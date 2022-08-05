@@ -2,7 +2,7 @@
 
 exports[`Link render correctly with bad variant 1`] = `
 <DocumentFragment>
-  .cache-1rfggew-StyledLink {
+  .cache-ibris0-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -23,8 +23,8 @@ exports[`Link render correctly with bad variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -40,13 +40,17 @@ exports[`Link render correctly with bad variant 1`] = `
   text-case: none;
 }
 
-.cache-1rfggew-StyledLink>* {
+.cache-ibris0-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-ibris0-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1rfggew-StyledLink:hover,
-.cache-1rfggew-StyledLink:focus {
-  gap: 4px;
+.cache-ibris0-StyledLink:hover,
+.cache-ibris0-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -55,17 +59,25 @@ exports[`Link render correctly with bad variant 1`] = `
   text-decoration-color: #4a4f62;
 }
 
-.cache-1rfggew-StyledLink:hover::after,
-.cache-1rfggew-StyledLink:focus::after {
+.cache-ibris0-StyledLink:hover .e4bq1r52,
+.cache-ibris0-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-ibris0-StyledLink:hover::after,
+.cache-ibris0-StyledLink:focus::after {
   background-color: #4a4f62;
 }
 
-.cache-1rfggew-StyledLink:active {
+.cache-ibris0-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1rfggew-StyledLink e4bq1r50"
+    class="cache-ibris0-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -75,7 +87,7 @@ exports[`Link render correctly with bad variant 1`] = `
 
 exports[`Link render correctly with href props 1`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -96,8 +108,8 @@ exports[`Link render correctly with href props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -113,13 +125,17 @@ exports[`Link render correctly with href props 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -128,17 +144,25 @@ exports[`Link render correctly with href props 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -148,7 +172,7 @@ exports[`Link render correctly with href props 1`] = `
 
 exports[`Link render correctly with href props 2`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-90jdcs-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -169,8 +193,8 @@ exports[`Link render correctly with href props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -186,13 +210,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-90jdcs-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-90jdcs-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-90jdcs-StyledLink:hover,
+.cache-90jdcs-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -201,16 +229,24 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-90jdcs-StyledLink:hover .e4bq1r52,
+.cache-90jdcs-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(4px, 0);
+  -moz-transform: translate(4px, 0);
+  -ms-transform: translate(4px, 0);
+  transform: translate(4px, 0);
+}
+
+.cache-90jdcs-StyledLink:hover::after,
+.cache-90jdcs-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-90jdcs-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1gxgwfv-StyledIcon-sizeStyles {
+.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 16px;
   width: 16px;
@@ -218,16 +254,16 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 16px;
 }
 
-.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-90jdcs-StyledLink e4bq1r50"
     href="/"
   >
     <svg
-      class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+      class="e4bq1r52 etwatq50 cache-18bgzto-StyledIcon-sizeStyles-StyledIcon"
       viewBox="0 0 16 16"
     >
       <path
@@ -236,7 +272,7 @@ exports[`Link render correctly with href props 2`] = `
     </svg>
     Hello
   </a>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -257,8 +293,8 @@ exports[`Link render correctly with href props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -274,13 +310,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -289,16 +329,24 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1gxgwfv-StyledIcon-sizeStyles {
+.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 16px;
   width: 16px;
@@ -306,17 +354,17 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 16px;
 }
 
-.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon.cache-18bgzto-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
   >
     Hello
     <svg
-      class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+      class="e4bq1r52 etwatq50 cache-18bgzto-StyledIcon-sizeStyles-StyledIcon"
       viewBox="0 0 16 16"
     >
       <path
@@ -324,7 +372,7 @@ exports[`Link render correctly with href props 2`] = `
       />
     </svg>
   </a>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -345,8 +393,8 @@ exports[`Link render correctly with href props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -362,13 +410,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -377,12 +429,20 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -394,7 +454,7 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 14px;
   width: 14px;
@@ -402,12 +462,12 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 14px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -417,7 +477,7 @@ exports[`Link render correctly with href props 2`] = `
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        class="e4bq1r52 etwatq50 cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon"
         viewBox="0 0 24 24"
       >
         <path
@@ -426,7 +486,7 @@ exports[`Link render correctly with href props 2`] = `
       </svg>
     </span>
   </a>
-  .cache-mlmgzv-StyledLink {
+  .cache-90jdcs-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -447,8 +507,8 @@ exports[`Link render correctly with href props 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -464,13 +524,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-90jdcs-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-90jdcs-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-90jdcs-StyledLink:hover,
+.cache-90jdcs-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -479,12 +543,20 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-90jdcs-StyledLink:hover .e4bq1r52,
+.cache-90jdcs-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(4px, 0);
+  -moz-transform: translate(4px, 0);
+  -ms-transform: translate(4px, 0);
+  transform: translate(4px, 0);
+}
+
+.cache-90jdcs-StyledLink:hover::after,
+.cache-90jdcs-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-90jdcs-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -496,7 +568,7 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 14px;
   width: 14px;
@@ -504,12 +576,12 @@ exports[`Link render correctly with href props 2`] = `
   min-height: 14px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-90jdcs-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -519,7 +591,7 @@ exports[`Link render correctly with href props 2`] = `
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        class="e4bq1r52 etwatq50 cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon"
         viewBox="0 0 24 24"
       >
         <path
@@ -533,7 +605,7 @@ exports[`Link render correctly with href props 2`] = `
 
 exports[`Link render correctly with no variant 1`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -554,8 +626,8 @@ exports[`Link render correctly with no variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -571,13 +643,17 @@ exports[`Link render correctly with no variant 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -586,17 +662,25 @@ exports[`Link render correctly with no variant 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -606,7 +690,7 @@ exports[`Link render correctly with no variant 1`] = `
 
 exports[`Link render correctly with sizes 1`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -627,8 +711,8 @@ exports[`Link render correctly with sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -644,13 +728,17 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -659,23 +747,31 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
   >
     Hello
   </a>
   ,
-  .cache-u5thex-StyledLink {
+  .cache-1fu57bd-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -696,8 +792,8 @@ exports[`Link render correctly with sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -713,13 +809,17 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-u5thex-StyledLink>* {
+.cache-1fu57bd-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1fu57bd-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-u5thex-StyledLink:hover,
-.cache-u5thex-StyledLink:focus {
-  gap: 4px;
+.cache-1fu57bd-StyledLink:hover,
+.cache-1fu57bd-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -728,17 +828,25 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-u5thex-StyledLink:hover::after,
-.cache-u5thex-StyledLink:focus::after {
+.cache-1fu57bd-StyledLink:hover .e4bq1r52,
+.cache-1fu57bd-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1fu57bd-StyledLink:hover::after,
+.cache-1fu57bd-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-u5thex-StyledLink:active {
+.cache-1fu57bd-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-u5thex-StyledLink e4bq1r50"
+    class="cache-1fu57bd-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -749,7 +857,7 @@ exports[`Link render correctly with sizes 1`] = `
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -770,8 +878,8 @@ exports[`Link render correctly with target blank 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -787,13 +895,17 @@ exports[`Link render correctly with target blank 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -802,12 +914,20 @@ exports[`Link render correctly with target blank 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -819,7 +939,7 @@ exports[`Link render correctly with target blank 1`] = `
   padding-bottom: 4px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   fill: currentColor;
   height: 14px;
   width: 14px;
@@ -827,12 +947,12 @@ exports[`Link render correctly with target blank 1`] = `
   min-height: 14px;
 }
 
-.cache-14vhymm-StyledIcon-sizeStyles.cache-14vhymm-StyledIcon-sizeStyles {
+.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon.cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon {
   vertical-align: middle;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -842,7 +962,7 @@ exports[`Link render correctly with target blank 1`] = `
       class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-14vhymm-StyledIcon-sizeStyles"
+        class="e4bq1r52 etwatq50 cache-tz0ztm-StyledIcon-sizeStyles-StyledIcon"
         viewBox="0 0 24 24"
       >
         <path
@@ -856,7 +976,7 @@ exports[`Link render correctly with target blank 1`] = `
 
 exports[`Link variant render danger 1`] = `
 <DocumentFragment>
-  .cache-1kn1wsd-StyledLink {
+  .cache-1elb5m0-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -877,8 +997,8 @@ exports[`Link variant render danger 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -894,13 +1014,17 @@ exports[`Link variant render danger 1`] = `
   text-case: none;
 }
 
-.cache-1kn1wsd-StyledLink>* {
+.cache-1elb5m0-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1elb5m0-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1kn1wsd-StyledLink:hover,
-.cache-1kn1wsd-StyledLink:focus {
-  gap: 4px;
+.cache-1elb5m0-StyledLink:hover,
+.cache-1elb5m0-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -909,17 +1033,25 @@ exports[`Link variant render danger 1`] = `
   text-decoration-color: #a6102d;
 }
 
-.cache-1kn1wsd-StyledLink:hover::after,
-.cache-1kn1wsd-StyledLink:focus::after {
+.cache-1elb5m0-StyledLink:hover .e4bq1r52,
+.cache-1elb5m0-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1elb5m0-StyledLink:hover::after,
+.cache-1elb5m0-StyledLink:focus::after {
   background-color: #a6102d;
 }
 
-.cache-1kn1wsd-StyledLink:active {
+.cache-1elb5m0-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1kn1wsd-StyledLink e4bq1r50"
+    class="cache-1elb5m0-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -929,7 +1061,7 @@ exports[`Link variant render danger 1`] = `
 
 exports[`Link variant render info 1`] = `
 <DocumentFragment>
-  .cache-17qgxc4-StyledLink {
+  .cache-fo68qk-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -950,8 +1082,8 @@ exports[`Link variant render info 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -967,13 +1099,17 @@ exports[`Link variant render info 1`] = `
   text-case: none;
 }
 
-.cache-17qgxc4-StyledLink>* {
+.cache-fo68qk-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-fo68qk-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-17qgxc4-StyledLink:hover,
-.cache-17qgxc4-StyledLink:focus {
-  gap: 4px;
+.cache-fo68qk-StyledLink:hover,
+.cache-fo68qk-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -982,17 +1118,25 @@ exports[`Link variant render info 1`] = `
   text-decoration-color: #1a4dbf;
 }
 
-.cache-17qgxc4-StyledLink:hover::after,
-.cache-17qgxc4-StyledLink:focus::after {
+.cache-fo68qk-StyledLink:hover .e4bq1r52,
+.cache-fo68qk-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-fo68qk-StyledLink:hover::after,
+.cache-fo68qk-StyledLink:focus::after {
   background-color: #1a4dbf;
 }
 
-.cache-17qgxc4-StyledLink:active {
+.cache-fo68qk-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-17qgxc4-StyledLink e4bq1r50"
+    class="cache-fo68qk-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -1002,7 +1146,7 @@ exports[`Link variant render info 1`] = `
 
 exports[`Link variant render neutral 1`] = `
 <DocumentFragment>
-  .cache-1rfggew-StyledLink {
+  .cache-ibris0-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1023,8 +1167,8 @@ exports[`Link variant render neutral 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -1040,13 +1184,17 @@ exports[`Link variant render neutral 1`] = `
   text-case: none;
 }
 
-.cache-1rfggew-StyledLink>* {
+.cache-ibris0-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-ibris0-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1rfggew-StyledLink:hover,
-.cache-1rfggew-StyledLink:focus {
-  gap: 4px;
+.cache-ibris0-StyledLink:hover,
+.cache-ibris0-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1055,17 +1203,25 @@ exports[`Link variant render neutral 1`] = `
   text-decoration-color: #4a4f62;
 }
 
-.cache-1rfggew-StyledLink:hover::after,
-.cache-1rfggew-StyledLink:focus::after {
+.cache-ibris0-StyledLink:hover .e4bq1r52,
+.cache-ibris0-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-ibris0-StyledLink:hover::after,
+.cache-ibris0-StyledLink:focus::after {
   background-color: #4a4f62;
 }
 
-.cache-1rfggew-StyledLink:active {
+.cache-ibris0-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1rfggew-StyledLink e4bq1r50"
+    class="cache-ibris0-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -1075,7 +1231,7 @@ exports[`Link variant render neutral 1`] = `
 
 exports[`Link variant render primary 1`] = `
 <DocumentFragment>
-  .cache-mlmgzv-StyledLink {
+  .cache-qjioss-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1096,8 +1252,8 @@ exports[`Link variant render primary 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -1113,13 +1269,17 @@ exports[`Link variant render primary 1`] = `
   text-case: none;
 }
 
-.cache-mlmgzv-StyledLink>* {
+.cache-qjioss-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-qjioss-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-mlmgzv-StyledLink:hover,
-.cache-mlmgzv-StyledLink:focus {
-  gap: 4px;
+.cache-qjioss-StyledLink:hover,
+.cache-qjioss-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1128,17 +1288,25 @@ exports[`Link variant render primary 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:hover::after,
-.cache-mlmgzv-StyledLink:focus::after {
+.cache-qjioss-StyledLink:hover .e4bq1r52,
+.cache-qjioss-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-qjioss-StyledLink:hover::after,
+.cache-qjioss-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-mlmgzv-StyledLink:active {
+.cache-qjioss-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-mlmgzv-StyledLink e4bq1r50"
+    class="cache-qjioss-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -1148,7 +1316,7 @@ exports[`Link variant render primary 1`] = `
 
 exports[`Link variant render success 1`] = `
 <DocumentFragment>
-  .cache-x7ygkl-StyledLink {
+  .cache-136870y-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1169,8 +1337,8 @@ exports[`Link variant render success 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -1186,13 +1354,17 @@ exports[`Link variant render success 1`] = `
   text-case: none;
 }
 
-.cache-x7ygkl-StyledLink>* {
+.cache-136870y-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-136870y-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-x7ygkl-StyledLink:hover,
-.cache-x7ygkl-StyledLink:focus {
-  gap: 4px;
+.cache-136870y-StyledLink:hover,
+.cache-136870y-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1201,17 +1373,25 @@ exports[`Link variant render success 1`] = `
   text-decoration-color: #149a7b;
 }
 
-.cache-x7ygkl-StyledLink:hover::after,
-.cache-x7ygkl-StyledLink:focus::after {
+.cache-136870y-StyledLink:hover .e4bq1r52,
+.cache-136870y-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-136870y-StyledLink:hover::after,
+.cache-136870y-StyledLink:focus::after {
   background-color: #149a7b;
 }
 
-.cache-x7ygkl-StyledLink:active {
+.cache-136870y-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-x7ygkl-StyledLink e4bq1r50"
+    class="cache-136870y-StyledLink e4bq1r50"
     href="/"
   >
     Hello
@@ -1221,7 +1401,7 @@ exports[`Link variant render success 1`] = `
 
 exports[`Link variant render warning 1`] = `
 <DocumentFragment>
-  .cache-120nmsi-StyledLink {
+  .cache-1ibb6nj-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1242,8 +1422,8 @@ exports[`Link variant render warning 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
-  transition: gap 250ms ease-out,text-decoration-color 250ms ease-out;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
   gap: 8px;
   position: relative;
   width: -webkit-fit-content;
@@ -1259,13 +1439,17 @@ exports[`Link variant render warning 1`] = `
   text-case: none;
 }
 
-.cache-120nmsi-StyledLink>* {
+.cache-1ibb6nj-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1ibb6nj-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-120nmsi-StyledLink:hover,
-.cache-120nmsi-StyledLink:focus {
-  gap: 4px;
+.cache-1ibb6nj-StyledLink:hover,
+.cache-1ibb6nj-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1274,17 +1458,25 @@ exports[`Link variant render warning 1`] = `
   text-decoration-color: #cc4e18;
 }
 
-.cache-120nmsi-StyledLink:hover::after,
-.cache-120nmsi-StyledLink:focus::after {
+.cache-1ibb6nj-StyledLink:hover .e4bq1r52,
+.cache-1ibb6nj-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1ibb6nj-StyledLink:hover::after,
+.cache-1ibb6nj-StyledLink:focus::after {
   background-color: #cc4e18;
 }
 
-.cache-120nmsi-StyledLink:active {
+.cache-1ibb6nj-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-120nmsi-StyledLink e4bq1r50"
+    class="cache-1ibb6nj-StyledLink e4bq1r50"
     href="/"
   >
     Hello

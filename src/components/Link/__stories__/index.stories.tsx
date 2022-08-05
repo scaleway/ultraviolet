@@ -61,9 +61,9 @@ Target.parameters = {
 }
 Target.decorators = [
   () => (
-    <Link href="https://scaleway.com" target="_blank">
-      Link opens in a new tab
-    </Link>
+      <Link href="https://scaleway.com" target="_blank">
+        Link opens in a new tab
+      </Link>
   ),
 ]
 

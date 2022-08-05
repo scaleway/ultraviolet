@@ -10,6 +10,8 @@ import React, {
 import { Color } from '../../theme'
 import Icon from '../Icon'
 
+const StyledIcon = styled(Icon)``
+
 type LinkSizes = 'large' | 'small'
 type LinkIconPosition = 'left' | 'right'
 type LinkProps = {
@@ -40,6 +42,7 @@ export const StyledLink = styled('a', {
 })<{
   variant: Color
   size: LinkSizes
+  iconPosition?: LinkIconPosition
 }>`
   background-color: transparent;
   border: none;
@@ -53,8 +56,10 @@ export const StyledLink = styled('a', {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  transition: gap ${TRANSITION_DURATION}ms ease-out,
-    text-decoration-color ${TRANSITION_DURATION}ms ease-out;
+  transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
+  ${StyledIcon} {
+    transition: transform ${TRANSITION_DURATION}ms ease-out;
+  }
   gap: ${({ theme }) => theme.space['1']};
   position: relative;
   width: fit-content;
@@ -81,7 +86,12 @@ export const StyledLink = styled('a', {
 
   &:hover,
   &:focus {
-    gap: ${({ theme }) => theme.space['0.5']};
+    ${StyledIcon} {
+      transform: ${({ theme, iconPosition }) =>
+        iconPosition === 'left'
+          ? `translate(${theme.space['0.5']}, 0)`
+          : `translate(-${theme.space['0.5']}, 0)`};
+    }
     outline: none;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -132,20 +142,21 @@ const Link = forwardRef(
         className={className}
         size={size}
         onClick={onClick}
+        iconPosition={iconPosition}
       >
         {!isBlank && iconPosition === 'left' ? (
-          <Icon name="arrow-left" size={ICON_SIZE} />
+          <StyledIcon name="arrow-left" size={ICON_SIZE} />
         ) : null}
         {children}
 
         {isBlank ? (
           <StyledExternalIconContainer>
-            <Icon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+            <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
           </StyledExternalIconContainer>
         ) : null}
 
         {!isBlank && iconPosition === 'right' ? (
-          <Icon name="arrow-right" size={ICON_SIZE} />
+          <StyledIcon name="arrow-right" size={ICON_SIZE} />
         ) : null}
       </StyledLink>
     )
