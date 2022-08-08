@@ -24,6 +24,7 @@ import Typography from '../Typography'
 import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
+  ExpandedContentProps,
   ListColumn,
   ListOrder,
   ListRowProps,
@@ -138,7 +139,7 @@ export type ListProps<DataType> = {
     SelectBar: typeof SelectBar
     Header: () => JSX.Element
     Row: (props: ListRowProps) => JSX.Element
-    ExpendableContent: (props: { children: ReactNode }) => JSX.Element
+    ExpendableContent: (props: ExpandedContentProps) => JSX.Element
   }) => ReactElement
   customLoader?: ReactNode
   variant?: ListVariant

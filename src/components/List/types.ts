@@ -57,3 +57,11 @@ export type ListRowProps = {
   disabled?: boolean
   onClick?: MouseEventHandler<HTMLDivElement | HTMLDetailsElement>
 }
+
+export type ExpandedContentProps = {
+  id?: string
+  rowsState?: { [x: string]: ListRowState }
+  children?:
+    | ReactNode
+    | ((props: { id?: string; isToggled: boolean }) => Element)
+}
