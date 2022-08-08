@@ -28,7 +28,7 @@ specifiers:
   '@rollup/plugin-babel': 5.3.1
   '@rollup/plugin-node-resolve': 13.3.0
   '@rollup/plugin-url': 7.0.0
-  '@scaleway/eslint-config-react': 3.4.48
+  '@scaleway/eslint-config-react': 3.4.49
   '@scaleway/jest-helpers': 1.2.8
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.3.16
@@ -171,7 +171,7 @@ devDependencies:
   '@rollup/plugin-babel': 5.3.1_tui6liyexu3zy4m5r2rytc7ixu
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.2
   '@rollup/plugin-url': 7.0.0_rollup@2.77.2
-  '@scaleway/eslint-config-react': 3.4.48_qugx7qdu5zevzvxaiqyxfiwquq
+  '@scaleway/eslint-config-react': 3.4.49_qugx7qdu5zevzvxaiqyxfiwquq
   '@scaleway/jest-helpers': 1.2.8_ut53jbcdha2wkkp7zjondxn7wa
   '@scaleway/use-i18n': 3.3.16_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
@@ -3372,8 +3372,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@scaleway/eslint-config-react/3.4.48_qugx7qdu5zevzvxaiqyxfiwquq:
-    resolution: {integrity: sha512-58t7n1lDiT1M7kv6NxAN9DtUAVyswjP55QkINAx/XO5KRd6NgU4KHHQerv8s5Hp2bGjlJdB+KjOoQ9U6rj73TA==}
+  /@scaleway/eslint-config-react/3.4.49_qugx7qdu5zevzvxaiqyxfiwquq:
+    resolution: {integrity: sha512-VfAHMwmQyThsMBqmIDOjcpnGiUvMkLoq8JfjDxQZ8QazAvpMVBvGAnniySo4e9Zg5Ky54REzQcpjDdl7+BWGkQ==}
     peerDependencies:
       eslint: '>= 8.5'
     dependencies:
@@ -7349,7 +7349,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1
+      promise-inflight: 1.0.1_bluebird@3.7.2
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -15471,6 +15471,17 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
+    dev: true
+
+  /promise-inflight/1.0.1_bluebird@3.7.2:
+    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
+    peerDependencies:
+      bluebird: '*'
+    peerDependenciesMeta:
+      bluebird:
+        optional: true
+    dependencies:
+      bluebird: 3.7.2
     dev: true
 
   /promise.allsettled/1.0.5:
