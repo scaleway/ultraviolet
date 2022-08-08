@@ -25,6 +25,7 @@ const StyledPopover = styled(Popover)`
   background-color: ${({ theme }) => theme.colors.neutral.background};
   color: ${({ theme }) => theme.colors.neutral.text};
   box-shadow: ${({ theme }) => theme.shadows.dropdown};
+  z-index: 1;
 `
 
 const bottomStyles = (theme: Theme) => css`
