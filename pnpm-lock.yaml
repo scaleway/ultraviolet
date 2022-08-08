@@ -106,7 +106,7 @@ specifiers:
   react-markdown: 5.0.3
   react-router-dom: 6.3.0
   react-select: 5.4.0
-  react-toastify: 9.0.7
+  react-toastify: 9.0.8
   react-use-clipboard: 1.0.8
   read-pkg: 7.1.0
   reakit: 1.3.11
@@ -147,7 +147,7 @@ dependencies:
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3_skqlhrap4das3cz5b6iqdn2lqi
   react-select: 5.4.0_akpexhzbkw3xxfu7ga2ccxyxla
-  react-toastify: 9.0.7_sfoxds7t5ydpegc3knd667wn6m
+  react-toastify: 9.0.8_sfoxds7t5ydpegc3knd667wn6m
   react-use-clipboard: 1.0.8_sfoxds7t5ydpegc3knd667wn6m
   reakit: 1.3.11_sfoxds7t5ydpegc3knd667wn6m
 
@@ -7349,7 +7349,7 @@ packages:
       mississippi: 3.0.0
       mkdirp: 0.5.5
       move-concurrently: 1.0.1
-      promise-inflight: 1.0.1_bluebird@3.7.2
+      promise-inflight: 1.0.1
       rimraf: 2.7.1
       ssri: 6.0.2
       unique-filename: 1.1.1
@@ -15473,17 +15473,6 @@ packages:
         optional: true
     dev: true
 
-  /promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: 3.7.2
-    dev: true
-
   /promise.allsettled/1.0.5:
     resolution: {integrity: sha512-tVDqeZPoBC0SlzJHzWGZ2NKAguVq2oiYj7gbggbiTvH2itHohijTp7njOUA0aQ/nl+0lr/r6egmhoYu63UZ/pQ==}
     engines: {node: '>= 0.4'}
@@ -15960,8 +15949,8 @@ packages:
       throttle-debounce: 3.0.1
     dev: true
 
-  /react-toastify/9.0.7_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-UG5P/2F/fYdbK+v3XRWHM6xfMkWeLM+k2swKvwU8oO9DXx31GkeoH7Z6slBTkavZ0VjoQ+n/YD6xOBqEwN7HRg==}
+  /react-toastify/9.0.8_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-EwM+teWt49HSHx+67qI08yLAW1zAsBxCXLCsUfxHYv1W7/R3ZLhrqKalh7j+kjgPna1h5LQMSMwns4tB4ww2yQ==}
     peerDependencies:
       react: '>=16 || 17'
       react-dom: '>=16'
