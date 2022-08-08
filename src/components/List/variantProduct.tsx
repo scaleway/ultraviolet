@@ -7,7 +7,6 @@ import {
   KeyboardEvent,
   MouseEvent,
   ReactEventHandler,
-  ReactNode,
   cloneElement,
   isValidElement,
   useCallback,
@@ -19,7 +18,7 @@ import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
 import SortIcon from './SortIcon'
 import { useListContext } from './context'
-import { ListRowProps, ListRowState } from './types'
+import { ExpandedContentProps, ListRowProps, ListRowState } from './types'
 
 export const BORDER_THICKNESS = 1
 
@@ -287,14 +286,6 @@ export const Header = () => {
       ))}
     </StyledHeader>
   )
-}
-
-type ExpandedContentProps = {
-  id?: string
-  rowsState?: { [x: string]: ListRowState }
-  children?:
-    | ReactNode
-    | ((props: { id?: string; isToggled: boolean }) => Element)
 }
 
 export const ExpendableContent = ({
