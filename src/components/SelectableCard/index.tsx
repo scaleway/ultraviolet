@@ -7,15 +7,18 @@ const StyledElement = (element: typeof Radio) => styled(element, {
   shouldForwardProp: prop => !['showTick'].includes(prop),
 })<{ showTick?: boolean }>`
   display: inline-flex;
+  align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid
-    ${({ theme, checked }) =>
-      checked
+    ${({ theme, checked, disabled }) =>
+      checked && !disabled
         ? theme.colors.primary.borderWeak
         : theme.colors.neutral.borderWeak};
   color: ${({ theme, checked }) =>
     checked ? theme.colors.primary.textWeak : theme.colors.neutral.text};
+  ${({ theme, disabled }) =>
+    disabled ? `background: ${theme.colors.neutral.backgroundDisabled};` : null}
 
   &:hover,
   &:focus-within,

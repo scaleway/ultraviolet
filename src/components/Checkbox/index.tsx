@@ -117,7 +117,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
 
 const StyledCheckBoxContainer = styled(Typography)`
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   &[aria-disabled='false'] {

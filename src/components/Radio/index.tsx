@@ -142,7 +142,7 @@ const Radio = ({
   onKeyDown,
 }: RadioProps) => {
   const computedName = useMemo(() => {
-    if (!name) return getUUID('checkbox')
+    if (!name) return getUUID('radio')
 
     return name
   }, [name])
