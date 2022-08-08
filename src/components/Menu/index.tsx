@@ -14,6 +14,7 @@ import {
   PopoverStateReturn,
   usePopoverState,
 } from 'reakit/Popover'
+import { Portal } from 'reakit/Portal'
 import Item from './Item'
 
 type DisclosureParam =
@@ -198,21 +199,27 @@ const Menu = ({
           {disclosureProps => cloneElement(target, disclosureProps)}
         </PopoverDisclosure>
       )}
-      <StyledPopover {...popover} aria-label={ariaLabel} className={className}>
-        <>
-          {/* Required to avoid loading menu content if not visible */}
-          {popover.visible ? (
-            <MenuList
-              align={align}
-              hasArrow={hasArrow}
-              placement={popover.placement as ArrowPlacement}
-              role="menu"
-            >
-              {typeof children === 'function' ? children(popover) : children}
-            </MenuList>
-          ) : null}
-        </>
-      </StyledPopover>
+      <Portal>
+        <StyledPopover
+          {...popover}
+          aria-label={ariaLabel}
+          className={className}
+        >
+          {
+            /* Required to avoid loading menu content if not visible */
+            popover.visible ? (
+              <MenuList
+                align={align}
+                hasArrow={hasArrow}
+                placement={popover.placement as ArrowPlacement}
+                role="menu"
+              >
+                {typeof children === 'function' ? children(popover) : children}
+              </MenuList>
+            ) : null
+          }
+        </StyledPopover>
+      </Portal>
     </>
   )
 }
