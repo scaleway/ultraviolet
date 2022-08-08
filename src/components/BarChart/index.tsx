@@ -13,6 +13,10 @@ import BarChartTooltip from './Tooltip'
 
 type Formater = ValueFormat<DatumValue>
 
+type TickSpec = NonNullable<
+  ComponentProps<typeof ResponsiveBar>['axisBottom']
+>['tickValues']
+
 type BarChartProps = {
   height?: string | number
   margin?: Box
@@ -21,7 +25,7 @@ type BarChartProps = {
     Record<'bottom' | 'left' | 'right' | 'top', Formater>
   >
   pointFormatters?: Partial<Record<'x' | 'y', Formater>>
-  tickValues?: Box
+  tickValues?: Partial<Record<'bottom' | 'left' | 'right' | 'top', TickSpec>>
   keys?: string[]
   tooltipFunction?: (
     props: BarTooltipProps<BarDatum>,
