@@ -1,3 +1,19 @@
+## [0.173.5](https://github.com/scaleway/scaleway-ui/compare/v0.173.4...v0.173.5) (2022-08-08)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.0.8 ([#1737](https://github.com/scaleway/scaleway-ui/issues/1737)) ([d10ff1a](https://github.com/scaleway/scaleway-ui/commit/d10ff1a42e9186a8d4f65fe2de25b745bd87276a))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @testing-library/dom to v8.16.1 ([#1734](https://github.com/scaleway/scaleway-ui/issues/1734)) ([e4e95b3](https://github.com/scaleway/scaleway-ui/commit/e4e95b30462a8673849dd6d9e1b7dbeedd355f81))
+* **devdeps:** update dependency @testing-library/jest-dom to v5.16.5 ([#1735](https://github.com/scaleway/scaleway-ui/issues/1735)) ([996fce6](https://github.com/scaleway/scaleway-ui/commit/996fce6fd6ce05cab20866b896c5936af08e108e))
+* **devdeps:** update dependency eslint to v8.21.0 ([#1736](https://github.com/scaleway/scaleway-ui/issues/1736)) ([aa9ee22](https://github.com/scaleway/scaleway-ui/commit/aa9ee22b6621193bdc0b4144f2b0307802484bf3))
+* **devdeps:** update dependency postcss to v8.4.16 ([#1738](https://github.com/scaleway/scaleway-ui/issues/1738)) ([cf6119a](https://github.com/scaleway/scaleway-ui/commit/cf6119a034e267c0e0f8bee78debdb27ec06e97f))
+* **devdeps:** update docker/build-push-action action to v3.1.1 ([#1733](https://github.com/scaleway/scaleway-ui/issues/1733)) ([f5f61b0](https://github.com/scaleway/scaleway-ui/commit/f5f61b0f6f1443cf1d06eeb3b84be4b418ff99d4))
+
 ## [0.173.4](https://github.com/scaleway/scaleway-ui/compare/v0.173.3...v0.173.4) (2022-08-05)
 
 
