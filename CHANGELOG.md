@@ -1,3 +1,10 @@
+## [0.174.0](https://github.com/scaleway/scaleway-ui/compare/v0.173.5...v0.174.0) (2022-08-08)
+
+
+### :gear: Features
+
+* **menu:** portal menu list ([#1740](https://github.com/scaleway/scaleway-ui/issues/1740)) ([4043263](https://github.com/scaleway/scaleway-ui/commit/4043263008b0cf76474ee5bda529c5690cf45480))
+
 ## [0.173.5](https://github.com/scaleway/scaleway-ui/compare/v0.173.4...v0.173.5) (2022-08-08)
 
 
