@@ -1,3 +1,25 @@
+## [0.174.1](https://github.com/scaleway/scaleway-ui/compare/v0.174.0...v0.174.1) (2022-08-09)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.4.49 ([#1741](https://github.com/scaleway/scaleway-ui/issues/1741)) ([4261eb7](https://github.com/scaleway/scaleway-ui/commit/4261eb7b401337dd713942cee71aaa473fe080a1))
+
+
+### :zap: Refactor
+
+* 💡 list.ExpandableContent type ([#1742](https://github.com/scaleway/scaleway-ui/issues/1742)) ([8598f94](https://github.com/scaleway/scaleway-ui/commit/8598f94b7caf62901cadd90d50b380ef4f32bfc2))
+
+
+### :repeat: CI
+
+* max coverage on RadioBorderedBox, Tag and Text ([#1728](https://github.com/scaleway/scaleway-ui/issues/1728)) ([6aa0aca](https://github.com/scaleway/scaleway-ui/commit/6aa0acac0d589267b5902c3aca376df1a9d410ba))
+
+
+### :bug: Bug Fixes
+
+* **PieChart:** tooltip alignement ([#1744](https://github.com/scaleway/scaleway-ui/issues/1744)) ([946c456](https://github.com/scaleway/scaleway-ui/commit/946c45671735d3bc63f8622bbc6f2a119e962e02))
+
 ## [0.174.0](https://github.com/scaleway/scaleway-ui/compare/v0.173.5...v0.174.0) (2022-08-08)
 
 
