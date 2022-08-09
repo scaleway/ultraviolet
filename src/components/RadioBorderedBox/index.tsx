@@ -77,7 +77,7 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeText?: string
   badgeProminence?: ComponentProps<typeof Badge>['prominence']
   badgeVariant?: ComponentProps<typeof Badge>['variant']
-  children: ReactNode
+  children?: ReactNode
   label: string
   labelDescription?: string
   name: string
@@ -126,13 +126,13 @@ const RadioBorderedBox = ({
           ) : null}
           {badgeText && (
             <Badge
-                size={badgeSize}
-                variant={badgeVariant}
-                prominence={badgeProminence}
-                disabled={disabled}
-              >
-                {badgeText}
-              </Badge>
+              size={badgeSize}
+              variant={badgeVariant}
+              prominence={badgeProminence}
+              disabled={disabled}
+            >
+              {badgeText}
+            </Badge>
           )}
         </StyledRadioContainer>
         {sideText ? (

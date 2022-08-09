@@ -204,3 +204,301 @@ exports[`Tag renders correctly neutral 1`] = `
   </span>
 </DocumentFragment>
 `;
+
+exports[`Tag renders correctly with icon 1`] = `
+<DocumentFragment>
+  .cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+  >
+    <svg
+      class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
+      />
+    </svg>
+    <span
+      aria-disabled="false"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
+    >
+      test
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tag renders correctly with isLoading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+  >
+    <span
+      aria-disabled="false"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
+    >
+      test
+    </span>
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 16px; width: 16px;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#d4dae7"
+        stroke-width="16"
+      />
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="#4f0599"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Tag renders correctly with onClose 1`] = `
+<DocumentFragment>
+  .cache-1q42p0o-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cache-de6xht-StyledTouchable-StyledTouchable {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-de6xht-StyledTouchable-StyledTouchable[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cache-de6xht-StyledTouchable-StyledTouchable[aria-disabled='false'] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cache-de6xht-StyledTouchable-StyledTouchable svg {
+  fill: #b2b6c3;
+}
+
+.cache-de6xht-StyledTouchable-StyledTouchable:hover:enabled svg,
+.cache-de6xht-StyledTouchable-StyledTouchable:focus:enabled svg {
+  fill: #4a4f62;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1gxgwfv-StyledIcon-sizeStyles.cache-1gxgwfv-StyledIcon-sizeStyles {
+  vertical-align: middle;
+}
+
+<span
+    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+  >
+    <span
+      aria-disabled="false"
+      class="cache-t6vuyb-StyledTag e1vt8sjg1"
+    >
+      test
+    </span>
+    <button
+      aria-disabled="false"
+      aria-label="Close tag"
+      class="e1vt8sjg0 e1kgqxfn0 cache-de6xht-StyledTouchable-StyledTouchable"
+      type="button"
+    >
+      <svg
+        class="sc-ui-icon etwatq50 cache-1gxgwfv-StyledIcon-sizeStyles"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </span>
+</DocumentFragment>
+`;

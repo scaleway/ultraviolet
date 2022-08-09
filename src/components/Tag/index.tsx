@@ -98,7 +98,7 @@ const Tag = ({
 
     {onClose && !isLoading ? (
       <StyledTouchable
-        onClick={!isLoading ? onClose : undefined}
+        onClick={onClose}
         variant={variant}
         disabled={disabled}
         aria-label="Close tag"
