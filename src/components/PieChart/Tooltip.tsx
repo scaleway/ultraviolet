@@ -12,13 +12,8 @@ const StyledItem = styled.li`
   display: flex;
   margin-top: 6px;
   width: 100%;
-`
-
-const Space = styled.span`
-  position: relative;
-  display: flex;
-  flex: 1;
-  min-width: 5px;
+  justify-content: space-between;
+  text-align: left;
 `
 
 type TooltipProps = {
@@ -41,22 +36,20 @@ const Tooltip = ({ data }: TooltipProps) => (
         <Text as="p" variant="body" prominence="stronger">
           {data.name}
         </Text>
-        <Space />
         <Text as="p" variant="body" prominence="stronger">
           {data.value}
         </Text>
       </StyledItem>
       {data.details?.map(detail => (
-          <StyledItem key={detail.name}>
-            <Text as="p" variant="bodySmall" prominence="stronger">
-              {detail.name}
-            </Text>
-            <Space />
-            <Text as="p" variant="bodySmall" prominence="stronger">
-              {detail.value}
-            </Text>
-          </StyledItem>
-        ))}
+        <StyledItem key={detail.name}>
+          <Text as="p" variant="bodySmall" prominence="stronger">
+            {detail.name}
+          </Text>
+          <Text as="p" variant="bodySmall" prominence="stronger">
+            {detail.value}
+          </Text>
+        </StyledItem>
+      ))}
     </StyledList>
   </div>
 )
