@@ -79,7 +79,7 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeVariant?: ComponentProps<typeof Badge>['variant']
   children?: ReactNode
   label: string
-  labelDescription?: string
+  labelDescription?: ReactNode
   name: string
   sideText?: string
   value: string | number
