@@ -238,6 +238,49 @@ Disabled.decorators = [
   ),
 ]
 
+export const isError = Template.bind({})
+isError.parameters = {
+  docs: {
+    storyDescription:
+      'Use `isError` prop to display SelectableCard with a error style.',
+  },
+}
+isError.decorators = [
+  () => (
+    <ControlValue value="label-12">
+      {({ value, onChange }) => (
+        <div style={{ display: 'flex', gap: '16px' }}>
+          <SelectableCard
+            name="label-12"
+            checked={value === 'label-12'}
+            value="label-12"
+            type="radio"
+            isError
+            showTick
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              onChange(event.currentTarget.value)
+            }
+          >
+            Left Radio
+          </SelectableCard>
+          <SelectableCard
+            name="label-13"
+            checked={value === 'label-13'}
+            value="label-13"
+            type="radio"
+            showTick
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              onChange(event.currentTarget.value)
+            }
+          >
+            Right Radio
+          </SelectableCard>
+        </div>
+      )}
+    </ControlValue>
+  ),
+]
+
 export const ComplexChildren = Template.bind({})
 ComplexChildren.parameters = {
   docs: {

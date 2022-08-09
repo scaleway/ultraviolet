@@ -10,24 +10,43 @@ const StyledElement = (element: typeof Radio) => styled(element, {
   align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px solid
-    ${({ theme, checked, disabled }) =>
-      checked && !disabled
-        ? theme.colors.primary.borderWeak
-        : theme.colors.neutral.borderWeak};
-  color: ${({ theme, checked }) =>
-    checked ? theme.colors.primary.textWeak : theme.colors.neutral.text};
-  ${({ theme, disabled }) =>
-    disabled ? `background: ${theme.colors.neutral.backgroundDisabled};` : null}
 
+  ${({ theme, checked, disabled, error }) => {
+    if (error)
+      return `
+      border: 1px solid ${theme.colors.danger.border};
+      color: ${theme.colors.danger.text};
+    `
+
+    if (checked)
+      return `
+      border: 1px solid ${theme.colors.primary.borderWeak};
+      color: ${theme.colors.primary.textWeak};
+    `
+
+    if (disabled)
+      return `
+      border: 1px solid ${theme.colors.neutral.borderWeakDisabled};
+      color: ${theme.colors.neutral.textDisabled};
+      background: ${theme.colors.neutral.backgroundDisabled};
+    `
+
+    return `
+      border: 1px solid ${theme.colors.neutral.borderWeak};
+      color: ${theme.colors.neutral.text};
+    `
+  }}
   &:hover,
   &:focus-within,
   &:active {
-    border: 1px solid
-      ${({ theme, disabled }) =>
-        disabled
-          ? theme.colors.neutral.borderWeakDisabled
-          : theme.colors.primary.borderWeakHover};
+    ${({ theme, disabled, error, checked }) => {
+      if (error || disabled) return ``
+
+      return `
+        border: 1px solid ${theme.colors.primary.borderWeak};
+        box-shadow: ${checked ? 'none' : theme.shadows.hoverPrimary};
+      `
+    }}
   }
 
   svg {
@@ -50,6 +69,7 @@ type SelectableCardProps = {
   disabled?: boolean
   checked?: boolean
   className?: string
+  isError?: boolean
 }
 
 const SelectableCard = ({
@@ -62,6 +82,7 @@ const SelectableCard = ({
   disabled = false,
   children,
   className,
+  isError,
 }: SelectableCardProps) => {
   const Element = StyledElement(type === 'radio' ? Radio : Checkbox)
 
@@ -74,6 +95,7 @@ const SelectableCard = ({
       checked={checked}
       disabled={disabled}
       className={className}
+      error={isError}
     >
       {typeof children === 'function'
         ? children({ checked, disabled })

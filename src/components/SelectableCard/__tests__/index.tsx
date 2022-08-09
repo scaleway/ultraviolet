@@ -107,6 +107,32 @@ describe('SelectableCard', () => {
       </SelectableCard>,
     ))
 
+  test('renders correctly with checkbox type and isError prop', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        onChange={() => {}}
+        name="radio"
+        type="checkbox"
+        value="choice"
+        isError
+      >
+        Radio card
+      </SelectableCard>,
+    ))
+
+  test('renders correctly with radio type and isError prop', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        onChange={() => {}}
+        name="radio"
+        type="radio"
+        value="choice"
+        isError
+      >
+        Radio card
+      </SelectableCard>,
+    ))
+
   test('renders correctly with complex children', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCard
