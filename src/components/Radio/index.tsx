@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import { InputHTMLAttributes, ReactNode } from 'react'
+import { InputHTMLAttributes, ReactNode, useMemo } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
+import { getUUID } from '../../utils'
 import Typography from '../Typography'
 
 const InnerCircleRing = styled.circle`
@@ -119,7 +120,7 @@ type RadioProps = {
   children: ReactNode
   error?: string | ReactNode
   checked?: boolean
-  name: string
+  name?: string
   size?: number
   value: string | number
 } & InputHTMLAttributes<HTMLInputElement> &
@@ -139,34 +140,42 @@ const Radio = ({
   className,
   autoFocus,
   onKeyDown,
-}: RadioProps) => (
-  <StyledRadioContainer
-    as="label"
-    aria-disabled={disabled}
-    htmlFor={`${name}-${value}`}
-    className={className}
-  >
-    <StyledRadio
-      type="radio"
-      aria-invalid={!!error}
-      aria-checked={checked}
+}: RadioProps) => {
+  const computedName = useMemo(() => {
+    if (!name) return getUUID('radio')
+
+    return name
+  }, [name])
+
+  return (
+    <StyledRadioContainer
+      as="label"
       aria-disabled={disabled}
-      checked={checked}
-      id={`${name}-${value}`}
-      onChange={onChange}
-      onFocus={onFocus}
-      onKeyDown={onKeyDown}
-      onBlur={onBlur}
-      value={value}
-      disabled={disabled}
-      name={name}
-      autoFocus={autoFocus}
-    />
-    <StyledIcon size={size} viewBox="0 0 24 24">
-      <RadioMarkedIcon />
-    </StyledIcon>
-    {children}
-  </StyledRadioContainer>
-)
+      htmlFor={`${computedName}-${value}`}
+      className={className}
+    >
+      <StyledRadio
+        type="radio"
+        aria-invalid={!!error}
+        aria-checked={checked}
+        aria-disabled={disabled}
+        checked={checked}
+        id={`${computedName}-${value}`}
+        onChange={onChange}
+        onFocus={onFocus}
+        onKeyDown={onKeyDown}
+        onBlur={onBlur}
+        value={value}
+        disabled={disabled}
+        name={computedName}
+        autoFocus={autoFocus}
+      />
+      <StyledIcon size={size} viewBox="0 0 24 24">
+        <RadioMarkedIcon />
+      </StyledIcon>
+      {children}
+    </StyledRadioContainer>
+  )
+}
 
 export default Radio

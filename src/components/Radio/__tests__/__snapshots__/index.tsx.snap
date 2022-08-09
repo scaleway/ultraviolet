@@ -677,3 +677,173 @@ exports[`Radio renders correctly when error 1`] = `
   </label>
 </DocumentFragment>
 `;
+
+exports[`Radio renders without name 1`] = `
+<DocumentFragment>
+  .cache-16xheb9-StyledText-variantStyles-StyledRadioContainer {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-16xheb9-StyledText-variantStyles-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-h7u1sr-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-gjpbat-StyledIcon {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
+}
+
+.cache-gjpbat-StyledIcon .e1duuirp4 {
+  fill: #ffffff;
+}
+
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
+}
+
+<label
+    aria-disabled="true"
+    class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-6c756c756c756c756c756c756c756c75-choice"
+  >
+    <input
+      aria-checked="false"
+      aria-disabled="true"
+      aria-invalid="false"
+      class="cache-h7u1sr-StyledRadio e1duuirp1"
+      disabled=""
+      id="radio-6c756c756c756c756c756c756c756c75-choice"
+      name="radio-6c756c756c756c756c756c756c756c75"
+      style="pointer-events: none;"
+      type="radio"
+      value="choice"
+    />
+    <svg
+      class="cache-gjpbat-StyledIcon e1duuirp2"
+      size="24"
+      viewBox="0 0 24 24"
+    >
+      <g>
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke-width="2"
+        />
+        <circle
+          class="cache-p50c5x-InnerCircleRing e1duuirp4"
+          cx="12"
+          cy="12"
+          r="6"
+        />
+        <circle
+          class="cache-ivayk3-RadioMark e1duuirp3"
+          cx="12"
+          cy="12"
+          r="4"
+        />
+      </g>
+    </svg>
+    Choice
+  </label>
+</DocumentFragment>
+`;
