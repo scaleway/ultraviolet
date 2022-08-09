@@ -77,7 +77,7 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeText?: string
   badgeProminence?: ComponentProps<typeof Badge>['prominence']
   badgeVariant?: ComponentProps<typeof Badge>['variant']
-  children: ReactNode
+  children?: ReactNode
   label: string
   labelDescription?: string
   name: string
@@ -146,9 +146,11 @@ const RadioBorderedBox = ({
           </Text>
         ) : null}
       </StyledSpaceContainer>
-      <Text as="p" variant="body" disabled={disabled}>
-        {children}
-      </Text>
+      {children ? (
+        <Text as="p" variant="body" disabled={disabled}>
+          {children}
+        </Text>
+      ) : null}
     </StyledBorderedBox>
     {error ? (
       <Expandable opened={!!error}>
