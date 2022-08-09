@@ -1,3 +1,10 @@
+## [0.175.0](https://github.com/scaleway/scaleway-ui/compare/v0.174.1...v0.175.0) (2022-08-09)
+
+
+### :gear: Features
+
+* new selectablecard component ([#1727](https://github.com/scaleway/scaleway-ui/issues/1727)) ([6896697](https://github.com/scaleway/scaleway-ui/commit/6896697faaf94f976a1f71a0ea3f4be8d48fa10a))
+
 ## [0.174.1](https://github.com/scaleway/scaleway-ui/compare/v0.174.0...v0.174.1) (2022-08-09)
 
 
