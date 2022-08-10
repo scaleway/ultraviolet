@@ -127,7 +127,7 @@ const RadioBorderedBox = ({
               {labelDescription}
             </Text>
           ) : null}
-          {badgeText && (
+          {badgeText ? (
             <Badge
               size={badgeSize}
               variant={badgeVariant}
@@ -136,7 +136,7 @@ const RadioBorderedBox = ({
             >
               {badgeText}
             </Badge>
-          )}
+          ) : null}
         </StyledRadioContainer>
         {sideText ? (
           <Text
