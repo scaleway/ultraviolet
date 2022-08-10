@@ -1,3 +1,10 @@
+## [0.175.3](https://github.com/scaleway/scaleway-ui/compare/v0.175.2...v0.175.3) (2022-08-10)
+
+
+### :bug: Bug Fixes
+
+* labelDescription parm ([#1746](https://github.com/scaleway/scaleway-ui/issues/1746)) ([de95174](https://github.com/scaleway/scaleway-ui/commit/de95174518154782e8e466e83cfb16009a049590))
+
 ## [0.175.2](https://github.com/scaleway/scaleway-ui/compare/v0.175.1...v0.175.2) (2022-08-10)
 
 
