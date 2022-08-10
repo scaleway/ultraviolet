@@ -1,3 +1,10 @@
+## [0.175.1](https://github.com/scaleway/scaleway-ui/compare/v0.175.0...v0.175.1) (2022-08-10)
+
+
+### :bug: Bug Fixes
+
+* **BarChart:** tickvalue prop typing ([#1747](https://github.com/scaleway/scaleway-ui/issues/1747)) ([ffa7067](https://github.com/scaleway/scaleway-ui/commit/ffa7067f0125ddb93d0e6058ce2d1973dc796a8f))
+
 ## [0.175.0](https://github.com/scaleway/scaleway-ui/compare/v0.174.1...v0.175.0) (2022-08-09)
 
 
