@@ -2,51 +2,55 @@
 
 exports[`Description renders correctly 1`] = `
 <DocumentFragment>
-  .cache-v7ox1c-StyledBox {
+  .cache-8c6su2-BareDescription {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
 }
 
-.cache-v7ox1c-StyledBox .eu9mc5y1+.eu9mc5y2 {
-  margin-top: 16px;
-}
-
-.cache-1pjhxej-Term {
+.cache-xf88sk-Term {
   font-weight: 500;
-  color: #4a4f62;
+  color: #151a2d;
+  display: inline-block;
 }
 
-.cache-1pjhxej-Term:after {
+.cache-xf88sk-Term:after {
   content: ':';
 }
 
-.cache-63i55g-Desc {
+.cache-ivr5h7-Desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #4a4f62;
-  margin: 0;
-  margin-top: 8px;
+  margin: 8px 0 0 0;
 }
 
 <dl
-    class="eu9mc5y0 cache-v7ox1c-StyledBox"
+    class="cache-8c6su2-BareDescription eu9mc5y0"
   >
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       125 GB
     </dd>
@@ -56,65 +60,71 @@ exports[`Description renders correctly 1`] = `
 
 exports[`Description renders correctly inline 1`] = `
 <DocumentFragment>
-  .cache-7xcbwr-StyledBox-StyledBox {
+  .cache-13t0gak-BareDescription-BareDescription {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-7xcbwr-StyledBox-StyledBox .eu9mc5y1+.eu9mc5y2 {
-  margin-top: 16px;
+.cache-13t0gak-BareDescription-BareDescription .eu9mc5y1 {
+  margin: 0 0 0 8px;
 }
 
-.cache-7xcbwr-StyledBox-StyledBox>.eu9mc5y2 {
-  float: left;
-  clear: left;
-  margin-right: 8px;
-}
-
-.cache-7xcbwr-StyledBox-StyledBox>.eu9mc5y1 {
-  margin-top: 0;
-}
-
-.cache-7xcbwr-StyledBox-StyledBox .eu9mc5y1+.eu9mc5y2+.eu9mc5y1 {
-  margin-top: 16px;
-}
-
-.cache-1pjhxej-Term {
+.cache-xf88sk-Term {
   font-weight: 500;
-  color: #4a4f62;
+  color: #151a2d;
+  display: inline-block;
 }
 
-.cache-1pjhxej-Term:after {
+.cache-xf88sk-Term:after {
   content: ':';
 }
 
-.cache-63i55g-Desc {
+.cache-ivr5h7-Desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #4a4f62;
-  margin: 0;
-  margin-top: 8px;
+  margin: 8px 0 0 0;
 }
 
 <dl
-    class="eu9mc5y0 cache-7xcbwr-StyledBox-StyledBox"
+    class="cache-13t0gak-BareDescription-BareDescription eu9mc5y0"
   >
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       125 GB
     </dd>
@@ -124,77 +134,83 @@ exports[`Description renders correctly inline 1`] = `
 
 exports[`Description renders correctly seletable 1`] = `
 <DocumentFragment>
-  .cache-1pnahs1-StyledBox-StyledBox-StyledBox {
+  .cache-1y4pgcv-BareDescription-BareDescription-BareDescription {
   font-size: 16px;
   line-height: 16px;
   margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox .eu9mc5y1+.eu9mc5y2 {
-  margin-top: 16px;
+.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1 {
+  margin: 0 0 0 8px;
 }
 
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox>.eu9mc5y2 {
-  float: left;
-  clear: left;
-  margin-right: 8px;
-}
-
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox>.eu9mc5y1 {
-  margin-top: 0;
-}
-
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox .eu9mc5y1+.eu9mc5y2+.eu9mc5y1 {
-  margin-top: 16px;
-}
-
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox>.eu9mc5y1 {
+.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1 {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
 }
 
-.cache-1pnahs1-StyledBox-StyledBox-StyledBox>.eu9mc5y1::selection {
+.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1::selection {
   color: #ffffff;
   background: #4f0599;
 }
 
-.cache-1pjhxej-Term {
+.cache-xf88sk-Term {
   font-weight: 500;
-  color: #4a4f62;
+  color: #151a2d;
+  display: inline-block;
 }
 
-.cache-1pjhxej-Term:after {
+.cache-xf88sk-Term:after {
   content: ':';
 }
 
-.cache-63i55g-Desc {
+.cache-ivr5h7-Desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #4a4f62;
-  margin: 0;
-  margin-top: 8px;
+  margin: 8px 0 0 0;
 }
 
 <dl
-    class="eu9mc5y0 cache-1pnahs1-StyledBox-StyledBox-StyledBox"
+    class="cache-1y4pgcv-BareDescription-BareDescription-BareDescription eu9mc5y0"
   >
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="eu9mc5y2 cache-1pjhxej-Term"
+      class="cache-xf88sk-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="eu9mc5y1 cache-63i55g-Desc"
+      class="cache-ivr5h7-Desc eu9mc5y1"
     >
       125 GB
     </dd>

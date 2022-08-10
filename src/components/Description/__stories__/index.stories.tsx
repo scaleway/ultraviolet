@@ -51,7 +51,7 @@ Selectable.parameters = {
 }
 Selectable.decorators = [
   () => (
-    <Description inline selectable>
+    <Description inline userSelect>
       <Description.Term>Name</Description.Term>
       <Description.Desc>Big instance</Description.Desc>
       <Description.Term>Size</Description.Term>
