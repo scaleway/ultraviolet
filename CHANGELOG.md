@@ -1,3 +1,10 @@
+## [0.175.2](https://github.com/scaleway/scaleway-ui/compare/v0.175.1...v0.175.2) (2022-08-10)
+
+
+### :bug: Bug Fixes
+
+* export selectable card ([#1749](https://github.com/scaleway/scaleway-ui/issues/1749)) ([5cc738e](https://github.com/scaleway/scaleway-ui/commit/5cc738ee0b83d5fbc0e7b459c8ee700805a7c76a))
+
 ## [0.175.1](https://github.com/scaleway/scaleway-ui/compare/v0.175.0...v0.175.1) (2022-08-10)
 
 
