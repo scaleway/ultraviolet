@@ -1,3 +1,10 @@
+## [0.176.0](https://github.com/scaleway/scaleway-ui/compare/v0.175.3...v0.176.0) (2022-08-10)
+
+
+### :gear: Features
+
+* **RadioBorderedBox:** use SelectableCard ([#1748](https://github.com/scaleway/scaleway-ui/issues/1748)) ([b54b819](https://github.com/scaleway/scaleway-ui/commit/b54b819543ef5fa5ad3c82eb2c4b9f611460969f))
+
 ## [0.175.3](https://github.com/scaleway/scaleway-ui/compare/v0.175.2...v0.175.3) (2022-08-10)
 
 
