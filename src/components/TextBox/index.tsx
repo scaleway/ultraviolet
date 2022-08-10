@@ -68,8 +68,7 @@ type StyledRightElementProps = {
 }
 
 const StyledRightElement = styled('div', {
-  shouldForwardProp: prop =>
-    !['edit', 'touchable', 'unit'].includes(prop),
+  shouldForwardProp: prop => !['edit', 'touchable', 'unit'].includes(prop),
 })<StyledRightElementProps>`
   ${({ theme: { colors } }) => css`
     pointer-events: none;
@@ -178,6 +177,10 @@ const StyledError = styled.div`
   font-size: 12px;
   color: ${({ theme }) => theme.colors.danger.textWeak};
   padding-top: ${({ theme }) => theme.space['0.25']};
+`
+
+const StyledNotice = styled(Notice)`
+  margin-top: ${({ theme }) => theme.space['1']};
 `
 
 type StyledInputProps = {
@@ -620,7 +623,7 @@ const TextBox = forwardRef<
         <Expandable height={56} overflow="hidden" opened={!!error}>
           <StyledError>{error}</StyledError>
         </Expandable>
-        {notice && <Notice mt={1}>{notice}</Notice>}
+        {notice && <StyledNotice>{notice}</StyledNotice>}
       </Box>
     )
   },
