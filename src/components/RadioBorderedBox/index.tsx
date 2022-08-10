@@ -119,7 +119,10 @@ const RadioBorderedBox = ({
           >
             {label}
           </Radio>
-          {labelDescription ? (
+          {labelDescription && typeof labelDescription === 'function'
+            ? labelDescription
+            : null}
+          {labelDescription && typeof labelDescription !== 'function' ? (
             <Text as="span" variant="body" disabled={disabled}>
               {labelDescription}
             </Text>
