@@ -27,6 +27,8 @@ const generateStyles = ({
   theme,
   oneLine,
   disabled,
+  italic,
+  underline,
 }: {
   prominence: ProminenceProps
   theme: Theme
@@ -34,6 +36,8 @@ const generateStyles = ({
   color: Color
   oneLine: boolean
   disabled: boolean
+  italic: boolean
+  underline: boolean
 }): string => {
   // stronger is available only for neutral color
   const definedProminence =
@@ -65,6 +69,8 @@ const generateStyles = ({
     overflow: hidden;`
         : ''
     }
+    ${italic ? `font-style: italic` : ''}
+    ${underline ? `text-decoration: underline` : ''}
   `
 }
 
@@ -77,19 +83,30 @@ type TextProps = {
   as: ElementType
   oneLine?: boolean
   disabled?: boolean
+  italic?: boolean
+  underline?: boolean
 }
 
 const StyledText = styled('div', {
   shouldForwardProp: prop =>
-    !['as', 'variant', 'color', 'prominence', 'oneLine', 'disabled'].includes(
-      prop,
-    ),
+    ![
+      'as',
+      'variant',
+      'color',
+      'prominence',
+      'oneLine',
+      'disabled',
+      'italic',
+      'underline',
+    ].includes(prop),
 })<{
   color: Color
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean
   disabled: boolean
+  italic: boolean
+  underline: boolean
 }>(generateStyles)
 
 const Text = ({
@@ -101,6 +118,8 @@ const Text = ({
   prominence = 'default',
   className,
   disabled = false,
+  italic = false,
+  underline = false,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -125,6 +144,8 @@ const Text = ({
         oneLine={oneLine}
         className={className}
         disabled={disabled}
+        italic={italic}
+        underline={underline}
       >
         {children}
       </StyledText>

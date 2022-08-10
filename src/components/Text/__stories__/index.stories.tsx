@@ -92,6 +92,36 @@ As.parameters = {
   },
 }
 
+export const Italic = Template.bind({})
+Italic.args = {
+  as: 'p',
+  children: 'This is a paragraph text',
+  italic: true,
+  variant: 'body',
+}
+Italic.parameters = {
+  docs: {
+    description: {
+      story: 'Set text style to be italic using `italic`',
+    },
+  },
+}
+
+export const Underline = Template.bind({})
+Underline.args = {
+  as: 'p',
+  children: 'This is a paragraph text',
+  underline: true,
+  variant: 'body',
+}
+Underline.parameters = {
+  docs: {
+    description: {
+      story: 'Set text style to be underline using `underline`',
+    },
+  },
+}
+
 export const OneLine: Story = () => (
   <>
     <strong>Without ellipsis</strong>
