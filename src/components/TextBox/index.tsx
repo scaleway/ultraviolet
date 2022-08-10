@@ -623,7 +623,7 @@ const TextBox = forwardRef<
         <Expandable height={56} overflow="hidden" opened={!!error}>
           <StyledError>{error}</StyledError>
         </Expandable>
-        {notice && <StyledNotice>{notice}</StyledNotice>}
+        {notice ? <StyledNotice>{notice}</StyledNotice> : null}
       </Box>
     )
   },
