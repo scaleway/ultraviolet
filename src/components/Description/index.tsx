@@ -16,7 +16,7 @@ const Desc = styled('dd', {
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  margin: 8px 0 0 0;
+  margin: ${({ theme }) => theme.space['1']} 0 0 0;
   ${({ capitalize }) =>
     capitalize &&
     css`
