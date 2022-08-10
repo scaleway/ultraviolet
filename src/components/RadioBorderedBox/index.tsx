@@ -79,7 +79,7 @@ type RadioBorderedBoxProps = RadioProps & {
   badgeVariant?: ComponentProps<typeof Badge>['variant']
   children?: ReactNode
   label: string
-  labelDescription?: string
+  labelDescription?: ReactNode
   name: string
   sideText?: string
   value: string | number
@@ -119,12 +119,15 @@ const RadioBorderedBox = ({
           >
             {label}
           </Radio>
-          {labelDescription ? (
+          {labelDescription && typeof labelDescription === 'function'
+            ? labelDescription
+            : null}
+          {labelDescription && typeof labelDescription !== 'function' ? (
             <Text as="span" variant="body" disabled={disabled}>
               {labelDescription}
             </Text>
           ) : null}
-          {badgeText && (
+          {badgeText ? (
             <Badge
               size={badgeSize}
               variant={badgeVariant}
@@ -133,7 +136,7 @@ const RadioBorderedBox = ({
             >
               {badgeText}
             </Badge>
-          )}
+          ) : null}
         </StyledRadioContainer>
         {sideText ? (
           <Text
