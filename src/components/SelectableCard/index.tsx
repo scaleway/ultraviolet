@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import React, { ChangeEventHandler, ReactNode } from 'react'
+import React, { ChangeEventHandler, FocusEventHandler, ReactNode } from 'react'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 
@@ -70,6 +70,8 @@ type SelectableCardProps = {
   checked?: boolean
   className?: string
   isError?: boolean
+  onFocus?: FocusEventHandler<HTMLInputElement>
+  onBlur?: FocusEventHandler<HTMLInputElement>
 }
 
 const SelectableCard = ({
@@ -83,6 +85,8 @@ const SelectableCard = ({
   children,
   className,
   isError,
+  onFocus,
+  onBlur,
 }: SelectableCardProps) => {
   const Element = StyledElement(type === 'radio' ? Radio : Checkbox)
 
@@ -96,6 +100,8 @@ const SelectableCard = ({
       disabled={disabled}
       className={className}
       error={isError}
+      onFocus={onFocus}
+      onBlur={onBlur}
     >
       {typeof children === 'function'
         ? children({ checked, disabled })

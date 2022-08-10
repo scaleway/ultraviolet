@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { ComponentProps, ReactNode } from 'react'
 import Badge from '../Badge'
-import BorderedBox from '../BorderedBox'
 import Expandable from '../Expandable'
 import Radio from '../Radio'
+import SelectableCard from '../SelectableCard'
 import Text from '../Text'
 
 type RadioProps = Pick<
@@ -17,38 +17,6 @@ type RadioProps = Pick<
   | 'value'
   | 'error'
 >
-
-type BorderedBoxTypes = {
-  disabled: boolean
-  checked: boolean
-  error: string | ReactNode
-}
-
-const StyledBorderedBox = styled(BorderedBox)<BorderedBoxTypes>`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['1']};
-  padding: ${({ theme }) => theme.space['2']};
-
-  ${({ disabled, checked, error, theme: { colors } }) => {
-    if (disabled)
-      return `
-        cursor: not-allowed !important;
-        color: ${colors.neutral.textDisabled};
-      `
-    if (error)
-      return `
-        border: 1px solid ${colors.danger.borderWeak} !important;
-      `
-
-    if (checked)
-      return `
-        border: 1px solid ${colors.primary.borderWeak} !important;
-      `
-
-    return null
-  }};
-`
 
 const StyledRadioContainer = styled.div`
   display: flex;
@@ -67,6 +35,7 @@ const StyledError = styled.div`
 `
 
 const StyledMainContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space['1']};
@@ -104,57 +73,59 @@ const RadioBorderedBox = ({
   error,
 }: RadioBorderedBoxProps) => (
   <StyledMainContainer>
-    <StyledBorderedBox disabled={disabled} checked={checked} error={error}>
-      <StyledSpaceContainer>
-        <StyledRadioContainer>
-          <Radio
-            name={name}
-            checked={checked}
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            disabled={disabled}
-            value={value}
-            error={error}
-          >
+    <SelectableCard
+      value={value}
+      onChange={onChange}
+      disabled={disabled}
+      name={name}
+      checked={checked}
+      isError={!!error}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      type="radio"
+      showTick
+    >
+      <StyledMainContainer>
+        <StyledSpaceContainer>
+          <StyledRadioContainer>
             {label}
-          </Radio>
-          {labelDescription && typeof labelDescription === 'function'
+            {labelDescription && typeof labelDescription === 'function'
             ? labelDescription
             : null}
           {labelDescription && typeof labelDescription !== 'function' ? (
-            <Text as="span" variant="body" disabled={disabled}>
-              {labelDescription}
-            </Text>
-          ) : null}
-          {badgeText ? (
-            <Badge
-              size={badgeSize}
-              variant={badgeVariant}
-              prominence={badgeProminence}
+              <Text as="span" variant="body" disabled={disabled}>
+                {labelDescription}
+              </Text>
+            ) : null}
+            {badgeText ? (
+              <Badge
+                size={badgeSize}
+                variant={badgeVariant}
+                prominence={badgeProminence}
+                disabled={disabled}
+              >
+                {badgeText}
+              </Badge>
+            ) : null}
+          </StyledRadioContainer>
+          {sideText ? (
+            <Text
+              as="span"
+              variant="bodySmallStronger"
+              color="primary"
               disabled={disabled}
             >
-              {badgeText}
-            </Badge>
+              {sideText}
+            </Text>
           ) : null}
-        </StyledRadioContainer>
-        {sideText ? (
-          <Text
-            as="span"
-            variant="bodySmallStronger"
-            color="primary"
-            disabled={disabled}
-          >
-            {sideText}
+        </StyledSpaceContainer>
+        {children ? (
+          <Text as="p" variant="body" disabled={disabled}>
+            {children}
           </Text>
         ) : null}
-      </StyledSpaceContainer>
-      {children ? (
-        <Text as="p" variant="body" disabled={disabled}>
-          {children}
-        </Text>
-      ) : null}
-    </StyledBorderedBox>
+      </StyledMainContainer>
+    </SelectableCard>
     {error ? (
       <Expandable opened={!!error}>
         <StyledError>{error}</StyledError>
