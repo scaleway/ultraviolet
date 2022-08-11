@@ -5,14 +5,6 @@ import { screens } from '../../../theme'
 
 describe('NavigationStepper', () => {
   beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
-  beforeAll(() => {
     jestMockMatchMedia({
       matches: false,
       media: `(max-width: ${screens.small}px)`,

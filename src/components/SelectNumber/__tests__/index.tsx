@@ -4,14 +4,6 @@ import SelectNumber from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('SelectNumber', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <SelectNumber

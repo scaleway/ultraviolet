@@ -2,14 +2,6 @@ import Placeholder, { placeholderTypes } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('Placeholder', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   test('renders default variant', () =>
     shouldMatchEmotionSnapshot(<Placeholder />))
 
