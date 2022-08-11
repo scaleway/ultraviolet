@@ -15,6 +15,7 @@ export default {
         excludeDecorators: true,
       },
     },
+    loki: { skip: true },
   },
   title: 'Components/Feedback/Tooltip',
 } as Meta

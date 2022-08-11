@@ -228,7 +228,11 @@ export const Header = () => {
   } = useListContext()
 
   const onSortEvent = useCallback(
-    (event: MouseEvent | KeyboardEvent, sort, index: number) => {
+    (
+      event: MouseEvent | KeyboardEvent,
+      index: number,
+      sort?: string | ((item: Record<string, unknown>) => string) | null,
+    ) => {
       event.preventDefault()
       if (sort) {
         onSort(index)
@@ -268,8 +272,8 @@ export const Header = () => {
           tabIndex={label ? 0 : undefined}
           aria-label={`sort ${label ?? index}`}
           disabled={isLoading}
-          onClick={e => (label ? onSortEvent(e, sort, index) : undefined)}
-          onKeyPress={e => onSortEvent(e, sort, index)}
+          onClick={e => (label ? onSortEvent(e, index, sort) : undefined)}
+          onKeyPress={e => onSortEvent(e, index, sort)}
           style={{
             alignItems: 'center',
             cursor: sort ? 'pointer' : 'default',

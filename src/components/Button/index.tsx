@@ -482,12 +482,7 @@ const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
 
 Button.propTypes = {
   action: PropTypes.oneOf([true, false, 'rounded']),
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node,
-    PropTypes.func,
-    PropTypes.arrayOf(PropTypes.node),
-  ]),
+  children: PropTypes.node,
   disabled: PropTypes.bool,
   download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   extend: PropTypes.bool,
