@@ -63,11 +63,6 @@ Cell.propTypes = {
   variant: PropTypes.string,
 }
 
-const CheckboxContainer = styled.div`
-  display: flex;
-  flex: 6;
-`
-
 const CellValueContainer = styled.div`
   display: flex;
   align-items: center;
@@ -115,7 +110,7 @@ const CustomLegend = ({
 
         return (
           <div key={labelIndexed} css={styles.row}>
-            <CheckboxContainer>
+            <LongContainer>
               <Checkbox
                 checked={selected.indexOf(labelIndexed) > -1}
                 name={id}
@@ -130,7 +125,7 @@ const CustomLegend = ({
                   <div data-testid={`label-${id}`} css={styles.legend(index)} />
                 </CellValueContainer>
               </Checkbox>
-            </CheckboxContainer>
+            </LongContainer>
             <Cell variant="bodySmall" value={axisTransformer(getMin(values))} />
             <Cell variant="bodySmall" value={axisTransformer(getMax(values))} />
             <Cell
