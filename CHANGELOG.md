@@ -1,3 +1,21 @@
+## [0.178.0](https://github.com/scaleway/scaleway-ui/compare/v0.177.1...v0.178.0) (2022-08-11)
+
+
+### :zap: Refactor
+
+* remove flexbox usage ([#1752](https://github.com/scaleway/scaleway-ui/issues/1752)) ([cabe0b4](https://github.com/scaleway/scaleway-ui/commit/cabe0b4ca4f88045bded79cf333784099858adf2))
+
+
+### :gear: Features
+
+* **Notice:** migrate from Box to div ([#1753](https://github.com/scaleway/scaleway-ui/issues/1753)) ([c9488b0](https://github.com/scaleway/scaleway-ui/commit/c9488b0d151ed91da76f2e681d06c02b00bade4b))
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.7 ([#1759](https://github.com/scaleway/scaleway-ui/issues/1759)) ([958924d](https://github.com/scaleway/scaleway-ui/commit/958924d3d779e9b65c09affb2d1794305827c687))
+* **devdeps:** update pnpm to v7.9.0 ([#1766](https://github.com/scaleway/scaleway-ui/issues/1766)) ([912c521](https://github.com/scaleway/scaleway-ui/commit/912c5211c90c0038a04d0220637cbc201e1f3d79))
+
 ## [0.177.1](https://github.com/scaleway/scaleway-ui/compare/v0.177.0...v0.177.1) (2022-08-11)
 
 
