@@ -2,10 +2,10 @@ import styled from '@emotion/styled'
 import { Point } from '@nivo/line'
 import PropTypes from 'prop-types'
 import { Validator } from 'react'
-import FlexBox from '../FlexBox'
 import Text from '../Text'
 
-const LineTooltipContainer = styled(FlexBox)`
+const LineTooltipContainer = styled.div`
+  display: flex;
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   border-radius: 2px;
   box-shadow: ${({ theme }) => theme.shadows.tooltip};

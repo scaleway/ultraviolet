@@ -7,8 +7,11 @@ import {
   TooltipReference,
   useTooltipState,
 } from 'reakit/Tooltip'
-import FlexBox from '../FlexBox'
 import Tag from '../Tag'
+
+const StyledContainer = styled.div`
+  display: flex;
+`
 
 const StyledTooltipReference = styled(TooltipReference)`
   color: ${({ theme }) => theme.colors.primary.text};
@@ -77,7 +80,7 @@ const TagsPoplist = ({
   }
 
   return (
-    <FlexBox>
+    <StyledContainer>
       <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag
@@ -113,7 +116,7 @@ const TagsPoplist = ({
           </Tooltip>
         </>
       )}
-    </FlexBox>
+    </StyledContainer>
   )
 }
 

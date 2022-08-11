@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
-const BarToolTipContainer = styled(FlexBox)`
+const BarToolTipContainer = styled.div`
+  display: flex;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border-radius: 2px;
   box-shadow: ${({ theme }) => theme.shadows.tooltip};

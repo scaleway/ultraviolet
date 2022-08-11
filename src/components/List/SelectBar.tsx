@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { ReactElement, ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
-import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 import { useListContext } from './context'
 
@@ -21,6 +20,12 @@ const StyledItemsCount = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary.text};
+`
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
 `
 
 type ListSelectBarProps<T> = {
@@ -51,11 +56,11 @@ function SelectBar<T extends Record<string, unknown>>({
       <Typography color="primary" fontWeight={500} ml={1}>
         {typeof text === 'function' ? text(selectedItems.length) : text}
       </Typography>
-      <FlexBox flex={1} justifyContent="flex-end">
+      <StyledContainer>
         {typeof children === 'function'
           ? children({ selectedItems, unselectAll })
           : children}
-      </FlexBox>
+      </StyledContainer>
     </ActionBar>
   ) : null
 }

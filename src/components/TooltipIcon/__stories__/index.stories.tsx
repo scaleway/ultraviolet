@@ -1,8 +1,12 @@
+import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import TooltipIcon from '..'
-import FlexBox from '../../FlexBox'
+
+const StyledContainer = styled.div`
+  display: flex;
+`
 
 export default {
   component: TooltipIcon,
@@ -26,9 +30,9 @@ const Template: Story<ComponentProps<typeof TooltipIcon>> = args => (
 export const Default = Template.bind({})
 Default.decorators = [
   DefaultStory => (
-    <FlexBox>
+    <StyledContainer>
       <DefaultStory />
-    </FlexBox>
+    </StyledContainer>
   ),
 ]
 Default.args = {
@@ -44,28 +48,28 @@ Default.play = ({ canvasElement }) => {
 
 export const Colors: Story = () => (
   <>
-    <FlexBox>
+    <StyledContainer>
       <TooltipIcon color="primary" tooltip="Scaleway is great" />
-    </FlexBox>
-    <FlexBox>
+    </StyledContainer>
+    <StyledContainer>
       <TooltipIcon color="red" tooltip="Pay attention" />
-    </FlexBox>
-    <FlexBox>
+    </StyledContainer>
+    <StyledContainer>
       <TooltipIcon color="green" tooltip="Go ahead" />
-    </FlexBox>
+    </StyledContainer>
   </>
 )
 
 export const Sizes: Story = () => (
   <>
-    <FlexBox>
+    <StyledContainer>
       <TooltipIcon size={10} tooltip="I'm Joe" />
-    </FlexBox>
-    <FlexBox>
+    </StyledContainer>
+    <StyledContainer>
       <TooltipIcon size={30} tooltip="I'm Jack" />
-    </FlexBox>
-    <FlexBox>
+    </StyledContainer>
+    <StyledContainer>
       <TooltipIcon size={40} tooltip="I'm Averell" />
-    </FlexBox>
+    </StyledContainer>
   </>
 )

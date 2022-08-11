@@ -1,8 +1,12 @@
+import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Pentagon from '..'
 import { colors } from '../../../theme'
-import { FlexBox } from '../../index'
+
+const StyledContainer = styled.div`
+  display: inline-flex;
+`
 
 export default {
   component: Pentagon,
@@ -25,23 +29,23 @@ export const Default = Template.bind({})
 export const Color = Template.bind({})
 Color.decorators = [
   () => (
-    <FlexBox inline>
+    <StyledContainer>
       <Pentagon color={colors.info.background} />
       <Pentagon color={colors.success.background} />
       <Pentagon color={colors.warning.background} />
       <Pentagon color={colors.danger.background} />
-    </FlexBox>
+    </StyledContainer>
   ),
 ]
 
 export const Size = Template.bind({})
 Size.decorators = [
   () => (
-    <FlexBox inline>
+    <StyledContainer>
       <Pentagon size="50px" />
       <Pentagon size="100px" />
       <Pentagon size="150px" />
       <Pentagon size="200px" />
-    </FlexBox>
+    </StyledContainer>
   ),
 ]

@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import FlexBox from '../FlexBox'
 
 const dotSize = 10
 
@@ -63,9 +62,11 @@ const selectedStepPosition = (length: number, width: number) =>
     `,
   )
 
-const DotWrapper = styled(FlexBox, {
+const DotWrapper = styled('div', {
   shouldForwardProp: prop => prop !== 'steps',
 })<{ steps: number }>`
+  display: flex;
+  justify-content: center;
   ${({ theme, steps }) =>
     selectedStepPosition(steps, dotSize + 2 * parseInt(theme.space[1], 10))}
 `
@@ -77,7 +78,7 @@ type DotStepsProps = {
 }
 
 const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
-  <DotWrapper justifyContent="center" steps={steps}>
+  <DotWrapper steps={steps}>
     {Array.from({ length: steps }, (_, i) => (
       <DotStep
         key={`dot-step-${i + 1}`}

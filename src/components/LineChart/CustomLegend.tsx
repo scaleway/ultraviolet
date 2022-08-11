@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import Checkbox from '../Checkbox'
-import FlexBox from '../FlexBox'
 import Text from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 
@@ -64,6 +63,21 @@ Cell.propTypes = {
   variant: PropTypes.string,
 }
 
+const CheckboxContainer = styled.div`
+  display: flex;
+  flex: 6;
+`
+
+const CellValueContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const LongContainer = styled.div`
+  display: flex;
+  flex: 6;
+`
+
 type Transformer = (value: DatumValue) => string
 
 const noop: Transformer = value => value.toString()
@@ -87,7 +101,7 @@ const CustomLegend = ({
 }: CustomLegendProps) => (
   <StyledContainer>
     <div css={styles.head}>
-      <FlexBox.Child flex="6">Legend</FlexBox.Child>
+      <LongContainer>Legend</LongContainer>
       <Cell variant="body" value="Minimum" />
       <Cell variant="body" value="Maximum" />
       <Cell variant="body" value="Average" />
@@ -101,7 +115,7 @@ const CustomLegend = ({
 
         return (
           <div key={labelIndexed} css={styles.row}>
-            <FlexBox.Child flex="6">
+            <CheckboxContainer>
               <Checkbox
                 checked={selected.indexOf(labelIndexed) > -1}
                 name={id}
@@ -109,14 +123,14 @@ const CustomLegend = ({
                   setSelected([...getSelected(id, index, selected)])
                 }
               >
-                <FlexBox direction="row" alignItems="center">
+                <CellValueContainer>
                   <Text as="span" variant="bodySmall" color="neutral">
                     {row.label}
                   </Text>
                   <div data-testid={`label-${id}`} css={styles.legend(index)} />
-                </FlexBox>
+                </CellValueContainer>
               </Checkbox>
-            </FlexBox.Child>
+            </CheckboxContainer>
             <Cell variant="bodySmall" value={axisTransformer(getMin(values))} />
             <Cell variant="bodySmall" value={axisTransformer(getMax(values))} />
             <Cell
