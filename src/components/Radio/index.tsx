@@ -151,7 +151,6 @@ const Radio = ({
     <StyledRadioContainer
       as="label"
       aria-disabled={disabled}
-      htmlFor={`${computedName}-${value}`}
       className={className}
     >
       <StyledRadio
@@ -160,7 +159,6 @@ const Radio = ({
         aria-checked={checked}
         aria-disabled={disabled}
         checked={checked}
-        id={`${computedName}-${value}`}
         onChange={onChange}
         onFocus={onFocus}
         onKeyDown={onKeyDown}
