@@ -1,3 +1,15 @@
+## [0.177.0](https://github.com/scaleway/scaleway-ui/compare/v0.176.0...v0.177.0) (2022-08-11)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.0 ([#1745](https://github.com/scaleway/scaleway-ui/issues/1745)) ([f55c2c3](https://github.com/scaleway/scaleway-ui/commit/f55c2c3cb7a4dba7c262c66b9bd7b2bbd46fd357))
+
+
+### :gear: Features
+
+* make text support italic and underline ([#1750](https://github.com/scaleway/scaleway-ui/issues/1750)) ([6b9b84e](https://github.com/scaleway/scaleway-ui/commit/6b9b84ec55897bd0ebaddad1e17be9227a82e1df))
+
 ## [0.176.0](https://github.com/scaleway/scaleway-ui/compare/v0.175.3...v0.176.0) (2022-08-10)
 
 
