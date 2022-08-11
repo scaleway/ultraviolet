@@ -1,7 +1,11 @@
+import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Separator from '..'
-import FlexBox from '../../FlexBox'
+
+const StyledContainer = styled.div`
+  display: inline-flex;
+`
 
 export default {
   component: Separator,
@@ -36,11 +40,11 @@ Thickness.parameters = {
 }
 
 export const Direction: Story<ComponentProps<typeof Separator>> = args => (
-  <FlexBox inline>
+  <StyledContainer>
     <div style={{ marginRight: 8 }}>left part</div>
     <Separator {...args} />
     <div style={{ marginLeft: 8 }}>right part</div>
-  </FlexBox>
+  </StyledContainer>
 )
 
 Direction.args = {

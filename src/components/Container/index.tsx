@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import { ReactNode, Validator } from 'react'
 import BorderedBox from '../BorderedBox'
 import Box, { BoxProps } from '../Box'
-import FlexBox from '../FlexBox'
 import Typography from '../Typography'
 
 const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
 
-const StyledTitleContainer = styled(FlexBox)`
+const StyledTitleContainer = styled.div`
+  display: flex;
   margin-bottom: ${({ theme }) => theme.space['1']};
 `
 
@@ -43,6 +43,11 @@ const StyledBox = styled(BorderedBox, {
   }
 `
 
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 type ContainerProps = ContainerBaseProps & {
   boxStyle?: SerializedStyles
   children: ReactNode
@@ -65,7 +70,7 @@ const Container = ({
   ...props
 }: ContainerProps) => (
   <StyledContainer {...props}>
-    <FlexBox justifyContent="space-between">
+    <TitleContainer>
       <StyledTitleContainer>
         <Typography variant="lead" my={0} mr={2}>
           {title}
@@ -73,7 +78,7 @@ const Container = ({
         {subtitle}
       </StyledTitleContainer>
       <div>{rightTitle}</div>
-    </FlexBox>
+    </TitleContainer>
     {header}
     <StyledBox
       css={boxStyle}
