@@ -66,6 +66,18 @@ describe('Text', () => {
         Lorem Ipsum
       </Text>,
     ))
+  test(`with italic`, () =>
+    shouldMatchEmotionSnapshot(
+      <Text as="div" variant="body" italic>
+        Lorem Ipsum
+      </Text>,
+    ))
+  test(`with underline`, () =>
+    shouldMatchEmotionSnapshot(
+      <Text as="div" variant="body" underline>
+        Lorem Ipsum
+      </Text>,
+    ))
 
   test(`with disabled`, () =>
     shouldMatchEmotionSnapshot(
