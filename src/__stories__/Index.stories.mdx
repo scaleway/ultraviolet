@@ -19,15 +19,19 @@ pnpm add @scaleway/ui
 To use the library you need to put a `ThemeProvider` which come from `@emotion/react` library:
 
 ```jsx
-import { ThemeProvider } from '@emotion/react'
-import { Typography, theme } from '@scaleway/ui'
+import { ThemeProvider, styled } from '@emotion/react'
+import { Text, theme } from '@scaleway/ui'
+
+const CenteredText = styled(Text)`
+  text-align: center;
+`
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Typography textAlign="center" variant="hero">
+      <CenteredText variant="headingLarge" as="h1">
         Welcome to Scaleway UI
-      </Typography>
+      </CenteredText>
     </ThemeProvider>
   )
 }
