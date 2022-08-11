@@ -1,3 +1,10 @@
+## [0.177.1](https://github.com/scaleway/scaleway-ui/compare/v0.177.0...v0.177.1) (2022-08-11)
+
+
+### :bug: Bug Fixes
+
+* radio and selectablecard ([#1758](https://github.com/scaleway/scaleway-ui/issues/1758)) ([7619416](https://github.com/scaleway/scaleway-ui/commit/7619416c4fe33b7a05144bd2ae89b1d56664fae0))
+
 ## [0.177.0](https://github.com/scaleway/scaleway-ui/compare/v0.176.0...v0.177.0) (2022-08-11)
 
 
