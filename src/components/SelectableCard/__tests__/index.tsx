@@ -133,6 +133,32 @@ describe('SelectableCard', () => {
       </SelectableCard>,
     ))
 
+  test('renders correctly with radio type and tooltip prop', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        onChange={() => {}}
+        name="radio"
+        type="radio"
+        value="choice"
+        tooltip="test"
+      >
+        Radio card
+      </SelectableCard>,
+    ))
+
+  test('renders correctly with checkbox type and tooltip prop', () =>
+    shouldMatchEmotionSnapshot(
+      <SelectableCard
+        onChange={() => {}}
+        name="checkbox"
+        type="checkbox"
+        value="choice"
+        tooltip="test"
+      >
+        Checkbox card
+      </SelectableCard>,
+    ))
+
   test('renders correctly with complex children', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCard
