@@ -55,7 +55,7 @@ const StyledElement = (element: typeof Radio) => styled(element, {
     }}
   }
 
-  svg {
+  input + svg {
     ${({ showTick }) => (!showTick ? `display: none;` : null)}
   }
 `
