@@ -318,6 +318,8 @@ export const icons = Object.keys(ICONS) as IconName[]
 const customViewBoxes = [
   {
     icons: [
+      'arrow-left-double',
+      'arrow-right-double',
       'arrow-left',
       'arrow-right',
       'credentials',
