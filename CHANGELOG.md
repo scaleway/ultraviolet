@@ -1,3 +1,21 @@
+## [0.178.1](https://github.com/scaleway/scaleway-ui/compare/v0.178.0...v0.178.1) (2022-08-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @testing-library/dom to v8.17.1 ([#1772](https://github.com/scaleway/scaleway-ui/issues/1772)) ([5b481f4](https://github.com/scaleway/scaleway-ui/commit/5b481f471b0927352137659f019de63ff7005c27))
+* **devdeps:** update dependency rollup to v2.77.3 ([#1770](https://github.com/scaleway/scaleway-ui/issues/1770)) ([7070ec9](https://github.com/scaleway/scaleway-ui/commit/7070ec9f1aa0e6afa5b191f40839c8a039abe085))
+
+
+### :repeat: CI
+
+* mock random globally ([#1763](https://github.com/scaleway/scaleway-ui/issues/1763)) ([a176f31](https://github.com/scaleway/scaleway-ui/commit/a176f3156054992ffea59249a6792efe588fdcef))
+
+
+### :bug: Bug Fixes
+
+* **pagination:** double arrow icon too small ([#1764](https://github.com/scaleway/scaleway-ui/issues/1764)) ([7a10b2a](https://github.com/scaleway/scaleway-ui/commit/7a10b2ac89a9efe54292c69c91986d218ae98fff))
+
 ## [0.178.0](https://github.com/scaleway/scaleway-ui/compare/v0.177.1...v0.178.0) (2022-08-11)
 
 
