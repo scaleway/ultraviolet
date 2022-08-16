@@ -39,14 +39,6 @@ const loadMore = async ({
 }
 
 describe('Pagination', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   test('should render correctly function', async () =>
     shouldMatchEmotionSnapshot(
       <Pagination

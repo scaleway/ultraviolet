@@ -2,14 +2,6 @@ import SelectableCard from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 describe('SelectableCard', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
       <SelectableCard onChange={() => {}} name="radio" value="choice">

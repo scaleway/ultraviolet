@@ -7,14 +7,6 @@ import {
 } from '../../../helpers/jestHelpers'
 
 describe('Tooltip', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   beforeEach(() => {
     jest.useFakeTimers()
   })

@@ -4,14 +4,6 @@ import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 const SampleIcon = () => <>IconMock</>
 
 describe('Button', () => {
-  beforeAll(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-  })
-
-  afterAll(() => {
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
   describe('variant', () => {
     buttonVariants.forEach(variant => {
       test(`render ${variant}`, () =>
