@@ -281,6 +281,42 @@ isError.decorators = [
   ),
 ]
 
+export const Tooltip = Template.bind({})
+Tooltip.decorators = [
+  () => (
+    <ControlValue value="label-7">
+      {({ value, onChange }) => (
+        <div style={{ display: 'flex', gap: '16px' }}>
+          <SelectableCard
+            name="label-14"
+            checked={value === 'label-14'}
+            value="label-41"
+            type="radio"
+            tooltip="Click on me!"
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              onChange(event.currentTarget.value)
+            }
+          >
+            Left Radio
+          </SelectableCard>
+          <SelectableCard
+            name="label-15"
+            checked={value === 'label-15'}
+            value="label-15"
+            type="radio"
+            tooltip="No! Click on me instead!"
+            onChange={(event: ChangeEvent<HTMLInputElement>) =>
+              onChange(event.currentTarget.value)
+            }
+          >
+            Right Radio
+          </SelectableCard>
+        </div>
+      )}
+    </ControlValue>
+  ),
+]
+
 export const ComplexChildren = Template.bind({})
 ComplexChildren.parameters = {
   docs: {

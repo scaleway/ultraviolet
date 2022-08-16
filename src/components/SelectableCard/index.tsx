@@ -7,6 +7,7 @@ import React, {
 } from 'react'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
+import Tooltip from '../Tooltip'
 
 const StyledElement = (element: typeof Radio) => styled(element, {
   shouldForwardProp: prop => !['showTick'].includes(prop),
@@ -78,6 +79,7 @@ type SelectableCardProps = {
   onFocus?: FocusEventHandler<HTMLInputElement>
   onBlur?: FocusEventHandler<HTMLInputElement>
   id?: string
+  tooltip?: string
 }
 
 const SelectableCard = ({
@@ -93,6 +95,7 @@ const SelectableCard = ({
   isError,
   onFocus,
   onBlur,
+  tooltip,
   id,
 }: SelectableCardProps) => {
   const Element = useMemo(
@@ -101,23 +104,25 @@ const SelectableCard = ({
   )
 
   return (
-    <Element
-      name={name}
-      value={value}
-      onChange={onChange}
-      showTick={showTick}
-      checked={checked}
-      disabled={disabled}
-      className={className}
-      error={isError}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      id={id}
-    >
-      {typeof children === 'function'
-        ? children({ checked, disabled })
-        : children}
-    </Element>
+    <Tooltip text={tooltip}>
+      <Element
+        name={name}
+        value={value}
+        onChange={onChange}
+        showTick={showTick}
+        checked={checked}
+        disabled={disabled}
+        className={className}
+        error={isError}
+        onFocus={onFocus}
+        onBlur={onBlur}
+        id={id}
+      >
+        {typeof children === 'function'
+          ? children({ checked, disabled })
+          : children}
+      </Element>
+    </Tooltip>
   )
 }
 
