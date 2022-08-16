@@ -20,9 +20,9 @@ export default {
 
 const Template: Story<ComponentProps<typeof Pagination>> = args => (
   <Pagination {...args}>
-    {({ pageData }: { pageData: string[] }) => (
+    {({ pageData }) => (
       <ul>
-        {pageData.map(item => (
+        {(pageData as string[]).map(item => (
           <li key={item}>{item}</li>
         ))}
       </ul>

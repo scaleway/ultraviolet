@@ -2004,6 +2004,13 @@ packages:
       stylis: 4.0.13
     dev: true
 
+  /@emotion/css-prettifier/1.0.1:
+    resolution: {integrity: sha512-cA9Dtol47mtvWKasPC+8tkh2DS0wBkX0MMHKieXGSkGyx079V7yFY85KC0pPalcIy+vi0LbMR9DNyiJBqYgJ1Q==}
+    dependencies:
+      '@emotion/memoize': 0.7.5
+      stylis: 4.0.13
+    dev: true
+
   /@emotion/css-prettifier/1.1.0:
     resolution: {integrity: sha512-ALZCKBcpC9FeA0D6HLc4Et3bwY06fOG63CqLtWwk4W/u7+bWjorRxS9yikcJ2aTmlKur/ST9eWm5ohzBmWlTOQ==}
     dependencies:
@@ -2059,7 +2066,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.18.9
-      '@emotion/css-prettifier': 1.1.0
+      '@emotion/css-prettifier': 1.0.1
       '@types/jest': 28.1.7
       chalk: 4.1.2
       specificity: 0.4.1
@@ -12507,7 +12514,7 @@ packages:
       form-data: 4.0.0
       html-encoding-sniffer: 3.0.0
       http-proxy-agent: 5.0.0
-      https-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.1
       is-potential-custom-element-name: 1.0.1
       nwsapi: 2.2.0
       parse5: 6.0.1
