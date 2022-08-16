@@ -1,3 +1,15 @@
+## [0.178.3](https://github.com/scaleway/scaleway-ui/compare/v0.178.2...v0.178.3) (2022-08-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency size-limit to v8.0.1 ([#1769](https://github.com/scaleway/scaleway-ui/issues/1769)) ([954f15f](https://github.com/scaleway/scaleway-ui/commit/954f15fd23c748eca1d4e8e52d2165094691ee94))
+
+
+### :bug: Bug Fixes
+
+* **SelectableCard:** avoid hidding all children svg ([#1773](https://github.com/scaleway/scaleway-ui/issues/1773)) ([8e14af6](https://github.com/scaleway/scaleway-ui/commit/8e14af617cefb355599f491f571ebbe0f3183514))
+
 ## [0.178.2](https://github.com/scaleway/scaleway-ui/compare/v0.178.1...v0.178.2) (2022-08-16)
 
 
