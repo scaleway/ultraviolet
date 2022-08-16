@@ -39,7 +39,7 @@ specifiers:
   '@semantic-release/github': 8.0.5
   '@semantic-release/npm': 9.0.1
   '@semantic-release/release-notes-generator': 10.0.3
-  '@size-limit/file': 8.0.0
+  '@size-limit/file': 8.0.1
   '@size-limit/preset-big-lib': 8.0.0
   '@storybook/addon-a11y': 6.5.10
   '@storybook/addon-actions': 6.5.10
@@ -180,7 +180,7 @@ devDependencies:
   '@semantic-release/github': 8.0.5_semantic-release@19.0.3
   '@semantic-release/npm': 9.0.1_semantic-release@19.0.3
   '@semantic-release/release-notes-generator': 10.0.3_semantic-release@19.0.3
-  '@size-limit/file': 8.0.0_size-limit@8.0.0
+  '@size-limit/file': 8.0.1_size-limit@8.0.0
   '@size-limit/preset-big-lib': 8.0.0_size-limit@8.0.0
   '@storybook/addon-a11y': 6.5.10_sfoxds7t5ydpegc3knd667wn6m
   '@storybook/addon-actions': 6.5.10_sfoxds7t5ydpegc3knd667wn6m
@@ -3614,6 +3614,16 @@ packages:
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
       size-limit: 8.0.0
+    dependencies:
+      semver: 7.3.7
+      size-limit: 8.0.0
+    dev: true
+
+  /@size-limit/file/8.0.1_size-limit@8.0.0:
+    resolution: {integrity: sha512-kwgc5UJQIz5qbRow3atSiW2K7vEIIw4DelT4WLn09cOwcJgWs82Imgz2UqVivHJmCisn/ltPjT4qmxaDfjFflw==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      size-limit: 8.0.1
     dependencies:
       semver: 7.3.7
       size-limit: 8.0.0
