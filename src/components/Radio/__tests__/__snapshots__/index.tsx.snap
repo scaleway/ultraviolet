@@ -125,13 +125,14 @@ exports[`Radio renders correctly 1`] = `
 <label
     aria-disabled="false"
     class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
     <input
       aria-checked="false"
       aria-disabled="false"
       aria-invalid="false"
       class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="id-d9i348"
+      id="radio-choice"
       name="radio"
       tabindex="0"
       type="radio"
@@ -293,6 +294,7 @@ exports[`Radio renders correctly when checked 1`] = `
 <label
     aria-disabled="false"
     class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
     <input
       aria-checked="true"
@@ -300,7 +302,7 @@ exports[`Radio renders correctly when checked 1`] = `
       aria-invalid="false"
       checked=""
       class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="id-d9i348"
+      id="radio-choice"
       name="radio"
       tabindex="0"
       type="radio"
@@ -462,6 +464,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 <label
     aria-disabled="true"
     class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
     <input
       aria-checked="false"
@@ -469,7 +472,7 @@ exports[`Radio renders correctly when disabled 1`] = `
       aria-invalid="false"
       class="cache-h7u1sr-StyledRadio e1duuirp1"
       disabled=""
-      id="id-d9i348"
+      id="radio-choice"
       name="radio"
       style="pointer-events: none;"
       type="radio"
@@ -631,13 +634,14 @@ exports[`Radio renders correctly when error 1`] = `
 <label
     aria-disabled="false"
     class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-choice"
   >
     <input
       aria-checked="false"
       aria-disabled="false"
       aria-invalid="true"
       class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="id-d9i348"
+      id="radio-choice"
       name="radio"
       tabindex="0"
       type="radio"
@@ -799,6 +803,7 @@ exports[`Radio renders without name 1`] = `
 <label
     aria-disabled="true"
     class="e1duuirp0 e1g1zfwd0 cache-16xheb9-StyledText-variantStyles-StyledRadioContainer"
+    for="radio-6c756c756c756c756c756c756c756c75-choice"
   >
     <input
       aria-checked="false"
@@ -806,7 +811,7 @@ exports[`Radio renders without name 1`] = `
       aria-invalid="false"
       class="cache-h7u1sr-StyledRadio e1duuirp1"
       disabled=""
-      id="id-d9i348"
+      id="radio-6c756c756c756c756c756c756c756c75-choice"
       name="radio-6c756c756c756c756c756c756c756c75"
       style="pointer-events: none;"
       type="radio"

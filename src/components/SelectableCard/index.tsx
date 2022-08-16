@@ -16,6 +16,7 @@ const StyledElement = (element: typeof Radio) => styled(element, {
   align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
+  transition: border-color 200ms ease, box-shadow 200ms ease;
 
   ${({ theme, checked, disabled, error }) => {
     if (error)
