@@ -66,7 +66,7 @@ specifiers:
   '@testing-library/react': 12.1.5
   '@testing-library/user-event': 13.5.0
   '@types/intl-tel-input': 17.0.5
-  '@types/jest': 27.5.2
+  '@types/jest': 28.1.7
   '@types/jest-axe': 3.5.4
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
@@ -165,14 +165,14 @@ devDependencies:
   '@emotion/babel-plugin': 11.10.0_@babel+core@7.18.10
   '@emotion/cache': 11.10.1
   '@emotion/eslint-plugin': 11.10.0_eslint@8.21.0
-  '@emotion/jest': 11.10.0_@types+jest@27.5.2
+  '@emotion/jest': 11.10.0_@types+jest@28.1.7
   '@emotion/react': 11.10.0_dix7ey6gbjrwvo6teqhxmfkyn4
   '@emotion/styled': 11.10.0_nbf7fryyhih6f2mhpaw3jzv2d4
   '@rollup/plugin-babel': 5.3.1_56fnebo2rl23pzm3cph57q7t7i
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.77.3
   '@rollup/plugin-url': 7.0.0_rollup@2.77.3
   '@scaleway/eslint-config-react': 3.5.0_qugx7qdu5zevzvxaiqyxfiwquq
-  '@scaleway/jest-helpers': 1.2.8_ut53jbcdha2wkkp7zjondxn7wa
+  '@scaleway/jest-helpers': 1.2.8_ziswxchyl4g5ll3gilxbyjd67i
   '@scaleway/use-i18n': 3.3.16_sfoxds7t5ydpegc3knd667wn6m
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
@@ -206,7 +206,7 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   '@testing-library/user-event': 13.5.0_wl4iynrlixafokvgqnhzlvigei
-  '@types/jest': 27.5.2
+  '@types/jest': 28.1.7
   '@types/jest-axe': 3.5.4
   '@types/node': 17.0.31
   '@types/prop-types': 15.7.5
@@ -2101,7 +2101,7 @@ packages:
     dependencies:
       '@emotion/memoize': 0.8.0
 
-  /@emotion/jest/11.10.0_@types+jest@27.5.2:
+  /@emotion/jest/11.10.0_@types+jest@28.1.7:
     resolution: {integrity: sha512-jeevEzauWrjDPWt9BGITjKzgLd31Q6kZ35gmH77f+LSaU/Ie1bFfxroum0nQNPEHS+kUxh6unv9DQIw+DEr5Ug==}
     peerDependencies:
       '@types/jest': ^26.0.14 || ^27.0.0 || ^28.0.0
@@ -2114,7 +2114,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       '@emotion/css-prettifier': 1.1.0
-      '@types/jest': 27.5.2
+      '@types/jest': 28.1.7
       chalk: 4.1.2
       specificity: 0.4.1
       stylis: 4.0.13
@@ -3395,13 +3395,13 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/1.2.8_ut53jbcdha2wkkp7zjondxn7wa:
+  /@scaleway/jest-helpers/1.2.8_ziswxchyl4g5ll3gilxbyjd67i:
     resolution: {integrity: sha512-rnn3lp5PDIj8ASYfv2NaKL0BaSBTDxOSkyXZ6k3skpum85WnWKCC1MSr4FTsq3JhdEOiaGw4eXokdHX2wu5DqQ==}
     peerDependencies:
       react: ^17.0.1 || 17
     dependencies:
       '@emotion/cache': 11.10.0
-      '@emotion/jest': 11.10.0_@types+jest@27.5.2
+      '@emotion/jest': 11.10.0_@types+jest@28.1.7
       '@emotion/react': 11.10.0_dix7ey6gbjrwvo6teqhxmfkyn4
       '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
       react: 17.0.2
@@ -5601,15 +5601,15 @@ packages:
   /@types/jest-axe/3.5.4:
     resolution: {integrity: sha512-S0M+Etke9v3o0PjjfA4ijoU8G0+eI+lblpGYFYw2t+PPPnPPzJBX7UKLoQjz1SfIp+Hf/bNMFvoBX8zlFVzdrQ==}
     dependencies:
-      '@types/jest': 27.5.2
+      '@types/jest': 28.1.7
       axe-core: 3.5.6
     dev: true
 
-  /@types/jest/27.5.2:
-    resolution: {integrity: sha512-mpT8LJJ4CMeeahobofYWIjFo0xonRS/HfxnVEPMPFSQdGUt1uHCnoPT7Zhb+sjDU2wz0oKV0OLUR0WzrHNgfeA==}
+  /@types/jest/28.1.7:
+    resolution: {integrity: sha512-acDN4VHD40V24tgu0iC44jchXavRNVFXQ/E6Z5XNsswgoSO/4NgsXoEYmPUGookKldlZQyIpmrEXsHI9cA3ZTA==}
     dependencies:
-      jest-matcher-utils: 27.5.1
-      pretty-format: 27.5.1
+      expect: 28.1.3
+      pretty-format: 28.1.3
     dev: true
 
   /@types/jquery/3.5.14:
@@ -5773,7 +5773,7 @@ packages:
   /@types/testing-library__jest-dom/5.14.5:
     resolution: {integrity: sha512-SBwbxYoyPIvxHbeHxTZX2Pe/74F/tX2/D3mMvzabdeJ25bBojfW0TyB8BHrbq/9zaaKICJZjLP+8r6AeZMFCuQ==}
     dependencies:
-      '@types/jest': 27.5.2
+      '@types/jest': 28.1.7
     dev: true
 
   /@types/tough-cookie/4.0.2:
@@ -12219,16 +12219,6 @@ packages:
 
   /jest-matcher-utils/27.0.2:
     resolution: {integrity: sha512-Qczi5xnTNjkhcIB0Yy75Txt+Ez51xdhOxsukN7awzq2auZQGPHcQrJ623PZj0ECDEMOk2soxWx05EXdXGd1CbA==}
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
-    dependencies:
-      chalk: 4.1.2
-      jest-diff: 27.5.1
-      jest-get-type: 27.5.1
-      pretty-format: 27.5.1
-    dev: true
-
-  /jest-matcher-utils/27.5.1:
-    resolution: {integrity: sha512-z2uTx/T6LBaCoNWNFWwChLBKYxTMcGBRjAt+2SbP929/Fflb9aa5LGma654Rz8z9HLxsrUaYzxE9T/EFIL/PAw==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dependencies:
       chalk: 4.1.2
