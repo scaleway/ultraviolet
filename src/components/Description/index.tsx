@@ -18,10 +18,11 @@ const Desc = styled('dd', {
   color: ${({ theme }) => theme.colors.neutral.text};
   margin: ${({ theme }) => theme.space['1']} 0 0 0;
   ${({ capitalize }) =>
-    capitalize &&
-    css`
-      text-transform: capitalize;
-    `}
+    capitalize
+      ? css`
+          text-transform: capitalize;
+        `
+      : undefined}
 `
 
 interface DescriptionProps {
@@ -40,39 +41,42 @@ const BareDescription = styled('dl', {
   margin: 0;
 
   ${({ inline }) =>
-    inline &&
-    css`
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      ${Desc} {
-        margin: 0 0 0 8px;
-      }
-    `};
+    inline
+      ? css`
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          ${Desc} {
+            margin: 0 0 0 8px;
+          }
+        `
+      : undefined};
 
   ${({ ellipsis, width }) =>
-    ellipsis &&
-    css`
-      ${Desc} {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: ${width};
-      }
-    `}
+    ellipsis
+      ? css`
+          ${Desc} {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: ${width};
+          }
+        `
+      : undefined}
 
   ${({ userSelect, theme }) =>
-    userSelect &&
-    css`
-      ${Desc} {
-        user-select: all;
+    userSelect
+      ? css`
+          ${Desc} {
+            user-select: all;
 
-        &::selection {
-          color: ${theme.colors.primary.textStrong};
-          background: ${theme.colors.primary.backgroundStrong};
-        }
-      }
-    `}
+            &::selection {
+              color: ${theme.colors.primary.textStrong};
+              background: ${theme.colors.primary.backgroundStrong};
+            }
+          }
+        `
+      : undefined}
 `
 
 type DescriptionType = typeof BareDescription & {
