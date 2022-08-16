@@ -1,3 +1,16 @@
+## [0.178.2](https://github.com/scaleway/scaleway-ui/compare/v0.178.1...v0.178.2) (2022-08-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @size-limit/file to v8.0.1 ([#1767](https://github.com/scaleway/scaleway-ui/issues/1767)) ([fd3f783](https://github.com/scaleway/scaleway-ui/commit/fd3f7831905b9e712d9944f44de32539a0f47dae))
+* **devdeps:** update dependency @types/jest to v28 ([#1538](https://github.com/scaleway/scaleway-ui/issues/1538)) ([01be0f3](https://github.com/scaleway/scaleway-ui/commit/01be0f30c0998c9dfdac20ec6be1fe247e3c1b5a))
+
+
+### :bug: Bug Fixes
+
+* **SelectableCard:** support tooltip ([#1771](https://github.com/scaleway/scaleway-ui/issues/1771)) ([aca579e](https://github.com/scaleway/scaleway-ui/commit/aca579ea7c0784d405e0367cbff8c4a7827e7e0d))
+
 ## [0.178.1](https://github.com/scaleway/scaleway-ui/compare/v0.178.0...v0.178.1) (2022-08-16)
 
 
