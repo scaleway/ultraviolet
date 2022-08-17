@@ -175,8 +175,10 @@ export const Header = () => {
           tabIndex={label ? 0 : undefined}
           aria-label={`sort ${label ?? index}`}
           disabled={isLoading}
-          onClick={e => (label ? onSortEvent(e, index, sort) : undefined)}
-          onKeyPress={e => onSortEvent(e, index, sort)}
+          onClick={event =>
+            label ? onSortEvent(event, index, sort) : undefined
+          }
+          onKeyPress={event => onSortEvent(event, index, sort)}
           style={{
             cursor: sort ? 'pointer' : 'default',
             width: width ?? undefined,

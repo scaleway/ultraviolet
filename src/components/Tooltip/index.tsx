@@ -280,9 +280,7 @@ const Tooltip = ({
   }, [children, className, generatedId, onMouseEvent])
 
   if (!text) {
-    if (typeof children === 'function') {
-      return null
-    }
+    if (typeof children === 'function') return null
 
     return <>{children}</>
   }
