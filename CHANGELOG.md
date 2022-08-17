@@ -1,3 +1,15 @@
+## [0.179.0](https://github.com/scaleway/scaleway-ui/compare/v0.178.3...v0.179.0) (2022-08-17)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.1 ([#1774](https://github.com/scaleway/scaleway-ui/issues/1774)) ([9cab428](https://github.com/scaleway/scaleway-ui/commit/9cab428c6f06bda0597f4ed4184577212330e91a))
+
+
+### :gear: Features
+
+* react 18 ([#1775](https://github.com/scaleway/scaleway-ui/issues/1775)) ([8cb0007](https://github.com/scaleway/scaleway-ui/commit/8cb000712810ca9a0b96fa384f0ee31cb71aae9b)), closes [#1642](https://github.com/scaleway/scaleway-ui/issues/1642) [#1645](https://github.com/scaleway/scaleway-ui/issues/1645)
+
 ## [0.178.3](https://github.com/scaleway/scaleway-ui/compare/v0.178.2...v0.178.3) (2022-08-16)
 
 
