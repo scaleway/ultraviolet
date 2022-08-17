@@ -72,7 +72,7 @@ specifiers:
   '@types/prop-types': 15.7.5
   '@types/react': 18.0.14
   '@types/react-datepicker': 4.4.2
-  '@types/react-dom': 18.0.5
+  '@types/react-dom': 18.0.6
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   '@xstyled/emotion': 2.5.0
@@ -212,7 +212,7 @@ devDependencies:
   '@types/prop-types': 15.7.5
   '@types/react': 18.0.14
   '@types/react-datepicker': 4.4.2_react@18.2.0
-  '@types/react-dom': 18.0.5
+  '@types/react-dom': 18.0.6
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   babel-loader: 8.2.5_xc6oct4hcywdrbo4ned6ytbybm
@@ -5354,7 +5354,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.18.9
       '@testing-library/dom': 8.17.1
-      '@types/react-dom': 18.0.5
+      '@types/react-dom': 18.0.6
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
@@ -5635,27 +5635,34 @@ packages:
     resolution: {integrity: sha512-g8DhWvYmaIMLzVrIEVLXncylyImyBaoPsEUr3yR13JDaaHoebhDorqnVv4tLkNGa8SjBB8SAOQvxD5jaPNBX8A==}
     dependencies:
       '@popperjs/core': 2.11.2
-      '@types/react': 18.0.14
+      '@types/react': 18.0.17
       date-fns: 2.29.1
       react-popper: 2.2.5_ihrwprzaii4pnuvtmj5eh6b6gu
     transitivePeerDependencies:
       - react
     dev: true
 
-  /@types/react-dom/18.0.5:
-    resolution: {integrity: sha512-OWPWTUrY/NIrjsAPkAk1wW9LZeIjSvkXRhclsFO8CZcZGCOg2G0YZy4ft+rOyYxy8B7ui5iZzi9OkDebZ7/QSA==}
+  /@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 18.0.14
+      '@types/react': 18.0.17
     dev: true
 
   /@types/react-transition-group/4.4.4:
     resolution: {integrity: sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug==}
     dependencies:
-      '@types/react': 18.0.14
+      '@types/react': 18.0.17
     dev: false
 
   /@types/react/18.0.14:
     resolution: {integrity: sha512-x4gGuASSiWmo0xjDLpm5mPb52syZHJx02VKbqUKdLmKtAwIh63XClGsiTI1K6DO5q7ox4xAsQrU+Gl3+gGXF9Q==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.0
+
+  /@types/react/18.0.17:
+    resolution: {integrity: sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
