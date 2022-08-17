@@ -76,8 +76,10 @@ describe('NavigationStepper', () => {
     shouldMatchEmotionSnapshot(
       <NavigationStepper step={2}>
         <NavigationStepper.Step>First</NavigationStepper.Step>
+        {/* @ts-expect-error intended error type */}
         <NavigationStepper.Step>{() => 'wtf'}</NavigationStepper.Step>
         <NavigationStepper.Step>
+          {/* @ts-expect-error intended error type */}
           {() => () => () => () => {}}
         </NavigationStepper.Step>
       </NavigationStepper>,

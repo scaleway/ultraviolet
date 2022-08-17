@@ -168,6 +168,7 @@ const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   ) as unknown as React.RefObject<HTMLButtonElement>
 
   return (
+    // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
     <DialogDisclosure {...dialog} ref={innerRef}>
       {disclosureProps => React.cloneElement(target, disclosureProps)}
     </DialogDisclosure>
@@ -237,7 +238,7 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-type ModalProps = Partial<DialogProps> &
+type ModalProps = Partial<Omit<DialogProps, 'children'>> &
   Partial<DialogState> & {
     animation?: ModalAnimation
     ariaLabel?: string
@@ -253,7 +254,7 @@ type ModalProps = Partial<DialogProps> &
     opened?: boolean
     placement?: ModalPlacement
     width?: ModalWidth
-    children: ReactNode | ((args: DialogStateReturn) => JSX.Element)
+    children: ReactNode | ((args: DialogStateReturn) => ReactNode)
   }
 
 const Modal = ({
