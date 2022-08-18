@@ -1,3 +1,17 @@
+## [0.179.1](https://github.com/scaleway/scaleway-ui/compare/v0.179.0...v0.179.1) (2022-08-18)
+
+
+### :bug: Bug Fixes
+
+* remove phone input component ([#1787](https://github.com/scaleway/scaleway-ui/issues/1787)) ([67e1f94](https://github.com/scaleway/scaleway-ui/commit/67e1f94345cca2ea11bcf15d446867c4fb4fd0c6))
+
+
+### :package: Chore
+
+* correct lockfile ([5c1c2a5](https://github.com/scaleway/scaleway-ui/commit/5c1c2a567327933410c635074457d8706d5f0446))
+* **devdeps:** update dependency @types/react to v18.0.17 ([#1785](https://github.com/scaleway/scaleway-ui/issues/1785)) ([490ba9d](https://github.com/scaleway/scaleway-ui/commit/490ba9dd4ac2206735d21b6da29f4949d88f5a18))
+* **devdeps:** update dependency @types/react-dom to v18.0.6 ([#1786](https://github.com/scaleway/scaleway-ui/issues/1786)) ([48a991b](https://github.com/scaleway/scaleway-ui/commit/48a991b1fe8eec52d34b12e537984c2961bd2057))
+
 ## [0.179.0](https://github.com/scaleway/scaleway-ui/compare/v0.178.3...v0.179.0) (2022-08-17)
 
 
