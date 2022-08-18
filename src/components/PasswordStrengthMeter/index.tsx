@@ -93,7 +93,7 @@ const PasswordStrengthMeter = ({
 
   return (
     <div title={title} role="alert" aria-live="polite">
-      <StyledTitle variant="bodySmallStrong" as="h3">
+      <StyledTitle variant="bodySmallStrong" as="p">
         {title}
       </StyledTitle>
 
