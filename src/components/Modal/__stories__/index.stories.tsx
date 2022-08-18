@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Modal, { MODAL_ANIMATION, MODAL_PLACEMENT, MODAL_WIDTH } from '..'
-import { Button, Switch as SWUISwitch } from '../..'
+import { Button, Toggle as SWUISwitch } from '../..'
 
 export default {
   component: Modal,

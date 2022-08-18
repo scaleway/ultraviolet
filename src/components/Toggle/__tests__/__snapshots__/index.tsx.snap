@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle renders correctly 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly label 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-1jasoly-StyledLabelContent {
+  margin-left: 8px;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+    <span
+      class="cache-1jasoly-StyledLabelContent e6hn8de0"
+    >
+      This is a label
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly when checked 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="true"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="true"
+        aria-label="test"
+        checked=""
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly when disabled 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="true"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="true"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        disabled=""
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with complex label 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+    <span>
+      Custom label rendered
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with custom labels on right 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-1jasoly-StyledLabelContent {
+  margin-left: 8px;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+    <span
+      class="cache-1jasoly-StyledLabelContent e6hn8de0"
+    >
+      This is a label
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with labels on left 1`] = `
+<DocumentFragment>
+  .cache-zmnhj0-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-zmnhj0-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-zmnhj0-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1lufvr8-StyledLabelContent {
+  margin-right: 8px;
+}
+
+.cache-15xf2fd-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-15xf2fd-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-15xf2fd-StyledToggle:focus-within,
+.cache-15xf2fd-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus-within,
+.cache-15xf2fd-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-15xf2fd-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-zmnhj0-StyledLabel e6hn8de1"
+    data-size="large"
+  >
+    <span
+      class="cache-1lufvr8-StyledLabelContent e6hn8de0"
+    >
+      This is a label
+    </span>
+    <div
+      class="cache-15xf2fd-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="large"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with non default size 1`] = `
+<DocumentFragment>
+  .cache-1gx30s3-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cache-1gx30s3-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+  width: 16.53px;
+}
+
+.cache-1gx30s3-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-i3ps10-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 34px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 40px;
+  height: 20px;
+}
+
+.cache-i3ps10-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-i3ps10-StyledToggle:focus-within,
+.cache-i3ps10-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-i3ps10-StyledToggle[data-disabled='false']:active:after {
+  width: 16.53px;
+}
+
+.cache-i3ps10-StyledToggle[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-i3ps10-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-i3ps10-StyledToggle[data-checked='true']:focus-within,
+.cache-i3ps10-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-i3ps10-StyledToggle[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-i3ps10-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-1gx30s3-StyledLabel e6hn8de1"
+    data-size="small"
+  >
+    <div
+      class="cache-i3ps10-StyledToggle e6hn8de3"
+      data-checked="false"
+      data-disabled="false"
+      data-size="small"
+    >
+      <input
+        aria-checked="false"
+        aria-label="test"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        id="test"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
