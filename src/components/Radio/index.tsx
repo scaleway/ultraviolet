@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { InputHTMLAttributes, ReactNode, useMemo } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
 import { getUUID } from '../../utils'
-import Typography from '../Typography'
 
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -76,7 +75,7 @@ const StyledRadio = styled(ReakitRadio)`
   }
 `
 
-const StyledRadioContainer = styled(Typography)`
+const StyledRadioContainer = styled.label`
   position: relative;
   display: flex;
   align-items: flex-start;

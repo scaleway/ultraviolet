@@ -8,9 +8,9 @@ import DatePicker, {
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import Icon from '../Icon'
 import Separator from '../Separator'
+import Text from '../Text'
 import TextBox from '../TextBox'
 import Touchable from '../Touchable'
-import Typography from '../Typography'
 
 const PREFIX = '.react-datepicker'
 
@@ -138,6 +138,12 @@ const TopHeaderDiv = styled.div`
   background-color: ${({ theme }) =>
     theme.colors.neutral.backgroundWeakElevated};
 `
+
+const StyledText = styled(Text)`
+  text-transform: capitalize;
+  margin-right: ${({ theme }) => theme.space['1']};
+`
+
 type DateInputProps = Pick<
   ReactDatePickerProps<string>,
   | 'autoFocus'
@@ -236,12 +242,12 @@ const DateInput = ({
           }) => (
             <>
               <TopHeaderDiv>
-                <Typography variant="bodyA" mr={1} textTransform="capitalize">
+                <StyledText variant="body" as="p">
                   {new Date(date).toLocaleString(localeCode, {
                     month: 'long',
                     year: 'numeric',
                   })}
-                </Typography>
+                </StyledText>
               </TopHeaderDiv>
               <StyledSpan>
                 <Touchable

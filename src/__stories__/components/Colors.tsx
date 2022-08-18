@@ -3,12 +3,20 @@ import styled from '@emotion/styled'
 import { readableColor } from 'polished'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
-import Typography from '../../components/Typography'
+import Text from '../../components/Text'
 import lightTheme, { Color } from '../../theme'
 import ThemeWrapper from './ThemeWrapper'
 
 const StyledSeparator = styled(Separator)`
   margin: ${({ theme }) => `${theme.space['3']} 0`};
+`
+
+const CapitalizedText = styled(Text)`
+  text-transform: capitalize;
+`
+
+const BlackOrWhiteText = styled(Text)<{ isBackgroundDark: boolean }>`
+  color: ${({ isBackgroundDark }) => (isBackgroundDark ? '#fff' : '#000')};
 `
 
 type AvailableContexts = keyof typeof lightTheme['colors'][Color]
@@ -25,9 +33,9 @@ const Colors = () => {
 
         return (
           <>
-            <Typography variant="title" style={{ textTransform: 'capitalize' }}>
+            <CapitalizedText variant="headingSmall" as="h3">
               {sentiment}
-            </Typography>
+            </CapitalizedText>
             <div style={{ display: 'flex', gap: 24, marginTop: 16 }}>
               <div
                 style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
@@ -46,17 +54,32 @@ const Colors = () => {
                         width: 275,
                       }}
                     >
-                      <Typography
-                        color={readableColor(theme.colors[sentiment][context])}
+                      <BlackOrWhiteText
+                        variant="body"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {context}
-                      </Typography>
-                      <Typography
-                        variant="tiny"
-                        color={readableColor(theme.colors[sentiment][context])}
+                      </BlackOrWhiteText>
+                      <BlackOrWhiteText
+                        variant="caption"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {theme.colors[sentiment][context]}
-                      </Typography>
+                      </BlackOrWhiteText>
                     </BorderedBox>
                   ))}
               </div>
@@ -77,17 +100,33 @@ const Colors = () => {
                         width: 275,
                       }}
                     >
-                      <Typography
-                        color={readableColor(theme.colors[sentiment][context])}
+                      <BlackOrWhiteText
+                        variant="body"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {context}
-                      </Typography>
-                      <Typography
-                        variant="tiny"
-                        color={readableColor(theme.colors[sentiment][context])}
+                      </BlackOrWhiteText>
+
+                      <BlackOrWhiteText
+                        variant="caption"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {theme.colors[sentiment][context]}
-                      </Typography>
+                      </BlackOrWhiteText>
                     </BorderedBox>
                   ))}
               </div>
@@ -108,17 +147,33 @@ const Colors = () => {
                         width: 275,
                       }}
                     >
-                      <Typography
-                        color={readableColor(theme.colors[sentiment][context])}
+                      <BlackOrWhiteText
+                        variant="body"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {context}
-                      </Typography>
-                      <Typography
-                        variant="tiny"
-                        color={readableColor(theme.colors[sentiment][context])}
+                      </BlackOrWhiteText>
+
+                      <BlackOrWhiteText
+                        variant="caption"
+                        as="p"
+                        isBackgroundDark={
+                          readableColor(
+                            theme.colors[sentiment][context],
+                            '#000',
+                            '#fff',
+                          ) === '#fff'
+                        }
                       >
                         {theme.colors[sentiment][context]}
-                      </Typography>
+                      </BlackOrWhiteText>
                     </BorderedBox>
                   ))}
               </div>

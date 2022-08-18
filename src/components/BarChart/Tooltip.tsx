@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import Typography from '../Typography'
+import Text from '../Text'
 
 const BarToolTipContainer = styled.div`
   display: flex;
@@ -37,10 +37,12 @@ const BarChartToolTip = ({
       <BarColorSquare color={color} />
     </div>
     <div>
-      <Typography variant="bodyA" fontWeight={600} color="primary">
+      <Text variant="bodyStronger" as="p" color="primary">
         {formattedValue}
-      </Typography>
-      <Typography variant="bodyC">{indexValue}</Typography>
+      </Text>
+      <Text variant="bodySmall" as="p">
+        {indexValue}
+      </Text>
     </div>
   </BarToolTipContainer>
 )

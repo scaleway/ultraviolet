@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
-import Typography from '../Typography'
+import Text from '../Text'
 import { useListContext } from './context'
 
 const StyledCheckbox = styled(Checkbox)`
@@ -20,6 +20,10 @@ const StyledItemsCount = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary.text};
+`
+
+const MargedText = styled(Text)`
+  margin-left: ${({ theme }) => theme.space['1']};
 `
 
 const StyledContainer = styled.div`
@@ -53,9 +57,9 @@ function SelectBar<T extends Record<string, unknown>>({
     <ActionBar {...props} role="dialog" aria-modal="true">
       <StyledCheckbox checked onChange={unselectAll} autoFocus />
       <StyledItemsCount>{selectedItems.length}</StyledItemsCount>
-      <Typography color="primary" fontWeight={500} ml={1}>
+      <MargedText color="primary" variant="bodyStrong" as="p">
         {typeof text === 'function' ? text(selectedItems.length) : text}
-      </Typography>
+      </MargedText>
       <StyledContainer>
         {typeof children === 'function'
           ? children({ selectedItems, unselectAll })

@@ -21,8 +21,8 @@ import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'
 import Separator from '../Separator'
+import Text from '../Text'
 import Touchable from '../Touchable'
-import Typography from '../Typography'
 
 const inputSizes = {
   medium: {
@@ -356,6 +356,15 @@ type TextBoxProps = {
 ) &
   XStyledProps
 
+const UnitLabel = styled(Text)<{
+  alignSelf: 'center' | 'flex-end' | 'flex-start'
+}>`
+  display: flex;
+  padding: ${({ theme: { space } }) => space['1']} 0;
+  align-self: ${({ alignSelf }) => alignSelf};
+  line-height: 18px;
+`
+
 const TextBox = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
   TextBoxProps
@@ -540,17 +549,17 @@ const TextBox = forwardRef<
         return (
           <>
             <StyledSeparator direction="vertical" />
-            <Typography
-              variant="bodyB"
-              display="flex"
+            <UnitLabel
+              variant="bodySmall"
+              as="p"
               alignSelf={unitAlignment}
-              py={1}
+              prominence="weak"
             >
               {unit}
               {required && (
                 <Icon ml="2px" name="asterisk" color="warning" size={8} />
               )}
-            </Typography>
+            </UnitLabel>
           </>
         )
       if (required) return <Icon name="asterisk" color="warning" size={10} />

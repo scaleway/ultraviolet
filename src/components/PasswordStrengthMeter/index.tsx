@@ -2,18 +2,18 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { useCallback, useEffect, useState } from 'react'
-import Typography from '../Typography'
+import Text from '../Text'
 
-const StyledTitle = styled(Typography)`
+const StyledTitle = styled(Text)`
   display: inline-block;
   vertical-align: top;
   line-height: 22px;
-  font-weight: 500;
+  color: ${({ theme }) => theme.colors.neutral.text};
 `
-const StyledStrength = styled(Typography)`
+const StyledStrength = styled(Text)<{ strength: Strength }>`
   float: right;
   vertical-align: top;
-  font-weight: 500;
+  color: ${({ strength }) => strength.color};
 `
 
 const StyledWrapper = styled.div`
@@ -93,11 +93,15 @@ const PasswordStrengthMeter = ({
 
   return (
     <div title={title} role="alert" aria-live="polite">
-      <StyledTitle variant="bodyB" color={theme.colors.neutral.text}>
+      <StyledTitle variant="bodySmallStrong" as="h3">
         {title}
       </StyledTitle>
 
-      <StyledStrength as="span" variant="bodyB" color={strength[score]?.color}>
+      <StyledStrength
+        as="span"
+        variant="bodySmallStrong"
+        strength={strength[score]}
+      >
         {strength[score]?.t}
       </StyledStrength>
 

@@ -20,7 +20,7 @@ import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Placeholder from '../Placeholder'
-import Typography from '../Typography'
+import Text from '../Text'
 import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
@@ -68,6 +68,11 @@ const StyledActivityContainer = styled.div`
   display: flex;
   justify-content: center;
   margin: ${({ theme }) => `${theme.space['2']} 0`};
+`
+
+const CenteredText = styled(Text)`
+  text-align: center;
+  margin: ${({ theme }) => theme.space['2']};
 `
 
 function Body<DataType extends Record<string, unknown>>({
@@ -416,9 +421,9 @@ function List<DataType extends Record<string, unknown>>(
     if (emptyListComponent) return emptyListComponent
 
     return (
-      <Typography variant="bodyA" m={2} textAlign="center">
+      <CenteredText variant="body" as="p">
         This list is empty.
-      </Typography>
+      </CenteredText>
     )
   }, [emptyListComponent])
 

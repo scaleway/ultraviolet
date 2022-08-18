@@ -4,7 +4,7 @@ import { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import PropTypes from 'prop-types'
 import { ReactNode, Validator, useCallback, useState } from 'react'
-import Typography from '../Typography'
+import Text from '../Text'
 import Legends from './Legends'
 import { Data } from './types'
 
@@ -67,7 +67,9 @@ const PieChart = ({
     () =>
       emptyLegend ? (
         <EmptyLegend>
-          <Typography variant="bodyA">{emptyLegend}</Typography>
+          <Text variant="body" as="p">
+            {emptyLegend}
+          </Text>
         </EmptyLegend>
       ) : null,
     [emptyLegend],

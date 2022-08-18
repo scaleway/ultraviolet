@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Alert, { alertTypes, alertVariants } from '..'
-import { Button, Typography } from '../../index'
+import { Button, Text } from '../../index'
 
 export default {
   component: Alert,
@@ -121,7 +121,9 @@ AdvancedChildren.decorators = [
             justifyContent: 'space-between',
           }}
         >
-          <Typography color="danger">I am a complex children</Typography>
+          <Text variant="body" as="p" color="danger">
+            I am a complex children
+          </Text>
           <Button variant="warning">With a button</Button>
         </div>
       </Alert>

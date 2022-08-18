@@ -14,7 +14,7 @@ import {
 } from 'reakit/Checkbox'
 import { getUUID } from '../../utils'
 import Loader from '../Loader'
-import Typography from '../Typography'
+import Text from '../Text'
 
 const InnerCheckbox = styled.rect`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -37,7 +37,7 @@ const CheckboxMixedIcon = () => (
   </g>
 )
 
-const StyledError = styled(Typography)`
+const PaddedText = styled(Text)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
@@ -115,7 +115,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   }
 `
 
-const StyledCheckBoxContainer = styled(Typography)`
+const StyledCheckBoxContainer = styled.label`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -243,7 +243,6 @@ const Checkbox = ({
         </StyledActivityContainer>
       ) : null}
       <StyledCheckBoxContainer
-        as="label"
         className={className}
         aria-disabled={disabled}
         data-visibility={dataVisibility}
@@ -277,9 +276,9 @@ const Checkbox = ({
         {children}
       </StyledCheckBoxContainer>
       {error ? (
-        <StyledError id={`${computedName}-id`} variant="bodyB" color="danger">
+        <PaddedText variant="bodySmall" as="p" color="danger">
           {error}
-        </StyledError>
+        </PaddedText>
       ) : null}
     </>
   )

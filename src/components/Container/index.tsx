@@ -4,8 +4,11 @@ import PropTypes from 'prop-types'
 import { ReactNode, Validator } from 'react'
 import BorderedBox from '../BorderedBox'
 import Box, { BoxProps } from '../Box'
-import Typography from '../Typography'
+import Text from '../Text'
 
+const RightSpacedText = styled(Text)`
+  margin: 0 ${({ theme }) => theme.space[2]} 0 0;
+`
 const StyledContainer = styled(Box)`
   margin-top: 40px;
 `
@@ -72,9 +75,9 @@ const Container = ({
   <StyledContainer {...props}>
     <TitleContainer>
       <StyledTitleContainer>
-        <Typography variant="lead" my={0} mr={2}>
+        <RightSpacedText variant="heading" as="h2">
           {title}
-        </Typography>
+        </RightSpacedText>
         {subtitle}
       </StyledTitleContainer>
       <div>{rightTitle}</div>
