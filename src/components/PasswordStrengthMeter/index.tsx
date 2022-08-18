@@ -8,8 +8,8 @@ const StyledTitle = styled(Text)`
   display: inline-block;
   vertical-align: top;
   line-height: 22px;
-  color: ${({ theme }) => theme.colors.neutral.text};
 `
+
 const StyledStrength = styled(Text)<{ strength: Strength }>`
   float: right;
   vertical-align: top;
