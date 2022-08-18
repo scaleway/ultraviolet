@@ -69,7 +69,7 @@ const Colors = () => {
                       </BlackOrWhiteText>
                       <BlackOrWhiteText
                         variant="caption"
-                        as="p"
+                        as="small"
                         isBackgroundDark={
                           readableColor(
                             theme.colors[sentiment][context],
@@ -116,7 +116,7 @@ const Colors = () => {
 
                       <BlackOrWhiteText
                         variant="caption"
-                        as="p"
+                        as="small"
                         isBackgroundDark={
                           readableColor(
                             theme.colors[sentiment][context],
@@ -163,7 +163,7 @@ const Colors = () => {
 
                       <BlackOrWhiteText
                         variant="caption"
-                        as="p"
+                        as="small"
                         isBackgroundDark={
                           readableColor(
                             theme.colors[sentiment][context],

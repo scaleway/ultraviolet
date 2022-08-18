@@ -563,7 +563,7 @@ const Option = ({
         {inlineDescription ? (
           <StyledText
             as="span"
-            variant="body"
+            variant="bodySmall"
             isSelectedAndNotFocused={isSelected && !isFocused}
           >
             {inlineDescription}
@@ -572,7 +572,7 @@ const Option = ({
         {description ? (
           <MaxLineStyledText
             as="p"
-            variant="body"
+            variant="bodySmall"
             isSelectedAndNotFocused={isSelected && !isFocused}
           >
             {description}
