@@ -18,7 +18,8 @@ jobs:
       with:
         node-version: 18
         cache: 'pnpm'
-    - run: pnpm install
+    - run: pnpm install && cd website && pnpm install
+    - run: pnpm run build
     - run: pnpm tsc --noEmit
   lint:
     runs-on: ubuntu-20.04
@@ -30,7 +31,8 @@ jobs:
       with:
         node-version: 18
         cache: 'pnpm'
-    - run: pnpm install
+    - run: pnpm install && cd website && pnpm install
+    - run: pnpm run build
     - run: pnpm run lint
   test:
     runs-on: ubuntu-20.04
@@ -64,21 +66,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run test:a11y
-  build:
-    strategy:
-      matrix:
-        node: [ '18' ]
-    runs-on: ubuntu-20.04
-    needs: [lint, test]
-    steps:
-    - uses: actions/checkout@v3.0.2
-    - uses: pnpm/action-setup@v2.2.2
-    - name: Use Node.js
-      uses: actions/setup-node@v3.4.1
-      with:
-        node-version: ${{ matrix.node }}
-    - run: pnpm install
-    - run: pnpm run build
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
