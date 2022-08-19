@@ -68,7 +68,7 @@ jobs:
       - run: pnpm run test:a11y
   deploy:
     runs-on: ubuntu-20.04
-    needs: [build]
+    needs: [typecheck]
     if: github.ref == 'refs/heads/main'
     env:
       GIT_COMMITTER_NAME: Scaleway Bot
