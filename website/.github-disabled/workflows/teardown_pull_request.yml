@@ -1,0 +1,37 @@
+name: Teardown Pull Request
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  teardown:
+    runs-on: ubuntu-20.04
+    env:
+      SUFFIX: ui-scaleway
+    steps:
+      - uses: actions/checkout@v2.3.5
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v3.x
+      - name: Export custom variables
+        run: |
+          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
+          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+
+      - name: S3 Delete Bucket
+        uses: remyleone/scw-s3-action@v0.0.2
+        with:
+          args: s3 rb s3://${{ env.BRANCH_SLUG }}-${{ env.SUFFIX }} --force
+        env:
+          SCW_ACCESS_KEY: ${{ secrets.SCW_ACCESS_KEY }}
+          SCW_SECRET_KEY: ${{ secrets.SCW_SECRET_KEY }}
+          SCW_REGION: 'fr-par'
+        continue-on-error: true
+
+      - name: Update deployment status
+        uses: bobheadxi/deployments@v0.6.0
+        with:
+          step: deactivate-env
+          token: ${{ secrets.GITHUB_TOKEN }}
+          env: ${{ env.BRANCH_SLUG }}
+

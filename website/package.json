@@ -1,0 +1,46 @@
+{
+  "name": "scaleway-ui-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependenciesMeta": {
+    "@react-spring/core": {
+      "built": false
+    }
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@scaleway/ui": "file:../",
+    "next": "12.2.4",
+    "polished": "^4.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-schemaorg": "2.0.0",
+    "react-syntax-highlighter": "15.5.0",
+    "react-use-clipboard": "^1.0.8",
+    "schema-dts": "1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@next/bundle-analyzer": "12.2.4",
+    "@types/react": "^18.0.17",
+    "@types/react-syntax-highlighter": "15.5.4",
+    "next-transpile-modules": "9.0.0",
+    "typescript": "^4.7.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18"
+      }
+    }
+  },
+  "packageManager": "pnpm@7.8.0"
+}
