@@ -1,0 +1,32 @@
+######################################################################
+# This stage install dependencies and build the application          #
+######################################################################
+FROM node:18.7-alpine as builder
+WORKDIR /usr/src/app
+
+COPY package.json pnpm-lock.yaml ./
+COPY website ./website
+
+RUN corepack enable
+RUN pnpm install --frozen-lockfile
+RUN ls
+RUN cd website && pnpm install --frozen-lockfile
+
+COPY . .
+
+RUN pnpm run build
+RUN cd website && pnpm run build
+RUN cd website && pnpm run export
+
+######################################################################
+# This stage download a simple http server and serve the application #
+######################################################################
+FROM node:18.7-alpine
+
+WORKDIR /workspace
+
+COPY --from=builder /usr/src/app/website/out .
+
+RUN npm add -g serve
+
+CMD serve -l 80
