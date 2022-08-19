@@ -80,7 +80,7 @@ specifiers:
   babel-plugin-named-exports-order: 0.0.2
   cross-env: 7.0.3
   cz-conventional-changelog: 3.3.0
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   deepmerge: 4.2.2
   eslint: 8.22.0
   husky: 8.0.1
@@ -169,7 +169,7 @@ devDependencies:
   '@rollup/plugin-url': 7.0.0_rollup@2.77.3
   '@scaleway/eslint-config-react': 3.5.1_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@scaleway/jest-helpers': 2.0.12_lavtllvvt26nkpszrciagnumma
-  '@scaleway/use-i18n': 3.3.16_rhuonlwbzp2fndnvchrj5ghlku
+  '@scaleway/use-i18n': 3.3.16_kkwlen7dfpviuab6evuzax4rkm
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.3
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.3
   '@semantic-release/git': 10.0.1_semantic-release@19.0.3
@@ -216,7 +216,7 @@ devDependencies:
   babel-plugin-named-exports-order: 0.0.2
   cross-env: 7.0.3
   cz-conventional-changelog: 3.3.0
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   eslint: 8.22.0
   husky: 8.0.1
   identity-obj-proxy: 3.0.0
@@ -3403,7 +3403,7 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-i18n/3.3.16_rhuonlwbzp2fndnvchrj5ghlku:
+  /@scaleway/use-i18n/3.3.16_kkwlen7dfpviuab6evuzax4rkm:
     resolution: {integrity: sha512-Z4dPs5Mw2bjig7i1nY1PQacdZIF7E7+JZLydGthMDz1E3JGAuv0dkXsh9zEzOy5nA+L0mqgNpGnLDRxk81dSWQ==}
     peerDependencies:
       date-fns: 2.x
@@ -3412,7 +3412,7 @@ packages:
     dependencies:
       '@formatjs/ecma402-abstract': 1.11.8
       '@formatjs/fast-memoize': 1.2.4
-      date-fns: 2.29.1
+      date-fns: 2.29.2
       filesize: 9.0.11
       intl-messageformat: 10.1.1
       prop-types: 15.8.1
@@ -5687,7 +5687,7 @@ packages:
     dependencies:
       '@popperjs/core': 2.11.2
       '@types/react': 18.0.17
-      date-fns: 2.29.1
+      date-fns: 2.29.2
       react-popper: 2.2.5_ihrwprzaii4pnuvtmj5eh6b6gu
     transitivePeerDependencies:
       - react
@@ -8601,8 +8601,8 @@ packages:
       whatwg-url: 11.0.0
     dev: true
 
-  /date-fns/2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
     engines: {node: '>=0.11'}
 
   /dateformat/3.0.3:
@@ -15663,7 +15663,7 @@ packages:
     dependencies:
       '@popperjs/core': 2.11.2
       classnames: 2.3.1
-      date-fns: 2.29.1
+      date-fns: 2.29.2
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
