@@ -1,3 +1,21 @@
+## [0.180.0](https://github.com/scaleway/scaleway-ui/compare/v0.179.1...v0.180.0) (2022-08-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency eslint to v8.22.0 ([#1793](https://github.com/scaleway/scaleway-ui/issues/1793)) ([e419d46](https://github.com/scaleway/scaleway-ui/commit/e419d465ea6ddca84dee5c4c2c972d8a855f55c0))
+* **devdeps:** update pnpm to v7.9.3 ([#1789](https://github.com/scaleway/scaleway-ui/issues/1789)) ([bf1f2f1](https://github.com/scaleway/scaleway-ui/commit/bf1f2f194c2001076eadf448924ff1c2e06f26ad))
+
+
+### :gear: Features
+
+* **ProgressionButton:** remove BoxProps ([#1776](https://github.com/scaleway/scaleway-ui/issues/1776)) ([c8f7221](https://github.com/scaleway/scaleway-ui/commit/c8f72216464b5d7f8e8ef497bbdc59787214459f))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/use-media to v1.2.0 ([#1795](https://github.com/scaleway/scaleway-ui/issues/1795)) ([0a451ba](https://github.com/scaleway/scaleway-ui/commit/0a451ba77a636a4ec752b1fe6d71da198f1c66f2))
+
 ## [0.179.1](https://github.com/scaleway/scaleway-ui/compare/v0.179.0...v0.179.1) (2022-08-18)
 
 
