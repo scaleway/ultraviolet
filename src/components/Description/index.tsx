@@ -1,104 +1,93 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { WeakValidationMap } from 'react'
-import Box, { BoxProps } from '../Box'
 
-const Term = styled(Box.withComponent('dt'))`
+const Term = styled.dt`
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.neutral.textHover};
+  color: ${({ theme }) => theme.colors.neutral.textStrong};
+  display: inline-block;
   &:after {
     content: ':';
   }
 `
-const Desc = styled(Box.withComponent('dd'))`
+
+const Desc = styled('dd', {
+  shouldForwardProp: prop => !['capitalize'].includes(prop),
+})<{ capitalize?: boolean }>`
+  display: flex;
+  align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  margin: 0;
-  margin-top: ${({ theme }) => theme.space['1']};
+  margin: ${({ theme }) => theme.space['1']} 0 0 0;
+  ${({ capitalize }) =>
+    capitalize
+      ? css`
+          text-transform: capitalize;
+        `
+      : undefined}
 `
 
-const StyledBox = styled(Box, {
-  shouldForwardProp: prop => !['inline', 'selectable'].includes(prop),
-})<{ inline: boolean; selectable: boolean }>`
+interface DescriptionProps {
+  ellipsis?: boolean
+  inline?: boolean
+  userSelect?: boolean
+  width?: string
+}
+
+const BareDescription = styled('dl', {
+  shouldForwardProp: prop =>
+    !['inline', 'ellipsis', 'userSelect'].includes(prop),
+})<DescriptionProps>`
   font-size: 16px;
   line-height: 16px;
   margin: 0;
 
-  ${Desc} + ${Term} {
-    margin-top: ${({ theme }) => theme.space['2']};
-  }
-
-  ${({ theme, inline }) =>
+  ${({ inline }) =>
     inline
       ? css`
-          & > ${Term} {
-            float: left;
-            clear: left;
-            margin-right: ${theme.space['1']};
-          }
-
-          & > ${Desc} {
-            margin-top: 0;
-          }
-
-          ${Desc} + ${Term} + ${Desc} {
-            margin-top: ${theme.space['2']};
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          ${Desc} {
+            margin: 0 0 0 8px;
           }
         `
-      : ``}
+      : undefined};
 
-  ${({ theme, selectable }) =>
-    selectable &&
-    css`
-      > ${Desc} {
-        user-select: all;
+  ${({ ellipsis, width }) =>
+    ellipsis
+      ? css`
+          ${Desc} {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: ${width};
+          }
+        `
+      : undefined}
 
-        &::selection {
-          color: ${theme.colors.primary.textStrong};
-          background: ${theme.colors.primary.backgroundStrong};
-        }
-      }
-    `}
+  ${({ userSelect, theme }) =>
+    userSelect
+      ? css`
+          ${Desc} {
+            user-select: all;
+
+            &::selection {
+              color: ${theme.colors.primary.textStrong};
+              background: ${theme.colors.primary.backgroundStrong};
+            }
+          }
+        `
+      : undefined}
 `
 
-type DescriptionProps = {
-  /**
-   * Display description inline
-   */
-  inline?: boolean
-  /**
-   * Select all `Description.Desc` content by default
-   */
-  selectable?: boolean
-} & BoxProps
-
-type DescriptionComponent = ((props: DescriptionProps) => JSX.Element) & {
-  propTypes: WeakValidationMap<DescriptionProps>
-  Desc: typeof Desc
+type DescriptionType = typeof BareDescription & {
   Term: typeof Term
+  Desc: typeof Desc
 }
 
-const Description: DescriptionComponent = ({
-  inline = false,
-  selectable = false,
-  ...props
-}) => <StyledBox as="dl" inline={inline} selectable={selectable} {...props} />
+// @ts-expect-error we assign the missing compound components
+const Description: DescriptionType = BareDescription
 
-Description.propTypes = {
-  /**
-   * Display description inline
-   */
-  inline: PropTypes.bool,
-  /**
-   * Select all `Description.Desc` content by default
-   */
-  selectable: PropTypes.bool,
-}
-
-Desc.displayName = 'Description.Term'
 Description.Term = Term
-
-Desc.displayName = 'Description.Desc'
 Description.Desc = Desc
 
 export default Description
