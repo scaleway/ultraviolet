@@ -32,7 +32,7 @@ specifiers:
   '@scaleway/jest-helpers': 2.0.12
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 3.3.16
-  '@scaleway/use-media': 1.1.1
+  '@scaleway/use-media': 1.2.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
   '@semantic-release/git': 10.0.1
@@ -133,7 +133,7 @@ dependencies:
   '@nivo/scales': 0.79.0
   '@nivo/tooltip': 0.79.0_zhuuyauhwzzhfusgrzbzttapgm
   '@scaleway/random-name': 3.0.2
-  '@scaleway/use-media': 1.1.1_react@18.2.0
+  '@scaleway/use-media': 1.2.0_react@18.2.0
   '@xstyled/emotion': 2.5.0_72v32ofbtgpmxm7mhvtx474vfu
   deepmerge: 4.2.2
   polished: 4.2.2
@@ -3420,10 +3420,10 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@scaleway/use-media/1.1.1_react@18.2.0:
-    resolution: {integrity: sha512-D7hvjB4UfjxjKRIi4/Ahb1IioxovrQshzCG3eKEI3IgHvURWcJXBCjM1lITEexzLz7CIsuN3n7iMcaXhLybIsg==}
+  /@scaleway/use-media/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-MI/K0+rQzujtKXSmxduJWxGAPhaf1ZupUkPKQNkZmZXEdaJ34VqLXZQzqE8vrozTBtl/K9ThowJC/jHeMMRXiA==}
     peerDependencies:
-      react: 17.x || 18.x || 18
+      react: 18.x || 18
     dependencies:
       react: 18.2.0
     dev: false
