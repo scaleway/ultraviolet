@@ -1,3 +1,16 @@
+## [0.181.0](https://github.com/scaleway/scaleway-ui/compare/v0.180.0...v0.181.0) (2022-08-19)
+
+
+### :gear: Features
+
+* port Description from console ([#1751](https://github.com/scaleway/scaleway-ui/issues/1751)) ([4c82a8e](https://github.com/scaleway/scaleway-ui/commit/4c82a8ec2031ac0c1a9a1ab3190b78d3dd4ca0f8))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.2 ([#1796](https://github.com/scaleway/scaleway-ui/issues/1796)) ([52df13a](https://github.com/scaleway/scaleway-ui/commit/52df13a6b3ade5ac8c4903fa17fccebbcf81923d))
+* **devdeps:** update dependency date-fns to v2.29.2 ([#1798](https://github.com/scaleway/scaleway-ui/issues/1798)) ([6b6a584](https://github.com/scaleway/scaleway-ui/commit/6b6a584a7250b1784c974695875fac33edb68dbf))
+
 ## [0.180.0](https://github.com/scaleway/scaleway-ui/compare/v0.179.1...v0.180.0) (2022-08-19)
 
 
