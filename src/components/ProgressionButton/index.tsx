@@ -2,7 +2,6 @@ import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
-import Box, { BoxProps } from '../Box'
 
 const progressionAnimation = keyframes`
   from {
@@ -14,7 +13,7 @@ const progressionAnimation = keyframes`
   }
 `
 
-const ProgressionContainer = styled(Box)`
+const ProgressionContainer = styled.div`
   position: relative;
   text-align: center;
   color: white;
@@ -56,23 +55,22 @@ const Progression = styled.div<ProgressionProps>`
     ${({ duration, delay }) => `${duration}s linear ${-delay}s`} forwards;
 `
 
-type ProgressionButtonProps = Partial<Omit<ProgressionProps, 'delay'>> & {
+type ProgressionButtonProps = {
   children: ReactNode
   creation?: string | Date
   duration?: number
-} & BoxProps
+}
 
 const ProgressionButton = ({
   children,
   creation = new Date(), // Supposed start time of the progression
   duration = 120, // Approximation of the progression's duration (in seconds)
-  ...props
 }: ProgressionButtonProps) => {
   const createdAt = typeof creation === 'string' ? new Date(creation) : creation
   const delay = Math.floor((Date.now() - createdAt.getTime()) / 1000)
 
   return (
-    <ProgressionContainer role="progressbar" {...props}>
+    <ProgressionContainer role="progressbar">
       <Progression delay={delay} duration={duration} />
       {children}
     </ProgressionContainer>
