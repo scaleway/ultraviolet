@@ -1,204 +1,111 @@
-import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
+  ChangeEvent,
   ChangeEventHandler,
   FocusEventHandler,
-  LabelHTMLAttributes,
-  ReactNode,
+  useState,
 } from 'react'
-import { Radio } from 'reakit'
-import Box, { BoxProps } from '../Box'
+import BorderedBox from '../BorderedBox'
+import SelectableCard from '../SelectableCard'
 import Tooltip from '../Tooltip'
 
-const variants = {
-  segment: (theme: Theme) => css`
-    &[data-variant='segment'] {
-      font-size: 14;
-      height: 40px;
-      transition: none;
-      border-radius: 4px;
-      box-shadow: none;
-      border-color: transparent;
-      color: ${theme.colors.neutral.text};
-
-      &:hover,
-      &:focus {
-        border-color: transparent;
-        box-shadow: none;
-      }
-
-      &[data-checked='true'] {
-        background-color: ${theme.colors.primary.backgroundStrong};
-        color: ${theme.colors.primary.textStrong};
-      }
-
-      &[aria-disabled='true'] {
-        color: ${theme.colors.neutral.textDisabled};
-
-        &[data-checked='true'] {
-          color: ${theme.colors.neutral.textDisabled};
-          background-color: ${theme.colors.neutral.backgroundDisabled};
-        }
-      }
-
-      &:not([data-checked='true']):not([aria-disabled='true']) {
-        &:hover,
-        &:focus {
-          border-color: transparent;
-          box-shadow: none;
-        }
-      }
-    }
-  `,
-} as const
-
-type Variants = keyof typeof variants
-
-const switchButtonVariants = Object.keys(variants) as Variants[]
-
-type StyledSwitchProps = BoxProps & LabelHTMLAttributes<HTMLLabelElement>
-
-const StyledSwitch = styled(Box, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})<StyledSwitchProps>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 4px;
-  align-items: center;
-  border-style: solid;
-  border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-width: 1px;
-  padding: 16px;
-  transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
-  user-select: none;
-  touch-action: manipulation;
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
-  font-size: 16px;
-  line-height: 22px;
-  position: relative;
-  font-weight: 500;
-  cursor: pointer;
-
-  &[data-checked='true'] {
-    cursor: auto;
-    color: ${({ theme }) => theme.colors.primary.text};
-    border-color: ${({ theme }) => theme.colors.primary.border};
-  }
-
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    pointer-events: none;
-
-    &[data-checked='true'] {
-      color: ${({ theme }) => theme.colors.neutral.textDisabled};
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-    }
-  }
-
-  &:not([data-checked='true']):not([aria-disabled='true']) {
-    &:hover,
-    &:focus {
-      border-color: ${({ theme }) => theme.colors.primary.border};
-    }
-
-    &:hover {
-      box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
-    }
-
-    &:focus {
-      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    }
-  }
-
-  ${({ theme }) => Object.values(variants).map(variantFn => variantFn(theme))}
+const StyledBorderedBox = styled(BorderedBox)`
+  padding: ${({ theme }) => theme.space['0.5']};
+  display: inline-flex;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
-const StyledRadio = styled(Radio)`
-  position: absolute;
-  opacity: 0.01;
-`
-
-type SwitchButtonProps = Omit<StyledSwitchProps, 'onChange' | 'children'> & {
-  children:
-    | ReactNode
-    | (({
-        checked,
-        disabled,
-      }: {
-        checked: boolean
-        disabled: boolean
-      }) => ReactNode)
+type SwitchButtonProps = {
   name: string
   onBlur?: FocusEventHandler
   onChange: ChangeEventHandler
   onFocus?: FocusEventHandler
   tooltip?: string
-  value: string
-  checked?: boolean
-  disabled?: boolean
-  variant?: Variants
+  selected?: 'left' | 'right'
+  leftValue: string | number
+  rightValue: string | number
+  leftText: string
+  rightText: string
 }
 
+const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
+  border: none;
+  color: ${({ theme }) => theme.colors.primary.textWeak};
+  height: 40px;
+  padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+
+  &:hover,
+  &:focus-within,
+  &:active {
+    background: ${({ theme }) => theme.colors.primary.backgroundWeakHover};
+    border: none;
+  }
+
+  ${({ checked, theme }) =>
+    checked
+      ? `
+  background: ${theme.colors.primary.backgroundStrong};
+  color: ${theme.colors.primary.textStrong};
+
+  &:hover,
+  &:focus-within,
+  &:active {
+    background: ${theme.colors.primary.backgroundStrongHover};
+        border: none;
+  }
+  `
+      : null}
+`
+
 const SwitchButton = ({
-  checked = false,
-  disabled = false,
+  selected = 'left',
   onChange,
   onFocus,
   onBlur,
   name,
-  value,
-  children,
+  leftValue,
+  rightValue,
+  leftText,
+  rightText,
   tooltip,
-  variant,
-  ...props
-}: SwitchButtonProps) => (
-  <Tooltip text={tooltip}>
-    <StyledSwitch
-      as="label"
-      htmlFor={`${name}-${value}`}
-      data-checked={checked}
-      aria-disabled={disabled}
-      data-variant={variant}
-      {...props}
-    >
-      {typeof children === 'function'
-        ? children({ checked, disabled })
-        : children}
-      <StyledRadio
-        checked={checked}
-        disabled={disabled}
-        id={`${name}-${value}`}
-        name={name}
-        onBlur={onBlur}
-        onChange={onChange}
-        onFocus={onFocus}
-        type="radio"
-        value={value}
-      />
-    </StyledSwitch>
-  </Tooltip>
-)
+}: SwitchButtonProps) => {
+  const [localValue, setLocalValue] = useState(
+    selected === 'left' ? leftValue : rightValue,
+  )
+  const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    onChange?.(event)
+    setLocalValue(event.target.value)
+  }
 
-SwitchButton.propTypes = {
-  checked: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.func,
-  ]).isRequired,
-  disabled: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  tooltip: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(switchButtonVariants),
+  return (
+    <Tooltip text={tooltip}>
+      <StyledBorderedBox>
+        <StyledSelectableCard
+          name={name}
+          value={leftValue}
+          checked={localValue === leftValue}
+          onChange={handleOnChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
+        >
+          {leftText}
+        </StyledSelectableCard>
+        <StyledSelectableCard
+          name={name}
+          value={rightValue}
+          checked={localValue === rightValue}
+          onChange={handleOnChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
+        >
+          {rightText}
+        </StyledSelectableCard>
+      </StyledBorderedBox>
+    </Tooltip>
+  )
 }
 
 export default SwitchButton
