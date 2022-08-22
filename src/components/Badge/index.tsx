@@ -4,11 +4,12 @@ import { ReactNode, useMemo } from 'react'
 import { Color, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import Icon, { IconName } from '../Icon'
-import Typography from '../Typography'
+import Text from '../Text'
 
-const StyledTypography = styled(Typography)`
+const StyledText = styled(Text)<{ fontSize: number }>`
   text-transform: uppercase;
   font-size: ${({ fontSize }) => fontSize}px;
+  color: inherit;
 `
 
 // TODO: remove when typography has been created
@@ -151,13 +152,14 @@ const Badge = ({
       {icon && sizeValue !== SIZES.small ? (
         <Icon name={icon} size={16} />
       ) : null}
-      <StyledTypography
+      <StyledText
+        variant="bodyStrong"
+        as="p"
         fontSize={TEXT_SIZES[size]}
-        fontWeight={500}
-        color="inherit"
+        prominence={disabled ? 'weak' : 'default'}
       >
         {children}
-      </StyledTypography>
+      </StyledText>
     </StyledBox>
   )
 }

@@ -32,7 +32,7 @@ import * as animations from '../../utils/animations'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
-import Typography from '../Typography'
+import Text from '../Text'
 
 export type SelectOption = {
   value: string
@@ -445,6 +445,17 @@ const StyledPlaceholder = styled('label', {
   ${({ isDisabled, hasValue }) => hasValue && isDisabled && 'opacity: 0.5'}
 `
 
+const StyledText = styled(Text)<{ isSelectedAndNotFocused: boolean }>`
+  margin-left: ${({ theme }) => theme.space['1']};
+  color: ${({ isSelectedAndNotFocused, theme }) =>
+    isSelectedAndNotFocused ? theme.colors.primary.textStrong : undefined};
+`
+
+const MaxLineStyledText = styled(StyledText)`
+  -webkit-line-clamp: 3;
+  margin-top: ${({ theme }) => theme.space['2']};
+`
+
 const ValueContainer = ({
   isDisabled,
   children,
@@ -530,7 +541,6 @@ const Option = ({
   ...props
 }: OptionProps<SelectOption> & SelectOption) => {
   const [isFocused, setIsFocused] = useState(false)
-  const theme = useTheme()
 
   return (
     <div
@@ -551,33 +561,22 @@ const Option = ({
       >
         {children}
         {inlineDescription ? (
-          <Typography
+          <StyledText
             as="span"
-            variant="bodyB"
-            color={
-              isSelected && !isFocused
-                ? theme.colors.primary.textStrong
-                : undefined
-            }
-            ml={1}
+            variant="bodySmall"
+            isSelectedAndNotFocused={isSelected && !isFocused}
           >
             {inlineDescription}
-          </Typography>
+          </StyledText>
         ) : null}
         {description ? (
-          <Typography
+          <MaxLineStyledText
             as="p"
-            variant="bodyB"
-            color={
-              isSelected && !isFocused
-                ? theme.colors.primary.textStrong
-                : undefined
-            }
-            mt={1}
-            maxLines={3}
+            variant="bodySmall"
+            isSelectedAndNotFocused={isSelected && !isFocused}
           >
             {description}
-          </Typography>
+          </MaxLineStyledText>
         ) : null}
       </components.Option>
     </div>

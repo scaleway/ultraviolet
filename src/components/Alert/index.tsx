@@ -5,7 +5,7 @@ import { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme'
 import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'
-import Typography from '../Typography'
+import Text from '../Text'
 
 export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
 export const alertVariants = [
@@ -90,13 +90,17 @@ const AlertContainer = styled.div`
 `
 
 type TitleProps = {
-  color: string
   text: string
 }
-const Title = ({ color, text }: TitleProps) => (
-  <Typography variant="description" color={color}>
+
+const InheritedColorText = styled(Text)`
+  color: inherit;
+`
+
+const Title = ({ text }: TitleProps) => (
+  <InheritedColorText variant="bodyStrong" as="p">
     {text}
-  </Typography>
+  </InheritedColorText>
 )
 
 type AlertProps = {
@@ -124,11 +128,11 @@ const Alert = ({
       aria-hidden="true"
     />
     <AlertContainer>
-      {title && <Title text={title} color="inherit" />}
+      {title && <Title text={title} />}
       {typeof children === 'string' ? (
-        <Typography variant="bodyA" color="inherit">
+        <InheritedColorText variant="body" as="p">
           {children}
-        </Typography>
+        </InheritedColorText>
       ) : (
         children
       )}
@@ -137,7 +141,6 @@ const Alert = ({
 )
 
 Title.propTypes = {
-  color: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 }
 

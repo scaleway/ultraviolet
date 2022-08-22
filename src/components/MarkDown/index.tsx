@@ -5,10 +5,15 @@ import { ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
 import Box, { BoxProps } from '../Box'
 import Link from '../Link'
+import Text from '../Text'
 import Typography from '../Typography'
 
 const StyledLink = styled(Link)`
   font-size: inherit;
+`
+
+const StyledText = styled(Text)`
+  margin-top: 0;
 `
 
 const headingRenderer = ({
@@ -22,9 +27,9 @@ const headingRenderer = ({
 }) => {
   if (props.level === 1) {
     return (
-      <Typography mt={0} variant="lead-block">
+      <StyledText variant="heading" as="h2">
         {children}
-      </Typography>
+      </StyledText>
     )
   }
   const { heading: Heading } = ReactMarkDown.renderers
