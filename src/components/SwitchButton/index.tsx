@@ -46,9 +46,9 @@ const StyledBorderedBox = styled(BorderedBox)`
 
 const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
   border: none;
-  color: ${({ theme }) => theme.colors.primary.textWeak};
   height: 40px;
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   justify-content: center;
   align-items: center;
 
@@ -66,8 +66,8 @@ const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
   `
       : `
         &:hover {
-    background: ${theme.colors.primary.backgroundWeakHover};
-  }
+          color: ${theme.colors.primary.textWeak};
+        }
       `}
 `
 
