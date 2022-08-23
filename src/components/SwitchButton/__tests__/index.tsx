@@ -18,11 +18,11 @@ describe('SwitchButton', () => {
       />,
     ))
 
-  test('renders correctly with right value selected', () =>
+  test('renders correctly with right value', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
         name="test"
-        selected="right"
+        value="right"
         onChange={() => {}}
         leftText="Left choice"
         leftValue="left"

@@ -13,20 +13,36 @@ const StyledBorderedBox = styled(BorderedBox)`
   padding: ${({ theme }) => theme.space['0.5']};
   display: inline-flex;
   gap: ${({ theme }) => theme.space['1']};
-`
 
-type SwitchButtonProps = {
-  name: string
-  onBlur?: FocusEventHandler
-  onChange: ChangeEventHandler
-  onFocus?: FocusEventHandler
-  tooltip?: string
-  selected?: 'left' | 'right'
-  leftValue: string | number
-  rightValue: string | number
-  leftText: string
-  rightText: string
-}
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(
+      50% - ${({ theme }) => theme.space['1']} -
+        ${({ theme }) => theme.space['0.5']}
+    );
+    height: calc(100% - ${({ theme }) => theme.space['1']});
+    border-radius: ${({ theme }) => theme.radii.default};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    transition: transform 300ms, width 300ms, left 300ms;
+  }
+
+  &[data-position='right']:before {
+    left: calc(100% - 4px);
+    width: 50%;
+    transform: translateX(-100%);
+  }
+
+  &[data-position='right']:active:before {
+    width: calc(50% + ${({ theme }) => theme.space['0.5']});
+  }
+
+  &[data-position='left']:active:before {
+    width: calc(50% - ${({ theme }) => theme.space['0.5']} - 1px);
+  }
+`
 
 const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
   border: none;
@@ -35,33 +51,41 @@ const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   justify-content: center;
   align-items: center;
-  transition: all 200ms ease;
 
   &:hover,
   &:focus-within,
   &:active {
-    background: ${({ theme }) => theme.colors.primary.backgroundWeakHover};
+    box-shadow: none;
     border: none;
   }
 
   ${({ checked, theme }) =>
     checked
       ? `
-  background: ${theme.colors.primary.backgroundStrong};
   color: ${theme.colors.primary.textStrong};
-
-  &:hover,
-  &:focus-within,
-  &:active {
-    background: ${theme.colors.primary.backgroundStrongHover};
-        border: none;
-  }
   `
-      : null}
+      : `
+        &:hover {
+    background: ${theme.colors.primary.backgroundWeakHover};
+  }
+      `}
 `
 
+type SwitchButtonProps = {
+  name: string
+  onBlur?: FocusEventHandler
+  onChange: ChangeEventHandler
+  onFocus?: FocusEventHandler
+  tooltip?: string
+  value?: string | number
+  leftValue: string | number
+  rightValue: string | number
+  leftText: string
+  rightText: string
+}
+
 const SwitchButton = ({
-  selected = 'left',
+  value,
   onChange,
   onFocus,
   onBlur,
@@ -73,7 +97,7 @@ const SwitchButton = ({
   tooltip,
 }: SwitchButtonProps) => {
   const [localValue, setLocalValue] = useState(
-    selected === 'left' ? leftValue : rightValue,
+    value === 'left' ? leftValue : rightValue,
   )
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange?.(event)
@@ -82,28 +106,34 @@ const SwitchButton = ({
 
   return (
     <Tooltip text={tooltip}>
-      <StyledBorderedBox>
-        <StyledSelectableCard
-          name={name}
-          value={leftValue}
-          checked={localValue === leftValue}
-          onChange={handleOnChange}
-          onBlur={onBlur}
-          onFocus={onFocus}
+      <div style={{ display: 'inline-flex', position: 'relative' }}>
+        <StyledBorderedBox
+          data-position={localValue === leftValue ? 'left' : 'right'}
         >
-          {leftText}
-        </StyledSelectableCard>
-        <StyledSelectableCard
-          name={name}
-          value={rightValue}
-          checked={localValue === rightValue}
-          onChange={handleOnChange}
-          onBlur={onBlur}
-          onFocus={onFocus}
-        >
-          {rightText}
-        </StyledSelectableCard>
-      </StyledBorderedBox>
+          <StyledSelectableCard
+            name={name}
+            value={leftValue}
+            checked={localValue === leftValue}
+            onChange={handleOnChange}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            data-checked={localValue === leftValue}
+          >
+            {leftText}
+          </StyledSelectableCard>
+          <StyledSelectableCard
+            name={name}
+            value={rightValue}
+            checked={localValue === rightValue}
+            onChange={handleOnChange}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            data-checked={localValue === rightValue}
+          >
+            {rightText}
+          </StyledSelectableCard>
+        </StyledBorderedBox>
+      </div>
     </Tooltip>
   )
 }

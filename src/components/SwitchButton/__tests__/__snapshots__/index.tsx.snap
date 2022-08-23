@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .cache-vh4sqg-BorderedBox-StyledBorderedBox {
+  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -14,7 +14,40 @@ exports[`SwitchButton renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(
+        50% - 8px -
+          4px
+      );
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background-color: #4f0599;
+  -webkit-transition: -webkit-transform 300ms,width 300ms,left 300ms;
+  transition: transform 300ms,width 300ms,left 300ms;
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+  left: calc(100% - 4px);
+  width: 50%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(50% + 4px);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(50% - 4px - 1px);
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -41,8 +74,8 @@ exports[`SwitchButton renders correctly 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
   border: none;
   color: #4f0599;
   height: 40px;
@@ -55,70 +88,63 @@ exports[`SwitchButton renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  background: #4f0599;
-  color: #ffffff;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
   border: 1px solid #4f0599;
-  box-shadow: none;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
   display: none;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  box-shadow: none;
   border: none;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #390171;
-  border: none;
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover {
+  background: #eeeeff;
 }
 
 .cache-h7u1sr-StyledRadio {
@@ -189,381 +215,7 @@ exports[`SwitchButton renders correctly 1`] = `
   fill: #ffffff;
 }
 
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
-  border: none;
-  color: #4f0599;
-  height: 40px;
-  padding: 8px 16px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
-  border: none;
-}
-
-<div
-    class="cache-vh4sqg-BorderedBox-StyledBorderedBox e16krxq01"
-  >
-    <label
-      aria-disabled="false"
-      class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
-      for="test-left"
-    >
-      <input
-        aria-checked="true"
-        aria-disabled="false"
-        aria-invalid="false"
-        checked=""
-        class="cache-h7u1sr-StyledRadio e1duuirp1"
-        id="test-left"
-        name="test"
-        tabindex="0"
-        type="radio"
-        value="left"
-      />
-      <svg
-        class="cache-gjpbat-StyledIcon e1duuirp2"
-        size="24"
-        viewBox="0 0 24 24"
-      >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-p50c5x-InnerCircleRing e1duuirp4"
-            cx="12"
-            cy="12"
-            r="6"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark e1duuirp3"
-            cx="12"
-            cy="12"
-            r="4"
-          />
-        </g>
-      </svg>
-      Left choice
-    </label>
-    <label
-      aria-disabled="false"
-      class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
-      for="test-right"
-    >
-      <input
-        aria-checked="false"
-        aria-disabled="false"
-        aria-invalid="false"
-        class="cache-h7u1sr-StyledRadio e1duuirp1"
-        id="test-right"
-        name="test"
-        tabindex="0"
-        type="radio"
-        value="right"
-      />
-      <svg
-        class="cache-gjpbat-StyledIcon e1duuirp2"
-        size="24"
-        viewBox="0 0 24 24"
-      >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-p50c5x-InnerCircleRing e1duuirp4"
-            cx="12"
-            cy="12"
-            r="6"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark e1duuirp3"
-            cx="12"
-            cy="12"
-            r="4"
-          />
-        </g>
-      </svg>
-      Right choice
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SwitchButton renders correctly with right value selected 1`] = `
-<DocumentFragment>
-  .cache-vh4sqg-BorderedBox-StyledBorderedBox {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  padding: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  gap: 8px;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
-  border: none;
-  color: #4f0599;
-  height: 40px;
-  padding: 8px 16px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
-  border: none;
-}
-
-.cache-h7u1sr-StyledRadio {
-  opacity: 0.01;
-  width: px;
-  height: px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-gjpbat-StyledIcon {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #b2b6c3;
-}
-
-.cache-gjpbat-StyledIcon .e1duuirp4 {
-  fill: #ffffff;
-}
-
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
   color: #4a4f62;
   font-weight: 400;
   margin-bottom: 0;
@@ -604,471 +256,78 @@ exports[`SwitchButton renders correctly with right value selected 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  background: #4f0599;
   color: #ffffff;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
   border: 1px solid #4f0599;
   box-shadow: none;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
   display: none;
 }
 
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
-  border: none;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #390171;
-  border: none;
-}
-
-<div
-    class="cache-vh4sqg-BorderedBox-StyledBorderedBox e16krxq01"
-  >
-    <label
-      aria-disabled="false"
-      class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
-      for="test-left"
-    >
-      <input
-        aria-checked="false"
-        aria-disabled="false"
-        aria-invalid="false"
-        class="cache-h7u1sr-StyledRadio e1duuirp1"
-        id="test-left"
-        name="test"
-        tabindex="0"
-        type="radio"
-        value="left"
-      />
-      <svg
-        class="cache-gjpbat-StyledIcon e1duuirp2"
-        size="24"
-        viewBox="0 0 24 24"
-      >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-p50c5x-InnerCircleRing e1duuirp4"
-            cx="12"
-            cy="12"
-            r="6"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark e1duuirp3"
-            cx="12"
-            cy="12"
-            r="4"
-          />
-        </g>
-      </svg>
-      Left choice
-    </label>
-    <label
-      aria-disabled="false"
-      class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
-      for="test-right"
-    >
-      <input
-        aria-checked="true"
-        aria-disabled="false"
-        aria-invalid="false"
-        checked=""
-        class="cache-h7u1sr-StyledRadio e1duuirp1"
-        id="test-right"
-        name="test"
-        tabindex="0"
-        type="radio"
-        value="right"
-      />
-      <svg
-        class="cache-gjpbat-StyledIcon e1duuirp2"
-        size="24"
-        viewBox="0 0 24 24"
-      >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-p50c5x-InnerCircleRing e1duuirp4"
-            cx="12"
-            cy="12"
-            r="6"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark e1duuirp3"
-            cx="12"
-            cy="12"
-            r="4"
-          />
-        </g>
-      </svg>
-      Right choice
-    </label>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SwitchButton renders with tooltip 1`] = `
-<DocumentFragment>
-  .cache-vh4sqg-BorderedBox-StyledBorderedBox {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  padding: 4px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  gap: 8px;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
-  border: none;
-  color: #4f0599;
-  height: 40px;
-  padding: 8px 16px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  background: #4f0599;
-  color: #ffffff;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
   box-shadow: none;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
-  border: none;
-}
-
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #390171;
-  border: none;
-}
-
-.cache-h7u1sr-StyledRadio {
-  opacity: 0.01;
-  width: px;
-  height: px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-gjpbat-StyledIcon {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #b2b6c3;
-}
-
-.cache-gjpbat-StyledIcon .e1duuirp4 {
-  fill: #ffffff;
-}
-
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
-  border: none;
-  color: #4f0599;
-  height: 40px;
-  padding: 8px 16px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  background: #eeeeff;
   border: none;
 }
 
 <div
-    aria-describedby="tooltip-6c756c756c756c756c756c756c756c75"
+    style="display: inline-flex; position: relative;"
   >
     <div
-      class="cache-vh4sqg-BorderedBox-StyledBorderedBox e16krxq01"
+      class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+      data-position="right"
     >
       <label
         aria-disabled="false"
-        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-g9piib-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
         for="test-left"
       >
         <input
-          aria-checked="true"
+          aria-checked="false"
           aria-disabled="false"
           aria-invalid="false"
-          checked=""
           class="cache-h7u1sr-StyledRadio e1duuirp1"
           id="test-left"
           name="test"
@@ -1106,13 +365,14 @@ exports[`SwitchButton renders with tooltip 1`] = `
       </label>
       <label
         aria-disabled="false"
-        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-su3h60-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
         for="test-right"
       >
         <input
-          aria-checked="false"
+          aria-checked="true"
           aria-disabled="false"
           aria-invalid="false"
+          checked=""
           class="cache-h7u1sr-StyledRadio e1duuirp1"
           id="test-right"
           name="test"
@@ -1148,6 +408,836 @@ exports[`SwitchButton renders with tooltip 1`] = `
         </svg>
         Right choice
       </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton renders correctly with right value 1`] = `
+<DocumentFragment>
+  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  padding: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(
+        50% - 8px -
+          4px
+      );
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background-color: #4f0599;
+  -webkit-transition: -webkit-transform 300ms,width 300ms,left 300ms;
+  transition: transform 300ms,width 300ms,left 300ms;
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+  left: calc(100% - 4px);
+  width: 50%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(50% + 4px);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(50% - 4px - 1px);
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+  border: none;
+  color: #4f0599;
+  height: 40px;
+  padding: 8px 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+  display: none;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover {
+  background: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-gjpbat-StyledIcon {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
+}
+
+.cache-gjpbat-StyledIcon .e1duuirp4 {
+  fill: #ffffff;
+}
+
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  border: none;
+  color: #4f0599;
+  height: 40px;
+  padding: 8px 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  border: 1px solid #4f0599;
+  box-shadow: none;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+  display: none;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+<div
+    style="display: inline-flex; position: relative;"
+  >
+    <div
+      class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+      data-position="right"
+    >
+      <label
+        aria-disabled="false"
+        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+        for="test-left"
+      >
+        <input
+          aria-checked="false"
+          aria-disabled="false"
+          aria-invalid="false"
+          class="cache-h7u1sr-StyledRadio e1duuirp1"
+          id="test-left"
+          name="test"
+          tabindex="0"
+          type="radio"
+          value="left"
+        />
+        <svg
+          class="cache-gjpbat-StyledIcon e1duuirp2"
+          size="24"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="cache-p50c5x-InnerCircleRing e1duuirp4"
+              cx="12"
+              cy="12"
+              r="6"
+            />
+            <circle
+              class="cache-ivayk3-RadioMark e1duuirp3"
+              cx="12"
+              cy="12"
+              r="4"
+            />
+          </g>
+        </svg>
+        Left choice
+      </label>
+      <label
+        aria-disabled="false"
+        class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+        for="test-right"
+      >
+        <input
+          aria-checked="true"
+          aria-disabled="false"
+          aria-invalid="false"
+          checked=""
+          class="cache-h7u1sr-StyledRadio e1duuirp1"
+          id="test-right"
+          name="test"
+          tabindex="0"
+          type="radio"
+          value="right"
+        />
+        <svg
+          class="cache-gjpbat-StyledIcon e1duuirp2"
+          size="24"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="cache-p50c5x-InnerCircleRing e1duuirp4"
+              cx="12"
+              cy="12"
+              r="6"
+            />
+            <circle
+              class="cache-ivayk3-RadioMark e1duuirp3"
+              cx="12"
+              cy="12"
+              r="4"
+            />
+          </g>
+        </svg>
+        Right choice
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton renders with tooltip 1`] = `
+<DocumentFragment>
+  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  padding: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(
+        50% - 8px -
+          4px
+      );
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background-color: #4f0599;
+  -webkit-transition: -webkit-transform 300ms,width 300ms,left 300ms;
+  transition: transform 300ms,width 300ms,left 300ms;
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+  left: calc(100% - 4px);
+  width: 50%;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(50% + 4px);
+}
+
+.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(50% - 4px - 1px);
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+  border: none;
+  color: #4f0599;
+  height: 40px;
+  padding: 8px 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+  display: none;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+.cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover {
+  background: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-gjpbat-StyledIcon {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
+}
+
+.cache-gjpbat-StyledIcon .e1duuirp4 {
+  fill: #ffffff;
+}
+
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  border: none;
+  color: #4f0599;
+  height: 40px;
+  padding: 8px 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  border: 1px solid #4f0599;
+  box-shadow: none;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
+  display: none;
+}
+
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
+.cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+<div
+    aria-describedby="tooltip-6c756c756c756c756c756c756c756c75"
+  >
+    <div
+      style="display: inline-flex; position: relative;"
+    >
+      <div
+        class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+        data-position="right"
+      >
+        <label
+          aria-disabled="false"
+          class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-1kreli9-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+          for="test-left"
+        >
+          <input
+            aria-checked="false"
+            aria-disabled="false"
+            aria-invalid="false"
+            class="cache-h7u1sr-StyledRadio e1duuirp1"
+            id="test-left"
+            name="test"
+            tabindex="0"
+            type="radio"
+            value="left"
+          />
+          <svg
+            class="cache-gjpbat-StyledIcon e1duuirp2"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke-width="2"
+              />
+              <circle
+                class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                cx="12"
+                cy="12"
+                r="6"
+              />
+              <circle
+                class="cache-ivayk3-RadioMark e1duuirp3"
+                cx="12"
+                cy="12"
+                r="4"
+              />
+            </g>
+          </svg>
+          Left choice
+        </label>
+        <label
+          aria-disabled="false"
+          class="e16krxq00 ejleepd0 e1duuirp0 e1g1zfwd0 cache-fr1bt0-StyledText-variantStyles-StyledRadioContainer-StyledElement-StyledSelectableCard"
+          for="test-right"
+        >
+          <input
+            aria-checked="true"
+            aria-disabled="false"
+            aria-invalid="false"
+            checked=""
+            class="cache-h7u1sr-StyledRadio e1duuirp1"
+            id="test-right"
+            name="test"
+            tabindex="0"
+            type="radio"
+            value="right"
+          />
+          <svg
+            class="cache-gjpbat-StyledIcon e1duuirp2"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke-width="2"
+              />
+              <circle
+                class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                cx="12"
+                cy="12"
+                r="6"
+              />
+              <circle
+                class="cache-ivayk3-RadioMark e1duuirp3"
+                cx="12"
+                cy="12"
+                r="4"
+              />
+            </g>
+          </svg>
+          Right choice
+        </label>
+      </div>
     </div>
   </div>
 </DocumentFragment>
