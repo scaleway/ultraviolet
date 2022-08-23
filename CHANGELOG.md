@@ -1,3 +1,21 @@
+## [0.181.1](https://github.com/scaleway/scaleway-ui/compare/v0.181.0...v0.181.1) (2022-08-23)
+
+
+### :repeat: CI
+
+* **visual:** fix tests ([#1801](https://github.com/scaleway/scaleway-ui/issues/1801)) ([b8280ee](https://github.com/scaleway/scaleway-ui/commit/b8280ee3a0120baee7b66f572beaff4561494649))
+
+
+### :zap: Refactor
+
+* remove typography usage ([#1762](https://github.com/scaleway/scaleway-ui/issues/1762)) ([7801d68](https://github.com/scaleway/scaleway-ui/commit/7801d68ac27764ffb57b6e3596db231557513091))
+
+
+### :package: Chore
+
+* **deps:** update react monorepo to v18 ([#1800](https://github.com/scaleway/scaleway-ui/issues/1800)) ([66cfccf](https://github.com/scaleway/scaleway-ui/commit/66cfccf040763ad62101b600c6be319c48bb07b3))
+* **devdeps:** update actions/cache action to v3.0.8 ([#1799](https://github.com/scaleway/scaleway-ui/issues/1799)) ([d3769b0](https://github.com/scaleway/scaleway-ui/commit/d3769b001a4e84b06a49146196873932e2958e8a))
+
 ## [0.181.0](https://github.com/scaleway/scaleway-ui/compare/v0.180.0...v0.181.0) (2022-08-19)
 
 
