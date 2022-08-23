@@ -8,6 +8,9 @@ import {
 } from 'react'
 import Tooltip from '../Tooltip'
 
+const TOGGLE_RADIUS = '24px'
+const TOGGLE_POINT_RADIUS = '100px'
+
 const SIZES = {
   large: {
     ball: 16,
@@ -24,7 +27,7 @@ const SIZES = {
 const StyledToggle = styled.div<{
   'data-checked': boolean
   'data-disabled': boolean
-  'data-size': 'small' | 'large'
+  size: 'small' | 'large'
 }>`
   box-sizing: content-box;
   outline: none;
@@ -32,22 +35,21 @@ const StyledToggle = styled.div<{
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 34px;
+  border-radius: ${TOGGLE_RADIUS};
   position: relative;
   transition: all 300ms;
   background-color: ${({ theme }) => theme.colors.neutral.textWeak};
-  width: ${({ 'data-size': dataSize }) => SIZES[dataSize].width}px;
-  height: ${({ 'data-size': dataSize }) => SIZES[dataSize].height}px;
+  width: ${({ size }) => SIZES[size].width}px;
+  height: ${({ size }) => SIZES[size].height}px;
 
   &:after {
     content: '';
     position: absolute;
-    top: ${({ 'data-size': dataSize }) =>
-      SIZES[dataSize].height / 2 - SIZES[dataSize].ball / 2}px;
+    top: ${({ size }) => SIZES[size].height / 2 - SIZES[size].ball / 2}px;
     left: 5px;
-    width: ${({ 'data-size': dataSize }) => SIZES[dataSize].ball}px;
-    height: ${({ 'data-size': dataSize }) => SIZES[dataSize].ball}px;
-    border-radius: 100px;
+    width: ${({ size }) => SIZES[size].ball}px;
+    height: ${({ size }) => SIZES[size].ball}px;
+    border-radius: ${TOGGLE_POINT_RADIUS};
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     transition: all 300ms;
   }
@@ -58,7 +60,7 @@ const StyledToggle = styled.div<{
   }
 
   &[data-disabled='false']:active:after {
-    width: ${({ 'data-size': dataSize }) => SIZES[dataSize].ball * 1.3775}px;
+    width: ${({ size }) => SIZES[size].ball * 1.3775}px;
   }
 
   &[data-checked='true'] {
@@ -100,14 +102,14 @@ const StyledCheckbox = styled.input`
 `
 
 const StyledLabel = styled.label<{
-  'data-size': 'small' | 'large'
+  size: 'small' | 'large'
 }>`
   display: flex;
   align-items: center;
   cursor: pointer;
 
   &:active ${StyledToggle}[data-disabled='false']:after {
-    width: ${({ 'data-size': dataSize }) => SIZES[dataSize].ball * 1.3775}px;
+    width: ${({ size }) => SIZES[size].ball * 1.3775}px;
   }
 
   &[aria-disabled='true'] {
@@ -177,17 +179,13 @@ const Toggle = ({
     <Tooltip text={tooltip}>
       <StyledLabel
         aria-disabled={disabled}
-        data-size={size}
+        size={size}
         onClick={evt => evt.stopPropagation()}
       >
         {label && labelPosition === 'left' ? (
           <LabelContent label={label} labelPosition={labelPosition} />
         ) : null}
-        <StyledToggle
-          data-size={size}
-          data-checked={state}
-          data-disabled={disabled}
-        >
+        <StyledToggle size={size} data-checked={state} data-disabled={disabled}>
           <StyledCheckbox
             id={id || name}
             aria-label={name}
