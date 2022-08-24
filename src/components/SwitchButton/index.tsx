@@ -97,7 +97,7 @@ const SwitchButton = ({
   tooltip,
 }: SwitchButtonProps) => {
   const [localValue, setLocalValue] = useState(
-    value === 'left' ? leftValue : rightValue,
+    value === leftValue ? leftValue : rightValue,
   )
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange?.(event)
