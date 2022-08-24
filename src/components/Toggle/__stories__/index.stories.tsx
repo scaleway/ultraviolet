@@ -19,7 +19,7 @@ export default {
 const Template: Story<ComponentProps<typeof Toggle>> = ({
   checked,
   ...args
-}) => <Toggle {...args} name="Toggle" onChange={() => {}} />
+}) => <Toggle {...args} name="Toggle" />
 
 export const Default = Template.bind({})
 
