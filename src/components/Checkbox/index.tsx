@@ -1,8 +1,10 @@
 import styled from '@emotion/styled'
 import {
   ChangeEvent,
+  ForwardedRef,
   KeyboardEventHandler,
   ReactNode,
+  forwardRef,
   useCallback,
   useEffect,
   useMemo,
@@ -181,107 +183,113 @@ type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
   ['data-visibility']?: string
 } & Required<Pick<ReakitCheckboxProps, 'onChange'>>
 
-const Checkbox = ({
-  checked = false,
-  onChange,
-  onFocus,
-  onBlur,
-  error,
-  name,
-  value,
-  size = 24,
-  children,
-  progress = false,
-  disabled = false,
-  autoFocus = false,
-  className,
-  'data-visibility': dataVisibility,
-}: CheckboxProps) => {
-  const hasChildren = !!children
-  const checkbox = useCheckboxState({ state: checked })
-  const { state, setState } = checkbox
+const Checkbox = forwardRef(
+  (
+    {
+      checked = false,
+      onChange,
+      onFocus,
+      onBlur,
+      error,
+      name,
+      value,
+      size = 24,
+      children,
+      progress = false,
+      disabled = false,
+      autoFocus = false,
+      className,
+      'data-visibility': dataVisibility,
+    }: CheckboxProps,
+    ref: ForwardedRef<HTMLLabelElement>,
+  ) => {
+    const hasChildren = !!children
+    const checkbox = useCheckboxState({ state: checked })
+    const { state, setState } = checkbox
 
-  const computedName = useMemo(() => {
-    if (!name) return getUUID('checkbox')
+    const computedName = useMemo(() => {
+      if (!name) return getUUID('checkbox')
 
-    return name
-  }, [name])
+      return name
+    }, [name])
 
-  const icon = useMemo(() => {
-    if (state === 'indeterminate') return 'minus-box-outline'
-    if (state) return 'checkbox-marked-outline'
+    const icon = useMemo(() => {
+      if (state === 'indeterminate') return 'minus-box-outline'
+      if (state) return 'checkbox-marked-outline'
 
-    return 'checkbox-blank-outline'
-  }, [state])
+      return 'checkbox-blank-outline'
+    }, [state])
 
-  useEffect(() => {
-    setState(checked)
-  }, [checked, setState])
+    useEffect(() => {
+      setState(checked)
+    }, [checked, setState])
 
-  const onLocalChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (!progress) onChange(event)
-      setState(event.target.checked)
-    },
-    [onChange, progress, setState],
-  )
+    const onLocalChange = useCallback(
+      (event: ChangeEvent<HTMLInputElement>) => {
+        if (!progress) onChange(event)
+        setState(event.target.checked)
+      },
+      [onChange, progress, setState],
+    )
 
-  const onKeyDown: KeyboardEventHandler = useCallback(
-    event => {
-      if (event.key.charCodeAt(0) === 32) {
-        onChange(event)
-      }
-    },
-    [onChange],
-  )
+    const onKeyDown: KeyboardEventHandler = useCallback(
+      event => {
+        if (event.key.charCodeAt(0) === 32) {
+          onChange(event)
+        }
+      },
+      [onChange],
+    )
 
-  return (
-    <>
-      {progress ? (
-        <StyledActivityContainer hasChildren={hasChildren}>
-          <Loader active size={size} />
-        </StyledActivityContainer>
-      ) : null}
-      <StyledCheckBoxContainer
-        className={className}
-        aria-disabled={disabled}
-        data-visibility={dataVisibility}
-      >
-        <StyledReakitCheckbox
-          aria-invalid={!!error}
-          aria-describedby={error ? `${computedName}-hint` : undefined}
-          aria-checked={
-            state === 'indeterminate' ? 'mixed' : (state as boolean)
-          }
-          checked={state === 'indeterminate' ? false : (state as boolean)}
-          size={size}
-          onChange={onLocalChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onKeyDown={onKeyDown}
-          disabled={disabled}
-          value={value}
-          name={computedName}
-          autoFocus={autoFocus}
-        />
-        {!progress ? (
-          <StyledIcon name={icon} size={size} viewBox="0 0 24 24">
-            {state === 'indeterminate' ? (
-              <CheckboxMixedIcon />
-            ) : (
-              <CheckboxIcon />
-            )}
-          </StyledIcon>
+    return (
+      <>
+        {progress ? (
+          <StyledActivityContainer hasChildren={hasChildren}>
+            <Loader active size={size} />
+          </StyledActivityContainer>
         ) : null}
-        {children}
-      </StyledCheckBoxContainer>
-      {error ? (
-        <PaddedText variant="bodySmall" as="p" color="danger">
-          {error}
-        </PaddedText>
-      ) : null}
-    </>
-  )
-}
+        <StyledCheckBoxContainer
+          className={className}
+          aria-disabled={disabled}
+          data-visibility={dataVisibility}
+          ref={ref}
+        >
+          <StyledReakitCheckbox
+            aria-invalid={!!error}
+            aria-describedby={error ? `${computedName}-hint` : undefined}
+            aria-checked={
+              state === 'indeterminate' ? 'mixed' : (state as boolean)
+            }
+            checked={state === 'indeterminate' ? false : (state as boolean)}
+            size={size}
+            onChange={onLocalChange}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onKeyDown={onKeyDown}
+            disabled={disabled}
+            value={value}
+            name={computedName}
+            autoFocus={autoFocus}
+          />
+          {!progress ? (
+            <StyledIcon name={icon} size={size} viewBox="0 0 24 24">
+              {state === 'indeterminate' ? (
+                <CheckboxMixedIcon />
+              ) : (
+                <CheckboxIcon />
+              )}
+            </StyledIcon>
+          ) : null}
+          {children}
+        </StyledCheckBoxContainer>
+        {error ? (
+          <PaddedText variant="bodySmall" as="p" color="danger">
+            {error}
+          </PaddedText>
+        ) : null}
+      </>
+    )
+  },
+)
 
 export default Checkbox

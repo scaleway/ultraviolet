@@ -3,13 +3,18 @@ import {
   ChangeEvent,
   ChangeEventHandler,
   FocusEventHandler,
+  useLayoutEffect,
+  useRef,
   useState,
 } from 'react'
 import BorderedBox from '../BorderedBox'
 import SelectableCard from '../SelectableCard'
 import Tooltip from '../Tooltip'
 
-const StyledBorderedBox = styled(BorderedBox)`
+const StyledBorderedBox = styled(BorderedBox)<{
+  widthLeftSelectableCard: number
+  widthRightSelectableCard: number
+}>`
   padding: ${({ theme }) => theme.space['0.5']};
   display: inline-flex;
   gap: ${({ theme }) => theme.space['1']};
@@ -19,10 +24,7 @@ const StyledBorderedBox = styled(BorderedBox)`
     position: absolute;
     top: 4px;
     left: 4px;
-    width: calc(
-      50% - ${({ theme }) => theme.space['1']} -
-        ${({ theme }) => theme.space['0.5']}
-    );
+    width: ${({ widthLeftSelectableCard }) => widthLeftSelectableCard}px;
     height: calc(100% - ${({ theme }) => theme.space['1']});
     border-radius: ${({ theme }) => theme.radii.default};
     background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
@@ -31,16 +33,22 @@ const StyledBorderedBox = styled(BorderedBox)`
 
   &[data-position='right']:before {
     left: calc(100% - 4px);
-    width: 50%;
+    width: ${({ widthRightSelectableCard }) => widthRightSelectableCard}px;
     transform: translateX(-100%);
   }
 
   &[data-position='right']:active:before {
-    width: calc(50% + ${({ theme }) => theme.space['0.5']});
+    width: calc(
+      ${({ widthRightSelectableCard }) => widthRightSelectableCard}px +
+        ${({ theme }) => theme.space['1']}
+    );
   }
 
   &[data-position='left']:active:before {
-    width: calc(50% - ${({ theme }) => theme.space['0.5']} - 1px);
+    width: calc(
+      ${({ widthLeftSelectableCard }) => widthLeftSelectableCard}px +
+        ${({ theme }) => theme.space['1']}
+    );
   }
 `
 
@@ -98,6 +106,12 @@ const SwitchButton = ({
   rightButton,
   tooltip,
 }: SwitchButtonProps) => {
+  const refLeftButton = useRef<HTMLLabelElement>(null)
+  const refRightButton = useRef<HTMLLabelElement>(null)
+
+  const [widthLeftSelectableCard, setwidthLeftSelectableCard] = useState(0)
+  const [widthRightSelectableCard, setwidthRightSelectableCard] = useState(0)
+
   const [localValue, setLocalValue] = useState(
     value === leftButton.value ? leftButton.value : rightButton.value,
   )
@@ -106,13 +120,21 @@ const SwitchButton = ({
     setLocalValue(event.target.value)
   }
 
+  useLayoutEffect(() => {
+    setwidthLeftSelectableCard(refLeftButton?.current?.offsetWidth ?? 0)
+    setwidthRightSelectableCard(refRightButton?.current?.offsetWidth ?? 0)
+  }, [])
+
   return (
     <Tooltip text={tooltip}>
       <div style={{ display: 'inline-flex', position: 'relative' }}>
         <StyledBorderedBox
           data-position={localValue === leftButton.value ? 'left' : 'right'}
+          widthLeftSelectableCard={widthLeftSelectableCard}
+          widthRightSelectableCard={widthRightSelectableCard}
         >
           <StyledSelectableCard
+            ref={refLeftButton}
             name={name}
             value={leftButton.value}
             checked={localValue === leftButton.value}
@@ -124,6 +146,7 @@ const SwitchButton = ({
             {leftButton.label}
           </StyledSelectableCard>
           <StyledSelectableCard
+            ref={refRightButton}
             name={name}
             value={rightButton.value}
             checked={localValue === rightButton.value}
