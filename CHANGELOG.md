@@ -1,3 +1,20 @@
+## [0.182.0](https://github.com/scaleway/scaleway-ui/compare/v0.181.1...v0.182.0) (2022-08-25)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.3 ([#1804](https://github.com/scaleway/scaleway-ui/issues/1804)) ([b255dac](https://github.com/scaleway/scaleway-ui/commit/b255dacb519ff3337623f2a3174f45411b9031ea))
+
+
+### :repeat: CI
+
+* **codecov:** fix very low coverage changes on PR ([#1803](https://github.com/scaleway/scaleway-ui/issues/1803)) ([34e9e1e](https://github.com/scaleway/scaleway-ui/commit/34e9e1e71d579209f0e3244ccf29e6c0095035a9))
+
+
+### :gear: Features
+
+* **SwitchButton:** full refacto ([#1802](https://github.com/scaleway/scaleway-ui/issues/1802)) ([5536747](https://github.com/scaleway/scaleway-ui/commit/55367476207d09e1ef8980a7091141695f434e62))
+
 ## [0.181.1](https://github.com/scaleway/scaleway-ui/compare/v0.181.0...v0.181.1) (2022-08-23)
 
 
