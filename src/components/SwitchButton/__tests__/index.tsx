@@ -1,45 +1,84 @@
+import userEvent from '@testing-library/user-event'
 import SwitchButton from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 
 describe('SwitchButton', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <SwitchButton onChange={() => {}} name="radio" value="choice">
-        Choice
-      </SwitchButton>,
+      <SwitchButton
+        name="test"
+        onChange={() => {}}
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
+      />,
     ))
 
-  test('renders correctly with variant segment', () =>
+  test('renders correctly with right value', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
+        name="test"
+        value="right"
         onChange={() => {}}
-        name="radio"
-        value="choice"
-        variant="segment"
-      >
-        Choice
-      </SwitchButton>,
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
+      />,
     ))
 
-  test('renders correctly when disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <SwitchButton onChange={() => {}} name="radio" value="choice" disabled>
-        Choice
-      </SwitchButton>,
-    ))
-
-  test('renders correctly with complex child', () =>
+  test('renders with tooltip', () =>
     shouldMatchEmotionSnapshot(
       <SwitchButton
+        name="test"
         onChange={() => {}}
-        name="radio"
-        value="choice"
-        disabled
-        checked
-      >
-        {({ checked, disabled }) =>
-          `${checked.toString()} ${disabled.toString()}`
-        }
-      </SwitchButton>,
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
+        tooltip="This is a tooltip"
+      />,
     ))
+
+  test('renders with on change', () => {
+    const onChange = jest.fn()
+
+    const node = renderWithTheme(
+      <SwitchButton
+        name="test"
+        onChange={onChange}
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
+        tooltip="This is a tooltip"
+      />,
+    )
+
+    const input = node.getAllByRole('radio', {
+      hidden: true,
+    })
+
+    userEvent.click(input[1])
+  })
 })
