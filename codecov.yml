@@ -3,10 +3,13 @@ codecov:
   bot: scaleway-bot
 
 coverage:
-  threshold: 0.1%
   precision: 2
   round: down
   range: "70...100"
+  status:
+    project:
+      default:
+        threshold: 0.1%
 
 parsers:
   gcov:
