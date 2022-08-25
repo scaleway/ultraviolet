@@ -11,10 +11,14 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        leftText="Left choice"
-        leftValue="left"
-        rightText="Right choice"
-        rightValue="right"
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
       />,
     ))
 
@@ -24,10 +28,14 @@ describe('SwitchButton', () => {
         name="test"
         value="right"
         onChange={() => {}}
-        leftText="Left choice"
-        leftValue="left"
-        rightText="Right choice"
-        rightValue="right"
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
       />,
     ))
 
@@ -36,30 +44,41 @@ describe('SwitchButton', () => {
       <SwitchButton
         name="test"
         onChange={() => {}}
-        leftText="Left choice"
-        leftValue="left"
-        rightText="Right choice"
-        rightValue="right"
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
         tooltip="This is a tooltip"
       />,
     ))
 
   test('renders with on change', () => {
+    const onChange = jest.fn()
+
     const node = renderWithTheme(
       <SwitchButton
         name="test"
-        onChange={() => {}}
-        leftText="Left choice"
-        leftValue="left"
-        rightText="Right choice"
-        rightValue="right"
+        onChange={onChange}
+        leftButton={{
+          label: 'Left',
+          value: 'left',
+        }}
+        rightButton={{
+          label: 'Right',
+          value: 'right',
+        }}
         tooltip="This is a tooltip"
       />,
     )
 
-    const input = node.getAllByRole('radio')
+    const input = node.getAllByRole('radio', {
+      hidden: true,
+    })
 
-    userEvent.hover(input[1])
     userEvent.click(input[1])
   })
 })

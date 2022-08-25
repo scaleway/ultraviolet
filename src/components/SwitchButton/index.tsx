@@ -78,10 +78,14 @@ type SwitchButtonProps = {
   onFocus?: FocusEventHandler
   tooltip?: string
   value?: string | number
-  leftValue: string | number
-  rightValue: string | number
-  leftText: string
-  rightText: string
+  leftButton: {
+    label: string
+    value: string
+  }
+  rightButton: {
+    label: string
+    value: string
+  }
 }
 
 const SwitchButton = ({
@@ -90,14 +94,12 @@ const SwitchButton = ({
   onFocus,
   onBlur,
   name,
-  leftValue,
-  rightValue,
-  leftText,
-  rightText,
+  leftButton,
+  rightButton,
   tooltip,
 }: SwitchButtonProps) => {
   const [localValue, setLocalValue] = useState(
-    value === leftValue ? leftValue : rightValue,
+    value === leftButton.value ? leftButton.value : rightButton.value,
   )
   const handleOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange?.(event)
@@ -108,29 +110,29 @@ const SwitchButton = ({
     <Tooltip text={tooltip}>
       <div style={{ display: 'inline-flex', position: 'relative' }}>
         <StyledBorderedBox
-          data-position={localValue === leftValue ? 'left' : 'right'}
+          data-position={localValue === leftButton.value ? 'left' : 'right'}
         >
           <StyledSelectableCard
             name={name}
-            value={leftValue}
-            checked={localValue === leftValue}
+            value={leftButton.value}
+            checked={localValue === leftButton.value}
             onChange={handleOnChange}
             onBlur={onBlur}
             onFocus={onFocus}
-            data-checked={localValue === leftValue}
+            data-checked={localValue === leftButton.value}
           >
-            {leftText}
+            {leftButton.label}
           </StyledSelectableCard>
           <StyledSelectableCard
             name={name}
-            value={rightValue}
-            checked={localValue === rightValue}
+            value={rightButton.value}
+            checked={localValue === rightButton.value}
             onChange={handleOnChange}
             onBlur={onBlur}
             onFocus={onFocus}
-            data-checked={localValue === rightValue}
+            data-checked={localValue === rightButton.value}
           >
-            {rightText}
+            {rightButton.label}
           </StyledSelectableCard>
         </StyledBorderedBox>
       </div>
