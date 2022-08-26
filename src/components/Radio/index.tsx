@@ -1,5 +1,11 @@
 import styled from '@emotion/styled'
-import { InputHTMLAttributes, ReactNode, useMemo } from 'react'
+import {
+  ForwardedRef,
+  InputHTMLAttributes,
+  ReactNode,
+  forwardRef,
+  useMemo,
+} from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
 import { getUUID } from '../../utils'
 
@@ -125,56 +131,62 @@ type RadioProps = {
 } & InputHTMLAttributes<HTMLInputElement> &
   Required<Pick<ReakitRadioProps, 'onChange'>>
 
-const Radio = ({
-  checked = false,
-  onChange,
-  onFocus,
-  onBlur,
-  disabled = false,
-  error,
-  name,
-  value,
-  size = 24,
-  children,
-  className,
-  autoFocus,
-  onKeyDown,
-}: RadioProps) => {
-  const computedName = useMemo(() => {
-    if (!name) return getUUID('radio')
+const Radio = forwardRef(
+  (
+    {
+      checked = false,
+      onChange,
+      onFocus,
+      onBlur,
+      disabled = false,
+      error,
+      name,
+      value,
+      size = 24,
+      children,
+      className,
+      autoFocus,
+      onKeyDown,
+    }: RadioProps,
+    ref: ForwardedRef<HTMLLabelElement>,
+  ) => {
+    const computedName = useMemo(() => {
+      if (!name) return getUUID('radio')
 
-    return name
-  }, [name])
+      return name
+    }, [name])
 
-  return (
-    <StyledRadioContainer
-      as="label"
-      aria-disabled={disabled}
-      htmlFor={`${computedName}-${value}`}
-      className={className}
-    >
-      <StyledRadio
-        type="radio"
-        aria-invalid={!!error}
-        aria-checked={checked}
+    return (
+      <StyledRadioContainer
+        as="label"
         aria-disabled={disabled}
-        checked={checked}
-        id={`${computedName}-${value}`}
-        onChange={onChange}
-        onFocus={onFocus}
-        onKeyDown={onKeyDown}
-        onBlur={onBlur}
-        value={value}
-        disabled={disabled}
-        name={computedName}
-        autoFocus={autoFocus}
-      />
-      <StyledIcon size={size} viewBox="0 0 24 24">
-        <RadioMarkedIcon />
-      </StyledIcon>
-      {children}
-    </StyledRadioContainer>
-  )
-}
+        htmlFor={`${computedName}-${value}`}
+        className={className}
+        ref={ref}
+      >
+        <StyledRadio
+          type="radio"
+          aria-invalid={!!error}
+          aria-checked={checked}
+          aria-disabled={disabled}
+          checked={checked}
+          id={`${computedName}-${value}`}
+          onChange={onChange}
+          onFocus={onFocus}
+          onKeyDown={onKeyDown}
+          onBlur={onBlur}
+          value={value}
+          disabled={disabled}
+          name={computedName}
+          autoFocus={autoFocus}
+        />
+        <StyledIcon size={size} viewBox="0 0 24 24">
+          <RadioMarkedIcon />
+        </StyledIcon>
+        {children}
+      </StyledRadioContainer>
+    )
+  },
+)
 
 export default Radio

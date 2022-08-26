@@ -2,7 +2,7 @@
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
+  .cache-1v3w2nr-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -14,15 +14,12 @@ exports[`SwitchButton renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox:before {
   content: '';
   position: absolute;
   top: 4px;
   left: 4px;
-  width: calc(
-        50% - 8px -
-          4px
-      );
+  width: 0px;
   height: calc(100% - 8px);
   border-radius: 4px;
   background-color: #4f0599;
@@ -30,21 +27,27 @@ exports[`SwitchButton renders correctly 1`] = `
   transition: transform 300ms,width 300ms,left 300ms;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:before {
   left: calc(100% - 4px);
-  width: 50%;
+  width: 0px;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
-  width: calc(50% + 4px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
-  width: calc(50% - 4px - 1px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
 .cache-qumg1m-StyledRadioContainer-StyledElement-StyledSelectableCard {
@@ -308,7 +311,7 @@ exports[`SwitchButton renders correctly 1`] = `
     style="display: inline-flex; position: relative;"
   >
     <div
-      class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+      class="cache-1v3w2nr-BorderedBox-StyledBorderedBox e16krxq01"
       data-position="right"
     >
       <label
@@ -407,7 +410,7 @@ exports[`SwitchButton renders correctly 1`] = `
 
 exports[`SwitchButton renders correctly with right value 1`] = `
 <DocumentFragment>
-  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
+  .cache-1v3w2nr-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -419,15 +422,12 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   gap: 8px;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox:before {
   content: '';
   position: absolute;
   top: 4px;
   left: 4px;
-  width: calc(
-        50% - 8px -
-          4px
-      );
+  width: 0px;
   height: calc(100% - 8px);
   border-radius: 4px;
   background-color: #4f0599;
@@ -435,21 +435,27 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transition: transform 300ms,width 300ms,left 300ms;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:before {
   left: calc(100% - 4px);
-  width: 50%;
+  width: 0px;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
-  width: calc(50% + 4px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
-  width: calc(50% - 4px - 1px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
 .cache-qumg1m-StyledRadioContainer-StyledElement-StyledSelectableCard {
@@ -713,7 +719,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
     style="display: inline-flex; position: relative;"
   >
     <div
-      class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+      class="cache-1v3w2nr-BorderedBox-StyledBorderedBox e16krxq01"
       data-position="right"
     >
       <label
@@ -812,7 +818,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
 
 exports[`SwitchButton renders with tooltip 1`] = `
 <DocumentFragment>
-  .cache-xpe6gd-BorderedBox-StyledBorderedBox {
+  .cache-1v3w2nr-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -824,15 +830,12 @@ exports[`SwitchButton renders with tooltip 1`] = `
   gap: 8px;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox:before {
   content: '';
   position: absolute;
   top: 4px;
   left: 4px;
-  width: calc(
-        50% - 8px -
-          4px
-      );
+  width: 0px;
   height: calc(100% - 8px);
   border-radius: 4px;
   background-color: #4f0599;
@@ -840,21 +843,27 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transition: transform 300ms,width 300ms,left 300ms;
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:before {
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:before {
   left: calc(100% - 4px);
-  width: 50%;
+  width: 0px;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
-  width: calc(50% + 4px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='right']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
-.cache-xpe6gd-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
-  width: calc(50% - 4px - 1px);
+.cache-1v3w2nr-BorderedBox-StyledBorderedBox[data-position='left']:active:before {
+  width: calc(
+        0px +
+          8px
+      );
 }
 
 .cache-qumg1m-StyledRadioContainer-StyledElement-StyledSelectableCard {
@@ -1121,7 +1130,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
       style="display: inline-flex; position: relative;"
     >
       <div
-        class="cache-xpe6gd-BorderedBox-StyledBorderedBox e16krxq01"
+        class="cache-1v3w2nr-BorderedBox-StyledBorderedBox e16krxq01"
         data-position="right"
       >
         <label

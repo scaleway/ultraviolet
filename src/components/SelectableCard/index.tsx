@@ -2,7 +2,9 @@ import styled from '@emotion/styled'
 import React, {
   ChangeEventHandler,
   FocusEventHandler,
+  ForwardedRef,
   ReactNode,
+  forwardRef,
   useMemo,
 } from 'react'
 import Checkbox from '../Checkbox'
@@ -83,48 +85,55 @@ type SelectableCardProps = {
   tooltip?: string
 }
 
-const SelectableCard = ({
-  name,
-  value,
-  onChange,
-  showTick = false,
-  type = 'radio',
-  checked = false,
-  disabled = false,
-  children,
-  className,
-  isError,
-  onFocus,
-  onBlur,
-  tooltip,
-  id,
-}: SelectableCardProps) => {
-  const Element = useMemo(
-    () => StyledElement(type === 'radio' ? Radio : Checkbox),
-    [type],
-  )
+const SelectableCard = forwardRef(
+  (
+    {
+      name,
+      value,
+      onChange,
+      showTick = false,
+      type = 'radio',
+      checked = false,
+      disabled = false,
+      children,
+      className,
+      isError,
+      onFocus,
+      onBlur,
+      tooltip,
+      id,
+    }: SelectableCardProps,
+    ref: ForwardedRef<HTMLLabelElement>,
+  ) => {
+    const Element = useMemo(
+      () =>
+        StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
+      [type],
+    )
 
-  return (
-    <Tooltip text={tooltip}>
-      <Element
-        name={name}
-        value={value}
-        onChange={onChange}
-        showTick={showTick}
-        checked={checked}
-        disabled={disabled}
-        className={className}
-        error={isError}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        id={id}
-      >
-        {typeof children === 'function'
-          ? children({ checked, disabled })
-          : children}
-      </Element>
-    </Tooltip>
-  )
-}
+    return (
+      <Tooltip text={tooltip}>
+        <Element
+          name={name}
+          value={value}
+          onChange={onChange}
+          showTick={showTick}
+          checked={checked}
+          disabled={disabled}
+          className={className}
+          error={isError}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          ref={ref}
+          id={id}
+        >
+          {typeof children === 'function'
+            ? children({ checked, disabled })
+            : children}
+        </Element>
+      </Tooltip>
+    )
+  },
+)
 
 export default SelectableCard
