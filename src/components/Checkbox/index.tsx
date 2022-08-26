@@ -204,8 +204,7 @@ const Checkbox = forwardRef(
     ref: ForwardedRef<HTMLLabelElement>,
   ) => {
     const hasChildren = !!children
-    const checkbox = useCheckboxState({ state: checked })
-    const { state, setState } = checkbox
+    const { state, setState } = useCheckboxState({ state: checked })
 
     const computedName = useMemo(() => {
       if (!name) return getUUID('checkbox')
