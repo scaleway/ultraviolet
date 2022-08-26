@@ -251,6 +251,7 @@ const Checkbox = forwardRef(
           className={className}
           aria-disabled={disabled}
           data-visibility={dataVisibility}
+          data-checked={checked}
           ref={ref}
         >
           <StyledReakitCheckbox

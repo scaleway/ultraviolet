@@ -3,62 +3,26 @@ import {
   ChangeEvent,
   ChangeEventHandler,
   FocusEventHandler,
-  useLayoutEffect,
-  useRef,
   useState,
 } from 'react'
 import BorderedBox from '../BorderedBox'
 import SelectableCard from '../SelectableCard'
 import Tooltip from '../Tooltip'
 
-const StyledBorderedBox = styled(BorderedBox)<{
-  widthLeftSelectableCard: number
-  widthRightSelectableCard: number
-}>`
+const StyledBorderedBox = styled(BorderedBox)`
   padding: ${({ theme }) => theme.space['0.5']};
-  display: inline-flex;
+  display: flex;
   gap: ${({ theme }) => theme.space['1']};
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: ${({ widthLeftSelectableCard }) => widthLeftSelectableCard}px;
-    height: calc(100% - ${({ theme }) => theme.space['1']});
-    border-radius: ${({ theme }) => theme.radii.default};
-    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
-    transition: transform 300ms, width 300ms, left 300ms;
-  }
-
-  &[data-position='right']:before {
-    left: calc(100% - 4px);
-    width: ${({ widthRightSelectableCard }) => widthRightSelectableCard}px;
-    transform: translateX(-100%);
-  }
-
-  &[data-position='right']:active:before {
-    width: calc(
-      ${({ widthRightSelectableCard }) => widthRightSelectableCard}px +
-        ${({ theme }) => theme.space['1']}
-    );
-  }
-
-  &[data-position='left']:active:before {
-    width: calc(
-      ${({ widthLeftSelectableCard }) => widthLeftSelectableCard}px +
-        ${({ theme }) => theme.space['1']}
-    );
-  }
 `
 
-const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
+const StyledSelectableCard = styled(SelectableCard)`
   border: none;
   height: 40px;
   padding: ${({ theme }) => theme.space['1']} ${({ theme }) => theme.space['2']};
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   justify-content: center;
   align-items: center;
+  transition: all 200ms ease-in-out;
 
   &:hover,
   &:focus-within,
@@ -67,16 +31,16 @@ const StyledSelectableCard = styled(SelectableCard)<{ checked: boolean }>`
     border: none;
   }
 
-  ${({ checked, theme }) =>
-    checked
-      ? `
-  color: ${theme.colors.primary.textStrong};
-  `
-      : `
-        &:hover {
-          color: ${theme.colors.primary.textWeak};
-        }
-      `}
+  &[data-checked='true'] {
+    color: ${({ theme }) => theme.colors.primary.textStrong};
+    background: ${({ theme }) => theme.colors.primary.backgroundStrong};
+  }
+
+  &:not([data-checked='true']) {
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary.textWeak};
+    }
+  }
 `
 
 type SwitchButtonProps = {
@@ -106,12 +70,6 @@ const SwitchButton = ({
   rightButton,
   tooltip,
 }: SwitchButtonProps) => {
-  const refLeftButton = useRef<HTMLLabelElement>(null)
-  const refRightButton = useRef<HTMLLabelElement>(null)
-
-  const [widthLeftSelectableCard, setwidthLeftSelectableCard] = useState(0)
-  const [widthRightSelectableCard, setwidthRightSelectableCard] = useState(0)
-
   const [localValue, setLocalValue] = useState(
     value === leftButton.value ? leftButton.value : rightButton.value,
   )
@@ -120,21 +78,11 @@ const SwitchButton = ({
     setLocalValue(event.target.value)
   }
 
-  useLayoutEffect(() => {
-    setwidthLeftSelectableCard(refLeftButton?.current?.offsetWidth ?? 0)
-    setwidthRightSelectableCard(refRightButton?.current?.offsetWidth ?? 0)
-  }, [])
-
   return (
     <Tooltip text={tooltip}>
-      <div style={{ display: 'inline-flex', position: 'relative' }}>
-        <StyledBorderedBox
-          data-position={localValue === leftButton.value ? 'left' : 'right'}
-          widthLeftSelectableCard={widthLeftSelectableCard}
-          widthRightSelectableCard={widthRightSelectableCard}
-        >
+      <div style={{ display: 'inline-flex' }}>
+        <StyledBorderedBox>
           <StyledSelectableCard
-            ref={refLeftButton}
             name={name}
             value={leftButton.value}
             checked={localValue === leftButton.value}
@@ -146,7 +94,6 @@ const SwitchButton = ({
             {leftButton.label}
           </StyledSelectableCard>
           <StyledSelectableCard
-            ref={refRightButton}
             name={name}
             value={rightButton.value}
             checked={localValue === rightButton.value}
