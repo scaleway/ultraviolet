@@ -14,7 +14,7 @@ const Template: Story<ComponentProps<typeof SwitchButton>> = args => (
 export const Default = Template.bind({})
 Default.args = {
   leftButton: {
-    label: 'Left Left Left Left',
+    label: 'Left',
     value: 'left',
   },
   rightButton: {
