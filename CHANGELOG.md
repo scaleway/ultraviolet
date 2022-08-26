@@ -1,3 +1,20 @@
+## [0.182.1](https://github.com/scaleway/scaleway-ui/compare/v0.182.0...v0.182.1) (2022-08-26)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.4.3 ([#1794](https://github.com/scaleway/scaleway-ui/issues/1794)) ([ba64294](https://github.com/scaleway/scaleway-ui/commit/ba64294c01abf6fac65d68a60e17214b0ddae437))
+
+
+### :repeat: CI
+
+* **codecov:** correct fix ([#1809](https://github.com/scaleway/scaleway-ui/issues/1809)) ([4c50608](https://github.com/scaleway/scaleway-ui/commit/4c5060853921a005fe5e69d38575f03a64c3b5b7))
+
+
+### :bug: Bug Fixes
+
+* **SwitchButton:** make background size dynamic using refs ([#1808](https://github.com/scaleway/scaleway-ui/issues/1808)) ([66d0ee9](https://github.com/scaleway/scaleway-ui/commit/66d0ee9717ce0c52d248aa02f69f6257f3283d5e))
+
 ## [0.182.0](https://github.com/scaleway/scaleway-ui/compare/v0.181.1...v0.182.0) (2022-08-25)
 
 
