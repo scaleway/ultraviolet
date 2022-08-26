@@ -10,18 +10,17 @@ import {
   forwardRef,
   useMemo,
 } from 'react'
+import Text from '../Text'
 import Tooltip from '../Tooltip'
 import { useTabsContext } from './TabsContext'
 
-const StyledCounter = styled.span`
+const StyledCounter = styled(Text)`
   border-radius: 50%;
-  font-size: 12px;
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderStrong};
   margin-left: ${({ theme }) => theme.space['1']};
   height: 24px;
   width: 24px;
-  text-overflow: ellipsis;
   line-height: 22px;
 `
 
@@ -30,20 +29,15 @@ const BadgeContainer = styled.span`
   display: flex;
 `
 
-export const StyledTabButton = styled.button<{
-  'data-variant'?: 'menuitem' | 'tab'
-}>`
+export const StyledTabButton = styled.button`
   display: flex;
   flex-direction: row;
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
-  line-height: 24px;
   white-space: nowrap;
   color: ${({ theme }) => theme.colors.neutral.textWeak};
-  font-weight: 500;
   text-decoration: none;
   user-select: none;
   touch-action: manipulation;
@@ -54,6 +48,13 @@ export const StyledTabButton = styled.button<{
   border-bottom-style: solid;
   border-bottom-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   outline: none;
+
+  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
+  font-family: ${({ theme }) => theme.typography.bodyStrong.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
+  letter-spacing: ${({ theme }) => theme.typography.bodyStrong.letterSpacing};
+  line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
+  text-case: ${({ theme }) => theme.typography.bodyStrong.textCase};
 
   &:hover,
   &:active,
@@ -75,7 +76,7 @@ export const StyledTabButton = styled.button<{
     }
   }
 
-  &:not([aria-disabled='true']):not(:disabled) {
+  &[aria-disabled='false']:not(:disabled) {
     &:hover,
     &:focus,
     &:active {
@@ -116,6 +117,7 @@ export type TabProps<T extends ElementType> = {
   | 'disabled'
   | 'value'
   | 'tooltip'
+  | 'role'
 >
 
 const Tab = <T extends ElementType = 'button'>(
@@ -143,32 +145,35 @@ const Tab = <T extends ElementType = 'button'>(
 
   return (
     <Tooltip text={tooltip}>
-      <li>
-        <StyledTabButton
-          ref={ref as Ref<HTMLButtonElement> | null}
-          className={className}
-          as={computedAs}
-          aria-label={value ? `${value}` : undefined}
-          aria-selected={isSelected}
-          aria-disabled={disabled}
-          disabled={computedAs === 'button' ? disabled : undefined}
-          onClick={event => {
-            if (value) {
-              onChange(value)
-            }
-            ;(onClick as MouseEventHandler<HTMLElement>)?.(event)
-          }}
-          onKeyDown={event => {
-            ;(onKeyDown as KeyboardEventHandler<HTMLElement>)?.(event)
-            if (!event.defaultPrevented && !disabled && value) onChange(value)
-          }}
-          {...props}
-        >
-          {children}
-          {counter ? <StyledCounter>{counter}</StyledCounter> : null}
-          {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
-        </StyledTabButton>
-      </li>
+      <StyledTabButton
+        role="tab"
+        ref={ref as Ref<HTMLButtonElement> | null}
+        className={className}
+        as={computedAs}
+        aria-label={value ? `${value}` : undefined}
+        aria-selected={isSelected}
+        aria-disabled={disabled ?? 'false'}
+        disabled={computedAs === 'button' ? disabled : undefined}
+        onClick={event => {
+          if (value) {
+            onChange(value)
+          }
+          ;(onClick as MouseEventHandler<HTMLElement>)?.(event)
+        }}
+        onKeyDown={event => {
+          ;(onKeyDown as KeyboardEventHandler<HTMLElement>)?.(event)
+          if (!event.defaultPrevented && !disabled && value) onChange(value)
+        }}
+        {...props}
+      >
+        {children}
+        {counter ? (
+          <StyledCounter oneLine as="span" variant="caption">
+            {counter}
+          </StyledCounter>
+        ) : null}
+        {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
+      </StyledTabButton>
     </Tooltip>
   )
 }

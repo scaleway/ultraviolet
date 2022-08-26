@@ -1,5 +1,4 @@
 import { Theme, css } from '@emotion/react'
-import PropTypes from 'prop-types'
 import { ComponentProps } from 'react'
 import Button from '../Button'
 
@@ -108,12 +107,5 @@ const Item = ({
     ]}
   />
 )
-
-Item.propTypes = {
-  borderless: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  variant: PropTypes.oneOf(['danger', 'nav']),
-}
 
 export default Item

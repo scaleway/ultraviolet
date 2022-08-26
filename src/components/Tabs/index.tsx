@@ -5,16 +5,12 @@ import TabMenu from './TabMenu'
 import TabMenuItem from './TabMenuItem'
 import TabsContext from './TabsContext'
 
-const TabsContainer = styled.ul`
+const TabsContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
   overflow-x: scroll;
   position: relative;
   z-index: 0;
-  list-style-type: none;
 
   &::after {
     z-index: -1;
@@ -31,13 +27,13 @@ const TabsContainer = styled.ul`
 type TabsProps = {
   selected?: string | number
   onChange: (data: string | number) => void
-} & Omit<HTMLAttributes<HTMLElement>, 'onChange'>
+} & Omit<HTMLAttributes<HTMLElement>, 'onChange' | 'role'>
 
 const Tabs = ({
   children = null,
   selected,
   onChange = () => {},
-  className,
+  ...props
 }: TabsProps) => {
   const value = useMemo(
     () => ({
@@ -49,7 +45,9 @@ const Tabs = ({
 
   return (
     <TabsContext.Provider value={value}>
-      <TabsContainer className={className}>{children}</TabsContainer>
+      <TabsContainer role="tablist" {...props}>
+        {children}
+      </TabsContainer>
     </TabsContext.Provider>
   )
 }

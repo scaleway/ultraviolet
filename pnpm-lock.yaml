@@ -92,7 +92,6 @@ specifiers:
   jest-mock-random: 1.1.1
   lint-staged: 13.0.3
   loki: 0.30.3
-  mq-polyfill: ^1.1.8
   polished: 4.2.2
   postcss: 8.4.16
   prettier: 2.7.1
@@ -226,7 +225,6 @@ devDependencies:
   jest-mock-random: 1.1.1
   lint-staged: 13.0.3
   loki: 0.30.3_lrdj5lm3kl53ir2pasoc5vfvdu
-  mq-polyfill: 1.1.8
   postcss: 8.4.16
   prettier: 2.7.1
   react: 18.2.0
@@ -2942,7 +2940,7 @@ packages:
       '@types/node': 18.0.0
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.1_i2jc5nvbrvb5akjwkmra2rejwy
+      cosmiconfig-typescript-loader: 2.0.1_qiyc72axg2v44xl4yovan2v55u
       lodash: 4.17.21
       resolve-from: 5.0.0
       typescript: 4.7.4
@@ -9300,12 +9298,11 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cosmiconfig-typescript-loader/2.0.1_i2jc5nvbrvb5akjwkmra2rejwy:
+  /cosmiconfig-typescript-loader/2.0.1_qiyc72axg2v44xl4yovan2v55u:
     resolution: {integrity: sha512-B9s6sX/omXq7I6gC6+YgLmrBFMJhPWew7ty/X5Tuwtd2zOSgWaUdXjkuVwbe3qqcdETo60+1nSVMekq//LIXVA==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@types/node': '*'
-      cosmiconfig: '>=7'
       typescript: '>=3'
     dependencies:
       '@types/node': 18.0.0
@@ -15114,11 +15111,6 @@ packages:
       mkdirp: 0.5.5
       rimraf: 2.7.1
       run-queue: 1.0.3
-    dev: true
-
-  /mq-polyfill/1.1.8:
-    resolution: {integrity: sha512-7FolPfVZMGhkOSY4VKdHCowas+j4quxU/z43lmaK4pXCPtTllSKVb5w6mIB1CSzX0kY7x9KcYsLIkmFxpEdtIg==}
-    engines: {node: '>=6.*'}
     dev: true
 
   /mri/1.2.0:

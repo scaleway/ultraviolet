@@ -8,7 +8,8 @@ import {
 import Link from '../../Link'
 
 describe('Tabs', () => {
-  test('renders correctly', () => shouldMatchEmotionSnapshot(<Tabs />))
+  test('renders correctly', () =>
+    shouldMatchEmotionSnapshot(<Tabs onChange={() => {}} />))
 
   test('renders correctly with Tabs with prop', () =>
     shouldMatchEmotionSnapshotWithPortal(
@@ -50,7 +51,7 @@ describe('Tabs', () => {
 
   test('renders correctly with Tabs and last disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Tabs selected={2}>
+      <Tabs selected={2} onChange={() => {}}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={2} disabled>
@@ -61,7 +62,7 @@ describe('Tabs', () => {
 
   test('renders correctly with Tabs name', () =>
     shouldMatchEmotionSnapshot(
-      <Tabs selected="second">
+      <Tabs selected="second" onChange={() => {}}>
         <Tabs.Tab value="first">First</Tabs.Tab>
         <Tabs.Tab value="second">Second</Tabs.Tab>
         <Tabs.Tab value="three" disabled>
@@ -72,7 +73,7 @@ describe('Tabs', () => {
 
   test('renders correctly with custom Tabs component', () =>
     shouldMatchEmotionSnapshot(
-      <Tabs>
+      <Tabs onChange={() => {}}>
         <Tabs.Tab as="div">First</Tabs.Tab>
         <Tabs.Tab as="a">Second</Tabs.Tab>
         <Tabs.Tab as={Link} href="#" disabled>
@@ -145,7 +146,7 @@ describe('Tabs', () => {
   test('no onChange', () => {
     const onClick = jest.fn()
     const { getByText } = renderWithTheme(
-      <Tabs>
+      <Tabs onChange={() => {}}>
         <Tabs.Tab value="first" onClick={onClick}>
           First
         </Tabs.Tab>
