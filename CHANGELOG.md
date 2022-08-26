@@ -1,3 +1,10 @@
+## [0.182.2](https://github.com/scaleway/scaleway-ui/compare/v0.182.1...v0.182.2) (2022-08-26)
+
+
+### :bug: Bug Fixes
+
+* **SwitchButton:** drop animation ([#1810](https://github.com/scaleway/scaleway-ui/issues/1810)) ([53cbc72](https://github.com/scaleway/scaleway-ui/commit/53cbc72ce5ffa1a72e69bb6dff82c8bca4816786))
+
 ## [0.182.1](https://github.com/scaleway/scaleway-ui/compare/v0.182.0...v0.182.1) (2022-08-26)
 
 
