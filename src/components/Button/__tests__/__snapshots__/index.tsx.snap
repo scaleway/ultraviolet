@@ -702,7 +702,7 @@ exports[`Button should render correctly when acting as Link 2`] = `
 
 exports[`Button should render correctly when acting as Link with disabled props 1`] = `
 <DocumentFragment>
-  .cache-1sfn84z-StyledButton {
+  .cache-usv2yz-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -745,20 +745,24 @@ exports[`Button should render correctly when acting as Link with disabled props 
   box-shadow: none;
 }
 
-.cache-1sfn84z-StyledButton:hover,
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:hover,
+.cache-usv2yz-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1sfn84z-StyledButton:hover,
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:hover,
+.cache-usv2yz-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-usv2yz-StyledButton svg {
+  fill: #c4c9d6;
 }
 
 .cache-m245rk-StyledContent {
@@ -779,7 +783,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 <button
     aria-disabled="true"
-    class="em6gco80 cache-1sfn84z-StyledButton"
+    class="em6gco80 cache-usv2yz-StyledButton"
     disabled=""
     href="/"
     type="button"
@@ -955,7 +959,7 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 exports[`Button should render correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1sfn84z-StyledButton {
+  .cache-usv2yz-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -998,20 +1002,24 @@ exports[`Button should render correctly when disabled 1`] = `
   box-shadow: none;
 }
 
-.cache-1sfn84z-StyledButton:hover,
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:hover,
+.cache-usv2yz-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1sfn84z-StyledButton:hover,
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:hover,
+.cache-usv2yz-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1sfn84z-StyledButton:focus {
+.cache-usv2yz-StyledButton:focus {
   box-shadow: 0 0 0 2px rgba(57,1,113,0.25);
+}
+
+.cache-usv2yz-StyledButton svg {
+  fill: #c4c9d6;
 }
 
 .cache-m245rk-StyledContent {
@@ -1032,7 +1040,7 @@ exports[`Button should render correctly when disabled 1`] = `
 
 <button
     aria-disabled="true"
-    class="em6gco80 cache-1sfn84z-StyledButton"
+    class="em6gco80 cache-usv2yz-StyledButton"
     disabled=""
     type="button"
   >

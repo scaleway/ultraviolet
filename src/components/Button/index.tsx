@@ -333,7 +333,11 @@ const StyledButton = styled(Box, {
     `
     cursor: default;
     pointer-events: none;
-    color: ${theme.colors.neutral.textDisabled};`}
+    color: ${theme.colors.neutral.textDisabled};
+    svg {
+      fill: ${theme.colors.neutral.textDisabled};
+    }
+    `}
 
   ${({ variant, disabled, theme }) =>
     variant !== 'link' &&
