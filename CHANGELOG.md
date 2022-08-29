@@ -1,3 +1,10 @@
+## [0.182.4](https://github.com/scaleway/scaleway-ui/compare/v0.182.3...v0.182.4) (2022-08-29)
+
+
+### :bug: Bug Fixes
+
+* **SwitchButton:** disabled prop ([#1815](https://github.com/scaleway/scaleway-ui/issues/1815)) ([2243093](https://github.com/scaleway/scaleway-ui/commit/22430933baae2b8a49177cce249dc5cddfa73950))
+
 ## [0.182.3](https://github.com/scaleway/scaleway-ui/compare/v0.182.2...v0.182.3) (2022-08-29)
 
 
