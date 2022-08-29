@@ -53,10 +53,12 @@ type SwitchButtonProps = {
   leftButton: {
     label: string
     value: string
+    disabled?: boolean
   }
   rightButton: {
     label: string
     value: string
+    disabled?: boolean
   }
 }
 
