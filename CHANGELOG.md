@@ -1,3 +1,16 @@
+## [0.182.5](https://github.com/scaleway/scaleway-ui/compare/v0.182.4...v0.182.5) (2022-08-29)
+
+
+### :bug: Bug Fixes
+
+* button icon color when disabled ([#1814](https://github.com/scaleway/scaleway-ui/issues/1814)) ([2d28831](https://github.com/scaleway/scaleway-ui/commit/2d2883180c19778527764a9d9da8799d8f055db9))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.6 ([#1813](https://github.com/scaleway/scaleway-ui/issues/1813)) ([6c8209a](https://github.com/scaleway/scaleway-ui/commit/6c8209a0e10a4852969b6399b60c669f4ddfabac))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.5.3 ([#1812](https://github.com/scaleway/scaleway-ui/issues/1812)) ([081bd32](https://github.com/scaleway/scaleway-ui/commit/081bd32c8f1b4c8c7c4c549c247599ef0bca4af2))
+
 ## [0.182.4](https://github.com/scaleway/scaleway-ui/compare/v0.182.3...v0.182.4) (2022-08-29)
 
 
