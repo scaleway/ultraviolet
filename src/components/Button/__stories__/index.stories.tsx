@@ -56,7 +56,11 @@ Disabled.parameters = {
     storyDescription: 'Set `disabled` using disabled property.',
   },
 }
-Disabled.decorators = [() => <Button disabled>Disabled</Button>]
+Disabled.args = {
+  disabled: true,
+  icon: 'plus',
+  variant: 'primary-bordered',
+}
 
 export const Progress = Template.bind({})
 Progress.parameters = {
