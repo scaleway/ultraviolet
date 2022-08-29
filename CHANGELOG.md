@@ -1,3 +1,10 @@
+## [0.182.3](https://github.com/scaleway/scaleway-ui/compare/v0.182.2...v0.182.3) (2022-08-29)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo to v29 (major) ([#1806](https://github.com/scaleway/scaleway-ui/issues/1806)) ([df775b9](https://github.com/scaleway/scaleway-ui/commit/df775b9652e1cff815e8b12ea47610e58aa2d7cd))
+
 ## [0.182.2](https://github.com/scaleway/scaleway-ui/compare/v0.182.1...v0.182.2) (2022-08-26)
 
 
