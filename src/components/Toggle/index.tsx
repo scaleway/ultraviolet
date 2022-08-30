@@ -153,6 +153,7 @@ type ToggleProps = {
   labelPosition?: 'left' | 'right'
   label?: ReactNode
   disabled?: boolean
+  className?: string
 }
 
 const Toggle = ({
@@ -165,6 +166,7 @@ const Toggle = ({
   tooltip,
   labelPosition = 'right',
   label,
+  className,
 }: ToggleProps) => {
   const [state, setState] = useState(checked)
 
@@ -182,6 +184,7 @@ const Toggle = ({
         aria-disabled={disabled}
         size={size}
         onClick={evt => evt.stopPropagation()}
+        className={className}
       >
         {label && labelPosition === 'left' ? (
           <LabelContent label={label} labelPosition={labelPosition} />
