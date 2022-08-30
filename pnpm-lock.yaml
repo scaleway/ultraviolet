@@ -97,7 +97,6 @@ specifiers:
   prettier: 2.7.1
   prop-types: 15.8.1
   react: 18.2.0
-  react-countup: 6.3.0
   react-datepicker: 4.8.0
   react-dom: 18.2.0
   react-flatten-children: 1.1.2
@@ -138,7 +137,6 @@ dependencies:
   deepmerge: 4.2.2
   polished: 4.2.2
   prop-types: 15.8.1
-  react-countup: 6.3.0_react@18.2.0
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
   react-flatten-children: 1.1.2
   react-markdown: 5.0.3_ug65io7jkbhmo4fihdmbrh3ina
@@ -9298,10 +9296,6 @@ packages:
       path-type: 4.0.0
       yaml: 1.10.2
 
-  /countup.js/2.2.0:
-    resolution: {integrity: sha512-m0TvFNXm9/eFqJm+QiKVI8e0wRUHzlQSewz9dqVjlhl2DFoZtceLbomwzxHz0hJ1+r4zBC7wSpR/TpthG49h6g==}
-    dev: false
-
   /cp-file/7.0.0:
     resolution: {integrity: sha512-0Cbj7gyvFVApzpK/uhCtQ/9kE9UnYpxMzaq5nQQC/Dh4iaj5fxp7iEFIullrYwzj8nf0qnsI1Qsx34hAeAebvw==}
     engines: {node: '>=8'}
@@ -16860,15 +16854,6 @@ packages:
       minimist: 1.2.6
       strip-json-comments: 2.0.1
     dev: true
-
-  /react-countup/6.3.0_react@18.2.0:
-    resolution: {integrity: sha512-uZsE+kuisXp/3OZeAuq2lzp6sXKmzw331Et5CRy4ueR9VcOp7z7T6/O1F04BC2Pa2frKmIITsghi3Hh933qWXQ==}
-    peerDependencies:
-      react: '>= 16.3.0 || 18'
-    dependencies:
-      countup.js: 2.2.0
-      react: 18.2.0
-    dev: false
 
   /react-datepicker/4.8.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg==}
