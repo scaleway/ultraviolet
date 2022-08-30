@@ -106,6 +106,7 @@ const StyledLabel = styled.label<{
 }>`
   display: flex;
   align-items: center;
+  width: fit-content;
   cursor: pointer;
 
   &:active ${StyledToggle}[data-disabled='false']:after {
