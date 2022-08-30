@@ -1,3 +1,10 @@
+## [0.183.1](https://github.com/scaleway/scaleway-ui/compare/v0.183.0...v0.183.1) (2022-08-30)
+
+
+### :bug: Bug Fixes
+
+* **toggle:** uncontrolled and controlled behavior are wrong ([#1825](https://github.com/scaleway/scaleway-ui/issues/1825)) ([f07ba96](https://github.com/scaleway/scaleway-ui/commit/f07ba96d642ad35a29a74b0219f4c7d95ba95117))
+
 ## [0.183.0](https://github.com/scaleway/scaleway-ui/compare/v0.182.5...v0.183.0) (2022-08-30)
 
 
