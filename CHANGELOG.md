@@ -1,3 +1,11 @@
+## [0.183.2](https://github.com/scaleway/scaleway-ui/compare/v0.183.1...v0.183.2) (2022-08-30)
+
+
+### :bug: Bug Fixes
+
+* **radio:** nested radio container hover ([#1823](https://github.com/scaleway/scaleway-ui/issues/1823)) ([05dcf8c](https://github.com/scaleway/scaleway-ui/commit/05dcf8c416c7d40643cc9a0be698cd0499f08f41))
+* **Toggle:** add classname ([#1827](https://github.com/scaleway/scaleway-ui/issues/1827)) ([07015e6](https://github.com/scaleway/scaleway-ui/commit/07015e6383603223e5f5f007e653e807d8f47e8a))
+
 ## [0.183.1](https://github.com/scaleway/scaleway-ui/compare/v0.183.0...v0.183.1) (2022-08-30)
 
 
