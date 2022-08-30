@@ -7,6 +7,7 @@ import {
   forwardRef,
   useCallback,
   useEffect,
+  useId,
   useMemo,
 } from 'react'
 import {
@@ -14,7 +15,6 @@ import {
   CheckboxProps as ReakitCheckboxProps,
   useCheckboxState,
 } from 'reakit/Checkbox'
-import { getUUID } from '../../utils'
 import Loader from '../Loader'
 import Text from '../Text'
 
@@ -205,12 +205,8 @@ const Checkbox = forwardRef(
   ) => {
     const hasChildren = !!children
     const { state, setState } = useCheckboxState({ state: checked })
-
-    const computedName = useMemo(() => {
-      if (!name) return getUUID('checkbox')
-
-      return name
-    }, [name])
+    const id = useId()
+    const computedName = name ?? id
 
     const icon = useMemo(() => {
       if (state === 'indeterminate') return 'minus-box-outline'

@@ -4,10 +4,9 @@ import {
   InputHTMLAttributes,
   ReactNode,
   forwardRef,
-  useMemo,
+  useId,
 } from 'react'
 import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
-import { getUUID } from '../../utils'
 
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -150,11 +149,8 @@ const Radio = forwardRef(
     }: RadioProps,
     ref: ForwardedRef<HTMLLabelElement>,
   ) => {
-    const computedName = useMemo(() => {
-      if (!name) return getUUID('radio')
-
-      return name
-    }, [name])
+    const id = useId()
+    const computedName = name ?? id
 
     return (
       <StyledRadioContainer
