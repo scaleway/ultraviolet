@@ -29383,17 +29383,11 @@ exports[`List should render correctly with isLoading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+    left: -25%;
   }
 
   to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+    left: 100%;
   }
 }
 
@@ -29531,26 +29525,69 @@ exports[`List should render correctly with isLoading 1`] = `
   vertical-align: middle;
 }
 
-.cache-1ft639j-StyledActivityContainer {
+.cache-uj18cg-StyledContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+}
+
+.cache-18z9n8i-StyledList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-18z9n8i-StyledList>.exf86061:nth-of-type(even) {
+  background-color: #f6f6f8;
+}
+
+.cache-1ldrf1m-StyledItem {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin: 16px 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 48px;
+  padding: 4px 8px;
 }
 
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
+.cache-1sqnibl-Line {
+  height: 12px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #d4dae7;
 }
 
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
+.cache-dx8pme-StyledDiv {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-dx8pme-StyledDiv {
+    -webkit-animation: unset;
+    animation: unset;
+  }
 }
 
 <div
@@ -29697,40 +29734,51 @@ exports[`List should render correctly with isLoading 1`] = `
       </div>
     </div>
     <div
-      class="cache-1ft639j-StyledActivityContainer e1nh26ji1"
+      class="e3aa5lq1 cache-uj18cg-StyledContainer"
     >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 50px; width: 50px;"
-        viewBox="0 0 100 100"
+      <ul
+        class="cache-18z9n8i-StyledList exf86060"
       >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="#d4dae7"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="#4f0599"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
+        <li
+          class="cache-1ldrf1m-StyledItem exf86061"
+        >
+          <div
+            style="width: 240px;"
+          >
+            <div
+              class="cache-1sqnibl-Line e15slp7a0"
+            />
+          </div>
+          <div
+            style="width: 360px;"
+          >
+            <div
+              class="cache-1sqnibl-Line e15slp7a0"
+            />
+          </div>
+        </li>
+        <li
+          class="cache-1ldrf1m-StyledItem exf86061"
+        >
+          <div
+            style="width: 240px;"
+          >
+            <div
+              class="cache-1sqnibl-Line e15slp7a0"
+            />
+          </div>
+          <div
+            style="width: 360px;"
+          >
+            <div
+              class="cache-1sqnibl-Line e15slp7a0"
+            />
+          </div>
+        </li>
+      </ul>
+      <div
+        class="cache-dx8pme-StyledDiv e3aa5lq0"
+      />
     </div>
   </div>
 </DocumentFragment>
