@@ -4,6 +4,7 @@ import {
   ChangeEventHandler,
   ReactNode,
   useCallback,
+  useEffect,
   useState,
 } from 'react'
 import Tooltip from '../Tooltip'
@@ -148,6 +149,9 @@ type ToggleProps = {
   checked?: boolean
   name: string
   tooltip?: string
+  /**
+   * If `onChange` is given component will work as a controlled component if not it will work as an uncontrolled component.
+   */
   onChange?: ChangeEventHandler<HTMLInputElement>
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
@@ -170,11 +174,15 @@ const Toggle = ({
 
   const onLocalChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
-      onChange?.(event)
-      setState(event.target.checked)
+      if (onChange) onChange?.(event)
+      else setState(event.target.checked)
     },
     [onChange, setState],
   )
+
+  useEffect(() => {
+    setState(checked)
+  }, [checked, setState])
 
   return (
     <Tooltip text={tooltip}>

@@ -51,17 +51,11 @@ describe('Toggle', () => {
 
   test('renders correctly with complex label', () =>
     shouldMatchEmotionSnapshot(
-      <Toggle
-        name="test"
-        onChange={() => {}}
-        label={<span>Custom label rendered</span>}
-      />,
+      <Toggle name="test" label={<span>Custom label rendered</span>} />,
     ))
 
   test('renders and click on toggle on', () => {
-    const node = renderWithTheme(
-      <Toggle name="test" onChange={() => {}} label="This is a label" />,
-    )
+    const node = renderWithTheme(<Toggle name="test" label="This is a label" />)
 
     const input = node.getByRole('checkbox')
     userEvent.click(input)
