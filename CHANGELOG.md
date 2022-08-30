@@ -1,3 +1,18 @@
+## [0.183.0](https://github.com/scaleway/scaleway-ui/compare/v0.182.5...v0.183.0) (2022-08-30)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.7 ([#1821](https://github.com/scaleway/scaleway-ui/issues/1821)) ([5145081](https://github.com/scaleway/scaleway-ui/commit/5145081ec200c383bf69a2e4c10ecd15f85505dd))
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.14 ([#1816](https://github.com/scaleway/scaleway-ui/issues/1816)) ([b096830](https://github.com/scaleway/scaleway-ui/commit/b0968303c3538b2fbea8833562ad854eb17405bf))
+* **devdeps:** update node.js to v18.8 ([#1805](https://github.com/scaleway/scaleway-ui/issues/1805)) ([74ffdcb](https://github.com/scaleway/scaleway-ui/commit/74ffdcba061ab502b5550c33ecbd7dd6dd65d0ed))
+* **react-count:** remove unused dependency ([#1818](https://github.com/scaleway/scaleway-ui/issues/1818)) ([6d5656d](https://github.com/scaleway/scaleway-ui/commit/6d5656d04d47604aa87abce231dc77b99c575ea2))
+
+
+### :gear: Features
+
+* **Toggle:** refactor of component ([#1792](https://github.com/scaleway/scaleway-ui/issues/1792)) ([73df0f6](https://github.com/scaleway/scaleway-ui/commit/73df0f61d668462ab89587f24cf770bf5e3a6a0a))
+
 ## [0.182.5](https://github.com/scaleway/scaleway-ui/compare/v0.182.4...v0.182.5) (2022-08-29)
 
 
