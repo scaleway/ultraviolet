@@ -81,7 +81,7 @@ const StyledRadio = styled(ReakitRadio)`
   }
 `
 
-const StyledRadioContainer = styled.label`
+const StyledRadioContainer = styled.label<{ htmlFor: string }>`
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -92,7 +92,7 @@ const StyledRadioContainer = styled.label`
   }
 
   :hover[aria-disabled='false'] {
-    ${StyledRadio} + ${StyledIcon} {
+    ${StyledRadio}[id=${({ htmlFor }) => htmlFor}] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.text};
       ${InnerCircleRing} {
@@ -100,7 +100,8 @@ const StyledRadioContainer = styled.label`
       }
     }
 
-    ${StyledRadio}[aria-invalid='true']  + ${StyledIcon} {
+    ${StyledRadio}[id=${({ htmlFor }) =>
+      htmlFor}][aria-invalid='true']  + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
       ${InnerCircleRing} {
