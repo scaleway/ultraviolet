@@ -336,6 +336,7 @@ const customViewBoxes = [
       'credit-card',
       'progress-check',
       'card-account-details-outline',
+      'reboot',
     ],
     viewBox: '0 0 16 16',
   },
@@ -350,10 +351,6 @@ const customViewBoxes = [
   {
     icons: ['expand'],
     viewBox: '0 0 20 14',
-  },
-  {
-    icons: ['reboot'],
-    viewBox: '0 0 14 16',
   },
 ]
 
