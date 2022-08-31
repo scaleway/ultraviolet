@@ -1,3 +1,12 @@
+## [0.183.3](https://github.com/scaleway/scaleway-ui/compare/v0.183.2...v0.183.3) (2022-08-31)
+
+
+### :bug: Bug Fixes
+
+* **Checkbox:** types ([#1829](https://github.com/scaleway/scaleway-ui/issues/1829)) ([252b189](https://github.com/scaleway/scaleway-ui/commit/252b1898b15d121a9d31d677b219025a9df542a8))
+* update ci ([#1830](https://github.com/scaleway/scaleway-ui/issues/1830)) ([2eec5fa](https://github.com/scaleway/scaleway-ui/commit/2eec5fac804ef61b1c8623cfdd83c75f33c671a5))
+* use `useId` instead of `useUUID` ([#1826](https://github.com/scaleway/scaleway-ui/issues/1826)) ([320f34e](https://github.com/scaleway/scaleway-ui/commit/320f34eedcb2d1e1c4357a951a56d5c565dab938))
+
 ## [0.183.2](https://github.com/scaleway/scaleway-ui/compare/v0.183.1...v0.183.2) (2022-08-30)
 
 
