@@ -4,12 +4,11 @@ import {
   RefObject,
   useCallback,
   useEffect,
-  useMemo,
+  useId,
   useRef,
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
-import { getUUID } from '../../utils'
 
 const ARROW_WIDTH = 6 // in px
 const SPACE = 6 // in px
@@ -183,12 +182,8 @@ const Tooltip = ({
     ...DEFAULT_POSITIONS,
     tooltipInitialPosition: TOOLTIP_INITIAL_POSITION[placement],
   })
-
-  const generatedId = useMemo(() => {
-    if (!id) return getUUID('tooltip')
-
-    return id
-  }, [id])
+  const uniqueId = useId()
+  const generatedId = id ?? uniqueId
 
   const getPositions = useCallback(() => {
     if (childrenRef.current && tooltipRef.current) {

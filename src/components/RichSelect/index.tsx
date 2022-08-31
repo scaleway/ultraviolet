@@ -9,6 +9,7 @@ import {
   Validator,
   forwardRef,
   useEffect,
+  useId,
   useMemo,
   useState,
 } from 'react'
@@ -27,7 +28,6 @@ import Select, {
   components,
 } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
-import { getUUID } from '../../utils'
 import * as animations from '../../utils/animations'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
@@ -717,7 +717,8 @@ const RichSelect = ({
   value,
   ...props
 }: Partial<RichSelectProps>) => {
-  const inputId = useMemo(() => inputIdProp || getUUID('input'), [inputIdProp])
+  const id = useId()
+  const inputId = inputIdProp ?? id
   const theme = useTheme()
   const [isAnimated, setIsAnimated] = useState(false)
   const currentValue = (value as SelectOption)?.value
