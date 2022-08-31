@@ -1,3 +1,10 @@
+## [0.184.1](https://github.com/scaleway/scaleway-ui/compare/v0.184.0...v0.184.1) (2022-08-31)
+
+
+### :bug: Bug Fixes
+
+* export utils ([#1831](https://github.com/scaleway/scaleway-ui/issues/1831)) ([7569297](https://github.com/scaleway/scaleway-ui/commit/7569297f1f87cb36e94f6dc7638bd8e2293159d6))
+
 ## [0.184.0](https://github.com/scaleway/scaleway-ui/compare/v0.183.3...v0.184.0) (2022-08-31)
 
 
