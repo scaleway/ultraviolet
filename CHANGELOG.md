@@ -1,3 +1,10 @@
+## [0.184.0](https://github.com/scaleway/scaleway-ui/compare/v0.183.3...v0.184.0) (2022-08-31)
+
+
+### :gear: Features
+
+* **icons:** add reboot icon ([#1824](https://github.com/scaleway/scaleway-ui/issues/1824)) ([bd696fe](https://github.com/scaleway/scaleway-ui/commit/bd696fedf3f01c513a734af001a9420839b7c6a2))
+
 ## [0.183.3](https://github.com/scaleway/scaleway-ui/compare/v0.183.2...v0.183.3) (2022-08-31)
 
 
