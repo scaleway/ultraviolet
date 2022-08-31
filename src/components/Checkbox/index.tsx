@@ -172,7 +172,10 @@ const StyledActivityContainer = styled('div', {
     hasChildren ? theme.space[1] : 0};
 `
 
-type CheckboxProps = Omit<ReakitCheckboxProps, 'checked'> & {
+type CheckboxProps = Pick<
+  ReakitCheckboxProps,
+  'name' | 'onFocus' | 'onBlur' | 'value' | 'autoFocus'
+> & {
   children?: ReactNode
   error?: string | ReactNode
   size?: number
