@@ -80,16 +80,16 @@ function Body<DataType extends Record<string, unknown>>({
     customLoader,
     isLoading,
     emptyListComponent,
-    perPage = 2,
+    perPage,
+    columns,
   } = useListContext<DataType>()
 
-  const defaultLoader = useMemo(
-    () => <Placeholder length={perPage} variant="list" />,
-    [perPage],
-  )
-
   if (isLoading) {
-    return (customLoader as JSX.Element) ?? defaultLoader
+    return (
+      (customLoader as JSX.Element) ?? (
+        <Placeholder length={perPage} col={columns.length} variant="list" />
+      )
+    )
   }
 
   return (

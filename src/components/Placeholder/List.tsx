@@ -9,6 +9,10 @@ const StyledItem = styled.li`
   padding: 4px 8px;
 `
 
+const StyledLine = styled.div`
+  flex: 1;
+`
+
 const StyledList = styled.ul`
   list-style: none;
   padding: 0;
@@ -19,21 +23,20 @@ const StyledList = styled.ul`
   }
 `
 
-const Item = () => (
+const Item = ({ col = 3 }: { col: number }) => (
   <StyledItem>
-    <div style={{ width: '240px' }}>
-      <Line />
-    </div>
-    <div style={{ width: '360px' }}>
-      <Line />
-    </div>
+    {Array.from({ length: col }, (_, i) => (
+      <StyledLine key={`placeholder-list-col-${i}`}>
+        <Line />
+      </StyledLine>
+    ))}
   </StyledItem>
 )
 
-const List = ({ length = 2 }: { length?: number }) => (
+const List = ({ length = 3, col = 3 }: { length?: number; col?: number }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
-      <Item key={`placeholder-list-${i}`} />
+      <Item col={col} key={`placeholder-list-${i}`} />
     ))}
   </StyledList>
 )
