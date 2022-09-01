@@ -80,7 +80,7 @@ function Body<DataType extends Record<string, unknown>>({
     customLoader,
     isLoading,
     emptyListComponent,
-    perPage,
+    perPage = 2,
   } = useListContext<DataType>()
 
   const defaultLoader = useMemo(
