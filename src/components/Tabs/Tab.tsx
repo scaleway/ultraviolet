@@ -24,6 +24,8 @@ const StyledCounter = styled(Text)`
   line-height: 22px;
 `
 
+const StyledTooltip = styled(Tooltip)``
+
 const BadgeContainer = styled.span`
   margin-left: ${({ theme }) => theme.space['1']};
   display: flex;
@@ -144,15 +146,15 @@ const Tab = <T extends ElementType = 'button'>(
   )
 
   return (
-    <Tooltip text={tooltip}>
+    <StyledTooltip text={tooltip}>
       <StyledTabButton
         role="tab"
-        ref={ref as Ref<HTMLButtonElement> | null}
+        ref={ref as unknown as Ref<HTMLButtonElement>}
         className={className}
         as={computedAs}
         aria-label={value ? `${value}` : undefined}
         aria-selected={isSelected}
-        aria-disabled={disabled ?? 'false'}
+        aria-disabled={disabled}
         disabled={computedAs === 'button' ? disabled : undefined}
         onClick={event => {
           if (value) {
@@ -174,7 +176,7 @@ const Tab = <T extends ElementType = 'button'>(
         ) : null}
         {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
       </StyledTabButton>
-    </Tooltip>
+    </StyledTooltip>
   )
 }
 

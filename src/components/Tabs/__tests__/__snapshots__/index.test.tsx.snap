@@ -2,7 +2,7 @@
 
 exports[`Tabs renders correctly 1`] = `
 <DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+  .cache-1udxpxj-TabsContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,9 +14,11 @@ exports[`Tabs renders correctly 1`] = `
   overflow-x: scroll;
   position: relative;
   z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.cache-j9vddm-TabsContainer::after {
+.cache-1udxpxj-TabsContainer::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -27,8 +29,12 @@ exports[`Tabs renders correctly 1`] = `
   background: #d4dae7;
 }
 
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
 <div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
   />
 </DocumentFragment>
@@ -36,7 +42,7 @@ exports[`Tabs renders correctly 1`] = `
 
 exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
 <DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+  .cache-1udxpxj-TabsContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,9 +54,11 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   overflow-x: scroll;
   position: relative;
   z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.cache-j9vddm-TabsContainer::after {
+.cache-1udxpxj-TabsContainer::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -61,7 +69,11 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   background: #d4dae7;
 }
 
-.cache-1uai6yj-StyledTabButton {
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cache-pwehva-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -104,294 +116,152 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   text-case: none;
 }
 
-.cache-1uai6yj-StyledTabButton:hover,
-.cache-1uai6yj-StyledTabButton:active,
-.cache-1uai6yj-StyledTabButton:focus {
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1uai6yj-StyledTabButton:focus-visible {
+.cache-pwehva-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] {
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='true'],
-.cache-1uai6yj-StyledTabButton:disabled {
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-<div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
-    role="tablist"
-  >
-    <button
-      aria-disabled="false"
-      aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
-      role="tab"
-    >
-      First
-    </button>
-    <button
-      aria-disabled="false"
-      aria-label="1"
-      aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
-      role="tab"
-    >
-      Second
-    </button>
-    <button
-      aria-disabled="true"
-      aria-label="2"
-      aria-selected="true"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
-      disabled=""
-      role="tab"
-    >
-      Very long tab name
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tabs renders correctly with Tabs menu selected 1`] = `
-<DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-}
-
-.cache-j9vddm-TabsContainer::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+  position: -webkit-sticky;
+  position: sticky;
   right: 0;
-  height: 2px;
-  background: #d4dae7;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
 }
 
-.cache-1uai6yj-StyledTabButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-}
-
-.cache-1uai6yj-StyledTabButton:hover,
-.cache-1uai6yj-StyledTabButton:active,
-.cache-1uai6yj-StyledTabButton:focus {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1uai6yj-StyledTabButton:focus-visible {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
   outline: auto;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='true'],
-.cache-1uai6yj-StyledTabButton:disabled {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu:hover,
-.cache-p9r4bv-StyledTabButton-StyledMenu:active,
-.cache-p9r4bv-StyledTabButton-StyledMenu:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu:focus-visible {
-  outline: auto;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-selected='true'] {
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-selected='true'] .e1ej5pcd2 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='true'],
-.cache-p9r4bv-StyledTabButton-StyledMenu:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-p9r4bv-StyledTabButton-StyledMenu .e12ogfvr1 {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-expanded='true'] .e12ogfvr1 {
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -411,13 +281,13 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
 }
 
 <div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
   >
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       First
@@ -426,7 +296,402 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-label="1"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Second
+    </button>
+    <button
+      aria-disabled="true"
+      aria-label="2"
+      aria-selected="true"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      disabled=""
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-controls="menu"
+      aria-disabled="false"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
+      role="tab"
+      type="button"
+    >
+      More
+      <svg
+        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tabs renders correctly with Tabs menu selected 1`] = `
+<DocumentFragment>
+  .cache-1udxpxj-TabsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  position: relative;
+  z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cache-1udxpxj-TabsContainer::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d4dae7;
+}
+
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cache-pwehva-StyledTabButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+}
+
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-pwehva-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu:hover,
+.cache-ppmqz-StyledTabButton-StyledMenu:active,
+.cache-ppmqz-StyledTabButton-StyledMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-ppmqz-StyledTabButton-StyledMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  vertical-align: middle;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+<div
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
+    role="tablist"
+  >
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      First
+    </button>
+    <button
+      aria-disabled="false"
+      aria-label="1"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Second
@@ -435,7 +700,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-label="2"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Very long tab name
@@ -445,7 +710,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-expanded="true"
       aria-haspopup="dialog"
-      class="cache-p9r4bv-StyledTabButton-StyledMenu e12ogfvr0"
+      class="cache-ppmqz-StyledTabButton-StyledMenu e12ogfvr0"
       role="tab"
       type="button"
     >
@@ -464,12 +729,31 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="true"
       aria-expanded="false"
       aria-haspopup="dialog"
-      class="cache-p9r4bv-StyledTabButton-StyledMenu e12ogfvr0"
+      class="cache-ppmqz-StyledTabButton-StyledMenu e12ogfvr0"
       disabled=""
       role="tab"
       type="button"
     >
       More again
+      <svg
+        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+        />
+      </svg>
+    </button>
+    <button
+      aria-controls="menu"
+      aria-disabled="false"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
+      role="tab"
+      type="button"
+    >
+      More
       <svg
         class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
         viewBox="0 0 24 24"
@@ -643,7 +927,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   pointer-events: none;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -701,41 +985,45 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:hover,
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem svg {
+  fill: #c4c9d6;
+}
+
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:hover,
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:focus {
   color: #390171;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:last-child {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:hover,
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
   fill: #4a4f62;
 }
 
-.cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem[aria-selected='true'] {
+.cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem[aria-selected='true'] {
   color: #390171;
 }
 
@@ -771,7 +1059,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         <button
           aria-disabled="true"
           aria-selected="false"
-          class="ej1y0fv0 em6gco80 cache-1k1zpex-StyledButton-item-disabled-Item-StyledMenuItem"
+          class="ej1y0fv0 em6gco80 cache-ror8fk-StyledButton-item-disabled-Item-StyledMenuItem"
           disabled=""
           role="menuitem"
           type="button"
@@ -845,12 +1133,33 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       tabindex="-1"
     />
   </div>
+  .cache-16wxqto-StyledPopover {
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+}
+
+<div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="Menu"
+      class="cache-16wxqto-StyledPopover epli4kt1"
+      data-dialog="true"
+      hidden=""
+      id="menu"
+      role="dialog"
+      style="display: none; position: fixed; left: 100%; top: 100%;"
+      tabindex="-1"
+    />
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Tabs renders correctly with Tabs name 1`] = `
 <DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+  .cache-1udxpxj-TabsContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -862,9 +1171,11 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   overflow-x: scroll;
   position: relative;
   z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.cache-j9vddm-TabsContainer::after {
+.cache-1udxpxj-TabsContainer::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -875,7 +1186,11 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   background: #d4dae7;
 }
 
-.cache-1uai6yj-StyledTabButton {
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cache-pwehva-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -918,59 +1233,179 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   text-case: none;
 }
 
-.cache-1uai6yj-StyledTabButton:hover,
-.cache-1uai6yj-StyledTabButton:active,
-.cache-1uai6yj-StyledTabButton:focus {
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1uai6yj-StyledTabButton:focus-visible {
+.cache-pwehva-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] {
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='true'],
-.cache-1uai6yj-StyledTabButton:disabled {
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  vertical-align: middle;
+}
+
 <div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
   >
     <button
       aria-disabled="false"
       aria-label="first"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       First
@@ -979,7 +1414,7 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-disabled="false"
       aria-label="second"
       aria-selected="true"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Second
@@ -988,11 +1423,30 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-disabled="true"
       aria-label="three"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       disabled=""
       role="tab"
     >
       Very long tab name
+    </button>
+    <button
+      aria-controls="menu"
+      aria-disabled="false"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
+      role="tab"
+      type="button"
+    >
+      More
+      <svg
+        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+        />
+      </svg>
     </button>
   </div>
 </DocumentFragment>
@@ -1000,7 +1454,7 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
 
 exports[`Tabs renders correctly with Tabs with prop 1`] = `
 <DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+  .cache-1udxpxj-TabsContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1012,9 +1466,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   overflow-x: scroll;
   position: relative;
   z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.cache-j9vddm-TabsContainer::after {
+.cache-1udxpxj-TabsContainer::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -1025,7 +1481,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   background: #d4dae7;
 }
 
-.cache-1uai6yj-StyledTabButton {
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cache-pwehva-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1068,45 +1528,45 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   text-case: none;
 }
 
-.cache-1uai6yj-StyledTabButton:hover,
-.cache-1uai6yj-StyledTabButton:active,
-.cache-1uai6yj-StyledTabButton:focus {
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1uai6yj-StyledTabButton:focus-visible {
+.cache-pwehva-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] {
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='true'],
-.cache-1uai6yj-StyledTabButton:disabled {
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -1143,7 +1603,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu {
+.cache-ppmqz-StyledTabButton-StyledMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1186,58 +1646,58 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   text-case: none;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu:hover,
-.cache-p9r4bv-StyledTabButton-StyledMenu:active,
-.cache-p9r4bv-StyledTabButton-StyledMenu:focus {
+.cache-ppmqz-StyledTabButton-StyledMenu:hover,
+.cache-ppmqz-StyledTabButton-StyledMenu:active,
+.cache-ppmqz-StyledTabButton-StyledMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu:focus-visible {
+.cache-ppmqz-StyledTabButton-StyledMenu:focus-visible {
   outline: auto;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-selected='true'] {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-selected='true'] .e1ej5pcd2 {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-disabled='true'],
-.cache-p9r4bv-StyledTabButton-StyledMenu:disabled {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-ppmqz-StyledTabButton-StyledMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu .e12ogfvr1 {
+.cache-ppmqz-StyledTabButton-StyledMenu .e12ogfvr1 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-p9r4bv-StyledTabButton-StyledMenu[aria-expanded='true'] .e12ogfvr1 {
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-expanded='true'] .e12ogfvr1 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -1256,14 +1716,122 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   vertical-align: middle;
 }
 
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
 <div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
   >
     <button
       aria-disabled="false"
       aria-selected="true"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       First
@@ -1272,7 +1840,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-label="1"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Second
@@ -1280,7 +1848,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Undefined
@@ -1288,12 +1856,12 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Counter
       <span
-        class="e1ej5pcd2 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
+        class="e1ej5pcd3 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
       >
         12
       </span>
@@ -1301,12 +1869,12 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Conter and badge
       <span
-        class="e1ej5pcd2 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
+        class="e1ej5pcd3 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
       >
         12
       </span>
@@ -1319,7 +1887,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Badge
@@ -1332,7 +1900,87 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
+      role="tab"
+    >
+      Very long tab name
+    </button>
+    <button
+      aria-disabled="false"
+      aria-selected="false"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Very long tab name
@@ -1342,7 +1990,26 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-expanded="true"
       aria-haspopup="dialog"
-      class="cache-p9r4bv-StyledTabButton-StyledMenu e12ogfvr0"
+      class="cache-ppmqz-StyledTabButton-StyledMenu e12ogfvr0"
+      role="tab"
+      type="button"
+    >
+      More
+      <svg
+        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+        />
+      </svg>
+    </button>
+    <button
+      aria-controls="menu"
+      aria-disabled="false"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
       role="tab"
       type="button"
     >
@@ -1565,12 +2232,33 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       </div>
     </div>
   </div>
+  .cache-16wxqto-StyledPopover {
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+}
+
+<div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="Menu"
+      class="cache-16wxqto-StyledPopover epli4kt1"
+      data-dialog="true"
+      hidden=""
+      id="menu"
+      role="dialog"
+      style="display: none; position: fixed; left: 100%; top: 100%;"
+      tabindex="-1"
+    />
+  </div>
 </DocumentFragment>
 `;
 
 exports[`Tabs renders correctly with custom Tabs component 1`] = `
 <DocumentFragment>
-  .cache-j9vddm-TabsContainer {
+  .cache-1udxpxj-TabsContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1582,9 +2270,11 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   overflow-x: scroll;
   position: relative;
   z-index: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.cache-j9vddm-TabsContainer::after {
+.cache-1udxpxj-TabsContainer::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -1595,7 +2285,11 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   background: #d4dae7;
 }
 
-.cache-1uai6yj-StyledTabButton {
+.cache-1udxpxj-TabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cache-pwehva-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1638,51 +2332,51 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   text-case: none;
 }
 
-.cache-1uai6yj-StyledTabButton:hover,
-.cache-1uai6yj-StyledTabButton:active,
-.cache-1uai6yj-StyledTabButton:focus {
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1uai6yj-StyledTabButton:focus-visible {
+.cache-pwehva-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] {
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-1uai6yj-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-1uai6yj-StyledTabButton[aria-disabled='true'],
-.cache-1uai6yj-StyledTabButton:disabled {
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton {
+.cache-16e5x96-StyledLink-StyledTabButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1760,17 +2454,17 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   text-case: none;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton .e4bq1r52 {
+.cache-16e5x96-StyledLink-StyledTabButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton>* {
+.cache-16e5x96-StyledLink-StyledTabButton>* {
   pointer-events: none;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:hover,
-.cache-jppxd4-StyledLink-StyledTabButton:focus {
+.cache-16e5x96-StyledLink-StyledTabButton:hover,
+.cache-16e5x96-StyledLink-StyledTabButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1779,75 +2473,195 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:hover .e4bq1r52,
-.cache-jppxd4-StyledLink-StyledTabButton:focus .e4bq1r52 {
+.cache-16e5x96-StyledLink-StyledTabButton:hover .e4bq1r52,
+.cache-16e5x96-StyledLink-StyledTabButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:hover::after,
-.cache-jppxd4-StyledLink-StyledTabButton:focus::after {
+.cache-16e5x96-StyledLink-StyledTabButton:hover::after,
+.cache-16e5x96-StyledLink-StyledTabButton:focus::after {
   background-color: #390171;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:active {
+.cache-16e5x96-StyledLink-StyledTabButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:hover,
-.cache-jppxd4-StyledLink-StyledTabButton:active,
-.cache-jppxd4-StyledLink-StyledTabButton:focus {
+.cache-16e5x96-StyledLink-StyledTabButton:hover,
+.cache-16e5x96-StyledLink-StyledTabButton:active,
+.cache-16e5x96-StyledLink-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton:focus-visible {
+.cache-16e5x96-StyledLink-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton[aria-selected='true'] {
+.cache-16e5x96-StyledLink-StyledTabButton[aria-selected='true'] {
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton[aria-selected='true'] .e1ej5pcd2 {
+.cache-16e5x96-StyledLink-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #390171;
   border-bottom-color: #4f0599;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd2,
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd2,
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd2 {
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
   background-color: #eeeeff;
   border-color: #eeeeff;
 }
 
-.cache-jppxd4-StyledLink-StyledTabButton[aria-disabled='true'],
-.cache-jppxd4-StyledLink-StyledTabButton:disabled {
+.cache-16e5x96-StyledLink-StyledTabButton[aria-disabled='true'],
+.cache-16e5x96-StyledLink-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+  position: -webkit-sticky;
+  position: sticky;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 24px 6px #D4DAE766;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  vertical-align: middle;
+}
+
 <div
-    class="cache-j9vddm-TabsContainer e1h41e5k0"
+    class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
   >
     <div
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       First
@@ -1855,17 +2669,36 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
     <a
       aria-disabled="false"
       aria-selected="false"
-      class="cache-1uai6yj-StyledTabButton e1ej5pcd0"
+      class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
     >
       Second
     </a>
     <a
-      class="e1ej5pcd0 cache-jppxd4-StyledLink-StyledTabButton e4bq1r50"
+      class="e1ej5pcd0 cache-16e5x96-StyledLink-StyledTabButton e4bq1r50"
       href="#"
     >
       Very long tab name
     </a>
+    <button
+      aria-controls="menu"
+      aria-disabled="false"
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
+      role="tab"
+      type="button"
+    >
+      More
+      <svg
+        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;

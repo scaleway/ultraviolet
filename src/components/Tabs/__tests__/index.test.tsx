@@ -1,4 +1,5 @@
 import { fireEvent } from '@testing-library/react'
+import React from 'react'
 import Tabs from '..'
 import {
   renderWithTheme,
@@ -11,8 +12,21 @@ describe('Tabs', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<Tabs onChange={() => {}} />))
 
-  test('renders correctly with Tabs with prop', () =>
-    shouldMatchEmotionSnapshotWithPortal(
+  test('renders correctly with Tabs with prop', async () => {
+    Object.defineProperty(HTMLElement.prototype, 'clientWidth', {
+      configurable: true,
+      value: 500,
+    })
+    Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
+      configurable: true,
+      value: 600,
+    })
+    Object.defineProperty(HTMLElement.prototype, 'scrollIntoView', {
+      configurable: true,
+      value: () => {},
+    })
+
+    return shouldMatchEmotionSnapshotWithPortal(
       <Tabs selected={0} onChange={() => {}}>
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
@@ -23,12 +37,28 @@ describe('Tabs', () => {
         </Tabs.Tab>
         <Tabs.Tab badge="Badge">Badge</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
+        <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Menu visible baseId="test" disclosure="More">
           <Tabs.MenuItem value={3}>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
       </Tabs>,
-    ))
+      {
+        transform: node => {
+          fireEvent.scroll(node.getByRole('tablist'), {})
+        },
+      },
+    )
+  })
 
   test('renders correctly with Tabs menu selected', () =>
     shouldMatchEmotionSnapshotWithPortal(
@@ -145,7 +175,7 @@ describe('Tabs', () => {
 
   test('no onChange', () => {
     const onClick = jest.fn()
-    const { getByText } = renderWithTheme(
+    const { getByText, unmount } = renderWithTheme(
       <Tabs onChange={() => {}}>
         <Tabs.Tab value="first" onClick={onClick}>
           First
@@ -172,5 +202,6 @@ describe('Tabs', () => {
     fireEvent.click(getByText('Item'))
     fireEvent.click(getByText('Item no value'))
     expect(onClick).toHaveBeenCalledTimes(5)
+    unmount()
   })
 })

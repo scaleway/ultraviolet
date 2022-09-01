@@ -1,5 +1,11 @@
 import styled from '@emotion/styled'
-import { ButtonHTMLAttributes, ComponentProps, ReactNode } from 'react'
+import {
+  ButtonHTMLAttributes,
+  ComponentProps,
+  ReactNode,
+  Ref,
+  forwardRef,
+} from 'react'
 import Icon from '../Icon'
 import Menu from '../Menu'
 import { StyledTabButton } from './Tab'
@@ -23,32 +29,32 @@ type TabMenuProps = {
   visible?: ComponentProps<typeof Menu>['visible']
   baseId?: ComponentProps<typeof Menu>['baseId']
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'aria-disabled'>
-const TabMenu = ({
-  children,
-  disclosure,
-  visible,
-  baseId,
-  disabled,
-  ...props
-}: TabMenuProps) => (
-  <Menu
-    visible={visible}
-    baseId={baseId}
-    disclosure={
-      <StyledMenu
-        role="tab"
-        aria-disabled={disabled ?? 'false'}
-        disabled={disabled}
-        aria-haspopup="menu"
-        {...props}
-      >
-        {disclosure}
-        <ArrowIcon name="arrow-down" />
-      </StyledMenu>
-    }
-  >
-    {children}
-  </Menu>
+
+const TabMenu = forwardRef(
+  (
+    { children, disclosure, visible, baseId, disabled, ...props }: TabMenuProps,
+    ref: Ref<HTMLButtonElement>,
+  ) => (
+    <Menu
+      visible={visible}
+      baseId={baseId}
+      ref={ref}
+      disclosure={
+        <StyledMenu
+          role="tab"
+          aria-disabled={disabled ?? 'false'}
+          disabled={disabled}
+          aria-haspopup="menu"
+          {...props}
+        >
+          {disclosure}
+          <ArrowIcon name="arrow-down" />
+        </StyledMenu>
+      }
+    >
+      {children}
+    </Menu>
+  ),
 )
 
 export default TabMenu
