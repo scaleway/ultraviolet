@@ -1,3 +1,15 @@
+## [0.185.0](https://github.com/scaleway/scaleway-ui/compare/v0.184.1...v0.185.0) (2022-09-02)
+
+
+### :package: Chore
+
+* **devdeps:** update emotion monorepo ([#1820](https://github.com/scaleway/scaleway-ui/issues/1820)) ([7cd79e0](https://github.com/scaleway/scaleway-ui/commit/7cd79e030957228d65c46e157c9873904ba0bae2))
+
+
+### :gear: Features
+
+* change loader by placeholder in List ([#1828](https://github.com/scaleway/scaleway-ui/issues/1828)) ([f1ea827](https://github.com/scaleway/scaleway-ui/commit/f1ea82752cf26e13aec985c8b99b16df171e81d8))
+
 ## [0.184.1](https://github.com/scaleway/scaleway-ui/compare/v0.184.0...v0.184.1) (2022-08-31)
 
 
