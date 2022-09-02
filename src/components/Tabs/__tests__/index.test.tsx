@@ -47,13 +47,19 @@ describe('Tabs', () => {
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
-        <Tabs.Menu visible baseId="test" disclosure="More">
+        <Tabs.Menu visible baseId="test" disclosure="Blabla">
           <Tabs.MenuItem value={3}>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
       </Tabs>,
       {
         transform: node => {
+          fireEvent.scroll(node.getByRole('tablist'), {})
+          fireEvent.click(node.getByText('More'))
+          Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
+            configurable: true,
+            value: 500,
+          })
           fireEvent.scroll(node.getByRole('tablist'), {})
         },
       },

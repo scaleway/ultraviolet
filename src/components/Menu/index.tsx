@@ -1,7 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import {
-  MutableRefObject,
   ReactElement,
   ReactNode,
   Ref,
@@ -196,10 +195,7 @@ const Menu = (
 
   // if you need dialog inside your component, use function, otherwise component is fine
   const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
-  const innerRef = useRef(
-    target,
-  ) as unknown as MutableRefObject<HTMLButtonElement | null>
-
+  const innerRef = useRef(target as unknown as HTMLButtonElement)
   useImperativeHandle(ref, () => innerRef.current)
 
   return (

@@ -17,10 +17,10 @@ const MenuContainer = styled.div`
   flex-direction: column;
 
   ${StyledTabButton} {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+    line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
     font-weight: inherit;
-    padding: 4px 8px;
+    padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
     border-bottom-width: 1px;
     width: 100%;
     cursor: pointer;
@@ -77,8 +77,8 @@ const Tabs = ({
   selected,
   ...props
 }: TabsProps) => {
-  const tabsRef = useRef<HTMLDivElement | null>(null)
-  const moreStaticRef = useRef<HTMLButtonElement | null>(null)
+  const tabsRef = useRef<HTMLDivElement>({} as HTMLDivElement)
+  const moreStaticRef = useRef<HTMLButtonElement>({} as HTMLButtonElement)
   const [displayMore, setDisplayMore] = useState(false)
   const value = useMemo(
     () => ({
@@ -89,45 +89,40 @@ const Tabs = ({
   )
 
   useEffect(() => {
-    if (tabsRef.current) {
-      setDisplayMore(tabsRef.current.scrollWidth > tabsRef.current.clientWidth)
-    }
+    setDisplayMore(tabsRef.current.scrollWidth > tabsRef.current.clientWidth)
   }, [])
 
   // Scroll automatically to the tab
   useEffect(() => {
-    if (tabsRef.current) {
-      const tab = tabsRef.current.querySelector(
-        `[role='tab'][aria-selected='true']`,
-      )
-      if (tab && tab.scrollIntoView) {
-        tab.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center',
-        })
-      }
+    const tab = tabsRef.current.querySelector(
+      `[role='tab'][aria-selected='true']`,
+    )
+    if (tab && tab.scrollIntoView) {
+      tab.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      })
     }
   }, [selected])
 
   // Change the moreButton style automatically based on the scroll
   useEffect(() => {
     const element = tabsRef.current
+    const moreElement = moreStaticRef.current
     const handler = () => {
-      if (tabsRef.current && moreStaticRef.current) {
-        moreStaticRef.current.style.boxShadow =
-          tabsRef.current.scrollLeft + SHADOW_THRESHOLD >
-          tabsRef.current.scrollWidth - tabsRef.current.clientWidth
-            ? 'none'
-            : ''
-      }
+      moreElement.style.boxShadow =
+        element.scrollLeft + SHADOW_THRESHOLD >
+        element.scrollWidth - element.clientWidth
+          ? 'none'
+          : ''
     }
-    if (element && displayMore) {
+    if (displayMore) {
       element.addEventListener('scroll', handler)
     }
 
     return () => {
-      if (element) element.removeEventListener('scroll', handler)
+      if (displayMore) element.removeEventListener('scroll', handler)
     }
   }, [displayMore])
 
@@ -137,8 +132,8 @@ const Tabs = ({
         {children}
         {displayMore ? (
           <StyledTabMenu ref={moreStaticRef} disclosure={moreDisclosure}>
-              <MenuContainer>{children}</MenuContainer>
-            </StyledTabMenu>
+            <MenuContainer>{children}</MenuContainer>
+          </StyledTabMenu>
         ) : null}
       </TabsContainer>
     </TabsContext.Provider>

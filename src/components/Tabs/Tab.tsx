@@ -156,14 +156,15 @@ const Tab = <T extends ElementType = 'button'>(
         aria-selected={isSelected}
         aria-disabled={disabled}
         disabled={computedAs === 'button' ? disabled : undefined}
+        type={computedAs === 'button' ? 'button' : undefined}
         onClick={event => {
           if (value) {
             onChange(value)
           }
-          ;(onClick as MouseEventHandler<HTMLElement>)?.(event)
+          onClick?.(event)
         }}
         onKeyDown={event => {
-          ;(onKeyDown as KeyboardEventHandler<HTMLElement>)?.(event)
+          onKeyDown?.(event)
           if (!event.defaultPrevented && !disabled && value) onChange(value)
         }}
         {...props}

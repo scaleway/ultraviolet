@@ -160,126 +160,6 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 6px #D4DAE766;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
-  outline: auto;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
-  color: inherit;
-  margin-left: 8px;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  vertical-align: middle;
-}
-
 <div
     class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
@@ -289,6 +169,7 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       First
     </button>
@@ -298,6 +179,7 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Second
     </button>
@@ -308,27 +190,9 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       disabled=""
       role="tab"
-    >
-      Very long tab name
-    </button>
-    <button
-      aria-controls="menu"
-      aria-disabled="false"
-      aria-expanded="false"
-      aria-haspopup="dialog"
-      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
-      role="tab"
       type="button"
     >
-      More
-      <svg
-        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-        />
-      </svg>
+      Very long tab name
     </button>
   </div>
 </DocumentFragment>
@@ -567,114 +431,6 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   vertical-align: middle;
 }
 
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 6px #D4DAE766;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
-  outline: auto;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
-  color: inherit;
-  margin-left: 8px;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
 <div
     class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
@@ -684,6 +440,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       First
     </button>
@@ -693,6 +450,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Second
     </button>
@@ -702,6 +460,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -735,25 +494,6 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       type="button"
     >
       More again
-      <svg
-        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-        />
-      </svg>
-    </button>
-    <button
-      aria-controls="menu"
-      aria-disabled="false"
-      aria-expanded="false"
-      aria-haspopup="dialog"
-      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
-      role="tab"
-      type="button"
-    >
-      More
       <svg
         class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
         viewBox="0 0 24 24"
@@ -1133,27 +873,6 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       tabindex="-1"
     />
   </div>
-  .cache-16wxqto-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #4a4f62;
-  box-shadow: 0px 4px 24px 6px #D4DAE766;
-}
-
-<div
-    class="__reakit-portal"
-  >
-    <div
-      aria-label="Menu"
-      class="cache-16wxqto-StyledPopover epli4kt1"
-      data-dialog="true"
-      hidden=""
-      id="menu"
-      role="dialog"
-      style="display: none; position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
-    />
-  </div>
 </DocumentFragment>
 `;
 
@@ -1277,126 +996,6 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 6px #D4DAE766;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
-  outline: auto;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
-  color: inherit;
-  margin-left: 8px;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  vertical-align: middle;
-}
-
 <div
     class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
@@ -1407,6 +1006,7 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       First
     </button>
@@ -1416,6 +1016,7 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-selected="true"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Second
     </button>
@@ -1426,27 +1027,9 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       disabled=""
       role="tab"
-    >
-      Very long tab name
-    </button>
-    <button
-      aria-controls="menu"
-      aria-disabled="false"
-      aria-expanded="false"
-      aria-haspopup="dialog"
-      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
-      role="tab"
       type="button"
     >
-      More
-      <svg
-        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-        />
-      </svg>
+      Very long tab name
     </button>
   </div>
 </DocumentFragment>
@@ -1833,6 +1416,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="true"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       First
     </button>
@@ -1842,6 +1426,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Second
     </button>
@@ -1850,6 +1435,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Undefined
     </button>
@@ -1858,6 +1444,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Counter
       <span
@@ -1871,6 +1458,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Conter and badge
       <span
@@ -1889,6 +1477,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Badge
       <span
@@ -1902,6 +1491,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1910,6 +1500,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1918,6 +1509,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1926,6 +1518,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1934,6 +1527,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1942,6 +1536,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1950,6 +1545,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1958,6 +1554,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1966,6 +1563,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1974,6 +1572,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
@@ -1982,19 +1581,20 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-selected="false"
       class="cache-pwehva-StyledTabButton e1ej5pcd0"
       role="tab"
+      type="button"
     >
       Very long tab name
     </button>
     <button
       aria-controls="test"
       aria-disabled="false"
-      aria-expanded="true"
+      aria-expanded="false"
       aria-haspopup="dialog"
       class="cache-ppmqz-StyledTabButton-StyledMenu e12ogfvr0"
       role="tab"
       type="button"
     >
-      More
+      Blabla
       <svg
         class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
         viewBox="0 0 24 24"
@@ -2007,10 +1607,11 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-controls="menu"
       aria-disabled="false"
-      aria-expanded="false"
+      aria-expanded="true"
       aria-haspopup="dialog"
       class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
       role="tab"
+      style="box-shadow: none;"
       type="button"
     >
       More
@@ -2023,6 +1624,27 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
         />
       </svg>
     </button>
+  </div>
+  .cache-16wxqto-StyledPopover {
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #4a4f62;
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+}
+
+<div
+    class="__reakit-portal"
+  >
+    <div
+      aria-label="Menu"
+      class="cache-16wxqto-StyledPopover epli4kt1"
+      data-dialog="true"
+      hidden=""
+      id="test"
+      role="dialog"
+      style="position: fixed; left: 100%; top: 100%; display: none;"
+      tabindex="-1"
+    />
   </div>
   .cache-16wxqto-StyledPopover {
   border-radius: 4px;
@@ -2094,13 +1716,37 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
+.cache-10p4zn7-MenuContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cache-10p4zn7-MenuContainer .e1ej5pcd0 {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: inherit;
+  padding: 8px 16px;
+  border-bottom-width: 1px;
+  width: 100%;
+  cursor: pointer;
+  min-width: 110px;
+  background-color: transparent;
+}
+
+.cache-pwehva-StyledTabButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
   cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -2110,81 +1756,217 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-align: center;
+  white-space: nowrap;
+  color: #b2b6c3;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
   outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
   font-size: 16px;
-  line-height: 32px;
+  font-family: Asap;
   font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #e6e9f0;
-  cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  min-width: 110px;
-  background-color: transparent;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
 }
 
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:hover,
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:focus {
+.cache-pwehva-StyledTabButton:hover,
+.cache-pwehva-StyledTabButton:active,
+.cache-pwehva-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
+  outline: none;
 }
 
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:hover,
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:focus {
+.cache-pwehva-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-pwehva-StyledTabButton[aria-selected='true'] {
   color: #390171;
+  border-bottom-color: #4f0599;
 }
 
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:hover svg,
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
+.cache-pwehva-StyledTabButton[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
 }
 
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem[aria-selected='true'] {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
   color: #390171;
+  border-bottom-color: #4f0599;
 }
 
-.cache-m245rk-StyledContent {
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-pwehva-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-pwehva-StyledTabButton[aria-disabled='true'],
+.cache-pwehva-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1l5bbhh-StyledText-StyledCounter {
+  color: #4a4f62;
+  font-size: 12px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f6f6f8;
+  border: 1px solid #d4dae7;
+  margin-left: 8px;
+  height: 24px;
+  width: 24px;
+  line-height: 22px;
+}
+
+.cache-1hjfwlj-BadgeContainer {
+  margin-left: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #b2b6c3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d4dae7;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-case: none;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu:hover,
+.cache-ppmqz-StyledTabButton-StyledMenu:active,
+.cache-ppmqz-StyledTabButton-StyledMenu:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu:focus-visible {
+  outline: auto;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] {
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-selected='true'] .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #390171;
+  border-bottom-color: #4f0599;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
+  background-color: #eeeeff;
+  border-color: #eeeeff;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-ppmqz-StyledTabButton-StyledMenu:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu .e12ogfvr1 {
+  color: inherit;
+  margin-left: 8px;
+  -webkit-transition: 300ms -webkit-transform ease-out;
+  transition: 300ms transform ease-out;
+}
+
+.cache-ppmqz-StyledTabButton-StyledMenu[aria-expanded='true'] .e12ogfvr1 {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
+  vertical-align: middle;
 }
 
 <div
@@ -2194,7 +1976,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-label="Menu"
       class="cache-16wxqto-StyledPopover epli4kt1"
       data-dialog="true"
-      id="test"
+      id="menu"
       role="dialog"
       style="position: fixed; left: 100%; top: 100%;"
       tabindex="-1"
@@ -2203,55 +1985,219 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
         class="cache-1u5ri25-MenuList-centerStyles-bottomStyles-bottom epli4kt0"
         role="menu"
       >
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="ej1y0fv0 em6gco80 cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem"
-          role="menuitem"
-          type="button"
+        <div
+          class="cache-10p4zn7-MenuContainer e1h41e5k2"
         >
-          <div
-            class="cache-m245rk-StyledContent em6gco83"
+          <button
+            aria-disabled="false"
+            aria-selected="true"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
           >
-            Test
-          </div>
-        </button>
-        <button
-          aria-disabled="false"
-          aria-selected="false"
-          class="ej1y0fv0 em6gco80 cache-1ukyjcz-StyledButton-item-Item-StyledMenuItem"
-          role="menuitem"
-          type="button"
-        >
-          <div
-            class="cache-m245rk-StyledContent em6gco83"
+            First
+          </button>
+          <button
+            aria-disabled="false"
+            aria-label="1"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
           >
-            Test 2
-          </div>
-        </button>
+            Second
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Undefined
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Counter
+            <span
+              class="e1ej5pcd3 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
+            >
+              12
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Conter and badge
+            <span
+              class="e1ej5pcd3 cache-1l5bbhh-StyledText-StyledCounter e1tg3t120"
+            >
+              12
+            </span>
+            <span
+              class="cache-1hjfwlj-BadgeContainer e1ej5pcd1"
+            >
+              Badge
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Badge
+            <span
+              class="cache-1hjfwlj-BadgeContainer e1ej5pcd1"
+            >
+              Badge
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-disabled="false"
+            aria-selected="false"
+            class="cache-pwehva-StyledTabButton e1ej5pcd0"
+            role="tab"
+            type="button"
+          >
+            Very long tab name
+          </button>
+          <button
+            aria-controls="test"
+            aria-disabled="false"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="cache-ppmqz-StyledTabButton-StyledMenu e12ogfvr0"
+            role="tab"
+            type="button"
+          >
+            Blabla
+            <svg
+              class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  .cache-16wxqto-StyledPopover {
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #4a4f62;
-  box-shadow: 0px 4px 24px 6px #D4DAE766;
-}
-
-<div
-    class="__reakit-portal"
-  >
     <div
-      aria-label="Menu"
-      class="cache-16wxqto-StyledPopover epli4kt1"
-      data-dialog="true"
-      hidden=""
-      id="menu"
-      role="dialog"
-      style="display: none; position: fixed; left: 100%; top: 100%;"
-      tabindex="-1"
-    />
+      class="__reakit-portal"
+    >
+      <div
+        aria-label="Menu"
+        class="cache-16wxqto-StyledPopover epli4kt1"
+        data-dialog="true"
+        hidden=""
+        id="test"
+        role="dialog"
+        style="position: fixed; left: 100%; top: 100%; display: none;"
+        tabindex="-1"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -2534,126 +2480,6 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d4dae7;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-case: none;
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: #ffffff;
-  box-shadow: 0px 0px 24px 6px #D4DAE766;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:active,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
-  outline: auto;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #390171;
-  border-bottom-color: #4f0599;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1ej5pcd3,
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1ej5pcd3 {
-  background-color: #eeeeff;
-  border-color: #eeeeff;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu .e12ogfvr1 {
-  color: inherit;
-  margin-left: 8px;
-  -webkit-transition: 300ms -webkit-transform ease-out;
-  transition: 300ms transform ease-out;
-}
-
-.cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .e12ogfvr1 {
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-udlih-StyledIcon-sizeStyles-ArrowIcon.cache-udlih-StyledIcon-sizeStyles-ArrowIcon {
-  vertical-align: middle;
-}
-
 <div
     class="cache-1udxpxj-TabsContainer e1h41e5k0"
     role="tablist"
@@ -2680,25 +2506,6 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
     >
       Very long tab name
     </a>
-    <button
-      aria-controls="menu"
-      aria-disabled="false"
-      aria-expanded="false"
-      aria-haspopup="dialog"
-      class="e1h41e5k1 cache-1mzqpts-StyledTabButton-StyledMenu-StyledTabMenu e12ogfvr0"
-      role="tab"
-      type="button"
-    >
-      More
-      <svg
-        class="e12ogfvr1 etwatq50 cache-udlih-StyledIcon-sizeStyles-ArrowIcon"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-        />
-      </svg>
-    </button>
   </div>
 </DocumentFragment>
 `;
