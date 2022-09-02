@@ -716,13 +716,13 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   cursor: progress;
 }
 
-.cache-18z9n8i-StyledList {
+.cache-5r0rob-StyledList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.cache-18z9n8i-StyledList>.exf86061:nth-of-type(even) {
+.cache-5r0rob-StyledList>.exf86062:nth-of-type(even) {
   background-color: #f6f6f8;
 }
 
@@ -737,6 +737,12 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
   align-items: center;
   height: 48px;
   padding: 4px 8px;
+}
+
+.cache-vmfh4y-StyledLine {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1sqnibl-Line {
@@ -777,20 +783,27 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
     class="e3aa5lq1 cache-uj18cg-StyledContainer"
   >
     <ul
-      class="cache-18z9n8i-StyledList exf86060"
+      class="cache-5r0rob-StyledList exf86060"
     >
       <li
-        class="cache-1ldrf1m-StyledItem exf86061"
+        class="cache-1ldrf1m-StyledItem exf86062"
       >
         <div
-          style="width: 240px;"
+          class="cache-vmfh4y-StyledLine exf86061"
         >
           <div
             class="cache-1sqnibl-Line e15slp7a0"
           />
         </div>
         <div
-          style="width: 360px;"
+          class="cache-vmfh4y-StyledLine exf86061"
+        >
+          <div
+            class="cache-1sqnibl-Line e15slp7a0"
+          />
+        </div>
+        <div
+          class="cache-vmfh4y-StyledLine exf86061"
         >
           <div
             class="cache-1sqnibl-Line e15slp7a0"
@@ -798,17 +811,49 @@ exports[`Placeholder renders correctly with type="list" 1`] = `
         </div>
       </li>
       <li
-        class="cache-1ldrf1m-StyledItem exf86061"
+        class="cache-1ldrf1m-StyledItem exf86062"
       >
         <div
-          style="width: 240px;"
+          class="cache-vmfh4y-StyledLine exf86061"
         >
           <div
             class="cache-1sqnibl-Line e15slp7a0"
           />
         </div>
         <div
-          style="width: 360px;"
+          class="cache-vmfh4y-StyledLine exf86061"
+        >
+          <div
+            class="cache-1sqnibl-Line e15slp7a0"
+          />
+        </div>
+        <div
+          class="cache-vmfh4y-StyledLine exf86061"
+        >
+          <div
+            class="cache-1sqnibl-Line e15slp7a0"
+          />
+        </div>
+      </li>
+      <li
+        class="cache-1ldrf1m-StyledItem exf86062"
+      >
+        <div
+          class="cache-vmfh4y-StyledLine exf86061"
+        >
+          <div
+            class="cache-1sqnibl-Line e15slp7a0"
+          />
+        </div>
+        <div
+          class="cache-vmfh4y-StyledLine exf86061"
+        >
+          <div
+            class="cache-1sqnibl-Line e15slp7a0"
+          />
+        </div>
+        <div
+          class="cache-vmfh4y-StyledLine exf86061"
         >
           <div
             class="cache-1sqnibl-Line e15slp7a0"

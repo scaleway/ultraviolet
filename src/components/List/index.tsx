@@ -15,7 +15,6 @@ import {
 } from 'react'
 import orderBy from '../../utils/orderBy'
 import Box from '../Box'
-import Loader from '../Loader'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
@@ -64,12 +63,6 @@ type BodyProps<DataType> = {
   children: (props: ListBodyRenderProps<DataType>) => JSX.Element
 }
 
-const StyledActivityContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: ${({ theme }) => `${theme.space['2']} 0`};
-`
-
 const CenteredText = styled(Text)`
   text-align: center;
   margin: ${({ theme }) => theme.space['2']};
@@ -88,22 +81,15 @@ function Body<DataType extends Record<string, unknown>>({
     isLoading,
     emptyListComponent,
     perPage,
+    columns,
   } = useListContext<DataType>()
 
-  const defaultLoader = useMemo(() => {
-    if (perPage) {
-      return <Placeholder length={perPage} variant="list" />
-    }
-
-    return (
-      <StyledActivityContainer>
-        <Loader active size={50} />
-      </StyledActivityContainer>
-    )
-  }, [perPage])
-
   if (isLoading) {
-    return (customLoader as JSX.Element) ?? defaultLoader
+    return (
+      (customLoader as JSX.Element) ?? (
+        <Placeholder length={perPage} col={columns.length} variant="list" />
+      )
+    )
   }
 
   return (
