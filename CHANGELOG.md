@@ -1,3 +1,10 @@
+## [0.185.1](https://github.com/scaleway/scaleway-ui/compare/v0.185.0...v0.185.1) (2022-09-05)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo ([#1833](https://github.com/scaleway/scaleway-ui/issues/1833)) ([ff1369d](https://github.com/scaleway/scaleway-ui/commit/ff1369d0f51138c72958037157c4ad04f40c2b34))
+
 ## [0.185.0](https://github.com/scaleway/scaleway-ui/compare/v0.184.1...v0.185.0) (2022-09-02)
 
 
