@@ -1,3 +1,10 @@
+## [0.186.0](https://github.com/scaleway/scaleway-ui/compare/v0.185.1...v0.186.0) (2022-09-06)
+
+
+### :gear: Features
+
+* new tabs components ([#1807](https://github.com/scaleway/scaleway-ui/issues/1807)) ([af6e486](https://github.com/scaleway/scaleway-ui/commit/af6e48620f032652a7cdb94f27ff0aaf8bdee193))
+
 ## [0.185.1](https://github.com/scaleway/scaleway-ui/compare/v0.185.0...v0.185.1) (2022-09-05)
 
 
