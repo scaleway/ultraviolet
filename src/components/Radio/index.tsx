@@ -148,7 +148,7 @@ const Radio = forwardRef(
       autoFocus,
       onKeyDown,
     }: RadioProps,
-    ref: ForwardedRef<HTMLLabelElement>,
+    ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const id = useId()
     const computedName = name ?? id
@@ -159,7 +159,6 @@ const Radio = forwardRef(
         aria-disabled={disabled}
         htmlFor={`${computedName}-${value}`}
         className={className}
-        ref={ref}
         data-checked={checked}
       >
         <StyledRadio
@@ -177,6 +176,7 @@ const Radio = forwardRef(
           disabled={disabled}
           name={computedName}
           autoFocus={autoFocus}
+          ref={ref}
         />
         <StyledIcon size={size} viewBox="0 0 24 24">
           <RadioMarkedIcon />

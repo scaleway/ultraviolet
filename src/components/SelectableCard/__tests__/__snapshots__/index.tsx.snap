@@ -2,7 +2,35 @@
 
 exports[`SelectableCard renders correctly with checkbox type 1`] = `
 <DocumentFragment>
-  .cache-1sde7g4-StyledCheckBoxContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -20,60 +48,51 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover,
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:focus-within,
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement input+svg {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
   display: none;
 }
 
@@ -156,53 +175,85 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   stroke: #b2b6c3;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-1sde7g4-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="false"
+<div
+    class="cache-4ctph4-Container ejleepd1"
   >
-    <input
-      aria-checked="false"
-      aria-invalid="false"
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      name="checkbox"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-blank-outline"
-      size="24"
-      viewBox="0 0 24 24"
+    <label
+      aria-disabled="false"
+      class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="false"
     >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        name="checkbox"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-blank-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
     Checkbox card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with checkbox type and checked prop 1`] = `
 <DocumentFragment>
-  .cache-b3p0nr-StyledCheckBoxContainer-StyledElement {
+  .cache-10f1esf-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-10f1esf-Container:hover,
+.cache-10f1esf-Container:focus-within,
+.cache-10f1esf-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: none;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -220,60 +271,51 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:hover,
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:focus-within,
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: none;
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-b3p0nr-StyledCheckBoxContainer-StyledElement input+svg {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
   display: none;
 }
 
@@ -356,67 +398,65 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   stroke: #b2b6c3;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-b3p0nr-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="true"
+<div
+    class="cache-10f1esf-Container ejleepd1"
   >
-    <input
-      aria-checked="true"
-      aria-invalid="false"
-      checked=""
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      name="radio"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-marked-outline"
-      size="24"
-      viewBox="0 0 24 24"
+    <label
+      aria-disabled="false"
+      class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="true"
     >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="true"
+        aria-invalid="false"
+        checked=""
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        name="radio"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-marked-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with checkbox type and disabled prop 1`] = `
 <DocumentFragment>
-  .cache-1dd4dca-StyledCheckBoxContainer-StyledElement {
-  position: relative;
+  .cache-1ya5sn0-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -425,182 +465,13 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   border-radius: 4px;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
   border: 1px solid #d4dae7;
   color: #c4c9d6;
   background: #f6f6f8;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
-  fill: #c4c9d6;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
-  stroke: #c4c9d6;
-  fill: #f6f6f8;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement input+svg {
-  display: none;
-}
-
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.cache-uzcbt1-InnerCheckbox {
-  fill: #ffffff;
-  stroke: #b2b6c3;
-}
-
-<label
-    aria-disabled="true"
-    class="ejleepd0 cache-1dd4dca-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="false"
-  >
-    <input
-      aria-checked="false"
-      aria-disabled="true"
-      aria-invalid="false"
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      disabled=""
-      name="radio"
-      style="pointer-events: none;"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-blank-outline"
-      size="24"
-      viewBox="0 0 24 24"
-    >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
-    Radio card
-  </label>
-</DocumentFragment>
-`;
-
-exports[`SelectableCard renders correctly with checkbox type and isError prop 1`] = `
-<DocumentFragment>
-  .cache-11qv0ig-StyledCheckBoxContainer-StyledElement {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -618,53 +489,51 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #a6102d;
-  color: #a6102d;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-11qv0ig-StyledCheckBoxContainer-StyledElement input+svg {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
   display: none;
 }
 
@@ -747,49 +616,227 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   stroke: #b2b6c3;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-11qv0ig-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="false"
+<div
+    class="cache-1ya5sn0-Container ejleepd1"
+    disabled=""
   >
-    <input
-      aria-checked="false"
-      aria-describedby="radio-hint"
-      aria-invalid="true"
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      name="radio"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-blank-outline"
-      size="24"
-      viewBox="0 0 24 24"
+    <label
+      aria-disabled="true"
+      class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="false"
     >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="true"
+        aria-invalid="false"
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        disabled=""
+        name="radio"
+        style="pointer-events: none;"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-blank-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
-  .cache-1p3rjo3-StyledText-PaddedText {
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectableCard renders correctly with checkbox type and isError prop 1`] = `
+<DocumentFragment>
+  .cache-z09eqx-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+  stroke: #c4c9d6;
+  fill: #f6f6f8;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
+  display: none;
+}
+
+.cache-18vdqte-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-1m7zzqc-StyledIcon {
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-uzcbt1-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #b2b6c3;
+}
+
+.cache-1p3rjo3-StyledText-PaddedText {
   color: #a6102d;
   font-size: 14px;
   font-family: Asap;
@@ -803,15 +850,89 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   padding: 0 4px;
 }
 
-<p
-    class="eu28k4m4 cache-1p3rjo3-StyledText-PaddedText e1tg3t120"
-  />
+<div
+    class="cache-z09eqx-Container ejleepd1"
+  >
+    <label
+      aria-disabled="false"
+      class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="false"
+    >
+      <input
+        aria-checked="false"
+        aria-describedby="radio-hint"
+        aria-invalid="true"
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        name="radio"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-blank-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
+    <p
+      class="eu28k4m4 cache-1p3rjo3-StyledText-PaddedText e1tg3t120"
+    />
+    Radio card
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`] = `
 <DocumentFragment>
-  .cache-1sde7g4-StyledCheckBoxContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -829,60 +950,51 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:hover,
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:focus-within,
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-1sde7g4-StyledCheckBoxContainer-StyledElement input+svg {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
   display: none;
 }
 
@@ -968,54 +1080,80 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
 <div
     aria-describedby=":rn:"
   >
-    <label
-      aria-disabled="false"
-      class="ejleepd0 cache-1sde7g4-StyledCheckBoxContainer-StyledElement eu28k4m1"
-      data-checked="false"
+    <div
+      class="cache-4ctph4-Container ejleepd1"
     >
-      <input
-        aria-checked="false"
-        aria-invalid="false"
-        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-        name="checkbox"
-        type="checkbox"
-        value="choice"
-      />
-      <svg
-        class="cache-1m7zzqc-StyledIcon eu28k4m3"
-        name="checkbox-blank-outline"
-        size="24"
-        viewBox="0 0 24 24"
+      <label
+        aria-disabled="false"
+        class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+        data-checked="false"
       >
-        <g>
-          <rect
-            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-            height="14"
-            rx="1"
-            stroke-width="2"
-            width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eu28k4m5"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
-          />
-        </g>
-      </svg>
+        <input
+          aria-checked="false"
+          aria-invalid="false"
+          class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+          name="checkbox"
+          type="checkbox"
+          value="choice"
+        />
+        <svg
+          class="cache-1m7zzqc-StyledIcon eu28k4m3"
+          name="checkbox-blank-outline"
+          size="24"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <rect
+              class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+              height="14"
+              rx="1"
+              stroke-width="2"
+              width="14"
+              x="5"
+              y="5"
+            />
+            <rect
+              class="cache-1nu9t2r-CheckMark eu28k4m5"
+              height="8"
+              rx="1"
+              width="8"
+              x="8"
+              y="8"
+            />
+          </g>
+        </svg>
+      </label>
       Checkbox card
-    </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with complex children 1`] = `
 <DocumentFragment>
-  .cache-1dd4dca-StyledCheckBoxContainer-StyledElement {
+  .cache-1ya5sn0-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1033,54 +1171,51 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #c4c9d6;
-  background: #f6f6f8;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-1dd4dca-StyledCheckBoxContainer-StyledElement input+svg {
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-a0yyol-StyledCheckBoxContainer-StyledElement label {
   display: none;
 }
 
@@ -1163,60 +1298,93 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   stroke: #b2b6c3;
 }
 
-<label
-    aria-disabled="true"
-    class="ejleepd0 cache-1dd4dca-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="false"
+<div
+    class="cache-1ya5sn0-Container ejleepd1"
+    disabled=""
   >
-    <input
-      aria-checked="false"
+    <label
       aria-disabled="true"
-      aria-invalid="false"
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      disabled=""
-      name="radio"
-      style="pointer-events: none;"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-blank-outline"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-a0yyol-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="false"
     >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="true"
+        aria-invalid="false"
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        disabled=""
+        name="radio"
+        style="pointer-events: none;"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-blank-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
     <div
       style="background: gray; color: gray;"
     >
       Complex radio card
     </div>
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-9q6ozz-StyledRadioContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1235,57 +1403,48 @@ exports[`SelectableCard renders correctly with default props 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover,
-.cache-9q6ozz-StyledRadioContainer-StyledElement:focus-within,
-.cache-9q6ozz-StyledRadioContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-10dvah3-StyledRadioContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement input+svg {
+.cache-10dvah3-StyledRadioContainer-StyledElement label {
   display: none;
 }
 
@@ -1357,57 +1516,89 @@ exports[`SelectableCard renders correctly with default props 1`] = `
   fill: #ffffff;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-9q6ozz-StyledRadioContainer-StyledElement e1duuirp0"
-    data-checked="false"
-    for="radio-choice"
+<div
+    class="cache-4ctph4-Container ejleepd1"
   >
-    <input
-      aria-checked="false"
+    <label
       aria-disabled="false"
-      aria-invalid="false"
-      class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="radio-choice"
-      name="radio"
-      tabindex="0"
-      type="radio"
-      value="choice"
-    />
-    <svg
-      class="cache-gjpbat-StyledIcon e1duuirp2"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-10dvah3-StyledRadioContainer-StyledElement e1duuirp0"
+      data-checked="false"
+      for="radio-choice"
     >
-      <g>
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          stroke-width="2"
-        />
-        <circle
-          class="cache-p50c5x-InnerCircleRing e1duuirp4"
-          cx="12"
-          cy="12"
-          r="6"
-        />
-        <circle
-          class="cache-ivayk3-RadioMark e1duuirp3"
-          cx="12"
-          cy="12"
-          r="4"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="false"
+        aria-invalid="false"
+        class="cache-h7u1sr-StyledRadio e1duuirp1"
+        id="radio-choice"
+        name="radio"
+        tabindex="0"
+        type="radio"
+        value="choice"
+      />
+      <svg
+        class="cache-gjpbat-StyledIcon e1duuirp2"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke-width="2"
+          />
+          <circle
+            class="cache-p50c5x-InnerCircleRing e1duuirp4"
+            cx="12"
+            cy="12"
+            r="6"
+          />
+          <circle
+            class="cache-ivayk3-RadioMark e1duuirp3"
+            cx="12"
+            cy="12"
+            r="4"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with radio type and checked prop 1`] = `
 <DocumentFragment>
-  .cache-1r55vud-StyledRadioContainer-StyledElement {
+  .cache-10f1esf-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-10f1esf-Container:hover,
+.cache-10f1esf-Container:focus-within,
+.cache-10f1esf-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: none;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1426,57 +1617,48 @@ exports[`SelectableCard renders correctly with radio type and checked prop 1`] =
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement:hover,
-.cache-1r55vud-StyledRadioContainer-StyledElement:focus-within,
-.cache-1r55vud-StyledRadioContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: none;
+.cache-10dvah3-StyledRadioContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-1r55vud-StyledRadioContainer-StyledElement input+svg {
+.cache-10dvah3-StyledRadioContainer-StyledElement label {
   display: none;
 }
 
@@ -1548,72 +1730,69 @@ exports[`SelectableCard renders correctly with radio type and checked prop 1`] =
   fill: #ffffff;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-1r55vud-StyledRadioContainer-StyledElement e1duuirp0"
-    data-checked="true"
-    for="radio-choice"
+<div
+    class="cache-10f1esf-Container ejleepd1"
   >
-    <input
-      aria-checked="true"
+    <label
       aria-disabled="false"
-      aria-invalid="false"
-      checked=""
-      class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="radio-choice"
-      name="radio"
-      tabindex="0"
-      type="radio"
-      value="choice"
-    />
-    <svg
-      class="cache-gjpbat-StyledIcon e1duuirp2"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-10dvah3-StyledRadioContainer-StyledElement e1duuirp0"
+      data-checked="true"
+      for="radio-choice"
     >
-      <g>
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          stroke-width="2"
-        />
-        <circle
-          class="cache-p50c5x-InnerCircleRing e1duuirp4"
-          cx="12"
-          cy="12"
-          r="6"
-        />
-        <circle
-          class="cache-ivayk3-RadioMark e1duuirp3"
-          cx="12"
-          cy="12"
-          r="4"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="true"
+        aria-disabled="false"
+        aria-invalid="false"
+        checked=""
+        class="cache-h7u1sr-StyledRadio e1duuirp1"
+        id="radio-choice"
+        name="radio"
+        tabindex="0"
+        type="radio"
+        value="choice"
+      />
+      <svg
+        class="cache-gjpbat-StyledIcon e1duuirp2"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke-width="2"
+          />
+          <circle
+            class="cache-p50c5x-InnerCircleRing e1duuirp4"
+            cx="12"
+            cy="12"
+            r="6"
+          />
+          <circle
+            class="cache-ivayk3-RadioMark e1duuirp3"
+            cx="12"
+            cy="12"
+            r="4"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with radio type and disabled prop 1`] = `
 <DocumentFragment>
-  .cache-1c4z4zv-StyledRadioContainer-StyledElement {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
+  .cache-1ya5sn0-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -1622,47 +1801,73 @@ exports[`SelectableCard renders correctly with radio type and disabled prop 1`] 
   border-radius: 4px;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
   border: 1px solid #d4dae7;
   color: #c4c9d6;
   background: #f6f6f8;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1c4z4zv-StyledRadioContainer-StyledElement input+svg {
+.cache-10dvah3-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement label {
   display: none;
 }
 
@@ -1734,58 +1939,84 @@ exports[`SelectableCard renders correctly with radio type and disabled prop 1`] 
   fill: #ffffff;
 }
 
-<label
-    aria-disabled="true"
-    class="ejleepd0 cache-1c4z4zv-StyledRadioContainer-StyledElement e1duuirp0"
-    data-checked="false"
-    for="radio-choice"
+<div
+    class="cache-1ya5sn0-Container ejleepd1"
+    disabled=""
   >
-    <input
-      aria-checked="false"
+    <label
       aria-disabled="true"
-      aria-invalid="false"
-      class="cache-h7u1sr-StyledRadio e1duuirp1"
-      disabled=""
-      id="radio-choice"
-      name="radio"
-      style="pointer-events: none;"
-      type="radio"
-      value="choice"
-    />
-    <svg
-      class="cache-gjpbat-StyledIcon e1duuirp2"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-10dvah3-StyledRadioContainer-StyledElement e1duuirp0"
+      data-checked="false"
+      for="radio-choice"
     >
-      <g>
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          stroke-width="2"
-        />
-        <circle
-          class="cache-p50c5x-InnerCircleRing e1duuirp4"
-          cx="12"
-          cy="12"
-          r="6"
-        />
-        <circle
-          class="cache-ivayk3-RadioMark e1duuirp3"
-          cx="12"
-          cy="12"
-          r="4"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="true"
+        aria-invalid="false"
+        class="cache-h7u1sr-StyledRadio e1duuirp1"
+        disabled=""
+        id="radio-choice"
+        name="radio"
+        style="pointer-events: none;"
+        type="radio"
+        value="choice"
+      />
+      <svg
+        class="cache-gjpbat-StyledIcon e1duuirp2"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke-width="2"
+          />
+          <circle
+            class="cache-p50c5x-InnerCircleRing e1duuirp4"
+            cx="12"
+            cy="12"
+            r="6"
+          />
+          <circle
+            class="cache-ivayk3-RadioMark e1duuirp3"
+            cx="12"
+            cy="12"
+            r="4"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with radio type and isError prop 1`] = `
 <DocumentFragment>
-  .cache-kncm8w-StyledRadioContainer-StyledElement {
+  .cache-z09eqx-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1804,50 +2035,48 @@ exports[`SelectableCard renders correctly with radio type and isError prop 1`] =
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #a6102d;
-  color: #a6102d;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-kncm8w-StyledRadioContainer-StyledElement input+svg {
+.cache-10dvah3-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement label {
   display: none;
 }
 
@@ -1919,57 +2148,89 @@ exports[`SelectableCard renders correctly with radio type and isError prop 1`] =
   fill: #ffffff;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-kncm8w-StyledRadioContainer-StyledElement e1duuirp0"
-    data-checked="false"
-    for="radio-choice"
+<div
+    class="cache-z09eqx-Container ejleepd1"
   >
-    <input
-      aria-checked="false"
+    <label
       aria-disabled="false"
-      aria-invalid="true"
-      class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="radio-choice"
-      name="radio"
-      tabindex="0"
-      type="radio"
-      value="choice"
-    />
-    <svg
-      class="cache-gjpbat-StyledIcon e1duuirp2"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-10dvah3-StyledRadioContainer-StyledElement e1duuirp0"
+      data-checked="false"
+      for="radio-choice"
     >
-      <g>
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          stroke-width="2"
-        />
-        <circle
-          class="cache-p50c5x-InnerCircleRing e1duuirp4"
-          cx="12"
-          cy="12"
-          r="6"
-        />
-        <circle
-          class="cache-ivayk3-RadioMark e1duuirp3"
-          cx="12"
-          cy="12"
-          r="4"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="false"
+        aria-invalid="true"
+        class="cache-h7u1sr-StyledRadio e1duuirp1"
+        id="radio-choice"
+        name="radio"
+        tabindex="0"
+        type="radio"
+        value="choice"
+      />
+      <svg
+        class="cache-gjpbat-StyledIcon e1duuirp2"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke-width="2"
+          />
+          <circle
+            class="cache-p50c5x-InnerCircleRing e1duuirp4"
+            cx="12"
+            cy="12"
+            r="6"
+          />
+          <circle
+            class="cache-ivayk3-RadioMark e1duuirp3"
+            cx="12"
+            cy="12"
+            r="4"
+          />
+        </g>
+      </svg>
+    </label>
     Radio card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] = `
 <DocumentFragment>
-  .cache-9q6ozz-StyledRadioContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-10dvah3-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1988,57 +2249,48 @@ exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] =
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-10dvah3-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement:hover,
-.cache-9q6ozz-StyledRadioContainer-StyledElement:focus-within,
-.cache-9q6ozz-StyledRadioContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-10dvah3-StyledRadioContainer-StyledElement input+svg {
+  display: none;
 }
 
-.cache-9q6ozz-StyledRadioContainer-StyledElement input+svg {
+.cache-10dvah3-StyledRadioContainer-StyledElement label {
   display: none;
 }
 
@@ -2113,58 +2365,90 @@ exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] =
 <div
     aria-describedby=":rl:"
   >
-    <label
-      aria-disabled="false"
-      class="ejleepd0 cache-9q6ozz-StyledRadioContainer-StyledElement e1duuirp0"
-      data-checked="false"
-      for="radio-choice"
+    <div
+      class="cache-4ctph4-Container ejleepd1"
     >
-      <input
-        aria-checked="false"
+      <label
         aria-disabled="false"
-        aria-invalid="false"
-        class="cache-h7u1sr-StyledRadio e1duuirp1"
-        id="radio-choice"
-        name="radio"
-        tabindex="0"
-        type="radio"
-        value="choice"
-      />
-      <svg
-        class="cache-gjpbat-StyledIcon e1duuirp2"
-        size="24"
-        viewBox="0 0 24 24"
+        class="ejleepd0 cache-10dvah3-StyledRadioContainer-StyledElement e1duuirp0"
+        data-checked="false"
+        for="radio-choice"
       >
-        <g>
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            stroke-width="2"
-          />
-          <circle
-            class="cache-p50c5x-InnerCircleRing e1duuirp4"
-            cx="12"
-            cy="12"
-            r="6"
-          />
-          <circle
-            class="cache-ivayk3-RadioMark e1duuirp3"
-            cx="12"
-            cy="12"
-            r="4"
-          />
-        </g>
-      </svg>
+        <input
+          aria-checked="false"
+          aria-disabled="false"
+          aria-invalid="false"
+          class="cache-h7u1sr-StyledRadio e1duuirp1"
+          id="radio-choice"
+          name="radio"
+          tabindex="0"
+          type="radio"
+          value="choice"
+        />
+        <svg
+          class="cache-gjpbat-StyledIcon e1duuirp2"
+          size="24"
+          viewBox="0 0 24 24"
+        >
+          <g>
+            <circle
+              cx="12"
+              cy="12"
+              r="8"
+              stroke-width="2"
+            />
+            <circle
+              class="cache-p50c5x-InnerCircleRing e1duuirp4"
+              cx="12"
+              cy="12"
+              r="6"
+            />
+            <circle
+              class="cache-ivayk3-RadioMark e1duuirp3"
+              cx="12"
+              cy="12"
+              r="4"
+            />
+          </g>
+        </svg>
+      </label>
       Radio card
-    </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = `
 <DocumentFragment>
-  .cache-18axxhe-StyledCheckBoxContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2182,57 +2466,44 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+.cache-1ch7ke9-StyledCheckBoxContainer-StyledElement:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
-}
-
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:hover,
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:focus-within,
-.cache-18axxhe-StyledCheckBoxContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-18vdqte-StyledReakitCheckbox {
@@ -2314,53 +2585,85 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   stroke: #b2b6c3;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-18axxhe-StyledCheckBoxContainer-StyledElement eu28k4m1"
-    data-checked="false"
+<div
+    class="cache-4ctph4-Container ejleepd1"
   >
-    <input
-      aria-checked="false"
-      aria-invalid="false"
-      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
-      name="checkbox"
-      type="checkbox"
-      value="choice"
-    />
-    <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
-      name="checkbox-blank-outline"
-      size="24"
-      viewBox="0 0 24 24"
+    <label
+      aria-disabled="false"
+      class="ejleepd0 cache-1ch7ke9-StyledCheckBoxContainer-StyledElement eu28k4m1"
+      data-checked="false"
     >
-      <g>
-        <rect
-          class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-          height="14"
-          rx="1"
-          stroke-width="2"
-          width="14"
-          x="5"
-          y="5"
-        />
-        <rect
-          class="cache-1nu9t2r-CheckMark eu28k4m5"
-          height="8"
-          rx="1"
-          width="8"
-          x="8"
-          y="8"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-invalid="false"
+        class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+        name="checkbox"
+        type="checkbox"
+        value="choice"
+      />
+      <svg
+        class="cache-1m7zzqc-StyledIcon eu28k4m3"
+        name="checkbox-blank-outline"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <rect
+            class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+            height="14"
+            rx="1"
+            stroke-width="2"
+            width="14"
+            x="5"
+            y="5"
+          />
+          <rect
+            class="cache-1nu9t2r-CheckMark eu28k4m5"
+            height="8"
+            rx="1"
+            width="8"
+            x="8"
+            y="8"
+          />
+        </g>
+      </svg>
+    </label>
     Checkbox card
-  </label>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
 <DocumentFragment>
-  .cache-15eo3c-StyledRadioContainer-StyledElement {
+  .cache-4ctph4-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-4ctph4-Container:hover,
+.cache-4ctph4-Container:focus-within,
+.cache-4ctph4-Container:active {
+  border: 1px solid #4f0599;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-18ado15-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2379,54 +2682,41 @@ exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-18ado15-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice]+.e1duuirp2 {
+.cache-18ado15-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-18ado15-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-18ado15-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-18ado15-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=checkbox-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-18ado15-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-18ado15-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-15eo3c-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-18ado15-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
-}
-
-.cache-15eo3c-StyledRadioContainer-StyledElement:hover,
-.cache-15eo3c-StyledRadioContainer-StyledElement:focus-within,
-.cache-15eo3c-StyledRadioContainer-StyledElement:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-h7u1sr-StyledRadio {
@@ -2497,50 +2787,54 @@ exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
   fill: #ffffff;
 }
 
-<label
-    aria-disabled="false"
-    class="ejleepd0 cache-15eo3c-StyledRadioContainer-StyledElement e1duuirp0"
-    data-checked="false"
-    for="checkbox-choice"
+<div
+    class="cache-4ctph4-Container ejleepd1"
   >
-    <input
-      aria-checked="false"
+    <label
       aria-disabled="false"
-      aria-invalid="false"
-      class="cache-h7u1sr-StyledRadio e1duuirp1"
-      id="checkbox-choice"
-      name="checkbox"
-      tabindex="0"
-      type="radio"
-      value="choice"
-    />
-    <svg
-      class="cache-gjpbat-StyledIcon e1duuirp2"
-      size="24"
-      viewBox="0 0 24 24"
+      class="ejleepd0 cache-18ado15-StyledRadioContainer-StyledElement e1duuirp0"
+      data-checked="false"
+      for="checkbox-choice"
     >
-      <g>
-        <circle
-          cx="12"
-          cy="12"
-          r="8"
-          stroke-width="2"
-        />
-        <circle
-          class="cache-p50c5x-InnerCircleRing e1duuirp4"
-          cx="12"
-          cy="12"
-          r="6"
-        />
-        <circle
-          class="cache-ivayk3-RadioMark e1duuirp3"
-          cx="12"
-          cy="12"
-          r="4"
-        />
-      </g>
-    </svg>
+      <input
+        aria-checked="false"
+        aria-disabled="false"
+        aria-invalid="false"
+        class="cache-h7u1sr-StyledRadio e1duuirp1"
+        id="checkbox-choice"
+        name="checkbox"
+        tabindex="0"
+        type="radio"
+        value="choice"
+      />
+      <svg
+        class="cache-gjpbat-StyledIcon e1duuirp2"
+        size="24"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <circle
+            cx="12"
+            cy="12"
+            r="8"
+            stroke-width="2"
+          />
+          <circle
+            class="cache-p50c5x-InnerCircleRing e1duuirp4"
+            cx="12"
+            cy="12"
+            r="6"
+          />
+          <circle
+            class="cache-ivayk3-RadioMark e1duuirp3"
+            cx="12"
+            cy="12"
+            r="4"
+          />
+        </g>
+      </svg>
+    </label>
     Checkbox card
-  </label>
+  </div>
 </DocumentFragment>
 `;

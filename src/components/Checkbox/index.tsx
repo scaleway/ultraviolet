@@ -204,7 +204,7 @@ const Checkbox = forwardRef(
       className,
       'data-visibility': dataVisibility,
     }: CheckboxProps,
-    ref: ForwardedRef<HTMLLabelElement>,
+    ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasChildren = !!children
     const { state, setState } = useCheckboxState({ state: checked })
@@ -251,7 +251,6 @@ const Checkbox = forwardRef(
           aria-disabled={disabled}
           data-visibility={dataVisibility}
           data-checked={checked}
-          ref={ref}
         >
           <StyledReakitCheckbox
             aria-invalid={!!error}
@@ -269,6 +268,7 @@ const Checkbox = forwardRef(
             value={value}
             name={computedName}
             autoFocus={autoFocus}
+            ref={ref}
           />
           {!progress ? (
             <StyledIcon name={icon} size={size} viewBox="0 0 24 24">

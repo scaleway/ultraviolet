@@ -2,23 +2,26 @@ import styled from '@emotion/styled'
 import {
   ChangeEventHandler,
   FocusEventHandler,
-  ForwardedRef,
   ReactNode,
-  forwardRef,
   useMemo,
+  useRef,
 } from 'react'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 import Tooltip from '../Tooltip'
 
-const StyledElement = (element: typeof Radio) => styled(element, {
-  shouldForwardProp: prop => !['showTick'].includes(prop),
-})<{ showTick?: boolean }>`
+const Container = styled.div<{
+  disabled?: boolean
+  checked?: boolean
+  error?: boolean
+}>`
   display: inline-flex;
+  flex-direction: column;
   align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
   transition: border-color 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
 
   ${({ theme, checked, disabled, error }) => {
     if (error)
@@ -57,15 +60,27 @@ const StyledElement = (element: typeof Radio) => styled(element, {
       `
     }}
   }
+`
+
+const StyledElement = (element: typeof Radio) => styled(element, {
+  shouldForwardProp: prop => !['showTick', 'hasLabel'].includes(prop),
+})<{ showTick?: boolean; hasLabel?: boolean }>`
+  display: inline-flex;
+  align-items: start;
 
   input + svg {
     ${({ showTick }) => (!showTick ? `display: none;` : null)}
+  }
+
+  label {
+    ${({ showTick, hasLabel }) =>
+      !showTick && !hasLabel ? `display: none;` : null}
   }
 `
 
 type SelectableCardProps = {
   name?: string
-  children:
+  children?:
     | (({
         disabled,
         checked,
@@ -83,36 +98,44 @@ type SelectableCardProps = {
   onBlur?: FocusEventHandler<HTMLInputElement>
   id?: string
   tooltip?: string
+  label?: ReactNode
 }
 
-const SelectableCard = forwardRef(
-  (
-    {
-      name,
-      value,
-      onChange,
-      showTick = false,
-      type = 'radio',
-      checked = false,
-      disabled = false,
-      children,
-      className,
-      isError,
-      onFocus,
-      onBlur,
-      tooltip,
-      id,
-    }: SelectableCardProps,
-    ref: ForwardedRef<HTMLLabelElement>,
-  ) => {
-    const Element = useMemo(
-      () =>
-        StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
-      [type],
-    )
+const SelectableCard = ({
+  name,
+  value,
+  onChange,
+  showTick = false,
+  type = 'radio',
+  checked = false,
+  disabled = false,
+  children,
+  className,
+  isError,
+  onFocus,
+  onBlur,
+  tooltip,
+  id,
+  label,
+}: SelectableCardProps) => {
+  const Element = useMemo(
+    () => StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
+    [type],
+  )
 
-    return (
-      <Tooltip text={tooltip}>
+  const ref = useRef<HTMLInputElement>({} as HTMLInputElement)
+
+  return (
+    <Tooltip text={tooltip}>
+      <Container
+        disabled={disabled}
+        error={isError}
+        checked={checked}
+        onClick={() => {
+          ref.current.click()
+        }}
+        className={className}
+      >
         <Element
           name={name}
           value={value}
@@ -120,20 +143,21 @@ const SelectableCard = forwardRef(
           showTick={showTick}
           checked={checked}
           disabled={disabled}
-          className={className}
           error={isError}
           onFocus={onFocus}
           onBlur={onBlur}
           ref={ref}
+          hasLabel={!!label}
           id={id}
         >
-          {typeof children === 'function'
-            ? children({ checked, disabled })
-            : children}
+          {label}
         </Element>
-      </Tooltip>
-    )
-  },
-)
+        {typeof children === 'function'
+          ? children({ checked, disabled })
+          : children}
+      </Container>
+    </Tooltip>
+  )
+}
 
 export default SelectableCard
