@@ -3,9 +3,11 @@ import styled from '@emotion/styled'
 import {
   ReactElement,
   ReactNode,
-  RefObject,
+  Ref,
   cloneElement,
+  forwardRef,
   isValidElement,
+  useImperativeHandle,
   useRef,
 } from 'react'
 import {
@@ -19,7 +21,7 @@ import Item from './Item'
 
 type DisclosureParam =
   | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
-  | (ReactElement & { ref?: RefObject<HTMLButtonElement> })
+  | (ReactElement & { ref?: Ref<HTMLButtonElement> })
 
 const StyledPopover = styled(Popover)`
   border-radius: ${({ theme }) => theme.radii.default};
@@ -171,60 +173,68 @@ const MenuList = styled.div<MenuListProps>`
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
-const Menu = ({
-  align = { left: '50%', right: 'inherit' },
-  ariaLabel = 'Menu',
-  baseId = 'menu',
-  children,
-  disclosure,
-  hasArrow = true,
-  placement = 'bottom',
-  visible = false,
-  className,
-}: MenuProps) => {
-  const popover = usePopoverState({
-    baseId,
-    placement,
-    visible,
-  })
+const Menu = forwardRef(
+  (
+    {
+      align = { left: '50%', right: 'inherit' },
+      ariaLabel = 'Menu',
+      baseId = 'menu',
+      children,
+      disclosure,
+      hasArrow = true,
+      placement = 'bottom',
+      visible = false,
+      className,
+    }: MenuProps,
+    ref: Ref<HTMLButtonElement | null>,
+  ) => {
+    const popover = usePopoverState({
+      baseId,
+      placement,
+      visible,
+    })
 
-  // if you need dialog inside your component, use function, otherwise component is fine
-  const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
-  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
+    // if you need dialog inside your component, use function, otherwise component is fine
+    const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
+    const innerRef = useRef(target as unknown as HTMLButtonElement)
+    useImperativeHandle(ref, () => innerRef.current)
 
-  return (
-    <>
-      {disclosure && (
-        // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
-        <PopoverDisclosure {...popover} ref={innerRef}>
-          {disclosureProps => cloneElement(target, disclosureProps)}
-        </PopoverDisclosure>
-      )}
-      <Portal>
-        <StyledPopover
-          {...popover}
-          aria-label={ariaLabel}
-          className={className}
-        >
-          {
-            /* Required to avoid loading menu content if not visible */
-            popover.visible ? (
-              <MenuList
-                align={align}
-                hasArrow={hasArrow}
-                placement={popover.placement as ArrowPlacement}
-                role="menu"
-              >
-                {typeof children === 'function' ? children(popover) : children}
-              </MenuList>
-            ) : null
-          }
-        </StyledPopover>
-      </Portal>
-    </>
-  )
-}
+    return (
+      <>
+        {disclosure && (
+          // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
+          <PopoverDisclosure {...popover} ref={innerRef}>
+            {disclosureProps => cloneElement(target, disclosureProps)}
+          </PopoverDisclosure>
+        )}
+        <Portal>
+          <StyledPopover
+            {...popover}
+            aria-label={ariaLabel}
+            className={className}
+          >
+            {
+              /* Required to avoid loading menu content if not visible */
+              popover.visible ? (
+                <MenuList
+                  align={align}
+                  hasArrow={hasArrow}
+                  placement={popover.placement as ArrowPlacement}
+                  role="menu"
+                >
+                  {typeof children === 'function'
+                    ? children(popover)
+                    : children}
+                </MenuList>
+              ) : null
+            }
+          </StyledPopover>
+        </Portal>
+      </>
+    )
+  },
+)
 
-Menu.Item = Item
+const EnhancedMenu = Object.assign(Menu, { Item })
 
-export default Menu
+export default EnhancedMenu

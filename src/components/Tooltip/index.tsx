@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
 import {
   ReactNode,
+  Ref,
   RefObject,
   useCallback,
   useEffect,
   useId,
+  useImperativeHandle,
   useRef,
   useState,
 } from 'react'
@@ -149,20 +151,21 @@ const computePositions = ({
 type TooltipProps = {
   id?: string
   children:
-    | ReactNode
-    | ((renderProps: {
-        className?: string
-        onBlur: () => void
-        onFocus: () => void
-        onMouseEnter: () => void
-        onMouseLeave: () => void
-        ref: RefObject<HTMLDivElement>
-      }) => ReactNode)
+  | ReactNode
+  | ((renderProps: {
+    className?: string
+    onBlur: () => void
+    onFocus: () => void
+    onMouseEnter: () => void
+    onMouseLeave: () => void
+    ref: RefObject<HTMLDivElement>
+  }) => ReactNode)
   maxWidth?: number
   placement?: TooltipPlacement
   text?: ReactNode
   className?: string
   visible?: boolean
+  innerRef?: Ref<HTMLDivElement | null>
 }
 
 const Tooltip = ({
@@ -173,8 +176,10 @@ const Tooltip = ({
   className,
   maxWidth = 232,
   visible = false,
+  innerRef,
 }: TooltipProps) => {
   const childrenRef = useRef<HTMLDivElement>(null)
+  useImperativeHandle(innerRef, () => childrenRef.current)
   const tooltipRef = useRef<HTMLDivElement>(null)
   const timer = useRef<ReturnType<typeof setInterval>>()
   const [visibleInDom, setVisibleInDom] = useState(visible)
@@ -263,6 +268,7 @@ const Tooltip = ({
     return (
       <div
         aria-describedby={generatedId}
+        className={className}
         onBlur={onMouseEvent(false)}
         onFocus={onMouseEvent(true)}
         onMouseEnter={onMouseEvent(true)}
@@ -285,17 +291,17 @@ const Tooltip = ({
       {renderChildren()}
       {visibleInDom
         ? createPortal(
-            <StyledTooltip
-              ref={tooltipRef}
-              positions={positions}
-              maxWidth={maxWidth}
-              role="tooltip"
-              id={generatedId}
-            >
-              {text}
-            </StyledTooltip>,
-            document.body,
-          )
+          <StyledTooltip
+            ref={tooltipRef}
+            positions={positions}
+            maxWidth={maxWidth}
+            role="tooltip"
+            id={generatedId}
+          >
+            {text}
+          </StyledTooltip>,
+          document.body,
+        )
         : null}
     </>
   )
