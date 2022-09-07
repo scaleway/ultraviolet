@@ -35,11 +35,11 @@ const StyledDiv = styled.div`
   opacity: 0.8;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0)
+    ${({ theme }) => theme.colors.neutral.backgroundWeak}00,
+    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
+    ${({ theme }) => theme.colors.neutral.backgroundWeak}66,
+    ${({ theme }) => theme.colors.neutral.backgroundWeak}4D,
+    ${({ theme }) => theme.colors.neutral.backgroundWeak}00
   );
   animation: ${shineAnimation} 1s linear infinite;
   animation-direction: alternate;
