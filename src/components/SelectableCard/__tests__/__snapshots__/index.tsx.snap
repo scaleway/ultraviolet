@@ -2,7 +2,7 @@
 
 exports[`SelectableCard renders correctly with checkbox type 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -23,10 +23,31 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -176,7 +197,9 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
 }
 
 <div
-    class="cache-4ctph4-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"
@@ -225,7 +248,7 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
 
 exports[`SelectableCard renders correctly with checkbox type and checked prop 1`] = `
 <DocumentFragment>
-  .cache-10f1esf-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -242,15 +265,36 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
   color: #4f0599;
 }
 
-.cache-10f1esf-Container:hover,
-.cache-10f1esf-Container:focus-within,
-.cache-10f1esf-Container:active {
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
   border: 1px solid #4f0599;
-  box-shadow: none;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-a0yyol-StyledCheckBoxContainer-StyledElement {
@@ -399,7 +443,9 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
 }
 
 <div
-    class="cache-10f1esf-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="true"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"
@@ -449,7 +495,7 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
 
 exports[`SelectableCard renders correctly with checkbox type and disabled prop 1`] = `
 <DocumentFragment>
-  .cache-1ya5sn0-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -467,8 +513,35 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
   color: #c4c9d6;
   background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-a0yyol-StyledCheckBoxContainer-StyledElement {
@@ -617,8 +690,9 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
 }
 
 <div
-    class="cache-1ya5sn0-Container ejleepd1"
-    disabled=""
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="true"
   >
     <label
       aria-disabled="true"
@@ -670,7 +744,7 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
 
 exports[`SelectableCard renders correctly with checkbox type and isError prop 1`] = `
 <DocumentFragment>
-  .cache-z09eqx-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -687,8 +761,36 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
   border: 1px solid #a6102d;
   color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-a0yyol-StyledCheckBoxContainer-StyledElement {
@@ -851,7 +953,10 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
 }
 
 <div
-    class="cache-z09eqx-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
+    data-error="true"
   >
     <label
       aria-disabled="false"
@@ -904,7 +1009,7 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
 
 exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -925,10 +1030,31 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -1081,7 +1207,9 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
     aria-describedby=":rn:"
   >
     <div
-      class="cache-4ctph4-Container ejleepd1"
+      class="cache-59ke6x-Container ejleepd1"
+      data-checked="false"
+      data-disabled="false"
     >
       <label
         aria-disabled="false"
@@ -1131,7 +1259,7 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
 
 exports[`SelectableCard renders correctly with complex children 1`] = `
 <DocumentFragment>
-  .cache-1ya5sn0-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1149,8 +1277,35 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
   color: #c4c9d6;
   background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-a0yyol-StyledCheckBoxContainer-StyledElement {
@@ -1299,8 +1454,9 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
 }
 
 <div
-    class="cache-1ya5sn0-Container ejleepd1"
-    disabled=""
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="true"
   >
     <label
       aria-disabled="true"
@@ -1356,7 +1512,7 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
 
 exports[`SelectableCard renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1377,10 +1533,31 @@ exports[`SelectableCard renders correctly with default props 1`] = `
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -1517,7 +1694,9 @@ exports[`SelectableCard renders correctly with default props 1`] = `
 }
 
 <div
-    class="cache-4ctph4-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"
@@ -1570,7 +1749,7 @@ exports[`SelectableCard renders correctly with default props 1`] = `
 
 exports[`SelectableCard renders correctly with radio type and checked prop 1`] = `
 <DocumentFragment>
-  .cache-10f1esf-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1587,15 +1766,36 @@ exports[`SelectableCard renders correctly with radio type and checked prop 1`] =
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
   color: #4f0599;
 }
 
-.cache-10f1esf-Container:hover,
-.cache-10f1esf-Container:focus-within,
-.cache-10f1esf-Container:active {
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
   border: 1px solid #4f0599;
-  box-shadow: none;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-10dvah3-StyledRadioContainer-StyledElement {
@@ -1731,7 +1931,9 @@ exports[`SelectableCard renders correctly with radio type and checked prop 1`] =
 }
 
 <div
-    class="cache-10f1esf-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="true"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"
@@ -1785,7 +1987,7 @@ exports[`SelectableCard renders correctly with radio type and checked prop 1`] =
 
 exports[`SelectableCard renders correctly with radio type and disabled prop 1`] = `
 <DocumentFragment>
-  .cache-1ya5sn0-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1803,8 +2005,35 @@ exports[`SelectableCard renders correctly with radio type and disabled prop 1`] 
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
   border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
   color: #c4c9d6;
   background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-10dvah3-StyledRadioContainer-StyledElement {
@@ -1940,8 +2169,9 @@ exports[`SelectableCard renders correctly with radio type and disabled prop 1`] 
 }
 
 <div
-    class="cache-1ya5sn0-Container ejleepd1"
-    disabled=""
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="true"
   >
     <label
       aria-disabled="true"
@@ -1995,7 +2225,7 @@ exports[`SelectableCard renders correctly with radio type and disabled prop 1`] 
 
 exports[`SelectableCard renders correctly with radio type and isError prop 1`] = `
 <DocumentFragment>
-  .cache-z09eqx-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2012,8 +2242,36 @@ exports[`SelectableCard renders correctly with radio type and isError prop 1`] =
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-59ke6x-Container[data-checked='true'] {
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
   border: 1px solid #a6102d;
   color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
 .cache-10dvah3-StyledRadioContainer-StyledElement {
@@ -2149,7 +2407,10 @@ exports[`SelectableCard renders correctly with radio type and isError prop 1`] =
 }
 
 <div
-    class="cache-z09eqx-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
+    data-error="true"
   >
     <label
       aria-disabled="false"
@@ -2202,7 +2463,7 @@ exports[`SelectableCard renders correctly with radio type and isError prop 1`] =
 
 exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2223,10 +2484,31 @@ exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] =
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -2366,7 +2648,9 @@ exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] =
     aria-describedby=":rl:"
   >
     <div
-      class="cache-4ctph4-Container ejleepd1"
+      class="cache-59ke6x-Container ejleepd1"
+      data-checked="false"
+      data-disabled="false"
     >
       <label
         aria-disabled="false"
@@ -2420,7 +2704,7 @@ exports[`SelectableCard renders correctly with radio type and tooltip prop 1`] =
 
 exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2441,10 +2725,31 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -2586,7 +2891,9 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
 }
 
 <div
-    class="cache-4ctph4-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"
@@ -2635,7 +2942,7 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
 
 exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
 <DocumentFragment>
-  .cache-4ctph4-Container {
+  .cache-59ke6x-Container {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2656,10 +2963,31 @@ exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
   color: #4a4f62;
 }
 
-.cache-4ctph4-Container:hover,
-.cache-4ctph4-Container:focus-within,
-.cache-4ctph4-Container:active {
+.cache-59ke6x-Container[data-checked='true'] {
   border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-59ke6x-Container[data-error='true'] {
+  border: 1px solid #a6102d;
+  color: #a6102d;
+}
+
+.cache-59ke6x-Container[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-59ke6x-Container:hover[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:focus-within[data-error='false'][data-disabled='false'][data-cheked='false'],
+.cache-59ke6x-Container:active[data-error='false'][data-disabled='false'][data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
@@ -2788,7 +3116,9 @@ exports[`SelectableCard renders correctly with showTick and type radio 1`] = `
 }
 
 <div
-    class="cache-4ctph4-Container ejleepd1"
+    class="cache-59ke6x-Container ejleepd1"
+    data-checked="false"
+    data-disabled="false"
   >
     <label
       aria-disabled="false"

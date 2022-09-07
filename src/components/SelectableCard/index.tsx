@@ -10,11 +10,7 @@ import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 import Tooltip from '../Tooltip'
 
-const Container = styled.div<{
-  disabled?: boolean
-  checked?: boolean
-  error?: boolean
-}>`
+const Container = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: start;
@@ -23,41 +19,33 @@ const Container = styled.div<{
   transition: border-color 200ms ease, box-shadow 200ms ease;
   cursor: pointer;
 
-  ${({ theme, checked, disabled, error }) => {
-    if (error)
-      return `
-      border: 1px solid ${theme.colors.danger.border};
-      color: ${theme.colors.danger.text};
-    `
+  &[data-checked='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+    color: ${({ theme }) => theme.colors.primary.textWeak};
+  }
 
-    if (checked)
-      return `
-      border: 1px solid ${theme.colors.primary.borderWeak};
-      color: ${theme.colors.primary.textWeak};
-    `
+  &[data-error='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+    color: ${({ theme }) => theme.colors.danger.text};
+  }
 
-    if (disabled)
-      return `
-      border: 1px solid ${theme.colors.neutral.borderWeakDisabled};
-      color: ${theme.colors.neutral.textDisabled};
-      background: ${theme.colors.neutral.backgroundDisabled};
-    `
+  &[data-disabled='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+  }
 
-    return `
-      border: 1px solid ${theme.colors.neutral.borderWeak};
-      color: ${theme.colors.neutral.text};
-    `
-  }}
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
+
   &:hover,
   &:focus-within,
   &:active {
-    ${({ theme, disabled, error, checked }) => {
-      if (error || disabled) return ``
-
-      return `
-        border: 1px solid ${theme.colors.primary.borderWeak};
-        box-shadow: ${checked ? 'none' : theme.shadows.hoverPrimary};
-      `
+    &[data-error='false'][data-disabled='false'] {
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+      &[data-cheked='false'] {
+        box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
+      }
     }}
   }
 `
@@ -128,13 +116,13 @@ const SelectableCard = ({
   return (
     <Tooltip text={tooltip}>
       <Container
-        disabled={disabled}
-        error={isError}
-        checked={checked}
         onClick={() => {
           ref.current.click()
         }}
         className={className}
+        data-checked={checked}
+        data-disabled={disabled}
+        data-error={isError}
       >
         <Element
           name={name}

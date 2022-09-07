@@ -3,6 +3,7 @@ import { ChangeEvent, ComponentProps } from 'react'
 import SelectableCard from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Badge from '../../Badge'
+import { SelectOption } from '../../RichSelect'
 import { RichSelect } from '../../index'
 
 export default {
@@ -24,7 +25,7 @@ const Template: Story<ComponentProps<typeof SelectableCard>> = ({
 
 export const Default = Template.bind({})
 Default.args = {
-  label: 'Label',
+  label: 'Selectable Radio',
 }
 
 export const Controlled = Template.bind({})
@@ -272,13 +273,13 @@ isError.decorators = [
 export const Tooltip = Template.bind({})
 Tooltip.decorators = [
   () => (
-    <ControlValue value="label-7">
+    <ControlValue value="label-14">
       {({ value, onChange }) => (
         <div style={{ display: 'flex', gap: '16px' }}>
           <SelectableCard
             name="label-14"
             checked={value === 'label-14'}
-            value="label-41"
+            value="label-14"
             type="radio"
             tooltip="Click on me!"
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
@@ -314,67 +315,75 @@ Children.decorators = [
   () => (
     <ControlValue value="label-9">
       {({ value, onChange }) => (
-        <div style={{ display: 'flex', gap: '16px' }}>
-          <SelectableCard
-            name="label-9"
-            checked={value === 'label-9'}
-            value="label-9"
-            type="radio"
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              onChange(event.currentTarget.value)
-            }
-            label="Left Radio"
-          >
-            {({ checked }) => (
-              <>
-                I am a children with a badge &nbsp;
-                <Badge
-                  variant={checked ? 'info' : 'neutral'}
-                  prominence={checked ? 'default' : 'strong'}
-                >
-                  info
-                </Badge>
-              </>
-            )}
-          </SelectableCard>
-          <SelectableCard
-            name="label-10"
-            checked={value === 'label-10'}
-            value="label-10"
-            type="radio"
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              onChange(event.currentTarget.value)
-            }
-            label="Middle Radio"
-          >
-            I am a children with clickable rich select
-            <RichSelect
-              value="option-1"
-              onChange={() => {}}
-              options={[
-                { value: 'option-1', label: 'Option 1' },
-                { value: 'option-2', label: 'Option 2' },
-              ]}
-            />
-          </SelectableCard>
-          <SelectableCard
-            name="label-11"
-            checked={value === 'label-11'}
-            value="label-11"
-            type="radio"
-            disabled
-            onChange={(event: ChangeEvent<HTMLInputElement>) =>
-              onChange(event.currentTarget.value)
-            }
-            label="Right Radio"
-          >
-            {({ disabled }) => (
-              <>
-                I am a children with a badge &nbsp;
-                <Badge disabled={disabled}>disabled info</Badge>
-              </>
-            )}
-          </SelectableCard>
+        <div style={{ height: '200px' }}>
+          <div style={{ display: 'flex', gap: '16px' }}>
+            <SelectableCard
+              name="label-9"
+              checked={value === 'label-9'}
+              value="label-9"
+              type="radio"
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                onChange(event.currentTarget.value)
+              }
+              label="Left Radio"
+            >
+              {({ checked }) => (
+                <>
+                  I am a children with a badge &nbsp;
+                  <Badge
+                    variant={checked ? 'info' : 'neutral'}
+                    prominence={checked ? 'default' : 'strong'}
+                  >
+                    info
+                  </Badge>
+                </>
+              )}
+            </SelectableCard>
+            <SelectableCard
+              name="label-10"
+              checked={value === 'label-10'}
+              value="label-10"
+              type="radio"
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                onChange(event.currentTarget.value)
+              }
+              label="Middle Radio"
+            >
+              I am a children with clickable rich select
+              <ControlValue<SelectOption>
+                value={{ label: 'Option 1', value: 'option-1' }}
+              >
+                {({ value: richSelectValue, onChange: richSelectOnChange }) => (
+                  <RichSelect
+                    value={richSelectValue}
+                    onChange={richSelectOnChange}
+                    options={[
+                      { label: 'Option 1', value: 'option-1' },
+                      { label: 'Option 2', value: 'option-2' },
+                    ]}
+                  />
+                )}
+              </ControlValue>
+            </SelectableCard>
+            <SelectableCard
+              name="label-11"
+              checked={value === 'label-11'}
+              value="label-11"
+              type="radio"
+              disabled
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                onChange(event.currentTarget.value)
+              }
+              label="Right Radio"
+            >
+              {({ disabled }) => (
+                <>
+                  I am a children with a badge &nbsp;
+                  <Badge disabled={disabled}>disabled info</Badge>
+                </>
+              )}
+            </SelectableCard>
+          </div>
         </div>
       )}
     </ControlValue>
