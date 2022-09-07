@@ -1,3 +1,10 @@
+## [0.187.0](https://github.com/scaleway/scaleway-ui/compare/v0.186.0...v0.187.0) (2022-09-07)
+
+
+### :gear: Features
+
+* **TextBox:** add OnKeyUp & onKeyDown ([#1836](https://github.com/scaleway/scaleway-ui/issues/1836)) ([40bbd4f](https://github.com/scaleway/scaleway-ui/commit/40bbd4fa2f7fde11553b49bc39b58aacbfbf1689))
+
 ## [0.186.0](https://github.com/scaleway/scaleway-ui/compare/v0.185.1...v0.186.0) (2022-09-06)
 
 
