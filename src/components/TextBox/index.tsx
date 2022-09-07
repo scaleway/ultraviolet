@@ -335,6 +335,8 @@ type TextBoxProps = {
   onBlur?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onChange?: (value: string) => void
   onFocus?: FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onKeyUp?: KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   placeholder?: string
   random?: string
   readOnly?: boolean
@@ -392,6 +394,8 @@ const TextBox = forwardRef<
       onBlur,
       onChange,
       onFocus,
+      onKeyUp,
+      onKeyDown,
       placeholder,
       random,
       readOnly,
@@ -593,6 +597,8 @@ const TextBox = forwardRef<
             onBlur={onBlur}
             onChange={handleChange}
             onFocus={handleFocus}
+            onKeyUp={onKeyUp}
+            onKeyDown={onKeyDown}
             placeholder={placeholder}
             readOnly={readOnly}
             ref={controlRef}
