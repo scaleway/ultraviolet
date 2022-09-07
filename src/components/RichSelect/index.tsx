@@ -199,7 +199,7 @@ const getSelectStyles = ({
     fontWeight: 500,
     height: '24px',
     justifyContent: 'center',
-    marginTop: '11px',
+    marginTop: noTopLabel ? '4px' : '11px',
     textOverflow: 'ellipsis',
     ...(customStyle(state)?.multiValue || {}),
   }),
