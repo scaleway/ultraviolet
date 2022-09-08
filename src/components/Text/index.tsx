@@ -69,8 +69,8 @@ const generateStyles = ({
     overflow: hidden;`
         : ''
     }
-    ${italic ? `font-style: italic` : ''}
-    ${underline ? `text-decoration: underline` : ''}
+    ${italic ? `font-style: italic;` : ''}
+    ${underline ? `text-decoration: underline;` : ''}
   `
 }
 
