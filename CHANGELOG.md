@@ -1,3 +1,15 @@
+## [0.187.1](https://github.com/scaleway/scaleway-ui/compare/v0.187.0...v0.187.1) (2022-09-08)
+
+
+### :repeat: CI
+
+* add tolerence to fix M1 test update ([#1840](https://github.com/scaleway/scaleway-ui/issues/1840)) ([efa1f6a](https://github.com/scaleway/scaleway-ui/commit/efa1f6a5820b55ab8f0b7822029e3d728f16d945))
+
+
+### :bug: Bug Fixes
+
+* **Text:** italic & underline missing semicolon ([#1841](https://github.com/scaleway/scaleway-ui/issues/1841)) ([a7fce53](https://github.com/scaleway/scaleway-ui/commit/a7fce535fe40abee2a59e6b24f65187638490628))
+
 ## [0.187.0](https://github.com/scaleway/scaleway-ui/compare/v0.186.0...v0.187.0) (2022-09-07)
 
 
