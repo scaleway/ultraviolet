@@ -108,7 +108,6 @@ specifiers:
   read-pkg: 7.1.0
   reakit: 1.3.11
   regenerator-runtime: 0.13.9
-  require-from-string: 2.0.2
   rollup: 2.77.3
   rollup-plugin-dts: 4.2.2
   rollup-plugin-postcss: 4.0.2
@@ -191,7 +190,7 @@ devDependencies:
   '@storybook/manager-webpack5': 6.5.10_o3mauctgtumsl5j4kwehbgms54
   '@storybook/mdx2-csf': 0.0.3
   '@storybook/preview-web': 6.5.10_biqbaboplfbrettd7655fr4n2y
-  '@storybook/react': 6.5.10_vdrdlsmwgvdbacicuzfv2ewqbi
+  '@storybook/react': 6.5.10_basxw3feqedjh4bc3dkeclcdom
   '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
   '@storybook/testing-react': 1.3.0_truglhzl6p67jl4hctb7lm4u5i
   '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
@@ -232,7 +231,6 @@ devDependencies:
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   read-pkg: 7.1.0
   regenerator-runtime: 0.13.9
-  require-from-string: 2.0.2
   rollup: 2.77.3
   rollup-plugin-dts: 4.2.2_u7uwnjpwzdscdmf57dt35g5b44
   rollup-plugin-postcss: 4.0.2_postcss@8.4.16
@@ -3681,7 +3679,7 @@ packages:
         optional: true
     dependencies:
       '@loki/browser': 0.30.1
-      '@storybook/react': 6.5.10_vdrdlsmwgvdbacicuzfv2ewqbi
+      '@storybook/react': 6.5.10_basxw3feqedjh4bc3dkeclcdom
     dev: true
 
   /@loki/integration-vue/0.30.1:
@@ -6045,7 +6043,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/react/6.5.10_vdrdlsmwgvdbacicuzfv2ewqbi:
+  /@storybook/react/6.5.10_basxw3feqedjh4bc3dkeclcdom:
     resolution: {integrity: sha512-m8S1qQrwA7pDGwdKEvL6LV3YKvSzVUY297Fq+xcTU3irnAy4sHDuFoLqV6Mi1510mErK1r8+rf+0R5rEXB219g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -6110,7 +6108,6 @@ packages:
       react-refresh: 0.11.0
       read-pkg-up: 7.0.1
       regenerator-runtime: 0.13.9
-      require-from-string: 2.0.2
       ts-dedent: 2.2.0
       typescript: 4.7.4
       util-deprecate: 1.0.2
@@ -6273,7 +6270,7 @@ packages:
       '@storybook/client-api': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/csf': 0.0.2--canary.87bc651.0
       '@storybook/preview-web': 6.5.10_biqbaboplfbrettd7655fr4n2y
-      '@storybook/react': 6.5.10_vdrdlsmwgvdbacicuzfv2ewqbi
+      '@storybook/react': 6.5.10_basxw3feqedjh4bc3dkeclcdom
       react: 18.2.0
     dev: true
 
@@ -14139,7 +14136,7 @@ packages:
       '@loki/target-chrome-docker': 0.30.1
       '@loki/target-native-android-emulator': 0.30.0
       '@loki/target-native-ios-simulator': 0.30.0
-      '@storybook/react': 6.5.10_vdrdlsmwgvdbacicuzfv2ewqbi
+      '@storybook/react': 6.5.10_basxw3feqedjh4bc3dkeclcdom
     transitivePeerDependencies:
       - '@storybook/addons'
       - '@storybook/react-native'
