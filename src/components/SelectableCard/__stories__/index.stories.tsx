@@ -3,8 +3,8 @@ import { ChangeEvent, ComponentProps } from 'react'
 import SelectableCard from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Badge from '../../Badge'
-import { SelectOption } from '../../RichSelect'
-import { RichSelect } from '../../index'
+import Checkbox from '../../Checkbox'
+import RichSelect, { SelectOption } from '../../RichSelect'
 
 export default {
   component: SelectableCard,
@@ -354,14 +354,20 @@ Children.decorators = [
                 value={{ label: 'Option 1', value: 'option-1' }}
               >
                 {({ value: richSelectValue, onChange: richSelectOnChange }) => (
-                  <RichSelect
-                    value={richSelectValue}
-                    onChange={richSelectOnChange}
-                    options={[
-                      { label: 'Option 1', value: 'option-1' },
-                      { label: 'Option 2', value: 'option-2' },
-                    ]}
-                  />
+                  <>
+                    <Checkbox name="test" value="test" onChange={() => {}}>
+                      First element
+                    </Checkbox>
+
+                    <RichSelect
+                      value={richSelectValue}
+                      onChange={richSelectOnChange}
+                      options={[
+                        { label: 'Option 1', value: 'option-1' },
+                        { label: 'Option 2', value: 'option-2' },
+                      ]}
+                    />
+                  </>
                 )}
               </ControlValue>
             </SelectableCard>

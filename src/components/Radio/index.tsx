@@ -160,6 +160,7 @@ const Radio = forwardRef(
         htmlFor={`${computedName}-${value}`}
         className={className}
         data-checked={checked}
+        data-error={error}
       >
         <StyledRadio
           type="radio"

@@ -21,12 +21,10 @@ const Container = styled.div`
 
   &[data-checked='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
-    color: ${({ theme }) => theme.colors.primary.textWeak};
   }
 
   &[data-error='true'] {
     border: 1px solid ${({ theme }) => theme.colors.danger.border};
-    color: ${({ theme }) => theme.colors.danger.text};
   }
 
   &[data-disabled='true'] {
@@ -55,6 +53,14 @@ const StyledElement = (element: typeof Radio) => styled(element, {
 })<{ showTick?: boolean; hasLabel?: boolean }>`
   display: inline-flex;
   align-items: start;
+
+  &[data-checked='true'] {
+    color: ${({ theme }) => theme.colors.primary.textWeak};
+  }
+
+  &[data-error='true'] {
+    color: ${({ theme }) => theme.colors.danger.text};
+  }
 
   input + svg {
     ${({ showTick }) => (!showTick ? `display: none;` : null)}
@@ -137,6 +143,7 @@ const SelectableCard = ({
           ref={ref}
           hasLabel={!!label}
           id={id}
+          data-error={isError}
         >
           {label}
         </Element>
