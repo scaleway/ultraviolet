@@ -1,3 +1,16 @@
+## [0.187.2](https://github.com/scaleway/scaleway-ui/compare/v0.187.1...v0.187.2) (2022-09-09)
+
+
+### :zap: Refactor
+
+* remove flexbox for good ([#1838](https://github.com/scaleway/scaleway-ui/issues/1838)) ([c2c0c21](https://github.com/scaleway/scaleway-ui/commit/c2c0c21a21c7bc98eacaeef9487cb73ade481773)), closes [#1780](https://github.com/scaleway/scaleway-ui/issues/1780)
+
+
+### :bug: Bug Fixes
+
+* **PlaceHolder:** make it compatible dark theme ([#1839](https://github.com/scaleway/scaleway-ui/issues/1839)) ([800d66a](https://github.com/scaleway/scaleway-ui/commit/800d66adc56bdf69701f5f73603c9d91fb4d34fe))
+* **RadioBorderedBox:** remove from library ([#1832](https://github.com/scaleway/scaleway-ui/issues/1832)) ([b38b066](https://github.com/scaleway/scaleway-ui/commit/b38b06634c06e3a5c900f9a9c190aba7a2f16ae5))
+
 ## [0.187.1](https://github.com/scaleway/scaleway-ui/compare/v0.187.0...v0.187.1) (2022-09-08)
 
 
