@@ -46,38 +46,17 @@ const StyledSelectableCard = styled(SelectableCard)`
   }
 `
 
-const FocusOverlay = styled.div<{
-  leftCardWidth: number
-  rightCardWidth: number
-  focusPosition: 'left' | 'right'
-  hasMouseDown: boolean
-}>`
+const FocusOverlay = styled.div`
   position: absolute;
   height: calc(100% - ${({ theme }) => theme.space['1']});
-  width: ${({ leftCardWidth, rightCardWidth, focusPosition }) =>
-    focusPosition === 'right' ? rightCardWidth : leftCardWidth}px;
   border-radius: ${({ theme }) => theme.radii.default};
   background: ${({ theme }) => theme.colors.primary.backgroundStrong};
-  transform: translate3d(
-      ${({ leftCardWidth, focusPosition }) =>
-        focusPosition === 'left' ? 0 : leftCardWidth + 8}px,
-      0,
-      0
-    )
-    scale3d(
-      ${({ hasMouseDown, leftCardWidth, rightCardWidth, focusPosition }) => {
-        if (!hasMouseDown) return 1
-        const offsetScale = 6
-        const currentWidth =
-          focusPosition === 'left' ? leftCardWidth : rightCardWidth
-
-        return 1 + offsetScale / currentWidth
-      }},
-      1,
-      1
-    );
-  transform-origin: ${({ focusPosition }) => focusPosition} center;
+  transform-origin: left center;
   transition: all 200ms ease-in-out;
+
+  &[data-focusposition='right'] {
+    transform-origin: right center;
+  }
 `
 
 type SwitchButtonProps = {
@@ -109,8 +88,8 @@ const SwitchButton = ({
   rightButton,
   tooltip,
 }: SwitchButtonProps) => {
-  const leftButtonRef = useRef<HTMLLabelElement | null>(null)
-  const rightButtonRef = useRef<HTMLLabelElement | null>(null)
+  const leftButtonRef = useRef<HTMLLabelElement>(null)
+  const rightButtonRef = useRef<HTMLLabelElement>(null)
   const [leftCardWidth, setLeftCardWidth] = useState(0)
   const [rightCardWidth, setRightCardWidth] = useState(0)
   const [hasMouseDown, setHasMouseDown] = useState(false)
@@ -132,6 +111,15 @@ const SwitchButton = ({
   const setMouseDown = (isMouseDown: boolean) => () =>
     setHasMouseDown(isMouseDown)
 
+  const getScaleValue = () => {
+    if (!hasMouseDown) return 1
+    const offsetScaleRatio = 6
+    const currentWidth =
+      localValue === leftButton.value ? leftCardWidth : rightCardWidth
+
+    return 1 + offsetScaleRatio / currentWidth
+  }
+
   return (
     <Tooltip text={tooltip}>
       <div style={{ display: 'inline-flex' }}>
@@ -141,10 +129,17 @@ const SwitchButton = ({
           onMouseLeave={setMouseDown(false)}
         >
           <FocusOverlay
-            leftCardWidth={leftCardWidth}
-            rightCardWidth={rightCardWidth}
-            focusPosition={localValue === leftButton.value ? 'left' : 'right'}
-            hasMouseDown={hasMouseDown}
+            data-focusposition={
+              localValue === leftButton.value ? 'left' : 'right'
+            }
+            style={{
+              transform: `translate3d(${
+                localValue === leftButton.value ? 0 : leftCardWidth + 8
+              }px, 0, 0) scale3d(${getScaleValue()}, 1, 1)`,
+              width: `${
+                localValue === leftButton.value ? leftCardWidth : rightCardWidth
+              }px`,
+            }}
           />
           <StyledSelectableCard
             ref={leftButtonRef}
