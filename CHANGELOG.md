@@ -1,3 +1,10 @@
+## [0.187.3](https://github.com/scaleway/scaleway-ui/compare/v0.187.2...v0.187.3) (2022-09-09)
+
+
+### :bug: Bug Fixes
+
+* **richselect:** multi value padding without top label ([#1837](https://github.com/scaleway/scaleway-ui/issues/1837)) ([fde6a1f](https://github.com/scaleway/scaleway-ui/commit/fde6a1f2bb3d8470047eff3b4e159da11d02ba87))
+
 ## [0.187.2](https://github.com/scaleway/scaleway-ui/compare/v0.187.1...v0.187.2) (2022-09-09)
 
 
