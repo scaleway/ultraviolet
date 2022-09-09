@@ -3,6 +3,8 @@ import {
   ChangeEvent,
   ChangeEventHandler,
   FocusEventHandler,
+  useEffect,
+  useRef,
   useState,
 } from 'react'
 import BorderedBox from '../BorderedBox'
@@ -13,6 +15,8 @@ const StyledBorderedBox = styled(BorderedBox)`
   padding: ${({ theme }) => theme.space['0.5']};
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
+  position: relative;
+  align-items: stretch;
 `
 
 const StyledSelectableCard = styled(SelectableCard)`
@@ -33,7 +37,6 @@ const StyledSelectableCard = styled(SelectableCard)`
 
   &[data-checked='true'] {
     color: ${({ theme }) => theme.colors.primary.textStrong};
-    background: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
   &:not([data-checked='true']) {
@@ -41,6 +44,40 @@ const StyledSelectableCard = styled(SelectableCard)`
       color: ${({ theme }) => theme.colors.primary.textWeak};
     }
   }
+`
+
+const FocusOverlay = styled.div<{
+  leftCardWidth: number
+  rightCardWidth: number
+  focusPosition: 'left' | 'right'
+  hasMouseDown: boolean
+}>`
+  position: absolute;
+  height: calc(100% - ${({ theme }) => theme.space['1']});
+  width: ${({ leftCardWidth, rightCardWidth, focusPosition }) =>
+    focusPosition === 'right' ? rightCardWidth : leftCardWidth}px;
+  border-radius: ${({ theme }) => theme.radii.default};
+  background: ${({ theme }) => theme.colors.primary.backgroundStrong};
+  transform: translate3d(
+      ${({ leftCardWidth, focusPosition }) =>
+        focusPosition === 'left' ? 0 : leftCardWidth + 8}px,
+      0,
+      0
+    )
+    scale3d(
+      ${({ hasMouseDown, leftCardWidth, rightCardWidth, focusPosition }) => {
+        if (!hasMouseDown) return 1
+        const offsetScale = 6
+        const currentWidth =
+          focusPosition === 'left' ? leftCardWidth : rightCardWidth
+
+        return 1 + offsetScale / currentWidth
+      }},
+      1,
+      1
+    );
+  transform-origin: ${({ focusPosition }) => focusPosition} center;
+  transition: all 200ms ease-in-out;
 `
 
 type SwitchButtonProps = {
@@ -72,6 +109,12 @@ const SwitchButton = ({
   rightButton,
   tooltip,
 }: SwitchButtonProps) => {
+  const leftButtonRef = useRef<HTMLLabelElement | null>(null)
+  const rightButtonRef = useRef<HTMLLabelElement | null>(null)
+  const [leftCardWidth, setLeftCardWidth] = useState(0)
+  const [rightCardWidth, setRightCardWidth] = useState(0)
+  const [hasMouseDown, setHasMouseDown] = useState(false)
+
   const [localValue, setLocalValue] = useState(
     value === leftButton.value ? leftButton.value : rightButton.value,
   )
@@ -80,11 +123,31 @@ const SwitchButton = ({
     setLocalValue(event.target.value)
   }
 
+  useEffect(() => {
+    if (!leftButtonRef.current || !rightButtonRef.current) return
+    setLeftCardWidth(leftButtonRef.current.getBoundingClientRect().width)
+    setRightCardWidth(rightButtonRef.current.getBoundingClientRect().width)
+  }, [leftButton.value, leftButtonRef, localValue, rightButtonRef])
+
+  const setMouseDown = (isMouseDown: boolean) => () =>
+    setHasMouseDown(isMouseDown)
+
   return (
     <Tooltip text={tooltip}>
       <div style={{ display: 'inline-flex' }}>
-        <StyledBorderedBox>
+        <StyledBorderedBox
+          onMouseDown={setMouseDown(true)}
+          onMouseUp={setMouseDown(false)}
+          onMouseLeave={setMouseDown(false)}
+        >
+          <FocusOverlay
+            leftCardWidth={leftCardWidth}
+            rightCardWidth={rightCardWidth}
+            focusPosition={localValue === leftButton.value ? 'left' : 'right'}
+            hasMouseDown={hasMouseDown}
+          />
           <StyledSelectableCard
+            ref={leftButtonRef}
             name={name}
             value={leftButton.value}
             checked={localValue === leftButton.value}
@@ -96,6 +159,7 @@ const SwitchButton = ({
             {leftButton.label}
           </StyledSelectableCard>
           <StyledSelectableCard
+            ref={rightButtonRef}
             name={name}
             value={rightButton.value}
             checked={localValue === rightButton.value}
