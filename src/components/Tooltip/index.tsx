@@ -11,26 +11,15 @@ import {
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
+import {
+  ARROW_WIDTH,
+  DEFAULT_POSITIONS,
+  TOOLTIP_INITIAL_POSITION,
+  TooltipPlacement,
+  computePositions,
+} from './helpers'
 
-const ARROW_WIDTH = 6 // in px
-const SPACE = 6 // in px
-const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
 const ANIMATION_DURATION = 230 // in ms
-const DEFAULT_POSITIONS = {
-  arrowLeft: 50,
-  arrowTop: 99,
-  arrowTransform: 'translate(-50%, -50)',
-  left: 0,
-  rotate: 135,
-  tooltipInitialPosition: 'translateX(0%)',
-  top: 0,
-}
-const TOOLTIP_INITIAL_POSITION = {
-  bottom: `translateY(-${TOTAL_USED_SPACE}px)`,
-  left: `translateX(${TOTAL_USED_SPACE}px)`,
-  right: `translateX(-${TOTAL_USED_SPACE}px)`,
-  top: `translateY(${TOTAL_USED_SPACE}px)`,
-}
 
 type PositionsType = {
   arrowLeft: number
@@ -79,88 +68,22 @@ const StyledTooltip = styled.div<StyledTooltipProps>`
   }
 `
 
-type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left'
-
-type ComputePositionsTypes = {
-  placement: TooltipPlacement
-  childrenRef: RefObject<HTMLDivElement>
-  tooltipRef: RefObject<HTMLDivElement>
-}
-
-const computePositions = ({
-  placement,
-  childrenRef,
-  tooltipRef,
-}: ComputePositionsTypes) => {
-  const {
-    top: childrenTop,
-    left: childrenLeft,
-    right: childrenRight,
-    width: childrenWidth,
-    height: childrenHeight,
-  } = (childrenRef.current as HTMLDivElement).getBoundingClientRect()
-
-  const { width: tooltipWidth, height: tooltipHeight } = (
-    tooltipRef.current as HTMLDivElement
-  ).getBoundingClientRect()
-
-  switch (placement) {
-    case 'bottom':
-      return {
-        arrowLeft: tooltipWidth / 2,
-        arrowTop: -ARROW_WIDTH - 5,
-        arrowTransform: '',
-        left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
-        rotate: 180,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.bottom,
-        top: childrenTop + childrenHeight + ARROW_WIDTH + SPACE,
-      }
-    case 'left':
-      return {
-        arrowLeft: tooltipWidth + ARROW_WIDTH + 5,
-        arrowTop: tooltipHeight / 2,
-        arrowTransform: 'translate(-50%, -50%)',
-        left: childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2,
-        rotate: -90,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.left,
-        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
-      }
-    case 'right':
-      return {
-        arrowLeft: -ARROW_WIDTH - 5,
-        arrowTop: tooltipHeight / 2,
-        arrowTransform: 'translate(50%, -50%)',
-        left: childrenRight + ARROW_WIDTH + SPACE * 2,
-        rotate: 90,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.right,
-        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
-      }
-    default: // top placement is default value
-      return {
-        arrowLeft: tooltipWidth / 2,
-        arrowTop: tooltipHeight - 1,
-        arrowTransform: '',
-        left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
-        rotate: 0,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.top,
-        top: childrenTop - tooltipHeight - ARROW_WIDTH - SPACE,
-      }
-  }
-}
-
 type TooltipProps = {
   id?: string
   children:
-  | ReactNode
-  | ((renderProps: {
-    className?: string
-    onBlur: () => void
-    onFocus: () => void
-    onMouseEnter: () => void
-    onMouseLeave: () => void
-    ref: RefObject<HTMLDivElement>
-  }) => ReactNode)
+    | ReactNode
+    | ((renderProps: {
+        className?: string
+        onBlur: () => void
+        onFocus: () => void
+        onMouseEnter: () => void
+        onMouseLeave: () => void
+        ref: RefObject<HTMLDivElement>
+      }) => ReactNode)
   maxWidth?: number
+  /**
+   * Auto placement will position the tooltip on the side with the most space
+   */
   placement?: TooltipPlacement
   text?: ReactNode
   className?: string
@@ -171,7 +94,7 @@ type TooltipProps = {
 const Tooltip = ({
   children,
   text = '',
-  placement = 'top',
+  placement = 'auto',
   id,
   className,
   maxWidth = 232,
@@ -291,17 +214,17 @@ const Tooltip = ({
       {renderChildren()}
       {visibleInDom
         ? createPortal(
-          <StyledTooltip
-            ref={tooltipRef}
-            positions={positions}
-            maxWidth={maxWidth}
-            role="tooltip"
-            id={generatedId}
-          >
-            {text}
-          </StyledTooltip>,
-          document.body,
-        )
+            <StyledTooltip
+              ref={tooltipRef}
+              positions={positions}
+              maxWidth={maxWidth}
+              role="tooltip"
+              id={generatedId}
+            >
+              {text}
+            </StyledTooltip>,
+            document.body,
+          )
         : null}
     </>
   )

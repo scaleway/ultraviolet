@@ -1,3 +1,4 @@
+import { act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ComponentProps } from 'react'
 import Tooltip from '..'
@@ -29,7 +30,9 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
@@ -46,7 +49,9 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
@@ -59,11 +64,17 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
-    userEvent.unhover(input)
-    jest.advanceTimersByTime(230)
+    act(() => {
+      userEvent.unhover(input)
+
+      // That's the time until animation finishes
+      jest.advanceTimersByTime(230)
+    })
     expect(tooltipPortal).not.toBeVisible()
   })
 
@@ -75,11 +86,15 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
-    userEvent.unhover(input)
-    userEvent.hover(input)
+    act(() => {
+      userEvent.unhover(input)
+      userEvent.hover(input)
+    })
     expect(tooltipPortal).toBeVisible()
   })
 
@@ -91,7 +106,9 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
@@ -104,12 +121,14 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    userEvent.hover(input)
+    act(() => {
+      userEvent.hover(input)
+    })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
 
-  describe(`placement`, () => {
+  describe(`defined placement`, () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
       test(`should renders tooltip with placement ${placement}`, () => {
         const node = renderWithTheme(
@@ -122,7 +141,9 @@ describe('Tooltip', () => {
         )
 
         const input = node.getByTestId('children') as HTMLInputElement
-        userEvent.hover(input)
+        act(() => {
+          userEvent.hover(input)
+        })
         const tooltipPortal = node.getByText(
           'test success!',
         ) as HTMLInputElement
