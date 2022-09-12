@@ -111,7 +111,7 @@ specifiers:
   rollup: 2.77.3
   rollup-plugin-dts: 4.2.2
   rollup-plugin-postcss: 4.0.2
-  rollup-plugin-visualizer: 5.7.1
+  rollup-plugin-visualizer: 5.8.1
   semantic-release: 19.0.3
   shx: 0.3.4
   size-limit: 8.0.1
@@ -234,7 +234,7 @@ devDependencies:
   rollup: 2.77.3
   rollup-plugin-dts: 4.2.2_u7uwnjpwzdscdmf57dt35g5b44
   rollup-plugin-postcss: 4.0.2_postcss@8.4.16
-  rollup-plugin-visualizer: 5.7.1_rollup@2.77.3
+  rollup-plugin-visualizer: 5.8.1_rollup@2.77.3
   semantic-release: 19.0.3
   shx: 0.3.4
   size-limit: 8.0.1
@@ -17647,12 +17647,15 @@ packages:
       - ts-node
     dev: true
 
-  /rollup-plugin-visualizer/5.7.1_rollup@2.77.3:
-    resolution: {integrity: sha512-E/IgOMnmXKlc6ICyf53ok1b6DxPeNVUs3R0kYYPuDpGfofT4bkiG+KtSMlGjMACFmfwbbqTVDZBIF7sMZVKJbA==}
+  /rollup-plugin-visualizer/5.8.1_rollup@2.77.3:
+    resolution: {integrity: sha512-NBT/xN/LWCwDM2/j5vYmjzpEAKHyclo/8Cv8AfTCwgADAG+tLJDy1vzxMw6NO0dSDjmTeRELD9UU3FwknLv0GQ==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
       rollup: ^2.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
       nanoid: 3.3.4
       open: 8.4.0
