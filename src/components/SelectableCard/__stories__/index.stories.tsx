@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import React, { ChangeEvent, ComponentProps } from 'react'
+import { ChangeEvent, ComponentProps } from 'react'
 import SelectableCard from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Badge from '../../Badge'
