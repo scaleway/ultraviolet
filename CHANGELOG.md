@@ -1,3 +1,15 @@
+## [0.187.4](https://github.com/scaleway/scaleway-ui/compare/v0.187.3...v0.187.4) (2022-09-12)
+
+
+### :bug: Bug Fixes
+
+* **react:** remove unused import thanks to new transformer ([#1846](https://github.com/scaleway/scaleway-ui/issues/1846)) ([0385e85](https://github.com/scaleway/scaleway-ui/commit/0385e857846e0717fe24cf8f3ab67716ace99dac))
+
+
+### :memo: Documentation
+
+* **storybook:** remove useless require-for-string peer-deps ([#1845](https://github.com/scaleway/scaleway-ui/issues/1845)) ([a51a7b6](https://github.com/scaleway/scaleway-ui/commit/a51a7b697cdb58d0d9a36499287d104abcb38f43))
+
 ## [0.187.3](https://github.com/scaleway/scaleway-ui/compare/v0.187.2...v0.187.3) (2022-09-09)
 
 
