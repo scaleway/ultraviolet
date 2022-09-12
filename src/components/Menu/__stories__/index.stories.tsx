@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react'
+import { fireEvent, within } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import Menu from '..'
 import { Icon, Modal as SWUIModal, Touchable } from '../..'
@@ -46,10 +47,10 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
 )
 
 export const Default = Template.bind({})
-/* Default.play = ({ canvasElement }) => {
+Default.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
-} */
+  fireEvent.click(canvas.getByRole('button'))
+}
 
 export const Variants = Template.bind({})
 Variants.parameters = {
@@ -99,12 +100,10 @@ Variants.decorators = [
     </div>
   ),
 ]
-/*
 Variants.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
+  fireEvent.click(canvas.getByRole('button'))
 }
-*/
 
 export const Borderless = Template.bind({})
 Borderless.parameters = {
@@ -149,10 +148,10 @@ Borderless.decorators = [
     </div>
   ),
 ]
-/* Borderless.play = ({ canvasElement }) => {
+Borderless.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
-} */
+  fireEvent.click(canvas.getByRole('button'))
+}
 
 export const ChildrenProps = Template.bind({})
 ChildrenProps.parameters = {
@@ -192,10 +191,10 @@ ChildrenProps.decorators = [
     </div>
   ),
 ]
-/* ChildrenProps.play = ({ canvasElement }) => {
+ChildrenProps.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
-} */
+  fireEvent.click(canvas.getByRole('button'))
+}
 
 export const Modal = Template.bind({})
 Modal.parameters = {
@@ -227,14 +226,16 @@ Modal.decorators = [
     </div>
   ),
 ]
-/* Modal.play = ({ canvasElement }) => {
+/*
+Modal.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
+  fireEvent.click(canvas.getByRole('button'))
   const button = canvas.getByText('MenuItem with Modal').closest('button')
   if (button !== null) {
-    userEvent.click(button)
+    fireEvent.click(button)
   }
-} */
+}
+*/
 
 export const FunctionDisclosure = Template.bind({})
 FunctionDisclosure.parameters = {
@@ -259,7 +260,7 @@ FunctionDisclosure.decorators = [
     </div>
   ),
 ]
-/* FunctionDisclosure.play = ({ canvasElement }) => {
+FunctionDisclosure.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
-  userEvent.click(canvas.getByRole('button'))
-} */
+  fireEvent.click(canvas.getByRole('button'))
+}
