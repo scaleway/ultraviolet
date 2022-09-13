@@ -23,7 +23,9 @@ type LineChartProps = {
     >
   >
   pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<DatumValue>>>
-  tickValues?: NivoBox
+  tickValues?: Partial<
+    Record<'bottom' | 'left' | 'right' | 'top', number | string>
+  >
   chartProps?: Partial<LineSvgProps>
 }
 
@@ -77,7 +79,9 @@ const LineChart = ({
   )
 
   useEffect(() => {
-    if (selected !== undefined) return
+    if (selected !== undefined) {
+      return
+    }
     setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
   }, [dataset.datasets, selected])
 
