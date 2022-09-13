@@ -1,9 +1,10 @@
 {
   "diffingEngine": "pixelmatch",
-  "chromeTolerance": 0.02,
+  "chromeTolerance": 0.05,
   "requireReference": true,
   "reactUri": "file:./storybook-static",
   "storiesFilter": "^Components/*",
+  "chromeSelector": "body.sb-show-main",
   "configurations": {
     "chrome.laptop": {
       "target": "chrome.docker",

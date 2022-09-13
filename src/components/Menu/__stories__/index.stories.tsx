@@ -100,6 +100,7 @@ Variants.decorators = [
     </div>
   ),
 ]
+
 Variants.play = ({ canvasElement }) => {
   const canvas = within(canvasElement)
   fireEvent.click(canvas.getByRole('button'))
@@ -226,16 +227,21 @@ Modal.decorators = [
     </div>
   ),
 ]
-/*
-Modal.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
+Modal.play = async ({ canvasElement }) => {
+  // Workaround to get portal code as canvasElement gives only div#root content
+  // see https://github.com/storybookjs/storybook/issues/16971#issuecomment-1186028103
+  const {
+    ownerDocument: { body },
+  } = canvasElement
+  const canvas = within(body)
+
   fireEvent.click(canvas.getByRole('button'))
-  const button = canvas.getByText('MenuItem with Modal').closest('button')
+  const modalMenu = await canvas.findByText('MenuItem with Modal')
+  const button = modalMenu.closest('button')
   if (button !== null) {
     fireEvent.click(button)
   }
 }
-*/
 
 export const FunctionDisclosure = Template.bind({})
 FunctionDisclosure.parameters = {
