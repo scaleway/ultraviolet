@@ -34,7 +34,7 @@ export const FocusOverlay = ({
     () =>
       focusPosition === 'left'
         ? 0
-        : (leftCardWidth ?? 0) + FOCUS_OVERLAY_PIXEL_RIGHT_OFFSET,
+        : leftCardWidth + FOCUS_OVERLAY_PIXEL_RIGHT_OFFSET,
     [focusPosition, leftCardWidth],
   )
 

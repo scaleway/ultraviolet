@@ -1,5 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FocusOverlay renders correctly when left is focused 1`] = `
+<DocumentFragment>
+  .cache-bxae8r-StyledDiv {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #4f0599;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+  transform-origin: right center;
+}
+
+<div
+    class="cache-bxae8r-StyledDiv e11rfazh0"
+    data-focusposition="left"
+    style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
+  />
+</DocumentFragment>
+`;
+
+exports[`FocusOverlay renders correctly when left is focused and has mouse down 1`] = `
+<DocumentFragment>
+  .cache-bxae8r-StyledDiv {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #4f0599;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+  transform-origin: right center;
+}
+
+<div
+    class="cache-bxae8r-StyledDiv e11rfazh0"
+    data-focusposition="left"
+    style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
+  />
+</DocumentFragment>
+`;
+
+exports[`FocusOverlay renders correctly when right is focused 1`] = `
+<DocumentFragment>
+  .cache-bxae8r-StyledDiv {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #4f0599;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+  transform-origin: right center;
+}
+
+<div
+    class="cache-bxae8r-StyledDiv e11rfazh0"
+    data-focusposition="right"
+    style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
+  />
+</DocumentFragment>
+`;
+
+exports[`FocusOverlay renders correctly when right is focused and has mouse down 1`] = `
+<DocumentFragment>
+  .cache-bxae8r-StyledDiv {
+  position: absolute;
+  height: calc(100% - 8px);
+  border-radius: 4px;
+  background: #4f0599;
+  transform-origin: left center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+  transform-origin: right center;
+}
+
+<div
+    class="cache-bxae8r-StyledDiv e11rfazh0"
+    data-focusposition="right"
+    style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
+  />
+</DocumentFragment>
+`;
+
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
   .cache-fo08zx-BorderedBox-StyledBorderedBox {
