@@ -1,4 +1,5 @@
 import { useCallback } from 'react'
+import isLokiRunning from '@loki/is-loki-running'
 import I18n from '@scaleway/use-i18n'
 import { Story } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
@@ -89,6 +90,9 @@ const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
     }),
     ancestorTheme,
   ),
+  fonts: isLokiRunning()
+    ? { monospace: 'Helvetica', sansSerif: 'sans-serif' }
+    : theme.fonts,
 })
 
 export const globalStyles = (theme: Theme) => css`

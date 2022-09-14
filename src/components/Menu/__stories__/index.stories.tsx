@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import { fireEvent, within } from '@storybook/testing-library'
+import { fireEvent, screen } from '@storybook/testing-library'
 import { ComponentProps } from 'react'
 import Menu from '..'
 import { Icon, Modal as SWUIModal, Touchable } from '../..'
@@ -47,9 +47,8 @@ const Template: Story<ComponentProps<typeof Menu>> = ({
 )
 
 export const Default = Template.bind({})
-Default.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  fireEvent.click(canvas.getByRole('button'))
+Default.play = () => {
+  fireEvent.click(screen.getByRole('button'))
 }
 
 export const Variants = Template.bind({})
@@ -101,9 +100,8 @@ Variants.decorators = [
   ),
 ]
 
-Variants.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  fireEvent.click(canvas.getByRole('button'))
+Variants.play = () => {
+  fireEvent.click(screen.getByRole('button'))
 }
 
 export const Borderless = Template.bind({})
@@ -149,9 +147,8 @@ Borderless.decorators = [
     </div>
   ),
 ]
-Borderless.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  fireEvent.click(canvas.getByRole('button'))
+Borderless.play = () => {
+  fireEvent.click(screen.getByRole('button'))
 }
 
 export const ChildrenProps = Template.bind({})
@@ -192,9 +189,8 @@ ChildrenProps.decorators = [
     </div>
   ),
 ]
-ChildrenProps.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  fireEvent.click(canvas.getByRole('button'))
+ChildrenProps.play = () => {
+  fireEvent.click(screen.getByRole('button'))
 }
 
 export const Modal = Template.bind({})
@@ -227,16 +223,9 @@ Modal.decorators = [
     </div>
   ),
 ]
-Modal.play = async ({ canvasElement }) => {
-  // Workaround to get portal code as canvasElement gives only div#root content
-  // see https://github.com/storybookjs/storybook/issues/16971#issuecomment-1186028103
-  const {
-    ownerDocument: { body },
-  } = canvasElement
-  const canvas = within(body)
-
-  fireEvent.click(canvas.getByRole('button'))
-  const modalMenu = await canvas.findByText('MenuItem with Modal')
+Modal.play = async () => {
+  fireEvent.click(screen.getByRole('button'))
+  const modalMenu = await screen.findByText('MenuItem with Modal')
   const button = modalMenu.closest('button')
   if (button !== null) {
     fireEvent.click(button)
@@ -266,7 +255,6 @@ FunctionDisclosure.decorators = [
     </div>
   ),
 ]
-FunctionDisclosure.play = ({ canvasElement }) => {
-  const canvas = within(canvasElement)
-  fireEvent.click(canvas.getByRole('button'))
+FunctionDisclosure.play = () => {
+  fireEvent.click(screen.getByRole('button'))
 }
