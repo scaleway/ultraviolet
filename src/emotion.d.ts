@@ -1,4 +1,4 @@
-import { SCWUITheme } from './src'
+import { SCWUITheme } from '.'
 
 declare module '@emotion/react' {
   // https://emotion.sh/docs/typescript#define-a-theme

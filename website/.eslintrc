@@ -1,0 +1,17 @@
+{
+  "extends": ["@scaleway/react/typescript", "plugin:react/jsx-runtime"],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "plugins": ["@emotion"],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["next.config.js"]
+      }
+    ],
+    "react/require-default-props": "off"
+  },
+  "root": true
+}

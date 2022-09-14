@@ -18,9 +18,9 @@
     "**/*.jsx",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
-    "emotion.d.ts",
-    "global.d.ts",
+    "src/emotion.d.ts",
+    "src/global.d.ts",
     ".jest/setupTests.ts"
   ],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "exclude": ["node_modules", "coverage", "dist", "website"]
 }
