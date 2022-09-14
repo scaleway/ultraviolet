@@ -1048,6 +1048,1893 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
 </DocumentFragment>
 `;
 
+exports[`LineChart renders correctly when data is async 1`] = `
+<DocumentFragment>
+  <div
+    style="height: 537px;"
+  >
+    <div>
+      <div
+        style="position: relative;"
+      >
+        <svg
+          height="500"
+          role="img"
+          width="1000"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="transparent"
+            height="500"
+            width="1000"
+          />
+          <g
+            transform="translate(60,50)"
+          >
+            <g>
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="91"
+                x2="91"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="181"
+                x2="181"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="272"
+                x2="272"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="362"
+                x2="362"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="453"
+                x2="453"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="543"
+                x2="543"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="634"
+                x2="634"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="724"
+                x2="724"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="815"
+                x2="815"
+                y1="0"
+                y2="400"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="905"
+                x2="905"
+                y1="0"
+                y2="400"
+              />
+            </g>
+            <g>
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="386"
+                y2="386"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="357"
+                y2="357"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="328"
+                y2="328"
+              />
+              <line
+                opacity="1"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="200"
+                y2="200"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="270"
+                y2="270"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="241"
+                y2="241"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="212"
+                y2="212"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="183"
+                y2="183"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="154"
+                y2="154"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="125"
+                y2="125"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="96"
+                y2="96"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="67"
+                y2="67"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="38"
+                y2="38"
+              />
+              <line
+                opacity="0"
+                stroke="#dddddd"
+                stroke-width="1"
+                x1="0"
+                x2="915"
+                y1="9"
+                y2="9"
+              />
+            </g>
+            <g
+              transform="translate(0,400)"
+            >
+              <g
+                style="opacity: 0;"
+                transform="translate(0,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  0
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(91,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  200
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(181,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  400
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(272,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  600
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(362,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  800
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(453,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  1000
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(543,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  1200
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(634,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  1400
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(724,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  1600
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(815,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  1800
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(905,0)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="0"
+                  y1="0"
+                  y2="5"
+                />
+                <text
+                  dominant-baseline="text-before-edge"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="middle"
+                  transform="translate(0,10) rotate(0)"
+                >
+                  2000
+                </text>
+              </g>
+              <line
+                style="stroke: transparent; stroke-width: 1;"
+                x1="0"
+                x2="915"
+                y1="0"
+                y2="0"
+              />
+            </g>
+            <g
+              transform="translate(0,0)"
+            >
+              <g
+                style="opacity: 0;"
+                transform="translate(0,386)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  -30
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,357)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  -20
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,328)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  -10
+                </text>
+              </g>
+              <g
+                style="opacity: 1;"
+                transform="translate(0,200)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  0
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,270)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  10
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,241)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  20
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,212)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  30
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,183)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  40
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,154)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  50
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,125)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  60
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,96)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  70
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,67)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  80
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,38)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  90
+                </text>
+              </g>
+              <g
+                style="opacity: 0;"
+                transform="translate(0,9)"
+              >
+                <line
+                  style="stroke: #f6f6f8; stroke-width: 1;"
+                  x1="0"
+                  x2="-5"
+                  y1="0"
+                  y2="0"
+                />
+                <text
+                  dominant-baseline="central"
+                  style="font-family: Asap, System, sans-serif; font-size: 12px; fill: #b2b6c3;"
+                  text-anchor="end"
+                  transform="translate(-10,0) rotate(0)"
+                >
+                  100
+                </text>
+              </g>
+              <line
+                style="stroke: transparent; stroke-width: 1;"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="400"
+              />
+            </g>
+            <path
+              d="M915,272C915,272,915,270,915,270C915,270,915,29,915,29C915,29,915,301,915,301C915,301,915,336,915,336C915,336,915,96,915,96C915,96,915,212,915,212C915,212,915,409,915,409C915,409,915,287,915,287C915,287,915,284,915,284C915,284,915,275,915,275C915,275,915,272,915,272C915,272,915,72,915,72C915,72,915,226,915,226C915,226,915,200,915,200"
+              fill="none"
+              stroke="#3f6ed8"
+              stroke-width="2"
+            />
+            <path
+              d="M915,281C915,281,915,299,915,299C915,299,915,272,915,272C915,272,915,328,915,328C915,328,915,339,915,339C915,339,915,78,915,78C915,78,915,200,915,200C915,200,915,255,915,255C915,255,915,299,915,299"
+              fill="none"
+              stroke="#a365f6"
+              stroke-width="2"
+            />
+            <path
+              d="M915,252C915,252,915,270,915,270C915,270,915,325,915,325C915,325,915,301,915,301C915,301,915,310,915,310C915,310,915,165,915,165C915,165,915,258,915,258C915,258,915,139,915,139C915,139,915,264,915,264C915,264,915,299,915,299"
+              fill="none"
+              stroke="#22c8a2"
+              stroke-width="2"
+            />
+            <g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 200)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 226)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 72)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 272)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 275)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 284)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 287)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 409)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 212)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 96)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 336)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 301)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 29)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 270)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 272)"
+              >
+                <circle
+                  fill="#3f6ed8"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 255)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 200)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 78)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 339)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 328)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 272)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 281)"
+              >
+                <circle
+                  fill="#a365f6"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 299)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 264)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 139)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 258)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 165)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 310)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 301)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 325)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 270)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+              <g
+                style="pointer-events: none;"
+                transform="translate(915, 252)"
+              >
+                <circle
+                  fill="#22c8a2"
+                  r="5"
+                  stroke="transparent"
+                  stroke-width="0"
+                  style="pointer-events: none;"
+                />
+              </g>
+            </g>
+            <g>
+              <rect
+                fill="red"
+                height="400"
+                opacity="0"
+                style="cursor: auto;"
+                width="915"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  .cache-1j0fs0x-StyledContainer {
+  margin-top: 16px;
+}
+
+.cache-1m425p5-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f6f6f8;
+}
+
+.cache-1m425p5-head>:not(:last-child) {
+  margin-right: 8px;
+}
+
+.cache-qp094k-LongContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+}
+
+.cache-33vbz7-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: none;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 72px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-i8f77n-body>:not(:last-child) {
+  border-bottom: 1px solid #f6f6f8;
+}
+
+.cache-achh5b-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 0;
+}
+
+.cache-achh5b-row>:not(:last-child) {
+  margin-right: 8px;
+}
+
+.cache-122v91t-StyledCheckBoxContainer {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+  stroke: #c4c9d6;
+  fill: #f6f6f8;
+}
+
+.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-18vdqte-StyledReakitCheckbox {
+  opacity: 0.01;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-1m7zzqc-StyledIcon {
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-uzcbt1-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #b2b6c3;
+}
+
+.cache-3xyhdp-CellValueContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1gnf816-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1agnpp2-legend {
+  margin-left: 16px;
+  width: 32px;
+  height: 2px;
+  background-color: #22c8a2;
+}
+
+.cache-ol5r6f-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 72px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-ja0hz5-legend {
+  margin-left: 16px;
+  width: 32px;
+  height: 2px;
+  background-color: #a365f6;
+}
+
+.cache-xgdiqy-legend {
+  margin-left: 16px;
+  width: 32px;
+  height: 2px;
+  background-color: #3f6ed8;
+}
+
+<div
+    class="cache-1j0fs0x-StyledContainer eaefwd70"
+  >
+    <div
+      class="cache-1m425p5-head"
+    >
+      <div
+        class="cache-qp094k-LongContainer eaefwd71"
+      >
+        Legend
+      </div>
+      <span
+        class="eaefwd73 cache-33vbz7-StyledText-StyledText e1tg3t120"
+      >
+        Minimum
+      </span>
+      <span
+        class="eaefwd73 cache-33vbz7-StyledText-StyledText e1tg3t120"
+      >
+        Maximum
+      </span>
+      <span
+        class="eaefwd73 cache-33vbz7-StyledText-StyledText e1tg3t120"
+      >
+        Average
+      </span>
+      <span
+        class="eaefwd73 cache-33vbz7-StyledText-StyledText e1tg3t120"
+      >
+        Current
+      </span>
+    </div>
+    <div
+      class="cache-i8f77n-body"
+    >
+      <div
+        class="cache-achh5b-row"
+      >
+        <div
+          class="cache-qp094k-LongContainer eaefwd71"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            data-checked="true"
+          >
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              name="lineChartMultiple1"
+              type="checkbox"
+            />
+            <svg
+              class="cache-1m7zzqc-StyledIcon eu28k4m3"
+              name="checkbox-marked-outline"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <rect
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  height="14"
+                  rx="1"
+                  stroke-width="2"
+                  width="14"
+                  x="5"
+                  y="5"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  height="8"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="8"
+                />
+              </g>
+            </svg>
+            <div
+              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            >
+              <span
+                class="cache-1gnf816-StyledText e1tg3t120"
+              >
+                Serie 1
+              </span>
+              <div
+                class="cache-1agnpp2-legend"
+                data-testid="label-lineChartMultiple1"
+              />
+            </div>
+          </label>
+        </div>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          -9
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          55
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          9.27
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          0
+        </span>
+      </div>
+      <div
+        class="cache-achh5b-row"
+      >
+        <div
+          class="cache-qp094k-LongContainer eaefwd71"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            data-checked="true"
+          >
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              name="lineChartMultiple2"
+              type="checkbox"
+            />
+            <svg
+              class="cache-1m7zzqc-StyledIcon eu28k4m3"
+              name="checkbox-marked-outline"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <rect
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  height="14"
+                  rx="1"
+                  stroke-width="2"
+                  width="14"
+                  x="5"
+                  y="5"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  height="8"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="8"
+                />
+              </g>
+            </svg>
+            <div
+              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            >
+              <span
+                class="cache-1gnf816-StyledText e1tg3t120"
+              >
+                Serie 2
+              </span>
+              <div
+                class="cache-ja0hz5-legend"
+                data-testid="label-lineChartMultiple2"
+              />
+            </div>
+          </label>
+        </div>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          -14
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          76
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          7.73
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          0
+        </span>
+      </div>
+      <div
+        class="cache-achh5b-row"
+      >
+        <div
+          class="cache-qp094k-LongContainer eaefwd71"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            data-checked="true"
+          >
+            <input
+              aria-checked="true"
+              aria-invalid="false"
+              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              name="lineChartMultiple3"
+              type="checkbox"
+            />
+            <svg
+              class="cache-1m7zzqc-StyledIcon eu28k4m3"
+              name="checkbox-marked-outline"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <rect
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  height="14"
+                  rx="1"
+                  stroke-width="2"
+                  width="14"
+                  x="5"
+                  y="5"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  height="8"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="8"
+                />
+              </g>
+            </svg>
+            <div
+              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            >
+              <span
+                class="cache-1gnf816-StyledText e1tg3t120"
+              >
+                Serie 3
+              </span>
+              <div
+                class="cache-xgdiqy-legend"
+                data-testid="label-lineChartMultiple3"
+              />
+            </div>
+          </label>
+        </div>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          -38
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          93
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          21.53
+        </span>
+        <span
+          class="eaefwd73 cache-ol5r6f-StyledText-StyledText e1tg3t120"
+        >
+          34
+        </span>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`LineChart renders correctly when legend is deselected 1`] = `
 <DocumentFragment>
   <div

@@ -3,7 +3,7 @@ import { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import PropTypes from 'prop-types'
-import { ComponentProps, Validator, useState } from 'react'
+import { ComponentProps, Validator, useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import CustomLegend from './CustomLegend'
 import LineChartTooltip from './Tooltip'
@@ -23,7 +23,9 @@ type LineChartProps = {
     >
   >
   pointFormatters?: Partial<Record<'x' | 'y', ValueFormat<DatumValue>>>
-  tickValues?: NivoBox
+  tickValues?: Partial<
+    Record<'bottom' | 'left' | 'right' | 'top', number | string>
+  >
   chartProps?: Partial<LineSvgProps>
 }
 
@@ -37,7 +39,7 @@ const LineChart = ({
     useUTC: false,
   },
   yScale = { type: 'linear' },
-  data = [],
+  data,
   withLegend = false,
   axisFormatters,
   pointFormatters,
@@ -46,7 +48,7 @@ const LineChart = ({
 }: LineChartProps) => {
   const theme = useTheme()
   const dataset = {
-    datasets: data.map((d, i) => ({
+    datasets: data?.map((d, i) => ({
       data: d.data,
       id: d.id,
       label: d.label as string,
@@ -68,20 +70,27 @@ const LineChart = ({
     textColor: theme.colors.neutral.textWeak,
   }
 
-  const [selected, setState] = useState(
-    dataset.datasets.map(({ id }, index) => `${id}${index}`),
+  const [selected, setSelected] = useState(
+    dataset.datasets?.map(({ id }, index) => `${id}${index}`),
   )
 
-  const finalData = dataset.datasets.filter(
-    ({ id }, index) => selected.indexOf(`${id}${index}`) > -1,
+  const finalData = dataset.datasets?.filter(({ id }, index) =>
+    selected ? selected.indexOf(`${id}${index}`) > -1 : false,
   )
+
+  useEffect(() => {
+    if (selected !== undefined) {
+      return
+    }
+    setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
+  }, [dataset.datasets, selected])
 
   return (
     <>
       <div style={{ height }}>
         <ResponsiveLine
           colors={(point: Point) => point.serieColor}
-          data={finalData}
+          data={finalData ?? []}
           margin={margin}
           xScale={xScale}
           yScale={
@@ -118,8 +127,8 @@ const LineChart = ({
       {withLegend && (
         <CustomLegend
           data={dataset.datasets}
-          selected={selected}
-          setSelected={setState}
+          selected={selected ?? []}
+          setSelected={setSelected}
           axisTransformer={axisFormatters?.left}
         />
       )}
