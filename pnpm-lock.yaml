@@ -19,7 +19,6 @@ specifiers:
   '@emotion/serialize': 1.1.0
   '@emotion/styled': 11.10.4
   '@jest/types': 29.0.3
-  '@loki/create-async-callback': ^0.30.2
   '@loki/is-loki-running': ^0.30.0
   '@nivo/bar': 0.79.1
   '@nivo/core': 0.79.0
@@ -164,7 +163,6 @@ devDependencies:
   '@emotion/jest': 11.10.0_@types+jest@28.1.8
   '@emotion/react': 11.10.4_axxkdcpdr7up57umjkldobkynm
   '@emotion/styled': 11.10.4_sn4wuyy54zwps25tv4w7lbiz6i
-  '@loki/create-async-callback': 0.30.2_@storybook+addons@6.5.10
   '@loki/is-loki-running': 0.30.0
   '@rollup/plugin-babel': 5.3.1_qjhfxcwn2glzcb5646tzyg45bq
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.0
@@ -2588,15 +2586,6 @@ packages:
     resolution: {integrity: sha512-1RtnAg5vqPaigazthdPQ+QpWiTsdJdw3obB9G07ckC4QkSe9CA/JEH8OrHRlNLPR9chia5vH5QGqze6URQA5fA==}
     dependencies:
       shelljs: 0.8.5
-    dev: true
-
-  /@loki/create-async-callback/0.30.2_@storybook+addons@6.5.10:
-    resolution: {integrity: sha512-o70TyNrvhn5GwhPEJynTy4jHXjUiSC9zTX8MNr1XtWC+lK0qc4GAueXoMHZX8M2IfDBuijTFWs09OLpBvjq6/w==}
-    dependencies:
-      '@loki/integration-react-native': 0.30.2_@storybook+addons@6.5.10
-    transitivePeerDependencies:
-      - '@storybook/addons'
-      - '@storybook/react-native'
     dev: true
 
   /@loki/diff-graphics-magick/0.30.0:
