@@ -1,3 +1,24 @@
+## [0.187.5](https://github.com/scaleway/scaleway-ui/compare/v0.187.4...v0.187.5) (2022-09-14)
+
+
+### :repeat: CI
+
+* update pnpm version ([#1859](https://github.com/scaleway/scaleway-ui/issues/1859)) ([d75035e](https://github.com/scaleway/scaleway-ui/commit/d75035ed1f15429345775b6670f59ad69cba1fca))
+
+
+### :package: Chore
+
+* **devdeps:** update commitlint monorepo ([#1850](https://github.com/scaleway/scaleway-ui/issues/1850)) ([a4fbd51](https://github.com/scaleway/scaleway-ui/commit/a4fbd51da1dea959d3edb275cb26f4180435d2c8))
+* **devdeps:** update dependency @types/react to v18.0.20 ([#1860](https://github.com/scaleway/scaleway-ui/issues/1860)) ([36f8f14](https://github.com/scaleway/scaleway-ui/commit/36f8f14a35377dc467145c30f9c6a055a72bc08c))
+* **devdeps:** update dependency jest-junit to v14.0.1 ([#1847](https://github.com/scaleway/scaleway-ui/issues/1847)) ([ed08c8a](https://github.com/scaleway/scaleway-ui/commit/ed08c8a4febdf8d8a69e15c08fb1738676a7e2ba))
+* **devdeps:** update dependency rollup-plugin-visualizer to v5.8.1 ([#1854](https://github.com/scaleway/scaleway-ui/issues/1854)) ([e0c3273](https://github.com/scaleway/scaleway-ui/commit/e0c3273dba2a77eaeec0c78cd2713905002ba579))
+* **devdeps:** update semantic-release monorepo ([#1848](https://github.com/scaleway/scaleway-ui/issues/1848)) ([90a741d](https://github.com/scaleway/scaleway-ui/commit/90a741d96aee0e378bcf24b46dd3726685c2df40))
+
+
+### :bug: Bug Fixes
+
+* **linechart:** select chart even when provided asynchronously ([#1863](https://github.com/scaleway/scaleway-ui/issues/1863)) ([963a7c3](https://github.com/scaleway/scaleway-ui/commit/963a7c389ab091b72142363fa8df766d5703ebc3))
+
 ## [0.187.4](https://github.com/scaleway/scaleway-ui/compare/v0.187.3...v0.187.4) (2022-09-12)
 
 
