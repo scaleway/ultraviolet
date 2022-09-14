@@ -1,3 +1,15 @@
+## [0.188.0](https://github.com/scaleway/scaleway-ui/compare/v0.187.6...v0.188.0) (2022-09-14)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency rollup to v2.79.0 ([#1853](https://github.com/scaleway/scaleway-ui/issues/1853)) ([f5c8c9a](https://github.com/scaleway/scaleway-ui/commit/f5c8c9a5c4e73d9a853681bcd6d503792d6ee18f))
+
+
+### :gear: Features
+
+* **switchbutton:** add animation ([#1844](https://github.com/scaleway/scaleway-ui/issues/1844)) ([74e3114](https://github.com/scaleway/scaleway-ui/commit/74e31144141eb651899ea381e1d6d2123c82831a))
+
 ## [0.187.6](https://github.com/scaleway/scaleway-ui/compare/v0.187.5...v0.187.6) (2022-09-14)
 
 ## [0.187.5](https://github.com/scaleway/scaleway-ui/compare/v0.187.4...v0.187.5) (2022-09-14)
