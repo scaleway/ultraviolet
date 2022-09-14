@@ -19,7 +19,6 @@ specifiers:
   '@emotion/serialize': 1.1.0
   '@emotion/styled': 11.10.4
   '@jest/types': 29.0.3
-  '@loki/is-loki-running': ^0.30.0
   '@nivo/bar': 0.79.1
   '@nivo/core': 0.79.0
   '@nivo/line': 0.79.1
@@ -163,7 +162,6 @@ devDependencies:
   '@emotion/jest': 11.10.0_@types+jest@28.1.8
   '@emotion/react': 11.10.4_axxkdcpdr7up57umjkldobkynm
   '@emotion/styled': 11.10.4_sn4wuyy54zwps25tv4w7lbiz6i
-  '@loki/is-loki-running': 0.30.0
   '@rollup/plugin-babel': 5.3.1_qjhfxcwn2glzcb5646tzyg45bq
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.0
   '@rollup/plugin-url': 7.0.0_rollup@2.79.0
@@ -2652,10 +2650,6 @@ packages:
         optional: true
     dependencies:
       '@loki/browser': 0.30.1
-    dev: true
-
-  /@loki/is-loki-running/0.30.0:
-    resolution: {integrity: sha512-TPYtEYHoljy2Y9MekxKB5GQPUn8+WWO9fvwghTs2lIEpD2GgWMpqmXI5k1UQR9qti8qWOl3i6jvEkXGFXV50HQ==}
     dev: true
 
   /@loki/runner/0.30.3_@types+react@18.0.20:
