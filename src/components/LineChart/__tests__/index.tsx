@@ -1,7 +1,7 @@
 import * as nivo from '@nivo/core'
 import { fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ComponentProps } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import LineChart from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import {
@@ -96,4 +96,20 @@ describe('LineChart', () => {
         },
       },
     ))
+
+  test('renders correctly when data is async', () => {
+    const AsyncLineChart = () => {
+      const [data, setData] = useState<
+        typeof lineChartMultipleData | undefined
+      >()
+
+      useEffect(() => {
+        setData(lineChartMultipleData)
+      }, [])
+
+      return <LineChart data={data} withLegend xScale={{ type: 'linear' }} />
+    }
+
+    return shouldMatchEmotionSnapshot(<AsyncLineChart />)
+  })
 })
