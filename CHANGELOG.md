@@ -1,3 +1,15 @@
+## [0.188.2](https://github.com/scaleway/scaleway-ui/compare/v0.188.1...v0.188.2) (2022-09-15)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency date-fns to v2.29.3 ([#1864](https://github.com/scaleway/scaleway-ui/issues/1864)) ([5cb3c91](https://github.com/scaleway/scaleway-ui/commit/5cb3c9177a83bbb78764011c8f4a790cc0c9fd81))
+
+
+### :bug: Bug Fixes
+
+* visual testing on menu is back ([#1861](https://github.com/scaleway/scaleway-ui/issues/1861)) ([0315e86](https://github.com/scaleway/scaleway-ui/commit/0315e863484641e90259ac91ec984251ddfce846))
+
 ## [0.188.1](https://github.com/scaleway/scaleway-ui/compare/v0.188.0...v0.188.1) (2022-09-15)
 
 
