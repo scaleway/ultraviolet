@@ -31,7 +31,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.5.7
   '@scaleway/jest-helpers': 2.0.17
   '@scaleway/random-name': 3.0.2
-  '@scaleway/use-i18n': 3.5.3
+  '@scaleway/use-i18n': 3.6.2
   '@scaleway/use-media': 1.2.0
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/commit-analyzer': 9.0.2
@@ -167,7 +167,7 @@ devDependencies:
   '@rollup/plugin-url': 7.0.0_rollup@2.79.0
   '@scaleway/eslint-config-react': 3.5.7_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@scaleway/jest-helpers': 2.0.17_tsyfe2etww6h4xfxsjqfre2tha
-  '@scaleway/use-i18n': 3.5.3_3pf3ktbrffvgnzxoo2eotyjcpi
+  '@scaleway/use-i18n': 3.6.2_3pf3ktbrffvgnzxoo2eotyjcpi
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.5
   '@semantic-release/git': 10.0.1_semantic-release@19.0.5
@@ -3419,8 +3419,8 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-i18n/3.5.3_3pf3ktbrffvgnzxoo2eotyjcpi:
-    resolution: {integrity: sha512-y8hD4TpwH7G5o54Fi2WLa6lj3W+JzQAn9CTGbug2BHsx1jQoIdTtCHbdsSMbjKXMgmyLHpIinmt3QVfewa/3yA==}
+  /@scaleway/use-i18n/3.6.2_3pf3ktbrffvgnzxoo2eotyjcpi:
+    resolution: {integrity: sha512-Fbg133HAaldewdLgmfbowdyox4YUDMrWcMfansY6ZaIrd8OgIzJVuYxVHAeKCzGp0MUg9DwM2Xb713mS8eB2Ag==}
     peerDependencies:
       date-fns: 2.x
       react: 18.x || 18
@@ -3430,7 +3430,7 @@ packages:
       '@formatjs/fast-memoize': 1.2.6
       date-fns: 2.29.3
       filesize: 9.0.11
-      international-types: 0.3.3
+      international-types: 0.3.5
       intl-messageformat: 10.1.4
       prop-types: 15.8.1
       react: 18.2.0
@@ -11362,8 +11362,8 @@ packages:
       side-channel: 1.0.4
     dev: true
 
-  /international-types/0.3.3:
-    resolution: {integrity: sha512-S7XBOB3bncwtqBLvTvG/Bm0GYGDOP5d7RHB1ihHToUAgwrmcluE7uM4pM9puWiT/s+RRfdV8u+Z2sM+WGDx6Fw==}
+  /international-types/0.3.5:
+    resolution: {integrity: sha512-PsNtqKgYDSBdGGbh39khLlWL8gJ2yRGCn2eR48SV59S0WtvqoB+va+UFRneP69Sm+wyGLr+TPaihBB2t4i2ggg==}
     dev: true
 
   /internmap/1.0.1:
@@ -17228,6 +17228,7 @@ packages:
 
   /stable/0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
+    deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
     dev: true
 
   /stack-utils/2.0.5:
