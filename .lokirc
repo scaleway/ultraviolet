@@ -4,6 +4,7 @@
   "requireReference": true,
   "reactUri": "file:./storybook-static",
   "storiesFilter": "^Components/*",
+  "chromeSelector": "body.sb-show-main",
   "configurations": {
     "chrome.laptop": {
       "target": "chrome.docker",
