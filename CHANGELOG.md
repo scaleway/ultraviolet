@@ -1,3 +1,16 @@
+## [0.188.1](https://github.com/scaleway/scaleway-ui/compare/v0.188.0...v0.188.1) (2022-09-15)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#1849](https://github.com/scaleway/scaleway-ui/issues/1849)) ([0308472](https://github.com/scaleway/scaleway-ui/commit/03084722417e6fb57d64e33572e9eb1f655d2b43))
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.17 ([#1858](https://github.com/scaleway/scaleway-ui/issues/1858)) ([62b96b0](https://github.com/scaleway/scaleway-ui/commit/62b96b07f13978848b76898d411dc02a81b1e950))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo to v29.0.3 ([#1867](https://github.com/scaleway/scaleway-ui/issues/1867)) ([17f2d81](https://github.com/scaleway/scaleway-ui/commit/17f2d819a5dbc69164c2b431a12184b0d818bc87))
+
 ## [0.188.0](https://github.com/scaleway/scaleway-ui/compare/v0.187.6...v0.188.0) (2022-09-14)
 
 
