@@ -44,7 +44,7 @@ Variants.decorators = [
 export const Animated = Template.bind({})
 Animated.args = {
   animated: true,
-  variant: 'success',
+  variant: 'info',
 }
 Animated.parameters = {
   docs: {

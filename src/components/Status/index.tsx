@@ -1,6 +1,6 @@
-import { Theme, css } from '@emotion/react'
+import { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { flash } from '../../utils'
+import { ping } from '../../utils'
 import Tooltip from '../Tooltip'
 
 const variants = {
@@ -23,21 +23,23 @@ const variants = {
 type StatusVariant = keyof typeof variants
 export const statusVariants = Object.keys(variants) as StatusVariant[]
 
-type StyledCircleProps = Pick<StatusProps, 'variant' | 'animated'>
-const StyledCircle = styled('div', {
-  shouldForwardProp: prop => !['variant', 'animated'].includes(prop),
-})<StyledCircleProps>`
+type StyledCircleProps = Pick<StatusProps, 'variant'>
+const StyledCircle = styled.span<StyledCircleProps>`
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   ${({ variant }) => variants[variant]};
-  ${({ animated }) =>
-    animated
-      ? css`
-          animation: ${flash} linear 1s infinite;
-        `
-      : ''};
+`
+
+const StyledAnimatedCircle = styled.span<StyledCircleProps>`
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.75;
+  border-radius: ${({ theme }) => theme.radii.circle};
+  animation: ${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  ${({ variant }) => variants[variant]};
 `
 
 type StatusProps = {
@@ -54,7 +56,8 @@ const Status = ({
   variant,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
-    <StyledCircle className={className} animated={animated} variant={variant} />
+    {animated ? <StyledAnimatedCircle variant={variant} /> : null}
+    <StyledCircle className={className} variant={variant} />
   </Tooltip>
 )
 
