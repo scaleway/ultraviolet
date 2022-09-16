@@ -70,7 +70,7 @@ jobs:
           root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_WEBSITE_NAMESPACE_ID }}
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
 
       - name: Update deployment status
