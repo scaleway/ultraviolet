@@ -1,4 +1,4 @@
-name: Deploy Storybook
+name: Deploy Website
 
 on:
   pull_request:
@@ -11,15 +11,15 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     env:
-      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
-      DEPLOYMENT_NAME: 'storybook'
+      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui-website
+      DEPLOYMENT_NAME: 'website'
 
     steps:
       - uses: actions/checkout@v3.0.2
       - name: Cache Docker layers
         uses: actions/cache@v3.0.8
         with:
-          path: /tmp/docs/.buildx-cache
+          path: /tmp/website/.buildx-cache
           key: ${{ runner.os }}-buildx
           restore-keys: |
             ${{ runner.os }}-buildx-
@@ -57,9 +57,9 @@ jobs:
         with:
           push: true
           tags: ${{ env.IMAGE }}
-          file: Dockerfile.docs
-          cache-from: type=local,src=/tmp/docs/.buildx-cache
-          cache-to: type=local,dest=/tmp/docs/.buildx-cache-new,mode=max
+          file: Dockerfile.website
+          cache-from: type=local,src=/tmp/website/.buildx-cache
+          cache-to: type=local,dest=/tmp/website/.buildx-cache-new,mode=max
 
       - name: Deploy Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.0.8
@@ -67,6 +67,7 @@ jobs:
         with:
           type: 'deploy'
           scw_dns: ${{ secrets.SCW_DNS }}
+          root_zone: ${{env.BRANCH_SLUG == 'main'}}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
@@ -83,10 +84,10 @@ jobs:
           # This will now be automatically handled by github with the auto_inactive
           override: false
           status: ${{ job.status }}
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}:storybook
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{ steps.deploy.outputs.url }}
 
       - name: Move cache
         run: |
-          rm -rf /tmp/docs/.buildx-cache
-          mv /tmp/docs/.buildx-cache-new /tmp/docs/.buildx-cache
+          rm -rf /tmp/website/.buildx-cache
+          mv /tmp/website/.buildx-cache-new /tmp/website/.buildx-cache

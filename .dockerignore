@@ -1,11 +1,10 @@
 .git
 
-# dependancies
-
-node_modules/
+# dependencies
+**/node_modules
 
 # we are using pnpm here
-package-lock.json
+**/package-lock.json
 yarn.lock
 
 # misc
@@ -13,10 +12,13 @@ yarn.lock
 .env
 /.vscode
 .idea/
-.eslintcache
+**/.eslintcache
 dist/
 coverage
 storybook-static
 .reports
+
+website/.next
+website/out
 
 

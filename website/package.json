@@ -1,0 +1,51 @@
+{
+  "name": "scaleway-ui-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "eslint --cache --ext tsx,ts,.d.ts ."
+  },
+  "dependenciesMeta": {
+    "@react-spring/core": {
+      "built": false
+    }
+  },
+  "dependencies": {
+    "@emotion/react": "11.10.4",
+    "@emotion/styled": "11.10.4",
+    "@scaleway/ui": "file:../",
+    "next": "12.3.0",
+    "polished": "4.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-schemaorg": "2.0.0",
+    "react-syntax-highlighter": "15.5.0",
+    "react-use-clipboard": "1.0.8",
+    "schema-dts": "1.1.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "12.3.0",
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "@types/react-syntax-highlighter": "15.5.5",
+    "next-transpile-modules": "9.0.0",
+    "prop-types": "15.8.1",
+    "typescript": "4.8.3",
+    "eslint": "8.23.1",
+    "@scaleway/eslint-config-react": "3.5.14",
+    "@emotion/eslint-plugin": "11.10.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18",
+        "react-dom": "18"
+      }
+    }
+  },
+  "packageManager": "pnpm@7.11.0"
+}
