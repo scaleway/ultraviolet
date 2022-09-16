@@ -1,3 +1,15 @@
+## [0.189.1](https://github.com/scaleway/scaleway-ui/compare/v0.189.0...v0.189.1) (2022-09-16)
+
+
+### :zap: Refactor
+
+* integrate scaleway ui website ([#1866](https://github.com/scaleway/scaleway-ui/issues/1866)) ([924ec21](https://github.com/scaleway/scaleway-ui/commit/924ec214c4ffcacd2f989dc72489d975c11bbeac))
+
+
+### :bug: Bug Fixes
+
+* fix ci for production deployment ([#1874](https://github.com/scaleway/scaleway-ui/issues/1874)) ([91cb4ba](https://github.com/scaleway/scaleway-ui/commit/91cb4bae5c00ccea178a214076f85d31a62830bd))
+
 ## [0.189.0](https://github.com/scaleway/scaleway-ui/compare/v0.188.2...v0.189.0) (2022-09-16)
 
 
