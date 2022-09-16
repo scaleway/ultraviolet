@@ -2,13 +2,15 @@ name: Teardown Pull Request
 
 on:
   pull_request:
-    types: [ closed ]
+    types: [closed]
 
 jobs:
   teardown:
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
+      STORYBOOK_DEPLOYMENT_NAME: storybook
+      WEBSITE_DEPLOYMENT_NAME: website
 
     steps:
       - uses: actions/checkout@v3.0.2
@@ -17,23 +19,41 @@ jobs:
 
       - name: Export custom variables
         run: |
-          SAFE_GITHUB_HEAD_REF_SLUG_URL=$(echo $GITHUB_HEAD_REF_SLUG_URL | rev | cut -c-37 | rev)
-          ([[ $GITHUB_REF == 'refs/heads/main' ]] && echo "BRANCH_SLUG=main" || echo "BRANCH_SLUG=$SAFE_GITHUB_HEAD_REF_SLUG_URL") >> $GITHUB_ENV
+          SAFE_STORYBOOK_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$STORYBOOK_DEPLOYMENT_NAME | rev | cut -c-37 | rev)
+          echo "STORYBOOK_BRANCH_SLUG=$SAFE_STORYBOOK_HEAD_REF" >> $GITHUB_ENV
+          SAFE_WEBSITE_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$WEBSITE_DEPLOYMENT_NAME | rev | cut -c-37 | rev)
+          echo "WEBSITE_BRANCH_SLUG=$SAFE_WEBSITE_HEAD_REF" >> $GITHUB_ENV
 
-      - name: Delete Serverless Container Scaleway
+      - name: Delete Storybook Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.0.8
-        id: teardown
         with:
-          type: "teardown"
+          type: 'teardown'
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_dns: ${{ secrets.SCW_DNS }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
-          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
 
-      - name: Update deployment status
+      - name: Delete Website Serverless Container Scaleway
+        uses: philibea/scaleway-containers-deploy@v1.0.8
+        with:
+          type: 'teardown'
+          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
+          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
+          scw_dns: ${{ secrets.SCW_DNS }}
+          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
+          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.WEBSITE_BRANCH_SLUG }}
+
+      - name: Remove storybook deployment
         uses: bobheadxi/deployments@v1.3.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.BRANCH_SLUG }}
+          env: ${{ env.STORYBOOK_DEPLOYMENT_NAME }}
+
+      - name: Remove website deployment
+        uses: bobheadxi/deployments@v1.3.0
+        with:
+          step: delete-env
+          token: ${{ secrets.GH_TOKEN }}
+          env: ${{ env.WEBSITE_DEPLOYMENT_NAME }}
