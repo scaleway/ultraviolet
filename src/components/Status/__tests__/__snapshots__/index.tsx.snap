@@ -3,111 +3,119 @@
 exports[`Status render animated 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
+  75%, 100% {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
   }
 }
 
-.cache-h473kd-StyledCircle-StyledCircle {
+.cache-1oiabdd-StyledAnimatedCircle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.75;
+  border-radius: 100%;
+  -webkit-animation: animation-0 1.1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation: animation-0 1.1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  background-color: #22c8a2;
+}
+
+<span
+    class="cache-1oiabdd-StyledAnimatedCircle ew1r0gb0"
+  />
+  .cache-1wbk14j-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #22c8a2;
-  -webkit-animation: animation-0 linear 1s infinite;
-  animation: animation-0 linear 1s infinite;
 }
 
-<div
-    class="cache-h473kd-StyledCircle-StyledCircle ew1r0gb0"
+<span
+    class="cache-1wbk14j-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
 
 exports[`Status renders correctly with type="danger" 1`] = `
 <DocumentFragment>
-  .cache-hn05i3-StyledCircle {
+  .cache-6g00ox-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #dd3252;
 }
 
-<div
-    class="cache-hn05i3-StyledCircle ew1r0gb0"
+<span
+    class="cache-6g00ox-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
 
 exports[`Status renders correctly with type="info" 1`] = `
 <DocumentFragment>
-  .cache-1kwzqhx-StyledCircle {
+  .cache-11tzzz5-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #3f6ed8;
 }
 
-<div
-    class="cache-1kwzqhx-StyledCircle ew1r0gb0"
+<span
+    class="cache-11tzzz5-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
 
 exports[`Status renders correctly with type="neutral" 1`] = `
 <DocumentFragment>
-  .cache-18gs2l6-StyledCircle {
+  .cache-2uypwr-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #4a4f62;
 }
 
-<div
-    class="cache-18gs2l6-StyledCircle ew1r0gb0"
+<span
+    class="cache-2uypwr-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
 
 exports[`Status renders correctly with type="success" 1`] = `
 <DocumentFragment>
-  .cache-bgp5mr-StyledCircle {
+  .cache-1wbk14j-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #22c8a2;
 }
 
-<div
-    class="cache-bgp5mr-StyledCircle ew1r0gb0"
+<span
+    class="cache-1wbk14j-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
 
 exports[`Status renders correctly with type="warning" 1`] = `
 <DocumentFragment>
-  .cache-uy7h6k-StyledCircle {
+  .cache-152d2d2-StyledCircle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #ff8c69;
 }
 
-<div
-    class="cache-uy7h6k-StyledCircle ew1r0gb0"
+<span
+    class="cache-152d2d2-StyledCircle ew1r0gb1"
   />
 </DocumentFragment>
 `;
