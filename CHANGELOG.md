@@ -1,3 +1,10 @@
+## [0.189.2](https://github.com/scaleway/scaleway-ui/compare/v0.189.1...v0.189.2) (2022-09-16)
+
+
+### :bug: Bug Fixes
+
+* **deploy:** change namespace id ([#1875](https://github.com/scaleway/scaleway-ui/issues/1875)) ([92dbbb6](https://github.com/scaleway/scaleway-ui/commit/92dbbb62c2ab38a53152b1f92ed340559399b076))
+
 ## [0.189.1](https://github.com/scaleway/scaleway-ui/compare/v0.189.0...v0.189.1) (2022-09-16)
 
 
