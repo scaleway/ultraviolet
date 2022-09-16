@@ -30,7 +30,7 @@ jobs:
           type: 'teardown'
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_dns: ${{ secrets.SCW_DNS }}
+          scw_dns: storybook.${{ secrets.SCW_DNS }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
 

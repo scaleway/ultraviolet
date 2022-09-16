@@ -66,7 +66,8 @@ jobs:
         id: deploy
         with:
           type: 'deploy'
-          scw_dns: ${{ secrets.SCW_DNS }}
+          scw_dns: storybook.${{ secrets.SCW_DNS }}
+          root_zone: ${{ env.BRANCH_SLUG == 'main' }}
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
           scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
           scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_NAMESPACE_ID }}
@@ -83,7 +84,7 @@ jobs:
           # This will now be automatically handled by github with the auto_inactive
           override: false
           status: ${{ job.status }}
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}:storybook
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{ steps.deploy.outputs.url }}
 
       - name: Move cache
