@@ -1,3 +1,16 @@
+## [0.189.0](https://github.com/scaleway/scaleway-ui/compare/v0.188.2...v0.189.0) (2022-09-16)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.6.2 ([#1868](https://github.com/scaleway/scaleway-ui/issues/1868)) ([c6e5d31](https://github.com/scaleway/scaleway-ui/commit/c6e5d31e703a703947321d0fc6c8cfeb5858703e))
+* **devdeps:** update dependency eslint to v8.23.1 ([#1852](https://github.com/scaleway/scaleway-ui/issues/1852)) ([4f04b24](https://github.com/scaleway/scaleway-ui/commit/4f04b243bda0a61a5e5c6af62016bf7295c1ab86))
+
+
+### :gear: Features
+
+* **status:** add better animation for status ([#1872](https://github.com/scaleway/scaleway-ui/issues/1872)) ([e63c5b1](https://github.com/scaleway/scaleway-ui/commit/e63c5b1b1ffeaca1f031cde619dac2efc670d963))
+
 ## [0.188.2](https://github.com/scaleway/scaleway-ui/compare/v0.188.1...v0.188.2) (2022-09-15)
 
 
