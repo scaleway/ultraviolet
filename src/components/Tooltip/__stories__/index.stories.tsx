@@ -51,7 +51,7 @@ Placement.decorators = [
         justifyContent: 'center',
       }}
     >
-      {['top', 'bottom', 'left', 'right'].map(placement => (
+      {['auto', 'top', 'bottom', 'left', 'right'].map(placement => (
         <Tooltip
           key={placement}
           placement={placement as ComponentProps<typeof Tooltip>['placement']}
