@@ -1,4 +1,4 @@
-FROM node:18.8-alpine as builder
+FROM node:18.9-alpine as builder
 WORKDIR /app
 RUN corepack enable
 
@@ -19,7 +19,7 @@ RUN cd website && pnpm install --frozen-lockfile
 COPY website ./website/
 RUN cd website && pnpm run build && pnpm run export
 
-FROM node:18.7-alpine as runner
+FROM node:18.9-alpine as runner
 WORKDIR /workspace
 COPY --from=builder /app/website/out ./
 RUN npm add -g serve
