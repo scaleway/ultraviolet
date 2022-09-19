@@ -1,3 +1,10 @@
+## [0.190.0](https://github.com/scaleway/scaleway-ui/compare/v0.189.3...v0.190.0) (2022-09-19)
+
+
+### :gear: Features
+
+* **tooltip:** dymanic position ([#1857](https://github.com/scaleway/scaleway-ui/issues/1857)) ([5eca0e5](https://github.com/scaleway/scaleway-ui/commit/5eca0e5e82247c1f9a9fd1597ba3d93530ed2f52))
+
 ## [0.189.3](https://github.com/scaleway/scaleway-ui/compare/v0.189.2...v0.189.3) (2022-09-19)
 
 
