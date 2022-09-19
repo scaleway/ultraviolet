@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { Breakpoint, Col, Grid, Icon, Row, Toggle } from '@scaleway/ui'
+import { Breakpoint, Icon, Toggle } from '@scaleway/ui'
+import { APP_MAX_WIDTH } from '../constants'
 import { ChangeEventHandler, useEffect } from 'react'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
@@ -15,11 +16,21 @@ const Header = styled.header`
   align-items: center;
   min-width: 10px;
   padding: 8px 10px;
+  width: 100%;
+  justify-content: center;
 `
 const HorizontalStack = styled.div`
   display: flex;
   align-items: center;
-  gap: ${({ theme }): string => theme.space[0.5]};
+  gap: ${({ theme }): string => theme.space['1']};
+`
+
+const HeaderRow = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  max-width: ${APP_MAX_WIDTH}px;
 `
 
 type TopBarProps = {
@@ -27,7 +38,7 @@ type TopBarProps = {
   setIsLightMode: (isLight: boolean) => void
 }
 
-const TopBar = ({ isLightMode, setIsLightMode }: TopBarProps): JSX.Element => {
+const TopBar = ({ isLightMode, setIsLightMode }: TopBarProps) => {
   useEffect(() => {
     const localStorageSettings = localStorage.getItem('settings') ?? '{}'
     const settings = JSON.parse(localStorageSettings) as ApplicationSettings
@@ -47,27 +58,19 @@ const TopBar = ({ isLightMode, setIsLightMode }: TopBarProps): JSX.Element => {
 
   return (
     <Header>
-      <Grid>
-        <Row>
-          <Col display="flex" justifyContent="flex-start" alignItems="center">
-            <Logo width={124} height={24} />
-          </Col>
-          <Col display="flex" justifyContent="flex-end">
-            <Breakpoint up="medium">
-              <GithubAndDocumentationButtons />
-            </Breakpoint>
-            <HorizontalStack>
-              <Icon size={20} name="moon" />
-              <Toggle
-                name="darkMode"
-                checked={isLightMode}
-                onChange={onChange}
-              />
-              <Icon size={20} name="sun" />
-            </HorizontalStack>
-          </Col>
-        </Row>
-      </Grid>
+      <HeaderRow>
+        <div>
+          <Logo width={124} height={24} />
+        </div>
+        <HorizontalStack>
+          <Breakpoint up="medium">
+            <GithubAndDocumentationButtons />
+          </Breakpoint>
+          <Icon size={20} name="moon" />
+          <Toggle name="darkMode" checked={isLightMode} onChange={onChange} />
+          <Icon size={20} name="sun" />
+        </HorizontalStack>
+      </HeaderRow>
     </Header>
   )
 }

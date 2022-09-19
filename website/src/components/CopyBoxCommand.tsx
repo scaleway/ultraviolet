@@ -37,10 +37,7 @@ interface CopyBoxProps {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
 }
 
-const CopyBox = ({
-  onChange = () => undefined,
-  children,
-}: CopyBoxProps): JSX.Element => {
+const CopyBox = ({ onChange = () => undefined, children }: CopyBoxProps) => {
   const flatChild = (
     Children.map(children, child =>
       isValidElement(child) ? child : undefined,
@@ -88,18 +85,20 @@ const Command = ({
   command,
   showCopyButton = false,
   showLineNumbers = true,
-}: CommandProps): JSX.Element => (
-  <>
+}: CommandProps) => (
+  <div>
     <SyntaxHighlighter
       language="jsx"
       style={darcula}
       customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
+      lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
+      wrapLines={true}
       showLineNumbers={showLineNumbers}
     >
       {command}
     </SyntaxHighlighter>
     <StyledCopyButton text={command} showCopyButton={showCopyButton} />
-  </>
+  </div>
 )
 
 CopyBox.Command = Command

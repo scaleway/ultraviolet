@@ -1,9 +1,7 @@
 import { Global, Theme, css } from '@emotion/react'
-import { normalize } from 'polished'
+import { normalize } from '@scaleway/ui'
 
 const baseStyles = (theme: Theme) => css`
-  ${normalize()}
-
   /* Fallback system fonts */
   @font-face {
     font-family: 'System';
@@ -32,69 +30,28 @@ const baseStyles = (theme: Theme) => css`
       local('Roboto-Bold'), local('DroidSans-Bold'), local('Tahoma Bold');
   }
 
-  * {
-    box-sizing: border-box;
-  }
+  ${normalize()}
 
   html {
-    box-sizing: border-box;
-    line-height: 1.5;
-    font-size: 16px;
     height: 100%;
-    -webkit-tap-highlight-color: transparent;
-    margin: 0;
   }
 
   body {
     background-color: ${theme.colors.neutral.backgroundWeak};
     color: ${theme.colors.neutral.text};
     font-family: ${theme.fonts.sansSerif};
-    overflow-y: auto;
-    height: 100%;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-  }
-
-  input,
-  textarea,
-  select,
-  button {
-    font-family: ${theme.fonts.sansSerif};
-  }
-
-  button,
-  html [type='button'],
-  [type='reset'],
-  [type='submit'] {
-    appearance: none;
-  }
-
-  img,
-  canvas,
-  iframe,
-  video,
-  svg,
-  select,
-  textarea {
-    max-width: 100%;
   }
 
   a {
-    color: ${theme.colors.info.textWeak};
+    color: ${theme.colors.info.text};
     text-decoration: none;
   }
 
   a:hover,
   a:focus,
   a:active {
-    color: ${theme.colors.info.textWeak};
+    color: ${theme.colors.info.textHover};
     text-decoration: underline;
-  }
-
-  p {
-    margin: 0;
   }
 `
 

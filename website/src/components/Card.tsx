@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { BorderedBox, Col, Row, Typography, down, up } from '@scaleway/ui'
+import { BorderedBox, Text } from '@scaleway/ui'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
@@ -7,30 +7,34 @@ type CardProps = {
   title: string
   description: string | ReactNode
   icon: string
+  className?: string
 }
 
 const StyledBorderedBox = styled(BorderedBox)`
-  ${down('large', `margin: 8px 16px`)}
-  ${up('large', `height: 100%;`)}
+  display: grid;
+  grid-template-columns: fit-content(20%) 3fr;
+  gap: ${({ theme }) => theme.space['2']};
+  height: auto;
+  min-width: 350px;
 `
 
-const Card = ({ title, description, icon }: CardProps): JSX.Element => (
-  <StyledBorderedBox>
-    <Row>
-      <Col xsmall="auto">
-        <Image src={icon} alt="icon" width={64} height={64} />
-      </Col>
-      <Col>
-        <Typography variant="lead" mb={1} color="primary">
-          {title}
-        </Typography>
-        {typeof description === 'string' ? (
-          <Typography variant="bodyD">{description}</Typography>
-        ) : (
-          description
-        )}
-      </Col>
-    </Row>
+const Card = ({ title, description, icon, className }: CardProps) => (
+  <StyledBorderedBox className={className}>
+    <div>
+      <Image src={icon} alt="icon" width={64} height={64} />
+    </div>
+    <div>
+      <Text as="h3" variant="heading" color="primary">
+        {title}
+      </Text>
+      {typeof description === 'string' ? (
+        <Text as="p" variant="bodySmall">
+          {description}
+        </Text>
+      ) : (
+        description
+      )}
+    </div>
   </StyledBorderedBox>
 )
 

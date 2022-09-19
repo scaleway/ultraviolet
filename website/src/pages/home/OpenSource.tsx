@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Col, Grid, Icon, Link, Row, Typography } from '@scaleway/ui'
+import { down, Icon, Link, Text } from '@scaleway/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
@@ -8,66 +8,90 @@ const StyledDescription = styled.div`
   margin-bottom: 12px;
 `
 
-const OpenSource = (): JSX.Element => (
-  <Grid mt={4}>
-    <Row textAlign="center" justifyContent="center">
-      <Col xsmall={10}>
-        <Typography variant="hero" mb={5}>
-          Open Source
-        </Typography>
-        <Typography textAlign="justify">
-          Discover our other open source projects:
-        </Typography>
-      </Col>
-    </Row>
+const StyledOpenSourceContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['5']};
+`
 
-    <Row mt={5}>
-      <Col xsmall={12} large={6}>
-        <Card
-          title="Scaleway Form"
-          description={
-            <>
-              <StyledDescription>
-                Build amazing forms with Scaleway UI and React Final Form 🚀
-              </StyledDescription>
-              <div>
-                <Icon name="github" mr={1} size={20} />
-                <Link
-                  href="https://github.com/scaleway/scaleway-form"
-                  target="_blank"
-                >
-                  Visit on GitHub
-                </Link>
-              </div>
-            </>
-          }
-          icon={swForm}
-        />
-      </Col>
-      <Col xsmall={12} large={6}>
-        <Card
-          title="Scaleway Lib"
-          description={
-            <>
-              <StyledDescription>
-                Scaleway Lib is a set of NPM packages used at Scaleway
-              </StyledDescription>
-              <div>
-                <Icon name="github" mr={1} size={20} />
-                <Link
-                  href="https://github.com/scaleway/scaleway-lib"
-                  target="_blank"
-                >
-                  Visit on GitHub
-                </Link>
-              </div>
-            </>
-          }
-          icon={swLib}
-        />
-      </Col>
-    </Row>
-  </Grid>
+const StyledOpenSourceTitleContainer = styled(StyledOpenSourceContainer)`
+  gap: ${({ theme }) => theme.space['2']};
+`
+
+const StyledTitle = styled(Text)`
+  align-self: center;
+`
+
+const StyledProjectsContainer = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.space['2']};
+  flex-wrap: wrap;
+`
+
+const StyledCard = styled(Card)`
+  flex: 1;
+`
+
+const GithubLinkContainer = styled.div`
+  display: flex;
+  gap: ${({ theme }) => theme.space['1']};
+  align-items: center;
+`
+
+const OpenSource = () => (
+  <StyledOpenSourceContainer>
+    <StyledOpenSourceTitleContainer>
+      <StyledTitle as="h3" variant="headingLarge">
+        Open Source
+      </StyledTitle>
+      <Text as="p" variant="body">
+        Discover our other open source projects:
+      </Text>
+    </StyledOpenSourceTitleContainer>
+
+    <StyledProjectsContainer>
+      <StyledCard
+        title="Scaleway Form"
+        description={
+          <>
+            <StyledDescription>
+              Build amazing forms with Scaleway UI and React Final Form 🚀
+            </StyledDescription>
+            <GithubLinkContainer>
+              <Icon name="github" size={20} />
+              <Link
+                href="https://github.com/scaleway/scaleway-form"
+                target="_blank"
+              >
+                Visit on GitHub
+              </Link>
+            </GithubLinkContainer>
+          </>
+        }
+        icon={swForm}
+      />
+      <StyledCard
+        title="Scaleway Lib"
+        description={
+          <>
+            <StyledDescription>
+              Scaleway Lib is a set of NPM packages used at Scaleway
+            </StyledDescription>
+            <GithubLinkContainer>
+              <Icon name="github" size={20} />
+              <Link
+                href="https://github.com/scaleway/scaleway-lib"
+                target="_blank"
+              >
+                Visit on GitHub
+              </Link>
+            </GithubLinkContainer>
+          </>
+        }
+        icon={swLib}
+      />
+    </StyledProjectsContainer>
+  </StyledOpenSourceContainer>
 )
 
 export default OpenSource

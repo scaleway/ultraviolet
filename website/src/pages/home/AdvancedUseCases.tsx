@@ -1,9 +1,10 @@
-import { Col, Grid, Row, Typography } from '@scaleway/ui'
+import styled from '@emotion/styled'
+import { down, Text } from '@scaleway/ui'
 import { useState } from 'react'
 import CopyBox from '../../components/CopyBoxCommand'
 
 const useCase1 = `import { ThemeProvider } from '@emotion/react'
-import { theme as scwTheme, Button } from '@scaleway/ui'
+import { theme as scwTheme, Button, Text } from '@scaleway/ui'
 import React, { useCallback, useState } from 'react'
 
 const darkTheme = {
@@ -34,9 +35,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={isLightMode ? lightTheme : darkTheme}>
-      <Typography variant="bodyC">
+      <Text as="p" variant="body">
         This could be a very cool introduction text.
-      </Typography>
+      </Text>
       <Switch
         name="darkMode"
         size="small"
@@ -65,7 +66,7 @@ import {
   Container,
   RichSelect,
   TextBox,
-  Typography,
+  Text,
 } from "@scaleway/ui"
 import React from "react"
 
@@ -75,8 +76,8 @@ const StyledFieldContainer = styled.div\`
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Container m={4}>
-      <Typography variant="title">Welcome to this form example</Typography>
+    <Container>
+      <Text as="h1" variant="headingLarge">Welcome to this form example</Text>
       <StyledFieldContainer>
         <TextBox
           name="name"
@@ -107,7 +108,17 @@ const App = () => (
 export default App
 `
 
-const AdvancedUseCases = (): JSX.Element => {
+const StyledTitle = styled(Text)`
+  align-self: center;
+`
+
+const AdvancedUseCasesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['5']};
+`
+
+const AdvancedUseCases = () => {
   const [selectedTab, setSelectedTab] = useState<number>(0)
 
   const tabDescription = [
@@ -116,24 +127,18 @@ const AdvancedUseCases = (): JSX.Element => {
   ]
 
   return (
-    <Grid mb={9}>
-      <Row textAlign="center" justifyContent="center">
-        <Col xsmall={10}>
-          <Typography variant="hero" mb={5}>
-            Advanced Use Cases
-          </Typography>
-          <Typography textAlign="justify" mb={5}>
-            {tabDescription[selectedTab]}
-          </Typography>
-          <CopyBox
-            onChange={(value: unknown) => setSelectedTab(value as number)}
-          >
-            <CopyBox.Command title="Dark theme" command={useCase1} />
-            <CopyBox.Command title="Simple Form" command={useCase2} />
-          </CopyBox>
-        </Col>
-      </Row>
-    </Grid>
+    <AdvancedUseCasesContainer>
+      <StyledTitle as="h3" variant="headingLarge">
+        Advanced Use Cases
+      </StyledTitle>
+      <Text as="p" variant="body">
+        {tabDescription[selectedTab]}
+      </Text>
+      <CopyBox onChange={(value: unknown) => setSelectedTab(value as number)}>
+        <CopyBox.Command title="Dark theme" command={useCase1} />
+        <CopyBox.Command title="Simple Form" command={useCase2} />
+      </CopyBox>
+    </AdvancedUseCasesContainer>
   )
 }
 
