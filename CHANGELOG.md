@@ -1,3 +1,16 @@
+## [0.189.3](https://github.com/scaleway/scaleway-ui/compare/v0.189.2...v0.189.3) (2022-09-19)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @size-limit/file to v8.1.0 ([#1869](https://github.com/scaleway/scaleway-ui/issues/1869)) ([5891891](https://github.com/scaleway/scaleway-ui/commit/5891891c94fa7158f02681d511b869e139363823))
+* **devdeps:** update node.js to v18.9 ([#1876](https://github.com/scaleway/scaleway-ui/issues/1876)) ([406b2ab](https://github.com/scaleway/scaleway-ui/commit/406b2ab6a9e77e6636efb8f5c4b64c0be84ea6cf))
+
+
+### :bug: Bug Fixes
+
+* **website:** documentation url ([#1877](https://github.com/scaleway/scaleway-ui/issues/1877)) ([9959dbf](https://github.com/scaleway/scaleway-ui/commit/9959dbf3c539ede3d7ec3a83dbb94644a3ba7400))
+
 ## [0.189.2](https://github.com/scaleway/scaleway-ui/compare/v0.189.1...v0.189.2) (2022-09-16)
 
 
