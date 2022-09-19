@@ -8,7 +8,7 @@ const GithubAndDocumentationButtons = (): JSX.Element => (
       iconSize={24}
       href="https://github.com/scaleway/scaleway-ui"
     />
-    <Button href="https://main.ui.scaleway.com/" mx="2" size="medium">
+    <Button href="https://storybook.ui.scaleway.com/" mx="2" size="medium">
       Documentation
     </Button>
   </>
