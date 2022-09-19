@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { APP_MAX_WIDTH } from '../constants'
 import { Text, down } from '@scaleway/ui'
+import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { down, Icon, Link, Text } from '@scaleway/ui'
+import { Icon, Link, Text } from '@scaleway/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'

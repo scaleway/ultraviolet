@@ -91,8 +91,8 @@ const Command = ({
       language="jsx"
       style={darcula}
       customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
-      lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
-      wrapLines={true}
+      lineProps={{ style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' } }}
+      wrapLines
       showLineNumbers={showLineNumbers}
     >
       {command}

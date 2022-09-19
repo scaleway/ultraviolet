@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Breakpoint, Icon, Toggle } from '@scaleway/ui'
-import { APP_MAX_WIDTH } from '../constants'
 import { ChangeEventHandler, useEffect } from 'react'
+import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
 

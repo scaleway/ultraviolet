@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { down, Text } from '@scaleway/ui'
+import { Text } from '@scaleway/ui'
 import { useState } from 'react'
 import CopyBox from '../../components/CopyBoxCommand'
 

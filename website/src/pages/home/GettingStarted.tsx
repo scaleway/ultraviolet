@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { down, Text, Typography } from '@scaleway/ui'
+import { Text } from '@scaleway/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
 
