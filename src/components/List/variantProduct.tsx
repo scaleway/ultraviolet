@@ -18,7 +18,12 @@ import Tooltip from '../Tooltip'
 import BaseCell from './Cell'
 import SortIcon from './SortIcon'
 import { useListContext } from './context'
-import { ExpandedContentProps, ListRowProps, ListRowState } from './types'
+import {
+  ExpandedContentProps,
+  FinalChildrenProps,
+  ListRowProps,
+  ListRowState,
+} from './types'
 
 export const BORDER_THICKNESS = 1
 
@@ -355,7 +360,8 @@ export const Row = ({
   } = rowsState[id] || {}
 
   const finalChildren = Children.toArray(children).map(child =>
-    isValidElement(child) && child.type === ExpendableContent
+    isValidElement<FinalChildrenProps>(child) &&
+    child.type === ExpendableContent
       ? cloneElement(child, {
           id,
           isToggled: forceOpened || opened,

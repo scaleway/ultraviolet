@@ -14,8 +14,18 @@ import { darkTheme } from '../../src'
 import { ThemeProvider } from '@emotion/react'
 import lightTheme from '../../src/theme'
 
+type ExtraProps = {
+  deprecated: boolean
+  deprecatedReason: string
+  migrationLink: string
+}
+
 const CustomBaseContainer = BaseContainer as unknown as FunctionComponent<
-  DocsContainerProps & { children: ReactNode }
+  DocsContainerProps & { children: ReactNode } & {
+    context: {
+      parameters: ExtraProps
+    }
+  }
 >
 
 const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
@@ -41,7 +51,7 @@ const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
           },
         }}
       >
-        {isValidElement(children)
+        {isValidElement<ExtraProps>(children)
           ? cloneElement(children, {
               deprecated: context.parameters?.deprecated,
               deprecatedReason: context.parameters?.deprecatedReason,
