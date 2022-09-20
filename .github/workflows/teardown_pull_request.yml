@@ -19,9 +19,9 @@ jobs:
 
       - name: Export custom variables
         run: |
-          SAFE_STORYBOOK_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$STORYBOOK_DEPLOYMENT_NAME | rev | cut -c-37 | rev)
+          SAFE_STORYBOOK_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$STORYBOOK_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_STORYBOOK_HEAD_REF" >> $GITHUB_ENV
-          SAFE_WEBSITE_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$WEBSITE_DEPLOYMENT_NAME | rev | cut -c-37 | rev)
+          SAFE_WEBSITE_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$WEBSITE_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
           echo "WEBSITE_BRANCH_SLUG=$SAFE_WEBSITE_HEAD_REF" >> $GITHUB_ENV
 
       - name: Delete Storybook Serverless Container Scaleway
