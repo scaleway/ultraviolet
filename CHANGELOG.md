@@ -1,3 +1,20 @@
+## [0.190.1](https://github.com/scaleway/scaleway-ui/compare/v0.190.0...v0.190.1) (2022-09-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.14 ([#1856](https://github.com/scaleway/scaleway-ui/issues/1856)) ([f7c2d22](https://github.com/scaleway/scaleway-ui/commit/f7c2d225d89dfa8bf31e7e55e03ecc299f5537e8))
+
+
+### :repeat: CI
+
+* make sure image names don't start with a dash ([#1880](https://github.com/scaleway/scaleway-ui/issues/1880)) ([c1f2e41](https://github.com/scaleway/scaleway-ui/commit/c1f2e41ebca47df32caa64c3fdc4f927a65f72e7))
+
+
+### :bug: Bug Fixes
+
+* **status:** animation container ([#1881](https://github.com/scaleway/scaleway-ui/issues/1881)) ([e593ba7](https://github.com/scaleway/scaleway-ui/commit/e593ba7c23391824e736e19ce1bb2db5802c38bf))
+
 ## [0.190.0](https://github.com/scaleway/scaleway-ui/compare/v0.189.3...v0.190.0) (2022-09-19)
 
 
