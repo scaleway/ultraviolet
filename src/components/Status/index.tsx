@@ -3,6 +3,9 @@ import styled from '@emotion/styled'
 import { ping } from '../../utils'
 import Tooltip from '../Tooltip'
 
+const HEIGHT = '10px'
+const WIDTH = '10px'
+
 const variants = {
   danger: ({ theme }: { theme: Theme }) => `
       background-color: ${theme.colors.danger.backgroundStrong};
@@ -26,20 +29,26 @@ export const statusVariants = Object.keys(variants) as StatusVariant[]
 type StyledCircleProps = Pick<StatusProps, 'variant'>
 const StyledCircle = styled.span<StyledCircleProps>`
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: ${WIDTH};
+  height: ${HEIGHT};
   border-radius: ${({ theme }) => theme.radii.circle};
   ${({ variant }) => variants[variant]};
 `
 
 const StyledAnimatedCircle = styled.span<StyledCircleProps>`
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: ${WIDTH};
+  height: ${HEIGHT};
   opacity: 0.75;
   border-radius: ${({ theme }) => theme.radii.circle};
   animation: ${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite;
   ${({ variant }) => variants[variant]};
+`
+
+const Container = styled.span`
+  display: flex;
+  width: ${WIDTH};
+  height: ${HEIGHT};
 `
 
 type StatusProps = {
@@ -56,8 +65,10 @@ const Status = ({
   variant,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
-    {animated ? <StyledAnimatedCircle variant={variant} /> : null}
-    <StyledCircle className={className} variant={variant} />
+    <Container>
+      {animated ? <StyledAnimatedCircle variant={variant} /> : null}
+      <StyledCircle className={className} variant={variant} />
+    </Container>
   </Tooltip>
 )
 
