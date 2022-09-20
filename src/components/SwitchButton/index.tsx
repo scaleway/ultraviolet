@@ -33,13 +33,20 @@ const StyledSelectableCard = styled(SelectableCard)`
   &:active {
     box-shadow: none;
     border: none;
+    &:not([data-error='true'][data-disabled='true']) {
+      border: none;
+    }
   }
 
   &[data-checked='true'] {
+    border: none;
+  }
+
+  &[data-checked='true'] > label {
     color: ${({ theme }) => theme.colors.primary.textStrong};
   }
 
-  &:not([data-checked='true']) {
+  &:not([data-checked='true']) > label {
     &:hover {
       color: ${({ theme }) => theme.colors.primary.textWeak};
     }
@@ -75,8 +82,8 @@ const SwitchButton = ({
   rightButton,
   tooltip,
 }: SwitchButtonProps) => {
-  const leftButtonRef = useRef<HTMLLabelElement>(null)
-  const rightButtonRef = useRef<HTMLLabelElement>(null)
+  const leftButtonRef = useRef<HTMLDivElement>(null)
+  const rightButtonRef = useRef<HTMLDivElement>(null)
   const [leftCardWidth, setLeftCardWidth] = useState<number>()
   const [rightCardWidth, setRightCardWidth] = useState<number>()
   const [hasMouseDown, setHasMouseDown] = useState(false)
@@ -123,9 +130,8 @@ const SwitchButton = ({
             onBlur={onBlur}
             onFocus={onFocus}
             data-checked={localValue === leftButton.value}
-          >
-            {leftButton.label}
-          </StyledSelectableCard>
+            label={leftButton.label}
+          />
           <StyledSelectableCard
             ref={rightButtonRef}
             name={name}
@@ -135,9 +141,8 @@ const SwitchButton = ({
             onBlur={onBlur}
             onFocus={onFocus}
             data-checked={localValue === rightButton.value}
-          >
-            {rightButton.label}
-          </StyledSelectableCard>
+            label={rightButton.label}
+          />
         </StyledBorderedBox>
       </div>
     </Tooltip>

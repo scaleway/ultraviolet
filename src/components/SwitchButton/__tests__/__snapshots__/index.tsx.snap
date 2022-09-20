@@ -111,21 +111,14 @@ exports[`SwitchButton renders correctly 1`] = `
   position: relative;
 }
 
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
+.cache-qz1q0x-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: start;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -134,6 +127,7 @@ exports[`SwitchButton renders correctly 1`] = `
   border-radius: 4px;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
   border: 1px solid #d4dae7;
   color: #4a4f62;
   border: none;
@@ -152,65 +146,128 @@ exports[`SwitchButton renders correctly 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
   border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #a6102d;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+  cursor: not-allowed;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
+.cache-qz1q0x-Container-StyledSelectableCard:hover,
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within,
+.cache-qz1q0x-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true']>label {
   color: #ffffff;
 }
 
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
+.cache-qz1q0x-Container-StyledSelectableCard:not([data-checked='true'])>label:hover {
   color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-checked='true'] {
+  color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement input+svg {
+  display: none;
 }
 
 .cache-h7u1sr-StyledRadio {
@@ -281,7 +338,7 @@ exports[`SwitchButton renders correctly 1`] = `
   fill: #ffffff;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard {
+.cache-vdjxve-StyledRadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -300,87 +357,57 @@ exports[`SwitchButton renders correctly 1`] = `
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #390171;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
-  color: #ffffff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement input+svg {
+  display: none;
 }
 
 <div
@@ -388,791 +415,15 @@ exports[`SwitchButton renders correctly 1`] = `
   >
     <div
       class="cache-fo08zx-BorderedBox-StyledBorderedBox e16krxq01"
-    >
-      <label
-        aria-disabled="false"
-        class="e16krxq00 ejleepd0 cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
-        data-checked="false"
-        for="test-left"
-      >
-        <input
-          aria-checked="false"
-          aria-disabled="false"
-          aria-invalid="false"
-          class="cache-h7u1sr-StyledRadio e1duuirp1"
-          id="test-left"
-          name="test"
-          tabindex="0"
-          type="radio"
-          value="left"
-        />
-        <svg
-          class="cache-gjpbat-StyledIcon e1duuirp2"
-          size="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke-width="2"
-            />
-            <circle
-              class="cache-p50c5x-InnerCircleRing e1duuirp4"
-              cx="12"
-              cy="12"
-              r="6"
-            />
-            <circle
-              class="cache-ivayk3-RadioMark e1duuirp3"
-              cx="12"
-              cy="12"
-              r="4"
-            />
-          </g>
-        </svg>
-        Left
-      </label>
-      <label
-        aria-disabled="false"
-        class="e16krxq00 ejleepd0 cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
-        data-checked="true"
-        for="test-right"
-      >
-        <input
-          aria-checked="true"
-          aria-disabled="false"
-          aria-invalid="false"
-          checked=""
-          class="cache-h7u1sr-StyledRadio e1duuirp1"
-          id="test-right"
-          name="test"
-          tabindex="0"
-          type="radio"
-          value="right"
-        />
-        <svg
-          class="cache-gjpbat-StyledIcon e1duuirp2"
-          size="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke-width="2"
-            />
-            <circle
-              class="cache-p50c5x-InnerCircleRing e1duuirp4"
-              cx="12"
-              cy="12"
-              r="6"
-            />
-            <circle
-              class="cache-ivayk3-RadioMark e1duuirp3"
-              cx="12"
-              cy="12"
-              r="4"
-            />
-          </g>
-        </svg>
-        Right
-      </label>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SwitchButton renders correctly with right value 1`] = `
-<DocumentFragment>
-  .cache-fo08zx-BorderedBox-StyledBorderedBox {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
-  color: #ffffff;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
-  color: #4f0599;
-}
-
-.cache-h7u1sr-StyledRadio {
-  opacity: 0.01;
-  width: px;
-  height: px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-gjpbat-StyledIcon {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #b2b6c3;
-}
-
-.cache-gjpbat-StyledIcon .e1duuirp4 {
-  fill: #ffffff;
-}
-
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
-  color: #ffffff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
-  color: #4f0599;
-}
-
-<div
-    style="display: inline-flex;"
-  >
-    <div
-      class="cache-fo08zx-BorderedBox-StyledBorderedBox e16krxq01"
-    >
-      <label
-        aria-disabled="false"
-        class="e16krxq00 ejleepd0 cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
-        data-checked="false"
-        for="test-left"
-      >
-        <input
-          aria-checked="false"
-          aria-disabled="false"
-          aria-invalid="false"
-          class="cache-h7u1sr-StyledRadio e1duuirp1"
-          id="test-left"
-          name="test"
-          tabindex="0"
-          type="radio"
-          value="left"
-        />
-        <svg
-          class="cache-gjpbat-StyledIcon e1duuirp2"
-          size="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke-width="2"
-            />
-            <circle
-              class="cache-p50c5x-InnerCircleRing e1duuirp4"
-              cx="12"
-              cy="12"
-              r="6"
-            />
-            <circle
-              class="cache-ivayk3-RadioMark e1duuirp3"
-              cx="12"
-              cy="12"
-              r="4"
-            />
-          </g>
-        </svg>
-        Left
-      </label>
-      <label
-        aria-disabled="false"
-        class="e16krxq00 ejleepd0 cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
-        data-checked="true"
-        for="test-right"
-      >
-        <input
-          aria-checked="true"
-          aria-disabled="false"
-          aria-invalid="false"
-          checked=""
-          class="cache-h7u1sr-StyledRadio e1duuirp1"
-          id="test-right"
-          name="test"
-          tabindex="0"
-          type="radio"
-          value="right"
-        />
-        <svg
-          class="cache-gjpbat-StyledIcon e1duuirp2"
-          size="24"
-          viewBox="0 0 24 24"
-        >
-          <g>
-            <circle
-              cx="12"
-              cy="12"
-              r="8"
-              stroke-width="2"
-            />
-            <circle
-              class="cache-p50c5x-InnerCircleRing e1duuirp4"
-              cx="12"
-              cy="12"
-              r="6"
-            />
-            <circle
-              class="cache-ivayk3-RadioMark e1duuirp3"
-              cx="12"
-              cy="12"
-              r="4"
-            />
-          </g>
-        </svg>
-        Right
-      </label>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`SwitchButton renders with tooltip 1`] = `
-<DocumentFragment>
-  .cache-fo08zx-BorderedBox-StyledBorderedBox {
-  padding: 24px;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  padding: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  position: relative;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
-  color: #ffffff;
-}
-
-.cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
-  color: #4f0599;
-}
-
-.cache-h7u1sr-StyledRadio {
-  opacity: 0.01;
-  width: px;
-  height: px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-gjpbat-StyledIcon {
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-  border-radius: 100%;
-  fill: #b2b6c3;
-}
-
-.cache-gjpbat-StyledIcon .e1duuirp4 {
-  fill: #ffffff;
-}
-
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 16px;
-  border-radius: 4px;
-  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
-  transition: border-color 200ms ease,box-shadow 200ms ease;
-  border: 1px solid #4f0599;
-  color: #4f0599;
-  border: none;
-  height: 40px;
-  padding: 8px 16px;
-  font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
-  background-color: #eeeeff;
-  fill: #390171;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
-  fill: #eeeeff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
-  fill: #ffe1e7;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 {
-  fill: #c4c9d6;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
-  fill: #f6f6f8;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  border: 1px solid #4f0599;
-  box-shadow: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard input+svg {
-  display: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:hover,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:focus-within,
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:active {
-  box-shadow: none;
-  border: none;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard[data-checked='true'] {
-  color: #ffffff;
-}
-
-.cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard:not([data-checked='true']):hover {
-  color: #4f0599;
-}
-
-<div
-    aria-describedby=":ra:"
-  >
-    <div
-      style="display: inline-flex;"
     >
       <div
-        class="cache-fo08zx-BorderedBox-StyledBorderedBox e16krxq01"
+        class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+        data-checked="false"
+        data-disabled="false"
       >
         <label
           aria-disabled="false"
-          class="e16krxq00 ejleepd0 cache-bj8we6-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
+          class="ejleepd0 cache-19t7i7l-StyledRadioContainer-StyledElement e1duuirp0"
           data-checked="false"
           for="test-left"
         >
@@ -1215,9 +466,15 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </svg>
           Left
         </label>
+      </div>
+      <div
+        class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+        data-checked="true"
+        data-disabled="false"
+      >
         <label
           aria-disabled="false"
-          class="e16krxq00 ejleepd0 cache-1diqnjo-StyledRadioContainer-StyledElement-StyledSelectableCard e1duuirp0"
+          class="ejleepd0 cache-vdjxve-StyledRadioContainer-StyledElement e1duuirp0"
           data-checked="true"
           for="test-right"
         >
@@ -1261,6 +518,866 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </svg>
           Right
         </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton renders correctly with right value 1`] = `
+<DocumentFragment>
+  .cache-fo08zx-BorderedBox-StyledBorderedBox {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+  border: none;
+  height: 40px;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #a6102d;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+  cursor: not-allowed;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover,
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within,
+.cache-qz1q0x-Container-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true']>label {
+  color: #ffffff;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:not([data-checked='true'])>label:hover {
+  color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-checked='true'] {
+  color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-h7u1sr-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-gjpbat-StyledIcon {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
+}
+
+.cache-gjpbat-StyledIcon .e1duuirp4 {
+  fill: #ffffff;
+}
+
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-checked='true'] {
+  color: #4f0599;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+<div
+    style="display: inline-flex;"
+  >
+    <div
+      class="cache-fo08zx-BorderedBox-StyledBorderedBox e16krxq01"
+    >
+      <div
+        class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+        data-checked="false"
+        data-disabled="false"
+      >
+        <label
+          aria-disabled="false"
+          class="ejleepd0 cache-19t7i7l-StyledRadioContainer-StyledElement e1duuirp0"
+          data-checked="false"
+          for="test-left"
+        >
+          <input
+            aria-checked="false"
+            aria-disabled="false"
+            aria-invalid="false"
+            class="cache-h7u1sr-StyledRadio e1duuirp1"
+            id="test-left"
+            name="test"
+            tabindex="0"
+            type="radio"
+            value="left"
+          />
+          <svg
+            class="cache-gjpbat-StyledIcon e1duuirp2"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke-width="2"
+              />
+              <circle
+                class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                cx="12"
+                cy="12"
+                r="6"
+              />
+              <circle
+                class="cache-ivayk3-RadioMark e1duuirp3"
+                cx="12"
+                cy="12"
+                r="4"
+              />
+            </g>
+          </svg>
+          Left
+        </label>
+      </div>
+      <div
+        class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+        data-checked="true"
+        data-disabled="false"
+      >
+        <label
+          aria-disabled="false"
+          class="ejleepd0 cache-vdjxve-StyledRadioContainer-StyledElement e1duuirp0"
+          data-checked="true"
+          for="test-right"
+        >
+          <input
+            aria-checked="true"
+            aria-disabled="false"
+            aria-invalid="false"
+            checked=""
+            class="cache-h7u1sr-StyledRadio e1duuirp1"
+            id="test-right"
+            name="test"
+            tabindex="0"
+            type="radio"
+            value="right"
+          />
+          <svg
+            class="cache-gjpbat-StyledIcon e1duuirp2"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <circle
+                cx="12"
+                cy="12"
+                r="8"
+                stroke-width="2"
+              />
+              <circle
+                class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                cx="12"
+                cy="12"
+                r="6"
+              />
+              <circle
+                class="cache-ivayk3-RadioMark e1duuirp3"
+                cx="12"
+                cy="12"
+                r="4"
+              />
+            </g>
+          </svg>
+          Right
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SwitchButton renders with tooltip 1`] = `
+<DocumentFragment>
+  .cache-fo08zx-BorderedBox-StyledBorderedBox {
+  padding: 24px;
+  border-radius: 4px;
+  border: 1px solid #d4dae7;
+  padding: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  padding: 16px;
+  border-radius: 4px;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  cursor: pointer;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+  border: none;
+  height: 40px;
+  padding: 8px 16px;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #a6102d;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d4dae7;
+  color: #c4c9d6;
+  background: #f6f6f8;
+  cursor: not-allowed;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: 1px solid #4f0599;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true'])[data-cheked='false'],
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover,
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within,
+.cache-qz1q0x-Container-StyledSelectableCard:active {
+  box-shadow: none;
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-qz1q0x-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true'] {
+  border: none;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard[data-checked='true']>label {
+  color: #ffffff;
+}
+
+.cache-qz1q0x-Container-StyledSelectableCard:not([data-checked='true'])>label:hover {
+  color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-checked='true'] {
+  color: #4f0599;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-19t7i7l-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+.cache-h7u1sr-StyledRadio {
+  opacity: 0.01;
+  width: px;
+  height: px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cache-h7u1sr-StyledRadio+.e1duuirp2 .e1duuirp3 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-h7u1sr-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-h7u1sr-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-h7u1sr-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-gjpbat-StyledIcon {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #b2b6c3;
+}
+
+.cache-gjpbat-StyledIcon .e1duuirp4 {
+  fill: #ffffff;
+}
+
+.cache-p50c5x-InnerCircleRing {
+  fill: #ffffff;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+  background-color: #eeeeff;
+  fill: #390171;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+  fill: #eeeeff;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+  background-color: #ffe1e7;
+  fill: #a6102d;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+  fill: #ffe1e7;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+  fill: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+  fill: #f6f6f8;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-checked='true'] {
+  color: #4f0599;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[data-error='true'] {
+  color: #a6102d;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+  color: #c4c9d6;
+}
+
+.cache-vdjxve-StyledRadioContainer-StyledElement input+svg {
+  display: none;
+}
+
+<div
+    aria-describedby=":ra:"
+  >
+    <div
+      style="display: inline-flex;"
+    >
+      <div
+        class="cache-fo08zx-BorderedBox-StyledBorderedBox e16krxq01"
+      >
+        <div
+          class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+          data-checked="false"
+          data-disabled="false"
+        >
+          <label
+            aria-disabled="false"
+            class="ejleepd0 cache-19t7i7l-StyledRadioContainer-StyledElement e1duuirp0"
+            data-checked="false"
+            for="test-left"
+          >
+            <input
+              aria-checked="false"
+              aria-disabled="false"
+              aria-invalid="false"
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="test-left"
+              name="test"
+              tabindex="0"
+              type="radio"
+              value="left"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Left
+          </label>
+        </div>
+        <div
+          class="e16krxq00 cache-qz1q0x-Container-StyledSelectableCard ejleepd1"
+          data-checked="true"
+          data-disabled="false"
+        >
+          <label
+            aria-disabled="false"
+            class="ejleepd0 cache-vdjxve-StyledRadioContainer-StyledElement e1duuirp0"
+            data-checked="true"
+            for="test-right"
+          >
+            <input
+              aria-checked="true"
+              aria-disabled="false"
+              aria-invalid="false"
+              checked=""
+              class="cache-h7u1sr-StyledRadio e1duuirp1"
+              id="test-right"
+              name="test"
+              tabindex="0"
+              type="radio"
+              value="right"
+            />
+            <svg
+              class="cache-gjpbat-StyledIcon e1duuirp2"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke-width="2"
+                />
+                <circle
+                  class="cache-p50c5x-InnerCircleRing e1duuirp4"
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+                <circle
+                  class="cache-ivayk3-RadioMark e1duuirp3"
+                  cx="12"
+                  cy="12"
+                  r="4"
+                />
+              </g>
+            </svg>
+            Right
+          </label>
+        </div>
       </div>
     </div>
   </div>

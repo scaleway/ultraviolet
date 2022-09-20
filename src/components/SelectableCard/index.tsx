@@ -2,7 +2,9 @@ import styled from '@emotion/styled'
 import {
   ChangeEventHandler,
   FocusEventHandler,
+  ForwardedRef,
   ReactNode,
+  forwardRef,
   useMemo,
   useRef,
 } from 'react'
@@ -19,6 +21,9 @@ const Container = styled.div`
   transition: border-color 200ms ease, box-shadow 200ms ease;
   cursor: pointer;
 
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
+
   &[data-checked='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
   }
@@ -31,15 +36,13 @@ const Container = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    cursor: not-allowed;
   }
-
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  color: ${({ theme }) => theme.colors.neutral.text};
 
   &:hover,
   &:focus-within,
   &:active {
-    &[data-error='false'][data-disabled='false'] {
+    &:not([data-error='true'][data-disabled='true']) {
       border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
       &[data-cheked='false'] {
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
@@ -60,6 +63,10 @@ const StyledElement = (element: typeof Radio) => styled(element, {
 
   &[data-error='true'] {
     color: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &[aria-disabled='true'] {
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }
 
   input + svg {
@@ -95,64 +102,73 @@ type SelectableCardProps = {
   label?: ReactNode
 }
 
-const SelectableCard = ({
-  name,
-  value,
-  onChange,
-  showTick = false,
-  type = 'radio',
-  checked = false,
-  disabled = false,
-  children,
-  className,
-  isError,
-  onFocus,
-  onBlur,
-  tooltip,
-  id,
-  label,
-}: SelectableCardProps) => {
-  const Element = useMemo(
-    () => StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
-    [type],
-  )
+const SelectableCard = forwardRef(
+  (
+    {
+      name,
+      value,
+      onChange,
+      showTick = false,
+      type = 'radio',
+      checked = false,
+      disabled = false,
+      children,
+      className,
+      isError,
+      onFocus,
+      onBlur,
+      tooltip,
+      id,
+      label,
+    }: SelectableCardProps,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
+    const Element = useMemo(
+      () =>
+        StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
+      [type],
+    )
 
-  const ref = useRef<HTMLInputElement>({} as HTMLInputElement)
+    const innerRef = useRef<HTMLInputElement>(null)
 
-  return (
-    <Tooltip text={tooltip}>
-      <Container
-        onClick={() => {
-          ref.current.click()
-        }}
-        className={className}
-        data-checked={checked}
-        data-disabled={disabled}
-        data-error={isError}
-      >
-        <Element
-          name={name}
-          value={value}
-          onChange={onChange}
-          showTick={showTick}
-          checked={checked}
-          disabled={disabled}
-          error={isError}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          ref={ref}
-          hasLabel={!!label}
-          id={id}
+    return (
+      <Tooltip text={tooltip}>
+        <Container
+          onClick={() => {
+            if (innerRef && innerRef.current) {
+              innerRef.current.click()
+            }
+          }}
+          className={className}
+          data-checked={checked}
+          data-disabled={disabled}
           data-error={isError}
+          ref={ref}
         >
-          {label}
-        </Element>
-        {typeof children === 'function'
-          ? children({ checked, disabled })
-          : children}
-      </Container>
-    </Tooltip>
-  )
-}
+          <Element
+            name={name}
+            value={value}
+            onChange={onChange}
+            showTick={showTick}
+            checked={checked}
+            disabled={disabled}
+            error={isError}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            hasLabel={!!label}
+            id={id}
+            ref={innerRef}
+            data-error={isError}
+          >
+            {label}
+          </Element>
+          {typeof children === 'function'
+            ? children({ checked, disabled })
+            : children}
+        </Container>
+      </Tooltip>
+    )
+  },
+)
 
 export default SelectableCard

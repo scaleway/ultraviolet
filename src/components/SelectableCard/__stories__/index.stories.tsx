@@ -199,7 +199,7 @@ ShowTick.decorators = [
 export const Disabled = Template.bind({})
 Disabled.decorators = [
   () => (
-    <ControlValue value="label-7">
+    <ControlValue value="label-8">
       {({ value, onChange }) => (
         <div style={{ display: 'flex', gap: '16px' }}>
           <SelectableCard
