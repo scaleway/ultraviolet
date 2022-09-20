@@ -1,6 +1,6 @@
 import Link from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
-import { Color, SENTIMENTS } from '../../../theme'
+import { SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
   test(`render correctly with no variant`, () =>
@@ -11,7 +11,7 @@ describe('Link', () => {
       '%s',
       (_, variant) =>
         shouldMatchEmotionSnapshot(
-          <Link href="/" variant={variant as Color}>
+          <Link href="/" variant={variant}>
             Hello
           </Link>,
         ),

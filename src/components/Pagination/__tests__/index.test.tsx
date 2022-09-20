@@ -351,7 +351,7 @@ describe('Pagination', () => {
         onLoadPage={async () =>
           new Promise(resolve => {
             setTimeout(() => {
-              resolve()
+              resolve('ok')
             }, 500)
           })
         }

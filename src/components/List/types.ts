@@ -65,3 +65,9 @@ export type ExpandedContentProps = {
     | ReactNode
     | ((props: { id?: string; isToggled: boolean }) => JSX.Element)
 }
+
+export type FinalChildrenProps = {
+  id: string
+  isToggled: boolean
+  rowsState: { [p: string]: ListRowState }
+}
