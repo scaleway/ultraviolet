@@ -1,3 +1,17 @@
+## [0.190.2](https://github.com/scaleway/scaleway-ui/compare/v0.190.1...v0.190.2) (2022-09-21)
+
+
+### :package: Chore
+
+* **devdeps:** update codecov/codecov-action action to v3.1.1 ([#1879](https://github.com/scaleway/scaleway-ui/issues/1879)) ([44ba305](https://github.com/scaleway/scaleway-ui/commit/44ba30572866f0052ad31156ea89c83c6de09a70))
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.18 ([#1882](https://github.com/scaleway/scaleway-ui/issues/1882)) ([a0026a8](https://github.com/scaleway/scaleway-ui/commit/a0026a863117c4ecd1979ad52264228ee878a4f0))
+* **devdeps:** update dependency typescript to v4.8.3 ([#1855](https://github.com/scaleway/scaleway-ui/issues/1855)) ([52b43ad](https://github.com/scaleway/scaleway-ui/commit/52b43ad8c23a5d9e5dd67433cf25e12b1b8764ac))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update nivo monorepo to v0.80.0 ([#1885](https://github.com/scaleway/scaleway-ui/issues/1885)) ([f5224c8](https://github.com/scaleway/scaleway-ui/commit/f5224c86f1eda6d26f0aecdab76a497f00209d32))
+
 ## [0.190.1](https://github.com/scaleway/scaleway-ui/compare/v0.190.0...v0.190.1) (2022-09-20)
 
 
