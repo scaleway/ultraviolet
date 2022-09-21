@@ -55,9 +55,7 @@ const StyledIcon = styled.svg<{ size: number }>`
 const StyledReakitCheckbox = styled(ReakitCheckbox, {
   shouldForwardProp: prop => !['size'].includes(prop),
 })`
-  opacity: 0.01;
-  width: ${({ size }) => size}px;
-  height: ${({ size }) => size}px;
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
   & + ${StyledIcon} {

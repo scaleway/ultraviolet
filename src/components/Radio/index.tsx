@@ -35,9 +35,7 @@ const StyledIcon = styled.svg<{ size: number }>`
 `
 
 const StyledRadio = styled(ReakitRadio)`
-  opacity: 0.01;
-  width: ${({ size }) => size}px;
-  height: ${({ size }) => size}px;
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
   & + ${StyledIcon} {
