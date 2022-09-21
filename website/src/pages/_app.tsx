@@ -1,13 +1,21 @@
 import { ThemeProvider } from '@emotion/react'
+import styled from '@emotion/styled'
 import { darkTheme as dark, lightTheme as light } from '@scaleway/ui'
 import Footer from 'components/Footer'
 import GlobalStyle from 'components/GlobalStyle'
 import Head from 'components/Head'
-import TopBar from 'components/TopBar'
+import Header from 'components/Header'
 import { AppProps } from 'next/app'
 import { useCallback, useState } from 'react'
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element | null => {
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['4']};
+  align-items: center;
+`
+
+const App = ({ Component, pageProps }: AppProps) => {
   const [isLightMode, setIsLightMode] = useState<boolean>(true)
 
   const setLightModeCallBack = useCallback(
@@ -22,12 +30,17 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element | null => {
     <ThemeProvider theme={isLightMode ? light : dark}>
       <GlobalStyle />
       <Head />
-      <TopBar isLightMode={isLightMode} setIsLightMode={setLightModeCallBack} />
-      <Component
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...pageProps}
-      />
-      <Footer />
+      <AppContainer>
+        <Header
+          isLightMode={isLightMode}
+          setIsLightMode={setLightModeCallBack}
+        />
+        <Component
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          {...pageProps}
+        />
+        <Footer />
+      </AppContainer>
     </ThemeProvider>
   )
 }

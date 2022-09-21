@@ -29,6 +29,9 @@ const nextConfig = () => {
     poweredByHeader: false,
     reactStrictMode: true,
     swcMinify: true,
+    compiler: {
+      emotion: true,
+    },
   }
 
   return plugins.reduce((acc, next) => next(acc), config)

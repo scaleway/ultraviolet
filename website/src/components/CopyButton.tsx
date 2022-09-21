@@ -11,7 +11,7 @@ type CopyButtonProps = {
   className?: string
 }
 
-const CopyButton = ({ text, className }: CopyButtonProps): JSX.Element => {
+const CopyButton = ({ text, className }: CopyButtonProps) => {
   const [isCopied, setCopied] = useClipboard(text, {
     successDuration: 2000,
   })

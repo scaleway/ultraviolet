@@ -4,7 +4,7 @@ type ErrorPageProps = {
   statusCode: number
 }
 
-const ErrorPage = ({ statusCode }: ErrorPageProps): JSX.Element => (
+const ErrorPage = ({ statusCode }: ErrorPageProps) => (
   <div>
     {statusCode
       ? `SCWUI: An error ${statusCode} occurred on server`

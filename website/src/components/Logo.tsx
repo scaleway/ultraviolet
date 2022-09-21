@@ -9,7 +9,7 @@ type LogoProps = {
   height: number
 }
 
-const Logo = ({ width, height }: LogoProps): JSX.Element => (
+const Logo = ({ width, height }: LogoProps) => (
   <svg
     width={width}
     height={height}
