@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { Text } from '@scaleway/ui'
-import { useState } from 'react'
 import CopyBox from '../../components/CopyBoxCommand'
 
 const useCase1 = `import { ThemeProvider } from '@emotion/react'
@@ -125,7 +124,7 @@ const AdvancedUseCases = () => (
     </StyledTitle>
     <Text as="p" variant="body">
       If you want to change the theme or even to create a dark theme, Scaleway
-      UI allows you to do it easily'
+      UI allows you to do it easily
     </Text>
     <CopyBox>
       <CopyBox.Command title="Dark theme" command={useCase1} />
