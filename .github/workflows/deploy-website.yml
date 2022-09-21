@@ -37,7 +37,7 @@ jobs:
         with:
           step: start
           token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.DEPLOYMENT_NAME }}
+          env: ${{ env.BRANCH_SLUG }}
           ref: ${{ github.head_ref }}
 
       - name: Set up Docker Buildx
@@ -78,7 +78,7 @@ jobs:
         if: always()
         with:
           step: finish
-          env: ${{ env.DEPLOYMENT_NAME }}
+          env: ${{ env.BRANCH_SLUG }}
           token: ${{ secrets.GH_TOKEN }}
           auto_inactive: true
           # This will now be automatically handled by github with the auto_inactive

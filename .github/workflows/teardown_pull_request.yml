@@ -49,11 +49,11 @@ jobs:
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.STORYBOOK_DEPLOYMENT_NAME }}
+          env: ${{ env.STORYBOOK_BRANCH_SLUG }}
 
       - name: Remove website deployment
         uses: bobheadxi/deployments@v1.3.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.WEBSITE_DEPLOYMENT_NAME }}
+          env: ${{ env.WEBSITE_BRANCH_SLUG }}
