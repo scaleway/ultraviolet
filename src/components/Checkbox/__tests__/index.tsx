@@ -114,7 +114,7 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox')
+    const input = node.getByRole('checkbox', { hidden: true })
     userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
@@ -126,7 +126,7 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox')
+    const input = node.getByRole('checkbox', { hidden: true })
     userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
@@ -138,7 +138,9 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox') as HTMLInputElement
+    const input = node.getByRole('checkbox', {
+      hidden: true,
+    }) as HTMLInputElement
 
     input.focus()
     userEvent.type(input, '{space}')
@@ -152,7 +154,9 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox') as HTMLInputElement
+    const input = node.getByRole('checkbox', {
+      hidden: true,
+    }) as HTMLInputElement
 
     input.focus()
     userEvent.type(input, 'a')

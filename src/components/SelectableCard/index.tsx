@@ -6,66 +6,82 @@ import {
   ReactNode,
   forwardRef,
   useMemo,
+  useRef,
 } from 'react'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 import Tooltip from '../Tooltip'
 
-const StyledElement = (element: typeof Radio) => styled(element, {
-  shouldForwardProp: prop => !['showTick'].includes(prop),
-})<{ showTick?: boolean }>`
+const Container = styled.div`
   display: inline-flex;
+  flex-direction: column;
   align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
   transition: border-color 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
 
-  ${({ theme, checked, disabled, error }) => {
-    if (error)
-      return `
-      border: 1px solid ${theme.colors.danger.border};
-      color: ${theme.colors.danger.text};
-    `
+  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
 
-    if (checked)
-      return `
-      border: 1px solid ${theme.colors.primary.borderWeak};
-      color: ${theme.colors.primary.textWeak};
-    `
+  &[data-checked='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+  }
 
-    if (disabled)
-      return `
-      border: 1px solid ${theme.colors.neutral.borderWeakDisabled};
-      color: ${theme.colors.neutral.textDisabled};
-      background: ${theme.colors.neutral.backgroundDisabled};
-    `
+  &[data-error='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.danger.border};
+  }
 
-    return `
-      border: 1px solid ${theme.colors.neutral.borderWeak};
-      color: ${theme.colors.neutral.text};
-    `
-  }}
+  &[data-disabled='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    cursor: not-allowed;
+  }
+
   &:hover,
   &:focus-within,
   &:active {
-    ${({ theme, disabled, error, checked }) => {
-      if (error || disabled) return ``
-
-      return `
-        border: 1px solid ${theme.colors.primary.borderWeak};
-        box-shadow: ${checked ? 'none' : theme.shadows.hoverPrimary};
-      `
+    &:not([data-error='true'][data-disabled='true']) {
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+      &[data-cheked='false'] {
+        box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
+      }
     }}
+  }
+`
+
+const StyledElement = (element: typeof Radio) => styled(element, {
+  shouldForwardProp: prop => !['showTick', 'hasLabel'].includes(prop),
+})<{ showTick?: boolean; hasLabel?: boolean }>`
+  display: inline-flex;
+  align-items: start;
+
+  &[data-checked='true'] {
+    color: ${({ theme }) => theme.colors.primary.textWeak};
+  }
+
+  &[data-error='true'] {
+    color: ${({ theme }) => theme.colors.danger.text};
+  }
+
+  &[aria-disabled='true'] {
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }
 
   input + svg {
     ${({ showTick }) => (!showTick ? `display: none;` : null)}
   }
+
+  label {
+    ${({ showTick, hasLabel }) =>
+      !showTick && !hasLabel ? `display: none;` : null}
+  }
 `
 
 type SelectableCardProps = {
   name?: string
-  children:
+  children?:
     | (({
         disabled,
         checked,
@@ -83,6 +99,7 @@ type SelectableCardProps = {
   onBlur?: FocusEventHandler<HTMLInputElement>
   id?: string
   tooltip?: string
+  label?: ReactNode
 }
 
 const SelectableCard = forwardRef(
@@ -102,8 +119,9 @@ const SelectableCard = forwardRef(
       onBlur,
       tooltip,
       id,
+      label,
     }: SelectableCardProps,
-    ref: ForwardedRef<HTMLLabelElement>,
+    ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const Element = useMemo(
       () =>
@@ -111,26 +129,43 @@ const SelectableCard = forwardRef(
       [type],
     )
 
+    const innerRef = useRef<HTMLInputElement>(null)
+
     return (
       <Tooltip text={tooltip}>
-        <Element
-          name={name}
-          value={value}
-          onChange={onChange}
-          showTick={showTick}
-          checked={checked}
-          disabled={disabled}
+        <Container
+          onClick={() => {
+            if (innerRef && innerRef.current) {
+              innerRef.current.click()
+            }
+          }}
           className={className}
-          error={isError}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          data-checked={checked}
+          data-disabled={disabled}
+          data-error={isError}
           ref={ref}
-          id={id}
         >
+          <Element
+            name={name}
+            value={value}
+            onChange={onChange}
+            showTick={showTick}
+            checked={checked}
+            disabled={disabled}
+            error={isError}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            hasLabel={!!label}
+            id={id}
+            ref={innerRef}
+            data-error={isError}
+          >
+            {label}
+          </Element>
           {typeof children === 'function'
             ? children({ checked, disabled })
             : children}
-        </Element>
+        </Container>
       </Tooltip>
     )
   },

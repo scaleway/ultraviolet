@@ -35,9 +35,7 @@ const StyledIcon = styled.svg<{ size: number }>`
 `
 
 const StyledRadio = styled(ReakitRadio)`
-  opacity: 0.01;
-  width: ${({ size }) => size}px;
-  height: ${({ size }) => size}px;
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
   & + ${StyledIcon} {
@@ -148,7 +146,7 @@ const Radio = forwardRef(
       autoFocus,
       onKeyDown,
     }: RadioProps,
-    ref: ForwardedRef<HTMLLabelElement>,
+    ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const id = useId()
     const computedName = name ?? id
@@ -159,8 +157,8 @@ const Radio = forwardRef(
         aria-disabled={disabled}
         htmlFor={`${computedName}-${value}`}
         className={className}
-        ref={ref}
         data-checked={checked}
+        data-error={error}
       >
         <StyledRadio
           type="radio"
@@ -177,6 +175,7 @@ const Radio = forwardRef(
           disabled={disabled}
           name={computedName}
           autoFocus={autoFocus}
+          ref={ref}
         />
         <StyledIcon size={size} viewBox="0 0 24 24">
           <RadioMarkedIcon />

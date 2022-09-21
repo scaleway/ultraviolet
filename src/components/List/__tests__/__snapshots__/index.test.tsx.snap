@@ -1349,15 +1349,13 @@ exports[`List should render correctly multiselect 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1367,49 +1365,49 @@ exports[`List should render correctly multiselect 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1645,11 +1643,12 @@ exports[`List should render correctly multiselect 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -1838,12 +1837,13 @@ exports[`List should render correctly multiselect 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -1927,12 +1927,13 @@ exports[`List should render correctly multiselect 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -2016,12 +2017,13 @@ exports[`List should render correctly multiselect 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -2105,12 +2107,13 @@ exports[`List should render correctly multiselect 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -2194,12 +2197,13 @@ exports[`List should render correctly multiselect 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -2380,15 +2384,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2398,49 +2400,49 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -2676,11 +2678,12 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -2823,12 +2826,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -2912,12 +2916,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -3001,12 +3006,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -3090,12 +3096,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -3179,12 +3186,13 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -3348,15 +3356,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3366,49 +3372,49 @@ exports[`List should render correctly multiselect and click indeterminate, explo
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -3572,11 +3578,12 @@ exports[`List should render correctly multiselect and click indeterminate, explo
           aria-disabled="false"
           class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -3709,12 +3716,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -3783,12 +3791,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -3857,12 +3866,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -3931,12 +3941,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -4005,12 +4016,13 @@ exports[`List should render correctly multiselect and click indeterminate, explo
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -4165,15 +4177,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -4183,49 +4193,49 @@ exports[`List should render correctly multiselect and click indeterminate, table
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -4391,11 +4401,12 @@ exports[`List should render correctly multiselect and click indeterminate, table
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -4528,12 +4539,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -4602,12 +4614,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -4676,12 +4689,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -4750,12 +4764,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -4824,12 +4839,13 @@ exports[`List should render correctly multiselect and click indeterminate, table
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -5004,15 +5020,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5022,49 +5036,49 @@ exports[`List should render correctly multiselect and with click 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -5470,11 +5484,12 @@ exports[`List should render correctly multiselect and with click 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="indeterminate"
+            data-error="false"
           >
             <input
               aria-checked="mixed"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -5616,12 +5631,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="true"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="true"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -5705,12 +5721,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="true"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="true"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -5794,12 +5811,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -5883,12 +5901,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -5972,12 +5991,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -6052,12 +6072,13 @@ exports[`List should render correctly multiselect and with click 1`] = `
         aria-disabled="false"
         class="e1fla99k3 cache-l3mkb6-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
         data-checked="true"
+        data-error="false"
       >
         <input
           aria-checked="true"
           aria-invalid="false"
           checked=""
-          class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+          class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
           name=":r2o:"
           type="checkbox"
         />
@@ -6219,15 +6240,13 @@ exports[`List should render correctly multiselect and with click and not functio
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6237,49 +6256,49 @@ exports[`List should render correctly multiselect and with click and not functio
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -6685,11 +6704,12 @@ exports[`List should render correctly multiselect and with click and not functio
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="indeterminate"
+            data-error="false"
           >
             <input
               aria-checked="mixed"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -6831,12 +6851,13 @@ exports[`List should render correctly multiselect and with click and not functio
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="true"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="true"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -6920,12 +6941,13 @@ exports[`List should render correctly multiselect and with click and not functio
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="true"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="true"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -7009,12 +7031,13 @@ exports[`List should render correctly multiselect and with click and not functio
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -7098,12 +7121,13 @@ exports[`List should render correctly multiselect and with click and not functio
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -7187,12 +7211,13 @@ exports[`List should render correctly multiselect and with click and not functio
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -7267,12 +7292,13 @@ exports[`List should render correctly multiselect and with click and not functio
         aria-disabled="false"
         class="e1fla99k3 cache-l3mkb6-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
         data-checked="true"
+        data-error="false"
       >
         <input
           aria-checked="true"
           aria-invalid="false"
           checked=""
-          class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+          class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
           name=":r3k:"
           type="checkbox"
         />
@@ -7434,15 +7460,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -7452,49 +7476,49 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -7750,11 +7774,12 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -7943,12 +7968,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -8032,12 +8058,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -8121,12 +8148,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -8210,12 +8238,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -8299,12 +8328,13 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -8485,15 +8515,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -8503,49 +8531,49 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -8801,11 +8829,12 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -8994,12 +9023,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -9083,12 +9113,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -9172,12 +9203,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -9261,12 +9293,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -9350,12 +9383,13 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -9519,15 +9553,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -9537,49 +9569,49 @@ exports[`List should render correctly multiselect explorer 1`] = `
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -9743,11 +9775,12 @@ exports[`List should render correctly multiselect explorer 1`] = `
           aria-disabled="false"
           class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -9926,12 +9959,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -10000,12 +10034,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -10074,12 +10109,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -10148,12 +10184,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -10222,12 +10259,13 @@ exports[`List should render correctly multiselect explorer 1`] = `
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -10382,15 +10420,13 @@ exports[`List should render correctly multiselect table 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -10400,49 +10436,49 @@ exports[`List should render correctly multiselect table 1`] = `
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -10608,11 +10644,12 @@ exports[`List should render correctly multiselect table 1`] = `
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -10791,12 +10828,13 @@ exports[`List should render correctly multiselect table 1`] = `
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -10865,12 +10903,13 @@ exports[`List should render correctly multiselect table 1`] = `
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -10939,12 +10978,13 @@ exports[`List should render correctly multiselect table 1`] = `
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -11013,12 +11053,13 @@ exports[`List should render correctly multiselect table 1`] = `
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -11087,12 +11128,13 @@ exports[`List should render correctly multiselect table 1`] = `
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -11267,15 +11309,13 @@ exports[`List should render correctly multiselect with condition 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -11285,49 +11325,49 @@ exports[`List should render correctly multiselect with condition 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -11563,11 +11603,12 @@ exports[`List should render correctly multiselect with condition 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -11759,13 +11800,14 @@ exports[`List should render correctly multiselect with condition 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -11852,12 +11894,13 @@ exports[`List should render correctly multiselect with condition 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -11944,13 +11987,14 @@ exports[`List should render correctly multiselect with condition 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -12040,13 +12084,14 @@ exports[`List should render correctly multiselect with condition 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -12136,13 +12181,14 @@ exports[`List should render correctly multiselect with condition 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -12306,15 +12352,13 @@ exports[`List should render correctly multiselect with condition, table variant 
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -12324,49 +12368,49 @@ exports[`List should render correctly multiselect with condition, table variant 
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -12532,11 +12576,12 @@ exports[`List should render correctly multiselect with condition, table variant 
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -12718,13 +12763,14 @@ exports[`List should render correctly multiselect with condition, table variant 
               aria-disabled="true"
               class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
               data-checked="false"
+              data-error="false"
               data-visibility="hover"
             >
               <input
                 aria-checked="false"
                 aria-disabled="true"
                 aria-invalid="false"
-                class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+                class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                 disabled=""
                 name="select-rows"
                 style="pointer-events: none;"
@@ -12796,12 +12842,13 @@ exports[`List should render correctly multiselect with condition, table variant 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -12873,13 +12920,14 @@ exports[`List should render correctly multiselect with condition, table variant 
               aria-disabled="true"
               class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
               data-checked="false"
+              data-error="false"
               data-visibility="hover"
             >
               <input
                 aria-checked="false"
                 aria-disabled="true"
                 aria-invalid="false"
-                class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+                class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                 disabled=""
                 name="select-rows"
                 style="pointer-events: none;"
@@ -12954,13 +13002,14 @@ exports[`List should render correctly multiselect with condition, table variant 
               aria-disabled="true"
               class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
               data-checked="false"
+              data-error="false"
               data-visibility="hover"
             >
               <input
                 aria-checked="false"
                 aria-disabled="true"
                 aria-invalid="false"
-                class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+                class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                 disabled=""
                 name="select-rows"
                 style="pointer-events: none;"
@@ -13035,13 +13084,14 @@ exports[`List should render correctly multiselect with condition, table variant 
               aria-disabled="true"
               class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
               data-checked="false"
+              data-error="false"
               data-visibility="hover"
             >
               <input
                 aria-checked="false"
                 aria-disabled="true"
                 aria-invalid="false"
-                class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+                class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                 disabled=""
                 name="select-rows"
                 style="pointer-events: none;"
@@ -13202,15 +13252,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -13220,49 +13268,49 @@ exports[`List should render correctly multiselect, explorer variant and with cli
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -13500,71 +13548,6 @@ exports[`List should render correctly multiselect, explorer variant and with cli
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
 .cache-1m7zzqc-StyledIcon {
   margin-right: 8px;
   border-radius: 4px;
@@ -13623,11 +13606,12 @@ exports[`List should render correctly multiselect, explorer variant and with cli
           aria-disabled="false"
           class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="indeterminate"
+          data-error="false"
         >
           <input
             aria-checked="mixed"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -13759,12 +13743,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="true"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="true"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -13833,12 +13818,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="true"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="true"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -13907,12 +13893,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -13981,12 +13968,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -14055,12 +14043,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -14129,12 +14118,13 @@ exports[`List should render correctly multiselect, explorer variant and with cli
         aria-disabled="false"
         class="e1fla99k3 cache-l3mkb6-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
         data-checked="true"
+        data-error="false"
       >
         <input
           aria-checked="true"
           aria-invalid="false"
           checked=""
-          class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+          class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
           name=":r6s:"
           type="checkbox"
         />
@@ -14279,15 +14269,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -14297,49 +14285,49 @@ exports[`List should render correctly multiselect, explorer variant and with sor
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -14521,11 +14509,12 @@ exports[`List should render correctly multiselect, explorer variant and with sor
           aria-disabled="false"
           class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -14704,12 +14693,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -14778,12 +14768,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -14852,12 +14843,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="6"
@@ -14926,12 +14918,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -15000,12 +14993,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -15074,12 +15068,13 @@ exports[`List should render correctly multiselect, explorer variant and with sor
             aria-disabled="false"
             class="e1eztlh81 cache-beov7b-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -15234,15 +15229,13 @@ exports[`List should render correctly multiselect, table variant and with click 
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -15252,49 +15245,49 @@ exports[`List should render correctly multiselect, table variant and with click 
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -15534,71 +15527,6 @@ exports[`List should render correctly multiselect, table variant and with click 
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  cursor: pointer;
-}
-
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
 .cache-1m7zzqc-StyledIcon {
   margin-right: 8px;
   border-radius: 4px;
@@ -15657,11 +15585,12 @@ exports[`List should render correctly multiselect, table variant and with click 
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="indeterminate"
+          data-error="false"
         >
           <input
             aria-checked="mixed"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -15793,12 +15722,13 @@ exports[`List should render correctly multiselect, table variant and with click 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="true"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="true"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -15867,12 +15797,13 @@ exports[`List should render correctly multiselect, table variant and with click 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="true"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="true"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -15941,12 +15872,13 @@ exports[`List should render correctly multiselect, table variant and with click 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -16015,12 +15947,13 @@ exports[`List should render correctly multiselect, table variant and with click 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -16089,12 +16022,13 @@ exports[`List should render correctly multiselect, table variant and with click 
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -16163,12 +16097,13 @@ exports[`List should render correctly multiselect, table variant and with click 
         aria-disabled="false"
         class="e1fla99k3 cache-l3mkb6-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
         data-checked="true"
+        data-error="false"
       >
         <input
           aria-checked="true"
           aria-invalid="false"
           checked=""
-          class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+          class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
           name=":r60:"
           type="checkbox"
         />
@@ -16310,15 +16245,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -16328,49 +16261,49 @@ exports[`List should render correctly multiselect, table variant and with sort c
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -16554,11 +16487,12 @@ exports[`List should render correctly multiselect, table variant and with sort c
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="false"
+          data-error="false"
         >
           <input
             aria-checked="false"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -16737,12 +16671,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -16811,12 +16746,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -16885,12 +16821,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="2"
@@ -16959,12 +16896,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="3"
@@ -17033,12 +16971,13 @@ exports[`List should render correctly multiselect, table variant and with sort c
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility="hover"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="4"
@@ -18766,15 +18705,13 @@ exports[`List should render correctly with alert 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -18784,49 +18721,49 @@ exports[`List should render correctly with alert 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -19078,11 +19015,12 @@ exports[`List should render correctly with alert 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -19271,12 +19209,13 @@ exports[`List should render correctly with alert 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -19366,12 +19305,13 @@ exports[`List should render correctly with alert 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -19568,15 +19508,13 @@ exports[`List should render correctly with animated 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -19586,49 +19524,49 @@ exports[`List should render correctly with animated 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -19887,11 +19825,12 @@ exports[`List should render correctly with animated 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -20080,12 +20019,13 @@ exports[`List should render correctly with animated 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -20175,12 +20115,13 @@ exports[`List should render correctly with animated 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -21764,15 +21705,13 @@ exports[`List should render correctly with bad idKey 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -21782,49 +21721,49 @@ exports[`List should render correctly with bad idKey 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -22061,11 +22000,12 @@ exports[`List should render correctly with bad idKey 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -22257,13 +22197,14 @@ exports[`List should render correctly with bad idKey 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -22359,13 +22300,14 @@ exports[`List should render correctly with bad idKey 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -22461,13 +22403,14 @@ exports[`List should render correctly with bad idKey 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -22563,13 +22506,14 @@ exports[`List should render correctly with bad idKey 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -22665,13 +22609,14 @@ exports[`List should render correctly with bad idKey 1`] = `
                     aria-disabled="true"
                     class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                     data-checked="false"
+                    data-error="false"
                     data-visibility="hover"
                   >
                     <input
                       aria-checked="false"
                       aria-disabled="true"
                       aria-invalid="false"
-                      class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                      class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                       disabled=""
                       name="select-rows"
                       style="pointer-events: none;"
@@ -23168,15 +23113,13 @@ exports[`List should render correctly with defaultSort 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -23186,49 +23129,49 @@ exports[`List should render correctly with defaultSort 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -23485,11 +23428,12 @@ exports[`List should render correctly with defaultSort 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -23678,12 +23622,13 @@ exports[`List should render correctly with defaultSort 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -23773,12 +23718,13 @@ exports[`List should render correctly with defaultSort 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -23868,12 +23814,13 @@ exports[`List should render correctly with defaultSort 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -23963,12 +23910,13 @@ exports[`List should render correctly with defaultSort 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -24058,12 +24006,13 @@ exports[`List should render correctly with defaultSort 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -25136,15 +25085,13 @@ exports[`List should render correctly with empty data 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -25154,49 +25101,49 @@ exports[`List should render correctly with empty data 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -25348,11 +25295,12 @@ exports[`List should render correctly with empty data 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -26221,15 +26169,13 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -26239,49 +26185,49 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -26586,11 +26532,12 @@ exports[`List should render correctly with highlighted and selected 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="indeterminate"
+            data-error="false"
           >
             <input
               aria-checked="mixed"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -26778,12 +26725,13 @@ exports[`List should render correctly with highlighted and selected 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="true"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="true"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -26867,12 +26815,13 @@ exports[`List should render correctly with highlighted and selected 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility=""
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -27459,15 +27408,13 @@ exports[`List should render correctly with highlighted and selected, table varia
   fill: #ffe1e7;
 }
 
-.cache-49l1gj-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 20px;
-  height: 20px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-49l1gj-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -27477,49 +27424,49 @@ exports[`List should render correctly with highlighted and selected, table varia
   transform: scale(0);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-49l1gj-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-49l1gj-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -27742,11 +27689,12 @@ exports[`List should render correctly with highlighted and selected, table varia
           aria-disabled="false"
           class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
           data-checked="indeterminate"
+          data-error="false"
         >
           <input
             aria-checked="mixed"
             aria-invalid="false"
-            class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+            class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
             name="select-rows"
             type="checkbox"
             value="all"
@@ -27924,12 +27872,13 @@ exports[`List should render correctly with highlighted and selected, table varia
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="true"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="true"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="1"
@@ -27998,12 +27947,13 @@ exports[`List should render correctly with highlighted and selected, table varia
             aria-disabled="false"
             class="ewf8fux1 cache-1k78jdv-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
             data-visibility=""
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-49l1gj-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="0"
@@ -29982,15 +29932,13 @@ exports[`List should render correctly with no data 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -30000,49 +29948,49 @@ exports[`List should render correctly with no data 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -30179,11 +30127,12 @@ exports[`List should render correctly with no data 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -30470,15 +30419,13 @@ exports[`List should render correctly with pagination 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -30488,49 +30435,49 @@ exports[`List should render correctly with pagination 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -31039,11 +30986,12 @@ exports[`List should render correctly with pagination 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -31163,12 +31111,13 @@ exports[`List should render correctly with pagination 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -31242,12 +31191,13 @@ exports[`List should render correctly with pagination 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -31321,12 +31271,13 @@ exports[`List should render correctly with pagination 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="2"
@@ -31400,12 +31351,13 @@ exports[`List should render correctly with pagination 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -31479,12 +31431,13 @@ exports[`List should render correctly with pagination 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
@@ -33310,15 +33263,13 @@ exports[`List should render correctly with unusual props 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-18vdqte-StyledReakitCheckbox {
-  opacity: 0.01;
-  width: 24px;
-  height: 24px;
+.cache-x4k6jl-StyledReakitCheckbox {
+  visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-18vdqte-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -33328,49 +33279,49 @@ exports[`List should render correctly with unusual props 1`] = `
   transform: scale(0);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-18vdqte-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-18vdqte-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-x4k6jl-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -33649,11 +33600,12 @@ exports[`List should render correctly with unusual props 1`] = `
             aria-disabled="false"
             class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
             data-checked="false"
+            data-error="false"
           >
             <input
               aria-checked="false"
               aria-invalid="false"
-              class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+              class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
               name="select-rows"
               type="checkbox"
               value="all"
@@ -33842,12 +33794,13 @@ exports[`List should render correctly with unusual props 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="0"
@@ -33937,12 +33890,13 @@ exports[`List should render correctly with unusual props 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="1"
@@ -34083,12 +34037,13 @@ exports[`List should render correctly with unusual props 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="3"
@@ -34178,12 +34133,13 @@ exports[`List should render correctly with unusual props 1`] = `
                   aria-disabled="false"
                   class="e1r829121 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
                   data-checked="false"
+                  data-error="false"
                   data-visibility="hover"
                 >
                   <input
                     aria-checked="false"
                     aria-invalid="false"
-                    class="cache-18vdqte-StyledReakitCheckbox eu28k4m2"
+                    class="cache-x4k6jl-StyledReakitCheckbox eu28k4m2"
                     name="select-rows"
                     type="checkbox"
                     value="4"
