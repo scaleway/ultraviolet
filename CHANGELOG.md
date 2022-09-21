@@ -1,3 +1,10 @@
+## [0.190.4](https://github.com/scaleway/scaleway-ui/compare/v0.190.3...v0.190.4) (2022-09-21)
+
+
+### :bug: Bug Fixes
+
+* **ci:** persist deployments in pull requests ([#1887](https://github.com/scaleway/scaleway-ui/issues/1887)) ([70b8e19](https://github.com/scaleway/scaleway-ui/commit/70b8e192346ee35e027e8802ff166af781144fb5))
+
 ## [0.190.3](https://github.com/scaleway/scaleway-ui/compare/v0.190.2...v0.190.3) (2022-09-21)
 
 
