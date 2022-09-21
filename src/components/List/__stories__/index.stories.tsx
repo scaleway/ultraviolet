@@ -559,6 +559,58 @@ PaginationLoading.decorators = [
   },
 ]
 
+export const PaginationLazyLoading = Template.bind({})
+PaginationLazyLoading.decorators = [
+  () => {
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const [paginatedData, setPaginatedData] = useState({
+      data: generateData(5),
+      total: 100,
+    })
+
+    const fetchMoreData = (newPage: number) => {
+      setPaginatedData({
+        ...paginatedData,
+        data: generateData(5, newPage.toString()),
+      })
+      setCurrentPage(newPage)
+    }
+
+    return (
+      <List
+        data={paginatedData.data}
+        perPage={5}
+        page={currentPage}
+        pageCount={paginatedData.total / 5}
+        onChangePage={fetchMoreData}
+        multiselect
+        idKey="id"
+        columns={[
+          { label: 'Name', sort: 'name' },
+          { label: 'Description' },
+          { label: 'Department' },
+        ]}
+      >
+        {list => (
+          <>
+            <list.Header />
+            <list.Body>
+              {({ rowData }) => (
+                <list.Row id={rowData.id}>
+                  <list.Cell>{rowData.name}</list.Cell>
+                  <list.Cell>{rowData.description}</list.Cell>
+                  <list.Cell>{rowData.department}</list.Cell>
+                </list.Row>
+              )}
+            </list.Body>
+          </>
+        )}
+      </List>
+    )
+  },
+]
+
 export const PaginationLoadingPageCount = Template.bind({})
 PaginationLoadingPageCount.decorators = [
   () => {
