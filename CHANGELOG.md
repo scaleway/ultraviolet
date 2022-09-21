@@ -1,3 +1,15 @@
+## [0.190.3](https://github.com/scaleway/scaleway-ui/compare/v0.190.2...v0.190.3) (2022-09-21)
+
+
+### :memo: Documentation
+
+* revamp website with current guidelines ([#1878](https://github.com/scaleway/scaleway-ui/issues/1878)) ([d353866](https://github.com/scaleway/scaleway-ui/commit/d35386613253cf72b77bbaa36f43416df10d89ad))
+
+
+### :bug: Bug Fixes
+
+* **SelectableCard:** encapsulate children into div and add label ([#1835](https://github.com/scaleway/scaleway-ui/issues/1835)) ([f9ca801](https://github.com/scaleway/scaleway-ui/commit/f9ca80144590b7515a3e7aa15620e1dc5f3dd822))
+
 ## [0.190.2](https://github.com/scaleway/scaleway-ui/compare/v0.190.1...v0.190.2) (2022-09-21)
 
 
