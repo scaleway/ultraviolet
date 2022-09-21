@@ -1,3 +1,10 @@
+## [0.190.5](https://github.com/scaleway/scaleway-ui/compare/v0.190.4...v0.190.5) (2022-09-21)
+
+
+### :bug: Bug Fixes
+
+* **status:** classname on container ([#1888](https://github.com/scaleway/scaleway-ui/issues/1888)) ([110ff7c](https://github.com/scaleway/scaleway-ui/commit/110ff7c7d4dd78f6825ecc2c405eea8795fc3142))
+
 ## [0.190.4](https://github.com/scaleway/scaleway-ui/compare/v0.190.3...v0.190.4) (2022-09-21)
 
 
