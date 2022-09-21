@@ -65,9 +65,9 @@ const Status = ({
   variant,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
-    <Container>
+    <Container className={className}>
       {animated ? <StyledAnimatedCircle variant={variant} /> : null}
-      <StyledCircle className={className} variant={variant} />
+      <StyledCircle variant={variant} />
     </Container>
   </Tooltip>
 )

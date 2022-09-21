@@ -53,6 +53,35 @@ exports[`Status render animated 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Status render with className 1`] = `
+<DocumentFragment>
+  .cache-1oymmk9-Container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10px;
+  height: 10px;
+}
+
+.cache-1wbk14j-StyledCircle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #22c8a2;
+}
+
+<span
+    class="test cache-1oymmk9-Container ew1r0gb0"
+  >
+    <span
+      class="cache-1wbk14j-StyledCircle ew1r0gb2"
+    />
+  </span>
+</DocumentFragment>
+`;
+
 exports[`Status renders correctly with type="danger" 1`] = `
 <DocumentFragment>
   .cache-1oymmk9-Container {
