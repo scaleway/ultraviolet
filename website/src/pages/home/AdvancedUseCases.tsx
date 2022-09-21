@@ -118,28 +118,20 @@ const AdvancedUseCasesContainer = styled.div`
   gap: ${({ theme }) => theme.space['5']};
 `
 
-const AdvancedUseCases = () => {
-  const [selectedTab, setSelectedTab] = useState<number>(0)
-
-  const tabDescription = [
-    'If you want to change the theme or even to create a dark theme, Scaleway UI allows you to do it easily',
-    'If you want to change the theme or even to create a dark theme, Scaleway UI allows you to do it easily',
-  ]
-
-  return (
-    <AdvancedUseCasesContainer>
-      <StyledTitle as="h3" variant="headingLarge">
-        Advanced Use Cases
-      </StyledTitle>
-      <Text as="p" variant="body">
-        {tabDescription[selectedTab]}
-      </Text>
-      <CopyBox>
-        <CopyBox.Command title="Dark theme" command={useCase1} />
-        <CopyBox.Command title="Simple Form" command={useCase2} />
-      </CopyBox>
-    </AdvancedUseCasesContainer>
-  )
-}
+const AdvancedUseCases = () => (
+  <AdvancedUseCasesContainer>
+    <StyledTitle as="h3" variant="headingLarge">
+      Advanced Use Cases
+    </StyledTitle>
+    <Text as="p" variant="body">
+      If you want to change the theme or even to create a dark theme, Scaleway
+      UI allows you to do it easily'
+    </Text>
+    <CopyBox>
+      <CopyBox.Command title="Dark theme" command={useCase1} />
+      <CopyBox.Command title="Simple Form" command={useCase2} />
+    </CopyBox>
+  </AdvancedUseCasesContainer>
+)
 
 export default AdvancedUseCases
