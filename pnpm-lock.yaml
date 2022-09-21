@@ -26,7 +26,7 @@ specifiers:
   '@nivo/scales': 0.80.0
   '@nivo/tooltip': 0.80.0
   '@rollup/plugin-babel': 5.3.1
-  '@rollup/plugin-node-resolve': 13.3.0
+  '@rollup/plugin-node-resolve': 14.1.0
   '@rollup/plugin-url': 7.0.0
   '@scaleway/eslint-config-react': 3.5.14
   '@scaleway/jest-helpers': 2.0.18
@@ -163,7 +163,7 @@ devDependencies:
   '@emotion/react': 11.10.4_axxkdcpdr7up57umjkldobkynm
   '@emotion/styled': 11.10.4_sn4wuyy54zwps25tv4w7lbiz6i
   '@rollup/plugin-babel': 5.3.1_qjhfxcwn2glzcb5646tzyg45bq
-  '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.0
+  '@rollup/plugin-node-resolve': 14.1.0_rollup@2.79.0
   '@rollup/plugin-url': 7.0.0_rollup@2.79.0
   '@scaleway/eslint-config-react': 3.5.14_irgkl5vooow2ydyo6aokmferha
   '@scaleway/jest-helpers': 2.0.18_tsyfe2etww6h4xfxsjqfre2tha
@@ -3324,11 +3324,11 @@ packages:
       rollup: 2.79.0
     dev: true
 
-  /@rollup/plugin-node-resolve/13.3.0_rollup@2.79.0:
-    resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
+  /@rollup/plugin-node-resolve/14.1.0_rollup@2.79.0:
+    resolution: {integrity: sha512-5G2niJroNCz/1zqwXtk0t9+twOSDlG00k1Wfd7bkbbXmwg8H8dvgHdIWAun53Ps/rckfvOC7scDBjuGFg5OaWw==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
-      rollup: ^2.42.0
+      rollup: ^2.78.0
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.79.0
       '@types/resolve': 1.17.1
@@ -11644,7 +11644,7 @@ packages:
     dev: true
 
   /is-module/1.0.0:
-    resolution: {integrity: sha1-Mlj7afeMFNW4FdZkM2tM/7ZEFZE=}
+    resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
     dev: true
 
   /is-negative-zero/2.0.2:
