@@ -33,11 +33,10 @@ const StyledCopyButton = styled(CopyButton, {
 `
 
 interface CopyBoxProps {
-  onChange?: (data?: unknown) => void
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
 }
 
-const CopyBox = ({ onChange = () => undefined, children }: CopyBoxProps) => {
+const CopyBox = ({ children }: CopyBoxProps) => {
   const flatChild = (
     Children.map(children, child =>
       isValidElement(child) ? child : undefined,
@@ -53,16 +52,17 @@ const CopyBox = ({ onChange = () => undefined, children }: CopyBoxProps) => {
     >
       {flatChild.length > 1 && (
         <Tabs
-          selected={tab}
+          selected={tab + 1}
           onChange={value => {
             if (typeof value === 'number') {
-              setTab(value)
+              setTab(value - 1)
             }
-            onChange(value)
           }}
         >
-          {flatChild.map(({ props: { title } }) => (
-            <Tabs.Tab key={`tab-${title}`}>{title}</Tabs.Tab>
+          {flatChild.map(({ props: { title } }, index) => (
+            <Tabs.Tab key={`tab-${title}`} value={index + 1}>
+              {title}
+            </Tabs.Tab>
           ))}
         </Tabs>
       )}

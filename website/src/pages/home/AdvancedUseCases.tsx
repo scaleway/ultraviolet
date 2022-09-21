@@ -134,7 +134,7 @@ const AdvancedUseCases = () => {
       <Text as="p" variant="body">
         {tabDescription[selectedTab]}
       </Text>
-      <CopyBox onChange={(value: unknown) => setSelectedTab(value as number)}>
+      <CopyBox>
         <CopyBox.Command title="Dark theme" command={useCase1} />
         <CopyBox.Command title="Simple Form" command={useCase2} />
       </CopyBox>
