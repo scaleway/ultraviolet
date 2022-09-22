@@ -1,3 +1,15 @@
+## [0.190.6](https://github.com/scaleway/scaleway-ui/compare/v0.190.5...v0.190.6) (2022-09-22)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-node-resolve to v14 ([#1886](https://github.com/scaleway/scaleway-ui/issues/1886)) ([ce203b2](https://github.com/scaleway/scaleway-ui/commit/ce203b298c35eec73a88cc8d86669173adff3ad9))
+
+
+### :bug: Bug Fixes
+
+* **radio:** correct primary color when activated ([#1893](https://github.com/scaleway/scaleway-ui/issues/1893)) ([8ade11a](https://github.com/scaleway/scaleway-ui/commit/8ade11aec1602361ff858cfd0875d2adb4301819))
+
 ## [0.190.5](https://github.com/scaleway/scaleway-ui/compare/v0.190.4...v0.190.5) (2022-09-21)
 
 
