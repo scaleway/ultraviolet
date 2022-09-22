@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react'
+import { Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import Pagination from '..'
 
@@ -7,12 +7,13 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Pagination can be useful for long listings.',
+        component:
+          'Display multiple buttons to allow navigation between a paginated resource',
       },
     },
   },
   title: 'Components/Navigation/PaginationV2',
-} as Meta
+}
 
 const Template: Story<ComponentProps<typeof Pagination>> = args => (
   <Pagination {...args} />

@@ -55,13 +55,31 @@ const StyledPageButton = styled.button`
 `
 
 export type PaginationProps = {
+  /**
+    Event function called when changing the page
+  */
   onChange: (newPage: number) => void
+  /**
+    The current page
+  */
   page: number
+  /**
+    Number of page you have
+  */
   pageCount: number
+  /**
+    How many page button you want to have
+  */
   pageTabCount?: number
+  /**
+    Disable all buttons
+  */
   disabled?: boolean
 }
 
+/**
+ * Display multiple buttons to allow navigation between a paginated resource
+ */
 function Pagination({
   disabled = false,
   page,
