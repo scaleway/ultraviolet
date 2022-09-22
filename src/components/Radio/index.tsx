@@ -54,7 +54,7 @@ const StyledRadio = styled(ReakitRadio)`
 
   &[aria-checked='true'][aria-disabled='false'][aria-invalid='false']
     + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.text};
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
   &[aria-invalid='true'] + ${StyledIcon} {
@@ -63,7 +63,7 @@ const StyledRadio = styled(ReakitRadio)`
 
   &:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.text};
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
     ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.primary.background};
     }
@@ -91,7 +91,7 @@ const StyledRadioContainer = styled.label<{ htmlFor: string }>`
   :hover[aria-disabled='false'] {
     ${StyledRadio}[id=${({ htmlFor }) => htmlFor}] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
-      fill: ${({ theme }) => theme.colors.primary.text};
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.primary.background};
       }
