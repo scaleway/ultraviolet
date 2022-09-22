@@ -18,8 +18,8 @@ import Box from '../Box'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
-import Placeholder from '../Placeholder'
 import Text from '../Text'
+import { LoadingPlaceholder } from './LoadingPlaceholder'
 import SelectBar, { ListSelectBarProps } from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
@@ -87,7 +87,10 @@ function Body<DataType extends Record<string, unknown>>({
   if (isLoading) {
     return (
       (customLoader as JSX.Element) ?? (
-        <Placeholder length={perPage} col={columns.length} variant="list" />
+        <LoadingPlaceholder<DataType>
+          columns={columns}
+          totalRows={perPage !== undefined ? perPage : pageData.length}
+        />
       )
     )
   }
