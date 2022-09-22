@@ -39,7 +39,7 @@ const baseStyles = (theme: Theme) => css`
   body {
     background-color: ${theme.colors.neutral.backgroundWeak};
     color: ${theme.colors.neutral.text};
-    font-family: ${theme.fonts.sansSerif};
+    font-family: ${theme.typography.body.fontFamily};
   }
 
   a {
