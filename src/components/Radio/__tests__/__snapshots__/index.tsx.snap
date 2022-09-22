@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1eeb8md-StyledRadioContainer {
+  .cache-17d84s0-StyledRadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,48 +15,48 @@ exports[`Radio renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='false'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-4urzlw-StyledRadio {
+.cache-b6gkah-StyledRadio {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-4urzlw-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-b6gkah-StyledRadio+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -66,36 +66,36 @@ exports[`Radio renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-b6gkah-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
+.cache-b6gkah-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -118,7 +118,7 @@ exports[`Radio renders correctly 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1eeb8md-StyledRadioContainer e1duuirp0"
+    class="cache-17d84s0-StyledRadioContainer e1duuirp0"
     data-checked="false"
     for="radio-choice"
   >
@@ -126,7 +126,7 @@ exports[`Radio renders correctly 1`] = `
       aria-checked="false"
       aria-disabled="false"
       aria-invalid="false"
-      class="cache-4urzlw-StyledRadio e1duuirp1"
+      class="cache-b6gkah-StyledRadio e1duuirp1"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -166,7 +166,7 @@ exports[`Radio renders correctly 1`] = `
 
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-1eeb8md-StyledRadioContainer {
+  .cache-17d84s0-StyledRadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -179,48 +179,48 @@ exports[`Radio renders correctly when checked 1`] = `
   gap: 8px;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='false'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-4urzlw-StyledRadio {
+.cache-b6gkah-StyledRadio {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-4urzlw-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-b6gkah-StyledRadio+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -230,36 +230,36 @@ exports[`Radio renders correctly when checked 1`] = `
   transform: scale(0);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-b6gkah-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
+.cache-b6gkah-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -282,7 +282,7 @@ exports[`Radio renders correctly when checked 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1eeb8md-StyledRadioContainer e1duuirp0"
+    class="cache-17d84s0-StyledRadioContainer e1duuirp0"
     data-checked="true"
     for="radio-choice"
   >
@@ -291,7 +291,7 @@ exports[`Radio renders correctly when checked 1`] = `
       aria-disabled="false"
       aria-invalid="false"
       checked=""
-      class="cache-4urzlw-StyledRadio e1duuirp1"
+      class="cache-b6gkah-StyledRadio e1duuirp1"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -331,7 +331,7 @@ exports[`Radio renders correctly when checked 1`] = `
 
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1eeb8md-StyledRadioContainer {
+  .cache-17d84s0-StyledRadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -344,48 +344,48 @@ exports[`Radio renders correctly when disabled 1`] = `
   gap: 8px;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='false'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-4urzlw-StyledRadio {
+.cache-b6gkah-StyledRadio {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-4urzlw-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-b6gkah-StyledRadio+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -395,36 +395,36 @@ exports[`Radio renders correctly when disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-b6gkah-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
+.cache-b6gkah-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -447,7 +447,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-1eeb8md-StyledRadioContainer e1duuirp0"
+    class="cache-17d84s0-StyledRadioContainer e1duuirp0"
     data-checked="false"
     for="radio-choice"
   >
@@ -455,7 +455,7 @@ exports[`Radio renders correctly when disabled 1`] = `
       aria-checked="false"
       aria-disabled="true"
       aria-invalid="false"
-      class="cache-4urzlw-StyledRadio e1duuirp1"
+      class="cache-b6gkah-StyledRadio e1duuirp1"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -496,7 +496,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 
 exports[`Radio renders correctly when error 1`] = `
 <DocumentFragment>
-  .cache-1eeb8md-StyledRadioContainer {
+  .cache-17d84s0-StyledRadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -509,48 +509,48 @@ exports[`Radio renders correctly when error 1`] = `
   gap: 8px;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='false'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1eeb8md-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=radio-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1eeb8md-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-17d84s0-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-4urzlw-StyledRadio {
+.cache-b6gkah-StyledRadio {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-4urzlw-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-b6gkah-StyledRadio+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -560,36 +560,36 @@ exports[`Radio renders correctly when error 1`] = `
   transform: scale(0);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-b6gkah-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
+.cache-b6gkah-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -612,7 +612,7 @@ exports[`Radio renders correctly when error 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1eeb8md-StyledRadioContainer e1duuirp0"
+    class="cache-17d84s0-StyledRadioContainer e1duuirp0"
     data-checked="false"
     data-error="Invalid value"
     for="radio-choice"
@@ -621,7 +621,7 @@ exports[`Radio renders correctly when error 1`] = `
       aria-checked="false"
       aria-disabled="false"
       aria-invalid="true"
-      class="cache-4urzlw-StyledRadio e1duuirp1"
+      class="cache-b6gkah-StyledRadio e1duuirp1"
       id="radio-choice"
       name="radio"
       tabindex="0"
@@ -661,7 +661,7 @@ exports[`Radio renders correctly when error 1`] = `
 
 exports[`Radio renders without name 1`] = `
 <DocumentFragment>
-  .cache-pjwdt7-StyledRadioContainer {
+  .cache-7bokbk-StyledRadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -674,48 +674,48 @@ exports[`Radio renders without name 1`] = `
   gap: 8px;
 }
 
-.cache-pjwdt7-StyledRadioContainer[aria-disabled='false'] {
+.cache-7bokbk-StyledRadioContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-pjwdt7-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice]+.e1duuirp2 {
+.cache-7bokbk-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice]+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-pjwdt7-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice]+.e1duuirp2 .e1duuirp4 {
+.cache-7bokbk-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-pjwdt7-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice][aria-invalid='true']+.e1duuirp2 {
+.cache-7bokbk-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-pjwdt7-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-7bokbk-StyledRadioContainer:hover[aria-disabled='false'] .e1duuirp1[id=:r2:-choice][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-pjwdt7-StyledRadioContainer[aria-disabled='true'] {
+.cache-7bokbk-StyledRadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-pjwdt7-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
+.cache-7bokbk-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-pjwdt7-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-7bokbk-StyledRadioContainer[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-4urzlw-StyledRadio {
+.cache-b6gkah-StyledRadio {
   visibility: hidden;
   position: absolute;
   cursor: pointer;
 }
 
-.cache-4urzlw-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-b6gkah-StyledRadio+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -725,36 +725,36 @@ exports[`Radio renders without name 1`] = `
   transform: scale(0);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-b6gkah-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-4urzlw-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
-  fill: #390171;
+.cache-b6gkah-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 {
   background-color: #eeeeff;
-  fill: #390171;
+  fill: #4f0599;
 }
 
-.cache-4urzlw-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-4urzlw-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-b6gkah-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -777,7 +777,7 @@ exports[`Radio renders without name 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-pjwdt7-StyledRadioContainer e1duuirp0"
+    class="cache-7bokbk-StyledRadioContainer e1duuirp0"
     data-checked="false"
     for=":r2:-choice"
   >
@@ -785,7 +785,7 @@ exports[`Radio renders without name 1`] = `
       aria-checked="false"
       aria-disabled="true"
       aria-invalid="false"
-      class="cache-4urzlw-StyledRadio e1duuirp1"
+      class="cache-b6gkah-StyledRadio e1duuirp1"
       disabled=""
       id=":r2:-choice"
       name=":r2:"
