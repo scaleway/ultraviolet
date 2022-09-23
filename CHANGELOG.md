@@ -1,3 +1,10 @@
+## [0.191.1](https://github.com/scaleway/scaleway-ui/compare/v0.191.0...v0.191.1) (2022-09-23)
+
+
+### :bug: Bug Fixes
+
+* **Placeholder:** set max-width on Line to avoid overflow ([#1891](https://github.com/scaleway/scaleway-ui/issues/1891)) ([5a4dcfa](https://github.com/scaleway/scaleway-ui/commit/5a4dcfad192cd0beb0cb8bd0067a3a9e7d55b802))
+
 ## [0.191.0](https://github.com/scaleway/scaleway-ui/compare/v0.190.7...v0.191.0) (2022-09-23)
 
 
