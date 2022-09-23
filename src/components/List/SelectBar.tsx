@@ -32,7 +32,7 @@ const StyledContainer = styled.div`
   justify-content: flex-end;
 `
 
-type ListSelectBarProps<T> = {
+export type ListSelectBarProps<T> = {
   text?: ReactNode | ((length: number) => string)
   children?:
     | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactNode)
