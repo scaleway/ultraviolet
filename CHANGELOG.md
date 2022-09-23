@@ -1,3 +1,10 @@
+## [0.191.0](https://github.com/scaleway/scaleway-ui/compare/v0.190.7...v0.191.0) (2022-09-23)
+
+
+### :gear: Features
+
+* **font:** new code font and new line height ([#1892](https://github.com/scaleway/scaleway-ui/issues/1892)) ([3cbb51b](https://github.com/scaleway/scaleway-ui/commit/3cbb51bab743280a2fa15739f688801a83a1423d))
+
 ## [0.190.7](https://github.com/scaleway/scaleway-ui/compare/v0.190.6...v0.190.7) (2022-09-23)
 
 
