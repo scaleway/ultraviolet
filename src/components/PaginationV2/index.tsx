@@ -25,11 +25,11 @@ const PageSwitchContainer = styled.div`
 
 const StyledPageButton = styled.button`
   color: ${({ theme }) => theme.colors.neutral.textStrong};
-  line-height: 24px;
+  line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
+  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.fontWeight};
   width: 48px;
   height: 48px;
-  font-size: 16px;
-  font-weight: 500;
   cursor: pointer;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   border: 1px solid transparent;
