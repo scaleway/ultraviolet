@@ -1,7 +1,6 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import Box, { BoxProps } from '../Box'
 import Block from './Block'
 import Blocks from './Blocks'
 import BoxWithIcon from './BoxWithIcon'
@@ -19,7 +18,7 @@ const shineAnimation = keyframes`
   }
 `
 
-const StyledContainer = styled(Box)`
+const StyledContainer = styled.div`
   position: relative;
   display: block;
   width: 100%;
@@ -65,18 +64,19 @@ type PlaceholderProps = {
   variant?: PlaceholderVariant
   length?: number
   col?: number
-} & BoxProps
+  className?: string
+}
 
 const Placeholder = ({
   variant = 'blocks',
   length,
   col,
-  ...props
+  className,
 }: PlaceholderProps) => {
   const Component = variants[variant]
 
   return (
-    <StyledContainer {...props}>
+    <StyledContainer className={className}>
       <Component length={length} col={col} />
 
       <StyledDiv />
