@@ -1,3 +1,10 @@
+## [0.192.0](https://github.com/scaleway/scaleway-ui/compare/v0.191.1...v0.192.0) (2022-09-23)
+
+
+### :gear: Features
+
+* **list:** add correct type in SelectBar props ([#1901](https://github.com/scaleway/scaleway-ui/issues/1901)) ([2e6de9d](https://github.com/scaleway/scaleway-ui/commit/2e6de9d10314d3e39cdff14a58fa1b9e6ee5b336))
+
 ## [0.191.1](https://github.com/scaleway/scaleway-ui/compare/v0.191.0...v0.191.1) (2022-09-23)
 
 
