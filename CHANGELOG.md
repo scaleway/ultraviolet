@@ -1,3 +1,10 @@
+## [0.190.7](https://github.com/scaleway/scaleway-ui/compare/v0.190.6...v0.190.7) (2022-09-23)
+
+
+### :bug: Bug Fixes
+
+* radio and checkbox input ([#1898](https://github.com/scaleway/scaleway-ui/issues/1898)) ([4d5e9f5](https://github.com/scaleway/scaleway-ui/commit/4d5e9f568e91b2ff007b3ddda2e7cda441206fd2))
+
 ## [0.190.6](https://github.com/scaleway/scaleway-ui/compare/v0.190.5...v0.190.6) (2022-09-22)
 
 
