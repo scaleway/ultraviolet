@@ -20,7 +20,7 @@ import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Placeholder from '../Placeholder'
 import Text from '../Text'
-import SelectBar from './SelectBar'
+import SelectBar, { ListSelectBarProps } from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
   ExpandedContentProps,
@@ -127,7 +127,7 @@ export type ListProps<DataType> = {
       | ((props: { children: ReactNode }) => ReactElement | null)
       | ((props: { children: ReactNode }) => ReactElement | null)
     data: DataType[]
-    SelectBar: typeof SelectBar
+    SelectBar: (props: ListSelectBarProps<DataType>) => JSX.Element | null
     Header: () => JSX.Element
     Row: (props: ListRowProps) => JSX.Element
     ExpendableContent: (props: ExpandedContentProps) => JSX.Element
@@ -492,7 +492,7 @@ function List<DataType extends Record<string, unknown>>(
 
     return {
       Body,
-      SelectBar,
+      SelectBar: SelectBar<DataType>,
       ...variantFound,
       Cell: variantFound.Cell,
       ExpendableContent:
