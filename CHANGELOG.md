@@ -1,3 +1,11 @@
+## [0.193.0](https://github.com/scaleway/scaleway-ui/compare/v0.192.0...v0.193.0) (2022-09-23)
+
+
+### :gear: Features
+
+* **Placeholder:** drop Box ([#1896](https://github.com/scaleway/scaleway-ui/issues/1896)) ([bf54c16](https://github.com/scaleway/scaleway-ui/commit/bf54c168f837af7794daba24a4c1b0b62e083db4))
+* remove Range component ([#1900](https://github.com/scaleway/scaleway-ui/issues/1900)) ([c7bb130](https://github.com/scaleway/scaleway-ui/commit/c7bb13039944c89ef7788c9bdf8f13f8fa204886))
+
 ## [0.192.0](https://github.com/scaleway/scaleway-ui/compare/v0.191.1...v0.192.0) (2022-09-23)
 
 
