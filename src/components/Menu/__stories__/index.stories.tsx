@@ -22,7 +22,7 @@ export default {
   title: 'Components/Navigation/Menu',
 } as ComponentMeta<typeof Menu>
 
-export { Default } from './Default'
+export { Playground } from './Playground'
 export { Variants } from './Variants'
 export { Borderless } from './Borderless'
 export { ChildrenProps } from './ChildrenProps'

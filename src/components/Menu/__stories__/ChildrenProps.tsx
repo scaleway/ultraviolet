@@ -35,8 +35,8 @@ ChildrenProps.parameters = {
     source: {
       code: customCodeSnippet,
     },
-    storyDescription:
-      'Use children props :\n- `toggle` to toggle menu with action',
+    storyDescription: `Use children props :
+- \`toggle\` to toggle menu with action`,
   },
 }
 

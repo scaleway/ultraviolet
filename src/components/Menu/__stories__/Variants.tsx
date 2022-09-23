@@ -6,8 +6,10 @@ export const Variants = Template.bind({})
 
 Variants.parameters = {
   docs: {
-    storyDescription:
-      'A set of variant you can add on MenuItem (danger, nav). You can use either props on MenuItem :\n- `onClick` to define menu actions.\n- `to` to define as a `React Router Link`.\n- `href` to define as a native link `a`.',
+    storyDescription: `A set of variant you can add on MenuItem (danger, nav). You can use either props on MenuItem :
+- \`onClick\` to define menu actions.
+- \`to\` to define as a \`React Router Link\`.
+- \`href\` to define as a native link \`a\`.`,
   },
 }
 

@@ -2,20 +2,20 @@ import { fireEvent, screen } from '@storybook/testing-library'
 import Menu from '..'
 import { Template } from './Template'
 
-export const Default = Template.bind({})
+export const Playground = Template.bind({})
 
-Default.args = {
+Playground.args = {
   children: [
     <Menu.Item>Menu Item 1</Menu.Item>,
     <Menu.Item>Menu Item 2</Menu.Item>,
   ],
 }
 
-Default.play = () => {
+Playground.play = () => {
   fireEvent.click(screen.getByRole('button'))
 }
 
-Default.decorators = [
+Playground.decorators = [
   StoryComponent => (
     <div style={{ height: '80px' }}>
       <StoryComponent />
