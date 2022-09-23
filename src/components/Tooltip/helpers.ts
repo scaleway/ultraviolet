@@ -86,8 +86,6 @@ export const computePositions = ({
         })
       : placement
 
-  console.log(placementBasedOnWindowSize)
-
   const {
     top: childrenTop,
     left: childrenLeft,
