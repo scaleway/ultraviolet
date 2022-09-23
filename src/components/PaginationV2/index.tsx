@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import Button from '../Button'
 import Icon from '../Icon'
 import getPageNumbers from './getPageNumbers'
@@ -12,8 +11,8 @@ const PageNumbersContainer = styled.div`
 `
 
 const StyledPageSwitch = styled(Button)`
-  width: ${({ theme }) => theme.space['4']};
-  height: ${({ theme }) => theme.space['6']};
+  width: 32px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,9 +25,9 @@ const PageSwitchContainer = styled.div`
 
 const StyledPageButton = styled.button`
   color: ${({ theme }) => theme.colors.neutral.textStrong};
-  line-height: ${({ theme }) => theme.space['3']};
-  width: ${({ theme }) => theme.space['6']};
-  height: ${({ theme }) => theme.space['6']};
+  line-height: 24px;
+  width: 48px;
+  height: 48px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -87,30 +86,33 @@ function Pagination({
   onChange,
   pageTabCount = 5,
 }: PaginationProps): JSX.Element {
-  const goToFirstPage = () => {
+  const goToFirstPage = useCallback(() => {
     onChange(1)
-  }
+  }, [onChange])
 
-  const goToLastPage = () => {
+  const goToLastPage = useCallback(() => {
     onChange(pageCount)
-  }
+  }, [onChange, pageCount])
 
-  const goToNextPage = () => {
+  const goToNextPage = useCallback(() => {
     onChange(page + 1)
-  }
+  }, [onChange, page])
 
-  const goToPreviousPage = () => {
+  const goToPreviousPage = useCallback(() => {
     onChange(page - 1)
-  }
+  }, [onChange, page])
 
   const pageNumbersToDisplay = useMemo(
     () => (pageCount > 1 ? getPageNumbers(page, pageCount, pageTabCount) : [1]),
     [page, pageCount, pageTabCount],
   )
 
-  const handlePageClick = (pageNumber: number) => () => {
-    onChange(pageNumber)
-  }
+  const handlePageClick = useCallback(
+    (pageNumber: number) => () => {
+      onChange(pageNumber)
+    },
+    [onChange],
+  )
 
   return (
     <div style={{ display: 'flex' }}>
@@ -165,14 +167,6 @@ function Pagination({
       </PageSwitchContainer>
     </div>
   )
-}
-
-Pagination.propTypes = {
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
-  page: PropTypes.number.isRequired,
-  pageCount: PropTypes.number.isRequired,
-  pageTabCount: PropTypes.number,
 }
 
 export default Pagination
