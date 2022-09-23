@@ -70,7 +70,7 @@ const styles: Record<string, (props: StyleProps) => SerializedStyles | string> =
         : '',
     command: ({ theme }: StyleProps) =>
       css`
-        font-family: ${theme?.fonts.monospace};
+        font-family: ${theme?.typography.code.fontFamily};
         font-size: 13px;
         font-weight: 500;
         border-radius: ${theme?.radii.default};

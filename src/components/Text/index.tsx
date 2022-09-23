@@ -58,8 +58,7 @@ const generateStyles = ({
     font-weight: ${theme.typography[variant].weight};
     letter-spacing: ${theme.typography[variant].letterSpacing};
     line-height: ${theme.typography[variant].lineHeight};
-    paragraph-spacing: ${theme.typography[variant].paragraphSpacing};
-    text-case: ${theme.typography[variant].textCase};
+    text-transform: ${theme.typography[variant].textCase};
     text-decoration: ${theme.typography[variant].textDecoration};
 
     ${

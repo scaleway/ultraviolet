@@ -10,6 +10,10 @@ import { light, dark } from './storybookThemes'
 import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
+import AsapBoldWoff2 from './assets/fonts/asap/Asap-Bold.woff2'
+import AsapMediumWoff2 from './assets/fonts/asap/Asap-Medium.woff2'
+import AsapRegularWoff2 from './assets/fonts/asap/Asap-Regular.woff2'
+import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
 
@@ -91,15 +95,45 @@ const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
   ),
   fonts: window.loki?.isRunning
     ? { monospace: 'Helvetica', sansSerif: 'sans-serif' }
-    : theme.fonts,
+    : undefined,
 })
 
 export const globalStyles = (theme: Theme) => css`
   ${normalize()}
 
   body {
-    font-family: ${theme.fonts.sansSerif};
     color: ${theme.colors.neutral.text};
+  }
+`
+
+const fonts = css`
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapRegularWoff2}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapMediumWoff2}) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapBoldWoff2}) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'JetBrains';
+    font-style: normal;
+    src: url(${JetBrains}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
   }
 `
 
@@ -127,7 +161,7 @@ export const decorators = [
         supportedLocales={['en', 'fr', 'es']}
       >
         <ThemeProvider theme={generatedTheme}>
-          <Global styles={[globalStyles]} />
+          <Global styles={[globalStyles, fonts]} />
           <StoryComponent />
         </ThemeProvider>
       </I18n>

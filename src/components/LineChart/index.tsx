@@ -65,7 +65,7 @@ const LineChart = ({
         },
       },
     },
-    fontFamily: theme.fonts.sansSerif,
+    fontFamily: theme.typography.body.fontFamily,
     fontSize: 12,
     textColor: theme.colors.neutral.textWeak,
   }

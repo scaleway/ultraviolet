@@ -40,15 +40,10 @@ const screens = {
 }
 export type ScreenSize = keyof typeof screens
 
-const fonts = {
-  monospace: "'Lucida Console', Monaco, 'Courier New', Courier, monospace",
-  sansSerif: 'Asap, System, sans-serif',
-}
 /* eslint-enable sort-keys */
 
 const theme = {
   colors,
-  fonts,
   radii,
   screens,
   shadows,
@@ -104,7 +99,6 @@ export {
   shadows,
   space,
   radii,
-  fonts,
   screens,
   darkTheme,
   extendTheme,
