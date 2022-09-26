@@ -1,16 +1,19 @@
-import { useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import Placeholder from '../Placeholder'
 import { ListColumn } from './types'
-import { Cell, Row } from './variantProduct'
 
 type LoadingPlaceholderProps<DataType> = {
   totalRows: number
   columns: ListColumn<DataType>[]
+  Cell: ({ children }: { children: ReactNode }) => JSX.Element | null
+  Row: ({ id, children }: { id: string; children: ReactNode }) => JSX.Element
 }
 
 export const LoadingPlaceholder = <DataType,>({
   totalRows,
   columns,
+  Cell,
+  Row,
 }: LoadingPlaceholderProps<DataType>) => {
   const rows = useMemo(() => Array.from({ length: totalRows }), [totalRows])
 

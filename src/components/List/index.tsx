@@ -30,16 +30,8 @@ import type {
   ListRowState,
   ListSort,
 } from './types'
-import * as variantExplorer from './variantExplorer'
-import * as variantProduct from './variantProduct'
-import * as variantTable from './variantTable'
+import { ListVariant, variants } from './variants'
 
-const variants = {
-  explorer: variantExplorer,
-  product: variantProduct,
-  table: variantTable,
-}
-type ListVariant = keyof typeof variants
 type ListRowStates = Record<string, ListRowState>
 
 export type ListRefType<DataType> = {
@@ -82,6 +74,7 @@ function Body<DataType extends Record<string, unknown>>({
     emptyListComponent,
     perPage,
     columns,
+    variant,
   } = useListContext<DataType>()
 
   if (isLoading) {
@@ -90,6 +83,8 @@ function Body<DataType extends Record<string, unknown>>({
         <LoadingPlaceholder<DataType>
           columns={columns}
           totalRows={perPage !== undefined ? perPage : pageData.length}
+          Cell={variants[variant].Cell}
+          Row={variants[variant].Row}
         />
       )
     )
@@ -126,9 +121,7 @@ export type ListProps<DataType> = {
   multiselect?: boolean
   children: (props: {
     Body: (props: BodyProps<DataType>) => JSX.Element
-    Cell:
-      | ((props: { children: ReactNode }) => ReactElement | null)
-      | ((props: { children: ReactNode }) => ReactElement | null)
+    Cell: (props: { children: ReactNode }) => ReactElement | null
     data: DataType[]
     SelectBar: (props: ListSelectBarProps<DataType>) => JSX.Element | null
     Header: () => JSX.Element
@@ -463,6 +456,7 @@ function List<DataType extends Record<string, unknown>>(
       sortedIndex: sort.index,
       sortOrder: sort.order,
       unselectAll,
+      variant,
     }
   }, [
     columns,
@@ -488,6 +482,7 @@ function List<DataType extends Record<string, unknown>>(
     sort.index,
     sortedData,
     unselectAll,
+    variant,
   ])
 
   const childrenProps = useMemo(() => {
@@ -499,7 +494,7 @@ function List<DataType extends Record<string, unknown>>(
       ...variantFound,
       Cell: variantFound.Cell,
       ExpendableContent:
-        (variantFound as typeof variantProduct).ExpendableContent ??
+        (variantFound as typeof variants.product).ExpendableContent ??
         (() => null),
     }
   }, [variant])

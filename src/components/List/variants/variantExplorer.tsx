@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { KeyboardEvent, MouseEvent, useCallback } from 'react'
-import Box from '../Box'
-import Checkbox from '../Checkbox'
-import Tooltip from '../Tooltip'
-import BaseCell from './Cell'
-import SortIcon from './SortIcon'
-import { useListContext } from './context'
-import { ListRowProps } from './types'
+import Box from '../../Box'
+import Checkbox from '../../Checkbox'
+import Tooltip from '../../Tooltip'
+import BaseCell from '../Cell'
+import SortIcon from '../SortIcon'
+import { useListContext } from '../context'
+import { ListRowProps } from '../types'
 
 export const Cell = styled(BaseCell)``
 const StyledRow = styled(Box, {

@@ -1,5 +1,6 @@
 import { ReactNode, createContext, useContext } from 'react'
 import { ListColumn, ListOrder, ListRowState } from './types'
+import type { ListVariant } from './variants'
 
 type ListContextType<DataType extends Record<string, unknown>> = {
   columns: ListColumn<DataType>[]
@@ -25,6 +26,7 @@ type ListContextType<DataType extends Record<string, unknown>> = {
   sortOrder: ListOrder
   unselectAll: () => void
   pageData: DataType[]
+  variant: ListVariant
 }
 
 // @ts-expect-error Here we volontarily ignore generic, generic hint will be given through the consumer
