@@ -228,7 +228,7 @@ function List<DataType extends Record<string, unknown>>(
 
   const pagination = usePagination({
     data: sortedData,
-    isListLoading: isLoading,
+    isLoading,
     onChangePage: onChangePage || setPage,
     onLoadPage: onLoadPage ? handleLoadPage : undefined,
     page,

@@ -12,7 +12,7 @@ export type UsePaginationParams<T> = {
   data: T[]
   page: number
   pageCount?: number
-  isListLoading?: boolean
+  isLoading?: boolean
   onLoadPage?: (params: {
     page: number
     perPage?: number
@@ -42,7 +42,7 @@ const usePagination = <T>({
   data,
   page,
   pageCount,
-  isListLoading,
+  isLoading,
   onLoadPage,
   onChangePage,
   perPage,
@@ -72,14 +72,14 @@ const usePagination = <T>({
   )
 
   useEffect(() => {
-    if (isListLoading) return
+    if (isLoading) return
     setMaxPage(
       pageCount ??
         Math.max(
           ...Object.keys(paginatedData).map(value => parseInt(value, 10)),
         ),
     )
-  }, [isListLoading, pageCount, paginatedData])
+  }, [isLoading, pageCount, paginatedData])
 
   const goToPage = useCallback(
     (wantedPage: number) => {
