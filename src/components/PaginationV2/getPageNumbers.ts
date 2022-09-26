@@ -23,7 +23,7 @@ export default function getPageNumbers(
     start = 1
   }
   if (end < pageCount) {
-    end = end + remaining > pageCount ? pageCount : end + remaining
+    end = Math.min(end + remaining, pageCount)
   }
 
   return Array.from({ length: end - start + 1 }, (_, index) => start + index)

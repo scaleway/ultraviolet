@@ -23,6 +23,10 @@ const PageSwitchContainer = styled.div`
   gap: ${({ theme }) => theme.space['1']};
 `
 
+const StyledContainer = styled.div`
+  display: flex;
+`
+
 const StyledPageButton = styled.button`
   color: ${({ theme }) => theme.colors.neutral.textStrong};
   line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
@@ -115,7 +119,7 @@ function Pagination({
   )
 
   return (
-    <div style={{ display: 'flex' }}>
+    <StyledContainer>
       <PageSwitchContainer>
         <StyledPageSwitch
           aria-label="First"
@@ -165,7 +169,7 @@ function Pagination({
           <Icon name="arrow-right-double" />
         </StyledPageSwitch>
       </PageSwitchContainer>
-    </div>
+    </StyledContainer>
   )
 }
 

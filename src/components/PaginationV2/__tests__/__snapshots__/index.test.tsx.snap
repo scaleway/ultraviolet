@@ -2,7 +2,14 @@
 
 exports[`Pagination should render correctly 1`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,15 +253,15 @@ exports[`Pagination should render correctly 1`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -277,7 +284,7 @@ exports[`Pagination should render correctly 1`] = `
       <button
         aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -296,7 +303,7 @@ exports[`Pagination should render correctly 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="true"
@@ -335,12 +342,12 @@ exports[`Pagination should render correctly 1`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -359,7 +366,7 @@ exports[`Pagination should render correctly 1`] = `
       <button
         aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -385,7 +392,14 @@ exports[`Pagination should render correctly 1`] = `
 
 exports[`Pagination should render correctly component with disabled 1`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -550,15 +564,15 @@ exports[`Pagination should render correctly component with disabled 1`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -581,7 +595,7 @@ exports[`Pagination should render correctly component with disabled 1`] = `
       <button
         aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -600,7 +614,7 @@ exports[`Pagination should render correctly component with disabled 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="false"
@@ -628,12 +642,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -653,7 +667,7 @@ exports[`Pagination should render correctly component with disabled 1`] = `
       <button
         aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -680,7 +694,14 @@ exports[`Pagination should render correctly component with disabled 1`] = `
 
 exports[`Pagination should render correctly component with disabled 2`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -845,15 +866,15 @@ exports[`Pagination should render correctly component with disabled 2`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -876,7 +897,7 @@ exports[`Pagination should render correctly component with disabled 2`] = `
       <button
         aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -895,7 +916,7 @@ exports[`Pagination should render correctly component with disabled 2`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="false"
@@ -923,12 +944,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -948,7 +969,7 @@ exports[`Pagination should render correctly component with disabled 2`] = `
       <button
         aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -975,7 +996,14 @@ exports[`Pagination should render correctly component with disabled 2`] = `
 
 exports[`Pagination should render correctly component with pageTabCount 1`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1130,15 +1158,15 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="false"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1160,7 +1188,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
       <button
         aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1178,7 +1206,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="false"
@@ -1203,12 +1231,12 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1227,7 +1255,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
       <button
         aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1253,7 +1281,14 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
 
 exports[`Pagination should render correctly with pageClick 1`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1408,15 +1443,15 @@ exports[`Pagination should render correctly with pageClick 1`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="false"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1438,7 +1473,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
       <button
         aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1456,7 +1491,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="false"
@@ -1495,12 +1530,12 @@ exports[`Pagination should render correctly with pageClick 1`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1519,7 +1554,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
       <button
         aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-167eu9b-StyledButton-StyledPageSwitch"
         type="button"
       >
         <div
@@ -1545,7 +1580,14 @@ exports[`Pagination should render correctly with pageClick 1`] = `
 
 exports[`Pagination should render correctly with pageCount is 1 1`] = `
 <DocumentFragment>
-  .cache-14uy6tf-PageSwitchContainer {
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-14uy6tf-PageSwitchContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1710,15 +1752,15 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
 }
 
 <div
-    style="display: flex;"
+    class="cache-a1981g-StyledContainer e2j7atg1"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="First"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -1741,7 +1783,7 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
       <button
         aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -1760,7 +1802,7 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg3"
+      class="cache-2sizh-PageNumbersContainer e2j7atg4"
     >
       <button
         aria-current="true"
@@ -1771,12 +1813,12 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
     >
       <button
         aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
@@ -1796,7 +1838,7 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
       <button
         aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg2 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
+        class="e2j7atg3 em6gco80 cache-37zkn6-StyledButton-StyledPageSwitch"
         disabled=""
         type="button"
       >
