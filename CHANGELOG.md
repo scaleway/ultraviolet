@@ -1,3 +1,10 @@
+## [0.194.0](https://github.com/scaleway/scaleway-ui/compare/v0.193.0...v0.194.0) (2022-09-26)
+
+
+### :gear: Features
+
+* make pagination easy to use ([#1894](https://github.com/scaleway/scaleway-ui/issues/1894)) ([2c14da5](https://github.com/scaleway/scaleway-ui/commit/2c14da5d4b6484c71c36f7d073c5b082117accbf))
+
 ## [0.193.0](https://github.com/scaleway/scaleway-ui/compare/v0.192.0...v0.193.0) (2022-09-23)
 
 
