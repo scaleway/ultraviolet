@@ -1,3 +1,10 @@
+## [0.194.1](https://github.com/scaleway/scaleway-ui/compare/v0.194.0...v0.194.1) (2022-09-27)
+
+
+### :bug: Bug Fixes
+
+* **pagination:** do not update max page when list is loading ([#1902](https://github.com/scaleway/scaleway-ui/issues/1902)) ([46ca18a](https://github.com/scaleway/scaleway-ui/commit/46ca18a8678f83ce83b830655e6081113ff7c3c7))
+
 ## [0.194.0](https://github.com/scaleway/scaleway-ui/compare/v0.193.0...v0.194.0) (2022-09-26)
 
 
