@@ -131,25 +131,32 @@ exports[`MarkDown render simple string 1`] = `
   text-decoration-thickness: 2px;
 }
 
-.cache-i5d2y8-StyledText-command-variantStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-family: JetBrains;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 4px;
-  color: #151a2d;
+.cache-46pynu-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   background-color: #f6f6f8;
   padding: 8px;
+}
+
+.cache-1t8vhoi-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     class="ejtitxs0 cache-8d7ye5-StyledContainer"
   >
     <h2
-      class="ejtitxs1 cache-8pvx2m-StyledText-StyledText e1tg3t120"
+      class="ejtitxs2 cache-8pvx2m-StyledText-StyledText e1tg3t120"
     >
       <span>
         I am a Markdown H1
@@ -186,7 +193,7 @@ exports[`MarkDown render simple string 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="ejtitxs2 cache-10iou2z-StyledLink-StyledLink e4bq1r50"
+        class="ejtitxs3 cache-10iou2z-StyledLink-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
       >
         <span>
@@ -204,13 +211,17 @@ exports[`MarkDown render simple string 1`] = `
         I can also render code
       </span>
     </p>
-    <p>
+    <p />
+    <div
+      class="cache-46pynu-Container ejtitxs1"
+    >
       <code
-        class="e1g1zfwd0 cache-i5d2y8-StyledText-command-variantStyles"
+        class="cache-1t8vhoi-StyledText e1tg3t120"
       >
         const example = 1 // Inline code
       </code>
-    </p>
+    </div>
+    <p />
     <pre>
       <code>
           const example = 2
@@ -330,25 +341,32 @@ exports[`MarkDown render simple string with target blank 1`] = `
   vertical-align: middle;
 }
 
-.cache-i5d2y8-StyledText-command-variantStyles {
-  color: #4a4f62;
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
-  font-family: JetBrains;
-  font-size: 13px;
-  font-weight: 500;
-  border-radius: 4px;
-  color: #151a2d;
+.cache-46pynu-Container {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   background-color: #f6f6f8;
   padding: 8px;
+}
+
+.cache-1t8vhoi-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     class="ejtitxs0 cache-8d7ye5-StyledContainer"
   >
     <h2
-      class="ejtitxs1 cache-8pvx2m-StyledText-StyledText e1tg3t120"
+      class="ejtitxs2 cache-8pvx2m-StyledText-StyledText e1tg3t120"
     >
       <span>
         I am a Markdown H1
@@ -385,7 +403,7 @@ exports[`MarkDown render simple string with target blank 1`] = `
         You can find the complete reference 
       </span>
       <a
-        class="ejtitxs2 cache-10iou2z-StyledLink-StyledLink e4bq1r50"
+        class="ejtitxs3 cache-10iou2z-StyledLink-StyledLink e4bq1r50"
         href="https://commonmark.org/help/"
         rel="noopener noreferrer"
         target="_blank"
@@ -417,13 +435,17 @@ exports[`MarkDown render simple string with target blank 1`] = `
         I can also render code
       </span>
     </p>
-    <p>
+    <p />
+    <div
+      class="cache-46pynu-Container ejtitxs1"
+    >
       <code
-        class="e1g1zfwd0 cache-i5d2y8-StyledText-command-variantStyles"
+        class="cache-1t8vhoi-StyledText e1tg3t120"
       >
         const example = 1 // Inline code
       </code>
-    </p>
+    </div>
+    <p />
     <pre>
       <code>
           const example = 2

@@ -6,7 +6,6 @@ import ReactMarkDown from 'react-markdown'
 import Box, { BoxProps } from '../Box'
 import Link from '../Link'
 import Text from '../Text'
-import Typography from '../Typography'
 
 const StyledLink = styled(Link)`
   font-size: inherit;
@@ -14,6 +13,12 @@ const StyledLink = styled(Link)`
 
 const StyledText = styled(Text)`
   margin-top: 0;
+`
+
+const Container = styled.div`
+  display: inline-flex;
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  padding: ${({ theme }) => theme.space['1']};
 `
 
 const headingRenderer = ({
@@ -38,7 +43,11 @@ const headingRenderer = ({
 }
 
 const inlineCodeRenderer = ({ children }: { children: ReactNode }) => (
-  <Typography variant="command">{children}</Typography>
+  <Container>
+    <Text as="code" variant="code">
+      {children}
+    </Text>
+  </Container>
 )
 const textRenderer = ({ children }: { children: ReactNode }) => (
   <span>{children}</span>

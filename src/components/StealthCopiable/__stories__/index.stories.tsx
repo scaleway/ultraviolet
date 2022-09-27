@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
 import StealthCopiable from '..'
-import Typography from '../../Typography'
+import Text from '../../Text'
 
 export default {
   component: StealthCopiable,
@@ -60,7 +60,9 @@ export const ComplexChildren = Template.bind({})
 ComplexChildren.decorators = [
   () => (
     <StealthCopiable>
-      <Typography variant="command">I&apos;m a command Typography</Typography>
+      <Text as="code" variant="code">
+        I&apos;m a command Typography
+      </Text>
     </StealthCopiable>
   ),
 ]
