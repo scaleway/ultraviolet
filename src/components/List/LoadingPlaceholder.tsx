@@ -15,14 +15,16 @@ export const LoadingPlaceholder = <DataType,>({
   Cell,
   Row,
 }: LoadingPlaceholderProps<DataType>) => {
-  const rows = useMemo(() => Array.from({ length: totalRows }), [totalRows])
+  const rows = useMemo(() => Array.from(Array(totalRows).keys()), [totalRows])
 
   return (
     <>
-      {rows.map((_, index) => (
-        <Row id={index.toString()}>
+      {rows.map(index => (
+        <Row id={index.toString()} key={index.toString()}>
           {columns.map(column => (
-            <Cell>{column.label ? <Placeholder variant="line" /> : null}</Cell>
+            <Cell key={column.label}>
+              {column.label ? <Placeholder variant="line" /> : null}
+            </Cell>
           ))}
         </Row>
       ))}
