@@ -26,6 +26,62 @@ export const dataWithLegends = [
     percent: 50,
     value: '20',
   },
+  {
+    color: '#F79E43',
+    id: 'functions',
+    name: 'Serverless Functions',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#8B3DD3',
+    id: 'containers',
+    name: 'Serverless Containers',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#EC5775',
+    id: 's3',
+    name: 'Object Storage',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#43C1A3',
+    id: 'dns',
+    name: 'Domain zones',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#76DFDE',
+    id: 'appleSilicon',
+    name: 'Apple Silicon',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#C2E457',
+    id: 'baremetal',
+    name: 'Baremetal',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#45d69e',
+    id: 'database',
+    name: 'Database',
+    percent: 50,
+    value: '20',
+  },
+  {
+    color: '#ff8c69',
+    id: 'lb',
+    name: 'Load Balancer',
+    percent: 50,
+    value: '20',
+  },
 ]
 
 export const dataWithLegendsAndDetails = [
