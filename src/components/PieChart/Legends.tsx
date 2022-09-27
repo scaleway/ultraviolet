@@ -34,7 +34,7 @@ const List = styled.ul`
   flex-direction: column;
   margin: auto;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
 `
 
 const ListItem = styled.li<{ isFocused: boolean }>`
