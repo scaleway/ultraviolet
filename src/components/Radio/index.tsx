@@ -34,14 +34,12 @@ const StyledIcon = styled.svg<{ size: number }>`
   }
 `
 
-const StyledRadio = styled(ReakitRadio)`
+const StyledRadio = styled(ReakitRadio)<{ size: number }>`
   cursor: pointer;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  height: ${({ size }) => size}px;
+  width: ${({ size }) => size}px;
+  opacity: 0;
   white-space: nowrap;
   border-width: 0;
   & + ${StyledIcon} {
@@ -182,6 +180,7 @@ const Radio = forwardRef(
           name={computedName}
           autoFocus={autoFocus}
           ref={ref}
+          size={size}
         />
         <StyledIcon size={size} viewBox="0 0 24 24">
           <RadioMarkedIcon />
