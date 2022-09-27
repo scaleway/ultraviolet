@@ -4,7 +4,6 @@ import {
   useCallback,
   useEffect,
   useLayoutEffect,
-  useMemo,
   useRef,
   useState,
 } from 'react'
@@ -13,6 +12,7 @@ export type UsePaginationParams<T> = {
   data: T[]
   page: number
   pageCount?: number
+  isLoading?: boolean
   onLoadPage?: (params: {
     page: number
     perPage?: number
@@ -42,6 +42,7 @@ const usePagination = <T>({
   data,
   page,
   pageCount,
+  isLoading,
   onLoadPage,
   onChangePage,
   perPage,
@@ -65,15 +66,20 @@ const usePagination = <T>({
         }, {})
       : { [page]: data },
   )
+  const [maxPage, setMaxPage] = useState<number>(
+    pageCount ??
+      Math.max(...Object.keys(paginatedData).map(value => parseInt(value, 10))),
+  )
 
-  const maxPage = useMemo(() => {
-    if (pageCount) return pageCount
-    const pageDataCount = Math.max(
-      ...Object.keys(paginatedData).map(value => parseInt(value, 10)),
+  useEffect(() => {
+    if (isLoading) return
+    setMaxPage(
+      pageCount ??
+        Math.max(
+          ...Object.keys(paginatedData).map(value => parseInt(value, 10)),
+        ),
     )
-
-    return pageDataCount
-  }, [pageCount, paginatedData])
+  }, [isLoading, pageCount, paginatedData])
 
   const goToPage = useCallback(
     (wantedPage: number) => {
