@@ -32,8 +32,7 @@ const List = styled.ul`
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin: auto;
-  height: 100%;
+  max-height: 100%;
   overflow-y: scroll;
 `
 
