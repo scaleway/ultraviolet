@@ -18,6 +18,7 @@ const testedComponents = [
   'MarkDown',
   'Placeholder',
   'Separator',
+  'Stack',
   'Status',
   'StealthCopiable',
   'Stepper',
