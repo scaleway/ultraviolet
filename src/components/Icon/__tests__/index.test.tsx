@@ -28,5 +28,6 @@ describe('Icon', () => {
     ))
 
   test(`render unknow`, () =>
+    // @ts-expect-error we check a failing case
     shouldMatchEmotionSnapshot(<Icon name="unknown" />))
 })
