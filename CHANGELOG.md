@@ -1,3 +1,22 @@
+## [0.194.2](https://github.com/scaleway/scaleway-ui/compare/v0.194.1...v0.194.2) (2022-09-28)
+
+
+### :zap: Refactor
+
+* **typography:** remove typography ([#1903](https://github.com/scaleway/scaleway-ui/issues/1903)) ([411e5a0](https://github.com/scaleway/scaleway-ui/commit/411e5a0257f9ffb26a2fe1fd8ca7dc83021959c9))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @next/bundle-analyzer to v12.3.1 ([#1884](https://github.com/scaleway/scaleway-ui/issues/1884)) ([3cc458e](https://github.com/scaleway/scaleway-ui/commit/3cc458e8a26cefbef34da76b0bd93cdd631598f0))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.5.15 ([#1890](https://github.com/scaleway/scaleway-ui/issues/1890)) ([5f6883d](https://github.com/scaleway/scaleway-ui/commit/5f6883d0978329d1cdae05d293fc7074bb042ac9)), closes [#1893](https://github.com/scaleway/scaleway-ui/issues/1893) [#1886](https://github.com/scaleway/scaleway-ui/issues/1886) [#1893](https://github.com/scaleway/scaleway-ui/issues/1893) [#1898](https://github.com/scaleway/scaleway-ui/issues/1898) [#1898](https://github.com/scaleway/scaleway-ui/issues/1898) [#1892](https://github.com/scaleway/scaleway-ui/issues/1892) [#1892](https://github.com/scaleway/scaleway-ui/issues/1892) [#1891](https://github.com/scaleway/scaleway-ui/issues/1891) [#1891](https://github.com/scaleway/scaleway-ui/issues/1891) [#1901](https://github.com/scaleway/scaleway-ui/issues/1901) [#1901](https://github.com/scaleway/scaleway-ui/issues/1901) [#1896](https://github.com/scaleway/scaleway-ui/issues/1896) [#1900](https://github.com/scaleway/scaleway-ui/issues/1900) [#1896](https://github.com/scaleway/scaleway-ui/issues/1896) [#1900](https://github.com/scaleway/scaleway-ui/issues/1900) [#1894](https://github.com/scaleway/scaleway-ui/issues/1894) [#1894](https://github.com/scaleway/scaleway-ui/issues/1894) [#1902](https://github.com/scaleway/scaleway-ui/issues/1902) [#1902](https://github.com/scaleway/scaleway-ui/issues/1902) [#1903](https://github.com/scaleway/scaleway-ui/issues/1903)
+
+
+### :bug: Bug Fixes
+
+* **menu:** show args and valid code snippets in menu doc ([#1883](https://github.com/scaleway/scaleway-ui/issues/1883)) ([b439126](https://github.com/scaleway/scaleway-ui/commit/b43912689571b1f3e3db09375b06f2b4704178c5))
+* radio checkbox and selectable card visible input ([#1904](https://github.com/scaleway/scaleway-ui/issues/1904)) ([b2c469b](https://github.com/scaleway/scaleway-ui/commit/b2c469b328029d352584c1a0398d589ff21df1b7))
+
 ## [0.194.1](https://github.com/scaleway/scaleway-ui/compare/v0.194.0...v0.194.1) (2022-09-27)
 
 
