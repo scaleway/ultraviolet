@@ -42,7 +42,7 @@ const Container = styled.div`
   &:hover,
   &:focus-within,
   &:active {
-    &:not([data-error='true'][data-disabled='true']) {
+    &:not([data-error='true']):not([data-disabled='true']) {
       border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
       &[data-cheked='false'] {
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
