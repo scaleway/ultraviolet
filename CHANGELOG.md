@@ -1,3 +1,10 @@
+## [0.195.0](https://github.com/scaleway/scaleway-ui/compare/v0.194.2...v0.195.0) (2022-09-28)
+
+
+### :gear: Features
+
+* **list:** better loading placeholder ([#1895](https://github.com/scaleway/scaleway-ui/issues/1895)) ([aef4827](https://github.com/scaleway/scaleway-ui/commit/aef48276f3e2379675cc0d9f094f686dd77607ec))
+
 ## [0.194.2](https://github.com/scaleway/scaleway-ui/compare/v0.194.1...v0.194.2) (2022-09-28)
 
 
