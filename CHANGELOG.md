@@ -1,3 +1,10 @@
+## [0.196.1](https://github.com/scaleway/scaleway-ui/compare/v0.196.0...v0.196.1) (2022-09-28)
+
+
+### :bug: Bug Fixes
+
+* **PieChart:** allow scroll overflow on Legend ([#1906](https://github.com/scaleway/scaleway-ui/issues/1906)) ([e71d133](https://github.com/scaleway/scaleway-ui/commit/e71d1337a01ba2b0866c6c6134d057a8aec68894))
+
 ## [0.196.0](https://github.com/scaleway/scaleway-ui/compare/v0.195.0...v0.196.0) (2022-09-28)
 
 
