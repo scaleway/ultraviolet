@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme'
-import Box, { BoxProps } from '../Box'
 import Icon, { icons } from '../Icon'
 import Text from '../Text'
 
@@ -67,7 +66,7 @@ const typesDefaultIcons: Record<
 
 type ContainerProps = { variant: AlertVariant; type: AlertType }
 
-const StyledContainer = styled(Box, {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['type', 'variant'].includes(prop),
 })<ContainerProps>`
   display: flex;
@@ -110,7 +109,8 @@ type AlertProps = {
   icon?: ComponentProps<typeof Icon>['name']
   title?: string
   type?: AlertType
-} & BoxProps
+  className?: string
+}
 
 const Alert = ({
   variant = 'standard',
@@ -119,9 +119,9 @@ const Alert = ({
   icon,
   title,
   type = 'warning',
-  ...props
+  className,
 }: AlertProps) => (
-  <StyledContainer type={type} variant={variant} {...props}>
+  <StyledContainer type={type} variant={variant} className={className}>
     <StyledIcon
       name={icon || typesDefaultIcons[type]}
       size={iconSize}
