@@ -109,6 +109,8 @@ type TagsProps = {
   className?: string
 }
 
+const emptyTags: string[] = []
+
 const Tags = ({
   disabled = false,
   id,
@@ -117,7 +119,7 @@ const Tags = ({
   onChange,
   onChangeError,
   placeholder,
-  tags = [],
+  tags = emptyTags,
   variant = 'base',
   className,
 }: TagsProps): JSX.Element => {
