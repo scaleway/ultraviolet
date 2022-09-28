@@ -9,6 +9,9 @@ import ExampleChildren from './ExampleChildren'
 export default {
   component: Pagination,
   parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please use PaginationV2 instead.',
     docs: {
       description: {
         component: 'Pagination can be useful for long listings.',

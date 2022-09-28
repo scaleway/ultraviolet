@@ -444,6 +444,9 @@ function Pagination<T>(
   )
 }
 
+/**
+ * @deprecated Use PaginationV2 instead
+ */
 // @ts-expect-error it breaks on i don't know what
 const PaginationForward = forwardRef(Pagination) as (<T>(
   props: PaginationProps<T> & { ref?: ForwardedRef<PaginationState<T>> },
