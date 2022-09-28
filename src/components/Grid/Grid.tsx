@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
@@ -22,7 +21,10 @@ type GridProps = {
   fluid?: boolean
 } & BoxProps
 
-const StyledGrid = styled(Box, {
+/**
+ * @deprecated
+ */
+const Grid = styled(Box, {
   shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop),
 })<GridProps>`
   width: 100%;
@@ -39,22 +41,5 @@ const StyledGrid = styled(Box, {
           '',
         )}
 `
-
-/**
- * @deprecated
- */
-const Grid = (props: GridProps) => <StyledGrid {...props} />
-
-Grid.propTypes = {
-  children: PropTypes.node.isRequired,
-  /**
-   * If true, take all the parent width
-   */
-  fluid: PropTypes.bool,
-  /**
-   * padding left and right space
-   */
-  gutter: PropTypes.oneOf(Object.keys(space).map(Number) as Spaces[]),
-}
 
 export default Grid

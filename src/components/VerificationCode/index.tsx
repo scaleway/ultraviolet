@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ChangeEvent,
   ClipboardEventHandler,
@@ -227,20 +226,6 @@ const VerificationCode = ({
       ))}
     </div>
   )
-}
-
-VerificationCode.propTypes = {
-  disabled: PropTypes.bool,
-  error: PropTypes.bool,
-  fields: PropTypes.number,
-  initialValue: PropTypes.string,
-  inputId: PropTypes.string,
-  inputStyle: PropTypes.string,
-  onChange: PropTypes.func,
-  onComplete: PropTypes.func,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool,
-  type: PropTypes.oneOf(['text', 'number']),
 }
 
 export default VerificationCode

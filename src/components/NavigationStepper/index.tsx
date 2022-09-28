@@ -1,8 +1,7 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useMedia } from '@scaleway/use-media'
-import PropTypes from 'prop-types'
-import { Children, ReactNode, WeakValidationMap, isValidElement } from 'react'
+import { Children, ReactNode, isValidElement } from 'react'
 import Icon from '../Icon'
 import Loader from '../Loader'
 
@@ -90,11 +89,6 @@ type StepProps = { children: ReactNode; isLoading?: boolean }
 export const Step = ({ children }: StepProps) => children as JSX.Element
 Step.displayName = 'NavigationStepper.Step'
 
-Step.propTypes = {
-  children: PropTypes.node.isRequired,
-  isLoading: PropTypes.bool,
-}
-
 const StyledUl = styled('ul', {
   shouldForwardProp: prop => !['count', 'condensed'].includes(prop),
 })<{ count: number; condensed?: boolean }>`
@@ -140,7 +134,6 @@ type NavigationStepperType = ((
   props: NavigationStepperProps,
 ) => JSX.Element) & {
   Step: (props: StepProps) => JSX.Element
-  propTypes: WeakValidationMap<NavigationStepperProps>
 }
 
 const NavigationStepper: NavigationStepperType = ({
@@ -210,12 +203,5 @@ const NavigationStepper: NavigationStepperType = ({
 }
 
 NavigationStepper.Step = Step
-
-NavigationStepper.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  className: PropTypes.string,
-  condensed: PropTypes.bool,
-  step: PropTypes.number,
-}
 
 export default NavigationStepper

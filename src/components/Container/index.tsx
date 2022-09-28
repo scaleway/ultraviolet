@@ -1,7 +1,6 @@
 import { SerializedStyles } from '@emotion/serialize'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { ReactNode, Validator } from 'react'
+import { ReactNode } from 'react'
 import BorderedBox from '../BorderedBox'
 import Box, { BoxProps } from '../Box'
 import Text from '../Text'
@@ -54,7 +53,9 @@ const TitleContainer = styled.div`
 type ContainerProps = ContainerBaseProps & {
   boxStyle?: SerializedStyles
   children: ReactNode
+  /** Header can be a string but also a component. */
   header?: ReactNode
+  /** Right title can be a string but also a component, like header properties does. */
   rightTitle?: ReactNode
   subtitle?: string
   title: string
@@ -93,23 +94,5 @@ const Container = ({
     </StyledBox>
   </StyledContainer>
 )
-
-Container.propTypes = {
-  boxStyle: PropTypes.shape({}) as Validator<SerializedStyles>,
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  edition: PropTypes.bool,
-  /**
-   * Header can be a string but also a component.
-   */
-  header: PropTypes.node,
-  /**
-   * Right title can be a string but also a component, like header properties does.
-   */
-  rightTitle: PropTypes.node,
-  small: PropTypes.bool,
-  subtitle: PropTypes.string,
-  title: PropTypes.string.isRequired,
-}
 
 export default Container

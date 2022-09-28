@@ -1,6 +1,5 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Children, Fragment, ReactNode } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
@@ -185,12 +184,6 @@ const Stepper = ({
       })}
     </StyledContainer>
   )
-}
-
-Stepper.propTypes = {
-  animated: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  selected: PropTypes.number,
 }
 
 export default Stepper

@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
 import Box, { BoxProps } from '../Box'
@@ -102,11 +101,6 @@ const RootRendererComponent = ({
     {children}
   </StyledContainer>
 )
-RootRendererComponent.propTypes = {
-  children: PropTypes.node,
-  inline: PropTypes.bool,
-  parentProps: PropTypes.shape({}),
-}
 
 const rootRenderer =
   (inline: boolean, parentProps: BoxProps) =>
@@ -147,12 +141,5 @@ const MarkDown = ({
     escapeHtml={escapeHtml}
   />
 )
-
-MarkDown.propTypes = {
-  escapeHtml: PropTypes.bool,
-  inline: PropTypes.bool,
-  linkTarget: PropTypes.string,
-  source: PropTypes.string.isRequired,
-}
 
 export default MarkDown

@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { useCallback, useEffect, useState } from 'react'
 import Text from '../Text'
 
@@ -115,29 +114,6 @@ const PasswordStrengthMeter = ({
       </StyledWrapper>
     </div>
   )
-}
-
-PasswordStrengthMeter.propTypes = {
-  /**
-   * A function that should return a score based on password. The higher score is the stronger password is.
-   */
-  estimate: PropTypes.func,
-  onChange: PropTypes.func,
-  password: PropTypes.string,
-  /**
-   * Strength is used for defining different color and text associated with it.
-   */
-  strength: PropTypes.arrayOf(
-    PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      t: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
-  title: PropTypes.string.isRequired,
-  /**
-   * An array of string that defines what word shouldn't be used in the password.
-   */
-  userInputs: PropTypes.arrayOf<string>(PropTypes.string.isRequired),
 }
 
 export default PasswordStrengthMeter

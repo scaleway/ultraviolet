@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 
 const StyledWrapper = styled.div`
@@ -163,9 +162,5 @@ const Slider = ({ children }: SliderProps): JSX.Element => {
 }
 
 Slider.Item = SliderItem
-
-Slider.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Slider

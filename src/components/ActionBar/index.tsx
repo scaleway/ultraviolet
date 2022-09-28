@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 
 const HEIGHT = 56
@@ -42,12 +41,5 @@ const ActionBar = ({
     {children}
   </StyledDiv>
 )
-
-ActionBar.propTypes = {
-  'aria-modal': PropTypes.oneOf(['true', 'false']),
-  children: PropTypes.node.isRequired,
-  rank: PropTypes.number,
-  role: PropTypes.string,
-}
 
 export default ActionBar

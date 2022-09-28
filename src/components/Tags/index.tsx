@@ -1,6 +1,5 @@
 import { Theme } from '@emotion/react'
 import styled from '@xstyled/emotion'
-import PropTypes from 'prop-types'
 import {
   ChangeEvent,
   ClipboardEventHandler,
@@ -62,7 +61,6 @@ const variants = {
 } as const
 
 type Variant = keyof typeof variants
-const keysVariant = Object.keys(variants) as Variant[]
 
 interface TagsContainersProps {
   variant: Variant
@@ -119,7 +117,7 @@ const Tags = ({
   onChange,
   onChangeError,
   placeholder,
-  tags,
+  tags = [],
   variant = 'base',
   className,
 }: TagsProps): JSX.Element => {
@@ -260,29 +258,6 @@ const Tags = ({
       ) : null}
     </TagsContainer>
   )
-}
-
-Tags.defaultProps = {
-  tags: [],
-}
-
-Tags.propTypes = {
-  disabled: PropTypes.bool,
-  id: PropTypes.string,
-  manualInput: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  onChange: PropTypes.func,
-  onChangeError: PropTypes.func,
-  placeholder: PropTypes.string,
-  tags: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.shape({
-        label: PropTypes.string,
-      }),
-    ]),
-  ),
-  variant: PropTypes.oneOf(keysVariant),
 }
 
 export default Tags

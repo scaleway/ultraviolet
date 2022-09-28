@@ -1,5 +1,4 @@
 import { css, useTheme } from '@emotion/react'
-import PropTypes from 'prop-types'
 import { Col, Grid, Row } from '../Grid'
 import Icon from '../Icon'
 
@@ -58,16 +57,6 @@ const PasswordCheck = ({ rules }: PasswordCheckProps) => {
       </Row>
     </Grid>
   )
-}
-
-PasswordCheck.propTypes = {
-  rules: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      valid: PropTypes.bool.isRequired,
-    }).isRequired,
-  ).isRequired,
 }
 
 export default PasswordCheck

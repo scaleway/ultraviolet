@@ -1,10 +1,7 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
-  AriaAttributes,
   Children,
   ReactNode,
-  WeakValidationMap,
   cloneElement,
   isValidElement,
   useMemo,
@@ -135,9 +132,18 @@ interface ItemProps {
     | 'location'
     | 'date'
     | 'time'
+  /**
+   * Make the component act a `Link` tag
+   */
   to?: string
   disabled?: boolean
+  /**
+   * Will be automatically injected by Breadcrumbs parent tag
+   */
   variant?: Variants
+  /**
+   * Id of the step, automatically injected by Breadcrumbs parent tag
+   */
   step?: number
   onClick?: (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>,
@@ -176,35 +182,6 @@ export const Item = ({
   )
 }
 
-Item.propTypes = {
-  'aria-current': PropTypes.oneOf<AriaAttributes['aria-current']>([
-    true,
-    false,
-    'false',
-    'true',
-    'page',
-    'step',
-    'location',
-    'date',
-    'time',
-  ]),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  /**
-   * Id of the step, automatically injected by Breadcrumbs parent tag
-   */
-  step: PropTypes.number,
-  /**
-   * Make the component act a `Link` tag
-   */
-  to: PropTypes.string,
-  /**
-   * Will be automatically injected by Breadcrumbs parent tag
-   */
-  variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
-}
-
 interface BreadcrumbsProps {
   variant?: Variants
   selected?: number
@@ -213,7 +190,6 @@ interface BreadcrumbsProps {
 
 type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
   Item: typeof Item
-  propTypes: WeakValidationMap<BreadcrumbsProps>
 }
 
 const Breadcrumbs: BreadcrumbsType = ({
@@ -243,12 +219,6 @@ const Breadcrumbs: BreadcrumbsType = ({
       </StyledOl>
     </nav>
   )
-}
-
-Breadcrumbs.propTypes = {
-  children: PropTypes.node.isRequired,
-  selected: PropTypes.number,
-  variant: PropTypes.oneOf<Variants>(breadcrumbsVariants),
 }
 
 Breadcrumbs.Item = Item

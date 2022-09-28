@@ -2,7 +2,6 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { DatumValue } from '@nivo/core'
 import { Serie } from '@nivo/line'
-import PropTypes from 'prop-types'
 import { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import Checkbox from '../Checkbox'
@@ -57,11 +56,6 @@ const Cell = ({ value, variant }: CellProps) => (
     {value as string | number}
   </StyledText>
 )
-
-Cell.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  variant: PropTypes.string,
-}
 
 const CellValueContainer = styled.div`
   display: flex;
@@ -142,21 +136,5 @@ const CustomLegend = ({
     </div>
   </StyledContainer>
 )
-
-CustomLegend.propTypes = {
-  axisTransformer: PropTypes.func,
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      data: PropTypes.arrayOf(
-        PropTypes.shape({
-          y: PropTypes.number,
-        }).isRequired,
-      ).isRequired,
-      id: PropTypes.string.isRequired,
-    }).isRequired,
-  ),
-  selected: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  setSelected: PropTypes.func.isRequired,
-}
 
 export default CustomLegend

@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import { ListOrder } from './types'
 
@@ -58,11 +57,6 @@ const SortIcon = ({
       />
     </StyledContainer>
   )
-}
-
-SortIcon.propTypes = {
-  active: PropTypes.bool,
-  order: PropTypes.oneOf(['asc', 'desc']),
 }
 
 export default SortIcon

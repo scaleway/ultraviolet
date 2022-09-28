@@ -2,8 +2,7 @@ import { useTheme } from '@emotion/react'
 import { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
 import { LineSvgProps, Point, ResponsiveLine, Serie } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
-import PropTypes from 'prop-types'
-import { ComponentProps, Validator, useEffect, useState } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import CustomLegend from './CustomLegend'
 import LineChartTooltip from './Tooltip'
@@ -134,44 +133,6 @@ const LineChart = ({
       )}
     </>
   )
-}
-
-LineChart.propTypes = {
-  axisFormatters: PropTypes.shape({
-    bottom: PropTypes.func,
-    left: PropTypes.func,
-    right: PropTypes.func,
-    top: PropTypes.func,
-  }) as Validator<LineChartProps['axisFormatters']>,
-  chartProps: PropTypes.shape({}),
-  data: PropTypes.arrayOf(PropTypes.shape({})) as Validator<Serie[]>,
-  height: PropTypes.number,
-  margin: PropTypes.shape({
-    bottom: PropTypes.number,
-    left: PropTypes.number,
-    right: PropTypes.number,
-    top: PropTypes.number,
-  }) as Validator<LineChartProps['margin']>,
-  pointFormatters: PropTypes.shape({
-    x: PropTypes.func,
-    y: PropTypes.func,
-  }) as Validator<LineChartProps['pointFormatters']>,
-  tickValues: PropTypes.shape({
-    bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }) as Validator<LineChartProps['tickValues']>,
-  withLegend: PropTypes.bool,
-  xScale: PropTypes.shape({
-    format: PropTypes.string,
-    precision: PropTypes.string,
-    type: PropTypes.string,
-    useUTC: PropTypes.bool,
-  }) as Validator<LineChartProps['xScale']>,
-  yScale: PropTypes.shape({
-    type: PropTypes.string,
-  }) as Validator<LineChartProps['yScale']>,
 }
 
 export default LineChart

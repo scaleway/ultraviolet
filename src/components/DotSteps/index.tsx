@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 
 const dotSize = 10
 
@@ -72,8 +71,18 @@ const DotWrapper = styled('div', {
 `
 
 type DotStepsProps = {
+  /**
+   * Change the step when clicking on the dot
+   * @param {number} clickedStep The clicked step
+   */
   setStep(index: number): void
+  /**
+   * Current step
+   */
   step?: number
+  /**
+   * Total steps length
+   */
   steps?: number
 }
 
@@ -88,21 +97,5 @@ const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
     ))}
   </DotWrapper>
 )
-
-DotSteps.propTypes = {
-  /**
-   * Change the step when clicking on the dot
-   * @param {number} clickedStep The clicked step
-   */
-  setStep: PropTypes.func.isRequired,
-  /**
-   * Current step
-   */
-  step: PropTypes.number,
-  /**
-   * Total steps length
-   */
-  steps: PropTypes.number,
-}
 
 export default DotSteps

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import IconPlaceholder from './IconPlaceholder'
 import Line from './Line'
 
@@ -29,10 +28,5 @@ const Blocks = ({ col = 4, length = 8 }: { col?: number; length?: number }) => (
     ))}
   </StyledContainer>
 )
-
-Blocks.propTypes = {
-  col: PropTypes.number,
-  length: PropTypes.number,
-}
 
 export default Blocks

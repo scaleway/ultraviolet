@@ -49,9 +49,10 @@
     ],
     // React
     "react/jsx-props-no-spreading": "warn",
-    "react/sort-prop-types": "off",
     "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
-
+    "react/sort-prop-types": "off",
+    "react/prop-types": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
 
     // emotion
     "@emotion/styled-import": "error",
@@ -60,8 +61,7 @@
     "@emotion/syntax-preference": [
       "error",
       "string"
-    ],
-    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
+    ]
   },
   "overrides": [
     {
@@ -75,7 +75,6 @@
       "rules": {
         "no-console": "off",
         "no-alert": "off",
-        "react/prop-types": "off",
         "react/jsx-props-no-spreading": "off"
       }
     }

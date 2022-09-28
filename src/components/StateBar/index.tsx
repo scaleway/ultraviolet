@@ -69,7 +69,6 @@ type StateBarType = ((props: {
   State: (props: StateBarStateProps) => JSX.Element
 }
 
-// eslint-disable-next-line react/prop-types
 const StateBar: StateBarType = ({ children, className }) => (
   <div className={className}>{children}</div>
 )

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 
@@ -18,7 +17,7 @@ type ExpandableProps = {
   opened?: boolean
 } & BoxProps
 
-const StyledExpandable = styled(Box, {
+const Expandable = styled(Box, {
   shouldForwardProp: prop => !['opened', 'height'].includes(prop),
 })<ExpandableProps>`
   transition: max-height 300ms ease-out, opacity 300ms ease-out;
@@ -37,13 +36,5 @@ const StyledExpandable = styled(Box, {
     overflow: visible;
   `}
 `
-
-const Expandable = (props: ExpandableProps) => <StyledExpandable {...props} />
-
-Expandable.propTypes = {
-  children: PropTypes.node.isRequired,
-  height: PropTypes.number,
-  opened: PropTypes.bool,
-}
 
 export default Expandable

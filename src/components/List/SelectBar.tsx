@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
@@ -67,11 +66,6 @@ function SelectBar<T extends Record<string, unknown>>({
       </StyledContainer>
     </ActionBar>
   ) : null
-}
-
-SelectBar.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
-  text: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 }
 
 export default SelectBar

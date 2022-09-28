@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Color } from '../../theme'
 
 const bordersStyles = ({
@@ -74,12 +73,5 @@ const Sphere = ({
     )}
   </StyledSphere>
 )
-
-Sphere.propTypes = {
-  colors: PropTypes.arrayOf(PropTypes.string.isRequired),
-  size: PropTypes.number,
-  text: PropTypes.string,
-  textColor: PropTypes.string,
-}
 
 export default Sphere

@@ -1,7 +1,6 @@
 import { useTheme } from '@emotion/react'
-import PropTypes from 'prop-types'
 import { ComponentProps, ReactNode } from 'react'
-import Icon, { icons } from '../Icon'
+import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 
 type TooltipIconProps = {
@@ -34,15 +33,6 @@ const TooltipIcon = ({
       />
     </Tooltip>
   )
-}
-
-TooltipIcon.propTypes = {
-  baseId: PropTypes.string,
-  color: PropTypes.string,
-  name: PropTypes.oneOf(icons),
-  size: PropTypes.number,
-  tooltip: PropTypes.node.isRequired,
-  verticalAlign: PropTypes.string,
 }
 
 export default TooltipIcon

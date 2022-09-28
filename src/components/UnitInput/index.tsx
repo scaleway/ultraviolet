@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ComponentProps, useEffect, useState } from 'react'
 import RichSelect, { SelectOption } from '../RichSelect'
 import type { WithSelectProps } from '../RichSelect'
@@ -78,16 +77,22 @@ type UnitInputProps = Omit<
   'defaultValue'
 > & {
   name?: string
+  /** The default value in the TextInput */
   defaultValue?: number
   disabled?: boolean
   maxValue?: number
   minValue?: number
+  /**
+   * @param {{value, unit}} UnitInputValue The value containing the unit select and the value in the TextInput
+   */
   onChange?: (value: UnitInputValue) => void
+  /** Possible RichSelect options */
   options?: SelectOption[]
   placeholder?: string
   richSelectWidth?: number
   size?: string
   textBoxWidth?: number
+  /** The default selected option in the RichSelect */
   defaultOption?: SelectOption
 }
 
@@ -150,41 +155,6 @@ const UnitInput = ({
       />
     </div>
   )
-}
-
-UnitInput.propTypes = {
-  /**
-   * The default selected option in the RichSelect
-   */
-  defaultOption: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-  }),
-  /**
-   * The default value in the TextInput
-   */
-  defaultValue: PropTypes.number,
-  disabled: PropTypes.bool,
-  maxValue: PropTypes.number,
-  minValue: PropTypes.number,
-  name: PropTypes.string.isRequired,
-  /**
-   * @param {{value, unit}} currentValue The value containing the unit select and the value in the TextInput
-   */
-  onChange: PropTypes.func,
-  /**
-   * Possible RichSelect options
-   */
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-    }).isRequired,
-  ),
-  placeholder: PropTypes.string,
-  richSelectWidth: PropTypes.number,
-  size: PropTypes.oneOf(Object.keys(sizesHeight)),
-  textBoxWidth: PropTypes.number,
 }
 
 export default UnitInput

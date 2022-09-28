@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Color } from '../../theme'
 
 const shineAnimation = keyframes`
@@ -60,6 +59,7 @@ const StyledFilled = styled('div', {
 type ProgressBarProps = {
   variant?: string
   value?: number
+  /** Put ProgressBar in a loading state */
   progress?: boolean
   className?: string
 }
@@ -84,14 +84,5 @@ const ProgressBar = ({
     )}
   </StyledProgressContainer>
 )
-
-ProgressBar.propTypes = {
-  /**
-   * Put ProgressBar in a loading state
-   */
-  progress: PropTypes.bool,
-  value: PropTypes.number,
-  variant: PropTypes.oneOf(progressBarVariants),
-}
 
 export default ProgressBar

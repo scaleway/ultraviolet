@@ -1,6 +1,5 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { forwardRef, useMemo } from 'react'
 import * as React from 'react'
 import { Color } from '../../theme'
@@ -451,14 +450,5 @@ const Icon = forwardRef<SVGElement, IconProps>(
     )
   },
 )
-
-Icon.propTypes = {
-  color: PropTypes.string,
-  name: PropTypes.oneOf(icons),
-  prominence: PropTypes.oneOf(['default', 'strong', 'stronger', 'weak']),
-  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  title: PropTypes.string,
-  verticalAlign: PropTypes.oneOf(['top', 'middle', 'bottom']),
-}
 
 export default Icon

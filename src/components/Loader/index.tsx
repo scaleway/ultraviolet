@@ -1,6 +1,5 @@
 import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { Color } from '../../theme'
 
 const VIEWBOX_WIDTH = 100
@@ -106,23 +105,6 @@ const Loader = ({
       ) : null}
     </svg>
   )
-}
-
-Loader.propTypes = {
-  active: PropTypes.bool,
-  color: PropTypes.string,
-  /**
-   * Label should be defined for accessibility, to indicate what is loading
-   */
-  label: PropTypes.string,
-  percentage: PropTypes.number,
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  strokeWidth: PropTypes.number,
-  /**
-   * Text is placed in center of ProgressCircle.
-   */
-  text: PropTypes.string,
-  trailColor: PropTypes.string,
 }
 
 export default Loader

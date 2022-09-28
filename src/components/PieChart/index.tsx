@@ -2,8 +2,7 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
-import PropTypes from 'prop-types'
-import { ReactNode, Validator, useCallback, useState } from 'react'
+import { ReactNode, useCallback, useState } from 'react'
 import Text from '../Text'
 import Legends from './Legends'
 import { Data } from './types'
@@ -149,31 +148,6 @@ const PieChart = ({
       {withLegend ? <LegendDisplayer /> : null}
     </Container>
   )
-}
-
-PieChart.propTypes = {
-  chartProps: PropTypes.shape({}),
-  content: PropTypes.node,
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string,
-      needPattern: PropTypes.bool,
-      percent: PropTypes.number.isRequired,
-      value: PropTypes.string,
-    }).isRequired,
-  ),
-  emptyLegend: PropTypes.string,
-  height: PropTypes.number,
-  margin: PropTypes.shape({
-    bottom: PropTypes.number,
-    left: PropTypes.number,
-    right: PropTypes.number,
-    top: PropTypes.number,
-  }) as Validator<Box>,
-  width: PropTypes.number,
-  withLegend: PropTypes.bool,
 }
 
 export default PieChart

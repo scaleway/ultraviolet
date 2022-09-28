@@ -1,7 +1,6 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
-import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
   ComponentProps,
@@ -260,11 +259,6 @@ const SmartIcon = ({
     <Icon name={icon as ComponentProps<typeof Icon>['name']} size={iconSize} />
   )
 
-SmartIcon.propTypes = {
-  icon: PropTypes.node.isRequired,
-  iconSize: PropTypes.number,
-}
-
 type StyledIcon = {
   margin: number
   position?: 'left' | 'right'
@@ -284,8 +278,10 @@ type StyledButtonProps = {
   disabled?: boolean
   extend?: boolean
   href?: string
+  /** Name of the icon. All [icons](/?path=/docs/components-icon) are supported. */
   icon?: string | JSX.Element
   iconPosition?: 'left' | 'right'
+  /** Use this properties to associate ref to button component. */
   progress?: boolean | 'left' | 'right'
   iconSize?: number
   size: ButtonSize
@@ -483,29 +479,6 @@ const FwdButton = ({
 const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
   (props, ref) => <FwdButton {...props} innerRef={ref} />,
 )
-
-Button.propTypes = {
-  action: PropTypes.oneOf([true, false, 'rounded']),
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  extend: PropTypes.bool,
-  href: PropTypes.string,
-  /**
-   * Name of the icon. All [icons](/?path=/docs/components-icon) are supported.
-   */
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  iconPosition: PropTypes.oneOf(['left', 'right']),
-  iconSize: PropTypes.number,
-  /**
-   * Use this properties to associate ref to button component.
-   */
-  progress: PropTypes.oneOf([true, false, 'left', 'right']),
-  size: PropTypes.oneOf<ButtonSize>(buttonSizes),
-  tooltip: PropTypes.string,
-  tooltipBaseId: PropTypes.string,
-  variant: PropTypes.oneOf(buttonVariants as [ButtonVariant]),
-}
 
 Button.displayName = 'fwd(Button)'
 
