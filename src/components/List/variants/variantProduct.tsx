@@ -12,18 +12,18 @@ import {
   useCallback,
   useEffect,
 } from 'react'
-import * as animations from '../../utils/animations'
-import Checkbox from '../Checkbox'
-import Tooltip from '../Tooltip'
-import BaseCell from './Cell'
-import SortIcon from './SortIcon'
-import { useListContext } from './context'
+import * as animations from '../../../utils/animations'
+import Checkbox from '../../Checkbox'
+import Tooltip from '../../Tooltip'
+import BaseCell from '../Cell'
+import SortIcon from '../SortIcon'
+import { useListContext } from '../context'
 import {
   ExpandedContentProps,
   FinalChildrenProps,
   ListRowProps,
   ListRowState,
-} from './types'
+} from '../types'
 
 export const BORDER_THICKNESS = 1
 
