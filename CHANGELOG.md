@@ -1,3 +1,10 @@
+## [0.196.0](https://github.com/scaleway/scaleway-ui/compare/v0.195.0...v0.196.0) (2022-09-28)
+
+
+### :gear: Features
+
+* **Alert:** remove Box ([#1905](https://github.com/scaleway/scaleway-ui/issues/1905)) ([cacff50](https://github.com/scaleway/scaleway-ui/commit/cacff50ee831e57c027d3b9efc8870e999ed3f07))
+
 ## [0.195.0](https://github.com/scaleway/scaleway-ui/compare/v0.194.2...v0.195.0) (2022-09-28)
 
 
