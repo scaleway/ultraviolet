@@ -1,50 +1,28 @@
 import styled from '@emotion/styled'
 import { CSSProperties, ReactNode } from 'react'
-import { SCWUITheme } from '../..'
+import { SCWUITheme } from '../../theme'
 
-type StackCSSProperties = {
-  gap: keyof SCWUITheme['space']
-  direction: 'row' | 'column'
-  alignItems: CSSProperties['alignItems']
-  justifyContent: CSSProperties['justifyContent']
-}
-
-type StackProps = Partial<StackCSSProperties> & {
+type StackProps = {
+  gap?: keyof SCWUITheme['space']
+  direction?: 'row' | 'column'
+  alignItems?: CSSProperties['alignItems']
+  justifyContent?: CSSProperties['justifyContent']
   className?: string
   children: ReactNode
 }
 
-const Root = styled('div', {
+const Stack = styled('div', {
   shouldForwardProp: prop =>
     !['gap', 'direction', 'alignItems', 'justifyContent'].includes(prop),
-})<StackCSSProperties>`
+})<StackProps>`
   display: flex;
 
-  ${({ theme, gap, direction, alignItems, justifyContent }) => `
+  ${({ theme, gap = 0, direction = 'column', alignItems, justifyContent }) => `
     gap: ${theme.space[gap]};
     flex-direction: ${direction};
     align-items: ${alignItems || 'normal'};
     justify-content: ${justifyContent || 'normal'};
   `}
 `
-
-const Stack = ({
-  gap = 0,
-  direction = 'column',
-  alignItems,
-  justifyContent,
-  className,
-  children,
-}: StackProps) => (
-  <Root
-    className={className}
-    gap={gap}
-    direction={direction}
-    alignItems={alignItems}
-    justifyContent={justifyContent}
-  >
-    {children}
-  </Root>
-)
 
 export default Stack
