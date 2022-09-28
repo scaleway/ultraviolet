@@ -28,7 +28,7 @@ exports[`PieChart renders correctly when chart is hovered 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -41,10 +41,8 @@ exports[`PieChart renders correctly when chart is hovered 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-exvtnx-ListItem {
@@ -249,7 +247,7 @@ exports[`PieChart renders correctly when chart is hovered 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-compute"
@@ -360,7 +358,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -373,10 +371,8 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-exvtnx-ListItem {
@@ -575,7 +571,7 @@ exports[`PieChart renders correctly when legend is focused 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-compute"
@@ -686,7 +682,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -699,10 +695,8 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-exvtnx-ListItem {
@@ -901,7 +895,7 @@ exports[`PieChart renders correctly when legend is hovered 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-compute"
@@ -1201,7 +1195,7 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -1214,10 +1208,8 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-1klfns5-ListItem {
@@ -1376,7 +1368,7 @@ exports[`PieChart renders correctly with detailed legend 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-compute"
@@ -1473,7 +1465,7 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -1486,10 +1478,8 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-1klfns5-ListItem {
@@ -1655,7 +1645,7 @@ exports[`PieChart renders correctly with detailed legend and discount 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-discount"
@@ -1831,7 +1821,7 @@ exports[`PieChart renders correctly with legend 1`] = `
   height: 206px;
 }
 
-.cache-jo4t4s-List {
+.cache-1bc84hq-List {
   font-size: 14px;
   list-style-type: none;
   display: -webkit-box;
@@ -1844,10 +1834,8 @@ exports[`PieChart renders correctly with legend 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  cursor: pointer;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
 .cache-1klfns5-ListItem {
@@ -1932,6 +1920,78 @@ exports[`PieChart renders correctly with legend 1`] = `
   background: #F4306C;
 }
 
+.cache-bosrvg-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #F79E43;
+}
+
+.cache-1b806re-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #8B3DD3;
+}
+
+.cache-178z5zh-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #EC5775;
+}
+
+.cache-lo6qcr-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #43C1A3;
+}
+
+.cache-1n24sj5-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #76DFDE;
+}
+
+.cache-trj95b-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #C2E457;
+}
+
+.cache-18avcmg-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #45d69e;
+}
+
+.cache-16i93g6-Bullet {
+  display: inline-block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #ff8c69;
+}
+
 <div
     class="cache-1kb8v2a-Container e17m7c932"
     height="206"
@@ -1987,17 +2047,73 @@ exports[`PieChart renders correctly with legend 1`] = `
               transform="translate(93,93)"
             >
               <path
-                d="M5.694607616035192e-15,-93A93,93,0,1,1,-3.560568890002063e-14,93L-2.8484551120016506e-14,74.4A74.4,74.4,0,1,0,4.555686092828154e-15,-74.4Z"
+                d="M5.694607616035192e-15,-93A93,93,0,0,1,54.664028463200005,-75.23858047687011L43.73122277056,-60.1908643814961A74.4,74.4,0,0,0,4.555686092828154e-15,-74.4Z"
                 fill="#4F1A81"
                 opacity="1"
                 stroke="rgb(55, 18, 90)"
                 stroke-width="0"
               />
               <path
-                d="M-3.560568890002063e-14,93A93,93,0,1,1,6.551677018400607e-14,-93L5.241341614720486e-14,-74.4A74.4,74.4,0,1,0,-2.8484551120016506e-14,74.4Z"
+                d="M54.664028463200005,-75.23858047687011A93,93,0,0,1,88.44825601544927,-28.73858047687011L70.75860481235942,-22.99086438149609A74.4,74.4,0,0,0,43.73122277056,-60.1908643814961Z"
                 fill="#F4306C"
                 opacity="1"
                 stroke="rgb(171, 34, 76)"
+                stroke-width="0"
+              />
+              <path
+                d="M88.44825601544927,-28.73858047687011A93,93,0,0,1,88.44825601544927,28.73858047687011L70.75860481235942,22.99086438149609A74.4,74.4,0,0,0,70.75860481235942,-22.99086438149609Z"
+                fill="#F79E43"
+                opacity="1"
+                stroke="rgb(173, 111, 47)"
+                stroke-width="0"
+              />
+              <path
+                d="M88.44825601544927,28.73858047687011A93,93,0,0,1,54.664028463200005,75.23858047687011L43.73122277056,60.1908643814961A74.4,74.4,0,0,0,70.75860481235942,22.99086438149609Z"
+                fill="#8B3DD3"
+                opacity="1"
+                stroke="rgb(97, 43, 148)"
+                stroke-width="0"
+              />
+              <path
+                d="M54.664028463200005,75.23858047687011A93,93,0,0,1,5.694607616035192e-15,93L4.555686092828154e-15,74.4A74.4,74.4,0,0,0,43.73122277056,60.1908643814961Z"
+                fill="#EC5775"
+                opacity="1"
+                stroke="rgb(165, 61, 82)"
+                stroke-width="0"
+              />
+              <path
+                d="M5.694607616035192e-15,93A93,93,0,0,1,-54.66402846319999,75.23858047687011L-43.731222770559995,60.1908643814961A74.4,74.4,0,0,0,4.555686092828154e-15,74.4Z"
+                fill="#43C1A3"
+                opacity="1"
+                stroke="rgb(47, 135, 114)"
+                stroke-width="0"
+              />
+              <path
+                d="M-54.66402846319999,75.23858047687011A93,93,0,0,1,-88.44825601544927,28.73858047687012L-70.75860481235942,22.990864381496095A74.4,74.4,0,0,0,-43.731222770559995,60.1908643814961Z"
+                fill="#76DFDE"
+                opacity="1"
+                stroke="rgb(83, 156, 155)"
+                stroke-width="0"
+              />
+              <path
+                d="M-88.44825601544927,28.73858047687012A93,93,0,0,1,-88.44825601544929,-28.738580476870098L-70.75860481235944,-22.99086438149608A74.4,74.4,0,0,0,-70.75860481235942,22.990864381496095Z"
+                fill="#C2E457"
+                opacity="1"
+                stroke="rgb(136, 160, 61)"
+                stroke-width="0"
+              />
+              <path
+                d="M-88.44825601544929,-28.738580476870098A93,93,0,0,1,-54.66402846320001,-75.2385804768701L-43.73122277056002,-60.190864381496084A74.4,74.4,0,0,0,-70.75860481235944,-22.99086438149608Z"
+                fill="#45d69e"
+                opacity="1"
+                stroke="rgb(48, 150, 111)"
+                stroke-width="0"
+              />
+              <path
+                d="M-54.66402846320001,-75.2385804768701A93,93,0,0,1,-1.7083822848105575e-14,-93L-1.3667058278484462e-14,-74.4A74.4,74.4,0,0,0,-43.73122277056002,-60.190864381496084Z"
+                fill="#ff8c69"
+                opacity="1"
+                stroke="rgb(179, 98, 74)"
                 stroke-width="0"
               />
             </g>
@@ -2006,7 +2122,7 @@ exports[`PieChart renders correctly with legend 1`] = `
       </div>
     </div>
     <ul
-      class="cache-jo4t4s-List enw618e8"
+      class="cache-1bc84hq-List enw618e8"
     >
       <div
         aria-describedby="chart-legend-compute"
@@ -2068,6 +2184,310 @@ exports[`PieChart renders correctly with legend 1`] = `
               class="cache-1o1agb-Text enw618e3"
             >
               GPU Instances
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-functions"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-functions"
+          />
+          <div
+            class="cache-bosrvg-Bullet enw618e6"
+            color="#F79E43"
+            id="chart-legend-functions"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Serverless Functions
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-containers"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-containers"
+          />
+          <div
+            class="cache-1b806re-Bullet enw618e6"
+            color="#8B3DD3"
+            id="chart-legend-containers"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Serverless Containers
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-s3"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-s3"
+          />
+          <div
+            class="cache-178z5zh-Bullet enw618e6"
+            color="#EC5775"
+            id="chart-legend-s3"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Object Storage
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-dns"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-dns"
+          />
+          <div
+            class="cache-lo6qcr-Bullet enw618e6"
+            color="#43C1A3"
+            id="chart-legend-dns"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Domain zones
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-appleSilicon"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-appleSilicon"
+          />
+          <div
+            class="cache-1n24sj5-Bullet enw618e6"
+            color="#76DFDE"
+            id="chart-legend-appleSilicon"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Apple Silicon
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-baremetal"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-baremetal"
+          />
+          <div
+            class="cache-trj95b-Bullet enw618e6"
+            color="#C2E457"
+            id="chart-legend-baremetal"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Baremetal
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-database"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-database"
+          />
+          <div
+            class="cache-18avcmg-Bullet enw618e6"
+            color="#45d69e"
+            id="chart-legend-database"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Database
+            </span>
+            <span
+              class="cache-1j2xuq2-Line enw618e1"
+            >
+              <span
+                class="cache-1dejm4g-ProgressiveLine enw618e0"
+              />
+            </span>
+          </div>
+          <div
+            class="cache-ngx53z-Value enw618e4"
+          >
+            20
+          </div>
+        </li>
+      </div>
+      <div
+        aria-describedby="chart-legend-lb"
+      >
+        <li
+          class="cache-1klfns5-ListItem enw618e7"
+        >
+          <div
+            class="cache-1swvs82-ToggleBox enw618e2"
+            data-testid="chart-legend-lb"
+          />
+          <div
+            class="cache-16i93g6-Bullet enw618e6"
+            color="#ff8c69"
+            id="chart-legend-lb"
+          />
+          <div
+            class="cache-s9pm9i-Label enw618e5"
+          >
+            <span
+              class="cache-1o1agb-Text enw618e3"
+            >
+              Load Balancer
             </span>
             <span
               class="cache-1j2xuq2-Line enw618e1"

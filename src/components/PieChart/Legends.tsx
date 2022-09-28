@@ -32,8 +32,8 @@ const List = styled.ul`
   display: flex;
   flex: 1;
   flex-direction: column;
-  cursor: pointer;
-  height: min-content;
+  max-height: 100%;
+  overflow-y: scroll;
 `
 
 const ListItem = styled.li<{ isFocused: boolean }>`
