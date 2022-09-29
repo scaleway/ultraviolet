@@ -17,11 +17,17 @@ const Stack = styled('div', {
 })<StackProps>`
   display: flex;
 
-  ${({ theme, gap = 0, direction = 'column', alignItems, justifyContent }) => `
+  ${({
+    theme,
+    gap = 0,
+    direction = 'column',
+    alignItems = 'normal',
+    justifyContent = 'normal',
+  }) => `
     gap: ${theme.space[gap]};
     flex-direction: ${direction};
-    align-items: ${alignItems || 'normal'};
-    justify-content: ${justifyContent || 'normal'};
+    align-items: ${alignItems};
+    justify-content: ${justifyContent};
   `}
 `
 
