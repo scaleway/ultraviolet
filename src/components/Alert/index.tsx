@@ -1,9 +1,8 @@
 import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme'
-import Icon, { icons } from '../Icon'
+import Icon from '../Icon'
 import Text from '../Text'
 
 export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
@@ -107,6 +106,9 @@ type AlertProps = {
   children: ReactNode
   iconSize?: number
   icon?: ComponentProps<typeof Icon>['name']
+  /**
+   * Add a title at the top of your alert.
+   */
   title?: string
   type?: AlertType
   className?: string
@@ -139,21 +141,5 @@ const Alert = ({
     </AlertContainer>
   </StyledContainer>
 )
-
-Title.propTypes = {
-  text: PropTypes.string.isRequired,
-}
-
-Alert.propTypes = {
-  children: PropTypes.node.isRequired,
-  icon: PropTypes.oneOf(icons),
-  iconSize: PropTypes.number,
-  /**
-   * Add a title at the top of your alert.
-   */
-  title: PropTypes.string,
-  type: PropTypes.oneOf<AlertType>(alertTypes),
-  variant: PropTypes.oneOf<AlertVariant>(alertVariants),
-}
 
 export default Alert

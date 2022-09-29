@@ -6,8 +6,7 @@ import {
   ResponsiveBar,
 } from '@nivo/bar'
 import { Box, DatumValue, ValueFormat } from '@nivo/core'
-import PropTypes from 'prop-types'
-import { ComponentProps, Validator, useCallback } from 'react'
+import { ComponentProps, useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import BarChartTooltip from './Tooltip'
 
@@ -117,32 +116,6 @@ const BarChart = ({
       />
     </div>
   )
-}
-
-BarChart.propTypes = {
-  axisFormatters: PropTypes.shape({
-    bottom: PropTypes.func,
-    left: PropTypes.func,
-    right: PropTypes.func,
-    top: PropTypes.func,
-  }) as Validator<BarChartProps['axisFormatters']>,
-  chartProps: PropTypes.shape({}) as Validator<Partial<BarSvgProps<BarDatum>>>,
-  data: PropTypes.arrayOf(PropTypes.shape({}) as Validator<BarDatum>),
-  height: PropTypes.number,
-  keys: PropTypes.arrayOf(PropTypes.string.isRequired),
-  margin: PropTypes.shape({
-    bottom: PropTypes.number,
-    left: PropTypes.number,
-    right: PropTypes.number,
-    top: PropTypes.number,
-  }) as Validator<BarChartProps['margin']>,
-  tickValues: PropTypes.shape({
-    bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }) as Validator<BarChartProps['tickValues']>,
-  tooltipFunction: PropTypes.func,
 }
 
 export default BarChart

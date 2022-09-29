@@ -1,6 +1,5 @@
 import { Global, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import DatePicker, {
   ReactDatePickerProps,
   registerLocale,
@@ -159,6 +158,9 @@ type DateInputProps = Pick<
 > & {
   error?: string
   format?: (value?: Date | string) => string | undefined
+  /**
+   * Label of the field
+   */
   label?: string
   value?: Date | string
 }
@@ -279,49 +281,6 @@ const DateInput = ({
       </StyledWrapper>
     </>
   )
-}
-
-DateInput.propTypes = {
-  /**
-   * If set to `true` the input will be focused by default
-   */
-  autoFocus: PropTypes.bool,
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  /**
-   *
-   */
-  format: PropTypes.func,
-  /**
-   * Label of the field
-   */
-  label: PropTypes.string,
-  /**
-   * Locale provided by `date-fns/locales` package
-   */
-  locale: PropTypes.oneOfType([
-    PropTypes.shape({
-      code: PropTypes.string.isRequired,
-    }),
-    PropTypes.string,
-  ]),
-  /**
-   * Max date that are allowed
-   */
-  maxDate: PropTypes.instanceOf(Date),
-  /**
-   * Min data that are allowed
-   */
-  minDate: PropTypes.instanceOf(Date),
-  /**
-   * Input name
-   */
-  name: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
 }
 
 export default DateInput

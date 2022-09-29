@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types'
-import { ComponentProps, WeakValidationMap } from 'react'
+import { ComponentProps } from 'react'
 import RichSelect from '../RichSelect'
 
 const hours = [
@@ -203,7 +202,6 @@ type TimeInputProps = Partial<ComponentProps<typeof RichSelect>> & {
 
 type TimeInputType = ((props: TimeInputProps) => JSX.Element) & {
   options: typeof options
-  propTypes: WeakValidationMap<TimeInputProps>
 }
 
 const TimeInput: TimeInputType = ({
@@ -213,12 +211,6 @@ const TimeInput: TimeInputType = ({
 }: TimeInputProps = {}) => (
   <RichSelect {...props} time value={value} options={options(schedule)} />
 )
-const scheduleType = Object.keys(schedules) as ScheduleType[]
-
-TimeInput.propTypes = {
-  ...RichSelect.propTypes,
-  schedule: PropTypes.oneOf(scheduleType),
-}
 
 TimeInput.options = options
 

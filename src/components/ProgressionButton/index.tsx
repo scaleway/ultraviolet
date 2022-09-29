@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 
 const progressionAnimation = keyframes`
@@ -57,7 +56,14 @@ const Progression = styled.div<ProgressionProps>`
 
 type ProgressionButtonProps = {
   children: ReactNode
+  /**
+   * Indicates the starting time of the progression.
+   */
   creation?: string | Date
+  /**
+   * Indicates an approximation of the progression duration in seconds.
+   */
+
   duration?: number
 }
 
@@ -75,18 +81,6 @@ const ProgressionButton = ({
       {children}
     </ProgressionContainer>
   )
-}
-
-ProgressionButton.propTypes = {
-  children: PropTypes.node.isRequired,
-  /**
-   * Indicates the starting time of the progression.
-   */
-  creation: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.string]),
-  /**
-   * Indicates an approximation of the progression duration in seconds.
-   */
-  duration: PropTypes.number,
 }
 
 export default ProgressionButton

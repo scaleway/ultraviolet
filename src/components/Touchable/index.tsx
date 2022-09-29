@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ButtonHTMLAttributes,
   InputHTMLAttributes,
@@ -88,17 +87,5 @@ const Touchable = forwardRef<Element, TouchableProps>(
     )
   },
 )
-
-Touchable.propTypes = {
-  activeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  as: PropTypes.string,
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  hasFocus: PropTypes.bool,
-  onClick: PropTypes.func,
-  onKeyDown: PropTypes.func,
-  title: PropTypes.string,
-  type: PropTypes.string,
-}
 
 export default Touchable

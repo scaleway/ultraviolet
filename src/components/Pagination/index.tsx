@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ForwardedRef,
   ReactNode,
@@ -445,53 +444,7 @@ function Pagination<T>(
   )
 }
 
-PaginationContainer.propTypes = {
-  LeftComponent: PropTypes.func,
-  MiddleComponent: PropTypes.func,
-  pageTabCount: PropTypes.number,
-  paginationState: PropTypes.shape({
-    canLoadMore: PropTypes.bool.isRequired,
-    // eslint-disable-next-line react/forbid-prop-types
-    data: PropTypes.arrayOf(PropTypes.any),
-    goToFirstPage: PropTypes.func.isRequired,
-    goToLastPage: PropTypes.func.isRequired,
-    goToNextPage: PropTypes.func.isRequired,
-    goToPage: PropTypes.func.isRequired,
-    goToPreviousPage: PropTypes.func.isRequired,
-    isLoadingPage: PropTypes.bool.isRequired,
-    maxPage: PropTypes.number.isRequired,
-    page: PropTypes.number.isRequired,
-    // eslint-disable-next-line react/forbid-prop-types
-    pageData: PropTypes.arrayOf(PropTypes.any).isRequired,
-    paginatedData: PropTypes.shape({}).isRequired,
-    perPage: PropTypes.number,
-    reloadPage: PropTypes.func.isRequired,
-    setPageData: PropTypes.func.isRequired,
-    setPaginatedData: PropTypes.func.isRequired,
-  }).isRequired,
-  RightComponent: PropTypes.func,
-}
-
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.arrayOf(PropTypes.any),
-  // eslint-disable-next-line react/forbid-prop-types
-  initialData: PropTypes.arrayOf(PropTypes.any),
-  initialPage: PropTypes.number,
-  LeftComponent: PropTypes.func,
-  LoaderComponent: PropTypes.func,
-  MiddleComponent: PropTypes.func,
-  onChangePage: PropTypes.func,
-  onLoadPage: PropTypes.func,
-  page: PropTypes.number,
-  pageCount: PropTypes.number,
-  pageTabCount: PropTypes.number,
-  perPage: PropTypes.number,
-  RightComponent: PropTypes.func,
-}
-
-// @ts-expect-error it breaks on propTypes
+// @ts-expect-error it breaks on i don't know what
 const PaginationForward = forwardRef(Pagination) as (<T>(
   props: PaginationProps<T> & { ref?: ForwardedRef<PaginationState<T>> },
 ) => ReturnType<typeof Pagination>) & {
@@ -510,10 +463,8 @@ const PaginationForward = forwardRef(Pagination) as (<T>(
   LoaderComponent: (
     props: PaginationComponentProps<unknown>,
   ) => JSX.Element | null
-  propTypes: typeof propTypes
 }
 
-Pagination.propTypes = propTypes
 PaginationForward.LeftComponent = DefaultLeftComponent
 PaginationForward.LoaderComponent = DefaultLoaderComponent
 PaginationForward.MiddleComponent = DefaultMiddleComponent

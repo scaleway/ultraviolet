@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import Box, { BoxProps } from '../Box'
 import { useListContext } from './context'
@@ -42,10 +41,6 @@ const Cell = ({ children, ...props }: BoxProps & { children: ReactNode }) => {
       {children}
     </StyledCell>
   )
-}
-
-Cell.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Cell

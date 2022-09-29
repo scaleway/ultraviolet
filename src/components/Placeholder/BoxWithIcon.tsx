@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import IconPlaceholder from './IconPlaceholder'
 import Line from './Line'
 
@@ -36,9 +35,5 @@ const BoxWithIcon = ({
     ))}
   </StyledContainer>
 )
-
-BoxWithIcon.propTypes = {
-  length: PropTypes.number,
-}
 
 export default BoxWithIcon

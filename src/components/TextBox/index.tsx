@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
-import PropTypes from 'prop-types'
 import {
   ChangeEvent,
   FocusEventHandler,
@@ -643,44 +642,5 @@ const TextBox = forwardRef<
     )
   },
 )
-
-TextBox.propTypes = {
-  ariaControls: PropTypes.string,
-  autoComplete: PropTypes.string,
-  autoFocus: PropTypes.bool,
-  cols: PropTypes.number,
-  'data-testid': PropTypes.string,
-  defaultValue: PropTypes.string,
-  disabled: PropTypes.bool,
-  edit: PropTypes.bool,
-  error: PropTypes.string,
-  fillAvailable: PropTypes.bool,
-  generated: PropTypes.bool,
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  id: PropTypes.string,
-  inputProps: PropTypes.shape({}),
-  label: PropTypes.string,
-  multiline: PropTypes.bool,
-  name: PropTypes.string,
-  notice: PropTypes.string,
-  noTopLabel: PropTypes.bool,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  placeholder: PropTypes.string,
-  random: PropTypes.string,
-  readOnly: PropTypes.bool,
-  required: PropTypes.bool,
-  resizable: PropTypes.bool,
-  rows: PropTypes.number,
-  size: PropTypes.oneOf<TextBoxSizes>(textBoxSizes),
-  tabIndex: PropTypes.number,
-  type: PropTypes.string,
-  unit: PropTypes.string,
-  unitAlignment: PropTypes.oneOf(['center', 'flex-end', 'flex-start']),
-  valid: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  wrap: PropTypes.string,
-}
 
 export default TextBox

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ForwardedRef,
   Fragment,
@@ -107,18 +106,46 @@ function Body<DataType extends Record<string, unknown>>({
   )
 }
 
-Body.propTypes = {
-  children: PropTypes.func.isRequired,
-}
-
 export type ListProps<DataType> = {
+  /**
+   * Used to manage row state. Enter an unique property of your row
+   */
   idKey?: string
+  /**
+   * Display a Loader
+   */
   isLoading?: boolean
+  /**
+   * For a controlled List
+   */
   data?: DataType[]
+  /**
+   * For an uncontrolled List
+   */
   initialData?: DataType[]
+  /**
+   * Custom empty list component
+   */
   emptyListComponent?: ReactNode
+  /**
+   * Columns of the list.
+   */
   columns: ListColumn<DataType>[]
+  /**
+   * Does the list need to display a checkbox
+   */
   multiselect?: boolean
+  /**
+   * @param {{
+   *  Body,
+   *  Row,
+   *  Cell,
+   *  ExpendableContent,
+   *  SelectBar,
+   *  data
+   * }} list Components to build your list. `ExpandableContent` is only available with `product` variant.
+   * @returns {JSX.Element} The React component to render
+   */
   children: (props: {
     Body: (props: BodyProps<DataType>) => JSX.Element
     Cell: (props: { children: ReactNode }) => ReactElement | null
@@ -128,20 +155,52 @@ export type ListProps<DataType> = {
     Row: (props: ListRowProps) => JSX.Element
     ExpendableContent: (props: ExpandedContentProps) => JSX.Element
   }) => ReactElement
+  /**
+   * Custom Loader to display when isLoading is true
+   */
   customLoader?: ReactNode
   variant?: ListVariant
+  /**
+   * @param {Array} data The list of all items
+   * @returns {Array} The list of items that can be selected
+   */
   selectable?: (data: DataType[]) => DataType[]
+  /**
+   * Auto close opened ExpandableContent when clicking on another row
+   */
   autoClose?: boolean
+  /**
+   * Text to display in a tooltip on rows that can't be selected
+   */
   notSelectableText?: string
+  /**
+   * Number of item per page
+   */
   perPage?: number
+  /**
+   * Initial page (needs perPage)
+   */
   page?: number
+  /**
+   * If you known the page you have (needs perPage)
+   */
   pageCount?: number
+  /**
+   * @param {{page, perPage, sort, order}} params The params to load the page
+   * @returns {*} The array or object to store in the page
+   */
   onLoadPage?: (params: {
     page: number
     perPage?: number
     sort: ListSort<DataType>
   }) => Promise<void | DataType[]>
+  /**
+   * @param {number} newPage The new page
+   */
   onChangePage?: (newPage: number) => void
+  /**
+   * @param {{page, perPage, sort, order}} params The params to sort the list
+   */
   onSortClick?: (params: {
     field?: string | ((item: DataType) => string) | null
     order: ListOrder
@@ -151,6 +210,9 @@ export type ListProps<DataType> = {
     perPage?: number
   }) => void
   // TODO Change this when Pagination migration is merged
+  /**
+   * Additional props to pass to the Pagination component
+   */
   paginationProps?: Partial<PaginationProps<DataType>>
 }
 
@@ -519,112 +581,8 @@ function List<DataType extends Record<string, unknown>>(
   )
 }
 
-const propTypes = {
-  /**
-   * Auto close opened ExpandableContent when clicking on another row
-   */
-  autoClose: PropTypes.bool,
-  /**
-   * @param {{
-   *  Body,
-   *  Row,
-   *  Cell,
-   *  ExpendableContent,
-   *  SelectBar,
-   *  data
-   * }} list Components to build your list. `ExpandableContent` is only available with `product` variant.
-   * @returns {JSX.Element} The React component to render
-   */
-  children: PropTypes.func.isRequired,
-  /**
-   * Columns of the list.
-   */
-  columns: PropTypes.arrayOf(
-    PropTypes.shape({
-      justifyContent: PropTypes.string,
-      label: PropTypes.string,
-      onSort: PropTypes.func,
-      padding: PropTypes.string,
-      sort: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-      width: PropTypes.string,
-    }).isRequired,
-  ).isRequired,
-  /**
-   * Custom Loader to display when isLoading is true
-   */
-  customLoader: PropTypes.node,
-  /**
-   * For a controlled List
-   */
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.array,
-  /**
-   * Custom empty list component
-   */
-  emptyListComponent: PropTypes.node,
-  /**
-   * Used to manage row state. Enter an unique property of your row
-   */
-  idKey: PropTypes.string,
-  /**
-   * For an uncontrolled List
-   */
-  // eslint-disable-next-line react/forbid-prop-types
-  initialData: PropTypes.array,
-  /**
-   * Display a Loader
-   */
-  isLoading: PropTypes.bool,
-  /**
-   * Does the list need to display a checkbox
-   */
-  multiselect: PropTypes.bool,
-  /**
-   * Text to display in a tooltip on rows that can't be selected
-   */
-  notSelectableText: PropTypes.string,
-  /**
-   * @param {number} newPage The new page
-   */
-  onChangePage: PropTypes.func,
-  /**
-   * @param {{page, perPage, sort, order}} params The params to load the page
-   * @returns {*} The array or object to store in the page
-   */
-  onLoadPage: PropTypes.func,
-  /**
-   * @param {{page, perPage, sort, order}} params The params to sort the list
-   */
-  onSortClick: PropTypes.func,
-  /**
-   * Initial page (needs perPage)
-   */
-  page: PropTypes.number,
-  /**
-   * If you known the page you have (needs perPage)
-   */
-  pageCount: PropTypes.number,
-  /**
-   * Additional props to pass to the Pagination component
-   */
-  paginationProps: PropTypes.shape(Pagination.propTypes),
-  /**
-   * Number of item per page
-   */
-  perPage: PropTypes.number,
-  /**
-   * @param {Array} data The list of all items
-   * @returns {Array} The list of items that can be selected
-   */
-  selectable: PropTypes.func,
-  variant: PropTypes.oneOf(['product', 'table', 'explorer']),
-}
-
 const ForwardedList = forwardRef(List) as <DataType>(
   props: ListProps<DataType> & { ref?: ForwardedRef<ListRefType<DataType>> },
 ) => ReturnType<typeof List>
-
-// @ts-expect-error proptypes funky
-ForwardedList.propTypes = propTypes
 
 export default ForwardedList

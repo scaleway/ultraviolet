@@ -27,12 +27,7 @@ describe('Icon', () => {
       <Icon name="circle" color="primary" prominence="stronger" />,
     ))
 
-  test(`render unknow`, async () => {
-    const spy = jest.spyOn(console, 'error').mockImplementation()
-
+  test(`render unknow`, () =>
     // @ts-expect-error we check a failing case
-    await shouldMatchEmotionSnapshot(<Icon name="unknown" />)
-    expect(console.error).toHaveBeenCalledTimes(1)
-    spy.mockRestore()
-  })
+    shouldMatchEmotionSnapshot(<Icon name="unknown" />))
 })

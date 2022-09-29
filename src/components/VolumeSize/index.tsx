@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import Text from '../Text'
 
@@ -284,20 +283,6 @@ const VolumeSize = ({
       </StyledContainer>
     </StyledComponentContainer>
   )
-}
-
-VolumeSize.propTypes = {
-  maxLabel: PropTypes.string,
-  maxSize: PropTypes.number,
-  minLabel: PropTypes.string,
-  minSize: PropTypes.number.isRequired,
-  requiredLabel: PropTypes.string,
-  size: PropTypes.oneOf<Sizes>(Object.keys(sizes) as Sizes[]),
-  title: PropTypes.string,
-  tooBigMessage: PropTypes.string,
-  tooSmallMessage: PropTypes.string,
-  unit: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
 }
 
 export default VolumeSize

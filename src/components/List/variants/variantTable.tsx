@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import * as animations from '../../../utils/animations'
 import Box from '../../Box'
@@ -202,8 +201,9 @@ export const Row = ({
   animated,
   animation = 'fadeIn',
   animationDuration = 1000,
-  disabled,
+  disabled = false,
   tooltip,
+  open = false,
   ...props
 }: ListRowProps) => {
   const {
@@ -222,6 +222,7 @@ export const Row = ({
     <Tooltip key={id} text={tooltip}>
       <StyledRow
         {...props}
+        open={open}
         role="listitem"
         disabled={disabled}
         animated={animated}
@@ -253,34 +254,4 @@ export const Row = ({
       </StyledRow>
     </Tooltip>
   )
-}
-
-Row.propTypes = {
-  animated: PropTypes.bool,
-  animation: PropTypes.oneOf<ListRowProps['animation']>(
-    Object.keys(animations) as ListRowProps['animation'][],
-  ),
-  animationDuration: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  disabled: PropTypes.bool,
-  edition: PropTypes.bool,
-  id: PropTypes.string.isRequired,
-  isEditable: PropTypes.bool,
-  isHoverable: PropTypes.bool,
-  onClick: PropTypes.func,
-  open: PropTypes.bool,
-  tooltip: PropTypes.string,
-}
-
-Row.defaultProps = {
-  animated: undefined,
-  customStyle: undefined,
-  disabled: false,
-  edition: false,
-  isEditable: false,
-  isHoverable: false,
-  onClick: undefined,
-  open: false,
-  tooltip: undefined,
 }

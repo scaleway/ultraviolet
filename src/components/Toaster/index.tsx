@@ -1,6 +1,5 @@
 import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ComponentProps, ReactNode } from 'react'
 import {
   ToastContainer as BaseToastContainer,
@@ -8,7 +7,7 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import Alert, { alertTypes } from '../Alert'
+import Alert from '../Alert'
 import Icon from '../Icon'
 
 const PREFIX = '.Toastify'
@@ -62,10 +61,6 @@ const CloseButton = ({ closeToast }: CloseButtonProps) => (
   <Icon name="close" size={18} ml={1} onClick={closeToast} />
 )
 
-CloseButton.propTypes = {
-  closeToast: PropTypes.func,
-}
-
 const StyledAlert = styled(Alert)`
   padding: 0;
 `
@@ -79,11 +74,6 @@ const SanitizedAlertBar = ({ type, children }: SanitizedAlertBarProps) => (
     {children}
   </StyledAlert>
 )
-
-SanitizedAlertBar.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.oneOf(alertTypes),
-}
 
 const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>

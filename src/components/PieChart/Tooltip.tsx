@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Text from '../Text'
 
 const StyledList = styled.ul`
@@ -53,18 +52,5 @@ const Tooltip = ({ data }: TooltipProps) => (
     </StyledList>
   </div>
 )
-
-Tooltip.propTypes = {
-  data: PropTypes.shape({
-    details: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-        value: PropTypes.string,
-      }).isRequired,
-    ),
-    name: PropTypes.string,
-    value: PropTypes.string,
-  }).isRequired,
-}
 
 export default Tooltip

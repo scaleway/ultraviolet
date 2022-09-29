@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
@@ -76,13 +75,6 @@ const StealthCopiable = ({
       {side === 'left' && <StyledContent>{children}</StyledContent>}
     </StyledContainer>
   )
-}
-
-StealthCopiable.propTypes = {
-  children: PropTypes.node.isRequired,
-  copiedText: PropTypes.string,
-  copyText: PropTypes.string,
-  side: PropTypes.oneOf(['left', 'right']),
 }
 
 export default StealthCopiable

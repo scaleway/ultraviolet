@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { ComponentProps, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
 import Box, { BoxProps } from '../Box'
@@ -19,7 +18,11 @@ type ColProps = {
 } & Partial<Record<ScreenSize, number | string | boolean>> &
   BoxProps
 
-const StyledCol = styled(Box, {
+/**
+ * @deprecated
+ */
+
+const Col = styled(Box, {
   shouldForwardProp: prop =>
     ![...Object.keys(screens), 'gutter'].includes(prop),
 })<ColProps>`
@@ -76,28 +79,5 @@ const StyledCol = styled(Box, {
         return null
       })}
 `
-
-/**
- * @deprecated
- */
-const Col = (props: ComponentProps<typeof StyledCol>) => (
-  <StyledCol {...props} />
-)
-
-const PropTypesBreakpoint = PropTypes.oneOfType([
-  PropTypes.bool,
-  PropTypes.string,
-  PropTypes.number,
-])
-
-Col.propTypes = {
-  children: PropTypes.node,
-  gutter: PropTypes.oneOf(Object.keys(space).map(Number) as Spaces[]),
-  large: PropTypesBreakpoint,
-  medium: PropTypesBreakpoint,
-  small: PropTypesBreakpoint,
-  xlarge: PropTypesBreakpoint,
-  xsmall: PropTypesBreakpoint,
-}
 
 export default Col

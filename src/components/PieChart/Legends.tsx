@@ -1,6 +1,5 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
 import patternVariants from './patterns'
@@ -154,24 +153,5 @@ const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
     })}
   </List>
 )
-
-Legends.defaultProps = {
-  focused: undefined,
-}
-
-Legends.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      color: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string,
-      needPattern: PropTypes.bool,
-      percent: PropTypes.number.isRequired,
-      value: PropTypes.string,
-    }).isRequired,
-  ).isRequired,
-  focused: PropTypes.string,
-  onFocusChange: PropTypes.func.isRequired,
-}
 
 export default Legends

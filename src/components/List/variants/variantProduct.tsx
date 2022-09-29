@@ -1,6 +1,5 @@
 import { Theme, css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ChangeEvent,
   Children,
@@ -314,12 +313,6 @@ export const ExpendableContent = ({
   </div>
 )
 
-ExpendableContent.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired,
-  id: PropTypes.string,
-  rowsState: PropTypes.shape({}),
-}
-
 export const Row = ({
   id,
   children,
@@ -452,23 +445,4 @@ export const Row = ({
       </StyledExpendableContainer>
     </StyledRow>
   )
-}
-
-Row.propTypes = {
-  alert: PropTypes.bool,
-  animated: PropTypes.bool,
-  animation: PropTypes.oneOf<ListRowProps['animation']>(
-    Object.keys(animations) as ListRowProps['animation'][],
-  ),
-  animationDuration: PropTypes.number,
-  children: PropTypes.node.isRequired,
-  customStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  disabled: PropTypes.bool,
-  edition: PropTypes.bool,
-  expandableClassName: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  isEditable: PropTypes.bool,
-  isHoverable: PropTypes.bool,
-  locked: PropTypes.bool,
-  open: PropTypes.bool,
 }

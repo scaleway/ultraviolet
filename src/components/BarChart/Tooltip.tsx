@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Text from '../Text'
 
 const BarToolTipContainer = styled.div`
@@ -46,11 +45,5 @@ const BarChartToolTip = ({
     </div>
   </BarToolTipContainer>
 )
-
-BarChartToolTip.propTypes = {
-  color: PropTypes.string.isRequired,
-  formattedValue: PropTypes.string.isRequired,
-  indexValue: PropTypes.string.isRequired,
-}
 
 export default BarChartToolTip

@@ -1,6 +1,5 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ReactElement,
   ReactNode,
@@ -175,11 +174,6 @@ const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   )
 }
 
-Disclosure.propTypes = {
-  dialog: PropTypes.shape({}).isRequired,
-  disclosure: PropTypes.func.isRequired,
-}
-
 const MemoDisclosure = memo(Disclosure)
 
 const StyledDialogBackdrop = styled(DialogBackdrop)`
@@ -338,29 +332,6 @@ const Modal = ({
       </StyledDialogBackdrop>
     </>
   )
-}
-
-Modal.propTypes = {
-  animated: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
-  animation: PropTypes.oneOf(Object.keys(MODAL_ANIMATION) as ModalAnimation[]),
-  ariaLabel: PropTypes.string,
-  baseId: PropTypes.string,
-  bordered: PropTypes.bool,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  customDialogBackdropStyles: PropTypes.shape({}),
-  customDialogStyles: PropTypes.shape({}),
-  disclosure: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
-  height: PropTypes.string,
-  hideOnClickOutside: PropTypes.bool,
-  hideOnEsc: PropTypes.bool,
-  isClosable: PropTypes.bool,
-  modal: PropTypes.bool,
-  onBeforeClose: PropTypes.func,
-  onClose: PropTypes.func,
-  opened: PropTypes.bool,
-  placement: PropTypes.oneOf(Object.keys(MODAL_PLACEMENT) as ModalPlacement[]),
-  preventBodyScroll: PropTypes.bool,
-  width: PropTypes.oneOf(Object.keys(MODAL_WIDTH) as ModalWidth[]),
 }
 
 export default memo(Modal)

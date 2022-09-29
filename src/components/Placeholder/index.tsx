@@ -1,6 +1,5 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Block from './Block'
 import Blocks from './Blocks'
 import BoxWithIcon from './BoxWithIcon'
@@ -85,11 +84,5 @@ const Placeholder = ({
 }
 
 export const placeholderTypes = Object.keys(variants) as PlaceholderVariant[]
-
-Placeholder.propTypes = {
-  col: PropTypes.number,
-  length: PropTypes.number,
-  variant: PropTypes.oneOf(placeholderTypes),
-}
 
 export default Placeholder

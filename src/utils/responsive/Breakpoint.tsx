@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
-import { ScreenSize, screens } from '../../theme'
+import { ScreenSize } from '../../theme'
 import { down, up } from './utilities'
 
 const Breakpoint = styled.div<{ down?: ScreenSize; up?: ScreenSize }>`
@@ -10,10 +9,5 @@ const Breakpoint = styled.div<{ down?: ScreenSize; up?: ScreenSize }>`
     ${props.down ? down(props.down, 'display: block;') : ''}
   `}
 `
-
-Breakpoint.propTypes = {
-  down: PropTypes.oneOf<ScreenSize>(Object.keys(screens) as ScreenSize[]),
-  up: PropTypes.oneOf<ScreenSize>(Object.keys(screens) as ScreenSize[]),
-}
 
 export default Breakpoint

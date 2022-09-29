@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { ComponentProps, useState } from 'react'
 import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
@@ -15,10 +14,6 @@ const UncontrolledPasswordStrengthMeter = ({
       <PasswordStrengthMeter password={value} {...props} />
     </div>
   )
-}
-
-UncontrolledPasswordStrengthMeter.propTypes = {
-  name: PropTypes.string.isRequired,
 }
 
 export default UncontrolledPasswordStrengthMeter

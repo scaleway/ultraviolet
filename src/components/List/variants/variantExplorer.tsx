@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { KeyboardEvent, MouseEvent, useCallback } from 'react'
 import Box from '../../Box'
 import Checkbox from '../../Checkbox'
@@ -185,14 +184,4 @@ export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
       </StyledRow>
     </Tooltip>
   )
-}
-
-Row.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string.isRequired,
-  tooltip: PropTypes.string,
-}
-
-Row.defaultProps = {
-  tooltip: undefined,
 }

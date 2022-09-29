@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import { HTMLAttributes } from 'react'
 import { Color } from '../../theme'
 
@@ -26,10 +25,5 @@ const StyledPentagon = styled('div', {
 const Pentagon = (props: PentagonProps & HTMLAttributes<HTMLDivElement>) => (
   <StyledPentagon {...props} />
 )
-
-Pentagon.propTypes = {
-  color: PropTypes.string,
-  size: PropTypes.string,
-}
 
 export default Pentagon

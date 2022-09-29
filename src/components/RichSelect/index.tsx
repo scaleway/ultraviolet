@@ -1,12 +1,10 @@
 import { CSSObject, Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   ForwardRefExoticComponent,
   ForwardedRef,
   ReactElement,
   ReactNode,
-  Validator,
   forwardRef,
   useEffect,
   useId,
@@ -91,11 +89,20 @@ type SelectStyleMap = Record<string, SelectStyleFactory>
 
 type SelectStyleProps = {
   error?: string
+  /**
+   * Custom styles of the RichSelect. See [React select documentation](https://react-select.com/styles)
+   */
   customStyle: (
     state: SelectProps & WithSelectProps,
   ) => Record<string, CSSObject>
   animation?: string
+  /**
+   * Time of the animation
+   */
   animationDuration: number
+  /**
+   * Show/hide the label inside the component
+   */
   noTopLabel?: boolean
   theme: Theme
 }
@@ -380,35 +387,6 @@ const SelectContainer = (
   )
 }
 
-SelectContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  getStyles: PropTypes.func.isRequired,
-  innerProps: PropTypes.shape({}).isRequired,
-  isDisabled: PropTypes.bool.isRequired,
-  selectProps: PropTypes.shape({
-    error: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-    flex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    inputId: PropTypes.string,
-    labelId: PropTypes.string,
-    mb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    ml: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    mx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    my: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    name: PropTypes.string,
-    pb: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pl: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pr: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    pt: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    px: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    py: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }) as Validator<SelectProps & ContainerProps<SelectOption>['selectProps']>,
-}
-
 type StyledPlaceholderProps = {
   error?: string
   isMulti: boolean
@@ -491,14 +469,6 @@ const ValueContainer = ({
   </components.ValueContainer>
 )
 
-ValueContainer.propTypes = {
-  children: PropTypes.node,
-  hasValue: PropTypes.bool.isRequired,
-  isDisabled: PropTypes.bool.isRequired,
-  isMulti: PropTypes.bool.isRequired,
-  selectProps: SelectContainer.propTypes?.selectProps,
-}
-
 const inputStyles = ({ isMulti }: Partial<SelectProps>) => css`
   margin-left: 0px;
   ${!isMulti && 'caret-color: transparent'};
@@ -522,13 +492,6 @@ const Input = ({
     }
   />
 )
-
-Input.propTypes = {
-  hasValue: PropTypes.bool.isRequired,
-  isMulti: PropTypes.bool.isRequired,
-  selectProps: SelectContainer.propTypes?.selectProps,
-  value: PropTypes.string,
-}
 
 const Option = ({
   selectProps,
@@ -583,19 +546,6 @@ const Option = ({
   )
 }
 
-Option.propTypes = {
-  description: PropTypes.string,
-  inlineDescription: PropTypes.string,
-  label: PropTypes.string.isRequired,
-  selectProps: SelectContainer.propTypes?.selectProps,
-  value: PropTypes.string.isRequired,
-}
-
-Option.defaultProps = {
-  description: undefined,
-  inlineDescription: undefined,
-}
-
 const DropdownIndicator = (
   props: DropdownIndicatorProps<SelectOption> & WithSelectProps,
 ) => {
@@ -626,10 +576,6 @@ const DropdownIndicator = (
   )
 }
 
-DropdownIndicator.propTypes = {
-  selectProps: SelectContainer.propTypes?.selectProps,
-}
-
 const ClearIndicator = (
   props: ClearIndicatorProps<SelectOption> & WithSelectProps,
 ) => {
@@ -656,11 +602,6 @@ const ClearIndicator = (
   )
 }
 
-ClearIndicator.propTypes = {
-  innerProps: PropTypes.shape({}).isRequired,
-  selectProps: SelectContainer.propTypes?.selectProps,
-}
-
 const MultiValueContainer = (props: MultiValueProps<SelectOption>) => (
   <components.MultiValueContainer {...props} />
 )
@@ -681,11 +622,20 @@ type StateManagedSelect = typeof Select
 
 type RichSelectProps = SelectProps &
   SelectStyleProps & {
+    /**
+     * Name of the animation
+     */
     animation?: string
+    /**
+     * Play the animation when the value change
+     */
     animationOnChange?: boolean
     disabled?: boolean
     readOnly?: boolean
     innerRef?: ForwardedRef<StateManagedSelect>
+    /**
+     * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
+     */
     customComponents?: SelectProps['components']
     children: ReactNode
   }
@@ -801,57 +751,5 @@ const RichSelectWithRef = forwardRef(
 }
 
 RichSelectWithRef.Option = Option as OptionComponent
-
-RichSelectWithRef.propTypes = {
-  /**
-   * Name of the animation
-   */
-  animation: PropTypes.oneOf(Object.keys(animations)),
-  /**
-   * Time of the animation
-   */
-  animationDuration: PropTypes.number,
-  /**
-   * Play the animation when the value change
-   */
-  animationOnChange: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  className: PropTypes.string,
-  /**
-   * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
-   */
-  customComponents: PropTypes.shape({}),
-  /**
-   * Custom styles of the RichSelect. See [React select documentation](https://react-select.com/styles)
-   */
-  customStyle: PropTypes.func,
-  disabled: PropTypes.bool,
-  error: PropTypes.string,
-  inputId: PropTypes.string,
-  isClearable: PropTypes.bool,
-  isMulti: PropTypes.bool,
-  isSearchable: PropTypes.bool,
-  labelId: PropTypes.string,
-  name: PropTypes.string,
-  /**
-   * Show/hide the label inside the component
-   */
-  noTopLabel: PropTypes.bool,
-  onChange: PropTypes.func,
-  placeholder: PropTypes.string,
-  readOnly: PropTypes.bool,
-  required: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-    }),
-  ]),
-}
-RichSelect.propTypes = RichSelectWithRef.propTypes
 
 export default RichSelectWithRef

@@ -1,7 +1,5 @@
 import styled from '@emotion/styled'
 import { Point } from '@nivo/line'
-import PropTypes from 'prop-types'
-import { Validator } from 'react'
 import Text from '../Text'
 
 const LineTooltipContainer = styled.div`
@@ -41,15 +39,5 @@ const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
     </div>
   </LineTooltipContainer>
 )
-
-LineChartTooltip.propTypes = {
-  point: PropTypes.shape({
-    color: PropTypes.string,
-    data: PropTypes.shape({
-      xFormatted: PropTypes.string,
-      yFormatted: PropTypes.string,
-    }),
-  }).isRequired as Validator<Point>,
-}
 
 export default LineChartTooltip

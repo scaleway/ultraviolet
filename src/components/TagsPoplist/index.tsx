@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import {
   Tooltip,
   TooltipArrow,
@@ -48,9 +47,18 @@ const StyledManyTagsContainer = styled.div`
 `
 
 type TagsPoplistProps = {
+  /**
+   * This property define maximum characters length of all tags until it hide tags into tooltip.
+   */
   maxLength?: number
   tags?: string[]
+  /**
+   * This property define maximum characters length of all tags until it hide tags into tooltip.
+   */
   threshold?: number
+  /**
+   * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
+   */
   multiline?: boolean
 }
 
@@ -118,22 +126,6 @@ const TagsPoplist = ({
       )}
     </StyledContainer>
   )
-}
-
-TagsPoplist.propTypes = {
-  /**
-   * This property define maximum characters length of all tags until it hide tags into tooltip.
-   */
-  maxLength: PropTypes.number,
-  /**
-   * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
-   */
-  multiline: PropTypes.bool,
-  tags: PropTypes.arrayOf(PropTypes.string.isRequired),
-  /**
-   * This property define number of tags to display before hiding them in tooltip.
-   */
-  threshold: PropTypes.number,
 }
 
 export default TagsPoplist

@@ -1,5 +1,4 @@
 import { Box as XStyledBox } from '@xstyled/emotion'
-import PropTypes from 'prop-types'
 import {
   AllHTMLAttributes,
   ComponentProps,
@@ -81,7 +80,7 @@ type BoxType = typeof forwardType & {
 /**
  * @deprecated
  */
-// @ts-expect-error We add withComponent & propTypes just below
+// @ts-expect-error We add withComponent just below
 const Box: BoxType = forwardRef<
   Element | HTMLInputElement | HTMLButtonElement,
   BoxProps
@@ -93,10 +92,5 @@ const Box: BoxType = forwardRef<
 Box.withComponent =
   (element: string | ElementType<unknown>) => (props: BoxProps) =>
     <Box as={element} {...props} />
-
-Box.propTypes = {
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-}
 
 export default Box

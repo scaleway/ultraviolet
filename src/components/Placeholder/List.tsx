@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import Line from './Line'
 
 const StyledItem = styled.li`
@@ -40,9 +39,5 @@ const List = ({ length = 3, col = 3 }: { length?: number; col?: number }) => (
     ))}
   </StyledList>
 )
-
-List.propTypes = {
-  length: PropTypes.number,
-}
 
 export default List
