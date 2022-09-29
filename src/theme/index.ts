@@ -2,7 +2,6 @@ import deepmerge from 'deepmerge'
 import dark from './tokens/dark'
 import light from './tokens/light'
 
-/* eslint-disable sort-keys */
 const radii = {
   none: '0',
   default: '4px',
@@ -39,8 +38,6 @@ const screens = {
   xlarge: 1200,
 }
 export type ScreenSize = keyof typeof screens
-
-/* eslint-enable sort-keys */
 
 const theme = {
   colors,
