@@ -1,3 +1,10 @@
+## [0.198.0](https://github.com/scaleway/scaleway-ui/compare/v0.197.0...v0.198.0) (2022-09-29)
+
+
+### :gear: Features
+
+* new component Stack ([#1908](https://github.com/scaleway/scaleway-ui/issues/1908)) ([2fd5892](https://github.com/scaleway/scaleway-ui/commit/2fd589225a28ffa83807bb55b182476b320879b9))
+
 ## [0.197.0](https://github.com/scaleway/scaleway-ui/compare/v0.196.1...v0.197.0) (2022-09-29)
 
 
