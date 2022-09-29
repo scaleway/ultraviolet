@@ -1,18 +1,14 @@
-import userEvent from '@testing-library/user-event'
+import { fireEvent } from '@testing-library/react'
 import VerificationCode from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../helpers/jestHelpers'
 
-const pasteEventWithValue = async (selector: HTMLElement, value: string) => {
-  await userEvent.paste(selector, value, {
-    // @ts-expect-error we mock, don't care about the other values
-    clipboardData: {
-      getData: () => value,
-    },
+const pasteEventWithValue = (selector: HTMLElement, value: string) =>
+  fireEvent.paste(selector, {
+    clipboardData: { getData: () => value },
   })
-}
 
 describe('VerificationCode', () => {
   test('renders correctly with default values', () =>
@@ -27,8 +23,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode type="number" fields={4} initialValue="1" />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          await pasteEventWithValue(getByDisplayValue('1'), '1234')
+        transform: ({ getByDisplayValue }) => {
+          pasteEventWithValue(getByDisplayValue('1'), '1234')
         },
       },
     ))
@@ -37,8 +33,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="1" />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          await pasteEventWithValue(getByDisplayValue('1'), '1a34')
+        transform: ({ getByDisplayValue }) => {
+          pasteEventWithValue(getByDisplayValue('1'), '1a34')
         },
       },
     ))
@@ -47,8 +43,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="12" />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          await pasteEventWithValue(getByDisplayValue('1'), '123456')
+        transform: ({ getByDisplayValue }) => {
+          pasteEventWithValue(getByDisplayValue('1'), '123456')
         },
       },
     ))
@@ -57,8 +53,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="12" />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          await pasteEventWithValue(getByDisplayValue('2'), '123456')
+        transform: ({ getByDisplayValue }) => {
+          pasteEventWithValue(getByDisplayValue('2'), '123456')
         },
       },
     ))
@@ -67,15 +63,16 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode type="text" fields={6} initialValue="12" />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          await pasteEventWithValue(getByDisplayValue('2'), 'h23a*6')
+        transform: ({ getByDisplayValue }) => {
+          pasteEventWithValue(getByDisplayValue('2'), 'h23a*6')
         },
       },
     ))
 
-  test('should trigger onChange and onComplete after pasting values', async () => {
+  test('should trigger onChange and onComplete after pasting values', () => {
     const onChange = jest.fn()
     const onComplete = jest.fn()
+
     const { getByDisplayValue } = renderWithTheme(
       <VerificationCode
         type="number"
@@ -86,12 +83,13 @@ describe('VerificationCode', () => {
       />,
     )
 
-    await pasteEventWithValue(getByDisplayValue('1'), '12')
-    expect(onChange).toHaveBeenLastCalledWith('12')
-    expect(onChange).toHaveBeenCalledTimes(2) // called twice because on paste event then triggers inputOnChange event too
+    pasteEventWithValue(getByDisplayValue('1'), '12')
 
-    await pasteEventWithValue(getByDisplayValue('1'), '1234')
+    expect(onChange).toHaveBeenLastCalledWith('12')
+    expect(onChange).toHaveBeenCalledTimes(1)
+
+    pasteEventWithValue(getByDisplayValue('1'), '1234')
     expect(onComplete).toHaveBeenLastCalledWith('1234')
-    expect(onComplete).toHaveBeenCalledTimes(2)
+    expect(onComplete).toHaveBeenCalledTimes(1)
   })
 })

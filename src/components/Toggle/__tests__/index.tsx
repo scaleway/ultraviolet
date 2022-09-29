@@ -54,11 +54,11 @@ describe('Toggle', () => {
       <Toggle name="test" label={<span>Custom label rendered</span>} />,
     ))
 
-  test('renders and click on toggle on', () => {
+  test('renders and click on toggle on', async () => {
     const node = renderWithTheme(<Toggle name="test" label="This is a label" />)
 
     const input = node.getByRole('checkbox')
-    userEvent.click(input)
+    await userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
 })

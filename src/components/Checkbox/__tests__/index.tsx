@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Checkbox from '..'
 import {
@@ -143,7 +143,8 @@ describe('Checkbox', () => {
     }) as HTMLInputElement
 
     input.focus()
-    userEvent.type(input, '{space}')
+    expect(input).toHaveFocus()
+    fireEvent.keyDown(input, { charCode: 32, code: 'Space', key: ' ' })
     await waitFor(() => expect(input.checked).toBe(false))
   })
 
@@ -159,7 +160,7 @@ describe('Checkbox', () => {
     }) as HTMLInputElement
 
     input.focus()
-    userEvent.type(input, 'a')
+    await userEvent.type(input, 'a')
     await waitFor(() => expect(input.checked).toBe(true))
   })
 })

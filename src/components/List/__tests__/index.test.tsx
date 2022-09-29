@@ -442,17 +442,17 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: node => {
+        transform: async node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
           }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
-          userEvent.click(checkboxes[1])
-          userEvent.click(checkboxes[2])
+          await userEvent.click(checkboxes[1])
+          await userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
-          userEvent.click(checkboxes[0])
+          await userEvent.click(checkboxes[0])
         },
       },
     ))
@@ -667,17 +667,17 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: node => {
+        transform: async node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
           }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
-          userEvent.click(checkboxes[1])
-          userEvent.click(checkboxes[2])
+          await userEvent.click(checkboxes[1])
+          await userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
-          userEvent.click(checkboxes[0])
+          await userEvent.click(checkboxes[0])
         },
       },
     ))
@@ -847,17 +847,17 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: node => {
+        transform: async node => {
           expect(node.getByTestId('row-0')).toBeInTheDocument()
           const checkboxes = node.getAllByRole('checkbox', {
             hidden: true,
           }) as HTMLInputElement[]
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
-          userEvent.click(checkboxes[1])
-          userEvent.click(checkboxes[2])
+          await userEvent.click(checkboxes[1])
+          await userEvent.click(checkboxes[2])
           expect(node.getByText('items selected'))
-          userEvent.click(checkboxes[0])
+          await userEvent.click(checkboxes[0])
         },
       },
     ))
@@ -2016,7 +2016,7 @@ describe('List', () => {
             name: 'sort Name',
           }) as HTMLButtonElement
 
-          await waitFor(() => userEvent.click(nameHeader))
+          await waitFor(async () => userEvent.click(nameHeader))
           await waitFor(() =>
             expect(
               (

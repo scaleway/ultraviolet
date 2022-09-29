@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { fireEvent , waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Tags from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
@@ -214,8 +214,7 @@ describe('Tags', () => {
       {
         transform: async ({ getByDisplayValue, getByText }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          await userEvent.paste(input, '', {
-            // @ts-expect-error we mock, don't care about the other values
+          fireEvent.paste(input, {
             clipboardData: { getData: () => 'test' },
           })
           await waitFor(() => expect(input.value).toBe(''))
@@ -235,10 +234,9 @@ describe('Tags', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async ({ getByDisplayValue }) => {
+        transform: ({ getByDisplayValue }) => {
           const input = getByDisplayValue('') as HTMLInputElement
-          await userEvent.paste(input, '', {
-            // @ts-expect-error we mock, don't care about the other values
+          fireEvent.paste(input, {
             clipboardData: { getData: () => 'test' },
           })
         },

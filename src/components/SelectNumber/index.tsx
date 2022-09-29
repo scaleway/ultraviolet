@@ -88,13 +88,16 @@ const StyledCenterBox = styled('div', {
   justify-content: center;
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid transparent;
+
   :hover:not([disabled], :focus) {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
+
   :focus-within:not([disabled]) {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
+
   max-width: 100%;
 `
 
@@ -110,6 +113,14 @@ const StyledInput = styled.input`
   max-width: 100%;
   font-weight: 500;
   text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  -moz-appearance: textfield;
 `
 
 const StyledText = styled('span', {
@@ -302,6 +313,7 @@ const SelectNumber = ({
           }}
           value={inputValue.toString()} // A dom element can only have string attributes.
           aria-label="Input"
+          type="number"
         />
         {typeof text === 'string' ? (
           <StyledText disabled={disabled}>{text}</StyledText>

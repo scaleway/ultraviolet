@@ -32,8 +32,8 @@ describe('StealthCopiable', () => {
     shouldMatchEmotionSnapshot(
       <StealthCopiable side="left">Hello</StealthCopiable>,
       {
-        transform: ({ getByText }) => {
-          fireEvent.click(getByText('Copy'))
+        transform: async ({ getByText }) => {
+          await fireEvent.click(getByText('Copy'))
           // @ts-expect-error we are voluntarily based on an older browser spec
           // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           expect(window.clipboardData.getData()).toBe('Hello')
@@ -49,8 +49,8 @@ describe('StealthCopiable', () => {
         </ComplexChild>
       </StealthCopiable>,
       {
-        transform: ({ getByText }) => {
-          fireEvent.click(getByText('Copy'))
+        transform: async ({ getByText }) => {
+          await fireEvent.click(getByText('Copy'))
           // @ts-expect-error we are voluntarily based on an older browser spec
           // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
           expect(window.clipboardData.getData()).toBe('Hello')
