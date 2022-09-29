@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack should render correctly with alighCenter 1`] = `
+<DocumentFragment>
+  .cache-1r9wymk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+<div
+    class="cache-1r9wymk-Stack e1sgck4o0"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stack should render correctly with default props 1`] = `
+<DocumentFragment>
+  .cache-5xxpzm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+<div
+    class="cache-5xxpzm-Stack e1sgck4o0"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+    <div>
+      third child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stack should render correctly with row direction 1`] = `
+<DocumentFragment>
+  .cache-6gu0z8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+<div
+    class="cache-6gu0z8-Stack e1sgck4o0"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+    <div>
+      third child
+    </div>
+  </div>
+</DocumentFragment>
+`;
