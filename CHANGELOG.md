@@ -1,3 +1,16 @@
+## [0.197.0](https://github.com/scaleway/scaleway-ui/compare/v0.196.1...v0.197.0) (2022-09-29)
+
+
+### :package: Chore
+
+* **devdeps:** pin dependency @babel/core to 7.19.3 ([#1907](https://github.com/scaleway/scaleway-ui/issues/1907)) ([c540256](https://github.com/scaleway/scaleway-ui/commit/c540256e38404568a06758206487052d6aca4496))
+* **devdeps:** update dependency @types/react to v18.0.21 ([#1897](https://github.com/scaleway/scaleway-ui/issues/1897)) ([8da5a2c](https://github.com/scaleway/scaleway-ui/commit/8da5a2c05ba557e61ab6c41553ffb5c8d66f34d0))
+
+
+### :gear: Features
+
+* remove propTypes ([#1909](https://github.com/scaleway/scaleway-ui/issues/1909)) ([2f449dc](https://github.com/scaleway/scaleway-ui/commit/2f449dc2cbaceeb28316400c3f0cc0f8e69c32a2))
+
 ## [0.196.1](https://github.com/scaleway/scaleway-ui/compare/v0.196.0...v0.196.1) (2022-09-28)
 
 
