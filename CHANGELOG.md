@@ -1,3 +1,19 @@
+## [0.198.1](https://github.com/scaleway/scaleway-ui/compare/v0.198.0...v0.198.1) (2022-09-30)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.9 ([#1915](https://github.com/scaleway/scaleway-ui/issues/1915)) ([4812fd3](https://github.com/scaleway/scaleway-ui/commit/4812fd3a7225cb4b8516009f8ce27049cfa89937))
+* **devdeps:** update actions/setup-node action to v3.5.0 ([#1913](https://github.com/scaleway/scaleway-ui/issues/1913)) ([23bad76](https://github.com/scaleway/scaleway-ui/commit/23bad767d0a81a06f74c8278b44646c042c23ba3))
+* **devdeps:** update all devdeps to unlock renovate ([#1912](https://github.com/scaleway/scaleway-ui/issues/1912)) ([9cca699](https://github.com/scaleway/scaleway-ui/commit/9cca699e6d705a6aa82cee8b3e33625865fb6574))
+* **devdeps:** update node.js to v18.10 ([#1914](https://github.com/scaleway/scaleway-ui/issues/1914)) ([e6ac8cf](https://github.com/scaleway/scaleway-ui/commit/e6ac8cffa835a81a0f91d7284c3d82afddacb3ea))
+* **devdeps:** update pnpm to 7.12.2 ([#1911](https://github.com/scaleway/scaleway-ui/issues/1911)) ([7ce47cf](https://github.com/scaleway/scaleway-ui/commit/7ce47cf1bdf7de4f63082c0d318c427e9aafe53d))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update jest monorepo to v29.1.2 ([#1916](https://github.com/scaleway/scaleway-ui/issues/1916)) ([87e0ace](https://github.com/scaleway/scaleway-ui/commit/87e0ace6283fb5068ec23284d0f3e864f339b29e))
+
 ## [0.198.0](https://github.com/scaleway/scaleway-ui/compare/v0.197.0...v0.198.0) (2022-09-29)
 
 
