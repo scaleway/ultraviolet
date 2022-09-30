@@ -34,7 +34,9 @@ const StyledIcon = styled.svg<{ size: number }>`
   }
 `
 
-const StyledRadio = styled(ReakitRadio)<{ size: number }>`
+const StyledRadio = styled(ReakitRadio, {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: number }>`
   cursor: pointer;
   position: absolute;
   height: ${({ size }) => size}px;

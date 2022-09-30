@@ -14,7 +14,6 @@ import { createPortal } from 'react-dom'
 import {
   ARROW_WIDTH,
   DEFAULT_POSITIONS,
-  TOOLTIP_INITIAL_POSITION,
   TooltipPlacement,
   computePositions,
 } from './helpers'
@@ -25,10 +24,10 @@ type PositionsType = {
   arrowLeft: number
   arrowTop: number
   arrowTransform: string
-  left: number
+  placement: string
   rotate: number
-  top: number
   tooltipInitialPosition: string
+  tooltipPosition: string
 }
 
 type StyledTooltipProps = {
@@ -42,15 +41,13 @@ const StyledTooltip = styled.div<StyledTooltipProps>`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   text-align: center;
-  position: fixed;
+  position: absolute;
   max-width: ${({ maxWidth }) => maxWidth}px;
-  left: ${({ positions }) => positions.left}px;
-  top: ${({ positions }) => positions.top}px;
   opacity: 0;
-  transition: ${ANIMATION_DURATION}ms opacity ease-in-out,
-    ${ANIMATION_DURATION}ms transform ease-in-out;
-  transform: ${({ positions }) => positions.tooltipInitialPosition};
   font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  transition: none;
+  transform: ${({ positions }) => positions.tooltipInitialPosition};
 
   &::after {
     content: ' ';
@@ -82,7 +79,7 @@ type TooltipProps = {
       }) => ReactNode)
   maxWidth?: number
   /**
-   * Auto placement will position the tooltip on the side with the most space
+   * `auto` placement will change the position of the tooltip if it doesn't fit in the viewport.
    */
   placement?: TooltipPlacement
   text?: ReactNode
@@ -108,12 +105,14 @@ const Tooltip = ({
   const [visibleInDom, setVisibleInDom] = useState(visible)
   const [positions, setPositions] = useState<PositionsType>({
     ...DEFAULT_POSITIONS,
-    tooltipInitialPosition: TOOLTIP_INITIAL_POSITION[placement],
   })
   const uniqueId = useId()
   const generatedId = id ?? uniqueId
 
-  const getPositions = useCallback(() => {
+  /**
+   * Will compute the positions of the tooltip and the arrow
+   */
+  const generatePositions = useCallback(() => {
     if (childrenRef.current && tooltipRef.current) {
       setPositions(computePositions({ childrenRef, placement, tooltipRef }))
     }
@@ -124,9 +123,9 @@ const Tooltip = ({
    */
   const unmountTooltip = useCallback(() => {
     setVisibleInDom(false)
-    window.removeEventListener('resize', getPositions)
-    window.removeEventListener('scroll', getPositions)
-  }, [getPositions])
+
+    window.removeEventListener('scroll', generatePositions)
+  }, [generatePositions])
 
   /**
    * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
@@ -138,7 +137,6 @@ const Tooltip = ({
       // then we remove it from dom
       if (!isVisible && tooltipRef.current) {
         tooltipRef.current.style.opacity = '0'
-        tooltipRef.current.style.transform = TOOLTIP_INITIAL_POSITION[placement]
         timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
       } else {
         // If a timeout is already set it means tooltip didn't have time to close completely and be removed from dom,
@@ -147,13 +145,14 @@ const Tooltip = ({
           clearTimeout(timer.current)
           if (tooltipRef.current) {
             tooltipRef.current.style.opacity = '1'
-            tooltipRef.current.style.transform = 'translateY(+0%)'
+            tooltipRef.current.style.transform = positions.tooltipPosition
+            tooltipRef.current.focus()
           }
         }
         setVisibleInDom(isVisible)
       }
     },
-    [placement, unmountTooltip],
+    [positions.tooltipPosition, unmountTooltip],
   )
 
   /**
@@ -162,20 +161,27 @@ const Tooltip = ({
    */
   useEffect(() => {
     if (visibleInDom) {
-      getPositions()
+      generatePositions()
 
-      window.addEventListener('resize', getPositions)
-      window.addEventListener('scroll', getPositions)
+      // if placement is auto we want to recompute positions on scroll only when placement changes
+      if (placement === 'auto') {
+        window.addEventListener('scroll', generatePositions)
+      }
 
-      if (tooltipRef.current) {
+      if (
+        tooltipRef.current &&
+        positions.tooltipPosition !== DEFAULT_POSITIONS.tooltipInitialPosition
+      ) {
+        tooltipRef.current.style.transition = `${ANIMATION_DURATION}ms opacity ease-in-out, ${ANIMATION_DURATION}ms transform ease-in-out`
         tooltipRef.current.style.opacity = '1'
-        tooltipRef.current.style.transform = 'translateY(+0%)'
+        tooltipRef.current.style.transform = positions.tooltipPosition
+        tooltipRef.current.focus()
       }
     }
-  }, [getPositions, placement, unmountTooltip, visibleInDom])
+  }, [visibleInDom, positions.tooltipPosition, generatePositions, placement])
 
   /**
-   * WIll render children conditionally
+   * WIll render children conditionally if children is a function or not.
    */
   const renderChildren = useCallback(() => {
     if (typeof children === 'function')

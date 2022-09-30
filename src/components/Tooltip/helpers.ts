@@ -8,18 +8,10 @@ export const DEFAULT_POSITIONS = {
   arrowLeft: 50,
   arrowTop: 99,
   arrowTransform: 'translate(-50%, -50)',
-  left: 0,
+  placement: 'top',
   rotate: 135,
-  tooltipInitialPosition: 'translate3d(0, 0, 0))',
-  top: 0,
-}
-
-export const TOOLTIP_INITIAL_POSITION = {
-  auto: `translate3d(0, ${TOTAL_USED_SPACE}px, 0)`,
-  bottom: `translate3d(0, -${TOTAL_USED_SPACE}px, 0)`,
-  left: `translate3d(${TOTAL_USED_SPACE}px, 0, 0)`,
-  right: `translate3d(-${TOTAL_USED_SPACE}px, 0, 0)`,
-  top: `translate3d(0, ${TOTAL_USED_SPACE}px, 0)`,
+  tooltipInitialPosition: 'translate3d(0, 0, 0)',
+  tooltipPosition: 'translate3d(0, 0, 0)',
 }
 
 type ComputePlacementTypes = {
@@ -35,18 +27,18 @@ export const computePlacement = ({
   tooltipStructuredRef,
 }: ComputePlacementTypes) => {
   const {
-    top: childrenTop,
-    left: childrenLeft,
+    top: childrenX,
+    left: childrenY,
     right: childrenRight,
   } = childrenStructuredRef
 
   const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
 
-  if (childrenTop - tooltipHeight - TOTAL_USED_SPACE < 0) {
+  if (childrenX - tooltipHeight - TOTAL_USED_SPACE < 0) {
     return 'bottom'
   }
 
-  if (childrenLeft - tooltipWidth - TOTAL_USED_SPACE < 0) {
+  if (childrenY - tooltipWidth - TOTAL_USED_SPACE < 0) {
     return 'right'
   }
 
@@ -96,46 +88,78 @@ export const computePositions = ({
 
   const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
 
+  // It will get how much scroll is done on the page to compute the position of the tooltip
+  const scrollTopValue = document.documentElement.scrollTop
+
   switch (placementBasedOnWindowSize) {
-    case 'bottom':
+    case 'bottom': {
+      const positionX = childrenLeft + childrenWidth / 2 - tooltipWidth / 2
+      const positionY =
+        childrenTop + scrollTopValue + childrenHeight + ARROW_WIDTH + SPACE
+
       return {
         arrowLeft: tooltipWidth / 2,
         arrowTop: -ARROW_WIDTH - 5,
         arrowTransform: '',
-        left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
+        placement: 'bottom',
         rotate: 180,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.bottom,
-        top: childrenTop + childrenHeight + ARROW_WIDTH + SPACE,
+        tooltipInitialPosition: `translate3d(${positionX}px, ${
+          positionY - TOTAL_USED_SPACE
+        }px, 0)`,
+        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
-    case 'left':
+    }
+    case 'left': {
+      const positionX = childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2
+      const positionY =
+        childrenTop + scrollTopValue - tooltipHeight / 2 + childrenHeight / 2
+
       return {
         arrowLeft: tooltipWidth + ARROW_WIDTH + 5,
         arrowTop: tooltipHeight / 2,
         arrowTransform: 'translate(-50%, -50%)',
-        left: childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2,
+        placement: 'left',
         rotate: -90,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.left,
-        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
+        tooltipInitialPosition: `translate3d(${
+          positionX + TOTAL_USED_SPACE
+        }px, ${positionY}px, 0)`,
+        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
-    case 'right':
+    }
+    case 'right': {
+      const positionX = childrenRight + ARROW_WIDTH + SPACE * 2
+      const positionY =
+        childrenTop + scrollTopValue - tooltipHeight / 2 + childrenHeight / 2
+
       return {
         arrowLeft: -ARROW_WIDTH - 5,
         arrowTop: tooltipHeight / 2,
         arrowTransform: 'translate(50%, -50%)',
-        left: childrenRight + ARROW_WIDTH + SPACE * 2,
+        placement: 'right',
         rotate: 90,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.right,
-        top: childrenTop - tooltipHeight / 2 + childrenHeight / 2,
+        tooltipInitialPosition: `translate3d(${
+          positionX - TOTAL_USED_SPACE
+        }px, ${positionY}px, 0)`,
+        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
-    default: // top placement is default value
+    }
+    default: {
+      // top placement is default value
+      const positionX = childrenLeft + childrenWidth / 2 - tooltipWidth / 2
+      const positionY =
+        childrenTop + scrollTopValue - tooltipHeight - ARROW_WIDTH - SPACE
+
       return {
         arrowLeft: tooltipWidth / 2,
         arrowTop: tooltipHeight - 1,
         arrowTransform: '',
-        left: childrenLeft + childrenWidth / 2 - tooltipWidth / 2,
+        placement: 'top',
         rotate: 0,
-        tooltipInitialPosition: TOOLTIP_INITIAL_POSITION.top,
-        top: childrenTop - tooltipHeight - ARROW_WIDTH - SPACE,
+        tooltipInitialPosition: `translate3d(${positionX}px, ${
+          positionY + TOTAL_USED_SPACE
+        }px, 0)`,
+        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
+    }
   }
 }
