@@ -11,7 +11,7 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     env:
-      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
+      IMAGE_NAME: rg.fr-par.scw.cloud/console-scw/scaleway-ui
       DEPLOYMENT_NAME: 'storybook'
 
     steps:
@@ -46,7 +46,7 @@ jobs:
       - name: Login to Registry
         uses: docker/login-action@v2.0.0
         with:
-          registry: rg.fr-par.scw.cloud/consolescw
+          registry: rg.fr-par.scw.cloud/console-scw
           username: nologin
           password: ${{ secrets.SCW_SECRET_KEY }}
 
