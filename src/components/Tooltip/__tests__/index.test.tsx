@@ -8,21 +8,13 @@ import {
 } from '../../../helpers/jestHelpers'
 
 describe('Tooltip', () => {
-  beforeEach(() => {
-    jest.useFakeTimers()
-  })
-
-  afterEach(() => {
-    jest.useRealTimers()
-  })
-
   test('should render correctly', () =>
     shouldMatchEmotionSnapshot(<Tooltip text="test">Hover me</Tooltip>))
 
   test('should render correctly without text', () =>
     shouldMatchEmotionSnapshot(<Tooltip>Hover me</Tooltip>))
 
-  test(`should display tooltip on hover`, () => {
+  test(`should display tooltip on hover`, async () => {
     const node = renderWithTheme(
       <Tooltip id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -30,14 +22,14 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should display tooltip on hover with function children`, () => {
+  test(`should display tooltip on hover with function children`, async () => {
     const node = renderWithTheme(
       <Tooltip id="test" text="test success!">
         {props => (
@@ -49,14 +41,14 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should display tooltip on hover and hide when exit`, () => {
+  test(`should display tooltip on hover and hide when exit`, async () => {
     const node = renderWithTheme(
       <Tooltip id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -64,21 +56,18 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
-    act(() => {
-      userEvent.unhover(input)
-
-      // That's the time until animation finishes
-      jest.advanceTimersByTime(230)
+    await act(async () => {
+      await userEvent.unhover(input)
     })
     expect(tooltipPortal).not.toBeVisible()
   })
 
-  test(`should display tooltip on hover and hide when exit and hover back before animation ends`, () => {
+  test(`should display tooltip on hover and hide when exit and hover back before animation ends`, async () => {
     const node = renderWithTheme(
       <Tooltip id="test" text="test success!">
         <p data-testid="children">Hover me</p>
@@ -86,19 +75,19 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
-    act(() => {
-      userEvent.unhover(input)
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.unhover(input)
+      await userEvent.hover(input)
     })
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should create tooltip with random id`, () => {
+  test(`should create tooltip with random id`, async () => {
     const node = renderWithTheme(
       <Tooltip text="test success!">
         <p data-testid="children">Hover me</p>
@@ -106,14 +95,14 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
   })
 
-  test(`should renders tooltip with maxWidth`, () => {
+  test(`should renders tooltip with maxWidth`, async () => {
     const node = renderWithTheme(
       <Tooltip text="test success!" maxWidth={100}>
         <p data-testid="children">Hover me</p>
@@ -121,8 +110,8 @@ describe('Tooltip', () => {
     )
 
     const input = node.getByTestId('children') as HTMLInputElement
-    act(() => {
-      userEvent.hover(input)
+    await act(async () => {
+      await userEvent.hover(input)
     })
     const tooltipPortal = node.getByText('test success!') as HTMLInputElement
     expect(tooltipPortal).toBeVisible()
@@ -130,7 +119,7 @@ describe('Tooltip', () => {
 
   describe(`defined placement`, () => {
     ;['top', 'left', 'right', 'bottom'].forEach(placement => {
-      test(`should renders tooltip with placement ${placement}`, () => {
+      test(`should renders tooltip with placement ${placement}`, async () => {
         const node = renderWithTheme(
           <Tooltip
             text="test success!"
@@ -141,8 +130,8 @@ describe('Tooltip', () => {
         )
 
         const input = node.getByTestId('children') as HTMLInputElement
-        act(() => {
-          userEvent.hover(input)
+        await act(async () => {
+          await userEvent.hover(input)
         })
         const tooltipPortal = node.getByText(
           'test success!',

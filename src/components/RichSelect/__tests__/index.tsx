@@ -30,9 +30,9 @@ describe('RichSelect', () => {
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByRole('combobox')
-          userEvent.click(input)
+          await userEvent.click(input)
         },
       },
     ))
@@ -107,9 +107,9 @@ describe('RichSelect', () => {
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByRole('combobox')
-          userEvent.click(input)
+          await userEvent.click(input)
         },
       },
     ))
@@ -124,9 +124,9 @@ describe('RichSelect', () => {
         </RichSelect.Option>
       </RichSelect>,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByRole('combobox')
-          userEvent.click(input)
+          await userEvent.click(input)
         },
       },
     ))
@@ -145,9 +145,9 @@ describe('RichSelect', () => {
         </RichSelect.Option>
       </RichSelect>,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByRole('combobox')
-          userEvent.click(input)
+          await userEvent.click(input)
         },
       },
     ))
@@ -165,9 +165,9 @@ describe('RichSelect', () => {
         <RichSelect.Option value="b">Option B</RichSelect.Option>
       </RichSelect>,
       {
-        transform: node => {
+        transform: async node => {
           const input = node.getByRole('combobox')
-          userEvent.click(input)
+          await userEvent.click(input)
         },
       },
     ))

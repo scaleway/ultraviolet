@@ -54,20 +54,20 @@ describe('Pagination', () => {
     shouldMatchEmotionSnapshot(
       <Pagination page={2} pageCount={10} onChange={() => {}} />,
       {
-        transform: node => {
+        transform: async node => {
           const nextButton = node.getByRole('button', { name: 'Next' })
           const backButton = node.getByRole('button', { name: 'Back' })
           const firstButton = node.getByRole('button', { name: 'First' })
           const lastButton = node.getByRole('button', { name: 'Last' })
-          userEvent.click(nextButton)
-          userEvent.click(backButton)
-          userEvent.click(lastButton)
-          userEvent.click(firstButton)
+          await userEvent.click(nextButton)
+          await userEvent.click(backButton)
+          await userEvent.click(lastButton)
+          await userEvent.click(firstButton)
           const page3Button = node.getByRole('button', { name: 'Page 3' })
-          userEvent.click(page3Button)
-          userEvent.click(page3Button)
+          await userEvent.click(page3Button)
+          await userEvent.click(page3Button)
           const page4Button = node.getByRole('button', { name: 'Page 4' })
-          userEvent.click(page4Button)
+          await userEvent.click(page4Button)
         },
       },
     ))

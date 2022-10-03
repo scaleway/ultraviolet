@@ -2495,8 +2495,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
       />
       <div
         class="react-datepicker-popper"
-        data-placement="bottom"
-        style="position: absolute; left: 0px; top: 0px;"
+        data-placement="bottom-start"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -2504,7 +2504,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
           >
             <div
               class="react-datepicker__triangle"
-              style="position: absolute;"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"
@@ -3466,8 +3466,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
       />
       <div
         class="react-datepicker-popper"
-        data-placement="bottom"
-        style="position: absolute; left: 0px; top: 0px;"
+        data-placement="bottom-start"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -3475,7 +3475,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
           >
             <div
               class="react-datepicker__triangle"
-              style="position: absolute;"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"
@@ -4437,8 +4437,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
       />
       <div
         class="react-datepicker-popper"
-        data-placement="bottom"
-        style="position: absolute; left: 0px; top: 0px;"
+        data-placement="bottom-start"
+        style="position: absolute; left: 0px; top: 0px; transform: translate(0px, 0px);"
       >
         <div>
           <div
@@ -4446,7 +4446,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
           >
             <div
               class="react-datepicker__triangle"
-              style="position: absolute;"
+              style="position: absolute; left: 0px; transform: translate(0px, 0px);"
             />
             <div
               class="react-datepicker__month-container"

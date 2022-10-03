@@ -24,10 +24,10 @@ describe('DotSteps', () => {
     const onClick = jest.fn()
 
     return shouldMatchEmotionSnapshot(<DotSteps setStep={onClick} />, {
-      transform: () => {
+      transform: async () => {
         const currentStep = document.querySelector('div[aria-selected=true]')
         if (!currentStep) throw new Error('current step element not found')
-        userEvent.click(currentStep)
+        await userEvent.click(currentStep)
         expect(onClick).toHaveBeenCalledTimes(1)
       },
     })

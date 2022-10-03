@@ -1,7 +1,10 @@
-import { waitFor } from '@testing-library/react'
+import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import SelectNumber from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../helpers/jestHelpers'
 
 describe('SelectNumber', () => {
   it('should renders correctly', () =>
@@ -52,9 +55,9 @@ describe('SelectNumber', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const inputButton = getByLabelText('Input')
-          const input = getByRole('textbox') as HTMLTextAreaElement
+          const input = getByRole('spinbutton') as HTMLInputElement
 
-          userEvent.click(inputButton)
+          await userEvent.click(inputButton)
           await waitFor(() => expect(input.value).toBe('10'))
         },
       },
@@ -66,12 +69,12 @@ describe('SelectNumber', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const minus = getByLabelText('Minus')
-          const input = getByRole('textbox') as HTMLTextAreaElement
+          const input = getByRole('spinbutton') as HTMLInputElement
 
-          userEvent.click(minus)
+          await userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('9'))
 
-          userEvent.click(minus)
+          await userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('8'))
         },
       },
@@ -89,12 +92,12 @@ describe('SelectNumber', () => {
       {
         transform: async ({ getByLabelText, getByRole }) => {
           const plus = getByLabelText('Plus')
-          const input = getByRole('textbox') as HTMLTextAreaElement
+          const input = getByRole('spinbutton') as HTMLInputElement
 
-          userEvent.click(plus)
+          await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
 
-          userEvent.click(plus)
+          await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('30'))
         },
       },
@@ -106,15 +109,15 @@ describe('SelectNumber', () => {
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const buttonContainer = getByLabelText('Input')
-          const input = getByRole('textbox') as HTMLTextAreaElement
+          const input = getByRole('spinbutton') as HTMLInputElement
 
-          userEvent.click(buttonContainer)
+          await userEvent.click(buttonContainer)
           await waitFor(() => expect(input).toHaveFocus())
           input.blur()
 
-          userEvent.click(buttonContainer)
-          userEvent.clear(input)
-          userEvent.type(input, '20')
+          await userEvent.click(buttonContainer)
+          await userEvent.clear(input)
+          await userEvent.type(input, '20')
           await waitFor(() => expect(input.value).toBe('20'))
         },
       },
@@ -129,10 +132,10 @@ describe('SelectNumber', () => {
       />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox') as HTMLTextAreaElement
-          if (input.parentElement) userEvent.click(input.parentElement)
-          userEvent.clear(input)
-          userEvent.type(input, '1')
+          const input = getByRole('spinbutton') as HTMLInputElement
+          if (input.parentElement) await userEvent.click(input.parentElement)
+          await userEvent.clear(input)
+          await userEvent.type(input, '1')
           await waitFor(() => expect(input.value).toBe('1'))
           input.blur()
           await waitFor(() => expect(input.value).toBe('10'))
@@ -150,10 +153,10 @@ describe('SelectNumber', () => {
       />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox') as HTMLTextAreaElement
-          if (input.parentElement) userEvent.click(input.parentElement)
-          userEvent.clear(input)
-          userEvent.type(input, '120')
+          const input = getByRole('spinbutton') as HTMLInputElement
+          if (input.parentElement) await userEvent.click(input.parentElement)
+          await userEvent.clear(input)
+          await userEvent.type(input, '120')
           await waitFor(() => expect(input.value).toBe('120'))
           input.blur()
           await waitFor(() => expect(input.value).toBe('100'))
@@ -166,19 +169,32 @@ describe('SelectNumber', () => {
       <SelectNumber minValue={10} maxValue={100} value={30} />,
       {
         transform: async ({ getByRole }) => {
-          const input = getByRole('textbox') as HTMLTextAreaElement
-          if (input.parentElement) userEvent.click(input.parentElement)
-          userEvent.type(input, '{arrowup}')
+          const input = getByRole('spinbutton') as HTMLInputElement
+          if (input.parentElement) await userEvent.click(input.parentElement)
+          await userEvent.click(input)
+          fireEvent.keyDown(input, {
+            key: 'ArrowUp',
+            keyCode: 38,
+          })
           await waitFor(() => expect(input.value).toBe('31'))
-          userEvent.type(input, '{arrowdown}')
+          fireEvent.keyDown(input, {
+            key: 'ArrowDown',
+            keyCode: 40,
+          })
           await waitFor(() => expect(input.value).toBe('30'))
-          userEvent.clear(input)
-          userEvent.type(input, '10')
-          userEvent.type(input, '{arrowdown}')
+          await userEvent.clear(input)
+          await userEvent.type(input, '10')
+          fireEvent.keyDown(input, {
+            key: 'ArrowDown',
+            keyCode: 40,
+          })
           await waitFor(() => expect(input.value).toBe('10'))
-          userEvent.clear(input)
-          userEvent.type(input, '100')
-          userEvent.type(input, '{arrowup}')
+          await userEvent.clear(input)
+          await userEvent.type(input, '100')
+          fireEvent.keyDown(input, {
+            key: 'ArrowUp',
+            keyCode: 38,
+          })
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },
@@ -196,37 +212,54 @@ describe('SelectNumber', () => {
       {
         transform: async ({ getByLabelText, getByRole }) => {
           const plus = getByLabelText('Plus')
-          const input = getByRole('textbox') as HTMLTextAreaElement
+          const input = getByRole('spinbutton') as HTMLInputElement
 
-          userEvent.click(plus)
+          await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
 
-          userEvent.click(plus)
+          await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('30'))
         },
       },
     ))
 
-  it('should increase and decrease input with arrow up and down, step and an in-between value set', () =>
-    shouldMatchEmotionSnapshot(
+  it('should increase and decrease input with arrow up and down, step and an in-between value set', async () => {
+    const node = renderWithTheme(
       <SelectNumber minValue={10} maxValue={100} value={32} step={10} />,
-      {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('textbox') as HTMLTextAreaElement
-          if (input.parentElement) userEvent.click(input.parentElement)
-          userEvent.type(input, '{arrowup}')
-          await waitFor(() => expect(input.value).toBe('40'))
-          userEvent.type(input, '{arrowdown}')
-          await waitFor(() => expect(input.value).toBe('30'))
-          userEvent.clear(input)
-          userEvent.type(input, '12')
-          userEvent.type(input, '{arrowdown}')
-          await waitFor(() => expect(input.value).toBe('10'))
-          userEvent.clear(input)
-          userEvent.type(input, '99')
-          userEvent.type(input, '{arrowup}')
-          await waitFor(() => expect(input.value).toBe('100'))
-        },
-      },
-    ))
+    )
+
+    const input = node.getByRole('spinbutton') as HTMLInputElement
+    await waitFor(() => expect(input.value).toBe('32'))
+
+    input.focus()
+    expect(input).toHaveFocus()
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowUp',
+      keyCode: 38,
+    })
+    await waitFor(() => expect(input.value).toBe('40'))
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowDown',
+      keyCode: 40,
+    })
+    await waitFor(() => expect(input.value).toBe('30'))
+    await userEvent.clear(input)
+    await userEvent.type(input, '12')
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowDown',
+      keyCode: 40,
+    })
+    await waitFor(() => expect(input.value).toBe('10'))
+    await userEvent.clear(input)
+    await userEvent.type(input, '99')
+
+    fireEvent.keyDown(input, {
+      key: 'ArrowUp',
+      keyCode: 38,
+    })
+    await waitFor(() => expect(input.value).toBe('100'))
+  })
 })

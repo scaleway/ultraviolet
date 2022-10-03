@@ -57,7 +57,7 @@ describe('SwitchButton', () => {
       />,
     ))
 
-  test('renders with on change', () => {
+  test('renders with on change', async () => {
     const onChange = jest.fn()
 
     const node = renderWithTheme(
@@ -80,7 +80,7 @@ describe('SwitchButton', () => {
       hidden: true,
     })
 
-    userEvent.click(input[1])
+    await userEvent.click(input[1])
   })
 })
 

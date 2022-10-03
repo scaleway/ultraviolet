@@ -70,8 +70,8 @@ describe('UnitInput', () => {
 
     // Role textbox is only for the searchable input
     const valueContainer = node.getByRole('combobox') as HTMLInputElement
-    userEvent.click(valueContainer)
-    userEvent.type(valueContainer, 'weeks{enter}')
+    await userEvent.click(valueContainer)
+    await userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
 
     const richSelect = node.getByTestId('rich-select-test-unit')
@@ -88,11 +88,12 @@ test(`renders with TextBox update`, async () => {
 
   const input = node.getByRole('spinbutton') as HTMLInputElement
   await waitFor(() => expect(input.value).toBe('1'))
-  userEvent.click(input)
-  userEvent.type(input, '10')
+  await userEvent.click(input)
+  await userEvent.type(input, '10')
   await waitFor(() => expect(input.value).toBe('110'))
-  userEvent.type(input, '{selectall}{del}')
+  await userEvent.clear(input)
   await waitFor(() => expect(input.value).toBe('1'))
-  userEvent.type(input, '{selectall}{del}111111111')
+  await userEvent.clear(input)
+  await userEvent.type(input, '111111111')
   await waitFor(() => expect(input.value).toBe('99999'))
 })
