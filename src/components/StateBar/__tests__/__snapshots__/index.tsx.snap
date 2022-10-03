@@ -2,7 +2,26 @@
 
 exports[`StateBar should render correctly with a children 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -34,7 +53,7 @@ exports[`StateBar should render correctly with a children 1`] = `
   text-decoration: none;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -42,10 +61,7 @@ exports[`StateBar should render correctly with a children 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-pq81p8-StyledFilled {
@@ -60,7 +76,9 @@ exports[`StateBar should render correctly with a children 1`] = `
   width: 0%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -77,7 +95,7 @@ exports[`StateBar should render correctly with a children 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
@@ -90,7 +108,26 @@ exports[`StateBar should render correctly with a children 1`] = `
 
 exports[`StateBar should render correctly with a value < 70 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -122,7 +159,7 @@ exports[`StateBar should render correctly with a value < 70 1`] = `
   text-decoration: none;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -130,10 +167,7 @@ exports[`StateBar should render correctly with a value < 70 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-1n6y0uh-StyledFilled {
@@ -148,7 +182,9 @@ exports[`StateBar should render correctly with a value < 70 1`] = `
   width: 69%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -165,7 +201,7 @@ exports[`StateBar should render correctly with a value < 70 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="69"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
@@ -178,7 +214,26 @@ exports[`StateBar should render correctly with a value < 70 1`] = `
 
 exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -210,7 +265,7 @@ exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
   text-decoration: none;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -218,10 +273,7 @@ exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-w970rp-StyledFilled {
@@ -236,7 +288,9 @@ exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
   width: 71%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -253,7 +307,7 @@ exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="71"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
@@ -266,7 +320,26 @@ exports[`StateBar should render correctly with a value < 90 && >= 70 1`] = `
 
 exports[`StateBar should render correctly with a value >= 90 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -298,7 +371,7 @@ exports[`StateBar should render correctly with a value >= 90 1`] = `
   text-decoration: none;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -306,10 +379,7 @@ exports[`StateBar should render correctly with a value >= 90 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-1u63zvy-StyledFilled {
@@ -324,7 +394,9 @@ exports[`StateBar should render correctly with a value >= 90 1`] = `
   width: 90%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -341,7 +413,7 @@ exports[`StateBar should render correctly with a value >= 90 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="90"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
@@ -354,7 +426,26 @@ exports[`StateBar should render correctly with a value >= 90 1`] = `
 
 exports[`StateBar should render correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -374,7 +465,7 @@ exports[`StateBar should render correctly with default props 1`] = `
   gap: 8px;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -382,10 +473,7 @@ exports[`StateBar should render correctly with default props 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-pq81p8-StyledFilled {
@@ -400,7 +488,9 @@ exports[`StateBar should render correctly with default props 1`] = `
   width: 0%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -410,7 +500,7 @@ exports[`StateBar should render correctly with default props 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
@@ -423,7 +513,26 @@ exports[`StateBar should render correctly with default props 1`] = `
 
 exports[`StateBar should render correctly with unlimited value 1`] = `
 <DocumentFragment>
-  .cache-1qr3n93-StyledText-StyledText {
+  .cache-16qovrg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1qr3n93-StyledText-StyledText {
   color: #151a2d;
   font-size: 16px;
   font-family: Asap;
@@ -455,7 +564,7 @@ exports[`StateBar should render correctly with unlimited value 1`] = `
   text-decoration: none;
 }
 
-.cache-pftomu-StyledProgressContainer-StyledProgressBar {
+.cache-1m52ew8-StyledProgressContainer-StyledProgressBar {
   overflow: hidden;
   position: relative;
   height: 4px;
@@ -463,10 +572,7 @@ exports[`StateBar should render correctly with unlimited value 1`] = `
   margin-right: 0;
   border-radius: 2px;
   background-color: #f6f6f8;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 }
 
 .cache-1igbyob-StyledFilled {
@@ -481,7 +587,9 @@ exports[`StateBar should render correctly with unlimited value 1`] = `
   width: 100%;
 }
 
-<div>
+<div
+    class="cache-16qovrg-Stack e1sgck4o0"
+  >
     <div
       class="efuzcis1 cache-1qr3n93-StyledText-StyledText e1tg3t120"
     >
@@ -498,7 +606,7 @@ exports[`StateBar should render correctly with unlimited value 1`] = `
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow="100"
-      class="efuzcis0 cache-pftomu-StyledProgressContainer-StyledProgressBar et8xa2y2"
+      class="efuzcis0 cache-1m52ew8-StyledProgressContainer-StyledProgressBar et8xa2y2"
       role="progressbar"
     >
       <div
