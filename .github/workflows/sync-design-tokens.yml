@@ -1,6 +1,7 @@
 name: Design tokens
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "30 9 * * 1-5"
 
