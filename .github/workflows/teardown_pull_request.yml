@@ -8,7 +8,7 @@ jobs:
   teardown:
     runs-on: ubuntu-20.04
     env:
-      IMAGE_NAME: rg.fr-par.scw.cloud/consolescw/scaleway-ui
+      IMAGE_NAME: rg.fr-par.scw.cloud/console-scw/scaleway-ui
       STORYBOOK_DEPLOYMENT_NAME: storybook
       WEBSITE_DEPLOYMENT_NAME: website
 
