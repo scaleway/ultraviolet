@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { ReactNode, useMemo } from 'react'
 import ProgressBar from '../ProgressBar'
+import Stack from '../Stack'
 import Text from '../Text'
 
 interface StateBarStateProps {
@@ -35,8 +36,7 @@ interface StateBarBarProps {
 }
 
 const StyledProgressBar = styled(ProgressBar)`
-  flex: 1;
-  margin-top: 12px;
+  width: 100%;
 `
 
 export const StateBarBar = ({
@@ -70,7 +70,9 @@ type StateBarType = ((props: {
 }
 
 const StateBar: StateBarType = ({ children, className }) => (
-  <div className={className}>{children}</div>
+  <Stack gap={1} className={className}>
+    {children}
+  </Stack>
 )
 
 StateBar.Bar = StateBarBar
