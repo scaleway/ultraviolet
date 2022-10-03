@@ -8,14 +8,6 @@ import {
 } from '../../../helpers/jestHelpers'
 
 describe('Tooltip', () => {
-  beforeEach(() => {
-    jest.useFakeTimers()
-  })
-
-  afterEach(() => {
-    jest.useRealTimers()
-  })
-
   test('should render correctly', () =>
     shouldMatchEmotionSnapshot(<Tooltip text="test">Hover me</Tooltip>))
 
@@ -71,9 +63,6 @@ describe('Tooltip', () => {
     expect(tooltipPortal).toBeVisible()
     await act(async () => {
       await userEvent.unhover(input)
-
-      // That's the time until animation finishes
-      jest.advanceTimersByTime(230)
     })
     expect(tooltipPortal).not.toBeVisible()
   })

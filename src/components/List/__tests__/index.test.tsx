@@ -1138,12 +1138,12 @@ describe('List', () => {
           await act(async () => {
             await userEvent.click(firstRow.firstElementChild as Element)
           })
-          expect(secondRow.open).toBeFalsy()
           expect(firstRow.open).toBeTruthy()
+          expect(secondRow.open).toBeFalsy()
           await act(async () => {
             await userEvent.click(secondRow.firstElementChild as Element)
           })
-          await waitFor(() => expect(firstRow.open).toBeTruthy())
+          expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeTruthy()
         },
       },
