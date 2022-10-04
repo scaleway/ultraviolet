@@ -1,18 +1,12 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
-  Tooltip,
-  TooltipArrow,
-  TooltipReference,
-  useTooltipState,
-} from 'reakit/Tooltip'
 import Tag from '../Tag'
+import Tooltip from '../Tooltip'
 
 const StyledContainer = styled.div`
   display: flex;
 `
 
-const StyledTooltipReference = styled(TooltipReference)`
+const StyledTooltipReference = styled.span`
   color: ${({ theme }) => theme.colors.primary.text};
   border: none;
   font-size: 14px;
@@ -35,13 +29,9 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
 `
 
 const StyledManyTagsContainer = styled.div`
-  box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  border-radius: ${({ theme }) => theme.radii.default};
-  max-width: 80vw;
   flex-wrap: wrap;
   gap: ${({ theme }) => theme.space['1']};
 `
@@ -68,7 +58,6 @@ const TagsPoplist = ({
   threshold = 1,
   multiline = false,
 }: TagsPoplistProps): JSX.Element | null => {
-  const theme = useTheme()
   let tmpThreshold = threshold
   if (
     tags?.length > 0 &&
@@ -80,8 +69,6 @@ const TagsPoplist = ({
   }
   const hasManyTags = tags.length > tmpThreshold || false
   const visibleTagsCount = hasManyTags ? tmpThreshold : tags.length
-
-  const tooltip = useTooltipState({ gutter: 8 })
 
   if (!tags.length) {
     return null
@@ -101,28 +88,27 @@ const TagsPoplist = ({
         ))}
       </StyledTagContainer>
       {hasManyTags && (
-        <>
-          <StyledTooltipReference {...tooltip}>
-            +{tags.length - tmpThreshold}
-          </StyledTooltipReference>
-          <Tooltip {...tooltip}>
-            <TooltipArrow
-              {...tooltip}
-              style={{ fill: theme.colors.neutral.backgroundWeak, top: '93%' }}
-            />
+        <Tooltip
+          maxWidth={600}
+          text={
             <StyledManyTagsContainer>
               {tags.slice(visibleTagsCount).map((tag, index) => (
                 // useful when two tags are identical `${tag}-${index}`
-                <Tag
+                <span
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${tag}-${index}`}
                 >
                   {tag}
-                </Tag>
+                  {index < tags.slice(visibleTagsCount).length - 1 ? ',' : null}
+                </span>
               ))}
             </StyledManyTagsContainer>
-          </Tooltip>
-        </>
+          }
+        >
+          <StyledTooltipReference>
+            +{tags.length - tmpThreshold}
+          </StyledTooltipReference>
+        </Tooltip>
       )}
     </StyledContainer>
   )
