@@ -72,7 +72,7 @@ const usePagination = <T>({
   )
 
   useEffect(() => {
-    if (isLoading) return
+    if (isLoading || pageCount === 0) return
     setMaxPage(
       pageCount ??
         Math.max(
