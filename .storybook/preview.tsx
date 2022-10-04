@@ -18,7 +18,14 @@ import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
 
 const STORY_SORT = {
-  order: ['Home', 'Testing', 'Theme', 'Components'],
+  order: [
+    'Home',
+    'Testing',
+    'Customization',
+    ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
+    'Responsive',
+    'Components',
+  ],
 }
 
 const darkMode = {

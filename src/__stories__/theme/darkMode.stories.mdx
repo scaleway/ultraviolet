@@ -1,0 +1,30 @@
+import {Meta} from '@storybook/addon-docs'
+
+<Meta title="Customization/Dark mode"/>
+
+# Dark mode
+
+## How to?
+
+Scaleway UI is designed to be used in both light and dark mode. The kit also provide both light and dark theme. <br />
+You can enable dark mode by setting the `theme` prop to `dark` on the `ThemeProvider` component.
+
+```tsx
+import { ThemeProvider } from '@emotion/react'
+import { theme, darkTheme, Button } from '@scaleway/ui'
+import { useState } from 'react'
+
+function App() {
+  const [theme, setTheme] = useState(theme)
+
+  return (
+    <ThemeProvider theme={theme}>
+        <Button onClick={() => setTheme(darkTheme)}>
+            Switch theme
+        </Button>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```
