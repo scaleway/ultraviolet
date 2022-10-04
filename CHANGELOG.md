@@ -1,3 +1,10 @@
+## [0.198.3](https://github.com/scaleway/scaleway-ui/compare/v0.198.2...v0.198.3) (2022-10-04)
+
+
+### :bug: Bug Fixes
+
+* **PieChart:** vertical scroll auto ([#1920](https://github.com/scaleway/scaleway-ui/issues/1920)) ([0ca5081](https://github.com/scaleway/scaleway-ui/commit/0ca5081dd9eeb7ef627eaa2d096b3b57c8ea1693))
+
 ## [0.198.2](https://github.com/scaleway/scaleway-ui/compare/v0.198.1...v0.198.2) (2022-10-04)
 
 
