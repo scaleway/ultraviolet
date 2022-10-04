@@ -1,3 +1,32 @@
+## [0.198.2](https://github.com/scaleway/scaleway-ui/compare/v0.198.1...v0.198.2) (2022-10-04)
+
+
+### :memo: Documentation
+
+* make pagination deprecated ([#1910](https://github.com/scaleway/scaleway-ui/issues/1910)) ([294f3e8](https://github.com/scaleway/scaleway-ui/commit/294f3e8c7931eee246decfd4fc497cceae618108))
+
+
+### :repeat: CI
+
+* make sync tokens triggerable ([#1919](https://github.com/scaleway/scaleway-ui/issues/1919)) ([8241960](https://github.com/scaleway/scaleway-ui/commit/82419607305e2389a1cfa51f82af57be98b97edc))
+* use new registry ([#1923](https://github.com/scaleway/scaleway-ui/issues/1923)) ([de32de3](https://github.com/scaleway/scaleway-ui/commit/de32de37074a480090826419099099060c29c424))
+
+
+### :zap: Refactor
+
+* **statebar:** use stack ([#1921](https://github.com/scaleway/scaleway-ui/issues/1921)) ([af503fa](https://github.com/scaleway/scaleway-ui/commit/af503fadeed6a46e6028b382223db98cc56f5c32))
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.10 ([#1922](https://github.com/scaleway/scaleway-ui/issues/1922)) ([36bbd4a](https://github.com/scaleway/scaleway-ui/commit/36bbd4a99214923e77e802e03896bf78db7268b5))
+* **devdeps:** update dependency @testing-library/user-event to v14 ([#1313](https://github.com/scaleway/scaleway-ui/issues/1313)) ([7afa8a5](https://github.com/scaleway/scaleway-ui/commit/7afa8a53c3e45261c5c2dd95e087c48a9263f8ae))
+
+
+### :bug: Bug Fixes
+
+* **list:** do not allow 0 page count ([#1917](https://github.com/scaleway/scaleway-ui/issues/1917)) ([8ce037b](https://github.com/scaleway/scaleway-ui/commit/8ce037b3ce684d81a1d6beff8329813139a6f6c5))
+
 ## [0.198.1](https://github.com/scaleway/scaleway-ui/compare/v0.198.0...v0.198.1) (2022-09-30)
 
 
