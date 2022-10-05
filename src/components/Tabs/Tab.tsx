@@ -22,6 +22,7 @@ const StyledCounter = styled(Text)`
   height: 24px;
   width: 24px;
   line-height: 22px;
+  text-align: center;
 `
 
 const StyledTooltip = styled(Tooltip)``
