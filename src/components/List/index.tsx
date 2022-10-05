@@ -18,7 +18,10 @@ import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
 import Text from '../Text'
-import { LoadingPlaceholder } from './LoadingPlaceholder'
+import {
+  DEFAULT_PLACEHOLDER_ROWS_COUNT,
+  LoadingPlaceholder,
+} from './LoadingPlaceholder'
 import SelectBar, { ListSelectBarProps } from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
@@ -76,12 +79,20 @@ function Body<DataType extends Record<string, unknown>>({
     variant,
   } = useListContext<DataType>()
 
+  const totalLoadingRows = useMemo(() => {
+    if (perPage) return perPage
+
+    return pageData.length > 0
+      ? pageData.length
+      : DEFAULT_PLACEHOLDER_ROWS_COUNT
+  }, [pageData.length, perPage])
+
   if (isLoading) {
     return (
       (customLoader as JSX.Element) ?? (
         <LoadingPlaceholder<DataType>
           columns={columns}
-          totalRows={perPage !== undefined ? perPage : pageData.length}
+          totalRows={totalLoadingRows}
           Cell={variants[variant].Cell}
           Row={variants[variant].Row}
         />
