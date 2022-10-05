@@ -1,3 +1,15 @@
+## [0.198.4](https://github.com/scaleway/scaleway-ui/compare/v0.198.3...v0.198.4) (2022-10-05)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/checkout action to v3.1.0 ([#1924](https://github.com/scaleway/scaleway-ui/issues/1924)) ([bb7c4f4](https://github.com/scaleway/scaleway-ui/commit/bb7c4f45e19c4fe6c98183f1948f393843d5742a))
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** new tooltip positioning system ([#1918](https://github.com/scaleway/scaleway-ui/issues/1918)) ([927bc6f](https://github.com/scaleway/scaleway-ui/commit/927bc6f3abe105e2e347dab0a6e22a23d1522dfe))
+
 ## [0.198.3](https://github.com/scaleway/scaleway-ui/compare/v0.198.2...v0.198.3) (2022-10-04)
 
 
