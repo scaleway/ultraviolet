@@ -1,0 +1,82 @@
+import {Meta} from '@storybook/addon-docs'
+
+<Meta title="Customization/Spaces and Radii"/>
+
+# Spaces and Radii
+
+## Spaces
+
+The default space scale is:
+
+```tsx
+const space = {
+  0: '0',
+  0.25: '2px',
+  0.5: '4px',
+  0.75: '6px',
+  1: '8px',
+  2: '16px',
+  2.25: '18px',
+  3: '24px',
+  4: '32px',
+  5: '40px',
+  6: '48px',
+  7: '56px',
+  8: '64px',
+  9: '72px',
+}
+```
+
+## Radii
+
+The default radii scale is:
+
+```tsx
+const radii = {
+  none: '0',
+  default: '4px',
+  large: '8px',
+  circle: '100%',
+}
+```
+
+## Customize
+
+You can customize the space and radii scale by passing a custom theme to the `ThemeProvider`:
+
+```tsx
+import { ThemeProvider } from '@emotion/react'
+import { Button, extendTheme } from '@scaleway/ui'
+
+function App() {
+  const myTheme = extendTheme({
+    space: {
+        0: '0',
+        0.25: '4px',
+        0.5: '8px',
+        0.75: '16px',
+        1: '18px',
+        2: '24px',
+        2.25: '32px',
+        3: '40px',
+        ...
+    },
+    radii: {
+        none: '0',
+        default: '8px',
+        large: '16px',
+        circle: '100%',
+    }
+  })
+
+  return (
+    <ThemeProvider theme={myTheme}>
+        <Button>
+            Example
+        </Button>
+    </ThemeProvider>
+  )
+}
+
+export default App
+```

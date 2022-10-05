@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import styled from '@emotion/styled'
-import { darkTheme as dark, lightTheme as light } from '@scaleway/ui'
+import { darkTheme as dark, theme as light } from '@scaleway/ui'
 import Footer from 'components/Footer'
 import GlobalStyle from 'components/GlobalStyle'
 import Head from 'components/Head'
