@@ -544,7 +544,7 @@ const TextBox = forwardRef<
         return (
           <Icon
             name={!valid ? 'close' : 'check'}
-            color={!valid ? 'warning' : 'success'}
+            color={!valid ? 'danger' : 'success'}
             size={20}
           />
         )
@@ -560,12 +560,12 @@ const TextBox = forwardRef<
             >
               {unit}
               {required && (
-                <Icon ml="2px" name="asterisk" color="warning" size={8} />
+                <Icon ml="2px" name="asterisk" color="danger" size={8} />
               )}
             </UnitLabel>
           </>
         )
-      if (required) return <Icon name="asterisk" color="warning" size={10} />
+      if (required) return <Icon name="asterisk" color="danger" size={10} />
 
       return null
     }
