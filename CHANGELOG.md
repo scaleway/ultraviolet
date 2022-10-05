@@ -1,3 +1,10 @@
+## [0.198.6](https://github.com/scaleway/scaleway-ui/compare/v0.198.5...v0.198.6) (2022-10-05)
+
+
+### :bug: Bug Fixes
+
+* updated theme documentation and extendTheme function ([#1925](https://github.com/scaleway/scaleway-ui/issues/1925)) ([16fe265](https://github.com/scaleway/scaleway-ui/commit/16fe265b96ed0e95ffd248863a996a9291e4a037))
+
 ## [0.198.5](https://github.com/scaleway/scaleway-ui/compare/v0.198.4...v0.198.5) (2022-10-05)
 
 
