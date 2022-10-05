@@ -1,3 +1,16 @@
+## [0.198.5](https://github.com/scaleway/scaleway-ui/compare/v0.198.4...v0.198.5) (2022-10-05)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.7.4 ([#1926](https://github.com/scaleway/scaleway-ui/issues/1926)) ([a4c933c](https://github.com/scaleway/scaleway-ui/commit/a4c933ca29bba67828fcffef4cd8462de0ffb280))
+* **devdeps:** update dependency @scaleway/use-i18n to v3.7.4 ([#1927](https://github.com/scaleway/scaleway-ui/issues/1927)) ([e7178c4](https://github.com/scaleway/scaleway-ui/commit/e7178c48f3df0ec3254ffd2013fbe8bace4e6c78))
+
+
+### :bug: Bug Fixes
+
+* force text align in counter ([#1928](https://github.com/scaleway/scaleway-ui/issues/1928)) ([8fb0e53](https://github.com/scaleway/scaleway-ui/commit/8fb0e538e7c46303c01c371c63a76656be12fb96))
+
 ## [0.198.4](https://github.com/scaleway/scaleway-ui/compare/v0.198.3...v0.198.4) (2022-10-05)
 
 
