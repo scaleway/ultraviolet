@@ -19,8 +19,9 @@ RUN cd website && pnpm install --frozen-lockfile
 COPY website ./website/
 RUN cd website && pnpm run build && pnpm run export
 
-FROM node:18.10-alpine as runner
+# Serve website
+FROM joseluisq/static-web-server:2
+
 WORKDIR /workspace
-COPY --from=builder /app/website/out ./
-RUN npm add -g serve
-CMD serve -l 80
+
+COPY --from=builder /app/website/out ./public
