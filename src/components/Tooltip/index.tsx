@@ -186,7 +186,6 @@ const Tooltip = ({
   const renderChildren = useCallback(() => {
     if (typeof children === 'function')
       return children({
-        className,
         onBlur: onMouseEvent(false),
         onFocus: onMouseEvent(true),
         onMouseEnter: onMouseEvent(true),
@@ -197,7 +196,6 @@ const Tooltip = ({
     return (
       <div
         aria-describedby={generatedId}
-        className={className}
         onBlur={onMouseEvent(false)}
         onFocus={onMouseEvent(true)}
         onMouseEnter={onMouseEvent(true)}
@@ -207,7 +205,7 @@ const Tooltip = ({
         {children}
       </div>
     )
-  }, [children, className, generatedId, onMouseEvent])
+  }, [children, generatedId, onMouseEvent])
 
   if (!text) {
     if (typeof children === 'function') return null
@@ -226,6 +224,7 @@ const Tooltip = ({
               maxWidth={maxWidth}
               role="tooltip"
               id={generatedId}
+              className={className}
             >
               {text}
             </StyledTooltip>,
