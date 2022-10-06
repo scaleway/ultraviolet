@@ -1,3 +1,10 @@
+## [0.198.7](https://github.com/scaleway/scaleway-ui/compare/v0.198.6...v0.198.7) (2022-10-06)
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** apply className on tooltip instead of children ([#1932](https://github.com/scaleway/scaleway-ui/issues/1932)) ([1e1f1af](https://github.com/scaleway/scaleway-ui/commit/1e1f1aff728af596c2fd450c2bdee88c20719335))
+
 ## [0.198.6](https://github.com/scaleway/scaleway-ui/compare/v0.198.5...v0.198.6) (2022-10-05)
 
 
