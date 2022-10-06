@@ -57,7 +57,7 @@ type ContainerProps = ContainerBaseProps & {
   header?: ReactNode
   /** Right title can be a string but also a component, like header properties does. */
   rightTitle?: ReactNode
-  subtitle?: string
+  subtitle?: ReactNode
   title: string
 } & BoxProps
 
