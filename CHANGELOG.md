@@ -1,3 +1,10 @@
+## [0.198.8](https://github.com/scaleway/scaleway-ui/compare/v0.198.7...v0.198.8) (2022-10-06)
+
+
+### :bug: Bug Fixes
+
+* container props ([#1933](https://github.com/scaleway/scaleway-ui/issues/1933)) ([ebcf370](https://github.com/scaleway/scaleway-ui/commit/ebcf37002f907c41da8c172274f7821a6ed45c5d))
+
 ## [0.198.7](https://github.com/scaleway/scaleway-ui/compare/v0.198.6...v0.198.7) (2022-10-06)
 
 
