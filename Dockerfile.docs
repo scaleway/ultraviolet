@@ -16,12 +16,8 @@ RUN pnpm run build:storybook
 ######################################################################
 # This stage download a simple http server and serve the application #
 ######################################################################
-FROM node:18.10-alpine
+FROM joseluisq/static-web-server:2
 
 WORKDIR /workspace
 
-COPY --from=builder /usr/src/app/storybook-static .
-
-RUN npm add -g serve
-
-CMD serve -l 80
+COPY --from=builder /usr/src/app/storybook-static ./public
