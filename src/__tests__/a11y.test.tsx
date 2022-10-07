@@ -66,11 +66,7 @@ if (process.argv[4]) {
 
 expect.extend(toHaveNoViolations)
 
-jest.setTimeout(90000)
-
-// TODO: Remove this once https://github.com/nickcolley/jest-axe/issues/147 is fixed.
-const { getComputedStyle } = window
-window.getComputedStyle = elt => getComputedStyle(elt)
+jest.setTimeout(120000)
 
 describe('A11y', () => {
   afterEach(() => {
