@@ -1,3 +1,22 @@
+## [0.198.9](https://github.com/scaleway/scaleway-ui/compare/v0.198.8...v0.198.9) (2022-10-07)
+
+
+### :memo: Documentation
+
+* remove decorators from code snippets - global configuration ([#1935](https://github.com/scaleway/scaleway-ui/issues/1935)) ([d3d9d30](https://github.com/scaleway/scaleway-ui/commit/d3d9d303557ef0323dcc5be5d2b62906af809c81))
+
+
+### :repeat: CI
+
+* fix flacky ci and remove unsed code ([#1929](https://github.com/scaleway/scaleway-ui/issues/1929)) ([0482d50](https://github.com/scaleway/scaleway-ui/commit/0482d50f1948a073f8e3cc99fa746d32e7fedaee))
+* use static web server ([#1934](https://github.com/scaleway/scaleway-ui/issues/1934)) ([8fe1676](https://github.com/scaleway/scaleway-ui/commit/8fe167627b4e254445d684b6ba2d0f9e18a8fa08))
+
+
+### :bug: Bug Fixes
+
+* **list:** show placeholder when data length is unknown ([#1930](https://github.com/scaleway/scaleway-ui/issues/1930)) ([ec537b8](https://github.com/scaleway/scaleway-ui/commit/ec537b8310f89b24fe6a168cc7ca1d6f3b02e085))
+* **TextBox:** required icon color ([#1931](https://github.com/scaleway/scaleway-ui/issues/1931)) ([8f3806d](https://github.com/scaleway/scaleway-ui/commit/8f3806d2144ece6cca67e02a20a41d31e0e86ef5))
+
 ## [0.198.8](https://github.com/scaleway/scaleway-ui/compare/v0.198.7...v0.198.8) (2022-10-06)
 
 
