@@ -29,6 +29,7 @@ type ActionBarProps = {
   rank?: number
   role?: string
   'aria-modal'?: 'true' | 'false'
+  className?: string
 }
 
 const ActionBar = ({
@@ -36,8 +37,14 @@ const ActionBar = ({
   role,
   rank = 0,
   'aria-modal': ariaModal,
-}: ActionBarProps): JSX.Element => (
-  <StyledDiv rank={rank} role={role} aria-modal={ariaModal}>
+  className,
+}: ActionBarProps) => (
+  <StyledDiv
+    rank={rank}
+    role={role}
+    aria-modal={ariaModal}
+    className={className}
+  >
     {children}
   </StyledDiv>
 )
