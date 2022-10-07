@@ -9,6 +9,8 @@ type LoadingPlaceholderProps<DataType> = {
   Row: ({ id, children }: { id: string; children: ReactNode }) => JSX.Element
 }
 
+export const DEFAULT_PLACEHOLDER_ROWS_COUNT = 3
+
 export const LoadingPlaceholder = <DataType,>({
   totalRows,
   columns,
