@@ -1,3 +1,10 @@
+## [0.198.10](https://github.com/scaleway/scaleway-ui/compare/v0.198.9...v0.198.10) (2022-10-07)
+
+
+### :bug: Bug Fixes
+
+* **ActionBar:** allow className ([#1937](https://github.com/scaleway/scaleway-ui/issues/1937)) ([6f99c3a](https://github.com/scaleway/scaleway-ui/commit/6f99c3ac7ee03ca719e78d64e13be892fd46410f))
+
 ## [0.198.9](https://github.com/scaleway/scaleway-ui/compare/v0.198.8...v0.198.9) (2022-10-07)
 
 
