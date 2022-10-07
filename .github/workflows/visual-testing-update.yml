@@ -1,0 +1,45 @@
+name: Visual Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      branchTarget:
+        description: 'Branch to update visual tests against. A commit will be created on this branch.'
+        required: true
+        type: string
+
+jobs:
+  lost-pixel-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch_target }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build storybook
+        run: pnpm run build
+
+      - name: Lost Pixel
+        id: lp
+        uses: lost-pixel/lost-pixel@v2.21.0
+        env:
+          LOST_PIXEL_MODE: update
+
+      - name: Create Commit
+        uses: gr2m/create-or-update-pull-request-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: ${{ github.event.inputs.branch_target }}
+          author: Scaleway Bot <github@scaleway.com>
+          commit-message: "ci: update visual testing"
