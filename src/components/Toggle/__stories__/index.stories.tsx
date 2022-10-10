@@ -17,7 +17,7 @@ export default {
 } as Meta
 
 const Template: Story<ComponentProps<typeof Toggle>> = ({
-  checked,
+  checked: _checked,
   ...args
 }) => <Toggle {...args} name="Toggle" />
 

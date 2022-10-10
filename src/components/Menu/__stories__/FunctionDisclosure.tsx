@@ -4,7 +4,7 @@ import Menu from '..'
 import Touchable from '../../Touchable'
 
 const CustomTemplate: ComponentStory<typeof Menu> = ({
-  disclosure,
+  disclosure: _disclosure,
   ...props
 }) => (
   <Menu

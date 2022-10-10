@@ -1,9 +1,56 @@
+import { Story } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
 import Menu from '..'
-import { Template } from './Template'
+import Icon from '../../Icon'
+import Touchable from '../../Touchable'
 
-export const Variants = Template.bind({})
+const DefaultDisclosure = (
+  <Touchable title="menu" name="menu">
+    <Icon name="dots-horizontal" color="neutral" size={24} />
+  </Touchable>
+)
 
+export const Variants: Story = _props => (
+  <Menu disclosure={DefaultDisclosure}>
+    <Menu.Item>default</Menu.Item>
+    <Menu.Item variant="danger">Danger</Menu.Item>
+    <Menu.Item variant="nav">Nav</Menu.Item>
+    <Menu.Item>default</Menu.Item>
+    <Menu.Item href="/?path=/docs/components-navigation-menu--default">
+      Link
+    </Menu.Item>
+
+    <Menu.Item
+      variant="danger"
+      href="/?path=/docs/components-navigation-menu--default"
+    >
+      Link Danger
+    </Menu.Item>
+
+    <Menu.Item
+      variant="danger"
+      href="/?path=/docs/components-navigation-menu--default"
+      disabled
+    >
+      Link Danger Disabled
+    </Menu.Item>
+
+    <Menu.Item
+      variant="nav"
+      href="/?path=/docs/components-navigation-menu--default"
+    >
+      Link Nav
+    </Menu.Item>
+
+    <Menu.Item
+      variant="nav"
+      href="/?path=/docs/components-navigation-menu--default"
+      disabled
+    >
+      Link Nav disabled
+    </Menu.Item>
+  </Menu>
+)
 Variants.parameters = {
   docs: {
     storyDescription: `A set of variant you can add on MenuItem (danger, nav). You can use either props on MenuItem :
@@ -14,41 +61,7 @@ Variants.parameters = {
 }
 
 Variants.args = {
-  children: [
-    <Menu.Item>default</Menu.Item>,
-    <Menu.Item variant="danger">Danger</Menu.Item>,
-    <Menu.Item variant="nav">Nav</Menu.Item>,
-    <Menu.Item>default</Menu.Item>,
-    <Menu.Item href="/?path=/docs/components-navigation-menu--default">
-      Link
-    </Menu.Item>,
-    <Menu.Item
-      variant="danger"
-      href="/?path=/docs/components-navigation-menu--default"
-    >
-      Link Danger
-    </Menu.Item>,
-    <Menu.Item
-      variant="danger"
-      href="/?path=/docs/components-navigation-menu--default"
-      disabled
-    >
-      Link Danger Disabled
-    </Menu.Item>,
-    <Menu.Item
-      variant="nav"
-      href="/?path=/docs/components-navigation-menu--default"
-    >
-      Link Nav
-    </Menu.Item>,
-    <Menu.Item
-      variant="nav"
-      href="/?path=/docs/components-navigation-menu--default"
-      disabled
-    >
-      Link Nav disabled
-    </Menu.Item>,
-  ],
+  children: [],
 }
 
 Variants.play = () => {
