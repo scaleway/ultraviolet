@@ -1,3 +1,10 @@
+## [0.199.0](https://github.com/scaleway/scaleway-ui/compare/v0.198.10...v0.199.0) (2022-10-10)
+
+
+### :gear: Features
+
+* improve story writing ([#1941](https://github.com/scaleway/scaleway-ui/issues/1941)) ([4b35ff2](https://github.com/scaleway/scaleway-ui/commit/4b35ff2370ade69c0a75d8fc6b1cc585e00c2275))
+
 ## [0.198.10](https://github.com/scaleway/scaleway-ui/compare/v0.198.9...v0.198.10) (2022-10-07)
 
 
