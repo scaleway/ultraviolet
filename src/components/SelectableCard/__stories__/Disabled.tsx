@@ -3,32 +3,6 @@ import { useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 
-const codeSnippet = `
-const [value, onChange] = useState('label-8')
-
-return (
-  <>
-    <SelectableCard
-      name="label-7"
-      checked={value === 'label-7'}
-      value="label-7"
-      type="radio"
-      onChange={event => onChange(event.currentTarget.value)}
-      label="Radio Left"
-    />
-    <SelectableCard
-      name="label-8"
-      checked={value === 'label-8'}
-      value="label-8"
-      type="radio"
-      disabled
-      onChange={event => onChange(event.currentTarget.value)}
-      label="Radio Right"
-    />
-  </>
-)
-`
-
 export const Disabled: Story = () => {
   const [value, onChange] = useState('label-8')
 
@@ -62,11 +36,3 @@ Disabled.decorators = [
     </Stack>
   ),
 ]
-
-Disabled.parameters = {
-  docs: {
-    source: {
-      code: codeSnippet,
-    },
-  },
-}

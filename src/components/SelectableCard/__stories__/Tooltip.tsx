@@ -3,34 +3,7 @@ import { useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 
-const codeSnippet = `
-const [value, onChange] = useState('label-14')
-
-return (
-  <>
-    <SelectableCard
-      name="label-14"
-      checked={value === 'label-14'}
-      value="label-14"
-      type="radio"
-      tooltip="Click on me!"
-      onChange={event => onChange(event.currentTarget.value)}
-      label="Radio Left"
-    />
-    <SelectableCard
-      name="label-15"
-      checked={value === 'label-15'}
-      value="label-15"
-      type="radio"
-      tooltip="No! Click on me instead!"
-      onChange={event => onChange(event.currentTarget.value)}
-      label="Radio Right"
-    />
-  </>
-)
-`
-
-export const Tooltip: Story = () => {
+export const Tooltip: Story = _ => {
   const [value, onChange] = useState('label-14')
 
   return (
@@ -64,11 +37,3 @@ Tooltip.decorators = [
     </Stack>
   ),
 ]
-
-Tooltip.parameters = {
-  docs: {
-    source: {
-      code: codeSnippet,
-    },
-  },
-}
