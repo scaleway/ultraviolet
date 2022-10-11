@@ -10,6 +10,7 @@ const DefaultDisclosure = (
   </Touchable>
 )
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const Variants: Story = _props => (
   <Menu disclosure={DefaultDisclosure}>
     <Menu.Item>default</Menu.Item>
