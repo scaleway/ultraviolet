@@ -11,7 +11,6 @@ import {
   useState,
 } from 'react'
 import parseIntOr from '../../helpers/numbers'
-import Box from '../Box'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 import Touchable from '../Touchable'
@@ -131,7 +130,7 @@ const StyledText = styled('span', {
   user-select: none;
 `
 
-const StyledContainer = styled(Box, {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
@@ -192,7 +191,6 @@ const SelectNumber = ({
   text,
   value,
   disabledTooltip,
-  ...props
 }: SelectNumberProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
@@ -234,8 +232,7 @@ const SelectNumber = ({
   }
 
   const onKeyDown: KeyboardEventHandler = e => {
-    // Arrow Up
-    if (e.keyCode === 38) {
+    if (e.key === 'ArrowUp') {
       e.stopPropagation()
       e.preventDefault()
 
@@ -249,8 +246,7 @@ const SelectNumber = ({
       }
     }
 
-    // Arrow Down
-    if (e.keyCode === 40) {
+    if (e.key === 'ArrowDown') {
       e.stopPropagation()
       e.preventDefault()
 
@@ -278,7 +274,7 @@ const SelectNumber = ({
   const isPlusDisabled = plusRoundedValue > maxValue || disabled
 
   return (
-    <StyledContainer disabled={disabled} size={size} {...props}>
+    <StyledContainer disabled={disabled} size={size}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledTouchable
           onClick={offsetFn(-1)}

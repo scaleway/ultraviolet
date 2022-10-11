@@ -1,10 +1,22 @@
+import styled from '@emotion/styled'
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps, useState } from 'react'
 import SelectNumber, { containerSizesKeys } from '..'
 
+const StyledDiv = styled.div`
+  max-width: 200px;
+`
+
 export default {
   component: SelectNumber,
   title: 'Components/Data Display/SelectNumber',
+  decorators: [
+    StoryComponent => (
+      <StyledDiv>
+        <StoryComponent />
+      </StyledDiv>
+    ),
+  ],
 } as Meta
 
 const Template: Story<ComponentProps<typeof SelectNumber>> = args => {
@@ -16,7 +28,6 @@ const Template: Story<ComponentProps<typeof SelectNumber>> = args => {
       maxValue={100}
       onChange={val => typeof val === 'number' && setValue(val)}
       value={value}
-      width={200}
       {...args}
     />
   )
@@ -42,7 +53,6 @@ Text.decorators = [
         text="GB"
         onChange={val => typeof val === 'number' && setValue(val)}
         value={value}
-        width={200}
       />
     )
   },
@@ -65,7 +75,6 @@ DisabledTooltip.decorators = [
         maxValue={1}
         onChange={val => typeof val === 'number' && setValue(val)}
         value={value}
-        width={200}
         disabledTooltip="This is the content of the disabled tooltip"
       />
     )
@@ -90,7 +99,6 @@ Steps.decorators = [
         step={10}
         onChange={val => typeof val === 'number' && setValue(val)}
         value={value}
-        width={200}
       />
     )
   },
@@ -112,7 +120,6 @@ Sizes.decorators = [
               size={size}
               onChange={val => typeof val === 'number' && setValue(val)}
               value={value}
-              width={200}
             />
           </div>
         )
@@ -124,14 +131,7 @@ Sizes.decorators = [
 export const Disabled = Template.bind({})
 Disabled.decorators = [
   () => (
-    <SelectNumber
-      minValue={0}
-      maxValue={100}
-      value={10}
-      disabled
-      width={200}
-      text="GB"
-    />
+    <SelectNumber minValue={0} maxValue={100} value={10} disabled text="GB" />
   ),
 ]
 
@@ -147,7 +147,6 @@ Events.decorators = [
       onBlur={() => console.log('onBlur')}
       onMinCrossed={() => console.log('onMinCrossed')}
       onMaxCrossed={() => console.log('onMaxCrossed')}
-      width={200}
     />
   ),
 ]
