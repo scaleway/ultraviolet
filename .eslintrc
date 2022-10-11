@@ -66,25 +66,10 @@
       }
     },
     {
-      "files": ["**/__stories__/**/*.{ts,tsx}"],
+      "files": ["**/__stories__/**/*.stories.{ts,tsx}"],
       "rules": {
-        // Unused vars : to allow storybook to show code snippets on custom stories
-        "no-unused-vars": [
-          "error",
-          {
-            "argsIgnorePattern": "^_",
-            "varsIgnorePattern": "^_",
-            "caughtErrorsIgnorePattern": "^_"
-          }
-        ],
-        "@typescript-eslint/no-unused-vars": [
-          "error",
-          {
-            "argsIgnorePattern": "^_",
-            "varsIgnorePattern": "^_",
-            "caughtErrorsIgnorePattern": "^_"
-          }
-        ]
+        // Allow inline nested components (for code snippets)
+        "react/no-unstable-nested-components": "off"
       }
     }
   ]
