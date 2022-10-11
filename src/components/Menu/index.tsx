@@ -19,8 +19,10 @@ import {
 import { Portal } from 'reakit/Portal'
 import Item from './Item'
 
-type DisclosureParam =
-  | ((popover?: Partial<PopoverStateReturn>) => ReactElement)
+export type DisclosureProps = Partial<PopoverStateReturn>
+
+type DisclosureElement =
+  | ((popover: Partial<PopoverStateReturn>) => ReactElement)
   | (ReactElement & { ref?: Ref<HTMLButtonElement> })
 
 const StyledPopover = styled(Popover)`
@@ -134,7 +136,7 @@ type MenuProps = {
   placement?: ArrowPlacement
   children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
   className?: string
-  disclosure: DisclosureParam
+  disclosure: DisclosureElement
   hasArrow?: boolean
   visible?: boolean
 }

@@ -1,17 +1,9 @@
-import { Story } from '@storybook/react'
+import { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
 import Menu from '..'
-import Icon from '../../Icon'
-import Touchable from '../../Touchable'
+import { DefaultDisclosure } from './Template.stories'
 
-const DefaultDisclosure = (
-  <Touchable title="menu" name="menu">
-    <Icon name="dots-horizontal" color="neutral" size={24} />
-  </Touchable>
-)
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Variants: Story = _props => (
+export const Variants: ComponentStory<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
     <Menu.Item>default</Menu.Item>
     <Menu.Item variant="danger">Danger</Menu.Item>
@@ -52,6 +44,7 @@ export const Variants: Story = _props => (
     </Menu.Item>
   </Menu>
 )
+
 Variants.parameters = {
   docs: {
     storyDescription: `A set of variant you can add on MenuItem (danger, nav). You can use either props on MenuItem :
@@ -59,10 +52,6 @@ Variants.parameters = {
 - \`to\` to define as a \`React Router Link\`.
 - \`href\` to define as a native link \`a\`.`,
   },
-}
-
-Variants.args = {
-  children: [],
 }
 
 Variants.play = () => {
