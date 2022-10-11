@@ -244,7 +244,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   margin-right: 0;
 }
 
-.cache-1ha1qhz-Expandable {
+.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -252,9 +252,6 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
-}
-
-.cache-1ha1qhz-Expandable.cache-1ha1qhz-Expandable {
   overflow: hidden;
 }
 
@@ -265,7 +262,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 <div
-    class="e1lzna4r4 cache-1fg0y9a-StyledContainer-container-StyledContainer"
+    class="e1lzna4r5 cache-1fg0y9a-StyledContainer-container-StyledContainer"
     data-testid="rich-select-timeinput-test-0"
   >
     <span
@@ -346,10 +343,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
-      class="e14o3tsk0 cache-1ha1qhz-Expandable"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e1lzna4r3"
     >
       <div
-        class="cache-1k8ev0-StyledError e1lzna4r3"
+        class="cache-1k8ev0-StyledError e1lzna4r4"
       />
     </div>
   </div>

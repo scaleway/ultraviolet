@@ -203,6 +203,10 @@ type InputProps = Omit<
   'inputSize'
 >
 
+const ExpandableWithHiddenOverflow = styled(Expandable)`
+  overflow: hidden;
+`
+
 const StyledInput = styled('input', {
   shouldForwardProp: prop =>
     ![
@@ -634,9 +638,9 @@ const TextBox = forwardRef<
             </StyledRightElement>
           ) : null}
         </StyledRelativeDiv>
-        <Expandable height={56} overflow="hidden" opened={!!error}>
+        <ExpandableWithHiddenOverflow height={56} opened={!!error}>
           <StyledError>{error}</StyledError>
-        </Expandable>
+        </ExpandableWithHiddenOverflow>
         {notice ? <StyledNotice>{notice}</StyledNotice> : null}
       </Box>
     )
