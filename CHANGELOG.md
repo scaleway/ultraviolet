@@ -1,3 +1,21 @@
+## [0.199.1](https://github.com/scaleway/scaleway-ui/compare/v0.199.0...v0.199.1) (2022-10-12)
+
+
+### :lipstick: Style
+
+* add inline nested component eslint rule ([#1943](https://github.com/scaleway/scaleway-ui/issues/1943)) ([46388b1](https://github.com/scaleway/scaleway-ui/commit/46388b1857fca760c860a9c60eb916fdf0689ed3))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency eslint to v8.25.0 ([#1939](https://github.com/scaleway/scaleway-ui/issues/1939)) ([7849ee0](https://github.com/scaleway/scaleway-ui/commit/7849ee05249034cc3ec387bd481347209de3dcf4))
+* **devdeps:** update pnpm/action-setup action to v2.2.3 ([#1947](https://github.com/scaleway/scaleway-ui/issues/1947)) ([e792daf](https://github.com/scaleway/scaleway-ui/commit/e792dafd3d1381fbce6002e206b86de15da8fd3b))
+
+
+### :bug: Bug Fixes
+
+* **Tabs:** counter will be displayed if value is zero ([#1950](https://github.com/scaleway/scaleway-ui/issues/1950)) ([e2816f3](https://github.com/scaleway/scaleway-ui/commit/e2816f37e3ae87f3be989610fee5f32da92d11de))
+
 ## [0.199.0](https://github.com/scaleway/scaleway-ui/compare/v0.198.10...v0.199.0) (2022-10-10)
 
 
