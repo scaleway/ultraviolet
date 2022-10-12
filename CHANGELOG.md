@@ -1,3 +1,15 @@
+## [0.199.2](https://github.com/scaleway/scaleway-ui/compare/v0.199.1...v0.199.2) (2022-10-12)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @rollup/plugin-babel to v6 ([#1940](https://github.com/scaleway/scaleway-ui/issues/1940)) ([f9c5572](https://github.com/scaleway/scaleway-ui/commit/f9c557214f433386bf06121b19ca0c9f86327765))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-use-clipboard to v1.0.9 ([#1948](https://github.com/scaleway/scaleway-ui/issues/1948)) ([cb07b7d](https://github.com/scaleway/scaleway-ui/commit/cb07b7dbc841ea3b87eb13027bcfc012d2097325))
+
 ## [0.199.1](https://github.com/scaleway/scaleway-ui/compare/v0.199.0...v0.199.1) (2022-10-12)
 
 
