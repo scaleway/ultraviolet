@@ -173,16 +173,13 @@ exports[`TextBox should handle events on random button 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
-}
-
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -228,7 +225,7 @@ exports[`TextBox should handle events on random button 1`] = `
             class="cache-1sybl11-StyledIconContainer em6gco81"
           >
             <svg
-              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              class="sc-ui-icon cache-190f6hx-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
@@ -423,16 +420,13 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
-}
-
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -478,7 +472,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
             class="cache-1sybl11-StyledIconContainer em6gco81"
           >
             <svg
-              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              class="sc-ui-icon cache-190f6hx-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
@@ -1620,16 +1614,13 @@ exports[`TextBox should render correctly required true 1`] = `
   color: #4a4f62;
 }
 
-.cache-zx1iws-StyledIcon-sizeStyles {
+.cache-1df1xfu-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: #a6102d;
   height: 10px;
   width: 10px;
   min-width: 10px;
   min-height: 10px;
-}
-
-.cache-zx1iws-StyledIcon-sizeStyles.cache-zx1iws-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -1672,7 +1663,7 @@ exports[`TextBox should render correctly required true 1`] = `
         class="cache-q3eo1g-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-zx1iws-StyledIcon-sizeStyles"
+          class="sc-ui-icon cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -2868,16 +2859,13 @@ exports[`TextBox should render correctly with notice 1`] = `
   margin-top: 8px;
 }
 
-.cache-iz8g7f-StyledIcon-sizeStyles {
+.cache-ahx3oi-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-}
-
-.cache-iz8g7f-StyledIcon-sizeStyles.cache-iz8g7f-StyledIcon-sizeStyles {
-  vertical-align: top;
 }
 
 <div
@@ -2911,7 +2899,7 @@ exports[`TextBox should render correctly with notice 1`] = `
       class="e18bmnpq3 cache-v3fc09-Container-StyledNotice e1qg14600"
     >
       <svg
-        class="sc-ui-icon etwatq50 cache-iz8g7f-StyledIcon-sizeStyles"
+        class="sc-ui-icon cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
         viewBox="0 0 24 24"
       >
         <path
@@ -3427,6 +3415,25 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   line-height: 18px;
 }
 
+.cache-ayytwk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -3474,9 +3481,13 @@ exports[`TextBox should render correctly with unit is px 1`] = `
         />
         <p
           class="e18bmnpq0 cache-113jkm-StyledText-UnitLabel e1tg3t120"
+        />
+        <div
+          class="cache-ayytwk-Stack e1sgck4o0"
         >
           px
-        </p>
+        </div>
+        <p />
       </div>
     </div>
     <div
@@ -3649,17 +3660,32 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   line-height: 18px;
 }
 
-.cache-1qkl7e1-StyledIcon-sizeStyles {
+.cache-ayytwk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1u6olvk-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: #a6102d;
   height: 8px;
   width: 8px;
   min-width: 8px;
   min-height: 8px;
-}
-
-.cache-1qkl7e1-StyledIcon-sizeStyles.cache-1qkl7e1-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  margin-left: 2px;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -3709,17 +3735,21 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
         />
         <p
           class="e18bmnpq0 cache-113jkm-StyledText-UnitLabel e1tg3t120"
+        />
+        <div
+          class="cache-ayytwk-Stack e1sgck4o0"
         >
           px
           <svg
-            class="sc-ui-icon etwatq50 cache-1qkl7e1-StyledIcon-sizeStyles"
+            class="sc-ui-icon cache-1u6olvk-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 24 24"
           >
             <path
               d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
             />
           </svg>
-        </p>
+        </div>
+        <p />
       </div>
     </div>
     <div
@@ -3982,16 +4012,13 @@ exports[`TextBox should render correctly with valid true 1`] = `
   color: #4a4f62;
 }
 
-.cache-1phpi0z-StyledIcon-sizeStyles {
+.cache-1i6h90c-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: #149a7b;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-}
-
-.cache-1phpi0z-StyledIcon-sizeStyles.cache-1phpi0z-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -4035,7 +4062,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
         class="cache-jb8kk0-StyledRightElement-StyledRightElement e18bmnpq7"
       >
         <svg
-          class="sc-ui-icon etwatq50 cache-1phpi0z-StyledIcon-sizeStyles"
+          class="sc-ui-icon cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -4514,16 +4541,13 @@ exports[`TextBox should render random 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
-}
-
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -4569,7 +4593,7 @@ exports[`TextBox should render random 1`] = `
             class="cache-1sybl11-StyledIconContainer em6gco81"
           >
             <svg
-              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              class="sc-ui-icon cache-190f6hx-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
@@ -4786,16 +4810,13 @@ exports[`TextBox should render random 2`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
-}
-
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -4851,7 +4872,7 @@ exports[`TextBox should render random 2`] = `
             class="cache-1sybl11-StyledIconContainer em6gco81"
           >
             <svg
-              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              class="sc-ui-icon cache-190f6hx-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
@@ -5046,16 +5067,13 @@ exports[`TextBox should render toggleable password 1`] = `
   pointer-events: none;
 }
 
-.cache-5xampy-StyledIcon-sizeStyles {
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
   fill: currentColor;
   height: 1em;
   width: 1em;
   min-width: 1em;
   min-height: 1em;
-}
-
-.cache-5xampy-StyledIcon-sizeStyles.cache-5xampy-StyledIcon-sizeStyles {
-  vertical-align: middle;
 }
 
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
@@ -5101,7 +5119,7 @@ exports[`TextBox should render toggleable password 1`] = `
             class="cache-1sybl11-StyledIconContainer em6gco81"
           >
             <svg
-              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              class="sc-ui-icon cache-190f6hx-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path

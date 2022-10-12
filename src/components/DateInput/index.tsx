@@ -228,7 +228,6 @@ const DateInput = ({
                     error ? theme.colors.danger.text : theme.colors.neutral.text
                   }
                   size={24}
-                  alignSelf="center"
                 />
               </StyledIconContainer>
             </div>

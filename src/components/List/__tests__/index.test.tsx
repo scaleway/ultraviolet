@@ -554,7 +554,7 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0]
+          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
             .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
@@ -724,7 +724,7 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0]
+          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
             .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
@@ -970,7 +970,7 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTitle('ascending')[0]
+          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
             .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)

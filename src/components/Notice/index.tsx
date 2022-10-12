@@ -18,7 +18,7 @@ type NoticeProps = {
 
 const Notice = ({ children, className }: NoticeProps) => (
   <Container className={className}>
-    <Icon name="information-outline" verticalAlign="top" size={20} />
+    <Icon name="information-outline" size={20} />
     {typeof children === 'string' ? (
       <MarkDown source={children} linkTarget="_blank" />
     ) : null}

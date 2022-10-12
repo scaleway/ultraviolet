@@ -57,8 +57,12 @@ type CloseButtonProps = {
   closeToast?: () => void
 }
 
+const IconWithLeftMargin = styled(Icon)`
+  margin-left: ${({ theme }) => theme.space['1']};
+`
+
 const CloseButton = ({ closeToast }: CloseButtonProps) => (
-  <Icon name="close" size={18} ml={1} onClick={closeToast} />
+  <IconWithLeftMargin name="close" size={18} onClick={closeToast} />
 )
 
 const StyledAlert = styled(Alert)`
