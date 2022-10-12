@@ -31,6 +31,9 @@ describe('Tabs', () => {
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={undefined}>Undefined</Tabs.Tab>
         <Tabs.Tab counter={12}>Counter</Tabs.Tab>
+        <Tabs.Tab value={2} counter={0}>
+          Counter no items
+        </Tabs.Tab>
         <Tabs.Tab counter={12} badge="Badge">
           Conter and badge
         </Tabs.Tab>

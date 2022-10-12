@@ -171,7 +171,7 @@ const Tab = <T extends ElementType = 'button'>(
         {...props}
       >
         {children}
-        {counter ? (
+        {typeof counter === 'number' ? (
           <StyledCounter oneLine as="span" variant="caption">
             {counter}
           </StyledCounter>
