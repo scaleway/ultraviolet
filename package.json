@@ -48,12 +48,10 @@
     "test:unit:watch": "pnpm run test:unit --watch",
     "test:unit:update": "pnpm run test:unit --updateSnapshot",
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
-    "test:visual": "pnpm run build:storybook-visual && pnpm loki test",
-    "test:visual:update": "pnpm run build:storybook-visual && pnpm loki update",
-    "test:visual:nobuild": "pnpm loki test",
     "prepare": "husky install",
     "size": "pnpm run build && size-limit",
-    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write src/theme/tokens"
+    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write src/theme/tokens",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "lint-staged": {
     "*.(j|t)s?(x)": [
@@ -166,6 +164,7 @@
     "babel-loader": "8.2.5",
     "babel-plugin-annotate-pure-calls": "0.4.0",
     "babel-plugin-named-exports-order": "0.0.2",
+    "chromatic": "^6.10.2",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "date-fns": "2.29.3",
@@ -178,7 +177,6 @@
     "jest-junit": "14.0.1",
     "jest-mock-random": "1.1.1",
     "lint-staged": "13.0.3",
-    "loki": "0.30.3",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "react": "18.2.0",
