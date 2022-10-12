@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3.1.0
         env:
           LANG: en_US.UTF-8
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: pnpm/action-setup@v2.2.3
       - name: Use Node.js
         uses: actions/setup-node@v3.5.0
         with:
