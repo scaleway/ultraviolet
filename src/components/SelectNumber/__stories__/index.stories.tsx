@@ -4,7 +4,7 @@ import SelectNumber, { containerSizesKeys } from '..'
 
 export default {
   component: SelectNumber,
-  title: 'Components/Data Display/SelectNumber',
+  title: 'Components/Data Entry/SelectNumber',
 } as Meta
 
 const Template: Story<ComponentProps<typeof SelectNumber>> = args => {

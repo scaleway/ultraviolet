@@ -13,6 +13,16 @@ export const PROMINENCES = {
   weak: 'weak',
 }
 
+// Those are the allowed color values outside theme
+export const COLOR_CSS_GLOBAL_VALUE = [
+  'inherit',
+  'initial',
+  'unset',
+  'revert',
+  'revert-layer',
+] as const
+
+type ColorProps = Color | typeof COLOR_CSS_GLOBAL_VALUE[number]
 type ProminenceProps = keyof typeof PROMINENCES
 export type TextVariant = keyof typeof typography
 export const textVariants = Object.keys(typography) as TextVariant[]
@@ -33,7 +43,7 @@ const generateStyles = ({
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
-  color: Color
+  color: ColorProps
   oneLine: boolean
   disabled: boolean
   italic: boolean
@@ -45,13 +55,19 @@ const generateStyles = ({
       ? capitalize(PROMINENCES.default)
       : capitalize(PROMINENCES[prominence])
 
-  const themeColor = theme.colors[color]
+  const themeColor = theme.colors[color as Color]
   const text = `text${definedProminence}${
     disabled ? 'Disabled' : ''
   }` as keyof typeof themeColor
 
   return `
-    color: ${theme.colors[color][text]};
+    color: ${
+      COLOR_CSS_GLOBAL_VALUE.includes(
+        color as typeof COLOR_CSS_GLOBAL_VALUE[number],
+      )
+        ? color
+        : theme.colors[color as Color][text]
+    };
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
@@ -77,7 +93,7 @@ type TextProps = {
   className?: string
   children: ReactNode
   variant: TextVariant
-  color?: Color
+  color?: ColorProps
   prominence?: ProminenceProps
   as: ElementType
   oneLine?: boolean
@@ -99,7 +115,7 @@ const StyledText = styled('div', {
       'underline',
     ].includes(prop),
 })<{
-  color: Color
+  color: ColorProps
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean
