@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import Text, { COLOR_CSS_GLOBAL_VALUE, textVariants } from '..'
+import Text, { textVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 // TODO: Remove any but IDK what we can put here
@@ -77,14 +77,4 @@ describe('Text', () => {
         Lorem Ipsum
       </Text>,
     ))
-
-  test.each(COLOR_CSS_GLOBAL_VALUE)(
-    'renders correctly with global color css value="%s"',
-    color =>
-      shouldMatchEmotionSnapshot(
-        <Text as="div" variant="body" color={color}>
-          {color}
-        </Text>,
-      ),
-  )
 })
