@@ -3,7 +3,7 @@ import Menu from '..'
 import Icon from '../../Icon'
 import Touchable from '../../Touchable'
 
-const DefaultDisclosure = (
+export const DefaultDisclosure = (
   <Touchable title="menu" name="menu">
     <Icon name="dots-horizontal" color="neutral" size={24} />
   </Touchable>

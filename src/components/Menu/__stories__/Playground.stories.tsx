@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@storybook/testing-library'
 import Menu from '..'
-import { Template } from './Template'
+import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
 

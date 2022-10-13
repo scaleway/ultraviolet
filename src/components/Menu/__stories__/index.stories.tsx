@@ -21,9 +21,9 @@ export default {
   title: 'Components/Navigation/Menu',
 } as ComponentMeta<typeof Menu>
 
-export { Playground } from './Playground'
-export { Variants } from './Variants'
-export { Borderless } from './Borderless'
-export { ChildrenProps } from './ChildrenProps'
-export { WithModal } from './WithModal'
-export { FunctionDisclosure } from './FunctionDisclosure'
+export { Playground } from './Playground.stories'
+export { Variants } from './Variants.stories'
+export { Borderless } from './Borderless.stories'
+export { ChildrenProps } from './ChildrenProps.stories'
+export { WithModal } from './WithModal.stories'
+export { FunctionDisclosure } from './FunctionDisclosure.stories'
