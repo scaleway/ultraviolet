@@ -44,6 +44,7 @@ const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
               parameters: {
                 ...storyContext?.parameters,
                 docs: {
+                  ...storyContext?.parameters.docs,
                   theme: isDarkTheme ? dark : light,
                 },
               },
