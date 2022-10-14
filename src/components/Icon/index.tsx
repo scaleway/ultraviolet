@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { forwardRef, useMemo } from 'react'
-import * as React from 'react'
 import { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
 
@@ -404,7 +403,9 @@ type IconProps = {
   name?: IconName
   prominence?: ProminenceProps
   color?: Color | string
-} & React.SVGAttributes<HTMLOrSVGElement>
+  'data-testid'?: string
+  className?: string
+}
 
 const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
@@ -413,7 +414,8 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       color = 'currentColor',
       size = '1em',
       prominence = 'default',
-      ...props
+      className,
+      'data-testid': dataTestId,
     },
     ref,
   ) => {
@@ -433,7 +435,8 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         prominence={prominence}
         size={size}
         viewBox={defaultViewBox}
-        {...props}
+        className={className}
+        data-testid={dataTestId}
       >
         {render()}
       </StyledIcon>
