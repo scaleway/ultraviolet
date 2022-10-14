@@ -430,7 +430,6 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       <StyledIcon
         ref={ref}
         color={color}
-        className="sc-ui-icon"
         prominence={prominence}
         size={size}
         viewBox={defaultViewBox}
