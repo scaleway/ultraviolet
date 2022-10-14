@@ -191,6 +191,7 @@ const SelectNumber = ({
   text,
   value,
   disabledTooltip,
+  className,
 }: SelectNumberProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
@@ -231,10 +232,10 @@ const SelectNumber = ({
     if (onBlur) onBlur(event)
   }
 
-  const onKeyDown: KeyboardEventHandler = e => {
-    if (e.key === 'ArrowUp') {
-      e.stopPropagation()
-      e.preventDefault()
+  const onKeyDown: KeyboardEventHandler = event => {
+    if (event.key === 'ArrowUp') {
+      event.stopPropagation()
+      event.preventDefault()
 
       const direction = 1
       const newValue =
@@ -246,9 +247,9 @@ const SelectNumber = ({
       }
     }
 
-    if (e.key === 'ArrowDown') {
-      e.stopPropagation()
-      e.preventDefault()
+    if (event.key === 'ArrowDown') {
+      event.stopPropagation()
+      event.preventDefault()
 
       const direction = -1
 
@@ -274,7 +275,7 @@ const SelectNumber = ({
   const isPlusDisabled = plusRoundedValue > maxValue || disabled
 
   return (
-    <StyledContainer disabled={disabled} size={size}>
+    <StyledContainer disabled={disabled} size={size} className={className}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledTouchable
           onClick={offsetFn(-1)}
