@@ -14,7 +14,6 @@ import parseIntOr from '../../helpers/numbers'
 import Box from '../Box'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
-import Touchable from '../Touchable'
 
 const bounded = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(value, max))
@@ -57,13 +56,12 @@ const iconSizes = {
   small: 22,
 }
 
-const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: prop => !['position', 'size'].includes(prop),
-})<{ size: ContainerSizesType }>`
-  justify-content: center;
-  align-items: center;
-  position: relative;
+const StyledSelectButton = styled.button`
+  cursor: pointer;
+  background: none;
+  border: 0;
   border-radius: ${({ theme }) => theme.radii.default};
+
   color: ${({ theme, disabled }) =>
     disabled
       ? theme.colors.neutral.textDisabled
@@ -73,6 +71,7 @@ const StyledTouchable = styled(Touchable, {
     background: ${({ theme }) => theme.colors.primary.background};
   }
 
+  padding: 0;
   margin: 0 ${({ theme }) => theme.space['1']};
 `
 
@@ -149,7 +148,7 @@ const StyledContainer = styled(Box, {
   ${({ disabled, theme }) =>
     disabled
       ? css`
-          > ${StyledTouchable}, ${StyledInput}, ${StyledCenterBox} {
+          > ${StyledSelectButton}, ${StyledInput}, ${StyledCenterBox} {
             ${disabledStyles({ disabled, theme })}
           }
         `
@@ -280,14 +279,13 @@ const SelectNumber = ({
   return (
     <StyledContainer disabled={disabled} size={size} {...props}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
-        <StyledTouchable
+        <StyledSelectButton
           onClick={offsetFn(-1)}
-          size={size}
           disabled={isMinusDisabled}
           aria-label="Minus"
         >
           <Icon name="minus" size={iconSizes[size]} />
-        </StyledTouchable>
+        </StyledSelectButton>
       </Tooltip>
 
       <StyledCenterBox
@@ -323,14 +321,13 @@ const SelectNumber = ({
       </StyledCenterBox>
 
       <Tooltip text={isPlusDisabled && disabledTooltip}>
-        <StyledTouchable
-          size={size}
+        <StyledSelectButton
           onClick={offsetFn(1)}
           disabled={isPlusDisabled}
           aria-label="Plus"
         >
           <Icon name="plus" size={iconSizes[size]} />
-        </StyledTouchable>
+        </StyledSelectButton>
       </Tooltip>
     </StyledContainer>
   )

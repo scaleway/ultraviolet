@@ -5,11 +5,11 @@ import DatePicker, {
   registerLocale,
 } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
+import Button from '../Button'
 import Icon from '../Icon'
 import Separator from '../Separator'
 import Text from '../Text'
 import TextBox from '../TextBox'
-import Touchable from '../Touchable'
 
 const PREFIX = '.react-datepicker'
 
@@ -118,6 +118,8 @@ const StyledSpan = styled.span`
   position: absolute;
   right: 16px;
   top: 16px;
+  display: flex;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 const StyledIconContainer = styled.div`
@@ -252,28 +254,22 @@ const DateInput = ({
                 </StyledText>
               </TopHeaderDiv>
               <StyledSpan>
-                <Touchable
+                <Button
+                  action="rounded"
+                  icon="chevron-left"
+                  iconSize={10}
+                  variant="secondary"
                   onClick={decreaseMonth}
                   disabled={prevMonthButtonDisabled}
-                  mx={1}
-                >
-                  <Icon
-                    size={11}
-                    name="chevron-left"
-                    color={theme.colors.neutral.text}
-                  />
-                </Touchable>
-                <Touchable
+                />
+                <Button
+                  action="rounded"
+                  icon="chevron-right"
+                  iconSize={10}
+                  variant="secondary"
                   onClick={increaseMonth}
                   disabled={nextMonthButtonDisabled}
-                  mx={1}
-                >
-                  <Icon
-                    size={11}
-                    name="chevron-right"
-                    color={theme.colors.neutral.text}
-                  />
-                </Touchable>
+                />
               </StyledSpan>
             </>
           )}

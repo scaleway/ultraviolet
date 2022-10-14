@@ -1,4 +1,4 @@
-import { css, useTheme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import {
   ReactElement,
@@ -20,8 +20,7 @@ import {
   useDialogState,
 } from 'reakit/Dialog'
 import * as animations from '../../utils'
-import Icon from '../Icon'
-import Touchable from '../Touchable'
+import Button from '../Button'
 
 export const MODAL_WIDTH = {
   large: 850,
@@ -273,7 +272,6 @@ const Modal = ({
   preventBodyScroll = true,
   width = 'small',
 }: ModalProps) => {
-  const theme = useTheme()
   const dialog = useDialogState({
     animated,
     baseId,
@@ -311,18 +309,14 @@ const Modal = ({
           <>
             <StyledContainer>
               {isClosable && (
-                <Touchable
+                <Button
                   onClick={onClose || onCloseCallBack}
-                  alignSelf="center"
                   title="close"
-                  mb={0}
-                >
-                  <Icon
-                    name="close"
-                    size={20}
-                    color={theme.colors.neutral.textWeak}
-                  />
-                </Touchable>
+                  variant="transparent"
+                  icon="close"
+                  iconSize={20}
+                  action
+                />
               )}
             </StyledContainer>
             {dialog.visible &&

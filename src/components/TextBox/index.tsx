@@ -16,12 +16,12 @@ import {
   useState,
 } from 'react'
 import Box, { XStyledProps } from '../Box'
+import Button from '../Button'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'
 import Separator from '../Separator'
 import Text from '../Text'
-import Touchable from '../Touchable'
 
 const inputSizes = {
   medium: {
@@ -525,24 +525,26 @@ const TextBox = forwardRef<
     const getRightComponent = () => {
       if (isPassToggleable && !generated)
         return (
-          <Touchable
+          <Button
+            action
             onClick={handlePassVisibilityClick}
             onKeyDown={handlePassVisiblityKeyDown}
             title={passwordVisible ? 'Hide' : 'Show'}
-          >
-            <Icon name={passwordVisible ? 'eye-off' : 'eye'} />
-          </Touchable>
+            variant="transparent"
+            icon={passwordVisible ? 'eye-off' : 'eye'}
+          />
         )
       if (random)
         return (
-          <Touchable
+          <Button
+            action
             onClick={handleClickRandomize}
             onKeyDown={handleKeyDownRandomize}
             disabled={disabled}
             title="Randomize"
-          >
-            <Icon name="auto-fix" />
-          </Touchable>
+            icon="auto-fix"
+            variant="transparent"
+          />
         )
       if (valid === false || valid === true)
         return (
