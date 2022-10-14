@@ -66,7 +66,7 @@ const PieChart = ({
     () =>
       emptyLegend ? (
         <EmptyLegend>
-          <Text variant="body" as="p">
+          <Text color="neutral" variant="body" as="p">
             {emptyLegend}
           </Text>
         </EmptyLegend>

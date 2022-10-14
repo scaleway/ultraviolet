@@ -40,11 +40,11 @@ const HeadStartContainer = styled.div`
 
 const GettingStarted = () => (
   <GettingStartedContainer>
-    <Text as="h3" variant="headingLarge">
+    <Text color="neutral" as="h3" variant="headingLarge">
       Getting Started
     </Text>
     <HeadStartContainer>
-      <Text as="p" variant="body">
+      <Text color="neutral" as="p" variant="body">
         Run one of the following commands in your React project to start using
         Scaleway UI:
       </Text>
@@ -77,7 +77,7 @@ const GettingStarted = () => (
       </RelativeDiv>
     </HeadStartContainer>
     <HeadStartContainer>
-      <Text as="p" variant="body">
+      <Text color="neutral" as="p" variant="body">
         Integrate the theme into your project to use our components.
       </Text>
       <CopyBox>

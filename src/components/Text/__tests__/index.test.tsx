@@ -23,7 +23,7 @@ describe('Text', () => {
 
   test.each(textVariants)('renders correctly with type="%s"', variant =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant={variant}>
+      <Text color="neutral" as="div" variant={variant}>
         {variant}
       </Text>,
     ),
@@ -32,7 +32,7 @@ describe('Text', () => {
   test(`renders correctly with tooltip`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-        <Text as="div" variant="body" oneLine>
+        <Text color="neutral" as="div" variant="body" oneLine>
           This text is quite long. Lorem ipsum dolor sit amet, consectetur
           adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
@@ -42,10 +42,10 @@ describe('Text', () => {
 
   test(`with multiple nested chidldren renders correctly`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body">
+      <Text color="neutral" as="div" variant="body">
         Lorem
         <span>Ipsum</span>
-        <Text variant="heading" as="span">
+        <Text color="neutral" variant="heading" as="span">
           <span>Dolor</span>
         </Text>
         Sit
@@ -60,20 +60,20 @@ describe('Text', () => {
     ))
   test(`with italic`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" italic>
+      <Text color="neutral" as="div" variant="body" italic>
         Lorem Ipsum
       </Text>,
     ))
   test(`with underline`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" underline>
+      <Text color="neutral" as="div" variant="body" underline>
         Lorem Ipsum
       </Text>,
     ))
 
   test(`with disabled`, () =>
     shouldMatchEmotionSnapshot(
-      <Text as="div" variant="body" disabled>
+      <Text color="neutral" as="div" variant="body" disabled>
         Lorem Ipsum
       </Text>,
     ))

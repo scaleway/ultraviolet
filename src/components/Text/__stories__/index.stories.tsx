@@ -15,7 +15,9 @@ export default {
   title: 'Components/Fondation/Text',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Text>> = args => <Text {...args} />
+const Template: Story<ComponentProps<typeof Text>> = args => (
+  <Text color="neutral" {...args} />
+)
 
 export const Default = Template.bind({})
 Default.args = {
@@ -27,7 +29,7 @@ Default.args = {
 export const Variants: Story = () => (
   <>
     {textVariants.map(variant => (
-      <Text as="div" key={variant} variant={variant}>
+      <Text color="neutral" as="div" key={variant} variant={variant}>
         {variant}
       </Text>
     ))}
@@ -126,7 +128,7 @@ export const OneLine: Story = () => (
   <>
     <strong>Without ellipsis</strong>
     <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-      <Text as="div" variant="body">
+      <Text color="neutral" as="div" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
@@ -134,7 +136,7 @@ export const OneLine: Story = () => (
     </div>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
     <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
-      <Text as="div" variant="body" oneLine>
+      <Text color="neutral" as="div" variant="body" oneLine>
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.

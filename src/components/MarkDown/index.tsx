@@ -43,7 +43,7 @@ const headingRenderer = ({
 
 const inlineCodeRenderer = ({ children }: { children: ReactNode }) => (
   <Container>
-    <Text as="code" variant="code">
+    <Text color="neutral" as="code" variant="code">
       {children}
     </Text>
   </Container>

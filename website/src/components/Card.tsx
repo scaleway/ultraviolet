@@ -28,7 +28,7 @@ const Card = ({ title, description, icon, className }: CardProps) => (
         {title}
       </Text>
       {typeof description === 'string' ? (
-        <Text as="p" variant="bodySmall">
+        <Text color="neutral" as="p" variant="bodySmall">
           {description}
         </Text>
       ) : (

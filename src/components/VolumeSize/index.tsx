@@ -229,7 +229,7 @@ const VolumeSize = ({
   return (
     <StyledComponentContainer>
       <StyledBox role="status" aria-live="polite">
-        <Text as="span" variant="bodyStrong">
+        <Text color="neutral" as="span" variant="bodyStrong">
           {title ? <StyledTitle>{title}</StyledTitle> : null}
           <StyledValue hasError={hasError}>
             {value} {unit}
@@ -263,7 +263,7 @@ const VolumeSize = ({
             <StyledLabel type="min">
               {minSize} {unit}
             </StyledLabel>
-            <Text as="span" variant="bodySmall">
+            <Text color="neutral" as="span" variant="bodySmall">
               {maxSize ? minLabel : requiredLabel}
             </Text>
           </StyledLabelContainer>
@@ -274,7 +274,7 @@ const VolumeSize = ({
               <StyledLabel type="max">
                 {maxSize} {unit}
               </StyledLabel>
-              <Text as="span" variant="bodySmall">
+              <Text color="neutral" as="span" variant="bodySmall">
                 {maxLabel}
               </Text>
             </StyledLabelContainer>

@@ -58,7 +58,7 @@ const Introduction = () => (
             Scaleway <b>UI</b>
           </Text>
         </NameContainer>
-        <Text as="h2" variant="heading">
+        <Text color="neutral" as="h2" variant="heading">
           Open Source <br />
           Component Library
         </Text>

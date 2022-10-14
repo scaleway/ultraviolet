@@ -16,7 +16,7 @@ AlignItems.decorators = [
   () => (
     <Stack gap={2} direction="row" alignItems="center">
       <Icon name="plus" size={40} />
-      <Text variant="body" as="p">
+      <Text color="neutral" variant="body" as="p">
         {'A long text repeated'.repeat(20)}
       </Text>
     </Stack>

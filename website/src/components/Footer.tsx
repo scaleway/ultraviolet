@@ -32,10 +32,10 @@ const Footer = () => (
   <StyledFooter>
     <FooterRow>
       <div>
-        <Text as="p" variant="body">
+        <Text color="neutral" as="p" variant="body">
           Hosted in green datacenters in France
         </Text>
-        <Text as="p" variant="bodySmall" prominence="weak">
+        <Text color="neutral" as="p" variant="bodySmall" prominence="weak">
           Our datacenters are designed and built to deliver excellent energy
           efficiency. They offer a low carbon footprint with our guaranteed
           clean energy source. We embrace both disruptive and state-of-the-art

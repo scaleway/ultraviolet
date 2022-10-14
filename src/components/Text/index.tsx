@@ -99,7 +99,7 @@ const StyledText = styled('div', {
       'underline',
     ].includes(prop),
 })<{
-  color?: Color
+  color: Color
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean

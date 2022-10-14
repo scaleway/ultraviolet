@@ -56,10 +56,10 @@ const Home = () => (
       <StyledCommunityLeft>
         <Image src={slackLogo} width="48" height="48" alt="Slack logo" />
         <div>
-          <Text as="h4" variant="headingSmall">
+          <Text color="neutral" as="h4" variant="headingSmall">
             Connect with the community
           </Text>
-          <Text as="p" variant="body">
+          <Text color="neutral" as="p" variant="body">
             Join us if you want to report an issue, if you have any questions or
             if you just want to meet new people!
           </Text>
@@ -74,7 +74,7 @@ const Home = () => (
       </Button>
     </StyledCommunityContainer>
     <BuiltWithContainer>
-      <Text as="span" variant="headingLarge">
+      <Text color="neutral" as="span" variant="headingLarge">
         Built with
         <svg width={35} height={35} viewBox="0 0 24 24">
           <StyledGroup>

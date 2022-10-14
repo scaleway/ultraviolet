@@ -39,7 +39,7 @@ const BarChartToolTip = ({
       <Text variant="bodyStronger" as="p" color="primary">
         {formattedValue}
       </Text>
-      <Text variant="bodySmall" as="p">
+      <Text color="neutral" variant="bodySmall" as="p">
         {indexValue}
       </Text>
     </div>

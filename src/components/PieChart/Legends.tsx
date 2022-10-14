@@ -141,7 +141,9 @@ const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
               id={`chart-legend-${item.id}`}
             />
             <Label>
-              <Text isFocused={isSegmentFocused}>{item.name}</Text>
+              <Text color="neutral" isFocused={isSegmentFocused}>
+                {item.name}
+              </Text>
               <Line>
                 <ProgressiveLine isFocused={isSegmentFocused} />
               </Line>

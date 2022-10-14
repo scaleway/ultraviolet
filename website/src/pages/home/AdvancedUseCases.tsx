@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={isLightMode ? lightTheme : darkTheme}>
-      <Text as="p" variant="body">
+      <Text color="neutral" as="p" variant="body">
         This could be a very cool introduction text.
       </Text>
       <Switch
@@ -76,7 +76,7 @@ const StyledFieldContainer = styled.div\`
 const App = () => (
   <ThemeProvider theme={theme}>
     <Container>
-      <Text as="h1" variant="headingLarge">Welcome to this form example</Text>
+      <Text color="neutral" as="h1" variant="headingLarge">Welcome to this form example</Text>
       <StyledFieldContainer>
         <TextBox
           name="name"
@@ -122,7 +122,7 @@ const AdvancedUseCases = () => (
     <StyledTitle as="h3" variant="headingLarge">
       Advanced Use Cases
     </StyledTitle>
-    <Text as="p" variant="body">
+    <Text color="neutral" as="p" variant="body">
       If you want to change the theme or even to create a dark theme, Scaleway
       UI allows you to do it easily
     </Text>

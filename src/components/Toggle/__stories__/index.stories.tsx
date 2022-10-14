@@ -47,7 +47,7 @@ ComplexLabel.args = {
       }}
     >
       <Icon name="lock" size={18} />
-      <Text as="span" variant="body">
+      <Text color="neutral" as="span" variant="body">
         Lock functionality
       </Text>
     </div>

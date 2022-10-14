@@ -60,7 +60,7 @@ export const ComplexChildren = Template.bind({})
 ComplexChildren.decorators = [
   () => (
     <StealthCopiable>
-      <Text as="code" variant="code">
+      <Text color="neutral" as="code" variant="code">
         I&apos;m a command Typography
       </Text>
     </StealthCopiable>

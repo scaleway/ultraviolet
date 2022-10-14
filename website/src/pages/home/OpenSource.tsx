@@ -44,7 +44,7 @@ const OpenSource = () => (
       <StyledTitle as="h3" variant="headingLarge">
         Open Source
       </StyledTitle>
-      <Text as="p" variant="body">
+      <Text color="neutral" as="p" variant="body">
         Discover our other open source projects:
       </Text>
     </StyledOpenSourceTitleContainer>
