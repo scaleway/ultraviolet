@@ -13,7 +13,7 @@ specifiers:
   '@types/react-syntax-highlighter': 15.5.5
   eslint: 8.25.0
   next: 12.3.1
-  next-transpile-modules: 9.0.0
+  next-transpile-modules: 9.1.0
   polished: 4.2.2
   prop-types: 15.8.1
   react: 18.2.0
@@ -46,7 +46,7 @@ devDependencies:
   '@types/react': 18.0.21
   '@types/react-syntax-highlighter': 15.5.5
   eslint: 8.25.0
-  next-transpile-modules: 9.0.0
+  next-transpile-modules: 9.1.0
   prop-types: 15.8.1
   typescript: 4.8.4
 
@@ -2707,8 +2707,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-transpile-modules/9.0.0:
-    resolution: {integrity: sha512-VCNFOazIAnXn1hvgYYSTYMnoWgKgwlYh4lm1pKbSfiB3kj5ZYLcKVhfh3jkPOg1cnd9DP+pte9yCUocdPEUBTQ==}
+  /next-transpile-modules/9.1.0:
+    resolution: {integrity: sha512-yzJji65xDqcIqjvx5vPJcs1M+MYQTzLM1pXH/qf8Q88ohx+bwVGDc1AeV+HKr1NwvMCNTpwVPSFI7cA5WdyeWA==}
     dependencies:
       enhanced-resolve: 5.10.0
       escalade: 3.1.1
@@ -3684,7 +3684,7 @@ packages:
     resolution: {directory: .., type: directory}
     id: file:..
     name: '@scaleway/ui'
-    version: 0.199.1
+    version: 0.199.2
     engines: {node: '>=18.x', pnpm: '>=7.0.0'}
     os: [darwin, linux]
     peerDependencies:
