@@ -112,27 +112,65 @@ exports[`TextBox should handle events on random button 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1rxwjlr-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-1wywx1b-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
   background-color: transparent;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-1wywx1b-StyledButton-StyledButton:hover,
+.cache-1wywx1b-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-1wywx1b-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
 }
 
 .cache-5xampy-StyledIcon-sizeStyles {
@@ -182,18 +220,22 @@ exports[`TextBox should handle events on random button 1`] = `
       >
         <button
           aria-disabled="false"
-          class="e1kgqxfn0 cache-1rxwjlr-StyledTouchable"
+          class="em6gco80 cache-1wywx1b-StyledButton-StyledButton"
           title="Randomize"
           type="button"
         >
-          <svg
-            class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-1sybl11-StyledIconContainer em6gco81"
           >
-            <path
-              d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-            />
-          </svg>
+            <svg
+              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -320,27 +362,65 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1rxwjlr-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-1wywx1b-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
   background-color: transparent;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-1wywx1b-StyledButton-StyledButton:hover,
+.cache-1wywx1b-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-1wywx1b-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
 }
 
 .cache-5xampy-StyledIcon-sizeStyles {
@@ -390,18 +470,22 @@ exports[`TextBox should handle events on toggleable password 1`] = `
       >
         <button
           aria-disabled="false"
-          class="e1kgqxfn0 cache-1rxwjlr-StyledTouchable"
+          class="em6gco80 cache-1wywx1b-StyledButton-StyledButton"
           title="Show"
           type="button"
         >
-          <svg
-            class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-1sybl11-StyledIconContainer em6gco81"
           >
-            <path
-              d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
-            />
-          </svg>
+            <svg
+              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -4369,27 +4453,65 @@ exports[`TextBox should render random 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1rxwjlr-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-1wywx1b-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
   background-color: transparent;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-1wywx1b-StyledButton-StyledButton:hover,
+.cache-1wywx1b-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-1wywx1b-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
 }
 
 .cache-5xampy-StyledIcon-sizeStyles {
@@ -4439,18 +4561,22 @@ exports[`TextBox should render random 1`] = `
       >
         <button
           aria-disabled="false"
-          class="e1kgqxfn0 cache-1rxwjlr-StyledTouchable"
+          class="em6gco80 cache-1wywx1b-StyledButton-StyledButton"
           title="Randomize"
           type="button"
         >
-          <svg
-            class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-1sybl11-StyledIconContainer em6gco81"
           >
-            <path
-              d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-            />
-          </svg>
+            <svg
+              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -4589,27 +4715,75 @@ exports[`TextBox should render random 2`] = `
   box-shadow: none!important;
 }
 
-.cache-1rxwjlr-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-wqzlx4-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
   background-color: transparent;
+  color: #4a4f62;
+  cursor: default;
+  pointer-events: none;
+  color: #c4c9d6;
+  background-color: #f6f6f8;
+  border-color: #d4dae7;
+  box-shadow: none;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-wqzlx4-StyledButton-StyledButton:hover,
+.cache-wqzlx4-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-wqzlx4-StyledButton-StyledButton svg {
+  fill: #c4c9d6;
+}
+
+.cache-wqzlx4-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
 }
 
 .cache-5xampy-StyledIcon-sizeStyles {
@@ -4668,19 +4842,23 @@ exports[`TextBox should render random 2`] = `
       >
         <button
           aria-disabled="true"
-          class="e1kgqxfn0 cache-1rxwjlr-StyledTouchable"
+          class="em6gco80 cache-wqzlx4-StyledButton-StyledButton"
           disabled=""
           title="Randomize"
           type="button"
         >
-          <svg
-            class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-1sybl11-StyledIconContainer em6gco81"
           >
-            <path
-              d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-            />
-          </svg>
+            <svg
+              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -4807,27 +4985,65 @@ exports[`TextBox should render toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1rxwjlr-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-1wywx1b-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
   background-color: transparent;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-1wywx1b-StyledButton-StyledButton:hover,
+.cache-1wywx1b-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1rxwjlr-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-1wywx1b-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
 }
 
 .cache-5xampy-StyledIcon-sizeStyles {
@@ -4877,18 +5093,22 @@ exports[`TextBox should render toggleable password 1`] = `
       >
         <button
           aria-disabled="false"
-          class="e1kgqxfn0 cache-1rxwjlr-StyledTouchable"
+          class="em6gco80 cache-1wywx1b-StyledButton-StyledButton"
           title="Show"
           type="button"
         >
-          <svg
-            class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
-            viewBox="0 0 24 24"
+          <div
+            class="cache-1sybl11-StyledIconContainer em6gco81"
           >
-            <path
-              d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
-            />
-          </svg>
+            <svg
+              class="sc-ui-icon etwatq50 cache-5xampy-StyledIcon-sizeStyles"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
