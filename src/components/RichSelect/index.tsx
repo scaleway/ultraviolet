@@ -324,6 +324,10 @@ const StyledError = styled.div`
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
+const ExpandableWithHiddenOverflow = styled(Expandable)`
+  overflow: hidden;
+`
+
 const SelectContainer = (
   props: ContainerProps<SelectOption> & WithSelectProps,
 ) => {
@@ -380,9 +384,9 @@ const SelectContainer = (
       }}
     >
       {children}
-      <Expandable height={56} overflow="hidden" opened={!!error}>
+      <ExpandableWithHiddenOverflow height={56} opened={!!error}>
         <StyledError>{error}</StyledError>
-      </Expandable>
+      </ExpandableWithHiddenOverflow>
     </StyledContainer>
   )
 }
