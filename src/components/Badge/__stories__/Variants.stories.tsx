@@ -2,11 +2,10 @@ import { Story } from '@storybook/react'
 import Badge from '..'
 import { SENTIMENTS } from '../../../theme'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Variants: Story = _props => (
+export const Variants: Story = props => (
   <>
     {SENTIMENTS.map(sentiment => (
-      <Badge key={sentiment} variant={sentiment}>
+      <Badge {...props} key={sentiment} variant={sentiment}>
         {sentiment}
       </Badge>
     ))}

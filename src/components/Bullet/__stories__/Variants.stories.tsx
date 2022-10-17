@@ -1,11 +1,10 @@
 import { Story } from '@storybook/react'
 import Bullet, { bulletVariants } from '..'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Variants: Story = _props => (
+export const Variants: Story = props => (
   <>
     {bulletVariants.map(variant => (
-      <Bullet key={variant} variant={variant} text="1" />
+      <Bullet {...props} key={variant} variant={variant} text="1" />
     ))}
   </>
 )

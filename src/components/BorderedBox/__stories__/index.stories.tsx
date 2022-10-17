@@ -6,4 +6,4 @@ export default {
   title: 'Components/Container/BorderedBox',
 } as ComponentMeta<typeof BorderedBox>
 
-export { Playground } from './Playground'
+export { Playground } from './Playground.stories'

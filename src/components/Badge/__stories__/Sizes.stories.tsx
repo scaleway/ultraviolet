@@ -1,13 +1,17 @@
 import { Story } from '@storybook/react'
-import Bullet, { bulletSizes } from '..'
+import Badge, { SIZES } from '..'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Sizes: Story = _props => (
+export const Sizes: Story = props => (
   <>
-    {bulletSizes.map(size => (
-      <div key={size}>
-        <Bullet size={size} text="1" />
-      </div>
+    {Object.keys(SIZES).map(size => (
+      <Badge
+        {...props}
+        key={size}
+        variant="primary"
+        size={size as keyof typeof SIZES}
+      >
+        {size}
+      </Badge>
     ))}
   </>
 )
@@ -16,6 +20,10 @@ Sizes.parameters = {
   docs: {
     storyDescription: 'You can define size of a badge using `size` property.',
   },
+}
+
+Sizes.args = {
+  children: [],
 }
 
 Sizes.decorators = [

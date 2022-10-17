@@ -1,12 +1,11 @@
 import { Story } from '@storybook/react'
 import Bullet from '..'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const Text: Story = _props => (
+export const Text: Story = props => (
   <>
-    <Bullet text="1" />
-    <Bullet text="1" variant="success" />
-    <Bullet text="1" size="small" />
+    <Bullet {...props} text="1" />
+    <Bullet {...props} text="1" variant="success" />
+    <Bullet {...props} text="1" size="small" />
   </>
 )
 

@@ -6,9 +6,9 @@ export default {
   title: 'Components/Data Display/Bullet',
 } as ComponentMeta<typeof Bullet>
 
-export { Playground } from './Playground'
-export { Variants } from './Variants'
-export { Icon } from './Icon'
-export { Sizes } from './Sizes'
-export { Text } from './Text'
-export { Tooltip } from './Tooltip'
+export { Playground } from './Playground.stories'
+export { Variants } from './Variants.stories'
+export { Icon } from './Icon.stories'
+export { Sizes } from './Sizes.stories'
+export { Text } from './Text.stories'
+export { Tooltip } from './Tooltip.stories'
