@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react'
 import Checkbox from '..'
 
-export const Sizes: Story = _ => (
+export const Sizes: Story = () => (
   <>
     <Checkbox size={16} onChange={() => {}}>
       Checkbox size 16

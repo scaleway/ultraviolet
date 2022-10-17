@@ -7,7 +7,7 @@ import Checkbox from '../../Checkbox'
 import RichSelect, { SelectOption } from '../../RichSelect'
 import Stack from '../../Stack'
 
-export const Children: Story = _ => {
+export const Children: Story = () => {
   const [value, onChange] = useState('label-9')
   const [richSelectValue, richSelectOnChange] = useState<SelectOption>({
     label: 'Option 1',

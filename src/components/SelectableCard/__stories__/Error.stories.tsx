@@ -3,26 +3,27 @@ import { useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 
-export const Tooltip: Story = _ => {
-  const [value, onChange] = useState('label-14')
+export const Error: Story = () => {
+  const [value, onChange] = useState('label-12')
 
   return (
     <>
       <SelectableCard
-        name="label-14"
-        checked={value === 'label-14'}
-        value="label-14"
+        name="label-12"
+        checked={value === 'label-12'}
+        value="label-12"
         type="radio"
-        tooltip="Click on me!"
+        isError
+        showTick
         onChange={event => onChange(event.currentTarget.value)}
         label="Radio Left"
       />
       <SelectableCard
-        name="label-15"
-        checked={value === 'label-15'}
-        value="label-15"
+        name="label-13"
+        checked={value === 'label-13'}
+        value="label-13"
         type="radio"
-        tooltip="No! Click on me instead!"
+        showTick
         onChange={event => onChange(event.currentTarget.value)}
         label="Radio Right"
       />
@@ -30,7 +31,14 @@ export const Tooltip: Story = _ => {
   )
 }
 
-Tooltip.decorators = [
+Error.parameters = {
+  docs: {
+    storyDescription:
+      'Use `isError` prop to display SelectableCard with a error style.',
+  },
+}
+
+Error.decorators = [
   StoryComponent => (
     <Stack direction="row" gap={2}>
       <StoryComponent />

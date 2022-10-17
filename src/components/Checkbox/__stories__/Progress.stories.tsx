@@ -2,7 +2,7 @@ import { Story } from '@storybook/react'
 import { ChangeEvent, useCallback, useState } from 'react'
 import Checkbox from '..'
 
-export const Progress: Story = _ => {
+export const Progress: Story = () => {
   const [checked, setChecked] = useState(false)
   const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked)

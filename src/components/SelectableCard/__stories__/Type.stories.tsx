@@ -3,7 +3,7 @@ import { useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 
-export const Type: Story = _ => {
+export const Type: Story = () => {
   const [value, onChange] = useState('label-3')
   const [value2, onChange2] = useState({ 'label-1': true, 'label-2': true })
 

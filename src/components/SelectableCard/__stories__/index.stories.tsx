@@ -14,11 +14,11 @@ export default {
   title: 'Components/Data Entry/SelectableCard',
 } as ComponentMeta<typeof SelectableCard>
 
-export { Playground } from './Playground'
-export { Children } from './Children'
-export { Controlled } from './Controlled'
-export { Disabled } from './Disabled'
-export { Error } from './Error'
-export { ShowTick } from './ShowTick'
-export { Tooltip } from './Tooltip'
-export { Type } from './Type'
+export { Playground } from './Playground.stories'
+export { Children } from './Children.stories'
+export { Controlled } from './Controlled.stories'
+export { Disabled } from './Disabled.stories'
+export { Error } from './Error.stories'
+export { ShowTick } from './ShowTick.stories'
+export { Tooltip } from './Tooltip.stories'
+export { Type } from './Type.stories'

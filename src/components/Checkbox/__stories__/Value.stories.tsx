@@ -1,7 +1,7 @@
 import { Story } from '@storybook/react'
 import Checkbox from '..'
 
-export const Value: Story = _ => (
+export const Value: Story = () => (
   <>
     <Checkbox value="false" onChange={() => {}}>
       Checkbox value false

@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 
-export const Controlled: Story = _ => {
+export const Controlled: Story = () => {
   const [value, onChange] = useState('label-1')
 
   return (

@@ -13,10 +13,10 @@ export default {
   title: 'Components/Data Entry/Checkbox',
 } as ComponentMeta<typeof Checkbox>
 
-export { Playground } from './Playground'
-export { Checked } from './Checked'
-export { Disabled } from './Disabled'
-export { Errors } from './Errors'
-export { Progress } from './Progress'
-export { Sizes } from './Sizes'
-export { Value } from './Value'
+export { Playground } from './Playground.stories'
+export { Checked } from './Checked.stories'
+export { Disabled } from './Disabled.stories'
+export { Errors } from './Errors.stories'
+export { Progress } from './Progress.stories'
+export { Sizes } from './Sizes.stories'
+export { Value } from './Value.stories'

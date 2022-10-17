@@ -14,7 +14,7 @@ export default {
   title: 'Components/Data Entry/Radio',
 } as ComponentMeta<typeof Radio>
 
-export { Playground } from './Playground'
-export { Controlled } from './Controlled'
-export { Disabled } from './Disabled'
-export { Error } from './Error'
+export { Playground } from './Playground.stories'
+export { Controlled } from './Controlled.stories'
+export { Disabled } from './Disabled.stories'
+export { Error } from './Error.stories'

@@ -2,16 +2,15 @@ import { Story } from '@storybook/react'
 import { useState } from 'react'
 import Radio from '..'
 
-export const Disabled: Story = _ => {
-  const [value, onChange] = useState('disabled-label-2')
+export const Controlled: Story = () => {
+  const [value, onChange] = useState('label-1')
 
   return (
     <>
       <Radio
-        name="disabled-label-1"
-        disabled
-        checked={value === 'disabled-label-1'}
-        value="disabled-label-1"
+        name="label-1"
+        checked={value === 'label-1'}
+        value="label-1"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
@@ -19,9 +18,9 @@ export const Disabled: Story = _ => {
         Label 1
       </Radio>
       <Radio
-        name="disabled-label-2"
-        checked={value === 'disabled-label-2'}
-        value="disabled-label-2"
+        name="label-2"
+        checked={value === 'label-2'}
+        value="label-2"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
@@ -31,9 +30,9 @@ export const Disabled: Story = _ => {
     </>
   )
 }
-
-Disabled.parameters = {
+Controlled.parameters = {
   docs: {
-    storyDescription: 'Set activation using `disabled` property.',
+    storyDescription:
+      'Radio only work as a controlled component. You need to pass `onChange` callback to control it.',
   },
 }

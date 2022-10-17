@@ -2,16 +2,16 @@ import { Story } from '@storybook/react'
 import { useState } from 'react'
 import Radio from '..'
 
-export const Error: Story = _ => {
-  const [value, onChange] = useState('error-label-1')
+export const Disabled: Story = () => {
+  const [value, onChange] = useState('disabled-label-2')
 
   return (
     <>
       <Radio
-        name="error-label-1"
-        error="invalid"
-        checked={value === 'error-label-1'}
-        value="error-label-1"
+        name="disabled-label-1"
+        disabled
+        checked={value === 'disabled-label-1'}
+        value="disabled-label-1"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
@@ -19,9 +19,9 @@ export const Error: Story = _ => {
         Label 1
       </Radio>
       <Radio
-        name="error-label-2"
-        checked={value === 'error-label-2'}
-        value="error-label-2"
+        name="disabled-label-2"
+        checked={value === 'disabled-label-2'}
+        value="disabled-label-2"
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
@@ -32,9 +32,8 @@ export const Error: Story = _ => {
   )
 }
 
-Error.parameters = {
+Disabled.parameters = {
   docs: {
-    storyDescription:
-      'Set validation with error message using `error` property.',
+    storyDescription: 'Set activation using `disabled` property.',
   },
 }
