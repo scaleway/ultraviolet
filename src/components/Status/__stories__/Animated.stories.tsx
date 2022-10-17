@@ -1,10 +1,12 @@
 import { Template } from './Template.stories'
 
 export const Animated = Template.bind({})
+
 Animated.args = {
   animated: true,
   variant: 'info',
 }
+
 Animated.parameters = {
   docs: {
     description: {
