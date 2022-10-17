@@ -1,3 +1,31 @@
+## [0.199.3](https://github.com/scaleway/scaleway-ui/compare/v0.199.2...v0.199.3) (2022-10-17)
+
+
+### :zap: Refactor
+
+* **expandable:** remove box ([#1945](https://github.com/scaleway/scaleway-ui/issues/1945)) ([2011cec](https://github.com/scaleway/scaleway-ui/commit/2011cec830e294fc69df6195293fd968a8500c4b))
+* **menu:** improve stories snippet parsing ([#1942](https://github.com/scaleway/scaleway-ui/issues/1942)) ([3605862](https://github.com/scaleway/scaleway-ui/commit/3605862f71e0de428209bac51a30ff4d20e8928f))
+
+
+### :package: Chore
+
+* **devdeps:** update actions/cache action to v3.0.11 ([#1957](https://github.com/scaleway/scaleway-ui/issues/1957)) ([7902165](https://github.com/scaleway/scaleway-ui/commit/7902165cb3d382337b5b522313b169999e08ee4a))
+* **devdeps:** update actions/setup-node action to v3.5.1 ([#1958](https://github.com/scaleway/scaleway-ui/issues/1958)) ([8361139](https://github.com/scaleway/scaleway-ui/commit/8361139b6a4959c0915a4f7a36eb85a25972325c))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.7.6 ([#1955](https://github.com/scaleway/scaleway-ui/issues/1955)) ([3b5c2b0](https://github.com/scaleway/scaleway-ui/commit/3b5c2b00de66614ea32b56b0402abe0f4928ad12))
+* **devdeps:** update dependency next-transpile-modules to v9.1.0 ([#1952](https://github.com/scaleway/scaleway-ui/issues/1952)) ([823b613](https://github.com/scaleway/scaleway-ui/commit/823b61339f3b520fb6e3d96396f9097a110826ce))
+* **devdeps:** update docker/build-push-action action to v3.2.0 ([#1953](https://github.com/scaleway/scaleway-ui/issues/1953)) ([f5aa0db](https://github.com/scaleway/scaleway-ui/commit/f5aa0dbeb568e6b4643c49caccf1c714e65767d4))
+* **devdeps:** update docker/login-action action to v2.1.0 ([#1954](https://github.com/scaleway/scaleway-ui/issues/1954)) ([5eef0e2](https://github.com/scaleway/scaleway-ui/commit/5eef0e28396ff8dc09d090aa29cc376adb7f9fc2))
+
+
+### :memo: Documentation
+
+* fix description not display in storybook ([#1960](https://github.com/scaleway/scaleway-ui/issues/1960)) ([5ba8a87](https://github.com/scaleway/scaleway-ui/commit/5ba8a872c194ec9adf06bf99bc0a0081dba7051b))
+
+
+### :bug: Bug Fixes
+
+* **verification-code:** add classname ([#1963](https://github.com/scaleway/scaleway-ui/issues/1963)) ([4495ba6](https://github.com/scaleway/scaleway-ui/commit/4495ba635c15189448c87051a8b7004f2b6664a1))
+
 ## [0.199.2](https://github.com/scaleway/scaleway-ui/compare/v0.199.1...v0.199.2) (2022-10-12)
 
 
