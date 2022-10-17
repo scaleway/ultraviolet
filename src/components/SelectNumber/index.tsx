@@ -11,7 +11,6 @@ import {
   useState,
 } from 'react'
 import parseIntOr from '../../helpers/numbers'
-import Box from '../Box'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 import Touchable from '../Touchable'
@@ -131,7 +130,7 @@ const StyledText = styled('span', {
   user-select: none;
 `
 
-const StyledContainer = styled(Box, {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ disabled: boolean; size: ContainerSizesType }>`
   background-color: ${({ theme, disabled }) =>
@@ -192,7 +191,7 @@ const SelectNumber = ({
   text,
   value,
   disabledTooltip,
-  ...props
+  className,
 }: SelectNumberProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
@@ -233,11 +232,10 @@ const SelectNumber = ({
     if (onBlur) onBlur(event)
   }
 
-  const onKeyDown: KeyboardEventHandler = e => {
-    // Arrow Up
-    if (e.keyCode === 38) {
-      e.stopPropagation()
-      e.preventDefault()
+  const onKeyDown: KeyboardEventHandler = event => {
+    if (event.key === 'ArrowUp') {
+      event.stopPropagation()
+      event.preventDefault()
 
       const direction = 1
       const newValue =
@@ -249,10 +247,9 @@ const SelectNumber = ({
       }
     }
 
-    // Arrow Down
-    if (e.keyCode === 40) {
-      e.stopPropagation()
-      e.preventDefault()
+    if (event.key === 'ArrowDown') {
+      event.stopPropagation()
+      event.preventDefault()
 
       const direction = -1
 
@@ -278,7 +275,7 @@ const SelectNumber = ({
   const isPlusDisabled = plusRoundedValue > maxValue || disabled
 
   return (
-    <StyledContainer disabled={disabled} size={size} {...props}>
+    <StyledContainer disabled={disabled} size={size} className={className}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledTouchable
           onClick={offsetFn(-1)}
