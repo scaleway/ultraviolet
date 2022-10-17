@@ -37,14 +37,22 @@ const StyledTabMenu = styled(TabMenu)`
   box-shadow: ${({ theme }) => theme.shadows.menu};
 `
 
+const TabsRoot = styled.div`
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  z-index: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`
+
 const TabsContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 
   &::after {
     z-index: -1;
@@ -55,10 +63,6 @@ const TabsContainer = styled.div`
     right: 0;
     height: 2px;
     background: ${({ theme }) => theme.colors.neutral.borderWeak};
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 `
 
@@ -77,6 +81,7 @@ const Tabs = ({
   selected,
   ...props
 }: TabsProps) => {
+  const rootRef = useRef<HTMLDivElement>({} as HTMLDivElement)
   const tabsRef = useRef<HTMLDivElement>({} as HTMLDivElement)
   const moreStaticRef = useRef<HTMLButtonElement>({} as HTMLButtonElement)
   const [displayMore, setDisplayMore] = useState(false)
@@ -89,7 +94,13 @@ const Tabs = ({
   )
 
   useEffect(() => {
-    setDisplayMore(tabsRef.current.scrollWidth > tabsRef.current.clientWidth)
+    const observedTarget = tabsRef.current
+    const observer = new ResizeObserver(() => {
+      setDisplayMore(observedTarget.scrollWidth > rootRef.current.clientWidth)
+    })
+    observer.observe(observedTarget)
+
+    return () => observedTarget && observer.unobserve(observedTarget)
   }, [])
 
   // Scroll automatically to the tab
@@ -128,14 +139,16 @@ const Tabs = ({
 
   return (
     <TabsContext.Provider value={value}>
-      <TabsContainer ref={tabsRef} role="tablist" {...props}>
-        {children}
+      <TabsRoot ref={rootRef}>
+        <TabsContainer ref={tabsRef} role="tablist" {...props}>
+          {children}
+        </TabsContainer>
         {displayMore ? (
           <StyledTabMenu ref={moreStaticRef} disclosure={moreDisclosure}>
             <MenuContainer>{children}</MenuContainer>
           </StyledTabMenu>
         ) : null}
-      </TabsContainer>
+      </TabsRoot>
     </TabsContext.Provider>
   )
 }

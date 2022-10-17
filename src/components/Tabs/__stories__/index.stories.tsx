@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react'
-import { ComponentProps, useState } from 'react'
+import { ComponentProps, useEffect, useState } from 'react'
 import Tabs from '..'
 import Badge from '../../Badge'
 import Tab from '../Tab'
@@ -223,3 +223,36 @@ WithCounter.args = {
   ],
   selected: 1,
 }
+
+export const Test = Template.bind({})
+Test.decorators = [
+  () => {
+    const [change, onChange] = useState(2)
+    const onChangeHandler = (e?: string | number) => onChange(e)
+    const [counter, setCounter] = useState<number | undefined>(undefined)
+
+    useEffect(() => {
+      setTimeout(() => setCounter(2), 2000)
+    }, [])
+
+    return (
+      <Tabs selected={change} onChange={onChangeHandler}>
+        <Tabs.Tab value={1} counter={counter}>
+          First Awesome Tab
+        </Tabs.Tab>
+        <Tabs.Tab value={2} counter={counter}>
+          Second Awesome Tab
+        </Tabs.Tab>
+        <Tabs.Tab value={3} counter={counter}>
+          Third Awesome Tab
+        </Tabs.Tab>
+        <Tabs.Tab value={4} counter={counter}>
+          Fourth Awesome Tab
+        </Tabs.Tab>
+        <Tabs.Tab value={5} counter={counter}>
+          Fifth Awesome Tab blablabla
+        </Tabs.Tab>
+      </Tabs>
+    )
+  },
+]
