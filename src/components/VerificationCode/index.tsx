@@ -42,6 +42,7 @@ const KEY_CODE = {
 type VerificationCodeProps = {
   disabled?: boolean
   error?: boolean
+  className?: string
   /**
    * Amount of field you want
    */
@@ -67,6 +68,7 @@ type VerificationCodeProps = {
 
 const VerificationCode = ({
   disabled = false,
+  className,
   error = false,
   fields = 4,
   initialValue = '',
@@ -202,7 +204,7 @@ const VerificationCode = ({
   }
 
   return (
-    <div>
+    <div className={className}>
       {values.map((value: string, index) => (
         <StyledInput
           css={[inputStyle]}
