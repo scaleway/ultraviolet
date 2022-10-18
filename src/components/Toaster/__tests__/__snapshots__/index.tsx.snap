@@ -21,17 +21,14 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   padding: 0;
 }
 
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
+.cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 16px;
-}
-
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
 }
 
 .cache-db05j6-AlertContainer {
@@ -70,8 +67,7 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
         class="e1txm9iz0 cache-9rv6mx-StyledContainer-alertStyles-StyledAlert eenhiht3"
       >
         <svg
-          aria-hidden="true"
-          class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+          class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -109,17 +105,14 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   padding: 0;
 }
 
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
+.cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 16px;
-}
-
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
 }
 
 .cache-db05j6-AlertContainer {
@@ -158,8 +151,7 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
         class="e1txm9iz0 cache-121pcd0-StyledContainer-alertStyles-StyledAlert eenhiht3"
       >
         <svg
-          aria-hidden="true"
-          class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+          class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -197,17 +189,14 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   padding: 0;
 }
 
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
+.cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 16px;
-}
-
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
 }
 
 .cache-db05j6-AlertContainer {
@@ -246,8 +235,7 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
         class="e1txm9iz0 cache-1sxr3vi-StyledContainer-alertStyles-StyledAlert eenhiht3"
       >
         <svg
-          aria-hidden="true"
-          class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+          class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -328,17 +316,14 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   padding: 0;
 }
 
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
+.cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
   fill: currentColor;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   margin-right: 16px;
-}
-
-.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon.cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
 }
 
 .cache-db05j6-AlertContainer {
@@ -368,16 +353,23 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   color: inherit;
 }
 
-.cache-15veyar-StyledIcon-sizeStyles {
+.cache-1klpfky-CloseButtonWrapper {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.cache-rfv5sc-StyledIcon-sizeStyles-IconWithLeftMargin {
+  vertical-align: middle;
   fill: currentColor;
   height: 18px;
   width: 18px;
   min-width: 18px;
   min-height: 18px;
-}
-
-.cache-15veyar-StyledIcon-sizeStyles.cache-15veyar-StyledIcon-sizeStyles {
-  vertical-align: middle;
   margin-left: 8px;
 }
 
@@ -439,8 +431,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
               class="e1txm9iz0 cache-9rv6mx-StyledContainer-alertStyles-StyledAlert eenhiht3"
             >
               <svg
-                aria-hidden="true"
-                class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+                class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -459,14 +450,19 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
             </div>
           </div>
         </div>
-        <svg
-          class="sc-ui-icon etwatq50 cache-15veyar-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <button
+          class="cache-1klpfky-CloseButtonWrapper e1txm9iz2"
+          type="button"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <svg
+            class="e1txm9iz1 cache-rfv5sc-StyledIcon-sizeStyles-IconWithLeftMargin etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </button>
         <div
           aria-hidden="false"
           aria-label="notification timer"
@@ -489,8 +485,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
               class="e1txm9iz0 cache-121pcd0-StyledContainer-alertStyles-StyledAlert eenhiht3"
             >
               <svg
-                aria-hidden="true"
-                class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+                class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -509,14 +504,19 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
             </div>
           </div>
         </div>
-        <svg
-          class="sc-ui-icon etwatq50 cache-15veyar-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <button
+          class="cache-1klpfky-CloseButtonWrapper e1txm9iz2"
+          type="button"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <svg
+            class="e1txm9iz1 cache-rfv5sc-StyledIcon-sizeStyles-IconWithLeftMargin etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </button>
         <div
           aria-hidden="false"
           aria-label="notification timer"
@@ -539,8 +539,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
               class="e1txm9iz0 cache-1sxr3vi-StyledContainer-alertStyles-StyledAlert eenhiht3"
             >
               <svg
-                aria-hidden="true"
-                class="eenhiht2 etwatq50 cache-1qu6rn0-StyledIcon-sizeStyles-StyledIcon"
+                class="eenhiht2 cache-iv2u1e-StyledIcon-sizeStyles-StyledIcon etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -559,14 +558,19 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
             </div>
           </div>
         </div>
-        <svg
-          class="sc-ui-icon etwatq50 cache-15veyar-StyledIcon-sizeStyles"
-          viewBox="0 0 24 24"
+        <button
+          class="cache-1klpfky-CloseButtonWrapper e1txm9iz2"
+          type="button"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <svg
+            class="e1txm9iz1 cache-rfv5sc-StyledIcon-sizeStyles-IconWithLeftMargin etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </button>
         <div
           aria-hidden="false"
           aria-label="notification timer"

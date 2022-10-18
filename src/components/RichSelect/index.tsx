@@ -30,6 +30,7 @@ import * as animations from '../../utils/animations'
 import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Stack from '../Stack'
 import Text from '../Text'
 
 export type SelectOption = {
@@ -567,15 +568,16 @@ const DropdownIndicator = (
 
   return (
     <components.DropdownIndicator {...props}>
-      <Icon
-        name={time ? 'clock-outline' : 'chevron-down'}
-        size={time ? 24 : 11}
-        color={color}
-        mr={required ? 2 : 0}
-      />
-      {required ? (
-        <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
-      ) : null}
+      <Stack gap={2} direction="row">
+        <Icon
+          name={time ? 'clock-outline' : 'chevron-down'}
+          size={time ? 24 : 11}
+          color={color}
+        />
+        {required ? (
+          <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
+        ) : null}
+      </Stack>
     </components.DropdownIndicator>
   )
 }

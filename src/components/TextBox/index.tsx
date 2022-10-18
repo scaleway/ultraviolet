@@ -21,6 +21,7 @@ import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'
 import Separator from '../Separator'
+import Stack from '../Stack'
 import Text from '../Text'
 
 const inputSizes = {
@@ -564,10 +565,10 @@ const TextBox = forwardRef<
               alignSelf={unitAlignment}
               prominence="weak"
             >
-              {unit}
-              {required && (
-                <Icon ml="2px" name="asterisk" color="danger" size={8} />
-              )}
+              <Stack gap={1} direction="row">
+                {unit}
+                {required && <Icon name="asterisk" color="danger" size={8} />}
+              </Stack>
             </UnitLabel>
           </>
         )

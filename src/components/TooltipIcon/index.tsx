@@ -9,14 +9,12 @@ type TooltipIconProps = {
   name?: ComponentProps<typeof Icon>['name']
   size?: number
   tooltip: ReactNode
-  verticalAlign?: string
 }
 
 const TooltipIcon = ({
   color,
   name = 'help-circle-outline',
   size = 20,
-  verticalAlign = 'middle',
   tooltip,
   baseId,
 }: TooltipIconProps) => {
@@ -28,7 +26,6 @@ const TooltipIcon = ({
         color={color || theme.colors.neutral.textWeak}
         name={name}
         size={size}
-        verticalAlign={verticalAlign}
         aria-label={name}
       />
     </Tooltip>

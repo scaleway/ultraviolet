@@ -85,23 +85,3 @@ UnknownOrUndefined.decorators = [
     </div>
   ),
 ]
-
-export const VerticalAlign = Template.bind({})
-VerticalAlign.parameters = {
-  docs: {
-    storyDescription:
-      '`Icon` is based on `Box`component which allow declarative css like `verticalAlign` in this example.',
-  },
-}
-VerticalAlign.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      {['top', 'middle', 'bottom'].map(align => (
-        <div style={{ alignItems: 'center', display: 'flex' }}>
-          <Icon name="eye" verticalAlign={align} />
-          &nbsp;{align}
-        </div>
-      ))}
-    </div>
-  ),
-]

@@ -1,10 +1,8 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { forwardRef, useMemo } from 'react'
-import * as React from 'react'
+import { SVGProps, forwardRef, useMemo } from 'react'
 import { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
-import Box, { BoxProps } from '../Box'
 
 // Non Material Design icons: 'send',
 
@@ -374,17 +372,14 @@ export const PROMINENCES = {
 
 type ProminenceProps = keyof typeof PROMINENCES
 
-const StyledIcon = styled(Box, {
+const StyledIcon = styled('svg', {
   shouldForwardProp: prop => !['size', 'color', 'prominence'].includes(prop),
-})<
-  {
-    color: Color | string
-    size: number | string
-    className: string
-    viewBox: string
-    prominence: ProminenceProps
-  } & BoxProps
->`
+})<{
+  color: Color | string
+  size: number | string
+  prominence: ProminenceProps
+}>`
+  vertical-align: middle;
   fill: ${({ theme, color, prominence }) => {
     // stronger is available only for neutral color
     const definedProminence =
@@ -406,21 +401,26 @@ export type IconName = keyof typeof ICONS
 type IconProps = {
   size?: number | string
   name?: IconName
-  title?: string
   prominence?: ProminenceProps
   color?: Color | string
-} & BoxProps &
-  React.SVGAttributes<HTMLOrSVGElement>
+  'data-testid'?: string
+} & Pick<
+  SVGProps<SVGSVGElement>,
+  'className' | 'stroke' | 'cursor' | 'strokeWidth'
+>
 
-const Icon = forwardRef<SVGElement, IconProps>(
+const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       name = 'circle',
       color = 'currentColor',
       size = '1em',
-      verticalAlign = 'middle',
       prominence = 'default',
-      ...props
+      className,
+      'data-testid': dataTestId,
+      stroke,
+      cursor,
+      strokeWidth,
     },
     ref,
   ) => {
@@ -435,15 +435,16 @@ const Icon = forwardRef<SVGElement, IconProps>(
 
     return (
       <StyledIcon
-        as="svg"
         ref={ref}
-        className="sc-ui-icon"
         color={color}
         prominence={prominence}
         size={size}
-        verticalAlign={verticalAlign}
         viewBox={defaultViewBox}
-        {...props}
+        className={className}
+        data-testid={dataTestId}
+        stroke={stroke}
+        cursor={cursor}
+        strokeWidth={strokeWidth}
       >
         {render()}
       </StyledIcon>

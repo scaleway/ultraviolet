@@ -40,20 +40,20 @@ const SortIcon = ({
   return (
     <StyledContainer aria-sort={ariaSort}>
       <UpIcon
-        title="ascending"
         color={
           active && order === 'asc' ? 'primary' : theme.colors.neutral.textWeak
         }
         size={10}
         name="arrow-up"
+        data-testid="arrow-up-icon"
       />
       <DownIcon
-        title="descending"
         color={
           active && order === 'desc' ? 'primary' : theme.colors.neutral.textWeak
         }
         size={10}
         name="arrow-down"
+        data-testid="arrow-down-icon"
       />
     </StyledContainer>
   )

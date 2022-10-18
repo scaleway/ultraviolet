@@ -114,11 +114,7 @@ const Avatar = ({
           textSize={textSize}
         >
           {lock ? (
-            <Icon
-              name="lock"
-              color={theme.colors.neutral.textWeak}
-              title="Locked"
-            />
+            <Icon name="lock" color={theme.colors.neutral.textWeak} />
           ) : (
             formatTextToAvatar(text)
           )}
