@@ -2356,49 +2356,98 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   margin-right: 8px;
 }
 
-.cache-11sx0c5-StyledSpan {
+.cache-sior7n-StyledSpan {
   position: absolute;
   right: 16px;
   top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
 }
 
-.cache-1ompuh1-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-ozkhtb-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #f6f6f8;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 16px;
 }
 
-.cache-1ompuh1-StyledTouchable.cache-1ompuh1-StyledTouchable {
-  margin-right: 8px;
-  margin-left: 8px;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  color: #4a4f62;
+  background-color: #d4dae7;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles {
-  fill: #4a4f62;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
+.cache-ozkhtb-StyledButton-StyledButton>svg {
+  pointer-events: none;
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles.cache-1gdnq3-StyledIcon-sizeStyles {
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles.cache-3ekktq-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -2501,35 +2550,43 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   </p>
                 </div>
                 <span
-                  class="cache-11sx0c5-StyledSpan e17s8tvr3"
+                  class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                 </span>
                 <div
@@ -3324,49 +3381,98 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   margin-right: 8px;
 }
 
-.cache-11sx0c5-StyledSpan {
+.cache-sior7n-StyledSpan {
   position: absolute;
   right: 16px;
   top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
 }
 
-.cache-1ompuh1-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-ozkhtb-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #f6f6f8;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 16px;
 }
 
-.cache-1ompuh1-StyledTouchable.cache-1ompuh1-StyledTouchable {
-  margin-right: 8px;
-  margin-left: 8px;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  color: #4a4f62;
+  background-color: #d4dae7;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles {
-  fill: #4a4f62;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
+.cache-ozkhtb-StyledButton-StyledButton>svg {
+  pointer-events: none;
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles.cache-1gdnq3-StyledIcon-sizeStyles {
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles.cache-3ekktq-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -3469,35 +3575,43 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   </p>
                 </div>
                 <span
-                  class="cache-11sx0c5-StyledSpan e17s8tvr3"
+                  class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                 </span>
                 <div
@@ -4292,49 +4406,98 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   margin-right: 8px;
 }
 
-.cache-11sx0c5-StyledSpan {
+.cache-sior7n-StyledSpan {
   position: absolute;
   right: 16px;
   top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
 }
 
-.cache-1ompuh1-StyledTouchable {
-  border: 0;
-  transition-property: opacity;
-  transition-duration: 0.15s;
+.cache-ozkhtb-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: transparent;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #f6f6f8;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  border-radius: 16px;
 }
 
-.cache-1ompuh1-StyledTouchable.cache-1ompuh1-StyledTouchable {
-  margin-right: 8px;
-  margin-left: 8px;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='true'] {
-  opacity: 0.5;
-  cursor: not-allowed;
+.cache-ozkhtb-StyledButton-StyledButton:hover,
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  color: #4a4f62;
+  background-color: #d4dae7;
 }
 
-.cache-1ompuh1-StyledTouchable[aria-disabled='false'] {
-  cursor: pointer;
-  touch-action: manipulation;
+.cache-ozkhtb-StyledButton-StyledButton:focus {
+  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles {
-  fill: #4a4f62;
-  height: 11px;
-  width: 11px;
-  min-width: 11px;
-  min-height: 11px;
+.cache-ozkhtb-StyledButton-StyledButton>svg {
+  pointer-events: none;
 }
 
-.cache-1gdnq3-StyledIcon-sizeStyles.cache-1gdnq3-StyledIcon-sizeStyles {
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles {
+  fill: currentColor;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.cache-3ekktq-StyledIcon-sizeStyles.cache-3ekktq-StyledIcon-sizeStyles {
   vertical-align: middle;
 }
 
@@ -4437,35 +4600,43 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   </p>
                 </div>
                 <span
-                  class="cache-11sx0c5-StyledSpan e17s8tvr3"
+                  class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="e1kgqxfn0 cache-1ompuh1-StyledTouchable"
+                    class="em6gco80 cache-ozkhtb-StyledButton-StyledButton"
                     type="button"
                   >
-                    <svg
-                      class="sc-ui-icon etwatq50 cache-1gdnq3-StyledIcon-sizeStyles"
-                      viewBox="0 0 24 24"
+                    <div
+                      class="cache-1sybl11-StyledIconContainer em6gco81"
                     >
-                      <path
-                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
-                      />
-                    </svg>
+                      <svg
+                        class="sc-ui-icon etwatq50 cache-3ekktq-StyledIcon-sizeStyles"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                        />
+                      </svg>
+                    </div>
                   </button>
                 </span>
                 <div

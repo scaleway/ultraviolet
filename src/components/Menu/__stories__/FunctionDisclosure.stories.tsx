@@ -1,13 +1,13 @@
 import { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
 import Menu, { DisclosureProps } from '..'
-import Touchable from '../../Touchable'
+import Button from '../../Button'
 
 export const FunctionDisclosure: ComponentStory<typeof Menu> = () => {
   const CustomDisclosure = ({ visible }: DisclosureProps) => (
-    <Touchable title="menu" name="menu">
+    <Button>
       {visible === true ? 'Menu (is opened)' : 'Menu (is closed)'}
-    </Touchable>
+    </Button>
   )
 
   return (

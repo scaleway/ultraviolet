@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { MouseEventHandler, ReactNode } from 'react'
 import { Color } from '../../theme'
+import Button from '../Button'
 import Icon, { IconName } from '../Icon'
 import Loader from '../Loader'
-import Touchable from '../Touchable'
 
 const StyledContainer = styled('span', {
   shouldForwardProp: prop => !['variant'].includes(prop),
@@ -51,22 +51,6 @@ const StyledTag = styled.span`
   text-overflow: ellipsis;
 `
 
-const StyledTouchable = styled(Touchable, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})<{ variant: Color }>`
-  display: flex;
-  align-items: center;
-  svg {
-    fill: ${({ theme }) => theme.colors.neutral.textWeak};
-  }
-  &:hover:enabled,
-  &:focus:enabled {
-    svg {
-      fill: ${({ theme }) => theme.colors.neutral.textHover};
-    }
-  }
-`
-
 type TagProps = {
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
@@ -79,6 +63,11 @@ type TagProps = {
   className?: string
   children: ReactNode
 }
+
+const StyledActionButton = styled(Button)`
+  width: fit-content;
+  height: fit-content;
+`
 
 const Tag = ({
   children,
@@ -97,14 +86,15 @@ const Tag = ({
     <StyledTag aria-disabled={disabled}>{children}</StyledTag>
 
     {onClose && !isLoading ? (
-      <StyledTouchable
+      <StyledActionButton
         onClick={onClose}
-        variant={variant}
         disabled={disabled}
         aria-label="Close tag"
-      >
-        <Icon name="close" size={16} />
-      </StyledTouchable>
+        action
+        variant="transparent"
+        icon="close"
+        iconSize={16}
+      />
     ) : null}
     {isLoading ? <Loader active size={16} /> : null}
   </StyledContainer>
