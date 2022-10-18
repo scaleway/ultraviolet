@@ -1,3 +1,16 @@
+## [0.200.0](https://github.com/scaleway/scaleway-ui/compare/v0.199.3...v0.200.0) (2022-10-18)
+
+
+### :zap: Refactor
+
+* **selectnumber:** remove box ([#1944](https://github.com/scaleway/scaleway-ui/issues/1944)) ([d2876af](https://github.com/scaleway/scaleway-ui/commit/d2876af2f56b2e2037a856162a0f382d6b208dfc))
+* stories for Badge, Bullet, Borderedbox ([#1949](https://github.com/scaleway/scaleway-ui/issues/1949)) ([1031a89](https://github.com/scaleway/scaleway-ui/commit/1031a89c34ef253fc7fc4884e65fbf4320e15dfb))
+
+
+### :gear: Features
+
+* remove Touchable ([#1962](https://github.com/scaleway/scaleway-ui/issues/1962)) ([8373a51](https://github.com/scaleway/scaleway-ui/commit/8373a51d91c289bd42c9c8092c6a23f588eebfb3))
+
 ## [0.199.3](https://github.com/scaleway/scaleway-ui/compare/v0.199.2...v0.199.3) (2022-10-17)
 
 
