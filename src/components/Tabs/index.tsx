@@ -89,8 +89,9 @@ const Tabs = ({
   )
 
   useEffect(() => {
-    setDisplayMore(tabsRef.current.scrollWidth > tabsRef.current.clientWidth)
-  }, [])
+    if (tabsRef.current)
+      setDisplayMore(tabsRef.current.scrollWidth > tabsRef.current.clientWidth)
+  }, [children])
 
   // Scroll automatically to the tab
   useEffect(() => {

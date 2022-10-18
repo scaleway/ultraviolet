@@ -45,7 +45,7 @@ const ENV_PARAMETERS = {
     },
     viewMode: 'docs',
     previewTabs: {
-      canvas: { hidden: true },
+      canvas: { hidden: false },
     },
     viewport: {
       viewports: {},

@@ -10,19 +10,12 @@ import {
   forwardRef,
   useMemo,
 } from 'react'
-import Text from '../Text'
+import Bullet from '../Bullet'
 import Tooltip from '../Tooltip'
 import { useTabsContext } from './TabsContext'
 
-const StyledCounter = styled(Text)`
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderStrong};
+const StyledBullet = styled(Bullet)`
   margin-left: ${({ theme }) => theme.space['1']};
-  height: 24px;
-  width: 24px;
-  line-height: 22px;
-  text-align: center;
 `
 
 const StyledTooltip = styled(Tooltip)``
@@ -40,7 +33,7 @@ export const StyledTabButton = styled.button`
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
   text-decoration: none;
   user-select: none;
   touch-action: manipulation;
@@ -73,10 +66,6 @@ export const StyledTabButton = styled.button`
   &[aria-selected='true'] {
     color: ${({ theme }) => theme.colors.primary.text};
     border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
-    ${StyledCounter} {
-      background-color: ${({ theme }) => theme.colors.primary.background};
-      border-color: ${({ theme }) => theme.colors.primary.background};
-    }
   }
 
   &[aria-disabled='false']:not(:disabled) {
@@ -86,9 +75,10 @@ export const StyledTabButton = styled.button`
       outline: none;
       color: ${({ theme }) => theme.colors.primary.text};
       border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
-      ${StyledCounter} {
+      ${StyledBullet} {
         background-color: ${({ theme }) => theme.colors.primary.background};
         border-color: ${({ theme }) => theme.colors.primary.background};
+        color: ${({ theme }) => theme.colors.primary.text};
       }
     }
   }
@@ -172,9 +162,11 @@ const Tab = <T extends ElementType = 'button'>(
       >
         {children}
         {typeof counter === 'number' ? (
-          <StyledCounter oneLine as="span" variant="caption">
-            {counter}
-          </StyledCounter>
+          <StyledBullet
+            text={`${counter}`}
+            size="small"
+            variant={isSelected ? 'primary' : 'default'}
+          />
         ) : null}
         {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
       </StyledTabButton>
