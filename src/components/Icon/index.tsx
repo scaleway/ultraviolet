@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { forwardRef, useMemo } from 'react'
+import { SVGProps, forwardRef, useMemo } from 'react'
 import { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
 
@@ -404,8 +404,10 @@ type IconProps = {
   prominence?: ProminenceProps
   color?: Color | string
   'data-testid'?: string
-  className?: string
-}
+} & Pick<
+  SVGProps<SVGSVGElement>,
+  'className' | 'stroke' | 'cursor' | 'strokeWidth'
+>
 
 const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
@@ -416,6 +418,9 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
       prominence = 'default',
       className,
       'data-testid': dataTestId,
+      stroke,
+      cursor,
+      strokeWidth,
     },
     ref,
   ) => {
@@ -437,6 +442,9 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         viewBox={defaultViewBox}
         className={className}
         data-testid={dataTestId}
+        stroke={stroke}
+        cursor={cursor}
+        strokeWidth={strokeWidth}
       >
         {render()}
       </StyledIcon>

@@ -53,6 +53,16 @@ const styles = {
   `,
 }
 
+const CloseButtonWrapper = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  margin-bottom: ${({ theme }) => theme.space['2']};
+`
+
 type CloseButtonProps = {
   closeToast?: () => void
 }
@@ -62,7 +72,9 @@ const IconWithLeftMargin = styled(Icon)`
 `
 
 const CloseButton = ({ closeToast }: CloseButtonProps) => (
-  <IconWithLeftMargin name="close" size={18} onClick={closeToast} />
+  <CloseButtonWrapper type="button" onClick={closeToast}>
+    <IconWithLeftMargin name="close" size={18} />
+  </CloseButtonWrapper>
 )
 
 const StyledAlert = styled(Alert)`
