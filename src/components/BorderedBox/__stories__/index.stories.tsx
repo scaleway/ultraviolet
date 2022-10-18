@@ -1,14 +1,9 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import BorderedBox from '..'
 
 export default {
   component: BorderedBox,
   title: 'Components/Container/BorderedBox',
-} as Meta
+} as ComponentMeta<typeof BorderedBox>
 
-const Template: Story<ComponentProps<typeof BorderedBox>> = props => (
-  <BorderedBox {...props}>Hello</BorderedBox>
-)
-
-export const Default = Template.bind({})
+export { Playground } from './Playground.stories'
