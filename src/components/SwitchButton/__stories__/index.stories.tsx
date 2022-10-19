@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { Meta } from '@storybook/react'
 import SwitchButton from '..'
 
 export default {
@@ -7,19 +6,4 @@ export default {
   title: 'Components/Data Entry/SwitchButton',
 } as Meta
 
-const Template: Story<ComponentProps<typeof SwitchButton>> = args => (
-  <SwitchButton {...args} />
-)
-
-export const Default = Template.bind({})
-Default.args = {
-  leftButton: {
-    label: 'Left',
-    value: 'left',
-  },
-  rightButton: {
-    label: 'Right',
-    value: 'right',
-  },
-  value: 'left',
-}
+export { Playground } from './Playground.stories'
