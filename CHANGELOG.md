@@ -1,3 +1,20 @@
+## [0.200.1](https://github.com/scaleway/scaleway-ui/compare/v0.200.0...v0.200.1) (2022-10-19)
+
+
+### :zap: Refactor
+
+* **icon:** remove box ([#1946](https://github.com/scaleway/scaleway-ui/issues/1946)) ([bb9b5a4](https://github.com/scaleway/scaleway-ui/commit/bb9b5a4983db4c60e359a41ecdd4c87baf4fdd29))
+
+
+### :memo: Documentation
+
+* update storybook doc status, switchbutton and text ([#1959](https://github.com/scaleway/scaleway-ui/issues/1959)) ([8f11ce6](https://github.com/scaleway/scaleway-ui/commit/8f11ce667dd91b55113d0e1bb9447b39ddc184a6))
+
+
+### :bug: Bug Fixes
+
+* more display in navtab ([#1965](https://github.com/scaleway/scaleway-ui/issues/1965)) ([4f6aee2](https://github.com/scaleway/scaleway-ui/commit/4f6aee2ba17669b1895d222a9d73f90a86b76e4f))
+
 ## [0.200.0](https://github.com/scaleway/scaleway-ui/compare/v0.199.3...v0.200.0) (2022-10-18)
 
 
