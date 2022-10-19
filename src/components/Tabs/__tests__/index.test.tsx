@@ -27,7 +27,9 @@ describe('Tabs', () => {
 
     return shouldMatchEmotionSnapshotWithPortal(
       <Tabs selected={0} onChange={() => {}}>
-        <Tabs.Tab value={0}>First</Tabs.Tab>
+        <Tabs.Tab value={0} counter={2}>
+          First
+        </Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={undefined}>Undefined</Tabs.Tab>
         <Tabs.Tab counter={12}>Counter</Tabs.Tab>

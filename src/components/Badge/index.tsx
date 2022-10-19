@@ -65,7 +65,8 @@ const generateStyles = ({
     ),
     disabled: `
       color: ${theme.colors.neutral.textWeak};
-      background: ${theme.colors.neutral.backgroundStrong}
+      background: ${theme.colors.neutral.backgroundStrong};
+      border: none;
     `,
     neutral: `
       color: ${
@@ -73,9 +74,8 @@ const generateStyles = ({
           ? theme.colors.neutral[text as keyof typeof theme.colors.neutral]
           : theme.colors.neutral.textWeak
       };
-      background: ${
-        theme.colors.neutral[background as keyof typeof theme.colors.neutral]
-      }
+      background: ${theme.colors.neutral.backgroundStrong};
+      border: 1px solid ${theme.colors.neutral.borderStrong};
     `,
   }
 }
