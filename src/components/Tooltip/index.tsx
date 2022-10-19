@@ -178,7 +178,13 @@ const Tooltip = ({
         tooltipRef.current.focus()
       }
     }
-  }, [visibleInDom, positions.tooltipPosition, generatePositions, placement])
+  }, [
+    visibleInDom,
+    positions.tooltipPosition,
+    generatePositions,
+    placement,
+    text,
+  ])
 
   /**
    * WIll render children conditionally if children is a function or not.
