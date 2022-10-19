@@ -61,6 +61,9 @@ type ContainerProps = ContainerBaseProps & {
   title: string
 } & BoxProps
 
+/**
+ * @deprecated: use ContainerV2, this deprecated Container included a wrong marginTop
+ */
 const Container = ({
   title,
   subtitle,
