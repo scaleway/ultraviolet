@@ -1,12 +1,8 @@
-import { Meta } from '@storybook/react'
+import { ComponentMeta } from '@storybook/react'
 import Tabs from '..'
-import Tab from '../Tab'
+import { Tab } from '../Tab'
 
 export default {
-  args: {
-    children: [<Tabs.Tab>Choice 1</Tabs.Tab>],
-    selected: 0,
-  },
   component: Tabs,
   parameters: {
     docs: {
@@ -17,11 +13,12 @@ export default {
   },
   subcomponents: { Tab },
   title: 'Components/Navigation/Tabs',
-} as Meta
+} as ComponentMeta<typeof Tabs>
 
 export { Playground } from './Playground.stories'
 export { Disabled } from './Disabled.stories'
 export { Showcase } from './Showcase.stories'
 export { WithBadge } from './WithBadge.stories'
+export { WithCounter } from './WithCounter.stories'
 export { WithMenu } from './WithMenu.stories'
 export { MenuDisabled } from './MenuDisabled.stories'

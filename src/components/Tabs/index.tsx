@@ -7,7 +7,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import Tab, { StyledTabButton } from './Tab'
+import { StyledTabButton, Tab } from './Tab'
 import TabMenu from './TabMenu'
 import TabMenuItem from './TabMenuItem'
 import TabsContext from './TabsContext'

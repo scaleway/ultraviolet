@@ -10,11 +10,12 @@ import {
   forwardRef,
   useMemo,
 } from 'react'
-import Bullet from '../Bullet'
+import Badge from '../Badge'
 import Tooltip from '../Tooltip'
 import { useTabsContext } from './TabsContext'
 
-const StyledBullet = styled(Bullet)`
+const StyledBadge = styled(Badge)`
+  padding: 0 ${({ theme }) => theme.space['1']};
   margin-left: ${({ theme }) => theme.space['1']};
 `
 
@@ -75,7 +76,7 @@ export const StyledTabButton = styled.button`
       outline: none;
       color: ${({ theme }) => theme.colors.primary.text};
       border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
-      ${StyledBullet} {
+      ${StyledBadge} {
         background-color: ${({ theme }) => theme.colors.primary.background};
         border-color: ${({ theme }) => theme.colors.primary.background};
         color: ${({ theme }) => theme.colors.primary.text};
@@ -89,12 +90,12 @@ export const StyledTabButton = styled.button`
     filter: grayscale(1) opacity(50%);
   }
 `
-export type TabProps<T extends ElementType> = {
+export type TabProps<T extends ElementType = 'button'> = {
   as?: T
   badge?: ReactNode
   children?: ReactNode
   className?: string
-  counter?: number
+  counter?: number | string
   disabled?: boolean
   value?: string | number
   onClick?: MouseEventHandler<HTMLElement>
@@ -113,65 +114,71 @@ export type TabProps<T extends ElementType> = {
   | 'role'
 >
 
-const Tab = <T extends ElementType = 'button'>(
-  {
-    as,
-    badge,
-    children,
-    className,
-    counter,
-    disabled = false,
-    value,
-    onClick,
-    onKeyDown,
-    tooltip,
-    ...props
-  }: TabProps<T>,
-  ref: ForwardedRef<HTMLElement>,
-) => {
-  const { selected, onChange } = useTabsContext()
-  const computedAs = as ?? 'button'
-  const isSelected = useMemo(
-    () => value !== undefined && selected === value,
-    [value, selected],
-  )
+const TabInner = forwardRef(
+  (
+    {
+      as,
+      badge,
+      children,
+      className,
+      counter,
+      disabled = false,
+      value,
+      onClick,
+      onKeyDown,
+      tooltip,
+      ...props
+    }: TabProps,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
+    const { selected, onChange } = useTabsContext()
+    const computedAs = as ?? 'button'
+    const isSelected = useMemo(
+      () => value !== undefined && selected === value,
+      [value, selected],
+    )
 
-  return (
-    <StyledTooltip text={tooltip}>
-      <StyledTabButton
-        role="tab"
-        ref={ref as unknown as Ref<HTMLButtonElement>}
-        className={className}
-        as={computedAs}
-        aria-label={value ? `${value}` : undefined}
-        aria-selected={isSelected}
-        aria-disabled={disabled}
-        disabled={computedAs === 'button' ? disabled : undefined}
-        type={computedAs === 'button' ? 'button' : undefined}
-        onClick={event => {
-          if (value) {
-            onChange(value)
-          }
-          onClick?.(event)
-        }}
-        onKeyDown={event => {
-          onKeyDown?.(event)
-          if (!event.defaultPrevented && !disabled && value) onChange(value)
-        }}
-        {...props}
-      >
-        {children}
-        {typeof counter === 'number' ? (
-          <StyledBullet
-            text={`${counter}`}
-            size="small"
-            variant={isSelected ? 'primary' : 'default'}
-          />
-        ) : null}
-        {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
-      </StyledTabButton>
-    </StyledTooltip>
-  )
-}
+    return (
+      <StyledTooltip text={tooltip}>
+        <StyledTabButton
+          role="tab"
+          ref={ref as unknown as Ref<HTMLButtonElement>}
+          className={className}
+          as={computedAs}
+          aria-label={value ? `${value}` : undefined}
+          aria-selected={isSelected}
+          aria-disabled={disabled}
+          disabled={computedAs === 'button' ? disabled : undefined}
+          type={computedAs === 'button' ? 'button' : undefined}
+          onClick={event => {
+            if (value !== undefined) {
+              onChange(value)
+            }
+            onClick?.(event)
+          }}
+          onKeyDown={event => {
+            onKeyDown?.(event)
+            if (!event.defaultPrevented && !disabled && value) onChange(value)
+          }}
+          {...props}
+        >
+          {children}
+          {typeof counter === 'number' || typeof counter === 'string' ? (
+            <StyledBadge
+              variant={isSelected ? 'primary' : 'neutral'}
+              prominence={isSelected ? 'default' : 'strong'}
+              size="medium"
+            >
+              {counter}
+            </StyledBadge>
+          ) : null}
+          {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
+        </StyledTabButton>
+      </StyledTooltip>
+    )
+  },
+)
 
-export default forwardRef(Tab)
+export const Tab = TabInner as <T extends ElementType = 'button'>(
+  props: TabProps<T> & { ref?: React.ForwardedRef<HTMLElement> },
+) => ReturnType<typeof TabInner>

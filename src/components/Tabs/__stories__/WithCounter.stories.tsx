@@ -12,6 +12,15 @@ WithCounter.args = {
     <Tabs.Tab value={2} counter={8}>
       Some items
     </Tabs.Tab>,
+    <Tabs.Tab value={2} counter={80}>
+      Some items
+    </Tabs.Tab>,
+    <Tabs.Tab value={2} counter={8000}>
+      Some items
+    </Tabs.Tab>,
+    <Tabs.Tab value={2} counter="99+">
+      Some items
+    </Tabs.Tab>,
   ],
   selected: 1,
 }

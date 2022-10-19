@@ -1132,50 +1132,73 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-eizj2o-StyledContainer-StyledBullet {
+.cache-6vti4y-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 50%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
-  background-color: #eeeeff;
-  color: #390171;
-  width: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  font-size: 14px;
+  color: #390171;
+  background: #eeeeff;
+  padding: 0 8px;
   margin-left: 8px;
 }
 
-.cache-1v791es-StyledContainer-StyledBullet {
+.cache-1vwepwg-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: inherit;
+}
+
+.cache-1x919v9-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 50%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
-  border: 1px solid #d4dae7;
-  background-color: #ffffff;
-  color: #4a4f62;
-  width: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  font-size: 14px;
+  color: #151a2d;
+  background: #f6f6f8;
+  border: 1px solid #d4dae7;
+  padding: 0 8px;
   margin-left: 8px;
 }
 
@@ -1410,9 +1433,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     >
       First
       <div
-        class="e1ej5pcd3 cache-eizj2o-StyledContainer-StyledBullet e1u3ywq30"
+        as="span"
+        class="e1ej5pcd3 cache-6vti4y-StyledBox-StyledBadge egvl2gp0"
+        role="status"
       >
-        2
+        <p
+          class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+        >
+          2
+        </p>
       </div>
     </button>
     <button
@@ -1443,9 +1472,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     >
       Counter
       <div
-        class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+        as="span"
+        class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+        role="status"
       >
-        12
+        <p
+          class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+        >
+          12
+        </p>
       </div>
     </button>
     <button
@@ -1458,9 +1493,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     >
       Counter no items
       <div
-        class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+        as="span"
+        class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+        role="status"
       >
-        0
+        <p
+          class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+        >
+          0
+        </p>
       </div>
     </button>
     <button
@@ -1472,9 +1513,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     >
       Conter and badge
       <div
-        class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+        as="span"
+        class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+        role="status"
       >
-        12
+        <p
+          class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+        >
+          12
+        </p>
       </div>
       <span
         class="cache-1hjfwlj-BadgeContainer e1ej5pcd1"
@@ -1831,50 +1878,73 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-eizj2o-StyledContainer-StyledBullet {
+.cache-6vti4y-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 50%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
-  background-color: #eeeeff;
-  color: #390171;
-  width: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  font-size: 14px;
+  color: #390171;
+  background: #eeeeff;
+  padding: 0 8px;
   margin-left: 8px;
 }
 
-.cache-1v791es-StyledContainer-StyledBullet {
+.cache-1vwepwg-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: inherit;
+}
+
+.cache-1x919v9-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 50%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: 500;
-  border: 1px solid #d4dae7;
-  background-color: #ffffff;
-  color: #4a4f62;
-  width: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 24px;
-  font-size: 14px;
+  color: #151a2d;
+  background: #f6f6f8;
+  border: 1px solid #d4dae7;
+  padding: 0 8px;
   margin-left: 8px;
 }
 
@@ -2020,9 +2090,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           >
             First
             <div
-              class="e1ej5pcd3 cache-eizj2o-StyledContainer-StyledBullet e1u3ywq30"
+              as="span"
+              class="e1ej5pcd3 cache-6vti4y-StyledBox-StyledBadge egvl2gp0"
+              role="status"
             >
-              2
+              <p
+                class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+              >
+                2
+              </p>
             </div>
           </button>
           <button
@@ -2053,9 +2129,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           >
             Counter
             <div
-              class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+              as="span"
+              class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+              role="status"
             >
-              12
+              <p
+                class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+              >
+                12
+              </p>
             </div>
           </button>
           <button
@@ -2068,9 +2150,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           >
             Counter no items
             <div
-              class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+              as="span"
+              class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+              role="status"
             >
-              0
+              <p
+                class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+              >
+                0
+              </p>
             </div>
           </button>
           <button
@@ -2082,9 +2170,15 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           >
             Conter and badge
             <div
-              class="e1ej5pcd3 cache-1v791es-StyledContainer-StyledBullet e1u3ywq30"
+              as="span"
+              class="e1ej5pcd3 cache-1x919v9-StyledBox-StyledBadge egvl2gp0"
+              role="status"
             >
-              12
+              <p
+                class="egvl2gp1 cache-1vwepwg-StyledText-StyledText e1tg3t120"
+              >
+                12
+              </p>
             </div>
             <span
               class="cache-1hjfwlj-BadgeContainer e1ej5pcd1"
