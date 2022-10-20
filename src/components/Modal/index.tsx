@@ -307,6 +307,8 @@ const Modal = ({
           hide={onClose || onCloseCallBack}
         >
           <>
+            {dialog.visible &&
+              (typeof children === 'function' ? children(dialog) : children)}
             <StyledContainer>
               {isClosable && (
                 <Button
@@ -319,8 +321,6 @@ const Modal = ({
                 />
               )}
             </StyledContainer>
-            {dialog.visible &&
-              (typeof children === 'function' ? children(dialog) : children)}
           </>
         </StyledDialog>
       </StyledDialogBackdrop>
