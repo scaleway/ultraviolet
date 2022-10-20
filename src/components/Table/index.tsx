@@ -18,14 +18,16 @@ const Table: ((props: BoxProps) => JSX.Element) & {
   BodyCell: typeof BodyCell
 } = props => <StyledTable {...props} />
 
-export const Head = styled(Box.withComponent('thead'))`
+const StyledHead = styled(Box.withComponent('thead'))`
   border: 0;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   border-style: solid;
 `
 
-export const Row = styled(Box.withComponent('tr'), {
+export const Head = (props: BoxProps) => <StyledHead {...props} />
+
+const StyledRow = styled(Box.withComponent('tr'), {
   shouldForwardProp: prop => prop !== 'highlight',
 })<{ highlight?: boolean }>`
   color: ${({ theme }) => theme.colors.neutral.text};
@@ -64,13 +66,19 @@ export const Row = styled(Box.withComponent('tr'), {
   }
 `
 
+type RowProps = {
+  highlight?: boolean
+} & BoxProps
+
+export const Row = (props: RowProps) => <StyledRow {...props} />
+
 const cellStyle = css`
   padding: 12px 16px;
   font-size: 14px;
   line-height: 24px;
 `
 
-export const HeadCell = styled(Box.withComponent('th'))`
+const StyledHeadCell = styled(Box.withComponent('th'))`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -80,11 +88,15 @@ export const HeadCell = styled(Box.withComponent('th'))`
   ${cellStyle};
 `
 
-export const BodyCell = styled(Box.withComponent('td'))`
+export const HeadCell = (props: BoxProps) => <StyledHeadCell {...props} />
+
+const StyledBodyCell = styled(Box.withComponent('td'))`
   overflow: hidden;
   white-space: nowrap;
   ${cellStyle};
 `
+
+export const BodyCell = (props: BoxProps) => <StyledBodyCell {...props} />
 
 const TBody = Box.withComponent('tbody')
 
