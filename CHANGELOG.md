@@ -1,3 +1,15 @@
+## [0.200.3](https://github.com/scaleway/scaleway-ui/compare/v0.200.2...v0.200.3) (2022-10-20)
+
+
+### :zap: Refactor
+
+* update storybook action bar / alert / avatar ([#1966](https://github.com/scaleway/scaleway-ui/issues/1966)) ([b4d90df](https://github.com/scaleway/scaleway-ui/commit/b4d90df0847085dee2d3de4086ca5b53e41a5ccf))
+
+
+### :bug: Bug Fixes
+
+* **modal:** make sure close button is in front of content ([#1972](https://github.com/scaleway/scaleway-ui/issues/1972)) ([eebe7fa](https://github.com/scaleway/scaleway-ui/commit/eebe7facc43fae854f372c9661f055fb28620960))
+
 ## [0.200.2](https://github.com/scaleway/scaleway-ui/compare/v0.200.1...v0.200.2) (2022-10-20)
 
 
