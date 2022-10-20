@@ -114,8 +114,8 @@ export type TabProps<T extends ElementType = 'button'> = {
   | 'role'
 >
 
-const TabInner = forwardRef(
-  (
+export const Tab = forwardRef(
+  <T extends ElementType = 'button'>(
     {
       as,
       badge,
@@ -128,7 +128,7 @@ const TabInner = forwardRef(
       onKeyDown,
       tooltip,
       ...props
-    }: TabProps,
+    }: TabProps<T>,
     ref: ForwardedRef<HTMLElement>,
   ) => {
     const { selected, onChange } = useTabsContext()
@@ -178,7 +178,3 @@ const TabInner = forwardRef(
     )
   },
 )
-
-export const Tab = TabInner as <T extends ElementType = 'button'>(
-  props: TabProps<T> & { ref?: React.ForwardedRef<HTMLElement> },
-) => ReturnType<typeof TabInner>
