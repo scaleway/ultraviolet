@@ -1,3 +1,10 @@
+## [0.200.4](https://github.com/scaleway/scaleway-ui/compare/v0.200.3...v0.200.4) (2022-10-20)
+
+
+### :bug: Bug Fixes
+
+* **toggle:** fix not toggling on storybook ([#1967](https://github.com/scaleway/scaleway-ui/issues/1967)) ([4e7f896](https://github.com/scaleway/scaleway-ui/commit/4e7f89640b335ed2ed8dfc84977bacc24dc198ba))
+
 ## [0.200.3](https://github.com/scaleway/scaleway-ui/compare/v0.200.2...v0.200.3) (2022-10-20)
 
 
