@@ -1,3 +1,10 @@
+## [0.200.2](https://github.com/scaleway/scaleway-ui/compare/v0.200.1...v0.200.2) (2022-10-20)
+
+
+### :bug: Bug Fixes
+
+* **tabs:** incorrect tab type ([#1970](https://github.com/scaleway/scaleway-ui/issues/1970)) ([ffecffa](https://github.com/scaleway/scaleway-ui/commit/ffecffa8952b2bc0a7c4f43b8b473f30f8c9ab90))
+
 ## [0.200.1](https://github.com/scaleway/scaleway-ui/compare/v0.200.0...v0.200.1) (2022-10-19)
 
 
