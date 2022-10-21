@@ -96,7 +96,7 @@ const Command = ({
     >
       {command}
     </SyntaxHighlighter>
-    <StyledCopyButton text={command} showCopyButton={showCopyButton} />
+    <StyledCopyButton value={command} showCopyButton={showCopyButton} />
   </div>
 )
 
