@@ -146,6 +146,7 @@ function Pagination({
             disabled={disabled}
             aria-current={pageNumber === page}
             onClick={handlePageClick(pageNumber)}
+            type="button"
           >
             {pageNumber}
           </StyledPageButton>

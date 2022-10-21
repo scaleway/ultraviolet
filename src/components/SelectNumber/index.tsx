@@ -280,6 +280,7 @@ const SelectNumber = ({
           onClick={offsetFn(-1)}
           disabled={isMinusDisabled}
           aria-label="Minus"
+          type="button"
         >
           <Icon name="minus" size={iconSizes[size]} />
         </StyledSelectButton>
@@ -322,6 +323,7 @@ const SelectNumber = ({
           onClick={offsetFn(1)}
           disabled={isPlusDisabled}
           aria-label="Plus"
+          type="button"
         >
           <Icon name="plus" size={iconSizes[size]} />
         </StyledSelectButton>
