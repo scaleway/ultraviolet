@@ -1,3 +1,15 @@
+## [0.200.5](https://github.com/scaleway/scaleway-ui/compare/v0.200.4...v0.200.5) (2022-10-21)
+
+
+### :repeat: CI
+
+* add chromatic support ([#1951](https://github.com/scaleway/scaleway-ui/issues/1951)) ([11cabca](https://github.com/scaleway/scaleway-ui/commit/11cabcabf515340bd0bbc85707ad479105e645b5))
+
+
+### :bug: Bug Fixes
+
+* add button type to styled buttons ([#1974](https://github.com/scaleway/scaleway-ui/issues/1974)) ([463c7e3](https://github.com/scaleway/scaleway-ui/commit/463c7e3dad3e5c4948dca8d90809a5a58de3dbf3))
+
 ## [0.200.4](https://github.com/scaleway/scaleway-ui/compare/v0.200.3...v0.200.4) (2022-10-20)
 
 
