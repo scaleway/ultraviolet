@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
-import Box, { BoxProps } from '../Box'
 import Link from '../Link'
 import Text from '../Text'
 
@@ -20,12 +19,10 @@ const Container = styled.div`
   padding: ${({ theme }) => theme.space['1']};
 `
 
-const headingRenderer = ({
-  node,
+const MdHeading = ({
   children,
   ...props
 }: {
-  node: unknown
   level: number
   children: ReactNode
 }) => {
@@ -38,47 +35,37 @@ const headingRenderer = ({
   }
   const { heading: Heading } = ReactMarkDown.renderers
 
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return <Heading {...props}>{children}</Heading>
 }
 
-const inlineCodeRenderer = ({ children }: { children: ReactNode }) => (
+const MdCode = ({ children }: { children: ReactNode }) => (
   <Container>
     <Text as="code" variant="code">
       {children}
     </Text>
   </Container>
 )
-const textRenderer = ({ children }: { children: ReactNode }) => (
+const MdText = ({ children }: { children: ReactNode }) => (
   <span>{children}</span>
 )
-const paragraphRenderer = ({ children }: { children: ReactNode }) => (
-  <p>{children}</p>
-)
+const MdParagraph = ({ children }: { children: ReactNode }) => <p>{children}</p>
 
-const linkRenderer = ({
-  node,
-  children,
-  href,
-  ...props
-}: {
-  node: unknown
-  href: string
-  children: ReactNode
-}) => {
+const MdLink = ({ children, href }: { href: string; children: ReactNode }) => {
   if (!href) {
     return null
   }
 
   return (
-    <StyledLink variant="info" href={href} {...props}>
+    <StyledLink variant="info" href={href}>
       {children}
     </StyledLink>
   )
 }
 
-const StyledContainer = styled(Box, {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['inline'].includes(prop),
-})<{ inline: boolean }>`
+})<{ inline?: boolean }>`
   ${({ inline }) =>
     inline &&
     css`
@@ -88,29 +75,15 @@ const StyledContainer = styled(Box, {
     `}
 `
 
-const RootRendererComponent = ({
-  inline = false,
-  parentProps = {},
-  children,
-}: {
-  children?: ReactNode
-  inline?: boolean
-  parentProps?: BoxProps
-}) => (
-  <StyledContainer inline={inline} {...parentProps}>
-    {children}
-  </StyledContainer>
-)
+type MarkDownContainerProps = Pick<MarkDownProps, 'inline' | 'className'>
 
 const rootRenderer =
-  (inline: boolean, parentProps: BoxProps) =>
-  (props: Record<string, unknown>) =>
+  ({ inline, className }: MarkDownContainerProps) =>
+  ({ children }: { children: ReactNode[] }) =>
     (
-      <RootRendererComponent
-        {...props}
-        inline={inline}
-        parentProps={parentProps}
-      />
+      <StyledContainer inline={inline} className={className}>
+        {children}
+      </StyledContainer>
     )
 
 type MarkDownProps = {
@@ -118,24 +91,25 @@ type MarkDownProps = {
   linkTarget?: string
   escapeHtml?: boolean
   inline?: boolean
-} & BoxProps
+  className?: string
+}
 
 const MarkDown = ({
   source,
   linkTarget,
   escapeHtml = true,
-  inline = false,
-  ...props
+  inline,
+  className,
 }: MarkDownProps) => (
   <ReactMarkDown
     source={source}
     renderers={{
-      heading: headingRenderer,
-      inlineCode: inlineCodeRenderer,
-      link: linkRenderer,
-      paragraph: paragraphRenderer,
-      root: rootRenderer(inline, props),
-      text: textRenderer,
+      heading: MdHeading,
+      inlineCode: MdCode,
+      link: MdLink,
+      paragraph: MdParagraph,
+      root: rootRenderer({ inline, className }),
+      text: MdText,
     }}
     linkTarget={linkTarget}
     escapeHtml={escapeHtml}
