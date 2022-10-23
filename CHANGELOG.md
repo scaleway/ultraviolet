@@ -1,3 +1,11 @@
+## [0.200.6](https://github.com/scaleway/scaleway-ui/compare/v0.200.5...v0.200.6) (2022-10-23)
+
+
+### :package: Chore
+
+* **deps:** pin dependency chromatic to 6.10.5 ([#1976](https://github.com/scaleway/scaleway-ui/issues/1976)) ([b67afbd](https://github.com/scaleway/scaleway-ui/commit/b67afbd04c659fdbe9ba077942444d01a06f2f3f))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.7.7 ([#1961](https://github.com/scaleway/scaleway-ui/issues/1961)) ([c5fa25c](https://github.com/scaleway/scaleway-ui/commit/c5fa25cbb1d275747a16455affe1c487598bda05))
+
 ## [0.200.5](https://github.com/scaleway/scaleway-ui/compare/v0.200.4...v0.200.5) (2022-10-21)
 
 
