@@ -1,7 +1,7 @@
 ######################################################################
 # This stage install dependencies and build the application          #
 ######################################################################
-FROM node:18.10-alpine as builder
+FROM node:19.0-alpine as builder
 WORKDIR /usr/src/app
 
 COPY package.json pnpm-lock.yaml ./
