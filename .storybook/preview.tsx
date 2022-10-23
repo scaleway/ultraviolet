@@ -2,10 +2,10 @@ import { useCallback } from 'react'
 import I18n from '@scaleway/use-i18n'
 import { Story } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
-import { mockRandom } from 'jest-mock-random'
 import normalize from '../src/utils/normalize'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
+import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
 import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
@@ -14,8 +14,9 @@ import AsapBoldWoff2 from './assets/fonts/asap/Asap-Bold.woff2'
 import AsapMediumWoff2 from './assets/fonts/asap/Asap-Medium.woff2'
 import AsapRegularWoff2 from './assets/fonts/asap/Asap-Regular.woff2'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
+import isChromatic from 'chromatic/isChromatic'
 
-if (process.env.STORYBOOK_ENVIRONMENT === 'visual') mockRandom([0.25, 0.5])
+if (isChromatic()) seedrandom('manual-seed', { global: true })
 
 const STORY_SORT = {
   order: [
