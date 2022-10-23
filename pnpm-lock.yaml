@@ -78,7 +78,7 @@ specifiers:
   babel-loader: 8.2.5
   babel-plugin-annotate-pure-calls: 0.4.0
   babel-plugin-named-exports-order: 0.0.2
-  chromatic: ^6.10.2
+  chromatic: 6.10.5
   cross-env: 7.0.3
   cz-conventional-changelog: 3.3.0
   date-fns: 2.29.3
@@ -187,7 +187,7 @@ devDependencies:
   '@storybook/client-api': 6.5.12_biqbaboplfbrettd7655fr4n2y
   '@storybook/components': 6.5.12_biqbaboplfbrettd7655fr4n2y
   '@storybook/core-events': 6.5.12
-  '@storybook/csf': 0.0.2--canary.51.26e6539.0
+  '@storybook/csf': 0.0.2--canary.29.77954d8.0
   '@storybook/manager-webpack5': 6.5.12_ceius3krcep667lesqygbylwku
   '@storybook/mdx2-csf': 0.0.3
   '@storybook/preview-web': 6.5.12_biqbaboplfbrettd7655fr4n2y
@@ -212,7 +212,7 @@ devDependencies:
   babel-loader: 8.2.5_wfdvla2jorjoj23kkavho2upde
   babel-plugin-annotate-pure-calls: 0.4.0_@babel+core@7.19.3
   babel-plugin-named-exports-order: 0.0.2
-  chromatic: 6.10.4
+  chromatic: 6.10.5
   cross-env: 7.0.3
   cz-conventional-changelog: 3.3.0
   date-fns: 2.29.3
@@ -4607,18 +4607,18 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/csf/0.0.2--canary.4566f4d.1:
-    resolution: {integrity: sha512-9OVvMVh3t9znYZwb0Svf/YQoxX2gVOeQTGe2bses2yj+a3+OJnCrUF3/hGv6Em7KujtOdL2LL+JnG49oMVGFgQ==}
-    dependencies:
-      lodash: 4.17.21
-    dev: true
-
-  /@storybook/csf/0.0.2--canary.51.26e6539.0:
-    resolution: {integrity: sha512-6ThzsNDhsvu+5AZ3vniw1jv8LfktmwB4664Cxrn29UP3TPjZNl4v2sWotOf/enlzVooI98SUH61x8iA0c3CESQ==}
+  /@storybook/csf/0.0.2--canary.29.77954d8.0:
+    resolution: {integrity: sha512-MTQkleZXRCKqp/5J9bEd5sYD4Mwl7K1suXx4WIsUAZVwww2zzeZqpBzZBaW+y4blUvsS5vZzWTNS8c9VeNcj+g==}
     dependencies:
       expect-type: 0.14.2
       lodash: 4.17.21
       type-fest: 2.19.0
+    dev: true
+
+  /@storybook/csf/0.0.2--canary.4566f4d.1:
+    resolution: {integrity: sha512-9OVvMVh3t9znYZwb0Svf/YQoxX2gVOeQTGe2bses2yj+a3+OJnCrUF3/hGv6Em7KujtOdL2LL+JnG49oMVGFgQ==}
+    dependencies:
+      lodash: 4.17.21
     dev: true
 
   /@storybook/csf/0.0.2--canary.87bc651.0:
@@ -7513,8 +7513,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic/6.10.4:
-    resolution: {integrity: sha512-5J3ieYoccdeud453NhTsl8b6XZIxQeKB6VDq2JPpop94kgkAc0qil61Zhx4IzcWGD2e9dJkKZNXMNCXs9cL0dQ==}
+  /chromatic/6.10.5:
+    resolution: {integrity: sha512-L5O2NwYWdYKBq3JzDkmhis1tH9g74DL82z1C7iTHMK6qTMobDRI8PoREKTTbaVmk2VP2lKb4+41NKdBRJxHZ3w==}
     hasBin: true
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
