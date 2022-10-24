@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Tabs } from '@scaleway/ui'
+import { CopyButton, Tabs } from '@scaleway/ui'
 import {
   Children,
   ReactElement,
@@ -9,7 +9,6 @@ import {
 } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import CopyButton from './CopyButton'
 
 const StyledDiv = styled.div`
   box-shadow: 0 0 8px 2px rgba(178, 182, 195, 0.37);
@@ -97,7 +96,7 @@ const Command = ({
     >
       {command}
     </SyntaxHighlighter>
-    <StyledCopyButton text={command} showCopyButton={showCopyButton} />
+    <StyledCopyButton value={command} showCopyButton={showCopyButton} />
   </div>
 )
 
