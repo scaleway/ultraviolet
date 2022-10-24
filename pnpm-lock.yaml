@@ -72,6 +72,7 @@ specifiers:
   '@types/react': 18.0.21
   '@types/react-datepicker': 4.4.2
   '@types/react-dom': 18.0.6
+  '@types/seedrandom': ^3.0.2
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   '@xstyled/emotion': 2.5.0
@@ -90,7 +91,6 @@ specifiers:
   jest-axe: 6.0.0
   jest-environment-jsdom: 29.2.1
   jest-junit: 14.0.1
-  jest-mock-random: 1.1.1
   lint-staged: 13.0.3
   polished: 4.2.2
   postcss: 8.4.18
@@ -113,6 +113,7 @@ specifiers:
   rollup-plugin-dts: 5.0.0
   rollup-plugin-postcss: 4.0.2
   rollup-plugin-visualizer: 5.8.3
+  seedrandom: ^3.0.5
   semantic-release: 19.0.5
   shx: 0.3.4
   size-limit: 8.1.0
@@ -207,6 +208,7 @@ devDependencies:
   '@types/react': 18.0.21
   '@types/react-datepicker': 4.4.2_react@18.2.0
   '@types/react-dom': 18.0.6
+  '@types/seedrandom': 3.0.2
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
   babel-loader: 8.2.5_6zc4kxld457avlfyhj3lzsljlm
@@ -223,7 +225,6 @@ devDependencies:
   jest-axe: 6.0.0
   jest-environment-jsdom: 29.2.1
   jest-junit: 14.0.1
-  jest-mock-random: 1.1.1
   lint-staged: 13.0.3
   postcss: 8.4.18
   prettier: 2.7.1
@@ -237,6 +238,7 @@ devDependencies:
   rollup-plugin-dts: 5.0.0_655ssj4e7sdqlljrreeiqtltve
   rollup-plugin-postcss: 4.0.2_postcss@8.4.18
   rollup-plugin-visualizer: 5.8.3_rollup@3.2.3
+  seedrandom: 3.0.5
   semantic-release: 19.0.5
   shx: 0.3.4
   size-limit: 8.1.0
@@ -5585,6 +5587,10 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+
+  /@types/seedrandom/3.0.2:
+    resolution: {integrity: sha512-YPLqEOo0/X8JU3rdiq+RgUKtQhQtrppE766y7vMTu8dGML7TVtZNiiiaC/hhU9Zqw9UYopXxhuWWENclMVBwKQ==}
+    dev: true
 
   /@types/semver/7.3.12:
     resolution: {integrity: sha512-WwA1MW0++RfXmCr12xeYOOC5baSC9mSb0ZqCquFzKhcoF4TvHu5MKOuXsncgZcpVFhB1pXd5hZmM0ryAoCp12A==}
@@ -11999,10 +12005,6 @@ packages:
       stack-utils: 2.0.5
     dev: true
 
-  /jest-mock-random/1.1.1:
-    resolution: {integrity: sha512-eLduwHIZeepHCHWTgx6MGr8k4CWxTG39SN76tszzgCjX8GNu6M/05WcXMci73z1GUVqYQAsw6inz6ndgr3Gmqw==}
-    dev: true
-
   /jest-mock/29.2.1:
     resolution: {integrity: sha512-NDphaY/GqyQpTfnTZiTqqpMaw4Z0I7XnB7yBgrT6IwYrLGxpOhrejYr4ANY4YvO2sEGdd8Tx/6D0+WLQy7/qDA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -16364,6 +16366,10 @@ packages:
       '@types/json-schema': 7.0.11
       ajv: 6.12.6
       ajv-keywords: 3.5.2_ajv@6.12.6
+    dev: true
+
+  /seedrandom/3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
     dev: true
 
   /semantic-release/19.0.5:

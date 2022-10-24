@@ -139,7 +139,8 @@ jobs:
         id: chromatic
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: build:storybook
+          buildScriptName: build:storybook:stats
+          onlyChanged: true
 
       - name: Update deployment
         uses: bobheadxi/deployments@v1.3.0
