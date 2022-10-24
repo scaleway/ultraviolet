@@ -65,18 +65,20 @@ type ProgressionButtonProps = {
    */
 
   duration?: number
+  className?: string
 }
 
 const ProgressionButton = ({
   children,
   creation = new Date(), // Supposed start time of the progression
   duration = 120, // Approximation of the progression's duration (in seconds)
+  className,
 }: ProgressionButtonProps) => {
   const createdAt = typeof creation === 'string' ? new Date(creation) : creation
   const delay = Math.floor((Date.now() - createdAt.getTime()) / 1000)
 
   return (
-    <ProgressionContainer role="progressbar">
+    <ProgressionContainer role="progressbar" className={className}>
       <Progression delay={delay} duration={duration} />
       {children}
     </ProgressionContainer>
