@@ -1,4 +1,4 @@
-import MarkDown from '..'
+import Markdown from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
 export const simple = `
@@ -33,20 +33,20 @@ export const withHtml = `
 
 describe('MarkDown', () => {
   test(`render simple string`, () =>
-    shouldMatchEmotionSnapshot(<MarkDown source={simple} />))
+    shouldMatchEmotionSnapshot(<Markdown source={simple} />))
 
   test(`render simple string with target blank`, () =>
     shouldMatchEmotionSnapshot(
-      <MarkDown source={simple} linkTarget="_blank" />,
+      <Markdown source={simple} linkTarget="_blank" />,
     ))
 
   test(`render paragraph inline`, () =>
     shouldMatchEmotionSnapshot(
-      <MarkDown source={withMultipleParagraphs} inline />,
+      <Markdown source={withMultipleParagraphs} inline />,
     ))
 
   test(`render html without escaing it`, () =>
     shouldMatchEmotionSnapshot(
-      <MarkDown source={withHtml} escapeHtml={false} />,
+      <Markdown source={withHtml} escapeHtml={false} />,
     ))
 })
