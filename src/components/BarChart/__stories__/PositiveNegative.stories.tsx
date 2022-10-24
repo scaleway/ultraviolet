@@ -3,8 +3,9 @@ import { format } from 'date-fns'
 import BarChart from '..'
 import { barChartPositiveNegativeData } from './mockData'
 
-export const PositiveNegative: ComponentStory<typeof BarChart> = () => (
+export const PositiveNegative: ComponentStory<typeof BarChart> = props => (
   <BarChart
+    {...props}
     height={200}
     data={barChartPositiveNegativeData}
     axisFormatters={{

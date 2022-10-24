@@ -5,8 +5,9 @@ import { barChartSimpleData } from './mockData'
 
 export const FormattedValuesAndTooltip: ComponentStory<
   typeof BarChart
-> = () => (
+> = props => (
   <BarChart
+    {...props}
     data={barChartSimpleData}
     axisFormatters={{
       bottom: value => format(new Date(value), 'dd-MM-Y'),
