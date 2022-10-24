@@ -1,3 +1,19 @@
+## [0.200.7](https://github.com/scaleway/scaleway-ui/compare/v0.200.6...v0.200.7) (2022-10-24)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#1971](https://github.com/scaleway/scaleway-ui/issues/1971)) ([355d39f](https://github.com/scaleway/scaleway-ui/commit/355d39f0b130d49dc90e6937a34c48a48ac4307c))
+* **devdeps:** update devdeps ([#1979](https://github.com/scaleway/scaleway-ui/issues/1979)) ([fd955a0](https://github.com/scaleway/scaleway-ui/commit/fd955a08689302562ca1b7b8b7948c541374a7c3))
+* **devdeps:** update docker/setup-buildx-action action to v2.2.1 ([#1981](https://github.com/scaleway/scaleway-ui/issues/1981)) ([e9358c5](https://github.com/scaleway/scaleway-ui/commit/e9358c5fea3c03ce5fa2f116952b4e663c141320))
+* **devdeps:** update node.js to v18.11 ([#1982](https://github.com/scaleway/scaleway-ui/issues/1982)) ([238e059](https://github.com/scaleway/scaleway-ui/commit/238e0594e408ebf767d226d971c6ca1f8fc425c2))
+* **devdeps:** update pnpm/action-setup action to v2.2.4 ([#1980](https://github.com/scaleway/scaleway-ui/issues/1980)) ([1788337](https://github.com/scaleway/scaleway-ui/commit/17883370c55abbb7fae1ada14927cd3d7bfb2e8d))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.5.4 ([#1983](https://github.com/scaleway/scaleway-ui/issues/1983)) ([c7eed36](https://github.com/scaleway/scaleway-ui/commit/c7eed36b4cef0b65f2e4e22c9431c8427fbe3afd))
+
 ## [0.200.6](https://github.com/scaleway/scaleway-ui/compare/v0.200.5...v0.200.6) (2022-10-23)
 
 
