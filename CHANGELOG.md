@@ -1,3 +1,15 @@
+## [0.200.8](https://github.com/scaleway/scaleway-ui/compare/v0.200.7...v0.200.8) (2022-10-24)
+
+
+### :repeat: CI
+
+* improve chromatic usage ([#1978](https://github.com/scaleway/scaleway-ui/issues/1978)) ([048b4a8](https://github.com/scaleway/scaleway-ui/commit/048b4a87bf24b215fdaa13bc518177e5be9b5741))
+
+
+### :package: Chore
+
+* **deps:** pin dependencies ([#1985](https://github.com/scaleway/scaleway-ui/issues/1985)) ([b80d6e1](https://github.com/scaleway/scaleway-ui/commit/b80d6e1b33292eced4507a1c7e944eb7d906ff2c))
+
 ## [0.200.7](https://github.com/scaleway/scaleway-ui/compare/v0.200.6...v0.200.7) (2022-10-24)
 
 
