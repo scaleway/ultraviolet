@@ -1,3 +1,10 @@
+## [0.201.0](https://github.com/scaleway/scaleway-ui/compare/v0.200.8...v0.201.0) (2022-10-24)
+
+
+### :gear: Features
+
+* **CopyButton:** new component ([#1969](https://github.com/scaleway/scaleway-ui/issues/1969)) ([6fb6369](https://github.com/scaleway/scaleway-ui/commit/6fb6369c79f88dbbf9f2809d08801f25c8e7eb97))
+
 ## [0.200.8](https://github.com/scaleway/scaleway-ui/compare/v0.200.7...v0.200.8) (2022-10-24)
 
 
