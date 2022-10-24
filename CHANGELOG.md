@@ -1,3 +1,10 @@
+## [0.201.1](https://github.com/scaleway/scaleway-ui/compare/v0.201.0...v0.201.1) (2022-10-24)
+
+
+### :bug: Bug Fixes
+
+* **progression-button:** add classname props ([#1986](https://github.com/scaleway/scaleway-ui/issues/1986)) ([c5b243b](https://github.com/scaleway/scaleway-ui/commit/c5b243b675c62d96cabc61c7e696a5576fb7fe6a))
+
 ## [0.201.0](https://github.com/scaleway/scaleway-ui/compare/v0.200.8...v0.201.0) (2022-10-24)
 
 
