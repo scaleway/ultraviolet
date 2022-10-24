@@ -19,7 +19,7 @@ const Container = styled.div`
   padding: ${({ theme }) => theme.space['1']};
 `
 
-const MdHeading = ({
+const MarDownHeading = ({
   children,
   ...props
 }: {
@@ -39,7 +39,7 @@ const MdHeading = ({
   return <Heading {...props}>{children}</Heading>
 }
 
-const MdCode = ({ children }: { children: ReactNode }) => (
+const MarkDownCode = ({ children }: { children: ReactNode }) => (
   <Container>
     <Text as="code" variant="code">
       {children}
@@ -49,9 +49,17 @@ const MdCode = ({ children }: { children: ReactNode }) => (
 const MdText = ({ children }: { children: ReactNode }) => (
   <span>{children}</span>
 )
-const MdParagraph = ({ children }: { children: ReactNode }) => <p>{children}</p>
+const MarkDownParagraph = ({ children }: { children: ReactNode }) => (
+  <p>{children}</p>
+)
 
-const MdLink = ({ children, href }: { href: string; children: ReactNode }) => {
+const MarkDownLink = ({
+  children,
+  href,
+}: {
+  href: string
+  children: ReactNode
+}) => {
   if (!href) {
     return null
   }
@@ -94,7 +102,7 @@ type MarkDownProps = {
   className?: string
 }
 
-const MarkDown = ({
+const Markdown = ({
   source,
   linkTarget,
   escapeHtml = true,
@@ -104,10 +112,10 @@ const MarkDown = ({
   <ReactMarkDown
     source={source}
     renderers={{
-      heading: MdHeading,
-      inlineCode: MdCode,
-      link: MdLink,
-      paragraph: MdParagraph,
+      heading: MarDownHeading,
+      inlineCode: MarkDownCode,
+      link: MarkDownLink,
+      paragraph: MarkDownParagraph,
       root: rootRenderer({ inline, className }),
       text: MdText,
     }}
@@ -116,4 +124,4 @@ const MarkDown = ({
   />
 )
 
-export default MarkDown
+export default Markdown

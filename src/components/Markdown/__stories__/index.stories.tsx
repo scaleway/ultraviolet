@@ -1,10 +1,10 @@
 import { Meta, Story } from '@storybook/react'
 import { ComponentProps } from 'react'
-import MarkDown from '..'
+import Markdown from '..'
 import { html, simple, withMultipleParagraphs } from './markdown_example'
 
 export default {
-  component: MarkDown,
+  component: Markdown,
   parameters: {
     docs: {
       description: {
@@ -13,13 +13,13 @@ export default {
       },
     },
   },
-  title: 'Components/MarkDown',
+  title: 'Components/Markdown',
 } as Meta
 
-const Template: Story<ComponentProps<typeof MarkDown>> = ({
+const Template: Story<ComponentProps<typeof Markdown>> = ({
   source = simple,
   ...props
-}) => <MarkDown source={source} {...props} />
+}) => <Markdown source={source} {...props} />
 
 export const Default = Template.bind({})
 
@@ -33,8 +33,8 @@ Inline.parameters = {
 Inline.decorators = [
   () => (
     <>
-      <MarkDown source={withMultipleParagraphs} />
-      <MarkDown source={withMultipleParagraphs} inline />
+      <Markdown source={withMultipleParagraphs} />
+      <Markdown source={withMultipleParagraphs} inline />
     </>
   ),
 ]
@@ -46,7 +46,7 @@ LinkTarget.parameters = {
       '`linkTarget` prop allows you to specify the target props for the links inside your markdown text. By default in react-markdown links are opened in a new tab.',
   },
 }
-LinkTarget.decorators = [() => <MarkDown source={simple} linkTarget="_self" />]
+LinkTarget.decorators = [() => <Markdown source={simple} linkTarget="_self" />]
 
 export const EspaceHTML = Template.bind({})
 EspaceHTML.parameters = {
@@ -54,4 +54,4 @@ EspaceHTML.parameters = {
     storyDescription: '`escapeHtml` manages the html escape of your markdown',
   },
 }
-EspaceHTML.decorators = [() => <MarkDown source={html} escapeHtml={false} />]
+EspaceHTML.decorators = [() => <Markdown source={html} escapeHtml={false} />]
