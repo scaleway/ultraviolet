@@ -1,3 +1,21 @@
+## [0.201.2](https://github.com/scaleway/scaleway-ui/compare/v0.201.1...v0.201.2) (2022-10-25)
+
+
+### :memo: Documentation
+
+* **Table:** fixed table crashing story and updated to new way of writing ([#1973](https://github.com/scaleway/scaleway-ui/issues/1973)) ([8d8ef3a](https://github.com/scaleway/scaleway-ui/commit/8d8ef3aaede9c6062c17b7357561fab07d040f68))
+
+
+### :zap: Refactor
+
+* **BarChart,BarStack:** rewrite stories ([#1987](https://github.com/scaleway/scaleway-ui/issues/1987)) ([f7c86e0](https://github.com/scaleway/scaleway-ui/commit/f7c86e0c8f75a37b521c22fa5bbeda4e12e68ef0))
+* **markdown:** remove box from Markdown ([#1975](https://github.com/scaleway/scaleway-ui/issues/1975)) ([b6ecfa9](https://github.com/scaleway/scaleway-ui/commit/b6ecfa9d2fae3eb42a7c738e47b3bedbc5017d16))
+
+
+### :bug: Bug Fixes
+
+* **theme:** synchronise design tokens ([#1992](https://github.com/scaleway/scaleway-ui/issues/1992)) ([d6a8544](https://github.com/scaleway/scaleway-ui/commit/d6a85447615f6074508e173761f000fdb81b3f81))
+
 ## [0.201.1](https://github.com/scaleway/scaleway-ui/compare/v0.201.0...v0.201.1) (2022-10-24)
 
 
