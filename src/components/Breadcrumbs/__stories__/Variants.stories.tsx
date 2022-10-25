@@ -1,22 +1,24 @@
-import { Story } from '@storybook/react'
+import { DecoratorFunction } from '@storybook/addons'
 import { ComponentProps } from 'react'
 import Breadcrumbs, { breadcrumbsVariants } from '..'
+import Stack from '../../Stack'
 
-export const Variants: Story<ComponentProps<typeof Breadcrumbs>> = props => (
-  <>
-    {breadcrumbsVariants.map(variant => (
-      <>
-        <b>{variant}:</b>
-        <Breadcrumbs {...props} key={variant} selected={1} variant={variant}>
-          <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
-          <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
-          <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
-        </Breadcrumbs>
-        <br />
-      </>
-    ))}
-  </>
-)
+export const Variants = (props: ComponentProps<typeof Breadcrumbs>) =>
+  breadcrumbsVariants.map(variant => (
+    <Breadcrumbs {...props} key={variant} selected={1} variant={variant}>
+      <Breadcrumbs.Item>Step 1</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 2</Breadcrumbs.Item>
+      <Breadcrumbs.Item>Step 3</Breadcrumbs.Item>
+    </Breadcrumbs>
+  ))
+
+Variants.decorators = [
+  StoryComponent => (
+    <Stack gap={2}>
+      <StoryComponent />
+    </Stack>
+  ),
+] as DecoratorFunction<JSX.Element>[]
 
 Variants.parameters = {
   docs: {
