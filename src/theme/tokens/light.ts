@@ -298,7 +298,7 @@ export default {
     },
     code: {
       fontFamily: 'JetBrains',
-      fontSize: '16px',
+      fontSize: '14px',
       fontWeight: 'Regular',
       letterSpacing: '0',
       lineHeight: '20px',
