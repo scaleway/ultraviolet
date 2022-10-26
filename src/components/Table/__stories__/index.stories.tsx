@@ -17,3 +17,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Hoverable } from './Hoverable.stories'
 export { Loader } from './Loader.stories'
+export { ColumnWidth } from './ColumnWidth'
