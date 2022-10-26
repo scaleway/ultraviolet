@@ -3,9 +3,11 @@ import { ComponentProps, useState } from 'react'
 import DateInput from '..'
 
 export const Controlled: Story<ComponentProps<typeof DateInput>> = () => {
-  const [value, setValue] = useState(new Date('December 17, 1995 03:24:00'))
+  const [value, setValue] = useState<Date | null>(
+    new Date('December 17, 1995 03:24:00'),
+  )
 
-  return <DateInput label="Date" value={value} onChange={setValue} />
+  return <DateInput label="Date" value={value as Date} onChange={setValue} />
 }
 
 Controlled.parameters = {
