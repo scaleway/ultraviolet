@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { Meta } from '@storybook/react'
 import Description from '..'
 
 export default {
@@ -13,49 +12,16 @@ export default {
     },
   },
   title: 'Components/Data Display/Description',
+  argTypes: {
+    inline: {
+      control: 'boolean',
+    },
+    userSelect: {
+      control: 'boolean',
+    },
+  },
 } as Meta
 
-const Template: Story<ComponentProps<typeof Description>> = args => (
-  <Description {...args}>
-    <Description.Term>Name</Description.Term>
-    <Description.Desc>Big instance</Description.Desc>
-    <Description.Term>Size</Description.Term>
-    <Description.Desc>125 GB</Description.Desc>
-  </Description>
-)
-
-export const Default = Template.bind({})
-
-export const Inline = Template.bind({})
-Inline.parameters = {
-  docs: {
-    storyDescription: 'Display it as inline using `inline` prop.',
-  },
-}
-Inline.decorators = [
-  () => (
-    <Description inline>
-      <Description.Term>Name</Description.Term>
-      <Description.Desc>Big instance</Description.Desc>
-      <Description.Term>Size</Description.Term>
-      <Description.Desc>125 GB</Description.Desc>
-    </Description>
-  ),
-]
-
-export const Selectable = Template.bind({})
-Selectable.parameters = {
-  docs: {
-    storyDescription: 'Make description selectable using `selectable` prop.',
-  },
-}
-Selectable.decorators = [
-  () => (
-    <Description inline userSelect>
-      <Description.Term>Name</Description.Term>
-      <Description.Desc>Big instance</Description.Desc>
-      <Description.Term>Size</Description.Term>
-      <Description.Desc>125 GB</Description.Desc>
-    </Description>
-  ),
-]
+export { Playground } from './Playground.stories'
+export { Inline } from './Inline.stories'
+export { Selectable } from './Selectable.stories'
