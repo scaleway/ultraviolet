@@ -6,6 +6,8 @@ import Icon from '../Icon'
 import Stack from '../Stack'
 import Text from '../Text'
 
+const LINES_BREAK_REGEX = /\r\n|\r|\n/
+
 type Prefixes = 'lines' | 'command'
 
 const PreText = styled(Text, {
@@ -155,7 +157,7 @@ const Snippet = ({
   const theme = useTheme()
   const [showMore, setShowMore] = useState(false)
 
-  const lines = value.split(/\r\n|\r|\n/).filter(Boolean)
+  const lines = value.split(LINES_BREAK_REGEX).filter(Boolean)
   const numberOfLines = lines.length
   const hasShowMoreButton = numberOfLines > 4 && multiline
 
@@ -188,7 +190,7 @@ const Snippet = ({
                     prefix={prefix}
                     prominence="weak"
                   >
-                    {prefix === 'lines' ? (index + 1).toString() : '$'}
+                    {prefix === 'lines' ? `${index + 1}` : '$'}
                   </Prefix>
                 ) : null}
                 {line}
@@ -210,7 +212,7 @@ const Snippet = ({
             </StyledSpan>
           )}
         </PreText>
-        <ButtonContainer multiline={multiline}>
+        <ButtonContainer multiline={multiline && numberOfLines > 1}>
           <CopyButton
             value={value}
             copyText={copyText}

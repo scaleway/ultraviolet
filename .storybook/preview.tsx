@@ -114,7 +114,7 @@ export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
     }
 
     :root {
-      color-scheme: ${mode === 'dark' ? 'dark' : 'light'};
+      color-scheme: ${mode};
     }
   `
 
