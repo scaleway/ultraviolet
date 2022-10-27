@@ -5,7 +5,6 @@ import { css, ThemeProvider, Global, Theme } from '@emotion/react'
 import normalize from '../src/utils/normalize'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
-import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
 import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
@@ -14,9 +13,12 @@ import AsapBoldWoff2 from './assets/fonts/asap/Asap-Bold.woff2'
 import AsapMediumWoff2 from './assets/fonts/asap/Asap-Medium.woff2'
 import AsapRegularWoff2 from './assets/fonts/asap/Asap-Regular.woff2'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
+/* TODO: Reactive if we reuse chomatic
+import seedrandom from 'seedrandom'
 import isChromatic from 'chromatic/isChromatic'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
+*/
 
 const STORY_SORT = {
   order: [

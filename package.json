@@ -35,6 +35,7 @@
     "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",
+    "build:storybook-visual": "STORYBOOK_ENVIRONMENT=visual build-storybook",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
     "commit": "npx git-cz -a",
     "start": "STORYBOOK_ENVIRONMENT=development start-storybook -p 6006",
