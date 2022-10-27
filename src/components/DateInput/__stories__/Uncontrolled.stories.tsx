@@ -3,7 +3,7 @@ import { ComponentProps } from 'react'
 import DateInput from '..'
 
 export const Uncontrolled: Story<ComponentProps<typeof DateInput>> = props => (
-  <DateInput {...props} onChange={() => {}} label="Date" />
+  <DateInput {...props} label="Date" />
 )
 
 Uncontrolled.parameters = {
