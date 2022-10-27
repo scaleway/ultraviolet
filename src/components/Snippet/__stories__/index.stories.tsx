@@ -23,3 +23,8 @@ export default {
 } as ComponentMeta<typeof Snippet>
 
 export { Playground } from './Playground.stories'
+export { SingleLine } from './SingleLine.stories'
+export { LongSingleLine } from './LongSingleLine.stories'
+export { Multiline } from './Multiline.stories'
+export { LongMultiline } from './LongMultiline.stories'
+export { Prefixes } from './Prefixes.stories'
