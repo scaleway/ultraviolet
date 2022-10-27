@@ -1,28 +1,7 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import Radio from '..'
-import ControlValue from '../../../__stories__/components/ControlValue'
 
 export default {
-  args: {
-    checked: false,
-    children: 'Label 1',
-    disabled: false,
-    name: 'basic',
-    value: 'label-1',
-  },
-  argTypes: {
-    checked: {
-      control: { type: 'boolean' },
-      description: 'checked',
-      name: 'checked',
-      table: {
-        defaultValue: { summary: false },
-        type: { summary: 'boolean' },
-      },
-      type: { name: 'boolean', required: false },
-    },
-  },
   component: Radio,
   parameters: {
     docs: {
@@ -33,116 +12,9 @@ export default {
     },
   },
   title: 'Components/Data Entry/Radio',
-} as Meta
+} as ComponentMeta<typeof Radio>
 
-const Template: Story<ComponentProps<typeof Radio>> = args => (
-  <Radio {...args} />
-)
-
-export const Default = Template.bind({})
-
-export const Controlled = Template.bind({})
-Controlled.parameters = {
-  docs: {
-    storyDescription:
-      'Radio only work as a controlled component. You need to pass `onChange` callback to control it.',
-  },
-}
-Controlled.decorators = [
-  () => (
-    <ControlValue value="label-1">
-      {({ value, onChange }) => (
-        <>
-          <Radio
-            name="label-1"
-            checked={value === 'label-1'}
-            value="label-1"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 1
-          </Radio>
-          <Radio
-            name="label-2"
-            checked={value === 'label-2'}
-            value="label-2"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 2
-          </Radio>
-        </>
-      )}
-    </ControlValue>
-  ),
-]
-
-export const Disabled = Template.bind({})
-
-Disabled.decorators = [
-  () => (
-    <ControlValue value="disabled-label-1">
-      {({ value, onChange }) => (
-        <>
-          <Radio
-            name="disabled-label-1"
-            disabled
-            checked={value === 'disabled-label-1'}
-            value="disabled-label-1"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 1
-          </Radio>
-          <Radio
-            name="disabled-label-2"
-            checked={value === 'disabled-label-2'}
-            value="disabled-label-2"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 2
-          </Radio>
-        </>
-      )}
-    </ControlValue>
-  ),
-]
-
-export const Error = Template.bind({})
-
-Error.decorators = [
-  () => (
-    <ControlValue value="error-label-1">
-      {({ value, onChange }) => (
-        <>
-          <Radio
-            name="error-label-1"
-            error="invalid"
-            checked={value === 'error-label-1'}
-            value="error-label-1"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 1
-          </Radio>
-          <Radio
-            name="error-label-2"
-            checked={value === 'error-label-2'}
-            value="error-label-2"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              onChange(e.currentTarget.value)
-            }
-          >
-            Label 2
-          </Radio>
-        </>
-      )}
-    </ControlValue>
-  ),
-]
+export { Playground } from './Playground.stories'
+export { Controlled } from './Controlled.stories'
+export { Disabled } from './Disabled.stories'
+export { Error } from './Error.stories'
