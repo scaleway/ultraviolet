@@ -103,6 +103,9 @@ const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
     }),
     ancestorTheme,
   ),
+  fonts: window.loki?.isRunning
+    ? { monospace: 'Helvetica', sansSerif: 'sans-serif' }
+    : undefined,
 })
 
 export const globalStyles = (theme: Theme) => css`

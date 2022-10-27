@@ -30,3 +30,7 @@ declare type XOR<T extends unknown[]> = T extends [infer Only]
   : T extends [infer A, infer B, ...infer Rest]
   ? XOR<[SingleXOR<A, B>, ...Rest]>
   : never
+
+interface Window {
+  loki?: { isRunning: boolean }
+}
