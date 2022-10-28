@@ -1,3 +1,23 @@
+## [0.201.4](https://github.com/scaleway/scaleway-ui/compare/v0.201.3...v0.201.4) (2022-10-28)
+
+
+### :zap: Refactor
+
+* **Breadcrumbs:** rewrite stories ([#1991](https://github.com/scaleway/scaleway-ui/issues/1991)) ([46760d1](https://github.com/scaleway/scaleway-ui/commit/46760d114e5d2be7c863688feb85a77aec98ee4f))
+* **DateInput,Description:** migrate stories ([#1995](https://github.com/scaleway/scaleway-ui/issues/1995)) ([1c68de9](https://github.com/scaleway/scaleway-ui/commit/1c68de9611e130447f7aba819d25aa23e5a1e601))
+* stories of checkbox, radio and selectable card ([#1938](https://github.com/scaleway/scaleway-ui/issues/1938)) ([1ce43ef](https://github.com/scaleway/scaleway-ui/commit/1ce43ef4da0c5c7af5e75b11567f82019e3b0b25))
+
+
+### :package: Chore
+
+* **devdeps:** update emotion monorepo ([#2000](https://github.com/scaleway/scaleway-ui/issues/2000)) ([cc8058e](https://github.com/scaleway/scaleway-ui/commit/cc8058ed5feefb7d73cdeec24338f4fe144af87c))
+* **devdeps:** update nextjs monorepo to v13 (major) ([#1994](https://github.com/scaleway/scaleway-ui/issues/1994)) ([ae51602](https://github.com/scaleway/scaleway-ui/commit/ae5160200685501de3ef9bde82356baed4d8eb8a))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.5.7 ([#1999](https://github.com/scaleway/scaleway-ui/issues/1999)) ([252c18d](https://github.com/scaleway/scaleway-ui/commit/252c18d903a9b34798c6db94af44fcb45c3f5765))
+
 ## [0.201.3](https://github.com/scaleway/scaleway-ui/compare/v0.201.2...v0.201.3) (2022-10-26)
 
 
