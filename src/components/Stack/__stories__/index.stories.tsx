@@ -14,9 +14,8 @@ export default {
   title: 'Components/Container/Stack',
 } as ComponentMeta<typeof Stack>
 
-export { Playground } from './Playground'
-export { Gap } from './Gap'
-export { Direction } from './Direction'
-export { AlignItems } from './AlignItems'
-export { JustifyContent } from './JustifyContent'
-export { Classname } from './Classname'
+export { Playground } from './Playground.stories'
+export { Gap } from './Gap.stories'
+export { Direction } from './Direction.stories'
+export { AlignItems } from './AlignItems.stories'
+export { JustifyContent } from './JustifyContent.stories'
