@@ -6,6 +6,11 @@ import { Button } from '../../index'
 export default {
   component: Container,
   title: 'Components/Container/Container',
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'Please use ContainerV2. It is the same inner component without the margin-top and box properties',
+  },
 } as Meta
 
 const Template: Story<ComponentProps<typeof Container>> = args => (
