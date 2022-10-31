@@ -1,3 +1,10 @@
+## [0.202.0](https://github.com/scaleway/scaleway-ui/compare/v0.201.4...v0.202.0) (2022-10-31)
+
+
+### :gear: Features
+
+* new ContainerV2 component ([#1968](https://github.com/scaleway/scaleway-ui/issues/1968)) ([5f1df56](https://github.com/scaleway/scaleway-ui/commit/5f1df5611a79dfbf53551a7988755dd88f18e772))
+
 ## [0.201.4](https://github.com/scaleway/scaleway-ui/compare/v0.201.3...v0.201.4) (2022-10-28)
 
 
