@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { Meta } from '@storybook/react'
 import TagsPoplist from '..'
 
 export default {
@@ -15,59 +14,6 @@ export default {
   title: 'Components/Data Display/TagsPopList',
 } as Meta
 
-const Template: Story<ComponentProps<typeof TagsPoplist>> = args => (
-  <TagsPoplist tags={['smooth', 'code']} {...args} />
-)
-
-export const Default = Template.bind({})
-
-export const Threshold = Template.bind({})
-Threshold.parameters = {
-  docs: {
-    description: {
-      story:
-        '`threshold` prop defines the number of tags to display before hiding them into a tooltip.',
-    },
-  },
-}
-
-Threshold.args = {
-  tags: [
-    'very',
-    ...Array<string>(50).fill('large'),
-    'tooltip',
-    'scaleway',
-    'paris',
-    'cloud',
-  ],
-  threshold: 5,
-}
-
-export const Multiline = Template.bind({})
-Multiline.parameters = {
-  docs: {
-    description: {
-      story: '`multiline` can be used to allow a multilined tag container.',
-    },
-  },
-}
-
-Multiline.decorators = [
-  TagWidthStory => (
-    <div style={{ width: '500px' }}>
-      <TagWidthStory />
-    </div>
-  ),
-]
-Multiline.args = {
-  multiline: true,
-  tags: [
-    'very',
-    ...Array<string>(50).fill('item'),
-    'tooltip',
-    'scaleway',
-    'paris',
-    'cloud',
-  ],
-  threshold: 55,
-}
+export { Playground } from './Playground.stories'
+export { Threshold } from './Threshold.stories'
+export { Multiline } from './Multiline.stories'
