@@ -1,3 +1,10 @@
+## [0.202.1](https://github.com/scaleway/scaleway-ui/compare/v0.202.0...v0.202.1) (2022-11-02)
+
+
+### :bug: Bug Fixes
+
+* **SelectNumber:** max value undefined makes it unlimited value ([#2005](https://github.com/scaleway/scaleway-ui/issues/2005)) ([6d4378f](https://github.com/scaleway/scaleway-ui/commit/6d4378f50564ad9f5355b5c98b08c9ea3ee91dba))
+
 ## [0.202.0](https://github.com/scaleway/scaleway-ui/compare/v0.201.4...v0.202.0) (2022-10-31)
 
 
