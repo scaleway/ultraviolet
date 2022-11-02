@@ -2,135 +2,97 @@
 
 exports[`PasswordCheck render with custom values 1`] = `
 <DocumentFragment>
-  .cache-10vkbbg-Grid {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
+  .cache-wayo1o-PasswordCheckContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
-.cache-1y523aw-Row {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.cache-1rxeymq-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
-.cache-d89yk9-Col {
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  max-width: 100%;
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-@media (min-width: 992px) {
-  .cache-d89yk9-Col {
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-.cache-w16rwt-condition {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 0 8px 0;
-  font-size: 14px;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
-.cache-znujrd-StyledIcon-sizeStyles-icon {
+.cache-dwb18c-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #b2b6c3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
-.cache-1ct3yoq-StyledIcon-sizeStyles-icon {
+.cache-197m6sv-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1d2gpmm-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #22c8a2;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-right: 8px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
 }
 
 <div
-    class="cache-10vkbbg-Grid em1vjd40"
+    class="cache-wayo1o-PasswordCheckContainer elw6r350"
   >
     <div
-      class="cache-1y523aw-Row e1uuye5o0"
+      class="cache-1rxeymq-Stack e1sgck4o0"
     >
-      <div
-        class="cache-d89yk9-Col efyj23m0"
+      <svg
+        class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
       >
-        <p
-          class="cache-w16rwt-condition"
-        >
-          <svg
-            class="cache-znujrd-StyledIcon-sizeStyles-icon etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
-            />
-          </svg>
-          That's a beautiful custom password check we have right there
-        </p>
-      </div>
-      <div
-        class="cache-d89yk9-Col efyj23m0"
+        <path
+          d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
+        />
+      </svg>
+      <p
+        class="cache-197m6sv-StyledText e1tg3t120"
       >
-        <p
-          class="cache-w16rwt-condition"
-        >
-          <svg
-            class="cache-1ct3yoq-StyledIcon-sizeStyles-icon etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
-            />
-          </svg>
-          That's a second beautiful custom password check we have right there
-        </p>
-      </div>
+        That's a beautiful custom password check we have right there
+      </p>
+    </div>
+    <div
+      class="cache-1rxeymq-Stack e1sgck4o0"
+    >
+      <svg
+        class="cache-1d2gpmm-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+        />
+      </svg>
+      <p
+        class="cache-197m6sv-StyledText e1tg3t120"
+      >
+        That's a second beautiful custom password check we have right there
+      </p>
     </div>
   </div>
 </DocumentFragment>
