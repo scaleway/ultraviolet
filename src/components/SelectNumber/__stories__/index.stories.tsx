@@ -4,7 +4,8 @@ import { ComponentProps, useState } from 'react'
 import SelectNumber, { containerSizesKeys } from '..'
 
 const StyledDiv = styled.div`
-  max-width: 200px;
+  min-width: 200px;
+  width: fit-content;
 `
 
 export default {
@@ -25,7 +26,6 @@ const Template: Story<ComponentProps<typeof SelectNumber>> = args => {
   return (
     <SelectNumber
       minValue={0}
-      maxValue={100}
       onChange={val => typeof val === 'number' && setValue(val)}
       value={value}
       {...args}

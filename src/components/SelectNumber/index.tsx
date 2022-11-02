@@ -104,7 +104,6 @@ const StyledInput = styled.input`
   background-color: transparent;
   font-size: 16;
   border: none;
-  text-align: right;
   outline: none;
   position: relative;
   margin-right: 4;
@@ -177,7 +176,7 @@ type SelectNumberProps = {
 
 const SelectNumber = ({
   disabled = false,
-  maxValue = 100,
+  maxValue,
   minValue = 0,
   name = 'selectnumber',
   onChange,
@@ -221,9 +220,9 @@ const SelectNumber = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    const boundedValue = bounded(inputValue, minValue, maxValue)
+    const boundedValue = bounded(inputValue, minValue, maxValue ?? inputValue)
 
-    if (inputValue > maxValue) onMaxCrossed?.()
+    if (maxValue && inputValue > maxValue) onMaxCrossed?.()
     if (inputValue < minValue) onMinCrossed?.()
 
     setValue(boundedValue)
@@ -241,7 +240,7 @@ const SelectNumber = ({
         inputValue % step === 0 ? inputValue + step * direction : inputValue
       const roundedValue = roundStep(newValue, step, direction)
 
-      if (roundedValue <= maxValue) {
+      if (maxValue && roundedValue <= maxValue) {
         setValue(roundedValue)
       }
     }
@@ -271,7 +270,7 @@ const SelectNumber = ({
       ? roundStep(inputValue + step, step, 1)
       : roundStep(inputValue, step, 1)
   const isMinusDisabled = minusRoundedValue < minValue || disabled
-  const isPlusDisabled = plusRoundedValue > maxValue || disabled
+  const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
   return (
     <StyledContainer disabled={disabled} size={size} className={className}>
