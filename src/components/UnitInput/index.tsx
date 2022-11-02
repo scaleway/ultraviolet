@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
 import { ComponentProps, useEffect, useState } from 'react'
 import RichSelect, { SelectOption } from '../RichSelect'
-import type { WithSelectProps } from '../RichSelect'
 import TextBox from '../TextBox'
 
-export const sizesHeight: Record<string, string> = {
-  large: '48px',
-  medium: '40px',
-  small: '32px',
+export const sizesHeight: Record<string, number> = {
+  large: 48,
+  medium: 40,
+  small: 32,
 }
 
 const CustomTextBox = styled(TextBox)`
@@ -26,7 +25,13 @@ const CustomTextBox = styled(TextBox)`
   }
 `
 
-const CustomRichSelect = styled(RichSelect)`
+const CustomRichSelect = styled(RichSelect)<{
+  width?: number
+  height?: number
+}>`
+  ${({ width }) => width && `width: ${width}px;`}
+  ${({ height }) => height && `height: ${height}px;`}
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -35,13 +40,13 @@ const CustomRichSelect = styled(RichSelect)`
   }
 `
 
-const customSelectStyle = (state: WithSelectProps) => ({
+const customSelectStyle = (height: number) => () => ({
   control: {
     borderBottomLeftRadius: 0,
     borderTopLeftRadius: 0,
     boxShadow: 'none',
-    height: state?.selectProps?.height,
-    minHeight: state?.selectProps?.height,
+    height,
+    minHeight: height,
   },
   singleValue: {
     marginTop: 0,
@@ -150,7 +155,7 @@ const UnitInput = ({
           (option: SelectOption) => option.value === value.unit,
         )}
         options={options}
-        customStyle={customSelectStyle}
+        customStyle={customSelectStyle(sizesHeight[size])}
         disabled={disabled}
       />
     </div>
