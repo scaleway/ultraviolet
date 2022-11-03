@@ -58,7 +58,10 @@ const generateStyles = ({
       };
       background: ${
         theme.colors[sentiment][background as keyof typeof theme.colors.primary]
-      }
+      };
+      border: 1px solid ${
+        theme.colors[sentiment][background as keyof typeof theme.colors.primary]
+      };
     `,
       }),
       {},

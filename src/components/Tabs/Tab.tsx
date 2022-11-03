@@ -51,7 +51,6 @@ export const StyledTabButton = styled.button`
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   letter-spacing: ${({ theme }) => theme.typography.bodyStrong.letterSpacing};
   line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
-  text-case: ${({ theme }) => theme.typography.bodyStrong.textCase};
 
   &:hover,
   &:active,
