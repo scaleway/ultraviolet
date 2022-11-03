@@ -408,10 +408,30 @@ const ValueContainer = ({
   selectProps: { error, labelId, inputId, ...selectProps },
   isMulti,
   hasValue,
-  ...props
+  clearValue,
+  getStyles,
+  getValue,
+  isRtl,
+  cx,
+  options,
+  selectOption,
+  setValue,
+  theme,
+  className,
+  innerProps,
 }: ValueContainerProps<SelectOption> & WithSelectProps) => (
   <components.ValueContainer
-    {...props}
+    clearValue={clearValue}
+    getStyles={getStyles}
+    getValue={getValue}
+    isRtl={isRtl}
+    cx={cx}
+    options={options}
+    selectOption={selectOption}
+    setValue={setValue}
+    theme={theme}
+    className={className}
+    innerProps={innerProps}
     selectProps={selectProps}
     isMulti={isMulti}
     hasValue={hasValue}
@@ -446,6 +466,17 @@ const Input = ({
   isMulti,
   hasValue,
   selectProps: { inputId, labelId, placeholder, ...selectProps },
+  clearValue,
+  getStyles,
+  getValue,
+  isRtl,
+  cx,
+  options,
+  selectOption,
+  setValue,
+  theme,
+  className,
+  isHidden,
   ...props
 }: InputProps<SelectOption> & WithSelectProps) => (
   <components.Input
@@ -455,6 +486,17 @@ const Input = ({
     aria-controls={labelId}
     hasValue={hasValue}
     isMulti={isMulti}
+    clearValue={clearValue}
+    getStyles={getStyles}
+    getValue={getValue}
+    isRtl={isRtl}
+    cx={cx}
+    options={options}
+    selectOption={selectOption}
+    setValue={setValue}
+    theme={theme}
+    className={className}
+    isHidden={isHidden}
     selectProps={
       { ...selectProps, placeholder } as InputProps<SelectOption>['selectProps']
     }
