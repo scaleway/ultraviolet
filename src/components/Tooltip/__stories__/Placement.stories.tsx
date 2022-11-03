@@ -2,12 +2,20 @@ import { DecoratorFunction } from '@storybook/addons'
 import { ComponentProps } from 'react'
 import Tooltip from '..'
 
+const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = [
+  'auto',
+  'top',
+  'bottom',
+  'left',
+  'right',
+]
+
 export const Placement = (props: ComponentProps<typeof Tooltip>) =>
-  ['auto', 'top', 'bottom', 'left', 'right'].map(placement => (
+  PLACEMENTS.map(placement => (
     <Tooltip
       {...props}
       key={placement}
-      placement={placement as ComponentProps<typeof Tooltip>['placement']}
+      placement={placement}
       text="Hello there"
     >
       Placement on {placement}

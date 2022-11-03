@@ -5,7 +5,7 @@ export const AlignItems = Template.bind({})
 AlignItems.parameters = {
   docs: {
     storyDescription:
-      'prop `alignItems` support every value of css property `align-items`',
+      'The prop `alignItems` supports every value of css property `align-items`',
   },
 }
 
