@@ -1,17 +1,16 @@
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import { Spaces, space } from '../../theme'
-import Box, { BoxProps } from '../Box'
 
 type RowProps = {
   children: ReactNode
   gutter?: Spaces
-} & BoxProps
+}
 
 /**
  * @deprecated
  */
-const Row = styled(Box, {
+const Row = styled('div', {
   shouldForwardProp: prop => !['gutter'].includes(prop),
 })<RowProps>`
   flex-grow: 1;

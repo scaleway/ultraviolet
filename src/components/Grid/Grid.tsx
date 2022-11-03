@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
-import Box, { BoxProps } from '../Box'
 
 const gridMaxWidths: Record<ScreenSize, string> = {
   large: '960px',
@@ -19,12 +18,12 @@ type GridProps = {
   children: ReactNode
   gutter?: Spaces
   fluid?: boolean
-} & BoxProps
+}
 
 /**
  * @deprecated
  */
-const Grid = styled(Box, {
+const Grid = styled('div', {
   shouldForwardProp: prop => !['gutter', 'fluid'].includes(prop),
 })<GridProps>`
   width: 100%;

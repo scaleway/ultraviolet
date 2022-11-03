@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import { ScreenSize, Spaces, screens, space } from '../../theme'
 import { up } from '../../utils'
-import Box, { BoxProps } from '../Box'
 
 const GRID_COLUMNS = 12
 
@@ -15,14 +14,13 @@ type ColProps = {
   children: ReactNode
   gutter?: Spaces
   fluid?: boolean
-} & Partial<Record<ScreenSize, number | string | boolean>> &
-  BoxProps
+} & Partial<Record<ScreenSize, number | string | boolean>>
 
 /**
  * @deprecated
  */
 
-const Col = styled(Box, {
+const Col = styled('div', {
   shouldForwardProp: prop =>
     ![...Object.keys(screens), 'gutter'].includes(prop),
 })<ColProps>`
