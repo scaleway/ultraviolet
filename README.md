@@ -6,7 +6,7 @@
 ![Logo](./.storybook/assets/logo-dark.svg#gh-dark-mode-only)
 ![Logo](./.storybook/assets/logo-light.svg#gh-light-mode-only)
 
-Scaleway UI library.
+Scaleway UI library. YALCÉ
 
 ---
 
