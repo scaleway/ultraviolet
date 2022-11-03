@@ -6,7 +6,7 @@ OnClose.parameters = {
   docs: {
     description: {
       story:
-        '`onClose` property to pass function trigger on click on close button.',
+        'Use the `onClose` property to trigger a function when the user clicks on the close button.',
     },
   },
 }
