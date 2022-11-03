@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
-import { Icon, Stack, Text } from '../..'
+import Icon from '../Icon'
+import Stack from '../Stack'
+import Text from '../Text'
 
 type Rule = {
   name: string
