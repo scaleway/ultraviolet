@@ -27,7 +27,6 @@ import Select, {
 } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
 import * as animations from '../../utils/animations'
-import Box, { XStyledProps } from '../Box'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Stack from '../Stack'
@@ -296,8 +295,7 @@ export type WithSelectProps = {
 
 type SelectProps = StyledContainerProps &
   Omit<Props<SelectOption>, 'value'> &
-  CommonProps<SelectOption, boolean, GroupBase<SelectOption>> &
-  XStyledProps & {
+  CommonProps<SelectOption, boolean, GroupBase<SelectOption>> & {
     value?: string | SelectOption
     checked?: boolean
     error?: string
@@ -311,7 +309,7 @@ type StyledContainerProps = {
   additionalStyles?: Parameters<typeof css>[0]
 }
 
-const StyledContainer = styled(Box, {
+const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['isDisabled', 'additionalStyles'].includes(prop),
 })<StyledContainerProps>`
   width: 100%;
@@ -338,25 +336,7 @@ const SelectContainer = (
     innerProps: { onKeyDown } = {},
     isDisabled = false,
     className,
-    selectProps: {
-      name = '',
-      mt = 0,
-      mr,
-      mb,
-      ml,
-      mx,
-      my,
-      pt,
-      pr,
-      pb,
-      pl,
-      px,
-      py,
-      flex,
-      height,
-      width,
-      error,
-    } = {},
+    selectProps: { name = '', error, className: selectPropsClassName } = {},
   } = props
 
   return (
@@ -364,25 +344,8 @@ const SelectContainer = (
       data-testid={`rich-select-${name}`}
       additionalStyles={getStyles?.('container', props)}
       isDisabled={isDisabled}
-      className={className}
+      className={[className, selectPropsClassName].filter(Boolean).join(' ')}
       onKeyDown={onKeyDown}
-      {...{
-        flex,
-        height,
-        mb,
-        ml,
-        mr,
-        mt,
-        mx,
-        my,
-        pb,
-        pl,
-        pr,
-        pt,
-        px,
-        py,
-        width,
-      }}
     >
       {children}
       <ExpandableWithHiddenOverflow height={56} opened={!!error}>
@@ -445,10 +408,30 @@ const ValueContainer = ({
   selectProps: { error, labelId, inputId, ...selectProps },
   isMulti,
   hasValue,
-  ...props
+  clearValue,
+  getStyles,
+  getValue,
+  isRtl,
+  cx,
+  options,
+  selectOption,
+  setValue,
+  theme,
+  className,
+  innerProps,
 }: ValueContainerProps<SelectOption> & WithSelectProps) => (
   <components.ValueContainer
-    {...props}
+    clearValue={clearValue}
+    getStyles={getStyles}
+    getValue={getValue}
+    isRtl={isRtl}
+    cx={cx}
+    options={options}
+    selectOption={selectOption}
+    setValue={setValue}
+    theme={theme}
+    className={className}
+    innerProps={innerProps}
     selectProps={selectProps}
     isMulti={isMulti}
     hasValue={hasValue}
@@ -483,6 +466,17 @@ const Input = ({
   isMulti,
   hasValue,
   selectProps: { inputId, labelId, placeholder, ...selectProps },
+  clearValue,
+  getStyles,
+  getValue,
+  isRtl,
+  cx,
+  options,
+  selectOption,
+  setValue,
+  theme,
+  className,
+  isHidden,
   ...props
 }: InputProps<SelectOption> & WithSelectProps) => (
   <components.Input
@@ -492,6 +486,17 @@ const Input = ({
     aria-controls={labelId}
     hasValue={hasValue}
     isMulti={isMulti}
+    clearValue={clearValue}
+    getStyles={getStyles}
+    getValue={getValue}
+    isRtl={isRtl}
+    cx={cx}
+    options={options}
+    selectOption={selectOption}
+    setValue={setValue}
+    theme={theme}
+    className={className}
+    isHidden={isHidden}
     selectProps={
       { ...selectProps, placeholder } as InputProps<SelectOption>['selectProps']
     }
@@ -663,7 +668,6 @@ const RichSelect = ({
   isClearable = false,
   isMulti = false,
   isSearchable = true,
-  labelId: labelIdProp,
   menuPortalTarget,
   noTopLabel = false,
   onChange,
@@ -671,7 +675,11 @@ const RichSelect = ({
   placeholder,
   readOnly = false,
   value,
-  ...props
+  name,
+  id: idProp,
+  time,
+  isLoading,
+  required,
 }: Partial<RichSelectProps>) => {
   const id = useId()
   const inputId = inputIdProp ?? id
@@ -739,7 +747,12 @@ const RichSelect = ({
       inputId={inputId}
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       ref={innerRef as any}
-      {...props}
+      name={name}
+      id={idProp}
+      // @ts-expect-error time prop doesn't exist in react-select but is used
+      time={time}
+      isLoading={isLoading}
+      required={required}
     />
   )
 }
