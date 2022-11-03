@@ -24,16 +24,6 @@ jobs:
           SAFE_WEBSITE_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$WEBSITE_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
           echo "WEBSITE_BRANCH_SLUG=$SAFE_WEBSITE_HEAD_REF" >> $GITHUB_ENV
 
-      - name: Delete Storybook Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.0.8
-        with:
-          type: 'teardown'
-          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
-          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_dns: storybook.${{ secrets.SCW_DNS }}
-          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_STORYBOOK_NAMESPACE_ID }}
-          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.STORYBOOK_BRANCH_SLUG }}
-
       - name: Delete Website Serverless Container Scaleway
         uses: philibea/scaleway-containers-deploy@v1.0.8
         with:
