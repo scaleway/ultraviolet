@@ -1,4 +1,5 @@
-import { Template, coloredChildren } from './Template.stories'
+import { Template } from './Template.stories'
+import { coloredChildren } from './helper'
 
 export const Gap = Template.bind({})
 
