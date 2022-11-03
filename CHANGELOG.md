@@ -1,3 +1,27 @@
+## [0.202.2](https://github.com/scaleway/scaleway-ui/compare/v0.202.1...v0.202.2) (2022-11-03)
+
+
+### :memo: Documentation
+
+* rewrite `Stack`, `Stepper` and `Tooltip` stories ([#2002](https://github.com/scaleway/scaleway-ui/issues/2002)) ([a9ada24](https://github.com/scaleway/scaleway-ui/commit/a9ada24e881bda0de1288172730b06149e78ab8d))
+* rewrite `Tag`, `Tags` and `TagsPoplist` stories ([#2001](https://github.com/scaleway/scaleway-ui/issues/2001)) ([e3edee1](https://github.com/scaleway/scaleway-ui/commit/e3edee183c7a7eb747767c6e218c7659bf52bd83))
+
+
+### :repeat: CI
+
+* fix teardown workflow ([#2011](https://github.com/scaleway/scaleway-ui/issues/2011)) ([da1802f](https://github.com/scaleway/scaleway-ui/commit/da1802faf339f0b93439aa03d0443b72db84512d))
+
+
+### :zap: Refactor
+
+* **grid:** remove box props ([#2010](https://github.com/scaleway/scaleway-ui/issues/2010)) ([f927c27](https://github.com/scaleway/scaleway-ui/commit/f927c276df8a61540b5354bb567afdf9a35a6e4c))
+* **RichSelect:** remove Box ([#2007](https://github.com/scaleway/scaleway-ui/issues/2007)) ([c92b4d2](https://github.com/scaleway/scaleway-ui/commit/c92b4d2fab79f6ffe1a4b021420b743ffbad78ad))
+
+
+### :bug: Bug Fixes
+
+* **Badge:** consistent element sizing across variants ([#2009](https://github.com/scaleway/scaleway-ui/issues/2009)) ([f3b562d](https://github.com/scaleway/scaleway-ui/commit/f3b562d15022d26fb81c2bb0d6c652c1e3e84498))
+
 ## [0.202.1](https://github.com/scaleway/scaleway-ui/compare/v0.202.0...v0.202.1) (2022-11-02)
 
 
