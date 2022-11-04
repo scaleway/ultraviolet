@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Children, useState } from 'react'
-import CopyButton, { CopyButtonProps } from '../CopyButton'
+import { Children, ComponentProps, useState } from 'react'
+import CopyButton from '../CopyButton'
 import Icon from '../Icon'
 import Stack from '../Stack'
 import Text from '../Text'
@@ -87,9 +87,7 @@ const ButtonContainer = styled('div', {
   top: 0;
   right: 0;
   padding: ${({ theme, multiline }) =>
-    multiline
-      ? `${theme.space['2']} ${theme.space['2']} 0 0`
-      : `${theme.space['1']} ${theme.space['2']} 0 0`};
+    `${theme.space[multiline ? '2' : '1']} ${theme.space['2']} 0 0`};
   background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   border-radius: ${({ theme }) => theme.radii.default};
   border: 2px solid transparent;
@@ -145,7 +143,7 @@ type SnippetProps = {
   prefix?: Prefixes
   showText?: string
   hideText?: string
-} & Pick<CopyButtonProps, 'copyText' | 'copiedText'>
+} & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 const Snippet = ({
   children,

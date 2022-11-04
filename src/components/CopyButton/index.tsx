@@ -44,7 +44,7 @@ const StyledButton = styled('button', {
   }
 `
 
-export type CopyButtonProps = {
+type CopyButtonProps = {
   size?: keyof typeof SIZES
   value: string
   copyText?: string
