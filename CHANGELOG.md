@@ -1,3 +1,15 @@
+## [0.202.4](https://github.com/scaleway/scaleway-ui/compare/v0.202.3...v0.202.4) (2022-11-04)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v3.10.1 ([#2004](https://github.com/scaleway/scaleway-ui/issues/2004)) ([52aa1eb](https://github.com/scaleway/scaleway-ui/commit/52aa1eb65b7242023280c0c074c67f66be20d54f))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.5.9 ([#2003](https://github.com/scaleway/scaleway-ui/issues/2003)) ([f75e389](https://github.com/scaleway/scaleway-ui/commit/f75e38927b5ba7c12862356e1aab4bc83411d066))
+
 ## [0.202.3](https://github.com/scaleway/scaleway-ui/compare/v0.202.2...v0.202.3) (2022-11-04)
 
 
