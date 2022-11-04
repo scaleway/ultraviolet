@@ -1,3 +1,15 @@
+## [0.202.3](https://github.com/scaleway/scaleway-ui/compare/v0.202.2...v0.202.3) (2022-11-04)
+
+
+### :memo: Documentation
+
+* rewrite  story and remove unused storybook helper ([#2006](https://github.com/scaleway/scaleway-ui/issues/2006)) ([ba877b3](https://github.com/scaleway/scaleway-ui/commit/ba877b3a35259c58fe51a80b707abb6f9552d73f))
+
+
+### :bug: Bug Fixes
+
+* **pagination:** initial change page should never return 0 ([#2012](https://github.com/scaleway/scaleway-ui/issues/2012)) ([a267747](https://github.com/scaleway/scaleway-ui/commit/a2677478f18c2ca3b2cde9371b2a4f059191e6dc))
+
 ## [0.202.2](https://github.com/scaleway/scaleway-ui/compare/v0.202.1...v0.202.2) (2022-11-03)
 
 
