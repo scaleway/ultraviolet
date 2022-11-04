@@ -10,7 +10,7 @@ const ThemeWrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <Global styles={[globalStyles]} />
+      <Global styles={[globalStyles(mode)]} />
       {children}
     </ThemeProvider>
   )
