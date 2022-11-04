@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { useState } from 'react'
+import { Children, useState } from 'react'
 import CopyButton, { CopyButtonProps } from '../CopyButton'
 import Icon from '../Icon'
 import Stack from '../Stack'
@@ -35,11 +35,13 @@ const PreText = styled(Text, {
   max-height: ${({ multiline, showMore, maxHeightExtended }) =>
     multiline && !showMore ? '120' : maxHeightExtended}px;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 `
 
 const StyledSpan = styled('span', {
-  shouldForwardProp: prop => !['linePrefix', 'multiline'].includes(prop),
-})<{ linePrefix?: string; multiline?: boolean }>`
+  shouldForwardProp: prop =>
+    !['linePrefix', 'multiline', 'prefix'].includes(prop),
+})<{ linePrefix?: string; multiline?: boolean; prefix?: Prefixes }>`
   display: block;
 
   &:after {
@@ -49,17 +51,17 @@ const StyledSpan = styled('span', {
         ? `padding: ${theme.space['4']}`
         : `padding-right: ${theme.space['8']}`};
   }
-`
 
-const Prefix = styled(Text, {
-  shouldForwardProp: prop => !['prefix'].includes(prop),
-})<{ prefix?: Prefixes }>`
-  width: ${({ prefix }) => (prefix === 'lines' ? '3%' : '')};
-  display: inline-flex;
-  justify-content: flex-end;
-  text-align: right;
-  user-select: none;
-  margin-right: ${({ theme }) => theme.space['1']};
+  &:before {
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+    width: ${({ prefix }) => (prefix === 'lines' ? '35px' : '')};
+    display: inline-flex;
+    justify-content: flex-end;
+    counter-increment: section;
+    content: ${({ prefix }) =>
+      prefix === 'lines' ? 'counter(section)' : "'$'"};
+    padding-right: ${({ theme }) => theme.space['1']};
+  }
 `
 
 const Container = styled('div', {
@@ -133,8 +135,8 @@ const AnimatedArrowIcon = styled(Icon, {
 `
 
 type SnippetProps = {
-  value: string
-  multiline?: boolean
+  className?: string
+  children: string
   /**
    * prefix display an element at the beginning of the snippet that is not copiable or selectable.
    * For `lines` prefix it will display the line number.
@@ -146,19 +148,20 @@ type SnippetProps = {
 } & Pick<CopyButtonProps, 'copyText' | 'copiedText'>
 
 const Snippet = ({
-  value,
+  children,
   copyText,
   copiedText,
-  multiline = false,
   showText = 'Show',
   hideText = 'Hide',
   prefix,
+  className,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useState(false)
 
-  const lines = value.split(LINES_BREAK_REGEX).filter(Boolean)
+  const lines = children.split(LINES_BREAK_REGEX).filter(Boolean)
   const numberOfLines = lines.length
+  const multiline = numberOfLines > 1
   const hasShowMoreButton = numberOfLines > 4 && multiline
 
   /**
@@ -170,7 +173,7 @@ const Snippet = ({
     Number(theme.space['2'].replace('px', '')) * 2
 
   return (
-    <Container multiline={multiline}>
+    <Container multiline={multiline} className={className}>
       <StyledStack>
         <PreText
           as="pre"
@@ -181,40 +184,18 @@ const Snippet = ({
           maxHeightExtended={maxHeightExtended}
         >
           {multiline ? (
-            lines.map((line, index) => (
-              <StyledSpan multiline={multiline} key={line}>
-                {prefix ? (
-                  <Prefix
-                    as="span"
-                    variant="code"
-                    prefix={prefix}
-                    prominence="weak"
-                  >
-                    {prefix === 'lines' ? `${index + 1}` : '$'}
-                  </Prefix>
-                ) : null}
-                {line}
+            Children.map(lines, child => (
+              <StyledSpan multiline prefix={prefix}>
+                {child}
               </StyledSpan>
             ))
           ) : (
-            <StyledSpan multiline={multiline}>
-              {prefix ? (
-                <Prefix
-                  as="span"
-                  variant="code"
-                  prefix={prefix}
-                  prominence="weak"
-                >
-                  {prefix === 'lines' ? '1' : '$'}
-                </Prefix>
-              ) : null}
-              {value}
-            </StyledSpan>
+            <StyledSpan prefix={prefix}>{children}</StyledSpan>
           )}
         </PreText>
         <ButtonContainer multiline={multiline && numberOfLines > 1}>
           <CopyButton
-            value={value}
+            value={children}
             copyText={copyText}
             copiedText={copiedText}
             noBorder

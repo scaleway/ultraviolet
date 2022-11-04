@@ -37,7 +37,7 @@ exports[`Snippet renders correctly 1`] = `
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-1u5ent2-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -54,18 +54,34 @@ exports[`Snippet renders correctly 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 52px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-1xp1b77-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-1xp1b77-StyledSpan:after {
   content: '';
   padding-right: 64px;
+}
+
+.cache-1xp1b77-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
 }
 
 .cache-o452sh-ButtonContainer {
@@ -127,18 +143,12 @@ exports[`Snippet renders correctly 1`] = `
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-1xp1b77-StyledSpan eryi49r7"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
         </span>
       </pre>
       <div
@@ -161,6 +171,838 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet renders correctly in multiline  1`] = `
+<DocumentFragment>
+  .cache-1qdkdz-Container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f6f6f8;
+  border-radius: 4px;
+}
+
+.cache-xwaheh-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  width: 100%;
+}
+
+.cache-11vrwt6-StyledText-PreText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  max-height: 120px;
+  -webkit-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+  counter-reset: section;
+}
+
+.cache-13jpsg6-StyledSpan {
+  display: block;
+}
+
+.cache-13jpsg6-StyledSpan:after {
+  content: '';
+  padding: 32px;
+}
+
+.cache-13jpsg6-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
+}
+
+.cache-l8v6uo-ButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f6f6f8;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.cache-1nnm9m7-StyledButton {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #4a4f62;
+  border: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline: none;
+}
+
+.cache-1nnm9m7-StyledButton:hover {
+  background: #e6e9f0;
+}
+
+.cache-1nnm9m7-StyledButtonactive,
+.cache-1nnm9m7-StyledButton:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1qk694q-ShowMoreContainer {
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f6f6f8;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-iqmg74-StyledText-AlignCenterText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+<div
+    class="cache-1qdkdz-Container eryi49r6"
+  >
+    <div
+      class="cache-xwaheh-Stack-StyledStack eryi49r5"
+    >
+      <pre
+        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      >
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </pre>
+      <div
+        class="cache-l8v6uo-ButtonContainer eryi49r4"
+      >
+        <div
+          aria-describedby=":r3:"
+        >
+          <button
+            class="cache-1nnm9m7-StyledButton e1go4oa30"
+            type="button"
+          >
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="cache-1qk694q-ShowMoreContainer eryi49r3"
+      >
+        <button
+          class="cache-eg7v1i-StyledButton eryi49r2"
+          type="button"
+        >
+          <span
+            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
+          >
+            Show 
+            <svg
+              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet renders correctly in multiline with prefix command 1`] = `
+<DocumentFragment>
+  .cache-1qdkdz-Container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f6f6f8;
+  border-radius: 4px;
+}
+
+.cache-xwaheh-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  width: 100%;
+}
+
+.cache-11vrwt6-StyledText-PreText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  max-height: 120px;
+  -webkit-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+  counter-reset: section;
+}
+
+.cache-13jpsg6-StyledSpan {
+  display: block;
+}
+
+.cache-13jpsg6-StyledSpan:after {
+  content: '';
+  padding: 32px;
+}
+
+.cache-13jpsg6-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
+}
+
+.cache-l8v6uo-ButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f6f6f8;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.cache-1nnm9m7-StyledButton {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #4a4f62;
+  border: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline: none;
+}
+
+.cache-1nnm9m7-StyledButton:hover {
+  background: #e6e9f0;
+}
+
+.cache-1nnm9m7-StyledButtonactive,
+.cache-1nnm9m7-StyledButton:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1qk694q-ShowMoreContainer {
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f6f6f8;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-iqmg74-StyledText-AlignCenterText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+<div
+    class="cache-1qdkdz-Container eryi49r6"
+  >
+    <div
+      class="cache-xwaheh-Stack-StyledStack eryi49r5"
+    >
+      <pre
+        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      >
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </pre>
+      <div
+        class="cache-l8v6uo-ButtonContainer eryi49r4"
+      >
+        <div
+          aria-describedby=":r9:"
+        >
+          <button
+            class="cache-1nnm9m7-StyledButton e1go4oa30"
+            type="button"
+          >
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="cache-1qk694q-ShowMoreContainer eryi49r3"
+      >
+        <button
+          class="cache-eg7v1i-StyledButton eryi49r2"
+          type="button"
+        >
+          <span
+            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
+          >
+            Show 
+            <svg
+              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
+<DocumentFragment>
+  .cache-1qdkdz-Container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f6f6f8;
+  border-radius: 4px;
+}
+
+.cache-xwaheh-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  width: 100%;
+}
+
+.cache-11vrwt6-StyledText-PreText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: auto;
+  max-height: 120px;
+  -webkit-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+  counter-reset: section;
+}
+
+.cache-1ta3sux-StyledSpan {
+  display: block;
+}
+
+.cache-1ta3sux-StyledSpan:after {
+  content: '';
+  padding: 32px;
+}
+
+.cache-1ta3sux-StyledSpan:before {
+  color: #b2b6c3;
+  width: 35px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: counter(section);
+  padding-right: 8px;
+}
+
+.cache-l8v6uo-ButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f6f6f8;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.cache-1nnm9m7-StyledButton {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #4a4f62;
+  border: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline: none;
+}
+
+.cache-1nnm9m7-StyledButton:hover {
+  background: #e6e9f0;
+}
+
+.cache-1nnm9m7-StyledButtonactive,
+.cache-1nnm9m7-StyledButton:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1qk694q-ShowMoreContainer {
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f6f6f8;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-iqmg74-StyledText-AlignCenterText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+<div
+    class="cache-1qdkdz-Container eryi49r6"
+  >
+    <div
+      class="cache-xwaheh-Stack-StyledStack eryi49r5"
+    >
+      <pre
+        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      >
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-1ta3sux-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </pre>
+      <div
+        class="cache-l8v6uo-ButtonContainer eryi49r4"
+      >
+        <div
+          aria-describedby=":r6:"
+        >
+          <button
+            class="cache-1nnm9m7-StyledButton e1go4oa30"
+            type="button"
+          >
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="cache-1qk694q-ShowMoreContainer eryi49r3"
+      >
+        <button
+          class="cache-eg7v1i-StyledButton eryi49r2"
+          type="button"
+        >
+          <span
+            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
+          >
+            Show 
+            <svg
+              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -204,7 +1046,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-1u5ent2-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -221,18 +1063,34 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 52px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-1xp1b77-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-1xp1b77-StyledSpan:after {
   content: '';
   padding-right: 64px;
+}
+
+.cache-1xp1b77-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
 }
 
 .cache-o452sh-ButtonContainer {
@@ -294,25 +1152,19 @@ exports[`Snippet renders correctly with copiedText 1`] = `
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-1xp1b77-StyledSpan eryi49r7"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
         </span>
       </pre>
       <div
         class="cache-o452sh-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":r10:"
+          aria-describedby=":ri:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -371,7 +1223,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-1u5ent2-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -388,18 +1240,34 @@ exports[`Snippet renders correctly with copyText 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 52px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-1xp1b77-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-1xp1b77-StyledSpan:after {
   content: '';
   padding-right: 64px;
+}
+
+.cache-1xp1b77-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
 }
 
 .cache-o452sh-ButtonContainer {
@@ -461,25 +1329,19 @@ exports[`Snippet renders correctly with copyText 1`] = `
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-1xp1b77-StyledSpan eryi49r7"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
         </span>
       </pre>
       <div
         class="cache-o452sh-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":ru:"
+          aria-describedby=":rg:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -503,173 +1365,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 exports[`Snippet renders correctly with hideText 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  max-width: 100%;
-  background: #f6f6f8;
-  border-radius: 4px;
-}
-
-.cache-xwaheh-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  width: 100%;
-}
-
-.cache-oczmay-StyledText-PreText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  padding-right: 72px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-  height: auto;
-  max-height: 152px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
-}
-
-.cache-167c64s-StyledSpan {
-  display: block;
-}
-
-.cache-167c64s-StyledSpan:after {
-  content: '';
-  padding-right: 64px;
-}
-
-.cache-o452sh-ButtonContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 8px 16px 0 0;
-  background: #f6f6f8;
-  border-radius: 4px;
-  border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
-}
-
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
-  height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline: none;
-}
-
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
-}
-
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-<div
-    class="cache-108ghl6-Container eryi49r6"
-  >
-    <div
-      class="cache-xwaheh-Stack-StyledStack eryi49r5"
-    >
-      <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
-      >
-        <span
-          class="cache-167c64s-StyledSpan eryi49r8"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-        </span>
-      </pre>
-      <div
-        class="cache-o452sh-ButtonContainer eryi49r4"
-      >
-        <div
-          aria-describedby=":r12:"
-        >
-          <button
-            class="cache-1nnm9m7-StyledButton e1go4oa30"
-            type="button"
-          >
-            <svg
-              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Snippet renders correctly with multiline 1`] = `
-<DocumentFragment>
   .cache-1qdkdz-Container {
   position: relative;
   display: -webkit-box;
@@ -706,7 +1401,7 @@ exports[`Snippet renders correctly with multiline 1`] = `
   width: 100%;
 }
 
-.cache-98n4tz-StyledText-PreText {
+.cache-11vrwt6-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -725,288 +1420,20 @@ exports[`Snippet renders correctly with multiline 1`] = `
   max-height: 120px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-182wccx-StyledSpan {
+.cache-13jpsg6-StyledSpan {
   display: block;
 }
 
-.cache-182wccx-StyledSpan:after {
+.cache-13jpsg6-StyledSpan:after {
   content: '';
   padding: 32px;
 }
 
-.cache-l8v6uo-ButtonContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 16px 16px 0 0;
-  background: #f6f6f8;
-  border-radius: 4px;
-  border: 2px solid transparent;
-}
-
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
-  height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline: none;
-}
-
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
-}
-
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1qk694q-ShowMoreContainer {
-  width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
-}
-
-.cache-eg7v1i-StyledButton {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 16px;
-  padding-top: 8px;
-  cursor: pointer;
-}
-
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  transform-origin: center;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-}
-
-<div
-    class="cache-1qdkdz-Container eryi49r6"
-  >
-    <div
-      class="cache-xwaheh-Stack-StyledStack eryi49r5"
-    >
-      <pre
-        class="eryi49r9 cache-98n4tz-StyledText-PreText e1tg3t120"
-      >
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
-      <div
-        class="cache-l8v6uo-ButtonContainer eryi49r4"
-      >
-        <div
-          aria-describedby=":r3:"
-        >
-          <button
-            class="cache-1nnm9m7-StyledButton e1go4oa30"
-            type="button"
-          >
-            <svg
-              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div
-        class="cache-1qk694q-ShowMoreContainer eryi49r3"
-      >
-        <button
-          class="cache-eg7v1i-StyledButton eryi49r2"
-          type="button"
-        >
-          <span
-            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
-          >
-            Show 
-            <svg
-              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Snippet renders correctly with multiline with prefix command 1`] = `
-<DocumentFragment>
-  .cache-1qdkdz-Container {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  max-width: 100%;
-  width: 100%;
-  background: #f6f6f8;
-  border-radius: 4px;
-}
-
-.cache-xwaheh-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  width: 100%;
-}
-
-.cache-98n4tz-StyledText-PreText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  padding-right: 72px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
-}
-
-.cache-182wccx-StyledSpan {
-  display: block;
-}
-
-.cache-182wccx-StyledSpan:after {
-  content: '';
-  padding: 32px;
-}
-
-.cache-1e7xv3u-StyledText-Prefix {
+.cache-13jpsg6-StyledSpan:before {
   color: #b2b6c3;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1015,12 +1442,9 @@ exports[`Snippet renders correctly with multiline with prefix command 1`] = `
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
 }
 
 .cache-l8v6uo-ButtonContainer {
@@ -1135,66 +1559,36 @@ exports[`Snippet renders correctly with multiline with prefix command 1`] = `
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-98n4tz-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </span>
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </span>
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </span>
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </span>
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </span>
         <span
-          class="cache-182wccx-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </span>
       </pre>
@@ -1202,325 +1596,7 @@ exports[`Snippet renders correctly with multiline with prefix command 1`] = `
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":rl:"
-        >
-          <button
-            class="cache-1nnm9m7-StyledButton e1go4oa30"
-            type="button"
-          >
-            <svg
-              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div
-        class="cache-1qk694q-ShowMoreContainer eryi49r3"
-      >
-        <button
-          class="cache-eg7v1i-StyledButton eryi49r2"
-          type="button"
-        >
-          <span
-            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
-          >
-            Show 
-            <svg
-              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Snippet renders correctly with multiline with prefix lines number 1`] = `
-<DocumentFragment>
-  .cache-1qdkdz-Container {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: start;
-  justify-content: start;
-  max-width: 100%;
-  width: 100%;
-  background: #f6f6f8;
-  border-radius: 4px;
-}
-
-.cache-xwaheh-Stack-StyledStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  width: 100%;
-}
-
-.cache-98n4tz-StyledText-PreText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 16px;
-  padding-right: 72px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
-}
-
-.cache-182wccx-StyledSpan {
-  display: block;
-}
-
-.cache-182wccx-StyledSpan:after {
-  content: '';
-  padding: 32px;
-}
-
-.cache-14wl1lr-StyledText-Prefix {
-  color: #b2b6c3;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 3%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
-}
-
-.cache-l8v6uo-ButtonContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 16px 16px 0 0;
-  background: #f6f6f8;
-  border-radius: 4px;
-  border: 2px solid transparent;
-}
-
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
-  height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline: none;
-}
-
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
-}
-
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-.cache-1qk694q-ShowMoreContainer {
-  width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
-}
-
-.cache-eg7v1i-StyledButton {
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 16px;
-  padding-top: 8px;
-  cursor: pointer;
-}
-
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  transform-origin: center;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-}
-
-<div
-    class="cache-1qdkdz-Container eryi49r6"
-  >
-    <div
-      class="cache-xwaheh-Stack-StyledStack eryi49r5"
-    >
-      <pre
-        class="eryi49r9 cache-98n4tz-StyledText-PreText e1tg3t120"
-      >
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            1
-          </span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            2
-          </span>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            3
-          </span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            4
-          </span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            5
-          </span>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-182wccx-StyledSpan eryi49r8"
-        >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            6
-          </span>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
-      <div
-        class="cache-l8v6uo-ButtonContainer eryi49r4"
-      >
-        <div
-          aria-describedby=":rc:"
+          aria-describedby=":rk:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -1566,7 +1642,7 @@ exports[`Snippet renders correctly with multiline with prefix lines number 1`] =
 
 exports[`Snippet renders correctly with showText 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1qdkdz-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1577,6 +1653,7 @@ exports[`Snippet renders correctly with showText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
+  width: 100%;
   background: #f6f6f8;
   border-radius: 4px;
 }
@@ -1601,7 +1678,7 @@ exports[`Snippet renders correctly with showText 1`] = `
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-11vrwt6-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1614,33 +1691,47 @@ exports[`Snippet renders correctly with showText 1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
-  white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 120px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-13jpsg6-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-13jpsg6-StyledSpan:after {
   content: '';
-  padding-right: 64px;
+  padding: 32px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-13jpsg6-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
+}
+
+.cache-l8v6uo-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 8px 16px 0 0;
+  padding: 16px 16px 0 0;
   background: #f6f6f8;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
 }
 
 .cache-1nnm9m7-StyledButton {
@@ -1684,32 +1775,105 @@ exports[`Snippet renders correctly with showText 1`] = `
   min-height: 16px;
 }
 
+.cache-1qk694q-ShowMoreContainer {
+  width: 100%;
+  box-shadow: 0px -22px 19px -6px #f6f6f8;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-iqmg74-StyledText-AlignCenterText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
 <div
-    class="cache-108ghl6-Container eryi49r6"
+    class="cache-1qdkdz-Container eryi49r6"
   >
     <div
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-13jpsg6-StyledSpan eryi49r7"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer eryi49r4"
+        class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":r14:"
+          aria-describedby=":rn:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -1725,6 +1889,28 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </svg>
           </button>
         </div>
+      </div>
+      <div
+        class="cache-1qk694q-ShowMoreContainer eryi49r3"
+      >
+        <button
+          class="cache-eg7v1i-StyledButton eryi49r2"
+          type="button"
+        >
+          <span
+            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
+          >
+            Test 
+            <svg
+              class="eryi49r0 cache-uiam8e-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -1768,7 +1954,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-1u5ent2-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1785,30 +1971,23 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 52px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-1xp1b77-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-1xp1b77-StyledSpan:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-1e7xv3u-StyledText-Prefix {
+.cache-1xp1b77-StyledSpan:before {
   color: #b2b6c3;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1817,12 +1996,9 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
 }
 
 .cache-o452sh-ButtonContainer {
@@ -1884,30 +2060,19 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-1xp1b77-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-1e7xv3u-StyledText-Prefix e1tg3t120"
-          >
-            $
-          </span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
         </span>
       </pre>
       <div
         class="cache-o452sh-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":rp:"
+          aria-describedby=":rc:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -1966,7 +2131,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   width: 100%;
 }
 
-.cache-oczmay-StyledText-PreText {
+.cache-1u5ent2-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1983,31 +2148,24 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 152px;
+  max-height: 52px;
   -webkit-transition: max-height 300ms ease-in-out;
   transition: max-height 300ms ease-in-out;
+  counter-reset: section;
 }
 
-.cache-167c64s-StyledSpan {
+.cache-sfim81-StyledSpan {
   display: block;
 }
 
-.cache-167c64s-StyledSpan:after {
+.cache-sfim81-StyledSpan:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-14wl1lr-StyledText-Prefix {
+.cache-sfim81-StyledSpan:before {
   color: #b2b6c3;
-  font-size: 14px;
-  font-family: JetBrains;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  width: 3%;
+  width: 35px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2016,12 +2174,9 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-right: 8px;
+  counter-increment: section;
+  content: counter(section);
+  padding-right: 8px;
 }
 
 .cache-o452sh-ButtonContainer {
@@ -2083,30 +2238,19 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
       class="cache-xwaheh-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r9 cache-oczmay-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
       >
         <span
-          class="cache-167c64s-StyledSpan eryi49r8"
+          class="cache-sfim81-StyledSpan eryi49r7"
         >
-          <span
-            class="eryi49r7 cache-14wl1lr-StyledText-Prefix e1tg3t120"
-          >
-            1
-          </span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
         </span>
       </pre>
       <div
         class="cache-o452sh-ButtonContainer eryi49r4"
       >
         <div
-          aria-describedby=":rs:"
+          aria-describedby=":re:"
         >
           <button
             class="cache-1nnm9m7-StyledButton e1go4oa30"
@@ -2122,6 +2266,283 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             </svg>
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Snippet should click on extend button to display full content on  1`] = `
+<DocumentFragment>
+  .cache-1qdkdz-Container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f6f6f8;
+  border-radius: 4px;
+}
+
+.cache-xwaheh-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  width: 100%;
+}
+
+.cache-1f7scj0-StyledText-PreText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  max-height: 152px;
+  -webkit-transition: max-height 300ms ease-in-out;
+  transition: max-height 300ms ease-in-out;
+  counter-reset: section;
+}
+
+.cache-13jpsg6-StyledSpan {
+  display: block;
+}
+
+.cache-13jpsg6-StyledSpan:after {
+  content: '';
+  padding: 32px;
+}
+
+.cache-13jpsg6-StyledSpan:before {
+  color: #b2b6c3;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  counter-increment: section;
+  content: '$';
+  padding-right: 8px;
+}
+
+.cache-l8v6uo-ButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f6f6f8;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.cache-1nnm9m7-StyledButton {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #4a4f62;
+  border: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline: none;
+}
+
+.cache-1nnm9m7-StyledButton:hover {
+  background: #e6e9f0;
+}
+
+.cache-1nnm9m7-StyledButtonactive,
+.cache-1nnm9m7-StyledButton:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1ucxira-ShowMoreContainer {
+  width: 100%;
+  box-shadow: none;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-iqmg74-StyledText-AlignCenterText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-12zq38q-StyledIcon-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+<div
+    class="cache-1qdkdz-Container eryi49r6"
+  >
+    <div
+      class="cache-xwaheh-Stack-StyledStack eryi49r5"
+    >
+      <pre
+        class="eryi49r8 cache-1f7scj0-StyledText-PreText e1tg3t120"
+      >
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </span>
+        <span
+          class="cache-13jpsg6-StyledSpan eryi49r7"
+        >
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </span>
+      </pre>
+      <div
+        class="cache-l8v6uo-ButtonContainer eryi49r4"
+      >
+        <div
+          aria-describedby=":rq:"
+        >
+          <button
+            class="cache-1nnm9m7-StyledButton e1go4oa30"
+            type="button"
+          >
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="cache-1ucxira-ShowMoreContainer eryi49r3"
+      >
+        <button
+          class="cache-eg7v1i-StyledButton eryi49r2"
+          type="button"
+        >
+          <span
+            class="eryi49r1 cache-iqmg74-StyledText-AlignCenterText e1tg3t120"
+          >
+            Hide 
+            <svg
+              class="eryi49r0 cache-12zq38q-StyledIcon-sizeStyles-AnimatedArrowIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </div>
   </div>

@@ -10,8 +10,12 @@ pnpm start
 
 export const Prefixes = (props: ComponentProps<typeof Snippet>) =>
   (['command', 'lines'] as const).map(suffix => (
-    <Snippet {...props} value={VALUE} prefix={suffix} multiline />
+    <Snippet {...props} prefix={suffix} />
   ))
+
+Prefixes.args = {
+  children: VALUE,
+}
 
 Prefixes.decorators = [
   StoryComponent => (
