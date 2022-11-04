@@ -72,7 +72,7 @@ const usePagination = <T>({
   )
 
   useEffect(() => {
-    if (isLoading || pageCount === 0) return
+    if (isLoading) return
     setMaxPage(
       pageCount ??
         Math.max(
@@ -135,7 +135,7 @@ const usePagination = <T>({
     }
     // If it's not possible to load page
     if (!onLoadPageRef.current) {
-      if (page > maxPage) {
+      if (page > maxPage && maxPage > 0) {
         onChangePageRef.current?.(maxPage)
       }
       if (page <= 0) {
