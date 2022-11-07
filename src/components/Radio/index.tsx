@@ -6,7 +6,6 @@ import {
   forwardRef,
   useId,
 } from 'react'
-import { Radio as ReakitRadio, RadioProps as ReakitRadioProps } from 'reakit'
 
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -34,7 +33,7 @@ const StyledIcon = styled.svg<{ size: number }>`
   }
 `
 
-const StyledRadio = styled(ReakitRadio, {
+const RadioInput = styled('input', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: number }>`
   cursor: pointer;
@@ -52,14 +51,13 @@ const StyledRadio = styled(ReakitRadio, {
     }
   }
 
-  &[aria-checked='true'] + svg {
+  &:checked + svg {
     ${RadioMark} {
       transform: scale(1);
     }
   }
 
-  &[aria-checked='true'][aria-disabled='false'][aria-invalid='false']
-    + ${StyledIcon} {
+  &:checked[aria-disabled='false'][aria-invalid='false'] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
@@ -84,7 +82,7 @@ const StyledRadio = styled(ReakitRadio, {
   }
 `
 
-const StyledRadioContainer = styled.label<{ htmlFor: string }>`
+const RadioContainer = styled.label<{ htmlFor: string }>`
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -95,7 +93,7 @@ const StyledRadioContainer = styled.label<{ htmlFor: string }>`
   }
 
   :hover[aria-disabled='false'] {
-    ${StyledRadio}[id=${({ htmlFor }) => htmlFor}] + ${StyledIcon} {
+    ${RadioInput}[id=${({ htmlFor }) => htmlFor}] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       ${InnerCircleRing} {
@@ -103,7 +101,7 @@ const StyledRadioContainer = styled.label<{ htmlFor: string }>`
       }
     }
 
-    ${StyledRadio}[id=${({ htmlFor }) =>
+    ${RadioInput}[id=${({ htmlFor }) =>
       htmlFor}][aria-invalid='true']  + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
@@ -129,11 +127,21 @@ type RadioProps = {
   children: ReactNode
   error?: string | ReactNode
   checked?: boolean
-  name?: string
   size?: number
   value: string | number
-} & InputHTMLAttributes<HTMLInputElement> &
-  Required<Pick<ReakitRadioProps, 'onChange'>>
+  className?: string
+} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
+  Pick<
+    InputHTMLAttributes<HTMLInputElement>,
+    | 'onFocus'
+    | 'onBlur'
+    | 'disabled'
+    | 'autoFocus'
+    | 'onKeyDown'
+    | 'id'
+    | 'name'
+    | 'required'
+  >
 
 const Radio = forwardRef(
   (
@@ -158,7 +166,7 @@ const Radio = forwardRef(
     const computedName = name ?? id
 
     return (
-      <StyledRadioContainer
+      <RadioContainer
         as="label"
         aria-disabled={disabled}
         htmlFor={`${computedName}-${value}`}
@@ -166,10 +174,9 @@ const Radio = forwardRef(
         data-checked={checked}
         data-error={error}
       >
-        <StyledRadio
+        <RadioInput
           type="radio"
           aria-invalid={!!error}
-          aria-checked={checked}
           aria-disabled={disabled}
           checked={checked}
           id={`${computedName}-${value}`}
@@ -188,7 +195,7 @@ const Radio = forwardRef(
           <RadioMarkedIcon />
         </StyledIcon>
         {children}
-      </StyledRadioContainer>
+      </RadioContainer>
     )
   },
 )

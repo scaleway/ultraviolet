@@ -2,19 +2,15 @@ import styled from '@emotion/styled'
 import {
   ChangeEvent,
   ForwardedRef,
-  KeyboardEventHandler,
+  InputHTMLAttributes,
+  KeyboardEvent,
   ReactNode,
   forwardRef,
   useCallback,
-  useEffect,
   useId,
   useMemo,
+  useState,
 } from 'react'
-import {
-  Checkbox as ReakitCheckbox,
-  CheckboxProps as ReakitCheckboxProps,
-  useCheckboxState,
-} from 'reakit/Checkbox'
 import Loader from '../Loader'
 import Text from '../Text'
 
@@ -52,7 +48,7 @@ const StyledIcon = styled.svg<{ size: number }>`
   min-height: ${({ size }) => size}px;
 `
 
-const StyledReakitCheckbox = styled(ReakitCheckbox, {
+const CheckboxInput = styled('input', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })`
   position: absolute;
@@ -61,6 +57,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   width: ${({ size }) => size}px;
   opacity: 0;
   border-width: 0;
+
   & + ${StyledIcon} {
     ${CheckMark} {
       transform-origin: center;
@@ -69,16 +66,13 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
     }
   }
 
-  &[aria-checked='true'] + svg {
+  &:checked + svg {
     ${CheckMark} {
       transform: scale(1);
     }
   }
 
-  &[aria-checked='true']
-    + ${StyledIcon},
-    &[aria-checked='mixed']
-    + ${StyledIcon} {
+  &:checked + ${StyledIcon}, &[aria-checked='mixed'] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
     ${InnerCheckbox} {
@@ -118,7 +112,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   }
 `
 
-const StyledCheckBoxContainer = styled.label`
+const CheckboxContainer = styled.label`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -142,7 +136,7 @@ const StyledCheckBoxContainer = styled.label`
   }
 
   &:hover[aria-disabled='false'] {
-    ${StyledReakitCheckbox} + ${StyledIcon} {
+    ${CheckboxInput} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -152,7 +146,7 @@ const StyledCheckBoxContainer = styled.label`
       }
     }
 
-    ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+    ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
 
@@ -173,10 +167,7 @@ const StyledActivityContainer = styled('div', {
     hasChildren ? theme.space[1] : 0};
 `
 
-type CheckboxProps = Pick<
-  ReakitCheckboxProps,
-  'name' | 'onFocus' | 'onBlur' | 'value' | 'autoFocus'
-> & {
+type CheckboxProps = {
   children?: ReactNode
   error?: string | ReactNode
   size?: number
@@ -185,7 +176,11 @@ type CheckboxProps = Pick<
   checked?: boolean | 'indeterminate'
   className?: string
   ['data-visibility']?: string
-} & Required<Pick<ReakitCheckboxProps, 'onChange'>>
+} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
+  Pick<
+    InputHTMLAttributes<HTMLInputElement>,
+    'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id'
+  >
 
 const Checkbox = forwardRef(
   (
@@ -208,7 +203,7 @@ const Checkbox = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasChildren = !!children
-    const { state, setState } = useCheckboxState({ state: checked })
+    const [state, setState] = useState<boolean | 'indeterminate'>(checked)
     const id = useId()
     const computedName = name ?? id
 
@@ -219,10 +214,6 @@ const Checkbox = forwardRef(
       return 'checkbox-blank-outline'
     }, [state])
 
-    useEffect(() => {
-      setState(checked)
-    }, [checked, setState])
-
     const onLocalChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
         if (!progress) onChange(event)
@@ -231,13 +222,14 @@ const Checkbox = forwardRef(
       [onChange, progress, setState],
     )
 
-    const onKeyDown: KeyboardEventHandler = useCallback(
-      event => {
+    const onKeyDown = useCallback(
+      (event: KeyboardEvent<HTMLInputElement>) => {
         if (event.key.charCodeAt(0) === 32) {
-          onChange(event)
+          event.preventDefault()
+          setState(!state)
         }
       },
-      [onChange],
+      [state],
     )
 
     return (
@@ -247,20 +239,19 @@ const Checkbox = forwardRef(
             <Loader active size={size} />
           </StyledActivityContainer>
         ) : null}
-        <StyledCheckBoxContainer
+        <CheckboxContainer
           className={className}
           aria-disabled={disabled}
           data-visibility={dataVisibility}
           data-checked={checked}
           data-error={!!error}
         >
-          <StyledReakitCheckbox
+          <CheckboxInput
+            type="checkbox"
             aria-invalid={!!error}
             aria-describedby={error ? `${computedName}-hint` : undefined}
-            aria-checked={
-              state === 'indeterminate' ? 'mixed' : (state as boolean)
-            }
-            checked={state === 'indeterminate' ? false : (state as boolean)}
+            aria-checked={state === 'indeterminate' ? 'mixed' : undefined}
+            checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
             onFocus={onFocus}
@@ -282,7 +273,7 @@ const Checkbox = forwardRef(
             </StyledIcon>
           ) : null}
           {children}
-        </StyledCheckBoxContainer>
+        </CheckboxContainer>
         {error ? (
           <PaddedText variant="bodySmall" as="p" color="danger">
             {error}

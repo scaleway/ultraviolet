@@ -114,9 +114,11 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', { hidden: true })
+    const input = node.getByRole('checkbox', {
+      hidden: true,
+    }) as HTMLInputElement
     await userEvent.click(input)
-    expect(input.getAttribute('aria-checked')).toBe('true')
+    expect(input.checked).toBe(true)
   })
 
   test('renders with click event with progress', async () => {
@@ -126,12 +128,14 @@ describe('Checkbox', () => {
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', { hidden: true })
+    const input = node.getByRole('checkbox', {
+      hidden: true,
+    }) as HTMLInputElement
     await userEvent.click(input)
-    expect(input.getAttribute('aria-checked')).toBe('true')
+    expect(input.checked).toBe(true)
   })
 
-  test('renders with space key for a11y', async () => {
+  test('check checkbox with space key for a11y', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
@@ -145,10 +149,10 @@ describe('Checkbox', () => {
     input.focus()
     expect(input).toHaveFocus()
     fireEvent.keyDown(input, { charCode: 32, code: 'Space', key: ' ' })
-    await waitFor(() => expect(input.checked).toBe(false))
+    await waitFor(() => expect(input.checked).toBe(true))
   })
 
-  test('renders with a key for a11y', async () => {
+  test('shoudld not check checkbox with key A', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
@@ -160,7 +164,7 @@ describe('Checkbox', () => {
     }) as HTMLInputElement
 
     input.focus()
-    await userEvent.type(input, 'a')
-    await waitFor(() => expect(input.checked).toBe(true))
+    fireEvent.keyDown(input, { charCode: 65, code: 'KeyA', key: 'a' })
+    await waitFor(() => expect(input.checked).toBe(false))
   })
 })
