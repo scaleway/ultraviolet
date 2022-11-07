@@ -1,4 +1,4 @@
-type MockData = {
+export type MockData = {
   department: string
   description: string
   id: string
