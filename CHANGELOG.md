@@ -1,3 +1,10 @@
+## [0.203.0](https://github.com/scaleway/scaleway-ui/compare/v0.202.5...v0.203.0) (2022-11-07)
+
+
+### :gear: Features
+
+* **Snippet:** new component ([#1997](https://github.com/scaleway/scaleway-ui/issues/1997)) ([fd2c459](https://github.com/scaleway/scaleway-ui/commit/fd2c459b3ff3ac5cd1a803354e029680e4b66583))
+
 ## [0.202.5](https://github.com/scaleway/scaleway-ui/compare/v0.202.4...v0.202.5) (2022-11-07)
 
 
