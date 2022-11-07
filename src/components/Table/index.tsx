@@ -1,13 +1,13 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import Loader from '../Loader'
 
 // Common
-const cellStyle = css`
-  padding: 12px 16px;
-  font-size: 14px;
-  line-height: 24px;
+const cellStyle = (theme: Theme) => css`
+  padding: ${theme.space[1]} ${theme.space[2]};
+  font-size: ${theme.typography.bodySmall.fontSize};
+  line-height: ${theme.typography.bodySmall.lineHeight};
 `
 
 // Table Head
@@ -116,7 +116,7 @@ const StyledHeadCell = styled('th', {
   font-weight: 400;
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-align: left;
-  ${cellStyle};
+  ${({ theme }) => cellStyle(theme)};
 `
 export const HeadCell = ({
   children,
@@ -142,7 +142,7 @@ export const HeadCell = ({
 const StyledBodyCell = styled.td`
   overflow: hidden;
   white-space: nowrap;
-  ${cellStyle};
+  ${({ theme }) => cellStyle(theme)};
 `
 
 export const BodyCell = ({
@@ -160,16 +160,19 @@ export const BodyCell = ({
 )
 
 // Table Body
-const LoaderBodyCell = styled(BodyCell)`
-  text-align: center;
-  padding-top: 25px;
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: ${({ theme }) => theme.space[2]};
 `
 
 const BodyLoader = ({ colSpan }: { colSpan: number }) => (
   <Row>
-    <LoaderBodyCell colSpan={colSpan}>
-      <Loader active size={40} />
-    </LoaderBodyCell>
+    <BodyCell colSpan={colSpan}>
+      <LoaderWrapper>
+        <Loader active size={40} />
+      </LoaderWrapper>
+    </BodyCell>
   </Row>
 )
 

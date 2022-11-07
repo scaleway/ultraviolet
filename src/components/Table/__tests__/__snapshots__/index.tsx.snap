@@ -51,24 +51,24 @@ exports[`Table renders correctly 1`] = `
   visibility: visible;
 }
 
-.cache-orqgv-StyledHeadCell-cellStyle {
+.cache-10t8oi4-StyledHeadCell-cellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
   color: #b2b6c3;
   text-align: left;
-  padding: 12px 16px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
 }
 
-.cache-lte08i-StyledBodyCell-cellStyle {
+.cache-fhczmp-StyledBodyCell-cellStyle {
   overflow: hidden;
   white-space: nowrap;
-  padding: 12px 16px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
 }
 
 <table
@@ -81,17 +81,17 @@ exports[`Table renders correctly 1`] = `
         class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
       >
         <th
-          class="cache-orqgv-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
         >
           ID
         </th>
         <th
-          class="cache-orqgv-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
         >
           Status
         </th>
         <th
-          class="cache-orqgv-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
         >
           Date
         </th>
@@ -102,17 +102,17 @@ exports[`Table renders correctly 1`] = `
         class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
       >
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           165
         </td>
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           Ongoing
         </td>
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           Yesterday
         </td>
@@ -121,17 +121,17 @@ exports[`Table renders correctly 1`] = `
         class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
       >
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           56
         </td>
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           Resolved
         </td>
         <td
-          class="cache-lte08i-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
         >
           1 hour ago
         </td>
@@ -208,26 +208,36 @@ exports[`Table renders correctly while loading 1`] = `
   visibility: visible;
 }
 
-.cache-orqgv-StyledHeadCell-cellStyle {
+.cache-10t8oi4-StyledHeadCell-cellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
   color: #b2b6c3;
   text-align: left;
-  padding: 12px 16px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
 }
 
-.cache-15paslh-StyledBodyCell-cellStyle-LoaderBodyCell {
+.cache-fhczmp-StyledBodyCell-cellStyle {
   overflow: hidden;
   white-space: nowrap;
-  padding: 12px 16px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  padding-top: 25px;
+  line-height: 20px;
+}
+
+.cache-hfqqsp-LoaderWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-top: 16px;
 }
 
 .cache-gqzzce-Loader {
@@ -250,12 +260,12 @@ exports[`Table renders correctly while loading 1`] = `
         class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
       >
         <th
-          class="cache-orqgv-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
         >
           ID
         </th>
         <th
-          class="cache-orqgv-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
         >
           Date
         </th>
@@ -266,41 +276,45 @@ exports[`Table renders correctly while loading 1`] = `
         class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
       >
         <td
-          class="efhaznt0 cache-15paslh-StyledBodyCell-cellStyle-LoaderBodyCell efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
           colspan="2"
         >
-          <svg
-            aria-label="Loading"
-            aria-valuemax="100"
-            aria-valuemin="0"
-            aria-valuenow="20"
-            aria-valuetext="20%"
-            class="cache-gqzzce-Loader"
-            role="progressbar"
-            style="height: 40px; width: 40px;"
-            viewBox="0 0 100 100"
+          <div
+            class="cache-hfqqsp-LoaderWrapper efhaznt0"
           >
-            <circle
-              cx="50"
-              cy="50"
-              fill="none"
-              r="42"
-              stroke="#d4dae7"
-              stroke-width="16"
-            />
-            <circle
-              class="cache-11f05l0-Loader"
-              cx="50"
-              cy="50"
-              fill="none"
-              r="42"
-              stroke="#4f0599"
-              stroke-dasharray="263.89378290154264"
-              stroke-dashoffset="211.11502632123413"
-              stroke-linecap="round"
-              stroke-width="16"
-            />
-          </svg>
+            <svg
+              aria-label="Loading"
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="20"
+              aria-valuetext="20%"
+              class="cache-gqzzce-Loader"
+              role="progressbar"
+              style="height: 40px; width: 40px;"
+              viewBox="0 0 100 100"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                fill="none"
+                r="42"
+                stroke="#d4dae7"
+                stroke-width="16"
+              />
+              <circle
+                class="cache-11f05l0-Loader"
+                cx="50"
+                cy="50"
+                fill="none"
+                r="42"
+                stroke="#4f0599"
+                stroke-dasharray="263.89378290154264"
+                stroke-dashoffset="211.11502632123413"
+                stroke-linecap="round"
+                stroke-width="16"
+              />
+            </svg>
+          </div>
         </td>
       </tr>
     </tbody>
