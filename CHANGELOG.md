@@ -1,3 +1,10 @@
+## [0.204.0](https://github.com/scaleway/scaleway-ui/compare/v0.203.0...v0.204.0) (2022-11-07)
+
+
+### :gear: Features
+
+* modernize PasswordCheck with Text + remove Grid ([#2008](https://github.com/scaleway/scaleway-ui/issues/2008)) ([8f7c996](https://github.com/scaleway/scaleway-ui/commit/8f7c99661d0a2240966b83905a3359f2561ad60b))
+
 ## [0.203.0](https://github.com/scaleway/scaleway-ui/compare/v0.202.5...v0.203.0) (2022-11-07)
 
 
