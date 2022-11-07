@@ -1,19 +1,7 @@
-import { css, useTheme } from '@emotion/react'
-import { Col, Grid, Row } from '../Grid'
+import styled from '@emotion/styled'
 import Icon from '../Icon'
-
-const styles = {
-  condition: css`
-    display: flex;
-    align-items: center;
-    margin: 0 0 8px 0;
-    font-size: 14px;
-  `,
-  icon: css`
-    margin-right: 8px;
-    align-self: center;
-  `,
-}
+import Stack from '../Stack'
+import Text from '../Text'
 
 type Rule = {
   name: string
@@ -29,34 +17,28 @@ type PasswordCheckProps = {
   rules: Rule[]
 }
 
-const PasswordCheck = ({ rules }: PasswordCheckProps) => {
-  const theme = useTheme()
+const PasswordCheckContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: ${({ theme }) => theme.space['1']};
+`
 
-  return (
-    <Grid fluid gutter={0}>
-      <Row>
-        {rules.map(rule => (
-          <Col large={6} key={rule.name}>
-            <p css={styles.condition}>
-              <Icon
-                name={
-                  rule.valid ? 'check-circle-outline' : 'close-circle-outline'
-                }
-                color={
-                  rule.valid
-                    ? theme.colors.success.textWeak
-                    : theme.colors.neutral.textWeak
-                }
-                css={styles.icon}
-                size={20}
-              />
-              {rule.text}
-            </p>
-          </Col>
-        ))}
-      </Row>
-    </Grid>
-  )
-}
+const PasswordCheck = ({ rules }: PasswordCheckProps) => (
+  <PasswordCheckContainer>
+    {rules.map(rule => (
+      <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
+        <Icon
+          name={rule.valid ? 'check-circle-outline' : 'close-circle-outline'}
+          color={rule.valid ? 'success' : 'neutral'}
+          prominence="weak"
+          size={20}
+        />
+        <Text as="p" variant="bodySmall">
+          {rule.text}
+        </Text>
+      </Stack>
+    ))}
+  </PasswordCheckContainer>
+)
 
 export default PasswordCheck
