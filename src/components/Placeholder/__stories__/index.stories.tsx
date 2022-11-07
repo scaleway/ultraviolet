@@ -19,7 +19,7 @@ export default {
     },
   },
   title: 'Components/Data Display/Placeholder',
-} as ComponentMeta<typeof PieChart>
+} as ComponentMeta<typeof Placeholder>
 
 export { Playground } from './Playground.stories'
 export { Block } from './Block.stories'
