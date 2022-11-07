@@ -1,9 +1,15 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import Placeholder from '..'
 
 export default {
   component: Placeholder,
+  decorators: [
+    StoryComponent => (
+      <div style={{ marginBottom: '1em', marginLeft: '2em' }}>
+        <StoryComponent />
+      </div>
+    ),
+  ],
   parameters: {
     docs: {
       description: {
@@ -13,47 +19,13 @@ export default {
     },
   },
   title: 'Components/Data Display/Placeholder',
-} as Meta
+} as ComponentMeta<typeof PieChart>
 
-const Template: Story<ComponentProps<typeof Placeholder>> = args => (
-  <Placeholder {...args} />
-)
-
-export const Default = Template.bind({})
-
-export const Block = Template.bind({})
-Block.args = {
-  variant: 'block',
-}
-
-export const Blocks = Template.bind({})
-Blocks.args = {
-  variant: 'blocks',
-}
-
-export const Box = Template.bind({})
-Blocks.args = {
-  length: 8,
-  variant: 'box',
-}
-
-export const Donut = Template.bind({})
-Donut.args = {
-  variant: 'donut',
-}
-
-export const Line = Template.bind({})
-Line.args = {
-  variant: 'line',
-}
-
-export const Slider = Template.bind({})
-Slider.args = {
-  variant: 'slider',
-}
-
-export const List = Template.bind({})
-List.args = {
-  length: 2,
-  variant: 'list',
-}
+export { Playground } from './Playground.stories'
+export { Block } from './Block.stories'
+export { Blocks } from './Blocks.stories'
+export { Box } from './Box.stories'
+export { Donut } from './Donut.stories'
+export { Line } from './Line.stories'
+export { Slider } from './Slider.stories'
+export { List } from './List.stories'
