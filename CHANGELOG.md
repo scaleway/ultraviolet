@@ -1,3 +1,10 @@
+## [0.204.1](https://github.com/scaleway/scaleway-ui/compare/v0.204.0...v0.204.1) (2022-11-07)
+
+
+### :bug: Bug Fixes
+
+* **list:** fix visual regression where gap is too large when list is loading ([#2014](https://github.com/scaleway/scaleway-ui/issues/2014)) ([c6ce979](https://github.com/scaleway/scaleway-ui/commit/c6ce9799616c4a228a82661f40ccf3a02e49f09b))
+
 ## [0.204.0](https://github.com/scaleway/scaleway-ui/compare/v0.203.0...v0.204.0) (2022-11-07)
 
 
