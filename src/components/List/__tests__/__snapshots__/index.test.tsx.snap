@@ -2,7 +2,26 @@
 
 exports[`List should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -130,7 +149,7 @@ exports[`List should render correctly 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,26 +173,30 @@ exports[`List should render correctly 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -231,7 +254,7 @@ exports[`List should render correctly 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -373,7 +396,7 @@ exports[`List should render correctly 1`] = `
       role="list"
     >
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -415,7 +438,7 @@ exports[`List should render correctly 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -457,7 +480,7 @@ exports[`List should render correctly 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -499,7 +522,7 @@ exports[`List should render correctly 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -541,7 +564,7 @@ exports[`List should render correctly 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -589,7 +612,26 @@ exports[`List should render correctly 1`] = `
 
 exports[`List should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -717,7 +759,7 @@ exports[`List should render correctly disabled 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -741,26 +783,30 @@ exports[`List should render correctly disabled 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -817,7 +863,7 @@ exports[`List should render correctly disabled 1`] = `
   margin: 0;
 }
 
-.cache-wvq8n4-StyledRow {
+.cache-1t81m1b-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -845,31 +891,35 @@ exports[`List should render correctly disabled 1`] = `
   pointer-events: none;
 }
 
-.cache-wvq8n4-StyledRow:hover {
+.cache-1t81m1b-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-wvq8n4-StyledRow [data-visibility='hover'] {
+.cache-1t81m1b-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-wvq8n4-StyledRow:hover [data-visibility='hover'] {
+.cache-1t81m1b-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-wvq8n4-StyledRow .em5tn2e8 {
+.cache-1t81m1b-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1t81m1b-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-wvq8n4-StyledRow .em5tn2e8:first-of-type {
+.cache-1t81m1b-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -1011,7 +1061,7 @@ exports[`List should render correctly disabled 1`] = `
       role="list"
     >
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -1053,7 +1103,7 @@ exports[`List should render correctly disabled 1`] = `
         />
       </div>
       <div
-        class="cache-wvq8n4-StyledRow em5tn2e6"
+        class="cache-1t81m1b-StyledRow em5tn2e6"
         data-testid="row-1"
         disabled=""
         role="listitem"
@@ -1096,7 +1146,7 @@ exports[`List should render correctly disabled 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -1138,7 +1188,7 @@ exports[`List should render correctly disabled 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -1180,7 +1230,7 @@ exports[`List should render correctly disabled 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -1228,7 +1278,26 @@ exports[`List should render correctly disabled 1`] = `
 
 exports[`List should render correctly multiselect 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1514,7 +1583,7 @@ exports[`List should render correctly multiselect 1`] = `
   bottom: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1538,26 +1607,30 @@ exports[`List should render correctly multiselect 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -1615,7 +1688,7 @@ exports[`List should render correctly multiselect 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -1804,7 +1877,7 @@ exports[`List should render correctly multiselect 1`] = `
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -1894,7 +1967,7 @@ exports[`List should render correctly multiselect 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -1984,7 +2057,7 @@ exports[`List should render correctly multiselect 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -2074,7 +2147,7 @@ exports[`List should render correctly multiselect 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -2164,7 +2237,7 @@ exports[`List should render correctly multiselect 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -2260,7 +2333,26 @@ exports[`List should render correctly multiselect 1`] = `
 
 exports[`List should render correctly multiselect and click indeterminate 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2546,7 +2638,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
   bottom: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2570,26 +2662,30 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -2647,7 +2743,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -2790,7 +2886,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -2880,7 +2976,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -2970,7 +3066,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -3060,7 +3156,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -3150,7 +3246,7 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -3246,7 +3342,26 @@ exports[`List should render correctly multiselect and click indeterminate 1`] = 
 
 exports[`List should render correctly multiselect and click indeterminate, explorer variant 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3547,7 +3662,7 @@ exports[`List should render correctly multiselect and click indeterminate, explo
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -4067,7 +4182,26 @@ exports[`List should render correctly multiselect and click indeterminate, explo
 
 exports[`List should render correctly multiselect and click indeterminate, table variant 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4367,7 +4501,7 @@ exports[`List should render correctly multiselect and click indeterminate, table
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -4887,7 +5021,26 @@ exports[`List should render correctly multiselect and click indeterminate, table
 
 exports[`List should render correctly multiselect and with click 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5173,7 +5326,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
   bottom: 0;
 }
 
-.cache-hlwb7i-StyledRow {
+.cache-1k1n5jj-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5197,26 +5350,30 @@ exports[`List should render correctly multiselect and with click 1`] = `
   color: inherit;
 }
 
-.cache-hlwb7i-StyledRow:hover {
+.cache-1k1n5jj-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-hlwb7i-StyledRow [data-visibility='hover'] {
+.cache-1k1n5jj-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-hlwb7i-StyledRow:hover [data-visibility='hover'] {
+.cache-1k1n5jj-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-hlwb7i-StyledRow .em5tn2e8 {
+.cache-1k1n5jj-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1k1n5jj-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-hlwb7i-StyledRow .em5tn2e8:first-of-type {
+.cache-1k1n5jj-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -5273,7 +5430,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
   margin: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5297,26 +5454,30 @@ exports[`List should render correctly multiselect and with click 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -5443,7 +5604,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -5585,7 +5746,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
       role="list"
     >
       <div
-        class="cache-hlwb7i-StyledRow em5tn2e6"
+        class="cache-1k1n5jj-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -5675,7 +5836,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
         />
       </div>
       <div
-        class="cache-hlwb7i-StyledRow em5tn2e6"
+        class="cache-1k1n5jj-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -5765,7 +5926,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -5855,7 +6016,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -5945,7 +6106,7 @@ exports[`List should render correctly multiselect and with click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -6103,7 +6264,26 @@ exports[`List should render correctly multiselect and with click 1`] = `
 
 exports[`List should render correctly multiselect and with click and not functional SelectBar children 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6389,7 +6569,7 @@ exports[`List should render correctly multiselect and with click and not functio
   bottom: 0;
 }
 
-.cache-hlwb7i-StyledRow {
+.cache-1k1n5jj-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6413,26 +6593,30 @@ exports[`List should render correctly multiselect and with click and not functio
   color: inherit;
 }
 
-.cache-hlwb7i-StyledRow:hover {
+.cache-1k1n5jj-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-hlwb7i-StyledRow [data-visibility='hover'] {
+.cache-1k1n5jj-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-hlwb7i-StyledRow:hover [data-visibility='hover'] {
+.cache-1k1n5jj-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-hlwb7i-StyledRow .em5tn2e8 {
+.cache-1k1n5jj-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1k1n5jj-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-hlwb7i-StyledRow .em5tn2e8:first-of-type {
+.cache-1k1n5jj-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -6489,7 +6673,7 @@ exports[`List should render correctly multiselect and with click and not functio
   margin: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6513,26 +6697,30 @@ exports[`List should render correctly multiselect and with click and not functio
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -6659,7 +6847,7 @@ exports[`List should render correctly multiselect and with click and not functio
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -6801,7 +6989,7 @@ exports[`List should render correctly multiselect and with click and not functio
       role="list"
     >
       <div
-        class="cache-hlwb7i-StyledRow em5tn2e6"
+        class="cache-1k1n5jj-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -6891,7 +7079,7 @@ exports[`List should render correctly multiselect and with click and not functio
         />
       </div>
       <div
-        class="cache-hlwb7i-StyledRow em5tn2e6"
+        class="cache-1k1n5jj-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -6981,7 +7169,7 @@ exports[`List should render correctly multiselect and with click and not functio
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -7071,7 +7259,7 @@ exports[`List should render correctly multiselect and with click and not functio
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -7161,7 +7349,7 @@ exports[`List should render correctly multiselect and with click and not functio
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -7319,7 +7507,26 @@ exports[`List should render correctly multiselect and with click and not functio
 
 exports[`List should render correctly multiselect and with custom sort click 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7622,7 +7829,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
   bottom: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7646,26 +7853,30 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -7723,7 +7934,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -7912,7 +8123,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -8002,7 +8213,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -8092,7 +8303,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -8182,7 +8393,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -8272,7 +8483,7 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -8368,7 +8579,26 @@ exports[`List should render correctly multiselect and with custom sort click 1`]
 
 exports[`List should render correctly multiselect and with sort click 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8671,7 +8901,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
   top: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8695,26 +8925,30 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -8772,7 +9006,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -8961,7 +9195,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -9051,7 +9285,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -9141,7 +9375,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -9231,7 +9465,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -9321,7 +9555,7 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -9417,7 +9651,26 @@ exports[`List should render correctly multiselect and with sort click 1`] = `
 
 exports[`List should render correctly multiselect explorer 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9718,7 +9971,7 @@ exports[`List should render correctly multiselect explorer 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -10284,7 +10537,26 @@ exports[`List should render correctly multiselect explorer 1`] = `
 
 exports[`List should render correctly multiselect table 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10584,7 +10856,7 @@ exports[`List should render correctly multiselect table 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -11150,7 +11422,26 @@ exports[`List should render correctly multiselect table 1`] = `
 
 exports[`List should render correctly multiselect with condition 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11436,7 +11727,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
   bottom: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11460,26 +11751,30 @@ exports[`List should render correctly multiselect with condition 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -11537,7 +11832,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -11726,7 +12021,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -11823,7 +12118,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -11913,7 +12208,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -12010,7 +12305,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -12107,7 +12402,7 @@ exports[`List should render correctly multiselect with condition 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -12210,7 +12505,26 @@ exports[`List should render correctly multiselect with condition 1`] = `
 
 exports[`List should render correctly multiselect with condition, table variant 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12510,7 +12824,7 @@ exports[`List should render correctly multiselect with condition, table variant 
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -13104,7 +13418,26 @@ exports[`List should render correctly multiselect with condition, table variant 
 
 exports[`List should render correctly multiselect, explorer variant and with click 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13602,7 +13935,7 @@ exports[`List should render correctly multiselect, explorer variant and with cli
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -14183,7 +14516,26 @@ exports[`List should render correctly multiselect, explorer variant and with cli
 
 exports[`List should render correctly multiselect, explorer variant and with sort click 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14499,7 +14851,7 @@ exports[`List should render correctly multiselect, explorer variant and with sor
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -15140,7 +15492,26 @@ exports[`List should render correctly multiselect, explorer variant and with sor
 
 exports[`List should render correctly multiselect, table variant and with click 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15637,7 +16008,7 @@ exports[`List should render correctly multiselect, table variant and with click 
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -16218,7 +16589,26 @@ exports[`List should render correctly multiselect, table variant and with click 
 
 exports[`List should render correctly multiselect, table variant and with sort click 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16533,7 +16923,7 @@ exports[`List should render correctly multiselect, table variant and with sort c
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -17099,7 +17489,26 @@ exports[`List should render correctly multiselect, table variant and with sort c
 
 exports[`List should render correctly variant explorer 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17254,7 +17663,7 @@ exports[`List should render correctly variant explorer 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -17557,7 +17966,26 @@ exports[`List should render correctly variant explorer 1`] = `
 
 exports[`List should render correctly variant table 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17714,7 +18142,7 @@ exports[`List should render correctly variant table 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -18017,7 +18445,26 @@ exports[`List should render correctly variant table 1`] = `
 
 exports[`List should render correctly with ExpendableContent 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18145,7 +18592,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
   bottom: 0;
 }
 
-.cache-195w6uw-StyledRow {
+.cache-1qr01ab-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18169,26 +18616,30 @@ exports[`List should render correctly with ExpendableContent 1`] = `
   color: inherit;
 }
 
-.cache-195w6uw-StyledRow:hover {
+.cache-1qr01ab-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-195w6uw-StyledRow [data-visibility='hover'] {
+.cache-1qr01ab-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-195w6uw-StyledRow:hover [data-visibility='hover'] {
+.cache-1qr01ab-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-195w6uw-StyledRow .em5tn2e8 {
+.cache-1qr01ab-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1qr01ab-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-195w6uw-StyledRow .em5tn2e8:first-of-type {
+.cache-1qr01ab-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -18246,7 +18697,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -18388,7 +18839,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
       role="list"
     >
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -18436,7 +18887,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -18484,7 +18935,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -18532,7 +18983,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -18580,7 +19031,7 @@ exports[`List should render correctly with ExpendableContent 1`] = `
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -18634,801 +19085,23 @@ exports[`List should render correctly with ExpendableContent 1`] = `
 
 exports[`List should render correctly with alert 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0 1px;
-}
-
-.cache-1vwyi4j-StyledHeader>.em5tn2e8 {
-  font-size: 14px;
-  color: #b2b6c3;
-  height: 40px;
-  padding: 0 8px;
-}
-
-.cache-1vwyi4j-StyledHeader>.em5tn2e8:first-of-type {
-  padding-left: 0px;
-}
-
-.cache-1vwyi4j-StyledHeader>.em5tn2e8[disabled] {
-  pointer-events: none;
-}
-
-.cache-krnxnj-StyledCheckboxContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding: 0px 8px;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='false'] {
-  cursor: pointer;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #c4c9d6;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] .eu28k4m3 {
-  fill: #c4c9d6;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
-  stroke: #c4c9d6;
-  fill: #f6f6f8;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
-  transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.cache-uzcbt1-InnerCheckbox {
-  fill: #ffffff;
-  stroke: #b2b6c3;
-}
-
-.cache-1jv4gms-StyledCell-Cell {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  text-overflow: ellipsis;
-}
-
-.cache-1jv4gms-StyledCell-Cell:nth-of-type(2) {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.cache-1jv4gms-StyledCell-Cell:nth-of-type(3) {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 15%;
-}
-
-.cache-1jv4gms-StyledCell-Cell:nth-of-type(4) {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 64px;
-}
-
-.cache-1jv4gms-StyledCell-Cell:nth-of-type(5) {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 64px;
-}
-
-.cache-1jv4gms-StyledCell-Cell:nth-of-type(6) {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 128px;
-  padding: 2px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.cache-13k4v1c-StyledSpan {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  color: #390171;
-}
-
-.cache-1egxqwr-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  gap: 16px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: relative;
-  margin-left: 8px;
-  height: 16px;
-  width: 10px;
-}
-
-.cache-7dbe29-StyledIcon-sizeStyles-UpIcon {
-  vertical-align: middle;
-  fill: #b2b6c3;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
-  position: absolute;
-  top: 0;
-}
-
-.cache-17q7usl-StyledIcon-sizeStyles-DownIcon {
-  vertical-align: middle;
-  fill: #390171;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
-  position: absolute;
-  bottom: 0;
-}
-
-.cache-ydnwlo-StyledSpan {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.cache-wfa830-StyledIcon-sizeStyles-DownIcon {
-  vertical-align: middle;
-  fill: #b2b6c3;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
-  position: absolute;
-  bottom: 0;
-}
-
-.cache-13zluto-StyledRow {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  border: 1px solid #cc4e18;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  padding: 8px 0;
-  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
-  transition: box-shadow 200ms ease,border-color 200ms ease;
-  background-color: #ffefe6;
-  cursor: pointer;
-  color: #cc4e18;
-}
-
-.cache-13zluto-StyledRow [data-visibility='hover'] {
-  opacity: 0;
-}
-
-.cache-13zluto-StyledRow:hover [data-visibility='hover'] {
-  opacity: 1;
-}
-
-.cache-13zluto-StyledRow .em5tn2e8 {
-  padding: 0 8px;
-  min-height: 48px;
-  font-size: 14px;
-}
-
-.cache-13zluto-StyledRow .em5tn2e8:first-of-type {
-  padding-left: 0px;
-}
-
-.cache-wruyr0-StyledSummary {
-  width: 100%;
-  list-style-type: none;
-}
-
-.cache-wruyr0-StyledSummary::before,
-.cache-wruyr0-StyledSummary::after {
-  content: none;
-}
-
-.cache-wruyr0-StyledSummary::-webkit-details-marker {
-  display: none;
-}
-
-.cache-wruyr0-StyledSummary::-marker {
-  display: none;
-}
-
-.cache-6w8osc-StyledContainerSummary {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.cache-57dxct-StyledExpendableContainer {
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-}
-
-.cache-57dxct-StyledExpendableContainer [data-expandable] {
-  border-top: 1px solid #d4dae7;
-  padding: 16px 16px 8px 48px;
-  margin-top: 8px;
-}
-
-.cache-57dxct-StyledExpendableContainer [data-expandable]>*+* {
-  margin: 16px 0;
-}
-
-.cache-57dxct-StyledExpendableContainer [data-expandable]>*:last-child {
-  margin: 0;
-}
-
-<div
-    class="cache-3svqc9"
-  >
-    <div
-      class="cache-1vwyi4j-StyledHeader em5tn2e3"
-    >
-      <div>
-        <div
-          class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
-        >
-          <label
-            aria-disabled="false"
-            class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
-            data-checked="false"
-            data-error="false"
-          >
-            <input
-              aria-checked="false"
-              aria-invalid="false"
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
-              name="select-rows"
-              type="checkbox"
-              value="all"
-            />
-            <svg
-              class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-blank-outline"
-              size="24"
-              viewBox="0 0 24 24"
-            >
-              <g>
-                <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-                  height="14"
-                  rx="1"
-                  stroke-width="2"
-                  width="14"
-                  x="5"
-                  y="5"
-                />
-                <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
-                  height="8"
-                  rx="1"
-                  width="8"
-                  x="8"
-                  y="8"
-                />
-              </g>
-            </svg>
-          </label>
-        </div>
-      </div>
-      <div
-        aria-label="sort Name"
-        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-        role="button"
-        style="align-items: center; cursor: pointer;"
-        tabindex="0"
-      >
-        <span
-          class="cache-13k4v1c-StyledSpan em5tn2e0"
-        >
-          Name
-        </span>
-        <div
-          aria-sort="descending"
-          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
-        >
-          <svg
-            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
-            data-testid="arrow-up-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
-            />
-          </svg>
-          <svg
-            class="e1yj8mjl0 cache-17q7usl-StyledIcon-sizeStyles-DownIcon etwatq50"
-            data-testid="arrow-down-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        aria-label="sort Description"
-        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-        role="button"
-        style="align-items: center; cursor: pointer; width: 15%;"
-        tabindex="0"
-      >
-        <span
-          class="cache-ydnwlo-StyledSpan em5tn2e0"
-        >
-          Description
-        </span>
-        <div
-          aria-sort="none"
-          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
-        >
-          <svg
-            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
-            data-testid="arrow-up-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
-            />
-          </svg>
-          <svg
-            class="e1yj8mjl0 cache-wfa830-StyledIcon-sizeStyles-DownIcon etwatq50"
-            data-testid="arrow-down-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        aria-label="sort Department"
-        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-        role="button"
-        style="align-items: center; cursor: default; width: 64px;"
-        tabindex="0"
-      >
-        <span
-          class="cache-ydnwlo-StyledSpan em5tn2e0"
-        >
-          Department
-        </span>
-      </div>
-      <div
-        aria-label="sort Reference"
-        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-        role="button"
-        style="align-items: center; cursor: pointer; width: 64px;"
-        tabindex="0"
-      >
-        <span
-          class="cache-ydnwlo-StyledSpan em5tn2e0"
-        >
-          Reference
-        </span>
-        <div
-          aria-sort="none"
-          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
-        >
-          <svg
-            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
-            data-testid="arrow-up-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
-            />
-          </svg>
-          <svg
-            class="e1yj8mjl0 cache-wfa830-StyledIcon-sizeStyles-DownIcon etwatq50"
-            data-testid="arrow-down-icon"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        aria-label="sort 4"
-        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-        role="button"
-        style="align-items: center; cursor: default; width: 128px;"
-      >
-        <span
-          class="cache-ydnwlo-StyledSpan em5tn2e0"
-        />
-      </div>
-    </div>
-    <div
-      class="cache-3svqc9"
-      role="list"
-    >
-      <details
-        class="cache-13zluto-StyledRow em5tn2e6"
-        data-testid="row-1"
-        role="listitem"
-      >
-        <summary
-          class="cache-wruyr0-StyledSummary em5tn2e2"
-        >
-          <div
-            class="cache-6w8osc-StyledContainerSummary em5tn2e4"
-          >
-            <div
-              class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
-            >
-              <div>
-                <label
-                  aria-disabled="false"
-                  class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
-                  data-checked="false"
-                  data-error="false"
-                  data-visibility="hover"
-                >
-                  <input
-                    aria-checked="false"
-                    aria-invalid="false"
-                    class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
-                    name="select-rows"
-                    type="checkbox"
-                    value="1"
-                  />
-                  <svg
-                    class="cache-1m7zzqc-StyledIcon eu28k4m3"
-                    name="checkbox-blank-outline"
-                    size="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <g>
-                      <rect
-                        class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-                        height="14"
-                        rx="1"
-                        stroke-width="2"
-                        width="14"
-                        x="5"
-                        y="5"
-                      />
-                      <rect
-                        class="cache-1nu9t2r-CheckMark eu28k4m5"
-                        height="8"
-                        rx="1"
-                        width="8"
-                        x="8"
-                        y="8"
-                      />
-                    </g>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Scaler 1
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Fake message for row 1
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Not Front
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              1
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              actions
-            </div>
-          </div>
-        </summary>
-        <div
-          class="cache-57dxct-StyledExpendableContainer em5tn2e7"
-        >
-          <div
-            data-expandable="true"
-          >
-            ExpendableContent 1
-          </div>
-        </div>
-      </details>
-      <details
-        class="cache-13zluto-StyledRow em5tn2e6"
-        data-testid="row-0"
-        role="listitem"
-      >
-        <summary
-          class="cache-wruyr0-StyledSummary em5tn2e2"
-        >
-          <div
-            class="cache-6w8osc-StyledContainerSummary em5tn2e4"
-          >
-            <div
-              class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
-            >
-              <div>
-                <label
-                  aria-disabled="false"
-                  class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
-                  data-checked="false"
-                  data-error="false"
-                  data-visibility="hover"
-                >
-                  <input
-                    aria-checked="false"
-                    aria-invalid="false"
-                    class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
-                    name="select-rows"
-                    type="checkbox"
-                    value="0"
-                  />
-                  <svg
-                    class="cache-1m7zzqc-StyledIcon eu28k4m3"
-                    name="checkbox-blank-outline"
-                    size="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <g>
-                      <rect
-                        class="cache-uzcbt1-InnerCheckbox eu28k4m6"
-                        height="14"
-                        rx="1"
-                        stroke-width="2"
-                        width="14"
-                        x="5"
-                        y="5"
-                      />
-                      <rect
-                        class="cache-1nu9t2r-CheckMark eu28k4m5"
-                        height="8"
-                        rx="1"
-                        width="8"
-                        x="8"
-                        y="8"
-                      />
-                    </g>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Scaler 0
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Fake message for row 0
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              Front
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              0
-            </div>
-            <div
-              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
-            >
-              actions
-            </div>
-          </div>
-        </summary>
-        <div
-          class="cache-57dxct-StyledExpendableContainer em5tn2e7"
-        >
-          <div
-            data-expandable="true"
-          >
-            ExpendableContent 0
-          </div>
-        </div>
-      </details>
-    </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`List should render correctly with animated 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-1vwyi4j-StyledHeader {
@@ -19735,7 +19408,7 @@ exports[`List should render correctly with animated 1`] = `
   bottom: 0;
 }
 
-.cache-1kkwpv2-StyledRow-StyledRow {
+.cache-1881sz2-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19748,39 +19421,36 @@ exports[`List should render correctly with animated 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-animation: animation-0 1000ms linear;
-  animation: animation-0 1000ms linear;
-  border: 1px solid #d4dae7;
+  border: 1px solid #cc4e18;
   border-radius: 4px;
   margin-bottom: 16px;
   padding: 8px 0;
   -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
   transition: box-shadow 200ms ease,border-color 200ms ease;
-  background-color: #ffffff;
+  background-color: #ffefe6;
   cursor: pointer;
-  color: inherit;
+  color: #cc4e18;
 }
 
-.cache-1kkwpv2-StyledRow-StyledRow:hover {
-  border-color: #390171;
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
-}
-
-.cache-1kkwpv2-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-1881sz2-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-1kkwpv2-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-1881sz2-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-1kkwpv2-StyledRow-StyledRow .em5tn2e8 {
+.cache-1881sz2-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1881sz2-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-1kkwpv2-StyledRow-StyledRow .em5tn2e8:first-of-type {
+.cache-1881sz2-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -19838,7 +19508,7 @@ exports[`List should render correctly with animated 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -20027,7 +19697,7 @@ exports[`List should render correctly with animated 1`] = `
       role="list"
     >
       <details
-        class="cache-1kkwpv2-StyledRow-StyledRow em5tn2e6"
+        class="cache-1881sz2-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -20123,7 +19793,834 @@ exports[`List should render correctly with animated 1`] = `
         </div>
       </details>
       <details
-        class="cache-1kkwpv2-StyledRow-StyledRow em5tn2e6"
+        class="cache-1881sz2-StyledRow em5tn2e6"
+        data-testid="row-0"
+        role="listitem"
+      >
+        <summary
+          class="cache-wruyr0-StyledSummary em5tn2e2"
+        >
+          <div
+            class="cache-6w8osc-StyledContainerSummary em5tn2e4"
+          >
+            <div
+              class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
+            >
+              <div>
+                <label
+                  aria-disabled="false"
+                  class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
+                  data-checked="false"
+                  data-error="false"
+                  data-visibility="hover"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-invalid="false"
+                    class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+                    name="select-rows"
+                    type="checkbox"
+                    value="0"
+                  />
+                  <svg
+                    class="cache-1m7zzqc-StyledIcon eu28k4m3"
+                    name="checkbox-blank-outline"
+                    size="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g>
+                      <rect
+                        class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                        height="14"
+                        rx="1"
+                        stroke-width="2"
+                        width="14"
+                        x="5"
+                        y="5"
+                      />
+                      <rect
+                        class="cache-1nu9t2r-CheckMark eu28k4m5"
+                        height="8"
+                        rx="1"
+                        width="8"
+                        x="8"
+                        y="8"
+                      />
+                    </g>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Scaler 0
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Fake message for row 0
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Front
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              0
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              actions
+            </div>
+          </div>
+        </summary>
+        <div
+          class="cache-57dxct-StyledExpendableContainer em5tn2e7"
+        >
+          <div
+            data-expandable="true"
+          >
+            ExpendableContent 0
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`List should render correctly with animated 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 1px;
+}
+
+.cache-1vwyi4j-StyledHeader>.em5tn2e8 {
+  font-size: 14px;
+  color: #b2b6c3;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.cache-1vwyi4j-StyledHeader>.em5tn2e8:first-of-type {
+  padding-left: 0px;
+}
+
+.cache-1vwyi4j-StyledHeader>.em5tn2e8[disabled] {
+  pointer-events: none;
+}
+
+.cache-krnxnj-StyledCheckboxContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0px 8px;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+  stroke: #c4c9d6;
+  fill: #f6f6f8;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-17x67yn-StyledReakitCheckbox {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
+.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
+.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+}
+
+.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-1m7zzqc-StyledIcon {
+  margin-right: 8px;
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-uzcbt1-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #b2b6c3;
+}
+
+.cache-1jv4gms-StyledCell-Cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+}
+
+.cache-1jv4gms-StyledCell-Cell:nth-of-type(2) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-1jv4gms-StyledCell-Cell:nth-of-type(3) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 15%;
+}
+
+.cache-1jv4gms-StyledCell-Cell:nth-of-type(4) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 64px;
+}
+
+.cache-1jv4gms-StyledCell-Cell:nth-of-type(5) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 64px;
+}
+
+.cache-1jv4gms-StyledCell-Cell:nth-of-type(6) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 128px;
+  padding: 2px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.cache-13k4v1c-StyledSpan {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #390171;
+}
+
+.cache-1egxqwr-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  margin-left: 8px;
+  height: 16px;
+  width: 10px;
+}
+
+.cache-7dbe29-StyledIcon-sizeStyles-UpIcon {
+  vertical-align: middle;
+  fill: #b2b6c3;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  top: 0;
+}
+
+.cache-17q7usl-StyledIcon-sizeStyles-DownIcon {
+  vertical-align: middle;
+  fill: #390171;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.cache-ydnwlo-StyledSpan {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cache-wfa830-StyledIcon-sizeStyles-DownIcon {
+  vertical-align: middle;
+  fill: #b2b6c3;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-animation: animation-0 1000ms linear;
+  animation: animation-0 1000ms linear;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: inherit;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow:hover {
+  border-color: #390171;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow [data-visibility='hover'] {
+  opacity: 0;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow:hover [data-visibility='hover'] {
+  opacity: 1;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow .em5tn2e8 {
+  padding: 0 8px;
+  min-height: 48px;
+  font-size: 14px;
+}
+
+.cache-10y4gs5-StyledRow-StyledRow .em5tn2e8:first-of-type {
+  padding-left: 0px;
+}
+
+.cache-wruyr0-StyledSummary {
+  width: 100%;
+  list-style-type: none;
+}
+
+.cache-wruyr0-StyledSummary::before,
+.cache-wruyr0-StyledSummary::after {
+  content: none;
+}
+
+.cache-wruyr0-StyledSummary::-webkit-details-marker {
+  display: none;
+}
+
+.cache-wruyr0-StyledSummary::-marker {
+  display: none;
+}
+
+.cache-6w8osc-StyledContainerSummary {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.cache-57dxct-StyledExpendableContainer {
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.cache-57dxct-StyledExpendableContainer [data-expandable] {
+  border-top: 1px solid #d4dae7;
+  padding: 16px 16px 8px 48px;
+  margin-top: 8px;
+}
+
+.cache-57dxct-StyledExpendableContainer [data-expandable]>*+* {
+  margin: 16px 0;
+}
+
+.cache-57dxct-StyledExpendableContainer [data-expandable]>*:last-child {
+  margin: 0;
+}
+
+<div
+    class="cache-cqrcwm-Stack e1sgck4o0"
+  >
+    <div
+      class="cache-1vwyi4j-StyledHeader em5tn2e3"
+    >
+      <div>
+        <div
+          class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
+        >
+          <label
+            aria-disabled="false"
+            class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
+            data-checked="false"
+            data-error="false"
+          >
+            <input
+              aria-checked="false"
+              aria-invalid="false"
+              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              name="select-rows"
+              type="checkbox"
+              value="all"
+            />
+            <svg
+              class="cache-1m7zzqc-StyledIcon eu28k4m3"
+              name="checkbox-blank-outline"
+              size="24"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <rect
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  height="14"
+                  rx="1"
+                  stroke-width="2"
+                  width="14"
+                  x="5"
+                  y="5"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  height="8"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="8"
+                />
+              </g>
+            </svg>
+          </label>
+        </div>
+      </div>
+      <div
+        aria-label="sort Name"
+        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+        role="button"
+        style="align-items: center; cursor: pointer;"
+        tabindex="0"
+      >
+        <span
+          class="cache-13k4v1c-StyledSpan em5tn2e0"
+        >
+          Name
+        </span>
+        <div
+          aria-sort="descending"
+          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
+        >
+          <svg
+            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
+            data-testid="arrow-up-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
+            />
+          </svg>
+          <svg
+            class="e1yj8mjl0 cache-17q7usl-StyledIcon-sizeStyles-DownIcon etwatq50"
+            data-testid="arrow-down-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        aria-label="sort Description"
+        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+        role="button"
+        style="align-items: center; cursor: pointer; width: 15%;"
+        tabindex="0"
+      >
+        <span
+          class="cache-ydnwlo-StyledSpan em5tn2e0"
+        >
+          Description
+        </span>
+        <div
+          aria-sort="none"
+          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
+        >
+          <svg
+            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
+            data-testid="arrow-up-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
+            />
+          </svg>
+          <svg
+            class="e1yj8mjl0 cache-wfa830-StyledIcon-sizeStyles-DownIcon etwatq50"
+            data-testid="arrow-down-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        aria-label="sort Department"
+        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+        role="button"
+        style="align-items: center; cursor: default; width: 64px;"
+        tabindex="0"
+      >
+        <span
+          class="cache-ydnwlo-StyledSpan em5tn2e0"
+        >
+          Department
+        </span>
+      </div>
+      <div
+        aria-label="sort Reference"
+        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+        role="button"
+        style="align-items: center; cursor: pointer; width: 64px;"
+        tabindex="0"
+      >
+        <span
+          class="cache-ydnwlo-StyledSpan em5tn2e0"
+        >
+          Reference
+        </span>
+        <div
+          aria-sort="none"
+          class="cache-1egxqwr-StyledContainer e1yj8mjl2"
+        >
+          <svg
+            class="e1yj8mjl1 cache-7dbe29-StyledIcon-sizeStyles-UpIcon etwatq50"
+            data-testid="arrow-up-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 7.5c.405 0 .808.153 1.116.458l5.921 5.87a1.556 1.556 0 0 1 0 2.213 1.588 1.588 0 0 1-2.232 0L12 11.278l-4.804 4.763a1.59 1.59 0 0 1-2.234 0 1.557 1.557 0 0 1 0-2.213l5.921-5.87A1.584 1.584 0 0 1 12 7.5"
+            />
+          </svg>
+          <svg
+            class="e1yj8mjl0 cache-wfa830-StyledIcon-sizeStyles-DownIcon etwatq50"
+            data-testid="arrow-down-icon"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 16.5a1.58 1.58 0 0 1-1.116-.458l-5.921-5.87a1.556 1.556 0 0 1 0-2.213 1.588 1.588 0 0 1 2.232 0L12 12.722l4.804-4.763a1.59 1.59 0 0 1 2.234 0 1.557 1.557 0 0 1 0 2.213l-5.921 5.87A1.584 1.584 0 0 1 12 16.5"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        aria-label="sort 4"
+        class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+        role="button"
+        style="align-items: center; cursor: default; width: 128px;"
+      >
+        <span
+          class="cache-ydnwlo-StyledSpan em5tn2e0"
+        />
+      </div>
+    </div>
+    <div
+      class="cache-3svqc9"
+      role="list"
+    >
+      <details
+        class="cache-10y4gs5-StyledRow-StyledRow em5tn2e6"
+        data-testid="row-1"
+        role="listitem"
+      >
+        <summary
+          class="cache-wruyr0-StyledSummary em5tn2e2"
+        >
+          <div
+            class="cache-6w8osc-StyledContainerSummary em5tn2e4"
+          >
+            <div
+              class="cache-krnxnj-StyledCheckboxContainer em5tn2e5"
+            >
+              <div>
+                <label
+                  aria-disabled="false"
+                  class="em5tn2e1 cache-h0vgcd-StyledCheckBoxContainer-StyledCheckbox eu28k4m1"
+                  data-checked="false"
+                  data-error="false"
+                  data-visibility="hover"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-invalid="false"
+                    class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+                    name="select-rows"
+                    type="checkbox"
+                    value="1"
+                  />
+                  <svg
+                    class="cache-1m7zzqc-StyledIcon eu28k4m3"
+                    name="checkbox-blank-outline"
+                    size="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g>
+                      <rect
+                        class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                        height="14"
+                        rx="1"
+                        stroke-width="2"
+                        width="14"
+                        x="5"
+                        y="5"
+                      />
+                      <rect
+                        class="cache-1nu9t2r-CheckMark eu28k4m5"
+                        height="8"
+                        rx="1"
+                        width="8"
+                        x="8"
+                        y="8"
+                      />
+                    </g>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Scaler 1
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Fake message for row 1
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              Not Front
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              1
+            </div>
+            <div
+              class="em5tn2e8 e1ipwytk0 cache-1jv4gms-StyledCell-Cell"
+            >
+              actions
+            </div>
+          </div>
+        </summary>
+        <div
+          class="cache-57dxct-StyledExpendableContainer em5tn2e7"
+        >
+          <div
+            data-expandable="true"
+          >
+            ExpendableContent 1
+          </div>
+        </div>
+      </details>
+      <details
+        class="cache-10y4gs5-StyledRow-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -20243,6 +20740,25 @@ exports[`List should render correctly with animated, table variant 1`] = `
   100% {
     opacity: 1;
   }
+}
+
+.cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-1pzlru8-StyledHeader {
@@ -20420,7 +20936,7 @@ exports[`List should render correctly with animated, table variant 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -20656,6 +21172,25 @@ exports[`List should render correctly with animation on Row 1`] = `
   }
 }
 
+.cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
 .cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
@@ -20768,7 +21303,7 @@ exports[`List should render correctly with animation on Row 1`] = `
   bottom: 0;
 }
 
-.cache-1bruyu-StyledRow-StyledRow {
+.cache-gjptkd-StyledRow-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20794,26 +21329,30 @@ exports[`List should render correctly with animation on Row 1`] = `
   color: inherit;
 }
 
-.cache-1bruyu-StyledRow-StyledRow:hover {
+.cache-gjptkd-StyledRow-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-1bruyu-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-gjptkd-StyledRow-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-1bruyu-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-gjptkd-StyledRow-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-1bruyu-StyledRow-StyledRow .em5tn2e8 {
+.cache-gjptkd-StyledRow-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-gjptkd-StyledRow-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-1bruyu-StyledRow-StyledRow .em5tn2e8:first-of-type {
+.cache-gjptkd-StyledRow-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -20871,7 +21410,7 @@ exports[`List should render correctly with animation on Row 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -20944,7 +21483,7 @@ exports[`List should render correctly with animation on Row 1`] = `
       role="list"
     >
       <div
-        class="cache-1bruyu-StyledRow-StyledRow em5tn2e6"
+        class="cache-gjptkd-StyledRow-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -20982,7 +21521,26 @@ exports[`List should render correctly with animation on Row 1`] = `
 
 exports[`List should render correctly with autoClose and ExpendableContent 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21110,7 +21668,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
   bottom: 0;
 }
 
-.cache-195w6uw-StyledRow {
+.cache-1qr01ab-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21134,26 +21692,30 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
   color: inherit;
 }
 
-.cache-195w6uw-StyledRow:hover {
+.cache-1qr01ab-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-195w6uw-StyledRow [data-visibility='hover'] {
+.cache-1qr01ab-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-195w6uw-StyledRow:hover [data-visibility='hover'] {
+.cache-1qr01ab-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-195w6uw-StyledRow .em5tn2e8 {
+.cache-1qr01ab-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1qr01ab-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-195w6uw-StyledRow .em5tn2e8:first-of-type {
+.cache-1qr01ab-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -21211,7 +21773,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -21353,7 +21915,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
       role="list"
     >
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -21401,7 +21963,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-1"
         open=""
         role="listitem"
@@ -21450,7 +22012,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -21498,7 +22060,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -21546,7 +22108,7 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
         </div>
       </details>
       <details
-        class="cache-195w6uw-StyledRow em5tn2e6"
+        class="cache-1qr01ab-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -21600,7 +22162,26 @@ exports[`List should render correctly with autoClose and ExpendableContent 1`] =
 
 exports[`List should render correctly with bad idKey 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21887,7 +22468,7 @@ exports[`List should render correctly with bad idKey 1`] = `
   bottom: 0;
 }
 
-.cache-ni6k37-StyledRow {
+.cache-1gfo24w-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21911,26 +22492,30 @@ exports[`List should render correctly with bad idKey 1`] = `
   color: inherit;
 }
 
-.cache-ni6k37-StyledRow:hover {
+.cache-1gfo24w-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-ni6k37-StyledRow [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-ni6k37-StyledRow:hover [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8 {
+.cache-1gfo24w-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1gfo24w-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8:first-of-type {
+.cache-1gfo24w-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -21988,7 +22573,7 @@ exports[`List should render correctly with bad idKey 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -22177,7 +22762,7 @@ exports[`List should render correctly with bad idKey 1`] = `
       role="list"
     >
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -22280,7 +22865,7 @@ exports[`List should render correctly with bad idKey 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -22383,7 +22968,7 @@ exports[`List should render correctly with bad idKey 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -22486,7 +23071,7 @@ exports[`List should render correctly with bad idKey 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -22589,7 +23174,7 @@ exports[`List should render correctly with bad idKey 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -22698,7 +23283,26 @@ exports[`List should render correctly with bad idKey 1`] = `
 
 exports[`List should render correctly with custom loader 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22845,7 +23449,7 @@ exports[`List should render correctly with custom loader 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -22996,7 +23600,26 @@ exports[`List should render correctly with custom loader 1`] = `
 
 exports[`List should render correctly with defaultSort 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23300,7 +23923,7 @@ exports[`List should render correctly with defaultSort 1`] = `
   bottom: 0;
 }
 
-.cache-ni6k37-StyledRow {
+.cache-1gfo24w-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23324,26 +23947,30 @@ exports[`List should render correctly with defaultSort 1`] = `
   color: inherit;
 }
 
-.cache-ni6k37-StyledRow:hover {
+.cache-1gfo24w-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-ni6k37-StyledRow [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-ni6k37-StyledRow:hover [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8 {
+.cache-1gfo24w-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1gfo24w-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8:first-of-type {
+.cache-1gfo24w-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -23401,7 +24028,7 @@ exports[`List should render correctly with defaultSort 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -23590,7 +24217,7 @@ exports[`List should render correctly with defaultSort 1`] = `
       role="list"
     >
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -23686,7 +24313,7 @@ exports[`List should render correctly with defaultSort 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -23782,7 +24409,7 @@ exports[`List should render correctly with defaultSort 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -23878,7 +24505,7 @@ exports[`List should render correctly with defaultSort 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -23974,7 +24601,7 @@ exports[`List should render correctly with defaultSort 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -24076,7 +24703,26 @@ exports[`List should render correctly with defaultSort 1`] = `
 
 exports[`List should render correctly with disabled 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24249,7 +24895,7 @@ exports[`List should render correctly with disabled 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -24459,7 +25105,26 @@ exports[`List should render correctly with disabled 1`] = `
 
 exports[`List should render correctly with disabled 2`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24605,7 +25270,7 @@ exports[`List should render correctly with disabled 2`] = `
   bottom: 0;
 }
 
-.cache-wvq8n4-StyledRow {
+.cache-1t81m1b-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24633,26 +25298,30 @@ exports[`List should render correctly with disabled 2`] = `
   pointer-events: none;
 }
 
-.cache-wvq8n4-StyledRow:hover {
+.cache-1t81m1b-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-wvq8n4-StyledRow [data-visibility='hover'] {
+.cache-1t81m1b-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-wvq8n4-StyledRow:hover [data-visibility='hover'] {
+.cache-1t81m1b-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-wvq8n4-StyledRow .em5tn2e8 {
+.cache-1t81m1b-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1t81m1b-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-wvq8n4-StyledRow .em5tn2e8:first-of-type {
+.cache-1t81m1b-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -24710,7 +25379,7 @@ exports[`List should render correctly with disabled 2`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -24852,7 +25521,7 @@ exports[`List should render correctly with disabled 2`] = `
       role="list"
     >
       <div
-        class="cache-wvq8n4-StyledRow em5tn2e6"
+        class="cache-1t81m1b-StyledRow em5tn2e6"
         data-testid="row-1"
         disabled=""
         role="listitem"
@@ -24895,7 +25564,7 @@ exports[`List should render correctly with disabled 2`] = `
         />
       </div>
       <div
-        class="cache-wvq8n4-StyledRow em5tn2e6"
+        class="cache-1t81m1b-StyledRow em5tn2e6"
         data-testid="row-0"
         disabled=""
         role="listitem"
@@ -24944,7 +25613,26 @@ exports[`List should render correctly with disabled 2`] = `
 
 exports[`List should render correctly with empty data 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25246,7 +25934,7 @@ exports[`List should render correctly with empty data 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -25446,7 +26134,26 @@ exports[`List should render correctly with empty data 1`] = `
 
 exports[`List should render correctly with highlighted 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25592,7 +26299,7 @@ exports[`List should render correctly with highlighted 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25616,26 +26323,30 @@ exports[`List should render correctly with highlighted 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -25692,7 +26403,7 @@ exports[`List should render correctly with highlighted 1`] = `
   margin: 0;
 }
 
-.cache-v1oy54-StyledRow {
+.cache-1nyf3r9-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25716,32 +26427,36 @@ exports[`List should render correctly with highlighted 1`] = `
   color: inherit;
 }
 
-.cache-v1oy54-StyledRow:hover,
-.cache-v1oy54-StyledRow {
+.cache-1nyf3r9-StyledRow:hover,
+.cache-1nyf3r9-StyledRow {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-v1oy54-StyledRow [data-visibility='hover'] {
+.cache-1nyf3r9-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-v1oy54-StyledRow:hover [data-visibility='hover'] {
+.cache-1nyf3r9-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-v1oy54-StyledRow .em5tn2e8 {
+.cache-1nyf3r9-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1nyf3r9-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-v1oy54-StyledRow .em5tn2e8:first-of-type {
+.cache-1nyf3r9-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -25883,7 +26598,7 @@ exports[`List should render correctly with highlighted 1`] = `
       role="list"
     >
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -25925,7 +26640,7 @@ exports[`List should render correctly with highlighted 1`] = `
         />
       </div>
       <div
-        class="cache-v1oy54-StyledRow em5tn2e6"
+        class="cache-1nyf3r9-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -25967,7 +26682,7 @@ exports[`List should render correctly with highlighted 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -26015,7 +26730,26 @@ exports[`List should render correctly with highlighted 1`] = `
 
 exports[`List should render correctly with highlighted and selected 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26319,7 +27053,7 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   bottom: 0;
 }
 
-.cache-14i9nma-StyledRow {
+.cache-1acshcz-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26343,27 +27077,31 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   color: inherit;
 }
 
-.cache-14i9nma-StyledRow:hover,
-.cache-14i9nma-StyledRow {
+.cache-1acshcz-StyledRow:hover,
+.cache-1acshcz-StyledRow {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-14i9nma-StyledRow [data-visibility='hover'] {
+.cache-1acshcz-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-14i9nma-StyledRow:hover [data-visibility='hover'] {
+.cache-1acshcz-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-14i9nma-StyledRow .em5tn2e8 {
+.cache-1acshcz-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1acshcz-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-14i9nma-StyledRow .em5tn2e8:first-of-type {
+.cache-1acshcz-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -26420,7 +27158,7 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   margin: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26444,31 +27182,35 @@ exports[`List should render correctly with highlighted and selected 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -26656,7 +27398,7 @@ exports[`List should render correctly with highlighted and selected 1`] = `
       role="list"
     >
       <div
-        class="cache-14i9nma-StyledRow em5tn2e6"
+        class="cache-1acshcz-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -26746,7 +27488,7 @@ exports[`List should render correctly with highlighted and selected 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -26842,7 +27584,26 @@ exports[`List should render correctly with highlighted and selected 1`] = `
 
 exports[`List should render correctly with highlighted and selected, explorer variant 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27049,7 +27810,7 @@ exports[`List should render correctly with highlighted and selected, explorer va
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -27259,7 +28020,26 @@ exports[`List should render correctly with highlighted and selected, explorer va
 
 exports[`List should render correctly with highlighted and selected, table variant 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27613,7 +28393,7 @@ exports[`List should render correctly with highlighted and selected, table varia
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -27953,7 +28733,26 @@ exports[`List should render correctly with highlighted and selected, table varia
 
 exports[`List should render correctly with highlighted, explorer variant 1`] = `
 <DocumentFragment>
-  .cache-15e5lab-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-15e5lab-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28124,7 +28923,7 @@ exports[`List should render correctly with highlighted, explorer variant 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-15e5lab-StyledHeader ehz0roz2"
@@ -28334,7 +29133,26 @@ exports[`List should render correctly with highlighted, explorer variant 1`] = `
 
 exports[`List should render correctly with highlighted, table variant 1`] = `
 <DocumentFragment>
-  .cache-1pzlru8-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1pzlru8-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28507,7 +29325,7 @@ exports[`List should render correctly with highlighted, table variant 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1pzlru8-StyledHeader e1zrudf3"
@@ -28717,7 +29535,26 @@ exports[`List should render correctly with highlighted, table variant 1`] = `
 
 exports[`List should render correctly with isHoverable 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28863,7 +29700,7 @@ exports[`List should render correctly with isHoverable 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28887,26 +29724,30 @@ exports[`List should render correctly with isHoverable 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -28964,7 +29805,7 @@ exports[`List should render correctly with isHoverable 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -29106,7 +29947,7 @@ exports[`List should render correctly with isHoverable 1`] = `
       role="list"
     >
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -29148,7 +29989,7 @@ exports[`List should render correctly with isHoverable 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -29190,7 +30031,7 @@ exports[`List should render correctly with isHoverable 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -29246,6 +30087,25 @@ exports[`List should render correctly with isLoading 1`] = `
   to {
     left: 100%;
   }
+}
+
+.cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-1l26f6-StyledHeader {
@@ -29376,7 +30236,7 @@ exports[`List should render correctly with isLoading 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29400,26 +30260,30 @@ exports[`List should render correctly with isLoading 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -29520,7 +30384,7 @@ exports[`List should render correctly with isLoading 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -29663,7 +30527,7 @@ exports[`List should render correctly with isLoading 1`] = `
       </div>
     </div>
     <div
-      class="cache-vtfsoo-StyledRow em5tn2e6"
+      class="cache-1fyf2ru-StyledRow em5tn2e6"
       data-testid="row-0"
       role="listitem"
     >
@@ -29739,7 +30603,7 @@ exports[`List should render correctly with isLoading 1`] = `
       />
     </div>
     <div
-      class="cache-vtfsoo-StyledRow em5tn2e6"
+      class="cache-1fyf2ru-StyledRow em5tn2e6"
       data-testid="row-1"
       role="listitem"
     >
@@ -29815,7 +30679,7 @@ exports[`List should render correctly with isLoading 1`] = `
       />
     </div>
     <div
-      class="cache-vtfsoo-StyledRow em5tn2e6"
+      class="cache-1fyf2ru-StyledRow em5tn2e6"
       data-testid="row-2"
       role="listitem"
     >
@@ -29891,7 +30755,7 @@ exports[`List should render correctly with isLoading 1`] = `
       />
     </div>
     <div
-      class="cache-vtfsoo-StyledRow em5tn2e6"
+      class="cache-1fyf2ru-StyledRow em5tn2e6"
       data-testid="row-3"
       role="listitem"
     >
@@ -29967,7 +30831,7 @@ exports[`List should render correctly with isLoading 1`] = `
       />
     </div>
     <div
-      class="cache-vtfsoo-StyledRow em5tn2e6"
+      class="cache-1fyf2ru-StyledRow em5tn2e6"
       data-testid="row-4"
       role="listitem"
     >
@@ -30048,7 +30912,26 @@ exports[`List should render correctly with isLoading 1`] = `
 
 exports[`List should render correctly with no data 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30336,7 +31219,7 @@ exports[`List should render correctly with no data 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -30532,7 +31415,26 @@ exports[`List should render correctly with no data 1`] = `
 
 exports[`List should render correctly with pagination 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30802,7 +31704,7 @@ exports[`List should render correctly with pagination 1`] = `
   bottom: 0;
 }
 
-.cache-d9rrxy-StyledRow {
+.cache-1vh76sx-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30826,26 +31728,30 @@ exports[`List should render correctly with pagination 1`] = `
   color: inherit;
 }
 
-.cache-d9rrxy-StyledRow:hover {
+.cache-1vh76sx-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-d9rrxy-StyledRow [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-d9rrxy-StyledRow:hover [data-visibility='hover'] {
+.cache-1vh76sx-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8 {
+.cache-1vh76sx-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1vh76sx-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-d9rrxy-StyledRow .em5tn2e8:first-of-type {
+.cache-1vh76sx-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -31189,7 +32095,7 @@ exports[`List should render correctly with pagination 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -31309,7 +32215,7 @@ exports[`List should render correctly with pagination 1`] = `
       role="list"
     >
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -31389,7 +32295,7 @@ exports[`List should render correctly with pagination 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -31469,7 +32375,7 @@ exports[`List should render correctly with pagination 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -31549,7 +32455,7 @@ exports[`List should render correctly with pagination 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -31629,7 +32535,7 @@ exports[`List should render correctly with pagination 1`] = `
         />
       </div>
       <div
-        class="cache-d9rrxy-StyledRow em5tn2e6"
+        class="cache-1vh76sx-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -31877,7 +32783,26 @@ exports[`List should render correctly with pagination 1`] = `
 
 exports[`List should render correctly with pagination and bad idKey 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31989,7 +32914,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   bottom: 0;
 }
 
-.cache-vtfsoo-StyledRow {
+.cache-1fyf2ru-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32013,26 +32938,30 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
   color: inherit;
 }
 
-.cache-vtfsoo-StyledRow:hover {
+.cache-1fyf2ru-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-vtfsoo-StyledRow [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-vtfsoo-StyledRow:hover [data-visibility='hover'] {
+.cache-1fyf2ru-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8 {
+.cache-1fyf2ru-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1fyf2ru-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-vtfsoo-StyledRow .em5tn2e8:first-of-type {
+.cache-1fyf2ru-StyledRow .em5tn2e8:first-of-type {
   padding-left: 16px;
 }
 
@@ -32376,7 +33305,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -32449,7 +33378,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
       role="list"
     >
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -32481,7 +33410,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -32513,7 +33442,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -32545,7 +33474,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -32577,7 +33506,7 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
         />
       </div>
       <div
-        class="cache-vtfsoo-StyledRow em5tn2e6"
+        class="cache-1fyf2ru-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
@@ -32777,7 +33706,26 @@ exports[`List should render correctly with pagination and bad idKey 1`] = `
 
 exports[`List should render correctly with pagination and page loading 1`] = `
 <DocumentFragment>
-  .cache-1l26f6-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1l26f6-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33103,7 +34051,7 @@ exports[`List should render correctly with pagination and page loading 1`] = `
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1l26f6-StyledHeader em5tn2e3"
@@ -33352,7 +34300,26 @@ exports[`List should render correctly with pagination and page loading 1`] = `
 
 exports[`List should render correctly with unusual props 1`] = `
 <DocumentFragment>
-  .cache-1vwyi4j-StyledHeader {
+  .cache-cqrcwm-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1vwyi4j-StyledHeader {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33639,7 +34606,7 @@ exports[`List should render correctly with unusual props 1`] = `
   bottom: 0;
 }
 
-.cache-ni6k37-StyledRow {
+.cache-1gfo24w-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33663,26 +34630,30 @@ exports[`List should render correctly with unusual props 1`] = `
   color: inherit;
 }
 
-.cache-ni6k37-StyledRow:hover {
+.cache-1gfo24w-StyledRow:hover {
   border-color: #390171;
   box-shadow: 0px 4px 16px 4px #EEEEFFCC;
 }
 
-.cache-ni6k37-StyledRow [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-ni6k37-StyledRow:hover [data-visibility='hover'] {
+.cache-1gfo24w-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8 {
+.cache-1gfo24w-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1gfo24w-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-ni6k37-StyledRow .em5tn2e8:first-of-type {
+.cache-1gfo24w-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
@@ -33739,7 +34710,7 @@ exports[`List should render correctly with unusual props 1`] = `
   margin: 0;
 }
 
-.cache-13zluto-StyledRow {
+.cache-1881sz2-StyledRow {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33763,26 +34734,30 @@ exports[`List should render correctly with unusual props 1`] = `
   color: #cc4e18;
 }
 
-.cache-13zluto-StyledRow [data-visibility='hover'] {
+.cache-1881sz2-StyledRow [data-visibility='hover'] {
   opacity: 0;
 }
 
-.cache-13zluto-StyledRow:hover [data-visibility='hover'] {
+.cache-1881sz2-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
 }
 
-.cache-13zluto-StyledRow .em5tn2e8 {
+.cache-1881sz2-StyledRow:last-child {
+  margin-bottom: 0;
+}
+
+.cache-1881sz2-StyledRow .em5tn2e8 {
   padding: 0 8px;
   min-height: 48px;
   font-size: 14px;
 }
 
-.cache-13zluto-StyledRow .em5tn2e8:first-of-type {
+.cache-1881sz2-StyledRow .em5tn2e8:first-of-type {
   padding-left: 0px;
 }
 
 <div
-    class="cache-3svqc9"
+    class="cache-cqrcwm-Stack e1sgck4o0"
   >
     <div
       class="cache-1vwyi4j-StyledHeader em5tn2e3"
@@ -33971,7 +34946,7 @@ exports[`List should render correctly with unusual props 1`] = `
       role="list"
     >
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-0"
         role="listitem"
       >
@@ -34067,7 +35042,7 @@ exports[`List should render correctly with unusual props 1`] = `
         </div>
       </details>
       <details
-        class="cache-13zluto-StyledRow em5tn2e6"
+        class="cache-1881sz2-StyledRow em5tn2e6"
         data-testid="row-1"
         role="listitem"
       >
@@ -34163,7 +35138,7 @@ exports[`List should render correctly with unusual props 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-2"
         role="listitem"
       >
@@ -34214,7 +35189,7 @@ exports[`List should render correctly with unusual props 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-3"
         role="listitem"
       >
@@ -34310,7 +35285,7 @@ exports[`List should render correctly with unusual props 1`] = `
         </div>
       </details>
       <details
-        class="cache-ni6k37-StyledRow em5tn2e6"
+        class="cache-1gfo24w-StyledRow em5tn2e6"
         data-testid="row-4"
         role="listitem"
       >
