@@ -17,6 +17,7 @@ import Box from '../Box'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
+import Stack from '../Stack'
 import Text from '../Text'
 import {
   DEFAULT_PLACEHOLDER_ROWS_COUNT,
@@ -251,7 +252,6 @@ function List<DataType extends Record<string, unknown>>(
     paginationProps = {
       pageTabCount: 5,
     },
-    ...props
   }: ListProps<DataType>,
   ref: ForwardedRef<ListRefType<DataType>>,
 ) {
@@ -575,7 +575,7 @@ function List<DataType extends Record<string, unknown>>(
 
   return (
     <ListContext.Provider value={value}>
-      <Box {...props}>
+      <Stack gap={2}>
         {children({
           data: pagination.pageData,
           ...childrenProps,
@@ -587,7 +587,7 @@ function List<DataType extends Record<string, unknown>>(
             paginationState={{ ...pagination, canLoadMore: !!onLoadPage }}
           />
         ) : null}
-      </Box>
+      </Stack>
     </ListContext.Provider>
   )
 }

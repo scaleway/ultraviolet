@@ -129,6 +129,10 @@ const StyledRow = styled('details', {
     opacity: 1;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   ${({ disabled, theme }) =>
     disabled
       ? `
