@@ -105,13 +105,18 @@ const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
   ),
 })
 
-export const globalStyles = (theme: Theme) => css`
-  ${normalize()}
+export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
+  css`
+    ${normalize()}
 
-  body {
-    color: ${theme.colors.neutral.text};
-  }
-`
+    body {
+      color: ${theme.colors.neutral.text};
+    }
+
+    :root {
+      color-scheme: ${mode};
+    }
+  `
 
 const fonts = css`
   @font-face {
@@ -168,7 +173,7 @@ export const decorators = [
         supportedLocales={['en', 'fr', 'es']}
       >
         <ThemeProvider theme={generatedTheme}>
-          <Global styles={[globalStyles, fonts]} />
+          <Global styles={[globalStyles(mode), fonts]} />
           <StoryComponent />
         </ThemeProvider>
       </I18n>
