@@ -1,3 +1,15 @@
+## [0.202.5](https://github.com/scaleway/scaleway-ui/compare/v0.202.4...v0.202.5) (2022-11-07)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/node to v18.11.6 ([#1989](https://github.com/scaleway/scaleway-ui/issues/1989)) ([591a64a](https://github.com/scaleway/scaleway-ui/commit/591a64a223d56a8304efa1eb0989fd8717b87f51))
+
+
+### :bug: Bug Fixes
+
+* **list:** fix missing gap between list and pagination with table variant ([#2013](https://github.com/scaleway/scaleway-ui/issues/2013)) ([507fdc8](https://github.com/scaleway/scaleway-ui/commit/507fdc86c23232c53557bf1591bef71a7f8c89df))
+
 ## [0.202.4](https://github.com/scaleway/scaleway-ui/compare/v0.202.3...v0.202.4) (2022-11-04)
 
 
