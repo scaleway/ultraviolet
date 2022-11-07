@@ -1,41 +1,33 @@
-import { ComponentStory } from '@storybook/react'
-import { useState } from 'react'
+import { DecoratorFunction } from '@storybook/addons'
+import { ComponentProps, useState } from 'react'
 import SelectNumber from '..'
+import Stack from '../../Stack'
 
-export const Sizes: ComponentStory<typeof SelectNumber> = () => {
+const sizes: ComponentProps<typeof SelectNumber>['size'][] = [
+  'large',
+  'medium',
+  'small',
+]
+
+export const Sizes = (props: ComponentProps<typeof SelectNumber>) => {
   const [value, setValue] = useState(0)
 
-  return (
-    <>
-      <SelectNumber
-        onChange={val => typeof val === 'number' && setValue(val)}
-        value={value}
-        size="small"
-      />
-      <SelectNumber
-        onChange={val => typeof val === 'number' && setValue(val)}
-        value={value}
-        size="medium"
-      />
-      <SelectNumber
-        onChange={val => typeof val === 'number' && setValue(val)}
-        value={value}
-        size="large"
-      />
-    </>
-  )
+  return sizes.map(size => (
+    <SelectNumber
+      {...props}
+      onChange={val => typeof val === 'number' && setValue(val)}
+      value={value}
+      size={size}
+    >
+      {size}
+    </SelectNumber>
+  ))
 }
 
 Sizes.decorators = [
-  StoryComponent => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-      }}
-    >
-      <StoryComponent />
-    </div>
+  Story => (
+    <Stack gap={2}>
+      <Story />
+    </Stack>
   ),
-]
+] as DecoratorFunction<JSX.Element>[]
