@@ -1,7 +1,5 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { Meta } from '@storybook/react'
 import Image from '..'
-import logo from './scaleway-text.png'
 
 export default {
   component: Image,
@@ -16,8 +14,4 @@ export default {
   title: 'Components/Image',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Image>> = args => (
-  <Image src={logo} alt="Scaleway logo" {...args} />
-)
-
-export const Default = Template.bind({})
+export { Playground } from './Playground.stories'

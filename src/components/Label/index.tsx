@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { ComponentProps } from 'react'
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.neutral.text};
@@ -9,8 +8,13 @@ const StyledLabel = styled.label`
   margin-bottom: 8px;
 `
 
-const Label = (props: ComponentProps<typeof StyledLabel>) => (
-  <StyledLabel {...props} />
+type LabelProps = {
+  children: React.ReactNode
+  htmlFor?: string
+}
+
+const Label = ({ children, htmlFor }: LabelProps) => (
+  <StyledLabel htmlFor={htmlFor}>{children}</StyledLabel>
 )
 
 export default Label

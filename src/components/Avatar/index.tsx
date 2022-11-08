@@ -120,7 +120,7 @@ const Avatar = ({
           )}
         </StyledTextAvatar>
       ) : (
-        <StyledImg src={image} alt="" />
+        <StyledImg src={image ?? ''} alt="" />
       )}
     </AvatarContainer>
   )
