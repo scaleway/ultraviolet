@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { Meta } from '@storybook/react'
 import Label from '..'
 
 export default {
@@ -7,8 +6,4 @@ export default {
   title: 'Components/Data Entry/Label',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Label>> = args => (
-  <Label {...args}>This is a label</Label>
-)
-
-export const Default = Template.bind({})
+export { Playground } from './Playground.stories'

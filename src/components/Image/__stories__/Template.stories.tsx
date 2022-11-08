@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react'
 import Image from '..'
-import logo from './scaleway-text.png'
+import defaultLogo from './scaleway-text.png'
 
-export const Template: ComponentStory<typeof Image> = args => (
-  <Image src={logo} alt="Scaleway logo" {...args} />
+export const Template: ComponentStory<typeof Image> = ({ src, ...args }) => (
+  <Image src={src ?? defaultLogo} alt="Scaleway logo" {...args} />
 )
