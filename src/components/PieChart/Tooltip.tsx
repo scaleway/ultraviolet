@@ -13,6 +13,7 @@ const StyledItem = styled.li`
   width: 100%;
   justify-content: space-between;
   text-align: left;
+  gap: 8px;
 `
 
 type TooltipProps = {
