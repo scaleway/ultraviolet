@@ -79,6 +79,8 @@ const StyledPageButton = styled('button', {
 
 export type PaginationComponentProps<T> = {
   // eslint-disable-next-line react/no-unused-prop-types
+  className?: string
+  // eslint-disable-next-line react/no-unused-prop-types
   pageTabCount?: number
   paginationState: PaginationState<T>
 }
@@ -232,8 +234,9 @@ const PaginationContainer = ({
   RightComponent = DefaultRightComponent,
   paginationState,
   pageTabCount = 5,
+  className,
 }: PaginationContainerProps<unknown>) => (
-  <StyledMainContainer role="navigation">
+  <StyledMainContainer role="navigation" className={className}>
     <StyledLeftContainer>
       <LeftComponent
         paginationState={paginationState}

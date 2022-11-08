@@ -17,7 +17,6 @@ import Box from '../Box'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
-import Stack from '../Stack'
 import Text from '../Text'
 import {
   DEFAULT_PLACEHOLDER_ROWS_COUNT,
@@ -61,6 +60,10 @@ type BodyProps<DataType> = {
 const CenteredText = styled(Text)`
   text-align: center;
   margin: ${({ theme }) => theme.space['2']};
+`
+
+const StyledPaginationContainer = styled(Pagination.PaginationContainer)`
+  margin-top: ${({ theme }) => theme.space['2']};
 `
 
 function Body<DataType extends Record<string, unknown>>({
@@ -577,19 +580,19 @@ const List = forwardRef(
 
     return (
       <ListContext.Provider value={value}>
-        <Stack gap={2}>
+        <div>
           {children({
             data: pagination.pageData,
             ...childrenProps,
           })}
           {pagination.maxPage > 1 ? (
-            <Pagination.PaginationContainer
+            <StyledPaginationContainer
               {...paginationProps}
               // @ts-expect-error Pagination types are funky and does not allow generics yet
               paginationState={{ ...pagination, canLoadMore: !!onLoadPage }}
             />
           ) : null}
-        </Stack>
+        </div>
       </ListContext.Provider>
     )
   },
