@@ -3,13 +3,7 @@ import Placeholder from '..'
 
 export default {
   component: Placeholder,
-  decorators: [
-    StoryComponent => (
-      <div style={{ marginBottom: '1em', marginLeft: '2em' }}>
-        <StoryComponent />
-      </div>
-    ),
-  ],
+  decorators: [StoryComponent => <StoryComponent />],
   parameters: {
     docs: {
       description: {

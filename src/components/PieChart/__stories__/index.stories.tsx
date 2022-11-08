@@ -3,13 +3,7 @@ import PieChart from '..'
 
 export default {
   component: PieChart,
-  decorators: [
-    StoryComponent => (
-      <div style={{ marginBottom: '1em', marginLeft: '2em' }}>
-        <StoryComponent />
-      </div>
-    ),
-  ],
+  decorators: [StoryComponent => <StoryComponent />],
   title: 'Components/Data Display/Chart/PieChart',
 } as ComponentMeta<typeof PieChart>
 

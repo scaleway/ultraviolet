@@ -7,8 +7,6 @@ export default {
     StoryComponent => (
       <div
         style={{
-          marginBottom: '1em',
-          marginLeft: '2em',
           width: 'fit-content',
           minWidth: '200px',
         }}
