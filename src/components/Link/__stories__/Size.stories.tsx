@@ -12,6 +12,12 @@ export const Size = (props: ComponentProps<typeof Link>) =>
     </Link>
   ))
 
+Size.parameters = {
+  docs: {
+    storyDescription: 'Edit `size` prop to change the size of the text',
+  },
+}
+
 Size.decorators = [
   Story => (
     <Stack>
