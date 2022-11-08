@@ -1,21 +1,15 @@
-import styled from '@emotion/styled'
-import { ComponentStory } from '@storybook/react'
+import { DecoratorFunction } from '@storybook/addons'
+import { ComponentProps } from 'react'
 import Icon, { icons } from '..'
 import Stack from '../../Stack'
 
-const StyledStack = styled(Stack)`
-  font-size: ${({ theme }) => theme.typography.heading.fontSize};
-`
-
-export const Name: ComponentStory<typeof Icon> = args => (
-  <>
-    {icons.map(name => (
-      <StyledStack key={name} direction="row" gap={2} alignItems="center">
-        <Icon name={name} {...args} /> {name}
-      </StyledStack>
-    ))}
-  </>
-)
+export const Name = (args: ComponentProps<typeof Icon>) =>
+  icons.map(name => (
+    <div>
+      <Icon name={name} {...args} />
+      &nbsp;{name}
+    </div>
+  ))
 
 Name.parameters = {
   docs: {
@@ -29,4 +23,4 @@ Name.decorators = [
       <Story />
     </Stack>
   ),
-]
+] as DecoratorFunction<JSX.Element>[]
