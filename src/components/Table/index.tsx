@@ -1,34 +1,54 @@
-import { css } from '@emotion/react'
+import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ReactNode } from 'react'
-import Box, { BoxProps } from '../Box'
 import Loader from '../Loader'
 
-const StyledTable = styled(Box.withComponent('table'))`
+// Common
+const cellStyle = (theme: Theme) => css`
+  padding: ${theme.space[1]} ${theme.space[2]};
+  font-size: ${theme.typography.bodySmall.fontSize};
+  line-height: ${theme.typography.bodySmall.lineHeight};
+`
+
+// Table Head
+const StyledTable = styled.table`
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 `
 
-const Table: ((props: BoxProps) => JSX.Element) & {
+const Table: ((props: {
+  children: ReactNode
+  className?: string
+}) => JSX.Element) & {
   Head: typeof Head
   Body: typeof Body
   Row: typeof Row
   HeadCell: typeof HeadCell
   BodyCell: typeof BodyCell
-} = props => <StyledTable {...props} />
+} = ({ children, className }) => (
+  <StyledTable className={className}>{children}</StyledTable>
+)
 
-const StyledHead = styled(Box.withComponent('thead'))`
+// Table Head
+const StyledHead = styled.thead`
   border: 0;
   border-bottom-width: 1px;
   border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   border-style: solid;
 `
 
-export const Head = (props: BoxProps) => <StyledHead {...props} />
+export const Head = ({
+  children,
+  className,
+}: {
+  children: ReactNode
+  className?: string
+}) => <StyledHead className={className}>{children}</StyledHead>
 
-const StyledRow = styled(Box.withComponent('tr'), {
-  shouldForwardProp: prop => prop !== 'highlight',
+// Table Row
+const StyledRow = styled('tr', {
+  shouldForwardProp: prop => !['highlight'].includes(prop),
 })<{ highlight?: boolean }>`
   color: ${({ theme }) => theme.colors.neutral.text};
 
@@ -66,75 +86,113 @@ const StyledRow = styled(Box.withComponent('tr'), {
   }
 `
 
-type RowProps = {
+export const Row = ({
+  highlight,
+  children,
+  className,
+}: {
   highlight?: boolean
-} & BoxProps
+  children: ReactNode
+  className?: string
+}) => (
+  <StyledRow className={className} highlight={highlight}>
+    {children}
+  </StyledRow>
+)
 
-export const Row = (props: RowProps) => <StyledRow {...props} />
-
-const cellStyle = css`
-  padding: 12px 16px;
-  font-size: 14px;
-  line-height: 24px;
-`
-
-const StyledHeadCell = styled(Box.withComponent('th'))`
+// Table Head  Cell
+const StyledHeadCell = styled('th', {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<
+  { width?: string } & Pick<
+    React.HTMLProps<HTMLTableCellElement>,
+    'rowSpan' | 'colSpan'
+  >
+>`
+  ${({ width }) => (width ? `width: ${width};` : '')}
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-align: left;
-  ${cellStyle};
+  ${({ theme }) => cellStyle(theme)};
 `
-
-export const HeadCell = (props: BoxProps) => <StyledHeadCell {...props} />
-
-const StyledBodyCell = styled(Box.withComponent('td'))`
-  overflow: hidden;
-  white-space: nowrap;
-  ${cellStyle};
-`
-
-export const BodyCell = (props: BoxProps) => <StyledBodyCell {...props} />
-
-const TBody = Box.withComponent('tbody')
-
-const StyledBox = styled(Box)`
-  position: absolute;
-  top: 16px;
-  left: 50%;
-`
-
-const BodyLoader = (props: BoxProps & BodyProps) => (
-  <TBody>
-    <Row>
-      <BodyCell height={80} position="relative" {...props}>
-        <StyledBox>
-          <Loader active size={40} />
-        </StyledBox>
-      </BodyCell>
-    </Row>
-  </TBody>
+export const HeadCell = ({
+  children,
+  colSpan,
+  rowSpan,
+  className,
+  width,
+}: { children?: ReactNode; className?: string; width?: string } & Pick<
+  React.HTMLProps<HTMLTableCellElement>,
+  'rowSpan' | 'colSpan'
+>) => (
+  <StyledHeadCell
+    className={className}
+    colSpan={colSpan}
+    rowSpan={rowSpan}
+    width={width}
+  >
+    {children}
+  </StyledHeadCell>
 )
 
-type BodyProps = {
-  loading?: boolean
-  colSpan?: number
-}
+// Table Body Cell
+const StyledBodyCell = styled.td`
+  overflow: hidden;
+  white-space: nowrap;
+  ${({ theme }) => cellStyle(theme)};
+`
+
+export const BodyCell = ({
+  children,
+  colSpan,
+  rowSpan,
+  className,
+}: { children?: ReactNode; className?: string } & Pick<
+  React.HTMLProps<HTMLTableCellElement>,
+  'rowSpan' | 'colSpan'
+>) => (
+  <StyledBodyCell className={className} colSpan={colSpan} rowSpan={rowSpan}>
+    {children}
+  </StyledBodyCell>
+)
+
+// Table Body
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: ${({ theme }) => theme.space[2]};
+`
+
+const BodyLoader = ({ colSpan }: { colSpan: number }) => (
+  <Row>
+    <BodyCell colSpan={colSpan}>
+      <LoaderWrapper>
+        <Loader active size={40} />
+      </LoaderWrapper>
+    </BodyCell>
+  </Row>
+)
 
 export const Body = ({
   loading = false,
   colSpan = 1,
   children,
-  ...props
-}: BodyProps & { children: ReactNode }) =>
-  loading ? (
-    <BodyLoader colSpan={colSpan} />
-  ) : (
-    <TBody {...props}>{children}</TBody>
-  )
+  className,
+}: {
+  loading?: boolean
+  colSpan?: number
+  children: ReactNode
+  className?: string
+}) => (
+  <tbody className={className}>
+    {loading ? <BodyLoader colSpan={colSpan} /> : children}
+  </tbody>
+)
 
+// Export
 Table.Head = Head
 Table.Body = Body
 Table.Row = Row
