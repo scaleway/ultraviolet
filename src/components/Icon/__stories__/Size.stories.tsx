@@ -1,6 +1,7 @@
 import { DecoratorFunction } from '@storybook/addons'
 import { ComponentProps } from 'react'
 import Icon from '..'
+import Stack from '../../Stack'
 
 const sizes: ComponentProps<typeof Icon>['size'][] = [40, 50, 60]
 
@@ -15,8 +16,8 @@ Size.parameters = {
 
 Size.decorators = [
   Story => (
-    <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
+    <Stack gap={2} alignItems="center" direction="row">
       <Story />
-    </div>
+    </Stack>
   ),
 ] as DecoratorFunction<JSX.Element>[]

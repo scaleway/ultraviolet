@@ -1,10 +1,10 @@
-import { DecoratorFunction } from '@storybook/addons'
+import { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 import Expandable from '..'
 import Button from '../../Button'
 import Stack from '../../Stack'
 
-export const Controlled = () => {
+export const Controlled: ComponentStory<typeof Expandable> = () => {
   const [toggled, onToggle] = useState(false)
   const toggle = () => onToggle(state => !state)
 
@@ -29,4 +29,4 @@ Controlled.decorators = [
       <Story />
     </Stack>
   ),
-] as DecoratorFunction<JSX.Element>[]
+]

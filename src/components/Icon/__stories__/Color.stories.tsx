@@ -1,6 +1,7 @@
 import { DecoratorFunction } from '@storybook/addons'
 import { ComponentProps } from 'react'
 import Icon from '..'
+import Stack from '../../Stack'
 
 const colors: ComponentProps<typeof Icon>['color'][] = [
   'primary',
@@ -19,8 +20,8 @@ Color.parameters = {
 
 Color.decorators = [
   Story => (
-    <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
+    <Stack gap={2} alignItems="center" direction="row">
       <Story />
-    </div>
+    </Stack>
   ),
 ] as DecoratorFunction<JSX.Element>[]

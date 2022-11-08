@@ -1,6 +1,7 @@
 import { DecoratorFunction } from '@storybook/addons'
 import { ComponentProps } from 'react'
 import Icon from '..'
+import Stack from '../../Stack'
 
 export const UnknownOrUndefined = (args: ComponentProps<typeof Icon>) => [
   <Icon name={undefined} color="danger" {...args} />,
@@ -17,8 +18,8 @@ UnknownOrUndefined.parameters = {
 
 UnknownOrUndefined.decorators = [
   Story => (
-    <div style={{ display: 'flex', gap: 16 }}>
+    <Stack gap={2} alignItems="center" direction="row">
       <Story />
-    </div>
+    </Stack>
   ),
 ] as DecoratorFunction<JSX.Element>[]
