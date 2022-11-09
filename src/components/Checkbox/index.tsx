@@ -7,8 +7,8 @@ import {
   ReactNode,
   forwardRef,
   useCallback,
+  useEffect,
   useId,
-  useMemo,
   useState,
 } from 'react'
 import Loader from '../Loader'
@@ -20,18 +20,12 @@ const InnerCheckbox = styled.rect`
 `
 
 const CheckMark = styled.rect``
+const CheckMixedMark = styled.rect``
 
-const CheckboxIcon = () => (
+const CheckboxIconContainer = ({ children }: { children: ReactNode }) => (
   <g>
     <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
-    <CheckMark x="8" y="8" rx="1" width="8" height="8" />
-  </g>
-)
-
-const CheckboxMixedIcon = () => (
-  <g>
-    <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
-    <rect x="8" y="11" rx="1" width="8" height="2" />
+    {children}
   </g>
 )
 
@@ -58,18 +52,12 @@ const CheckboxInput = styled('input', {
   opacity: 0;
   border-width: 0;
 
-  & + ${StyledIcon} {
-    ${CheckMark} {
-      transform-origin: center;
-      transition: 200ms transform ease-in-out;
-      transform: scale(0);
-    }
+  &:not(:disabled) {
+    cursor: pointer;
   }
 
-  &:checked + svg {
-    ${CheckMark} {
-      transform: scale(1);
-    }
+  &:disabled {
+    cursor: not-allowed;
   }
 
   &:checked + ${StyledIcon}, &[aria-checked='mixed'] + ${StyledIcon} {
@@ -135,6 +123,20 @@ const CheckboxContainer = styled.label`
     }
   }
 
+  ${CheckMark}, ${CheckMixedMark} {
+    transform-origin: center;
+    transition: 200ms transform ease-in-out;
+    transform: scale(0);
+  }
+
+  ${CheckboxInput}:checked + ${StyledIcon} ${CheckMark} {
+    transform: scale(1);
+  }
+
+  ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} ${CheckMixedMark} {
+    transform: scale(1);
+  }
+
   &:hover[aria-disabled='false'] {
     ${CheckboxInput} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
@@ -161,8 +163,7 @@ const CheckboxContainer = styled.label`
 const StyledActivityContainer = styled('div', {
   shouldForwardProp: prop => !['hasChildren'].includes(prop),
 })<{ hasChildren: boolean }>`
-  display: inline;
-  vertical-align: middle;
+  display: flex;
   margin-right: ${({ theme, hasChildren }) =>
     hasChildren ? theme.space[1] : 0};
 `
@@ -176,11 +177,10 @@ type CheckboxProps = {
   checked?: boolean | 'indeterminate'
   className?: string
   ['data-visibility']?: string
-} & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
-  Pick<
-    InputHTMLAttributes<HTMLInputElement>,
-    'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id'
-  >
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
+>
 
 const Checkbox = forwardRef(
   (
@@ -202,50 +202,46 @@ const Checkbox = forwardRef(
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
-    const hasChildren = !!children
     const [state, setState] = useState<boolean | 'indeterminate'>(checked)
+    const hasChildren = !!children
     const id = useId()
     const computedName = name ?? id
 
-    const icon = useMemo(() => {
-      if (state === 'indeterminate') return 'minus-box-outline'
-      if (state) return 'checkbox-marked-outline'
-
-      return 'checkbox-blank-outline'
-    }, [state])
+    useEffect(() => {
+      setState(checked)
+    }, [checked])
 
     const onLocalChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
-        if (!progress) onChange(event)
-        setState(event.target.checked)
+        if (!progress) onChange?.(event)
+        setState(current =>
+          current === 'indeterminate' ? false : event.target.checked,
+        )
       },
       [onChange, progress, setState],
     )
 
-    const onKeyDown = useCallback(
-      (event: KeyboardEvent<HTMLInputElement>) => {
-        if (event.key.charCodeAt(0) === 32) {
-          event.preventDefault()
-          setState(!state)
-        }
-      },
-      [state],
-    )
+    const onKeyDown = useCallback((event: KeyboardEvent<HTMLInputElement>) => {
+      if (event.key.charCodeAt(0) === 32) {
+        event.preventDefault()
+        setState(current => !current)
+      }
+    }, [])
 
     return (
       <>
-        {progress ? (
-          <StyledActivityContainer hasChildren={hasChildren}>
-            <Loader active size={size} />
-          </StyledActivityContainer>
-        ) : null}
         <CheckboxContainer
           className={className}
           aria-disabled={disabled}
           data-visibility={dataVisibility}
-          data-checked={checked}
+          data-checked={state}
           data-error={!!error}
         >
+          {progress ? (
+            <StyledActivityContainer hasChildren={hasChildren}>
+              <Loader active size={size} />
+            </StyledActivityContainer>
+          ) : null}
           <CheckboxInput
             type="checkbox"
             aria-invalid={!!error}
@@ -254,9 +250,9 @@ const Checkbox = forwardRef(
             checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
+            onKeyDown={onKeyDown}
             onFocus={onFocus}
             onBlur={onBlur}
-            onKeyDown={onKeyDown}
             disabled={disabled}
             value={value}
             name={computedName}
@@ -264,12 +260,11 @@ const Checkbox = forwardRef(
             ref={ref}
           />
           {!progress ? (
-            <StyledIcon name={icon} size={size} viewBox="0 0 24 24">
-              {state === 'indeterminate' ? (
-                <CheckboxMixedIcon />
-              ) : (
-                <CheckboxIcon />
-              )}
+            <StyledIcon size={size} viewBox="0 0 24 24">
+              <CheckboxIconContainer>
+                <CheckMixedMark x="8" y="11" rx="1" width="8" height="2" />
+                <CheckMark x="8" y="8" rx="1" width="8" height="8" />
+              </CheckboxIconContainer>
             </StyledIcon>
           ) : null}
           {children}
