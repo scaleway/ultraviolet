@@ -69,6 +69,12 @@ expect.extend(toHaveNoViolations)
 jest.setTimeout(120000)
 
 describe('A11y', () => {
+  beforeEach(() => {
+    console.log = jest.fn()
+    console.warn = jest.fn()
+    console.error = jest.fn()
+  })
+
   afterEach(() => {
     cleanup()
   })
@@ -86,22 +92,23 @@ describe('A11y', () => {
   })
 
   foundFiles.forEach((file, index) => {
-    test(`${file.split('/')[2]}`, async () => {
-      const module = await moduleArray[index]
-      const components = composeStories(module)
+    describe(`${file.split('/')[2]}`, () =>
+      test(file.split('/')[4].split('.')[0], async () => {
+        const module = await moduleArray[index]
+        const components = composeStories(module)
 
-      for (const componentName of Object.keys(components)) {
-        if (componentName !== 'default') {
-          const ComponentToRender = components[
-            componentName as keyof typeof components
-          ] as () => JSX.Element
-          const { container } = renderWithTheme(<ComponentToRender />)
-          // eslint-disable-next-line no-await-in-loop
-          const results = await axe(container)
+        for (const componentName of Object.keys(components)) {
+          if (componentName !== 'default') {
+            const ComponentToRender = components[
+              componentName as keyof typeof components
+            ] as () => JSX.Element
+            const { container } = renderWithTheme(<ComponentToRender />)
+            // eslint-disable-next-line no-await-in-loop
+            const results = await axe(container)
 
-          expect(results).toHaveNoViolations()
+            expect(results).toHaveNoViolations()
+          }
         }
-      }
-    })
+      }))
   })
 })
