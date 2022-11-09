@@ -1,3 +1,19 @@
+## [0.204.2](https://github.com/scaleway/scaleway-ui/compare/v0.204.1...v0.204.2) (2022-11-09)
+
+
+### :zap: Refactor
+
+* **list:** reorganize List stories ([#2015](https://github.com/scaleway/scaleway-ui/issues/2015)) ([38c7849](https://github.com/scaleway/scaleway-ui/commit/38c7849408f2a39ad651343b7238ffdad6c6a382))
+* remove Box props from Table ([#1996](https://github.com/scaleway/scaleway-ui/issues/1996)) ([d4701f4](https://github.com/scaleway/scaleway-ui/commit/d4701f4b17d284aec610c90a797a39d9f4f96a2d))
+* reorganize and improve `Image`, `Label`, `LineChart` stories ([#2020](https://github.com/scaleway/scaleway-ui/issues/2020)) ([d9c78c2](https://github.com/scaleway/scaleway-ui/commit/d9c78c26cd7feed699eb2f81b42783cb70f5ab7a))
+* reorganize and improve DotSteps Expandable and Icon stories ([#2017](https://github.com/scaleway/scaleway-ui/issues/2017)) ([dfb7e84](https://github.com/scaleway/scaleway-ui/commit/dfb7e84aa16f20c074beee373f3eae17c9026bdf))
+* reorganize and improve Link and Separator stories ([#2016](https://github.com/scaleway/scaleway-ui/issues/2016)) ([3a0c629](https://github.com/scaleway/scaleway-ui/commit/3a0c629f37ec05b621600185037e09216f386c91))
+
+
+### :bug: Bug Fixes
+
+* **list:** fix list header gap ([#2021](https://github.com/scaleway/scaleway-ui/issues/2021)) ([025de46](https://github.com/scaleway/scaleway-ui/commit/025de468855a6504ef0ec7356b0a7793a7b96bed))
+
 ## [0.204.1](https://github.com/scaleway/scaleway-ui/compare/v0.204.0...v0.204.1) (2022-11-07)
 
 
