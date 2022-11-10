@@ -1,3 +1,25 @@
+## [0.204.3](https://github.com/scaleway/scaleway-ui/compare/v0.204.2...v0.204.3) (2022-11-10)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/react to v18.0.25 ([#1988](https://github.com/scaleway/scaleway-ui/issues/1988)) ([b12d5bd](https://github.com/scaleway/scaleway-ui/commit/b12d5bd3b88c4eb7294ca89be954f9b527901507))
+
+
+### :zap: Refactor
+
+* reorganize and improve PieChart, Placeholder and SelectNumber stories ([#2019](https://github.com/scaleway/scaleway-ui/issues/2019)) ([b0337e4](https://github.com/scaleway/scaleway-ui/commit/b0337e42aa4c125f69520422cc51e8388fdd858e))
+
+
+### :repeat: CI
+
+* fix script with new storiesfile format ([#2023](https://github.com/scaleway/scaleway-ui/issues/2023)) ([d0f59fa](https://github.com/scaleway/scaleway-ui/commit/d0f59faaa7b2a6ef7214be12f3e717d45df84a91))
+
+
+### :bug: Bug Fixes
+
+* radio and checkbox properties and removed reakit usages ([#2018](https://github.com/scaleway/scaleway-ui/issues/2018)) ([96feda3](https://github.com/scaleway/scaleway-ui/commit/96feda33536cee12e013da0479124c6920f92958))
+
 ## [0.204.2](https://github.com/scaleway/scaleway-ui/compare/v0.204.1...v0.204.2) (2022-11-09)
 
 
