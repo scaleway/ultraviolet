@@ -2,19 +2,15 @@ import styled from '@emotion/styled'
 import {
   ChangeEvent,
   ForwardedRef,
-  KeyboardEventHandler,
+  InputHTMLAttributes,
+  KeyboardEvent,
   ReactNode,
   forwardRef,
   useCallback,
   useEffect,
   useId,
-  useMemo,
+  useState,
 } from 'react'
-import {
-  Checkbox as ReakitCheckbox,
-  CheckboxProps as ReakitCheckboxProps,
-  useCheckboxState,
-} from 'reakit/Checkbox'
 import Loader from '../Loader'
 import Text from '../Text'
 
@@ -24,18 +20,12 @@ const InnerCheckbox = styled.rect`
 `
 
 const CheckMark = styled.rect``
+const CheckMixedMark = styled.rect``
 
-const CheckboxIcon = () => (
+const CheckboxIconContainer = ({ children }: { children: ReactNode }) => (
   <g>
     <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
-    <CheckMark x="8" y="8" rx="1" width="8" height="8" />
-  </g>
-)
-
-const CheckboxMixedIcon = () => (
-  <g>
-    <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
-    <rect x="8" y="11" rx="1" width="8" height="2" />
+    {children}
   </g>
 )
 
@@ -52,7 +42,7 @@ const StyledIcon = styled.svg<{ size: number }>`
   min-height: ${({ size }) => size}px;
 `
 
-const StyledReakitCheckbox = styled(ReakitCheckbox, {
+const CheckboxInput = styled('input', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })`
   position: absolute;
@@ -61,24 +51,16 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   width: ${({ size }) => size}px;
   opacity: 0;
   border-width: 0;
-  & + ${StyledIcon} {
-    ${CheckMark} {
-      transform-origin: center;
-      transition: 200ms transform ease-in-out;
-      transform: scale(0);
-    }
+
+  &:not(:disabled) {
+    cursor: pointer;
   }
 
-  &[aria-checked='true'] + svg {
-    ${CheckMark} {
-      transform: scale(1);
-    }
+  &:disabled {
+    cursor: not-allowed;
   }
 
-  &[aria-checked='true']
-    + ${StyledIcon},
-    &[aria-checked='mixed']
-    + ${StyledIcon} {
+  &:checked + ${StyledIcon}, &[aria-checked='mixed'] + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
     ${InnerCheckbox} {
@@ -118,7 +100,7 @@ const StyledReakitCheckbox = styled(ReakitCheckbox, {
   }
 `
 
-const StyledCheckBoxContainer = styled.label`
+const CheckboxContainer = styled.label`
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -141,8 +123,22 @@ const StyledCheckBoxContainer = styled.label`
     }
   }
 
+  ${CheckMark}, ${CheckMixedMark} {
+    transform-origin: center;
+    transition: 200ms transform ease-in-out;
+    transform: scale(0);
+  }
+
+  ${CheckboxInput}:checked + ${StyledIcon} ${CheckMark} {
+    transform: scale(1);
+  }
+
+  ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} ${CheckMixedMark} {
+    transform: scale(1);
+  }
+
   &:hover[aria-disabled='false'] {
-    ${StyledReakitCheckbox} + ${StyledIcon} {
+    ${CheckboxInput} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
@@ -152,7 +148,7 @@ const StyledCheckBoxContainer = styled.label`
       }
     }
 
-    ${StyledReakitCheckbox}[aria-invalid="true"] + ${StyledIcon} {
+    ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
 
@@ -167,16 +163,12 @@ const StyledCheckBoxContainer = styled.label`
 const StyledActivityContainer = styled('div', {
   shouldForwardProp: prop => !['hasChildren'].includes(prop),
 })<{ hasChildren: boolean }>`
-  display: inline;
-  vertical-align: middle;
+  display: flex;
   margin-right: ${({ theme, hasChildren }) =>
     hasChildren ? theme.space[1] : 0};
 `
 
-type CheckboxProps = Pick<
-  ReakitCheckboxProps,
-  'name' | 'onFocus' | 'onBlur' | 'value' | 'autoFocus'
-> & {
+type CheckboxProps = {
   children?: ReactNode
   error?: string | ReactNode
   size?: number
@@ -185,7 +177,10 @@ type CheckboxProps = Pick<
   checked?: boolean | 'indeterminate'
   className?: string
   ['data-visibility']?: string
-} & Required<Pick<ReakitCheckboxProps, 'onChange'>>
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
+>
 
 const Checkbox = forwardRef(
   (
@@ -207,65 +202,57 @@ const Checkbox = forwardRef(
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
+    const [state, setState] = useState<boolean | 'indeterminate'>(checked)
     const hasChildren = !!children
-    const { state, setState } = useCheckboxState({ state: checked })
     const id = useId()
     const computedName = name ?? id
 
-    const icon = useMemo(() => {
-      if (state === 'indeterminate') return 'minus-box-outline'
-      if (state) return 'checkbox-marked-outline'
-
-      return 'checkbox-blank-outline'
-    }, [state])
-
     useEffect(() => {
       setState(checked)
-    }, [checked, setState])
+    }, [checked])
 
     const onLocalChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
-        if (!progress) onChange(event)
-        setState(event.target.checked)
+        if (!progress) onChange?.(event)
+        setState(current =>
+          current === 'indeterminate' ? false : event.target.checked,
+        )
       },
       [onChange, progress, setState],
     )
 
-    const onKeyDown: KeyboardEventHandler = useCallback(
-      event => {
-        if (event.key.charCodeAt(0) === 32) {
-          onChange(event)
-        }
-      },
-      [onChange],
-    )
+    const onKeyDown = useCallback((event: KeyboardEvent<HTMLInputElement>) => {
+      if (event.key.charCodeAt(0) === 32) {
+        event.preventDefault()
+        setState(current => !current)
+      }
+    }, [])
 
     return (
       <>
-        {progress ? (
-          <StyledActivityContainer hasChildren={hasChildren}>
-            <Loader active size={size} />
-          </StyledActivityContainer>
-        ) : null}
-        <StyledCheckBoxContainer
+        <CheckboxContainer
           className={className}
           aria-disabled={disabled}
           data-visibility={dataVisibility}
-          data-checked={checked}
+          data-checked={state}
           data-error={!!error}
         >
-          <StyledReakitCheckbox
+          {progress ? (
+            <StyledActivityContainer hasChildren={hasChildren}>
+              <Loader active size={size} />
+            </StyledActivityContainer>
+          ) : null}
+          <CheckboxInput
+            type="checkbox"
             aria-invalid={!!error}
             aria-describedby={error ? `${computedName}-hint` : undefined}
-            aria-checked={
-              state === 'indeterminate' ? 'mixed' : (state as boolean)
-            }
-            checked={state === 'indeterminate' ? false : (state as boolean)}
+            aria-checked={state === 'indeterminate' ? 'mixed' : undefined}
+            checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
+            onKeyDown={onKeyDown}
             onFocus={onFocus}
             onBlur={onBlur}
-            onKeyDown={onKeyDown}
             disabled={disabled}
             value={value}
             name={computedName}
@@ -273,16 +260,15 @@ const Checkbox = forwardRef(
             ref={ref}
           />
           {!progress ? (
-            <StyledIcon name={icon} size={size} viewBox="0 0 24 24">
-              {state === 'indeterminate' ? (
-                <CheckboxMixedIcon />
-              ) : (
-                <CheckboxIcon />
-              )}
+            <StyledIcon size={size} viewBox="0 0 24 24">
+              <CheckboxIconContainer>
+                <CheckMixedMark x="8" y="11" rx="1" width="8" height="2" />
+                <CheckMark x="8" y="8" rx="1" width="8" height="8" />
+              </CheckboxIconContainer>
             </StyledIcon>
           ) : null}
           {children}
-        </StyledCheckBoxContainer>
+        </CheckboxContainer>
         {error ? (
           <PaddedText variant="bodySmall" as="p" color="danger">
             {error}

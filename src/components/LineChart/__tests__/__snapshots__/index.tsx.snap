@@ -745,7 +745,7 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -757,54 +757,26 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -814,49 +786,93 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -968,27 +984,26 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartSerie"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -997,7 +1012,15 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -2458,7 +2481,7 @@ exports[`LineChart renders correctly when data is async 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2470,54 +2493,26 @@ exports[`LineChart renders correctly when data is async 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2527,49 +2522,93 @@ exports[`LineChart renders correctly when data is async 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -2695,26 +2734,25 @@ exports[`LineChart renders correctly when data is async 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple1"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -2723,7 +2761,15 @@ exports[`LineChart renders correctly when data is async 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -2776,26 +2822,25 @@ exports[`LineChart renders correctly when data is async 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple2"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -2804,7 +2849,15 @@ exports[`LineChart renders correctly when data is async 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -2857,26 +2910,25 @@ exports[`LineChart renders correctly when data is async 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple3"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -2885,7 +2937,15 @@ exports[`LineChart renders correctly when data is async 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -3613,7 +3673,7 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3625,54 +3685,26 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3682,49 +3714,93 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -3836,27 +3912,26 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="false"
             data-error="false"
           >
             <input
-              aria-checked="false"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartSerie"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-blank-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -3865,7 +3940,15 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -6030,7 +6113,7 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6042,54 +6125,26 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6099,49 +6154,93 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -6253,27 +6352,26 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartSerie"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -6282,7 +6380,15 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -7743,7 +7849,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -7755,54 +7861,26 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -7812,49 +7890,93 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -7980,27 +8102,26 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple1"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -8009,7 +8130,15 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -8062,27 +8191,26 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple2"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -8091,7 +8219,15 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -8144,27 +8280,26 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartMultiple3"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -8173,7 +8308,15 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"
@@ -9831,7 +9974,7 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   margin-right: 8px;
 }
 
-.cache-122v91t-StyledCheckBoxContainer {
+.cache-104pa6-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9843,54 +9986,26 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   align-items: center;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='false'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-122v91t-StyledCheckBoxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
-  background-color: #eeeeff;
-  fill: #4f0599;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-  fill: #eeeeff;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
-  background-color: #ffe1e7;
-  fill: #dd3252;
-}
-
-.cache-122v91t-StyledCheckBoxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-  fill: #ffe1e7;
-}
-
-.cache-17x67yn-StyledReakitCheckbox {
-  position: absolute;
-  white-space: nowrap;
-  height: 24px;
-  width: 24px;
-  opacity: 0;
-  border-width: 0;
-}
-
-.cache-17x67yn-StyledReakitCheckbox+.eu28k4m3 .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m6,
+.cache-104pa6-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -9900,49 +10015,93 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   transform: scale(0);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+svg .eu28k4m5 {
+.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 {
-  fill: #4f0599;
+.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-checked='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #4f0599;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 {
-  fill: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']+.eu28k4m3 .eu28k4m6,
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='mixed']+.eu28k4m3 .eu28k4m6 {
-  stroke: #dd3252;
-}
-
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-17x67yn-StyledReakitCheckbox:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-17x67yn-StyledReakitCheckbox[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m6 {
+.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -10054,27 +10213,26 @@ exports[`LineChart renders correctly with timeline data 1`] = `
         >
           <label
             aria-disabled="false"
-            class="cache-122v91t-StyledCheckBoxContainer eu28k4m1"
+            class="cache-104pa6-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
-              aria-checked="true"
               aria-invalid="false"
               checked=""
-              class="cache-17x67yn-StyledReakitCheckbox eu28k4m2"
+              class="cache-mhe016-CheckboxInput eu28k4m2"
               name="lineChartHours"
               type="checkbox"
+              value=""
             />
             <svg
               class="cache-1m7zzqc-StyledIcon eu28k4m3"
-              name="checkbox-marked-outline"
               size="24"
               viewBox="0 0 24 24"
             >
               <g>
                 <rect
-                  class="cache-uzcbt1-InnerCheckbox eu28k4m6"
+                  class="cache-uzcbt1-InnerCheckbox eu28k4m7"
                   height="14"
                   rx="1"
                   stroke-width="2"
@@ -10083,7 +10241,15 @@ exports[`LineChart renders correctly with timeline data 1`] = `
                   y="5"
                 />
                 <rect
-                  class="cache-1nu9t2r-CheckMark eu28k4m5"
+                  class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                  height="2"
+                  rx="1"
+                  width="8"
+                  x="8"
+                  y="11"
+                />
+                <rect
+                  class="cache-1nu9t2r-CheckMark eu28k4m6"
                   height="8"
                   rx="1"
                   width="8"

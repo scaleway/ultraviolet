@@ -198,7 +198,7 @@ exports[`SwitchButton renders correctly 1`] = `
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement {
+.cache-1nknr80-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -219,58 +219,58 @@ exports[`SwitchButton renders correctly 1`] = `
   align-items: start;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement input+svg {
+.cache-1nknr80-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-w8vjw1-StyledRadio {
+.cache-drr0yu-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -280,7 +280,7 @@ exports[`SwitchButton renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-w8vjw1-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-drr0yu-RadioInput+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -290,36 +290,36 @@ exports[`SwitchButton renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-drr0yu-RadioInput:checked+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+.cache-drr0yu-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -340,7 +340,7 @@ exports[`SwitchButton renders correctly 1`] = `
   fill: #ffffff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement {
+.cache-dirs5e-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -361,54 +361,54 @@ exports[`SwitchButton renders correctly 1`] = `
   align-items: start;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement input+svg {
+.cache-dirs5e-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
@@ -425,18 +425,16 @@ exports[`SwitchButton renders correctly 1`] = `
       >
         <label
           aria-disabled="false"
-          class="ejleepd0 cache-zffp8b-StyledRadioContainer-StyledElement e1duuirp0"
+          class="ejleepd0 cache-1nknr80-RadioContainer-StyledElement e1duuirp0"
           data-checked="false"
           for="test-left"
         >
           <input
-            aria-checked="false"
             aria-disabled="false"
             aria-invalid="false"
-            class="cache-w8vjw1-StyledRadio e1duuirp1"
+            class="cache-drr0yu-RadioInput e1duuirp1"
             id="test-left"
             name="test"
-            tabindex="0"
             type="radio"
             value="left"
           />
@@ -476,19 +474,17 @@ exports[`SwitchButton renders correctly 1`] = `
       >
         <label
           aria-disabled="false"
-          class="ejleepd0 cache-1g2fzb0-StyledRadioContainer-StyledElement e1duuirp0"
+          class="ejleepd0 cache-dirs5e-RadioContainer-StyledElement e1duuirp0"
           data-checked="true"
           for="test-right"
         >
           <input
-            aria-checked="true"
             aria-disabled="false"
             aria-invalid="false"
             checked=""
-            class="cache-w8vjw1-StyledRadio e1duuirp1"
+            class="cache-drr0yu-RadioInput e1duuirp1"
             id="test-right"
             name="test"
-            tabindex="0"
             type="radio"
             value="right"
           />
@@ -628,7 +624,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement {
+.cache-1nknr80-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -649,58 +645,58 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement input+svg {
+.cache-1nknr80-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-w8vjw1-StyledRadio {
+.cache-drr0yu-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -710,7 +706,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   border-width: 0;
 }
 
-.cache-w8vjw1-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-drr0yu-RadioInput+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -720,36 +716,36 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transform: scale(0);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-drr0yu-RadioInput:checked+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+.cache-drr0yu-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -770,7 +766,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   fill: #ffffff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement {
+.cache-dirs5e-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -791,54 +787,54 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement input+svg {
+.cache-dirs5e-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
@@ -855,18 +851,16 @@ exports[`SwitchButton renders correctly with right value 1`] = `
       >
         <label
           aria-disabled="false"
-          class="ejleepd0 cache-zffp8b-StyledRadioContainer-StyledElement e1duuirp0"
+          class="ejleepd0 cache-1nknr80-RadioContainer-StyledElement e1duuirp0"
           data-checked="false"
           for="test-left"
         >
           <input
-            aria-checked="false"
             aria-disabled="false"
             aria-invalid="false"
-            class="cache-w8vjw1-StyledRadio e1duuirp1"
+            class="cache-drr0yu-RadioInput e1duuirp1"
             id="test-left"
             name="test"
-            tabindex="0"
             type="radio"
             value="left"
           />
@@ -906,19 +900,17 @@ exports[`SwitchButton renders correctly with right value 1`] = `
       >
         <label
           aria-disabled="false"
-          class="ejleepd0 cache-1g2fzb0-StyledRadioContainer-StyledElement e1duuirp0"
+          class="ejleepd0 cache-dirs5e-RadioContainer-StyledElement e1duuirp0"
           data-checked="true"
           for="test-right"
         >
           <input
-            aria-checked="true"
             aria-disabled="false"
             aria-invalid="false"
             checked=""
-            class="cache-w8vjw1-StyledRadio e1duuirp1"
+            class="cache-drr0yu-RadioInput e1duuirp1"
             id="test-right"
             name="test"
-            tabindex="0"
             type="radio"
             value="right"
           />
@@ -1058,7 +1050,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement {
+.cache-1nknr80-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1079,58 +1071,58 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: start;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-left][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1nknr80-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-zffp8b-StyledRadioContainer-StyledElement input+svg {
+.cache-1nknr80-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-w8vjw1-StyledRadio {
+.cache-drr0yu-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1140,7 +1132,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.cache-w8vjw1-StyledRadio+.e1duuirp2 .e1duuirp3 {
+.cache-drr0yu-RadioInput+.e1duuirp2 .e1duuirp3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1150,36 +1142,36 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true']+svg .e1duuirp3 {
+.cache-drr0yu-RadioInput:checked+svg .e1duuirp3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-w8vjw1-StyledRadio[aria-checked='true'][aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
+.cache-drr0yu-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.e1duuirp2 {
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']+.e1duuirp2 {
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-w8vjw1-StyledRadio:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput:focus+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-w8vjw1-StyledRadio[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
+.cache-drr0yu-RadioInput[aria-invalid='true']:focus+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
@@ -1200,7 +1192,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   fill: #ffffff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement {
+.cache-dirs5e-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1221,54 +1213,54 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: start;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='false'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right]+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement:hover[aria-disabled='false'] .e1duuirp1[id=test-right][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-checked='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-checked='true'] {
   color: #4f0599;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[data-error='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[data-error='true'] {
   color: #a6102d;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement[aria-disabled='true'] {
+.cache-dirs5e-RadioContainer-StyledElement[aria-disabled='true'] {
   color: #c4c9d6;
 }
 
-.cache-1g2fzb0-StyledRadioContainer-StyledElement input+svg {
+.cache-dirs5e-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
@@ -1288,18 +1280,16 @@ exports[`SwitchButton renders with tooltip 1`] = `
         >
           <label
             aria-disabled="false"
-            class="ejleepd0 cache-zffp8b-StyledRadioContainer-StyledElement e1duuirp0"
+            class="ejleepd0 cache-1nknr80-RadioContainer-StyledElement e1duuirp0"
             data-checked="false"
             for="test-left"
           >
             <input
-              aria-checked="false"
               aria-disabled="false"
               aria-invalid="false"
-              class="cache-w8vjw1-StyledRadio e1duuirp1"
+              class="cache-drr0yu-RadioInput e1duuirp1"
               id="test-left"
               name="test"
-              tabindex="0"
               type="radio"
               value="left"
             />
@@ -1339,19 +1329,17 @@ exports[`SwitchButton renders with tooltip 1`] = `
         >
           <label
             aria-disabled="false"
-            class="ejleepd0 cache-1g2fzb0-StyledRadioContainer-StyledElement e1duuirp0"
+            class="ejleepd0 cache-dirs5e-RadioContainer-StyledElement e1duuirp0"
             data-checked="true"
             for="test-right"
           >
             <input
-              aria-checked="true"
               aria-disabled="false"
               aria-invalid="false"
               checked=""
-              class="cache-w8vjw1-StyledRadio e1duuirp1"
+              class="cache-drr0yu-RadioInput e1duuirp1"
               id="test-right"
               name="test"
-              tabindex="0"
               type="radio"
               value="right"
             />
