@@ -29,7 +29,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 15.0.1
   '@rollup/plugin-url': 8.0.1
   '@scaleway/eslint-config-react': 3.8.1
-  '@scaleway/jest-helpers': 2.0.21
+  '@scaleway/jest-helpers': 2.0.22
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-i18n': 4.0.0
   '@scaleway/use-media': 1.2.0
@@ -166,7 +166,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 15.0.1_rollup@3.2.5
   '@rollup/plugin-url': 8.0.1_rollup@3.2.5
   '@scaleway/eslint-config-react': 3.8.1_rmayb2veg2btbq6mbmnyivgasy
-  '@scaleway/jest-helpers': 2.0.21_o6ujcdmwt6ni5mv4wdf5n6tg3y
+  '@scaleway/jest-helpers': 2.0.22_o6ujcdmwt6ni5mv4wdf5n6tg3y
   '@scaleway/use-i18n': 4.0.0_3pf3ktbrffvgnzxoo2eotyjcpi
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.5
@@ -187,7 +187,7 @@ devDependencies:
   '@storybook/client-api': 6.5.13_biqbaboplfbrettd7655fr4n2y
   '@storybook/components': 6.5.13_biqbaboplfbrettd7655fr4n2y
   '@storybook/core-events': 6.5.13
-  '@storybook/csf': 0.0.2--canary.fed52be.0
+  '@storybook/csf': 0.0.2--canary.57.a8fc7a0.0
   '@storybook/manager-webpack5': 6.5.13_5msx5wgifzd2n7nm3paor5omae
   '@storybook/mdx2-csf': 0.0.3
   '@storybook/preview-web': 6.5.13_biqbaboplfbrettd7655fr4n2y
@@ -3346,8 +3346,8 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/2.0.21_o6ujcdmwt6ni5mv4wdf5n6tg3y:
-    resolution: {integrity: sha512-oZ1+ZMnC7pcZ390OY+xGa/9M/diepHlxFyXywDBVckXBZxZwQAHBWivAztDbi/8CyzD5Ep5jg0VgGAyJyky+LQ==}
+  /@scaleway/jest-helpers/2.0.22_o6ujcdmwt6ni5mv4wdf5n6tg3y:
+    resolution: {integrity: sha512-hXd9NHhObFE7K/UVQ0pAtZyLEvhFxDJIcz/AfxRE5nx27+jm4TwmcfjjeHWz6tt4LkllUs9touliJFJkLxcACw==}
     peerDependencies:
       react: ^18.0.0 || 18
     dependencies:
@@ -4642,18 +4642,18 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@storybook/csf/0.0.2--canary.87bc651.0:
-    resolution: {integrity: sha512-ajk1Uxa+rBpFQHKrCcTmJyQBXZ5slfwHVEaKlkuFaW77it8RgbPJp/ccna3sgoi8oZ7FkkOyvv1Ve4SmwFqRqw==}
-    dependencies:
-      lodash: 4.17.21
-    dev: true
-
-  /@storybook/csf/0.0.2--canary.fed52be.0:
-    resolution: {integrity: sha512-rNPVKjcWYHX5fsp1NWRt/UR2zLiLuqw+2XAmYnedeWMgNlA+KZBDBG6fA8Zjcow88EdRXLIpgcaG6sEBn4W9qQ==}
+  /@storybook/csf/0.0.2--canary.57.a8fc7a0.0:
+    resolution: {integrity: sha512-ay4qnB8jIBDFut1p9QSyeQUyXwMhM4y4MaDbq/vktzdisSQ+PBWkuqkZN1RMGvB5HZAJiYdzODIGw71QEd4/GQ==}
     dependencies:
       expect-type: 0.14.2
       lodash: 4.17.21
       type-fest: 2.19.0
+    dev: true
+
+  /@storybook/csf/0.0.2--canary.87bc651.0:
+    resolution: {integrity: sha512-ajk1Uxa+rBpFQHKrCcTmJyQBXZ5slfwHVEaKlkuFaW77it8RgbPJp/ccna3sgoi8oZ7FkkOyvv1Ve4SmwFqRqw==}
+    dependencies:
+      lodash: 4.17.21
     dev: true
 
   /@storybook/docs-tools/6.5.13_biqbaboplfbrettd7655fr4n2y:
