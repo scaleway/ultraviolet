@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react'
+import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ComponentProps } from 'react'
 import Tooltip from '..'
@@ -64,7 +64,9 @@ describe('Tooltip', () => {
     await act(async () => {
       await userEvent.unhover(input)
     })
-    expect(tooltipPortal).not.toBeVisible()
+    await waitFor(() => {
+      expect(tooltipPortal).not.toBeVisible()
+    })
   })
 
   test(`should display tooltip on hover and hide when exit and hover back before animation ends`, async () => {
