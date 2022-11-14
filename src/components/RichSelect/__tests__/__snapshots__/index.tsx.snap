@@ -2208,6 +2208,7 @@ exports[`RichSelect renders correctly multi 1`] = `
       <input
         name="multi"
         type="hidden"
+        value=""
       />
     </div>
     <div
@@ -2894,6 +2895,16 @@ exports[`RichSelect renders correctly required 1`] = `
   min-height: 8px;
 }
 
+.cache-5kkxb2-requiredInput-RequiredInput {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -2954,6 +2965,7 @@ exports[`RichSelect renders correctly required 1`] = `
             aria-describedby="react-select-6-placeholder"
             aria-expanded="false"
             aria-haspopup="true"
+            aria-required="true"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -3002,8 +3014,10 @@ exports[`RichSelect renders correctly required 1`] = `
       </div>
     </div>
     <input
+      class="cache-5kkxb2-requiredInput-RequiredInput"
       name="required"
-      type="hidden"
+      required=""
+      tabindex="-1"
       value=""
     />
     <div
