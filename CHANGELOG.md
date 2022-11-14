@@ -1,3 +1,19 @@
+## [0.205.0](https://github.com/scaleway/scaleway-ui/compare/v0.204.3...v0.205.0) (2022-11-14)
+
+
+### :package: Chore
+
+* **devdeps:** pin dependency @jest/types to 29.3.1 ([#2026](https://github.com/scaleway/scaleway-ui/issues/2026)) ([45c1df1](https://github.com/scaleway/scaleway-ui/commit/45c1df1564f998060d91b69fefb54b7f77447656))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.8.1 ([#1977](https://github.com/scaleway/scaleway-ui/issues/1977)) ([f463a04](https://github.com/scaleway/scaleway-ui/commit/f463a049e5871dec187b121a242f9dbceea9135c))
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.22 ([#2031](https://github.com/scaleway/scaleway-ui/issues/2031)) ([2277d07](https://github.com/scaleway/scaleway-ui/commit/2277d0798659b4e0c39e93cd6c0d8b990b79f4fe))
+* **devdeps:** update node.js to v18.12 ([#2027](https://github.com/scaleway/scaleway-ui/issues/2027)) ([86dfa5f](https://github.com/scaleway/scaleway-ui/commit/86dfa5f880b1e83de23b7006e2c77054dd8a9fbe))
+* **devDeps:** upgrade deps ([#2025](https://github.com/scaleway/scaleway-ui/issues/2025)) ([2743a8e](https://github.com/scaleway/scaleway-ui/commit/2743a8ee98954b086467fd8f9eee84560cbdce1c))
+
+
+### :gear: Features
+
+* **tooltip:** nested scrolls, replaced transition by animation and cleaned code ([#2022](https://github.com/scaleway/scaleway-ui/issues/2022)) ([cab3e01](https://github.com/scaleway/scaleway-ui/commit/cab3e0143dbd85e3271a6340e502655e7269f5a8))
+
 ## [0.204.3](https://github.com/scaleway/scaleway-ui/compare/v0.204.2...v0.204.3) (2022-11-10)
 
 
