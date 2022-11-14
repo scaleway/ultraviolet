@@ -1,3 +1,10 @@
+## [0.205.1](https://github.com/scaleway/scaleway-ui/compare/v0.205.0...v0.205.1) (2022-11-14)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.6.0 ([#2028](https://github.com/scaleway/scaleway-ui/issues/2028)) ([a6896d3](https://github.com/scaleway/scaleway-ui/commit/a6896d316a84ee0793f54dbf11a2c18f080f10aa))
+
 ## [0.205.0](https://github.com/scaleway/scaleway-ui/compare/v0.204.3...v0.205.0) (2022-11-14)
 
 
