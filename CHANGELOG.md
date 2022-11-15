@@ -1,3 +1,10 @@
+## [0.205.2](https://github.com/scaleway/scaleway-ui/compare/v0.205.1...v0.205.2) (2022-11-15)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.1.1 ([#2029](https://github.com/scaleway/scaleway-ui/issues/2029)) ([a579e8e](https://github.com/scaleway/scaleway-ui/commit/a579e8e72d1ccb4916e528b2c2054d70b2238636))
+
 ## [0.205.1](https://github.com/scaleway/scaleway-ui/compare/v0.205.0...v0.205.1) (2022-11-14)
 
 
