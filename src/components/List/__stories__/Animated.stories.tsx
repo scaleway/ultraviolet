@@ -33,7 +33,6 @@ export const Animated = () => {
             setDisplay(true)
           }, 50)
         }}
-        mt={1}
       >
         Trigger
       </Button>

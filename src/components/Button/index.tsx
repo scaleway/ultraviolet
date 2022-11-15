@@ -2,18 +2,16 @@ import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import {
+  AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   ComponentProps,
   ElementType,
-  FocusEventHandler,
-  MouseEventHandler,
   ReactNode,
   Ref,
   forwardRef,
   isValidElement,
   useMemo,
 } from 'react'
-import Box, { BoxProps } from '../Box'
 import Icon from '../Icon'
 import Link from '../Link'
 import Loader from '../Loader'
@@ -30,6 +28,8 @@ const StyledContent = styled.div`
 
 // It will remove animation between Link and left icon that is implemented into Link component
 const StyledLink = styled(Link)`
+  gap: 0;
+
   &:hover,
   &:focus {
     gap: ${({ theme }) => theme.space['1']};
@@ -277,7 +277,6 @@ type StyledButtonProps = {
   action?: boolean | 'rounded'
   disabled?: boolean
   extend?: boolean
-  href?: string
   /** Name of the icon. All [icons](/?path=/docs/components-icon) are supported. */
   icon?: string | JSX.Element
   iconPosition?: 'left' | 'right'
@@ -287,16 +286,16 @@ type StyledButtonProps = {
   size: ButtonSize
   tooltip?: string
   tooltipBaseId?: string
-  type?: 'button' | 'reset' | 'submit'
   variant: ButtonVariant
-  onFocus?: FocusEventHandler
-  onMouseEnter?: MouseEventHandler
-} & BoxProps &
-  ButtonHTMLAttributes<HTMLButtonElement>
+} & ButtonHTMLAttributes<HTMLButtonElement> &
+  Pick<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    'href' | 'target' | 'download' | 'rel'
+  >
 
-const StyledButton = styled(Box, {
+const StyledButton = styled('button', {
   shouldForwardProp: prop =>
-    !['action', 'variant', 'extend', 'icon', 'download'].includes(prop),
+    !['action', 'variant', 'extend', 'icon', 'download', 'as'].includes(prop),
 })<StyledButtonProps>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.default};
@@ -401,23 +400,20 @@ const FwdButton = ({
   size = 'large',
   tooltip,
   tooltipBaseId,
-  type: elementType = 'button',
+  type = 'button',
   variant = 'primary',
-  as: asProp,
   ...props
 }: ButtonProps) => {
   const as = useMemo(() => {
     if (disabled) return 'button'
-    if (asProp) return asProp
     if (href || download) return StyledLink
 
     return 'button'
-  }, [disabled, href, download, asProp])
+  }, [disabled, href, download])
 
   const displayProgressOnly = !children
 
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
-  const type = as === 'button' ? elementType : undefined
 
   return (
     <Tooltip id={tooltipBaseId} text={tooltip}>
@@ -425,7 +421,7 @@ const FwdButton = ({
         {...props}
         href={href}
         download={download}
-        ref={innerRef}
+        ref={innerRef as Ref<HTMLButtonElement>}
         as={as}
         disabled={as === 'button' && disabled}
         aria-disabled={disabled}
