@@ -37,6 +37,22 @@ describe('RichSelect', () => {
       },
     ))
 
+  test('renders correctly with emptyState', () =>
+    shouldMatchEmotionSnapshot(
+      <RichSelect
+        inputId="test"
+        labelId="test-label"
+        name="emptyState"
+        emptyState={() => 'test'}
+      />,
+      {
+        transform: async node => {
+          const input = node.getByRole('combobox')
+          await userEvent.click(input)
+        },
+      },
+    ))
+
   test('renders correctly with custom styles', () =>
     shouldMatchEmotionSnapshot(
       <RichSelect
