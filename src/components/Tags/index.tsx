@@ -101,7 +101,7 @@ type TagsProps = {
   id?: string
   manualInput?: boolean
   name?: string
-  onChange?: (tags: string[]) => void
+  onChange?: (tags: string[]) => void | Promise<void>
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   tags?: TagsProp
@@ -133,12 +133,15 @@ const Tags = ({
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const dispatchOnChange = (newState: TagsProp) => {
+  const dispatchOnChange = async (newState: TagsProp) => {
     const changes = newState.map(tag =>
       typeof tag === 'object' ? tag?.label : tag,
     )
 
-    onChange?.(changes)
+    if (onChange) {
+      await onChange(changes)
+      inputRef.current?.focus()
+    }
   }
 
   const handleContainerClick = () => {
@@ -160,7 +163,7 @@ const Tags = ({
       setStatus({ [newTags[newTags.length - 1].index]: STATUS.LOADING })
     }
     try {
-      dispatchOnChange(newTags)
+      dispatchOnChange(newTags).catch(null)
       setStatus({ [newTags[newTags.length - 1].index]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
@@ -174,7 +177,7 @@ const Tags = ({
     const newTags = [...tagsState]
     newTags.splice(findIndex, 1)
     try {
-      dispatchOnChange(newTags)
+      dispatchOnChange(newTags).catch(null)
       setTags(newTags)
       setStatus({ [tagIndex]: STATUS.IDLE })
     } catch (error) {
@@ -215,7 +218,7 @@ const Tags = ({
     setTags(newTags)
     setStatus({ [newTags.length - 1]: STATUS.LOADING })
     try {
-      dispatchOnChange(newTags)
+      dispatchOnChange(newTags).catch(null)
       setStatus({ [newTags.length - 1]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
