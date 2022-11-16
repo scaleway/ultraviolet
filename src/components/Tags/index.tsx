@@ -133,14 +133,19 @@ const Tags = ({
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const dispatchOnChange = async (newState: TagsProp) => {
+  const dispatchOnChange = (newState: TagsProp) => {
     const changes = newState.map(tag =>
       typeof tag === 'object' ? tag?.label : tag,
     )
 
-    if (onChange) {
-      await onChange(changes)
-      inputRef.current?.focus()
+    const promise = onChange?.(changes)
+
+    if (promise instanceof Promise) {
+      promise
+        .then(() => {
+          inputRef.current?.focus()
+        })
+        .catch(null)
     }
   }
 
@@ -163,7 +168,7 @@ const Tags = ({
       setStatus({ [newTags[newTags.length - 1].index]: STATUS.LOADING })
     }
     try {
-      dispatchOnChange(newTags).catch(null)
+      dispatchOnChange(newTags)
       setStatus({ [newTags[newTags.length - 1].index]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
@@ -177,7 +182,7 @@ const Tags = ({
     const newTags = [...tagsState]
     newTags.splice(findIndex, 1)
     try {
-      dispatchOnChange(newTags).catch(null)
+      dispatchOnChange(newTags)
       setTags(newTags)
       setStatus({ [tagIndex]: STATUS.IDLE })
     } catch (error) {
@@ -218,7 +223,7 @@ const Tags = ({
     setTags(newTags)
     setStatus({ [newTags.length - 1]: STATUS.LOADING })
     try {
-      dispatchOnChange(newTags).catch(null)
+      dispatchOnChange(newTags)
       setStatus({ [newTags.length - 1]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
