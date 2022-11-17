@@ -1,3 +1,10 @@
+## [0.205.4](https://github.com/scaleway/scaleway-ui/compare/v0.205.3...v0.205.4) (2022-11-17)
+
+
+### :bug: Bug Fixes
+
+* **CopyButton:** add noBorder to not forwarded props list ([#2037](https://github.com/scaleway/scaleway-ui/issues/2037)) ([d50d58f](https://github.com/scaleway/scaleway-ui/commit/d50d58f8e504e1c08afb016a2b2eb73037fd2628))
+
 ## [0.205.3](https://github.com/scaleway/scaleway-ui/compare/v0.205.2...v0.205.3) (2022-11-16)
 
 
