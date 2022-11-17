@@ -15,7 +15,7 @@ export const SIZES = {
  * TODO: replace when buttonV2 will be available
  */
 const StyledButton = styled('button', {
-  shouldForwardProp: prop => !['size', 'variant'].includes(prop),
+  shouldForwardProp: prop => !['size', 'variant', 'noBorder'].includes(prop),
 })<{ size: number; variant: Color; noBorder?: boolean }>`
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
