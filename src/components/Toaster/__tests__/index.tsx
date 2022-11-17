@@ -24,7 +24,7 @@ describe('Toaster', () => {
           toastId: 'error',
         })
 
-        act(() => {
+        await act(() => {
           jest.runAllTimers()
         })
 
