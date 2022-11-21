@@ -4,6 +4,9 @@ import RichSelect, { SelectOption } from '..'
 import { Badge, Button, Loader } from '../..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
+import Icon from '../../Icon'
+import Stack from '../../Stack'
+import Text from '../../Text'
 
 export default {
   component: RichSelect,
@@ -365,6 +368,40 @@ Description.parameters = {
     description: {
       story:
         'You can add a description to each of your options. There is two type of description `description` and `inlineDescription`.',
+    },
+  },
+}
+
+export const EmptyState = Template.bind({})
+EmptyState.decorators = [
+  () => (
+    <RichSelect
+      name="emptyState"
+      emptyState={() => (
+        <Stack justifyContent="center" alignItems="center" gap={1}>
+          <Icon
+            color="neutral"
+            name="information-outline"
+            size={32}
+            prominence="strong"
+          />
+          <Text as="p" variant="bodyStrong">
+            There is currently no option available
+          </Text>
+          <Text as="small" variant="caption">
+            Please reload or try again later
+          </Text>
+        </Stack>
+      )}
+    />
+  ),
+]
+
+EmptyState.parameters = {
+  docs: {
+    description: {
+      story:
+        'Empty state will be shown when there is no option available. You can customize it by passing a function to the `emptyState` prop.',
     },
   },
 }

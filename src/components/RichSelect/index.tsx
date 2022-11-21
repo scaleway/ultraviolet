@@ -1,6 +1,7 @@
 import { CSSObject, Theme, css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import {
+  ComponentProps,
   ForwardRefExoticComponent,
   ForwardedRef,
   ReactElement,
@@ -649,6 +650,7 @@ type RichSelectProps = SelectProps &
      */
     customComponents?: SelectProps['components']
     children: ReactNode
+    emptyState?: ComponentProps<Select>['noOptionsMessage']
   }
 
 const defaultCustomStyle = () => ({})
@@ -680,6 +682,7 @@ const RichSelect = ({
   time,
   isLoading,
   required,
+  emptyState,
 }: Partial<RichSelectProps>) => {
   const id = useId()
   const inputId = inputIdProp ?? id
@@ -753,6 +756,7 @@ const RichSelect = ({
       time={time}
       isLoading={isLoading}
       required={required}
+      noOptionsMessage={emptyState}
     />
   )
 }
