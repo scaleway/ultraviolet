@@ -524,7 +524,7 @@ const TextBox = forwardRef<
     const inputSize = size
 
     const getRightComponent = () => {
-      if (isPassToggleable && !generated)
+      if (isPassToggleable && !generated) {
         return (
           <Button
             action
@@ -535,7 +535,8 @@ const TextBox = forwardRef<
             icon={passwordVisible ? 'eye-off' : 'eye'}
           />
         )
-      if (random)
+      }
+      if (random) {
         return (
           <Button
             action
@@ -547,7 +548,8 @@ const TextBox = forwardRef<
             variant="transparent"
           />
         )
-      if (valid === false || valid === true)
+      }
+      if (valid === false || valid === true) {
         return (
           <Icon
             name={!valid ? 'close' : 'check'}
@@ -555,7 +557,8 @@ const TextBox = forwardRef<
             size={20}
           />
         )
-      if (unit)
+      }
+      if (unit) {
         return (
           <>
             <StyledSeparator direction="vertical" />
@@ -572,6 +575,7 @@ const TextBox = forwardRef<
             </UnitLabel>
           </>
         )
+      }
       if (required) return <Icon name="asterisk" color="danger" size={10} />
 
       return null

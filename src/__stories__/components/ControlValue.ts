@@ -21,8 +21,9 @@ const getNewValue = <T>(
     if (
       valueOrEvent.currentTarget.type === 'checkbox' ||
       valueOrEvent.currentTarget.type === 'radio'
-    )
+    ) {
       return valueOrEvent.currentTarget.checked as unknown as T
+    }
 
     return valueOrEvent.currentTarget.value as unknown as T
   }
