@@ -1,3 +1,15 @@
+## [0.207.0](https://github.com/scaleway/scaleway-ui/compare/v0.206.0...v0.207.0) (2022-11-21)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency typescript to v4.9.3 ([#2041](https://github.com/scaleway/scaleway-ui/issues/2041)) ([ae68f43](https://github.com/scaleway/scaleway-ui/commit/ae68f4332b775e9bd4b1dac5235b448fe48de95a))
+
+
+### :gear: Features
+
+* **RichSelect:** allow customization of empty state ([#2035](https://github.com/scaleway/scaleway-ui/issues/2035)) ([5f6554a](https://github.com/scaleway/scaleway-ui/commit/5f6554aba2db9316028618b87980852a495f026f))
+
 ## [0.206.0](https://github.com/scaleway/scaleway-ui/compare/v0.205.4...v0.206.0) (2022-11-21)
 
 
