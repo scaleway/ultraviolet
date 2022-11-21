@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stack should render correctly with alighCenter 1`] = `
+exports[`Stack should render correctly with alignCenter 1`] = `
 <DocumentFragment>
-  .cache-1r9wymk-Stack {
+  .cache-1i7e9sg-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,10 +19,14 @@ exports[`Stack should render correctly with alighCenter 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <div
-    class="cache-1r9wymk-Stack e1sgck4o0"
+    class="cache-1i7e9sg-Stack e1sgck4o0"
   >
     <div>
       first child
@@ -36,7 +40,7 @@ exports[`Stack should render correctly with alighCenter 1`] = `
 
 exports[`Stack should render correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-5xxpzm-Stack {
+  .cache-11tw670-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,10 +57,14 @@ exports[`Stack should render correctly with default props 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <div
-    class="cache-5xxpzm-Stack e1sgck4o0"
+    class="cache-11tw670-Stack e1sgck4o0"
   >
     <div>
       first child
@@ -73,7 +81,7 @@ exports[`Stack should render correctly with default props 1`] = `
 
 exports[`Stack should render correctly with row direction 1`] = `
 <DocumentFragment>
-  .cache-6gu0z8-Stack {
+  .cache-1jx9yod-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,10 +98,14 @@ exports[`Stack should render correctly with row direction 1`] = `
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
   justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <div
-    class="cache-6gu0z8-Stack e1sgck4o0"
+    class="cache-1jx9yod-Stack e1sgck4o0"
   >
     <div>
       first child
@@ -103,6 +115,83 @@ exports[`Stack should render correctly with row direction 1`] = `
     </div>
     <div>
       third child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stack should render correctly with wrap as boolean 1`] = `
+<DocumentFragment>
+  .cache-1hg4n6q-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+    class="cache-1hg4n6q-Stack e1sgck4o0"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stack should render correctly with wrap as string 1`] = `
+<DocumentFragment>
+  .cache-tao90g-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+<div
+    class="cache-tao90g-Stack e1sgck4o0"
+    wrap="wrap-reverse"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
     </div>
   </div>
 </DocumentFragment>
