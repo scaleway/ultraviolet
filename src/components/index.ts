@@ -1,4 +1,4 @@
-export * from './Grid'
+export { Grid, Row, Col } from './Grid'
 export { default as ActionBar } from './ActionBar'
 export { default as Alert } from './Alert'
 export { default as Avatar } from './Avatar'

@@ -219,7 +219,7 @@ const Tooltip = ({
    * Will render children conditionally if children is a function or not.
    */
   const renderChildren = useCallback(() => {
-    if (typeof children === 'function')
+    if (typeof children === 'function') {
       return children({
         onBlur: onMouseEvent(false),
         onFocus: onMouseEvent(true),
@@ -227,6 +227,7 @@ const Tooltip = ({
         onMouseLeave: onMouseEvent(false),
         ref: childrenRef,
       })
+    }
 
     return (
       <div

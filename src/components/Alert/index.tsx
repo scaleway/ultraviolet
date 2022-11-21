@@ -30,21 +30,24 @@ const alertStyles = ({
   const sentiment =
     theme.colors[alertTypeToColorMapping[type]] || theme.colors.danger
 
-  if (variant === 'filled')
+  if (variant === 'filled') {
     return css`
       background-color: ${sentiment.backgroundStrong};
       color: ${sentiment.textStrong};
     `
-  if (variant === 'transparent')
+  }
+  if (variant === 'transparent') {
     return css`
       background-color: transparent;
       color: ${sentiment.textWeak};
     `
-  if (variant === 'outlined')
+  }
+  if (variant === 'outlined') {
     return css`
       border: 1px solid ${sentiment.borderWeak};
       color: ${sentiment.textWeak};
     `
+  }
 
   return css`
     background-color: ${sentiment.background};

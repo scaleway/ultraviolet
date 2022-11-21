@@ -18,7 +18,7 @@ const StyledContainer = styled('span', {
   width: fit-content;
   height: ${({ theme }) => theme.space['3']};
   ${({ variant, theme }) => {
-    if (variant === 'disabled')
+    if (variant === 'disabled') {
       return `
       color: ${theme.colors.neutral.textDisabled};
       background: ${theme.colors.neutral.backgroundDisabled};
@@ -26,12 +26,14 @@ const StyledContainer = styled('span', {
       cursor: not-allowed
 
     `
-    if (variant === 'neutral')
+    }
+    if (variant === 'neutral') {
       return `
       color: ${theme.colors.neutral.text};
       background: ${theme.colors.neutral.background};
       border: solid 1px ${theme.colors.neutral.border};
     `
+    }
 
     return `
       color: ${theme.colors[variant].text};
