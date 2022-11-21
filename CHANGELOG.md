@@ -1,3 +1,10 @@
+## [0.208.0](https://github.com/scaleway/scaleway-ui/compare/v0.207.0...v0.208.0) (2022-11-21)
+
+
+### :gear: Features
+
+* **Icon:** add view icon ([#2044](https://github.com/scaleway/scaleway-ui/issues/2044)) ([01c706d](https://github.com/scaleway/scaleway-ui/commit/01c706d0759a7fe3bc707b070494ad11f068f698))
+
 ## [0.207.0](https://github.com/scaleway/scaleway-ui/compare/v0.206.0...v0.207.0) (2022-11-21)
 
 
