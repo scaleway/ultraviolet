@@ -20,9 +20,25 @@ describe('Stack', () => {
       </Stack>,
     ))
 
-  test(`should render correctly with alighCenter`, () =>
+  test(`should render correctly with alignCenter`, () =>
     shouldMatchEmotionSnapshot(
       <Stack direction="row" alignItems="center">
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
+
+  test(`should render correctly with wrap as boolean`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack direction="row" wrap>
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
+
+  test(`should render correctly with wrap as string`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack direction="row" wrap="wrap-reverse">
         <div>first child</div>
         <div>second child</div>
       </Stack>,
