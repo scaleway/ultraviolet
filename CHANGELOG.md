@@ -1,3 +1,22 @@
+## [0.206.0](https://github.com/scaleway/scaleway-ui/compare/v0.205.4...v0.206.0) (2022-11-21)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.8.3 ([#2030](https://github.com/scaleway/scaleway-ui/issues/2030)) ([88c25f2](https://github.com/scaleway/scaleway-ui/commit/88c25f23d6b0cfa2ead66c0b97a491917987d812))
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.8.4 ([#2039](https://github.com/scaleway/scaleway-ui/issues/2039)) ([5a98152](https://github.com/scaleway/scaleway-ui/commit/5a981525e2b8228da4142a8f24411d935fdeb7e2))
+* **devdeps:** update dependency jest-axe to v7 ([#2036](https://github.com/scaleway/scaleway-ui/issues/2036)) ([60fcabc](https://github.com/scaleway/scaleway-ui/commit/60fcabcd442bf306c402b66071007850fa3a5952))
+
+
+### :zap: Refactor
+
+* **Button:** remove box ([#2032](https://github.com/scaleway/scaleway-ui/issues/2032)) ([0d60aa9](https://github.com/scaleway/scaleway-ui/commit/0d60aa90c4e802f19b639d9a7d265047def6ca45))
+
+
+### :gear: Features
+
+* **Stack:** add wrap props ([#2042](https://github.com/scaleway/scaleway-ui/issues/2042)) ([dedde65](https://github.com/scaleway/scaleway-ui/commit/dedde650c8ee82cbce21ba49c892f270abe403d7))
+
 ## [0.205.4](https://github.com/scaleway/scaleway-ui/compare/v0.205.3...v0.205.4) (2022-11-17)
 
 
