@@ -113,6 +113,10 @@ export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
       color: ${theme.colors.neutral.text};
     }
 
+    a[id='back-to-chromatic'] {
+      display: none;
+    }
+
     :root {
       color-scheme: ${mode};
     }
