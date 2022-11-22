@@ -1,3 +1,15 @@
+## [0.208.2](https://github.com/scaleway/scaleway-ui/compare/v0.208.1...v0.208.2) (2022-11-22)
+
+
+### :zap: Refactor
+
+* stories of Markdown, Modal, NavigationStepper ([#2038](https://github.com/scaleway/scaleway-ui/issues/2038)) ([6914d1e](https://github.com/scaleway/scaleway-ui/commit/6914d1e80c89102ef890ca9b58d1c3d33cb17ac9))
+
+
+### :bug: Bug Fixes
+
+* **Snippet:** no prefix as default value ([#2046](https://github.com/scaleway/scaleway-ui/issues/2046)) ([3bfab7e](https://github.com/scaleway/scaleway-ui/commit/3bfab7ef7d476f878721fe2bb54642e95b83268c))
+
 ## [0.208.1](https://github.com/scaleway/scaleway-ui/compare/v0.208.0...v0.208.1) (2022-11-22)
 
 
