@@ -1,0 +1,25 @@
+import Table from '../components/Table';
+import {
+  Meta,
+} from '@storybook/addon-docs'
+import * as components from '../components'
+
+console.log(components)
+
+<Meta title="Components State"/>
+
+<Table>
+  <Table.Head>
+    <Table.Row>
+      <Table.HeadCell>Component Name</Table.HeadCell>
+      <Table.HeadCell>Component State</Table.HeadCell>
+    </Table.Row>
+  </Table.Head>
+  <Table.Body>
+    <Table.Row>
+      <Table.BodyCell>Test</Table.BodyCell>
+      <Table.BodyCell>is Okay</Table.BodyCell>
+    </Table.Row>
+  </Table.Body>
+</Table>
+
