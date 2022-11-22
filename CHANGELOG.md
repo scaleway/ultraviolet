@@ -1,3 +1,11 @@
+## [0.208.1](https://github.com/scaleway/scaleway-ui/compare/v0.208.0...v0.208.1) (2022-11-22)
+
+
+### :bug: Bug Fixes
+
+* add export of snippet ([#2045](https://github.com/scaleway/scaleway-ui/issues/2045)) ([5adffc6](https://github.com/scaleway/scaleway-ui/commit/5adffc6b4358640cd17de7acab1cf4639ec910b3))
+* **Tags:** focus input after onChange ([#2034](https://github.com/scaleway/scaleway-ui/issues/2034)) ([98527d6](https://github.com/scaleway/scaleway-ui/commit/98527d680899422a5987ae10f5d43f474772bd44))
+
 ## [0.208.0](https://github.com/scaleway/scaleway-ui/compare/v0.207.0...v0.208.0) (2022-11-21)
 
 
