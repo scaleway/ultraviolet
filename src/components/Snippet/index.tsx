@@ -52,16 +52,20 @@ const StyledSpan = styled('span', {
         : `padding-right: ${theme.space['8']}`};
   }
 
-  &:before {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
-    width: ${({ prefix }) => (prefix === 'lines' ? '35px' : '')};
-    display: inline-flex;
-    justify-content: flex-end;
-    counter-increment: section;
-    content: ${({ prefix }) =>
-      prefix === 'lines' ? 'counter(section)' : "'$'"};
-    padding-right: ${({ theme }) => theme.space['1']};
-  }
+  ${({ prefix, theme }) =>
+    prefix
+      ? `
+    &:before {
+      color: ${theme.colors.neutral.textWeak};
+      width: ${prefix === 'lines' ? '35px' : ''};
+      display: inline-flex;
+      justify-content: flex-end;
+      counter-increment: section;
+      content: ${prefix === 'lines' ? 'counter(section)' : "'$'"};
+      padding-right: ${theme.space['1']};
+    }
+  `
+      : null}
 `
 
 const Container = styled('div', {
