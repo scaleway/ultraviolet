@@ -1,4 +1,4 @@
-import { fireEvent , waitFor } from '@testing-library/react'
+import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Tags from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
@@ -239,6 +239,32 @@ describe('Tags', () => {
           fireEvent.paste(input, {
             clipboardData: { getData: () => 'test' },
           })
+        },
+      },
+    ))
+  test('focus tag after onChange', () =>
+    shouldMatchEmotionSnapshot(
+      <Tags
+        id="test"
+        onChange={async () =>
+          new Promise(resolve => {
+            setTimeout(resolve, 1000)
+          })
+        }
+        onChangeError={e => e}
+        name="focus"
+        tags={['hello', 'world']}
+      />,
+      {
+        transform: async ({ getByDisplayValue }) => {
+          const input = getByDisplayValue('') as HTMLInputElement
+          const focus = jest.fn()
+          input.focus = focus
+
+          await userEvent.type(input, 'test{enter}')
+          await waitFor(() => expect(input.value).toBe(''))
+
+          expect(focus).toHaveBeenCalled()
         },
       },
     ))
