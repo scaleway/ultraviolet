@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import Notice from '..'
 
 export default {
@@ -12,10 +11,6 @@ export default {
     },
   },
   title: 'Components/Data Display/Notice',
-} as Meta
+} as ComponentMeta<typeof Notice>
 
-const Template: Story<ComponentProps<typeof Notice>> = args => (
-  <Notice {...args}>This is a notice</Notice>
-)
-
-export const Default = Template.bind({})
+export { Playground } from './Playground.stories'
