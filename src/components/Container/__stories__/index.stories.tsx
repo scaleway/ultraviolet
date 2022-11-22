@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/react'
-import ContainerV2 from '..'
+import Container from '..'
 
 export default {
-  component: ContainerV2,
-  title: 'Components/Container/ContainerV2',
+  component: Container,
+  title: 'Components/Container/Container',
 } as Meta
 
 export { Playground } from './Playground.stories'
