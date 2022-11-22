@@ -11,7 +11,6 @@ export {
   Button,
   Checkbox,
   Container,
-  ContainerV2,
   Stepper,
   DateInput,
   Description,

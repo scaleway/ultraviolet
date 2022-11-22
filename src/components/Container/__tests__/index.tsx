@@ -1,28 +1,28 @@
-import Container from '..'
+import ContainerV2 from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 
-describe('Container', () => {
+describe('ContainerV2', () => {
   test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(<Container title="Title">Hello</Container>))
+    shouldMatchEmotionSnapshot(<ContainerV2 title="Title">Hello</ContainerV2>))
 
   test('renders correctly on edition mode', () =>
     shouldMatchEmotionSnapshot(
-      <Container title="Title" edition>
+      <ContainerV2 title="Title" edition>
         Hello
-      </Container>,
+      </ContainerV2>,
     ))
 
   test('renders correctly with small variant', () =>
     shouldMatchEmotionSnapshot(
-      <Container title="Title" small>
+      <ContainerV2 title="Title" small>
         Hello
-      </Container>,
+      </ContainerV2>,
     ))
 
   test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Container title="Title" disabled>
+      <ContainerV2 title="Title" disabled>
         Hello
-      </Container>,
+      </ContainerV2>,
     ))
 })
