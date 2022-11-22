@@ -52,6 +52,7 @@ export {
   Status,
   StealthCopiable,
   StepList,
+  Snippet,
   Toggle,
   SwitchButton,
   Tabs,
