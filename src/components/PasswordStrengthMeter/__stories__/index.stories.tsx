@@ -1,9 +1,5 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
-import zxcvbn from 'zxcvbn'
+import { ComponentMeta } from '@storybook/react'
 import PasswordStrengthMeter from '..'
-import { colors } from '../../../theme'
-import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
 
 export default {
   component: PasswordStrengthMeter,
@@ -15,36 +11,7 @@ export default {
     },
   },
   title: 'Components/Data Entry/PasswordStrengthMeter',
-} as Meta
+} as ComponentMeta<typeof PasswordStrengthMeter>
 
-const Template: Story<
-  Omit<ComponentProps<typeof PasswordStrengthMeter>, 'title' | 'strength'>
-> = args => (
-  <UncontrolledPasswordStrengthMeter
-    name="basic"
-    estimate={zxcvbn}
-    title="Password Strength"
-    strength={[
-      { color: colors.danger.text, t: 'veryWeak' },
-      { color: colors.warning.text, t: 'weak' },
-      { color: colors.warning.text, t: 'medium' },
-      { color: colors.success.text, t: 'strong' },
-      { color: colors.success.text, t: 'veryStrong' },
-    ]}
-    {...args}
-  />
-)
-
-export const Default = Template.bind({})
-
-export const UserInputs = Template.bind({})
-UserInputs.parameters = {
-  docs: {
-    storyDescription: `__userInputs__ properties can be used to specify which word shouldn't be used for a password. That way you can force user to avoid using sensitive data such as: their email, login, name, etc.
-
-In this example try to type __thisisalongpassword__, the score should be really low as the word has been "banned" using __userInputs__ properties.`,
-  },
-}
-UserInputs.args = {
-  userInputs: ['thisisalongpassword'],
-}
+export { Playground } from './Playground.stories'
+export { UserInputs } from './UserInputs.stories'
