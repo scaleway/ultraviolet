@@ -25,5 +25,4 @@ pnpm build
 # Test
 pnpm test:unit
 `,
-  prefix: 'lines',
 }
