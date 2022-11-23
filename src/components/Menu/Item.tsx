@@ -1,5 +1,5 @@
 import { Theme, css } from '@emotion/react'
-import { ComponentProps } from 'react'
+import { ComponentProps, Ref, forwardRef } from 'react'
 import Button from '../Button'
 
 const variantStyle = {
@@ -83,29 +83,35 @@ type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
   variant?: VariantItem
 }
 
-const Item = ({
-  borderless = false,
-  disabled = false,
-  onClick,
-  variant,
-  href,
-  ...props
-}: ItemProps) => (
-  <Button
-    variant="transparent"
-    role="menuitem"
-    disabled={disabled}
-    onClick={onClick}
-    href={href}
-    as={href ? 'a' : undefined}
-    {...props}
-    css={[
-      styles.item,
-      variant && variantStyle[variant],
-      disabled && styles.disabled,
-      borderless && styles.borderless,
-    ]}
-  />
+const Item = forwardRef(
+  (
+    {
+      borderless = false,
+      disabled = false,
+      onClick,
+      variant,
+      href,
+      ...props
+    }: ItemProps,
+    ref: Ref<HTMLButtonElement>,
+  ) => (
+    <Button
+      ref={ref}
+      variant="transparent"
+      role="menuitem"
+      disabled={disabled}
+      onClick={onClick}
+      href={href}
+      as={href ? 'a' : undefined}
+      {...props}
+      css={[
+        styles.item,
+        variant && variantStyle[variant],
+        disabled && styles.disabled,
+        borderless && styles.borderless,
+      ]}
+    />
+  ),
 )
 
 export default Item
