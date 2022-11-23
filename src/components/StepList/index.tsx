@@ -6,15 +6,18 @@ export const Steps = styled.ul`
   list-style: none;
   padding-left: ${({ theme }) => theme.space['2']};
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space['3']};
   font-size: 16px;
 `
 
 export const Step = styled('li', {
   shouldForwardProp: prop => !['disabled'].includes(prop),
 })<{ disabled: boolean }>`
-  margin-bottom: ${({ theme }) => theme.space['3']};
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
   justify-content: center;
   color: ${({ theme, disabled }) =>
     disabled
@@ -26,7 +29,8 @@ const StyledDiv = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: Sizes }>`
   flex: 1;
-  margin-left: 1rem;
+  margin: auto;
+  line-height: ${({ size }) => (size === 'medium' ? '32px' : '24px')};
   font-size: ${({ size }) => (size === 'medium' ? '24px' : '16px')};
 `
 
