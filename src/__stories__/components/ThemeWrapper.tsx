@@ -1,7 +1,7 @@
 import { Global, ThemeProvider } from '@emotion/react'
 import { ReactNode } from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { globalStyles } from '../../../.storybook/preview'
+import { fonts, globalStyles } from '../../../.storybook/preview'
 import lightTheme, { darkTheme } from '../../theme'
 
 const ThemeWrapper = ({ children }: { children: ReactNode }) => {
@@ -10,7 +10,7 @@ const ThemeWrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <Global styles={[globalStyles(mode)]} />
+      <Global styles={[globalStyles(mode), fonts]} />
       {children}
     </ThemeProvider>
   )

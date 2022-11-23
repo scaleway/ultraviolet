@@ -19,7 +19,6 @@ type ColProps = {
 /**
  * @deprecated
  */
-
 const Col = styled('div', {
   shouldForwardProp: prop =>
     ![...Object.keys(screens), 'gutter'].includes(prop),
