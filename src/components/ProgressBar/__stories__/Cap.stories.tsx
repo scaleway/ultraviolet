@@ -2,11 +2,19 @@ import { Story } from '@storybook/react'
 import ProgressBar from '..'
 
 export const Cap: Story = props => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }} {...props}>
-    <ProgressBar value={600} />
-    <ProgressBar value={-600} />
-  </div>
+  <>
+    <ProgressBar value={600} {...props} />
+    <ProgressBar value={-600} {...props} />
+  </>
 )
+
+Cap.decorators = [
+  StoryComponent => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <StoryComponent />
+    </div>
+  ),
+]
 
 Cap.parameters = {
   docs: {

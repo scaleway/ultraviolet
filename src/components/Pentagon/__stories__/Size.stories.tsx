@@ -2,10 +2,18 @@ import { Story } from '@storybook/react'
 import Pentagon from '..'
 
 export const Size: Story = props => (
-  <div style={{ display: 'inline-flex' }} {...props}>
-    <Pentagon size="50px" />
-    <Pentagon size="100px" />
-    <Pentagon size="150px" />
-    <Pentagon size="200px" />
-  </div>
+  <>
+    <Pentagon size="50px" {...props} />
+    <Pentagon size="100px" {...props} />
+    <Pentagon size="150px" {...props} />
+    <Pentagon size="200px" {...props} />
+  </>
 )
+
+Size.decorators = [
+  StoryComponent => (
+    <div style={{ display: 'inline-flex' }}>
+      <StoryComponent />
+    </div>
+  ),
+]

@@ -3,12 +3,20 @@ import { progressBarVariants } from '..'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
 export const Variants: Story = props => (
-  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }} {...props}>
+  <>
     {progressBarVariants.map(variant => (
-      <UncontrolledProgressBar key={variant} variant={variant} />
+      <UncontrolledProgressBar key={variant} variant={variant} {...props} />
     ))}
-  </div>
+  </>
 )
+
+Variants.decorators = [
+  StoryComponent => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+      <StoryComponent />
+    </div>
+  ),
+]
 
 Variants.parameters = {
   docs: {
