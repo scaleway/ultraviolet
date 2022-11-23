@@ -1,3 +1,10 @@
+## [0.209.0](https://github.com/scaleway/scaleway-ui/compare/v0.208.2...v0.209.0) (2022-11-23)
+
+
+### :gear: Features
+
+* **Container:** replace Container by ContainerV2 ([#2048](https://github.com/scaleway/scaleway-ui/issues/2048)) ([46f0bb3](https://github.com/scaleway/scaleway-ui/commit/46f0bb3d9cec7edac569fb7845e75c42500bbffc))
+
 ## [0.208.2](https://github.com/scaleway/scaleway-ui/compare/v0.208.1...v0.208.2) (2022-11-22)
 
 
