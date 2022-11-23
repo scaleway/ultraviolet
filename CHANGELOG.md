@@ -1,3 +1,10 @@
+## [0.210.0](https://github.com/scaleway/scaleway-ui/compare/v0.209.0...v0.210.0) (2022-11-23)
+
+
+### :gear: Features
+
+* **StepList:** allow complex children ([#2052](https://github.com/scaleway/scaleway-ui/issues/2052)) ([4195ec2](https://github.com/scaleway/scaleway-ui/commit/4195ec2cbdcc0fea5b2930d1df51af4b90d968b3))
+
 ## [0.209.0](https://github.com/scaleway/scaleway-ui/compare/v0.208.2...v0.209.0) (2022-11-23)
 
 
