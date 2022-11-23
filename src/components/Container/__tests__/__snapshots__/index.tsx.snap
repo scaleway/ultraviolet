@@ -2,29 +2,75 @@
 
 exports[`Container renders correctly 1`] = `
 <DocumentFragment>
-  .cache-17c1im2-StyledContainer {
-  margin-top: 40px;
-}
-
-.cache-7hh7ya-TitleContainer {
+  .cache-7hpczr-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-142nvv6-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-p4470q-StyledTitleContainer {
+.cache-we9r3h-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 8px;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-3mm024-StyledText-RightSpacedText {
+.cache-r5s8ej-StyledText {
   color: #4a4f62;
   font-size: 25px;
   font-family: Asap;
@@ -34,42 +80,30 @@ exports[`Container renders correctly 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin: 0 16px 0 0;
 }
 
-.cache-55v6gi-BorderedBox-StyledBox {
+.cache-9dklj-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
   background: #ffffff;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 24px;
   border: 1px solid #e6e9f0;
   opacity: inherit;
   cursor: default;
 }
 
-.cache-55v6gi-BorderedBox-StyledBox>* {
-  margin-top: 0;
-}
-
-.cache-55v6gi-BorderedBox-StyledBox>*+* {
-  margin-top: 16px;
-}
-
 <div
-    class="elb23zt3 cache-17c1im2-StyledContainer"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      class="cache-7hh7ya-TitleContainer elb23zt0"
+      class="cache-142nvv6-Stack e1sgck4o0"
     >
       <div
-        class="cache-p4470q-StyledTitleContainer elb23zt2"
+        class="cache-we9r3h-Stack e1sgck4o0"
       >
         <h2
-          class="elb23zt4 cache-3mm024-StyledText-RightSpacedText e1tg3t120"
+          class="cache-r5s8ej-StyledText e1tg3t120"
         >
           Title
         </h2>
@@ -77,7 +111,7 @@ exports[`Container renders correctly 1`] = `
       <div />
     </div>
     <div
-      class="cache-55v6gi-BorderedBox-StyledBox elb23zt1"
+      class="cache-9dklj-BorderedBox-StyledBorderedBox elb23zt0"
     >
       Hello
     </div>
@@ -87,29 +121,75 @@ exports[`Container renders correctly 1`] = `
 
 exports[`Container renders correctly on edition mode 1`] = `
 <DocumentFragment>
-  .cache-17c1im2-StyledContainer {
-  margin-top: 40px;
-}
-
-.cache-7hh7ya-TitleContainer {
+  .cache-7hpczr-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-142nvv6-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-p4470q-StyledTitleContainer {
+.cache-we9r3h-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 8px;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-3mm024-StyledText-RightSpacedText {
+.cache-r5s8ej-StyledText {
   color: #4a4f62;
   font-size: 25px;
   font-family: Asap;
@@ -119,42 +199,30 @@ exports[`Container renders correctly on edition mode 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin: 0 16px 0 0;
 }
 
-.cache-1rh7aiq-BorderedBox-StyledBox {
+.cache-5xj2fz-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
   background: #ffffff;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 24px;
   border: 1px solid #390171;
   opacity: inherit;
   cursor: default;
 }
 
-.cache-1rh7aiq-BorderedBox-StyledBox>* {
-  margin-top: 0;
-}
-
-.cache-1rh7aiq-BorderedBox-StyledBox>*+* {
-  margin-top: 16px;
-}
-
 <div
-    class="elb23zt3 cache-17c1im2-StyledContainer"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      class="cache-7hh7ya-TitleContainer elb23zt0"
+      class="cache-142nvv6-Stack e1sgck4o0"
     >
       <div
-        class="cache-p4470q-StyledTitleContainer elb23zt2"
+        class="cache-we9r3h-Stack e1sgck4o0"
       >
         <h2
-          class="elb23zt4 cache-3mm024-StyledText-RightSpacedText e1tg3t120"
+          class="cache-r5s8ej-StyledText e1tg3t120"
         >
           Title
         </h2>
@@ -162,7 +230,7 @@ exports[`Container renders correctly on edition mode 1`] = `
       <div />
     </div>
     <div
-      class="cache-1rh7aiq-BorderedBox-StyledBox elb23zt1"
+      class="cache-5xj2fz-BorderedBox-StyledBorderedBox elb23zt0"
     >
       Hello
     </div>
@@ -172,29 +240,75 @@ exports[`Container renders correctly on edition mode 1`] = `
 
 exports[`Container renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-17c1im2-StyledContainer {
-  margin-top: 40px;
-}
-
-.cache-7hh7ya-TitleContainer {
+  .cache-7hpczr-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-142nvv6-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-p4470q-StyledTitleContainer {
+.cache-we9r3h-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 8px;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-3mm024-StyledText-RightSpacedText {
+.cache-r5s8ej-StyledText {
   color: #4a4f62;
   font-size: 25px;
   font-family: Asap;
@@ -204,42 +318,30 @@ exports[`Container renders correctly when disabled 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin: 0 16px 0 0;
 }
 
-.cache-5qi24d-BorderedBox-StyledBox {
+.cache-a7br29-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
   background: #ffffff;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px 24px;
   border: 1px solid #e6e9f0;
   opacity: 0.4;
   cursor: not-allowed;
 }
 
-.cache-5qi24d-BorderedBox-StyledBox>* {
-  margin-top: 0;
-}
-
-.cache-5qi24d-BorderedBox-StyledBox>*+* {
-  margin-top: 16px;
-}
-
 <div
-    class="elb23zt3 cache-17c1im2-StyledContainer"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      class="cache-7hh7ya-TitleContainer elb23zt0"
+      class="cache-142nvv6-Stack e1sgck4o0"
     >
       <div
-        class="cache-p4470q-StyledTitleContainer elb23zt2"
+        class="cache-we9r3h-Stack e1sgck4o0"
       >
         <h2
-          class="elb23zt4 cache-3mm024-StyledText-RightSpacedText e1tg3t120"
+          class="cache-r5s8ej-StyledText e1tg3t120"
         >
           Title
         </h2>
@@ -247,8 +349,7 @@ exports[`Container renders correctly when disabled 1`] = `
       <div />
     </div>
     <div
-      class="cache-5qi24d-BorderedBox-StyledBox elb23zt1"
-      disabled=""
+      class="cache-a7br29-BorderedBox-StyledBorderedBox elb23zt0"
     >
       Hello
     </div>
@@ -258,29 +359,75 @@ exports[`Container renders correctly when disabled 1`] = `
 
 exports[`Container renders correctly with small variant 1`] = `
 <DocumentFragment>
-  .cache-17c1im2-StyledContainer {
-  margin-top: 40px;
-}
-
-.cache-7hh7ya-TitleContainer {
+  .cache-7hpczr-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-142nvv6-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-p4470q-StyledTitleContainer {
+.cache-we9r3h-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 8px;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
-.cache-3mm024-StyledText-RightSpacedText {
+.cache-r5s8ej-StyledText {
   color: #4a4f62;
   font-size: 25px;
   font-family: Asap;
@@ -290,42 +437,30 @@ exports[`Container renders correctly with small variant 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  margin: 0 16px 0 0;
 }
 
-.cache-f7t8ij-BorderedBox-StyledBox {
+.cache-ju7m5c-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
   background: #ffffff;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 24px;
   border: 1px solid #e6e9f0;
   opacity: inherit;
   cursor: default;
 }
 
-.cache-f7t8ij-BorderedBox-StyledBox>* {
-  margin-top: 0;
-}
-
-.cache-f7t8ij-BorderedBox-StyledBox>*+* {
-  margin-top: 16px;
-}
-
 <div
-    class="elb23zt3 cache-17c1im2-StyledContainer"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      class="cache-7hh7ya-TitleContainer elb23zt0"
+      class="cache-142nvv6-Stack e1sgck4o0"
     >
       <div
-        class="cache-p4470q-StyledTitleContainer elb23zt2"
+        class="cache-we9r3h-Stack e1sgck4o0"
       >
         <h2
-          class="elb23zt4 cache-3mm024-StyledText-RightSpacedText e1tg3t120"
+          class="cache-r5s8ej-StyledText e1tg3t120"
         >
           Title
         </h2>
@@ -333,7 +468,7 @@ exports[`Container renders correctly with small variant 1`] = `
       <div />
     </div>
     <div
-      class="cache-f7t8ij-BorderedBox-StyledBox elb23zt1"
+      class="cache-ju7m5c-BorderedBox-StyledBorderedBox elb23zt0"
     >
       Hello
     </div>
