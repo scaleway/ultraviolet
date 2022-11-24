@@ -410,8 +410,6 @@ const FwdButton = ({
     return 'button'
   }, [disabled, href, download])
 
-  console.log(as)
-
   const displayProgressOnly = !children
 
   const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
