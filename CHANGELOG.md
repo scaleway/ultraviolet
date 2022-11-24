@@ -1,3 +1,15 @@
+## [0.211.0](https://github.com/scaleway/scaleway-ui/compare/v0.210.0...v0.211.0) (2022-11-24)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v4.1.0 ([#2051](https://github.com/scaleway/scaleway-ui/issues/2051)) ([b60e702](https://github.com/scaleway/scaleway-ui/commit/b60e70278d2a5689b974a89f41345c616471a036))
+
+
+### :gear: Features
+
+* **Icon:** add book-open-outline and play-circle-outline ([#2055](https://github.com/scaleway/scaleway-ui/issues/2055)) ([9884566](https://github.com/scaleway/scaleway-ui/commit/98845668aa9a70539d2f6dd5eddf7276eedc6c87))
+
 ## [0.210.0](https://github.com/scaleway/scaleway-ui/compare/v0.209.0...v0.210.0) (2022-11-23)
 
 
