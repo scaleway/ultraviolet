@@ -32,8 +32,7 @@ const StyledLink = styled(Link)`
 
   &:hover,
   &:focus {
-    gap: ${({ theme }) => theme.space['1']};
-  }
+    gap: 0;
 `
 
 const borderedVariant = ({
@@ -410,6 +409,8 @@ const FwdButton = ({
 
     return 'button'
   }, [disabled, href, download])
+
+  console.log(as)
 
   const displayProgressOnly = !children
 
