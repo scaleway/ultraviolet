@@ -4,7 +4,7 @@ import Bullet from '../Bullet'
 
 export const Steps = styled.ul`
   list-style: none;
-  padding-left: ${({ theme }) => theme.space['2']};
+  padding-left: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
