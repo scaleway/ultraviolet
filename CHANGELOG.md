@@ -1,3 +1,17 @@
+## [0.211.1](https://github.com/scaleway/scaleway-ui/compare/v0.211.0...v0.211.1) (2022-11-24)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.10.2 ([#2056](https://github.com/scaleway/scaleway-ui/issues/2056)) ([1221cd4](https://github.com/scaleway/scaleway-ui/commit/1221cd4e947091bf3046f715b8596e66248f7ac5))
+* **devdeps:** update dependency eslint to v8.28.0 ([#2054](https://github.com/scaleway/scaleway-ui/issues/2054)) ([5388db9](https://github.com/scaleway/scaleway-ui/commit/5388db984b7e31e1ed15067ce7d323d973ce9fa9))
+* **devdeps:** update nextjs monorepo to v13.0.4 ([#2040](https://github.com/scaleway/scaleway-ui/issues/2040)) ([62c808b](https://github.com/scaleway/scaleway-ui/commit/62c808b9d54b537f6bbac15187822727727e4c2d))
+
+
+### :bug: Bug Fixes
+
+* **StepList:** set ul padding-left to 0 ([#2059](https://github.com/scaleway/scaleway-ui/issues/2059)) ([f47f6a3](https://github.com/scaleway/scaleway-ui/commit/f47f6a3763e6690cfd762bed0e5008cfdd7ab4ad))
+
 ## [0.211.0](https://github.com/scaleway/scaleway-ui/compare/v0.210.0...v0.211.0) (2022-11-24)
 
 
