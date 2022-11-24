@@ -5,35 +5,16 @@
   },
   "extends": ["@scaleway/react/typescript", "plugin:react/jsx-runtime"],
   "parserOptions": {
-    "project": ["tsconfig.json"]
+    "project": ["./tsconfig.json"]
   },
   "plugins": ["@emotion"],
   "rules": {
-    "no-restricted-syntax": [
-      // https://eslint.org/docs/rules/no-restricted-syntax#disallow-specified-syntax-no-restricted-syntax
-      "warn",
-      {
-        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
-        "selector": "ForInStatement"
-      },
-      {
-        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
-        "selector": "LabeledStatement"
-      },
-      {
-        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
-        "selector": "WithStatement"
-      },
-      {
-        "message": "Deprecated color usage, use colors instead.",
-        "selector": "MemberExpression[object.object.name='theme'] Identifier[name='colorsDeprecated'], MemberExpression[object.name='colorsDeprecated'] Identifier[name='colorsDeprecated']"
-      }
-    ],
     // Import
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
+          "**/docs/**/*",
           "**/__stories__/**/*",
           "**/__tests__/**/*",
           "rollup.config.mjs"
@@ -58,7 +39,7 @@
       "env": {
         "jest": true
       },
-      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
+      "files": ["**/docs/**/*.{ts,tsx}", "**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
       "rules": {
         "no-console": "off",
         "no-alert": "off",
@@ -66,8 +47,9 @@
       }
     },
     {
-      "files": ["**/__stories__/**/*.stories.{ts,tsx}"],
+      "files": ["**/docs/**/*.{ts,tsx}", "**/__stories__/**/*.stories.{ts,tsx}"],
       "rules": {
+        "import/no-relative-packages": "off",
         // Allow inline nested components (for code snippets)
         "react/no-unstable-nested-components": "off"
       }

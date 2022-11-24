@@ -14,8 +14,10 @@ export default {
     reactDocgen: 'react-docgen-typescript',
   },
   stories: [
-    '../src/**/__stories__/**/*.stories.mdx',
-    '../src/**/__stories__/*.stories.tsx',
+    '../**/__stories__/**/*.stories.mdx',
+    '../**/__stories__/*.stories.tsx',
+    '../**/docs/**/*.stories.mdx',
+    '../**/docs/*.stories.tsx',
   ],
   addons: [
     '@storybook/addon-essentials',

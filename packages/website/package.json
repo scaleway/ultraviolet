@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
-    "lint": "eslint --cache --ext tsx,ts,.d.ts ."
+    "start": "next start"
   },
   "dependenciesMeta": {
     "@react-spring/core": {
@@ -17,7 +16,7 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
-    "@scaleway/ui": "file:../",
+    "@scaleway/ui": "workspace:*",
     "next": "13.0.4",
     "polished": "4.2.2",
     "react": "18.2.0",
@@ -29,15 +28,9 @@
   },
   "devDependencies": {
     "@babel/core": "7.20.2",
-    "@emotion/eslint-plugin": "11.10.0",
     "@next/bundle-analyzer": "13.0.4",
-    "@scaleway/eslint-config-react": "3.10.2",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
     "@types/react-syntax-highlighter": "15.5.5",
-    "eslint": "8.27.0",
     "next-transpile-modules": "10.0.0",
-    "prop-types": "15.8.1",
     "typescript": "4.9.3"
   },
   "pnpm": {

@@ -10,9 +10,9 @@ import {
 } from '@storybook/addon-docs'
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
-import { darkTheme } from '../../src'
+import { darkTheme } from '../../packages/ui/src'
 import { ThemeProvider } from '@emotion/react'
-import lightTheme from '../../src/theme'
+import lightTheme from '../../packages/ui/src/theme'
 
 type ExtraProps = {
   deprecated: boolean

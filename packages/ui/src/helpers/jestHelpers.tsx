@@ -1,5 +1,4 @@
 import { ThemeProvider } from '@emotion/react'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import makeHelpers from '@scaleway/jest-helpers'
 import { ReactNode } from 'react'
 import defaultTheme from '../theme'

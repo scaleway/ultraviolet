@@ -1,10 +1,10 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { readableColor } from 'polished'
-import BorderedBox from '../../components/BorderedBox'
-import Separator from '../../components/Separator'
-import Text from '../../components/Text'
-import lightTheme, { Color } from '../../theme'
+import BorderedBox from '../../packages/ui/src/components/BorderedBox'
+import Separator from '../../packages/ui/src/components/Separator'
+import Text from '../../packages/ui/src/components/Text'
+import lightTheme, { Color } from '../../packages/ui/src/theme'
 import ThemeWrapper from './ThemeWrapper'
 
 const StyledSeparator = styled(Separator)`

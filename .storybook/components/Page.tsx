@@ -7,7 +7,7 @@ import {
   Stories,
   PRIMARY_STORY,
 } from '@storybook/addon-docs'
-import { Badge, Button } from '../../src'
+import { Badge, Button } from '../../packages/ui/src'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 
