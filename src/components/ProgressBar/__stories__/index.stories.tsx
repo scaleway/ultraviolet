@@ -1,7 +1,5 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
-import ProgressBar, { progressBarVariants } from '..'
-import UncontrolledProgressBar from './UncontrolledProgressBar'
+import { ComponentMeta } from '@storybook/react'
+import ProgressBar from '..'
 
 export default {
   component: ProgressBar,
@@ -13,51 +11,9 @@ export default {
     },
   },
   title: 'Components/Data Display/ProgressBar',
-} as Meta
+} as ComponentMeta<typeof ProgressBar>
 
-const Template: Story<ComponentProps<typeof ProgressBar>> = args => (
-  <ProgressBar value={40} {...args} />
-)
-
-export const Default = Template.bind({})
-
-export const Variants = Template.bind({})
-Variants.parameters = {
-  docs: {
-    storyDescription: 'Set variant using `variant` prop.',
-  },
-}
-Variants.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      {progressBarVariants.map(variant => (
-        <UncontrolledProgressBar key={variant} variant={variant} />
-      ))}
-    </div>
-  ),
-]
-
-export const Progress = Template.bind({})
-Progress.parameters = {
-  docs: {
-    storyDescription:
-      'Progress is used to show a loading state of the component.',
-  },
-}
-Progress.decorators = [() => <ProgressBar progress />]
-
-export const Cap = Template.bind({})
-Cap.parameters = {
-  docs: {
-    storyDescription:
-      'Value will be capped out above 0 and below 100, so you&apos;re safe to pass an even greater/lower value',
-  },
-}
-Cap.decorators = [
-  () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      <ProgressBar value={600} />
-      <ProgressBar value={-600} />
-    </div>
-  ),
-]
+export { Playground } from './Playground.stories'
+export { Variants } from './Variants.stories'
+export { Progress } from './Progress.stories'
+export { Cap } from './Cap.stories'
