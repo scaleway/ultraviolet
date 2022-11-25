@@ -109,34 +109,7 @@ const toast = {
     ),
 }
 
-type ToastContainerProps = {
-  className?: string
-  /**
-   * Whether or not to display the newest toast on top.
-   * `Default: false`
-   */
-  newestOnTop?: boolean
-  /**
-   * Limit the number of toast displayed at the same time
-   */
-  limit?: number
-  /**
-   * Position of the toast container
-   */
-  position?: ToastOptions['position']
-  /**
-   * You can set an id if you have multiple toast containers
-   */
-  id?: string
-}
-
-const ToastContainer = ({
-  className,
-  newestOnTop,
-  limit,
-  position,
-  id,
-}: ToastContainerProps) => {
+const ToastContainer = (): JSX.Element => {
   const theme = useTheme()
 
   return (
@@ -149,11 +122,6 @@ const ToastContainer = ({
             toastClassName={localCss(styles.toast(theme))}
             autoClose={AUTOCLOSE_DELAY}
             icon={false}
-            newestOnTop={newestOnTop}
-            limit={limit}
-            className={className}
-            position={position}
-            containerId={id}
           />
         )}
       </ClassNames>
