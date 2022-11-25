@@ -20,7 +20,6 @@ const testedComponents = [
   'Separator',
   'Stack',
   'Status',
-  'StealthCopiable',
   'Stepper',
   'Switch',
   'SelectableCard',

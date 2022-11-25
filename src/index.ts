@@ -49,7 +49,6 @@ export {
   Stack,
   StateBar,
   Status,
-  StealthCopiable,
   StepList,
   Snippet,
   Toggle,
