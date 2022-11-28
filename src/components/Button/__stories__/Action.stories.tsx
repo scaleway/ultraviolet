@@ -3,9 +3,14 @@ import Button from '..'
 
 export const Action: ComponentStory<typeof Button> = () => (
   <>
-    <Button action icon="rocket" />
-    <Button action icon="rocket" variant="success" />
-    <Button action="rounded" icon="rocket" variant="warning-bordered" />
+    <Button action icon="rocket" aria-label="test" />
+    <Button action icon="rocket" variant="success" aria-label="test" />
+    <Button
+      action="rounded"
+      icon="rocket"
+      variant="warning-bordered"
+      aria-label="test"
+    />
   </>
 )
 
