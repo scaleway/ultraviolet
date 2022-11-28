@@ -119,7 +119,7 @@ const AdvancedUseCasesContainer = styled.div`
 
 const AdvancedUseCases = () => (
   <AdvancedUseCasesContainer>
-    <StyledTitle as="h3" variant="headingLarge">
+    <StyledTitle as="h3" variant="heading">
       Advanced Use Cases
     </StyledTitle>
     <Text as="p" variant="body">

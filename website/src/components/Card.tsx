@@ -24,7 +24,7 @@ const Card = ({ title, description, icon, className }: CardProps) => (
       <Image src={icon} alt="icon" width={64} height={64} />
     </div>
     <div>
-      <Text as="h3" variant="heading" color="primary">
+      <Text as="h3" variant="headingSmall" color="primary">
         {title}
       </Text>
       {typeof description === 'string' ? (

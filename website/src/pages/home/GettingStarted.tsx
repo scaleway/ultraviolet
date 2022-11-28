@@ -1,11 +1,6 @@
 import styled from '@emotion/styled'
-import { Text } from '@scaleway/ui'
-import CopyBox from '../../components/CopyBoxCommand'
+import { Snippet, Stack, Text } from '@scaleway/ui'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
-
-const install = `pnpm add @scaleway/ui @emotion/react @emotion/styled`
-const installYarn = `yarn add @scaleway/ui @emotion/react @emotion/styled`
-const installNpm = `npm i @scaleway/ui @emotion/react @emotion/styled`
 
 const command = `import { theme, Button } from "@scaleway/ui"
 import { ThemeProvider } from "@emotion/react"
@@ -22,13 +17,6 @@ const RelativeDiv = styled.div`
   position: relative;
 `
 
-const GettingStartedContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['5']};
-`
-
 const HeadStartContainer = styled.div`
   width: 100%;
   display: flex;
@@ -39,53 +27,39 @@ const HeadStartContainer = styled.div`
 `
 
 const GettingStarted = () => (
-  <GettingStartedContainer>
-    <Text as="h3" variant="headingLarge">
+  <Stack gap={5} alignItems="center">
+    <Text as="h3" variant="heading">
       Getting Started
     </Text>
-    <HeadStartContainer>
+    <Stack gap={4}>
       <Text as="p" variant="body">
         Run one of the following commands in your React project to start using
         Scaleway UI:
       </Text>
       <RelativeDiv>
-        <CopyBox>
-          <CopyBox.Command
-            title="PNPM install"
-            command={install}
-            showLineNumbers={false}
-          />
-        </CopyBox>
+        <Snippet prefix="command">
+          pnpm add @scaleway/ui @emotion/react @emotion/styled
+        </Snippet>
       </RelativeDiv>
       <RelativeDiv>
-        <CopyBox>
-          <CopyBox.Command
-            title="Yarn install"
-            command={installYarn}
-            showLineNumbers={false}
-          />
-        </CopyBox>
+        <Snippet prefix="command">
+          yarn add @scaleway/ui @emotion/react @emotion/styled
+        </Snippet>
       </RelativeDiv>
       <RelativeDiv>
-        <CopyBox>
-          <CopyBox.Command
-            title="NPM install"
-            command={installNpm}
-            showLineNumbers={false}
-          />
-        </CopyBox>
+        <Snippet prefix="command">
+          npm i @scaleway/ui @emotion/react @emotion/styled
+        </Snippet>
       </RelativeDiv>
-    </HeadStartContainer>
-    <HeadStartContainer>
+    </Stack>
+    <Stack gap={4}>
       <Text as="p" variant="body">
         Integrate the theme into your project to use our components.
       </Text>
-      <CopyBox>
-        <CopyBox.Command title="Provide theme" command={command} />
-      </CopyBox>
-    </HeadStartContainer>
+      <Snippet prefix="command">{command}</Snippet>
+    </Stack>
     <GithubAndDocumentationButtons />
-  </GettingStartedContainer>
+  </Stack>
 )
 
 export default GettingStarted

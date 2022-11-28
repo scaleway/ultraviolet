@@ -41,7 +41,7 @@ const GithubLinkContainer = styled.div`
 const OpenSource = () => (
   <StyledOpenSourceContainer>
     <StyledOpenSourceTitleContainer>
-      <StyledTitle as="h3" variant="headingLarge">
+      <StyledTitle as="h3" variant="heading">
         Open Source
       </StyledTitle>
       <Text as="p" variant="body">

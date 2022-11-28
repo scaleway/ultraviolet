@@ -66,9 +66,9 @@ const TopBar = ({ isLightMode, setIsLightMode }: TopBarProps) => {
           <Breakpoint up="medium">
             <GithubAndDocumentationButtons />
           </Breakpoint>
-          <Icon size={20} name="moon" />
-          <Toggle name="darkMode" checked={isLightMode} onChange={onChange} />
           <Icon size={20} name="sun" />
+          <Toggle name="darkMode" checked={isLightMode} onChange={onChange} />
+          <Icon size={20} name="moon" />
         </HorizontalStack>
       </HeaderRow>
     </Header>

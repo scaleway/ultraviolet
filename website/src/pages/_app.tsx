@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import styled from '@emotion/styled'
-import { darkTheme as dark, theme as light } from '@scaleway/ui'
+import { darkTheme as dark, extendTheme } from '@scaleway/ui'
 import Footer from 'components/Footer'
 import GlobalStyle from 'components/GlobalStyle'
 import Head from 'components/Head'
@@ -15,6 +15,36 @@ const AppContainer = styled.div`
   align-items: center;
 `
 
+const COMMON_THEME_PROPS = {
+  typography: {
+    headingLarge: {
+      fontSize: '72px',
+    },
+    heading: {
+      fontSize: '42px',
+      lineHeight: '52px',
+    },
+    headingSmall: {
+      fontSize: '28px',
+    },
+  },
+}
+
+const LOCAL_LIGHT_THEME = extendTheme({
+  ...COMMON_THEME_PROPS,
+  colors: {
+    primary: {
+      textWeak: '#A395FF',
+      text: '#4F0599',
+    },
+  },
+})
+
+const LOCAL_DARK_THEME = extendTheme({
+  ...dark,
+  ...COMMON_THEME_PROPS,
+})
+
 const App = ({ Component, pageProps }: AppProps) => {
   const [isLightMode, setIsLightMode] = useState<boolean>(true)
 
@@ -27,7 +57,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   )
 
   return (
-    <ThemeProvider theme={isLightMode ? light : dark}>
+    <ThemeProvider theme={isLightMode ? LOCAL_LIGHT_THEME : LOCAL_DARK_THEME}>
       <GlobalStyle />
       <Head />
       <AppContainer>

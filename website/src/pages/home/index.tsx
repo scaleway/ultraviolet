@@ -74,7 +74,7 @@ const Home = () => (
       </Button>
     </StyledCommunityContainer>
     <BuiltWithContainer>
-      <Text as="span" variant="headingLarge">
+      <Text as="span" variant="heading">
         Built with
         <svg width={35} height={35} viewBox="0 0 24 24">
           <StyledGroup>
