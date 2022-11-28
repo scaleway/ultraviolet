@@ -1,3 +1,20 @@
+## [0.211.2](https://github.com/scaleway/scaleway-ui/compare/v0.211.1...v0.211.2) (2022-11-28)
+
+
+### :zap: Refactor
+
+* passwordStrengthMeter pentagon and progressBar stories ([#2047](https://github.com/scaleway/scaleway-ui/issues/2047)) ([9613fc9](https://github.com/scaleway/scaleway-ui/commit/9613fc9372726364215f62fa4cf9894d66ae460c))
+
+
+### :package: Chore
+
+* **devdeps:** update nextjs monorepo to v13.0.5 ([#2060](https://github.com/scaleway/scaleway-ui/issues/2060)) ([2f015b7](https://github.com/scaleway/scaleway-ui/commit/2f015b7ef1d8ed2acfcff3feb71896cdad0dcc73))
+
+
+### :bug: Bug Fixes
+
+* **menu:** add forward ref to menu item ([#2049](https://github.com/scaleway/scaleway-ui/issues/2049)) ([3d907bb](https://github.com/scaleway/scaleway-ui/commit/3d907bbe8b6cdd5d42e04b63bc35164dabc4f667))
+
 ## [0.211.1](https://github.com/scaleway/scaleway-ui/compare/v0.211.0...v0.211.1) (2022-11-24)
 
 
