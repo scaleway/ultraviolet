@@ -29,20 +29,6 @@
   "module": "dist/src/index.js",
   "jsnext:main": "dist/src/index.js",
   "types": "dist/index.d.ts",
-  "size-limit": [
-    {
-      "path": "dist/**/*.js",
-      "limit": "230 kB",
-      "webpack": false,
-      "brotli": true,
-      "running": false
-    }
-  ],
-  "dependenciesMeta": {
-    "@react-spring/core": {
-      "built": false
-    }
-  },
   "peerDependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",

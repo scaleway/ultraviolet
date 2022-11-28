@@ -4,7 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.17.1",
   "engines": {
     "node": ">=18.x",
     "pnpm": ">=7.0.0"
@@ -43,14 +43,6 @@
       "eslint --fix --ext js,jsx,ts,tsx"
     ]
   },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "react": "18",
-        "react-dom": "18"
-      }
-    }
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
@@ -70,11 +62,6 @@
       "running": false
     }
   ],
-  "dependenciesMeta": {
-    "@react-spring/core": {
-      "built": false
-    }
-  },
   "devDependencies": {
     "@babel/core": "7.20.2",
     "@babel/eslint-parser": "7.19.1",
