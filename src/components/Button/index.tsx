@@ -475,6 +475,4 @@ const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
   (props, ref) => <FwdButton {...props} innerRef={ref} />,
 )
 
-Button.displayName = 'fwd(Button)'
-
 export default Button
