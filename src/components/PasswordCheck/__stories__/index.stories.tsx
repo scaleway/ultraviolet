@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import PasswordCheck from '..'
 
 export default {
@@ -13,44 +12,6 @@ export default {
     },
   },
   title: 'Components/Data Entry/PasswordCheck',
-} as Meta
+} as ComponentMeta<typeof PasswordCheck>
 
-const Template: Story<ComponentProps<typeof PasswordCheck>> = args => (
-  <PasswordCheck {...args}>Button</PasswordCheck>
-)
-
-export const Default = Template.bind({})
-Default.args = {
-  rules: [
-    {
-      name: 'hasOneUppercase',
-      text: 'Password must have at least one uppercase character',
-      valid: true,
-    },
-    {
-      name: 'hasOneLowercase',
-      text: 'Password must have at least one lowercase character',
-      valid: true,
-    },
-    {
-      name: 'hasOneSpecial',
-      text: 'Password must have at least one special character',
-      valid: true,
-    },
-    {
-      name: 'hasOneNumber',
-      text: 'Password must have at least one number',
-      valid: true,
-    },
-    {
-      name: 'isLongEnough',
-      text: 'Password must have a minimum of 8 characters',
-      valid: false,
-    },
-    {
-      name: 'score',
-      text: 'Password strength score',
-      valid: false,
-    },
-  ],
-}
+export { Playground } from './Playground.stories'
