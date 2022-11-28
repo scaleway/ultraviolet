@@ -69,7 +69,6 @@ export {
   UnitInput,
   usePagination,
   VerificationCode,
-  VolumeSize,
   CopyButton,
   Grid,
   Row,
