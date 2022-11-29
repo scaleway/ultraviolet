@@ -1,3 +1,15 @@
+## [0.211.3](https://github.com/scaleway/scaleway-ui/compare/v0.211.2...v0.211.3) (2022-11-29)
+
+
+### :zap: Refactor
+
+* stories of notice, paginationV2 and passwordCheck ([#2050](https://github.com/scaleway/scaleway-ui/issues/2050)) ([236c36b](https://github.com/scaleway/scaleway-ui/commit/236c36be57976aed7cbcb888a2c23ac30d9bfc37))
+
+
+### :bug: Bug Fixes
+
+* **Button:** as link ([#2057](https://github.com/scaleway/scaleway-ui/issues/2057)) ([ce6b7de](https://github.com/scaleway/scaleway-ui/commit/ce6b7de39609e22fdf474db2df980709d016c803))
+
 ## [0.211.2](https://github.com/scaleway/scaleway-ui/compare/v0.211.1...v0.211.2) (2022-11-28)
 
 
