@@ -1,8 +1,10 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const Disabled: ComponentStory<typeof Button> = () => (
-  <Button disabled>Disabled</Button>
+export const Disabled: ComponentStory<typeof Button> = ({ ...props }) => (
+  <Button disabled {...props}>
+    Disabled
+  </Button>
 )
 
 Disabled.parameters = {

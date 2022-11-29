@@ -1,13 +1,23 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const Size: ComponentStory<typeof Button> = () => (
+export const Size: ComponentStory<typeof Button> = ({ ...props }) => (
   <>
-    <Button size="large">large</Button>
-    <Button size="medium">medium</Button>
-    <Button size="small">small</Button>
-    <Button size="xsmall">xsmall</Button>
-    <Button size="xxsmall">xxsmall</Button>
+    <Button size="large" {...props}>
+      large
+    </Button>
+    <Button size="medium" {...props}>
+      medium
+    </Button>
+    <Button size="small" {...props}>
+      small
+    </Button>
+    <Button size="xsmall" {...props}>
+      xsmall
+    </Button>
+    <Button size="xxsmall" {...props}>
+      xxsmall
+    </Button>
   </>
 )
 

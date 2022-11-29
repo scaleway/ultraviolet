@@ -1,16 +1,14 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const IconPosition: ComponentStory<typeof Button> = () => (
+export const IconPosition: ComponentStory<typeof Button> = ({ ...props }) => (
   <>
-    <Button iconPosition="left" icon="lock">
+    <Button iconPosition="left" icon="lock" {...props}>
       Left
     </Button>
-    ,
-    <Button iconPosition="right" icon="lock">
+    <Button iconPosition="right" icon="lock" {...props}>
       Right
     </Button>
-    ,
   </>
 )
 

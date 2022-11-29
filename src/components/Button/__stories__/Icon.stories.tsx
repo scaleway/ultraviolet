@@ -1,8 +1,10 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const Icon: ComponentStory<typeof Button> = () => (
-  <Button icon="lock">With text</Button>
+export const Icon: ComponentStory<typeof Button> = ({ ...props }) => (
+  <Button icon="lock" {...props}>
+    With text
+  </Button>
 )
 
 Icon.parameters = {

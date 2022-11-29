@@ -1,15 +1,22 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const Action: ComponentStory<typeof Button> = () => (
+export const Action: ComponentStory<typeof Button> = ({ ...props }) => (
   <>
-    <Button action icon="rocket" aria-label="test" />
-    <Button action icon="rocket" variant="success" aria-label="test" />
+    <Button action icon="rocket" aria-label="test" {...props} />
+    <Button
+      action
+      icon="rocket"
+      variant="success"
+      aria-label="test"
+      {...props}
+    />
     <Button
       action="rounded"
       icon="rocket"
       variant="warning-bordered"
       aria-label="test"
+      {...props}
     />
   </>
 )

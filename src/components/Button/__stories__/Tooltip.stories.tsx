@@ -1,7 +1,7 @@
 import { ComponentStory } from '@storybook/react'
 import Button from '..'
 
-export const Tooltip: ComponentStory<typeof Button> = () => (
+export const Tooltip: ComponentStory<typeof Button> = ({ ...props }) => (
   <>
     <Button
       action
@@ -9,14 +9,16 @@ export const Tooltip: ComponentStory<typeof Button> = () => (
       variant="primary"
       tooltip="I am locked"
       aria-label="test"
+      {...props}
     />
     <Button
       icon="lock"
       variant="primary"
       tooltip="I am locked"
       aria-label="test"
+      {...props}
     />
-    <Button icon="lock" variant="primary" tooltip="I am locked">
+    <Button icon="lock" variant="primary" tooltip="I am locked" {...props}>
       Hover Me
     </Button>
   </>
