@@ -84,6 +84,7 @@ type TextProps = {
   disabled?: boolean
   italic?: boolean
   underline?: boolean
+  id?: string
 }
 
 const StyledText = styled('div', {
@@ -119,6 +120,7 @@ const Text = ({
   disabled = false,
   italic = false,
   underline = false,
+  id,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -145,6 +147,7 @@ const Text = ({
         disabled={disabled}
         italic={italic}
         underline={underline}
+        id={id}
       >
         {children}
       </StyledText>

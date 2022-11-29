@@ -26,6 +26,7 @@ type LinkProps = {
   href: string
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
+  'aria-label'?: string
 }
 
 const ICON_SIZE = 16
@@ -125,6 +126,7 @@ const Link = forwardRef(
       rel,
       className,
       onClick,
+      'aria-label': ariaLabel,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -143,6 +145,7 @@ const Link = forwardRef(
         size={size}
         onClick={onClick}
         iconPosition={iconPosition}
+        aria-label={ariaLabel}
       >
         {!isBlank && iconPosition === 'left' ? (
           <StyledIcon name="arrow-left" size={ICON_SIZE} />
