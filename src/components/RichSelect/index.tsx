@@ -773,6 +773,8 @@ const RichSelectWithRef = forwardRef(
   Option: OptionComponent
 }
 
+RichSelectWithRef.displayName = 'RichSelect'
+
 RichSelectWithRef.Option = Option as OptionComponent
 
 export default RichSelectWithRef
