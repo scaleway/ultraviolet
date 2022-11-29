@@ -1,3 +1,21 @@
+## [0.211.4](https://github.com/scaleway/scaleway-ui/compare/v0.211.3...v0.211.4) (2022-11-29)
+
+
+### :memo: Documentation
+
+* remove fonts load at each story to make it global ([#2063](https://github.com/scaleway/scaleway-ui/issues/2063)) ([dd26593](https://github.com/scaleway/scaleway-ui/commit/dd26593d60925fa4c9d691d7310afa7e61c1b5eb))
+
+
+### :zap: Refactor
+
+* remove stealth copiable replace by copy button ([#2062](https://github.com/scaleway/scaleway-ui/issues/2062)) ([d62905a](https://github.com/scaleway/scaleway-ui/commit/d62905a816233bf0f86fdaa749b4c6be3718634d))
+* remove volume size ([#2064](https://github.com/scaleway/scaleway-ui/issues/2064)) ([58760ca](https://github.com/scaleway/scaleway-ui/commit/58760ca622c2b43759fa3eb58bee1b30a3650915))
+
+
+### :bug: Bug Fixes
+
+* bug missing braces ([#2068](https://github.com/scaleway/scaleway-ui/issues/2068)) ([cefbc9f](https://github.com/scaleway/scaleway-ui/commit/cefbc9fc8516190fbc68af3b3f8b0f47b57567ad))
+
 ## [0.211.3](https://github.com/scaleway/scaleway-ui/compare/v0.211.2...v0.211.3) (2022-11-29)
 
 
