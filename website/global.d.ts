@@ -13,5 +13,8 @@ declare global {
 }
 
 declare module '@emotion/react' {
-  export interface Theme extends SCWUITheme {}
+  export interface Theme extends SCWUITheme {
+    theme: 'light' | 'dark'
+    setTheme: Dispatch<SetStateAction<'light' | 'dark'>>
+  }
 }

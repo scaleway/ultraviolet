@@ -1,5 +1,6 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { CopyButton, Tabs } from '@scaleway/ui'
+import { Stack, Tabs } from '@scaleway/ui'
 import {
   Children,
   ReactElement,
@@ -8,27 +9,22 @@ import {
   useState,
 } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import {
+  dracula,
+  oneLight,
+} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-const StyledDiv = styled.div`
-  box-shadow: 0 0 8px 2px rgba(178, 182, 195, 0.37);
-  background-color: #0e1120;
-  padding: 16px 24px;
-  border-radius: 4px;
-  [role='tab'][aria-selected='true'],
-  [role='tab']:hover {
-    color: ${({ theme }) => theme.colors.primary.textStrong};
+const StyledDiv = styled(Stack)`
+  background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  span {
+    background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   }
-`
 
-const StyledCopyButton = styled(CopyButton, {
-  shouldForwardProp: prop => !['showCopyButton'].includes(prop.toString()),
-})<{ showCopyButton: boolean }>`
-  position: absolute;
-  right: 16px;
-  bottom: 8px;
-  opacity: ${({ showCopyButton }) => (showCopyButton ? '1' : '0')};
-  transition: opacity 200ms ease;
+  .react-syntax-highlighter-line-number {
+    font-style: normal !important;
+  }
+  padding: ${({ theme }) => `${theme.space['2']} ${theme.space['3']}`};
+  border-radius: ${({ theme }) => theme.radii.default};
 `
 
 interface CopyBoxProps {
@@ -41,14 +37,10 @@ const CopyBox = ({ children }: CopyBoxProps) => {
       isValidElement(child) ? child : undefined,
     ) || []
   ).filter(child => !!child)
-  const [showCopyButton, setShowCopyButton] = useState(false)
   const [tab, setTab] = useState(0)
 
   return (
-    <StyledDiv
-      onMouseEnter={() => setShowCopyButton(true)}
-      onMouseLeave={() => setShowCopyButton(false)}
-    >
+    <StyledDiv gap={2}>
       {flatChild.length > 1 && (
         <Tabs
           selected={tab + 1}
@@ -65,9 +57,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
           ))}
         </Tabs>
       )}
-      {cloneElement(flatChild[tab], {
-        showCopyButton,
-      })}
+      {cloneElement(flatChild[tab])}
     </StyledDiv>
   )
 }
@@ -76,29 +66,29 @@ interface CommandProps {
   command: string
   // eslint-disable-next-line react/no-unused-prop-types
   title: string
-  showCopyButton?: boolean
   showLineNumbers?: boolean
 }
 
-const Command = ({
-  command,
-  showCopyButton = false,
-  showLineNumbers = true,
-}: CommandProps) => (
-  <div>
-    <SyntaxHighlighter
-      language="jsx"
-      style={darcula}
-      customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
-      lineProps={{ style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' } }}
-      wrapLines
-      showLineNumbers={showLineNumbers}
-    >
-      {command}
-    </SyntaxHighlighter>
-    <StyledCopyButton value={command} showCopyButton={showCopyButton} />
-  </div>
-)
+const Command = ({ command, showLineNumbers = true }: CommandProps) => {
+  const { theme } = useTheme()
+
+  return (
+    <div>
+      <SyntaxHighlighter
+        language="typescript"
+        style={theme === 'light' ? oneLight : dracula}
+        customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
+        lineProps={{
+          style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
+        }}
+        wrapLines
+        showLineNumbers={showLineNumbers}
+      >
+        {command}
+      </SyntaxHighlighter>
+    </div>
+  )
+}
 
 CopyBox.Command = Command
 

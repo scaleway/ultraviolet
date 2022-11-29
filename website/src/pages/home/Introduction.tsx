@@ -16,10 +16,6 @@ const StyledCard = styled(Card)`
   flex: 1;
 `
 
-const StyledStack = styled(Stack)`
-  flex-wrap: wrap;
-`
-
 const Introduction = () => (
   <Stack gap={6}>
     <HeadingContainer
@@ -48,7 +44,7 @@ const Introduction = () => (
       />
     </HeadingContainer>
 
-    <StyledStack gap={2} justifyContent="space-between" direction="row">
+    <Stack gap={2} justifyContent="space-between" direction="row">
       <StyledCard
         title="Accessibility"
         description="We follow WAI-ARIA standards for each component."
@@ -64,7 +60,7 @@ const Introduction = () => (
         description="Scaleway UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
         icon={swDx}
       />
-    </StyledStack>
+    </Stack>
   </Stack>
 )
 

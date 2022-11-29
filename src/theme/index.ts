@@ -52,16 +52,12 @@ type SCWUITheme = typeof theme & {
   linkComponent?: unknown
 }
 
-type RecursivePartial<T> = {
-  [P in keyof T]?: RecursivePartial<T[P]>
-}
-
 /**
  * Will extend theme with new theme properties
  * @param {SCWUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
  * @param {RecursivePartial<SCWUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
-const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
+const extendTheme = (extendedTheme: Record<string, unknown>) =>
   deepmerge(theme, extendedTheme) as SCWUITheme
 
 const lightTheme: SCWUITheme = theme
