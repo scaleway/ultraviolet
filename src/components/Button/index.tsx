@@ -33,6 +33,7 @@ const StyledLink = styled(Link)`
   &:hover,
   &:focus {
     gap: 0;
+  }
 `
 
 const borderedVariant = ({
