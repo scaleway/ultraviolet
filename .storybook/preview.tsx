@@ -10,10 +10,6 @@ import { light, dark } from './storybookThemes'
 import lightTheme, { darkTheme } from '../src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
-import AsapBoldWoff2 from './assets/fonts/asap/Asap-Bold.woff2'
-import AsapMediumWoff2 from './assets/fonts/asap/Asap-Medium.woff2'
-import AsapRegularWoff2 from './assets/fonts/asap/Asap-Regular.woff2'
-import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 import isChromatic from 'chromatic/isChromatic'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
@@ -118,37 +114,6 @@ export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
     }
   `
 
-const fonts = css`
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url(${AsapRegularWoff2}) format('woff2');
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url(${AsapMediumWoff2}) format('woff2');
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    src: url(${AsapBoldWoff2}) format('woff2');
-    font-weight: 600;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'JetBrains';
-    font-style: normal;
-    src: url(${JetBrains}) format('woff2');
-    font-weight: 400;
-    font-display: swap;
-  }
-`
-
 export const decorators = [
   (StoryComponent: Story) => {
     const mode = useDarkMode() ? 'dark' : 'light'
@@ -173,7 +138,7 @@ export const decorators = [
         supportedLocales={['en', 'fr', 'es']}
       >
         <ThemeProvider theme={generatedTheme}>
-          <Global styles={[globalStyles(mode), fonts]} />
+          <Global styles={[globalStyles(mode)]} />
           <StoryComponent />
         </ThemeProvider>
       </I18n>

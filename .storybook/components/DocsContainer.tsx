@@ -11,8 +11,43 @@ import {
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
 import { darkTheme } from '../../src'
-import { ThemeProvider } from '@emotion/react'
+import { ThemeProvider, Global, css } from '@emotion/react'
 import lightTheme from '../../src/theme'
+import AsapRegularWoff2 from '../assets/fonts/asap/Asap-Regular.woff2'
+import AsapMediumWoff2 from '../assets/fonts/asap/Asap-Medium.woff2'
+import AsapBoldWoff2 from '../assets/fonts/asap/Asap-Bold.woff2'
+import JetBrains from '../assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
+
+const fonts = css`
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapRegularWoff2}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapMediumWoff2}) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapBoldWoff2}) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'JetBrains';
+    font-style: normal;
+    src: url(${JetBrains}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+`
 
 type ExtraProps = {
   deprecated: boolean
@@ -34,6 +69,7 @@ const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
 
   return (
     <ThemeProvider theme={currentTheme}>
+      <Global styles={[fonts]} />
       <CustomBaseContainer
         context={{
           ...context,
