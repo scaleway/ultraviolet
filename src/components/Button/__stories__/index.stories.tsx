@@ -139,7 +139,7 @@ IconsPositions.parameters = {
 IconsPositions.decorators = [
   () => (
     <div style={{ display: 'flex', gap: 16 }}>
-      <Button iconPosition="left" icon="lock">
+      <Button iconPosition="left" icon="lock" href="#">
         Left
       </Button>
       <Button iconPosition="right" icon="lock">

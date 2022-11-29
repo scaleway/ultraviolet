@@ -32,8 +32,7 @@ const StyledLink = styled(Link)`
 
   &:hover,
   &:focus {
-    gap: ${({ theme }) => theme.space['1']};
-  }
+    gap: 0;
 `
 
 const borderedVariant = ({
