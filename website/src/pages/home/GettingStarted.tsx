@@ -46,7 +46,7 @@ const GettingStarted = () => (
           Integrate the theme into your project to use our components.
         </Text>
         <CopyBox>
-          <CopyBox.Command title="Dark theme" command={themeExample} />
+          <CopyBox.Command title="Theme" command={themeExample} />
         </CopyBox>
       </FullWidthStack>
       <GithubAndDocumentationButtons />

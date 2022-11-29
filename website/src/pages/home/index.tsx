@@ -24,7 +24,8 @@ const StyledCommunityContainer = styled(Stack)`
 
 const HomeContainer = styled(Stack)`
   max-width: ${APP_MAX_WIDTH}px;
-  ${({ theme }) => down('medium', `padding: 0 ${theme.space['2']};`)}
+  ${({ theme }) =>
+    down('medium', `padding: 0 ${theme.space['2']}; width: 100%`)}
 `
 
 const Home = () => (

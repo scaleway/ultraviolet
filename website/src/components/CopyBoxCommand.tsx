@@ -16,6 +16,7 @@ import {
 
 const StyledDiv = styled(Stack)`
   background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+
   span {
     background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   }
@@ -23,6 +24,7 @@ const StyledDiv = styled(Stack)`
   .react-syntax-highlighter-line-number {
     font-style: normal !important;
   }
+
   padding: ${({ theme }) => `${theme.space['2']} ${theme.space['3']}`};
   border-radius: ${({ theme }) => theme.radii.default};
 `
@@ -41,23 +43,23 @@ const CopyBox = ({ children }: CopyBoxProps) => {
 
   return (
     <StyledDiv gap={2}>
-      {flatChild.length > 1 && (
+      {flatChild.length > 1 ? (
         <Tabs
-          selected={tab + 1}
+          selected={tab}
           onChange={value => {
             if (typeof value === 'number') {
-              setTab(value - 1)
+              setTab(value)
             }
           }}
         >
           {flatChild.map(({ props: { title } }, index) => (
-            <Tabs.Tab key={`tab-${title}`} value={index + 1}>
+            <Tabs.Tab key={`tab-${title}`} value={index}>
               {title}
             </Tabs.Tab>
           ))}
         </Tabs>
-      )}
-      {cloneElement(flatChild[tab])}
+      ) : null}
+      {flatChild[tab]}
     </StyledDiv>
   )
 }
@@ -73,20 +75,18 @@ const Command = ({ command, showLineNumbers = true }: CommandProps) => {
   const { theme } = useTheme()
 
   return (
-    <div>
-      <SyntaxHighlighter
-        language="typescript"
-        style={theme === 'light' ? oneLight : dracula}
-        customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
-        lineProps={{
-          style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
-        }}
-        wrapLines
-        showLineNumbers={showLineNumbers}
-      >
-        {command}
-      </SyntaxHighlighter>
-    </div>
+    <SyntaxHighlighter
+      language="typescript"
+      style={theme === 'light' ? oneLight : dracula}
+      customStyle={{ background: 'none', fontSize: '14px', padding: 0 }}
+      lineProps={{
+        style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
+      }}
+      wrapLines
+      showLineNumbers={showLineNumbers}
+    >
+      {command}
+    </SyntaxHighlighter>
   )
 }
 

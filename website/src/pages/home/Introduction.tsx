@@ -9,11 +9,7 @@ import Card from '../../components/Card'
 import GithubAndDocumentationButtons from '../../components/GithubAndDocumentationButtons'
 
 const HeadingContainer = styled(Stack)`
-  ${down('medium', 'flex-direction: column-reverse;')}
-`
-
-const StyledCard = styled(Card)`
-  flex: 1;
+  ${down('medium', 'flex-direction: column;')}
 `
 
 const Introduction = () => (
@@ -45,17 +41,17 @@ const Introduction = () => (
     </HeadingContainer>
 
     <Stack gap={2} justifyContent="space-between" direction="row">
-      <StyledCard
+      <Card
         title="Accessibility"
         description="We follow WAI-ARIA standards for each component."
         icon={swA11y}
       />
-      <StyledCard
+      <Card
         title="Customizable"
         description="Easily define dark and light themes and customize them with various colors."
         icon={swCustom}
       />
-      <StyledCard
+      <Card
         title="Developer XP"
         description="Scaleway UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
         icon={swDx}
