@@ -1,3 +1,20 @@
+## [0.212.0](https://github.com/scaleway/scaleway-ui/compare/v0.211.4...v0.212.0) (2022-11-30)
+
+
+### :zap: Refactor
+
+* **Button, ProgressionButton:** migrate stories ([#2065](https://github.com/scaleway/scaleway-ui/issues/2065)) ([c0a6ee7](https://github.com/scaleway/scaleway-ui/commit/c0a6ee7a21992865ea391a633acca802ef172a2b))
+
+
+### :bug: Bug Fixes
+
+* a11y parameters for text and link ([#2067](https://github.com/scaleway/scaleway-ui/issues/2067)) ([6423d69](https://github.com/scaleway/scaleway-ui/commit/6423d69837b3a4bc92a07c0ec63cc80543963c0c))
+
+
+### :gear: Features
+
+* **toaster:** add more options and update stories ([#2061](https://github.com/scaleway/scaleway-ui/issues/2061)) ([f293fb6](https://github.com/scaleway/scaleway-ui/commit/f293fb6d7bf68bc14331770f5d7f9a0e309baa6d))
+
 ## [0.211.4](https://github.com/scaleway/scaleway-ui/compare/v0.211.3...v0.211.4) (2022-11-29)
 
 
