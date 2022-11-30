@@ -1,7 +1,8 @@
 import { Global, ThemeProvider } from '@emotion/react'
 import { ReactNode } from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { fonts, globalStyles } from '../../../.storybook/preview'
+import { fonts } from '../../../.storybook/components/DocsContainer'
+import { globalStyles } from '../../../.storybook/preview'
 import lightTheme, { darkTheme } from '../../theme'
 
 const ThemeWrapper = ({ children }: { children: ReactNode }) => {

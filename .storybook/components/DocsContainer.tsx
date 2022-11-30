@@ -18,7 +18,7 @@ import AsapMediumWoff2 from '../assets/fonts/asap/Asap-Medium.woff2'
 import AsapBoldWoff2 from '../assets/fonts/asap/Asap-Bold.woff2'
 import JetBrains from '../assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 
-const fonts = css`
+export const fonts = css`
   @font-face {
     font-family: 'Asap';
     font-style: normal;
