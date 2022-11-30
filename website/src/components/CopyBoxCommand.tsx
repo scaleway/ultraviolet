@@ -1,13 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Stack, Tabs } from '@scaleway/ui'
-import {
-  Children,
-  ReactElement,
-  cloneElement,
-  isValidElement,
-  useState,
-} from 'react'
+import { Children, ReactElement, isValidElement, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import {
   dracula,

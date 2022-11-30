@@ -1,9 +1,9 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Breakpoint, Icon, Toggle } from '@scaleway/ui'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
-import { useTheme } from '@emotion/react'
 
 const Header = styled.header`
   min-height: 60px;

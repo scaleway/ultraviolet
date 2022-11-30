@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Button, Separator, Text, down, Stack } from '@scaleway/ui'
+import { Button, Separator, Stack, Text, down } from '@scaleway/ui'
 import Image from 'next/image'
 import slackLogo from '../../assets/icons/icon-slack.svg'
 import { APP_MAX_WIDTH } from '../../constants'
