@@ -110,7 +110,6 @@ const toast = {
 }
 
 type ToastContainerProps = {
-  className?: string
   /**
    * Whether or not to display the newest toast on top.
    * `Default: false`
@@ -124,18 +123,12 @@ type ToastContainerProps = {
    * Position of the toast container
    */
   position?: ToastOptions['position']
-  /**
-   * You can set an id if you have multiple toast containers
-   */
-  id?: string
 }
 
 const ToastContainer = ({
-  className,
   newestOnTop,
   limit,
   position,
-  id,
 }: ToastContainerProps) => {
   const theme = useTheme()
 
@@ -151,9 +144,7 @@ const ToastContainer = ({
             icon={false}
             newestOnTop={newestOnTop}
             limit={limit}
-            className={className}
             position={position}
-            containerId={id}
           />
         )}
       </ClassNames>
