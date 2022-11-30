@@ -16,8 +16,11 @@ if (isChromatic()) seedrandom('manual-seed', { global: true })
 
 const STORY_SORT = {
   order: [
-    'Home',
+    'Get started',
+    'Components state',
     'Testing',
+    'Changelog',
+    'Guidelines',
     'Customization',
     ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
     'Responsive',
