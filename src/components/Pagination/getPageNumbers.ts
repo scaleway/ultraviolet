@@ -19,7 +19,7 @@ export default function getPageNumbers(
   }
   let start = currentPage - gap - remaining
   if (start < 1) {
-    remaining = -start + 1
+    remaining = -start
     start = 1
   }
   if (end < pageCount) {
