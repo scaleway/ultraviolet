@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon, Link, Stack, Text } from '@scaleway/ui'
+import { Icon, Link, Stack, Text, down } from '@scaleway/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
@@ -16,6 +16,10 @@ const StyledCard = styled(Card)`
   flex: 1;
 `
 
+const StyledStack = styled(Stack)`
+  ${down('medium', 'flex-direction: column;')}
+`
+
 const OpenSource = () => (
   <section>
     <Stack gap={5}>
@@ -28,7 +32,7 @@ const OpenSource = () => (
         </Text>
       </Stack>
 
-      <Stack gap={2} direction="row">
+      <StyledStack gap={2} direction="row">
         <StyledCard
           title="Scaleway Form"
           description={
@@ -69,7 +73,7 @@ const OpenSource = () => (
           }
           icon={swLib}
         />
-      </Stack>
+      </StyledStack>
     </Stack>
   </section>
 )

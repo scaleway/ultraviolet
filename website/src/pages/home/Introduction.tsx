@@ -23,7 +23,7 @@ const Introduction = () => (
       <Breakpoint down="medium">
         <GithubAndDocumentationButtons />
       </Breakpoint>
-      <Stack gap={3}>
+      <Stack>
         <Text as="h1" variant="headingLarge" color="primary">
           Scaleway <b>UI</b>
         </Text>
@@ -40,7 +40,7 @@ const Introduction = () => (
       />
     </HeadingContainer>
 
-    <Stack gap={2} justifyContent="space-between" direction="row">
+    <HeadingContainer gap={2} justifyContent="space-between" direction="row">
       <Card
         title="Accessibility"
         description="We follow WAI-ARIA standards for each component."
@@ -56,7 +56,7 @@ const Introduction = () => (
         description="Scaleway UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
         icon={swDx}
       />
-    </Stack>
+    </HeadingContainer>
   </Stack>
 )
 

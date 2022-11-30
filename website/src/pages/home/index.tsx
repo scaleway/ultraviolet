@@ -20,6 +20,7 @@ const StyledCommunityContainer = styled(Stack)`
   padding: ${({ theme }) => theme.space['3']};
   background-color: ${({ theme }): string => theme.colors.primary.background};
   border-radius: ${({ theme }) => theme.radii.default};
+  ${down('medium', 'flex-direction: column; justify-content: start;')}
 `
 
 const HomeContainer = styled(Stack)`
@@ -40,6 +41,7 @@ const Home = () => (
       justifyContent="space-evenly"
       direction="row"
       alignItems="center"
+      gap={2}
     >
       <Stack gap={3} direction="row" alignItems="center">
         <Image src={slackLogo} width="48" height="48" alt="Slack logo" />

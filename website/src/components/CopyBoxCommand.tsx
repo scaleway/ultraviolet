@@ -82,7 +82,6 @@ const Command = ({ command, showLineNumbers = true }: CommandProps) => {
       lineProps={{
         style: { whiteSpace: 'pre-wrap', wordBreak: 'break-all' },
       }}
-      wrapLines
       showLineNumbers={showLineNumbers}
     >
       {command}

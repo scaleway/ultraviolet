@@ -13,6 +13,7 @@ const COMMON_THEME_PROPS = {
   typography: {
     headingLarge: {
       fontSize: '72px',
+      lineHeight: '80px',
     },
     heading: {
       fontSize: '42px',
