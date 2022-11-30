@@ -1,3 +1,16 @@
+## [0.212.1](https://github.com/scaleway/scaleway-ui/compare/v0.212.0...v0.212.1) (2022-11-30)
+
+
+### :memo: Documentation
+
+* add readme changelog and component state ([#2053](https://github.com/scaleway/scaleway-ui/issues/2053)) ([9c5ed07](https://github.com/scaleway/scaleway-ui/commit/9c5ed079b52fd435a8c9c7c2b2d1729d8ff7e500))
+
+
+### :package: Chore
+
+* **deps:** pin dependency emoji-toolkit to 7.0.0 ([#2070](https://github.com/scaleway/scaleway-ui/issues/2070)) ([ceb0be1](https://github.com/scaleway/scaleway-ui/commit/ceb0be103c4d0a1402eaf55b58982eb88d92ac3d))
+* **devdeps:** update babel monorepo ([#2066](https://github.com/scaleway/scaleway-ui/issues/2066)) ([4af98cc](https://github.com/scaleway/scaleway-ui/commit/4af98cc896c48fd1fd72ab9a4c19f1d4cefd45d9))
+
 ## [0.212.0](https://github.com/scaleway/scaleway-ui/compare/v0.211.4...v0.212.0) (2022-11-30)
 
 
