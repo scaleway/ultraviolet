@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import Sphere from '..'
 
 export default {
@@ -11,34 +10,9 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Sphere',
-} as Meta
+  title: 'Components/Sphere',
+} as ComponentMeta<typeof Sphere>
 
-const Template: Story<ComponentProps<typeof Sphere>> = args => (
-  <Sphere {...args} />
-)
-
-export const Default = Template.bind({})
-export const Halved = Template.bind({})
-
-Halved.parameters = {
-  docs: {
-    description: {
-      story:
-        'Easily add two different colors inside of Sphere component by adding them into `bgColors` property.',
-    },
-  },
-}
-
-Halved.args = {
-  colors: ['#333', '#666'],
-}
-
-export const Text = Template.bind({})
-
-Text.args = {
-  colors: ['#000'],
-  size: 20,
-  text: '★',
-  textColor: '#fff',
-}
+export { Playground } from './Playground.stories'
+export { Halved } from './Halved.stories'
+export { Text } from './Text.stories'

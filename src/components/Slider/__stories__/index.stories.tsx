@@ -1,5 +1,4 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import { ComponentMeta } from '@storybook/react'
 import Slider, { SliderItem } from '..'
 
 export default {
@@ -12,19 +11,8 @@ export default {
       },
     },
   },
+  title: 'Components/Slider/Slider',
   subcomponents: { SliderItem },
-  title: 'Components/Data Display/Slider',
-} as Meta
+} as ComponentMeta<typeof Slider>
 
-const Template: Story<ComponentProps<typeof Slider>> = () => (
-  <Slider>
-    <Slider.Item>Item 1</Slider.Item>
-    <Slider.Item>Item 2</Slider.Item>
-    <Slider.Item>Item 3</Slider.Item>
-    <Slider.Item>Item 4</Slider.Item>
-    <Slider.Item>Item 5</Slider.Item>
-    <Slider.Item>Item 6</Slider.Item>
-  </Slider>
-)
-
-export const Default = Template.bind({})
+export { Playground } from './Playground.stories'
