@@ -8,7 +8,7 @@ import {
   oneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-const StyledDiv = styled(Stack)`
+const StyledStack = styled(Stack)`
   background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
 
   span {
@@ -36,7 +36,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
   const [tab, setTab] = useState(0)
 
   return (
-    <StyledDiv gap={2}>
+    <StyledStack gap={2}>
       {flatChild.length > 1 ? (
         <Tabs
           selected={tab}
@@ -54,7 +54,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
         </Tabs>
       ) : null}
       {flatChild[tab]}
-    </StyledDiv>
+    </StyledStack>
   )
 }
 
