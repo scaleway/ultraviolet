@@ -177,7 +177,7 @@ const quarter = [
   '23:45',
 ]
 
-const schedules = {
+export const schedules = {
   half,
   hours,
   quarter,
