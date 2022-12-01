@@ -1,9 +1,10 @@
-import { Theme, css } from '@emotion/react'
+import { Theme } from '@emotion/react'
+import styled from '@emotion/styled'
 import { ComponentProps, Ref, forwardRef } from 'react'
 import Button from '../Button'
 
 const variantStyle = {
-  danger: (theme: Theme) => css`
+  danger: (theme: Theme) => `
     color: ${theme.colors.danger.text};
     &:hover,
     &:focus {
@@ -16,7 +17,7 @@ const variantStyle = {
       fill: ${theme.colors.danger.text};
     }
   `,
-  nav: (theme: Theme) => css`
+  nav: (theme: Theme) => `
     font-size: 16px;
     line-height: 24px;
     color: ${theme.colors.neutral.textWeak};
@@ -30,11 +31,45 @@ const variantStyle = {
   `,
 } as const
 
-const styles = {
-  borderless: css`
-    border: 0;
-  `,
-  disabled: (theme: Theme) => css`
+const StyledButton = styled(Button, {
+  shouldForwardProp: prop => !['borderless', 'itemVariant'].includes(prop),
+})<{
+  borderless?: boolean
+  disabled?: boolean
+  itemVariant?: keyof typeof variantStyle
+}>`
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  color: ${({ theme }) => theme.colors.neutral.text};
+  border: 0;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  cursor: pointer;
+  transition: color 300ms;
+  min-width: 110px;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.primary.textHover};
+    svg {
+      transition: fill 300ms;
+      fill: ${({ theme }) => theme.colors.primary.textHover};
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+    border-radius: 0 0 4px 4px;
+  }
+
+  ${({ itemVariant, theme }) =>
+    itemVariant ? variantStyle[itemVariant]?.(theme) : null}
+
+  ${({ disabled, theme }) =>
+    disabled
+      ? `
     cursor: not-allowed;
     color: ${theme.colors.neutral.textDisabled};
 
@@ -46,35 +81,11 @@ const styles = {
         fill: ${theme.colors.neutral.textHover};
       }
     }
-  `,
-  item: (theme: Theme) => css`
-    display: inline-block;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: inherit;
-    padding: 4px 8px;
-    color: ${theme.colors.neutral.text};
-    border: 0;
-    border-bottom: 1px solid ${theme.colors.neutral.border};
-    cursor: pointer;
-    transition: color 300ms;
-    min-width: 110px;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary.textHover};
-      svg {
-        transition: fill 300ms;
-        fill: ${theme.colors.primary.textHover};
-      }
-    }
+  `
+      : null}
 
-    &:last-child {
-      border-bottom: 0;
-      border-radius: 0 0 4px 4px;
-    }
-  `,
-} as const
+  ${({ borderless }) => (borderless ? `border: 0;` : null)}
+`
 
 type VariantItem = keyof typeof variantStyle
 
@@ -89,13 +100,13 @@ const Item = forwardRef(
       borderless = false,
       disabled = false,
       onClick,
-      variant,
+      variant: itemVariant,
       href,
       ...props
     }: ItemProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
-    <Button
+    <StyledButton
       ref={ref}
       variant="transparent"
       role="menuitem"
@@ -103,13 +114,9 @@ const Item = forwardRef(
       onClick={onClick}
       href={href}
       as={href ? 'a' : undefined}
+      borderless={borderless}
+      itemVariant={itemVariant}
       {...props}
-      css={[
-        styles.item,
-        variant && variantStyle[variant],
-        disabled && styles.disabled,
-        borderless && styles.borderless,
-      ]}
     />
   ),
 )
