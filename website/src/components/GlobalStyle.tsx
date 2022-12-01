@@ -29,7 +29,7 @@ const baseStyles = (theme: Theme) => css`
 
 const customTransitionAnimation = css`
   * {
-    transition: background-color 500ms ease;
+    transition: all 500ms ease;
   }
 `
 

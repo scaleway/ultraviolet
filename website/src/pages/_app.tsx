@@ -32,24 +32,28 @@ const App = ({ Component, pageProps }: AppProps) => {
     setTheme(localTheme)
   }, [])
 
-  const localLightTheme = extendTheme({
-    ...COMMON_THEME_PROPS,
-    colors: {
-      primary: {
-        textWeak: '#A395FF',
-        text: '#4F0599',
+  const localLightTheme = {
+    ...extendTheme({
+      ...COMMON_THEME_PROPS,
+      colors: {
+        primary: {
+          textWeak: '#A395FF',
+          text: '#4F0599',
+        },
       },
-    },
+    }),
     theme: 'light',
     setTheme: setThemeCallBack,
-  })
+  }
 
-  const localDarkTheme = extendTheme({
-    ...dark,
-    ...COMMON_THEME_PROPS,
+  const localDarkTheme = {
+    ...extendTheme({
+      ...dark,
+      ...COMMON_THEME_PROPS,
+    }),
     theme: 'dark',
     setTheme: setThemeCallBack,
-  })
+  }
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
