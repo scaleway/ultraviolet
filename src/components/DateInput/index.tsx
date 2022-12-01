@@ -255,16 +255,16 @@ const DateInput = ({
               <StyledSpan>
                 <Button
                   action="rounded"
-                  icon="chevron-left"
-                  iconSize={10}
+                  icon="arrow-left"
+                  iconSize={16}
                   variant="secondary"
                   onClick={decreaseMonth}
                   disabled={prevMonthButtonDisabled}
                 />
                 <Button
                   action="rounded"
-                  icon="chevron-right"
-                  iconSize={10}
+                  icon="arrow-right"
+                  iconSize={16}
                   variant="secondary"
                   onClick={increaseMonth}
                   disabled={nextMonthButtonDisabled}
