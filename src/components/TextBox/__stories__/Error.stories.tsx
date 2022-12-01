@@ -1,12 +1,11 @@
-import { Story } from '@storybook/react'
-import ErrorTransition from '../../../__stories__/components/ErrorTransition'
-import UncontrolledTextBox from './UncontrolledTextBox'
+import { Template } from './Template.stories'
 
-export const Error: Story = () => (
-  <ErrorTransition error="An error">
-    {error => <UncontrolledTextBox error={error} placeholder="Placeholder" />}
-  </ErrorTransition>
-)
+export const Error = Template.bind({})
+
+Error.args = {
+  placeholder: 'Placeholder',
+  error: 'An error',
+}
 
 Error.parameters = {
   docs: {

@@ -1,16 +1,11 @@
 import { Story } from '@storybook/react'
-import { textBoxSizes } from '..'
-import UncontrolledTextBox from './UncontrolledTextBox'
+import TextBox, { textBoxSizes } from '..'
+import Stack from '../../Stack'
 
 export const Sizes: Story = props => (
   <>
     {textBoxSizes.map(size => (
-      <UncontrolledTextBox
-        {...props}
-        key={size}
-        placeholder={`Size ${size}`}
-        size={size}
-      />
+      <TextBox key={size} placeholder={`Size ${size}`} size={size} {...props} />
     ))}
   </>
 )
@@ -23,14 +18,8 @@ Sizes.parameters = {
 
 Sizes.decorators = [
   StoryComponent => (
-    <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: 8,
-      }}
-    >
+    <Stack gap={1} direction="row">
       <StoryComponent />
-    </div>
+    </Stack>
   ),
 ]
