@@ -1,18 +1,28 @@
 import { ComponentStory } from '@storybook/react'
-import RichSelect, { SelectOption } from '..'
-import ControlValue from '../../../__stories__/components/ControlValue'
+import { ChangeEvent, useState } from 'react'
+import RichSelect from '..'
 
-// @fixme this appear like 💩in the code snippet
-export const Controlled: ComponentStory<typeof RichSelect> = ({ ...props }) => (
-  <ControlValue<SelectOption> value={{ label: '', value: '' }} {...props}>
-    {({ value, onChange }) => (
-      <RichSelect name="controlled" value={value} onChange={onChange}>
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>
-    )}
-  </ControlValue>
-)
+export const Controlled: ComponentStory<typeof RichSelect> = ({ ...props }) => {
+  const [value, setValue] = useState<string>('a')
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setValue(event.currentTarget.value)
+  }
+
+  return (
+    <RichSelect
+      name="controlled"
+      value={value}
+      // @ts-expect-error onChange signature error because RichSelect did not properly implement IsMulti
+      onChange={handleChange}
+      {...props}
+    >
+      <RichSelect.Option value="a">Option A</RichSelect.Option>
+      <RichSelect.Option value="b">Option B</RichSelect.Option>
+    </RichSelect>
+  )
+}
+
 Controlled.parameters = {
   docs: {
     storyDescription: 'This shows how to use Controlled RichSelect.',

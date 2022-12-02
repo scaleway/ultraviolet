@@ -2,41 +2,42 @@ import { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 import RichSelect, { SelectOption } from '..'
 import { Button } from '../..'
-import ControlValue from '../../../__stories__/components/ControlValue'
 import * as animations from '../../../utils/animations'
 
-// @fixme this looks like 💩on code snippet
-export const Animated: ComponentStory<typeof RichSelect> = ({ ...props }) => (
-  <ControlValue<SelectOption> value={{ label: '', value: '' }}>
-    {({ value, onChange }) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const [options] = useState(
-        Object.keys(animations).map(animation => ({
-          label: animation,
-          value: animation,
-        })),
-      )
+export const Animated: ComponentStory<typeof RichSelect> = ({ ...props }) => {
+  const [value, setValue] = useState<string>('pulse')
 
-      return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
-          <Button onClick={() => onChange({ label: 'pulse', value: 'pulse' })}>
-            Select pulse animation
-          </Button>
-          <RichSelect
-            name="animated"
-            animationOnChange
-            animation={value.value}
-            animationDuration={1000}
-            value={value}
-            onChange={onChange}
-            options={options}
-            {...props}
-          />
-        </div>
-      )
-    }}
-  </ControlValue>
-)
+  const [options] = useState(
+    Object.keys(animations).map(animation => ({
+      label: animation,
+      value: animation,
+    })),
+  )
+
+  const handleChange = (newValue: SelectOption) => {
+    if (newValue?.value) {
+      setValue(newValue.value)
+    }
+  }
+
+  return (
+    <>
+      <Button onClick={() => setValue('pulse')}>Select pulse animation</Button>
+      <RichSelect
+        name="animated"
+        animationOnChange
+        animation={value}
+        animationDuration={1000}
+        value={value}
+        // @ts-expect-error onChange signature error because RichSelect did not properly implement IsMulti
+        onChange={handleChange}
+        isMulti={false}
+        options={options}
+        {...props}
+      />
+    </>
+  )
+}
 
 Animated.parameters = {
   docs: {
@@ -53,7 +54,14 @@ ${Object.keys(animations)
 
 Animated.decorators = [
   StoryComponent => (
-    <div style={{ margin: '16px 64px' }}>
+    <div
+      style={{
+        margin: '16px 64px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 32,
+      }}
+    >
       <StoryComponent />
     </div>
   ),
