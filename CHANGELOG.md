@@ -1,3 +1,20 @@
+## [0.212.2](https://github.com/scaleway/scaleway-ui/compare/v0.212.1...v0.212.2) (2022-12-02)
+
+
+### :white_check_mark: Test
+
+* **Pagination:** add tests to Pagination v1 and v2 to document v1 bug ([#2073](https://github.com/scaleway/scaleway-ui/issues/2073)) ([08886cc](https://github.com/scaleway/scaleway-ui/commit/08886cc3a341b80d5e4a255ba368ce2c39f818b9))
+
+
+### :package: Chore
+
+* **devDeps:** upgrade deps ([#2076](https://github.com/scaleway/scaleway-ui/issues/2076)) ([299e746](https://github.com/scaleway/scaleway-ui/commit/299e746d5915a107eab3f7d36db3b7bd7de51a3a))
+
+
+### :bug: Bug Fixes
+
+* **design:** replace chevron icons with arrow ones ([#2078](https://github.com/scaleway/scaleway-ui/issues/2078)) ([96c78eb](https://github.com/scaleway/scaleway-ui/commit/96c78eb368608385767c54e883fd00a646fd0319))
+
 ## [0.212.1](https://github.com/scaleway/scaleway-ui/compare/v0.212.0...v0.212.1) (2022-11-30)
 
 
