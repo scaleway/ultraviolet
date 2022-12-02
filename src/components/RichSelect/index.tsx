@@ -576,8 +576,8 @@ const DropdownIndicator = (
     <components.DropdownIndicator {...props}>
       <Stack gap={2} direction="row">
         <Icon
-          name={time ? 'clock-outline' : 'chevron-down'}
-          size={time ? 24 : 11}
+          name={time ? 'clock-outline' : 'arrow-down'}
+          size={time ? 24 : 16}
           color={color}
         />
         {required ? (
