@@ -106,7 +106,6 @@ const Title = ({ text }: TitleProps) => (
 type AlertProps = {
   variant?: AlertVariant
   children: ReactNode
-  iconSize?: number
   icon?: ComponentProps<typeof Icon>['name']
   /**
    * Add a title at the top of your alert.
@@ -119,7 +118,6 @@ type AlertProps = {
 const Alert = ({
   variant = 'standard',
   children,
-  iconSize = 32,
   icon,
   title,
   type = 'warning',
@@ -128,7 +126,7 @@ const Alert = ({
   <StyledContainer type={type} variant={variant} className={className}>
     <StyledIcon
       name={icon || typesDefaultIcons[type]}
-      size={iconSize}
+      size={24}
       aria-hidden="true"
     />
     <AlertContainer>
