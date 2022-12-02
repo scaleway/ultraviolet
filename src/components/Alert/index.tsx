@@ -3,17 +3,11 @@ import styled from '@emotion/styled'
 import { ComponentProps, ReactNode } from 'react'
 import { Color } from '../../theme'
 import Icon from '../Icon'
+import Stack from '../Stack'
 import Text from '../Text'
 
 export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
-export const alertVariants = [
-  'filled',
-  'standard',
-  'outlined',
-  'transparent',
-] as const
 type AlertType = typeof alertTypes[number]
-type AlertVariant = typeof alertVariants[number]
 
 const alertTypeToColorMapping: Record<AlertType, Color> = {
   beta: 'warning',
@@ -25,29 +19,9 @@ const alertTypeToColorMapping: Record<AlertType, Color> = {
 const alertStyles = ({
   theme,
   type,
-  variant,
 }: ContainerProps & { theme: Theme }): SerializedStyles => {
   const sentiment =
     theme.colors[alertTypeToColorMapping[type]] || theme.colors.danger
-
-  if (variant === 'filled') {
-    return css`
-      background-color: ${sentiment.backgroundStrong};
-      color: ${sentiment.textStrong};
-    `
-  }
-  if (variant === 'transparent') {
-    return css`
-      background-color: transparent;
-      color: ${sentiment.textWeak};
-    `
-  }
-  if (variant === 'outlined') {
-    return css`
-      border: 1px solid ${sentiment.borderWeak};
-      color: ${sentiment.textWeak};
-    `
-  }
 
   return css`
     background-color: ${sentiment.background};
@@ -65,21 +39,17 @@ const typesDefaultIcons: Record<
   warning: 'alert',
 }
 
-type ContainerProps = { variant: AlertVariant; type: AlertType }
+type ContainerProps = { type: AlertType }
 
-const StyledContainer = styled('div', {
-  shouldForwardProp: prop => !['type', 'variant'].includes(prop),
+const StyledStackContainer = styled(Stack, {
+  shouldForwardProp: prop => !['type'].includes(prop),
 })<ContainerProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: ${({ theme }) => theme.radii.default};
-  padding: 12px;
+  padding: ${({ theme }) => theme.space['2']};
   ${alertStyles}
-`
-
-const StyledIcon = styled(Icon)`
-  margin-right: ${({ theme }) => theme.space[2]};
 `
 
 const AlertContainer = styled.div`
@@ -104,7 +74,6 @@ const Title = ({ text }: TitleProps) => (
 )
 
 type AlertProps = {
-  variant?: AlertVariant
   children: ReactNode
   icon?: ComponentProps<typeof Icon>['name']
   /**
@@ -116,19 +85,21 @@ type AlertProps = {
 }
 
 const Alert = ({
-  variant = 'standard',
   children,
   icon,
   title,
   type = 'warning',
   className,
 }: AlertProps) => (
-  <StyledContainer type={type} variant={variant} className={className}>
-    <StyledIcon
-      name={icon || typesDefaultIcons[type]}
-      size={24}
-      aria-hidden="true"
-    />
+  <StyledStackContainer
+    direction="row"
+    alignItems="center"
+    justifyContent="flex-start"
+    type={type}
+    className={className}
+    gap={2}
+  >
+    <Icon name={icon || typesDefaultIcons[type]} size={24} aria-hidden="true" />
     <AlertContainer>
       {title && <Title text={title} />}
       {typeof children === 'string' ? (
@@ -139,7 +110,7 @@ const Alert = ({
         children
       )}
     </AlertContainer>
-  </StyledContainer>
+  </StyledStackContainer>
 )
 
 export default Alert
