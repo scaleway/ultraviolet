@@ -50,7 +50,7 @@ const LineChart = ({
     datasets: data?.map((d, i) => ({
       data: d.data,
       id: d.id,
-      label: d.label as string,
+      label: d?.['label'] as string,
       serieColor: getLegendColor(i, theme),
     })),
   }

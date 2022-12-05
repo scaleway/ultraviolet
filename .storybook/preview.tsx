@@ -86,7 +86,7 @@ ENV_PARAMETERS.visual = ENV_PARAMETERS.production
 
 export const parameters =
   ENV_PARAMETERS[
-    process.env.STORYBOOK_ENVIRONMENT as keyof typeof ENV_PARAMETERS
+    process.env?.['STORYBOOK_ENVIRONMENT'] as keyof typeof ENV_PARAMETERS
   ] || ENV_PARAMETERS.production
 
 const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({

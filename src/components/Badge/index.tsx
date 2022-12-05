@@ -148,7 +148,9 @@ const Badge = ({
       role="status"
       aria-label={ariaLabel}
       as="span"
-      variant={disabled ? generatedStyles.disabled : generatedStyles[variant]}
+      variant={
+        disabled ? generatedStyles?.['disabled'] : generatedStyles[variant]
+      }
       size={sizeValue}
       className={className}
     >
