@@ -3,6 +3,9 @@ import { useState } from 'react'
 import TimeInput from '..'
 import { SelectOption } from '../../RichSelect'
 
+const isSafeValue = (value: unknown): value is SelectOption =>
+  value !== null && !Array.isArray(value)
+
 export const Controlled: Story = ({
   value: defaultValue = { label: '03:30', value: '03:30' },
 }) => {
@@ -11,7 +14,11 @@ export const Controlled: Story = ({
   return (
     <TimeInput
       name="timeinput-test-controlled"
-      onChange={setValue}
+      onChange={newValue => {
+        if (isSafeValue(newValue)) {
+          setValue(newValue)
+        }
+      }}
       placeholder="Time"
       value={value}
     />
