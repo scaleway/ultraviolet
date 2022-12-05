@@ -82,10 +82,11 @@ export const SliderItem = ({ children }: SliderItemProps): JSX.Element => (
 )
 
 type SliderProps = {
+  className?: string
   children?: ReactNode
 }
 
-const Slider = ({ children }: SliderProps): JSX.Element => {
+const Slider = ({ children, className }: SliderProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
@@ -121,7 +122,7 @@ const Slider = ({ children }: SliderProps): JSX.Element => {
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper>
+    <StyledWrapper className={className}>
       <StyledBeforeScroll
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
