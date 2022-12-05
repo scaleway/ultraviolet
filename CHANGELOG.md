@@ -1,3 +1,27 @@
+## [0.212.4](https://github.com/scaleway/scaleway-ui/compare/v0.212.3...v0.212.4) (2022-12-05)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/react to v18.0.26 ([#2083](https://github.com/scaleway/scaleway-ui/issues/2083)) ([142a097](https://github.com/scaleway/scaleway-ui/commit/142a097eb78a4974359f2da8d212d388c2c6a9f1))
+* **devdeps:** update nextjs monorepo to v13.0.6 ([#2082](https://github.com/scaleway/scaleway-ui/issues/2082)) ([09ced4b](https://github.com/scaleway/scaleway-ui/commit/09ced4b9a5d79fe80c7b6e7ecac015238ad630ee))
+
+
+### :zap: Refactor
+
+* **alert:** change alert default icon size to 24px ([#2079](https://github.com/scaleway/scaleway-ui/issues/2079)) ([5908d64](https://github.com/scaleway/scaleway-ui/commit/5908d64c824b762e523be625549281919f7c73f5))
+* **Slider,Sphere,StateBar:** migrate stories ([#2072](https://github.com/scaleway/scaleway-ui/issues/2072)) ([b59871a](https://github.com/scaleway/scaleway-ui/commit/b59871a1d7aaef8dafc1fe651d9a0e0267a77277))
+
+
+### :repeat: CI
+
+* harden ts config ([#2084](https://github.com/scaleway/scaleway-ui/issues/2084)) ([7ea89e8](https://github.com/scaleway/scaleway-ui/commit/7ea89e841046836ef3b7b0a1df1af0acb60561f8))
+
+
+### :bug: Bug Fixes
+
+* **types:** embed XOR ([#2088](https://github.com/scaleway/scaleway-ui/issues/2088)) ([ca2f507](https://github.com/scaleway/scaleway-ui/commit/ca2f5071ced853adde2628e307915ae3d30dd966))
+
 ## [0.212.3](https://github.com/scaleway/scaleway-ui/compare/v0.212.2...v0.212.3) (2022-12-05)
 
 
