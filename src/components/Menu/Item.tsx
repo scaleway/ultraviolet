@@ -90,7 +90,10 @@ const StyledButton = styled(Button, {
 
 type VariantItem = keyof typeof variantStyle
 
-type ItemProps = Omit<ComponentProps<typeof Button>, 'variant' | 'innerRef'> & {
+type ItemProps = Pick<
+  ComponentProps<typeof Button>,
+  'disabled' | 'onClick' | 'href' | 'children'
+> & {
   borderless?: boolean
   variant?: VariantItem
 }
