@@ -1,3 +1,20 @@
+## [0.212.3](https://github.com/scaleway/scaleway-ui/compare/v0.212.2...v0.212.3) (2022-12-05)
+
+
+### :bug: Bug Fixes
+
+* **icon:** use proper arrow icons ([#2077](https://github.com/scaleway/scaleway-ui/issues/2077)) ([2086c0b](https://github.com/scaleway/scaleway-ui/commit/2086c0b9c2b221452ad8736cd528040bca4d36bc))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v4.1.1 ([#2081](https://github.com/scaleway/scaleway-ui/issues/2081)) ([ff49c6f](https://github.com/scaleway/scaleway-ui/commit/ff49c6f1b3495e366256351b645f6088c9dca77b))
+
+
+### :white_check_mark: Test
+
+* update snapshots after arrow icons redesign ([#2085](https://github.com/scaleway/scaleway-ui/issues/2085)) ([745a3cf](https://github.com/scaleway/scaleway-ui/commit/745a3cffc70b28e513e017c2470680e03b1c32ff))
+
 ## [0.212.2](https://github.com/scaleway/scaleway-ui/compare/v0.212.1...v0.212.2) (2022-12-02)
 
 
