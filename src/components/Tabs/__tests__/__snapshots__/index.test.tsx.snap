@@ -556,7 +556,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem {
+.cache-1vknmyi-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -593,7 +593,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   color: #4a4f62;
   display: inline-block;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
   color: #4a4f62;
@@ -606,31 +606,27 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   background-color: transparent;
 }
 
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:hover,
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:focus {
+.cache-1vknmyi-StyledButton-StyledButton:hover,
+.cache-1vknmyi-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:hover,
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:focus {
+.cache-1vknmyi-StyledButton-StyledButton:hover,
+.cache-1vknmyi-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:hover svg,
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:focus svg {
+.cache-1vknmyi-StyledButton-StyledButton:hover svg,
+.cache-1vknmyi-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem:last-child {
+.cache-1vknmyi-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
-}
-
-.cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem[aria-selected='true'] {
-  color: #390171;
 }
 
 .cache-m245rk-StyledContent {
@@ -649,7 +645,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   pointer-events: none;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem {
+.cache-1gz49bc-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -692,7 +688,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   box-shadow: none;
   display: inline-block;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
   color: #4a4f62;
@@ -707,46 +703,42 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-1gz49bc-StyledButton-StyledButton:hover,
+.cache-1gz49bc-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem svg {
+.cache-1gz49bc-StyledButton-StyledButton svg {
   fill: #c4c9d6;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-1gz49bc-StyledButton-StyledButton:hover,
+.cache-1gz49bc-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
+.cache-1gz49bc-StyledButton-StyledButton:hover svg,
+.cache-1gz49bc-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:last-child {
+.cache-1gz49bc-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:hover,
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:focus {
+.cache-1gz49bc-StyledButton-StyledButton:hover,
+.cache-1gz49bc-StyledButton-StyledButton:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:hover svg,
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem:focus svg {
+.cache-1gz49bc-StyledButton-StyledButton:hover svg,
+.cache-1gz49bc-StyledButton-StyledButton:focus svg {
   fill: #4a4f62;
-}
-
-.cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem[aria-selected='true'] {
-  color: #390171;
 }
 
 <div
@@ -767,8 +759,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       >
         <button
           aria-disabled="false"
-          aria-selected="false"
-          class="ej1y0fv0 cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem em6gco80"
+          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
           role="menuitem"
           type="button"
         >
@@ -780,8 +771,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="true"
-          aria-selected="false"
-          class="ej1y0fv0 cache-1k7pm7t-StyledButton-item-disabled-Item-StyledMenuItem em6gco80"
+          class="epxin6a0 cache-1gz49bc-StyledButton-StyledButton em6gco80"
           disabled=""
           role="menuitem"
           type="button"
@@ -794,8 +784,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          aria-selected="false"
-          class="ej1y0fv0 cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem em6gco80"
+          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
           role="menuitem"
           type="button"
         >
@@ -807,8 +796,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          aria-selected="true"
-          class="ej1y0fv0 cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem em6gco80"
+          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
           role="menuitem"
           type="button"
         >
@@ -820,8 +808,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          aria-selected="false"
-          class="ej1y0fv0 cache-1ky2tfc-StyledButton-item-Item-StyledMenuItem em6gco80"
+          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
           role="menuitem"
           type="button"
         >

@@ -18,8 +18,8 @@ const variantStyle = {
     }
   `,
   nav: (theme: Theme) => `
-    font-size: 16px;
-    line-height: 24px;
+    font-size: ${theme.typography.body.fontSize};
+    line-height: ${theme.typography.body.lineHeight};
     color: ${theme.colors.neutral.textWeak};
     &:hover,
     &:focus {
@@ -39,10 +39,10 @@ const StyledButton = styled(Button, {
   itemVariant?: keyof typeof variantStyle
 }>`
   display: inline-block;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
+  line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
   font-weight: inherit;
-  padding: 4px 8px;
+  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   color: ${({ theme }) => theme.colors.neutral.text};
   border: 0;
   border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
@@ -61,7 +61,8 @@ const StyledButton = styled(Button, {
 
   &:last-child {
     border-bottom: 0;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0
+      ${({ theme }) => ` ${theme.radii.default} ${theme.radii.default}`};
   }
 
   ${({ itemVariant, theme }) =>
@@ -102,7 +103,7 @@ const Item = forwardRef(
       onClick,
       variant: itemVariant,
       href,
-      ...props
+      children,
     }: ItemProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
@@ -116,8 +117,9 @@ const Item = forwardRef(
       as={href ? 'a' : undefined}
       borderless={borderless}
       itemVariant={itemVariant}
-      {...props}
-    />
+    >
+      {children}
+    </StyledButton>
   ),
 )
 
