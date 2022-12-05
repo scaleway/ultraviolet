@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Slider/Slider',
+  title: 'Components/Data Display/Slider',
   subcomponents: { SliderItem },
 } as ComponentMeta<typeof Slider>
 
