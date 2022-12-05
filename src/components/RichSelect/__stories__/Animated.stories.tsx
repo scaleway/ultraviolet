@@ -1,34 +1,39 @@
 import { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
-import RichSelect, { SelectOption } from '..'
+import { SingleValue } from 'react-select'
+import RichSelect from '..'
 import { Button } from '../..'
 import * as animations from '../../../utils/animations'
 
-export const Animated: ComponentStory<typeof RichSelect> = ({ ...props }) => {
-  const [value, setValue] = useState<string>('pulse')
+type OptionType = { label: string; value: string }
 
+export const Animated: ComponentStory<typeof RichSelect> = ({ ...props }) => {
   const [options] = useState(
     Object.keys(animations).map(animation => ({
       label: animation,
       value: animation,
     })),
   )
+  const defaultOption = { value: 'pulse', label: 'pulse' }
+  const [animation, setAnimation] = useState<OptionType>(defaultOption)
 
-  const handleChange = (newValue: SelectOption) => {
-    if (newValue?.value) {
-      setValue(newValue.value)
+  const handleChange = (newValue: SingleValue<OptionType>) => {
+    if (newValue) {
+      setAnimation(newValue)
     }
   }
 
   return (
     <>
-      <Button onClick={() => setValue('pulse')}>Select pulse animation</Button>
+      <Button onClick={() => setAnimation(defaultOption)}>
+        Select pulse animation
+      </Button>
       <RichSelect
         name="animated"
         animationOnChange
-        animation={value}
+        animation={animation.value}
         animationDuration={1000}
-        value={value}
+        value={animation}
         // @ts-expect-error onChange signature error because RichSelect did not properly implement IsMulti
         onChange={handleChange}
         isMulti={false}

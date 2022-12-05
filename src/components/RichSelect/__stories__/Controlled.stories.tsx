@@ -1,12 +1,18 @@
 import { ComponentStory } from '@storybook/react'
-import { ChangeEvent, useState } from 'react'
+import { useState } from 'react'
+import { SingleValue } from 'react-select'
 import RichSelect from '..'
 
-export const Controlled: ComponentStory<typeof RichSelect> = ({ ...props }) => {
-  const [value, setValue] = useState<string>('a')
+type OptionType = { label: string; value: string }
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.currentTarget.value)
+export const Controlled: ComponentStory<typeof RichSelect> = ({ ...props }) => {
+  const [value, setValue] = useState<OptionType>()
+
+  const handleChange = (newValue: SingleValue<OptionType>) => {
+    console.log({ newValue })
+    if (newValue) {
+      setValue(newValue)
+    }
   }
 
   return (
