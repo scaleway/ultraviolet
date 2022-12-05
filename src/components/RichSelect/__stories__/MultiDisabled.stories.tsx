@@ -1,21 +1,17 @@
-import { ComponentStory } from '@storybook/react'
 import RichSelect from '..'
+import { Template } from './Template.stories'
 
-export const MultiDisabled: ComponentStory<typeof RichSelect> = ({
-  ...props
-}) => (
-  <RichSelect
-    name="multi-disabled"
-    value={{ label: 'Option A', value: 'a' }}
-    isMulti
-    disabled
-    {...props}
-  >
-    <RichSelect.Option value="a">Option A</RichSelect.Option>
-    <RichSelect.Option value="b">Option B</RichSelect.Option>
-  </RichSelect>
-)
-
+export const MultiDisabled = Template.bind({})
+MultiDisabled.args = {
+  name: 'multi-disabled',
+  isMulti: true,
+  disabled: true,
+  value: { label: 'Option A', value: 'a' },
+  children: [
+    <RichSelect.Option value="a">Option A</RichSelect.Option>,
+    <RichSelect.Option value="b">Option B</RichSelect.Option>,
+  ],
+}
 MultiDisabled.parameters = {
   docs: {
     storyDescription:

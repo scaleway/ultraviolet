@@ -1,22 +1,17 @@
-import { ComponentStory } from '@storybook/react'
 import RichSelect from '..'
+import { Template } from './Template.stories'
 
-export const Uncontrolled: ComponentStory<typeof RichSelect> = ({
-  ...props
-}) => (
-  <RichSelect
-    isClearable
-    disabled
-    name="uncontrolled"
-    value={{ label: 'Option A', value: 'a' }}
-    {...props}
-  >
-    <RichSelect.Option value="a">Option A</RichSelect.Option>
-    <RichSelect.Option value="b">Option B</RichSelect.Option>
-  </RichSelect>
-)
+export const Uncontrolled = Template.bind({})
+Uncontrolled.args = {
+  name: 'uncontrolled',
+  value: { label: 'Option A', value: 'a' },
+  children: [
+    <RichSelect.Option value="a">Option A</RichSelect.Option>,
+    <RichSelect.Option value="b">Option B</RichSelect.Option>,
+  ],
+}
 Uncontrolled.parameters = {
   docs: {
-    storyDescription: 'This shows how to sur Uncontrolled RichSelect.',
+    storyDescription: 'This shows how to use Uncontrolled RichSelect.',
   },
 }
