@@ -101,7 +101,7 @@ const VerificationCode = ({
   }
 
   const inputOnChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const index = parseInt(String(event.target.dataset.id), 10)
+    const index = parseInt(String(event.target.dataset?.['id']), 10)
     let { value } = event.target
     if (type === 'number') {
       value = event.target.value.replace(/[^\d]/gi, '')
@@ -130,7 +130,7 @@ const VerificationCode = ({
   }
 
   const inputOnKeyDown: KeyboardEventHandler<HTMLInputElement> = event => {
-    const index = Number(event.currentTarget.dataset.id)
+    const index = Number(event.currentTarget.dataset?.['id'])
     const prevIndex = index - 1
     const nextIndex = index + 1
     const first = inputRefs[0]
@@ -179,7 +179,7 @@ const VerificationCode = ({
 
   const inputOnPaste: ClipboardEventHandler<HTMLInputElement> = event => {
     event.preventDefault()
-    const currentIndex = Number(event.currentTarget.dataset.id as string)
+    const currentIndex = Number(event.currentTarget.dataset?.['id'] as string)
     const pastedValue = [...event.clipboardData.getData('Text').split('')].map(
       (copiedValue: string) =>
         // Replace non number char with empty char when type is number

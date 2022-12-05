@@ -1206,7 +1206,13 @@ describe('List', () => {
 
   test('should render correctly with no data', () =>
     shouldMatchEmotionSnapshot(
-      <List<Record<string, string>>
+      <List<{
+        id: string
+        name: string
+        description: string
+        department: string
+        reference: string
+      }>
         emptyListComponent="Test"
         multiselect
         idKey="id"

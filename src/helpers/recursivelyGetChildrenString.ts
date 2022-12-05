@@ -5,11 +5,11 @@ const recursivelyGetChildrenString = (children: ReactNode): string => {
   if (Array.isArray(children)) return '' // We can't determine which string to display in tooltip
   if (typeof children === 'object') {
     const childProps = (
-      (children as unknown as Record<string, unknown>)?.props as Record<
+      (children as unknown as Record<string, unknown>)?.['props'] as Record<
         string,
         unknown
       >
-    )?.children as ReactNode
+    )?.['children'] as ReactNode
     if (childProps) return recursivelyGetChildrenString(childProps)
   }
 

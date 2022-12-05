@@ -114,7 +114,7 @@ const CustomLegend = ({
               >
                 <CellValueContainer>
                   <Text as="span" variant="bodySmall" color="neutral">
-                    {row.label}
+                    {row?.['label']}
                   </Text>
                   <div data-testid={`label-${id}`} css={styles.legend(index)} />
                 </CellValueContainer>
