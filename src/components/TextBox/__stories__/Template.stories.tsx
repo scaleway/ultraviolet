@@ -8,5 +8,5 @@ export const Template: ComponentStory<typeof TextBox> = ({
 }) => {
   const [value, setValue] = useState(defaultValue)
 
-  return <TextBox value={value} onChange={setValue} {...args} />
+  return <TextBox label="Label" value={value} onChange={setValue} {...args} />
 }
