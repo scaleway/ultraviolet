@@ -86,9 +86,7 @@ type SanitizedAlertBarProps = {
 } & ComponentProps<typeof Alert>
 
 const SanitizedAlertBar = ({ type, children }: SanitizedAlertBarProps) => (
-  <StyledAlert type={type} iconSize={24}>
-    {children}
-  </StyledAlert>
+  <StyledAlert type={type}>{children}</StyledAlert>
 )
 
 const toast = {
