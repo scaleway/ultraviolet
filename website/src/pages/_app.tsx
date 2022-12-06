@@ -44,7 +44,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }),
     theme: 'light',
     setTheme: setThemeCallBack,
-  }
+  } as const
 
   const localDarkTheme = {
     ...extendTheme({
@@ -53,7 +53,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }),
     theme: 'dark',
     setTheme: setThemeCallBack,
-  }
+  } as const
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
