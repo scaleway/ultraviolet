@@ -1,3 +1,21 @@
+## [0.212.5](https://github.com/scaleway/scaleway-ui/compare/v0.212.4...v0.212.5) (2022-12-06)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.10.3 ([#2089](https://github.com/scaleway/scaleway-ui/issues/2089)) ([a7a6346](https://github.com/scaleway/scaleway-ui/commit/a7a6346dc42e7ec0de656f7c7ab0593a07fcc5bc))
+
+
+### :zap: Refactor
+
+* **menu:** replaced css by styled ([#2074](https://github.com/scaleway/scaleway-ui/issues/2074)) ([5c799c6](https://github.com/scaleway/scaleway-ui/commit/5c799c647dd43152e13a504cd67a4a371b94c346))
+* **VerificationCode:** rewrite stories ([#2087](https://github.com/scaleway/scaleway-ui/issues/2087)) ([d9b3cb0](https://github.com/scaleway/scaleway-ui/commit/d9b3cb0f79f4d417fe394e7e455d7aa800168e46))
+
+
+### :bug: Bug Fixes
+
+* **Button:** use Template in stories when possible ([#2091](https://github.com/scaleway/scaleway-ui/issues/2091)) ([2f7097e](https://github.com/scaleway/scaleway-ui/commit/2f7097e05ad41d4e94cd90500b7dd67686864a99))
+
 ## [0.212.4](https://github.com/scaleway/scaleway-ui/compare/v0.212.3...v0.212.4) (2022-12-05)
 
 
