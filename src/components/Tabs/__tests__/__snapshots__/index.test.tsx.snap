@@ -556,7 +556,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   border-bottom-color: rgba(165, 165, 205, 0.4);
 }
 
-.cache-1vknmyi-StyledButton-StyledButton {
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -606,27 +606,31 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   background-color: transparent;
 }
 
-.cache-1vknmyi-StyledButton-StyledButton:hover,
-.cache-1vknmyi-StyledButton-StyledButton:focus {
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:hover,
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1vknmyi-StyledButton-StyledButton:hover,
-.cache-1vknmyi-StyledButton-StyledButton:focus {
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:hover,
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:focus {
   color: #390171;
 }
 
-.cache-1vknmyi-StyledButton-StyledButton:hover svg,
-.cache-1vknmyi-StyledButton-StyledButton:focus svg {
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:hover svg,
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1vknmyi-StyledButton-StyledButton:last-child {
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
+}
+
+.cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem[aria-selected='true'] {
+  color: #390171;
 }
 
 .cache-m245rk-StyledContent {
@@ -645,7 +649,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   pointer-events: none;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -703,42 +707,46 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:hover,
-.cache-1gz49bc-StyledButton-StyledButton:focus {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:hover,
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton svg {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem svg {
   fill: #c4c9d6;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:hover,
-.cache-1gz49bc-StyledButton-StyledButton:focus {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:hover,
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:focus {
   color: #390171;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:hover svg,
-.cache-1gz49bc-StyledButton-StyledButton:focus svg {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:hover svg,
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:last-child {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:hover,
-.cache-1gz49bc-StyledButton-StyledButton:focus {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:hover,
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-1gz49bc-StyledButton-StyledButton:hover svg,
-.cache-1gz49bc-StyledButton-StyledButton:focus svg {
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:hover svg,
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem:focus svg {
   fill: #4a4f62;
+}
+
+.cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem[aria-selected='true'] {
+  color: #390171;
 }
 
 <div
@@ -759,7 +767,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       >
         <button
           aria-disabled="false"
-          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
+          class="ej1y0fv0 epxin6a0 cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem em6gco80"
           role="menuitem"
           type="button"
         >
@@ -771,7 +779,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="true"
-          class="epxin6a0 cache-1gz49bc-StyledButton-StyledButton em6gco80"
+          class="ej1y0fv0 epxin6a0 cache-1f3dqh9-StyledButton-StyledButton-StyledMenuItem em6gco80"
           disabled=""
           role="menuitem"
           type="button"
@@ -784,7 +792,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
+          class="ej1y0fv0 epxin6a0 cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem em6gco80"
           role="menuitem"
           type="button"
         >
@@ -796,7 +804,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
+          class="ej1y0fv0 epxin6a0 cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem em6gco80"
           role="menuitem"
           type="button"
         >
@@ -808,7 +816,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="epxin6a0 cache-1vknmyi-StyledButton-StyledButton em6gco80"
+          class="ej1y0fv0 epxin6a0 cache-1tdnb7r-StyledButton-StyledButton-StyledMenuItem em6gco80"
           role="menuitem"
           type="button"
         >
