@@ -1,6 +1,6 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Breakpoint, Icon, Toggle } from '@scaleway/ui'
-import { ChangeEventHandler, useEffect } from 'react'
 import { APP_MAX_WIDTH } from '../constants'
 import GithubAndDocumentationButtons from './GithubAndDocumentationButtons'
 import Logo from './Logo'
@@ -18,6 +18,8 @@ const Header = styled.header`
   padding: 8px 10px;
   width: 100%;
   justify-content: center;
+  position: sticky;
+  z-index: 1;
 `
 const HorizontalStack = styled.div`
   display: flex;
@@ -33,42 +35,24 @@ const HeaderRow = styled.div`
   max-width: ${APP_MAX_WIDTH}px;
 `
 
-type TopBarProps = {
-  isLightMode: boolean
-  setIsLightMode: (isLight: boolean) => void
-}
-
-const TopBar = ({ isLightMode, setIsLightMode }: TopBarProps) => {
-  useEffect(() => {
-    const localStorageSettings = localStorage.getItem('settings') ?? '{}'
-    const settings = JSON.parse(localStorageSettings) as ApplicationSettings
-    if (settings) {
-      setIsLightMode(settings.isLightMode)
-    } else {
-      const isNavigatorLightTheme = window.matchMedia(
-        '(prefers-color-scheme: light)',
-      ).matches
-      setIsLightMode(isNavigatorLightTheme)
-    }
-  }, [setIsLightMode])
-
-  const onChange: ChangeEventHandler<HTMLInputElement> = event => {
-    setIsLightMode(event.target.checked)
-  }
+const TopBar = () => {
+  const { theme, setTheme } = useTheme()
 
   return (
     <Header>
       <HeaderRow>
-        <div>
-          <Logo width={124} height={24} />
-        </div>
+        <Logo />
         <HorizontalStack>
           <Breakpoint up="medium">
             <GithubAndDocumentationButtons />
           </Breakpoint>
-          <Icon size={20} name="moon" />
-          <Toggle name="darkMode" checked={isLightMode} onChange={onChange} />
           <Icon size={20} name="sun" />
+          <Toggle
+            name="darkMode"
+            checked={theme === 'dark'}
+            onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          />
+          <Icon size={20} name="moon" />
         </HorizontalStack>
       </HeaderRow>
     </Header>

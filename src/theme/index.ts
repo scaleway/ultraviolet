@@ -48,9 +48,7 @@ const theme = {
   typography,
 }
 
-type SCWUITheme = typeof theme & {
-  linkComponent?: unknown
-}
+type SCWUITheme = typeof theme
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>

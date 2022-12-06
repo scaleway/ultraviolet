@@ -1,26 +1,10 @@
 import styled from '@emotion/styled'
-import { Text } from '@scaleway/ui'
+import { Stack, Text } from '@scaleway/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 
 const useCase1 = `import { ThemeProvider } from '@emotion/react'
-import { theme as scwTheme, Button, Text } from '@scaleway/ui'
+import { theme as lightTheme, dark as darkTheme, Button, Text } from '@scaleway/ui'
 import React, { useCallback, useState } from 'react'
-
-const darkTheme = {
-  ...scwTheme,
-  colors: {
-    ...scwTheme.colors,
-    // Your dark colors
-  },
-}
-
-const lightTheme = {
-  ...scwTheme,
-  colors: {
-    ...scwTheme.colors,
-    // Your light colors
-  },
-}
 
 const App = () => {
   const [isLightMode, setIsLightMode] = useState(true)
@@ -70,7 +54,7 @@ import {
 import React from "react"
 
 const StyledFieldContainer = styled.div\`
-  margin-bottom: 16px;
+  margin-bottom: \${({ theme }) => theme.space['2']};
 \`
 
 const App = () => (
@@ -111,26 +95,22 @@ const StyledTitle = styled(Text)`
   align-self: center;
 `
 
-const AdvancedUseCasesContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['5']};
-`
-
 const AdvancedUseCases = () => (
-  <AdvancedUseCasesContainer>
-    <StyledTitle as="h3" variant="headingLarge">
-      Advanced Use Cases
-    </StyledTitle>
-    <Text as="p" variant="body">
-      If you want to change the theme or even to create a dark theme, Scaleway
-      UI allows you to do it easily
-    </Text>
-    <CopyBox>
-      <CopyBox.Command title="Dark theme" command={useCase1} />
-      <CopyBox.Command title="Simple Form" command={useCase2} />
-    </CopyBox>
-  </AdvancedUseCasesContainer>
+  <section>
+    <Stack gap={5}>
+      <StyledTitle as="h3" variant="heading" id="advanced-use-cases">
+        Advanced Use Cases
+      </StyledTitle>
+      <Text as="p" variant="body">
+        If you want to change the theme or even to create a dark theme, Scaleway
+        UI allows you to do it easily
+      </Text>
+      <CopyBox>
+        <CopyBox.Command title="Dark theme" command={useCase1} />
+        <CopyBox.Command title="Simple Form" command={useCase2} />
+      </CopyBox>
+    </Stack>
+  </section>
 )
 
 export default AdvancedUseCases

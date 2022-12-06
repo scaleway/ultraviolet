@@ -43,7 +43,7 @@ const Footer = () => (
         </Text>
       </div>
       <DisclaimerContainer>
-        <Logo width={124} height={24} />
+        <Logo />
         <GithubAndDocumentationButtons />
       </DisclaimerContainer>
     </FooterRow>

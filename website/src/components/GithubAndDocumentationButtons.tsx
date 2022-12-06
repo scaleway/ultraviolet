@@ -1,23 +1,22 @@
-import styled from '@emotion/styled'
-import { Button } from '@scaleway/ui'
-
-const ButtonsContainer = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.space['2']};
-`
+import { Button, Stack } from '@scaleway/ui'
 
 const GithubAndDocumentationButtons = () => (
-  <ButtonsContainer>
+  <Stack gap={2} direction="row">
     <Button
       variant="secondary"
       icon="github"
-      iconSize={24}
+      iconSize={28}
       href="https://github.com/scaleway/scaleway-ui"
+      aria-label="github"
     />
-    <Button href="https://storybook.ui.scaleway.com/" size="medium">
+    <Button
+      href="https://storybook.ui.scaleway.com/"
+      size="medium"
+      aria-label="documentation"
+    >
       Documentation
     </Button>
-  </ButtonsContainer>
+  </Stack>
 )
 
 export default GithubAndDocumentationButtons
