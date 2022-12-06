@@ -14,7 +14,9 @@ type StackProps = {
 
 const Stack = styled('div', {
   shouldForwardProp: prop =>
-    !['gap', 'direction', 'alignItems', 'justifyContent'].includes(prop),
+    !['gap', 'direction', 'alignItems', 'justifyContent', 'wrap'].includes(
+      prop,
+    ),
 })<StackProps>`
   display: flex;
 
