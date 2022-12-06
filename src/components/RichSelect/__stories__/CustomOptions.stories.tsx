@@ -1,12 +1,12 @@
-import { ComponentStory } from '@storybook/react'
 import RichSelect from '..'
 import Badge from '../../Badge'
+import { Template } from './Template.stories'
 
-export const CustomOptions: ComponentStory<typeof RichSelect> = ({
-  ...props
-}) => (
-  <RichSelect name="custom-options" {...props}>
-    <RichSelect.Option value="a">Option A</RichSelect.Option>
+export const CustomOptions = Template.bind({})
+CustomOptions.args = {
+  name: 'custom-options',
+  children: [
+    <RichSelect.Option value="a">Option A</RichSelect.Option>,
     <RichSelect.Option value="b">
       <div
         style={{
@@ -17,9 +17,9 @@ export const CustomOptions: ComponentStory<typeof RichSelect> = ({
       >
         Option B<Badge size="small">Awesome badge</Badge>
       </div>
-    </RichSelect.Option>
-  </RichSelect>
-)
+    </RichSelect.Option>,
+  ],
+}
 CustomOptions.parameters = {
   docs: {
     storyDescription: 'This shows how to customize options in a RichSelect.',

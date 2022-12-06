@@ -9,7 +9,6 @@ export const Controlled: ComponentStory<typeof RichSelect> = ({ ...props }) => {
   const [value, setValue] = useState<OptionType>()
 
   const handleChange = (newValue: SingleValue<OptionType>) => {
-    console.log({ newValue })
     if (newValue) {
       setValue(newValue)
     }
