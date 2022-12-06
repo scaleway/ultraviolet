@@ -1,3 +1,10 @@
+## [0.212.7](https://github.com/scaleway/scaleway-ui/compare/v0.212.6...v0.212.7) (2022-12-06)
+
+
+### :bug: Bug Fixes
+
+* **Menu.Item:** add missing className prop ([#2094](https://github.com/scaleway/scaleway-ui/issues/2094)) ([ec2bf1d](https://github.com/scaleway/scaleway-ui/commit/ec2bf1d984ac776c151404a58f35238b745ce9d8))
+
 ## [0.212.6](https://github.com/scaleway/scaleway-ui/compare/v0.212.5...v0.212.6) (2022-12-06)
 
 
