@@ -1,20 +1,16 @@
-import { ComponentStory } from '@storybook/react'
-import Button from '..'
+import { Template } from './Template.stories'
 
-export const Disabled: ComponentStory<typeof Button> = ({ ...props }) => (
-  <Button disabled {...props}>
-    Disabled
-  </Button>
-)
+export const Disabled = Template.bind({})
+
+Disabled.args = {
+  disabled: true,
+  children: 'Disabled',
+  icon: 'plus',
+  variant: 'primary-bordered',
+}
 
 Disabled.parameters = {
   docs: {
     storyDescription: 'This shows how to use `disabled` on Button.',
   },
-}
-
-Disabled.args = {
-  disabled: true,
-  icon: 'plus',
-  variant: 'primary-bordered',
 }

@@ -1,11 +1,12 @@
-import { ComponentStory } from '@storybook/react'
-import Button from '..'
+import { Template } from './Template.stories'
 
-export const Icon: ComponentStory<typeof Button> = ({ ...props }) => (
-  <Button icon="lock" {...props}>
-    With text
-  </Button>
-)
+export const Icon = Template.bind({})
+
+Icon.args = {
+  icon: 'lock',
+  extend: true,
+  children: 'With text',
+}
 
 Icon.parameters = {
   docs: {
