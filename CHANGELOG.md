@@ -1,3 +1,16 @@
+## [0.212.6](https://github.com/scaleway/scaleway-ui/compare/v0.212.5...v0.212.6) (2022-12-06)
+
+
+### :zap: Refactor
+
+* rewrite stories textbox and timeinput ([#2075](https://github.com/scaleway/scaleway-ui/issues/2075)) ([8dbd91c](https://github.com/scaleway/scaleway-ui/commit/8dbd91c1680e442451efa4cc7f41b245722a1f26))
+
+
+### :bug: Bug Fixes
+
+* **Menu.Item:** add missing tooltip prop ([#2093](https://github.com/scaleway/scaleway-ui/issues/2093)) ([afcebe1](https://github.com/scaleway/scaleway-ui/commit/afcebe10508f9dfe4cab5c7f19877ca124ff4a16))
+* **website:** update component usages ([#2069](https://github.com/scaleway/scaleway-ui/issues/2069)) ([c9bb5d2](https://github.com/scaleway/scaleway-ui/commit/c9bb5d2b891937d5a4297c3a5d5123e2394d931c))
+
 ## [0.212.5](https://github.com/scaleway/scaleway-ui/compare/v0.212.4...v0.212.5) (2022-12-06)
 
 
