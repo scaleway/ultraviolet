@@ -2,39 +2,38 @@
 
 exports[`DateInput renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -42,19 +41,19 @@ exports[`DateInput renders correctly disabled 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -65,7 +64,7 @@ exports[`DateInput renders correctly disabled 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -74,45 +73,45 @@ exports[`DateInput renders correctly disabled 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-1whvwml-StyledInput {
+.cache-x1bhfk {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -129,46 +128,46 @@ exports[`DateInput renders correctly disabled 1`] = `
   line-height: 24px;
   cursor: default;
   pointer-events: none;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  color: #c4c9d6;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
 }
 
-.cache-1whvwml-StyledInput::-webkit-input-placeholder {
+.cache-x1bhfk::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1whvwml-StyledInput::-moz-placeholder {
+.cache-x1bhfk::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1whvwml-StyledInput:-ms-input-placeholder {
+.cache-x1bhfk:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1whvwml-StyledInput::placeholder {
+.cache-x1bhfk::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1whvwml-StyledInput:hover,
-.cache-1whvwml-StyledInput:focus {
+.cache-x1bhfk:hover,
+.cache-x1bhfk:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-x1bhfk:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-1whvwml-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-1h3ffno-StyledLabel-StyledLabel {
+.cache-1s4sa9c {
   display: block;
   position: absolute;
   left: 0;
@@ -189,10 +188,10 @@ exports[`DateInput renders correctly disabled 1`] = `
   -moz-transform: translate(0, 12px) scale(1);
   -ms-transform: translate(0, 12px) scale(1);
   transform: translate(0, 12px) scale(1);
-  color: #c4c9d6;
+  color: #d4dae7;
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -200,16 +199,20 @@ exports[`DateInput renders correctly disabled 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -222,10 +225,9 @@ exports[`DateInput renders correctly disabled 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -233,22 +235,32 @@ exports[`DateInput renders correctly disabled 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -262,15 +274,14 @@ exports[`DateInput renders correctly disabled 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-1whvwml-StyledInput e18bmnpq1"
+                class="cache-x1bhfk e18bmnpq0"
                 disabled=""
                 id="date-input"
                 type="text"
@@ -278,7 +289,7 @@ exports[`DateInput renders correctly disabled 1`] = `
               />
               <label
                 aria-live="assertive"
-                class="cache-1h3ffno-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-1s4sa9c e18bmnpq1"
                 disabled=""
                 for="date-input"
               >
@@ -286,23 +297,23 @@ exports[`DateInput renders correctly disabled 1`] = `
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -319,39 +330,38 @@ exports[`DateInput renders correctly disabled 1`] = `
 
 exports[`DateInput renders correctly error 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -359,19 +369,19 @@ exports[`DateInput renders correctly error 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -382,7 +392,7 @@ exports[`DateInput renders correctly error 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -391,45 +401,45 @@ exports[`DateInput renders correctly error 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-1ud92w5-StyledInput {
+.cache-1uc52vc {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -448,66 +458,66 @@ exports[`DateInput renders correctly error 1`] = `
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
-  border-color: #dd3252;
+  border-color: #ef5774;
 }
 
-.cache-1ud92w5-StyledInput::-webkit-input-placeholder {
+.cache-1uc52vc::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1ud92w5-StyledInput::-moz-placeholder {
+.cache-1uc52vc::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1ud92w5-StyledInput:-ms-input-placeholder {
+.cache-1uc52vc:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1ud92w5-StyledInput::placeholder {
+.cache-1uc52vc::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1ud92w5-StyledInput:hover,
-.cache-1ud92w5-StyledInput:focus {
+.cache-1uc52vc:hover,
+.cache-1uc52vc:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1uc52vc:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-1ud92w5-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-1ud92w5-StyledInput::-webkit-input-placeholder {
+.cache-1uc52vc::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ud92w5-StyledInput::-moz-placeholder {
+.cache-1uc52vc::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1ud92w5-StyledInput:-ms-input-placeholder {
+.cache-1uc52vc:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1ud92w5-StyledInput::placeholder {
+.cache-1uc52vc::placeholder {
   opacity: 1;
 }
 
-.cache-1ud92w5-StyledInput:hover,
-.cache-1ud92w5-StyledInput:focus {
-  border-color: #a6102d;
+.cache-1uc52vc:hover,
+.cache-1uc52vc:focus {
+  border-color: #ef5774;
 }
 
-.cache-1ud92w5-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #DD325240;
-  border-color: #a6102d;
+.cache-1uc52vc:focus {
+  box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
+  border-color: #ef5774;
 }
 
-.cache-1h942x9-StyledLabel-StyledLabel-StyledLabel {
+.cache-14px29 {
   display: block;
   position: absolute;
   left: 0;
@@ -532,10 +542,10 @@ exports[`DateInput renders correctly error 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
-  color: #dd3252;
+  color: #ef5774;
 }
 
-.cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow {
+.cache-f39kmy {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -548,16 +558,20 @@ exports[`DateInput renders correctly error 1`] = `
   max-height: 56px;
   opacity: 1;
   overflow: visible;
+}
+
+.cache-f39kmy.cache-f39kmy {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -570,10 +584,9 @@ exports[`DateInput renders correctly error 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -581,22 +594,32 @@ exports[`DateInput renders correctly error 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-1cl8lqp-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #a6102d;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-18ts3jg {
+  fill: #ef5774;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-18ts3jg.cache-18ts3jg {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -609,47 +632,46 @@ exports[`DateInput renders correctly error 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-1ud92w5-StyledInput e18bmnpq1"
+                class="cache-1uc52vc e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-1h942x9-StyledLabel-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-14px29 e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-f39kmy e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               >
                 error
               </div>
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-1cl8lqp-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-18ts3jg e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -666,39 +688,38 @@ exports[`DateInput renders correctly error 1`] = `
 
 exports[`DateInput renders correctly error disabled 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -706,19 +727,19 @@ exports[`DateInput renders correctly error disabled 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -729,7 +750,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -738,45 +759,45 @@ exports[`DateInput renders correctly error disabled 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-1lnjaop-StyledInput {
+.cache-wccljw {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -793,73 +814,73 @@ exports[`DateInput renders correctly error disabled 1`] = `
   line-height: 24px;
   cursor: default;
   pointer-events: none;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  color: #c4c9d6;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
-  border-color: #dd3252;
+  border-color: #ef5774;
 }
 
-.cache-1lnjaop-StyledInput::-webkit-input-placeholder {
+.cache-wccljw::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput::-moz-placeholder {
+.cache-wccljw::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput:-ms-input-placeholder {
+.cache-wccljw:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput::placeholder {
+.cache-wccljw::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput:hover,
-.cache-1lnjaop-StyledInput:focus {
+.cache-wccljw:hover,
+.cache-wccljw:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-wccljw:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-1lnjaop-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-1lnjaop-StyledInput::-webkit-input-placeholder {
+.cache-wccljw::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput::-moz-placeholder {
+.cache-wccljw::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput:-ms-input-placeholder {
+.cache-wccljw:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput::placeholder {
+.cache-wccljw::placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput:hover,
-.cache-1lnjaop-StyledInput:focus {
-  border-color: #a6102d;
+.cache-wccljw:hover,
+.cache-wccljw:focus {
+  border-color: #ef5774;
 }
 
-.cache-1lnjaop-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #DD325240;
-  border-color: #a6102d;
+.cache-wccljw:focus {
+  box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
+  border-color: #ef5774;
 }
 
-.cache-nhf3ce-StyledLabel-StyledLabel-StyledLabel-StyledLabel {
+.cache-bs6egy {
   display: block;
   position: absolute;
   left: 0;
@@ -884,11 +905,11 @@ exports[`DateInput renders correctly error disabled 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
-  color: #c4c9d6;
-  color: #dd3252;
+  color: #d4dae7;
+  color: #ef5774;
 }
 
-.cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow {
+.cache-f39kmy {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -901,16 +922,20 @@ exports[`DateInput renders correctly error disabled 1`] = `
   max-height: 56px;
   opacity: 1;
   overflow: visible;
+}
+
+.cache-f39kmy.cache-f39kmy {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -923,10 +948,9 @@ exports[`DateInput renders correctly error disabled 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -934,22 +958,32 @@ exports[`DateInput renders correctly error disabled 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-1cl8lqp-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #a6102d;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-18ts3jg {
+  fill: #ef5774;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-18ts3jg.cache-18ts3jg {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -963,15 +997,14 @@ exports[`DateInput renders correctly error disabled 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-1lnjaop-StyledInput e18bmnpq1"
+                class="cache-wccljw e18bmnpq0"
                 disabled=""
                 id="date-input"
                 type="text"
@@ -979,7 +1012,7 @@ exports[`DateInput renders correctly error disabled 1`] = `
               />
               <label
                 aria-live="assertive"
-                class="cache-nhf3ce-StyledLabel-StyledLabel-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-bs6egy e18bmnpq1"
                 disabled=""
                 for="date-input"
               >
@@ -987,25 +1020,25 @@ exports[`DateInput renders correctly error disabled 1`] = `
               </label>
             </div>
             <div
-              class="cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-f39kmy e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               >
                 error
               </div>
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-1cl8lqp-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-18ts3jg e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1022,39 +1055,38 @@ exports[`DateInput renders correctly error disabled 1`] = `
 
 exports[`DateInput renders correctly error disabled required 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -1062,19 +1094,19 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -1085,7 +1117,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -1094,45 +1126,45 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-1lnjaop-StyledInput {
+.cache-wccljw {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -1149,73 +1181,73 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   line-height: 24px;
   cursor: default;
   pointer-events: none;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  color: #c4c9d6;
+  background-color: #fafafb;
+  border-color: #fafafb;
+  color: #d4dae7;
   height: 48px;
   padding-left: 8px;
   padding-right: 20px;
   padding-top: 14px;
-  border-color: #dd3252;
+  border-color: #ef5774;
 }
 
-.cache-1lnjaop-StyledInput::-webkit-input-placeholder {
+.cache-wccljw::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput::-moz-placeholder {
+.cache-wccljw::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput:-ms-input-placeholder {
+.cache-wccljw:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput::placeholder {
+.cache-wccljw::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-1lnjaop-StyledInput:hover,
-.cache-1lnjaop-StyledInput:focus {
+.cache-wccljw:hover,
+.cache-wccljw:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-wccljw:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-1lnjaop-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-1lnjaop-StyledInput::-webkit-input-placeholder {
+.cache-wccljw::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput::-moz-placeholder {
+.cache-wccljw::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput:-ms-input-placeholder {
+.cache-wccljw:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput::placeholder {
+.cache-wccljw::placeholder {
   opacity: 1;
 }
 
-.cache-1lnjaop-StyledInput:hover,
-.cache-1lnjaop-StyledInput:focus {
-  border-color: #a6102d;
+.cache-wccljw:hover,
+.cache-wccljw:focus {
+  border-color: #ef5774;
 }
 
-.cache-1lnjaop-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #DD325240;
-  border-color: #a6102d;
+.cache-wccljw:focus {
+  box-shadow: 0 0 0 2px rgba(239,87,116,0.25);
+  border-color: #ef5774;
 }
 
-.cache-nhf3ce-StyledLabel-StyledLabel-StyledLabel-StyledLabel {
+.cache-bs6egy {
   display: block;
   position: absolute;
   left: 0;
@@ -1240,11 +1272,11 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   -moz-transform: translate(-9.6%, -3px) scale(0.8);
   -ms-transform: translate(-9.6%, -3px) scale(0.8);
   transform: translate(-9.6%, -3px) scale(0.8);
-  color: #c4c9d6;
-  color: #dd3252;
+  color: #d4dae7;
+  color: #ef5774;
 }
 
-.cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow {
+.cache-f39kmy {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1257,16 +1289,20 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   max-height: 56px;
   opacity: 1;
   overflow: visible;
+}
+
+.cache-f39kmy.cache-f39kmy {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -1279,19 +1315,21 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-1u6olvk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #a6102d;
+.cache-1gjvl0 {
+  fill: #ef5774;
   height: 8px;
   width: 8px;
   min-width: 8px;
   min-height: 8px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-1gjvl0.cache-1gjvl0 {
+  vertical-align: middle;
+}
+
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1299,22 +1337,32 @@ exports[`DateInput renders correctly error disabled required 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-1cl8lqp-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #a6102d;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-18ts3jg {
+  fill: #ef5774;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-18ts3jg.cache-18ts3jg {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -1328,15 +1376,14 @@ exports[`DateInput renders correctly error disabled required 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-1lnjaop-StyledInput e18bmnpq1"
+                class="cache-wccljw e18bmnpq0"
                 disabled=""
                 id="date-input"
                 type="text"
@@ -1344,7 +1391,7 @@ exports[`DateInput renders correctly error disabled required 1`] = `
               />
               <label
                 aria-live="assertive"
-                class="cache-nhf3ce-StyledLabel-StyledLabel-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-bs6egy e18bmnpq1"
                 disabled=""
                 for="date-input"
               >
@@ -1352,20 +1399,20 @@ exports[`DateInput renders correctly error disabled required 1`] = `
               </label>
             </div>
             <div
-              class="cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-f39kmy e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               >
                 error
               </div>
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <svg
-              class="cache-1u6olvk-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-1gjvl0 e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1374,11 +1421,11 @@ exports[`DateInput renders correctly error disabled required 1`] = `
             </svg>
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-1cl8lqp-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-18ts3jg e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1395,39 +1442,38 @@ exports[`DateInput renders correctly error disabled required 1`] = `
 
 exports[`DateInput renders correctly min-max 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -1435,19 +1481,19 @@ exports[`DateInput renders correctly min-max 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -1458,7 +1504,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -1467,45 +1513,45 @@ exports[`DateInput renders correctly min-max 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-cj3nhc-StyledInput {
+.cache-1ukz7wy {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -1526,37 +1572,37 @@ exports[`DateInput renders correctly min-max 1`] = `
   padding-top: 14px;
 }
 
-.cache-cj3nhc-StyledInput::-webkit-input-placeholder {
+.cache-1ukz7wy::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput::-moz-placeholder {
+.cache-1ukz7wy::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput:-ms-input-placeholder {
+.cache-1ukz7wy:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput::placeholder {
+.cache-1ukz7wy::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput:hover,
-.cache-cj3nhc-StyledInput:focus {
+.cache-1ukz7wy:hover,
+.cache-1ukz7wy:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1ukz7wy:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-cj3nhc-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-qq47rc-StyledLabel {
+.cache-1arooal {
   display: block;
   position: absolute;
   left: 0;
@@ -1579,7 +1625,7 @@ exports[`DateInput renders correctly min-max 1`] = `
   transform: translate(0, 12px) scale(1);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1587,16 +1633,20 @@ exports[`DateInput renders correctly min-max 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -1609,10 +1659,9 @@ exports[`DateInput renders correctly min-max 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1620,22 +1669,32 @@ exports[`DateInput renders correctly min-max 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -1648,45 +1707,44 @@ exports[`DateInput renders correctly min-max 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-cj3nhc-StyledInput e18bmnpq1"
+                class="cache-1ukz7wy e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-qq47rc-StyledLabel e18bmnpq6"
+                class="cache-1arooal e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1703,39 +1761,38 @@ exports[`DateInput renders correctly min-max 1`] = `
 
 exports[`DateInput renders correctly required 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -1743,19 +1800,19 @@ exports[`DateInput renders correctly required 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -1766,7 +1823,7 @@ exports[`DateInput renders correctly required 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -1775,45 +1832,45 @@ exports[`DateInput renders correctly required 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-cj3nhc-StyledInput {
+.cache-1ukz7wy {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -1834,37 +1891,37 @@ exports[`DateInput renders correctly required 1`] = `
   padding-top: 14px;
 }
 
-.cache-cj3nhc-StyledInput::-webkit-input-placeholder {
+.cache-1ukz7wy::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput::-moz-placeholder {
+.cache-1ukz7wy::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput:-ms-input-placeholder {
+.cache-1ukz7wy:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput::placeholder {
+.cache-1ukz7wy::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-cj3nhc-StyledInput:hover,
-.cache-cj3nhc-StyledInput:focus {
+.cache-1ukz7wy:hover,
+.cache-1ukz7wy:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1ukz7wy:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-cj3nhc-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-qq47rc-StyledLabel {
+.cache-1arooal {
   display: block;
   position: absolute;
   left: 0;
@@ -1887,7 +1944,7 @@ exports[`DateInput renders correctly required 1`] = `
   transform: translate(0, 12px) scale(1);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -1895,16 +1952,20 @@ exports[`DateInput renders correctly required 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -1917,19 +1978,21 @@ exports[`DateInput renders correctly required 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-1u6olvk-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #a6102d;
+.cache-1gjvl0 {
+  fill: #ef5774;
   height: 8px;
   width: 8px;
   min-width: 8px;
   min-height: 8px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-1gjvl0.cache-1gjvl0 {
+  vertical-align: middle;
+}
+
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -1937,22 +2000,32 @@ exports[`DateInput renders correctly required 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -1965,40 +2038,39 @@ exports[`DateInput renders correctly required 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-cj3nhc-StyledInput e18bmnpq1"
+                class="cache-1ukz7wy e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-qq47rc-StyledLabel e18bmnpq6"
+                class="cache-1arooal e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <svg
-              class="cache-1u6olvk-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-1gjvl0 e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2007,11 +2079,11 @@ exports[`DateInput renders correctly required 1`] = `
             </svg>
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2028,39 +2100,38 @@ exports[`DateInput renders correctly required 1`] = `
 
 exports[`DateInput renders correctly with date-fns locale es 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -2068,19 +2139,19 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -2091,7 +2162,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -2100,45 +2171,45 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-or250s-StyledInput {
+.cache-1a8mafn {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -2159,53 +2230,53 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   padding-top: 14px;
 }
 
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:hover,
-.cache-or250s-StyledInput:focus {
+.cache-1a8mafn:hover,
+.cache-1a8mafn:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1a8mafn:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-or250s-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   opacity: 1;
 }
 
-.cache-1c1wycc-StyledLabel-StyledLabel {
+.cache-11rykwc {
   display: block;
   position: absolute;
   left: 0;
@@ -2232,7 +2303,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -2240,16 +2311,20 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -2262,10 +2337,9 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -2273,135 +2347,100 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-10umtls-TopHeaderDiv {
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-kmt8ow {
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.cache-1re7cvs-StyledText-StyledText {
+.cache-1apw6w3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   color: #4a4f62;
   font-size: 16px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  margin-right: 8px;
 }
 
-.cache-sior7n-StyledSpan {
+.cache-1apw6w3.cache-1apw6w3 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.cache-11f1jx7 {
   position: absolute;
   right: 16px;
   top: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
+  background-color: transparent;
   padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 16px;
+  margin: 0;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya.cache-14yfqya {
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  color: #4a4f62;
-  background-color: #d4dae7;
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-11bkkrh {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
 }
 
-.cache-1sybl11-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-11bkkrh.cache-11bkkrh {
   vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
 }
 
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -2414,45 +2453,44 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-or250s-StyledInput e18bmnpq1"
+                class="cache-1a8mafn e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-11rykwc e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2490,52 +2528,44 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                 class="react-datepicker__header react-datepicker__header--custom"
               >
                 <div
-                  class="cache-10umtls-TopHeaderDiv e17s8tvr1"
+                  class="cache-kmt8ow e17s8tvr0"
                 >
                   <p
-                    class="e17s8tvr0 cache-1re7cvs-StyledText-StyledText e1tg3t120"
+                    class="e1g1zfwd0 cache-1apw6w3 e7ah3bn0"
                   >
                     enero de 2021
                   </p>
                 </div>
                 <span
-                  class="cache-sior7n-StyledSpan e17s8tvr3"
+                  class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div
@@ -2569,7 +2599,7 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     class="react-datepicker__day-name"
                   >
-                    sá
+                    sa
                   </div>
                   <div
                     class="react-datepicker__day-name"
@@ -2581,7 +2611,6 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
               <div
                 aria-label="month  2021-01"
                 class="react-datepicker__month"
-                role="listbox"
               >
                 <div
                   class="react-datepicker__week"
@@ -2589,9 +2618,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 28 de diciembre de 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -2599,9 +2627,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 29 de diciembre de 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -2609,9 +2636,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 30 de diciembre de 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -2619,20 +2645,17 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 31 de diciembre de 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
                   </div>
                   <div
-                    aria-current="date"
                     aria-disabled="false"
                     aria-label="Choose viernes, 1 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
-                    role="option"
+                    role="button"
                     tabindex="0"
                   >
                     1
@@ -2640,9 +2663,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 2 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -2650,9 +2672,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 3 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -2664,9 +2685,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 4 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -2674,9 +2694,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 5 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -2684,9 +2703,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 6 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -2694,9 +2712,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 7 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -2704,9 +2721,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose viernes, 8 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--008"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     8
@@ -2714,9 +2730,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 9 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     9
@@ -2724,9 +2739,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 10 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     10
@@ -2738,9 +2752,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 11 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--011"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     11
@@ -2748,9 +2761,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 12 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--012"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     12
@@ -2758,9 +2770,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 13 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--013"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     13
@@ -2768,9 +2779,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 14 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--014"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     14
@@ -2778,9 +2788,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose viernes, 15 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--015"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     15
@@ -2788,9 +2797,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 16 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     16
@@ -2798,9 +2806,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 17 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     17
@@ -2812,9 +2819,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 18 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--018"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     18
@@ -2822,9 +2828,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 19 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--019"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     19
@@ -2832,9 +2837,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 20 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--020"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     20
@@ -2842,9 +2846,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 21 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--021"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     21
@@ -2852,9 +2855,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose viernes, 22 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--022"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     22
@@ -2862,9 +2864,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 23 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     23
@@ -2872,9 +2873,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 24 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     24
@@ -2886,9 +2886,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 25 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--025"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     25
@@ -2896,9 +2895,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 26 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--026"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     26
@@ -2906,9 +2904,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 27 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--027"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     27
@@ -2916,9 +2913,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 28 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -2926,9 +2922,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose viernes, 29 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -2936,9 +2931,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 30 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -2946,9 +2940,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 31 de enero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
@@ -2960,9 +2953,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lunes, 1 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     1
@@ -2970,9 +2962,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose martes, 2 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -2980,9 +2971,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose miércoles, 3 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -2990,9 +2980,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jueves, 4 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -3000,9 +2989,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose viernes, 5 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -3010,9 +2998,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose sábado, 6 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -3020,9 +3007,8 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose domingo, 7 de febrero de 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -3044,39 +3030,38 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
 
 exports[`DateInput renders correctly with date-fns locale fr 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -3084,19 +3069,19 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -3107,7 +3092,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -3116,45 +3101,45 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-or250s-StyledInput {
+.cache-1a8mafn {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -3175,53 +3160,53 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   padding-top: 14px;
 }
 
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:hover,
-.cache-or250s-StyledInput:focus {
+.cache-1a8mafn:hover,
+.cache-1a8mafn:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1a8mafn:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-or250s-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   opacity: 1;
 }
 
-.cache-1c1wycc-StyledLabel-StyledLabel {
+.cache-11rykwc {
   display: block;
   position: absolute;
   left: 0;
@@ -3248,7 +3233,7 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -3256,16 +3241,20 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -3278,10 +3267,9 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -3289,135 +3277,100 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-10umtls-TopHeaderDiv {
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-kmt8ow {
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.cache-1re7cvs-StyledText-StyledText {
+.cache-1apw6w3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   color: #4a4f62;
   font-size: 16px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  margin-right: 8px;
 }
 
-.cache-sior7n-StyledSpan {
+.cache-1apw6w3.cache-1apw6w3 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.cache-11f1jx7 {
   position: absolute;
   right: 16px;
   top: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
+  background-color: transparent;
   padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 16px;
+  margin: 0;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya.cache-14yfqya {
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  color: #4a4f62;
-  background-color: #d4dae7;
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-11bkkrh {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
 }
 
-.cache-1sybl11-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-11bkkrh.cache-11bkkrh {
   vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
 }
 
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -3430,45 +3383,44 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-or250s-StyledInput e18bmnpq1"
+                class="cache-1a8mafn e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-11rykwc e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3506,52 +3458,44 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                 class="react-datepicker__header react-datepicker__header--custom"
               >
                 <div
-                  class="cache-10umtls-TopHeaderDiv e17s8tvr1"
+                  class="cache-kmt8ow e17s8tvr0"
                 >
                   <p
-                    class="e17s8tvr0 cache-1re7cvs-StyledText-StyledText e1tg3t120"
+                    class="e1g1zfwd0 cache-1apw6w3 e7ah3bn0"
                   >
                     janvier 2021
                   </p>
                 </div>
                 <span
-                  class="cache-sior7n-StyledSpan e17s8tvr3"
+                  class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div
@@ -3597,7 +3541,6 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
               <div
                 aria-label="month  2021-01"
                 class="react-datepicker__month"
-                role="listbox"
               >
                 <div
                   class="react-datepicker__week"
@@ -3605,9 +3548,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 28 décembre 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -3615,9 +3557,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 29 décembre 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -3625,9 +3566,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 30 décembre 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -3635,20 +3575,17 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 31 décembre 2020"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
                   </div>
                   <div
-                    aria-current="date"
                     aria-disabled="false"
                     aria-label="Choose vendredi 1 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
-                    role="option"
+                    role="button"
                     tabindex="0"
                   >
                     1
@@ -3656,9 +3593,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 2 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -3666,9 +3602,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 3 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -3680,9 +3615,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 4 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -3690,9 +3624,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 5 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -3700,9 +3633,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 6 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -3710,9 +3642,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 7 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -3720,9 +3651,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose vendredi 8 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--008"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     8
@@ -3730,9 +3660,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 9 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     9
@@ -3740,9 +3669,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 10 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     10
@@ -3754,9 +3682,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 11 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--011"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     11
@@ -3764,9 +3691,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 12 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--012"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     12
@@ -3774,9 +3700,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 13 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--013"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     13
@@ -3784,9 +3709,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 14 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--014"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     14
@@ -3794,9 +3718,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose vendredi 15 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--015"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     15
@@ -3804,9 +3727,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 16 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     16
@@ -3814,9 +3736,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 17 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     17
@@ -3828,9 +3749,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 18 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--018"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     18
@@ -3838,9 +3758,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 19 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--019"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     19
@@ -3848,9 +3767,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 20 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--020"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     20
@@ -3858,9 +3776,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 21 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--021"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     21
@@ -3868,9 +3785,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose vendredi 22 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--022"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     22
@@ -3878,9 +3794,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 23 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     23
@@ -3888,9 +3803,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 24 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     24
@@ -3902,9 +3816,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 25 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--025"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     25
@@ -3912,9 +3825,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 26 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--026"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     26
@@ -3922,9 +3834,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 27 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--027"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     27
@@ -3932,9 +3843,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 28 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -3942,9 +3852,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose vendredi 29 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -3952,9 +3861,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 30 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -3962,9 +3870,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 31 janvier 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
@@ -3976,9 +3883,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose lundi 1 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     1
@@ -3986,9 +3892,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mardi 2 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -3996,9 +3901,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose mercredi 3 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -4006,9 +3910,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose jeudi 4 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -4016,9 +3919,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose vendredi 5 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -4026,9 +3928,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose samedi 6 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -4036,9 +3937,8 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose dimanche 7 février 2021"
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -4060,39 +3960,38 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
 
 exports[`DateInput renders correctly with date-fns locale ru 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -4100,19 +3999,19 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -4123,7 +4022,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -4132,45 +4031,45 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-or250s-StyledInput {
+.cache-1a8mafn {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -4191,53 +4090,53 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   padding-top: 14px;
 }
 
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:hover,
-.cache-or250s-StyledInput:focus {
+.cache-1a8mafn:hover,
+.cache-1a8mafn:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1a8mafn:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-or250s-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   opacity: 1;
 }
 
-.cache-1c1wycc-StyledLabel-StyledLabel {
+.cache-11rykwc {
   display: block;
   position: absolute;
   left: 0;
@@ -4264,7 +4163,7 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -4272,16 +4171,20 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -4294,10 +4197,9 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -4305,135 +4207,100 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
-.cache-10umtls-TopHeaderDiv {
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-kmt8ow {
   margin-bottom: 8px;
   margin-left: 8px;
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
-.cache-1re7cvs-StyledText-StyledText {
+.cache-1apw6w3 {
+  color: #4a4f62;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
   color: #4a4f62;
   font-size: 16px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
   line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  margin-right: 8px;
 }
 
-.cache-sior7n-StyledSpan {
+.cache-1apw6w3.cache-1apw6w3 {
+  margin-right: 8px;
+  text-transform: capitalize;
+}
+
+.cache-11f1jx7 {
   position: absolute;
   right: 16px;
   top: 16px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya {
+  border: 0;
+  transition-property: opacity;
+  transition-duration: 0.15s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
+  background-color: transparent;
   padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 16px;
+  margin: 0;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-14yfqya.cache-14yfqya {
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:hover,
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  color: #4a4f62;
-  background-color: #d4dae7;
+.cache-14yfqya[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px rgba(212,218,231,0.25);
+.cache-14yfqya[aria-disabled="false"] {
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.cache-fpmpmn-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-11bkkrh {
+  fill: lightBlack;
+  height: 11px;
+  width: 11px;
+  min-width: 11px;
+  min-height: 11px;
 }
 
-.cache-1sybl11-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-11bkkrh.cache-11bkkrh {
   vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
 }
 
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -4446,45 +4313,44 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
           value=""
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-or250s-StyledInput e18bmnpq1"
+                class="cache-1a8mafn e18bmnpq0"
                 id="date-input"
                 type="text"
                 value=""
               />
               <label
                 aria-live="assertive"
-                class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-11rykwc e18bmnpq1"
                 for="date-input"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
@@ -4522,52 +4388,44 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                 class="react-datepicker__header react-datepicker__header--custom"
               >
                 <div
-                  class="cache-10umtls-TopHeaderDiv e17s8tvr1"
+                  class="cache-kmt8ow e17s8tvr0"
                 >
                   <p
-                    class="e17s8tvr0 cache-1re7cvs-StyledText-StyledText e1tg3t120"
+                    class="e1g1zfwd0 cache-1apw6w3 e7ah3bn0"
                   >
                     январь 2021 г.
                   </p>
                 </div>
                 <span
-                  class="cache-sior7n-StyledSpan e17s8tvr3"
+                  class="cache-11f1jx7 e17s8tvr1"
                 >
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.71,9.88l8.55-9a2.75,2.75,0,0,1,4,0,3.12,3.12,0,0,1,0,4.24L11.75,12l6.54,6.88a3.12,3.12,0,0,1,0,4.24,2.75,2.75,0,0,1-4,0l-8.55-9a3.12,3.12,0,0,1,0-4.24Z"
+                      />
+                    </svg>
                   </button>
                   <button
                     aria-disabled="false"
-                    class="cache-fpmpmn-StyledButton-StyledButton em6gco80"
+                    class="e1kgqxfn0 cache-14yfqya e7ah3bn0"
                     type="button"
                   >
-                    <div
-                      class="cache-1sybl11-StyledIconContainer em6gco81"
+                    <svg
+                      class="sc-ui-icon etwatq50 cache-11bkkrh e7ah3bn0"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M18.29,14.12l-8.55,9a2.75,2.75,0,0,1-4,0,3.12,3.12,0,0,1,0-4.24L12.25,12,5.71,5.12a3.12,3.12,0,0,1,0-4.24,2.75,2.75,0,0,1,4,0l8.55,9a3.12,3.12,0,0,1,0,4.24Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div
@@ -4613,7 +4471,6 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
               <div
                 aria-label="month  2021-01"
                 class="react-datepicker__month"
-                role="listbox"
               >
                 <div
                   class="react-datepicker__week"
@@ -4621,9 +4478,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 28 декабря 2020 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -4631,9 +4487,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 29 декабря 2020 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -4641,9 +4496,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 30 декабря 2020 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -4651,20 +4505,17 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 31 декабря 2020 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
                   </div>
                   <div
-                    aria-current="date"
                     aria-disabled="false"
                     aria-label="Choose пятница, 1 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--keyboard-selected react-datepicker__day--today"
-                    role="option"
+                    role="button"
                     tabindex="0"
                   >
                     1
@@ -4672,9 +4523,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 2 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -4682,9 +4532,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 3 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -4696,9 +4545,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 4 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -4706,9 +4554,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 5 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -4716,9 +4563,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 6 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -4726,9 +4572,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 7 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -4736,9 +4581,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose пятница, 8 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--008"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     8
@@ -4746,9 +4590,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 9 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     9
@@ -4756,9 +4599,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 10 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     10
@@ -4770,9 +4612,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 11 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--011"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     11
@@ -4780,9 +4621,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 12 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--012"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     12
@@ -4790,9 +4630,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 13 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--013"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     13
@@ -4800,9 +4639,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 14 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--014"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     14
@@ -4810,9 +4648,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose пятница, 15 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--015"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     15
@@ -4820,9 +4657,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 16 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     16
@@ -4830,9 +4666,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 17 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     17
@@ -4844,9 +4679,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 18 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--018"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     18
@@ -4854,9 +4688,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 19 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--019"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     19
@@ -4864,9 +4697,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 20 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--020"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     20
@@ -4874,9 +4706,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 21 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--021"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     21
@@ -4884,9 +4715,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose пятница, 22 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--022"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     22
@@ -4894,9 +4724,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 23 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     23
@@ -4904,9 +4733,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 24 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     24
@@ -4918,9 +4746,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 25 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--025"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     25
@@ -4928,9 +4755,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 26 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--026"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     26
@@ -4938,9 +4764,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 27 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--027"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     27
@@ -4948,9 +4773,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 28 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--028"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     28
@@ -4958,9 +4782,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose пятница, 29 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--029"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     29
@@ -4968,9 +4791,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 30 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     30
@@ -4978,9 +4800,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 31 января 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     31
@@ -4992,9 +4813,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose понедельник, 1 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     1
@@ -5002,9 +4822,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose вторник, 2 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     2
@@ -5012,9 +4831,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose среда, 3 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     3
@@ -5022,9 +4840,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose четверг, 4 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     4
@@ -5032,9 +4849,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose пятница, 5 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     5
@@ -5042,9 +4858,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose суббота, 6 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     6
@@ -5052,9 +4867,8 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   <div
                     aria-disabled="false"
                     aria-label="Choose воскресенье, 7 февраля 2021 г."
-                    aria-selected="false"
                     class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--weekend react-datepicker__day--outside-month"
-                    role="option"
+                    role="button"
                     tabindex="-1"
                   >
                     7
@@ -5076,39 +4890,38 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
 
 exports[`DateInput renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-ifyrf8-StyledWrapper {
+  .cache-e230m3 {
   width: 100%;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker-wrapper {
+.cache-e230m3 div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__input-container {
+.cache-e230m3 div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__triangle {
+.cache-e230m3 div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-ifyrf8-StyledWrapper div.react-datepicker__month-container {
+.cache-e230m3 div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-ifyrf8-StyledWrapper .react-datepicker-popper {
+.cache-e230m3 .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar {
+.cache-e230m3 .calendar {
   font-family: 'Asap';
-  border-color: #d4dae7;
-  background-color: #ffffff;
+  border-color: #dce1eb;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__header {
+.cache-e230m3 .calendar .react-datepicker__header {
   color: #4a4f62;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: none;
   text-align: inherit;
   display: block;
@@ -5116,19 +4929,19 @@ exports[`DateInput renders correctly with default props 1`] = `
   position: inherit;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__triangle {
-  border-bottom-color: #ffffff;
+.cache-e230m3 .calendar .react-datepicker__triangle {
+  border-bottom-color: #fff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__month {
+.cache-e230m3 .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-names {
+.cache-e230m3 .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day-name {
+.cache-e230m3 .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #4a4f62;
   font-weight: 500;
@@ -5139,7 +4952,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   text-transform: capitalize;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day {
+.cache-e230m3 .calendar .react-datepicker__day {
   color: #b2b6c3;
   font-size: 16px;
   width: 1.7rem;
@@ -5148,45 +4961,45 @@ exports[`DateInput renders correctly with default props 1`] = `
   margin-right: 3px;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--selected {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day--selected {
+  color: #eeeeff;
+  background-color: #4f0599;
+  border-radius: 50%;
+}
+
+.cache-e230m3 .calendar .react-datepicker__day--keyboard-selected {
+  color: #4f0599;
   background-color: #eeeeff;
   border-radius: 50%;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--keyboard-selected {
-  color: #390171;
-  background-color: #eeeeff;
-  border-radius: 50%;
-}
-
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day:hover {
-  color: #390171;
+.cache-e230m3 .calendar .react-datepicker__day:hover {
+  color: #4f0599;
   border-radius: 50%;
   background-color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled {
+  color: #eeeeff;
 }
 
-.cache-ifyrf8-StyledWrapper .calendar .react-datepicker__day--disabled:hover {
-  color: #f9f9ff;
+.cache-e230m3 .calendar .react-datepicker__day--disabled:hover {
+  color: #eeeeff;
   background-color: transparent;
 }
 
-.cache-1txlkbl-StyledRelativeDiv {
+.cache-zkzsno.cache-zkzsno {
   position: relative;
 }
 
-.cache-or250s-StyledInput {
+.cache-1a8mafn {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: none;
   border: 1px solid #d4dae7;
   border-radius: 4px;
@@ -5207,53 +5020,53 @@ exports[`DateInput renders correctly with default props 1`] = `
   padding-top: 14px;
 }
 
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-or250s-StyledInput:hover,
-.cache-or250s-StyledInput:focus {
+.cache-1a8mafn:hover,
+.cache-1a8mafn:focus {
+  border-color: #dbdbdf;
+}
+
+.cache-1a8mafn:focus {
+  box-shadow: 0 0 0 2px rgba(79,5,153,0.25);
   border-color: #4f0599;
 }
 
-.cache-or250s-StyledInput:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border-color: #4f0599;
-}
-
-.cache-or250s-StyledInput::-webkit-input-placeholder {
+.cache-1a8mafn::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::-moz-placeholder {
+.cache-1a8mafn::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput:-ms-input-placeholder {
+.cache-1a8mafn:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-or250s-StyledInput::placeholder {
+.cache-1a8mafn::placeholder {
   opacity: 1;
 }
 
-.cache-1c1wycc-StyledLabel-StyledLabel {
+.cache-11rykwc {
   display: block;
   position: absolute;
   left: 0;
@@ -5280,7 +5093,7 @@ exports[`DateInput renders correctly with default props 1`] = `
   transform: translate(-9.6%, -3px) scale(0.8);
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-1w6vxon {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
   max-height: 0;
@@ -5288,16 +5101,20 @@ exports[`DateInput renders correctly with default props 1`] = `
   opacity: 0;
   height: auto;
   margin-top: 0;
+}
+
+.cache-1w6vxon.cache-1w6vxon {
   overflow: hidden;
 }
 
-.cache-e84ooj-StyledError {
+.cache-1jgvrmi.cache-1jgvrmi {
   font-size: 12px;
-  color: #dd3252;
+  color: #ef5774;
   padding-top: 2px;
 }
 
-.cache-wbc1ti-StyledIconContainer {
+.cache-vmxa5v.cache-vmxa5v {
+  height: 48px;
   padding: 8px;
   position: absolute;
   display: -webkit-box;
@@ -5310,10 +5127,9 @@ exports[`DateInput renders correctly with default props 1`] = `
   align-items: center;
   right: 0;
   top: 0;
-  height: 48px;
 }
 
-.cache-qgwnpo-StyledHr-StyledSeparator {
+.cache-ctx1nf {
   margin: 0;
   border: 0;
   width: 1px;
@@ -5321,22 +5137,32 @@ exports[`DateInput renders correctly with default props 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  background-color: #e6e9f0;
-  margin: 0 8px;
-  height: 100%;
+  background-color: #eeeeff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #4a4f62;
+.cache-ctx1nf.cache-ctx1nf {
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.cache-hyf5kt {
+  fill: gray;
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
 }
 
+.cache-hyf5kt.cache-hyf5kt {
+  vertical-align: middle;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
-    class="cache-ifyrf8-StyledWrapper e17s8tvr4"
+    class="cache-e230m3 e17s8tvr2"
   >
     <div
       class="react-datepicker-wrapper"
@@ -5350,45 +5176,44 @@ exports[`DateInput renders correctly with default props 1`] = `
           value="12/17/1995"
         >
           <div
-            class="cache-3svqc9"
+            class="cache-11djngs e7ah3bn0"
           >
             <div
-              class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+              class="cache-zkzsno e7ah3bn0"
             >
               <input
-                aria-label="Date"
                 autocomplete="on"
-                class="cache-or250s-StyledInput e18bmnpq1"
+                class="cache-1a8mafn e18bmnpq0"
                 id="date-input-test"
                 type="text"
                 value="1995-12-17T03:24:00.000Z"
               />
               <label
                 aria-live="assertive"
-                class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+                class="cache-11rykwc e18bmnpq1"
                 for="date-input-test"
               >
                 Date
               </label>
             </div>
             <div
-              class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+              class="e14o3tsk0 cache-1w6vxon e7ah3bn0"
             >
               <div
-                class="cache-e84ooj-StyledError e18bmnpq4"
+                class="cache-1jgvrmi e7ah3bn0"
               />
             </div>
           </div>
           <div
-            class="cache-wbc1ti-StyledIconContainer e17s8tvr2"
+            class="cache-vmxa5v e7ah3bn0"
           >
             <hr
               aria-orientation="vertical"
-              class="e17s8tvr5 cache-qgwnpo-StyledHr-StyledSeparator eoti1h20"
+              class="eoti1h20 cache-ctx1nf e7ah3bn0"
               role="separator"
             />
             <svg
-              class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
+              class="sc-ui-icon etwatq50 cache-hyf5kt e7ah3bn0"
               viewBox="0 0 24 24"
             >
               <path
