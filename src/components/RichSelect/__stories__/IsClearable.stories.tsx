@@ -13,6 +13,6 @@ IsClearable.args = {
 }
 IsClearable.parameters = {
   docs: {
-    storyDescription: 'This shows how to sur Uncontrolled RichSelect.',
+    storyDescription: 'This shows how to use `isClearable` on RichSelect.',
   },
 }

@@ -5,7 +5,6 @@ export const Searchable = Template.bind({})
 Searchable.args = {
   name: 'required',
   isSearchable: true,
-  required: true,
   children: [
     <RichSelect.Option value="a">Option A</RichSelect.Option>,
     <RichSelect.Option value="b">Option B</RichSelect.Option>,
