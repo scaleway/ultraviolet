@@ -92,7 +92,7 @@ type VariantItem = keyof typeof variantStyle
 
 type ItemProps = Pick<
   ComponentProps<typeof Button>,
-  'disabled' | 'onClick' | 'href' | 'children'
+  'disabled' | 'onClick' | 'href' | 'children' | 'tooltip'
 > & {
   borderless?: boolean
   variant?: VariantItem
@@ -107,6 +107,7 @@ const Item = forwardRef(
       variant: itemVariant,
       href,
       children,
+      tooltip,
     }: ItemProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
@@ -120,6 +121,7 @@ const Item = forwardRef(
       as={href ? 'a' : undefined}
       borderless={borderless}
       itemVariant={itemVariant}
+      tooltip={tooltip}
     >
       {children}
     </StyledButton>
