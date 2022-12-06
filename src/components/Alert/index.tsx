@@ -1,27 +1,20 @@
 import { SerializedStyles, Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ComponentProps, ReactNode } from 'react'
-import { Color } from '../../theme'
 import Icon from '../Icon'
 import Stack from '../Stack'
 import Text from '../Text'
 
-export const alertTypes = ['beta', 'info', 'success', 'warning'] as const
-type AlertType = typeof alertTypes[number]
-
-const alertTypeToColorMapping: Record<AlertType, Color> = {
-  beta: 'warning',
-  info: 'info',
-  success: 'success',
-  warning: 'danger',
-}
+type AlertType = 'danger' | 'info' | 'success' | 'warning'
 
 const alertStyles = ({
   theme,
-  type,
-}: ContainerProps & { theme: Theme }): SerializedStyles => {
-  const sentiment =
-    theme.colors[alertTypeToColorMapping[type]] || theme.colors.danger
+  variant,
+}: {
+  theme: Theme
+  variant: AlertType
+}): SerializedStyles => {
+  const sentiment = theme.colors[variant] || theme.colors.danger
 
   return css`
     background-color: ${sentiment.background};
@@ -33,20 +26,15 @@ const typesDefaultIcons: Record<
   AlertType,
   ComponentProps<typeof Icon>['name']
 > = {
-  beta: 'alert',
+  warning: 'alert',
   info: 'information-outline',
   success: 'checkbox-marked-circle-outline',
-  warning: 'alert',
+  danger: 'alert',
 }
 
-type ContainerProps = { type: AlertType }
-
 const StyledStackContainer = styled(Stack, {
-  shouldForwardProp: prop => !['type'].includes(prop),
-})<ContainerProps>`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  shouldForwardProp: prop => !['variant'].includes(prop),
+})<{ variant: AlertType }>`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['2']};
   ${alertStyles}
@@ -80,7 +68,7 @@ type AlertProps = {
    * Add a title at the top of your alert.
    */
   title?: string
-  type?: AlertType
+  variant?: AlertType
   className?: string
 }
 
@@ -88,18 +76,22 @@ const Alert = ({
   children,
   icon,
   title,
-  type = 'warning',
+  variant = 'danger',
   className,
 }: AlertProps) => (
   <StyledStackContainer
     direction="row"
     alignItems="center"
     justifyContent="flex-start"
-    type={type}
+    variant={variant}
     className={className}
     gap={2}
   >
-    <Icon name={icon || typesDefaultIcons[type]} size={24} aria-hidden="true" />
+    <Icon
+      name={icon || typesDefaultIcons[variant]}
+      size={24}
+      aria-hidden="true"
+    />
     <AlertContainer>
       {title && <Title text={title} />}
       {typeof children === 'string' ? (
