@@ -1,11 +1,11 @@
-import { ComponentStory } from '@storybook/react'
-import Button from '..'
+import { Template } from './Template.stories'
 
-export const Extend: ComponentStory<typeof Button> = ({ ...props }) => (
-  <Button extend icon="plus" {...props}>
-    Extend
-  </Button>
-)
+export const Extend = Template.bind({})
+
+Extend.args = {
+  icon: 'plus',
+  extend: true,
+}
 
 Extend.parameters = {
   docs: {
