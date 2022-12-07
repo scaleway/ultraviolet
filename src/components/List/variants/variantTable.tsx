@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 import type { KeyboardEvent, MouseEvent } from 'react'
 import { useCallback } from 'react'
 import * as animations from '../../../utils/animations'
-import Box from '../../Box'
 import Checkbox from '../../Checkbox'
 import Tooltip from '../../Tooltip'
 import BaseCell from '../Cell'
@@ -54,9 +53,11 @@ type StyledRowProps = {
   animationDuration: number
   disabled?: boolean
   highlighted?: boolean
+  open?: boolean
+  selected?: boolean
 }
 
-const StyledRow = styled(Box, {
+const StyledRow = styled('div', {
   shouldForwardProp: prop =>
     ![
       'animated',
@@ -177,7 +178,6 @@ export const Header = () => {
           role="button"
           tabIndex={label ? 0 : undefined}
           aria-label={`sort ${label ?? index}`}
-          disabled={isLoading}
           onClick={event =>
             label ? onSortEvent(event, index, sort) : undefined
           }

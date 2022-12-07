@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import type { KeyboardEvent, MouseEvent } from 'react'
 import { useCallback } from 'react'
-import Box from '../../Box'
 import Checkbox from '../../Checkbox'
 import Tooltip from '../../Tooltip'
 import BaseCell from '../Cell'
@@ -10,7 +9,7 @@ import { useListContext } from '../context'
 import type { ListRowProps } from '../types'
 
 export const Cell = styled(BaseCell)``
-const StyledRow = styled(Box, {
+const StyledRow = styled('div', {
   shouldForwardProp: prop => !['selected', 'highlighted'].includes(prop),
 })<{ selected?: boolean; highlighted?: boolean }>`
   display: flex;
@@ -132,7 +131,6 @@ export const Header = () => {
           role="button"
           aria-label={`sort ${label ?? index}`}
           tabIndex={label ? 0 : undefined}
-          disabled={isLoading}
           onClick={event =>
             label ? onSortEvent(event, index, sort) : undefined
           }
@@ -154,7 +152,7 @@ export const Header = () => {
   )
 }
 
-export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
+export const Row = ({ id, children, tooltip, className }: ListRowProps) => {
   const { multiselect, rowsState, setRowState, hasSelectedItems } =
     useListContext()
 
@@ -163,7 +161,7 @@ export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
   return (
     <Tooltip id={`list-tooltip-row-${id}`} text={tooltip}>
       <StyledRow
-        {...props}
+        className={className}
         role="listitem"
         data-testid={`row-${id}`}
         selected={selected}
