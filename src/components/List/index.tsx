@@ -231,6 +231,9 @@ export type ListProps<DataType> = {
   paginationProps?: Partial<PaginationProps<DataType>>
 }
 
+/**
+ * @deprecated Use ListV2 instead
+ */
 const List = forwardRef(
   <DataType extends Record<string, unknown>>(
     {
