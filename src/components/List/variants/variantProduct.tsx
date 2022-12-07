@@ -271,6 +271,7 @@ export const Header = () => {
                   : hasAllSelected
               }
               disabled={isLoading}
+              aria-label="select-rows"
               onChange={handleOnChange}
             />
           </StyledCheckboxContainer>
@@ -431,6 +432,7 @@ export const Row = ({
                     checked={selected}
                     disabled={!isSelectable || disabled}
                     name="select-rows"
+                    aria-label="select-rows"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       setRowState(id, { selected: e.target.checked })
                     }

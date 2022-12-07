@@ -20,7 +20,9 @@ describe('Checkbox', () => {
     ))
 
   test('renders correctly no child', () =>
-    shouldMatchEmotionSnapshot(<Checkbox onChange={() => {}} />))
+    shouldMatchEmotionSnapshot(
+      <Checkbox aria-label="check" onChange={() => {}} />,
+    ))
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
@@ -79,7 +81,9 @@ describe('Checkbox', () => {
     ))
 
   test('renders correctly with progress and no child', () =>
-    shouldMatchEmotionSnapshot(<Checkbox onChange={() => {}} progress />))
+    shouldMatchEmotionSnapshot(
+      <Checkbox aria-label="check" onChange={() => {}} progress />,
+    ))
 
   test('renders correctly with a value', () =>
     shouldMatchEmotionSnapshot(

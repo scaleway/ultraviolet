@@ -164,6 +164,7 @@ export const Header = () => {
             }
             size={20}
             disabled={isLoading}
+            aria-label="select-rows"
             onChange={handleOnChange}
           />
         </div>
@@ -246,6 +247,7 @@ export const Row = ({
                 checked={selected}
                 disabled={!isSelectable}
                 size={20}
+                aria-label="select-rows"
                 onChange={() => setRowState(id, { selected: !selected })}
               />
             </Tooltip>
