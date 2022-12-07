@@ -1,11 +1,5 @@
-import styled from '@emotion/styled'
 import { ReactNode } from 'react'
-
-const StyledTbody = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['2']};
-`
+import Stack from '../Stack'
 
 type ListBodyProps = {
   children: ReactNode
@@ -13,7 +7,7 @@ type ListBodyProps = {
 }
 
 export const ListBody = ({ children, className }: ListBodyProps) => (
-  <StyledTbody role="rowgroup" className={className}>
+  <Stack gap={2} role="rowgroup" className={className}>
     {children}
-  </StyledTbody>
+  </Stack>
 )

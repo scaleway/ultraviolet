@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import { ComponentProps, ReactNode } from 'react'
+import Stack from '../Stack'
 import { ListBody } from './ListBody'
 import { ListCell } from './ListCell'
 import { ListProvider } from './ListContext'
@@ -9,12 +9,6 @@ import { ListHeaderRow } from './ListHeaderRow'
 import { ListHeaders } from './ListHeaders'
 import { ListLoadingPlaceholder } from './ListLoadingPlaceholder'
 import { ListRow } from './ListRow'
-
-const StyledTable = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${({ theme }) => theme.space['1']};
-`
 
 type ListColumn = Omit<
   ComponentProps<typeof ListHeader>,
@@ -86,7 +80,7 @@ export const List = <
         selectedIds={selectedIds}
         onSelectedIdsChange={onSelectedIdsChange}
       >
-        <StyledTable role="table">
+        <Stack gap={1} role="table">
           <ListHeaders>
             <ListHeaderRow>
               {columns.map(({ label, onClick, sort, className, id }) => (
@@ -109,7 +103,7 @@ export const List = <
           ) : (
             children
           )}
-        </StyledTable>
+        </Stack>
       </ListProvider>
     )
   }
@@ -122,7 +116,7 @@ export const List = <
       onSelectedIdsChange={onSelectedIdsChange}
       data={data}
     >
-      <StyledTable role="table">
+      <Stack gap={1} role="table">
         {isLoading ? (
           <ListBody>
             <ListLoadingPlaceholder cols={template ? 1 : 12} />
@@ -130,7 +124,7 @@ export const List = <
         ) : (
           children
         )}
-      </StyledTable>
+      </Stack>
     </ListProvider>
   )
 }
