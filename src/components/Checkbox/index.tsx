@@ -161,12 +161,8 @@ const CheckboxContainer = styled.label`
   }
 `
 
-const StyledActivityContainer = styled('div', {
-  shouldForwardProp: prop => !['hasChildren'].includes(prop),
-})<{ hasChildren: boolean }>`
+const StyledActivityContainer = styled.div`
   display: flex;
-  margin-right: ${({ theme, hasChildren }) =>
-    hasChildren ? theme.space[1] : 0};
 `
 
 type CheckboxProps = {
@@ -217,7 +213,6 @@ const Checkbox = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const [state, setState] = useState<boolean | 'indeterminate'>(checked)
-    const hasChildren = !!children
     const id = useId()
     const computedName = name ?? id
 
@@ -252,7 +247,7 @@ const Checkbox = forwardRef(
           data-error={!!error}
         >
           {progress ? (
-            <StyledActivityContainer hasChildren={hasChildren}>
+            <StyledActivityContainer>
               <Loader active size={size} />
             </StyledActivityContainer>
           ) : null}
