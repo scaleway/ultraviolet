@@ -98,7 +98,7 @@ const Tabs = ({
       `[role='tab'][aria-selected='true']`,
     ) as HTMLElement
 
-    if (tab) {
+    if (tab && tabsRef.current.scrollTo) {
       tabsRef.current.scrollTo({ left: tab.offsetLeft, behavior: 'smooth' })
     }
   }, [selected])
