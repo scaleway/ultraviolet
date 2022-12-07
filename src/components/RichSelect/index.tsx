@@ -412,6 +412,7 @@ const ValueContainer = ({
   clearValue,
   getStyles,
   getValue,
+  getClassNames,
   isRtl,
   cx,
   options,
@@ -437,6 +438,7 @@ const ValueContainer = ({
     isMulti={isMulti}
     hasValue={hasValue}
     isDisabled={isDisabled}
+    getClassNames={getClassNames}
   >
     <>
       {selectProps.placeholder ? (
