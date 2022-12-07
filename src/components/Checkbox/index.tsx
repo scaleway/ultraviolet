@@ -182,7 +182,14 @@ type CheckboxProps = {
   ['data-visibility']?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'value'
+  | 'autoFocus'
+  | 'id'
+  | 'onChange'
+  | 'aria-label'
 >
 
 const Checkbox = forwardRef(
@@ -202,6 +209,7 @@ const Checkbox = forwardRef(
       autoFocus = false,
       className,
       'data-visibility': dataVisibility,
+      'aria-label': ariaLabel,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -250,6 +258,7 @@ const Checkbox = forwardRef(
             aria-invalid={!!error}
             aria-describedby={error ? `${computedName}-hint` : undefined}
             aria-checked={state === 'indeterminate' ? 'mixed' : undefined}
+            aria-label={ariaLabel}
             checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
