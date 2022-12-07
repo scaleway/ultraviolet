@@ -15,7 +15,6 @@ import {
   useRef,
   useState,
 } from 'react'
-import Box, { XStyledProps } from '../Box'
 import Button from '../Button'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
@@ -322,6 +321,7 @@ type TextBoxProps = {
   ariaControls?: string
   autoComplete?: string
   autoFocus?: boolean
+  className?: string
   cols?: number
   defaultValue?: string
   disabled?: boolean
@@ -359,8 +359,7 @@ type TextBoxProps = {
 } & (
   | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
-) &
-  XStyledProps
+)
 
 const UnitLabel = styled(Text)<{
   alignSelf: 'center' | 'flex-end' | 'flex-start'
@@ -381,6 +380,7 @@ const TextBox = forwardRef<
       ariaControls,
       autoComplete = 'on',
       autoFocus,
+      className,
       cols,
       defaultValue,
       disabled,
@@ -415,7 +415,6 @@ const TextBox = forwardRef<
       value,
       wrap,
       inputProps,
-      ...props
     },
     ref,
   ): JSX.Element => {
@@ -582,7 +581,7 @@ const TextBox = forwardRef<
     }
 
     return (
-      <Box {...props}>
+      <div className={className}>
         <StyledRelativeDiv>
           <StyledInput
             aria-controls={ariaControls}
@@ -593,6 +592,7 @@ const TextBox = forwardRef<
             autoFocus={autoFocus}
             cols={cols}
             data-testid={dataTestId}
+            defaultValue={defaultValue}
             disabled={disabled}
             error={!!error}
             fillAvailable={fillAvailable}
@@ -649,7 +649,7 @@ const TextBox = forwardRef<
           <StyledError>{error}</StyledError>
         </ExpandableWithHiddenOverflow>
         {notice ? <StyledNotice>{notice}</StyledNotice> : null}
-      </Box>
+      </div>
     )
   },
 )
