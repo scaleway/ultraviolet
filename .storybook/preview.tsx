@@ -36,7 +36,6 @@ const darkMode = {
 const ENV_PARAMETERS = {
   development: {
     darkMode,
-    actions: { disable: true, argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
       disable: true,
       grid: {
@@ -61,7 +60,6 @@ const ENV_PARAMETERS = {
   },
   production: {
     darkMode,
-    actions: { argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
       disable: true,
       grid: {

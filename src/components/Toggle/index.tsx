@@ -12,7 +12,7 @@ import Tooltip from '../Tooltip'
 const TOGGLE_RADIUS = '24px'
 const TOGGLE_POINT_RADIUS = '100px'
 
-const SIZES = {
+export const SIZES = {
   large: {
     ball: 16,
     height: 24,
