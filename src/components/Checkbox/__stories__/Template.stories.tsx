@@ -1,11 +1,8 @@
-import { ComponentStory } from '@storybook/react'
+import { Story } from '@storybook/react'
 import Checkbox from '..'
 
-export const Template: ComponentStory<typeof Checkbox> = ({
-  onChange = console.log,
-  ...props
-}) => (
-  <Checkbox onChange={onChange} {...props}>
+export const Template: Story<Omit<typeof Checkbox, 'aria-label'>> = args => (
+  <Checkbox onChange={console.log} {...args}>
     Beautiful checkbox
   </Checkbox>
 )

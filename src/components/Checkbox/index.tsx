@@ -11,6 +11,7 @@ import {
   useId,
   useState,
 } from 'react'
+import { XOR } from '../../types'
 import Loader from '../Loader'
 import Text from '../Text'
 
@@ -33,11 +34,7 @@ const PaddedText = styled(Text)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledIcon = styled('svg', {
-  shouldForwardProp: prop => !['hasChildren'].includes(prop),
-})<{ size: number; hasChildren: boolean }>`
-  margin-right: ${({ theme, hasChildren }) =>
-    hasChildren ? theme.space['1'] : 0};
+const StyledIcon = styled('svg')<{ size: number }>`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
@@ -107,6 +104,7 @@ const CheckboxContainer = styled.label`
   position: relative;
   display: inline-flex;
   align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
 
   &[aria-disabled='false'] {
     cursor: pointer;
@@ -172,7 +170,6 @@ const StyledActivityContainer = styled('div', {
 `
 
 type CheckboxProps = {
-  children?: ReactNode
   error?: string | ReactNode
   size?: number
   progress?: boolean
@@ -182,15 +179,21 @@ type CheckboxProps = {
   ['data-visibility']?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
-  | 'onFocus'
-  | 'onBlur'
-  | 'name'
-  | 'value'
-  | 'autoFocus'
-  | 'id'
-  | 'onChange'
-  | 'aria-label'
->
+  'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
+> &
+  XOR<
+    [
+      {
+        /**
+         * **`children` or `aria-label` property is required**
+         */
+        'aria-label': string
+      },
+      {
+        children: ReactNode
+      },
+    ]
+  >
 
 const Checkbox = forwardRef(
   (
@@ -272,11 +275,7 @@ const Checkbox = forwardRef(
             ref={ref}
           />
           {!progress ? (
-            <StyledIcon
-              size={size}
-              viewBox="0 0 24 24"
-              hasChildren={hasChildren}
-            >
+            <StyledIcon size={size} viewBox="0 0 24 24">
               <CheckboxIconContainer>
                 <CheckMixedMark x="8" y="11" rx="1" width="8" height="2" />
                 <CheckMark x="8" y="8" rx="1" width="8" height="8" />
