@@ -15,12 +15,12 @@ interface WrapperProps {
 export const data: ComponentProps<typeof List<Record<string, string>>>['data'] =
   Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
     id: `${rowNum}`,
-    a: `Row ${rowNum} Column 1`,
-    b: `Row ${rowNum} Column 2`,
-    c: `Row ${rowNum} Column 3`,
-    d: `Row ${rowNum} Column 4`,
-    e: `Row ${rowNum} Column 5`,
-    f: `Row ${rowNum} expandable content`,
+    columnA: `Row ${rowNum} Column 1`,
+    columnB: `Row ${rowNum} Column 2`,
+    columnC: `Row ${rowNum} Column 3`,
+    columnD: `Row ${rowNum} Column 4`,
+    columnE: `Row ${rowNum} Column 5`,
+    columnF: `Row ${rowNum} expandable content`,
   }))
 
 export const columns: NonNullable<ComponentProps<typeof List>['columns']> =
@@ -38,13 +38,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -55,13 +55,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -79,13 +79,13 @@ describe('ListV2', () => {
           </List.HeaderRow>
         </List.Headers>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -99,13 +99,13 @@ describe('ListV2', () => {
         columns={columns.map(column => ({ ...column, sort: 'none' }))}
       >
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -116,13 +116,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns} selectable>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -133,13 +133,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns} isLoading>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -157,13 +157,13 @@ describe('ListV2', () => {
           </List.HeaderRow>
         </List.Headers>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -181,13 +181,13 @@ describe('ListV2', () => {
           </List.HeaderRow>
         </List.Headers>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -198,13 +198,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} isDisabled id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -215,13 +215,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} isHighlighted id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -232,16 +232,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpandable id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpandable id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
     ))
@@ -250,16 +252,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpandable hideArrow id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpandable hideArrow id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
     ))
@@ -268,16 +272,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpanded id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpanded id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
     ))
@@ -286,16 +292,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpandable isExpanded id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpandable isExpanded id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
     ))
@@ -333,13 +341,13 @@ describe('ListV2', () => {
         selectable
       >
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -404,15 +412,17 @@ describe('ListV2', () => {
             }))}
           >
             <List.Body>
-              {data.map(({ id, a, b, c, d, e }) => (
-                <List.Row key={id} id={id}>
-                  <List.Cell>{a}</List.Cell>
-                  <List.Cell>{b}</List.Cell>
-                  <List.Cell>{c}</List.Cell>
-                  <List.Cell>{d}</List.Cell>
-                  <List.Cell>{e}</List.Cell>
-                </List.Row>
-              ))}
+              {data.map(
+                ({ id, columnA, columnB, columnC, columnD, columnE }) => (
+                  <List.Row key={id} id={id}>
+                    <List.Cell>{columnA}</List.Cell>
+                    <List.Cell>{columnB}</List.Cell>
+                    <List.Cell>{columnC}</List.Cell>
+                    <List.Cell>{columnD}</List.Cell>
+                    <List.Cell>{columnE}</List.Cell>
+                  </List.Row>
+                ),
+              )}
             </List.Body>
           </List>
         )}
@@ -441,13 +451,13 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns} selectable selectedIds={['1']}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -459,13 +469,13 @@ describe('ListV2', () => {
     const { rerender } = render(
       <List data={data} columns={columns} selectable selectedIds={selectedIds}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -477,13 +487,13 @@ describe('ListV2', () => {
     rerender(
       <List data={data} columns={columns} selectable selectedIds={selectedIds}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -492,13 +502,13 @@ describe('ListV2', () => {
     rerender(
       <List data={data} columns={columns} selectable selectedIds={[]}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -507,13 +517,13 @@ describe('ListV2', () => {
     rerender(
       <List data={data} columns={columns} selectable>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -525,14 +535,14 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns} selectable>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             // @ts-expect-error List.Row should have an id
             <List.Row key={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -567,16 +577,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpandable id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpandable id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
       {
@@ -591,19 +603,19 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
               <List.Cell
                 isClickable
                 onClick={event => {
                   event.preventDefault()
                 }}
               >
-                {e}
+                {columnE}
               </List.Cell>
             </List.Row>
           ))}
@@ -611,7 +623,9 @@ describe('ListV2', () => {
       </List>,
       {
         transform: node => {
-          userEvent.click(node.getByText(data[0].e))
+          userEvent.click(
+            node.getByText((data[0] as { columnE: string }).columnE),
+          )
         },
       },
     ))
@@ -620,16 +634,18 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List data={data} autoClose columns={columns}>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e, f }) => (
-            <List.Row key={id} isExpandable id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
-              <List.Expandable>{f}</List.Expandable>
-            </List.Row>
-          ))}
+          {data.map(
+            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+              <List.Row key={id} isExpandable id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+                <List.Expandable>{columnF}</List.Expandable>
+              </List.Row>
+            ),
+          )}
         </List.Body>
       </List>,
       {
@@ -655,13 +671,13 @@ describe('ListV2', () => {
           </List.HeaderRow>
         </List.Headers>
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell colSpan={2}>{a}</List.Cell>
-              <List.Cell colSpan={2}>{b}</List.Cell>
-              <List.Cell colSpan={2}>{c}</List.Cell>
-              <List.Cell colSpan={2}>{d}</List.Cell>
-              <List.Cell colSpan={2}>{e}</List.Cell>
+              <List.Cell colSpan={2}>{columnA}</List.Cell>
+              <List.Cell colSpan={2}>{columnB}</List.Cell>
+              <List.Cell colSpan={2}>{columnC}</List.Cell>
+              <List.Cell colSpan={2}>{columnD}</List.Cell>
+              <List.Cell colSpan={2}>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>
@@ -676,13 +692,13 @@ describe('ListV2', () => {
         columns={columns.map(column => ({ ...column, sort: 'badValue' }))}
       >
         <List.Body>
-          {data.map(({ id, a, b, c, d, e }) => (
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
-              <List.Cell>{a}</List.Cell>
-              <List.Cell>{b}</List.Cell>
-              <List.Cell>{c}</List.Cell>
-              <List.Cell>{d}</List.Cell>
-              <List.Cell>{e}</List.Cell>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
             </List.Row>
           ))}
         </List.Body>

@@ -22,6 +22,7 @@ export {
   LineChart,
   Link,
   List,
+  ListV2,
   Loader,
   Markdown,
   Menu,
