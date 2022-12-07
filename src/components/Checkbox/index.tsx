@@ -33,8 +33,11 @@ const PaddedText = styled(Text)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledIcon = styled.svg<{ size: number }>`
-  margin-right: ${({ theme }) => theme.space['1']};
+const StyledIcon = styled('svg', {
+  shouldForwardProp: prop => !['hasChildren'].includes(prop),
+})<{ size: number; hasChildren: boolean }>`
+  margin-right: ${({ theme, hasChildren }) =>
+    hasChildren ? theme.space['1'] : 0};
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
@@ -260,7 +263,11 @@ const Checkbox = forwardRef(
             ref={ref}
           />
           {!progress ? (
-            <StyledIcon size={size} viewBox="0 0 24 24">
+            <StyledIcon
+              size={size}
+              viewBox="0 0 24 24"
+              hasChildren={hasChildren}
+            >
               <CheckboxIconContainer>
                 <CheckMixedMark x="8" y="11" rx="1" width="8" height="2" />
                 <CheckMark x="8" y="8" rx="1" width="8" height="8" />
