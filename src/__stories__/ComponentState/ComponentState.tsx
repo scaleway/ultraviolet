@@ -1,7 +1,7 @@
-import * as components from '../components'
-import Stack from '../components/Stack'
-import Table from '../components/Table'
-import Text from '../components/Text'
+import * as components from '../../components'
+import Stack from '../../components/Stack'
+import Table from '../../components/Table'
+import Text from '../../components/Text'
 
 const componentsNames = Object.keys(components)
 let modules: PromiseSettledResult<{
@@ -15,7 +15,7 @@ let modules: PromiseSettledResult<{
 
 Promise.allSettled(
   componentsNames.map(
-    name => import(`../components/${name}/__stories__/index.stories`),
+    name => import(`../../components/${name}/__stories__/index.stories`),
   ),
 )
   .then(module => {
@@ -59,8 +59,6 @@ const ComponentState = () => (
             const componentName = desctructuredName[1]
               ? desctructuredName[1]
               : desctructuredName[0]
-
-            console.log(componentName, desctructuredName)
 
             return (
               <Table.Row>

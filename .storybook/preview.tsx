@@ -20,6 +20,8 @@ const STORY_SORT = {
     'Components state',
     'Testing',
     'Changelog',
+    'State',
+    ['Components state', 'Properties'],
     'Guidelines',
     'Customization',
     ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
@@ -105,7 +107,6 @@ const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
 export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
   css`
     ${normalize()}
-
     body {
       color: ${theme.colors.neutral.text};
     }
