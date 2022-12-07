@@ -155,17 +155,11 @@ exports[`UnitInput renders with custom options 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -183,6 +177,12 @@ exports[`UnitInput renders with custom options 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -195,28 +195,28 @@ exports[`UnitInput renders with custom options 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -229,16 +229,16 @@ exports[`UnitInput renders with custom options 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -266,32 +266,32 @@ exports[`UnitInput renders with custom options 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -302,7 +302,7 @@ exports[`UnitInput renders with custom options 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -334,31 +334,31 @@ exports[`UnitInput renders with custom options 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -442,10 +442,10 @@ exports[`UnitInput renders with custom options 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -456,12 +456,12 @@ exports[`UnitInput renders with custom options 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             KB
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -486,11 +486,11 @@ exports[`UnitInput renders with custom options 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -679,17 +679,11 @@ exports[`UnitInput renders with default props 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -707,6 +701,12 @@ exports[`UnitInput renders with default props 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -719,28 +719,28 @@ exports[`UnitInput renders with default props 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -753,16 +753,16 @@ exports[`UnitInput renders with default props 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -790,32 +790,32 @@ exports[`UnitInput renders with default props 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -826,7 +826,7 @@ exports[`UnitInput renders with default props 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -858,31 +858,31 @@ exports[`UnitInput renders with default props 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -966,10 +966,10 @@ exports[`UnitInput renders with default props 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -980,12 +980,12 @@ exports[`UnitInput renders with default props 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -1010,11 +1010,11 @@ exports[`UnitInput renders with default props 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -1203,17 +1203,11 @@ exports[`UnitInput renders with defaultOption 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1231,6 +1225,12 @@ exports[`UnitInput renders with defaultOption 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -1243,28 +1243,28 @@ exports[`UnitInput renders with defaultOption 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1277,16 +1277,16 @@ exports[`UnitInput renders with defaultOption 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -1314,32 +1314,32 @@ exports[`UnitInput renders with defaultOption 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1350,7 +1350,7 @@ exports[`UnitInput renders with defaultOption 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1382,31 +1382,31 @@ exports[`UnitInput renders with defaultOption 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -1490,10 +1490,10 @@ exports[`UnitInput renders with defaultOption 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -1504,12 +1504,12 @@ exports[`UnitInput renders with defaultOption 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -1534,11 +1534,11 @@ exports[`UnitInput renders with defaultOption 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -1727,17 +1727,11 @@ exports[`UnitInput renders with defaultValue 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1755,6 +1749,12 @@ exports[`UnitInput renders with defaultValue 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -1767,28 +1767,28 @@ exports[`UnitInput renders with defaultValue 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1801,16 +1801,16 @@ exports[`UnitInput renders with defaultValue 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -1838,32 +1838,32 @@ exports[`UnitInput renders with defaultValue 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1874,7 +1874,7 @@ exports[`UnitInput renders with defaultValue 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -1906,31 +1906,31 @@ exports[`UnitInput renders with defaultValue 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2014,10 +2014,10 @@ exports[`UnitInput renders with defaultValue 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -2028,12 +2028,12 @@ exports[`UnitInput renders with defaultValue 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -2058,11 +2058,11 @@ exports[`UnitInput renders with defaultValue 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -2258,17 +2258,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   white-space: nowrap;
 }
 
-.cache-1hrfza9-control {
+.cache-wfegxz-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: none;
-  border-width: 0;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2286,6 +2280,12 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #f6f6f8;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: none;
+  border-width: 0;
+  box-shadow: none;
   box-sizing: border-box;
   color: #c4c9d6;
   font-size: 16px;
@@ -2298,11 +2298,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   animation: none;
 }
 
-.cache-1hrfza9-control:hover {
+.cache-wfegxz-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-b2qn0l-ValueContainer {
+.cache-1cuimb-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2315,17 +2315,17 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   cursor: not-allowed;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-b2qn0l-ValueContainer label {
+.cache-1cuimb-ValueContainer label {
   display: none;
 }
 
@@ -2354,32 +2354,32 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   opacity: 0.5;
 }
 
-.cache-yp3il2-singleValue {
-  color: #c4c9d6;
+.cache-coc5k0-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #c4c9d6;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-1h4euje-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1sh2mib-inputStyles {
   visibility: hidden;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2390,7 +2390,7 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   caret-color: transparent;
 }
 
-.cache-1h4euje-inputStyles:after {
+.cache-1sh2mib-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2422,31 +2422,31 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -2531,10 +2531,10 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-1hrfza9-control"
+        class=" cache-wfegxz-control"
       >
         <div
-          class=" cache-b2qn0l-ValueContainer"
+          class=" cache-1cuimb-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -2545,12 +2545,12 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
             Select...
           </label>
           <div
-            class=" cache-yp3il2-singleValue"
+            class=" cache-coc5k0-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-1h4euje-inputStyles"
+            class="cache-1sh2mib-inputStyles"
             data-value=""
           >
             <input
@@ -2576,11 +2576,11 @@ exports[`UnitInput renders with disabled and placeHolder 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -2764,17 +2764,11 @@ exports[`UnitInput renders with min max 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2792,6 +2786,12 @@ exports[`UnitInput renders with min max 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -2804,28 +2804,28 @@ exports[`UnitInput renders with min max 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2838,16 +2838,16 @@ exports[`UnitInput renders with min max 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -2875,32 +2875,32 @@ exports[`UnitInput renders with min max 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2911,7 +2911,7 @@ exports[`UnitInput renders with min max 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -2943,31 +2943,31 @@ exports[`UnitInput renders with min max 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3051,10 +3051,10 @@ exports[`UnitInput renders with min max 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -3065,12 +3065,12 @@ exports[`UnitInput renders with min max 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -3095,11 +3095,11 @@ exports[`UnitInput renders with min max 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -3288,17 +3288,11 @@ exports[`UnitInput renders with size large 1`] = `
   white-space: nowrap;
 }
 
-.cache-13pvfao-control {
+.cache-sgn9vq-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3316,6 +3310,12 @@ exports[`UnitInput renders with size large 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -3328,28 +3328,28 @@ exports[`UnitInput renders with size large 1`] = `
   animation: none;
 }
 
-.cache-13pvfao-control:hover {
+.cache-sgn9vq-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-13pvfao-control:focus-within {
+.cache-sgn9vq-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-13pvfao-control:focus-within svg {
+.cache-sgn9vq-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-13pvfao-control:hover {
+.cache-sgn9vq-control:hover {
   border-color: #390171;
 }
 
-.cache-13pvfao-control:hover svg {
+.cache-sgn9vq-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3362,16 +3362,16 @@ exports[`UnitInput renders with size large 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -3399,32 +3399,32 @@ exports[`UnitInput renders with size large 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -3435,7 +3435,7 @@ exports[`UnitInput renders with size large 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3467,31 +3467,31 @@ exports[`UnitInput renders with size large 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -3575,10 +3575,10 @@ exports[`UnitInput renders with size large 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-13pvfao-control"
+        class=" cache-sgn9vq-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -3589,12 +3589,12 @@ exports[`UnitInput renders with size large 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -3619,11 +3619,11 @@ exports[`UnitInput renders with size large 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -3812,17 +3812,11 @@ exports[`UnitInput renders with size medium 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3840,6 +3834,12 @@ exports[`UnitInput renders with size medium 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -3852,28 +3852,28 @@ exports[`UnitInput renders with size medium 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3886,16 +3886,16 @@ exports[`UnitInput renders with size medium 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -3923,32 +3923,32 @@ exports[`UnitInput renders with size medium 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -3959,7 +3959,7 @@ exports[`UnitInput renders with size medium 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -3991,31 +3991,31 @@ exports[`UnitInput renders with size medium 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -4099,10 +4099,10 @@ exports[`UnitInput renders with size medium 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -4113,12 +4113,12 @@ exports[`UnitInput renders with size medium 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -4143,11 +4143,11 @@ exports[`UnitInput renders with size medium 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -4336,17 +4336,11 @@ exports[`UnitInput renders with size small 1`] = `
   white-space: nowrap;
 }
 
-.cache-yc94ap-control {
+.cache-xwbj3g-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4364,6 +4358,12 @@ exports[`UnitInput renders with size small 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -4376,28 +4376,28 @@ exports[`UnitInput renders with size small 1`] = `
   animation: none;
 }
 
-.cache-yc94ap-control:hover {
+.cache-xwbj3g-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-yc94ap-control:focus-within {
+.cache-xwbj3g-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-yc94ap-control:focus-within svg {
+.cache-xwbj3g-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-yc94ap-control:hover {
+.cache-xwbj3g-control:hover {
   border-color: #390171;
 }
 
-.cache-yc94ap-control:hover svg {
+.cache-xwbj3g-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4410,16 +4410,16 @@ exports[`UnitInput renders with size small 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -4447,32 +4447,32 @@ exports[`UnitInput renders with size small 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -4483,7 +4483,7 @@ exports[`UnitInput renders with size small 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -4515,31 +4515,31 @@ exports[`UnitInput renders with size small 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -4623,10 +4623,10 @@ exports[`UnitInput renders with size small 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-yc94ap-control"
+        class=" cache-xwbj3g-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -4637,12 +4637,12 @@ exports[`UnitInput renders with size small 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -4667,11 +4667,11 @@ exports[`UnitInput renders with size small 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
@@ -4860,17 +4860,11 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   white-space: nowrap;
 }
 
-.cache-i95pdk-control {
+.cache-stcktd-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4888,6 +4882,12 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -4900,28 +4900,28 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   animation: none;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-i95pdk-control:focus-within {
+.cache-stcktd-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-i95pdk-control:focus-within svg {
+.cache-stcktd-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-i95pdk-control:hover {
+.cache-stcktd-control:hover {
   border-color: #390171;
 }
 
-.cache-i95pdk-control:hover svg {
+.cache-stcktd-control:hover svg {
   fill: #390171;
 }
 
-.cache-1vgp1j-ValueContainer {
+.cache-1827o3p-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4934,16 +4934,16 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-1vgp1j-ValueContainer label {
+.cache-1827o3p-ValueContainer label {
   display: none;
 }
 
@@ -4971,32 +4971,32 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   opacity: 1;
 }
 
-.cache-k8ufz4-singleValue {
-  color: #4a4f62;
+.cache-14e3jk-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 0;
   padding-left: 0;
 }
 
-.cache-57pyfw-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 0;
+.cache-1xwier8-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -5007,7 +5007,7 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   caret-color: transparent;
 }
 
-.cache-57pyfw-inputStyles:after {
+.cache-1xwier8-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -5039,31 +5039,31 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
   max-height: 48px;
 }
 
-.cache-27txfv-indicatorSeparator {
+.cache-1rlboq6-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: none;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -5147,10 +5147,10 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-i95pdk-control"
+        class=" cache-stcktd-control"
       >
         <div
-          class=" cache-1vgp1j-ValueContainer"
+          class=" cache-1827o3p-ValueContainer"
         >
           <label
             aria-live="assertive"
@@ -5161,12 +5161,12 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
             Select...
           </label>
           <div
-            class=" cache-k8ufz4-singleValue"
+            class=" cache-14e3jk-singleValue"
           >
             Hours
           </div>
           <div
-            class="cache-57pyfw-inputStyles"
+            class="cache-1xwier8-inputStyles"
             data-value=""
           >
             <input
@@ -5191,11 +5191,11 @@ exports[`UnitInput renders with textBoxWidth and richSelectWidth 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-27txfv-indicatorSeparator"
+            class=" cache-1rlboq6-indicatorSeparator"
           />
           <div
             aria-hidden="true"
-            class=" cache-tlfecz-indicatorContainer"
+            class=" cache-1xc3v61-indicatorContainer"
           >
             <div
               class="cache-6874q2-Stack e1sgck4o0"
