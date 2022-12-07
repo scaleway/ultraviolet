@@ -96,13 +96,10 @@ const Tabs = ({
   useEffect(() => {
     const tab = tabsRef.current.querySelector(
       `[role='tab'][aria-selected='true']`,
-    )
-    if (tab && tab.scrollIntoView) {
-      tab.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      })
+    ) as HTMLElement
+
+    if (tab) {
+      tabsRef.current.scrollTo({ left: tab.offsetLeft, behavior: 'smooth' })
     }
   }, [selected])
 
