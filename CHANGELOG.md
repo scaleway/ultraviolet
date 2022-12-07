@@ -1,3 +1,21 @@
+## [0.212.8](https://github.com/scaleway/scaleway-ui/compare/v0.212.7...v0.212.8) (2022-12-07)
+
+
+### :zap: Refactor
+
+* rewrite stories toggle tooltipicon unitinput ([#2086](https://github.com/scaleway/scaleway-ui/issues/2086)) ([549eb77](https://github.com/scaleway/scaleway-ui/commit/549eb779badf8638c43ee7d2ea25b74e24f82f96))
+* **RichSelect, ScrollView:** migrate stories ([#2080](https://github.com/scaleway/scaleway-ui/issues/2080)) ([d03de08](https://github.com/scaleway/scaleway-ui/commit/d03de082e48133a26ce54eebeccc370b85ba49df))
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/node to v18.11.11 ([#2096](https://github.com/scaleway/scaleway-ui/issues/2096)) ([4e6c9f9](https://github.com/scaleway/scaleway-ui/commit/4e6c9f9acc0eda57bd88f344a3d5971910d06ef1))
+
+
+### :bug: Bug Fixes
+
+* remove box from textbox ([#2097](https://github.com/scaleway/scaleway-ui/issues/2097)) ([9468dc6](https://github.com/scaleway/scaleway-ui/commit/9468dc683ef14423ba3005e7e613290a5d179d6c))
+
 ## [0.212.7](https://github.com/scaleway/scaleway-ui/compare/v0.212.6...v0.212.7) (2022-12-06)
 
 
