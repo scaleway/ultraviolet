@@ -5,16 +5,14 @@ const HEIGHT = 56
 const SPACING = 20
 
 const StyledDiv = styled.div<{ rank: number }>`
-  align-items: center;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   bottom: ${({ rank }) => SPACING + rank * (HEIGHT + SPACING)}px;
   box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
-  display: flex;
   height: ${HEIGHT}px;
   left: 50%;
-  padding: 16px;
+  padding: ${({ theme }) => theme.space['2']};
   position: fixed;
   transform: translate(-50%, 0);
   width: 600px;
