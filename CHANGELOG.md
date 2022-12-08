@@ -1,3 +1,10 @@
+## [0.213.0](https://github.com/scaleway/scaleway-ui/compare/v0.212.11...v0.213.0) (2022-12-08)
+
+
+### :gear: Features
+
+* new list component ([#2102](https://github.com/scaleway/scaleway-ui/issues/2102)) ([4d59d16](https://github.com/scaleway/scaleway-ui/commit/4d59d16d247ce8f59fb8e8f3a93ba59f2a6a0cf7))
+
 ## [0.212.11](https://github.com/scaleway/scaleway-ui/compare/v0.212.10...v0.212.11) (2022-12-08)
 
 
