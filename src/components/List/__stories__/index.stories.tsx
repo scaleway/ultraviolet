@@ -4,6 +4,8 @@ import List from '..'
 export default {
   component: List,
   parameters: {
+    deprecated: true,
+    deprecatedReason: 'This component is deprecated please use ListV2 instead.',
     docs: {
       description: {
         component: 'Display a list of your data.',
