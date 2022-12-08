@@ -15,8 +15,15 @@ const StyledRow = styled('div', {
 }>`
   display: grid;
   grid-template-columns: ${({ template }) => template};
-  padding: 0 ${({ theme }) => theme.space['1']};
-  gap: ${({ theme }) => theme.space['1']};
+  column-gap: ${({ theme }) => theme.space['1']};
+
+  & > [role='columnheader']:first-of-type {
+    padding-left: ${({ theme }) => theme.space['1']};
+  }
+
+  & > [role='columnheader']:last-of-type {
+    padding-right: ${({ theme }) => theme.space['1']};
+  }
 `
 
 type ListHeaderRowProps = {

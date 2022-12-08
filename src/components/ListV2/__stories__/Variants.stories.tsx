@@ -18,6 +18,7 @@ const variants: Color[] = [
 export const Variants: Story = args => (
   <List
     {...args}
+    idKey="id"
     selectable
     data={data}
     columns={columns.map(({ label }) => ({

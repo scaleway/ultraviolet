@@ -19,7 +19,7 @@ type ListColumn = Omit<
   id?: string
 }
 
-type ListProps<T> = {
+type ListProps<T extends Record<string, unknown>> = {
   children: ReactNode
   /**
    * Add checkboxes on the list
@@ -37,7 +37,7 @@ type ListProps<T> = {
   /**
    * The idKey of each data entry
    * */
-  idKey?: string
+  idKey: keyof T extends string ? keyof T : string
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
@@ -73,7 +73,7 @@ export const List = <
       .join(' ')
 
     return (
-      <ListProvider
+      <ListProvider<T>
         autoClose={autoClose}
         template={computedTemplate}
         selectable={selectable}
@@ -119,6 +119,7 @@ export const List = <
       selectedIds={selectedIds}
       onSelectedIdsChange={onSelectedIdsChange}
       data={data}
+      idKey={idKey}
     >
       <Stack gap={1} role="table">
         {isLoading ? (

@@ -11,7 +11,7 @@ import {
   useState,
 } from 'react'
 
-type ListContextValue<T = Record<string, unknown>> = {
+type ListContextValue<T extends Record<string, unknown>> = {
   template: string
   selectable?: boolean
   selectedIds: string[]
@@ -19,36 +19,36 @@ type ListContextValue<T = Record<string, unknown>> = {
   expandedIds: string[]
   setExpandedIds: Dispatch<SetStateAction<string[]>>
   data: T[]
-  idKey: string
+  idKey: keyof T extends string ? keyof T : string
   autoClose: boolean
   disabledRowsRef: MutableRefObject<string[]>
 }
 
-const ListContext = createContext<ListContextValue>({} as ListContextValue)
+const ListContext = createContext<
+  ListContextValue<Record<string, unknown>> | undefined
+>(undefined)
 
-type ListProviderProps<
-  T extends Record<string, unknown> = Record<string, unknown>,
-> = {
+type ListProviderProps<T extends Record<string, unknown>> = {
   template?: string
   selectable?: boolean
   children: ReactNode
   onSelectedIdsChange?: (selectedIds: string[]) => void
   selectedIds?: string[]
   data: T[]
-  idKey?: keyof T
+  idKey: keyof T extends string ? keyof T : string
   autoClose?: boolean
 }
 
-export const ListProvider = ({
+export const ListProvider = <T extends Record<string, unknown>>({
   template = 'repeat(12, 1fr)',
   children,
   selectable,
   selectedIds: selectedIdsProp,
   onSelectedIdsChange,
   data,
-  idKey = 'id',
+  idKey,
   autoClose = false,
-}: ListProviderProps) => {
+}: ListProviderProps<T>) => {
   const [selectedIds, setSelectedIds] = useState(selectedIdsProp ?? [])
   const [expandedIds, setExpandedIds] = useState<string[]>([])
   const onSelectedIdsChangeRef = useRef(onSelectedIdsChange)
@@ -104,4 +104,13 @@ export const ListProvider = ({
   return <ListContext.Provider value={value}>{children}</ListContext.Provider>
 }
 
-export const useListContext = () => useContext(ListContext)
+export const useListContext = <
+  T extends Record<string, unknown> = Record<string, unknown>,
+>() => {
+  const context = useContext(ListContext) as ListContextValue<T>
+  if (!context) {
+    throw new Error('useListContext should be used inside a List component')
+  }
+
+  return context
+}

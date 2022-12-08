@@ -1,7 +1,16 @@
 import { ComponentProps } from 'react'
 import { List } from '..'
 
-export const data: ComponentProps<typeof List<Record<string, string>>>['data'] =
+type FakeDataType = {
+  id: string
+  a: string
+  b: string
+  c: string
+  d: string
+  e: string
+}
+
+export const data: ComponentProps<typeof List<FakeDataType>>['data'] =
   Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
     id: `${rowNum}`,
     a: `Row ${rowNum} Column 1`,

@@ -12,6 +12,7 @@ import { columns, data } from './resources'
 export const RowExpandableWithAction: Story = args => (
   <List
     {...args}
+    idKey="id"
     selectable
     data={data}
     columns={[
@@ -29,7 +30,7 @@ export const RowExpandableWithAction: Story = args => (
           <ListCell>{c}</ListCell>
           <ListCell>{d}</ListCell>
           <ListCell>{e}</ListCell>
-          <ListCell isClickable>
+          <ListCell preventClick>
             <Stack alignItems="end">
               <Menu
                 disclosure={

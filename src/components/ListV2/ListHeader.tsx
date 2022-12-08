@@ -3,8 +3,10 @@ import { HTMLProps, MouseEvent, ReactNode } from 'react'
 import Icon from '../Icon'
 import Stack from '../Stack'
 
+type ListOrder = 'asc' | 'desc' | 'none'
+
 const getAriaSort = (
-  sort: 'asc' | 'desc' | 'none',
+  sort: ListOrder,
 ): HTMLProps<HTMLDivElement>['aria-sort'] => {
   if (sort === 'asc') return 'ascending'
 
@@ -28,7 +30,7 @@ const StyledHeader = styled('div', {
   sortable?: boolean
 }>`
   display: flex;
-  text-align: initial;
+  text-align: left;
   flex-direction: row;
   align-items: center;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
@@ -63,9 +65,9 @@ type ListHeaderProps = {
   children: ReactNode
   colSpan?: number
   className?: string
-  sort?: 'asc' | 'desc' | 'none'
+  sort?: ListOrder
   onClick?: (
-    currentSort: { column: string; order: 'asc' | 'desc' | 'none' | undefined },
+    currentSort: { column: string; order?: ListOrder },
     event: MouseEvent<HTMLDivElement>,
   ) => unknown | void
   id?: string

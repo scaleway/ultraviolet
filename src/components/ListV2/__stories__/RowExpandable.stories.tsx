@@ -9,6 +9,7 @@ import { columns, data } from './resources'
 export const RowExpandable: Story = args => (
   <List
     {...args}
+    idKey="id"
     selectable
     data={data}
     columns={columns.map(({ label }) => ({

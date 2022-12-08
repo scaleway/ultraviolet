@@ -34,14 +34,14 @@ const StyledCheckbox = styled(Checkbox)`
   }
 `
 
-export const LIST_ROW_VARIANTS = [
+export const LIST_ROW_VARIANTS: Color[] = [
   'danger',
   'warning',
   'primary',
   'success',
   'neutral',
   'info',
-] as const
+]
 
 const StyledRow = styled('div', {
   shouldForwardProp: prop => prop !== 'template',
@@ -62,7 +62,7 @@ const StyledRow = styled('div', {
   background-color: ${({ theme }) => theme.colors.neutral.background};
   cursor: auto;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  col-gap: ${({ theme }) => theme.space['1']};
+  column-gap: ${({ theme }) => theme.space['1']};
 
   &[role='button row'] {
     cursor: pointer;
@@ -72,18 +72,18 @@ const StyledRow = styled('div', {
     LIST_ROW_VARIANTS.map(
       color => `
     &[data-variant="${color}"] {
-      color: ${theme.colors[color as Color].text};
-      border-color: ${theme.colors[color as Color].border};
-      background-color: ${theme.colors[color as Color].background};
+      color: ${theme.colors[color].text};
+      border-color: ${theme.colors[color].border};
+      background-color: ${theme.colors[color].background};
     }
 
     &[data-variant="${color}"][data-highlight="true"] {
-      border-color: ${theme.colors[color as Color].border};
+      border-color: ${theme.colors[color].border};
       box-shadow: none;
     }
 
     &[data-variant="${color}"][data-hoverable='true']:hover {
-      border-color: ${theme.colors[color as Color].border};
+      border-color: ${theme.colors[color].border};
       box-shadow: none;
     }
     `,
@@ -266,7 +266,7 @@ export const ListRow = ({
       <StyledRow
         className={className}
         data-disabled={isDisabled ?? false}
-        data-hoverable={isHoverable ?? false}
+        data-hoverable={isHoverable}
         data-highlight={!!isHighlighted || isSelected}
         data-variant={variant}
         role={isExpandable ? 'button row' : 'row'}
@@ -276,7 +276,7 @@ export const ListRow = ({
         onClick={isExpandable && !isDisabled ? handleExpand : undefined}
       >
         {selectable ? (
-          <ListCell isClickable>
+          <ListCell preventClick>
             {checkboxRender ?? (
               <StyledCheckboxContainer
                 data-visibility={selectedIds.length === 0 ? 'hover' : undefined}

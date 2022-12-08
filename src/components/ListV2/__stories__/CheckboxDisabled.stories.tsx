@@ -8,6 +8,7 @@ import { columns, data } from './resources'
 
 export const CheckboxDisabled: Story = args => (
   <List
+    idKey="id"
     {...args}
     selectable
     data={data}

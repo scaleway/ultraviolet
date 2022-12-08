@@ -15,7 +15,7 @@ Template.args = {
   autoClose: false,
   selectedIds: undefined,
   onSelectedIdsChange: undefined,
-  idKey: undefined,
+  idKey: 'id',
   isLoading: false,
   selectable: false,
   template: undefined,

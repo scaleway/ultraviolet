@@ -17,7 +17,7 @@ type ListCellProps = {
   /**
    *  Use this if you want to prevent onClick to be handle by parents (Like when you have an expandable content)
    * */
-  isClickable?: boolean
+  preventClick?: boolean
 }
 
 export const ListCell = ({
@@ -25,11 +25,11 @@ export const ListCell = ({
   children,
   onClick,
   className,
-  isClickable,
+  preventClick,
 }: ListCellProps) => {
   const handleClick: MouseEventHandler<HTMLTableCellElement> = event => {
     onClick?.(event)
-    if (isClickable && !event.isDefaultPrevented()) {
+    if (preventClick && !event.isDefaultPrevented()) {
       event.stopPropagation()
     }
   }

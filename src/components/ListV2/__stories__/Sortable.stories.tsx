@@ -33,6 +33,7 @@ export const Sortable: Story = args => {
   return (
     <List
       {...args}
+      idKey="id"
       data={data}
       columns={columns.map(({ label, id }) => ({
         label,

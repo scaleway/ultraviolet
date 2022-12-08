@@ -3,6 +3,10 @@ import Placeholder from '../Placeholder'
 import { ListCell } from './ListCell'
 import { ListRow } from './ListRow'
 
+const StyledListRow = styled(ListRow)`
+  cursor: progress;
+`
+
 const StyledPlaceholder = styled(Placeholder)`
   width: 80%;
   max-width: 100%;
@@ -18,24 +22,27 @@ export const ListLoadingPlaceholder = ({
   cols = 1,
   rows = 5,
   className,
-}: ListLoadingPlaceholderProps) => (
-  <>
-    {Array.from({ length: rows }, (_, index) => index).map(index => (
-      <ListRow
-        className={className}
-        checkboxRender={<div />}
-        id={`placeholder-${index}`}
-        key={index}
-        isHoverable={false}
-      >
-        {Array.from({ length: cols }, (_, columnIndex) => columnIndex).map(
-          columnIndex => (
+}: ListLoadingPlaceholderProps) => {
+  const rowArray = Array.from({ length: rows }, (_, index) => index)
+  const colArray = Array.from({ length: cols }, (_, index) => index)
+
+  return (
+    <>
+      {rowArray.map(index => (
+        <StyledListRow
+          className={className}
+          checkboxRender={<div />}
+          id={`placeholder-${index}`}
+          key={index}
+          isHoverable={false}
+        >
+          {colArray.map(columnIndex => (
             <ListCell key={columnIndex}>
               <StyledPlaceholder variant="line" />
             </ListCell>
-          ),
-        )}
-      </ListRow>
-    ))}
-  </>
-)
+          ))}
+        </StyledListRow>
+      ))}
+    </>
+  )
+}
