@@ -1,3 +1,17 @@
+## [0.212.11](https://github.com/scaleway/scaleway-ui/compare/v0.212.10...v0.212.11) (2022-12-08)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.10.5 ([#2105](https://github.com/scaleway/scaleway-ui/issues/2105)) ([ad6c01e](https://github.com/scaleway/scaleway-ui/commit/ad6c01e1666ef4ff18196b2a69a367c118f8f33a))
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.23 ([#2106](https://github.com/scaleway/scaleway-ui/issues/2106)) ([b5386af](https://github.com/scaleway/scaleway-ui/commit/b5386af30717fcee3ab9f2222a38e19e121dbe2d))
+* **devdeps:** update dependency eslint to v8.29.0 ([#2104](https://github.com/scaleway/scaleway-ui/issues/2104)) ([96fcce7](https://github.com/scaleway/scaleway-ui/commit/96fcce734a3a585f781a707c72045b43a4e42fd9))
+
+
+### :bug: Bug Fixes
+
+* **RichSelect, ScrollView:** clean stories ([#2098](https://github.com/scaleway/scaleway-ui/issues/2098)) ([2ecc95a](https://github.com/scaleway/scaleway-ui/commit/2ecc95a3854af9b18dbdc4a2516056d2a264527d))
+
 ## [0.212.10](https://github.com/scaleway/scaleway-ui/compare/v0.212.9...v0.212.10) (2022-12-08)
 
 
