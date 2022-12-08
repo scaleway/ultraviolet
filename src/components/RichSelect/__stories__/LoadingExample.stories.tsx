@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import RichSelect from '..'
 import { Button, Loader } from '../..'
 
-// @fixme is this really necessary??
 export const LoadingExample: ComponentStory<typeof RichSelect> = ({
   ...props
 }) => {
