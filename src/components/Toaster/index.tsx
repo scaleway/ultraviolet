@@ -85,24 +85,24 @@ type SanitizedAlertBarProps = {
   children?: ReactNode
 } & ComponentProps<typeof Alert>
 
-const SanitizedAlertBar = ({ type, children }: SanitizedAlertBarProps) => (
-  <StyledAlert type={type}>{children}</StyledAlert>
+const SanitizedAlertBar = ({ variant, children }: SanitizedAlertBarProps) => (
+  <StyledAlert variant={variant}>{children}</StyledAlert>
 )
 
 const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(
-      <SanitizedAlertBar type="warning">{children}</SanitizedAlertBar>,
+      <SanitizedAlertBar variant="warning">{children}</SanitizedAlertBar>,
       options,
     ),
   info: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.info(
-      <SanitizedAlertBar type="info">{children}</SanitizedAlertBar>,
+      <SanitizedAlertBar variant="info">{children}</SanitizedAlertBar>,
       options,
     ),
   success: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.success(
-      <SanitizedAlertBar type="success">{children}</SanitizedAlertBar>,
+      <SanitizedAlertBar variant="success">{children}</SanitizedAlertBar>,
       options,
     ),
 }

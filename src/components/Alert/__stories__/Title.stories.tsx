@@ -4,7 +4,7 @@ export const Title = Template.bind({})
 
 Title.args = {
   icon: 'information-outline',
-  type: 'info',
+  variant: 'info',
   title: 'Information',
   children: 'This is a notification bar with a custom title.',
 }
