@@ -67,11 +67,6 @@ const StyledRow = styled('div', {
     cursor: pointer;
   }
 
-  &[data-hoverable='true']:hover {
-    border-color: ${({ theme }) => theme.colors.primary.border};
-    box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
-  }
-
   ${({ theme }) =>
     LIST_ROW_VARIANTS.map(
       color => `
@@ -92,6 +87,11 @@ const StyledRow = styled('div', {
     }
     `,
     ).join(' ')}
+
+  &[data-hoverable='true']:hover, &[data-variant="neutral"][data-highlight="true"], &[data-variant="neutral"][data-hoverable='true']:hover {
+    border-color: ${({ theme }) => theme.colors.primary.border};
+    box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
+  }
 
   &[data-highlight='true'] {
     border-color: ${({ theme }) => theme.colors.primary.border};
@@ -156,7 +156,7 @@ export const ListRow = ({
   children,
   className,
   isDisabled,
-  isHoverable,
+  isHoverable = true,
   isHighlighted,
   isExpanded: forceExpand,
   isExpandable,

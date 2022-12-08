@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
-import Line from '../Placeholder/Line'
+import Placeholder from '../Placeholder'
 import { ListCell } from './ListCell'
 import { ListRow } from './ListRow'
 
-const StyledPlaceholder = styled(Line)`
+const StyledPlaceholder = styled(Placeholder)`
   width: 80%;
+  max-width: 100%;
 `
 
 type ListLoadingPlaceholderProps = {
@@ -25,11 +26,12 @@ export const ListLoadingPlaceholder = ({
         checkboxRender={<div />}
         id={`placeholder-${index}`}
         key={index}
+        isHoverable={false}
       >
         {Array.from({ length: cols }, (_, columnIndex) => columnIndex).map(
           columnIndex => (
             <ListCell key={columnIndex}>
-              <StyledPlaceholder />
+              <StyledPlaceholder variant="line" />
             </ListCell>
           ),
         )}
