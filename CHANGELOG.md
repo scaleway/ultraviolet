@@ -1,3 +1,15 @@
+## [0.213.1](https://github.com/scaleway/scaleway-ui/compare/v0.213.0...v0.213.1) (2022-12-08)
+
+
+### :zap: Refactor
+
+* **alert:** type to variant prop ([#2095](https://github.com/scaleway/scaleway-ui/issues/2095)) ([64950a0](https://github.com/scaleway/scaleway-ui/commit/64950a0e8582c3cfc3782de4fe96b9ca47039084))
+
+
+### :bug: Bug Fixes
+
+* **Checkbox:** remove margin when empty ([#2101](https://github.com/scaleway/scaleway-ui/issues/2101)) ([0e8d835](https://github.com/scaleway/scaleway-ui/commit/0e8d8354d6c3a1878f6878f1c86c38c175971094))
+
 ## [0.213.0](https://github.com/scaleway/scaleway-ui/compare/v0.212.11...v0.213.0) (2022-12-08)
 
 
