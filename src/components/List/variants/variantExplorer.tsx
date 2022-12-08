@@ -120,6 +120,7 @@ export const Header = () => {
             }
             size={20}
             disabled={isLoading}
+            aria-label="select-rows"
             onChange={handleOnChange}
           />
         </div>
@@ -175,6 +176,7 @@ export const Row = ({ id, children, tooltip, ...props }: ListRowProps) => {
               size={20}
               value={id}
               name="select-rows"
+              aria-label="select-rows"
               onChange={() => {
                 setRowState(id, { selected: !selected })
               }}

@@ -2,7 +2,7 @@
 
 exports[`Checkbox renders correctly 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -12,28 +12,29 @@ exports[`Checkbox renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -43,36 +44,36 @@ exports[`Checkbox renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -134,8 +135,7 @@ exports[`Checkbox renders correctly 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -150,7 +150,7 @@ exports[`Checkbox renders correctly 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
@@ -162,7 +162,7 @@ exports[`Checkbox renders correctly 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -201,7 +201,7 @@ exports[`Checkbox renders correctly 1`] = `
 
 exports[`Checkbox renders correctly checked 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -211,28 +211,29 @@ exports[`Checkbox renders correctly checked 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -242,36 +243,36 @@ exports[`Checkbox renders correctly checked 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -333,8 +334,7 @@ exports[`Checkbox renders correctly checked 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -349,7 +349,7 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="true"
     data-error="false"
   >
@@ -362,7 +362,7 @@ exports[`Checkbox renders correctly checked 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -401,7 +401,7 @@ exports[`Checkbox renders correctly checked 1`] = `
 
 exports[`Checkbox renders correctly checked and disabled 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -411,28 +411,29 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -442,36 +443,36 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -533,8 +534,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -549,7 +549,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="true"
     data-error="false"
   >
@@ -563,7 +563,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -602,7 +602,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
 
 exports[`Checkbox renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -612,28 +612,29 @@ exports[`Checkbox renders correctly disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -643,36 +644,36 @@ exports[`Checkbox renders correctly disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -734,8 +735,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -750,7 +750,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
@@ -763,7 +763,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -802,7 +802,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
 
 exports[`Checkbox renders correctly indeterminate 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -812,28 +812,29 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -843,36 +844,36 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -934,8 +935,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -950,7 +950,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="indeterminate"
     data-error="false"
   >
@@ -963,7 +963,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -1002,7 +1002,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
 
 exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1012,28 +1012,29 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1043,36 +1044,36 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1134,8 +1135,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1150,7 +1150,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="indeterminate"
     data-error="false"
   >
@@ -1164,7 +1164,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -1203,7 +1203,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
 
 exports[`Checkbox renders correctly invisible 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1213,28 +1213,29 @@ exports[`Checkbox renders correctly invisible 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1244,36 +1245,36 @@ exports[`Checkbox renders correctly invisible 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1335,8 +1336,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1351,7 +1351,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
     data-visibility="true"
@@ -1364,7 +1364,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -1403,7 +1403,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
 
 exports[`Checkbox renders correctly no child 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1413,28 +1413,29 @@ exports[`Checkbox renders correctly no child 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1444,36 +1445,36 @@ exports[`Checkbox renders correctly no child 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1535,8 +1536,7 @@ exports[`Checkbox renders correctly no child 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1551,19 +1551,20 @@ exports[`Checkbox renders correctly no child 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
     <input
       aria-invalid="false"
+      aria-label="check"
       class="cache-mhe016-CheckboxInput eu28k4m2"
       name=":r1:"
       type="checkbox"
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -1601,7 +1602,7 @@ exports[`Checkbox renders correctly no child 1`] = `
 
 exports[`Checkbox renders correctly with a value 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1611,28 +1612,29 @@ exports[`Checkbox renders correctly with a value 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1642,36 +1644,36 @@ exports[`Checkbox renders correctly with a value 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1733,8 +1735,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1749,7 +1750,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
@@ -1761,7 +1762,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
       value="test"
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -1800,7 +1801,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
 
 exports[`Checkbox renders correctly with an error 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1810,28 +1811,29 @@ exports[`Checkbox renders correctly with an error 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1841,36 +1843,36 @@ exports[`Checkbox renders correctly with an error 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -1932,8 +1934,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1948,7 +1949,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="true"
   >
@@ -1961,7 +1962,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -2018,7 +2019,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
 
 exports[`Checkbox renders correctly with indeterminate state 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2028,28 +2029,29 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2059,36 +2061,36 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -2150,8 +2152,7 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-1m7zzqc-StyledIcon {
-  margin-right: 8px;
+.cache-1lcemq7-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -2166,7 +2167,7 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="indeterminate"
     data-error="false"
   >
@@ -2179,7 +2180,7 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
       value=""
     />
     <svg
-      class="cache-1m7zzqc-StyledIcon eu28k4m3"
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -2234,7 +2235,7 @@ exports[`Checkbox renders correctly with progress 1`] = `
   }
 }
 
-.cache-104pa6-CheckboxContainer {
+.cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2244,28 +2245,29 @@ exports[`Checkbox renders correctly with progress 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2275,46 +2277,45 @@ exports[`Checkbox renders correctly with progress 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-18l7wuo-StyledActivityContainer {
+.cache-euwc5b-StyledActivityContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
 }
 
 .cache-gqzzce-Loader {
@@ -2386,12 +2387,12 @@ exports[`Checkbox renders correctly with progress 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
     <div
-      class="cache-18l7wuo-StyledActivityContainer eu28k4m0"
+      class="cache-euwc5b-StyledActivityContainer eu28k4m0"
     >
       <svg
         aria-label="Loading"
@@ -2456,7 +2457,7 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   }
 }
 
-.cache-104pa6-CheckboxContainer {
+.cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2466,28 +2467,29 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2497,46 +2499,45 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-1yuatfa-StyledActivityContainer {
+.cache-euwc5b-StyledActivityContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 0;
 }
 
 .cache-gqzzce-Loader {
@@ -2608,12 +2609,12 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
     <div
-      class="cache-1yuatfa-StyledActivityContainer eu28k4m0"
+      class="cache-euwc5b-StyledActivityContainer eu28k4m0"
     >
       <svg
         aria-label="Loading"
@@ -2650,6 +2651,7 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
     </div>
     <input
       aria-invalid="false"
+      aria-label="check"
       class="cache-mhe016-CheckboxInput eu28k4m2"
       name=":rb:"
       type="checkbox"
@@ -2661,7 +2663,7 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
 
 exports[`Checkbox renders correctly with sizes 1`] = `
 <DocumentFragment>
-  .cache-104pa6-CheckboxContainer {
+  .cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2671,28 +2673,29 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2702,36 +2705,36 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -2793,8 +2796,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   fill: #ffe1e7;
 }
 
-.cache-6rbey0-StyledIcon {
-  margin-right: 8px;
+.cache-mu6xj5-StyledIcon {
   border-radius: 4px;
   height: 37px;
   width: 37px;
@@ -2809,7 +2811,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
@@ -2821,7 +2823,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
       value="test"
     />
     <svg
-      class="cache-6rbey0-StyledIcon eu28k4m3"
+      class="cache-mu6xj5-StyledIcon eu28k4m3"
       size="37"
       viewBox="0 0 24 24"
     >
@@ -2871,7 +2873,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   }
 }
 
-.cache-104pa6-CheckboxContainer {
+.cache-3lt5x-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2881,28 +2883,29 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 8px;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='false'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
   cursor: pointer;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-104pa6-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m6,
-.cache-104pa6-CheckboxContainer .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2912,46 +2915,45 @@ exports[`Checkbox renders correctly with sizes 1`] = `
   transform: scale(0);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-104pa6-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
 
-.cache-18l7wuo-StyledActivityContainer {
+.cache-euwc5b-StyledActivityContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
 }
 
 .cache-gqzzce-Loader {
@@ -3023,12 +3025,12 @@ exports[`Checkbox renders correctly with sizes 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-104pa6-CheckboxContainer eu28k4m1"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
     data-checked="false"
     data-error="false"
   >
     <div
-      class="cache-18l7wuo-StyledActivityContainer eu28k4m0"
+      class="cache-euwc5b-StyledActivityContainer eu28k4m0"
     >
       <svg
         aria-label="Loading"

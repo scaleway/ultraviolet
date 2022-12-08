@@ -11,6 +11,7 @@ import {
   useId,
   useState,
 } from 'react'
+import { XOR } from '../../types'
 import Loader from '../Loader'
 import Text from '../Text'
 
@@ -33,8 +34,7 @@ const PaddedText = styled(Text)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
 `
 
-const StyledIcon = styled.svg<{ size: number }>`
-  margin-right: ${({ theme }) => theme.space['1']};
+const StyledIcon = styled('svg')<{ size: number }>`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
@@ -104,6 +104,7 @@ const CheckboxContainer = styled.label`
   position: relative;
   display: inline-flex;
   align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
 
   &[aria-disabled='false'] {
     cursor: pointer;
@@ -160,16 +161,11 @@ const CheckboxContainer = styled.label`
   }
 `
 
-const StyledActivityContainer = styled('div', {
-  shouldForwardProp: prop => !['hasChildren'].includes(prop),
-})<{ hasChildren: boolean }>`
+const StyledActivityContainer = styled.div`
   display: flex;
-  margin-right: ${({ theme, hasChildren }) =>
-    hasChildren ? theme.space[1] : 0};
 `
 
 type CheckboxProps = {
-  children?: ReactNode
   error?: string | ReactNode
   size?: number
   progress?: boolean
@@ -180,7 +176,20 @@ type CheckboxProps = {
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
->
+> &
+  XOR<
+    [
+      {
+        /**
+         * **`children` or `aria-label` property is required**
+         */
+        'aria-label': string
+      },
+      {
+        children: ReactNode
+      },
+    ]
+  >
 
 const Checkbox = forwardRef(
   (
@@ -199,11 +208,11 @@ const Checkbox = forwardRef(
       autoFocus = false,
       className,
       'data-visibility': dataVisibility,
+      'aria-label': ariaLabel,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const [state, setState] = useState<boolean | 'indeterminate'>(checked)
-    const hasChildren = !!children
     const id = useId()
     const computedName = name ?? id
 
@@ -238,7 +247,7 @@ const Checkbox = forwardRef(
           data-error={!!error}
         >
           {progress ? (
-            <StyledActivityContainer hasChildren={hasChildren}>
+            <StyledActivityContainer>
               <Loader active size={size} />
             </StyledActivityContainer>
           ) : null}
@@ -247,6 +256,7 @@ const Checkbox = forwardRef(
             aria-invalid={!!error}
             aria-describedby={error ? `${computedName}-hint` : undefined}
             aria-checked={state === 'indeterminate' ? 'mixed' : undefined}
+            aria-label={ariaLabel}
             checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
