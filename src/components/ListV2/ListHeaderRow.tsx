@@ -39,7 +39,7 @@ export const ListHeaderRow = ({
 }: ListHeaderRowProps) => {
   const {
     template,
-    selectable,
+    isSelectable,
     selectedIds,
     setSelectedIds,
     data,
@@ -75,7 +75,7 @@ export const ListHeaderRow = ({
 
   return (
     <StyledRow role="row" template={template} className={className}>
-      {selectable ? (
+      {isSelectable ? (
         <ListHeader>
           {checkboxRender ?? (
             <StyledCheckbox

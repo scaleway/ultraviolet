@@ -10,7 +10,7 @@ export const CheckboxDisabled: Story = args => (
   <List
     idKey="id"
     {...args}
-    selectable
+    isSelectable
     data={data}
     columns={columns.map(({ label }) => ({
       label,

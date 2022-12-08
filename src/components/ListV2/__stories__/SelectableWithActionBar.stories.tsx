@@ -21,7 +21,7 @@ export const SelectableWithActionBar: Story = args => {
     <List
       {...args}
       idKey="id"
-      selectable
+      isSelectable
       data={data}
       selectedIds={selectedIds}
       onSelectedIdsChange={setSelectedIds}

@@ -24,7 +24,7 @@ type ListProps<T extends Record<string, unknown>> = {
   /**
    * Add checkboxes on the list
    * */
-  selectable?: boolean
+  isSelectable?: boolean
   /**
    * Row ids of the selected checkboxes
    * */
@@ -58,7 +58,7 @@ export const List = <
   children,
   columns,
   template,
-  selectable,
+  isSelectable,
   selectedIds,
   onSelectedIdsChange,
   data,
@@ -76,7 +76,7 @@ export const List = <
       <ListProvider<T>
         autoClose={autoClose}
         template={computedTemplate}
-        selectable={selectable}
+        isSelectable={isSelectable}
         data={data}
         idKey={idKey}
         selectedIds={selectedIds}
@@ -115,7 +115,7 @@ export const List = <
   return (
     <ListProvider
       template={template}
-      selectable={selectable}
+      isSelectable={isSelectable}
       selectedIds={selectedIds}
       onSelectedIdsChange={onSelectedIdsChange}
       data={data}

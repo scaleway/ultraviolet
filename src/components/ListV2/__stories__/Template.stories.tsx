@@ -17,7 +17,7 @@ Template.args = {
   onSelectedIdsChange: undefined,
   idKey: 'id',
   isLoading: false,
-  selectable: false,
+  isSelectable: false,
   template: undefined,
   children: (
     <ListBody>

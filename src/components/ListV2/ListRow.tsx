@@ -168,9 +168,9 @@ type ListRowProps = {
 export const ListRow = ({
   children,
   className,
-  isDisabled,
+  isDisabled = false,
   isHoverable = true,
-  isHighlighted,
+  isHighlighted = false,
   isExpanded: forceExpand,
   isExpandable,
   id,
@@ -184,7 +184,7 @@ export const ListRow = ({
   const {
     autoClose,
     template,
-    selectable,
+    isSelectable,
     selectedIds,
     setSelectedIds,
     expandedIds,
@@ -265,7 +265,7 @@ export const ListRow = ({
     <Tooltip text={tooltip}>
       <StyledRow
         className={className}
-        data-disabled={isDisabled ?? false}
+        data-disabled={isDisabled}
         data-hoverable={isHoverable}
         data-highlight={!!isHighlighted || isSelected}
         data-variant={variant}
@@ -275,7 +275,7 @@ export const ListRow = ({
         aria-haspopup={isExpandable}
         onClick={isExpandable && !isDisabled ? handleExpand : undefined}
       >
-        {selectable ? (
+        {isSelectable ? (
           <ListCell preventClick>
             {checkboxRender ?? (
               <StyledCheckboxContainer

@@ -10,7 +10,7 @@ export const RowExpandable: Story = args => (
   <List
     {...args}
     idKey="id"
-    selectable
+    isSelectable
     data={data}
     columns={columns.map(({ label }) => ({
       label,

@@ -13,7 +13,7 @@ import {
 
 type ListContextValue<T extends Record<string, unknown>> = {
   template: string
-  selectable?: boolean
+  isSelectable?: boolean
   selectedIds: string[]
   setSelectedIds: Dispatch<SetStateAction<string[]>>
   expandedIds: string[]
@@ -30,7 +30,7 @@ const ListContext = createContext<
 
 type ListProviderProps<T extends Record<string, unknown>> = {
   template?: string
-  selectable?: boolean
+  isSelectable?: boolean
   children: ReactNode
   onSelectedIdsChange?: (selectedIds: string[]) => void
   selectedIds?: string[]
@@ -42,7 +42,7 @@ type ListProviderProps<T extends Record<string, unknown>> = {
 export const ListProvider = <T extends Record<string, unknown>>({
   template = 'repeat(12, 1fr)',
   children,
-  selectable,
+  isSelectable,
   selectedIds: selectedIdsProp,
   onSelectedIdsChange,
   data,
@@ -73,8 +73,8 @@ export const ListProvider = <T extends Record<string, unknown>>({
   }, [onSelectedIdsChange])
 
   const computedTemplate = useMemo(
-    () => (selectable ? `50px ${template}` : template),
-    [selectable, template],
+    () => (isSelectable ? `50px ${template}` : template),
+    [isSelectable, template],
   )
 
   const value = useMemo(
@@ -83,7 +83,7 @@ export const ListProvider = <T extends Record<string, unknown>>({
       autoClose,
       expandedIds,
       setExpandedIds,
-      selectable,
+      isSelectable,
       setSelectedIds,
       selectedIds,
       data,
@@ -93,7 +93,7 @@ export const ListProvider = <T extends Record<string, unknown>>({
     [
       computedTemplate,
       expandedIds,
-      selectable,
+      isSelectable,
       selectedIds,
       data,
       idKey,

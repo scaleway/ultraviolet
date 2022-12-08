@@ -23,7 +23,7 @@ const StyledIconContainer = styled(Stack)`
 `
 
 const StyledHeader = styled('div', {
-  shouldForwardProp: prop => prop !== 'sortable',
+  shouldForwardProp: prop => !['sortable', 'colSpan'].includes(prop),
 })<{
   colSpan?: number
   'data-sorted'?: boolean

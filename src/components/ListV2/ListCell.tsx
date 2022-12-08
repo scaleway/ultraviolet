@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
 import { MouseEventHandler, ReactNode } from 'react'
 
-const StyledCellDiv = styled.div<{ colSpan?: number }>`
+const StyledCellDiv = styled('div', {
+  shouldForwardProp: prop => prop !== 'colSpan',
+})<{ colSpan?: number }>`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,7 +27,7 @@ export const ListCell = ({
   children,
   onClick,
   className,
-  preventClick,
+  preventClick = false,
 }: ListCellProps) => {
   const handleClick: MouseEventHandler<HTMLTableCellElement> = event => {
     onClick?.(event)

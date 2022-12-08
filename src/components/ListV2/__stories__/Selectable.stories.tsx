@@ -4,4 +4,4 @@ import { Template } from './Template.stories'
 
 export const Selectable: ComponentStory<typeof List> = Template.bind({})
 
-Selectable.args = { ...Template.args, selectable: true }
+Selectable.args = { ...Template.args, isSelectable: true }

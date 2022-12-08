@@ -147,9 +147,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable', () =>
+  test('Should render correctly with isSelectable', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} selectable>
+      <List idKey="id" data={data} columns={columns} isSelectable>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -367,14 +367,14 @@ describe('ListV2', () => {
     )
   })
 
-  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
+  test('Should render correctly with isSelectable then click on first row then uncheck all, then check all', () =>
     shouldMatchEmotionSnapshot(
       <List
         idKey="id"
         onSelectedIdsChange={jest.fn()}
         data={data}
         columns={columns}
-        selectable
+        isSelectable
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -484,13 +484,13 @@ describe('ListV2', () => {
       },
     ))
 
-  test('Should render correctly with selectable and selectedIds', () =>
+  test('Should render correctly with isSelectable and selectedIds', () =>
     shouldMatchEmotionSnapshot(
       <List
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={['1']}
       >
         <List.Body>
@@ -507,14 +507,14 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable and selectedIds but then change theme', () => {
+  test('Should render correctly with isSelectable and selectedIds but then change theme', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <List
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -538,7 +538,7 @@ describe('ListV2', () => {
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -559,7 +559,7 @@ describe('ListV2', () => {
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={[]}
       >
         <List.Body>
@@ -576,7 +576,7 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List idKey="id" data={data} columns={columns} selectable>
+      <List idKey="id" data={data} columns={columns} isSelectable>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -592,9 +592,9 @@ describe('ListV2', () => {
     )
   })
 
-  test('Should render correctly with selectable and selectedIds change', () =>
+  test('Should render correctly with isSelectable and selectedIds change', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} selectable>
+      <List idKey="id" data={data} columns={columns} isSelectable>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             // @ts-expect-error List.Row should have an id
@@ -757,14 +757,14 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with selectable and selectedIds but then disable/enable them', () => {
+  test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <List
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -788,7 +788,7 @@ describe('ListV2', () => {
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -809,7 +809,7 @@ describe('ListV2', () => {
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -830,7 +830,7 @@ describe('ListV2', () => {
         idKey="id"
         data={data}
         columns={columns}
-        selectable
+        isSelectable
         selectedIds={selectedIds}
       >
         <List.Body>
