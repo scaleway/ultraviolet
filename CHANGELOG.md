@@ -1,3 +1,16 @@
+## [0.212.10](https://github.com/scaleway/scaleway-ui/compare/v0.212.9...v0.212.10) (2022-12-08)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/use-i18n to v4.1.3 ([#2107](https://github.com/scaleway/scaleway-ui/issues/2107)) ([6f37323](https://github.com/scaleway/scaleway-ui/commit/6f37323652be8d8d58b9f71462afdbac2a1acc31))
+
+
+### :bug: Bug Fixes
+
+* **list:** tooltip never disapear after hover on disabled checkbox ([#2092](https://github.com/scaleway/scaleway-ui/issues/2092)) ([d8d36eb](https://github.com/scaleway/scaleway-ui/commit/d8d36ebb108fd5387c29dd9e5ee87d85317e7271))
+* **tabs:** vertical scroll triggred on page load ([#2100](https://github.com/scaleway/scaleway-ui/issues/2100)) ([fd6da30](https://github.com/scaleway/scaleway-ui/commit/fd6da30666ff44601b249e406fb4145f961befe5))
+
 ## [0.212.9](https://github.com/scaleway/scaleway-ui/compare/v0.212.8...v0.212.9) (2022-12-07)
 
 
