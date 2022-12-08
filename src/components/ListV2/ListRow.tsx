@@ -12,6 +12,7 @@ import Tooltip from '../Tooltip'
 import { ListCell } from './ListCell'
 import { useListContext } from './ListContext'
 
+const StyledIcon = styled(Icon)``
 const StyledListCell = styled(ListCell)`
   display: flex;
   align-items: center;
@@ -61,7 +62,7 @@ const StyledRow = styled('div', {
   background-color: ${({ theme }) => theme.colors.neutral.background};
   cursor: auto;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  gap: ${({ theme }) => theme.space['1']};
+  col-gap: ${({ theme }) => theme.space['1']};
 
   &[role='button row'] {
     cursor: pointer;
@@ -120,10 +121,14 @@ const StyledRow = styled('div', {
     padding-right: ${({ theme }) => theme.space['1']};
   }
 
+  & [data-expandable-content] {
+    transition: max-height 500ms ease-in-out;
+  }
+
   &:not([aria-expanded='true']) [data-expandable-content] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-    height: 1px;
+    max-height: 1px;
     overflow: hidden;
     position: absolute;
     white-space: nowrap;
@@ -131,7 +136,15 @@ const StyledRow = styled('div', {
   }
 
   &[aria-expanded='true'] [data-expandable-content] {
-    height: auto;
+    max-height: 9999px;
+  }
+
+  & ${StyledIcon} {
+    transition: transform 250ms ease-in-out;
+  }
+
+  &[aria-expanded='true'] ${StyledIcon} {
+    transform: rotate(-180deg);
   }
 `
 
@@ -284,7 +297,7 @@ export const ListRow = ({
         {children}
         {isExpandable && !isDisabled && !hideArrow ? (
           <StyledListCell>
-            <Icon name={isExpanded ? 'arrow-up' : 'arrow-down'} />
+            <StyledIcon name="arrow-down" />
           </StyledListCell>
         ) : null}
       </StyledRow>
