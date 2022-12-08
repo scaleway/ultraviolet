@@ -62,8 +62,8 @@ describe('Snippet', () => {
 
   it('should click on extend button to display full content on ', () =>
     shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>, {
-      transform: async ({ getByRole }) => {
-        await userEvent.click(getByRole('button', { name: 'Show' }))
+      transform: async ({ getAllByRole }) => {
+        await userEvent.click(getAllByRole('button')[1])
       },
     }))
 })

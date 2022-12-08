@@ -444,6 +444,7 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
         stroke={stroke}
         cursor={cursor}
         strokeWidth={strokeWidth}
+        aria-label={name}
       >
         {render()}
       </StyledIcon>
