@@ -121,10 +121,10 @@ const StyledRow = styled('details', {
         box-shadow: ${theme.shadows.hoverPrimary};
       }`
       : ''}
-
   [data-visibility='hover'] {
     opacity: 0;
   }
+
   &:hover [data-visibility='hover'] {
     opacity: 1;
   }
@@ -143,7 +143,6 @@ const StyledRow = styled('details', {
     pointer-events: none;
     `
       : undefined}
-
   ${Cell} {
     padding: 0 8px;
     min-height: 48px;
@@ -196,22 +195,26 @@ const StyledHeader = styled('div', {
 const StyledSummary = styled.summary`
   width: 100%;
   list-style-type: none;
+
   &::before,
   &::after {
     content: none;
   }
+
   &::-webkit-details-marker {
     display: none;
   }
+
   &::-marker {
     display: none;
   }
 `
 
-const StyledCheckbox = styled(Checkbox)`
+const StyledCheckbox = styled(Checkbox)<{ disabled?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${({ disabled }) => (disabled ? 'pointer-events: none;' : '')};
 `
 
 const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
@@ -418,23 +421,21 @@ export const Row = ({
           {multiselect && (
             <StyledCheckboxContainer>
               {!locked && (
-                <div>
-                  <Tooltip
-                    id={`list-tooltip-row-${id}`}
-                    text={!isSelectable ? notSelectableText : undefined}
-                  >
-                    <StyledCheckbox
-                      value={id}
-                      data-visibility={hasSelectedItems ? '' : 'hover'}
-                      checked={selected}
-                      disabled={!isSelectable || disabled}
-                      name="select-rows"
-                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                        setRowState(id, { selected: e.target.checked })
-                      }
-                    />
-                  </Tooltip>
-                </div>
+                <Tooltip
+                  id={`list-tooltip-row-${id}`}
+                  text={!isSelectable ? notSelectableText : undefined}
+                >
+                  <StyledCheckbox
+                    value={id}
+                    data-visibility={hasSelectedItems ? '' : 'hover'}
+                    checked={selected}
+                    disabled={!isSelectable || disabled}
+                    name="select-rows"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setRowState(id, { selected: e.target.checked })
+                    }
+                  />
+                </Tooltip>
               )}
             </StyledCheckboxContainer>
           )}

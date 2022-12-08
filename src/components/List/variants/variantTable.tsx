@@ -104,11 +104,12 @@ const StyledRow = styled(Box, {
   }
 `
 
-const StyledCheckbox = styled(Checkbox)`
+const StyledCheckbox = styled(Checkbox)<{ disabled?: boolean }>`
   width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${({ disabled }) => (disabled ? 'pointer-events: none;' : '')};
 `
 
 const StyledSpan = styled.span<{ isPrimaryColor?: boolean }>`
