@@ -49,6 +49,7 @@ type ListProps<T> = {
 
   columns?: ListColumn[]
   template?: string
+  className?: string
 }
 
 export const List = <
@@ -64,6 +65,7 @@ export const List = <
   idKey,
   isLoading,
   autoClose,
+  className,
 }: ListProps<T>) => {
   if (columns) {
     const computedTemplate = columns
@@ -80,20 +82,22 @@ export const List = <
         selectedIds={selectedIds}
         onSelectedIdsChange={onSelectedIdsChange}
       >
-        <Stack gap={1} role="table">
+        <Stack className={className} gap={1} role="table">
           <ListHeaders>
             <ListHeaderRow>
-              {columns.map(({ label, onClick, sort, className, id }) => (
-                <ListHeader
-                  onClick={onClick}
-                  sort={sort}
-                  className={className}
-                  key={id}
-                  id={id}
-                >
-                  {label}
-                </ListHeader>
-              ))}
+              {columns.map(
+                ({ label, onClick, sort, className: columnClassName, id }) => (
+                  <ListHeader
+                    onClick={onClick}
+                    sort={sort}
+                    className={columnClassName}
+                    key={id}
+                    id={id}
+                  >
+                    {label}
+                  </ListHeader>
+                ),
+              )}
             </ListHeaderRow>
           </ListHeaders>
           {isLoading ? (

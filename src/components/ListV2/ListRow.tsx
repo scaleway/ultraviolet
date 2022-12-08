@@ -60,7 +60,7 @@ const StyledRow = styled('div', {
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   cursor: auto;
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   gap: ${({ theme }) => theme.space['1']};
 
   &[role='button row'] {

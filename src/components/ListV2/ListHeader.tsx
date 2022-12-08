@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import { HTMLProps, MouseEvent, ReactNode } from 'react'
 import Icon from '../Icon'
+import Stack from '../Stack'
 
 const getAriaSort = (
   sort: 'asc' | 'desc' | 'none',
@@ -15,13 +16,11 @@ const getAriaSort = (
 const ArrowDownIcon = styled(Icon)``
 const ArrowUpIcon = styled(Icon)``
 
-const StyledIconContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
 `
 
-const StyledTh = styled('div', {
+const StyledHeader = styled('div', {
   shouldForwardProp: prop => prop !== 'sortable',
 })<{
   colSpan?: number
@@ -80,7 +79,7 @@ export const ListHeader = ({
   sort,
   id,
 }: ListHeaderProps) => (
-  <StyledTh
+  <StyledHeader
     onClick={
       id ? event => onClick?.({ column: id, order: sort }, event) : undefined
     }
@@ -93,5 +92,5 @@ export const ListHeader = ({
   >
     {children}
     {sort ? <SortIcon /> : null}
-  </StyledTh>
+  </StyledHeader>
 )
