@@ -4,7 +4,7 @@ import { Template } from './Template.stories'
 export const Header = Template.bind({})
 Header.args = {
   title: 'Title',
-  header: <Alert type="info">An awesome header</Alert>,
+  header: <Alert variant="info">An awesome header</Alert>,
 }
 Header.parameters = {
   docs: {
