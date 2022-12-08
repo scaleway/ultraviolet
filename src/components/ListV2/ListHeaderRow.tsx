@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { ChangeEventHandler, ReactNode, useMemo } from 'react'
+import { ChangeEventHandler, ReactNode, useCallback, useMemo } from 'react'
 import Checkbox from '../Checkbox'
 import { useListContext } from './ListContext'
 import { ListHeader } from './ListHeader'
@@ -30,24 +30,35 @@ export const ListHeaderRow = ({
   className,
   checkboxRender,
 }: ListHeaderRowProps) => {
-  const { template, selectable, selectedIds, setSelectedIds, data, idKey } =
-    useListContext()
+  const {
+    template,
+    selectable,
+    selectedIds,
+    setSelectedIds,
+    data,
+    idKey,
+    disabledRowsRef,
+  } = useListContext()
+
+  const getSelectableRows = useCallback(
+    () =>
+      data
+        .map<string>(item => `${item[idKey] as string}`)
+        .filter(id => id !== '' && !disabledRowsRef.current.includes(id)),
+    [data, disabledRowsRef, idKey],
+  )
 
   const checkedValue = useMemo(() => {
-    if (selectedIds.length === data.length) {
+    if (selectedIds.length === getSelectableRows().length) {
       return true
     }
 
     return selectedIds.length > 0 ? 'indeterminate' : false
-  }, [data.length, selectedIds.length])
+  }, [getSelectableRows, selectedIds.length])
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
     if (event.target.checked && checkedValue !== 'indeterminate') {
-      const allSelected = data
-        .map<string>(item => `${item[idKey] as string}`)
-        .filter(id => id !== '')
-
-      setSelectedIds(allSelected)
+      setSelectedIds(getSelectableRows())
     } else {
       setSelectedIds([])
     }

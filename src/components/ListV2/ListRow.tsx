@@ -8,6 +8,7 @@ import {
 import type { Color } from '../../theme'
 import Checkbox from '../Checkbox'
 import Icon from '../Icon'
+import Tooltip from '../Tooltip'
 import { ListCell } from './ListCell'
 import { useListContext } from './ListContext'
 
@@ -17,6 +18,29 @@ const StyledListCell = styled(ListCell)`
   cursor: pointer;
   grid-col-start: -1;
 `
+
+const StyledCheckboxContainer = styled.div`
+  display: flex;
+`
+
+const StyledTooltip = styled(Tooltip)`
+  display: flex;
+`
+
+const StyledCheckbox = styled(Checkbox)`
+  &[aria-disabled='true'] {
+    pointer-events: none;
+  }
+`
+
+export const LIST_ROW_VARIANTS = [
+  'danger',
+  'warning',
+  'primary',
+  'success',
+  'neutral',
+  'info',
+] as const
 
 const StyledRow = styled('div', {
   shouldForwardProp: prop => prop !== 'template',
@@ -39,7 +63,7 @@ const StyledRow = styled('div', {
   font-size: 14px;
   gap: ${({ theme }) => theme.space['1']};
 
-  &[role='button'] {
+  &[role='button row'] {
     cursor: pointer;
   }
 
@@ -49,17 +73,25 @@ const StyledRow = styled('div', {
   }
 
   ${({ theme }) =>
-    Object.keys(theme.colors)
-      .map(
-        color => `
+    LIST_ROW_VARIANTS.map(
+      color => `
     &[data-variant="${color}"] {
-    color: ${theme.colors[color as Color].text};
-    border-color: ${theme.colors[color as Color].border};
-    background-color: ${theme.colors[color as Color].background};
+      color: ${theme.colors[color as Color].text};
+      border-color: ${theme.colors[color as Color].border};
+      background-color: ${theme.colors[color as Color].background};
+    }
+
+    &[data-variant="${color}"][data-highlight="true"] {
+      border-color: ${theme.colors[color as Color].border};
+      box-shadow: none;
+    }
+
+    &[data-variant="${color}"][data-hoverable='true']:hover {
+      border-color: ${theme.colors[color as Color].border};
+      box-shadow: none;
     }
     `,
-      )
-      .join(' ')}
+    ).join(' ')}
 
   &[data-highlight='true'] {
     border-color: ${({ theme }) => theme.colors.primary.border};
@@ -113,7 +145,10 @@ type ListRowProps = {
   isExpanded?: boolean
   id: string
   checkboxRender?: ReactNode
-  variant?: Color
+  checkboxDisabled?: boolean
+  checkboxTooltip?: string
+  tooltip?: string
+  variant?: typeof LIST_ROW_VARIANTS[number]
   hideArrow?: boolean
 }
 
@@ -129,6 +164,9 @@ export const ListRow = ({
   checkboxRender,
   variant,
   hideArrow = false,
+  tooltip,
+  checkboxTooltip,
+  checkboxDisabled,
 }: ListRowProps) => {
   const {
     autoClose,
@@ -138,6 +176,7 @@ export const ListRow = ({
     setSelectedIds,
     expandedIds,
     setExpandedIds,
+    disabledRowsRef,
   } = useListContext()
   const isSelected = id ? selectedIds.includes(id) : false
   const isExpanded = forceExpand || (id ? expandedIds.includes(id) : false)
@@ -178,39 +217,77 @@ export const ListRow = ({
 
   const computedTemplate = isExpandable ? `${template} 25px` : template
 
+  useEffect(() => {
+    if (
+      id &&
+      (isDisabled || checkboxDisabled) &&
+      !disabledRowsRef.current.includes(id)
+    ) {
+      disabledRowsRef.current.push(id)
+    }
+    if (
+      id &&
+      !isDisabled &&
+      !checkboxDisabled &&
+      disabledRowsRef.current.includes(id)
+    ) {
+      disabledRowsRef.current = disabledRowsRef.current.filter(
+        disabledId => disabledId !== id,
+      )
+    }
+  }, [isDisabled, id, disabledRowsRef, checkboxDisabled])
+
+  useEffect(() => {
+    if ((isDisabled || checkboxDisabled) && selectedIds.includes(id)) {
+      setSelectedIds(current => {
+        const indexOfItem = current.indexOf(id)
+        current.splice(indexOfItem, 1)
+
+        return [...current]
+      })
+    }
+  }, [id, isDisabled, selectedIds, setSelectedIds, checkboxDisabled])
+
   return (
-    <StyledRow
-      className={className}
-      data-disabled={isDisabled ?? false}
-      data-hoverable={isHoverable ?? false}
-      data-highlight={!!isHighlighted || isSelected}
-      data-variant={variant}
-      role={isExpandable ? 'button row' : 'row'}
-      template={computedTemplate}
-      aria-expanded={isExpanded}
-      aria-haspopup={isExpandable}
-      onClick={isExpandable && !isDisabled ? handleExpand : undefined}
-    >
-      {selectable ? (
-        <ListCell isClickable>
-          {checkboxRender ?? (
-            <Checkbox
-              data-visibility={selectedIds.length === 0 ? 'hover' : undefined}
-              name="list-radio"
-              value={id}
-              checked={isSelected}
-              onChange={handleCheck}
-              disabled={!id || isDisabled}
-            />
-          )}
-        </ListCell>
-      ) : null}
-      {children}
-      {isExpandable && !isDisabled && !hideArrow ? (
-        <StyledListCell>
-          <Icon name={isExpanded ? 'arrow-up' : 'arrow-down'} />
-        </StyledListCell>
-      ) : null}
-    </StyledRow>
+    <Tooltip text={tooltip}>
+      <StyledRow
+        className={className}
+        data-disabled={isDisabled ?? false}
+        data-hoverable={isHoverable ?? false}
+        data-highlight={!!isHighlighted || isSelected}
+        data-variant={variant}
+        role={isExpandable ? 'button row' : 'row'}
+        template={computedTemplate}
+        aria-expanded={isExpanded}
+        aria-haspopup={isExpandable}
+        onClick={isExpandable && !isDisabled ? handleExpand : undefined}
+      >
+        {selectable ? (
+          <ListCell isClickable>
+            {checkboxRender ?? (
+              <StyledCheckboxContainer
+                data-visibility={selectedIds.length === 0 ? 'hover' : undefined}
+              >
+                <StyledTooltip text={checkboxTooltip}>
+                  <StyledCheckbox
+                    name="list-radio"
+                    value={id}
+                    checked={isSelected}
+                    onChange={handleCheck}
+                    disabled={!id || isDisabled || checkboxDisabled}
+                  />
+                </StyledTooltip>
+              </StyledCheckboxContainer>
+            )}
+          </ListCell>
+        ) : null}
+        {children}
+        {isExpandable && !isDisabled && !hideArrow ? (
+          <StyledListCell>
+            <Icon name={isExpanded ? 'arrow-up' : 'arrow-down'} />
+          </StyledListCell>
+        ) : null}
+      </StyledRow>
+    </Tooltip>
   )
 }

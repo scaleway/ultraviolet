@@ -1,5 +1,6 @@
 import {
   Dispatch,
+  MutableRefObject,
   ReactNode,
   SetStateAction,
   createContext,
@@ -20,6 +21,7 @@ type ListContextValue<T = Record<string, unknown>> = {
   data: T[]
   idKey: string
   autoClose: boolean
+  disabledRowsRef: MutableRefObject<string[]>
 }
 
 const ListContext = createContext<ListContextValue>({} as ListContextValue)
@@ -50,6 +52,7 @@ export const ListProvider = ({
   const [selectedIds, setSelectedIds] = useState(selectedIdsProp ?? [])
   const [expandedIds, setExpandedIds] = useState<string[]>([])
   const onSelectedIdsChangeRef = useRef(onSelectedIdsChange)
+  const disabledRowsRef = useRef<string[]>([])
 
   useEffect(() => {
     if (selectedIds && onSelectedIdsChangeRef.current) {
@@ -85,6 +88,7 @@ export const ListProvider = ({
       selectedIds,
       data,
       idKey,
+      disabledRowsRef,
     }),
     [
       computedTemplate,

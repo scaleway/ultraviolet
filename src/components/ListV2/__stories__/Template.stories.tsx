@@ -22,7 +22,7 @@ Template.args = {
   children: (
     <ListBody>
       {data.map(({ a, b, c, d, e, id }) => (
-        <ListRow isHoverable id={id} key={id}>
+        <ListRow isHoverable isDisabled={id === '3'} id={id} key={id}>
           <ListCell>{a}</ListCell>
           <ListCell>{b}</ListCell>
           <ListCell>{c}</ListCell>

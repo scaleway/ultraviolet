@@ -559,16 +559,6 @@ describe('ListV2', () => {
             fail('First checkbox is not defined')
           }
           expect(firstRowCheckbox).toBeDisabled()
-          userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          expect(firstRowCheckbox).not.toBeChecked()
         },
       },
     ))
@@ -704,4 +694,71 @@ describe('ListV2', () => {
         </List.Body>
       </List>,
     ))
+
+  test('Should render correctly with selectable and selectedIds but then disable/enable them', () => {
+    const selectedIds = ['1']
+    const { rerender } = render(
+      <List data={data} columns={columns} selectable selectedIds={selectedIds}>
+        <List.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row key={id} id={id}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+        </List.Body>
+      </List>,
+      {
+        wrapper: Wrapper,
+      },
+    )
+    rerender(
+      <List data={data} columns={columns} selectable selectedIds={selectedIds}>
+        <List.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row isDisabled={id === selectedIds[0]} key={id} id={id}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+        </List.Body>
+      </List>,
+    )
+    rerender(
+      <List data={data} columns={columns} selectable selectedIds={selectedIds}>
+        <List.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row key={id} id={id}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+        </List.Body>
+      </List>,
+    )
+    rerender(
+      <List data={data} columns={columns} selectable selectedIds={selectedIds}>
+        <List.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row checkboxDisabled={id === selectedIds[0]} key={id} id={id}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+        </List.Body>
+      </List>,
+    )
+  })
 })

@@ -6,7 +6,7 @@ import { ListExpandable } from '../ListExpandable'
 import { ListRow } from '../ListRow'
 import { columns, data } from './resources'
 
-export const RowExpandable: Story = args => (
+export const CheckboxDisabled: Story = args => (
   <List
     {...args}
     selectable
@@ -18,11 +18,12 @@ export const RowExpandable: Story = args => (
     <ListBody>
       {data.map(({ a, b, c, d, e, id }) => (
         <ListRow
-          isHoverable
+          checkboxDisabled={Number(id) % 2 === 0}
+          checkboxTooltip={
+            Number(id) % 2 === 0 ? "You can't select this" : undefined
+          }
           isExpandable
-          hideArrow={id === '2'}
           isDisabled={id === '3'}
-          tooltip={id === '3' ? 'This row is disabled' : undefined}
           id={id}
           key={id}
         >
