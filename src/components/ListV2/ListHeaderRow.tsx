@@ -83,6 +83,7 @@ export const ListHeaderRow = ({
               value="all"
               checked={checkedValue}
               onChange={handleCheck}
+              aria-label="select"
             />
           )}
         </ListHeader>

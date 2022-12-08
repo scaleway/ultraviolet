@@ -288,6 +288,7 @@ export const ListRow = ({
                     checked={isSelected}
                     onChange={handleCheck}
                     disabled={!id || isDisabled || checkboxDisabled}
+                    aria-label="check"
                   />
                 </StyledTooltip>
               </StyledCheckboxContainer>
