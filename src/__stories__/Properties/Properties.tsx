@@ -9,17 +9,38 @@ const StyledText = styled(Text)`
   white-space: break-spaces;
 `
 
+const StyledTableRow = styled(Table.Row)`
+  vertical-align: top;
+
+  &:nth-of-type(even) {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  }
+`
+
+type PropertyType = {
+  defaultValue: {
+    value: string
+  }
+  description: string
+  name: string
+  required: boolean
+  type: {
+    name: string
+    value?: Array<{ value: string }>
+  }
+}
+
 type ModuleType =
   | ({
       __docgenInfo: {
-        props: Record<string, unknown>
+        props: Record<string, Record<string, PropertyType>>
       }
       displayName: string
     } & ComponentType) &
       ({
         type: {
           __docgenInfo: {
-            props: Record<string, unknown>
+            props: Record<string, Record<string, PropertyType>>
           }
           displayName: string
         }
@@ -33,24 +54,24 @@ const Properties = () => {
     if (component?.__docgenInfo?.props) {
       return {
         ...acc,
-        [component.displayName]: Object.keys(component.__docgenInfo.props),
+        [component.displayName]: component.__docgenInfo.props,
       }
     }
 
     if (component?.type?.__docgenInfo?.props) {
       return {
         ...acc,
-        [component.type.displayName]: Object.keys(
-          component.type.__docgenInfo.props,
-        ),
+        [component.type.displayName]: component.type.__docgenInfo.props,
       }
     }
 
     return acc
-  }, {} as Record<string, string[]>)
+  }, {} as Record<string, Record<string, unknown>>)
   /* eslint-enable no-underscore-dangle */
 
-  const propertiesList = Object.values(componentNameAndProperties).flat()
+  const propertiesList = Object.keys(componentNameAndProperties)
+    .map(key => Object.keys(componentNameAndProperties[key]))
+    .flat()
 
   const countPropertiesUsages = propertiesList.reduce((acc, property) => {
     if (!acc[property]) {
@@ -68,7 +89,7 @@ const Properties = () => {
     const componentsMatching = Object.entries(
       componentNameAndProperties,
     ).reduce((accumulator, [component, properties]) => {
-      if (properties.includes(property)) {
+      if (Object.keys(properties).includes(property)) {
         return [...accumulator, component]
       }
 
@@ -108,7 +129,8 @@ const Properties = () => {
           <Table.Row>
             <Table.HeadCell>Property Name</Table.HeadCell>
             <Table.HeadCell>Number of usages</Table.HeadCell>
-            <Table.HeadCell>Possible Similar property name</Table.HeadCell>
+            <Table.HeadCell>Values</Table.HeadCell>
+            <Table.HeadCell>Similar property name</Table.HeadCell>
             <Table.HeadCell>Components usage</Table.HeadCell>
           </Table.Row>
         </Table.Head>
@@ -172,8 +194,43 @@ const Properties = () => {
                 ),
               ]
 
+              const propertyValues = [
+                ...new Set(
+                  sortedPropertiesUsagesCountAndComponentsName[
+                    property
+                  ].components
+                    .map(component => {
+                      const { name, value } = (
+                        componentNameAndProperties as Record<
+                          string,
+                          Record<string, PropertyType>
+                        >
+                      )[component][property].type
+
+                      if (name === 'boolean') {
+                        return ['true', 'false']
+                      }
+
+                      if (name === 'string') {
+                        return ['string']
+                      }
+
+                      if (name === 'enum') {
+                        return (
+                          value?.map(localValue =>
+                            localValue.value.replaceAll('"', ''),
+                          ) ?? []
+                        )
+                      }
+
+                      return []
+                    })
+                    .flat(),
+                ),
+              ]
+
               return (
-                <Table.Row key={property}>
+                <StyledTableRow key={property}>
                   <Table.BodyCell>
                     <Text as="span" variant="bodyStrong">
                       {property}
@@ -189,6 +246,11 @@ const Properties = () => {
                   </Table.BodyCell>
                   <Table.BodyCell>
                     <StyledText as="span" variant="body">
+                      {propertyValues.join(', ')}
+                    </StyledText>
+                  </Table.BodyCell>
+                  <Table.BodyCell>
+                    <StyledText as="span" variant="body">
                       {findSimilarProperty.join(', ')}
                     </StyledText>
                   </Table.BodyCell>
@@ -199,7 +261,7 @@ const Properties = () => {
                       ].components.join(', ')}
                     </StyledText>
                   </Table.BodyCell>
-                </Table.Row>
+                </StyledTableRow>
               )
             },
           )}
