@@ -107,10 +107,10 @@ export const ListProvider = <T extends Record<string, unknown>>({
 export const useListContext = <
   T extends Record<string, unknown> = Record<string, unknown>,
 >() => {
-  const context = useContext(ListContext) as ListContextValue<T>
+  const context = useContext(ListContext)
   if (!context) {
     throw new Error('useListContext should be used inside a List component')
   }
 
-  return context
+  return context as ListContextValue<T>
 }
