@@ -1,3 +1,15 @@
+## [0.213.3](https://github.com/scaleway/scaleway-ui/compare/v0.213.2...v0.213.3) (2022-12-09)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency typescript to v4.9.4 ([#2110](https://github.com/scaleway/scaleway-ui/issues/2110)) ([fa72445](https://github.com/scaleway/scaleway-ui/commit/fa72445b2d7cd21a3f29489cff6b327e8e4966f0))
+
+
+### :bug: Bug Fixes
+
+* typing of new list ([#2111](https://github.com/scaleway/scaleway-ui/issues/2111)) ([1862931](https://github.com/scaleway/scaleway-ui/commit/1862931222e911a96cdb751f073de26d94d2560e))
+
 ## [0.213.2](https://github.com/scaleway/scaleway-ui/compare/v0.213.1...v0.213.2) (2022-12-09)
 
 
