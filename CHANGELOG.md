@@ -1,3 +1,10 @@
+## [0.213.2](https://github.com/scaleway/scaleway-ui/compare/v0.213.1...v0.213.2) (2022-12-09)
+
+
+### :bug: Bug Fixes
+
+* action bar display ([#2109](https://github.com/scaleway/scaleway-ui/issues/2109)) ([d714a3a](https://github.com/scaleway/scaleway-ui/commit/d714a3a7dc21f0c14da32c91ea6129b425eed0f9))
+
 ## [0.213.1](https://github.com/scaleway/scaleway-ui/compare/v0.213.0...v0.213.1) (2022-12-08)
 
 
