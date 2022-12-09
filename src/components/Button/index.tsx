@@ -66,7 +66,7 @@ const borderedVariant = ({
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${hoverColorValue}BF;
+      box-shadow: 0 0 0 2px ${hoverColorValue}40;
     }
   `
 
@@ -89,7 +89,7 @@ const plainVariant = ({
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${hoverColorValue}BF;
+      box-shadow: 0 0 0 2px ${hoverColorValue}40;
     }
   `
 
