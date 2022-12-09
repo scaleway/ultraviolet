@@ -10,7 +10,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import { ListDataObject } from './types'
+import type { ListDataObject } from './types'
 
 type ListContextValue<T> = {
   template: string
