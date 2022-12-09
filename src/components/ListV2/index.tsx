@@ -9,6 +9,7 @@ import { ListHeaderRow } from './ListHeaderRow'
 import { ListHeaders } from './ListHeaders'
 import { ListLoadingPlaceholder } from './ListLoadingPlaceholder'
 import { ListRow } from './ListRow'
+import type { ListDataObject } from './types'
 
 type ListColumn = Omit<
   ComponentProps<typeof ListHeader>,
@@ -19,7 +20,7 @@ type ListColumn = Omit<
   id?: string
 }
 
-type ListProps<T extends Record<string, unknown>> = {
+type ListProps<T> = {
   children: ReactNode
   /**
    * Add checkboxes on the list
@@ -37,7 +38,7 @@ type ListProps<T extends Record<string, unknown>> = {
   /**
    * The idKey of each data entry
    * */
-  idKey: keyof T extends string ? keyof T : string
+  idKey: T extends ListDataObject ? keyof T : string
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
@@ -52,9 +53,7 @@ type ListProps<T extends Record<string, unknown>> = {
   className?: string
 }
 
-export const List = <
-  T extends Record<string, unknown> = Record<string, unknown>,
->({
+export const List = <T = ListDataObject,>({
   children,
   columns,
   template,
