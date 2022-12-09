@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { transparentize } from 'polished'
 import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -67,7 +66,7 @@ const borderedVariant = ({
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, hoverColorValue)};
+      box-shadow: 0 0 0 2px ${hoverColorValue}BF;
     }
   `
 
@@ -90,7 +89,7 @@ const plainVariant = ({
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px ${transparentize(0.75, hoverColorValue)};
+      box-shadow: 0 0 0 2px ${hoverColorValue}BF;
     }
   `
 
