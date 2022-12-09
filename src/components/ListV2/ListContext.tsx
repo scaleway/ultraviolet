@@ -10,8 +10,9 @@ import {
   useRef,
   useState,
 } from 'react'
+import type { ListDataObject } from './types'
 
-type ListContextValue<T extends Record<string, unknown>> = {
+type ListContextValue<T> = {
   template: string
   isSelectable?: boolean
   selectedIds: string[]
@@ -19,27 +20,27 @@ type ListContextValue<T extends Record<string, unknown>> = {
   expandedIds: string[]
   setExpandedIds: Dispatch<SetStateAction<string[]>>
   data: T[]
-  idKey: keyof T extends string ? keyof T : string
+  idKey: T extends ListDataObject ? keyof T : string
   autoClose: boolean
   disabledRowsRef: MutableRefObject<string[]>
 }
 
-const ListContext = createContext<
-  ListContextValue<Record<string, unknown>> | undefined
->(undefined)
+const ListContext = createContext<ListContextValue<unknown> | undefined>(
+  undefined,
+)
 
-type ListProviderProps<T extends Record<string, unknown>> = {
+type ListProviderProps<T> = {
   template?: string
   isSelectable?: boolean
   children: ReactNode
   onSelectedIdsChange?: (selectedIds: string[]) => void
   selectedIds?: string[]
   data: T[]
-  idKey: keyof T extends string ? keyof T : string
+  idKey: T extends ListDataObject ? keyof T : string
   autoClose?: boolean
 }
 
-export const ListProvider = <T extends Record<string, unknown>>({
+export const ListProvider = <T,>({
   template = 'repeat(12, 1fr)',
   children,
   isSelectable,
@@ -101,12 +102,14 @@ export const ListProvider = <T extends Record<string, unknown>>({
     ],
   )
 
-  return <ListContext.Provider value={value}>{children}</ListContext.Provider>
+  return (
+    <ListContext.Provider value={value as ListContextValue<unknown>}>
+      {children}
+    </ListContext.Provider>
+  )
 }
 
-export const useListContext = <
-  T extends Record<string, unknown> = Record<string, unknown>,
->() => {
+export const useListContext = <T extends ListDataObject = ListDataObject>() => {
   const context = useContext(ListContext)
   if (!context) {
     throw new Error('useListContext should be used inside a List component')

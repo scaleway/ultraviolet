@@ -345,21 +345,21 @@ describe('ListV2', () => {
 
   test('Should render correctly with placeholder', async () => {
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[]} columns={columns}>
+      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
         <List.Body>
           <List.Placeholder cols={columns.length} rows={18} />
         </List.Body>
       </List>,
     )
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[]} columns={columns}>
+      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
         <List.Body>
           <List.Placeholder rows={18} />
         </List.Body>
       </List>,
     )
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[]} columns={columns}>
+      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
         <List.Body>
           <List.Placeholder cols={columns.length} />
         </List.Body>
