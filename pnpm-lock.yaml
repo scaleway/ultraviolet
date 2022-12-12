@@ -91,7 +91,6 @@ specifiers:
   jest-environment-jsdom: 29.3.1
   jest-junit: 15.0.0
   lint-staged: 13.0.4
-  polished: 4.2.2
   postcss: 8.4.19
   prettier: 2.8.0
   prop-types: 15.8.1
@@ -134,7 +133,6 @@ dependencies:
   '@scaleway/use-media': 1.2.1_react@18.2.0
   '@xstyled/emotion': 2.5.0_z6zezfurr26maxy6gvsa52xlim
   deepmerge: 4.2.2
-  polished: 4.2.2
   prop-types: 15.8.1
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
   react-flatten-children: 1.1.2
@@ -14717,6 +14715,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       '@babel/runtime': 7.20.6
+    dev: true
 
   /posix-character-classes/0.1.1:
     resolution: {integrity: sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg==}

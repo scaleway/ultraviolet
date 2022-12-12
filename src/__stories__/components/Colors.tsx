@@ -1,8 +1,8 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { readableColor } from 'polished'
 import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
+import Stack from '../../components/Stack'
 import Text from '../../components/Text'
 import lightTheme, { Color } from '../../theme'
 import ThemeWrapper from './ThemeWrapper'
@@ -13,10 +13,6 @@ const StyledSeparator = styled(Separator)`
 
 const CapitalizedText = styled(Text)`
   text-transform: capitalize;
-`
-
-const BlackOrWhiteText = styled(Text)<{ isBackgroundDark: boolean }>`
-  color: ${({ isBackgroundDark }) => (isBackgroundDark ? '#fff' : '#000')};
 `
 
 type AvailableContexts = keyof typeof lightTheme['colors'][Color]
@@ -43,44 +39,32 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('background'))
                   .map(context => (
-                    <BorderedBox
-                      key={context}
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: theme.colors[sentiment][context],
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        padding: 8,
-                        width: 275,
-                      }}
-                    >
-                      <BlackOrWhiteText
-                        variant="body"
-                        as="p"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
+                    <Stack>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
                       >
-                        {context}
-                      </BlackOrWhiteText>
-                      <BlackOrWhiteText
-                        variant="caption"
-                        as="small"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
-                      >
-                        {theme.colors[sentiment][context]}
-                      </BlackOrWhiteText>
-                    </BorderedBox>
+                        <Text variant="body" as="p">
+                          {context}
+                        </Text>
+                        <Text variant="caption" as="small">
+                          {theme.colors[sentiment][context]}
+                        </Text>
+                      </Stack>
+
+                      <BorderedBox
+                        key={context}
+                        style={{
+                          alignItems: 'center',
+                          backgroundColor: theme.colors[sentiment][context],
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          padding: 8,
+                          width: 275,
+                        }}
+                      />
+                    </Stack>
                   ))}
               </div>
               <div
@@ -89,45 +73,31 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('text'))
                   .map(context => (
-                    <BorderedBox
-                      key={context}
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: theme.colors[sentiment][context],
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        padding: 8,
-                        width: 275,
-                      }}
-                    >
-                      <BlackOrWhiteText
-                        variant="body"
-                        as="p"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
+                    <Stack>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
                       >
-                        {context}
-                      </BlackOrWhiteText>
-
-                      <BlackOrWhiteText
-                        variant="caption"
-                        as="small"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
-                      >
-                        {theme.colors[sentiment][context]}
-                      </BlackOrWhiteText>
-                    </BorderedBox>
+                        <Text variant="body" as="p">
+                          {context}
+                        </Text>
+                        <Text variant="caption" as="small">
+                          {theme.colors[sentiment][context]}
+                        </Text>
+                      </Stack>
+                      <BorderedBox
+                        key={context}
+                        style={{
+                          alignItems: 'center',
+                          backgroundColor: theme.colors[sentiment][context],
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          padding: 8,
+                          width: 275,
+                        }}
+                      />
+                    </Stack>
                   ))}
               </div>
               <div
@@ -136,45 +106,31 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('border'))
                   .map(context => (
-                    <BorderedBox
-                      key={context}
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: theme.colors[sentiment][context],
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        padding: 8,
-                        width: 275,
-                      }}
-                    >
-                      <BlackOrWhiteText
-                        variant="body"
-                        as="p"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
+                    <Stack>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
                       >
-                        {context}
-                      </BlackOrWhiteText>
-
-                      <BlackOrWhiteText
-                        variant="caption"
-                        as="small"
-                        isBackgroundDark={
-                          readableColor(
-                            theme.colors[sentiment][context],
-                            '#000',
-                            '#fff',
-                          ) === '#fff'
-                        }
-                      >
-                        {theme.colors[sentiment][context]}
-                      </BlackOrWhiteText>
-                    </BorderedBox>
+                        <Text variant="body" as="p">
+                          {context}
+                        </Text>
+                        <Text variant="caption" as="small">
+                          {theme.colors[sentiment][context]}
+                        </Text>
+                      </Stack>
+                      <BorderedBox
+                        key={context}
+                        style={{
+                          alignItems: 'center',
+                          backgroundColor: theme.colors[sentiment][context],
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          padding: 8,
+                          width: 275,
+                        }}
+                      />
+                    </Stack>
                   ))}
               </div>
             </div>
