@@ -20,17 +20,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.cache-acm3fg-control {
+.cache-1eguvzq-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ffffff;
-  border-color: #d4dae7;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: none;
   cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
@@ -48,6 +42,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   position: relative;
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
   box-sizing: border-box;
   color: #4a4f62;
   font-size: 16px;
@@ -57,28 +57,28 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.cache-acm3fg-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-acm3fg-control:focus-within {
+.cache-1eguvzq-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-acm3fg-control:focus-within svg {
+.cache-1eguvzq-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-acm3fg-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: #390171;
 }
 
-.cache-acm3fg-control:hover svg {
+.cache-1eguvzq-control:hover svg {
   fill: #390171;
 }
 
-.cache-evyzo2-ValueContainer {
+.cache-blvxib-ValueContainer {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -91,16 +91,16 @@ exports[`TimeInput renders correctly with base props 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 2px 8px;
   -webkit-overflow-scrolling: touch;
   position: relative;
   overflow: hidden;
+  padding: 2px 8px;
   box-sizing: border-box;
   height: 100%;
   padding-top: 0;
 }
 
-.cache-evyzo2-ValueContainer label {
+.cache-blvxib-ValueContainer label {
   display: initial;
 }
 
@@ -128,32 +128,32 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.cache-fs070l-singleValue {
-  color: #4a4f62;
+.cache-19ckjwh-singleValue {
   grid-area: 1/1/2/3;
-  margin-left: 0;
-  margin-right: 0;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   margin-top: 5px;
   padding-left: 0;
 }
 
-.cache-1eede0w-inputStyles {
-  margin: 2px;
-  padding-bottom: 2px;
-  padding-top: 11px;
+.cache-n0o3gm-inputStyles {
   visibility: visible;
-  color: hsl(0, 0%, 20%);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   display: inline-grid;
   grid-area: 1/1/2/3;
   grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -164,7 +164,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   caret-color: transparent;
 }
 
-.cache-1eede0w-inputStyles:after {
+.cache-n0o3gm-inputStyles:after {
   content: attr(data-value) " ";
   visibility: hidden;
   white-space: pre;
@@ -196,14 +196,14 @@ exports[`TimeInput renders correctly with base props 1`] = `
   max-height: 48px;
 }
 
-.cache-bex08z-indicatorSeparator {
+.cache-6uclbo-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  width: 1px;
   background-color: #d4dae7;
   margin-bottom: 8px;
   margin-top: 8px;
-  width: 1px;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -211,19 +211,19 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: flex;
 }
 
-.cache-tlfecz-indicatorContainer {
-  color: hsl(0, 0%, 80%);
+.cache-1xc3v61-indicatorContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px;
   -webkit-transition: color 150ms;
   transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
   box-sizing: border-box;
 }
 
-.cache-tlfecz-indicatorContainer:hover {
+.cache-1xc3v61-indicatorContainer:hover {
   color: hsl(0, 0%, 60%);
 }
 
@@ -291,10 +291,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" cache-acm3fg-control"
+      class=" cache-1eguvzq-control"
     >
       <div
-        class=" cache-evyzo2-ValueContainer"
+        class=" cache-blvxib-ValueContainer"
       >
         <label
           aria-live="assertive"
@@ -305,12 +305,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
           Select...
         </label>
         <div
-          class=" cache-fs070l-singleValue"
+          class=" cache-19ckjwh-singleValue"
         >
           00:00
         </div>
         <div
-          class="cache-1eede0w-inputStyles"
+          class="cache-n0o3gm-inputStyles"
           data-value=""
         >
           <input
@@ -335,11 +335,11 @@ exports[`TimeInput renders correctly with base props 1`] = `
         class=" cache-ralm3g-IndicatorsContainer"
       >
         <span
-          class=" cache-bex08z-indicatorSeparator"
+          class=" cache-6uclbo-indicatorSeparator"
         />
         <div
           aria-hidden="true"
-          class=" cache-tlfecz-indicatorContainer"
+          class=" cache-1xc3v61-indicatorContainer"
         >
           <div
             class="cache-6874q2-Stack e1sgck4o0"
