@@ -369,13 +369,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with isSelectable then click on first row then uncheck all, then check all', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        onSelectedIdsChange={jest.fn()}
-        data={data}
-        columns={columns}
-        isSelectable
-      >
+      <List idKey="id" data={data} columns={columns} isSelectable>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -620,6 +614,48 @@ describe('ListV2', () => {
             fail('First checkbox is not defined')
           }
           expect(firstRowCheckbox).toBeDisabled()
+        },
+      },
+    ))
+
+  test('Should use onSelectedIdsChange with isSelectable and selectedIds', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        idKey="id"
+        data={data}
+        onSelectedIdsChange={jest.fn()}
+        columns={columns}
+        isSelectable
+      >
+        <List.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row key={id} id={id}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+        </List.Body>
+      </List>,
+      {
+        transform: node => {
+          const checkboxes = node.getAllByRole('checkbox') as HTMLInputElement[]
+
+          const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+          const allCheckbox = checkboxes.find(({ value }) => value === 'all')
+          expect(firstRowCheckbox).toBeInTheDocument()
+          expect(allCheckbox).toBeInTheDocument()
+          if (!firstRowCheckbox) {
+            fail('First checkbox is not defined')
+          }
+          if (!allCheckbox) {
+            fail('Select all checkbox is not defined')
+          }
+          userEvent.click(firstRowCheckbox)
+          userEvent.click(allCheckbox)
+          userEvent.click(allCheckbox)
         },
       },
     ))
