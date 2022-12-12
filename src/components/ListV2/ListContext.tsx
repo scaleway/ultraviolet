@@ -4,6 +4,7 @@ import {
   ReactNode,
   SetStateAction,
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -56,12 +57,6 @@ export const ListProvider = <T,>({
   const disabledRowsRef = useRef<string[]>([])
 
   useEffect(() => {
-    if (selectedIds && onSelectedIdsChangeRef.current) {
-      onSelectedIdsChangeRef.current(selectedIds)
-    }
-  }, [selectedIds])
-
-  useEffect(() => {
     setSelectedIds(current =>
       selectedIdsProp && current !== selectedIdsProp
         ? selectedIdsProp
@@ -78,6 +73,19 @@ export const ListProvider = <T,>({
     [isSelectable, template],
   )
 
+  const onChangeSelectedIds: Dispatch<SetStateAction<string[]>> = useCallback(
+    (value: string[] | ((currentIds: string[]) => string[])) => {
+      const newSelectedIds =
+        typeof value !== 'function' ? value : value(selectedIds)
+      if (onSelectedIdsChangeRef.current) {
+        onSelectedIdsChangeRef.current(newSelectedIds)
+      } else {
+        setSelectedIds(newSelectedIds)
+      }
+    },
+    [selectedIds],
+  )
+
   const value = useMemo(
     () => ({
       template: computedTemplate,
@@ -85,7 +93,7 @@ export const ListProvider = <T,>({
       expandedIds,
       setExpandedIds,
       isSelectable,
-      setSelectedIds,
+      setSelectedIds: onChangeSelectedIds,
       selectedIds,
       data,
       idKey,
@@ -96,6 +104,7 @@ export const ListProvider = <T,>({
       expandedIds,
       isSelectable,
       selectedIds,
+      onChangeSelectedIds,
       data,
       idKey,
       autoClose,
