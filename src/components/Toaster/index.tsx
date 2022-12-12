@@ -92,7 +92,7 @@ const SanitizedAlertBar = ({ variant, children }: SanitizedAlertBarProps) => (
 const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(
-      <SanitizedAlertBar variant="warning">{children}</SanitizedAlertBar>,
+      <SanitizedAlertBar variant="danger">{children}</SanitizedAlertBar>,
       options,
     ),
   info: (children: ReactNode, options?: ToastOptions): number | string =>
