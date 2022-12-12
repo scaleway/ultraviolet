@@ -1,3 +1,20 @@
+## [0.213.5](https://github.com/scaleway/scaleway-ui/compare/v0.213.4...v0.213.5) (2022-12-12)
+
+
+### :memo: Documentation
+
+* properties usages ([#2103](https://github.com/scaleway/scaleway-ui/issues/2103)) ([4cfb8d9](https://github.com/scaleway/scaleway-ui/commit/4cfb8d9c4d1211ceaebb504b80c829291bd8b8f6))
+
+
+### :zap: Refactor
+
+* remove polished dependency ([#2112](https://github.com/scaleway/scaleway-ui/issues/2112)) ([bd32670](https://github.com/scaleway/scaleway-ui/commit/bd32670f831e293d4f55dcb79aa58a47fd566752))
+
+
+### :bug: Bug Fixes
+
+* **toaster:** wrong variant for error ([#2118](https://github.com/scaleway/scaleway-ui/issues/2118)) ([3e11c67](https://github.com/scaleway/scaleway-ui/commit/3e11c67a23ea5732953ef33aa66d3a52479c5645))
+
 ## [0.213.4](https://github.com/scaleway/scaleway-ui/compare/v0.213.3...v0.213.4) (2022-12-12)
 
 
