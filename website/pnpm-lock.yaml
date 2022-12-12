@@ -8,7 +8,7 @@ specifiers:
   '@next/bundle-analyzer': 13.0.6
   '@scaleway/eslint-config-react': 3.10.5
   '@scaleway/ui': file:../
-  '@types/node': 18.11.11
+  '@types/node': 18.11.13
   '@types/react': 18.0.26
   '@types/react-syntax-highlighter': 15.5.5
   eslint: 8.29.0
@@ -42,7 +42,7 @@ devDependencies:
   '@emotion/eslint-plugin': 11.10.0_eslint@8.29.0
   '@next/bundle-analyzer': 13.0.6
   '@scaleway/eslint-config-react': 3.10.5_ha6vam6werchizxrnqvarmz2zu
-  '@types/node': 18.11.11
+  '@types/node': 18.11.13
   '@types/react': 18.0.26
   '@types/react-syntax-highlighter': 15.5.5
   eslint: 8.29.0
@@ -943,8 +943,8 @@ packages:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
 
-  /@scaleway/use-media/1.2.0_react@18.2.0:
-    resolution: {integrity: sha512-MI/K0+rQzujtKXSmxduJWxGAPhaf1ZupUkPKQNkZmZXEdaJ34VqLXZQzqE8vrozTBtl/K9ThowJC/jHeMMRXiA==}
+  /@scaleway/use-media/1.2.1_react@18.2.0:
+    resolution: {integrity: sha512-xCEix2WhzHZehtijpyCiZhqLBL5YDaigbgf6Fw4HwsEm99xyNr2X8uAs+KcXgRdUbHQDD17f/PZT1O1npowrXA==}
     peerDependencies:
       react: 18.x || 18
     dependencies:
@@ -977,8 +977,8 @@ packages:
       '@types/unist': 2.0.6
     dev: false
 
-  /@types/node/18.11.11:
-    resolution: {integrity: sha512-KJ021B1nlQUBLopzZmPBVuGU9un7WJd/W4ya7Ih02B4Uwky5Nja0yGYav2EfYIk0RR2Q9oVhf60S2XR1BCWJ2g==}
+  /@types/node/18.11.13:
+    resolution: {integrity: sha512-IASpMGVcWpUsx5xBOrxMj7Bl8lqfuTY7FKAnPmu5cHkfQVWF8GulWS1jbRqA934qZL35xh5xN/+Xe/i26Bod4w==}
     dev: true
 
   /@types/parse-json/4.0.0:
@@ -3771,7 +3771,7 @@ packages:
     resolution: {directory: .., type: directory}
     id: file:..
     name: '@scaleway/ui'
-    version: 0.213.2
+    version: 0.213.5
     engines: {node: '>=18.x', pnpm: '>=7.0.0'}
     os: [darwin, linux]
     peerDependencies:
@@ -3790,7 +3790,7 @@ packages:
       '@nivo/scales': 0.80.0
       '@nivo/tooltip': 0.80.0_wyuiu3ihipn7hpncy62nqhyrji
       '@scaleway/random-name': 3.0.2
-      '@scaleway/use-media': 1.2.0_react@18.2.0
+      '@scaleway/use-media': 1.2.1_react@18.2.0
       '@xstyled/emotion': 2.5.0_z6zezfurr26maxy6gvsa52xlim
       deepmerge: 4.2.2
       polished: 4.2.2
