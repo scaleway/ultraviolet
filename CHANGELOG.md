@@ -1,3 +1,16 @@
+## [0.213.4](https://github.com/scaleway/scaleway-ui/compare/v0.213.3...v0.213.4) (2022-12-12)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/jest-helpers to v2.0.24 ([#2114](https://github.com/scaleway/scaleway-ui/issues/2114)) ([5abf3e6](https://github.com/scaleway/scaleway-ui/commit/5abf3e62b86b9047faa106e8c8c0d266682c47ab))
+* **devdeps:** update dependency @scaleway/use-i18n to v4.1.4 ([#2115](https://github.com/scaleway/scaleway-ui/issues/2115)) ([0d4569a](https://github.com/scaleway/scaleway-ui/commit/0d4569acd682b25f4b3ff9ae8f2f2f1332abea42))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/use-media to v1.2.1 ([#2116](https://github.com/scaleway/scaleway-ui/issues/2116)) ([03d813f](https://github.com/scaleway/scaleway-ui/commit/03d813f524e0abc8cd6f445f2fa635ebb41938c0))
+
 ## [0.213.3](https://github.com/scaleway/scaleway-ui/compare/v0.213.2...v0.213.3) (2022-12-09)
 
 
