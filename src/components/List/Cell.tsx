@@ -36,15 +36,25 @@ const Cell = ({
   children,
   className,
   role,
+  'aria-label': ariaLabel,
+  tabIndex,
+  onClick,
+  onKeyPress,
+  style,
 }: HTMLAttributes<HTMLDivElement>) => {
   const { columns, multiselect } = useListContext()
 
   return (
     <StyledCell
+      aria-label={ariaLabel}
+      tabIndex={tabIndex}
+      onClick={onClick}
+      onKeyPress={onKeyPress}
       role={role}
       className={className}
       columns={columns}
       multiselect={multiselect}
+      style={style}
     >
       {children}
     </StyledCell>
