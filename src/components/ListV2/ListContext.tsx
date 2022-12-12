@@ -58,7 +58,7 @@ export const ListProvider = <T,>({
 
   useEffect(() => {
     setSelectedIds(current =>
-      selectedIdsProp && current && current !== selectedIdsProp
+      selectedIdsProp && current !== selectedIdsProp
         ? selectedIdsProp
         : current,
     )
@@ -75,12 +75,12 @@ export const ListProvider = <T,>({
 
   const onChangeSelectedIds: Dispatch<SetStateAction<string[]>> = useCallback(
     (value: string[] | ((currentIds: string[]) => string[])) => {
+      const newSelectedIds =
+        typeof value !== 'function' ? value : value(selectedIds)
       if (onSelectedIdsChangeRef.current) {
-        onSelectedIdsChangeRef.current(
-          typeof value !== 'function' ? value : value(selectedIds),
-        )
+        onSelectedIdsChangeRef.current(newSelectedIds)
       } else {
-        setSelectedIds(typeof value !== 'function' ? value : value(selectedIds))
+        setSelectedIds(newSelectedIds)
       }
     },
     [selectedIds],
