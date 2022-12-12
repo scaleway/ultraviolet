@@ -1,3 +1,15 @@
+## [0.213.6](https://github.com/scaleway/scaleway-ui/compare/v0.213.5...v0.213.6) (2022-12-12)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/node to v18.11.13 ([#2113](https://github.com/scaleway/scaleway-ui/issues/2113)) ([ac02174](https://github.com/scaleway/scaleway-ui/commit/ac02174ddd7a359881bb0a6bd45e288c5f83b3ee))
+
+
+### :bug: Bug Fixes
+
+* rerender loop ([#2119](https://github.com/scaleway/scaleway-ui/issues/2119)) ([102146d](https://github.com/scaleway/scaleway-ui/commit/102146d3ec3a9572acf4075fe5cbc4e8e98b81a4))
+
 ## [0.213.5](https://github.com/scaleway/scaleway-ui/compare/v0.213.4...v0.213.5) (2022-12-12)
 
 
