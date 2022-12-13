@@ -50,6 +50,7 @@ const StyledButton = styled(Button, {
   transition: color 300ms;
   min-width: 110px;
   background-color: transparent;
+  border-radius: 0;
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.colors.primary.textHover};
