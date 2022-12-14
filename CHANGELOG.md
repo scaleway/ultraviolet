@@ -1,3 +1,10 @@
+## [0.213.7](https://github.com/scaleway/scaleway-ui/compare/v0.213.6...v0.213.7) (2022-12-14)
+
+
+### :bug: Bug Fixes
+
+* **menu:** border radius and color on dark mode ([#2120](https://github.com/scaleway/scaleway-ui/issues/2120)) ([70395de](https://github.com/scaleway/scaleway-ui/commit/70395deec19420ea3cc0e7a146c23f3a424be3ab))
+
 ## [0.213.6](https://github.com/scaleway/scaleway-ui/compare/v0.213.5...v0.213.6) (2022-12-12)
 
 
