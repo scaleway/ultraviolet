@@ -39,10 +39,10 @@ const bottomStyles = (theme: Theme) => css`
     bottom: 100%;
   }
   &:after {
-    border-bottom-color: ${theme.colors.primary.borderStrong};
+    border-bottom-color: ${theme.colors.neutral.background};
   }
   &:before {
-    border-bottom-color: rgba(165, 165, 205, 0.4);
+    border-bottom-color: transparent;
   }
 `
 const topStyles = (theme: Theme) => css`
