@@ -1,4 +1,4 @@
-import { RefObject } from 'react'
+import type { RefObject } from 'react'
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
 export const ARROW_WIDTH = 6 // in px

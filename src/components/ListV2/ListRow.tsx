@@ -1,10 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  ChangeEventHandler,
-  MouseEventHandler,
-  ReactNode,
-  useEffect,
-} from 'react'
+import type { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react'
+import { useEffect } from 'react'
 import type { Color } from '../../theme'
 import Checkbox from '../Checkbox'
 import Icon from '../Icon'

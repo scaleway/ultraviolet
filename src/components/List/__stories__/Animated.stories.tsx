@@ -3,7 +3,8 @@ import List from '..'
 import { generateData } from '../../../mocks/list'
 import * as animations from '../../../utils/animations'
 import Button from '../../Button'
-import RichSelect, { SelectOption } from '../../RichSelect'
+import type { SelectOption } from '../../RichSelect'
+import RichSelect from '../../RichSelect'
 import Stack from '../../Stack'
 
 const selectableAnimations = Object.keys(animations).map(animation => ({

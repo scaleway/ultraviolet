@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { ChangeEventHandler, ReactNode, useCallback, useMemo } from 'react'
+import type { ChangeEventHandler, ReactNode } from 'react'
+import { useCallback, useMemo } from 'react'
 import Checkbox from '../Checkbox'
 import { useListContext } from './ListContext'
 import { ListHeader } from './ListHeader'

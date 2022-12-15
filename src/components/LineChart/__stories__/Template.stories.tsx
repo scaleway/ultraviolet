@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import LineChart from '..'
 import { lineChartData } from './mockData'
 

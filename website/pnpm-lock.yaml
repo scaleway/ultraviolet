@@ -6,7 +6,7 @@ specifiers:
   '@emotion/react': 11.10.5
   '@emotion/styled': 11.10.5
   '@next/bundle-analyzer': 13.0.6
-  '@scaleway/eslint-config-react': 3.10.5
+  '@scaleway/eslint-config-react': 3.11.0
   '@scaleway/ui': file:../
   '@types/node': 18.11.13
   '@types/react': 18.0.26
@@ -41,7 +41,7 @@ devDependencies:
   '@babel/core': 7.20.5
   '@emotion/eslint-plugin': 11.10.0_eslint@8.29.0
   '@next/bundle-analyzer': 13.0.6
-  '@scaleway/eslint-config-react': 3.10.5_ha6vam6werchizxrnqvarmz2zu
+  '@scaleway/eslint-config-react': 3.11.0_ha6vam6werchizxrnqvarmz2zu
   '@types/node': 18.11.13
   '@types/react': 18.0.26
   '@types/react-syntax-highlighter': 15.5.5
@@ -915,8 +915,8 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@scaleway/eslint-config-react/3.10.5_ha6vam6werchizxrnqvarmz2zu:
-    resolution: {integrity: sha512-bNHaR33njC0CUxYBbFrq//9WoCQozQLXhnW6UQJr+qprqTNV4HKyChEvjOmlRg426PRQMr0doJ4rQqgsbpbI/w==}
+  /@scaleway/eslint-config-react/3.11.0_ha6vam6werchizxrnqvarmz2zu:
+    resolution: {integrity: sha512-Z70b/+GOkp9dfifxHsY4M5E0N3TkkKqfz8lwPtkVy/oFWRqm51JZK+QTsuG2ftwYIc9/Df2HookwWMrOGcSk9w==}
     peerDependencies:
       eslint: '>= 8.5'
     dependencies:
@@ -3771,7 +3771,7 @@ packages:
     resolution: {directory: .., type: directory}
     id: file:..
     name: '@scaleway/ui'
-    version: 0.213.5
+    version: 0.213.7
     engines: {node: '>=18.x', pnpm: '>=7.0.0'}
     os: [darwin, linux]
     peerDependencies:

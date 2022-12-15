@@ -1,9 +1,7 @@
 import { Global, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import DatePicker, {
-  ReactDatePickerProps,
-  registerLocale,
-} from 'react-datepicker'
+import type { ReactDatePickerProps } from 'react-datepicker'
+import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import Button from '../Button'
 import Icon from '../Icon'

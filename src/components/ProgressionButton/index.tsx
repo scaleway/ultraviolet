@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 const progressionAnimation = keyframes`
   from {
@@ -38,7 +38,7 @@ const ProgressionContainer = styled.div`
   }
 `
 
-interface ProgressionProps {
+type ProgressionProps = {
   duration: number
   delay: number
 }

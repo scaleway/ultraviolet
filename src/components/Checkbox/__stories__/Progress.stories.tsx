@@ -1,5 +1,6 @@
-import { Story } from '@storybook/react'
-import { ChangeEvent, useCallback, useState } from 'react'
+import type { Story } from '@storybook/react'
+import type { ChangeEvent } from 'react'
+import { useCallback, useState } from 'react'
 import Checkbox from '..'
 
 export const Progress: Story = () => {

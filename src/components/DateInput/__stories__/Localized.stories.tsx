@@ -1,6 +1,6 @@
-import { DecoratorFunction } from '@storybook/addons'
+import type { DecoratorFunction } from '@storybook/addons'
 import { es, fr, ru } from 'date-fns/locale'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import DateInput from '..'
 
 const locales = [

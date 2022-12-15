@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import TagsPoplist from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 

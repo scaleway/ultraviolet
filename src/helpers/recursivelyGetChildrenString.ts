@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 const recursivelyGetChildrenString = (children: ReactNode): string => {
   if (typeof children === 'string') return children

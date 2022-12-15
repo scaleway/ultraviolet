@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import Table, { Body, BodyCell, Head, HeadCell, Row } from '..'
 
 export default {

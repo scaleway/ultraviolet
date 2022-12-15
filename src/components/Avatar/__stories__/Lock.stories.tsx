@@ -1,5 +1,5 @@
-import { DecoratorFunction } from '@storybook/addons'
-import { ComponentProps } from 'react'
+import type { DecoratorFunction } from '@storybook/addons'
+import type { ComponentProps } from 'react'
 import Avatar from '..'
 import Stack from '../../Stack'
 

@@ -1,4 +1,4 @@
-import { NextPageContext } from 'next'
+import type { NextPageContext } from 'next'
 
 type ErrorPageProps = {
   statusCode: number

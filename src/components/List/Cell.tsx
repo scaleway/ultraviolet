@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
-import Box, { BoxProps } from '../Box'
+import type { ReactNode } from 'react'
+import type { BoxProps } from '../Box'
+import Box from '../Box'
 import { useListContext } from './context'
-import { ListColumn } from './types'
+import type { ListColumn } from './types'
 
 const StyledCell = styled(Box, {
   shouldForwardProp: prop => !['multiselect', 'columns'].includes(prop),

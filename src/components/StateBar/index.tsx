@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
-import { ReactNode, useMemo } from 'react'
+import type { ReactNode } from 'react'
+import { useMemo } from 'react'
 import ProgressBar from '../ProgressBar'
 import Stack from '../Stack'
 import Text from '../Text'
 
-interface StateBarStateProps {
+type StateBarStateProps = {
   children?: ReactNode
   label?: string
 }
@@ -29,7 +30,7 @@ export const StateBarState = ({
   </StyledText>
 )
 
-interface StateBarBarProps {
+type StateBarBarProps = {
   unlimited?: boolean
   value?: number
   progress?: boolean

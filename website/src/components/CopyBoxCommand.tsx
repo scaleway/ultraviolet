@@ -1,7 +1,8 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Stack, Tabs } from '@scaleway/ui'
-import { Children, ReactElement, isValidElement, useState } from 'react'
+import type { ReactElement } from 'react'
+import { Children, isValidElement, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import {
   dracula,
@@ -23,7 +24,7 @@ const StyledStack = styled(Stack)`
   border-radius: ${({ theme }) => theme.radii.default};
 `
 
-interface CopyBoxProps {
+type CopyBoxProps = {
   children: ReactElement<CommandProps> | ReactElement<CommandProps>[]
 }
 
@@ -58,7 +59,7 @@ const CopyBox = ({ children }: CopyBoxProps) => {
   )
 }
 
-interface CommandProps {
+type CommandProps = {
   command: string
   // eslint-disable-next-line react/no-unused-prop-types
   title: string

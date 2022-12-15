@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { DecoratorFunction } from '@storybook/addons'
-import { ComponentStory } from '@storybook/react'
+import type { DecoratorFunction } from '@storybook/addons'
+import type { ComponentStory } from '@storybook/react'
 import Separator from '..'
 
 const StyledContainer = styled.div`

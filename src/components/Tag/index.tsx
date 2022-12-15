@@ -1,8 +1,9 @@
 import styled from '@emotion/styled'
-import { MouseEventHandler, ReactNode } from 'react'
-import { Color } from '../../theme'
+import type { MouseEventHandler, ReactNode } from 'react'
+import type { Color } from '../../theme'
 import Button from '../Button'
-import Icon, { IconName } from '../Icon'
+import type { IconName } from '../Icon'
+import Icon from '../Icon'
 import Loader from '../Loader'
 
 const StyledContainer = styled('span', {

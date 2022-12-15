@@ -1,22 +1,13 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
-  ReactElement,
-  ReactNode,
-  isValidElement,
-  memo,
-  useCallback,
-  useEffect,
-  useRef,
-} from 'react'
+import type { ReactElement, ReactNode } from 'react'
+import { isValidElement, memo, useCallback, useEffect, useRef } from 'react'
 import * as React from 'react'
+import type { DialogProps, DialogState, DialogStateReturn } from 'reakit/Dialog'
 import {
   Dialog,
   DialogBackdrop,
   DialogDisclosure,
-  DialogProps,
-  DialogState,
-  DialogStateReturn,
   useDialogState,
 } from 'reakit/Dialog'
 import * as animations from '../../utils'

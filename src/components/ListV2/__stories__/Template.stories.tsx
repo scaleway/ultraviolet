@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import { List } from '..'
 import { ListBody } from '../ListBody'
 import { ListCell } from '../ListCell'

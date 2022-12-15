@@ -4,7 +4,7 @@ import Footer from 'components/Footer'
 import GlobalStyle from 'components/GlobalStyle'
 import Head from 'components/Head'
 import Header from 'components/Header'
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 import { useCallback, useEffect, useState } from 'react'
 
 type Themes = 'light' | 'dark'

@@ -1,13 +1,11 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
 import styled from '@xstyled/emotion'
-import {
+import type {
   ChangeEvent,
   ClipboardEventHandler,
   KeyboardEventHandler,
-  useEffect,
-  useRef,
-  useState,
 } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getUUID } from '../../utils'
 import Tag from '../Tag'
 
@@ -62,7 +60,7 @@ const variants = {
 
 type Variant = keyof typeof variants
 
-interface TagsContainersProps {
+type TagsContainersProps = {
   variant: Variant
 }
 

@@ -1,5 +1,5 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import type { Meta, Story } from '@storybook/react'
+import type { ComponentProps } from 'react'
 import Box from '..'
 
 export default {

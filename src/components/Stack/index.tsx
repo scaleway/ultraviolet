@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { CSSProperties, ReactNode } from 'react'
-import { SCWUITheme } from '../../theme'
+import type { CSSProperties, ReactNode } from 'react'
+import type { SCWUITheme } from '../../theme'
 
 type StackProps = {
   gap?: keyof SCWUITheme['space']

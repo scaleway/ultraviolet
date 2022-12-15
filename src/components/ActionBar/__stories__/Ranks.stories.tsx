@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import ActionBar from '..'
 
 export const Ranks: ComponentStory<typeof ActionBar> = props => (

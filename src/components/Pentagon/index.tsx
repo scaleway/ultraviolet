@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
-import { HTMLAttributes } from 'react'
-import { Color } from '../../theme'
+import type { HTMLAttributes } from 'react'
+import type { Color } from '../../theme'
 
-interface PentagonProps {
+type PentagonProps = {
   size?: string
   color?: string
 }

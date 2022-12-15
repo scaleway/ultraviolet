@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
+import type { ForwardedRef, ReactNode } from 'react'
 import {
-  ForwardedRef,
-  ReactNode,
   createContext,
   forwardRef,
   useCallback,
@@ -16,7 +15,8 @@ import Button from '../Button'
 import Icon from '../Icon'
 import Loader from '../Loader'
 import getPageNumbers from './getPageNumbers'
-import usePagination, { UsePaginationReturn } from './usePagination'
+import type { UsePaginationReturn } from './usePagination'
+import usePagination from './usePagination'
 
 export type PaginationState<T> = {
   canLoadMore: boolean

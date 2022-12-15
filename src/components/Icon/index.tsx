@@ -1,7 +1,8 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { SVGProps, forwardRef, useMemo } from 'react'
-import { Color } from '../../theme'
+import type { SVGProps } from 'react'
+import { forwardRef, useMemo } from 'react'
+import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
 
 // Non Material Design icons: 'send',

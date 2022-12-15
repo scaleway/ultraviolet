@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import Loader from '../index'
 
 export const Template: ComponentStory<typeof Loader> = props => (

@@ -1,6 +1,7 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import List from '..'
-import { MockData, generateData } from '../../../mocks/list'
+import type { MockData } from '../../../mocks/list'
+import { generateData } from '../../../mocks/list'
 import { defaultColumns } from './helper'
 
 export const Template: ComponentStory<typeof List<MockData>> = ({

@@ -1,4 +1,5 @@
-import { ScreenSize, screens } from '../../../theme'
+import type { ScreenSize } from '../../../theme'
+import { screens } from '../../../theme'
 import { down, up } from '../utilities'
 
 describe('Responsive utilities', () => {

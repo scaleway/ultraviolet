@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  Children,
-  ReactNode,
-  cloneElement,
-  isValidElement,
-  useMemo,
-} from 'react'
-import * as React from 'react'
+import { Children, cloneElement, isValidElement, useMemo } from 'react'
+import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import Link from '../Link'
 
 function reverseZIndexes() {
@@ -121,7 +115,7 @@ const variants = {
 type Variants = keyof typeof variants
 export const breadcrumbsVariants = Object.keys(variants) as Variants[]
 
-interface ItemProps {
+type ItemProps = {
   children: ReactNode
   'aria-current'?:
     | boolean
@@ -146,7 +140,7 @@ interface ItemProps {
    */
   step?: number
   onClick?: (
-    event: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    event: ReactMouseEvent<HTMLLIElement, MouseEvent>,
     step: number,
   ) => void
 }
@@ -182,7 +176,7 @@ export const Item = ({
   )
 }
 
-interface BreadcrumbsProps {
+type BreadcrumbsProps = {
   variant?: Variants
   selected?: number
   children: ReactNode

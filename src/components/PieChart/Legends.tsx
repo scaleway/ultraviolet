@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Tooltip from '../Tooltip'
 import TooltipContainer from './Tooltip'
 import patternVariants from './patterns'
-import { Data } from './types'
+import type { Data } from './types'
 
 const bulletFlashAnim = keyframes`
   0% {

@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Bullet from '..'
 
 export const Text: Story = props => (

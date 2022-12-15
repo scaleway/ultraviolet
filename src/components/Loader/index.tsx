@@ -1,6 +1,6 @@
 import { css, keyframes, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Color } from '../../theme'
+import type { Color } from '../../theme'
 
 const VIEWBOX_WIDTH = 100
 const VIEWBOX_HEIGHT = 100

@@ -1,5 +1,5 @@
-import { ComponentProps } from 'react'
-import { List } from '..'
+import type { ComponentProps } from 'react'
+import type { List } from '..'
 
 type FakeDataType = {
   id: string

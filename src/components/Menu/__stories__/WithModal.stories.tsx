@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
 import Menu from '..'
 import Modal from '../../Modal'

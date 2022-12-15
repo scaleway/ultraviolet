@@ -1,6 +1,6 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 

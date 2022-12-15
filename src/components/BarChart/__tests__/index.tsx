@@ -1,6 +1,6 @@
 import * as nivo from '@nivo/core'
 import userEvent from '@testing-library/user-event'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import BarChart from '..'
 import {
   renderWithTheme,

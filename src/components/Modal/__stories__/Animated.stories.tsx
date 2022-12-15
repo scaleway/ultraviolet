@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Modal, { MODAL_ANIMATION } from '..'
 import Button from '../../Button'
 

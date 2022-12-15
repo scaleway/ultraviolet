@@ -1,4 +1,4 @@
-import { DatumValue, Serie } from '@nivo/line'
+import type { DatumValue, Serie } from '@nivo/line'
 
 const parse = (data?: DatumValue | null): number => {
   if (typeof data === 'number') return data || 0

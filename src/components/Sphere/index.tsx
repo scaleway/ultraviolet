@@ -1,6 +1,7 @@
-import { Theme, css } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Color } from '../../theme'
+import type { Color } from '../../theme'
 
 const bordersStyles = ({
   size,

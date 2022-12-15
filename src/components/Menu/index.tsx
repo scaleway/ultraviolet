@@ -1,21 +1,16 @@
-import { Theme, css } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { ReactElement, ReactNode, Ref } from 'react'
 import {
-  ReactElement,
-  ReactNode,
-  Ref,
   cloneElement,
   forwardRef,
   isValidElement,
   useImperativeHandle,
   useRef,
 } from 'react'
-import {
-  Popover,
-  PopoverDisclosure,
-  PopoverStateReturn,
-  usePopoverState,
-} from 'reakit/Popover'
+import type { PopoverStateReturn } from 'reakit/Popover'
+import { Popover, PopoverDisclosure, usePopoverState } from 'reakit/Popover'
 import { Portal } from 'reakit/Portal'
 import Item from './Item'
 

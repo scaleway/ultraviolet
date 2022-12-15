@@ -1,13 +1,15 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
-import {
+import type {
   ChangeEvent,
   FocusEventHandler,
   InputHTMLAttributes,
   KeyboardEventHandler,
   LabelHTMLAttributes,
   TextareaHTMLAttributes,
+} from 'react'
+import {
   forwardRef,
   useCallback,
   useEffect,

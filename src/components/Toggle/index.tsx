@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useState,
-} from 'react'
+import type { ChangeEvent, ChangeEventHandler, ReactNode } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Tooltip from '../Tooltip'
 
 const TOGGLE_RADIUS = '24px'

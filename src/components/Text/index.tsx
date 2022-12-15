@@ -1,8 +1,10 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ElementType, ReactNode, useEffect, useRef, useState } from 'react'
+import type { ElementType, ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
-import { Color, typography } from '../../theme'
+import type { Color } from '../../theme'
+import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import Tooltip from '../Tooltip'
 

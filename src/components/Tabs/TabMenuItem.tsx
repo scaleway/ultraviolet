@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { ComponentProps, useMemo } from 'react'
+import type { ComponentProps } from 'react'
+import { useMemo } from 'react'
 import Item from '../Menu/Item'
 import { useTabsContext } from './TabsContext'
 

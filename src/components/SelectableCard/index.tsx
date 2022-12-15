@@ -1,13 +1,11 @@
 import styled from '@emotion/styled'
-import {
+import type {
   ChangeEventHandler,
   FocusEventHandler,
   ForwardedRef,
   ReactNode,
-  forwardRef,
-  useMemo,
-  useRef,
 } from 'react'
+import { forwardRef, useMemo, useRef } from 'react'
 import Checkbox from '../Checkbox'
 import Radio from '../Radio'
 import Tooltip from '../Tooltip'

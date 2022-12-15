@@ -1,5 +1,6 @@
-import { ReactNode, createContext, useContext } from 'react'
-import { ListColumn, ListOrder, ListRowState } from './types'
+import type { ReactNode } from 'react'
+import { createContext, useContext } from 'react'
+import type { ListColumn, ListOrder, ListRowState } from './types'
 import type { ListVariant } from './variants'
 
 type ListContextType<DataType extends Record<string, unknown>> = {

@@ -1,5 +1,5 @@
 import { useTheme } from '@emotion/react'
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 

@@ -1,11 +1,12 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Box } from '@nivo/core'
+import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
-import { ReactNode, useCallback, useState } from 'react'
+import type { ReactNode } from 'react'
+import { useCallback, useState } from 'react'
 import Text from '../Text'
 import Legends from './Legends'
-import { Data } from './types'
+import type { Data } from './types'
 
 const Container = styled.div<{ height: number }>`
   display: flex;

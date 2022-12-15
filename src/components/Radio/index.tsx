@@ -1,11 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  ForwardedRef,
-  InputHTMLAttributes,
-  ReactNode,
-  forwardRef,
-  useId,
-} from 'react'
+import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import { forwardRef, useId } from 'react'
 
 const InnerCircleRing = styled.circle`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};

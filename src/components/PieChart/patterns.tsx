@@ -1,4 +1,5 @@
-import { SerializedStyles, css } from '@emotion/react'
+import type { SerializedStyles } from '@emotion/react'
+import { css } from '@emotion/react'
 
 const discountDot = (color?: string): SerializedStyles => css`
   opacity: 0.6;

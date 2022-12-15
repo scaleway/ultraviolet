@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
-import { ScreenSize, Spaces, screens, space } from '../../theme'
+import type { ReactNode } from 'react'
+import type { ScreenSize, Spaces } from '../../theme'
+import { screens, space } from '../../theme'
 import { up } from '../../utils'
 
 const gridMaxWidths: Record<ScreenSize, string> = {

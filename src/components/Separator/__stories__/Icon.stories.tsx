@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import Separator from '..'
 
 export const Icon: ComponentStory<typeof Separator> = ({ icon }) => (

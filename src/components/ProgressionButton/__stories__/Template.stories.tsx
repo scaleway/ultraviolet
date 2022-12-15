@@ -1,4 +1,4 @@
-import { ComponentStory, Story } from '@storybook/react'
+import type { ComponentStory, Story } from '@storybook/react'
 import ProgressionButton from '..'
 
 export const Template: Story<

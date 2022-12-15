@@ -1,5 +1,6 @@
-import { ChangeEvent, useState } from 'react'
-import { MultiValue, SingleValue } from 'react-select'
+import type { ChangeEvent } from 'react'
+import { useState } from 'react'
+import type { MultiValue, SingleValue } from 'react-select'
 
 const isEvent = <T>(
   valueOrEvent:
@@ -31,7 +32,7 @@ const getNewValue = <T>(
   return valueOrEvent as T
 }
 
-interface ControlProps<T> {
+type ControlProps<T> = {
   value: T
   children: ({
     onChange,

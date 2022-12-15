@@ -1,4 +1,4 @@
-import { DecoratorFunction } from '@storybook/addons'
+import type { DecoratorFunction } from '@storybook/addons'
 import { Template } from './Template.stories'
 
 export const MaxWidth = Template.bind({})

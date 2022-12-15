@@ -1,5 +1,5 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import type { Meta, Story } from '@storybook/react'
+import type { ComponentProps } from 'react'
 import Grid from '../Grid'
 import Row from '../Row'
 import ColWithBackground from './ColWithBackground'

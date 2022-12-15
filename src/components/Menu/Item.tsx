@@ -1,6 +1,7 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ComponentProps, Ref, forwardRef } from 'react'
+import type { ComponentProps, Ref } from 'react'
+import { forwardRef } from 'react'
 import Button from '../Button'
 
 const variantStyle = {

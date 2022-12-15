@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import useClipboard from 'react-use-clipboard'
-import { Color } from '../../theme'
+import type { Color } from '../../theme'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'
 

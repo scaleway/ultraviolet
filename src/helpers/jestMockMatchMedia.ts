@@ -1,4 +1,4 @@
-export interface MockMatchMedia {
+export type MockMatchMedia = {
   media: string
   matches?: boolean
 }

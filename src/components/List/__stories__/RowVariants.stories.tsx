@@ -1,5 +1,6 @@
 import List from '..'
-import { MockData, generateData } from '../../../mocks/list'
+import type { MockData } from '../../../mocks/list'
+import { generateData } from '../../../mocks/list'
 import { defaultColumns } from './helper'
 
 export const RowVariants = () => (

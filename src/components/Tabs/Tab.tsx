@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import {
+import type {
   ComponentProps,
   ElementType,
   ForwardedRef,
@@ -7,9 +7,8 @@ import {
   MouseEventHandler,
   ReactNode,
   Ref,
-  forwardRef,
-  useMemo,
 } from 'react'
+import { forwardRef, useMemo } from 'react'
 import Badge from '../Badge'
 import Tooltip from '../Tooltip'
 import { useTabsContext } from './TabsContext'

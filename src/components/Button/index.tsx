@@ -1,16 +1,15 @@
-import { Theme, css } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
+import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   ComponentProps,
   ElementType,
   ReactNode,
   Ref,
-  forwardRef,
-  isValidElement,
-  useMemo,
 } from 'react'
+import { forwardRef, isValidElement, useMemo } from 'react'
 import Icon from '../Icon'
 import Link from '../Link'
 import Loader from '../Loader'

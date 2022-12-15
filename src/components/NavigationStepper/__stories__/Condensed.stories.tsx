@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import NavigationStepper from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import Button from '../../Button'

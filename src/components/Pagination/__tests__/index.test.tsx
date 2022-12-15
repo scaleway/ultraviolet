@@ -5,7 +5,7 @@ import Pagination, { usePaginationContext } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import theme from '../../../theme'
 import getPageNumbers from '../getPageNumbers'
-import { UsePaginationReturn } from '../usePagination'
+import type { UsePaginationReturn } from '../usePagination'
 
 const ExampleChildren = () => {
   const { pageData } = usePaginationContext<string>()
