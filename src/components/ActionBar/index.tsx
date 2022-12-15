@@ -5,8 +5,6 @@ const HEIGHT = 56
 const SPACING = 20
 
 const StyledDiv = styled.div<{ rank: number }>`
-  display: flex;
-  align-items: center;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};

@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import { ReactNode } from 'react'
 import ActionBar from '../ActionBar'
 import Checkbox from '../Checkbox'
+import Stack from '../Stack'
 import Text from '../Text'
 import { useListContext } from './context'
 
@@ -37,6 +38,7 @@ export type ListSelectBarProps<T> = {
     | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactNode)
     | ReactNode
 }
+
 function SelectBar<T extends Record<string, unknown>>({
   children,
   text = count => (count === 1 ? 'item selected' : `items selected`),
@@ -54,21 +56,23 @@ function SelectBar<T extends Record<string, unknown>>({
   // Don't display the pop-in if there aren't an item selected
   return selectedItems.length > 0 ? (
     <ActionBar {...props} role="dialog" aria-modal="true">
-      <StyledCheckbox
-        checked
-        onChange={unselectAll}
-        autoFocus
-        aria-label="unselect-all"
-      />
-      <StyledItemsCount>{selectedItems.length}</StyledItemsCount>
-      <MargedText color="primary" variant="bodyStrong" as="p">
-        {typeof text === 'function' ? text(selectedItems.length) : text}
-      </MargedText>
-      <StyledContainer>
-        {typeof children === 'function'
-          ? children({ selectedItems, unselectAll })
-          : children}
-      </StyledContainer>
+      <Stack alignItems="center" direction="row">
+        <StyledCheckbox
+          checked
+          onChange={unselectAll}
+          autoFocus
+          aria-label="unselect-all"
+        />
+        <StyledItemsCount>{selectedItems.length}</StyledItemsCount>
+        <MargedText color="primary" variant="bodyStrong" as="p">
+          {typeof text === 'function' ? text(selectedItems.length) : text}
+        </MargedText>
+        <StyledContainer>
+          {typeof children === 'function'
+            ? children({ selectedItems, unselectAll })
+            : children}
+        </StyledContainer>
+      </Stack>
     </ActionBar>
   ) : null
 }
