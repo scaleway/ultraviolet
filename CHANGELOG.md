@@ -1,3 +1,15 @@
+## [0.213.8](https://github.com/scaleway/scaleway-ui/compare/v0.213.7...v0.213.8) (2022-12-15)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.11.0 ([#2122](https://github.com/scaleway/scaleway-ui/issues/2122)) ([c1238ac](https://github.com/scaleway/scaleway-ui/commit/c1238acf1d5d7c63ae0711af61a6bf8f9a91102b))
+
+
+### :bug: Bug Fixes
+
+* **actionBar:** display flex is missing for alignement ([#2123](https://github.com/scaleway/scaleway-ui/issues/2123)) ([e33b7c1](https://github.com/scaleway/scaleway-ui/commit/e33b7c15b0bbb88b083ce92dee09d215b14a0906))
+
 ## [0.213.7](https://github.com/scaleway/scaleway-ui/compare/v0.213.6...v0.213.7) (2022-12-14)
 
 
