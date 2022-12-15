@@ -31,6 +31,7 @@ specifiers:
   '@scaleway/eslint-config-react': 3.11.2
   '@scaleway/jest-helpers': 2.0.24
   '@scaleway/random-name': 3.0.2
+  '@scaleway/tsconfig': ^1.1.0
   '@scaleway/use-i18n': 4.1.5
   '@scaleway/use-media': 1.2.1
   '@semantic-release/changelog': 6.0.2
@@ -165,6 +166,7 @@ devDependencies:
   '@rollup/plugin-url': 8.0.1_rollup@3.5.1
   '@scaleway/eslint-config-react': 3.11.2_ha6vam6werchizxrnqvarmz2zu
   '@scaleway/jest-helpers': 2.0.24_bkycudvrb3j3gvocoupj7qjewi
+  '@scaleway/tsconfig': 1.1.0
   '@scaleway/use-i18n': 4.1.5_3pf3ktbrffvgnzxoo2eotyjcpi
   '@semantic-release/changelog': 6.0.2_semantic-release@19.0.5
   '@semantic-release/commit-analyzer': 9.0.2_semantic-release@19.0.5
@@ -3246,6 +3248,10 @@ packages:
   /@scaleway/random-name/3.0.2:
     resolution: {integrity: sha512-vEL2RegTjZx/3ZEgVgWvNfxsXUZZ0ieiheNva+mXbHCrWc6f0CvntMezf8dONVajLC4Wi6V7Fo2Y9lhnJbvNow==}
     dev: false
+
+  /@scaleway/tsconfig/1.1.0:
+    resolution: {integrity: sha512-dZyeub6snbFUD0oTTgiUsdHYYOcyZDbQ5lSgAaZBCVS6FxF2R2HiLVwtrD6pw9IebhyPne2z8M4BsZQ4Rg+K1w==}
+    dev: true
 
   /@scaleway/use-i18n/4.1.5_3pf3ktbrffvgnzxoo2eotyjcpi:
     resolution: {integrity: sha512-vDsxwidAFRFyudrjNY50cxRmxZZW+c9GMYu1r4yZ2Fgd1NJhJwHwwfFb9bOhe2MxyKNlQg1en3Xv18jzbDq3Ew==}
@@ -7959,7 +7965,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /concat-stream/1.6.2:
