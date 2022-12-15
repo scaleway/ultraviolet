@@ -56,6 +56,7 @@ export type ListBodyRenderProps<DataType> = {
 type BodyProps<DataType> = {
   children: (props: ListBodyRenderProps<DataType>) => JSX.Element
   className?: string
+  style: React.CSSProperties
 }
 
 const CenteredText = styled(Text)`
@@ -70,6 +71,7 @@ const StyledPaginationContainer = styled(Pagination.PaginationContainer)`
 function Body<DataType extends Record<string, unknown>>({
   children,
   className,
+  style,
 }: BodyProps<DataType>) {
   const {
     pageData,
@@ -106,7 +108,7 @@ function Body<DataType extends Record<string, unknown>>({
   }
 
   return (
-    <div className={className} role="list">
+    <div className={className} style={style} role="list">
       {pageData.length === 0 ? emptyListComponent : null}
       {pageData.map((rowData, index) => (
         <Fragment key={(rowData[idKey] as string) || index}>
