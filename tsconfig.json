@@ -2,7 +2,8 @@
   "extends": "@scaleway/tsconfig",
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    // For storybook compatibility we use commonjs
+    "module": "commonjs",
     "jsxImportSource": "@emotion/react",
 
     "noEmit": true,
