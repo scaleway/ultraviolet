@@ -57,7 +57,10 @@ export const ListHeaderRow = ({
   )
 
   const checkedValue = useMemo(() => {
-    if (selectedIds.length === getSelectableRows().length) {
+    if (
+      getSelectableRows().length > 0 &&
+      selectedIds.length === getSelectableRows().length
+    ) {
       return true
     }
 
