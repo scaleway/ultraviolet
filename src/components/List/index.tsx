@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, ReactElement, ReactNode } from 'react'
 import {
+  CSSProperties,
   Fragment,
   forwardRef,
   useCallback,
@@ -56,7 +57,7 @@ export type ListBodyRenderProps<DataType> = {
 type BodyProps<DataType> = {
   children: (props: ListBodyRenderProps<DataType>) => JSX.Element
   className?: string
-  style?: React.CSSProperties
+  style?: CSSProperties
 }
 
 const CenteredText = styled(Text)`
