@@ -5582,6 +5582,29 @@ exports[`List should render correctly multiselect and with click 1`] = `
   z-index: 2;
 }
 
+.cache-1i7e9sg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-15v7v24-CheckboxContainer-StyledCheckbox {
   position: relative;
   display: -webkit-inline-box;
@@ -6334,69 +6357,73 @@ exports[`List should render correctly multiselect and with click 1`] = `
       class="cache-nmxi06-StyledDiv e1qbxe4b0"
       role="dialog"
     >
-      <label
-        aria-disabled="false"
-        class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
-        data-checked="true"
-        data-error="false"
+      <div
+        class="cache-1i7e9sg-Stack e1sgck4o0"
       >
-        <input
-          aria-invalid="false"
-          aria-label="unselect-all"
-          checked=""
-          class="cache-mhe016-CheckboxInput eu28k4m2"
-          name=":r2o:"
-          type="checkbox"
-          value=""
-        />
-        <svg
-          class="cache-1lcemq7-StyledIcon eu28k4m3"
-          size="24"
-          viewBox="0 0 24 24"
+        <label
+          aria-disabled="false"
+          class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
+          data-checked="true"
+          data-error="false"
         >
-          <g>
-            <rect
-              class="cache-uzcbt1-InnerCheckbox eu28k4m7"
-              height="14"
-              rx="1"
-              stroke-width="2"
-              width="14"
-              x="5"
-              y="5"
-            />
-            <rect
-              class="cache-1nkq693-CheckMixedMark eu28k4m5"
-              height="2"
-              rx="1"
-              width="8"
-              x="8"
-              y="11"
-            />
-            <rect
-              class="cache-1nu9t2r-CheckMark eu28k4m6"
-              height="8"
-              rx="1"
-              width="8"
-              x="8"
-              y="8"
-            />
-          </g>
-        </svg>
-      </label>
-      <div
-        class="cache-lvvktv-StyledItemsCount e1fla99k2"
-      >
-        2
-      </div>
-      <p
-        class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
-      >
-        items selected
-      </p>
-      <div
-        class="cache-32tjzf-StyledContainer e1fla99k0"
-      >
-        Test SelectBar
+          <input
+            aria-invalid="false"
+            aria-label="unselect-all"
+            checked=""
+            class="cache-mhe016-CheckboxInput eu28k4m2"
+            name=":r2o:"
+            type="checkbox"
+            value=""
+          />
+          <svg
+            class="cache-1lcemq7-StyledIcon eu28k4m3"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <rect
+                class="cache-uzcbt1-InnerCheckbox eu28k4m7"
+                height="14"
+                rx="1"
+                stroke-width="2"
+                width="14"
+                x="5"
+                y="5"
+              />
+              <rect
+                class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                height="2"
+                rx="1"
+                width="8"
+                x="8"
+                y="11"
+              />
+              <rect
+                class="cache-1nu9t2r-CheckMark eu28k4m6"
+                height="8"
+                rx="1"
+                width="8"
+                x="8"
+                y="8"
+              />
+            </g>
+          </svg>
+        </label>
+        <div
+          class="cache-lvvktv-StyledItemsCount e1fla99k2"
+        >
+          2
+        </div>
+        <p
+          class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
+        >
+          items selected
+        </p>
+        <div
+          class="cache-32tjzf-StyledContainer e1fla99k0"
+        >
+          Test SelectBar
+        </div>
       </div>
     </div>
   </div>
@@ -6880,6 +6907,29 @@ exports[`List should render correctly multiselect and with click and not functio
   z-index: 2;
 }
 
+.cache-1i7e9sg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-15v7v24-CheckboxContainer-StyledCheckbox {
   position: relative;
   display: -webkit-inline-box;
@@ -7632,69 +7682,73 @@ exports[`List should render correctly multiselect and with click and not functio
       class="cache-nmxi06-StyledDiv e1qbxe4b0"
       role="dialog"
     >
-      <label
-        aria-disabled="false"
-        class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
-        data-checked="true"
-        data-error="false"
+      <div
+        class="cache-1i7e9sg-Stack e1sgck4o0"
       >
-        <input
-          aria-invalid="false"
-          aria-label="unselect-all"
-          checked=""
-          class="cache-mhe016-CheckboxInput eu28k4m2"
-          name=":r3k:"
-          type="checkbox"
-          value=""
-        />
-        <svg
-          class="cache-1lcemq7-StyledIcon eu28k4m3"
-          size="24"
-          viewBox="0 0 24 24"
+        <label
+          aria-disabled="false"
+          class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
+          data-checked="true"
+          data-error="false"
         >
-          <g>
-            <rect
-              class="cache-uzcbt1-InnerCheckbox eu28k4m7"
-              height="14"
-              rx="1"
-              stroke-width="2"
-              width="14"
-              x="5"
-              y="5"
-            />
-            <rect
-              class="cache-1nkq693-CheckMixedMark eu28k4m5"
-              height="2"
-              rx="1"
-              width="8"
-              x="8"
-              y="11"
-            />
-            <rect
-              class="cache-1nu9t2r-CheckMark eu28k4m6"
-              height="8"
-              rx="1"
-              width="8"
-              x="8"
-              y="8"
-            />
-          </g>
-        </svg>
-      </label>
-      <div
-        class="cache-lvvktv-StyledItemsCount e1fla99k2"
-      >
-        2
-      </div>
-      <p
-        class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
-      >
-        items selected
-      </p>
-      <div
-        class="cache-32tjzf-StyledContainer e1fla99k0"
-      >
-        Test SelectBar
+          <input
+            aria-invalid="false"
+            aria-label="unselect-all"
+            checked=""
+            class="cache-mhe016-CheckboxInput eu28k4m2"
+            name=":r3k:"
+            type="checkbox"
+            value=""
+          />
+          <svg
+            class="cache-1lcemq7-StyledIcon eu28k4m3"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <rect
+                class="cache-uzcbt1-InnerCheckbox eu28k4m7"
+                height="14"
+                rx="1"
+                stroke-width="2"
+                width="14"
+                x="5"
+                y="5"
+              />
+              <rect
+                class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                height="2"
+                rx="1"
+                width="8"
+                x="8"
+                y="11"
+              />
+              <rect
+                class="cache-1nu9t2r-CheckMark eu28k4m6"
+                height="8"
+                rx="1"
+                width="8"
+                x="8"
+                y="8"
+              />
+            </g>
+          </svg>
+        </label>
+        <div
+          class="cache-lvvktv-StyledItemsCount e1fla99k2"
+        >
+          2
+        </div>
+        <p
+          class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
+        >
+          items selected
+        </p>
+        <div
+          class="cache-32tjzf-StyledContainer e1fla99k0"
+        >
+          Test SelectBar
+        </div>
       </div>
     </div>
   </div>
@@ -14303,6 +14357,29 @@ exports[`List should render correctly multiselect, explorer variant and with cli
   z-index: 2;
 }
 
+.cache-1i7e9sg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-15v7v24-CheckboxContainer-StyledCheckbox {
   position: relative;
   display: -webkit-inline-box;
@@ -15051,69 +15128,73 @@ exports[`List should render correctly multiselect, explorer variant and with cli
       class="cache-nmxi06-StyledDiv e1qbxe4b0"
       role="dialog"
     >
-      <label
-        aria-disabled="false"
-        class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
-        data-checked="true"
-        data-error="false"
+      <div
+        class="cache-1i7e9sg-Stack e1sgck4o0"
       >
-        <input
-          aria-invalid="false"
-          aria-label="unselect-all"
-          checked=""
-          class="cache-mhe016-CheckboxInput eu28k4m2"
-          name=":r6s:"
-          type="checkbox"
-          value=""
-        />
-        <svg
-          class="cache-1lcemq7-StyledIcon eu28k4m3"
-          size="24"
-          viewBox="0 0 24 24"
+        <label
+          aria-disabled="false"
+          class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
+          data-checked="true"
+          data-error="false"
         >
-          <g>
-            <rect
-              class="cache-uzcbt1-InnerCheckbox eu28k4m7"
-              height="14"
-              rx="1"
-              stroke-width="2"
-              width="14"
-              x="5"
-              y="5"
-            />
-            <rect
-              class="cache-1nkq693-CheckMixedMark eu28k4m5"
-              height="2"
-              rx="1"
-              width="8"
-              x="8"
-              y="11"
-            />
-            <rect
-              class="cache-1nu9t2r-CheckMark eu28k4m6"
-              height="8"
-              rx="1"
-              width="8"
-              x="8"
-              y="8"
-            />
-          </g>
-        </svg>
-      </label>
-      <div
-        class="cache-lvvktv-StyledItemsCount e1fla99k2"
-      >
-        2
-      </div>
-      <p
-        class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
-      >
-        items selected
-      </p>
-      <div
-        class="cache-32tjzf-StyledContainer e1fla99k0"
-      >
-        Test SelectBar
+          <input
+            aria-invalid="false"
+            aria-label="unselect-all"
+            checked=""
+            class="cache-mhe016-CheckboxInput eu28k4m2"
+            name=":r6s:"
+            type="checkbox"
+            value=""
+          />
+          <svg
+            class="cache-1lcemq7-StyledIcon eu28k4m3"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <rect
+                class="cache-uzcbt1-InnerCheckbox eu28k4m7"
+                height="14"
+                rx="1"
+                stroke-width="2"
+                width="14"
+                x="5"
+                y="5"
+              />
+              <rect
+                class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                height="2"
+                rx="1"
+                width="8"
+                x="8"
+                y="11"
+              />
+              <rect
+                class="cache-1nu9t2r-CheckMark eu28k4m6"
+                height="8"
+                rx="1"
+                width="8"
+                x="8"
+                y="8"
+              />
+            </g>
+          </svg>
+        </label>
+        <div
+          class="cache-lvvktv-StyledItemsCount e1fla99k2"
+        >
+          2
+        </div>
+        <p
+          class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
+        >
+          items selected
+        </p>
+        <div
+          class="cache-32tjzf-StyledContainer e1fla99k0"
+        >
+          Test SelectBar
+        </div>
       </div>
     </div>
   </div>
@@ -16475,6 +16556,29 @@ exports[`List should render correctly multiselect, table variant and with click 
   z-index: 2;
 }
 
+.cache-1i7e9sg-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 .cache-15v7v24-CheckboxContainer-StyledCheckbox {
   position: relative;
   display: -webkit-inline-box;
@@ -17223,69 +17327,73 @@ exports[`List should render correctly multiselect, table variant and with click 
       class="cache-nmxi06-StyledDiv e1qbxe4b0"
       role="dialog"
     >
-      <label
-        aria-disabled="false"
-        class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
-        data-checked="true"
-        data-error="false"
+      <div
+        class="cache-1i7e9sg-Stack e1sgck4o0"
       >
-        <input
-          aria-invalid="false"
-          aria-label="unselect-all"
-          checked=""
-          class="cache-mhe016-CheckboxInput eu28k4m2"
-          name=":r60:"
-          type="checkbox"
-          value=""
-        />
-        <svg
-          class="cache-1lcemq7-StyledIcon eu28k4m3"
-          size="24"
-          viewBox="0 0 24 24"
+        <label
+          aria-disabled="false"
+          class="e1fla99k3 cache-15v7v24-CheckboxContainer-StyledCheckbox eu28k4m1"
+          data-checked="true"
+          data-error="false"
         >
-          <g>
-            <rect
-              class="cache-uzcbt1-InnerCheckbox eu28k4m7"
-              height="14"
-              rx="1"
-              stroke-width="2"
-              width="14"
-              x="5"
-              y="5"
-            />
-            <rect
-              class="cache-1nkq693-CheckMixedMark eu28k4m5"
-              height="2"
-              rx="1"
-              width="8"
-              x="8"
-              y="11"
-            />
-            <rect
-              class="cache-1nu9t2r-CheckMark eu28k4m6"
-              height="8"
-              rx="1"
-              width="8"
-              x="8"
-              y="8"
-            />
-          </g>
-        </svg>
-      </label>
-      <div
-        class="cache-lvvktv-StyledItemsCount e1fla99k2"
-      >
-        2
-      </div>
-      <p
-        class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
-      >
-        items selected
-      </p>
-      <div
-        class="cache-32tjzf-StyledContainer e1fla99k0"
-      >
-        Test SelectBar
+          <input
+            aria-invalid="false"
+            aria-label="unselect-all"
+            checked=""
+            class="cache-mhe016-CheckboxInput eu28k4m2"
+            name=":r60:"
+            type="checkbox"
+            value=""
+          />
+          <svg
+            class="cache-1lcemq7-StyledIcon eu28k4m3"
+            size="24"
+            viewBox="0 0 24 24"
+          >
+            <g>
+              <rect
+                class="cache-uzcbt1-InnerCheckbox eu28k4m7"
+                height="14"
+                rx="1"
+                stroke-width="2"
+                width="14"
+                x="5"
+                y="5"
+              />
+              <rect
+                class="cache-1nkq693-CheckMixedMark eu28k4m5"
+                height="2"
+                rx="1"
+                width="8"
+                x="8"
+                y="11"
+              />
+              <rect
+                class="cache-1nu9t2r-CheckMark eu28k4m6"
+                height="8"
+                rx="1"
+                width="8"
+                x="8"
+                y="8"
+              />
+            </g>
+          </svg>
+        </label>
+        <div
+          class="cache-lvvktv-StyledItemsCount e1fla99k2"
+        >
+          2
+        </div>
+        <p
+          class="e1fla99k1 cache-ygo4k7-StyledText-MargedText e1tg3t120"
+        >
+          items selected
+        </p>
+        <div
+          class="cache-32tjzf-StyledContainer e1fla99k0"
+        >
+          Test SelectBar
+        </div>
       </div>
     </div>
   </div>
