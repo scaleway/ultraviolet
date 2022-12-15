@@ -1,3 +1,10 @@
+## [0.213.9](https://github.com/scaleway/scaleway-ui/compare/v0.213.8...v0.213.9) (2022-12-15)
+
+
+### :bug: Bug Fixes
+
+* unselect all when no selectable rows ([#2124](https://github.com/scaleway/scaleway-ui/issues/2124)) ([bafc77d](https://github.com/scaleway/scaleway-ui/commit/bafc77d31cc1eb6ffcbf0f8ec4aa7ab906468c15))
+
 ## [0.213.8](https://github.com/scaleway/scaleway-ui/compare/v0.213.7...v0.213.8) (2022-12-15)
 
 
