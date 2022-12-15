@@ -56,7 +56,7 @@ export type ListBodyRenderProps<DataType> = {
 type BodyProps<DataType> = {
   children: (props: ListBodyRenderProps<DataType>) => JSX.Element
   className?: string
-  style: React.CSSProperties
+  style?: React.CSSProperties
 }
 
 const CenteredText = styled(Text)`

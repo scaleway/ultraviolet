@@ -2,7 +2,7 @@
 
 exports[`ActionBar renders correctly  1`] = `
 <DocumentFragment>
-  .cache-nmxi06-StyledDiv {
+  .cache-3wr0el-StyledDiv {
   background: #ffffff;
   border: 1px solid #e6e9f0;
   border-radius: 4px;
@@ -18,10 +18,18 @@ exports[`ActionBar renders correctly  1`] = `
   transform: translate(-50%, 0);
   width: 600px;
   z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
-    class="cache-nmxi06-StyledDiv e1qbxe4b0"
+    class="cache-3wr0el-StyledDiv e1qbxe4b0"
   >
     Hello
   </div>
@@ -30,7 +38,7 @@ exports[`ActionBar renders correctly  1`] = `
 
 exports[`ActionBar renders correctly with custom rank 1`] = `
 <DocumentFragment>
-  .cache-ydwxx6-StyledDiv {
+  .cache-1fkr7d2-StyledDiv {
   background: #ffffff;
   border: 1px solid #e6e9f0;
   border-radius: 4px;
@@ -46,10 +54,18 @@ exports[`ActionBar renders correctly with custom rank 1`] = `
   transform: translate(-50%, 0);
   width: 600px;
   z-index: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
-    class="cache-ydwxx6-StyledDiv e1qbxe4b0"
+    class="cache-1fkr7d2-StyledDiv e1qbxe4b0"
   >
     I am rank 2
   </div>
