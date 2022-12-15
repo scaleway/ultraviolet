@@ -6,7 +6,6 @@ import type {
   ReactNode,
 } from 'react'
 import {
-  CSSProperties,
   Fragment,
   forwardRef,
   useCallback,
