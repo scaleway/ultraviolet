@@ -242,30 +242,4 @@ describe('Tags', () => {
         },
       },
     ))
-  test('focus tag after onChange', () =>
-    shouldMatchEmotionSnapshot(
-      <Tags
-        id="test"
-        onChange={async () =>
-          new Promise(resolve => {
-            setTimeout(resolve, 1000)
-          })
-        }
-        onChangeError={e => e}
-        name="focus"
-        tags={['hello', 'world']}
-      />,
-      {
-        transform: async ({ getByDisplayValue }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
-          const focus = jest.fn()
-          input.focus = focus
-
-          await userEvent.type(input, 'test{enter}')
-          await waitFor(() => expect(input.value).toBe(''))
-
-          expect(focus).toHaveBeenCalled()
-        },
-      },
-    ))
 })
