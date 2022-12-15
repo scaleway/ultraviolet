@@ -1,9 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { ReactNode, Ref, RefObject } from 'react'
 import {
-  ReactNode,
-  Ref,
-  RefObject,
   useCallback,
   useEffect,
   useId,
@@ -12,12 +10,8 @@ import {
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
-import {
-  ARROW_WIDTH,
-  DEFAULT_POSITIONS,
-  TooltipPlacement,
-  computePositions,
-} from './helpers'
+import type { TooltipPlacement } from './helpers'
+import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
 
 const ANIMATION_DURATION = 230 // in ms
 

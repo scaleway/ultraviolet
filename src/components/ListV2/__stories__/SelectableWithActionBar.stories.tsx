@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import { useState } from 'react'
 import { List } from '..'
 import ActionBar from '../../ActionBar'

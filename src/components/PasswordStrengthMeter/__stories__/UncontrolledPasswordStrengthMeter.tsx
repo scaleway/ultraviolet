@@ -1,4 +1,5 @@
-import { ComponentProps, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useState } from 'react'
 import PasswordStrengthMeter from '..'
 import { TextBox } from '../..'
 

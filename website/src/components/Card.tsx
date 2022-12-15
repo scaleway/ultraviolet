@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { BorderedBox, Text } from '@scaleway/ui'
 import Image from 'next/image'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 type CardProps = {
   title: string

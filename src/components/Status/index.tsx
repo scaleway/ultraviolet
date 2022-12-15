@@ -1,4 +1,4 @@
-import { Theme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ping } from '../../utils'
 import Tooltip from '../Tooltip'

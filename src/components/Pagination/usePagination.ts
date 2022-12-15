@@ -1,6 +1,5 @@
+import type { Dispatch, SetStateAction } from 'react'
 import {
-  Dispatch,
-  SetStateAction,
   useCallback,
   useEffect,
   useLayoutEffect,

@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import StateBar from '..'
 
 export const Unlimited: ComponentStory<typeof StateBar> = () => (

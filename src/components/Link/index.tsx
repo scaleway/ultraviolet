@@ -1,13 +1,13 @@
 import styled from '@emotion/styled'
-import {
+import type {
   AnchorHTMLAttributes,
   ForwardedRef,
   HTMLAttributeAnchorTarget,
   MouseEventHandler,
   ReactNode,
-  forwardRef,
 } from 'react'
-import { Color } from '../../theme'
+import { forwardRef } from 'react'
+import type { Color } from '../../theme'
 import Icon from '../Icon'
 
 const StyledIcon = styled(Icon)``

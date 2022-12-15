@@ -4,7 +4,8 @@ import BorderedBox from '../../components/BorderedBox'
 import Separator from '../../components/Separator'
 import Stack from '../../components/Stack'
 import Text from '../../components/Text'
-import lightTheme, { Color } from '../../theme'
+import type { Color } from '../../theme'
+import type lightTheme from '../../theme'
 import ThemeWrapper from './ThemeWrapper'
 
 const StyledSeparator = styled(Separator)`

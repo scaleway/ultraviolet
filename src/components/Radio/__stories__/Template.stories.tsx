@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import Radio from '..'
 
 export const Template: ComponentStory<typeof Radio> = args => (

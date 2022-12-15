@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Color } from '../../theme'
+import type { Color } from '../../theme'
 
 const shineAnimation = keyframes`
   from {

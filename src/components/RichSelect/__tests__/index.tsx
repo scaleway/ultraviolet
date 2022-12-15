@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/react'
+import type { CSSObject } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
 import RichSelect from '..'
 import {

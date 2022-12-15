@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Markdown from '..'
 import { withMultipleParagraphs } from './markdown_example'
 

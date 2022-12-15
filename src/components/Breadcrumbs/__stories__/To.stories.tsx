@@ -1,5 +1,5 @@
-import { Story } from '@storybook/react'
-import { ComponentProps } from 'react'
+import type { Story } from '@storybook/react'
+import type { ComponentProps } from 'react'
 import Breadcrumbs from '..'
 
 export const To: Story<ComponentProps<typeof Breadcrumbs>> = props => (

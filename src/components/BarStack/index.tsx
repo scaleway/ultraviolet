@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { MouseEventHandler, ReactNode, useMemo } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
+import { useMemo } from 'react'
 import Tooltip from '../Tooltip'
 
 type BarProps = {
@@ -27,7 +28,7 @@ type BarProps = {
   tooltip?: ReactNode
 }
 
-interface BarStackProps {
+type BarStackProps = {
   data: Array<BarProps>
   total?: number
 }

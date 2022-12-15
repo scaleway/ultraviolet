@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { MouseEventHandler, ReactNode } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
 
 const StyledCellDiv = styled('div', {
   shouldForwardProp: prop => prop !== 'colSpan',

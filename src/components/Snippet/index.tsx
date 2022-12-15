@@ -1,6 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Children, ComponentProps, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { Children, useState } from 'react'
 import CopyButton from '../CopyButton'
 import Icon from '../Icon'
 import Stack from '../Stack'

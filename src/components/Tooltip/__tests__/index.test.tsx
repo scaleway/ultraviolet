@@ -1,6 +1,6 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import Tooltip from '..'
 import {
   renderWithTheme,

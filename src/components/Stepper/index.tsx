@@ -1,6 +1,7 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Children, Fragment, ReactNode } from 'react'
+import type { ReactNode } from 'react'
+import { Children, Fragment } from 'react'
 import flattenChildren from 'react-flatten-children'
 import Icon from '../Icon'
 import Text from '../Text'

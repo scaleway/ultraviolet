@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  FocusEventHandler,
-  useEffect,
-  useRef,
-  useState,
-} from 'react'
+import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import BorderedBox from '../BorderedBox'
 import SelectableCard from '../SelectableCard'
 import Tooltip from '../Tooltip'

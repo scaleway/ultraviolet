@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { jsonLdScriptProps } from 'react-schemaorg'
-import { CreativeWork } from 'schema-dts'
+import type { CreativeWork } from 'schema-dts'
 
 class MyDocument extends Document {
   render() {

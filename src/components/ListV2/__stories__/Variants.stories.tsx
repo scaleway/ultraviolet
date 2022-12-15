@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import { List } from '..'
-import { Color } from '../../../theme'
+import type { Color } from '../../../theme'
 import { ListBody } from '../ListBody'
 import { ListCell } from '../ListCell'
 import { LIST_ROW_VARIANTS, ListRow } from '../ListRow'

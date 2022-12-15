@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { ScreenSize } from '../../theme'
+import type { ScreenSize } from '../../theme'
 import { down, up } from './utilities'
 
 const Breakpoint = styled.div<{ down?: ScreenSize; up?: ScreenSize }>`

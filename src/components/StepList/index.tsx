@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import Bullet from '../Bullet'
 
 export const Steps = styled.ul`

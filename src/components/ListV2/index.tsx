@@ -1,4 +1,4 @@
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import Stack from '../Stack'
 import { ListBody } from './ListBody'
 import { ListCell } from './ListCell'

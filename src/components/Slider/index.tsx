@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import { ReactNode, useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const StyledWrapper = styled.div`
   position: relative;

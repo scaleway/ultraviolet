@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
-import { Spaces, space } from '../../theme'
+import type { ReactNode } from 'react'
+import type { Spaces } from '../../theme'
+import { space } from '../../theme'
 
 type RowProps = {
   children: ReactNode

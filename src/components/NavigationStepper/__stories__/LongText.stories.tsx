@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import NavigationStepper from '..'
 
 export const LongText: Story = props => (

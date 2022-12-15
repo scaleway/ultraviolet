@@ -1,19 +1,16 @@
-import { CSSObject, Theme, css, keyframes, useTheme } from '@emotion/react'
+import type { CSSObject, Theme, keyframes } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
+import type {
   ComponentProps,
   ForwardRefExoticComponent,
   ForwardedRef,
   ReactElement,
   ReactNode,
-  forwardRef,
-  useEffect,
-  useId,
-  useMemo,
-  useState,
 } from 'react'
+import { forwardRef, useEffect, useId, useMemo, useState } from 'react'
 import flattenChildren from 'react-flatten-children'
-import Select, {
+import type {
   ClearIndicatorProps,
   CommonProps,
   ContainerProps,
@@ -24,8 +21,8 @@ import Select, {
   OptionProps,
   Props,
   ValueContainerProps,
-  components,
 } from 'react-select'
+import Select, { components } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
 import * as animations from '../../utils/animations'
 import Expandable from '../Expandable'

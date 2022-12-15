@@ -1,15 +1,15 @@
-import { Theme, css } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
+import type {
   ChangeEventHandler,
   FocusEventHandler,
   InputHTMLAttributes,
   KeyboardEventHandler,
   MutableRefObject,
   ReactNode,
-  useRef,
-  useState,
 } from 'react'
+import { useRef, useState } from 'react'
 import parseIntOr from '../../helpers/numbers'
 import Icon from '../Icon'
 import Tooltip from '../Tooltip'

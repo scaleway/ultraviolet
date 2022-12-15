@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Toggle, { SIZES } from '..'
 import Stack from '../../Stack'
 

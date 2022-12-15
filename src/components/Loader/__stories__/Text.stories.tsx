@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Loader from '../index'
 
 export const Text: Story = props => (

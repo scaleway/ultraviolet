@@ -1,4 +1,4 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import Badge, { PROMINENCES } from '..'
 import { SENTIMENTS } from '../../../theme'
 

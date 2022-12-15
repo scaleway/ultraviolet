@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { HTMLProps, MouseEvent, ReactNode } from 'react'
+import type { HTMLProps, MouseEvent, ReactNode } from 'react'
 import Icon from '../Icon'
 import Stack from '../Stack'
 

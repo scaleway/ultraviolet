@@ -1,7 +1,8 @@
 import * as nivo from '@nivo/core'
 import { fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ComponentProps, useEffect, useState } from 'react'
+import type { ComponentProps } from 'react'
+import { useEffect, useState } from 'react'
 import LineChart from '..'
 import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
 import {

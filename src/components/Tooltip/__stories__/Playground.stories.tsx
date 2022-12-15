@@ -1,4 +1,4 @@
-import { DecoratorFunction } from '@storybook/addons'
+import type { DecoratorFunction } from '@storybook/addons'
 import { userEvent, within } from '@storybook/testing-library'
 import { Template } from './Template.stories'
 

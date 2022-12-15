@@ -1,9 +1,10 @@
-import { ClassNames, Global, Theme, css, useTheme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
+import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
-  ToastOptions,
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'

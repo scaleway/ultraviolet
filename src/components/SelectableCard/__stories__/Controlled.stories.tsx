@@ -1,5 +1,6 @@
-import { Story } from '@storybook/react'
-import { ChangeEvent, useState } from 'react'
+import type { Story } from '@storybook/react'
+import type { ChangeEvent } from 'react'
+import { useState } from 'react'
 import SelectableCard from '..'
 import Stack from '../../Stack'
 

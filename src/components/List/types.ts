@@ -1,5 +1,5 @@
-import { MouseEventHandler, ReactNode } from 'react'
-import * as animations from '../../utils/animations'
+import type { MouseEventHandler, ReactNode } from 'react'
+import type * as animations from '../../utils/animations'
 
 export type ListOrder = 'asc' | 'desc' | undefined
 

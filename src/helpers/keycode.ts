@@ -1,4 +1,4 @@
-import { KeyboardEventHandler } from 'react'
+import type { KeyboardEventHandler } from 'react'
 
 const onKeyOnlyNumbers: KeyboardEventHandler = e => {
   // `e.which` and `e.keyCode` are deprecated (https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)

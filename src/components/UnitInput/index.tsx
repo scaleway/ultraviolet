@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
-import { ComponentProps, useEffect, useState } from 'react'
-import RichSelect, { SelectOption } from '../RichSelect'
+import type { ComponentProps } from 'react'
+import { useEffect, useState } from 'react'
+import type { SelectOption } from '../RichSelect'
+import RichSelect from '../RichSelect'
 import TextBox from '../TextBox'
 
 export const sizesHeight: Record<string, number> = {

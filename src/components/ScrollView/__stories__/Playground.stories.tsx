@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import { ScrollView } from '../..'
 
 export const Playground: ComponentStory<typeof ScrollView> = ({

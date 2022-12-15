@@ -1,4 +1,4 @@
-import { KeyboardEvent } from 'react'
+import type { KeyboardEvent } from 'react'
 import isJSONString from '../isJSON'
 import onKeyOnlyNumbers from '../keycode'
 import parseIntOr from '../numbers'

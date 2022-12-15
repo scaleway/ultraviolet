@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import Button from '..'
 
 export const IconSize: ComponentStory<typeof Button> = ({ ...props }) => (

@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import ToastContainer, { toast } from '..'
 import { Button } from '../../index'
 

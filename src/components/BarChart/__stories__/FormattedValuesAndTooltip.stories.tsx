@@ -1,4 +1,4 @@
-import { ComponentStory } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import { format } from 'date-fns'
 import BarChart from '..'
 import { barChartSimpleData } from './mockData'

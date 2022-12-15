@@ -1,7 +1,8 @@
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useMedia } from '@scaleway/use-media'
-import { Children, ReactNode, isValidElement } from 'react'
+import type { ReactNode } from 'react'
+import { Children, isValidElement } from 'react'
 import Icon from '../Icon'
 import Loader from '../Loader'
 

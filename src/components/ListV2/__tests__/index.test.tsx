@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { userEvent } from '@storybook/testing-library'
 import { render } from '@testing-library/react'
-import { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { List } from '..'
 import ControlValue from '../../../__stories__/components/ControlValue'
 import {
@@ -10,7 +10,7 @@ import {
 } from '../../../helpers/jestHelpers'
 import defaultTheme from '../../../theme'
 
-interface WrapperProps {
+type WrapperProps = {
   theme?: typeof defaultTheme
   children: ReactNode
 }

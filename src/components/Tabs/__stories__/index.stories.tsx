@@ -1,4 +1,4 @@
-import { ComponentMeta } from '@storybook/react'
+import type { ComponentMeta } from '@storybook/react'
 import Tabs from '..'
 import { Tab } from '../Tab'
 

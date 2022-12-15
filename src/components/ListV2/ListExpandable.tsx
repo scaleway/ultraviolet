@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 const StyledExpandableContainer = styled.div`
   grid-column: 1 / -1;

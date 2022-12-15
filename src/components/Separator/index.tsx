@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { ComponentProps } from 'react'
-import { Color } from '../../theme'
+import type { ComponentProps } from 'react'
+import type { Color } from '../../theme'
 import Icon from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'

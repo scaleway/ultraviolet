@@ -1,17 +1,13 @@
 import styled from '@emotion/styled'
-import {
+import type {
   ChangeEvent,
   ForwardedRef,
   InputHTMLAttributes,
   KeyboardEvent,
   ReactNode,
-  forwardRef,
-  useCallback,
-  useEffect,
-  useId,
-  useState,
 } from 'react'
-import { XOR } from '../../types'
+import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import type { XOR } from '../../types'
 import Loader from '../Loader'
 import Text from '../Text'
 

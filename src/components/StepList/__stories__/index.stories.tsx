@@ -1,6 +1,7 @@
-import { Meta, Story } from '@storybook/react'
-import { ComponentProps } from 'react'
-import StepList, { Sizes as SizesType } from '..'
+import type { Meta, Story } from '@storybook/react'
+import type { ComponentProps } from 'react'
+import type { Sizes as SizesType } from '..'
+import StepList from '..'
 import Stack from '../../Stack'
 import Text from '../../Text'
 

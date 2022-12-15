@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
-import {
+import type {
   ButtonHTMLAttributes,
   ComponentProps,
   ReactNode,
   Ref,
-  forwardRef,
 } from 'react'
+import { forwardRef } from 'react'
 import Icon from '../Icon'
 import Menu from '../Menu'
 import { StyledTabButton } from './Tab'

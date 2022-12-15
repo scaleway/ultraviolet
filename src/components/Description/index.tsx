@@ -25,7 +25,7 @@ const Desc = styled('dd', {
       : undefined}
 `
 
-interface DescriptionProps {
+type DescriptionProps = {
   ellipsis?: boolean
   inline?: boolean
   userSelect?: boolean

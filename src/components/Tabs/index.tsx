@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
-import {
-  HTMLAttributes,
-  ReactNode,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { StyledTabButton, Tab } from './Tab'
 import TabMenu from './TabMenu'
 import TabMenuItem from './TabMenuItem'

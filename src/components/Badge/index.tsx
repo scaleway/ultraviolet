@@ -1,9 +1,13 @@
-import { Theme, useTheme } from '@emotion/react'
+import type { Theme } from '@emotion/react'
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ReactNode, useMemo } from 'react'
-import { Color, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
+import type { ReactNode } from 'react'
+import { useMemo } from 'react'
+import type { Color } from '../../theme'
+import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
-import Icon, { IconName } from '../Icon'
+import type { IconName } from '../Icon'
+import Icon from '../Icon'
 import Text from '../Text'
 
 const StyledText = styled(Text)<{ fontSize: number }>`

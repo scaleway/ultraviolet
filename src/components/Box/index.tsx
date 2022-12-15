@@ -1,11 +1,11 @@
 import { Box as XStyledBox } from '@xstyled/emotion'
-import {
+import type {
   AllHTMLAttributes,
   ComponentProps,
   ElementType,
   ReactNode,
-  forwardRef,
 } from 'react'
+import { forwardRef } from 'react'
 
 export type XStyledProps = {
   align?: string

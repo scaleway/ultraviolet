@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { ComponentType } from 'react'
+import type { ComponentType } from 'react'
 import * as components from '../../components'
 import Stack from '../../components/Stack'
 import Table from '../../components/Table'

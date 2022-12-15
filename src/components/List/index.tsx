@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
+import type { ForwardedRef, ReactElement, ReactNode } from 'react'
 import {
-  ForwardedRef,
   Fragment,
-  ReactElement,
-  ReactNode,
   forwardRef,
   useCallback,
   useEffect,
@@ -16,13 +14,15 @@ import orderBy from '../../utils/orderBy'
 import Box from '../Box'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
-import usePagination, { UsePaginationReturn } from '../Pagination/usePagination'
+import type { UsePaginationReturn } from '../Pagination/usePagination'
+import usePagination from '../Pagination/usePagination'
 import Text from '../Text'
 import {
   DEFAULT_PLACEHOLDER_ROWS_COUNT,
   LoadingPlaceholder,
 } from './LoadingPlaceholder'
-import SelectBar, { ListSelectBarProps } from './SelectBar'
+import type { ListSelectBarProps } from './SelectBar'
+import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
 import type {
   ExpandedContentProps,
@@ -32,7 +32,8 @@ import type {
   ListRowState,
   ListSort,
 } from './types'
-import { ListVariant, variants } from './variants'
+import type { ListVariant } from './variants'
+import { variants } from './variants'
 
 type ListRowStates = Record<string, ListRowState>
 

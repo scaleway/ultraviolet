@@ -1,12 +1,11 @@
 import styled from '@emotion/styled'
-import {
+import type {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
   KeyboardEventHandler,
-  createRef,
-  useState,
 } from 'react'
+import { createRef, useState } from 'react'
 
 const StyledInput = styled.input`
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};

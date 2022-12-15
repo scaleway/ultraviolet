@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react'
+import type { Story } from '@storybook/react'
 import zxcvbn from 'zxcvbn'
-import PasswordStrengthMeter from '..'
+import type PasswordStrengthMeter from '..'
 import { colors } from '../../../theme'
 import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
 

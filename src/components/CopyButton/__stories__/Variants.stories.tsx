@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import type { ComponentProps } from 'react'
 import CopyButton from '../index'
 
 export const Variants = (props: ComponentProps<typeof CopyButton>) =>
