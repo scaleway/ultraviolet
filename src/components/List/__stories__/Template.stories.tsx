@@ -31,6 +31,7 @@ export const Template: ComponentStory<typeof List<MockData>> = ({
               </list.Row>
             )}
           </list.Body>
+          <list.SelectBar />
         </>
       ))}
   </List>
