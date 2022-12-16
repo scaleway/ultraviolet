@@ -1,31 +1,16 @@
 {
+  "extends": "@scaleway/tsconfig",
   "compilerOptions": {
-    "target": "es2021",
+    "target": "esnext",
+    // For storybook compatibility we use commonjs
     "module": "commonjs",
-
-    "strict": true,
-    "allowUnreachableCode": false,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "useUnknownInCatchVariables": true,
-    "noPropertyAccessFromIndexSignature": true,
-
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "noEmit": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
+
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    // Should be removed once we clear all errors
+    "noUncheckedIndexedAccess": false
   },
   "include": [
     "**/*.ts",
