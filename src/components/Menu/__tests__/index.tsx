@@ -2,7 +2,7 @@ import Menu, { arrowPlacements } from '..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 describe('Menu', () => {
   test('renders with disclosure not a function', () =>

@@ -1,5 +1,5 @@
 import { Col, Grid, Row } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Grid', () => {
   describe('Grid', () => {

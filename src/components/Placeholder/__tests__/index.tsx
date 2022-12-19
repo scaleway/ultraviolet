@@ -1,5 +1,5 @@
 import Placeholder, { placeholderTypes } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Placeholder', () => {
   test('renders default variant', () =>

@@ -2,7 +2,7 @@ import userEvent from '@testing-library/user-event'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
 import DateInput from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 tk.freeze(new Date(1609503120000))
 

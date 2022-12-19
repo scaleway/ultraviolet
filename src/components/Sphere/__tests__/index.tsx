@@ -1,5 +1,5 @@
 import Sphere from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Sphere', () => {
   test('renders correctly with default values', () =>

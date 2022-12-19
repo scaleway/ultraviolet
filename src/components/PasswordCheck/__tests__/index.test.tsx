@@ -1,5 +1,5 @@
 import PasswordCheck from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('PasswordCheck', () => {
   test('render with custom values', () =>

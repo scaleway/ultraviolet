@@ -3,7 +3,7 @@ import SwitchButton from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import { FocusOverlay } from '../FocusOverlay'
 
 describe('SwitchButton', () => {

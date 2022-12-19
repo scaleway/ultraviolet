@@ -1,5 +1,5 @@
 import Expandable from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Expandable', () => {
   test('renders correctly with default values', () =>

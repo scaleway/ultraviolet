@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {

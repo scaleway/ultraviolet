@@ -2,7 +2,7 @@ import userEvent from '@testing-library/user-event'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import CopyButton, { SIZES } from '../index'
 
 describe('CopyButton', () => {

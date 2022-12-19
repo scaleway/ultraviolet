@@ -1,5 +1,5 @@
 import Status, { statusVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Status', () => {
   test.each(statusVariants)('renders correctly with type="%s"', variant =>

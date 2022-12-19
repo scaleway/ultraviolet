@@ -1,5 +1,5 @@
 import NavigationStepper from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import jestMockMatchMedia from '../../../helpers/jestMockMatchMedia'
 import { screens } from '../../../theme'
 

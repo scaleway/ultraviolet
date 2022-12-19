@@ -1,5 +1,5 @@
 import Pentagon from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Pentagon', () => {
   test(`renders with default props`, () =>

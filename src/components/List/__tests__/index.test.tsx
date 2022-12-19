@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { createRef, useEffect } from 'react'
 import type { ListRefType } from '..'
 import List from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { generateData } from '../../../mocks/list'
 import { getUUID } from '../../../utils'
 

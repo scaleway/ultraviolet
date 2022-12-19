@@ -1,5 +1,5 @@
 import Tag from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Tag', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Tag>test</Tag>))

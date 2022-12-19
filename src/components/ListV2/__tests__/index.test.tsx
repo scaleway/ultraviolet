@@ -3,11 +3,11 @@ import { userEvent } from '@storybook/testing-library'
 import { render } from '@testing-library/react'
 import type { ComponentProps, ReactNode } from 'react'
 import { List } from '..'
-import ControlValue from '../../../__stories__/components/ControlValue'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
+import ControlValue from '../../../__stories__/components/ControlValue'
 import defaultTheme from '../../../theme'
 
 type WrapperProps = {

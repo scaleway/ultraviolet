@@ -4,7 +4,7 @@ import Checkbox from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 describe('Checkbox', () => {
   test('renders correctly', () =>

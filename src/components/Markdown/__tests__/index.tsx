@@ -1,5 +1,5 @@
 import Markdown from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 export const simple = `
   # I am a Markdown H1

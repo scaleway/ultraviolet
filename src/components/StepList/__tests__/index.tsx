@@ -1,5 +1,5 @@
 import StepList from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('StepList', () => {
   test('renders correctly ', () =>

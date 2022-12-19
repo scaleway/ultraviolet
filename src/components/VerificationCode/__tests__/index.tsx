@@ -3,7 +3,7 @@ import VerificationCode from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 const pasteEventWithValue = (selector: HTMLElement, value: string) =>
   fireEvent.paste(selector, {

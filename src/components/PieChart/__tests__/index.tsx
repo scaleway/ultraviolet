@@ -4,7 +4,7 @@ import PieChart from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import {
   data,
   dataWithLegends,

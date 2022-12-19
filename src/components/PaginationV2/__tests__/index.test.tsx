@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import Pagination from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Pagination', () => {
   test('should render correctly', async () =>

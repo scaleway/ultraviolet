@@ -1,5 +1,5 @@
 import Button, { buttonSizes, buttonVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const SampleIcon = () => <>IconMock</>
 
