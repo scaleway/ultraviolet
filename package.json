@@ -41,7 +41,7 @@
     "start:production": "STORYBOOK_ENVIRONMENT=production start-storybook -p 6006",
     "format": "prettier --write '**/*.{ts,tsx,js,json,md,mdx}'",
     "lint:fix": "pnpm run lint --fix",
-    "lint": "eslint --report-unused-disable-directives --cache --ext js,ts,tsx .",
+    "lint": "eslint --report-unused-disable-directives --cache --ext js,mjs,ts,tsx .",
     "prebuild": "shx rm -rf dist",
     "test:unit": "LC_ALL=en_US.UTF-8 jest --config .jest/unit.config.ts",
     "test:unit:coverage": "pnpm run test:unit --coverage",
@@ -54,9 +54,9 @@
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "lint-staged": {
-    "*.(j|t)s?(x)": [
+    "*.(j|t|mj)s?(x)": [
       "prettier --write",
-      "eslint --fix --ext js,jsx,ts,tsx"
+      "eslint --fix --ext js,mjs,ts,tsx"
     ]
   },
   "pnpm": {
@@ -118,10 +118,10 @@
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-node-resolve": "15.0.1",
     "@rollup/plugin-url": "8.0.1",
-    "@scaleway/eslint-config-react": "3.11.2",
+    "@scaleway/eslint-config-react": "3.13.0",
     "@scaleway/jest-helpers": "2.0.24",
-    "@scaleway/use-i18n": "4.1.5",
     "@scaleway/tsconfig": "1.1.0",
+    "@scaleway/use-i18n": "4.1.5",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",

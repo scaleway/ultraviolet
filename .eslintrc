@@ -3,71 +3,35 @@
   "env": {
     "browser": true
   },
-  "extends": ["@scaleway/react/typescript", "plugin:react/jsx-runtime"],
-  "parserOptions": {
-    "project": ["tsconfig.json"]
-  },
-  "plugins": ["@emotion"],
-  "rules": {
-    "no-restricted-syntax": [
-      // https://eslint.org/docs/rules/no-restricted-syntax#disallow-specified-syntax-no-restricted-syntax
-      "warn",
-      {
-        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
-        "selector": "ForInStatement"
-      },
-      {
-        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
-        "selector": "LabeledStatement"
-      },
-      {
-        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
-        "selector": "WithStatement"
-      },
-      {
-        "message": "Deprecated color usage, use colors instead.",
-        "selector": "MemberExpression[object.object.name='theme'] Identifier[name='colorsDeprecated'], MemberExpression[object.name='colorsDeprecated'] Identifier[name='colorsDeprecated']"
-      }
-    ],
-    // Import
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/__stories__/**/*",
-          "**/__tests__/**/*",
-          "rollup.config.mjs"
-        ]
-      }
-    ],
-    // React
-    "react/jsx-props-no-spreading": "warn",
-    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
-    "react/sort-prop-types": "off",
-    "react/prop-types": "off",
-    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
-
-    // emotion
-    "@emotion/styled-import": "error",
-    "@emotion/no-vanilla": "error",
-    "@emotion/import-from-emotion": "error",
-    "@emotion/syntax-preference": ["error", "string"]
-  },
   "overrides": [
     {
-      "env": {
-        "jest": true
+      "files": ["*.js", "*.mjs"],
+      "extends": ["@scaleway/react", "@scaleway/react/emotion"],
+      "parser": "@babel/eslint-parser"
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["@scaleway/react/typescript", "@scaleway/react/emotion"],
+      "parserOptions": {
+        "project": ["tsconfig.json"]
       },
-      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
       "rules": {
-        "no-console": "off",
-        "no-alert": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "warn"
       }
     },
     {
-      "files": ["**/__stories__/**/*.stories.{ts,tsx}"],
+      "files": ["**/__stories__/**/*.{ts,tsx}", "**/__tests__/**/*.{ts,tsx}"],
+      "extends": ["@scaleway/react/typescript"],
+      "parserOptions": {
+        "project": ["tsconfig.json"]
+      },
+      "env": {
+        "jest": true
+      },
       "rules": {
+        "no-console": "off",
+        "no-alert": "off",
+        "react/jsx-props-no-spreading": "off",
         // Allow inline nested components (for code snippets)
         "react/no-unstable-nested-components": "off"
       }
