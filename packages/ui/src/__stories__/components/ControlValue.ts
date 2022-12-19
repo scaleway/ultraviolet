@@ -49,6 +49,10 @@ type ControlProps<T> = {
   }) => JSX.Element
 }
 
+/**
+ * ControlValue is a component that allows you to set and change a value.
+ * IMPORTANT! DO NOT USE IT IN STORIES!
+ */
 const ControlValue = <T>({ value, children }: ControlProps<T>): JSX.Element => {
   const [state, setState] = useState<T>(value)
 
