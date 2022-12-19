@@ -74,7 +74,6 @@ specifiers:
   '@types/seedrandom': 3.0.2
   '@types/testing-library__jest-dom': 5.14.5
   '@types/zxcvbn': 4.4.1
-  '@xstyled/emotion': 2.5.0
   babel-loader: 9.1.0
   babel-plugin-annotate-pure-calls: 0.4.0
   babel-plugin-named-exports-order: 0.0.2
@@ -132,7 +131,6 @@ dependencies:
   '@nivo/tooltip': 0.80.0_wyuiu3ihipn7hpncy62nqhyrji
   '@scaleway/random-name': 3.0.2
   '@scaleway/use-media': 1.2.1_react@18.2.0
-  '@xstyled/emotion': 2.5.0_z6zezfurr26maxy6gvsa52xlim
   deepmerge: 4.2.2
   prop-types: 15.8.1
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
@@ -2088,6 +2086,7 @@ packages:
     resolution: {integrity: sha512-3aDpDprjM0AwaxGE09bOPkNxHpBd+kA6jty3RnaEXdweX1DF1U3VQpPYb0g1IStAuK7SVQ1cy+bNBBKp4W3Fjg==}
     dependencies:
       '@emotion/memoize': 0.8.0
+    dev: true
 
   /@emotion/jest/11.10.5:
     resolution: {integrity: sha512-LagosxybgisPlxfBGas9kGcNB5xTTX125WbjEVZiE3MEbb+dI4UYn0XIzrsilR8nUaQ5lH6yKUFrMmz7kB34vg==}
@@ -2169,6 +2168,7 @@ packages:
       '@emotion/utils': 1.2.0
       '@types/react': 18.0.26
       react: 18.2.0
+    dev: true
 
   /@emotion/unitless/0.8.0:
     resolution: {integrity: sha512-VINS5vEYAscRl2ZUDiT3uMPlrFQupiKgHz5AA4bCH1miKBg4qtwkim1qPmJj/4WG6TreYMY111rEFsjupcOKHw==}
@@ -6228,36 +6228,6 @@ packages:
       '@webassemblyjs/wast-parser': 1.9.0
       '@xtuc/long': 4.2.2
     dev: true
-
-  /@xstyled/core/2.5.0:
-    resolution: {integrity: sha512-hxWJUpkPK6buyLd2XB6hjTIN2Vc5QjYW4E4y8Ekqq2kezCIFpdumbI/8oHCxfARBPzQW7son/b8cAZDhXjsIsg==}
-    dependencies:
-      '@xstyled/system': 2.5.0
-    dev: false
-
-  /@xstyled/emotion/2.5.0_z6zezfurr26maxy6gvsa52xlim:
-    resolution: {integrity: sha512-Ox2MejJjDIqHr72Doe9bfe3w0lNnJ7ELQ3rqBnUgnp3mRe0Q2uSizYqWmLwCAsg44KoVJ9H580cJ0vaWHQ3X+Q==}
-    peerDependencies:
-      '@emotion/react': ^11.0.0
-      '@emotion/styled': ^11.0.0
-    dependencies:
-      '@emotion/react': 11.10.5_xl5my4wapvq2ctl7qwehtbgorq
-      '@emotion/styled': 11.10.5_3djhvnr4jirfvebjqpipo7gthy
-      '@xstyled/core': 2.5.0
-      '@xstyled/system': 2.5.0
-      '@xstyled/util': 2.2.3
-    dev: false
-
-  /@xstyled/system/2.5.0:
-    resolution: {integrity: sha512-BbPjO2Ui2qmnfxmkenRLadVrOvzPZ1F6+ADoYDATfFyOD8juZ2+GTpRrdawma52g5k/Qk0yzAzekuUtgmKV6qg==}
-    dependencies:
-      '@xstyled/util': 2.2.3
-      csstype: 3.1.1
-    dev: false
-
-  /@xstyled/util/2.2.3:
-    resolution: {integrity: sha512-hOtlkeCBJlmvo4eHdNAgv2gJE3djXr1oOdmpBJj1knge0hIZj6kdWpTBp0h/Uzs/8xQndbUdewdfq2cRlHcIZA==}
-    dev: false
 
   /@xtuc/ieee754/1.2.0:
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
