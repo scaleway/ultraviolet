@@ -305,7 +305,7 @@ const customViewBoxes = [
       'switch_orga',
       'credit-card',
       'progress-check',
-      'card-account-details-outline',
+      'id',
       'reboot',
     ],
     viewBox: '0 0 16 16',

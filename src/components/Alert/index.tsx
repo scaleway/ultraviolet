@@ -29,7 +29,7 @@ const typesDefaultIcons: Record<
 > = {
   warning: 'alert',
   info: 'information-outline',
-  success: 'checkbox-marked-circle-outline',
+  success: 'checkbox-circle-outline',
   danger: 'alert',
 }
 
