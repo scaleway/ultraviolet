@@ -62,7 +62,7 @@ class MyDocument extends Document {
               dateCreated: '2020-12-10',
               description: 'A beautiful React UI library created by Scaleway.',
               keywords:
-                'react, ui, styled-components, ui-components, scaleway, ui-library, reakit, xstyled',
+                'react, ui, styled-components, ui-components, scaleway, ui-library, reakit',
               name: 'Scaleway UI',
               url: 'https://ui.scaleway.com',
             })}

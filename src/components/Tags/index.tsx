@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import styled from '@xstyled/emotion'
+import styled from '@emotion/styled'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
