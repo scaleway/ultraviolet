@@ -1,3 +1,18 @@
+## [0.213.10](https://github.com/scaleway/scaleway-ui/compare/v0.213.9...v0.213.10) (2022-12-20)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @scaleway/eslint-config-react to v3.11.2 ([#2127](https://github.com/scaleway/scaleway-ui/issues/2127)) ([4769f11](https://github.com/scaleway/scaleway-ui/commit/4769f11c07954e9853904e121e048a3210dee641))
+* **devdeps:** update dependency @scaleway/use-i18n to v4.1.5 ([#2128](https://github.com/scaleway/scaleway-ui/issues/2128)) ([ad6ba2d](https://github.com/scaleway/scaleway-ui/commit/ad6ba2dae6fd930c4cf1d04f444c1177e800e82a))
+* **devdeps:** update dependency @types/node to v18.11.15 ([#2121](https://github.com/scaleway/scaleway-ui/issues/2121)) ([8a380a0](https://github.com/scaleway/scaleway-ui/commit/8a380a0364bd9b4629425be0ac985bd01daace56))
+* **devdeps:** update nextjs monorepo to v13.0.7 ([#2130](https://github.com/scaleway/scaleway-ui/issues/2130)) ([9d2814e](https://github.com/scaleway/scaleway-ui/commit/9d2814e612243c1772dfb050fc99a3ca964668fd))
+
+
+### :bug: Bug Fixes
+
+* remove box list ([#2117](https://github.com/scaleway/scaleway-ui/issues/2117)) ([4b9c084](https://github.com/scaleway/scaleway-ui/commit/4b9c08442c24230d92fba979bad2c7cedf6feb87))
+
 ## [0.213.9](https://github.com/scaleway/scaleway-ui/compare/v0.213.8...v0.213.9) (2022-12-15)
 
 
