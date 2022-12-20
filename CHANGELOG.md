@@ -1,3 +1,16 @@
+## [0.214.0](https://github.com/scaleway/scaleway-ui/compare/v0.213.10...v0.214.0) (2022-12-20)
+
+
+### :package: Chore
+
+* **devdeps:** update actions/checkout action to v3.2.0 ([#2134](https://github.com/scaleway/scaleway-ui/issues/2134)) ([83f4eba](https://github.com/scaleway/scaleway-ui/commit/83f4eba908d2ece825fa484320b459721a7c8c8e))
+* **devdeps:** update dependency @types/node to v18.11.17 ([#2133](https://github.com/scaleway/scaleway-ui/issues/2133)) ([b75863d](https://github.com/scaleway/scaleway-ui/commit/b75863d29d85be943fb5b69766ead770f7416922))
+
+
+### :gear: Features
+
+* remove Box and xstyled ([#2139](https://github.com/scaleway/scaleway-ui/issues/2139)) ([b1f5182](https://github.com/scaleway/scaleway-ui/commit/b1f51823ee760ae591029732d2bf51b510878fdc))
+
 ## [0.213.10](https://github.com/scaleway/scaleway-ui/compare/v0.213.9...v0.213.10) (2022-12-20)
 
 
