@@ -12,14 +12,14 @@ describe('StepList', () => {
   test('renders correctly with bulletIcon', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="circle">Item 1</StepList.Item>
+        <StepList.Item bulletIcon="alert">Item 1</StepList.Item>
       </StepList>,
     ))
 
   test('renders correctly with bulletIcon & variant', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="circle" variant="success">
+        <StepList.Item bulletIcon="alert" variant="success">
           Item 1
         </StepList.Item>
       </StepList>,

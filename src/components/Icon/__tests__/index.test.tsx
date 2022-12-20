@@ -14,17 +14,17 @@ describe('Icon', () => {
 
   test(`render Icon with color and prominence default`, () =>
     shouldMatchEmotionSnapshot(
-      <Icon name="circle" color="neutral" prominence="default" />,
+      <Icon name="alert" color="neutral" prominence="default" />,
     ))
 
   test(`render Icon with color and prominence weak`, () =>
     shouldMatchEmotionSnapshot(
-      <Icon name="circle" color="neutral" prominence="weak" />,
+      <Icon name="alert" color="neutral" prominence="weak" />,
     ))
 
   test(`render Icon with color other than neutral and prominence stronger (should render default prominence)`, () =>
     shouldMatchEmotionSnapshot(
-      <Icon name="circle" color="primary" prominence="stronger" />,
+      <Icon name="alert" color="primary" prominence="stronger" />,
     ))
 
   test(`render unknow`, () =>
