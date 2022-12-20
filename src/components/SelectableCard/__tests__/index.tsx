@@ -1,5 +1,5 @@
 import SelectableCard from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('SelectableCard', () => {
   test('renders correctly with default props', () =>

@@ -5,7 +5,7 @@ import Tooltip from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 describe('Tooltip', () => {
   test('should render correctly', () =>

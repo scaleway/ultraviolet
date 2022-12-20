@@ -1,5 +1,5 @@
 import PasswordStrengthMeter from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { colors } from '../../../theme'
 
 describe('PasswordStrengthMeter', () => {

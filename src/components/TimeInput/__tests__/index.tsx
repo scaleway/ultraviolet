@@ -1,5 +1,5 @@
 import TimeInput from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('TimeInput', () => {
   test('renders correctly with base props', () =>

@@ -1,5 +1,5 @@
 import Stack from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Stack', () => {
   test(`should render correctly with default props`, () =>

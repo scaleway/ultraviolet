@@ -5,7 +5,7 @@ import BarChart from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import {
   barChartMultiData,
   barChartPositiveNegativeData,

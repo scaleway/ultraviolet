@@ -1,5 +1,5 @@
 import TooltipIcon from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 
 describe('TooltipIcon', () => {
   test(`renders with default props`, () =>

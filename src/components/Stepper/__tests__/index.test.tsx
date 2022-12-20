@@ -1,5 +1,5 @@
 import Stepper from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Stepper', () => {
   test('renders correctly with default props', () =>

@@ -1,5 +1,5 @@
 import ProgressionButton from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ProgressionButton', () => {
   it('renders correctly with default values', () =>

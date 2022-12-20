@@ -1,5 +1,5 @@
 import Bullet, { bulletSizes, bulletVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Bullet', () => {
   test('renders correctly with a text', () =>

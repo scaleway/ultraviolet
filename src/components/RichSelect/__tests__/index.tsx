@@ -4,7 +4,7 @@ import RichSelect from '..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 const customStyles: Record<string, CSSObject> = {
   control: {},

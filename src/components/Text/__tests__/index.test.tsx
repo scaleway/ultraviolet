@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import Text, { textVariants } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 // TODO: Remove any but IDK what we can put here
 jest.mock(

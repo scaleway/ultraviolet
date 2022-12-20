@@ -1,4 +1,4 @@
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import BarChartTooltip from '../Tooltip'
 
 describe('BarChartTooltip', () => {

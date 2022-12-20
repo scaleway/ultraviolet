@@ -1,5 +1,5 @@
 import Table from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Table', () => {
   test('renders correctly', () =>

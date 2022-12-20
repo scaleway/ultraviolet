@@ -1,5 +1,5 @@
 import Icon, { icons } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Icon', () => {
   icons.forEach(icon => {

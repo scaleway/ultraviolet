@@ -4,7 +4,7 @@ import SelectNumber from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 describe('SelectNumber', () => {
   it('should renders correctly', () =>

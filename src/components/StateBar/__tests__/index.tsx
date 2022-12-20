@@ -1,5 +1,5 @@
 import StateBar from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('StateBar', () => {
   test(`should render correctly with default props`, () =>

@@ -4,7 +4,7 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 import Link from '../../Link'
 
 describe('Tabs', () => {

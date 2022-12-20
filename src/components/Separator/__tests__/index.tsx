@@ -1,5 +1,5 @@
 import Separator from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Separator', () => {
   test(`renders correctly with default props`, () =>

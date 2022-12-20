@@ -3,7 +3,7 @@ import Toggle from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
-} from '../../../helpers/jestHelpers'
+} from '../../../../.jest/helpers'
 
 describe('Toggle', () => {
   test('renders correctly', () =>

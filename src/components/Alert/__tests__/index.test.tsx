@@ -1,5 +1,5 @@
 import Alert from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Alert', () => {
   beforeAll(() => {

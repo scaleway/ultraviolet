@@ -1,5 +1,5 @@
 import Description from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Description', () => {
   test('renders correctly', () =>

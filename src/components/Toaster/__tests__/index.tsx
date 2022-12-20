@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react'
 import ToastContainer, { toast } from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 
 describe('Toaster', () => {
   beforeEach(() => {

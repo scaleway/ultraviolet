@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import BarStack from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const fakeData = [
   { id: '1', text: 'Hello', value: 20 },

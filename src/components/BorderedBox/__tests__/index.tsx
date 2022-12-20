@@ -1,5 +1,5 @@
 import BorderedBox from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('BorderedBox', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<BorderedBox />))

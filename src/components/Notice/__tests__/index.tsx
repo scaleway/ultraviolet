@@ -1,5 +1,5 @@
 import Notice from '..'
-import { shouldMatchEmotionSnapshot } from '../../../helpers/jestHelpers'
+import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Notice', () => {
   test(`renders correctly with default props`, () =>
