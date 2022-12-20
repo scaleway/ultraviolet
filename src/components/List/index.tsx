@@ -1,5 +1,10 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, ReactElement, ReactNode } from 'react'
+import type {
+  CSSProperties,
+  ForwardedRef,
+  ReactElement,
+  ReactNode,
+} from 'react'
 import {
   Fragment,
   forwardRef,
@@ -11,7 +16,6 @@ import {
   useState,
 } from 'react'
 import orderBy from '../../utils/orderBy'
-import Box from '../Box'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import type { UsePaginationReturn } from '../Pagination/usePagination'
@@ -56,6 +60,8 @@ export type ListBodyRenderProps<DataType> = {
 
 type BodyProps<DataType> = {
   children: (props: ListBodyRenderProps<DataType>) => JSX.Element
+  className?: string
+  style?: CSSProperties
 }
 
 const CenteredText = styled(Text)`
@@ -69,7 +75,8 @@ const StyledPaginationContainer = styled(Pagination.PaginationContainer)`
 
 function Body<DataType extends Record<string, unknown>>({
   children,
-  ...props
+  className,
+  style,
 }: BodyProps<DataType>) {
   const {
     pageData,
@@ -106,7 +113,7 @@ function Body<DataType extends Record<string, unknown>>({
   }
 
   return (
-    <Box {...props} role="list">
+    <div className={className} style={style} role="list">
       {pageData.length === 0 ? emptyListComponent : null}
       {pageData.map((rowData, index) => (
         <Fragment key={(rowData[idKey] as string) || index}>
@@ -118,7 +125,7 @@ function Body<DataType extends Record<string, unknown>>({
           } as ListBodyRenderProps<DataType>)}
         </Fragment>
       ))}
-    </Box>
+    </div>
   )
 }
 

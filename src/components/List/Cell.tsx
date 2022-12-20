@@ -1,11 +1,9 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
-import type { BoxProps } from '../Box'
-import Box from '../Box'
+import type { HTMLAttributes } from 'react'
 import { useListContext } from './context'
 import type { ListColumn } from './types'
 
-const StyledCell = styled(Box, {
+const StyledCell = styled('div', {
   shouldForwardProp: prop => !['multiselect', 'columns'].includes(prop),
 })`
   display: flex;
@@ -34,11 +32,30 @@ const StyledCell = styled(Box, {
     )}
 `
 
-const Cell = ({ children, ...props }: BoxProps & { children: ReactNode }) => {
+const Cell = ({
+  children,
+  className,
+  role,
+  'aria-label': ariaLabel,
+  tabIndex,
+  onClick,
+  onKeyPress,
+  style,
+}: HTMLAttributes<HTMLDivElement>) => {
   const { columns, multiselect } = useListContext()
 
   return (
-    <StyledCell {...props} columns={columns} multiselect={multiselect}>
+    <StyledCell
+      aria-label={ariaLabel}
+      tabIndex={tabIndex}
+      onClick={onClick}
+      onKeyPress={onKeyPress}
+      role={role}
+      className={className}
+      columns={columns}
+      multiselect={multiselect}
+      style={style}
+    >
       {children}
     </StyledCell>
   )

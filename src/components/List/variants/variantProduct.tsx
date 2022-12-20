@@ -286,7 +286,6 @@ export const Header = () => {
           role="button"
           tabIndex={label ? 0 : undefined}
           aria-label={`sort ${label ?? index}`}
-          disabled={isLoading}
           onClick={event =>
             label ? onSortEvent(event, index, sort) : undefined
           }

@@ -43,6 +43,7 @@ export type ListRowProps = {
   id: string
   tooltip?: string
   children: ReactNode
+  className?: string
   animated?: boolean
   animation?: keyof typeof animations
   animationDuration?: number
