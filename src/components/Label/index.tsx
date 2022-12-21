@@ -1,15 +1,15 @@
 import styled from '@emotion/styled'
+import type { ReactNode } from 'react'
 
 const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.neutral.text};
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  margin-bottom: 8px;
+  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
+  line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
 `
 
 type LabelProps = {
-  children: React.ReactNode
+  children: ReactNode
   htmlFor?: string
 }
 
