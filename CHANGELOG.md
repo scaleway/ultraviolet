@@ -1,3 +1,10 @@
+## [0.214.2](https://github.com/scaleway/scaleway-ui/compare/v0.214.1...v0.214.2) (2022-12-21)
+
+
+### :bug: Bug Fixes
+
+* **Tags:** revert focusing input onChange ([#2125](https://github.com/scaleway/scaleway-ui/issues/2125)) ([dd2b4e6](https://github.com/scaleway/scaleway-ui/commit/dd2b4e64664235e7b5456fb3c57f585a9a331cb0))
+
 ## [0.214.1](https://github.com/scaleway/scaleway-ui/compare/v0.214.0...v0.214.1) (2022-12-21)
 
 
