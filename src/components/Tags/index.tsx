@@ -99,7 +99,7 @@ type TagsProps = {
   id?: string
   manualInput?: boolean
   name?: string
-  onChange?: (tags: string[]) => void | Promise<void>
+  onChange?: (tags: string[]) => void
   onChangeError?: (error: Error | string) => void
   placeholder?: string
   tags?: TagsProp
@@ -136,15 +136,7 @@ const Tags = ({
       typeof tag === 'object' ? tag?.label : tag,
     )
 
-    const promise = onChange?.(changes)
-
-    if (promise instanceof Promise) {
-      promise
-        .then(() => {
-          inputRef.current?.focus()
-        })
-        .catch(null)
-    }
+    onChange?.(changes)
   }
 
   const handleContainerClick = () => {
