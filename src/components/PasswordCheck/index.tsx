@@ -28,7 +28,7 @@ const PasswordCheck = ({ rules }: PasswordCheckProps) => (
     {rules.map(rule => (
       <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
         <Icon
-          name={rule.valid ? 'check-circle-outline' : 'close-circle-outline'}
+          name={rule.valid ? 'checkbox-circle-outline' : 'close-circle-outline'}
           color={rule.valid ? 'success' : 'neutral'}
           prominence="weak"
           size={20}

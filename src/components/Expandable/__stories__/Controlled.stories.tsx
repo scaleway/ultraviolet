@@ -10,10 +10,7 @@ export const Controlled: ComponentStory<typeof Expandable> = () => {
 
   return (
     <>
-      <Button
-        icon={toggled ? 'minus-box-outline' : 'plus-box-outline'}
-        onClick={toggle}
-      >
+      <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
       <Expandable opened={toggled}>
