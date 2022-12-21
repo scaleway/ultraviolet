@@ -1,6 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ElementType, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
@@ -81,42 +81,40 @@ type TextProps = {
   variant: TextVariant
   color?: Color
   prominence?: ProminenceProps
-  as: keyof JSX.IntrinsicElements
+  as: ElementType
   oneLine?: boolean
   disabled?: boolean
   italic?: boolean
   underline?: boolean
   id?: string
-  htmlFor?: string
 }
 
-const StyledText = (as: keyof JSX.IntrinsicElements) =>
-  styled(as, {
-    shouldForwardProp: prop =>
-      ![
-        'as',
-        'variant',
-        'color',
-        'prominence',
-        'oneLine',
-        'disabled',
-        'italic',
-        'underline',
-      ].includes(prop),
-  })<{
-    color: Color
-    prominence: ProminenceProps
-    variant: TextVariant
-    oneLine: boolean
-    disabled: boolean
-    italic: boolean
-    underline: boolean
-  }>(generateStyles)
+const StyledText = styled('div', {
+  shouldForwardProp: prop =>
+    ![
+      'as',
+      'variant',
+      'color',
+      'prominence',
+      'oneLine',
+      'disabled',
+      'italic',
+      'underline',
+    ].includes(prop),
+})<{
+  color: Color
+  prominence: ProminenceProps
+  variant: TextVariant
+  oneLine: boolean
+  disabled: boolean
+  italic: boolean
+  underline: boolean
+}>(generateStyles)
 
 const Text = ({
   variant,
   children,
-  as = 'div',
+  as,
   color = 'neutral',
   oneLine = false,
   prominence = 'default',
@@ -125,7 +123,6 @@ const Text = ({
   italic = false,
   underline = false,
   id,
-  htmlFor,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -139,11 +136,9 @@ const Text = ({
     }
   }, [oneLine])
 
-  const StyledTextComponent = StyledText(as)
-
   return (
     <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
-      <StyledTextComponent
+      <StyledText
         ref={elementRef}
         as={as}
         prominence={prominence}
@@ -155,10 +150,9 @@ const Text = ({
         italic={italic}
         underline={underline}
         id={id}
-        htmlFor={htmlFor}
       >
         {children}
-      </StyledTextComponent>
+      </StyledText>
     </Tooltip>
   )
 }
