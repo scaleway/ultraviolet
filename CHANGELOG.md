@@ -1,3 +1,10 @@
+## [0.214.3](https://github.com/scaleway/scaleway-ui/compare/v0.214.2...v0.214.3) (2022-12-21)
+
+
+### :bug: Bug Fixes
+
+* **Button:** remove Link animation when using href ([#2136](https://github.com/scaleway/scaleway-ui/issues/2136)) ([850f00a](https://github.com/scaleway/scaleway-ui/commit/850f00ac631e9c6ce624c6c0765306b0d3bf6d52))
+
 ## [0.214.2](https://github.com/scaleway/scaleway-ui/compare/v0.214.1...v0.214.2) (2022-12-21)
 
 
