@@ -470,7 +470,7 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 
 exports[`Menu Menu.Item render with variant nav 1`] = `
 <DocumentFragment>
-  .cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton {
+  .cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -506,7 +506,6 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  gap: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -560,17 +559,17 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton>* {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -579,58 +578,61 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:active {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus {
-  gap: 0;
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+  -webkit-transform: none!important;
+  -moz-transform: none!important;
+  -ms-transform: none!important;
+  transform: none!important;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   fill: #390171;
 }
 
@@ -651,7 +653,7 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
 }
 
 <a
-    class="epxin6a0 em6gco80 em6gco82 cache-1a17qcw-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
+    class="epxin6a0 em6gco80 em6gco82 cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
     href="/test"
   >
     <div
@@ -1281,7 +1283,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1317,7 +1319,6 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  gap: 0;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1368,17 +1369,17 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-radius: 0;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton>* {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1387,47 +1388,50 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:active {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus {
-  gap: 0;
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+  -webkit-transform: none!important;
+  -moz-transform: none!important;
+  -ms-transform: none!important;
+  transform: none!important;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
+.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
@@ -1465,7 +1469,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
         role="menu"
       >
         <a
-          class="epxin6a0 em6gco80 em6gco82 cache-ecxzc-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
+          class="epxin6a0 em6gco80 em6gco82 cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
           href="/link"
         >
           <div

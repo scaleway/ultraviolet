@@ -24,13 +24,13 @@ const StyledContent = styled.div`
   pointer-events: none;
 `
 
-// It will remove animation between Link and left icon that is implemented into Link component
+// Remove the animation of the Link
 const StyledLink = styled(Link)`
-  gap: 0;
-
   &:hover,
   &:focus {
-    gap: 0;
+    svg {
+      transform: none !important;
+    }
   }
 `
 
