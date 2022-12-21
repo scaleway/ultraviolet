@@ -1,3 +1,16 @@
+## [0.214.1](https://github.com/scaleway/scaleway-ui/compare/v0.214.0...v0.214.1) (2022-12-21)
+
+
+### :repeat: CI
+
+* update eslint config with latest guidelines ([#2135](https://github.com/scaleway/scaleway-ui/issues/2135)) ([8498c7e](https://github.com/scaleway/scaleway-ui/commit/8498c7e24f9f469129ba61c039756d5a82ad956a))
+
+
+### :bug: Bug Fixes
+
+* **Icon:** merge add and remove icons ([#2137](https://github.com/scaleway/scaleway-ui/issues/2137)) ([204b1e2](https://github.com/scaleway/scaleway-ui/commit/204b1e20c87e8a296d78664923124ebb9379098f))
+* **label:** update label properties ([#2129](https://github.com/scaleway/scaleway-ui/issues/2129)) ([9a8d52b](https://github.com/scaleway/scaleway-ui/commit/9a8d52b060e1de0733a9342e3705a3b25bdde230))
+
 ## [0.214.0](https://github.com/scaleway/scaleway-ui/compare/v0.213.10...v0.214.0) (2022-12-20)
 
 
