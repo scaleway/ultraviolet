@@ -39,7 +39,7 @@ type SelectStyleProps = {
   /**
    * Time of the animation
    */
-  animationDuration: number
+  animationDuration?: number
   /**
    * Show/hide the label inside the component
    */
@@ -65,30 +65,32 @@ type SelectProps = StyledContainerProps &
 
 type StateManagedSelect = typeof Select
 
-type RichSelectProps = SelectProps &
-  SelectStyleProps & {
-    /**
-     * Name of the animation
-     */
-    animation?: string
-    /**
-     * Play the animation when the value change
-     */
-    animationOnChange?: boolean
-    disabled?: boolean
-    readOnly?: boolean
-    innerRef?: ForwardedRef<StateManagedSelect>
-    /**
-     * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
-     */
-    customComponents?: SelectProps['components']
-    children: ReactNode
-    emptyState?: ComponentProps<Select>['noOptionsMessage']
-  }
+type RichSelectProps = Partial<
+  SelectProps &
+    SelectStyleProps & {
+      /**
+       * Name of the animation
+       */
+      animation?: string
+      /**
+       * Play the animation when the value change
+       */
+      animationOnChange?: boolean
+      disabled?: boolean
+      readOnly?: boolean
+      innerRef?: ForwardedRef<StateManagedSelect>
+      /**
+       * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
+       */
+      customComponents?: SelectProps['components']
+      children: ReactNode
+      emptyState?: ComponentProps<Select>['noOptionsMessage']
+    }
+>
 
 type RichSelectOptionProps = OptionProps
 type RichSelectOptionElement = ReactElement<RichSelectOptionProps>
-type RichSelectOptions = ComponentProps<typeof Select>['options']
+type RichSelectOptions = SelectProps['options']
 type RichSelectOptionOrGroup = NonNullable<RichSelectOptions>[number]
 type RichSelectOption = { value: string; label: string }
 
@@ -108,7 +110,6 @@ export type RichSelectFieldProps<
     | 'inputId'
     | 'isClearable'
     | 'isLoading'
-    | 'isMulti'
     | 'isSearchable'
     | 'menuPortalTarget'
     | 'onBlur'
