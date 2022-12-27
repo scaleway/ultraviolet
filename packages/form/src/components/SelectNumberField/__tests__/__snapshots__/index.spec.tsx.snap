@@ -1,0 +1,680 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectNumberField should render correctly 1`] = `
+<DocumentFragment>
+  .cache-8ke8uo {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-bkq66r {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #c4c9d6;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-bkq66r:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-1ok07vq-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-zw5304 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-zw5304:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-zw5304:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1afrum9 {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-1afrum9::-webkit-outer-spin-button,
+.cache-1afrum9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-1mh6k42 {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #4f0599;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-1mh6k42:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-8ke8uo ermgxlz0"
+    >
+      <button
+        aria-label="Minus"
+        class="cache-bkq66r ermgxlz4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-zw5304 ermgxlz3"
+        role="status"
+      >
+        <input
+          aria-label="Input"
+          class="cache-1afrum9 ermgxlz2"
+          name="test"
+          style="width: 25px;"
+          type="number"
+          value="0"
+        />
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1mh6k42 ermgxlz4"
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`SelectNumberField should render correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-186d4cs-StyledContainer {
+  background-color: #f6f6f8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-186d4cs-StyledContainer>.ermgxlz4,
+.cache-186d4cs-StyledContainer .ermgxlz2,
+.cache-186d4cs-StyledContainer .ermgxlz3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.cache-bkq66r {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #c4c9d6;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-bkq66r:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-1ok07vq-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-zw5304 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-zw5304:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-zw5304:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1afrum9 {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-1afrum9::-webkit-outer-spin-button,
+.cache-1afrum9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-186d4cs-StyledContainer ermgxlz0"
+      disabled=""
+    >
+      <button
+        aria-label="Minus"
+        class="cache-bkq66r ermgxlz4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-zw5304 ermgxlz3"
+        role="status"
+      >
+        <input
+          aria-label="Input"
+          class="cache-1afrum9 ermgxlz2"
+          disabled=""
+          name="test"
+          style="width: 25px;"
+          type="number"
+          value="0"
+        />
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-bkq66r ermgxlz4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] = `
+<DocumentFragment>
+  .cache-8ke8uo {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-1mh6k42 {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #4f0599;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-1mh6k42:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-1ok07vq-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-zw5304 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-zw5304:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-zw5304:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1afrum9 {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-1afrum9::-webkit-outer-spin-button,
+.cache-1afrum9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-bkq66r {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #c4c9d6;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-bkq66r:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-8ke8uo ermgxlz0"
+    >
+      <button
+        aria-label="Minus"
+        class="cache-1mh6k42 ermgxlz4"
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-zw5304 ermgxlz3"
+        role="status"
+      >
+        <input
+          aria-label="Input"
+          class="cache-1afrum9 ermgxlz2"
+          name="test"
+          style="width: 35px;"
+          type="number"
+          value="20"
+        />
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-bkq66r ermgxlz4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`SelectNumberField should trigger events correctly 1`] = `
+<DocumentFragment>
+  .cache-8ke8uo {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-bkq66r {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #c4c9d6;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-bkq66r:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+.cache-1ok07vq-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-zw5304 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-zw5304:hover:not([disabled], :focus) {
+  border: 1px solid #4f0599;
+}
+
+.cache-zw5304:focus-within:not([disabled]) {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1afrum9 {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-1afrum9::-webkit-outer-spin-button,
+.cache-1afrum9::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-1mh6k42 {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: #4f0599;
+  padding: 0;
+  margin: 0 8px;
+}
+
+.cache-1mh6k42:hover:not([disabled]) {
+  background: #eeeeff;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-8ke8uo ermgxlz0"
+    >
+      <button
+        aria-label="Minus"
+        class="cache-bkq66r ermgxlz4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-zw5304 ermgxlz3"
+        role="status"
+      >
+        <input
+          aria-label="Input"
+          class="cache-1afrum9 ermgxlz2"
+          name="test"
+          style="width: 25px;"
+          type="number"
+          value="0"
+        />
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1mh6k42 ermgxlz4"
+        type="button"
+      >
+        <svg
+          class="cache-1ok07vq-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

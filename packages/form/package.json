@@ -1,0 +1,59 @@
+{
+  "name": "@scaleway/form",
+  "version": "1.36.0",
+  "description": "Scaleway Form",
+  "homepage": "https://github.com/scaleway/scaleway-form#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/scaleway-form"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=7.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "react": "18.x",
+    "react-dom": "18.x"
+  },
+  "devDependencies": {
+    "@babel/core": "7.20.7",
+    "@types/final-form-focus": "^1.1.2",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.20.7",
+    "@emotion/babel-plugin": "11.10.5",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@scaleway/ui": "workspace:*",
+    "final-form": "4.20.7",
+    "final-form-arrays": "3.0.2",
+    "final-form-focus": "1.1.2",
+    "react-final-form": "6.5.9",
+    "react-final-form-arrays": "3.1.4",
+    "react-select": "5.7.0"
+  }
+}

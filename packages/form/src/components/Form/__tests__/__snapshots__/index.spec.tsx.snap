@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form renders correctly  1`] = `
+<DocumentFragment>
+  <form
+    novalidate=""
+  >
+    Test
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form renders correctly with node children 1`] = `
+<DocumentFragment>
+  <form
+    novalidate=""
+  >
+    Test
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form renders correctly with onRawSubmit 1`] = `
+<DocumentFragment>
+  <form
+    novalidate=""
+  >
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`Form renders correctly with validate 1`] = `
+<DocumentFragment>
+  <form
+    novalidate=""
+  >
+    Test
+  </form>
+</DocumentFragment>
+`;
