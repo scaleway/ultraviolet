@@ -17,7 +17,7 @@
   "scripts": {
     "build": "pnpm recursive --filter='!scaleway-ui-website' exec -- rollup -c ../../rollup.config.mjs",
     "build:profile": "cross-env PROFILE=true pnpm run build",
-    "build:storybook": "STORYBOOK_ENVIRONMENT=production build-storybook",
+    "build:storybook": "pnpm run build && STORYBOOK_ENVIRONMENT=production build-storybook",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",
     "build:website": "pnpm run -r --filter scaleway-ui-website build && pnpm run -r --filter scaleway-ui-website export",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@semantic-release/*,@commitlint/*,@babel/*,babel-*'",
