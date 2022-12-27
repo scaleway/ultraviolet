@@ -3,7 +3,7 @@ import { jsonLdScriptProps } from 'react-schemaorg'
 import type { CreativeWork } from 'schema-dts'
 
 class MyDocument extends Document {
-  render() {
+  override render() {
     return (
       <Html>
         <Head>

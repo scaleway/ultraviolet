@@ -1,4 +1,4 @@
-import type { SCWUITheme } from '.'
+import type { SCWUITheme } from '@scaleway/ui'
 
 declare module '@emotion/react' {
   // https://emotion.sh/docs/typescript#define-a-theme
