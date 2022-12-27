@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.214.4...@scaleway/ui@0.215.0) (2022-12-27)
+
+### Features
+
+- **form:** port scaleway-form ([#2143](https://github.com/scaleway/scaleway-ui/issues/2143)) ([bd5eb6b](https://github.com/scaleway/scaleway-ui/commit/bd5eb6b0247443ca15e90d1653a08f7bfe8993e1))
+
 ## 0.214.4 (2022-12-27)
 
 **Note:** Version bump only for package @scaleway/ui
