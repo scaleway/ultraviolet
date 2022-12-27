@@ -1,5 +1,6 @@
 const nextConfig = () => {
   const plugins = [
+    // eslint-disable-next-line global-require
     require('next-transpile-modules')([
       '@scaleway/ui',
       'react-syntax-highlighter',
@@ -19,6 +20,9 @@ const nextConfig = () => {
     swcMinify: true,
     compiler: {
       emotion: true,
+    },
+    eslint: {
+      ignoreDuringBuilds: true,
     },
   }
 

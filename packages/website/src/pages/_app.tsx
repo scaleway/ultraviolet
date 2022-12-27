@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@emotion/react'
 import { Stack, darkTheme as dark, extendTheme } from '@scaleway/ui'
+import type { AppProps } from 'next/app'
+import { useCallback, useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import GlobalStyle from '../components/GlobalStyle'
 import Head from '../components/Head'
 import Header from '../components/Header'
-import type { AppProps } from 'next/app'
-import { useCallback, useEffect, useState } from 'react'
 
 type Themes = 'light' | 'dark'
 

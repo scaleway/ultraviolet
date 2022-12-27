@@ -17,12 +17,7 @@
     "allowJs": true,
     "skipLibCheck": true
   },
-  "include": [
-    "emotion.d.ts",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["global.d.ts", "emotion.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules"
   ]
