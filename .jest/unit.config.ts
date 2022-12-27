@@ -5,8 +5,10 @@ const config: Config.InitialOptions = {
   rootDir: path.join(__dirname, '..'),
   testEnvironment: 'jsdom',
   collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/__stories__/**/*.{js,ts,tsx,mdx}',
+    '**/src/**/*.{js,jsx,ts,tsx}',
+    '!**/src/**/__stories__/**/*.{js,ts,tsx,mdx}',
+    '!website/**',
+    '!**/dist/**',
   ],
   coverageReporters: ['text', 'cobertura'],
   reporters: [
@@ -20,7 +22,7 @@ const config: Config.InitialOptions = {
     ],
   ],
   transformIgnorePatterns: ['node_modules/(?!(.*(@scaleway)))'],
-  modulePathIgnorePatterns: ['src/__tests__/a11y.test.tsx'],
+  modulePathIgnorePatterns: ['packages/ui/src/__tests__/a11y.test.tsx'],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/.jest/fileMock.ts',
