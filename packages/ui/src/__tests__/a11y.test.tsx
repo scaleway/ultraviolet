@@ -49,11 +49,11 @@ const searchFileFromDir = (startPath: string, filter: string) => {
       searchFileFromDir(filePath, filter)
     } else if (filePath.indexOf(filter) >= 0) {
       const isTested = testedComponents.some(component =>
-        filePath.match(`^src/components/${component}/`),
+        filePath.match(`^packages/ui/src/components/${component}/`),
       )
 
       if (isTested) {
-        foundFiles.push(filePath.replace('src/', '../'))
+        foundFiles.push(filePath.replace('packages/ui/src/', '../'))
       }
     }
   }
@@ -62,7 +62,7 @@ const searchFileFromDir = (startPath: string, filter: string) => {
 if (process.argv[4]) {
   searchFileFromDir(process.argv[4], '.stories.tsx')
 } else {
-  searchFileFromDir('src/components', '.stories.tsx')
+  searchFileFromDir('packages/ui/src/components', '.stories.tsx')
 }
 
 expect.extend(toHaveNoViolations)

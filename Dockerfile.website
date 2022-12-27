@@ -1,23 +1,15 @@
-FROM node:18.12-alpine as builder
+FROM node:18.12 as builder
 WORKDIR /app
 RUN corepack enable
 
 # Install scw-ui
-COPY package.json pnpm-lock.yaml  ./
+COPY . .
+RUN pnpm install --frozen-lockfile
+RUN pnpm run build
 RUN pnpm install --frozen-lockfile
 
-# Build scw-ui
-COPY rollup.config.mjs tsconfig.json ./
-COPY src ./src
-RUN pnpm run build
-
-# Install website
-COPY website/package.json website/pnpm-lock.yaml ./website/
-RUN cd website && pnpm install --frozen-lockfile
-
 # Build website
-COPY website ./website/
-RUN cd website && pnpm run build && pnpm run export
+RUN pnpm run build:website
 
 # Serve website
 FROM joseluisq/static-web-server:2

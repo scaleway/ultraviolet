@@ -35,6 +35,13 @@
         // Allow inline nested components (for code snippets)
         "react/no-unstable-nested-components": "off"
       }
+    },
+    {
+      "files": ["website/**/*.{ts,tsx}"],
+      "extends": ["@scaleway/react/typescript"],
+      "parserOptions": {
+        "project": ["website/tsconfig.json"]
+      }
     }
   ]
 }

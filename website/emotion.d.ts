@@ -1,5 +1,5 @@
 import '@emotion/react'
-import { theme } from '@scaleway/ui'
+import type { theme } from '@scaleway/ui'
 
 type CustomTheme = {
   theme: 'light' | 'dark'
@@ -7,5 +7,6 @@ type CustomTheme = {
 } & typeof theme
 
 declare module '@emotion/react' {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions, @typescript-eslint/no-empty-interface
   export interface Theme extends CustomTheme {}
 }
