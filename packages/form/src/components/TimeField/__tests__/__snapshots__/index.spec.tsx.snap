@@ -1,0 +1,1467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeField should render correctly 1`] = `
+<DocumentFragment>
+  .cache-1gb28ew-container-StyledContainer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-1eguvzq-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.cache-1eguvzq-control:focus-within {
+  border-color: #390171;
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1eguvzq-control:focus-within svg {
+  fill: #390171;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: #390171;
+}
+
+.cache-1eguvzq-control:hover svg {
+  fill: #390171;
+}
+
+.cache-blvxib-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-blvxib-ValueContainer label {
+  display: initial;
+}
+
+.cache-isgbik {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #4a4f62;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.cache-19ckjwh-singleValue {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.cache-n0o3gm-inputStyles {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-n0o3gm-inputStyles:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-6uclbo-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d4dae7;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1xc3v61-indicatorContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cache-1xc3v61-indicatorContainer:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.cache-pjzp28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1wgmtwg-sizeStyles {
+  vertical-align: middle;
+  fill: #4a4f62;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-9vn1ol {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cache-19pioxy {
+  font-size: 12px;
+  color: #a6102d;
+  padding-top: 2px;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class=" cache-1gb28ew-container-StyledContainer e1lzna4r5"
+      data-testid="rich-select-"
+    >
+      <span
+        class="cache-1f43avz-a11yText-A11yText"
+        id="react-select-2-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="cache-1f43avz-a11yText-A11yText"
+      />
+      <div
+        class=" cache-1eguvzq-control"
+      >
+        <div
+          class=" cache-blvxib-ValueContainer"
+        >
+          <label
+            aria-live="assertive"
+            as="label"
+            class="cache-isgbik e1lzna4r2"
+            for=":r0:"
+          >
+            Select...
+          </label>
+          <div
+            class=" cache-19ckjwh-singleValue"
+          />
+          <div
+            class="cache-n0o3gm-inputStyles"
+            data-value=""
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
+              id=":r0:"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class=" cache-ralm3g-IndicatorsContainer"
+        >
+          <span
+            class=" cache-6uclbo-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            class=" cache-1xc3v61-indicatorContainer"
+          >
+            <div
+              class="cache-pjzp28 e1sgck4o0"
+            >
+              <svg
+                class="cache-1wgmtwg-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cache-9vn1ol e1lzna4r3"
+      >
+        <div
+          class="cache-19pioxy e1lzna4r4"
+        />
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`TimeField should render correctly checked without value 1`] = `
+<DocumentFragment>
+  .cache-1gb28ew-container-StyledContainer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-1eguvzq-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.cache-1eguvzq-control:focus-within {
+  border-color: #390171;
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1eguvzq-control:focus-within svg {
+  fill: #390171;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: #390171;
+}
+
+.cache-1eguvzq-control:hover svg {
+  fill: #390171;
+}
+
+.cache-blvxib-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-blvxib-ValueContainer label {
+  display: initial;
+}
+
+.cache-isgbik {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #4a4f62;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.cache-19ckjwh-singleValue {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.cache-n0o3gm-inputStyles {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-n0o3gm-inputStyles:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-6uclbo-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d4dae7;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1xc3v61-indicatorContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cache-1xc3v61-indicatorContainer:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.cache-pjzp28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1wgmtwg-sizeStyles {
+  vertical-align: middle;
+  fill: #4a4f62;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-9vn1ol {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cache-19pioxy {
+  font-size: 12px;
+  color: #a6102d;
+  padding-top: 2px;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class=" cache-1gb28ew-container-StyledContainer e1lzna4r5"
+      data-testid="rich-select-"
+    >
+      <span
+        class="cache-1f43avz-a11yText-A11yText"
+        id="react-select-4-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="cache-1f43avz-a11yText-A11yText"
+      />
+      <div
+        class=" cache-1eguvzq-control"
+      >
+        <div
+          class=" cache-blvxib-ValueContainer"
+        >
+          <label
+            aria-live="assertive"
+            as="label"
+            class="cache-isgbik e1lzna4r2"
+            for=":r2:"
+          >
+            Select...
+          </label>
+          <div
+            class=" cache-19ckjwh-singleValue"
+          />
+          <div
+            class="cache-n0o3gm-inputStyles"
+            data-value=""
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
+              id=":r2:"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class=" cache-ralm3g-IndicatorsContainer"
+        >
+          <span
+            class=" cache-6uclbo-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            class=" cache-1xc3v61-indicatorContainer"
+          >
+            <div
+              class="cache-pjzp28 e1sgck4o0"
+            >
+              <svg
+                class="cache-1wgmtwg-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cache-9vn1ol e1lzna4r3"
+      >
+        <div
+          class="cache-19pioxy e1lzna4r4"
+        />
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`TimeField should render correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-iwdjsb-container-StyledContainer {
+  width: 100%;
+  pointer-events: initial;
+  pointer-events: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-tvx0x4-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #f6f6f8;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: none;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #c4c9d6;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-tvx0x4-control:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.cache-1n25v7h-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  cursor: not-allowed;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-1n25v7h-ValueContainer label {
+  display: initial;
+}
+
+.cache-1c18mpa {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #4a4f62;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+  opacity: 0.5;
+}
+
+.cache-7dq4ii-singleValue {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #c4c9d6;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.cache-1mkq4cr-inputStyles {
+  visibility: hidden;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-1mkq4cr-inputStyles:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-6uclbo-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d4dae7;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1xc3v61-indicatorContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cache-1xc3v61-indicatorContainer:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.cache-pjzp28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1y9qt3p-sizeStyles {
+  vertical-align: middle;
+  fill: #c4c9d6;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-9vn1ol {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cache-19pioxy {
+  font-size: 12px;
+  color: #a6102d;
+  padding-top: 2px;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class=" cache-iwdjsb-container-StyledContainer e1lzna4r5"
+      data-testid="rich-select-"
+    >
+      <span
+        class="cache-1f43avz-a11yText-A11yText"
+        id="react-select-3-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="cache-1f43avz-a11yText-A11yText"
+      />
+      <div
+        class=" cache-tvx0x4-control"
+      >
+        <div
+          class=" cache-1n25v7h-ValueContainer"
+        >
+          <label
+            aria-live="assertive"
+            as="label"
+            class="cache-1c18mpa e1lzna4r2"
+            for=":r1:"
+          >
+            Select...
+          </label>
+          <div
+            class=" cache-7dq4ii-singleValue"
+          />
+          <div
+            class="cache-1mkq4cr-inputStyles"
+            data-value=""
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
+              disabled=""
+              id=":r1:"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class=" cache-ralm3g-IndicatorsContainer"
+        >
+          <span
+            class=" cache-6uclbo-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            class=" cache-1xc3v61-indicatorContainer"
+          >
+            <div
+              class="cache-pjzp28 e1sgck4o0"
+            >
+              <svg
+                class="cache-1y9qt3p-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cache-9vn1ol e1lzna4r3"
+      >
+        <div
+          class="cache-19pioxy e1lzna4r4"
+        />
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`TimeField should trigger events 1`] = `
+<DocumentFragment>
+  .cache-1gb28ew-container-StyledContainer {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.cache-1f43avz-a11yText-A11yText {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.cache-1eguvzq-control {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: default;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 48px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d4dae7;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #4a4f62;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.cache-1eguvzq-control:focus-within {
+  border-color: #390171;
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1eguvzq-control:focus-within svg {
+  fill: #390171;
+}
+
+.cache-1eguvzq-control:hover {
+  border-color: #390171;
+}
+
+.cache-1eguvzq-control:hover svg {
+  fill: #390171;
+}
+
+.cache-blvxib-ValueContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.cache-blvxib-ValueContainer label {
+  display: initial;
+}
+
+.cache-isgbik {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #4a4f62;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.cache-19ckjwh-singleValue {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4a4f62;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding-left: 0;
+}
+
+.cache-n0o3gm-inputStyles {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 11px;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.cache-n0o3gm-inputStyles:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.cache-ralm3g-IndicatorsContainer {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.cache-6uclbo-indicatorSeparator {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d4dae7;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1xc3v61-indicatorContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cache-1xc3v61-indicatorContainer:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.cache-pjzp28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1wgmtwg-sizeStyles {
+  vertical-align: middle;
+  fill: #4a4f62;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-9vn1ol {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cache-19pioxy {
+  font-size: 12px;
+  color: #a6102d;
+  padding-top: 2px;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class=" cache-1gb28ew-container-StyledContainer e1lzna4r5"
+      data-testid="rich-select-"
+    >
+      <span
+        class="cache-1f43avz-a11yText-A11yText"
+        id="react-select-5-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="cache-1f43avz-a11yText-A11yText"
+      />
+      <div
+        class=" cache-1eguvzq-control"
+      >
+        <div
+          class=" cache-blvxib-ValueContainer"
+        >
+          <label
+            aria-live="assertive"
+            as="label"
+            class="cache-isgbik e1lzna4r2"
+            for=":r3:"
+          >
+            Select...
+          </label>
+          <div
+            class=" cache-19ckjwh-singleValue"
+          >
+            1:00:00
+          </div>
+          <div
+            class="cache-n0o3gm-inputStyles"
+            data-value=""
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-haspopup="true"
+              autocapitalize="none"
+              autocomplete="off"
+              autocorrect="off"
+              class=""
+              id=":r3:"
+              role="combobox"
+              spellcheck="false"
+              style="opacity: 0; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+              tabindex="0"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class=" cache-ralm3g-IndicatorsContainer"
+        >
+          <span
+            class=" cache-6uclbo-indicatorSeparator"
+          />
+          <div
+            aria-hidden="true"
+            class=" cache-1xc3v61-indicatorContainer"
+          >
+            <div
+              class="cache-pjzp28 e1sgck4o0"
+            >
+              <svg
+                class="cache-1wgmtwg-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cache-9vn1ol e1lzna4r3"
+      >
+        <div
+          class="cache-19pioxy e1lzna4r4"
+        />
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;

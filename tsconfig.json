@@ -10,15 +10,14 @@
     "skipLibCheck": true,
 
     // Should be removed once we clear all errors
-    "noUncheckedIndexedAccess": false
+    "noUncheckedIndexedAccess": false,
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
-    "packages/ui/src/emotion.d.ts",
-    "packages/ui/src/global.d.ts",
+    "global.d.ts",
     ".jest/setupTests.ts"
   ],
   "exclude": ["node_modules", "coverage", "dist", "website"]

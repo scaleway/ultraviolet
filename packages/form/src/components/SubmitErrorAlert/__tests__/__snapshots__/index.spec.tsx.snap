@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitErrorAlert should display an alert when submitError is present 1`] = `
+<DocumentFragment>
+  .cache-107ul6f {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: #22c8a2;
+  color: #ffffff;
+}
+
+.cache-107ul6f:hover,
+.cache-107ul6f:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-107ul6f:hover,
+.cache-107ul6f:focus {
+  color: #ffffff;
+  background-color: #149a7b;
+}
+
+.cache-107ul6f:focus {
+  box-shadow: 0 0 0 2px #149a7b40;
+}
+
+.cache-115wth8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cache-1v4uk27-alertStyles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #ffe1e7;
+  color: #a6102d;
+}
+
+.cache-bqy7up-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-oaar7r {
+  color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-1gw1wgs {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+<form
+    novalidate=""
+  >
+    <button
+      aria-disabled="false"
+      class="cache-107ul6f em6gco80"
+      type="submit"
+    >
+      <div
+        class="cache-115wth8 em6gco83"
+      >
+        Submit
+      </div>
+    </button>
+    <div
+      class="cache-1v4uk27-alertStyles eenhiht2"
+    >
+      <svg
+        class="cache-bqy7up-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+        />
+      </svg>
+      <div
+        class="cache-oaar7r eenhiht1"
+      >
+        <p
+          class="eenhiht0 cache-1gw1wgs e1tg3t120"
+        >
+          hello
+        </p>
+      </div>
+    </div>
+    ,
+  </form>
+</DocumentFragment>
+`;
+
+exports[`SubmitErrorAlert should render nothing if no error 1`] = `
+<DocumentFragment>
+  <form
+    novalidate=""
+  />
+</DocumentFragment>
+`;

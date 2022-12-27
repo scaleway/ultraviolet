@@ -24,9 +24,7 @@ describe('Toaster', () => {
           toastId: 'error',
         })
 
-        await act(() => {
-          jest.runAllTimers()
-        })
+        act(() => jest.runAllTimers())
 
         expect(await screen.findAllByRole('alert')).toMatchSnapshot()
       },

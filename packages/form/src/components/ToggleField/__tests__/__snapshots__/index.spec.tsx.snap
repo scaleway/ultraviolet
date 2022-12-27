@@ -1,0 +1,557 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleField should render correctly 1`] = `
+<DocumentFragment>
+  .cache-ou5gie {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-ou5gie[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1w4yazo {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1w4yazo:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1w4yazo:focus-within,
+.cache-1w4yazo:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1w4yazo[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-1w4yazo[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1w4yazo[data-checked='true']:focus-within,
+.cache-1w4yazo[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-p9zju0 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-p9zju0[disabled] {
+  cursor: not-allowed;
+}
+
+<form
+    novalidate=""
+  >
+    <label
+      aria-disabled="false"
+      class="cache-ou5gie e6hn8de1"
+    >
+      <div
+        class="cache-1w4yazo e6hn8de3"
+        data-checked="false"
+        data-disabled="false"
+      >
+        <input
+          aria-checked="false"
+          aria-label="test"
+          class="cache-p9zju0 e6hn8de2"
+          id="test"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`ToggleField should render correctly checked 1`] = `
+<DocumentFragment>
+  .cache-ou5gie {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-ou5gie[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1w4yazo {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1w4yazo:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1w4yazo:focus-within,
+.cache-1w4yazo:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1w4yazo[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-1w4yazo[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1w4yazo[data-checked='true']:focus-within,
+.cache-1w4yazo[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-p9zju0 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-p9zju0[disabled] {
+  cursor: not-allowed;
+}
+
+<form
+    novalidate=""
+  >
+    <label
+      aria-disabled="false"
+      class="cache-ou5gie e6hn8de1"
+    >
+      <div
+        class="cache-1w4yazo e6hn8de3"
+        data-checked="true"
+        data-disabled="false"
+      >
+        <input
+          aria-checked="true"
+          aria-label="test"
+          checked=""
+          class="cache-p9zju0 e6hn8de2"
+          id="test"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`ToggleField should render correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-ou5gie {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-ou5gie[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1w4yazo {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1w4yazo:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1w4yazo:focus-within,
+.cache-1w4yazo:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1w4yazo[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-1w4yazo[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1w4yazo[data-checked='true']:focus-within,
+.cache-1w4yazo[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-p9zju0 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-p9zju0[disabled] {
+  cursor: not-allowed;
+}
+
+<form
+    novalidate=""
+  >
+    <label
+      aria-disabled="true"
+      class="cache-ou5gie e6hn8de1"
+    >
+      <div
+        class="cache-1w4yazo e6hn8de3"
+        data-checked="false"
+        data-disabled="true"
+      >
+        <input
+          aria-checked="false"
+          aria-label="test"
+          class="cache-p9zju0 e6hn8de2"
+          disabled=""
+          id="test"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+    </label>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`ToggleField should render correctly with label and checked 1`] = `
+<DocumentFragment>
+  .cache-ou5gie {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-ou5gie[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-1w4yazo {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #b2b6c3;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1w4yazo:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1w4yazo:focus-within,
+.cache-1w4yazo:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1w4yazo[data-checked='true'] {
+  color: #151a2d;
+  background-color: #4f0599;
+}
+
+.cache-1w4yazo[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1w4yazo[data-checked='true']:focus-within,
+.cache-1w4yazo[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1w4yazo[data-disabled='true'] {
+  background: #d4dae7;
+}
+
+.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+  background: #bda5df;
+}
+
+.cache-p9zju0 {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-p9zju0[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-sg5atl {
+  margin-left: 8px;
+}
+
+<form
+    novalidate=""
+  >
+    <label
+      aria-disabled="false"
+      class="cache-ou5gie e6hn8de1"
+    >
+      <div
+        class="cache-1w4yazo e6hn8de3"
+        data-checked="true"
+        data-disabled="false"
+      >
+        <input
+          aria-checked="true"
+          aria-label="test"
+          checked=""
+          class="cache-p9zju0 e6hn8de2"
+          id="test"
+          name="test"
+          type="checkbox"
+        />
+      </div>
+      <span
+        class="cache-sg5atl e6hn8de0"
+      >
+        test
+      </span>
+    </label>
+  </form>
+</DocumentFragment>
+`;
