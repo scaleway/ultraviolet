@@ -37,10 +37,10 @@
       }
     },
     {
-      "files": ["packages/website/**/*.{ts,tsx}"],
+      "files": ["website/**/*.{ts,tsx}"],
       "extends": ["@scaleway/react/typescript"],
       "parserOptions": {
-        "project": ["packages/website/tsconfig.json"]
+        "project": ["website/tsconfig.json"]
       }
     }
   ]

@@ -16,4 +16,4 @@ FROM joseluisq/static-web-server:2
 
 WORKDIR /workspace
 
-COPY --from=builder /app/packages/website/out ./public
+COPY --from=builder /app/website/out ./public

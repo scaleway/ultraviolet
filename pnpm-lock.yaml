@@ -275,7 +275,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
 
-  packages/website:
+  website:
     specifiers:
       '@babel/core': 7.20.5
       '@emotion/react': 11.10.5
@@ -297,7 +297,7 @@ importers:
     dependencies:
       '@emotion/react': 11.10.5_xl5my4wapvq2ctl7qwehtbgorq
       '@emotion/styled': 11.10.5_3djhvnr4jirfvebjqpipo7gthy
-      '@scaleway/ui': link:../ui
+      '@scaleway/ui': link:../packages/ui
       next: 13.0.7_672uxklweod7ene3nqtsh262ca
       polished: 4.2.2
       react: 18.2.0
