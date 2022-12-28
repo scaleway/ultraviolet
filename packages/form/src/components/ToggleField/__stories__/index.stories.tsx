@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/ToggleField',
+  title: 'Form/Components/Fields/ToggleField',
 } as Meta
 
 export { Playground } from './Playground.stories'

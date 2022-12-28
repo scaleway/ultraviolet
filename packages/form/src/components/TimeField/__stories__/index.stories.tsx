@@ -25,7 +25,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/TimeField',
+  title: 'Form/Components/Fields/TimeField',
 } as Meta
 
 export { Playground } from './Playground.stories'

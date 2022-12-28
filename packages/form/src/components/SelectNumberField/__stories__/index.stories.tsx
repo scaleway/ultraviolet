@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/SelectNumberField',
+  title: 'Form/Components/Fields/SelectNumberField',
 } as Meta
 
 export { Playground } from './Playground.stories'

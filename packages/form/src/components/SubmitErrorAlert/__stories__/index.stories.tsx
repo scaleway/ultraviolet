@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/SubmitErrorAlert',
+  title: 'Form/Components/SubmitErrorAlert',
 } as Meta
 
 export { Playground } from './Playground.stories'

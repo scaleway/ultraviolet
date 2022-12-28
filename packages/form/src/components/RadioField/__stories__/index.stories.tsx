@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/RadioField',
+  title: 'Form/Components/Fields/RadioField',
 } as Meta
 
 export { Playground } from './Playground.stories'
