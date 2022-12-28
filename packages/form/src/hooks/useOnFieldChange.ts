@@ -8,8 +8,8 @@ type CallbackFn<FieldValue, AllValues> = (
 
 export const useOnFieldChange = <FieldValue = unknown, AllValues = unknown>(
   name: string,
-  condition: boolean,
   callback: CallbackFn<FieldValue, AllValues>,
+  condition = true,
 ): void => {
   const { values } = useFormState<AllValues>()
   const {

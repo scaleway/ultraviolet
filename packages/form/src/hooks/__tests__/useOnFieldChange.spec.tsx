@@ -53,8 +53,6 @@ describe('useOnFieldChange', () => {
       () =>
         useOnFieldChange<FormValues['textBoxName'], FormValues>(
           'textBoxName',
-          // Condition always true, just need to change a value inside the form to trigger this hook
-          true,
           callback,
         ),
       {
@@ -84,9 +82,9 @@ describe('useOnFieldChange', () => {
       ({ condition }) => {
         useOnFieldChange<FormValues['textBoxName'], FormValues>(
           'textBoxName',
+          callback,
           // Condition will depends of rerender({ condition: '' })
           condition,
-          callback,
         )
       },
       {
