@@ -85,8 +85,8 @@ const StyledInput = styled.input`
   }
 `
 
-const convertTagArrayToTagStateArray = (tags: TagsProp = []) =>
-  tags.map((tag, index) =>
+const convertTagArrayToTagStateArray = (tags?: TagsProp) =>
+  (tags || [])?.map((tag, index) =>
     typeof tag === 'object'
       ? { ...tag, index: getUUID(`tag-${index}`) }
       : { index: getUUID(`tag-${index}`), label: tag },
@@ -107,8 +107,6 @@ type TagsProps = {
   className?: string
 }
 
-const emptyTags: string[] = []
-
 const Tags = ({
   disabled = false,
   id,
@@ -117,11 +115,13 @@ const Tags = ({
   onChange,
   onChangeError,
   placeholder,
-  tags = emptyTags,
+  tags,
   variant = 'base',
   className,
 }: TagsProps): JSX.Element => {
-  const [tagsState, setTags] = useState(convertTagArrayToTagStateArray(tags))
+  const [tagsState, setTags] = useState(
+    convertTagArrayToTagStateArray(tags ?? []),
+  )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
 
