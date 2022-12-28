@@ -3,15 +3,22 @@ import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'
 
-export type TagsFieldProps<T = unknown, K = string> = BaseFieldProps<T, K> &
+type TagsProp = ComponentProps<typeof Tags>['tags']
+
+export type TagsFieldProps<T = TagsProp, K = string> = BaseFieldProps<T, K> &
   Partial<
-    Pick<ComponentProps<typeof Tags>, 'tags' | 'variant' | 'onChange'>
+    Pick<
+      ComponentProps<typeof Tags>,
+      | 'tags'
+      | 'variant'
+      | 'onChange'
+      | 'placeholder'
+      | 'disabled'
+      | 'className'
+      | 'id'
+    >
   > & {
-    className?: string
-    disabled?: boolean
-    id?: string
     name: string
-    placeholder: string
     required?: boolean
   }
 
@@ -27,11 +34,13 @@ export const TagsField = ({
   validate,
   variant,
 }: TagsFieldProps): JSX.Element => {
-  const { input } = useFormField(name, {
+  const { input } = useFormField<TagsProp>(name, {
     disabled,
     required,
+    initialValue: tags,
     type: 'text',
     validate,
+    value: tags,
   })
 
   return (
@@ -46,7 +55,7 @@ export const TagsField = ({
       }}
       placeholder={placeholder}
       variant={variant}
-      tags={tags}
+      tags={input.value}
     />
   )
 }
