@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.4](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.3...@scaleway/form@1.37.4) (2022-12-28)
+
+### Bug Fixes
+
+- **useOnFieldChange:** change order of params condition and callback ([#2148](https://github.com/scaleway/scaleway-form/issues/2148)) ([2ca7bb1](https://github.com/scaleway/scaleway-form/commit/2ca7bb18f2af9eb7be40c7b4f4039e6aab7acf4f))
+
 ## [1.37.3](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.2...@scaleway/form@1.37.3) (2022-12-28)
 
 ### Bug Fixes
