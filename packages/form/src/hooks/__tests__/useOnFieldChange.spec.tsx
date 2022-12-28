@@ -53,8 +53,6 @@ describe('useOnFieldChange', () => {
       () =>
         useOnFieldChange<FormValues['textBoxName'], FormValues>(
           'textBoxName',
-          // Condition always true, just need to change a value inside the form to trigger this hook
-          true,
           callback,
         ),
       {
@@ -81,12 +79,12 @@ describe('useOnFieldChange', () => {
     let initialValues = initial
 
     const { result, rerender } = renderHook(
-      ({ condition }) => {
+      ({ enabled }) => {
         useOnFieldChange<FormValues['textBoxName'], FormValues>(
           'textBoxName',
-          // Condition will depends of rerender({ condition: '' })
-          condition,
           callback,
+          // enabled will depends of rerender({ condition: '' })
+          enabled,
         )
       },
       {
@@ -95,7 +93,7 @@ describe('useOnFieldChange', () => {
         ),
 
         initialProps: {
-          condition: false,
+          enabled: false,
         },
       },
     )
@@ -106,7 +104,7 @@ describe('useOnFieldChange', () => {
 
     initialValues = updated
 
-    rerender({ condition: true })
+    rerender({ enabled: true })
 
     expect(callback).toHaveBeenCalledTimes(1)
   })

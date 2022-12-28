@@ -8,8 +8,8 @@ type CallbackFn<FieldValue, AllValues> = (
 
 export const useOnFieldChange = <FieldValue = unknown, AllValues = unknown>(
   name: string,
-  condition: boolean,
   callback: CallbackFn<FieldValue, AllValues>,
+  enabled = true,
 ): void => {
   const { values } = useFormState<AllValues>()
   const {
@@ -21,9 +21,9 @@ export const useOnFieldChange = <FieldValue = unknown, AllValues = unknown>(
   const previousValues = useRef(value)
 
   useEffect(() => {
-    if (previousValues.current !== value && condition) {
+    if (previousValues.current !== value && enabled) {
       previousValues.current = value
       callback(value, values)
     }
-  }, [value, values, callback, condition])
+  }, [value, values, callback, enabled])
 }

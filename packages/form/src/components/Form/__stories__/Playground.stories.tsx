@@ -8,6 +8,7 @@ import {
   Form,
   RadioField,
   RichSelectField,
+  SelectableCardField,
   Submit,
   SubmitErrorAlert,
   TagsField,
@@ -46,6 +47,18 @@ export const Playground: ComponentStory<typeof Form> = args => {
         <Stack gap={2} direction="row">
           <DateField name="date" label="Date" required />
           <TimeField name="time" required />
+        </Stack>
+
+        <Stack gap={2} direction="row">
+          <SelectableCardField name="selectableCard" value="1" required>
+            Selectable Card 1
+          </SelectableCardField>
+          <SelectableCardField name="selectableCard" value="2" required>
+            Selectable Card 2
+          </SelectableCardField>
+          <SelectableCardField name="selectableCard" value="3" required>
+            Selectable Card 3
+          </SelectableCardField>
         </Stack>
 
         <TextBoxField
@@ -93,6 +106,7 @@ Playground.args = {
     receiveEmailUpdates: true,
     choice: '2',
     tags: ['cloud', 'of', 'choice'],
+    selectableCard: '1',
   },
   onRawSubmit: values => {
     console.log('Submit', values)
