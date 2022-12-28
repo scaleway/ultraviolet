@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.1 (2022-12-28)
+
+### Bug Fixes
+
+- **tagsFields:** initialValues was not working ([#2147](https://github.com/scaleway/scaleway-ui/issues/2147)) ([219f584](https://github.com/scaleway/scaleway-ui/commit/219f58436377d7f604882cee6f9dbcbf3e655702))
+
 ## [0.215.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.214.4...@scaleway/ui@0.215.0) (2022-12-27)
 
 ### Features

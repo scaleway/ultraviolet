@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.37.3](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.2...@scaleway/form@1.37.3) (2022-12-28)
+
+### Bug Fixes
+
+- **tagsFields:** initialValues was not working ([#2147](https://github.com/scaleway/scaleway-form/issues/2147)) ([219f584](https://github.com/scaleway/scaleway-form/commit/219f58436377d7f604882cee6f9dbcbf3e655702))
+
 ## [1.37.2](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.1...@scaleway/form@1.37.2) (2022-12-28)
 
 **Note:** Version bump only for package @scaleway/form
