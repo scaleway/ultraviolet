@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/TextBoxField',
+  title: 'Form/Components/Fields/TextBoxField',
 } as Meta
 
 export { Playground } from './Playground.stories'

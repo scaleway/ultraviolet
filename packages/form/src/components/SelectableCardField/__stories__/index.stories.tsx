@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/SelectableCardField',
+  title: 'Form/Components/Fields/SelectableCardField',
 } as Meta
 
 export { Playground } from './Playground.stories'

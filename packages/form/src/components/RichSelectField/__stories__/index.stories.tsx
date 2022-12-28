@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/RichSelectField',
+  title: 'Form/Components/Fields/RichSelectField',
 } as Meta
 
 export { Playground } from './Playground.stories'

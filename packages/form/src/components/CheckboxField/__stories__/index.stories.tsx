@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/CheckboxField',
+  title: 'Form/Components/Fields/CheckboxField',
 } as Meta
 
 export { Playground } from './Playground.stories'

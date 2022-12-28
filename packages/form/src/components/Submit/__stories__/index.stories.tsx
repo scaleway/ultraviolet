@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Submit',
+  title: 'Form/Components/Submit',
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Form',
+  title: 'Form/Components/Form',
 } as Meta
 
 export { Playground } from './Playground.stories'

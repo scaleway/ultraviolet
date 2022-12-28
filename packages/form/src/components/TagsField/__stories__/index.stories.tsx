@@ -19,7 +19,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fields/TagsField',
+  title: 'Form/Components/Fields/TagsField',
 } as Meta
 
 export { Playground } from './Playground.stories'
