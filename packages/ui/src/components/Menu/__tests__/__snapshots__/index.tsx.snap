@@ -2,22 +2,23 @@
 
 exports[`Menu Menu.Item render with borderless props 1`] = `
 <DocumentFragment>
-  .cache-z56dnm-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1dx34km-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -54,34 +55,38 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
   border: 0;
 }
 
-.cache-z56dnm-StyledButton-StyledButton:hover,
-.cache-z56dnm-StyledButton-StyledButton:focus {
+.cache-1dx34km-StyledButton-StyledButton:hover,
+.cache-1dx34km-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-z56dnm-StyledButton-StyledButton:hover,
-.cache-z56dnm-StyledButton-StyledButton:focus {
+.cache-1dx34km-StyledButton-StyledButton:hover,
+.cache-1dx34km-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-z56dnm-StyledButton-StyledButton:hover svg,
-.cache-z56dnm-StyledButton-StyledButton:focus svg {
+.cache-1dx34km-StyledButton-StyledButton:hover svg,
+.cache-1dx34km-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-z56dnm-StyledButton-StyledButton:last-child {
+.cache-1dx34km-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -90,17 +95,21 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="epxin6a0 cache-z56dnm-StyledButton-StyledButton em6gco80"
+    class="epxin6a0 cache-1dx34km-StyledButton-StyledButton em6gco80"
     role="menuitem"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Borderless Props
     </div>
@@ -110,22 +119,23 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
 
 exports[`Menu Menu.Item render with default props 1`] = `
 <DocumentFragment>
-  .cache-v4e1o7-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-14j6tyr-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -161,34 +171,38 @@ exports[`Menu Menu.Item render with default props 1`] = `
   border-radius: 0;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover,
-.cache-v4e1o7-StyledButton-StyledButton:focus {
+.cache-14j6tyr-StyledButton-StyledButton:hover,
+.cache-14j6tyr-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover,
-.cache-v4e1o7-StyledButton-StyledButton:focus {
+.cache-14j6tyr-StyledButton-StyledButton:hover,
+.cache-14j6tyr-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover svg,
-.cache-v4e1o7-StyledButton-StyledButton:focus svg {
+.cache-14j6tyr-StyledButton-StyledButton:hover svg,
+.cache-14j6tyr-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:last-child {
+.cache-14j6tyr-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -197,17 +211,21 @@ exports[`Menu Menu.Item render with default props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="epxin6a0 cache-v4e1o7-StyledButton-StyledButton em6gco80"
+    class="epxin6a0 cache-14j6tyr-StyledButton-StyledButton em6gco80"
     role="menuitem"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Default Props
     </div>
@@ -217,22 +235,23 @@ exports[`Menu Menu.Item render with default props 1`] = `
 
 exports[`Menu Menu.Item render with disabled props 1`] = `
 <DocumentFragment>
-  .cache-t4xun8-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1hr1hqu-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -276,49 +295,53 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   color: #c4c9d6;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-t4xun8-StyledButton-StyledButton svg {
+.cache-1hr1hqu-StyledButton-StyledButton svg {
   fill: #c4c9d6;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover svg,
-.cache-t4xun8-StyledButton-StyledButton:focus svg {
+.cache-1hr1hqu-StyledButton-StyledButton:hover svg,
+.cache-1hr1hqu-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:last-child {
+.cache-1hr1hqu-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover svg,
-.cache-t4xun8-StyledButton-StyledButton:focus svg {
+.cache-1hr1hqu-StyledButton-StyledButton:hover svg,
+.cache-1hr1hqu-StyledButton-StyledButton:focus svg {
   fill: #4a4f62;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -327,18 +350,22 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="true"
-    class="epxin6a0 cache-t4xun8-StyledButton-StyledButton em6gco80"
+    class="epxin6a0 cache-1hr1hqu-StyledButton-StyledButton em6gco80"
     disabled=""
     role="menuitem"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Disabled Props
     </div>
@@ -348,22 +375,23 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
 
 exports[`Menu Menu.Item render with variant danger 1`] = `
 <DocumentFragment>
-  .cache-bcirze-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1m7fn90-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -400,48 +428,52 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
   color: #a6102d;
 }
 
-.cache-bcirze-StyledButton-StyledButton:hover,
-.cache-bcirze-StyledButton-StyledButton:focus {
+.cache-1m7fn90-StyledButton-StyledButton:hover,
+.cache-1m7fn90-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-bcirze-StyledButton-StyledButton:hover,
-.cache-bcirze-StyledButton-StyledButton:focus {
+.cache-1m7fn90-StyledButton-StyledButton:hover,
+.cache-1m7fn90-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-bcirze-StyledButton-StyledButton:hover svg,
-.cache-bcirze-StyledButton-StyledButton:focus svg {
+.cache-1m7fn90-StyledButton-StyledButton:hover svg,
+.cache-1m7fn90-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-bcirze-StyledButton-StyledButton:last-child {
+.cache-1m7fn90-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-bcirze-StyledButton-StyledButton:hover,
-.cache-bcirze-StyledButton-StyledButton:focus {
+.cache-1m7fn90-StyledButton-StyledButton:hover,
+.cache-1m7fn90-StyledButton-StyledButton:focus {
   color: #a6102d;
 }
 
-.cache-bcirze-StyledButton-StyledButton:hover svg,
-.cache-bcirze-StyledButton-StyledButton:focus svg {
+.cache-1m7fn90-StyledButton-StyledButton:hover svg,
+.cache-1m7fn90-StyledButton-StyledButton:focus svg {
   fill: #a6102d;
 }
 
-.cache-bcirze-StyledButton-StyledButton svg {
+.cache-1m7fn90-StyledButton-StyledButton svg {
   fill: #a6102d;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -450,17 +482,21 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="epxin6a0 cache-bcirze-StyledButton-StyledButton em6gco80"
+    class="epxin6a0 cache-1m7fn90-StyledButton-StyledButton em6gco80"
     role="menuitem"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Danger
     </div>
@@ -470,7 +506,7 @@ exports[`Menu Menu.Item render with variant danger 1`] = `
 
 exports[`Menu Menu.Item render with variant nav 1`] = `
 <DocumentFragment>
-  .cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton {
+  .cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -506,21 +542,22 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -559,17 +596,17 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   color: #b2b6c3;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton>* {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -578,69 +615,73 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:active {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transform: none!important;
   -moz-transform: none!important;
   -ms-transform: none!important;
   transform: none!important;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   fill: #390171;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -649,15 +690,19 @@ exports[`Menu Menu.Item render with variant nav 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <a
-    class="epxin6a0 em6gco80 em6gco82 cache-zyuknh-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
+    class="epxin6a0 em6gco80 em6gco82 cache-4o6qy3-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
     href="/test"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Nav
     </div>
@@ -823,22 +868,23 @@ exports[`Menu renders with Menu.Item 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-14j6tyr-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -874,34 +920,38 @@ exports[`Menu renders with Menu.Item 1`] = `
   border-radius: 0;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover,
-.cache-v4e1o7-StyledButton-StyledButton:focus {
+.cache-14j6tyr-StyledButton-StyledButton:hover,
+.cache-14j6tyr-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover,
-.cache-v4e1o7-StyledButton-StyledButton:focus {
+.cache-14j6tyr-StyledButton-StyledButton:hover,
+.cache-14j6tyr-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:hover svg,
-.cache-v4e1o7-StyledButton-StyledButton:focus svg {
+.cache-14j6tyr-StyledButton-StyledButton:hover svg,
+.cache-14j6tyr-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-v4e1o7-StyledButton-StyledButton:last-child {
+.cache-14j6tyr-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -910,6 +960,10 @@ exports[`Menu renders with Menu.Item 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -931,12 +985,12 @@ exports[`Menu renders with Menu.Item 1`] = `
       >
         <button
           aria-disabled="false"
-          class="epxin6a0 cache-v4e1o7-StyledButton-StyledButton em6gco80"
+          class="epxin6a0 cache-14j6tyr-StyledButton-StyledButton em6gco80"
           role="menuitem"
           type="button"
         >
           <div
-            class="cache-m245rk-StyledContent em6gco83"
+            class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
           >
             Menu.Item
           </div>
@@ -1027,22 +1081,23 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-t4xun8-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1hr1hqu-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1086,49 +1141,53 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   color: #c4c9d6;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-t4xun8-StyledButton-StyledButton svg {
+.cache-1hr1hqu-StyledButton-StyledButton svg {
   fill: #c4c9d6;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover svg,
-.cache-t4xun8-StyledButton-StyledButton:focus svg {
+.cache-1hr1hqu-StyledButton-StyledButton:hover svg,
+.cache-1hr1hqu-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:last-child {
+.cache-1hr1hqu-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover,
-.cache-t4xun8-StyledButton-StyledButton:focus {
+.cache-1hr1hqu-StyledButton-StyledButton:hover,
+.cache-1hr1hqu-StyledButton-StyledButton:focus {
   color: #4a4f62;
   background-color: #ffffff;
 }
 
-.cache-t4xun8-StyledButton-StyledButton:hover svg,
-.cache-t4xun8-StyledButton-StyledButton:focus svg {
+.cache-1hr1hqu-StyledButton-StyledButton:hover svg,
+.cache-1hr1hqu-StyledButton-StyledButton:focus svg {
   fill: #4a4f62;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1137,6 +1196,10 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -1158,41 +1221,41 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
       >
         <button
           aria-disabled="true"
-          class="epxin6a0 cache-t4xun8-StyledButton-StyledButton em6gco80"
+          class="epxin6a0 cache-1hr1hqu-StyledButton-StyledButton em6gco80"
           disabled=""
           role="menuitem"
           type="button"
         >
           <div
-            class="cache-m245rk-StyledContent em6gco83"
+            class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
           >
             Menu.Item disabled
           </div>
         </button>
         <button
           aria-disabled="true"
-          class="epxin6a0 cache-t4xun8-StyledButton-StyledButton em6gco80"
+          class="epxin6a0 cache-1hr1hqu-StyledButton-StyledButton em6gco80"
           disabled=""
           href="/link"
           role="menuitem"
           type="button"
         >
           <div
-            class="cache-m245rk-StyledContent em6gco83"
+            class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
           >
             Menu.Item Link disabled
           </div>
         </button>
         <button
           aria-disabled="true"
-          class="epxin6a0 cache-t4xun8-StyledButton-StyledButton em6gco80"
+          class="epxin6a0 cache-1hr1hqu-StyledButton-StyledButton em6gco80"
           disabled=""
           href="https://link"
           role="menuitem"
           type="button"
         >
           <div
-            class="cache-m245rk-StyledContent em6gco83"
+            class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
           >
             Menu.Item Link disabled
           </div>
@@ -1283,7 +1346,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1319,21 +1382,22 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1369,17 +1433,17 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-radius: 0;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton>* {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1388,59 +1452,63 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover .e4bq1r52,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover::after,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:active {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transform: none!important;
   -moz-transform: none!important;
   -ms-transform: none!important;
   transform: none!important;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus {
   color: #390171;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:hover svg,
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:focus svg {
   -webkit-transition: fill 300ms;
   transition: fill 300ms;
   fill: #390171;
 }
 
-.cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
+.cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton:last-child {
   border-bottom: 0;
   border-radius: 0 0 4px 4px;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1449,6 +1517,10 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -1469,11 +1541,11 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
         role="menu"
       >
         <a
-          class="epxin6a0 em6gco80 em6gco82 cache-16fddmn-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
+          class="epxin6a0 em6gco80 em6gco82 cache-1www1vf-StyledLink-StyledLink-StyledButton-StyledButton e4bq1r50"
           href="/link"
         >
           <div
-            class="cache-m245rk-StyledContent em6gco83"
+            class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
           >
             Menu.Item as Link
           </div>
