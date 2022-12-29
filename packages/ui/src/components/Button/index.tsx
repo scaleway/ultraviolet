@@ -334,7 +334,7 @@ const StyledButton = styled('button', {
       & ${InhibitedStack} {
         transition: max-width 250ms ease, margin-left 250ms ease;
         max-width: 0;
-        margin-left: -${theme.space['1']}px; // To counteract parent gap
+        margin-left: -${theme.space['1']}; // To counteract parent gap
         overflow-x: clip; // hidden create a weird white square when size is small
       }
 
