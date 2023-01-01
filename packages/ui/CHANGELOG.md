@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.2 (2023-01-01)
+
+### Bug Fixes
+
+- **deps:** update dependency @scaleway/random-name to v3.0.3 ([#2158](https://github.com/scaleway/scaleway-ui/issues/2158)) ([c154448](https://github.com/scaleway/scaleway-ui/commit/c15444869f1e554c163f3cd4609fd8c82d92b18c))
+
 ## 0.215.1 (2022-12-28)
 
 ### Bug Fixes
