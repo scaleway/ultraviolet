@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.38.0](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.5...@scaleway/form@1.38.0) (2023-01-02)
+
+### Features
+
+- **submit:** add icon size ([#2156](https://github.com/scaleway/scaleway-form/issues/2156)) ([daf0edb](https://github.com/scaleway/scaleway-form/commit/daf0edb528a735098c0dd9717209631df935dfac))
+
 ## [1.37.5](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.37.4...@scaleway/form@1.37.5) (2023-01-01)
 
 **Note:** Version bump only for package @scaleway/form
