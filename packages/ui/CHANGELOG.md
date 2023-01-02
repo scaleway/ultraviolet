@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.3 (2023-01-02)
+
+### Bug Fixes
+
+- **List:** fix sort type to allow numbers ([#2160](https://github.com/scaleway/scaleway-ui/issues/2160)) ([ef44857](https://github.com/scaleway/scaleway-ui/commit/ef4485746c31adcb8f9c2df1e31cd71d5c641fcc))
+
 ## 0.215.2 (2023-01-01)
 
 ### Bug Fixes
