@@ -9,6 +9,7 @@ type SubmitProps = {
   className?: string
   disabled?: boolean
   icon?: ComponentProps<typeof Button>['icon']
+  iconSize?: ComponentProps<typeof Button>['iconSize']
   iconPosition?: ComponentProps<typeof Button>['iconPosition']
   size?: ComponentProps<typeof Button>['size']
   tooltip?: ComponentProps<typeof Button>['tooltip']
@@ -22,6 +23,7 @@ export const Submit = ({
   className,
   disabled = false,
   icon,
+  iconSize,
   iconPosition,
   size,
   tooltip,
@@ -52,6 +54,7 @@ export const Submit = ({
       className={className}
       disabled={isDisabled}
       icon={icon}
+      iconSize={iconSize}
       iconPosition={iconPosition}
       progress={submitting}
       size={size}
