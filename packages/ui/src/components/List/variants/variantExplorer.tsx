@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import type { KeyboardEvent, MouseEvent } from 'react'
 import { useCallback } from 'react'
+import type { ComparableType } from '../../../utils'
 import Checkbox from '../../Checkbox'
 import Tooltip from '../../Tooltip'
 import BaseCell from '../Cell'
@@ -91,7 +92,10 @@ export const Header = () => {
     (
       event: MouseEvent | KeyboardEvent,
       index: number,
-      sort?: string | ((item: Record<string, unknown>) => string) | null,
+      sort?:
+        | string
+        | ((item: Record<string, unknown>) => ComparableType)
+        | null,
     ) => {
       event.preventDefault()
       if (sort) {

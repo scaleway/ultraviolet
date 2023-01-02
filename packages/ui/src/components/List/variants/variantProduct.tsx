@@ -14,6 +14,7 @@ import {
   useCallback,
   useEffect,
 } from 'react'
+import type { ComparableType } from '../../../utils'
 import * as animations from '../../../utils/animations'
 import Checkbox from '../../Checkbox'
 import Tooltip from '../../Tooltip'
@@ -245,7 +246,10 @@ export const Header = () => {
     (
       event: MouseEvent | KeyboardEvent,
       index: number,
-      sort?: string | ((item: Record<string, unknown>) => string) | null,
+      sort?:
+        | string
+        | ((item: Record<string, unknown>) => ComparableType)
+        | null,
     ) => {
       event.preventDefault()
       if (sort) {

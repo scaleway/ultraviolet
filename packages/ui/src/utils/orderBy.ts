@@ -1,6 +1,6 @@
-type ComparableType = string | number
+export type ComparableType = string | number
 
-function orderBy<T extends Record<string, unknown>>(
+export function orderBy<T extends Record<string, unknown>>(
   key: string | ((a: T) => ComparableType),
   order: 'asc' | 'desc',
 ): (a: T, b: T) => number {
@@ -21,5 +21,3 @@ function orderBy<T extends Record<string, unknown>>(
     return transformedB > transformedA ? -1 * direction : 0
   }
 }
-
-export default orderBy

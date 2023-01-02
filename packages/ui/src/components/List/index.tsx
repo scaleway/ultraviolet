@@ -15,7 +15,8 @@ import {
   useRef,
   useState,
 } from 'react'
-import orderBy from '../../utils/orderBy'
+import { orderBy } from '../../utils'
+import type { ComparableType } from '../../utils'
 import Pagination from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import type { UsePaginationReturn } from '../Pagination/usePagination'
@@ -225,7 +226,7 @@ export type ListProps<DataType> = {
    * @param {{page, perPage, sort, order}} params The params to sort the list
    */
   onSortClick?: (params: {
-    field?: string | ((item: DataType) => string) | null
+    field?: string | ((item: DataType) => ComparableType) | null
     order: ListOrder
     page: number
     // TODO Change this when Pagination migration is merged
