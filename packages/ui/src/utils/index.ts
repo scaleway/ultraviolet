@@ -30,3 +30,5 @@ export {
 } from './animations'
 export { down, up, Breakpoint } from './responsive'
 export { default as normalize } from './normalize'
+export { orderBy } from './orderBy'
+export type { ComparableType } from './orderBy'

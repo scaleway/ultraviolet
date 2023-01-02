@@ -1,4 +1,5 @@
 import type { MouseEventHandler, ReactNode } from 'react'
+import type { ComparableType } from '../../utils'
 import type * as animations from '../../utils/animations'
 
 export type ListOrder = 'asc' | 'desc' | undefined
@@ -7,12 +8,12 @@ export type ListSort<T> = {
   index: number
   onSort?:
     | ((
-        prop: string | ((item: T) => string) | null,
+        prop: string | ((item: T) => ComparableType) | null,
         order: string,
       ) => (a: T, b: T) => number)
     | null
   order: ListOrder
-  prop: string | ((item: T) => string) | undefined
+  prop: string | ((item: T) => ComparableType) | undefined
 }
 
 export type ListColumn<T> = {
@@ -21,12 +22,12 @@ export type ListColumn<T> = {
   label?: string | null
   onSort?:
     | ((
-        prop: string | ((item: T) => string) | null,
+        prop: string | ((item: T) => ComparableType) | null,
         order: string,
       ) => (a: T, b: T) => number)
     | null
   padding?: string | null
-  sort?: string | ((item: T) => string) | null
+  sort?: string | ((item: T) => ComparableType) | null
   width?: string | null
   defaultSort?: ListOrder | null
 }
