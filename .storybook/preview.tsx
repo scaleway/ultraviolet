@@ -35,59 +35,99 @@ const darkMode = {
   light: { ...themes.normal, ...light },
 }
 
-const ENV_PARAMETERS = {
-  development: {
-    darkMode,
-    backgrounds: {
-      disable: true,
-      grid: {
-        disable: true,
-      },
-    },
-    viewMode: 'docs',
-    previewTabs: {
-      canvas: { hidden: false },
-    },
-    viewport: {
-      viewports: {},
-    },
-    options: {
-      storySort: STORY_SORT,
-    },
-    docs: {
-      container: DocsContainer,
-      page: Page,
-      source: { excludeDecorators: true }, // Exclude decorators from source code
-    },
-  },
-  production: {
-    darkMode,
-    backgrounds: {
-      disable: true,
-      grid: {
-        disable: true,
-      },
-    },
-    viewMode: 'docs',
-    previewTabs: { canvas: { hidden: true } },
-    options: {
-      storySort: STORY_SORT,
-    },
-    docs: {
-      container: DocsContainer,
-      page: Page,
-      source: { excludeDecorators: true }, // Exclude decorators from source code
-    },
-  },
-  visual: {},
-  layout: 'centered',
-}
-ENV_PARAMETERS.visual = ENV_PARAMETERS.production
+// const ENV_PARAMETERS = {
+//   development: {
+//     darkMode,
+//     backgrounds: {
+//       disable: true,
+//       grid: {
+//         disable: true,
+//       },
+//     },
+//     viewMode: 'docs',
+//     previewTabs: {
+//       canvas: { hidden: false },
+//     },
+//     viewport: {
+//       viewports: {},
+//     },
+//     options: {
+//       storySort: STORY_SORT,
+//     },
+//     docs: {
+//       container: DocsContainer,
+//       page: Page,
+//       source: { excludeDecorators: true }, // Exclude decorators from source code
+//     },
+//   },
+//   production: {
+//     darkMode,
+//     backgrounds: {
+//       disable: true,
+//       grid: {
+//         disable: true,
+//       },
+//     },
+//     viewMode: 'docs',
+//     previewTabs: { canvas: { hidden: true } },
+//     options: {
+//       storySort: STORY_SORT,
+//     },
+//     docs: {
+//       container: DocsContainer,
+//       page: Page,
+//       source: { excludeDecorators: true }, // Exclude decorators from source code
+//     },
+//   },
+//   visual: {},
+//   layout: 'centered',
+// }
+// ENV_PARAMETERS.visual = ENV_PARAMETERS.production
 
-export const parameters =
-  ENV_PARAMETERS[
-    process.env?.['STORYBOOK_ENVIRONMENT'] as keyof typeof ENV_PARAMETERS
-  ] || ENV_PARAMETERS.production
+// export const parameters =
+//   ENV_PARAMETERS[
+//     process.env?.['STORYBOOK_ENVIRONMENT'] as keyof typeof ENV_PARAMETERS
+//   ] || ENV_PARAMETERS.production
+
+// We must inline the parameters now??
+export const parameters = {
+  darkMode,
+  backgrounds: {
+    disable: true,
+    grid: {
+      disable: true,
+    },
+  },
+  viewMode: 'docs',
+  previewTabs: {
+    canvas: { hidden: false },
+  },
+  viewport: {
+    viewports: {},
+  },
+  options: {
+    storySort: {
+      order: [
+        'Get started',
+        'Components state',
+        'Testing',
+        'Changelog',
+        'State',
+        ['Components state', 'Properties'],
+        'Guidelines',
+        'Customization',
+        ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
+        'Responsive',
+        'Components',
+      ],
+    },
+  },
+  docs: {
+    container: DocsContainer,
+    page: Page,
+    source: { excludeDecorators: true }, // Exclude decorators from source code
+  },
+}
 
 const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
   ...ancestorTheme,

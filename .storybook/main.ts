@@ -1,9 +1,14 @@
 import { join } from 'path'
 import { Configuration } from 'webpack'
-
 export default {
   core: {
     builder: 'webpack5',
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {
+      fastRefresh: true,
+    },
   },
   features: {
     // storyStoreV7: true,
@@ -13,10 +18,7 @@ export default {
     // also valid 'react-docgen-typescript' | false
     reactDocgen: 'react-docgen-typescript',
   },
-  stories: [
-    '../**/__stories__/**/*.stories.mdx',
-    '../**/__stories__/*.stories.tsx',
-  ],
+  stories: ['../packages/ui/**/__stories__/index.stories.tsx'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
@@ -43,7 +45,9 @@ export default {
         path: require.resolve('path-browserify'),
       },
     }
-
     return config
+  },
+  docs: {
+    autodocs: true,
   },
 }
