@@ -12,7 +12,6 @@ const StyledDiv = styled.div<{ rank: number }>`
   box-shadow: ${({ theme }) => theme.shadows.defaultShadow};
   height: ${HEIGHT}px;
   left: 50%;
-  padding: ${({ theme }) => theme.space['2']};
   position: fixed;
   transform: translate(-50%, 0);
   width: 600px;
