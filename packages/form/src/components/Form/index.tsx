@@ -66,13 +66,17 @@ export const Form = <FormValues,>({
       render ??
       (renderProps => (
         <ErrorProvider errors={errors}>
-          <form noValidate name={name} onSubmit={renderProps.handleSubmit}>
+          <form
+            noValidate
+            name={name}
+            onSubmit={renderProps.handleSubmit}
+            className={className}
+          >
             {typeof children === 'function' ? children(renderProps) : children}
           </form>
         </ErrorProvider>
       ))
     }
-    className={className}
     keepDirtyOnReinitialize={keepDirtyOnReinitialize}
   />
 )
