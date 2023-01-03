@@ -89,6 +89,10 @@ const StyledTooltip = styled.div<StyledTooltipProps>`
   }
 `
 
+const StyledChildrenContainer = styled.div`
+  display: inherit;
+`
+
 type TooltipProps = {
   id?: string
   children:
@@ -224,7 +228,7 @@ const Tooltip = ({
     }
 
     return (
-      <div
+      <StyledChildrenContainer
         aria-describedby={generatedId}
         onBlur={onMouseEvent(false)}
         onFocus={onMouseEvent(true)}
@@ -233,7 +237,7 @@ const Tooltip = ({
         ref={childrenRef}
       >
         {children}
-      </div>
+      </StyledChildrenContainer>
     )
   }, [children, generatedId, onMouseEvent])
 

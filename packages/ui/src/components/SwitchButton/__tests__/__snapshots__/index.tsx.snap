@@ -950,7 +950,11 @@ exports[`SwitchButton renders correctly with right value 1`] = `
 
 exports[`SwitchButton renders with tooltip 1`] = `
 <DocumentFragment>
-  .cache-fo08zx-BorderedBox-StyledBorderedBox {
+  .cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-fo08zx-BorderedBox-StyledBorderedBox {
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -1266,6 +1270,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
 
 <div
     aria-describedby=":ra:"
+    class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
   >
     <div
       style="display: inline-flex;"
