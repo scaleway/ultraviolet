@@ -34,6 +34,7 @@ export type FormProps<FormValues = unknown> = {
   render?: ReactFinalFormProps<FormValues, Partial<FormValues>>['render']
   mutators?: ReactFinalFormProps<FormValues, Partial<FormValues>>['mutators']
   keepDirtyOnReinitialize?: boolean
+  className?: string
 }
 
 export const Form = <FormValues,>({
@@ -47,6 +48,7 @@ export const Form = <FormValues,>({
   render,
   mutators,
   keepDirtyOnReinitialize,
+  className,
 }: FormProps<FormValues>): JSX.Element => (
   <ReactFinalForm
     initialValues={initialValues}
@@ -70,6 +72,7 @@ export const Form = <FormValues,>({
         </ErrorProvider>
       ))
     }
+    className={className}
     keepDirtyOnReinitialize={keepDirtyOnReinitialize}
   />
 )
