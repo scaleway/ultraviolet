@@ -152,4 +152,25 @@ describe('TextBox', () => {
         },
       },
     ))
+
+  test('should render toggleable password with required', () =>
+    shouldMatchEmotionSnapshot(
+      <TextBox type="toggleable-password" name="password" required />,
+    ))
+
+  test('should render random with required', () =>
+    shouldMatchEmotionSnapshot(<TextBox random="test" name="test" required />))
+
+  test('should render unit with required', () =>
+    shouldMatchEmotionSnapshot(
+      <TextBox label="test" name="test" unit="px" required />,
+    ))
+
+  test('should render correctly with valid true', () =>
+    shouldMatchEmotionSnapshot(<TextBox label="test" name="test" valid />))
+
+  test('should render correctly with valid false', () =>
+    shouldMatchEmotionSnapshot(
+      <TextBox label="test" name="test" valid={false} />,
+    ))
 })
