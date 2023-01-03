@@ -114,6 +114,30 @@ exports[`TextBox should handle events on random button 1`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -203,44 +227,48 @@ exports[`TextBox should handle events on random button 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-cjl638-StyledInput e18bmnpq1"
+        class="cache-cjl638-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Randomize"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Randomize"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -361,6 +389,30 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -450,44 +502,48 @@ exports[`TextBox should handle events on toggleable password 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-cjl638-StyledInput e18bmnpq1"
+        class="cache-cjl638-StyledInput e18bmnpq2"
         name="password"
         type="password"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Show"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Show"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -594,20 +650,20 @@ exports[`TextBox should render correctly 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-17ab1cr-StyledInput e18bmnpq1"
+        class="cache-17ab1cr-StyledInput e18bmnpq2"
         type="text"
         value=""
       />
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -746,29 +802,29 @@ exports[`TextBox should render correctly disabled true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-1f878ct-StyledInput e18bmnpq1"
+        class="cache-1f878ct-StyledInput e18bmnpq2"
         disabled=""
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-rtdwgd-StyledLabel-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-rtdwgd-StyledLabel-StyledLabel-StyledLabel e18bmnpq7"
         disabled=""
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -918,27 +974,27 @@ exports[`TextBox should render correctly error string 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-1ud92w5-StyledInput e18bmnpq1"
+        class="cache-1ud92w5-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-1h942x9-StyledLabel-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1h942x9-StyledLabel-StyledLabel-StyledLabel e18bmnpq7"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-1m65ap1-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       >
         test error
       </div>
@@ -1047,21 +1103,21 @@ exports[`TextBox should render correctly label and noTopLabel 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-17ab1cr-StyledInput e18bmnpq1"
+        class="cache-17ab1cr-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1168,20 +1224,20 @@ exports[`TextBox should render correctly label and noTopLabel 2`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-17ab1cr-StyledInput e18bmnpq1"
+        class="cache-17ab1cr-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1314,27 +1370,27 @@ exports[`TextBox should render correctly label and noTopLabel 3`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1445,18 +1501,18 @@ exports[`TextBox should render correctly multiline true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <textarea
         autocomplete="on"
-        class="cache-1fsejcm-StyledInput e18bmnpq1"
+        class="cache-1fsejcm-StyledInput e18bmnpq2"
       />
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1606,6 +1662,30 @@ exports[`TextBox should render correctly required true 1`] = `
   min-height: 10px;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -1625,23 +1705,23 @@ exports[`TextBox should render correctly required true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         Test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <svg
           class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
@@ -1651,13 +1731,16 @@ exports[`TextBox should render correctly required true 1`] = `
             d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
           />
         </svg>
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+        />
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1770,31 +1853,31 @@ exports[`TextBox should render correctly with ariaControls 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-controls="test-control"
         aria-label="test"
         aria-labelledby="test-control"
         autocomplete="on"
-        class="cache-cj3nhc-StyledInput e18bmnpq1"
+        class="cache-cj3nhc-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
         id="test-control"
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -1927,12 +2010,12 @@ exports[`TextBox should render correctly with basic props 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         id="test"
         placeholder="type..."
         type="text"
@@ -1940,17 +2023,17 @@ exports[`TextBox should render correctly with basic props 1`] = `
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
         for="test"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2063,28 +2146,28 @@ exports[`TextBox should render correctly with defaultValue true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-cj3nhc-StyledInput e18bmnpq1"
+        class="cache-cj3nhc-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value="Test default value"
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2217,28 +2300,28 @@ exports[`TextBox should render correctly with edit true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2351,28 +2434,28 @@ exports[`TextBox should render correctly with fillAvailable true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-cj3nhc-StyledInput e18bmnpq1"
+        class="cache-cj3nhc-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2505,28 +2588,28 @@ exports[`TextBox should render correctly with generated true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2659,28 +2742,28 @@ exports[`TextBox should render correctly with height prop 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         style="height: 90px;"
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -2837,31 +2920,31 @@ exports[`TextBox should render correctly with notice 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="Test"
         autocomplete="on"
-        class="cache-or250s-StyledInput e18bmnpq1"
+        class="cache-or250s-StyledInput e18bmnpq2"
         type="text"
         value="test"
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
     <div
-      class="e18bmnpq3 cache-v3fc09-Container-StyledNotice e1qg14600"
+      class="e18bmnpq4 cache-v3fc09-Container-StyledNotice e1qg14600"
     >
       <svg
         class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
@@ -3025,6 +3108,30 @@ exports[`TextBox should render correctly with null right component 1`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
@@ -3044,31 +3151,35 @@ exports[`TextBox should render correctly with null right component 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1vh5d60-StyledInput e18bmnpq1"
+        class="cache-1vh5d60-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
-      />
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
+      >
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+        />
+      </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -3185,12 +3296,12 @@ exports[`TextBox should render correctly with readOnly true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-bozin8-StyledInput e18bmnpq1"
+        class="cache-bozin8-StyledInput e18bmnpq2"
         name="test"
         readonly=""
         type="text"
@@ -3198,17 +3309,17 @@ exports[`TextBox should render correctly with readOnly true 1`] = `
       />
       <label
         aria-live="assertive"
-        class="cache-1a7v2aw-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1a7v2aw-StyledLabel-StyledLabel e18bmnpq7"
         readonly=""
       >
         test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -3344,7 +3455,34 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-113jkm-StyledText-UnitLabel {
+.cache-ff9pac-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: flex-end;
+  align-self: flex-end;
+  min-width: 32px;
+}
+
+.cache-1hzrfdr-StyledText-UnitLabel {
   color: #b2b6c3;
   font-size: 14px;
   font-family: Asap;
@@ -3354,14 +3492,7 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 8px 0;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   line-height: 18px;
 }
 
@@ -3384,42 +3515,47 @@ exports[`TextBox should render correctly with unit is px 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1kpv70x-StyledInput e18bmnpq1"
+        class="cache-1kpv70x-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <hr
           aria-orientation="vertical"
-          class="e18bmnpq8 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
           role="separator"
         />
-        <p
-          class="e18bmnpq0 cache-113jkm-StyledText-UnitLabel e1tg3t120"
+        <div
+          alignself="flex-end"
+          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
         >
-          px
-        </p>
+          <p
+            class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
+          >
+            px
+          </p>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -3564,7 +3700,34 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-113jkm-StyledText-UnitLabel {
+.cache-ff9pac-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: flex-end;
+  align-self: flex-end;
+  min-width: 32px;
+}
+
+.cache-1hzrfdr-StyledText-UnitLabel {
   color: #b2b6c3;
   font-size: 14px;
   font-family: Asap;
@@ -3574,14 +3737,7 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 8px 0;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   line-height: 18px;
 }
 
@@ -3604,24 +3760,24 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1lrt4la-StyledInput e18bmnpq1"
+        class="cache-1lrt4la-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <svg
           class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
@@ -3633,21 +3789,26 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
         </svg>
         <hr
           aria-orientation="vertical"
-          class="e18bmnpq8 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
           role="separator"
         />
-        <p
-          class="e18bmnpq0 cache-113jkm-StyledText-UnitLabel e1tg3t120"
+        <div
+          alignself="flex-end"
+          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
         >
-          px
-        </p>
+          <p
+            class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
+          >
+            px
+          </p>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -3769,6 +3930,30 @@ exports[`TextBox should render correctly with valid false 1`] = `
   color: #4a4f62;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-1bnmxzp-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #a6102d;
@@ -3797,40 +3982,44 @@ exports[`TextBox should render correctly with valid false 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1kpv70x-StyledInput e18bmnpq1"
+        class="cache-1kpv70x-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <svg
-          class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <svg
+            class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -3952,6 +4141,30 @@ exports[`TextBox should render correctly with valid false 2`] = `
   color: #4a4f62;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-1bnmxzp-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #a6102d;
@@ -3980,40 +4193,44 @@ exports[`TextBox should render correctly with valid false 2`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1kpv70x-StyledInput e18bmnpq1"
+        class="cache-1kpv70x-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <svg
-          class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <path
-            d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-          />
-        </svg>
+          <svg
+            class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -4135,6 +4352,30 @@ exports[`TextBox should render correctly with valid true 1`] = `
   color: #4a4f62;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-1i6h90c-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #149a7b;
@@ -4163,40 +4404,44 @@ exports[`TextBox should render correctly with valid true 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1kpv70x-StyledInput e18bmnpq1"
+        class="cache-1kpv70x-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <svg
-          class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          <svg
+            class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -4318,6 +4563,30 @@ exports[`TextBox should render correctly with valid true 2`] = `
   color: #4a4f62;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-1i6h90c-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #149a7b;
@@ -4346,40 +4615,44 @@ exports[`TextBox should render correctly with valid true 2`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1kpv70x-StyledInput e18bmnpq1"
+        class="cache-1kpv70x-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <svg
-          class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
+          <svg
+            class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -4490,20 +4763,20 @@ exports[`TextBox should render multiline with props 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <textarea
         autocomplete="on"
-        class="cache-1xu5243-StyledInput e18bmnpq1"
+        class="cache-1xu5243-StyledInput e18bmnpq2"
         cols="50"
         rows="10"
       />
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -4639,29 +4912,29 @@ exports[`TextBox should render on focus 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <textarea
         aria-label="Test"
         autocomplete="on"
-        class="cache-18uo57l-StyledInput e18bmnpq1"
+        class="cache-18uo57l-StyledInput e18bmnpq2"
         cols="50"
         id="test"
         rows="10"
       />
       <label
         aria-live="assertive"
-        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1c1wycc-StyledLabel-StyledLabel e18bmnpq7"
         for="test"
       >
         Test
       </label>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -4782,6 +5055,30 @@ exports[`TextBox should render random 1`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4871,44 +5168,48 @@ exports[`TextBox should render random 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-cjl638-StyledInput e18bmnpq1"
+        class="cache-cjl638-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Randomize"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Randomize"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -5041,6 +5342,30 @@ exports[`TextBox should render random 2`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-1h2m2dl-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5140,12 +5465,12 @@ exports[`TextBox should render random 2`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-7yp9m2-StyledInput e18bmnpq1"
+        class="cache-7yp9m2-StyledInput e18bmnpq2"
         disabled=""
         name="test"
         type="text"
@@ -5153,41 +5478,45 @@ exports[`TextBox should render random 2`] = `
       />
       <label
         aria-live="assertive"
-        class="cache-1h3ffno-StyledLabel-StyledLabel e18bmnpq6"
+        class="cache-1h3ffno-StyledLabel-StyledLabel e18bmnpq7"
         disabled=""
       >
         test
       </label>
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <button
-          aria-disabled="true"
-          class="cache-1h2m2dl-StyledButton-StyledButton em6gco80"
-          disabled=""
-          title="Randomize"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="true"
+            class="cache-1h2m2dl-StyledButton-StyledButton em6gco80"
+            disabled=""
+            title="Randomize"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -5331,6 +5660,30 @@ exports[`TextBox should render random with required 1`] = `
   background-color: #f6f6f8;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5420,17 +5773,17 @@ exports[`TextBox should render random with required 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-16mc9j1-StyledInput e18bmnpq1"
+        class="cache-16mc9j1-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <svg
           class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
@@ -5442,35 +5795,39 @@ exports[`TextBox should render random with required 1`] = `
         </svg>
         <hr
           aria-orientation="vertical"
-          class="e18bmnpq8 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
           role="separator"
         />
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Randomize"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Randomize"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -5591,6 +5948,30 @@ exports[`TextBox should render toggleable password 1`] = `
   box-shadow: none!important;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5680,44 +6061,48 @@ exports[`TextBox should render toggleable password 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-cjl638-StyledInput e18bmnpq1"
+        class="cache-cjl638-StyledInput e18bmnpq2"
         name="password"
         type="password"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Show"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Show"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -5861,6 +6246,30 @@ exports[`TextBox should render toggleable password with required 1`] = `
   background-color: #f6f6f8;
 }
 
+.cache-1o5rljx-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
 .cache-7teqzn-StyledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5950,17 +6359,17 @@ exports[`TextBox should render toggleable password with required 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         autocomplete="on"
-        class="cache-16mc9j1-StyledInput e18bmnpq1"
+        class="cache-16mc9j1-StyledInput e18bmnpq2"
         name="password"
         type="password"
         value=""
       />
       <div
-        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <svg
           class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
@@ -5972,35 +6381,39 @@ exports[`TextBox should render toggleable password with required 1`] = `
         </svg>
         <hr
           aria-orientation="vertical"
-          class="e18bmnpq8 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
           role="separator"
         />
-        <button
-          aria-disabled="false"
-          class="cache-7teqzn-StyledButton-StyledButton em6gco80"
-          title="Show"
-          type="button"
+        <div
+          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
         >
-          <div
-            class="cache-1sybl11-StyledIconContainer em6gco81"
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Show"
+            type="button"
           >
-            <svg
-              class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
             >
-              <path
-                d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
-              />
-            </svg>
-          </div>
-        </button>
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>
@@ -6145,7 +6558,34 @@ exports[`TextBox should render unit with required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-113jkm-StyledText-UnitLabel {
+.cache-ff9pac-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: flex-end;
+  align-self: flex-end;
+  min-width: 32px;
+}
+
+.cache-1hzrfdr-StyledText-UnitLabel {
   color: #b2b6c3;
   font-size: 14px;
   font-family: Asap;
@@ -6155,14 +6595,7 @@ exports[`TextBox should render unit with required 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 8px 0;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   line-height: 18px;
 }
 
@@ -6185,24 +6618,24 @@ exports[`TextBox should render unit with required 1`] = `
 
 <div>
     <div
-      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq5"
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
     >
       <input
         aria-label="test"
         autocomplete="on"
-        class="cache-1lrt4la-StyledInput e18bmnpq1"
+        class="cache-1lrt4la-StyledInput e18bmnpq2"
         name="test"
         type="text"
         value=""
       />
       <label
         aria-live="assertive"
-        class="cache-qq47rc-StyledLabel e18bmnpq6"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
       >
         test
       </label>
       <div
-        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq7"
+        class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <svg
           class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
@@ -6214,21 +6647,26 @@ exports[`TextBox should render unit with required 1`] = `
         </svg>
         <hr
           aria-orientation="vertical"
-          class="e18bmnpq8 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
           role="separator"
         />
-        <p
-          class="e18bmnpq0 cache-113jkm-StyledText-UnitLabel e1tg3t120"
+        <div
+          alignself="flex-end"
+          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
         >
-          px
-        </p>
+          <p
+            class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
+          >
+            px
+          </p>
+        </div>
       </div>
     </div>
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq2"
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
     >
       <div
-        class="cache-e84ooj-StyledError e18bmnpq4"
+        class="cache-e84ooj-StyledError e18bmnpq5"
       />
     </div>
   </div>

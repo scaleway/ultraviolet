@@ -22,6 +22,7 @@ import Expandable from '../Expandable'
 import Icon from '../Icon'
 import Notice from '../Notice'
 import Separator from '../Separator'
+import Stack from '../Stack'
 import Text from '../Text'
 
 const inputSizes = {
@@ -302,6 +303,11 @@ const StyledInput = styled('input', {
   `}
 `
 
+const RightComponent = styled(Stack)<{ alignSelf?: string }>`
+  ${({ alignSelf }) => alignSelf && `align-self: ${alignSelf};`}
+  min-width: 32px;
+`
+
 type TextBoxProps = {
   'data-testid'?: string
   ariaControls?: string
@@ -347,12 +353,8 @@ type TextBoxProps = {
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 )
 
-const UnitLabel = styled(Text)<{
-  alignSelf: 'center' | 'flex-end' | 'flex-start'
-}>`
-  display: flex;
-  padding: ${({ theme: { space } }) => space['1']} 0;
-  align-self: ${({ alignSelf }) => alignSelf};
+const UnitLabel = styled(Text)`
+  padding: ${({ theme }) => theme.space['1']} 0;
   line-height: 18px;
 `
 
@@ -549,12 +551,7 @@ const TextBox = forwardRef<
       }
       if (unit) {
         return (
-          <UnitLabel
-            variant="bodySmall"
-            as="p"
-            alignSelf={unitAlignment}
-            prominence="weak"
-          >
+          <UnitLabel variant="bodySmall" as="p" prominence="weak">
             {unit}
           </UnitLabel>
         )
@@ -629,7 +626,13 @@ const TextBox = forwardRef<
               {(required && hasRightElement) || unit ? (
                 <StyledSeparator direction="vertical" />
               ) : null}
-              {getRightComponent()}
+              <RightComponent
+                justifyContent="center"
+                direction="row"
+                alignSelf={unit ? unitAlignment : undefined}
+              >
+                {getRightComponent()}
+              </RightComponent>
             </StyledRightElement>
           ) : null}
         </StyledRelativeDiv>
