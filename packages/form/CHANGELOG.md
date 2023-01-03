@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.1](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.0...@scaleway/form@1.39.1) (2023-01-03)
+
+### Bug Fixes
+
+- **form:** pass className to correct component on Form ([#2164](https://github.com/scaleway/scaleway-form/issues/2164)) ([d5dbcd6](https://github.com/scaleway/scaleway-form/commit/d5dbcd6e4eaa36b4917ea23150e7686c771c3016))
+
 ## [1.39.0](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.38.1...@scaleway/form@1.39.0) (2023-01-03)
 
 ### Features
