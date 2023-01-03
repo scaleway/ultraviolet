@@ -72,6 +72,19 @@
       }
     }
   },
+  "changelog-preset": {
+    "labels": {
+      "feature": ":rocket: New Feature",
+      "fix": ":bug: Bug Fix",
+      "chore": ":wrench: Chore",
+      "docs": ":memo: Documentation",
+      "refactor": ":recycle: Refactor",
+      "test": ":white_check_mark: Test",
+      "perf": ":zap: Performance",
+      "ci": ":construction_worker: CI",
+      "style": ":art: Style"
+    }
+  },
   "devDependencies": {
     "@babel/core": "7.20.7",
     "@babel/eslint-parser": "7.19.1",
