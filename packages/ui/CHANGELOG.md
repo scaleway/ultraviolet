@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.4...@scaleway/ui@0.215.5) (2023-01-03)
+
+### Bug Fixes
+
+- **Button:** manage flex display on tooltip ([#2155](https://github.com/scaleway/scaleway-ui/issues/2155)) ([387cf39](https://github.com/scaleway/scaleway-ui/commit/387cf397d3ac1d07f70e17b483628de0e0b8e591))
+
 ## 0.215.4 (2023-01-03)
 
 **Note:** Version bump only for package @scaleway/ui
