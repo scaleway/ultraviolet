@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Tags',
+  title: 'Components/Data Entry/Tags',
 } as Meta
 
 export { Playground } from './Playground.stories'

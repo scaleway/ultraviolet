@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Markdown',
+  title: 'Components/Data Display/Markdown',
 } as ComponentMeta<typeof Markdown>
 
 export { Playground } from './Playground.stories'

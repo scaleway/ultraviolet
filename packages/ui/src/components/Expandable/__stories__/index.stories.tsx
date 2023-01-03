@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Expandable',
+  title: 'Components/Button/Expandable',
 } as Meta
 
 export { Playground } from './Playground.stories'

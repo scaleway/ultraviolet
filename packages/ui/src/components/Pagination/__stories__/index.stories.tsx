@@ -19,7 +19,7 @@ export default {
       },
     },
   },
-  title: 'Components/Pagination',
+  title: 'Components/Navigation/Pagination',
 } as Meta
 
 const Template: Story<ComponentProps<typeof Pagination>> = args => (

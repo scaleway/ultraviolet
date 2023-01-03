@@ -3,7 +3,7 @@ import ActionBar from '..'
 
 export default {
   component: ActionBar,
-  title: 'Components/ActionBar',
+  title: 'Components/Container/ActionBar',
 } as Meta
 
 export { Playground } from './Playground.stories'
