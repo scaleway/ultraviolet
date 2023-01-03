@@ -1,13 +1,13 @@
 import { ThemeProvider } from '@emotion/react'
 import { userEvent } from '@storybook/testing-library'
 import { render } from '@testing-library/react'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
+import { useState } from 'react'
 import { List } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import ControlValue from '../../../__stories__/components/ControlValue'
 import defaultTheme from '../../../theme'
 
 type WrapperProps = {
@@ -409,17 +409,37 @@ describe('ListV2', () => {
       },
     ))
 
-  test('Should render correctly with sort then click', () =>
-    shouldMatchEmotionSnapshot(
-      <ControlValue
-        value={
-          { column: '', order: 'asc' } as {
+  test('Should render correctly with sort then click', () => {
+    const LocalControlValue = ({
+      children,
+    }: {
+      children: ({
+        value,
+        setValue,
+      }: {
+        value: {
+          column: string
+          order: ComponentProps<typeof List.Header>['sort']
+        }
+        setValue: Dispatch<
+          SetStateAction<{
             column: string
             order: ComponentProps<typeof List.Header>['sort']
-          }
-        }
-      >
-        {({ value, onChange }) => (
+          }>
+        >
+      }) => ReactNode
+    }) => {
+      const [value, setValue] = useState({ column: '', order: 'asc' } as {
+        column: string
+        order: ComponentProps<typeof List.Header>['sort']
+      })
+
+      return <div>{children({ value, setValue })}</div>
+    }
+
+    return shouldMatchEmotionSnapshot(
+      <LocalControlValue>
+        {({ value, setValue }) => (
           <List
             idKey="id"
             data={data}
@@ -429,12 +449,12 @@ describe('ListV2', () => {
               id: column.id,
               onClick: clickedSort => {
                 if (clickedSort.column === value.column) {
-                  onChange({
+                  setValue({
                     column: value.column,
                     order: value.order === 'asc' ? 'desc' : 'asc',
                   })
                 } else {
-                  onChange({
+                  setValue({
                     column: clickedSort.column,
                     order: 'asc',
                   })
@@ -457,9 +477,11 @@ describe('ListV2', () => {
             </List.Body>
           </List>
         )}
-      </ControlValue>,
+      </LocalControlValue>,
       {
         transform: node => {
+          console.log(node)
+
           const listColumns = node.getAllByRole(
             'columnheader',
           ) as HTMLTableCellElement[]
@@ -476,7 +498,8 @@ describe('ListV2', () => {
           expect(listColumns[1].getAttribute('aria-sort')).toBe('ascending')
         },
       },
-    ))
+    )
+  })
 
   test('Should render correctly with isSelectable and selectedIds', () =>
     shouldMatchEmotionSnapshot(
