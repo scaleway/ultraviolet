@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Button/Link',
+  title: 'Components/Action/Link',
 } as Meta
 
 export { Playground } from './Playground.stories'

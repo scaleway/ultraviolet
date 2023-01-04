@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Token/Icon',
+  title: 'Components/Data Display/Icon',
 } as Meta
 
 export { Playground } from './Playground.stories'

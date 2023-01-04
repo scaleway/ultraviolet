@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Button/CopyButton',
+  title: 'Components/Action/CopyButton',
 } as ComponentMeta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'

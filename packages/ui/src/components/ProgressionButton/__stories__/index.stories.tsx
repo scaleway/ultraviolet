@@ -17,7 +17,7 @@ export default {
       },
     },
   },
-  title: 'Components/Button/ProgressionButton',
+  title: 'Components/Action/ProgressionButton',
 } as ComponentMeta<typeof ProgressionButton>
 
 export { Playground } from './Playground.stories'
