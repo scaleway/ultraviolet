@@ -6,6 +6,7 @@ const validator: ValidatorFn<string, (RegExp | RegExp[])[]> = regexes => ({
     regexes.every(
       regex =>
         value === undefined ||
+        value === '' ||
         (Array.isArray(regex)
           ? regex.some(regexOr => regexOr.test(value))
           : regex.test(value)),
