@@ -4,7 +4,9 @@ import ActionBar from '..'
 import Button from '../../Button'
 import Stack from '../../Stack'
 
-const StyledStack = styled(Stack)`
+const StyledFlexDiv = styled.div`
+  display: flex;
+  align-items: flex-end;
   flex: 1;
 `
 
@@ -17,9 +19,9 @@ export const Template: ComponentStory<typeof ActionBar> = args => (
   <ActionBar {...args}>
     <FullHeightStack alignItems="center" direction="row">
       I am the Playground Action Bar
-      <StyledStack alignItems="flex-end">
+      <StyledFlexDiv>
         <Button action variant="warning-bordered" icon="delete" />
-      </StyledStack>
+      </StyledFlexDiv>
     </FullHeightStack>
   </ActionBar>
 )

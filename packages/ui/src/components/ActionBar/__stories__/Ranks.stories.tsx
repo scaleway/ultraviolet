@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
 import type { ComponentStory } from '@storybook/react'
 import ActionBar from '..'
-import Stack from '../../Stack'
 
-const FullHeightStack = styled(Stack)`
+const FullHeightDiv = styled.div`
+  display: flex;
+  align-items: center;
   height: 100%;
   padding: 0 ${({ theme }) => theme.space['2']};
 `
@@ -11,14 +12,10 @@ const FullHeightStack = styled(Stack)`
 export const Ranks: ComponentStory<typeof ActionBar> = props => (
   <>
     <ActionBar {...props} rank={1}>
-      <FullHeightStack alignItems="center" direction="row">
-        I am an Action Bar with rank 1
-      </FullHeightStack>
+      <FullHeightDiv>I am an Action Bar with rank 1</FullHeightDiv>
     </ActionBar>
     <ActionBar {...props} rank={2}>
-      <FullHeightStack alignItems="center" direction="row">
-        I am an Action Bar with rank 2
-      </FullHeightStack>
+      <FullHeightDiv>I am an Action Bar with rank 2</FullHeightDiv>
     </ActionBar>
   </>
 )
