@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.5...@scaleway/ui@0.215.6) (2023-01-04)
+
+### :bug: Bug Fixes
+
+- **deps:** update dependency @scaleway/use-media to v1.2.2 ([#2159](https://github.com/scaleway/scaleway-ui/issues/2159)) ([8948b7f](https://github.com/scaleway/scaleway-ui/commit/8948b7fd681d6d70ea256949597a60529f987029))
+
 ## [0.215.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.4...@scaleway/ui@0.215.5) (2023-01-03)
 
 ### Bug Fixes
