@@ -114,7 +114,7 @@ exports[`TextBox should handle events on random button 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -123,10 +123,10 @@ exports[`TextBox should handle events on random button 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -240,7 +240,7 @@ exports[`TextBox should handle events on random button 1`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -389,7 +389,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -398,10 +398,10 @@ exports[`TextBox should handle events on toggleable password 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -515,7 +515,7 @@ exports[`TextBox should handle events on toggleable password 1`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -1662,7 +1662,7 @@ exports[`TextBox should render correctly required true 1`] = `
   min-height: 10px;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1671,10 +1671,10 @@ exports[`TextBox should render correctly required true 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1732,7 +1732,7 @@ exports[`TextBox should render correctly required true 1`] = `
           />
         </svg>
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         />
       </div>
     </div>
@@ -2770,6 +2770,384 @@ exports[`TextBox should render correctly with height prop 1`] = `
 </DocumentFragment>
 `;
 
+exports[`TextBox should render correctly with multiple right components 1`] = `
+<DocumentFragment>
+  .cache-1txlkbl-StyledRelativeDiv {
+  position: relative;
+}
+
+.cache-1lrt4la-StyledInput {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  color: #4a4f62;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding-right: 22px;
+}
+
+.cache-1lrt4la-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.cache-1lrt4la-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.cache-1lrt4la-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.cache-1lrt4la-StyledInput::placeholder {
+  color: #b2b6c3;
+  opacity: 0;
+}
+
+.cache-1lrt4la-StyledInput:hover,
+.cache-1lrt4la-StyledInput:focus {
+  border-color: #4f0599;
+}
+
+.cache-1lrt4la-StyledInput:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border-color: #4f0599;
+}
+
+.cache-qq47rc-StyledLabel {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  pointer-events: none;
+  color: #b2b6c3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: 48px;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 150ms;
+  transition: transform 150ms;
+  -webkit-transform: translate(0, 12px) scale(1);
+  -moz-transform: translate(0, 12px) scale(1);
+  -ms-transform: translate(0, 12px) scale(1);
+  transform: translate(0, 12px) scale(1);
+}
+
+.cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: -webkit-transform 150ms,color 150ms;
+  transition: transform 150ms,color 150ms;
+  color: #b2b6c3;
+  pointer-events: auto;
+}
+
+.cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement:hover,
+.cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement:focus-within {
+  color: #4a4f62;
+}
+
+.cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement>button {
+  box-shadow: none!important;
+}
+
+.cache-1df1xfu-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #a6102d;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.cache-3qxh6z-StyledHr-StyledSeparator {
+  margin: 0;
+  border: 0;
+  width: 1px;
+  height: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #e6e9f0;
+  margin-top: 1px;
+  height: calc(100% - 2px);
+  background-color: #f6f6f8;
+}
+
+.cache-1tepvfo-Stack-RightComponent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
+}
+
+.cache-7teqzn-StyledButton-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: 500;
+  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #4a4f62;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.cache-7teqzn-StyledButton-StyledButton:hover,
+.cache-7teqzn-StyledButton-StyledButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-7teqzn-StyledButton-StyledButton>svg {
+  pointer-events: none;
+}
+
+.cache-1sybl11-StyledIconContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+}
+
+.cache-190f6hx-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+.cache-1i6h90c-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #149a7b;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.cache-1hzrfdr-StyledText-UnitLabel {
+  color: #b2b6c3;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 8px 0;
+  line-height: 18px;
+}
+
+.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cache-e84ooj-StyledError {
+  font-size: 12px;
+  color: #dd3252;
+  padding-top: 2px;
+}
+
+<div>
+    <div
+      class="cache-1txlkbl-StyledRelativeDiv e18bmnpq6"
+    >
+      <input
+        aria-label="Multiple"
+        autocomplete="on"
+        class="cache-1lrt4la-StyledInput e18bmnpq2"
+        type="password"
+        value=""
+      />
+      <label
+        aria-live="assertive"
+        class="cache-qq47rc-StyledLabel e18bmnpq7"
+      >
+        Multiple
+      </label>
+      <div
+        class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
+      >
+        <svg
+          class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+          />
+        </svg>
+        <hr
+          aria-orientation="vertical"
+          class="e18bmnpq9 cache-3qxh6z-StyledHr-StyledSeparator eoti1h20"
+          role="separator"
+        />
+        <div
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
+        >
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Show"
+            type="button"
+          >
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
+            >
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <button
+            aria-disabled="false"
+            class="cache-7teqzn-StyledButton-StyledButton em6gco80"
+            title="Randomize"
+            type="button"
+          >
+            <div
+              class="cache-1sybl11-StyledIconContainer em6gco81"
+            >
+              <svg
+                class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <svg
+            class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+            />
+          </svg>
+          <p
+            class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
+          >
+            px
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e18bmnpq3"
+    >
+      <div
+        class="cache-e84ooj-StyledError e18bmnpq5"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`TextBox should render correctly with notice 1`] = `
 <DocumentFragment>
   .cache-1txlkbl-StyledRelativeDiv {
@@ -3108,7 +3486,7 @@ exports[`TextBox should render correctly with null right component 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3117,10 +3495,10 @@ exports[`TextBox should render correctly with null right component 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3171,7 +3549,7 @@ exports[`TextBox should render correctly with null right component 1`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         />
       </div>
     </div>
@@ -3455,7 +3833,7 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-ff9pac-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3464,10 +3842,10 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3476,9 +3854,6 @@ exports[`TextBox should render correctly with unit is px 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   min-width: 32px;
 }
 
@@ -3540,8 +3915,7 @@ exports[`TextBox should render correctly with unit is px 1`] = `
           role="separator"
         />
         <div
-          alignself="flex-end"
-          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <p
             class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
@@ -3700,7 +4074,7 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-ff9pac-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3709,10 +4083,10 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3721,9 +4095,6 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   min-width: 32px;
 }
 
@@ -3793,8 +4164,7 @@ exports[`TextBox should render correctly with unit is px and required 1`] = `
           role="separator"
         />
         <div
-          alignself="flex-end"
-          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <p
             class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"
@@ -3930,7 +4300,7 @@ exports[`TextBox should render correctly with valid false 1`] = `
   color: #4a4f62;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3939,10 +4309,10 @@ exports[`TextBox should render correctly with valid false 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4002,7 +4372,7 @@ exports[`TextBox should render correctly with valid false 1`] = `
         class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <svg
             class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
@@ -4141,7 +4511,7 @@ exports[`TextBox should render correctly with valid false 2`] = `
   color: #4a4f62;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4150,10 +4520,10 @@ exports[`TextBox should render correctly with valid false 2`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4213,7 +4583,7 @@ exports[`TextBox should render correctly with valid false 2`] = `
         class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <svg
             class="cache-1bnmxzp-StyledIcon-sizeStyles etwatq50"
@@ -4352,7 +4722,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
   color: #4a4f62;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4361,10 +4731,10 @@ exports[`TextBox should render correctly with valid true 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4424,7 +4794,7 @@ exports[`TextBox should render correctly with valid true 1`] = `
         class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <svg
             class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
@@ -4563,7 +4933,7 @@ exports[`TextBox should render correctly with valid true 2`] = `
   color: #4a4f62;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4572,10 +4942,10 @@ exports[`TextBox should render correctly with valid true 2`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4635,7 +5005,7 @@ exports[`TextBox should render correctly with valid true 2`] = `
         class="cache-lv747-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <svg
             class="cache-1i6h90c-StyledIcon-sizeStyles etwatq50"
@@ -5055,7 +5425,7 @@ exports[`TextBox should render random 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5064,10 +5434,10 @@ exports[`TextBox should render random 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5181,7 +5551,7 @@ exports[`TextBox should render random 1`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -5342,7 +5712,7 @@ exports[`TextBox should render random 2`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5351,10 +5721,10 @@ exports[`TextBox should render random 2`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5487,7 +5857,7 @@ exports[`TextBox should render random 2`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="true"
@@ -5660,7 +6030,7 @@ exports[`TextBox should render random with required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5669,10 +6039,10 @@ exports[`TextBox should render random with required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5799,7 +6169,7 @@ exports[`TextBox should render random with required 1`] = `
           role="separator"
         />
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -5948,7 +6318,7 @@ exports[`TextBox should render toggleable password 1`] = `
   box-shadow: none!important;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5957,10 +6327,10 @@ exports[`TextBox should render toggleable password 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6074,7 +6444,7 @@ exports[`TextBox should render toggleable password 1`] = `
         class="cache-1ij6iic-StyledRightElement-StyledRightElement-StyledRightElement e18bmnpq8"
       >
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -6246,7 +6616,7 @@ exports[`TextBox should render toggleable password with required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-1o5rljx-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6255,10 +6625,10 @@ exports[`TextBox should render toggleable password with required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6385,7 +6755,7 @@ exports[`TextBox should render toggleable password with required 1`] = `
           role="separator"
         />
         <div
-          class="cache-1o5rljx-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <button
             aria-disabled="false"
@@ -6558,7 +6928,7 @@ exports[`TextBox should render unit with required 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-ff9pac-Stack-RightComponent {
+.cache-1tepvfo-Stack-RightComponent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6567,10 +6937,10 @@ exports[`TextBox should render unit with required 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6579,9 +6949,6 @@ exports[`TextBox should render unit with required 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: flex-end;
-  align-self: flex-end;
   min-width: 32px;
 }
 
@@ -6651,8 +7018,7 @@ exports[`TextBox should render unit with required 1`] = `
           role="separator"
         />
         <div
-          alignself="flex-end"
-          class="cache-ff9pac-Stack-RightComponent e18bmnpq1"
+          class="cache-1tepvfo-Stack-RightComponent e18bmnpq1"
         >
           <p
             class="e18bmnpq0 cache-1hzrfdr-StyledText-UnitLabel e1tg3t120"

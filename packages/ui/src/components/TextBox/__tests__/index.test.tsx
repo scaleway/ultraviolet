@@ -173,4 +173,16 @@ describe('TextBox', () => {
     shouldMatchEmotionSnapshot(
       <TextBox label="test" name="test" valid={false} />,
     ))
+
+  test('should render correctly with multiple right components', () =>
+    shouldMatchEmotionSnapshot(
+      <TextBox
+        label="Multiple"
+        random="prefix"
+        unit="px"
+        required
+        type="toggleable-password"
+        valid
+      />,
+    ))
 })

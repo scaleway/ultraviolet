@@ -303,8 +303,7 @@ const StyledInput = styled('input', {
   `}
 `
 
-const RightComponent = styled(Stack)<{ alignSelf?: string }>`
-  ${({ alignSelf }) => alignSelf && `align-self: ${alignSelf};`}
+const RightComponent = styled(Stack)`
   min-width: 32px;
 `
 
@@ -343,7 +342,6 @@ type TextBoxProps = {
   tabIndex?: number
   type?: string
   unit?: string
-  unitAlignment?: 'center' | 'flex-end' | 'flex-start'
   valid?: boolean
   value?: string | number
   wrap?: string
@@ -398,7 +396,6 @@ const TextBox = forwardRef<
       tabIndex,
       type = 'text',
       unit,
-      unitAlignment = 'flex-end',
       valid,
       value,
       wrap,
@@ -514,9 +511,11 @@ const TextBox = forwardRef<
 
     const inputSize = size
 
-    const getRightComponent = () => {
+    const getRightComponents = () => {
+      const rightComponents = []
+
       if (isPassToggleable && !generated) {
-        return (
+        rightComponents.push(
           <Button
             action
             onClick={handlePassVisibilityClick}
@@ -524,11 +523,11 @@ const TextBox = forwardRef<
             title={passwordVisible ? 'Hide' : 'Show'}
             variant="transparent"
             icon={passwordVisible ? 'eye-off' : 'eye'}
-          />
+          />,
         )
       }
       if (random) {
-        return (
+        rightComponents.push(
           <Button
             action
             onClick={handleClickRandomize}
@@ -537,27 +536,27 @@ const TextBox = forwardRef<
             title="Randomize"
             icon="auto-fix"
             variant="transparent"
-          />
+          />,
         )
       }
       if (valid === false || valid === true) {
-        return (
+        rightComponents.push(
           <Icon
             name={!valid ? 'close' : 'check'}
             color={!valid ? 'danger' : 'success'}
             size={20}
-          />
+          />,
         )
       }
       if (unit) {
-        return (
+        rightComponents.push(
           <UnitLabel variant="bodySmall" as="p" prominence="weak">
             {unit}
-          </UnitLabel>
+          </UnitLabel>,
         )
       }
 
-      return null
+      return rightComponents
     }
 
     return (
@@ -629,9 +628,9 @@ const TextBox = forwardRef<
               <RightComponent
                 justifyContent="center"
                 direction="row"
-                alignSelf={unit ? unitAlignment : undefined}
+                alignItems="center"
               >
-                {getRightComponent()}
+                {getRightComponents()}
               </RightComponent>
             </StyledRightElement>
           ) : null}
