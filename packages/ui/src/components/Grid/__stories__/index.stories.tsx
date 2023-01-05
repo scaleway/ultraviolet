@@ -15,7 +15,7 @@ export default {
       },
     },
   },
-  title: 'Components/Container/Grid',
+  title: 'Components/Layout/Grid',
 } as Meta
 
 const Template: Story<ComponentProps<typeof Grid>> = args => (

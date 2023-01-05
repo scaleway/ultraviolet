@@ -3,7 +3,7 @@ import Tag from '..'
 
 export default {
   component: Tag,
-  title: 'Components/Data Display/Tag',
+  title: 'Components/Badges/Tag',
 } as Meta
 
 export { Playground } from './Playground.stories'

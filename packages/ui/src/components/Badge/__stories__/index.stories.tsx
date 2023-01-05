@@ -3,7 +3,7 @@ import Badge from '..'
 
 export default {
   component: Badge,
-  title: 'Components/Data Display/Badge',
+  title: 'Components/Badges/Badge',
 } as ComponentMeta<typeof Badge>
 
 export { Playground } from './Playground.stories'

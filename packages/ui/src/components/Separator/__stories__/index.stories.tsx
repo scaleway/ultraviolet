@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Separator',
+  title: 'Components/Layout/Separator',
 } as Meta
 
 export { Playground } from './Playground.stories'
