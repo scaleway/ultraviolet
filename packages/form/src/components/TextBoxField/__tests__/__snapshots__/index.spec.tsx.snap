@@ -103,21 +103,21 @@ exports[`TextBoxField should render correctly 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-16jruyc e18bmnpq1"
+          class="cache-16jruyc e18bmnpq2"
           name="test"
           type="text"
           value=""
         />
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -233,11 +233,11 @@ exports[`TextBoxField should render correctly disabled 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-4sr5xp e18bmnpq1"
+          class="cache-4sr5xp e18bmnpq2"
           disabled=""
           name="test"
           type="text"
@@ -245,10 +245,10 @@ exports[`TextBoxField should render correctly disabled 1`] = `
         />
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -359,21 +359,21 @@ exports[`TextBoxField should render correctly generated 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-16jruyc e18bmnpq1"
+          class="cache-16jruyc e18bmnpq2"
           name="test"
           type="text"
           value=""
         />
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -484,11 +484,11 @@ exports[`TextBoxField should render correctly id 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-16jruyc e18bmnpq1"
+          class="cache-16jruyc e18bmnpq2"
           id="id"
           name="test"
           type="text"
@@ -496,10 +496,10 @@ exports[`TextBoxField should render correctly id 1`] = `
         />
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -634,25 +634,25 @@ exports[`TextBoxField should render correctly notice 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-16jruyc e18bmnpq1"
+          class="cache-16jruyc e18bmnpq2"
           name="test"
           type="text"
           value=""
         />
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
       <div
-        class="e18bmnpq3 cache-1wy3rxk e1qg14600"
+        class="e18bmnpq4 cache-1wy3rxk e1qg14600"
       >
         <svg
           class="cache-qq4de9-sizeStyles etwatq50"
@@ -759,17 +759,19 @@ exports[`TextBoxField should render correctly random 1`] = `
   opacity: 1;
 }
 
-.cache-zmd8bf-StyledRightElement {
+.cache-rjcpkh-StyledRightElement {
   pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  padding: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -780,13 +782,37 @@ exports[`TextBoxField should render correctly random 1`] = `
   pointer-events: auto;
 }
 
-.cache-zmd8bf-StyledRightElement:hover,
-.cache-zmd8bf-StyledRightElement:focus-within {
+.cache-rjcpkh-StyledRightElement:hover,
+.cache-rjcpkh-StyledRightElement:focus-within {
   color: #4a4f62;
 }
 
-.cache-zmd8bf-StyledRightElement>button {
+.cache-rjcpkh-StyledRightElement>button {
   box-shadow: none!important;
+}
+
+.cache-11ojotg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
 }
 
 .cache-19k31i2-StyledButton {
@@ -881,44 +907,48 @@ exports[`TextBoxField should render correctly random 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-z48xia e18bmnpq1"
+          class="cache-z48xia e18bmnpq2"
           name="test"
           type="text"
           value=""
         />
         <div
-          class="cache-zmd8bf-StyledRightElement e18bmnpq7"
+          class="cache-rjcpkh-StyledRightElement e18bmnpq8"
         >
-          <button
-            aria-disabled="false"
-            class="cache-19k31i2-StyledButton em6gco80"
-            title="Randomize"
-            type="button"
+          <div
+            class="cache-11ojotg e18bmnpq1"
           >
-            <div
-              class="cache-brwenz em6gco81"
+            <button
+              aria-disabled="false"
+              class="cache-19k31i2-StyledButton em6gco80"
+              title="Randomize"
+              type="button"
             >
-              <svg
-                class="cache-kv8vgz-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
+              <div
+                class="cache-brwenz em6gco81"
               >
-                <path
-                  d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
-                />
-              </svg>
-            </div>
-          </button>
+                <svg
+                  class="cache-kv8vgz-sizeStyles etwatq50"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.5,5.6L5,7L6.4,4.5L5,2L7.5,3.4L10,2L8.6,4.5L10,7L7.5,5.6M19.5,15.4L22,14L20.6,16.5L22,19L19.5,17.6L17,19L18.4,16.5L17,14L19.5,15.4M22,2L20.6,4.5L22,7L19.5,5.6L17,7L18.4,4.5L17,2L19.5,3.4L22,2M13.34,12.78L15.78,10.34L13.66,8.22L11.22,10.66L13.34,12.78M14.37,7.29L16.71,9.63C17.1,10 17.1,10.65 16.71,11.04L5.04,22.71C4.65,23.1 4,23.1 3.63,22.71L1.29,20.37C0.9,20 0.9,19.35 1.29,18.96L12.96,7.29C13.35,6.9 14,6.9 14.37,7.29Z"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -932,7 +962,7 @@ exports[`TextBoxField should render correctly required 1`] = `
   position: relative;
 }
 
-.cache-t4dkq1 {
+.cache-16jruyc {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -959,66 +989,67 @@ exports[`TextBoxField should render correctly required 1`] = `
   padding-right: 20px;
   padding-top: 14px;
   padding: 8px;
-  padding-right: 22px;
 }
 
-.cache-t4dkq1::-webkit-input-placeholder {
+.cache-16jruyc::-webkit-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-t4dkq1::-moz-placeholder {
+.cache-16jruyc::-moz-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-t4dkq1:-ms-input-placeholder {
+.cache-16jruyc:-ms-input-placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-t4dkq1::placeholder {
+.cache-16jruyc::placeholder {
   color: #b2b6c3;
   opacity: 0;
 }
 
-.cache-t4dkq1:hover,
-.cache-t4dkq1:focus {
+.cache-16jruyc:hover,
+.cache-16jruyc:focus {
   border-color: #4f0599;
 }
 
-.cache-t4dkq1:focus {
+.cache-16jruyc:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border-color: #4f0599;
 }
 
-.cache-t4dkq1::-webkit-input-placeholder {
+.cache-16jruyc::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-t4dkq1::-moz-placeholder {
+.cache-16jruyc::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-t4dkq1:-ms-input-placeholder {
+.cache-16jruyc:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-t4dkq1::placeholder {
+.cache-16jruyc::placeholder {
   opacity: 1;
 }
 
-.cache-h0isfn-StyledRightElement {
+.cache-4y5g3o-StyledRightElement {
   pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  padding: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1028,8 +1059,8 @@ exports[`TextBoxField should render correctly required 1`] = `
   color: #b2b6c3;
 }
 
-.cache-h0isfn-StyledRightElement:hover,
-.cache-h0isfn-StyledRightElement:focus-within {
+.cache-4y5g3o-StyledRightElement:hover,
+.cache-4y5g3o-StyledRightElement:focus-within {
   color: #4a4f62;
 }
 
@@ -1040,6 +1071,30 @@ exports[`TextBoxField should render correctly required 1`] = `
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.cache-11ojotg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
 }
 
 .cache-9vn1ol {
@@ -1064,17 +1119,17 @@ exports[`TextBoxField should render correctly required 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-t4dkq1 e18bmnpq1"
+          class="cache-16jruyc e18bmnpq2"
           name="test"
           type="text"
           value=""
         />
         <div
-          class="cache-h0isfn-StyledRightElement e18bmnpq7"
+          class="cache-4y5g3o-StyledRightElement e18bmnpq8"
         >
           <svg
             class="cache-7wqnxk-sizeStyles etwatq50"
@@ -1084,13 +1139,16 @@ exports[`TextBoxField should render correctly required 1`] = `
               d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
             />
           </svg>
+          <div
+            class="cache-11ojotg e18bmnpq1"
+          />
         </div>
       </div>
       <div
-        class="cache-9vn1ol e18bmnpq2"
+        class="cache-9vn1ol e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         />
       </div>
     </div>
@@ -1217,21 +1275,21 @@ exports[`TextBoxField should render correctly with minLength 1`] = `
   >
     <div>
       <div
-        class="cache-bjn8wh e18bmnpq5"
+        class="cache-bjn8wh e18bmnpq6"
       >
         <input
           autocomplete="on"
-          class="cache-1l46zoq e18bmnpq1"
+          class="cache-1l46zoq e18bmnpq2"
           name="test"
           type="text"
           value="test"
         />
       </div>
       <div
-        class="cache-msb198 e18bmnpq2"
+        class="cache-msb198 e18bmnpq3"
       >
         <div
-          class="cache-1rshnsu e18bmnpq4"
+          class="cache-1rshnsu e18bmnpq5"
         >
           This field should have a length greater than 13
         </div>
