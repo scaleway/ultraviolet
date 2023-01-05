@@ -27,6 +27,8 @@ const STORY_SORT = {
     ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
     'Responsive',
     'Components',
+    'Form',
+    ['Introduction', 'Changelog', 'Components'],
   ],
 }
 
