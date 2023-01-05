@@ -11,7 +11,7 @@ jobs:
   typecheck:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
       - uses: pnpm/action-setup@v2.2.4
       - name: Use Node.js
         uses: actions/setup-node@v3.5.1
@@ -25,7 +25,7 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
       - uses: pnpm/action-setup@v2.2.4
       - name: Use Node.js
         uses: actions/setup-node@v3.5.1
@@ -42,7 +42,7 @@ jobs:
       matrix:
         node: ['18']
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
         with:
           fetch-depth: '0'
       - uses: pnpm/action-setup@v2.2.4
@@ -59,7 +59,7 @@ jobs:
   accessibility:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
         with:
           fetch-depth: '0'
       - uses: pnpm/action-setup@v2.2.4
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: [lint, test]
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
       - uses: pnpm/action-setup@v2.2.4
       - name: Use Node.js
         uses: actions/setup-node@v3.5.1
@@ -94,7 +94,7 @@ jobs:
     env:
       HUSKY: 0
     steps:
-    - uses: actions/checkout@v3.2.0
+    - uses: actions/checkout@v3.3.0
       with:
         fetch-depth: "0"
         persist-credentials: false
@@ -125,7 +125,7 @@ jobs:
     env:
       DEPLOYMENT_NAME: 'storybook'
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
         with:
           fetch-depth: 0
 
