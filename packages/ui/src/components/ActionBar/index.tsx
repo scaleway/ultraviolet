@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
+import { createPortal } from 'react-dom'
+import { fadeIn } from '../../utils'
 
 const HEIGHT = 56
 const SPACING = 20
@@ -15,7 +17,7 @@ const StyledDiv = styled.div<{ rank: number }>`
   position: fixed;
   transform: translate(-50%, 0);
   width: 600px;
-  z-index: 2;
+  animation: ${fadeIn} 0.2s ease-in-out;
 `
 
 type ActionBarProps = {
@@ -35,15 +37,17 @@ const ActionBar = ({
   rank = 0,
   'aria-modal': ariaModal,
   className,
-}: ActionBarProps) => (
-  <StyledDiv
-    rank={rank}
-    role={role}
-    aria-modal={ariaModal}
-    className={className}
-  >
-    {children}
-  </StyledDiv>
-)
+}: ActionBarProps) =>
+  createPortal(
+    <StyledDiv
+      rank={rank}
+      role={role}
+      aria-modal={ariaModal}
+      className={className}
+    >
+      {children}
+    </StyledDiv>,
+    document.body,
+  )
 
 export default ActionBar
