@@ -6,6 +6,11 @@ import Stack from '../Stack'
 import Text from '../Text'
 import { useListContext } from './context'
 
+const StyledStack = styled(Stack)`
+  height: 100%;
+  padding: 0 ${({ theme }) => theme.space['2']};
+`
+
 const StyledCheckbox = styled(Checkbox)`
   justify-content: center;
   display: flex;
@@ -56,7 +61,7 @@ function SelectBar<T extends Record<string, unknown>>({
   // Don't display the pop-in if there aren't an item selected
   return selectedItems.length > 0 ? (
     <ActionBar {...props} role="dialog" aria-modal="true">
-      <Stack alignItems="center" direction="row">
+      <StyledStack alignItems="center" direction="row">
         <StyledCheckbox
           checked
           onChange={unselectAll}
@@ -72,7 +77,7 @@ function SelectBar<T extends Record<string, unknown>>({
             ? children({ selectedItems, unselectAll })
             : children}
         </StyledContainer>
-      </Stack>
+      </StyledStack>
     </ActionBar>
   ) : null
 }
