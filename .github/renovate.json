@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabledManagers": ["dockerfile", "github-actions", "npm"],
   "extends": ["config:base", ":combinePatchMinorReleases"],
   "assignees": ["team:console"],
@@ -52,6 +53,12 @@
       "labels": ["UPDATE-PATCH"],
       "stabilityDays": 1,
       "matchUpdateTypes": ["patch"]
+    },
+    {
+      "matchDepTypes": ["engines"],
+      "matchPackageNames": ["node"],
+      "matchManagers": ["pnpm"],
+      "rangeStrategy": "widen"
     }
   ]
 }
