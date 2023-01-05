@@ -4,7 +4,7 @@ export const Valid = Template.bind({})
 
 Valid.args = {
   label: 'First Name',
-  valid: true,
+  valid: false,
 }
 
 Valid.parameters = {

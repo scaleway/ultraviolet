@@ -56,7 +56,6 @@ type TextBoxSizes = keyof typeof inputSizes
 export const textBoxSizes = Object.keys(inputSizes) as TextBoxSizes[]
 
 const StyledSeparator = styled(Separator)`
-  margin-right: 8px;
   margin-top: 1px;
   height: calc(100% - 2px);
   background-color: ${({ theme: { colors } }) =>
@@ -65,20 +64,21 @@ const StyledSeparator = styled(Separator)`
 type StyledRightElementProps = {
   edit?: boolean
   touchable?: boolean
-  unit?: string
 }
 
 const StyledRightElement = styled('div', {
-  shouldForwardProp: prop => !['edit', 'touchable', 'unit'].includes(prop),
+  shouldForwardProp: prop => !['edit', 'touchable'].includes(prop),
 })<StyledRightElementProps>`
-  ${({ theme: { colors } }) => css`
+  ${({ theme: { colors, space } }) => css`
     pointer-events: none;
     position: absolute;
     right: 0;
     bottom: 0;
     top: 0;
-    padding: 8px;
+    padding-left: ${space['1']};
+    padding-right: ${space['1']};
     display: flex;
+    gap: ${space['1']};
     align-items: center;
     transition: transform 150ms, color 150ms;
     color: ${colors.neutral.textWeak};
@@ -89,28 +89,13 @@ const StyledRightElement = styled('div', {
     }
   `}
 
-  ${({ edit }) =>
-    edit &&
-    css`
-      transform: translateY(8px);
-    `}
-
-    ${({ touchable }) =>
+  ${({ touchable }) =>
     touchable &&
     css`
       pointer-events: auto;
       > button {
         box-shadow: none !important;
       }
-    `}
-
-    ${({ unit }) =>
-    unit &&
-    css`
-      padding-top: 0;
-      padding-bottom: 0;
-      transform: none;
-      align-items: flex-start;
     `}
 `
 type StyledLabelProps = {
@@ -318,6 +303,10 @@ const StyledInput = styled('input', {
   `}
 `
 
+const RightComponent = styled(Stack)`
+  min-width: 32px;
+`
+
 type TextBoxProps = {
   'data-testid'?: string
   ariaControls?: string
@@ -353,7 +342,6 @@ type TextBoxProps = {
   tabIndex?: number
   type?: string
   unit?: string
-  unitAlignment?: 'center' | 'flex-end' | 'flex-start'
   valid?: boolean
   value?: string | number
   wrap?: string
@@ -363,12 +351,8 @@ type TextBoxProps = {
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 )
 
-const UnitLabel = styled(Text)<{
-  alignSelf: 'center' | 'flex-end' | 'flex-start'
-}>`
-  display: flex;
-  padding: ${({ theme: { space } }) => space['1']} 0;
-  align-self: ${({ alignSelf }) => alignSelf};
+const UnitLabel = styled(Text)`
+  padding: ${({ theme }) => theme.space['1']} 0;
   line-height: 18px;
 `
 
@@ -412,7 +396,6 @@ const TextBox = forwardRef<
       tabIndex,
       type = 'text',
       unit,
-      unitAlignment = 'flex-end',
       valid,
       value,
       wrap,
@@ -506,8 +489,12 @@ const TextBox = forwardRef<
       hasLabel && (forceEdit || visited || value || error || generated)
 
     const isPlaceholderVisible = !hasLabel || !!edit
-    const hasRightElement =
-      valid || required || isPassToggleable || random || unit
+    const hasRightElement = !!(
+      valid !== undefined ||
+      isPassToggleable ||
+      random ||
+      unit
+    )
 
     // Set the right padding to 22px when the TextBox is required. 22px allows
     // keeping the required star icon centered, since it is smaller than valid or
@@ -524,9 +511,11 @@ const TextBox = forwardRef<
 
     const inputSize = size
 
-    const getRightComponent = () => {
+    const getRightComponents = () => {
+      const rightComponents = []
+
       if (isPassToggleable && !generated) {
-        return (
+        rightComponents.push(
           <Button
             action
             onClick={handlePassVisibilityClick}
@@ -534,11 +523,11 @@ const TextBox = forwardRef<
             title={passwordVisible ? 'Hide' : 'Show'}
             variant="transparent"
             icon={passwordVisible ? 'eye-off' : 'eye'}
-          />
+          />,
         )
       }
       if (random) {
-        return (
+        rightComponents.push(
           <Button
             action
             onClick={handleClickRandomize}
@@ -547,39 +536,27 @@ const TextBox = forwardRef<
             title="Randomize"
             icon="auto-fix"
             variant="transparent"
-          />
+          />,
         )
       }
       if (valid === false || valid === true) {
-        return (
+        rightComponents.push(
           <Icon
             name={!valid ? 'close' : 'check'}
             color={!valid ? 'danger' : 'success'}
             size={20}
-          />
+          />,
         )
       }
       if (unit) {
-        return (
-          <>
-            <StyledSeparator direction="vertical" />
-            <UnitLabel
-              variant="bodySmall"
-              as="p"
-              alignSelf={unitAlignment}
-              prominence="weak"
-            >
-              <Stack gap={1} direction="row">
-                {unit}
-                {required && <Icon name="asterisk" color="danger" size={8} />}
-              </Stack>
-            </UnitLabel>
-          </>
+        rightComponents.push(
+          <UnitLabel variant="bodySmall" as="p" prominence="weak">
+            {unit}
+          </UnitLabel>,
         )
       }
-      if (required) return <Icon name="asterisk" color="danger" size={10} />
 
-      return null
+      return rightComponents
     }
 
     return (
@@ -599,7 +576,7 @@ const TextBox = forwardRef<
             error={!!error}
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
-            hasRightElement={!!hasRightElement}
+            hasRightElement={hasRightElement}
             rightElementPadding={rightElementPadding}
             id={id}
             inputSize={inputSize}
@@ -637,13 +614,24 @@ const TextBox = forwardRef<
             </StyledLabel>
           )}
 
-          {hasRightElement ? (
+          {hasRightElement || required ? (
             <StyledRightElement
               edit={!!edit}
               touchable={isPassToggleable || !!random}
-              unit={unit}
             >
-              {getRightComponent()}
+              {required ? (
+                <Icon name="asterisk" color="danger" size={10} />
+              ) : null}
+              {(required && hasRightElement) || unit ? (
+                <StyledSeparator direction="vertical" />
+              ) : null}
+              <RightComponent
+                justifyContent="center"
+                direction="row"
+                alignItems="center"
+              >
+                {getRightComponents()}
+              </RightComponent>
             </StyledRightElement>
           ) : null}
         </StyledRelativeDiv>
