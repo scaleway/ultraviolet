@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.7](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.6...@scaleway/form@1.39.7) (2023-01-05)
+
+### :bug: Bug Fixes
+
+- add custom style attribute on richSelectField ([#2177](https://github.com/scaleway/scaleway-form/issues/2177)) ([082d4f5](https://github.com/scaleway/scaleway-form/commit/082d4f5279a90b13fc13435fb98be171f2e3847d))
+
 ## [1.39.6](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.5...@scaleway/form@1.39.6) (2023-01-05)
 
 ### :bug: Bug Fixes
