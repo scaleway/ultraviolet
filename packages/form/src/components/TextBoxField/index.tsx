@@ -42,7 +42,6 @@ type TextBoxFieldProps<T = TextBoxValue, K = string> = BaseFieldProps<T, K> &
       | 'value'
       | 'noTopLabel'
       | 'unit'
-      | 'unitAlignment'
     >
   > & {
     name: string
@@ -100,7 +99,6 @@ export const TextBoxField = forwardRef(
       subscription,
       type,
       unit,
-      unitAlignment,
       validate,
       validateFields,
       value,
@@ -193,7 +191,6 @@ export const TextBoxField = forwardRef(
         value={input.value}
         noTopLabel={noTopLabel}
         unit={unit}
-        unitAlignment={unitAlignment}
       />
     )
   },
