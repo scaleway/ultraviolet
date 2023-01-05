@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.8](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.7...@scaleway/form@1.39.8) (2023-01-05)
+
+### :bug: Bug Fixes
+
+- **TimeInput:** required icon correct position ([#2174](https://github.com/scaleway/scaleway-form/issues/2174)) ([cfab3b8](https://github.com/scaleway/scaleway-form/commit/cfab3b810b4074a4ca0d56c2a5370d5383b7809c))
+
 ## [1.39.7](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.6...@scaleway/form@1.39.7) (2023-01-05)
 
 ### :bug: Bug Fixes

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.9 (2023-01-05)
+
+### :package: Chore
+
+- **release:** publish ([f25f5d8](https://github.com/scaleway/scaleway-ui/commit/f25f5d88597931b3d4823c173ce428e94ec91116))
+
+### :bug: Bug Fixes
+
+- **TimeInput:** required icon correct position ([#2174](https://github.com/scaleway/scaleway-ui/issues/2174)) ([cfab3b8](https://github.com/scaleway/scaleway-ui/commit/cfab3b810b4074a4ca0d56c2a5370d5383b7809c))
+
 ## [0.215.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.7...@scaleway/ui@0.215.8) (2023-01-05)
 
 ### :bug: Bug Fixes
