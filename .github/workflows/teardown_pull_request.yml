@@ -13,7 +13,7 @@ jobs:
       WEBSITE_DEPLOYMENT_NAME: website
 
     steps:
-      - uses: actions/checkout@v3.2.0
+      - uses: actions/checkout@v3.3.0
       - name: Inject slug/short variables
         uses: rlespinasse/github-slug-action@v4
 
