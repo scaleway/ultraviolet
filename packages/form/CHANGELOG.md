@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.6](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.5...@scaleway/form@1.39.6) (2023-01-05)
+
+### :bug: Bug Fixes
+
+- **TextBox:** show required icon with right components ([#2166](https://github.com/scaleway/scaleway-form/issues/2166)) ([b21dac6](https://github.com/scaleway/scaleway-form/commit/b21dac629418980af872bcb0d3120d8588859b6c))
+
 ## [1.39.5](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.4...@scaleway/form@1.39.5) (2023-01-05)
 
 ### :memo: Documentation

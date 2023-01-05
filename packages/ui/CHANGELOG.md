@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.7...@scaleway/ui@0.215.8) (2023-01-05)
+
+### :bug: Bug Fixes
+
+- **actionBar:** remove padding and center content from list action bar ([#2165](https://github.com/scaleway/scaleway-ui/issues/2165)) ([f80a863](https://github.com/scaleway/scaleway-ui/commit/f80a863bef26ee0b4987e620cc278b6b2cd073b4))
+- **TextBox:** show required icon with right components ([#2166](https://github.com/scaleway/scaleway-ui/issues/2166)) ([b21dac6](https://github.com/scaleway/scaleway-ui/commit/b21dac629418980af872bcb0d3120d8588859b6c))
+
 ## [0.215.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.6...@scaleway/ui@0.215.7) (2023-01-05)
 
 ### :memo: Documentation
