@@ -26,7 +26,7 @@ const hours = [
   '21:00',
   '22:00',
   '23:00',
-]
+] as const
 
 const half = [
   '00:00',
@@ -77,7 +77,8 @@ const half = [
   '22:30',
   '23:00',
   '23:30',
-]
+] as const
+
 const quarter = [
   '00:00',
   '00:15',
@@ -175,7 +176,7 @@ const quarter = [
   '23:15',
   '23:30',
   '23:45',
-]
+] as const
 
 export const schedules = {
   half,

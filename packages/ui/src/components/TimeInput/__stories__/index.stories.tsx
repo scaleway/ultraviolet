@@ -11,6 +11,13 @@ export default {
     },
   },
   title: 'Components/Data Entry/TimeInput',
+  decorators: [
+    Story => (
+      <div style={{ height: 300 }}>
+        <Story />
+      </div>
+    ),
+  ],
 } as ComponentMeta<typeof TimeInput>
 
 export { Playground } from './Playground.stories'

@@ -27,8 +27,14 @@ import isJSONString from '../../helpers/isJSON'
 import * as animations from '../../utils/animations'
 import Expandable from '../Expandable'
 import Icon from '../Icon'
+import Separator from '../Separator'
 import Stack from '../Stack'
 import Text from '../Text'
+
+const StyledSeparator = styled(Separator)`
+  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  height: 100%;
+`
 
 export type SelectOption = {
   value: string
@@ -131,6 +137,7 @@ const getSelectStyles = ({
     lineHeight: '24px',
     minHeight: '48px',
     transition: 'border-color 200ms ease, box-shadow 200ms ease',
+    cursor: state.isDisabled ? 'not-allowed' : 'pointer',
 
     ...(!state.isDisabled && {
       ':focus-within': {
@@ -169,7 +176,7 @@ const getSelectStyles = ({
   indicatorSeparator: (provided, state) => ({
     ...provided,
     backgroundColor: theme.colors.neutral.borderWeak,
-    display: state.selectProps?.time ? 'flex' : 'none',
+    display: 'none',
     ...(customStyle(state)?.['indicatorSeparator'] || {}),
   }),
   input: provided => ({
@@ -241,6 +248,7 @@ const getSelectStyles = ({
   option: (provided, state) => ({
     ...provided,
     ...getOptionColor({ state, theme }),
+    cursor: state.isDisabled ? 'not-allowed' : 'pointer',
     ':active': {
       backgroundColor: state.isDisabled
         ? theme.colors.neutral.backgroundDisabled
@@ -573,15 +581,16 @@ const DropdownIndicator = (
 
   return (
     <components.DropdownIndicator {...props}>
-      <Stack gap={2} direction="row">
+      <Stack gap={1} direction="row" alignItems="center">
+        {required ? (
+          <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
+        ) : null}
+        {time ? <StyledSeparator direction="vertical" /> : null}
         <Icon
           name={time ? 'clock-outline' : 'arrow-down'}
           size={time ? 24 : 16}
           color={color}
         />
-        {required ? (
-          <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
-        ) : null}
       </Stack>
     </components.DropdownIndicator>
   )
