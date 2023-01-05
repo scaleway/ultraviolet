@@ -122,6 +122,7 @@ export type RichSelectFieldProps<
     | 'value'
     | 'noTopLabel'
     | 'noOptionsMessage'
+    | 'customStyle'
   > & {
     label?: string
     maxLength?: number
@@ -165,6 +166,7 @@ export const RichSelectField = <
   value,
   noTopLabel,
   noOptionsMessage,
+  customStyle,
 }: RichSelectFieldProps<T>) => {
   const { getError } = useErrors()
 
@@ -265,6 +267,7 @@ export const RichSelectField = <
       isClearable={isClearable}
       isLoading={isLoading}
       isMulti={input.multiple}
+      customStyle={customStyle}
       isSearchable={isSearchable}
       menuPortalTarget={menuPortalTarget}
       name={name}
