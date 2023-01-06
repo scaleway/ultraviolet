@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.11](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.10...@scaleway/ui@0.215.11) (2023-01-06)
+
+### :bug: Bug Fixes
+
+- remove Pentagon and NavigationStepper ([#2170](https://github.com/scaleway/scaleway-ui/issues/2170)) ([4bd8c8b](https://github.com/scaleway/scaleway-ui/commit/4bd8c8bedf965f4bf7f9f0bff597bf33269ff232))
+
 ## [0.215.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.9...@scaleway/ui@0.215.10) (2023-01-06)
 
 ### :package: Chore
