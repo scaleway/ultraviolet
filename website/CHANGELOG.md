@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.9...scaleway-ui-website@0.2.10) (2023-01-06)
+
+### :package: Chore
+
+- **devDeps:** upgrade deps ([#2180](https://github.com/scaleway/scaleway-ui/issues/2180)) ([54daa9e](https://github.com/scaleway/scaleway-ui/commit/54daa9e2f8c6213d3d4a34d4135b3c7d635a788b))
+
 ## 0.2.9 (2023-01-05)
 
 ### :package: Chore

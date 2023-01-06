@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.9](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.8...@scaleway/form@1.39.9) (2023-01-06)
+
+### :package: Chore
+
+- **devDeps:** upgrade deps ([#2180](https://github.com/scaleway/scaleway-form/issues/2180)) ([54daa9e](https://github.com/scaleway/scaleway-form/commit/54daa9e2f8c6213d3d4a34d4135b3c7d635a788b))
+
 ## [1.39.8](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.7...@scaleway/form@1.39.8) (2023-01-05)
 
 ### :bug: Bug Fixes
