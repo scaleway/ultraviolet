@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.11](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.10...@scaleway/form@1.39.11) (2023-01-09)
+
+### :bug: Bug Fixes
+
+- **form:** regex validator now accepts an empty string ([#2172](https://github.com/scaleway/scaleway-form/issues/2172)) ([7564c49](https://github.com/scaleway/scaleway-form/commit/7564c49badcdc2957dfbef8572c6236e7f11de42))
+
 ## [1.39.10](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.9...@scaleway/form@1.39.10) (2023-01-06)
 
 **Note:** Version bump only for package @scaleway/form
