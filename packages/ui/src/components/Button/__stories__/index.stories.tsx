@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Components/Button/Button',
+  title: 'Components/Action/Button',
 } as ComponentMeta<typeof Button>
 
 export { Playground } from './Playground.stories'

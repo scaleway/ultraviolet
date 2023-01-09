@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/ScrollView',
+  title: 'Components/Navigation/ScrollView',
 } as ComponentMeta<typeof ScrollView>
 
 export { Playground } from './Playground.stories'

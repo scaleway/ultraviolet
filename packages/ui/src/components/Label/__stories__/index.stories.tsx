@@ -3,7 +3,7 @@ import Label from '..'
 
 export default {
   component: Label,
-  title: 'Components/Data Entry/Label',
+  title: 'Components/Typography/Label',
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -12,7 +12,7 @@ By default now our modal is a portal. If you want to change this you can disable
       },
     },
   },
-  title: 'Components/Container/Modal',
+  title: 'Components/Overlay/Modal',
 } as ComponentMeta<typeof Modal>
 
 export { Playground } from './Playground.stories'

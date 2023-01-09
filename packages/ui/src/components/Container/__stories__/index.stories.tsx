@@ -3,7 +3,7 @@ import Container from '..'
 
 export default {
   component: Container,
-  title: 'Components/Container/Container',
+  title: 'Components/Layout/Container',
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Entry/PasswordCheck',
+  title: 'Components/Feedback/PasswordCheck',
 } as ComponentMeta<typeof PasswordCheck>
 
 export { Playground } from './Playground.stories'

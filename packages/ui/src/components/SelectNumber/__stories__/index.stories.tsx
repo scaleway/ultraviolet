@@ -15,7 +15,7 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Display/SelectNumber',
+  title: 'Components/Data Entry/SelectNumber',
 } as ComponentMeta<typeof SelectNumber>
 
 export { Playground } from './Playground.stories'

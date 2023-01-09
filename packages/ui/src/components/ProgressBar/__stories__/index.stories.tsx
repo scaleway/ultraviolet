@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/ProgressBar',
+  title: 'Components/Feedback/ProgressBar',
 } as ComponentMeta<typeof ProgressBar>
 
 export { Playground } from './Playground.stories'

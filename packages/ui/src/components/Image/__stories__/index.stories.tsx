@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Image',
+  title: 'Components/Other/Image',
 } as Meta
 
 export { Playground } from './Playground.stories'

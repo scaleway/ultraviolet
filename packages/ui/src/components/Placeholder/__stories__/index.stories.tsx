@@ -12,7 +12,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Placeholder',
+  title: 'Components/Feedback/Placeholder',
 } as ComponentMeta<typeof Placeholder>
 
 export { Playground } from './Playground.stories'

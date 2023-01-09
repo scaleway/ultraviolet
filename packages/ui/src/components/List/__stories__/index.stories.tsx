@@ -12,7 +12,7 @@ export default {
       },
     },
   },
-  title: 'Components/List',
+  title: 'Components/Data Display/List',
 } as Meta
 
 export { Playground } from './Playground.stories'

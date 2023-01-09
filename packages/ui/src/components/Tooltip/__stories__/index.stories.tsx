@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Feedback/Tooltip',
+  title: 'Components/Overlay/Tooltip',
 } as Meta
 
 export { Playground } from './Playground.stories'

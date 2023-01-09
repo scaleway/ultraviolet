@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Fondation/Text',
+  title: 'Components/Typography/Text',
 } as Meta
 
 export { Playground } from './Playground.stories'

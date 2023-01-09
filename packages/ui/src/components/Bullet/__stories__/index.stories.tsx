@@ -3,7 +3,7 @@ import Bullet from '..'
 
 export default {
   component: Bullet,
-  title: 'Components/Data Display/Bullet',
+  title: 'Components/Badges/Bullet',
 } as ComponentMeta<typeof Bullet>
 
 export { Playground } from './Playground.stories'

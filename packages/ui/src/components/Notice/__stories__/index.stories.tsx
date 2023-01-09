@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Notice',
+  title: 'Components/Feedback/Notice',
 } as ComponentMeta<typeof Notice>
 
 export { Playground } from './Playground.stories'

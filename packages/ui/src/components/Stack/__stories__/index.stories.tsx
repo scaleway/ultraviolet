@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Container/Stack',
+  title: 'Components/Layout/Stack',
 } as ComponentMeta<typeof Stack>
 
 export { Playground } from './Playground.stories'

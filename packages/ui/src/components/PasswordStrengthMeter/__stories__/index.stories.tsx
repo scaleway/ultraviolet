@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Entry/PasswordStrengthMeter',
+  title: 'Components/Feedback/PasswordStrengthMeter',
 } as ComponentMeta<typeof PasswordStrengthMeter>
 
 export { Playground } from './Playground.stories'

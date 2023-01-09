@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Sphere',
+  title: 'Components/Other/Sphere',
 } as ComponentMeta<typeof Sphere>
 
 export { Playground } from './Playground.stories'

@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/StateBar',
+  title: 'Components/Feedback/StateBar',
   subcomponents: { StateBarBar, StateBarState },
 } as ComponentMeta<typeof StateBar>
 

@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/ListV2',
+  title: 'Components/Data Display/ListV2',
   subcomponents: {
     'List.Row': List.Row,
     'List.Expandable': List.Expandable,

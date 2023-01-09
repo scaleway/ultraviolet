@@ -3,7 +3,7 @@ import Avatar from '..'
 
 export default {
   component: Avatar,
-  title: 'Components/Data Display/Avatar',
+  title: 'Components/Other/Avatar',
 } as Meta
 
 export { Playground } from './Playground.stories'
