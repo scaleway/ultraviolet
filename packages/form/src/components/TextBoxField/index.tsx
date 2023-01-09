@@ -42,6 +42,7 @@ type TextBoxFieldProps<T = TextBoxValue, K = string> = BaseFieldProps<T, K> &
       | 'value'
       | 'noTopLabel'
       | 'unit'
+      | 'valid'
     >
   > & {
     name: string
@@ -101,6 +102,7 @@ export const TextBoxField = forwardRef(
       unit,
       validate,
       validateFields,
+      valid,
       value,
     }: TextBoxFieldProps,
     ref: Ref<HTMLInputElement>,
@@ -191,6 +193,7 @@ export const TextBoxField = forwardRef(
         value={input.value}
         noTopLabel={noTopLabel}
         unit={unit}
+        valid={valid}
       />
     )
   },

@@ -53,6 +53,7 @@ type ExtraProps = {
   deprecated: boolean
   deprecatedReason: string
   migrationLink: string
+  hideArgsTable?: boolean
 }
 
 const CustomBaseContainer = BaseContainer as unknown as FunctionComponent<
@@ -93,6 +94,7 @@ const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
               deprecated: context.parameters?.deprecated,
               deprecatedReason: context.parameters?.deprecatedReason,
               migrationLink: context.parameters?.migrationLink,
+              hideArgsTable: context.parameters?.hideArgsTable,
             })
           : children}
       </CustomBaseContainer>
