@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.12 (2023-01-09)
+
+### :package: Chore
+
+- **release:** publish ([920ac02](https://github.com/scaleway/scaleway-ui/commit/920ac0292722ad268eaac27d804eccf668a526ec))
+
+### :memo: Documentation
+
+- update toaster doc and add all component into categories ([#2167](https://github.com/scaleway/scaleway-ui/issues/2167)) ([70fe3fd](https://github.com/scaleway/scaleway-ui/commit/70fe3fd8b56ad74bd4e2a33433fd2dcdb9bf03e9))
+
 ## [0.215.11](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.10...@scaleway/ui@0.215.11) (2023-01-06)
 
 ### :bug: Bug Fixes
