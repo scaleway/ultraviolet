@@ -67,7 +67,7 @@ type ListHeaderProps = {
   className?: string
   sort?: ListOrder
   onClick?: (
-    currentSort: { column: string; order?: ListOrder },
+    currentSort: { columnId: string; order?: ListOrder },
     event: MouseEvent<HTMLDivElement>,
   ) => unknown | void
   id?: string
@@ -83,7 +83,7 @@ export const ListHeader = ({
 }: ListHeaderProps) => (
   <StyledHeader
     onClick={
-      id ? event => onClick?.({ column: id, order: sort }, event) : undefined
+      id ? event => onClick?.({ columnId: id, order: sort }, event) : undefined
     }
     role="columnheader"
     aria-sort={sort ? getAriaSort(sort) : undefined}

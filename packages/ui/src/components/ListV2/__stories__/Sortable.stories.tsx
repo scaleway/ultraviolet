@@ -1,59 +1,81 @@
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { List } from '..'
-import { ListBody } from '../ListBody'
-import { ListCell } from '../ListCell'
-import { ListRow } from '../ListRow'
-import { columns, data } from './resources'
+import { data as sourceData } from './resources'
 
-export const Sortable: Story = args => {
-  const [sort, setSort] = useState<{
-    column: string
+export const Sortable: Story = () => {
+  const [currentSort, setCurrentSort] = useState<{
+    columnId: string
     order: ComponentProps<typeof List.Header>['sort']
-  }>({
-    column: '1',
-    order: 'asc',
-  })
+  }>({ columnId: 'perihelion', order: 'asc' })
 
-  const handleSort: ComponentProps<typeof List.Header>['onClick'] = ({
-    column,
+  const onColumnSort: ComponentProps<typeof List.Header>['onClick'] = ({
+    columnId,
+    order,
   }) => {
-    setSort(currentSort => {
-      if (currentSort.column === column) {
-        return {
-          column,
-          order: currentSort.order === 'asc' ? 'desc' : 'asc',
-        }
+    setCurrentSort({ columnId, order: order === 'asc' ? 'desc' : 'asc' })
+  }
+
+  const sortedData = useMemo(() => {
+    const orderMultiplicator = currentSort.order === 'asc' ? 1 : -1
+    const columnKey = currentSort.columnId as 'name' | 'perihelion' | 'aphelion'
+
+    return [...sourceData].sort((a, b) => {
+      if (a[columnKey] < b[columnKey]) {
+        return -1 * orderMultiplicator
+      }
+      if (a[columnKey] > b[columnKey]) {
+        return 1 * orderMultiplicator
       }
 
-      return { column, order: 'asc' }
+      return 0
     })
-  }
+  }, [currentSort])
 
   return (
     <List
-      {...args}
-      idKey="id"
-      data={data}
-      columns={columns.map(({ label, id }) => ({
-        label,
-        sort: sort.column === id ? sort.order : 'none',
-        onClick: handleSort,
-        id,
-      }))}
+      columns={[
+        {
+          label: 'Solar system Planet',
+          sort: currentSort.columnId === 'name' ? currentSort.order : 'none',
+          onClick: onColumnSort,
+          id: 'name',
+        },
+        {
+          label: 'Perihelion',
+          width: '200px',
+          sort:
+            currentSort.columnId === 'perihelion' ? currentSort.order : 'none',
+          onClick: onColumnSort,
+          id: 'perihelion',
+        },
+        {
+          label: 'Aphelion',
+          width: '200px',
+          sort:
+            currentSort.columnId === 'aphelion' ? currentSort.order : 'none',
+          onClick: onColumnSort,
+          id: 'aphelion',
+        },
+      ]}
     >
-      <ListBody>
-        {data.map(({ a, b, c, d, e, id }) => (
-          <ListRow id={id} isHoverable key={id}>
-            <ListCell>{a}</ListCell>
-            <ListCell>{b}</ListCell>
-            <ListCell>{c}</ListCell>
-            <ListCell>{d}</ListCell>
-            <ListCell>{e}</ListCell>
-          </ListRow>
+      <List.Body>
+        {sortedData.map(planet => (
+          <List.Row key={planet.id} id={planet.id}>
+            <List.Cell>{planet.name}</List.Cell>
+            <List.Cell>{planet.perihelion}AU</List.Cell>
+            <List.Cell>{planet.aphelion}AU</List.Cell>
+          </List.Row>
         ))}
-      </ListBody>
+      </List.Body>
     </List>
   )
+}
+
+Sortable.parameters = {
+  docs: {
+    storyDescription:
+      'You can sort a column. In order to do that it is mandatory to provide an `id` to your column, the current `sort` (asc/desc/none), and an `onClick` callback. This `onClick` callback receive `columnId` and the current `order` (using these parameters you can share one callback for multiples columns)',
+  },
 }

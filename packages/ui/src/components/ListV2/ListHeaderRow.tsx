@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ChangeEventHandler, ReactNode } from 'react'
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
 import { useListContext } from './ListContext'
 import { ListHeader } from './ListHeader'
@@ -40,36 +40,31 @@ export const ListHeaderRow = ({
 }: ListHeaderRowProps) => {
   const {
     template,
-    isSelectable,
-    selectedIds,
     setSelectedIds,
-    data,
-    idKey,
-    disabledRowsRef,
+    selectedIds,
+    selectableIds,
+    showExpandArrow,
   } = useListContext()
 
-  const getSelectableRows = useCallback(
-    () =>
-      data
-        .map<string>(item => `${item[idKey] as string}`)
-        .filter(id => id !== '' && !disabledRowsRef.current.includes(id)),
-    [data, disabledRowsRef, idKey],
-  )
-
-  const checkedValue = useMemo(() => {
-    if (
-      getSelectableRows().length > 0 &&
-      selectedIds.length === getSelectableRows().length
-    ) {
+  const checkedValue = useMemo<boolean | 'indeterminate'>(() => {
+    if (!selectedIds) {
       return true
     }
 
-    return selectedIds.length > 0 ? 'indeterminate' : false
-  }, [getSelectableRows, selectedIds.length])
+    if (selectedIds.length === Object.keys(selectableIds).length) {
+      return true
+    }
+
+    return selectedIds.length === 0 ? false : 'indeterminate'
+  }, [selectedIds, selectableIds])
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
+    if (!setSelectedIds) {
+      return false
+    }
+
     if (event.target.checked && checkedValue !== 'indeterminate') {
-      setSelectedIds(getSelectableRows())
+      setSelectedIds(Object.keys(selectableIds))
     } else {
       setSelectedIds([])
     }
@@ -78,8 +73,12 @@ export const ListHeaderRow = ({
   }
 
   return (
-    <StyledRow role="row" template={template} className={className}>
-      {isSelectable ? (
+    <StyledRow
+      role="row"
+      template={showExpandArrow ? `${template} 25px` : template}
+      className={className}
+    >
+      {setSelectedIds ? (
         <ListHeader>
           {checkboxRender ?? (
             <StyledCheckbox

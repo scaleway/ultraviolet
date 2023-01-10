@@ -1,15 +1,16 @@
 import styled from '@emotion/styled'
 import type { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react'
-import { useEffect } from 'react'
+import React, { isValidElement, useEffect } from 'react'
 import type { Color } from '../../theme'
 import { Checkbox } from '../Checkbox'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 import { ListCell } from './ListCell'
 import { useListContext } from './ListContext'
+import { ListExpandable } from './ListExpandable'
 
-const StyledIcon = styled(Icon)``
-const StyledListCell = styled(ListCell)`
+const ArrowIcon = styled(Icon)``
+const ArrowIconCell = styled(ListCell)`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -40,9 +41,10 @@ export const LIST_ROW_VARIANTS: Color[] = [
 ]
 
 const StyledRow = styled('div', {
-  shouldForwardProp: prop => prop !== 'template',
+  shouldForwardProp: prop => !['template', 'cellCount'].includes(prop),
 })<{
   template: string
+  cellCount: number
   'data-disabled': boolean
   'data-hoverable': boolean
   'data-highlight': boolean
@@ -113,7 +115,7 @@ const StyledRow = styled('div', {
     padding-left: ${({ theme }) => theme.space['1']};
   }
 
-  & > [role='cell']:last-of-type {
+  & > [role='cell']:nth-child(${({ cellCount }) => cellCount}) {
     padding-right: ${({ theme }) => theme.space['1']};
   }
 
@@ -135,11 +137,11 @@ const StyledRow = styled('div', {
     max-height: 9999px;
   }
 
-  & ${StyledIcon} {
+  & ${ArrowIcon} {
     transition: transform 250ms ease-in-out;
   }
 
-  &[aria-expanded='true'] ${StyledIcon} {
+  &[aria-expanded='true'] ${ArrowIcon} {
     transform: rotate(-180deg);
   }
 `
@@ -150,15 +152,12 @@ type ListRowProps = {
   isHoverable?: boolean
   isDisabled?: boolean
   isHighlighted?: boolean
-  isExpandable?: boolean
-  isExpanded?: boolean
   id: string
   checkboxRender?: ReactNode
   checkboxDisabled?: boolean
   checkboxTooltip?: string
   tooltip?: string
   variant?: typeof LIST_ROW_VARIANTS[number]
-  hideArrow?: boolean
 }
 
 export const ListRow = ({
@@ -167,12 +166,9 @@ export const ListRow = ({
   isDisabled = false,
   isHoverable = true,
   isHighlighted = false,
-  isExpanded: forceExpand,
-  isExpandable,
   id,
   checkboxRender,
   variant,
-  hideArrow = false,
   tooltip,
   checkboxTooltip,
   checkboxDisabled,
@@ -180,102 +176,91 @@ export const ListRow = ({
   const {
     autoClose,
     template,
-    isSelectable,
     selectedIds,
     setSelectedIds,
-    expandedIds,
-    setExpandedIds,
-    disabledRowsRef,
+    expandedRowIds,
+    setExpandedRowIds,
+    setSelectablesIds,
+    showExpandArrow,
   } = useListContext()
-  const isSelected = id ? selectedIds.includes(id) : false
-  const isExpanded = forceExpand || (id ? expandedIds.includes(id) : false)
 
-  useEffect(() => {
-    if (forceExpand && id && !expandedIds.includes(id)) {
-      setExpandedIds(current => Array.from(new Set([...current, id])))
-    }
-  }, [expandedIds, forceExpand, id, setExpandedIds])
+  const isSelected = id && selectedIds ? selectedIds.includes(id) : false
+  const isExpanded = expandedRowIds[id] !== undefined
 
   const handleExpand: MouseEventHandler<HTMLTableRowElement> = () => {
-    setExpandedIds(current => {
-      const indexOfItem = current.indexOf(id)
-      if (indexOfItem > -1) {
-        current.splice(indexOfItem, 1)
-
-        return [...current]
-      }
-
-      return autoClose ? [id] : Array.from(new Set([...current, id]))
-    })
+    setExpandedRowIds(current =>
+      autoClose ? { [id]: !current[id] } : { ...current, [id]: !current[id] },
+    )
   }
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (event.target.checked) {
-      setSelectedIds(current =>
-        Array.from(new Set([...current, event.target.value])),
-      )
-    } else {
-      setSelectedIds(current => {
-        const indexOfItem = current.indexOf(event.target.value)
-        current.splice(indexOfItem, 1)
+    if (!selectedIds || !setSelectedIds) {
+      return
+    }
 
-        return [...current]
-      })
+    if (event.target.checked) {
+      setSelectedIds([...selectedIds, event.target.value])
+    } else {
+      setSelectedIds(
+        selectedIds.filter(selectedId => selectedId !== event.target.value),
+      )
     }
   }
 
-  const computedTemplate = isExpandable ? `${template} 25px` : template
-
+  // Registering selectable row
   useEffect(() => {
-    if (
-      id &&
-      (isDisabled || checkboxDisabled) &&
-      !disabledRowsRef.current.includes(id)
-    ) {
-      disabledRowsRef.current.push(id)
-    }
-    if (
-      id &&
-      !isDisabled &&
-      !checkboxDisabled &&
-      disabledRowsRef.current.includes(id)
-    ) {
-      disabledRowsRef.current = disabledRowsRef.current.filter(
-        disabledId => disabledId !== id,
-      )
-    }
-  }, [isDisabled, id, disabledRowsRef, checkboxDisabled])
+    if (!checkboxDisabled && setSelectedIds) {
+      setSelectablesIds(currentSelectableIds => ({
+        ...currentSelectableIds,
+        [id]: true,
+      }))
 
-  useEffect(() => {
-    if ((isDisabled || checkboxDisabled) && selectedIds.includes(id)) {
-      setSelectedIds(current => {
-        const indexOfItem = current.indexOf(id)
-        current.splice(indexOfItem, 1)
+      return () => {
+        setSelectablesIds(currentSelectableIds => {
+          const { [id]: removedId, ...otherIds } = currentSelectableIds
 
-        return [...current]
-      })
+          return otherIds
+        })
+      }
     }
-  }, [id, isDisabled, selectedIds, setSelectedIds, checkboxDisabled])
+
+    return undefined
+  }, [id, checkboxDisabled, setSelectablesIds, setSelectedIds])
+
+  const cellCount =
+    React.Children.toArray(children).filter(
+      child => isValidElement(child) && child.type === ListCell,
+    ).length + (setSelectedIds ? 1 : 0)
+  const hasOnClickExpandable =
+    React.Children.toArray(children).find(
+      child =>
+        isValidElement<{ forceExpand?: boolean }>(child) &&
+        child.type === ListExpandable &&
+        child.props.forceExpand === undefined,
+    ) !== undefined
 
   return (
     <Tooltip text={tooltip}>
       <StyledRow
         className={className}
         data-disabled={isDisabled}
-        data-hoverable={isHoverable}
+        data-hoverable={hasOnClickExpandable !== undefined ? true : isHoverable}
         data-highlight={!!isHighlighted || isSelected}
         data-variant={variant}
-        role={isExpandable ? 'button row' : 'row'}
-        template={computedTemplate}
+        role={hasOnClickExpandable ? 'button row' : 'row'}
+        template={showExpandArrow ? `${template} 25px` : template}
         aria-expanded={isExpanded}
-        aria-haspopup={isExpandable}
-        onClick={isExpandable && !isDisabled ? handleExpand : undefined}
+        aria-haspopup={hasOnClickExpandable}
+        onClick={hasOnClickExpandable && !isDisabled ? handleExpand : undefined}
+        cellCount={cellCount}
       >
-        {isSelectable ? (
+        {setSelectedIds ? (
           <ListCell preventClick>
             {checkboxRender ?? (
               <StyledCheckboxContainer
-                data-visibility={selectedIds.length === 0 ? 'hover' : undefined}
+                data-visibility={
+                  selectedIds?.length === 0 ? 'hover' : undefined
+                }
               >
                 <StyledTooltip text={checkboxTooltip}>
                   <StyledCheckbox
@@ -283,7 +268,7 @@ export const ListRow = ({
                     value={id}
                     checked={isSelected}
                     onChange={handleCheck}
-                    disabled={!id || isDisabled || checkboxDisabled}
+                    disabled={isDisabled || checkboxDisabled}
                     aria-label="check"
                   />
                 </StyledTooltip>
@@ -291,11 +276,19 @@ export const ListRow = ({
             )}
           </ListCell>
         ) : null}
-        {children}
-        {isExpandable && !isDisabled && !hideArrow ? (
-          <StyledListCell>
-            <StyledIcon name="arrow-down" />
-          </StyledListCell>
+        {React.Children.map(children, child =>
+          isValidElement<{ relatedRowId: string }>(child) &&
+          child.type === ListExpandable
+            ? React.cloneElement<{ relatedRowId: string }>(child, {
+                ...child.props,
+                relatedRowId: id,
+              })
+            : child,
+        )}
+        {showExpandArrow ? (
+          <ArrowIconCell>
+            <ArrowIcon name="arrow-down" />
+          </ArrowIconCell>
         ) : null}
       </StyledRow>
     </Tooltip>

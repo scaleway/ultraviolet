@@ -25,16 +25,18 @@ type FakeDataType = {
   columnF: string
 }
 
-export const data: ComponentProps<typeof List<FakeDataType>>['data'] =
-  Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
-    id: `${rowNum}`,
-    columnA: `Row ${rowNum} Column 1`,
-    columnB: `Row ${rowNum} Column 2`,
-    columnC: `Row ${rowNum} Column 3`,
-    columnD: `Row ${rowNum} Column 4`,
-    columnE: `Row ${rowNum} Column 5`,
-    columnF: `Row ${rowNum} expandable content`,
-  }))
+export const data: FakeDataType[] = Array.from(
+  { length: 10 },
+  (_, index) => index + 1,
+).map(rowNum => ({
+  id: `${rowNum}`,
+  columnA: `Row ${rowNum} Column 1`,
+  columnB: `Row ${rowNum} Column 2`,
+  columnC: `Row ${rowNum} Column 3`,
+  columnD: `Row ${rowNum} Column 4`,
+  columnE: `Row ${rowNum} Column 5`,
+  columnF: `Row ${rowNum} expandable content`,
+}))
 
 export const columns: NonNullable<ComponentProps<typeof List>['columns']> =
   Array.from({ length: 5 }, (_, index) => index + 1).map(columnNumber => ({
@@ -70,7 +72,7 @@ describe('ListV2', () => {
 
   test('Should render correctly', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row isHoverable={id !== '1'} key={id} id={id}>
@@ -87,7 +89,7 @@ describe('ListV2', () => {
 
   test('Should render correctly without columns', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data}>
+      <List>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -104,7 +106,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with JSX columns', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data}>
+      <List>
         <List.Headers>
           <List.HeaderRow>
             {columns.map(({ id, label }) => (
@@ -128,11 +130,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with sort', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={data}
-        columns={columns.map(column => ({ ...column, sort: 'none' }))}
-      >
+      <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -147,9 +145,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with isSelectable', () =>
+  test('Should render correctly with onSelectedIdsChange', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} isSelectable>
+      <List columns={columns} selectedIds={[]} onSelectedIdsChange={jest.fn()}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -166,7 +164,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with isLoading', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} isLoading>
+      <List columns={columns} isLoading>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -183,7 +181,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with isLoading with JSX columns', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} isLoading>
+      <List isLoading>
         <List.Headers>
           <List.HeaderRow>
             {columns.map(({ id, label }) => (
@@ -207,7 +205,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with isLoading with JSX columns and template', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} template="repeat(5, 1fr)" isLoading>
+      <List template="repeat(5, 1fr)" isLoading>
         <List.Headers>
           <List.HeaderRow>
             {columns.map(({ id, label }) => (
@@ -231,7 +229,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with disabled rows', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} isDisabled id={id}>
@@ -248,7 +246,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with highlighted rows', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} isHighlighted id={id}>
@@ -265,31 +263,11 @@ describe('ListV2', () => {
 
   test('Should render correctly with isExpandable rows', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(
             ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpandable id={id}>
-                <List.Cell>{columnA}</List.Cell>
-                <List.Cell>{columnB}</List.Cell>
-                <List.Cell>{columnC}</List.Cell>
-                <List.Cell>{columnD}</List.Cell>
-                <List.Cell>{columnE}</List.Cell>
-                <List.Expandable>{columnF}</List.Expandable>
-              </List.Row>
-            ),
-          )}
-        </List.Body>
-      </List>,
-    ))
-
-  test('Should render correctly with expandable rows but hidden arrow', () =>
-    shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
-        <List.Body>
-          {data.map(
-            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpandable hideArrow id={id}>
+              <List.Row key={id} id={id}>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>
                 <List.Cell>{columnC}</List.Cell>
@@ -305,37 +283,17 @@ describe('ListV2', () => {
 
   test('Should render correctly with rows forceOpened', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(
             ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpanded id={id}>
+              <List.Row key={id} id={id}>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>
                 <List.Cell>{columnC}</List.Cell>
                 <List.Cell>{columnD}</List.Cell>
                 <List.Cell>{columnE}</List.Cell>
-                <List.Expandable>{columnF}</List.Expandable>
-              </List.Row>
-            ),
-          )}
-        </List.Body>
-      </List>,
-    ))
-
-  test('Should render correctly with expandable rows and forceOpened', () =>
-    shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
-        <List.Body>
-          {data.map(
-            ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpandable isExpanded id={id}>
-                <List.Cell>{columnA}</List.Cell>
-                <List.Cell>{columnB}</List.Cell>
-                <List.Cell>{columnC}</List.Cell>
-                <List.Cell>{columnD}</List.Cell>
-                <List.Cell>{columnE}</List.Cell>
-                <List.Expandable>{columnF}</List.Expandable>
+                <List.Expandable forceExpand>{columnF}</List.Expandable>
               </List.Row>
             ),
           )}
@@ -345,21 +303,21 @@ describe('ListV2', () => {
 
   test('Should render correctly with placeholder', async () => {
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           <List.Placeholder cols={columns.length} rows={18} />
         </List.Body>
       </List>,
     )
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           <List.Placeholder rows={18} />
         </List.Body>
       </List>,
     )
     await shouldMatchEmotionSnapshot(
-      <List idKey="id" data={[] as FakeDataType[]} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           <List.Placeholder cols={columns.length} />
         </List.Body>
@@ -367,21 +325,47 @@ describe('ListV2', () => {
     )
   })
 
-  test('Should render correctly with isSelectable then click on first row then uncheck all, then check all', () =>
-    shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} isSelectable>
-        <List.Body>
-          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            <List.Row key={id} id={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ))}
-        </List.Body>
-      </List>,
+  test('Should render correctly with isSelectable then click on first row then uncheck all, then check all', () => {
+    const LocalControlValue = ({
+      children,
+    }: {
+      children: ({
+        value,
+        setValue,
+      }: {
+        value: string[]
+        setValue: Dispatch<SetStateAction<string[]>>
+      }) => ReactNode
+    }) => {
+      const [value, setValue] = useState<string[]>([])
+
+      return <div>{children({ value, setValue })}</div>
+    }
+
+    return shouldMatchEmotionSnapshot(
+      <LocalControlValue>
+        {({ value, setValue }) => (
+          <List
+            columns={columns}
+            selectedIds={value}
+            onSelectedIdsChange={setValue}
+          >
+            <List.Body>
+              {data.map(
+                ({ id, columnA, columnB, columnC, columnD, columnE }) => (
+                  <List.Row key={id} id={id}>
+                    <List.Cell>{columnA}</List.Cell>
+                    <List.Cell>{columnB}</List.Cell>
+                    <List.Cell>{columnC}</List.Cell>
+                    <List.Cell>{columnD}</List.Cell>
+                    <List.Cell>{columnE}</List.Cell>
+                  </List.Row>
+                ),
+              )}
+            </List.Body>
+          </List>
+        )}
+      </LocalControlValue>,
       {
         transform: node => {
           const checkboxes = node.getAllByRole('checkbox') as HTMLInputElement[]
@@ -407,7 +391,8 @@ describe('ListV2', () => {
           expect(firstRowCheckbox).toBeChecked()
         },
       },
-    ))
+    )
+  })
 
   test('Should render correctly with sort then click', () => {
     const LocalControlValue = ({
@@ -441,21 +426,19 @@ describe('ListV2', () => {
       <LocalControlValue>
         {({ value, setValue }) => (
           <List
-            idKey="id"
-            data={data}
             columns={columns.map(column => ({
               ...column,
               sort: value.column === column.id ? value.order : 'none',
               id: column.id,
               onClick: clickedSort => {
-                if (clickedSort.column === value.column) {
+                if (clickedSort.columnId === value.column) {
                   setValue({
                     column: value.column,
                     order: value.order === 'asc' ? 'desc' : 'asc',
                   })
                 } else {
                   setValue({
-                    column: clickedSort.column,
+                    column: clickedSort.columnId,
                     order: 'asc',
                   })
                 }
@@ -502,11 +485,9 @@ describe('ListV2', () => {
   test('Should render correctly with isSelectable and selectedIds', () =>
     shouldMatchEmotionSnapshot(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
         selectedIds={['1']}
+        onSelectedIdsChange={jest.fn()}
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -526,11 +507,9 @@ describe('ListV2', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
         selectedIds={selectedIds}
+        onSelectedIdsChange={jest.fn()}
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -550,11 +529,9 @@ describe('ListV2', () => {
     )
     rerender(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
         selectedIds={selectedIds}
+        onSelectedIdsChange={jest.fn()}
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -571,11 +548,9 @@ describe('ListV2', () => {
     )
     rerender(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
-        selectedIds={[]}
+        selectedIds={selectedIds}
+        onSelectedIdsChange={jest.fn()}
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -591,7 +566,11 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List idKey="id" data={data} columns={columns} isSelectable>
+      <List
+        columns={columns}
+        selectedIds={selectedIds}
+        onSelectedIdsChange={jest.fn()}
+      >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -607,47 +586,9 @@ describe('ListV2', () => {
     )
   })
 
-  test('Should render correctly with isSelectable and selectedIds change', () =>
-    shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns} isSelectable>
-        <List.Body>
-          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-            // @ts-expect-error List.Row should have an id
-            <List.Row key={id}>
-              <List.Cell>{columnA}</List.Cell>
-              <List.Cell>{columnB}</List.Cell>
-              <List.Cell>{columnC}</List.Cell>
-              <List.Cell>{columnD}</List.Cell>
-              <List.Cell>{columnE}</List.Cell>
-            </List.Row>
-          ))}
-        </List.Body>
-      </List>,
-      {
-        transform: node => {
-          const checkboxes = node.getAllByRole('checkbox') as HTMLInputElement[]
-
-          const firstRowCheckbox = checkboxes.find(
-            ({ value }) => value !== 'all',
-          )
-          expect(firstRowCheckbox).toBeInTheDocument()
-          if (!firstRowCheckbox) {
-            fail('First checkbox is not defined')
-          }
-          expect(firstRowCheckbox).toBeDisabled()
-        },
-      },
-    ))
-
   test('Should use onSelectedIdsChange with isSelectable and selectedIds', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={data}
-        onSelectedIdsChange={jest.fn()}
-        columns={columns}
-        isSelectable
-      >
+      <List onSelectedIdsChange={jest.fn()} selectedIds={[]} columns={columns}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -683,11 +624,11 @@ describe('ListV2', () => {
 
   test('Should render correctly with isExpandable rows then click', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(
             ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpandable id={id}>
+              <List.Row key={id} id={id}>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>
                 <List.Cell>{columnC}</List.Cell>
@@ -709,7 +650,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with preventClick cell then click but event is prevented', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} columns={columns}>
+      <List columns={columns}>
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <List.Row key={id} id={id}>
@@ -740,11 +681,11 @@ describe('ListV2', () => {
 
   test('Should render correctly with isExpandable and autoClose rows then click', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data} autoClose columns={columns}>
+      <List autoClose columns={columns}>
         <List.Body>
           {data.map(
             ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
-              <List.Row key={id} isExpandable id={id}>
+              <List.Row key={id} id={id}>
                 <List.Cell>{columnA}</List.Cell>
                 <List.Cell>{columnB}</List.Cell>
                 <List.Cell>{columnC}</List.Cell>
@@ -768,7 +709,7 @@ describe('ListV2', () => {
 
   test('Should render correctly with JSX columns and colSpan', () =>
     shouldMatchEmotionSnapshot(
-      <List idKey="id" data={data}>
+      <List>
         <List.Headers>
           <List.HeaderRow>
             {columns.map(({ id, label }) => (
@@ -818,10 +759,8 @@ describe('ListV2', () => {
     const selectedIds = ['1']
     const { rerender } = render(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
+        onSelectedIdsChange={jest.fn()}
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -842,10 +781,8 @@ describe('ListV2', () => {
     )
     rerender(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
+        onSelectedIdsChange={jest.fn()}
         selectedIds={selectedIds}
       >
         <List.Body>
@@ -863,11 +800,9 @@ describe('ListV2', () => {
     )
     rerender(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
         selectedIds={selectedIds}
+        onSelectedIdsChange={jest.fn()}
       >
         <List.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -884,10 +819,8 @@ describe('ListV2', () => {
     )
     rerender(
       <List
-        idKey="id"
-        data={data}
         columns={columns}
-        isSelectable
+        onSelectedIdsChange={jest.fn()}
         selectedIds={selectedIds}
       >
         <List.Body>

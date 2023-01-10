@@ -1,4 +1,5 @@
 import type { ComponentProps, ReactNode } from 'react'
+import type { XOR } from '../../types'
 import { Stack } from '../Stack'
 import { ListBody } from './ListBody'
 import { ListCell } from './ListCell'
@@ -9,7 +10,6 @@ import { ListHeaderRow } from './ListHeaderRow'
 import { ListHeaders } from './ListHeaders'
 import { ListLoadingPlaceholder } from './ListLoadingPlaceholder'
 import { ListRow } from './ListRow'
-import type { ListDataObject } from './types'
 
 type ListColumn = Omit<
   ComponentProps<typeof ListHeader>,
@@ -20,25 +20,8 @@ type ListColumn = Omit<
   id?: string
 }
 
-type ListProps<T> = {
+type CommonListProps = {
   children: ReactNode
-  /**
-   * Add checkboxes on the list
-   * */
-  isSelectable?: boolean
-  /**
-   * Row ids of the selected checkboxes
-   * */
-  selectedIds?: string[]
-  /**
-   * When selectedIds change
-   * */
-  onSelectedIdsChange?: (selectedIds: string[]) => void
-  data: T[]
-  /**
-   * The idKey of each data entry
-   * */
-  idKey: T extends ListDataObject ? keyof T : string
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
@@ -47,37 +30,43 @@ type ListProps<T> = {
    * Auto close opened expandable row when another is opening
    * */
   autoClose?: boolean
-
+  showExpandArrow?: boolean
   columns?: ListColumn[]
   template?: string
   className?: string
 }
+type ListProps = XOR<
+  [
+    CommonListProps,
+    CommonListProps & {
+      // Multi Select props
+      selectedIds: string[]
+      onSelectedIdsChange: (selectedIds: string[]) => void
+    },
+  ]
+>
 
-export const List = <T = ListDataObject,>({
+export const List = ({
   children,
   columns,
   template,
-  isSelectable,
   selectedIds,
   onSelectedIdsChange,
-  data,
-  idKey,
   isLoading,
   autoClose,
+  showExpandArrow = false,
   className,
-}: ListProps<T>) => {
+}: ListProps) => {
   if (columns) {
     const computedTemplate = columns
       .map(({ width }) => width ?? '1fr')
       .join(' ')
 
     return (
-      <ListProvider<T>
+      <ListProvider
         autoClose={autoClose}
+        showExpandArrow={showExpandArrow}
         template={computedTemplate}
-        isSelectable={isSelectable}
-        data={data}
-        idKey={idKey}
         selectedIds={selectedIds}
         onSelectedIdsChange={onSelectedIdsChange}
       >
@@ -85,12 +74,15 @@ export const List = <T = ListDataObject,>({
           <ListHeaders>
             <ListHeaderRow>
               {columns.map(
-                ({ label, onClick, sort, className: columnClassName, id }) => (
+                (
+                  { label, onClick, sort, className: columnClassName, id },
+                  index,
+                ) => (
                   <ListHeader
                     onClick={onClick}
                     sort={sort}
                     className={columnClassName}
-                    key={id}
+                    key={id || `column-${index}`}
                     id={id}
                   >
                     {label}
@@ -114,11 +106,8 @@ export const List = <T = ListDataObject,>({
   return (
     <ListProvider
       template={template}
-      isSelectable={isSelectable}
       selectedIds={selectedIds}
       onSelectedIdsChange={onSelectedIdsChange}
-      data={data}
-      idKey={idKey}
     >
       <Stack gap={1} role="table">
         {isLoading ? (

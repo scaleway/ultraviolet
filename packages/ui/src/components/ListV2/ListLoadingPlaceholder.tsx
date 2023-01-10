@@ -34,7 +34,6 @@ export const ListLoadingPlaceholder = ({
           checkboxRender={<div />}
           id={`placeholder-${index}`}
           key={index}
-          isHoverable={false}
         >
           {colArray.map(columnIndex => (
             <ListCell key={columnIndex}>

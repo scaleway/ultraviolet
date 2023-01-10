@@ -24,12 +24,11 @@ export default {
 } as ComponentMeta<typeof List>
 
 export { Playground } from './Playground.stories'
-export { Selectable } from './Selectable.stories'
-export { SelectableWithActionBar } from './SelectableWithActionBar.stories'
 export { Sortable } from './Sortable.stories'
+export { Selectable } from './Selectable.stories'
 export { RowExpandable } from './RowExpandable.stories'
-export { RowExpandableWithAction } from './RowExpandableWithAction.stories'
+export { RowExpandableAutoclose } from './RowExpandableAutoclose.stories'
+export { ControlledRowExpandable } from './ControlledRowExpandable.stories'
 export { Variants } from './Variants.stories'
 export { Loading } from './Loading.stories'
-export { AutoCloseRowExpandable } from './AutoCloseRowExpandable.stories'
-export { CheckboxDisabled } from './CheckboxDisabled.stories'
+export { Perf } from './Perf.stories'
