@@ -20,12 +20,12 @@ exports[`TimeField should render correctly 1`] = `
   white-space: nowrap;
 }
 
-.cache-rjf8lv-control {
+.cache-1eguvzq-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,24 +57,24 @@ exports[`TimeField should render correctly 1`] = `
   animation: none;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-rjf8lv-control:focus-within {
+.cache-1eguvzq-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-rjf8lv-control:focus-within svg {
+.cache-1eguvzq-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: #390171;
 }
 
-.cache-rjf8lv-control:hover svg {
+.cache-1eguvzq-control:hover svg {
   fill: #390171;
 }
 
@@ -196,7 +196,7 @@ exports[`TimeField should render correctly 1`] = `
   max-height: 48px;
 }
 
-.cache-1rlboq6-indicatorSeparator {
+.cache-6uclbo-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -205,7 +205,10 @@ exports[`TimeField should render correctly 1`] = `
   margin-bottom: 8px;
   margin-top: 8px;
   box-sizing: border-box;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-1xc3v61-indicatorContainer {
@@ -224,19 +227,19 @@ exports[`TimeField should render correctly 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-108jn5w {
+.cache-pjzp28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -245,19 +248,6 @@ exports[`TimeField should render correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.cache-7nbpor {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e6e9f0;
-  background-color: #d4dae7;
-  height: 100%;
 }
 
 .cache-1wgmtwg-sizeStyles {
@@ -304,7 +294,7 @@ exports[`TimeField should render correctly 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-rjf8lv-control"
+        class=" cache-1eguvzq-control"
       >
         <div
           class=" cache-blvxib-ValueContainer"
@@ -346,20 +336,15 @@ exports[`TimeField should render correctly 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-1rlboq6-indicatorSeparator"
+            class=" cache-6uclbo-indicatorSeparator"
           />
           <div
             aria-hidden="true"
             class=" cache-1xc3v61-indicatorContainer"
           >
             <div
-              class="cache-108jn5w e1sgck4o0"
+              class="cache-pjzp28 e1sgck4o0"
             >
-              <hr
-                aria-orientation="vertical"
-                class="e1lzna4r6 cache-7nbpor eoti1h20"
-                role="separator"
-              />
               <svg
                 class="cache-1wgmtwg-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
@@ -404,12 +389,12 @@ exports[`TimeField should render correctly checked without value 1`] = `
   white-space: nowrap;
 }
 
-.cache-rjf8lv-control {
+.cache-1eguvzq-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,24 +426,24 @@ exports[`TimeField should render correctly checked without value 1`] = `
   animation: none;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-rjf8lv-control:focus-within {
+.cache-1eguvzq-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-rjf8lv-control:focus-within svg {
+.cache-1eguvzq-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: #390171;
 }
 
-.cache-rjf8lv-control:hover svg {
+.cache-1eguvzq-control:hover svg {
   fill: #390171;
 }
 
@@ -580,7 +565,7 @@ exports[`TimeField should render correctly checked without value 1`] = `
   max-height: 48px;
 }
 
-.cache-1rlboq6-indicatorSeparator {
+.cache-6uclbo-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -589,7 +574,10 @@ exports[`TimeField should render correctly checked without value 1`] = `
   margin-bottom: 8px;
   margin-top: 8px;
   box-sizing: border-box;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-1xc3v61-indicatorContainer {
@@ -608,19 +596,19 @@ exports[`TimeField should render correctly checked without value 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-108jn5w {
+.cache-pjzp28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -629,19 +617,6 @@ exports[`TimeField should render correctly checked without value 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.cache-7nbpor {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e6e9f0;
-  background-color: #d4dae7;
-  height: 100%;
 }
 
 .cache-1wgmtwg-sizeStyles {
@@ -688,7 +663,7 @@ exports[`TimeField should render correctly checked without value 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-rjf8lv-control"
+        class=" cache-1eguvzq-control"
       >
         <div
           class=" cache-blvxib-ValueContainer"
@@ -730,20 +705,15 @@ exports[`TimeField should render correctly checked without value 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-1rlboq6-indicatorSeparator"
+            class=" cache-6uclbo-indicatorSeparator"
           />
           <div
             aria-hidden="true"
             class=" cache-1xc3v61-indicatorContainer"
           >
             <div
-              class="cache-108jn5w e1sgck4o0"
+              class="cache-pjzp28 e1sgck4o0"
             >
-              <hr
-                aria-orientation="vertical"
-                class="e1lzna4r6 cache-7nbpor eoti1h20"
-                role="separator"
-              />
               <svg
                 class="cache-1wgmtwg-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
@@ -790,12 +760,12 @@ exports[`TimeField should render correctly disabled 1`] = `
   white-space: nowrap;
 }
 
-.cache-195e9n4-control {
+.cache-tvx0x4-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: not-allowed;
+  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -827,7 +797,7 @@ exports[`TimeField should render correctly disabled 1`] = `
   animation: none;
 }
 
-.cache-195e9n4-control:hover {
+.cache-tvx0x4-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
@@ -951,7 +921,7 @@ exports[`TimeField should render correctly disabled 1`] = `
   max-height: 48px;
 }
 
-.cache-1rlboq6-indicatorSeparator {
+.cache-6uclbo-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -960,7 +930,10 @@ exports[`TimeField should render correctly disabled 1`] = `
   margin-bottom: 8px;
   margin-top: 8px;
   box-sizing: border-box;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-1xc3v61-indicatorContainer {
@@ -979,19 +952,19 @@ exports[`TimeField should render correctly disabled 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-108jn5w {
+.cache-pjzp28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1000,19 +973,6 @@ exports[`TimeField should render correctly disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.cache-7nbpor {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e6e9f0;
-  background-color: #d4dae7;
-  height: 100%;
 }
 
 .cache-1y9qt3p-sizeStyles {
@@ -1059,7 +1019,7 @@ exports[`TimeField should render correctly disabled 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-195e9n4-control"
+        class=" cache-tvx0x4-control"
       >
         <div
           class=" cache-1n25v7h-ValueContainer"
@@ -1102,20 +1062,15 @@ exports[`TimeField should render correctly disabled 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-1rlboq6-indicatorSeparator"
+            class=" cache-6uclbo-indicatorSeparator"
           />
           <div
             aria-hidden="true"
             class=" cache-1xc3v61-indicatorContainer"
           >
             <div
-              class="cache-108jn5w e1sgck4o0"
+              class="cache-pjzp28 e1sgck4o0"
             >
-              <hr
-                aria-orientation="vertical"
-                class="e1lzna4r6 cache-7nbpor eoti1h20"
-                role="separator"
-              />
               <svg
                 class="cache-1y9qt3p-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
@@ -1160,12 +1115,12 @@ exports[`TimeField should trigger events 1`] = `
   white-space: nowrap;
 }
 
-.cache-rjf8lv-control {
+.cache-1eguvzq-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: default;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1197,24 +1152,24 @@ exports[`TimeField should trigger events 1`] = `
   animation: none;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-rjf8lv-control:focus-within {
+.cache-1eguvzq-control:focus-within {
   border-color: #390171;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-rjf8lv-control:focus-within svg {
+.cache-1eguvzq-control:focus-within svg {
   fill: #390171;
 }
 
-.cache-rjf8lv-control:hover {
+.cache-1eguvzq-control:hover {
   border-color: #390171;
 }
 
-.cache-rjf8lv-control:hover svg {
+.cache-1eguvzq-control:hover svg {
   fill: #390171;
 }
 
@@ -1336,7 +1291,7 @@ exports[`TimeField should trigger events 1`] = `
   max-height: 48px;
 }
 
-.cache-1rlboq6-indicatorSeparator {
+.cache-6uclbo-indicatorSeparator {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -1345,7 +1300,10 @@ exports[`TimeField should trigger events 1`] = `
   margin-bottom: 8px;
   margin-top: 8px;
   box-sizing: border-box;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-1xc3v61-indicatorContainer {
@@ -1364,19 +1322,19 @@ exports[`TimeField should trigger events 1`] = `
   color: hsl(0, 0%, 60%);
 }
 
-.cache-108jn5w {
+.cache-pjzp28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1385,19 +1343,6 @@ exports[`TimeField should trigger events 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-}
-
-.cache-7nbpor {
-  margin: 0;
-  border: 0;
-  width: 1px;
-  height: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  background-color: #e6e9f0;
-  background-color: #d4dae7;
-  height: 100%;
 }
 
 .cache-1wgmtwg-sizeStyles {
@@ -1444,7 +1389,7 @@ exports[`TimeField should trigger events 1`] = `
         class="cache-1f43avz-a11yText-A11yText"
       />
       <div
-        class=" cache-rjf8lv-control"
+        class=" cache-1eguvzq-control"
       >
         <div
           class=" cache-blvxib-ValueContainer"
@@ -1488,20 +1433,15 @@ exports[`TimeField should trigger events 1`] = `
           class=" cache-ralm3g-IndicatorsContainer"
         >
           <span
-            class=" cache-1rlboq6-indicatorSeparator"
+            class=" cache-6uclbo-indicatorSeparator"
           />
           <div
             aria-hidden="true"
             class=" cache-1xc3v61-indicatorContainer"
           >
             <div
-              class="cache-108jn5w e1sgck4o0"
+              class="cache-pjzp28 e1sgck4o0"
             >
-              <hr
-                aria-orientation="vertical"
-                class="e1lzna4r6 cache-7nbpor eoti1h20"
-                role="separator"
-              />
               <svg
                 class="cache-1wgmtwg-sizeStyles etwatq50"
                 viewBox="0 0 24 24"

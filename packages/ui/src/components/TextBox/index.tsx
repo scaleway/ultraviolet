@@ -14,6 +14,7 @@ import {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react'
@@ -75,8 +76,7 @@ const StyledRightElement = styled('div', {
     right: 0;
     bottom: 0;
     top: 0;
-    padding-left: ${space['1']};
-    padding-right: ${space['1']};
+    padding: 0 ${space['1']};
     display: flex;
     gap: ${space['1']};
     align-items: center;
@@ -304,7 +304,7 @@ const StyledInput = styled('input', {
 `
 
 const RightComponent = styled(Stack)`
-  min-width: 32px;
+  min-width: 24px;
 `
 
 type TextBoxProps = {
@@ -511,7 +511,7 @@ const TextBox = forwardRef<
 
     const inputSize = size
 
-    const getRightComponents = () => {
+    const rightComponentsArray = useMemo(() => {
       const rightComponents = []
 
       if (isPassToggleable && !generated) {
@@ -557,7 +557,19 @@ const TextBox = forwardRef<
       }
 
       return rightComponents
-    }
+    }, [
+      disabled,
+      generated,
+      handleClickRandomize,
+      handleKeyDownRandomize,
+      handlePassVisibilityClick,
+      handlePassVisiblityKeyDown,
+      isPassToggleable,
+      passwordVisible,
+      random,
+      unit,
+      valid,
+    ])
 
     return (
       <div className={className}>
@@ -625,13 +637,15 @@ const TextBox = forwardRef<
               {(required && hasRightElement) || unit ? (
                 <StyledSeparator direction="vertical" />
               ) : null}
-              <RightComponent
-                justifyContent="center"
-                direction="row"
-                alignItems="center"
-              >
-                {getRightComponents()}
-              </RightComponent>
+              {rightComponentsArray.length > 0 ? (
+                <RightComponent
+                  justifyContent="center"
+                  direction="row"
+                  alignItems="center"
+                >
+                  {rightComponentsArray}
+                </RightComponent>
+              ) : null}
             </StyledRightElement>
           ) : null}
         </StyledRelativeDiv>
