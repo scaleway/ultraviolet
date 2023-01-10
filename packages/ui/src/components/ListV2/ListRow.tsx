@@ -8,8 +8,12 @@ import { Tooltip } from '../Tooltip'
 import { ListCell } from './ListCell'
 import { useListContext } from './ListContext'
 
-const StyledIcon = styled(Icon)``
-const StyledListCell = styled(ListCell)`
+// @note : make sure Selectable & Expandable arrow contents are sync with column width
+export const SELECTABLE_CELL_WIDTH = 24
+export const EXPANDABLE_ARROW_CELL_WIDTH = 16
+
+const ArrowIcon = styled(Icon)``
+const ArrowIconCell = styled(ListCell)`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -30,7 +34,7 @@ const StyledCheckbox = styled(Checkbox)`
   }
 `
 
-export const LIST_ROW_VARIANTS: Color[] = [
+export const LIST_ROW_SENTIMENTS: Color[] = [
   'danger',
   'warning',
   'primary',
@@ -39,53 +43,51 @@ export const LIST_ROW_VARIANTS: Color[] = [
   'info',
 ]
 
-const StyledRow = styled('div', {
-  shouldForwardProp: prop => prop !== 'template',
-})<{
-  template: string
+const StyledRow = styled('div', {})<{
   'data-disabled': boolean
   'data-hoverable': boolean
   'data-highlight': boolean
-  'data-variant': Color | undefined
+  'data-sentiment': Color | undefined
+  'aria-expanded': boolean
 }>`
   position: relative;
-  display: grid;
-  grid-template-columns: ${({ template }) => template};
-  align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   cursor: auto;
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  column-gap: ${({ theme }) => theme.space['1']};
 
   &[role='button row'] {
     cursor: pointer;
   }
 
   ${({ theme }) =>
-    LIST_ROW_VARIANTS.map(
+    LIST_ROW_SENTIMENTS.map(
       color => `
-    &[data-variant="${color}"] {
+    &[data-sentiment="${color}"] {
       color: ${theme.colors[color].text};
       border-color: ${theme.colors[color].border};
       background-color: ${theme.colors[color].background};
     }
 
-    &[data-variant="${color}"][data-highlight="true"] {
+    &[data-sentiment="${color}"][data-highlight="true"] {
       border-color: ${theme.colors[color].border};
       box-shadow: none;
     }
 
-    &[data-variant="${color}"][data-hoverable='true']:hover {
+    &[data-sentiment="${color}"][data-hoverable='true']:hover {
       border-color: ${theme.colors[color].border};
       box-shadow: none;
+    }
+
+    &[data-sentiment="${color}"] [data-expandable-content] {
+      border-color: ${theme.colors[color].border};
     }
     `,
     ).join(' ')}
 
-  &[data-hoverable='true']:hover, &[data-variant="neutral"][data-highlight="true"], &[data-variant="neutral"][data-hoverable='true']:hover {
+  &[data-hoverable='true']:hover, &[data-sentiment="neutral"][data-highlight="true"], &[data-sentiment="neutral"][data-hoverable='true']:hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
     box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
   }
@@ -109,18 +111,14 @@ const StyledRow = styled('div', {
     pointer-events: none;
   }
 
-  & > [role='cell']:first-of-type {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-
-  & > [role='cell']:last-of-type {
-    padding-right: ${({ theme }) => theme.space['1']};
-  }
-
   & [data-expandable-content] {
+    grid-column: 1 / -1;
+    border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+    padding: ${({ theme }) => `${theme.space['2']} ${theme.space['2']}`};
+    grid-row-start: 2;
+    grid-row-end: 2;
     transition: max-height 500ms ease-in-out;
   }
-
   &:not([aria-expanded='true']) [data-expandable-content] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -130,18 +128,27 @@ const StyledRow = styled('div', {
     white-space: nowrap;
     width: 1px;
   }
-
   &[aria-expanded='true'] [data-expandable-content] {
     max-height: 9999px;
   }
-
-  & ${StyledIcon} {
+  & ${ArrowIcon} {
     transition: transform 250ms ease-in-out;
   }
-
-  &[aria-expanded='true'] ${StyledIcon} {
+  &[aria-expanded='true'] ${ArrowIcon} {
     transform: rotate(-180deg);
   }
+`
+
+const ListCellContainer = styled('div', {
+  shouldForwardProp: prop => !['template'].includes(prop),
+})<{
+  template: string
+}>`
+  display: grid;
+  grid-template-columns: ${({ template }) => template};
+  padding: 0 ${({ theme }) => theme.space['2']};
+  align-items: center;
+  column-gap: ${({ theme }) => theme.space['2']};
 `
 
 type ListRowProps = {
@@ -150,15 +157,16 @@ type ListRowProps = {
   isHoverable?: boolean
   isDisabled?: boolean
   isHighlighted?: boolean
-  isExpandable?: boolean
-  isExpanded?: boolean
   id: string
-  checkboxRender?: ReactNode
   checkboxDisabled?: boolean
   checkboxTooltip?: string
   tooltip?: string
-  variant?: typeof LIST_ROW_VARIANTS[number]
-  hideArrow?: boolean
+  sentiment?: typeof LIST_ROW_SENTIMENTS[number]
+  expandable?: ReactNode
+  /**
+   * If expandable content visibility is controlled, specify this prop to TRUE or FALSE
+   */
+  isExpanded?: boolean
 }
 
 export const ListRow = ({
@@ -167,135 +175,121 @@ export const ListRow = ({
   isDisabled = false,
   isHoverable = true,
   isHighlighted = false,
-  isExpanded: forceExpand,
-  isExpandable,
   id,
-  checkboxRender,
-  variant,
-  hideArrow = false,
+  sentiment,
   tooltip,
   checkboxTooltip,
   checkboxDisabled,
+  expandable,
+  isExpanded,
 }: ListRowProps) => {
   const {
     autoClose,
     template,
-    isSelectable,
     selectedIds,
     setSelectedIds,
-    expandedIds,
-    setExpandedIds,
-    disabledRowsRef,
+    expandedRowIds,
+    setExpandedRowIds,
+    setSelectablesIds,
   } = useListContext()
-  const isSelected = id ? selectedIds.includes(id) : false
-  const isExpanded = forceExpand || (id ? expandedIds.includes(id) : false)
-
-  useEffect(() => {
-    if (forceExpand && id && !expandedIds.includes(id)) {
-      setExpandedIds(current => Array.from(new Set([...current, id])))
-    }
-  }, [expandedIds, forceExpand, id, setExpandedIds])
+  const isSelected = id && selectedIds ? selectedIds.includes(id) : false
+  const isRowExpanded = isExpanded === true || expandedRowIds[id] === true
 
   const handleExpand: MouseEventHandler<HTMLTableRowElement> = () => {
-    setExpandedIds(current => {
-      const indexOfItem = current.indexOf(id)
-      if (indexOfItem > -1) {
-        current.splice(indexOfItem, 1)
-
-        return [...current]
-      }
-
-      return autoClose ? [id] : Array.from(new Set([...current, id]))
-    })
+    setExpandedRowIds(current =>
+      autoClose ? { [id]: !current[id] } : { ...current, [id]: !current[id] },
+    )
   }
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (event.target.checked) {
-      setSelectedIds(current =>
-        Array.from(new Set([...current, event.target.value])),
-      )
-    } else {
-      setSelectedIds(current => {
-        const indexOfItem = current.indexOf(event.target.value)
-        current.splice(indexOfItem, 1)
+    if (!selectedIds || !setSelectedIds) {
+      return
+    }
 
-        return [...current]
-      })
+    if (event.target.checked) {
+      setSelectedIds([...selectedIds, event.target.value])
+    } else {
+      setSelectedIds(
+        selectedIds.filter(selectedId => selectedId !== event.target.value),
+      )
     }
   }
 
-  const computedTemplate = isExpandable ? `${template} 25px` : template
-
+  // Registering selectable row
   useEffect(() => {
-    if (
-      id &&
-      (isDisabled || checkboxDisabled) &&
-      !disabledRowsRef.current.includes(id)
-    ) {
-      disabledRowsRef.current.push(id)
-    }
-    if (
-      id &&
-      !isDisabled &&
-      !checkboxDisabled &&
-      disabledRowsRef.current.includes(id)
-    ) {
-      disabledRowsRef.current = disabledRowsRef.current.filter(
-        disabledId => disabledId !== id,
-      )
-    }
-  }, [isDisabled, id, disabledRowsRef, checkboxDisabled])
+    if (!checkboxDisabled && setSelectedIds) {
+      setSelectablesIds(currentSelectableIds => ({
+        ...currentSelectableIds,
+        [id]: true,
+      }))
 
-  useEffect(() => {
-    if ((isDisabled || checkboxDisabled) && selectedIds.includes(id)) {
-      setSelectedIds(current => {
-        const indexOfItem = current.indexOf(id)
-        current.splice(indexOfItem, 1)
+      return () => {
+        setSelectablesIds(currentSelectableIds => {
+          const { [id]: removedId, ...otherIds } = currentSelectableIds
 
-        return [...current]
-      })
+          return otherIds
+        })
+      }
     }
-  }, [id, isDisabled, selectedIds, setSelectedIds, checkboxDisabled])
+
+    return undefined
+  }, [id, checkboxDisabled, setSelectablesIds, setSelectedIds])
 
   return (
     <Tooltip text={tooltip}>
       <StyledRow
         className={className}
         data-disabled={isDisabled}
-        data-hoverable={isHoverable}
+        // @note: Force data-hoverable to true, if click on row expand content
+        data-hoverable={
+          expandable !== undefined && isExpanded === undefined
+            ? true
+            : isHoverable
+        }
         data-highlight={!!isHighlighted || isSelected}
-        data-variant={variant}
-        role={isExpandable ? 'button row' : 'row'}
-        template={computedTemplate}
-        aria-expanded={isExpanded}
-        aria-haspopup={isExpandable}
-        onClick={isExpandable && !isDisabled ? handleExpand : undefined}
+        data-sentiment={sentiment}
+        role={expandable && isExpanded === undefined ? 'button row' : 'row'}
+        aria-expanded={isRowExpanded}
+        aria-haspopup={
+          expandable !== undefined && !isDisabled && isExpanded === undefined
+        }
+        onClick={
+          expandable && !isDisabled && isExpanded === undefined
+            ? handleExpand
+            : undefined
+        }
       >
-        {isSelectable ? (
-          <ListCell preventClick>
-            {checkboxRender ?? (
+        <ListCellContainer template={template}>
+          {setSelectedIds ? (
+            <ListCell preventClick>
               <StyledCheckboxContainer
-                data-visibility={selectedIds.length === 0 ? 'hover' : undefined}
+                data-visibility={
+                  selectedIds?.length === 0 ? 'hover' : undefined
+                }
               >
                 <StyledTooltip text={checkboxTooltip}>
                   <StyledCheckbox
+                    size={SELECTABLE_CELL_WIDTH}
                     name="list-radio"
                     value={id}
                     checked={isSelected}
                     onChange={handleCheck}
-                    disabled={!id || isDisabled || checkboxDisabled}
+                    disabled={isDisabled || checkboxDisabled}
                     aria-label="check"
                   />
                 </StyledTooltip>
               </StyledCheckboxContainer>
-            )}
-          </ListCell>
-        ) : null}
-        {children}
-        {isExpandable && !isDisabled && !hideArrow ? (
-          <StyledListCell>
-            <StyledIcon name="arrow-down" />
-          </StyledListCell>
+            </ListCell>
+          ) : null}
+          {expandable !== undefined && isExpanded === undefined ? (
+            <ArrowIconCell>
+              <ArrowIcon name="arrow-down" size={EXPANDABLE_ARROW_CELL_WIDTH} />
+            </ArrowIconCell>
+          ) : null}
+          {children}
+        </ListCellContainer>
+        {expandable ? (
+          <div data-expandable-content>{isRowExpanded ? expandable : null}</div>
         ) : null}
       </StyledRow>
     </Tooltip>

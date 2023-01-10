@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ChangeEventHandler, ReactNode } from 'react'
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
 import { useListContext } from './ListContext'
-import { ListHeader } from './ListHeader'
+import { ListHeaderCell } from './ListHeaderCell'
 
 const StyledCheckbox = styled(Checkbox)`
   display: flex;
@@ -16,60 +16,43 @@ const StyledRow = styled('div', {
 }>`
   display: grid;
   grid-template-columns: ${({ template }) => template};
-  column-gap: ${({ theme }) => theme.space['1']};
-
-  & > [role='columnheader']:first-of-type {
-    padding-left: ${({ theme }) => theme.space['1']};
-  }
-
-  & > [role='columnheader']:last-of-type {
-    padding-right: ${({ theme }) => theme.space['1']};
-  }
+  column-gap: ${({ theme }) => theme.space['2']};
+  padding: 0 ${({ theme }) => theme.space['2']};
 `
 
 type ListHeaderRowProps = {
   children: ReactNode
   className?: string
-  checkboxRender?: ReactNode
+  hasExpandableCell: boolean
 }
 
 export const ListHeaderRow = ({
   children,
   className,
-  checkboxRender,
+  hasExpandableCell,
 }: ListHeaderRowProps) => {
-  const {
-    template,
-    isSelectable,
-    selectedIds,
-    setSelectedIds,
-    data,
-    idKey,
-    disabledRowsRef,
-  } = useListContext()
+  const { template, setSelectedIds, selectedIds, selectableIds } =
+    useListContext()
 
-  const getSelectableRows = useCallback(
-    () =>
-      data
-        .map<string>(item => `${item[idKey] as string}`)
-        .filter(id => id !== '' && !disabledRowsRef.current.includes(id)),
-    [data, disabledRowsRef, idKey],
-  )
+  const checkedValue = useMemo<boolean | 'indeterminate'>(() => {
+    if (!selectedIds) {
+      return false
+    }
 
-  const checkedValue = useMemo(() => {
-    if (
-      getSelectableRows().length > 0 &&
-      selectedIds.length === getSelectableRows().length
-    ) {
+    if (selectedIds.length === Object.keys(selectableIds).length) {
       return true
     }
 
-    return selectedIds.length > 0 ? 'indeterminate' : false
-  }, [getSelectableRows, selectedIds.length])
+    return selectedIds.length === 0 ? false : 'indeterminate'
+  }, [selectedIds, selectableIds])
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
+    if (!setSelectedIds) {
+      return false
+    }
+
     if (event.target.checked && checkedValue !== 'indeterminate') {
-      setSelectedIds(getSelectableRows())
+      setSelectedIds(Object.keys(selectableIds))
     } else {
       setSelectedIds([])
     }
@@ -79,19 +62,19 @@ export const ListHeaderRow = ({
 
   return (
     <StyledRow role="row" template={template} className={className}>
-      {isSelectable ? (
-        <ListHeader>
-          {checkboxRender ?? (
-            <StyledCheckbox
-              name="list-radio"
-              value="all"
-              checked={checkedValue}
-              onChange={handleCheck}
-              aria-label="select"
-            />
-          )}
-        </ListHeader>
+      {setSelectedIds ? (
+        <ListHeaderCell>
+          <StyledCheckbox
+            name="list-radio"
+            value="all"
+            checked={checkedValue}
+            onChange={handleCheck}
+            aria-label="select"
+            disabled={Object.keys(selectableIds).length === 0}
+          />
+        </ListHeaderCell>
       ) : null}
+      {hasExpandableCell ? <ListHeaderCell /> : null}
       {children}
     </StyledRow>
   )

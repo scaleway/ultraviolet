@@ -1,27 +1,59 @@
 import type { ComponentProps } from 'react'
 import type { List } from '..'
 
-type FakeDataType = {
-  id: string
-  a: string
-  b: string
-  c: string
-  d: string
-  e: string
-}
+export const data = [
+  {
+    id: 'mercury',
+    name: 'Mercury',
+    perihelion: 0.307,
+    aphelion: 0.467,
+  },
+  {
+    id: 'venus',
+    name: 'Venus',
+    perihelion: 0.718,
+    aphelion: 0.728,
+  },
+  {
+    id: 'home-sweet-home',
+    name: 'Earth',
+    perihelion: 0.983,
+    aphelion: 1.017,
+  },
+  {
+    id: 'mars',
+    name: 'Mars',
+    perihelion: 1.381,
+    aphelion: 1.666,
+  },
+  {
+    id: 'jupiter',
+    name: 'Jupiter',
+    perihelion: 4.951,
+    aphelion: 5.457,
+  },
+  {
+    id: 'saturn',
+    name: 'Saturn',
+    perihelion: 9.041,
+    aphelion: 10.124,
+  },
+  {
+    id: 'uranus',
+    name: 'Uranus',
+    perihelion: 18.286,
+    aphelion: 20.097,
+  },
+  {
+    id: 'id-neptune',
+    name: 'Neptune',
+    perihelion: 29.81,
+    aphelion: 30.33,
+  },
+]
 
-export const data: ComponentProps<typeof List<FakeDataType>>['data'] =
-  Array.from({ length: 10 }, (_, index) => index + 1).map(rowNum => ({
-    id: `${rowNum}`,
-    a: `Row ${rowNum} Column 1`,
-    b: `Row ${rowNum} Column 2`,
-    c: `Row ${rowNum} Column 3`,
-    d: `Row ${rowNum} Column 4`,
-    e: `Row ${rowNum} Column 5`,
-  }))
-
-export const columns: NonNullable<ComponentProps<typeof List>['columns']> =
-  Array.from({ length: 5 }, (_, index) => index + 1).map(columnNumber => ({
-    label: `Column ${columnNumber}`,
-    id: `${columnNumber}`,
-  }))
+export const columns: NonNullable<ComponentProps<typeof List>['columns']> = [
+  { label: 'Solar system Planet', id: 'name' },
+  { label: 'Perihelion', width: '200px', id: 'perihelion' },
+  { label: 'Aphelion', width: '200px', id: 'aphelion' },
+]

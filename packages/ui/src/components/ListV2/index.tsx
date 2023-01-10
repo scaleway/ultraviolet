@@ -1,143 +1,129 @@
 import type { ComponentProps, ReactNode } from 'react'
+import { Children, isValidElement, useMemo, useRef } from 'react'
+import type { XOR } from '../../types'
 import { Stack } from '../Stack'
-import { ListBody } from './ListBody'
 import { ListCell } from './ListCell'
 import { ListProvider } from './ListContext'
-import { ListExpandable } from './ListExpandable'
-import { ListHeader } from './ListHeader'
+import { ListHeaderCell } from './ListHeaderCell'
 import { ListHeaderRow } from './ListHeaderRow'
-import { ListHeaders } from './ListHeaders'
 import { ListLoadingSkeleton } from './ListLoadingSkeleton'
-import { ListRow } from './ListRow'
-import type { ListDataObject } from './types'
+import {
+  EXPANDABLE_ARROW_CELL_WIDTH,
+  ListRow,
+  SELECTABLE_CELL_WIDTH,
+} from './ListRow'
 
-type ListColumn = Omit<
-  ComponentProps<typeof ListHeader>,
-  'children' | 'colSpan'
+type ListColumn = Pick<
+  ComponentProps<typeof ListHeaderCell>,
+  'sort' | 'onClick' | 'className'
 > & {
   label: ReactNode
   width?: string
   id?: string
 }
 
-type ListProps<T> = {
+type CommonListProps = {
   children: ReactNode
-  /**
-   * Add checkboxes on the list
-   * */
-  isSelectable?: boolean
-  /**
-   * Row ids of the selected checkboxes
-   * */
-  selectedIds?: string[]
-  /**
-   * When selectedIds change
-   * */
-  onSelectedIdsChange?: (selectedIds: string[]) => void
-  data: T[]
-  /**
-   * The idKey of each data entry
-   * */
-  idKey: T extends ListDataObject ? keyof T : string
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
   isLoading?: boolean
   /**
-   * Auto close opened expandable row when another is opening
+   * Auto close is closing expandable row when another is opening
    * */
   autoClose?: boolean
-
-  columns?: ListColumn[]
-  template?: string
+  columns: ListColumn[]
   className?: string
 }
+type ListProps = XOR<
+  [
+    CommonListProps,
+    CommonListProps & {
+      // Multi Select props
+      selectedIds: string[]
+      onSelectedIdsChange: (selectedIds: string[]) => void
+    },
+  ]
+>
 
-export const List = <T = ListDataObject,>({
+export const List = ({
   children,
   columns,
-  template,
-  isSelectable,
   selectedIds,
   onSelectedIdsChange,
-  data,
-  idKey,
   isLoading,
   autoClose,
   className,
-}: ListProps<T>) => {
-  if (columns) {
-    const computedTemplate = columns
-      .map(({ width }) => width ?? '1fr')
-      .join(' ')
+}: ListProps) => {
+  const hasExpandableRowsRef = useRef(false)
+  const rowWithExpandable = useMemo(
+    () =>
+      Children.toArray(children).find(child => {
+        if (
+          isValidElement<{ expandable?: ReactNode; isExpanded?: boolean }>(
+            child,
+          ) &&
+          child.props.expandable !== undefined &&
+          child.props.isExpanded === undefined
+        ) {
+          return true
+        }
 
-    return (
-      <ListProvider<T>
-        autoClose={autoClose}
-        template={computedTemplate}
-        isSelectable={isSelectable}
-        data={data}
-        idKey={idKey}
-        selectedIds={selectedIds}
-        onSelectedIdsChange={onSelectedIdsChange}
-      >
-        <Stack className={className} gap={1} role="table">
-          <ListHeaders>
-            <ListHeaderRow>
-              {columns.map(
-                ({ label, onClick, sort, className: columnClassName, id }) => (
-                  <ListHeader
-                    onClick={onClick}
-                    sort={sort}
-                    className={columnClassName}
-                    key={id}
-                    id={id}
-                  >
-                    {label}
-                  </ListHeader>
-                ),
-              )}
-            </ListHeaderRow>
-          </ListHeaders>
-          {isLoading ? (
-            <ListBody>
-              <ListLoadingSkeleton cols={columns.length} />
-            </ListBody>
-          ) : (
-            children
-          )}
-        </Stack>
-      </ListProvider>
-    )
+        return false
+      }),
+    [children],
+  )
+  if (
+    hasExpandableRowsRef.current === false &&
+    rowWithExpandable !== undefined
+  ) {
+    hasExpandableRowsRef.current = true
   }
+
+  const computedTemplate = `${
+    onSelectedIdsChange ? `${SELECTABLE_CELL_WIDTH}px ` : ''
+  }${
+    hasExpandableRowsRef.current ? `${EXPANDABLE_ARROW_CELL_WIDTH}px ` : ''
+  }${columns.map(({ width }) => width ?? '1fr').join(' ')}`
 
   return (
     <ListProvider
-      template={template}
-      isSelectable={isSelectable}
+      autoClose={autoClose}
+      template={computedTemplate}
       selectedIds={selectedIds}
       onSelectedIdsChange={onSelectedIdsChange}
-      data={data}
-      idKey={idKey}
     >
-      <Stack gap={1} role="table">
-        {isLoading ? (
-          <ListBody>
-            <ListLoadingSkeleton cols={template ? 1 : 12} />
-          </ListBody>
-        ) : (
-          children
-        )}
+      <Stack className={className} gap={1} role="table">
+        {/* Header */}
+        <div role="rowgroup">
+          <ListHeaderRow hasExpandableCell={hasExpandableRowsRef.current}>
+            {columns.map(
+              (
+                { label, onClick, sort, className: columnClassName, id },
+                index,
+              ) => (
+                <ListHeaderCell
+                  onClick={onClick}
+                  sort={sort}
+                  className={columnClassName}
+                  key={id || `column-${index}`}
+                  id={id}
+                >
+                  {label}
+                </ListHeaderCell>
+              ),
+            )}
+          </ListHeaderRow>
+        </div>
+        {/* Body */}
+        <Stack gap={2} role="rowgroup" className={className}>
+          {isLoading ? <ListLoadingSkeleton cols={columns.length} /> : children}
+        </Stack>
       </Stack>
     </ListProvider>
   )
 }
 
 List.Row = ListRow
-List.Body = ListBody
 List.Cell = ListCell
-List.Headers = ListHeaders
-List.HeaderRow = ListHeaderRow
-List.Header = ListHeader
 List.Skeleton = ListLoadingSkeleton
-List.Expandable = ListExpandable

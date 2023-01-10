@@ -1,130 +1,95 @@
-import type {
-  Dispatch,
-  MutableRefObject,
-  ReactNode,
-  SetStateAction,
-} from 'react'
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
-import type { ListDataObject } from './types'
+import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 
-type ListContextValue<T> = {
+type ListContextValue = {
   template: string
-  isSelectable?: boolean
-  selectedIds: string[]
-  setSelectedIds: Dispatch<SetStateAction<string[]>>
-  expandedIds: string[]
-  setExpandedIds: Dispatch<SetStateAction<string[]>>
-  data: T[]
-  idKey: T extends ListDataObject ? keyof T : string
+  // Expandable logic
   autoClose: boolean
-  disabledRowsRef: MutableRefObject<string[]>
+  expandedRowIds: Record<string, boolean>
+  setExpandedRowIds: Dispatch<SetStateAction<Record<string, boolean>>>
+  // Selectable logic
+  selectedIds?: string[]
+  setSelectedIds?: (selectedIds: string[]) => void
+  selectableIds: Record<string, true>
+  setSelectablesIds: Dispatch<SetStateAction<Record<string, true>>>
 }
 
-const ListContext = createContext<ListContextValue<unknown> | undefined>(
-  undefined,
-)
+const ListContext = createContext<ListContextValue | undefined>(undefined)
 
-type ListProviderProps<T> = {
-  template?: string
-  isSelectable?: boolean
+type ListProviderProps = {
+  template: string
   children: ReactNode
   onSelectedIdsChange?: (selectedIds: string[]) => void
   selectedIds?: string[]
-  data: T[]
-  idKey: T extends ListDataObject ? keyof T : string
   autoClose?: boolean
 }
 
-export const ListProvider = <T,>({
-  template = 'repeat(12, 1fr)',
+export const ListProvider = ({
+  template,
   children,
-  isSelectable,
-  selectedIds: selectedIdsProp,
+  selectedIds,
   onSelectedIdsChange,
-  data,
-  idKey,
   autoClose = false,
-}: ListProviderProps<T>) => {
-  const [selectedIds, setSelectedIds] = useState(selectedIdsProp ?? [])
-  const [expandedIds, setExpandedIds] = useState<string[]>([])
-  const onSelectedIdsChangeRef = useRef(onSelectedIdsChange)
-  const disabledRowsRef = useRef<string[]>([])
-
-  useEffect(() => {
-    setSelectedIds(current =>
-      selectedIdsProp && current !== selectedIdsProp
-        ? selectedIdsProp
-        : current,
-    )
-  }, [selectedIdsProp])
-
-  useEffect(() => {
-    onSelectedIdsChangeRef.current = onSelectedIdsChange
-  }, [onSelectedIdsChange])
-
-  const computedTemplate = useMemo(
-    () => (isSelectable ? `50px ${template}` : template),
-    [isSelectable, template],
+}: ListProviderProps) => {
+  // @note: Store row states
+  const [expandedRowIds, setExpandedRowIds] = useState<Record<string, boolean>>(
+    {},
   )
+  const [selectableIds, setSelectablesIds] = useState<Record<string, true>>({})
 
-  const onChangeSelectedIds: Dispatch<SetStateAction<string[]>> = useCallback(
-    (value: string[] | ((currentIds: string[]) => string[])) => {
-      const newSelectedIds =
-        typeof value !== 'function' ? value : value(selectedIds)
-      if (onSelectedIdsChangeRef.current) {
-        onSelectedIdsChangeRef.current(newSelectedIds)
-      } else {
-        setSelectedIds(newSelectedIds)
+  useEffect(() => {
+    if (!selectedIds || !onSelectedIdsChange) {
+      return
+    }
+
+    // @note: avoid loop twice (one to check diff, one to rebuild if necessary)
+    let diffFound = false
+    // @note: Checking that selectedIds are still
+    const filteredIds = selectedIds.filter(selectedId => {
+      if (!selectableIds[selectedId]) {
+        diffFound = true
+
+        return false
       }
-    },
-    [selectedIds],
-  )
 
-  const value = useMemo(
+      return true
+    })
+    if (diffFound) {
+      onSelectedIdsChange(filteredIds)
+    }
+  }, [selectableIds, selectedIds, onSelectedIdsChange])
+
+  const value = useMemo<ListContextValue>(
     () => ({
-      template: computedTemplate,
+      template,
       autoClose,
-      expandedIds,
-      setExpandedIds,
-      isSelectable,
-      setSelectedIds: onChangeSelectedIds,
       selectedIds,
-      data,
-      idKey,
-      disabledRowsRef,
+      setSelectedIds: onSelectedIdsChange,
+      selectableIds,
+      setSelectablesIds,
+      expandedRowIds,
+      setExpandedRowIds,
     }),
     [
-      computedTemplate,
-      expandedIds,
-      isSelectable,
+      template,
       selectedIds,
-      onChangeSelectedIds,
-      data,
-      idKey,
       autoClose,
+      setSelectablesIds,
+      onSelectedIdsChange,
+      selectableIds,
+      expandedRowIds,
+      setExpandedRowIds,
     ],
   )
 
-  return (
-    <ListContext.Provider value={value as ListContextValue<unknown>}>
-      {children}
-    </ListContext.Provider>
-  )
+  return <ListContext.Provider value={value}>{children}</ListContext.Provider>
 }
 
-export const useListContext = <T extends ListDataObject = ListDataObject>() => {
+export const useListContext = () => {
   const context = useContext(ListContext)
   if (!context) {
     throw new Error('useListContext should be used inside a List component')
   }
 
-  return context as ListContextValue<T>
+  return context
 }

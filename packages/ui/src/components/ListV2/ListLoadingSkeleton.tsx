@@ -31,10 +31,9 @@ export const ListLoadingSkeleton = ({
       {rowArray.map(index => (
         <StyledListRow
           className={className}
-          checkboxRender={<div />}
           id={`skeleton-${index}`}
           key={index}
-          isHoverable={false}
+          checkboxDisabled
         >
           {colArray.map(columnIndex => (
             <ListCell key={columnIndex}>

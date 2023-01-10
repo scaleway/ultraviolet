@@ -61,29 +61,35 @@ const SortIcon = () => (
   </StyledIconContainer>
 )
 
-type ListHeaderProps = {
-  children: ReactNode
+type ListHeaderCellProps = {
+  children?: ReactNode
   colSpan?: number
   className?: string
   sort?: ListOrder
   onClick?: (
-    currentSort: { column: string; order?: ListOrder },
+    currentSort: { columnId: string; newOrder: ListOrder },
     event: MouseEvent<HTMLDivElement>,
   ) => unknown | void
   id?: string
 }
 
-export const ListHeader = ({
+export const ListHeaderCell = ({
   children,
   colSpan,
   className,
   onClick,
   sort,
   id,
-}: ListHeaderProps) => (
+}: ListHeaderCellProps) => (
   <StyledHeader
     onClick={
-      id ? event => onClick?.({ column: id, order: sort }, event) : undefined
+      id
+        ? event =>
+            onClick?.(
+              { columnId: id, newOrder: sort === 'asc' ? 'desc' : 'asc' },
+              event,
+            )
+        : undefined
     }
     role="columnheader"
     aria-sort={sort ? getAriaSort(sort) : undefined}
