@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.14](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.13...@scaleway/ui@0.215.14) (2023-01-10)
+
+### :bug: Bug Fixes
+
+- **Button:** wrong overflow on extend ([#2191](https://github.com/scaleway/scaleway-ui/issues/2191)) ([d5677f0](https://github.com/scaleway/scaleway-ui/commit/d5677f0ac6b8c042c72f2c19101b4ec4df93ae78))
+
+### :zap: Refactor
+
+- **ActionBar:** remove z-index by using portal and add animation on display ([#2179](https://github.com/scaleway/scaleway-ui/issues/2179)) ([9ca6fbb](https://github.com/scaleway/scaleway-ui/commit/9ca6fbb8a808afe8e242b18678c49e5cc67b7a07))
+
 ## [0.215.13](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.12...@scaleway/ui@0.215.13) (2023-01-10)
 
 ### :bug: Bug Fixes
