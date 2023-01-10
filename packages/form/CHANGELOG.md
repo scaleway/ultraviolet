@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.13](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.12...@scaleway/form@1.39.13) (2023-01-10)
+
+### :bug: Bug Fixes
+
+- **TextBox:** required icon wrongly positioned ([#2188](https://github.com/scaleway/scaleway-form/issues/2188)) ([282943c](https://github.com/scaleway/scaleway-form/commit/282943c4932da65067bd86f11d1c915c9bbfc3ad))
+
 ## [1.39.12](https://github.com/scaleway/scaleway-form/compare/@scaleway/form@1.39.11...@scaleway/form@1.39.12) (2023-01-09)
 
 **Note:** Version bump only for package @scaleway/form

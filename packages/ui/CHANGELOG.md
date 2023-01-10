@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.13](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.12...@scaleway/ui@0.215.13) (2023-01-10)
+
+### :bug: Bug Fixes
+
+- **TextBox:** required icon wrongly positioned ([#2188](https://github.com/scaleway/scaleway-ui/issues/2188)) ([282943c](https://github.com/scaleway/scaleway-ui/commit/282943c4932da65067bd86f11d1c915c9bbfc3ad))
+
 ## 0.215.12 (2023-01-09)
 
 ### :package: Chore
