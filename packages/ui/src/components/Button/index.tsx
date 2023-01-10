@@ -350,7 +350,7 @@ const StyledButton = styled('button', {
         max-width: 0;
         margin-right: 0;
         ${icon ? 'padding-right: 0;' : 'padding-left: 0;'};
-        overflow: hidden;
+        overflow-x: clip; // hidden create a weird white square when size is small
       }
 
       &:focus ${StyledContent}, &:hover ${StyledContent} {

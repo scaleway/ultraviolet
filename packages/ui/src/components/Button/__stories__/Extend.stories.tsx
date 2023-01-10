@@ -5,6 +5,7 @@ export const Extend = Template.bind({})
 Extend.args = {
   icon: 'plus',
   extend: true,
+  children: 'Extend button !',
 }
 
 Extend.parameters = {
