@@ -48,7 +48,7 @@ $ pnpm install
 
 ### Storybook
 
-Our storybook includes both @scaleway/ui and @scaleway/form. 
+Our storybook includes both `@scaleway/ui` and `@scaleway/form`.
 
 In order to start storybook without errors you will need to build the project once 
 (this is because @scaleway/form uses @scaleway/ui build to run).
