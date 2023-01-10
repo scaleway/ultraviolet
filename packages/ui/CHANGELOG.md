@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.15](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.14...@scaleway/ui@0.215.15) (2023-01-10)
+
+### :memo: Documentation
+
+- **form:** update git repository ([#2187](https://github.com/scaleway/scaleway-ui/issues/2187)) ([1840a08](https://github.com/scaleway/scaleway-ui/commit/1840a08adc85fe127c982595361d3e2136b4923a))
+
 ## [0.215.14](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.13...@scaleway/ui@0.215.14) (2023-01-10)
 
 ### :bug: Bug Fixes
