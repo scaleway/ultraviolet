@@ -19,7 +19,7 @@ describe('Slider', () => {
       </Slider>,
     ))
 
-  test(`handles scroll`, async () => {
+  test('check hover state on scrollbar', async () => {
     const container = renderWithTheme(
       <Slider>
         <Slider.Item>Item 1</Slider.Item>
