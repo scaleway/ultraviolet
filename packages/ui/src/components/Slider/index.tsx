@@ -125,6 +125,7 @@ const Slider = ({ children, className }: SliderProps): JSX.Element => {
   return (
     <StyledWrapper className={className}>
       <StyledBeforeScroll
+        data-testid="scrollbar-before"
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
       />
@@ -156,6 +157,7 @@ const Slider = ({ children, className }: SliderProps): JSX.Element => {
       </StyledScrollableWrapper>
 
       <StyledAfterScroll
+        data-testid="scrollbar-after"
         onMouseOver={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
       />

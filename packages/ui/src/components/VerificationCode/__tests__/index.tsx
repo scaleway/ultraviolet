@@ -19,6 +19,34 @@ describe('VerificationCode', () => {
       <VerificationCode fields={6} initialValue="13" placeholder="0037" />,
     ))
 
+  test('should handle keyDown and special key cases and focus/change events', () =>
+    shouldMatchEmotionSnapshot(
+      <VerificationCode type="number" fields={4} initialValue="1" />,
+      {
+        transform: ({ container }) => {
+          const input0 = container.querySelector(
+            'input[id="verification-code-0"]',
+          ) as HTMLInputElement
+          fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
+          fireEvent.keyDown(input0, { keyCode: 37 }) // press arrow left
+          fireEvent.keyDown(input0, { keyCode: 39 }) // press arrow right
+          fireEvent.keyDown(input0, { keyCode: 38 }) // press arrow up
+          fireEvent.keyDown(input0, { keyCode: 40 }) // press arrow down
+          fireEvent.keyDown(input0, { keyCode: 50 }) // press 2
+
+          const input1 = container.querySelector(
+            'input[id="verification-code-1"]',
+          ) as HTMLInputElement
+
+          input1.focus()
+          fireEvent.keyDown(input1, { keyCode: 8 }) // press backspace
+
+          fireEvent.change(input1, { target: { value: '2' } })
+          fireEvent.change(input1, { target: { value: '' } })
+        },
+      },
+    ))
+
   test('should handle paste with no overflowing values', () =>
     shouldMatchEmotionSnapshot(
       <VerificationCode type="number" fields={4} initialValue="1" />,
@@ -92,4 +120,9 @@ describe('VerificationCode', () => {
     expect(onComplete).toHaveBeenLastCalledWith('1234')
     expect(onComplete).toHaveBeenCalledTimes(1)
   })
+
+  test('should handle error', () =>
+    shouldMatchEmotionSnapshot(
+      <VerificationCode error type="number" fields={4} initialValue="1" />,
+    ))
 })

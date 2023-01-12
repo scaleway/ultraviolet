@@ -257,6 +257,164 @@ exports[`VerificationCode should handle and replace non number with "" when type
 </DocumentFragment>
 `;
 
+exports[`VerificationCode should handle error 1`] = `
+<DocumentFragment>
+  .cache-wnn471-StyledInput-VerificationCode {
+  background: #ffffff;
+  border: solid 1px #dd3252;
+  font-size: 24px;
+  color: #dd3252;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.cache-wnn471-StyledInput-VerificationCode:last-child {
+  margin-right: 0;
+}
+
+.cache-wnn471-StyledInput-VerificationCode::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-wnn471-StyledInput-VerificationCode::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-wnn471-StyledInput-VerificationCode:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-wnn471-StyledInput-VerificationCode::placeholder {
+  color: #b2b6c3;
+}
+
+<div>
+    <input
+      aria-invalid="true"
+      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="1"
+    />
+    <input
+      aria-invalid="true"
+      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      aria-invalid="true"
+      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      aria-invalid="true"
+      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`VerificationCode should handle keyDown and special key cases and focus/change events 1`] = `
+<DocumentFragment>
+  .cache-1kx0bbi-StyledInput-VerificationCode {
+  background: #ffffff;
+  border: solid 1px #d4dae7;
+  font-size: 24px;
+  color: #4a4f62;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 8px;
+  width: 56px;
+  height: 64px;
+}
+
+.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+  margin-right: 0;
+}
+
+.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+  color: #b2b6c3;
+}
+
+<div>
+    <input
+      aria-invalid="false"
+      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
+      data-id="0"
+      id="verification-code-0"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      aria-invalid="false"
+      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
+      data-id="1"
+      id="verification-code-1"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      aria-invalid="false"
+      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
+      data-id="2"
+      id="verification-code-2"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+    <input
+      aria-invalid="false"
+      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
+      data-id="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`VerificationCode should handle paste when type is not number 1`] = `
 <DocumentFragment>
   .cache-1kx0bbi-StyledInput-VerificationCode {
