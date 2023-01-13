@@ -759,13 +759,14 @@ exports[`TextBoxField should render correctly random 1`] = `
   opacity: 1;
 }
 
-.cache-1i1cu7n-StyledRightElement {
+.cache-rjcpkh-StyledRightElement {
   pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  padding: 0 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -781,16 +782,16 @@ exports[`TextBoxField should render correctly random 1`] = `
   pointer-events: auto;
 }
 
-.cache-1i1cu7n-StyledRightElement:hover,
-.cache-1i1cu7n-StyledRightElement:focus-within {
+.cache-rjcpkh-StyledRightElement:hover,
+.cache-rjcpkh-StyledRightElement:focus-within {
   color: #4a4f62;
 }
 
-.cache-1i1cu7n-StyledRightElement>button {
+.cache-rjcpkh-StyledRightElement>button {
   box-shadow: none!important;
 }
 
-.cache-b79aqv {
+.cache-8atxza {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -811,7 +812,7 @@ exports[`TextBoxField should render correctly random 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  min-width: 24px;
+  min-width: 32px;
 }
 
 .cache-19k31i2-StyledButton {
@@ -916,10 +917,10 @@ exports[`TextBoxField should render correctly random 1`] = `
           value=""
         />
         <div
-          class="cache-1i1cu7n-StyledRightElement e18bmnpq8"
+          class="cache-rjcpkh-StyledRightElement e18bmnpq8"
         >
           <div
-            class="cache-b79aqv e18bmnpq1"
+            class="cache-8atxza e18bmnpq1"
           >
             <button
               aria-disabled="false"
@@ -1036,13 +1037,14 @@ exports[`TextBoxField should render correctly required 1`] = `
   opacity: 1;
 }
 
-.cache-1wiwt43-StyledRightElement {
+.cache-4y5g3o-StyledRightElement {
   pointer-events: none;
   position: absolute;
   right: 0;
   bottom: 0;
   top: 0;
-  padding: 0 8px;
+  padding-left: 8px;
+  padding-right: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1057,8 +1059,8 @@ exports[`TextBoxField should render correctly required 1`] = `
   color: #b2b6c3;
 }
 
-.cache-1wiwt43-StyledRightElement:hover,
-.cache-1wiwt43-StyledRightElement:focus-within {
+.cache-4y5g3o-StyledRightElement:hover,
+.cache-4y5g3o-StyledRightElement:focus-within {
   color: #4a4f62;
 }
 
@@ -1069,6 +1071,30 @@ exports[`TextBoxField should render correctly required 1`] = `
   width: 10px;
   min-width: 10px;
   min-height: 10px;
+}
+
+.cache-8atxza {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  min-width: 32px;
 }
 
 .cache-9vn1ol {
@@ -1103,7 +1129,7 @@ exports[`TextBoxField should render correctly required 1`] = `
           value=""
         />
         <div
-          class="cache-1wiwt43-StyledRightElement e18bmnpq8"
+          class="cache-4y5g3o-StyledRightElement e18bmnpq8"
         >
           <svg
             class="cache-7wqnxk-sizeStyles etwatq50"
@@ -1113,6 +1139,9 @@ exports[`TextBoxField should render correctly required 1`] = `
               d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
             />
           </svg>
+          <div
+            class="cache-8atxza e18bmnpq1"
+          />
         </div>
       </div>
       <div
