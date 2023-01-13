@@ -15,7 +15,7 @@ Playground.args = {
 }
 
 Playground.play = () => {
-  fireEvent.click(screen.getByRole('button'))
+  fireEvent.click(screen.getByRole('combobox'))
 }
 
 Playground.decorators = [
