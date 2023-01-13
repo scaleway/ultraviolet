@@ -310,7 +310,7 @@ const StyledButton = styled('button', {
   font-weight: 500;
 
   transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
-    border-color 150ms ease-in-out;
+    border-color 150ms ease-in-out, gap 150ms ease;
 
   &:hover,
   &:focus {
@@ -341,10 +341,15 @@ const StyledButton = styled('button', {
     box-shadow: none;
     `}
 
-  ${({ extend, icon }) =>
+  ${({ extend, icon, theme }) =>
     extend &&
     css`
       display: inline-flex;
+      &:focus,
+      &:hover {
+        gap: ${theme.space['1']};
+      }
+      gap: 0;
       & ${StyledContent} {
         transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
         max-width: 0;
