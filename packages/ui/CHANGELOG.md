@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.16](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.15...@scaleway/ui@0.215.16) (2023-01-16)
+
+### :bug: Bug Fixes
+
+- **deps:** update dependency final-form to v4.20.8 ([#2198](https://github.com/scaleway/scaleway-ui/issues/2198)) ([13a5dd0](https://github.com/scaleway/scaleway-ui/commit/13a5dd007bb176a5386eca7e6e5bd12a12df1279))
+- **RichSelect:** storybook play selector is wrong ([#2200](https://github.com/scaleway/scaleway-ui/issues/2200)) ([da53b0a](https://github.com/scaleway/scaleway-ui/commit/da53b0a6e4c32627b4dda7aae40d544b9bb6ddce))
+
 ## [0.215.15](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.14...@scaleway/ui@0.215.15) (2023-01-10)
 
 ### :memo: Documentation
