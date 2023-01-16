@@ -102,6 +102,9 @@ type MarkDownProps = {
   className?: string
 }
 
+/**
+ * @Deprecated in favor of Text component
+ */
 const Markdown = ({
   source,
   linkTarget,
