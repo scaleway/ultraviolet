@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.19](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.18...@scaleway/ui@0.215.19) (2023-01-16)
+
+### :bug: Bug Fixes
+
+- **Toggle:** use gap instead of margin for `label` content ([#2199](https://github.com/scaleway/scaleway-ui/issues/2199)) ([93908d5](https://github.com/scaleway/scaleway-ui/commit/93908d5ba34fa1c62db111638d98743f3d1b4759))
+
 ## [0.215.18](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.17...@scaleway/ui@0.215.18) (2023-01-16)
 
 ### :white_check_mark: Test
