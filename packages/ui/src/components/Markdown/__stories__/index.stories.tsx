@@ -9,6 +9,8 @@ export default {
         component:
           'A wrapper for [react-markdown](https://github.com/remarkjs/react-markdown)',
       },
+      deprecated: true,
+      deprecatedReason: 'This component is deprecated please use Text instead.',
     },
   },
   title: 'Components/Typography/Markdown',
