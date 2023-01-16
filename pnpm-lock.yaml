@@ -29,7 +29,7 @@ importers:
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/plugin-url': 8.0.1
       '@scaleway/eslint-config-react': 3.13.6
-      '@scaleway/jest-helpers': 2.0.25
+      '@scaleway/jest-helpers': 3.0.0
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': workspace:*
       '@scaleway/use-i18n': 4.1.10
@@ -133,7 +133,7 @@ importers:
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.9.1
       '@rollup/plugin-url': 8.0.1_rollup@3.9.1
       '@scaleway/eslint-config-react': 3.13.6_iukboom6ndih5an6iafl45j2fe
-      '@scaleway/jest-helpers': 2.0.25_vwskmg7mzf6u2jufkkmcrhvxcm
+      '@scaleway/jest-helpers': 3.0.0_vwskmg7mzf6u2jufkkmcrhvxcm
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': link:packages/ui
       '@scaleway/use-i18n': 4.1.10_3pf3ktbrffvgnzxoo2eotyjcpi
@@ -182,7 +182,7 @@ importers:
       babel-plugin-named-exports-order: 0.0.2
       chromatic: 6.14.0
       cross-env: 7.0.3
-      cz-conventional-changelog: 3.3.0_@types+node@18.11.18
+      cz-conventional-changelog: 3.3.0
       date-fns: 2.29.3
       emoji-toolkit: 7.0.0
       eslint: 8.31.0
@@ -227,7 +227,7 @@ importers:
       '@types/final-form-focus': 1.1.3
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
-      final-form: 4.20.7
+      final-form: 4.20.8
       final-form-arrays: 3.0.2
       final-form-focus: 1.1.2
       react: 18.2.0
@@ -241,11 +241,11 @@ importers:
       '@emotion/react': 11.10.5_jp5qgyg6plq757v5hojp7ls2oe
       '@emotion/styled': 11.10.5_jp5djshq6aqfasno3mth3hguci
       '@scaleway/ui': link:../ui
-      final-form: 4.20.7
-      final-form-arrays: 3.0.2_final-form@4.20.7
-      final-form-focus: 1.1.2_final-form@4.20.7
-      react-final-form: 6.5.9_b76tjmhm4bpbaoui6lan2hu4pm
-      react-final-form-arrays: 3.1.4_7jnyrk2zgzgwo2ewcetb52kcwq
+      final-form: 4.20.8
+      final-form-arrays: 3.0.2_final-form@4.20.8
+      final-form-focus: 1.1.2_final-form@4.20.8
+      react-final-form: 6.5.9_wgqxtrhlzhmon3nfoyvijndp44
+      react-final-form-arrays: 3.1.4_2m6shf4kcmqikrjxx2pgp4a33u
       react-select: 5.7.0_vwskmg7mzf6u2jufkkmcrhvxcm
     devDependencies:
       '@babel/core': 7.20.12
@@ -2244,6 +2244,30 @@ packages:
       - '@swc/wasm'
       - '@types/node'
     dev: true
+
+  /@commitlint/load/17.4.2:
+    resolution: {integrity: sha512-Si++F85rJ9t4hw6JcOw1i2h0fdpdFQt0YKwjuK4bk9KhFjyFkRxvR3SB2dPaMs+EwWlDrDBGL+ygip1QD6gmPw==}
+    engines: {node: '>=v14'}
+    dependencies:
+      '@commitlint/config-validator': 17.4.0
+      '@commitlint/execute-rule': 17.4.0
+      '@commitlint/resolve-extends': 17.4.0
+      '@commitlint/types': 17.4.0
+      '@types/node': 18.11.18
+      chalk: 4.1.2
+      cosmiconfig: 8.0.0
+      cosmiconfig-typescript-loader: 4.3.0_bxtyj3et3xbsdyxhh3oblnfbj4
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lodash.uniq: 4.5.0
+      resolve-from: 5.0.0
+      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
+      typescript: 4.9.4
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+    dev: true
+    optional: true
 
   /@commitlint/message/17.4.0:
     resolution: {integrity: sha512-USGJDU9PPxcgQjKXCzvPUal65KAhxWq3hp+MrU1pNCN2itWM654CLIoY2LMIQ7rScTli9B5dTLH3vXhzbItmzA==}
@@ -4570,8 +4594,9 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/2.0.25_vwskmg7mzf6u2jufkkmcrhvxcm:
-    resolution: {integrity: sha512-kUwzojK4I2R+ESFJYPxhqVoaTACPqPWCVZA53HvCfaJsRxFqwcJ6idONMcguNHub6ITB824ig3fdSIeTnU3+gA==}
+  /@scaleway/jest-helpers/3.0.0_vwskmg7mzf6u2jufkkmcrhvxcm:
+    resolution: {integrity: sha512-yZFDG+2MpPMIGE7BODEWU4HfdPyOkEz2UrtBz8icvonxfkBnCfhDv6gYRT1sIhUpEi242fv2aNHyekWJjaUZYw==}
+    engines: {node: '>=14.x'}
     peerDependencies:
       react: ^18.0.0 || 18
     dependencies:
@@ -6803,7 +6828,7 @@ packages:
   /@types/final-form-focus/1.1.3:
     resolution: {integrity: sha512-SAkFXzH21aiixLFGgeymMBcGjoLG75UmAADClXlZNps9CIC0lRahfcRqSycOSdTK+ZKC/jAMrq1fTDZstw1MRw==}
     dependencies:
-      final-form: 4.20.7
+      final-form: 4.20.8
     dev: true
 
   /@types/glob/7.2.0:
@@ -7992,14 +8017,6 @@ packages:
       normalize-path: 2.1.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /anymatch/3.1.2:
-    resolution: {integrity: sha512-P43ePfOAIupkguHUycrc4qJ9kz8ZiuOUijaETwX7THt0Y/GNK7v0aa8rY816xWjZ7rJdA5XdMcpVFTKMq+RvWg==}
-    engines: {node: '>= 8'}
-    dependencies:
-      normalize-path: 3.0.0
-      picomatch: 2.3.1
     dev: true
 
   /anymatch/3.1.3:
@@ -9210,7 +9227,7 @@ packages:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
     engines: {node: '>= 8.10.0'}
     dependencies:
-      anymatch: 3.1.2
+      anymatch: 3.1.3
       braces: 3.0.2
       glob-parent: 5.1.2
       is-binary-path: 2.1.0
@@ -9530,13 +9547,13 @@ packages:
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
-  /commitizen/4.2.4_@types+node@18.11.18:
+  /commitizen/4.2.4:
     resolution: {integrity: sha512-LlZChbDzg3Ir3O2S7jSo/cgWp5/QwylQVr59K4xayVq8S4/RdKzSyJkghAiZZHfhh5t4pxunUoyeg0ml1q/7aw==}
     engines: {node: '>= 10'}
     hasBin: true
     dependencies:
       cachedir: 2.2.0
-      cz-conventional-changelog: 3.2.0_@types+node@18.11.18
+      cz-conventional-changelog: 3.2.0
       dedent: 0.7.0
       detect-indent: 6.0.0
       find-node-modules: 2.1.3
@@ -9552,7 +9569,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
     dev: true
 
   /common-ancestor-path/1.0.1:
@@ -10186,40 +10202,38 @@ packages:
     resolution: {integrity: sha512-NJGVKPS81XejHcLhaLJS7plab0fK3slPh11mESeeDq2W4ZI5kUKK/LRRdVDvjJseojbPB7ZwjnyOybg3Igea/A==}
     dev: true
 
-  /cz-conventional-changelog/3.2.0_@types+node@18.11.18:
+  /cz-conventional-changelog/3.2.0:
     resolution: {integrity: sha512-yAYxeGpVi27hqIilG1nh4A9Bnx4J3Ov+eXy4koL3drrR+IO9GaWPsKjik20ht608Asqi8TQPf0mczhEeyAtMzg==}
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.4_@types+node@18.11.18
+      commitizen: 4.2.4
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.4.0_@types+node@18.11.18
+      '@commitlint/load': 17.4.2
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
     dev: true
 
-  /cz-conventional-changelog/3.3.0_@types+node@18.11.18:
+  /cz-conventional-changelog/3.3.0:
     resolution: {integrity: sha512-U466fIzU5U22eES5lTNiNbZ+d8dfcHcssH4o7QsdWaCcRs/feIPCxKYSWkYBNs5mny7MvEfwpTLWjvbm94hecw==}
     engines: {node: '>= 10'}
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.2.4_@types+node@18.11.18
+      commitizen: 4.2.4
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.4.0_@types+node@18.11.18
+      '@commitlint/load': 17.4.2
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
     dev: true
 
   /d3-array/2.12.1:
@@ -11860,24 +11874,24 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /final-form-arrays/3.0.2_final-form@4.20.7:
+  /final-form-arrays/3.0.2_final-form@4.20.8:
     resolution: {integrity: sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==}
     peerDependencies:
       final-form: ^4.18.2
     dependencies:
-      final-form: 4.20.7
+      final-form: 4.20.8
     dev: false
 
-  /final-form-focus/1.1.2_final-form@4.20.7:
+  /final-form-focus/1.1.2_final-form@4.20.8:
     resolution: {integrity: sha512-Gd+Bd2Ll7ijo3/sd6kJ/bwLkhc2bUJPxTON6fIqee/008EJpACWhT+zoWCm9q6NcfMcWRS+Sp5ikRX8iqdXeGQ==}
     peerDependencies:
       final-form: '>=1.3.0'
     dependencies:
-      final-form: 4.20.7
+      final-form: 4.20.8
     dev: false
 
-  /final-form/4.20.7:
-    resolution: {integrity: sha512-ii3X9wNfyBYFnDPunYN5jh1/HAvtOZ9aJI/TVk0MB86hZuOeYkb+W5L3icgwW9WWNztZR6MDU3En6eoZTUoFPg==}
+  /final-form/4.20.8:
+    resolution: {integrity: sha512-knyoRbK42XvZOwfElVSZEfE9licdOmgLLUfPSuxJOl0UhjYT1HiBaHZlfYnwqmvo1H9ucNGyXDHoUP0vI0474g==}
     dependencies:
       '@babel/runtime': 7.20.7
 
@@ -14156,7 +14170,7 @@ packages:
       '@jest/types': 29.3.1
       '@types/graceful-fs': 4.1.5
       '@types/node': 18.11.18
-      anymatch: 3.1.2
+      anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.10
       jest-regex-util: 29.2.0
@@ -18416,7 +18430,7 @@ packages:
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
 
-  /react-final-form-arrays/3.1.4_7jnyrk2zgzgwo2ewcetb52kcwq:
+  /react-final-form-arrays/3.1.4_2m6shf4kcmqikrjxx2pgp4a33u:
     resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
     peerDependencies:
       final-form: ^4.15.0
@@ -18425,20 +18439,20 @@ packages:
       react-final-form: ^6.2.1
     dependencies:
       '@babel/runtime': 7.20.7
-      final-form: 4.20.7
-      final-form-arrays: 3.0.2_final-form@4.20.7
+      final-form: 4.20.8
+      final-form-arrays: 3.0.2_final-form@4.20.8
       react: 18.2.0
-      react-final-form: 6.5.9_b76tjmhm4bpbaoui6lan2hu4pm
+      react-final-form: 6.5.9_wgqxtrhlzhmon3nfoyvijndp44
     dev: false
 
-  /react-final-form/6.5.9_b76tjmhm4bpbaoui6lan2hu4pm:
+  /react-final-form/6.5.9_wgqxtrhlzhmon3nfoyvijndp44:
     resolution: {integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==}
     peerDependencies:
       final-form: ^4.20.4
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
       '@babel/runtime': 7.20.7
-      final-form: 4.20.7
+      final-form: 4.20.8
       react: 18.2.0
     dev: false
 
