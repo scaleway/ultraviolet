@@ -2,11 +2,12 @@
 
 exports[`Toggle renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -17,11 +18,11 @@ exports[`Toggle renders correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -112,17 +113,17 @@ exports[`Toggle renders correctly 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
@@ -134,11 +135,12 @@ exports[`Toggle renders correctly 1`] = `
 
 exports[`Toggle renders correctly label 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -149,11 +151,11 @@ exports[`Toggle renders correctly label 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -242,44 +244,37 @@ exports[`Toggle renders correctly label 1`] = `
   cursor: not-allowed;
 }
 
-.cache-1jasoly-StyledLabelContent {
-  margin-left: 8px;
-}
-
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
       />
     </div>
-    <span
-      class="cache-1jasoly-StyledLabelContent e6hn8de0"
-    >
-      This is a label
-    </span>
+    This is a label
   </label>
 </DocumentFragment>
 `;
 
 exports[`Toggle renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -290,11 +285,11 @@ exports[`Toggle renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -385,10 +380,10 @@ exports[`Toggle renders correctly when checked 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="true"
       data-disabled="false"
     >
@@ -396,7 +391,7 @@ exports[`Toggle renders correctly when checked 1`] = `
         aria-checked="true"
         aria-label="test"
         checked=""
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
@@ -408,11 +403,12 @@ exports[`Toggle renders correctly when checked 1`] = `
 
 exports[`Toggle renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -423,11 +419,11 @@ exports[`Toggle renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -518,17 +514,17 @@ exports[`Toggle renders correctly when disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="true"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         disabled=""
         id="test"
         name="test"
@@ -541,11 +537,12 @@ exports[`Toggle renders correctly when disabled 1`] = `
 
 exports[`Toggle renders correctly with complex label 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -556,11 +553,11 @@ exports[`Toggle renders correctly with complex label 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -651,17 +648,17 @@ exports[`Toggle renders correctly with complex label 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
@@ -676,11 +673,12 @@ exports[`Toggle renders correctly with complex label 1`] = `
 
 exports[`Toggle renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -691,11 +689,11 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -784,44 +782,37 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   cursor: not-allowed;
 }
 
-.cache-1jasoly-StyledLabelContent {
-  margin-left: 8px;
-}
-
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
       />
     </div>
-    <span
-      class="cache-1jasoly-StyledLabelContent e6hn8de0"
-    >
-      This is a label
-    </span>
+    This is a label
   </label>
 </DocumentFragment>
 `;
 
 exports[`Toggle renders correctly with labels on left 1`] = `
 <DocumentFragment>
-  .cache-1y1h60s-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -832,17 +823,13 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   cursor: pointer;
 }
 
-.cache-1y1h60s-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1y1h60s-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
-}
-
-.cache-1lufvr8-StyledLabelContent {
-  margin-right: 8px;
 }
 
 .cache-x4xq1y-StyledToggle {
@@ -931,22 +918,18 @@ exports[`Toggle renders correctly with labels on left 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-1y1h60s-StyledLabel e6hn8de1"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
-    <span
-      class="cache-1lufvr8-StyledLabelContent e6hn8de0"
-    >
-      This is a label
-    </span>
+    This is a label
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de3"
+      class="cache-x4xq1y-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"
@@ -958,11 +941,12 @@ exports[`Toggle renders correctly with labels on left 1`] = `
 
 exports[`Toggle renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .cache-4cwi83-StyledLabel {
+  .cache-9kpil1-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -973,11 +957,11 @@ exports[`Toggle renders correctly with non default size 1`] = `
   cursor: pointer;
 }
 
-.cache-4cwi83-StyledLabel:active .e6hn8de3[data-disabled='false']:after {
+.cache-9kpil1-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 16.53px;
 }
 
-.cache-4cwi83-StyledLabel[aria-disabled='true'] {
+.cache-9kpil1-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -1068,17 +1052,17 @@ exports[`Toggle renders correctly with non default size 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-4cwi83-StyledLabel e6hn8de1"
+    class="cache-9kpil1-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-bod21w-StyledToggle e6hn8de3"
+      class="cache-bod21w-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
         aria-label="test"
-        class="cache-1myp2ct-StyledCheckbox e6hn8de2"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id="test"
         name="test"
         type="checkbox"

@@ -100,6 +100,7 @@ const StyledLabel = styled.label<{
   size: 'small' | 'large'
 }>`
   display: flex;
+  gap: ${({ theme }) => theme.space['1']};
   align-items: center;
   width: fit-content;
   cursor: pointer;
@@ -113,30 +114,6 @@ const StyledLabel = styled.label<{
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }
 `
-
-const StyledLabelContent = styled.span<{
-  labelPosition: 'left' | 'right'
-}>`
-  ${({ theme, labelPosition }) =>
-    labelPosition === 'left'
-      ? `margin-right: ${theme.space['1']}`
-      : `margin-left: ${theme.space['1']}`}
-`
-
-const LabelContent = ({
-  label,
-  labelPosition,
-}: Required<Pick<ToggleProps, 'label' | 'labelPosition'>>) => {
-  if (typeof label === 'string') {
-    return (
-      <StyledLabelContent labelPosition={labelPosition}>
-        {label}
-      </StyledLabelContent>
-    )
-  }
-
-  return <>{label}</>
-}
 
 type ToggleProps = {
   id?: string
@@ -188,9 +165,7 @@ const Toggle = ({
         onClick={evt => evt.stopPropagation()}
         className={className}
       >
-        {label && labelPosition === 'left' ? (
-          <LabelContent label={label} labelPosition={labelPosition} />
-        ) : null}
+        {label && labelPosition === 'left' ? label : null}
         <StyledToggle size={size} data-checked={state} data-disabled={disabled}>
           <StyledCheckbox
             id={id || name}
@@ -203,9 +178,7 @@ const Toggle = ({
             type="checkbox"
           />
         </StyledToggle>
-        {label && labelPosition === 'right' ? (
-          <LabelContent label={label} labelPosition={labelPosition} />
-        ) : null}
+        {label && labelPosition === 'right' ? label : null}
       </StyledLabel>
     </Tooltip>
   )
