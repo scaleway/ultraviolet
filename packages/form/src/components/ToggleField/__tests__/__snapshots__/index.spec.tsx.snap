@@ -2,11 +2,12 @@
 
 exports[`ToggleField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-ou5gie {
+  .cache-kx305k {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -17,11 +18,11 @@ exports[`ToggleField should render correctly 1`] = `
   cursor: pointer;
 }
 
-.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+.cache-kx305k:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-ou5gie[aria-disabled='true'] {
+.cache-kx305k[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -115,17 +116,17 @@ exports[`ToggleField should render correctly 1`] = `
   >
     <label
       aria-disabled="false"
-      class="cache-ou5gie e6hn8de1"
+      class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de3"
+        class="cache-1w4yazo e6hn8de2"
         data-checked="false"
         data-disabled="false"
       >
         <input
           aria-checked="false"
           aria-label="test"
-          class="cache-p9zju0 e6hn8de2"
+          class="cache-p9zju0 e6hn8de1"
           id="test"
           name="test"
           type="checkbox"
@@ -138,11 +139,12 @@ exports[`ToggleField should render correctly 1`] = `
 
 exports[`ToggleField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-ou5gie {
+  .cache-kx305k {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -153,11 +155,11 @@ exports[`ToggleField should render correctly checked 1`] = `
   cursor: pointer;
 }
 
-.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+.cache-kx305k:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-ou5gie[aria-disabled='true'] {
+.cache-kx305k[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -251,10 +253,10 @@ exports[`ToggleField should render correctly checked 1`] = `
   >
     <label
       aria-disabled="false"
-      class="cache-ou5gie e6hn8de1"
+      class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de3"
+        class="cache-1w4yazo e6hn8de2"
         data-checked="true"
         data-disabled="false"
       >
@@ -262,7 +264,7 @@ exports[`ToggleField should render correctly checked 1`] = `
           aria-checked="true"
           aria-label="test"
           checked=""
-          class="cache-p9zju0 e6hn8de2"
+          class="cache-p9zju0 e6hn8de1"
           id="test"
           name="test"
           type="checkbox"
@@ -275,11 +277,12 @@ exports[`ToggleField should render correctly checked 1`] = `
 
 exports[`ToggleField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-ou5gie {
+  .cache-kx305k {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -290,11 +293,11 @@ exports[`ToggleField should render correctly disabled 1`] = `
   cursor: pointer;
 }
 
-.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+.cache-kx305k:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-ou5gie[aria-disabled='true'] {
+.cache-kx305k[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -388,17 +391,17 @@ exports[`ToggleField should render correctly disabled 1`] = `
   >
     <label
       aria-disabled="true"
-      class="cache-ou5gie e6hn8de1"
+      class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de3"
+        class="cache-1w4yazo e6hn8de2"
         data-checked="false"
         data-disabled="true"
       >
         <input
           aria-checked="false"
           aria-label="test"
-          class="cache-p9zju0 e6hn8de2"
+          class="cache-p9zju0 e6hn8de1"
           disabled=""
           id="test"
           name="test"
@@ -412,11 +415,12 @@ exports[`ToggleField should render correctly disabled 1`] = `
 
 exports[`ToggleField should render correctly with label and checked 1`] = `
 <DocumentFragment>
-  .cache-ou5gie {
+  .cache-kx305k {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -427,11 +431,11 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   cursor: pointer;
 }
 
-.cache-ou5gie:active .e6hn8de3[data-disabled='false']:after {
+.cache-kx305k:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-ou5gie[aria-disabled='true'] {
+.cache-kx305k[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
@@ -520,19 +524,15 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   cursor: not-allowed;
 }
 
-.cache-sg5atl {
-  margin-left: 8px;
-}
-
 <form
     novalidate=""
   >
     <label
       aria-disabled="false"
-      class="cache-ou5gie e6hn8de1"
+      class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de3"
+        class="cache-1w4yazo e6hn8de2"
         data-checked="true"
         data-disabled="false"
       >
@@ -540,17 +540,13 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
           aria-checked="true"
           aria-label="test"
           checked=""
-          class="cache-p9zju0 e6hn8de2"
+          class="cache-p9zju0 e6hn8de1"
           id="test"
           name="test"
           type="checkbox"
         />
       </div>
-      <span
-        class="cache-sg5atl e6hn8de0"
-      >
-        test
-      </span>
+      test
     </label>
   </form>
 </DocumentFragment>
