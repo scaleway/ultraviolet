@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 import type { SingleValue } from 'react-select'
-import RichSelect from '..'
+import { RichSelect } from '..'
 
 type OptionType = { label: string; value: string }
 

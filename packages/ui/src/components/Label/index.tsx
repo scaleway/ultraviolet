@@ -13,8 +13,6 @@ type LabelProps = {
   htmlFor?: string
 }
 
-const Label = ({ children, htmlFor }: LabelProps) => (
+export const Label = ({ children, htmlFor }: LabelProps) => (
   <StyledLabel htmlFor={htmlFor}>{children}</StyledLabel>
 )
-
-export default Label

@@ -64,7 +64,7 @@ type ProgressBarProps = {
   className?: string
 }
 
-const ProgressBar = ({
+export const ProgressBar = ({
   progress = false,
   value = 0,
   variant = 'primary',
@@ -84,5 +84,3 @@ const ProgressBar = ({
     )}
   </StyledProgressContainer>
 )
-
-export default ProgressBar

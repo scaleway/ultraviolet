@@ -1,4 +1,4 @@
-import ScrollView from '..'
+import { ScrollView } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ScrollView', () => {

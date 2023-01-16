@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import StateBar, { StateBarBar, StateBarState } from '..'
+import { StateBar, StateBarBar, StateBarState } from '..'
 
 export default {
   component: StateBar,
@@ -14,7 +14,7 @@ export default {
   subcomponents: { StateBarBar, StateBarState },
 } as ComponentMeta<typeof StateBar>
 
-export { Playground } from './Playground.stories'
-export { Unlimited } from './Unlimited.stories'
-export { Progress } from './Progress.stories'
 export { LabelValue } from './LabelValue.stories'
+export { Playground } from './Playground.stories'
+export { Progress } from './Progress.stories'
+export { Unlimited } from './Unlimited.stories'

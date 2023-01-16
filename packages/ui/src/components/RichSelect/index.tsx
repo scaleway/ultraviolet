@@ -25,11 +25,11 @@ import type {
 import Select, { components } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
 import * as animations from '../../utils/animations'
-import Expandable from '../Expandable'
-import Icon from '../Icon'
-import Separator from '../Separator'
-import Stack from '../Stack'
-import Text from '../Text'
+import { Expandable } from '../Expandable'
+import { Icon } from '../Icon'
+import { Separator } from '../Separator'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const StyledSeparator = styled(Separator)`
   background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
@@ -663,7 +663,7 @@ type RichSelectProps = SelectProps &
 
 const defaultCustomStyle = () => ({})
 
-const RichSelect = ({
+const FwdRichSelect = ({
   animation = 'pulse',
   animationDuration = 1000,
   animationOnChange = false,
@@ -773,16 +773,14 @@ type OptionComponent = (
   props: Partial<OptionProps<SelectOption> & SelectOption>,
 ) => JSX.Element
 
-const RichSelectWithRef = forwardRef(
+export const RichSelect = forwardRef(
   (props: RichSelectProps, ref: ForwardedRef<StateManagedSelect>) => (
-    <RichSelect innerRef={ref} {...props} />
+    <FwdRichSelect innerRef={ref} {...props} />
   ),
 ) as ForwardRefExoticComponent<Partial<RichSelectProps>> & {
   Option: OptionComponent
 }
 
-RichSelectWithRef.displayName = 'RichSelect'
+RichSelect.displayName = 'RichSelect'
 
-RichSelectWithRef.Option = Option as OptionComponent
-
-export default RichSelectWithRef
+RichSelect.Option = Option as OptionComponent

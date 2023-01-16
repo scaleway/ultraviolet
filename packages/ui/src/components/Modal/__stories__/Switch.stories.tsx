@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal from '..'
-import Toggle from '../../Toggle'
+import { Modal } from '..'
+import { Toggle } from '../../Toggle'
 
 export const Switch: Story = props => (
   <Modal

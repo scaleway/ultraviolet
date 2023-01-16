@@ -7,8 +7,8 @@ import type { Color } from '../../theme'
 import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import type { IconName } from '../Icon'
-import Icon from '../Icon'
-import Text from '../Text'
+import { Icon } from '../Icon'
+import { Text } from '../Text'
 
 const StyledText = styled(Text)<{ fontSize: number }>`
   text-transform: uppercase;
@@ -118,7 +118,7 @@ type BadgeProps = {
   children: ReactNode
 }
 
-const Badge = ({
+export const Badge = ({
   variant = 'neutral',
   size = 'medium',
   prominence = 'default',
@@ -172,5 +172,3 @@ const Badge = ({
     </StyledBox>
   )
 }
-
-export default Badge

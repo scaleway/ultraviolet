@@ -85,9 +85,7 @@ type DescriptionType = typeof BareDescription & {
 }
 
 // @ts-expect-error we assign the missing compound components
-const Description: DescriptionType = BareDescription
+export const Description: DescriptionType = BareDescription
 
 Description.Term = Term
 Description.Desc = Desc
-
-export default Description

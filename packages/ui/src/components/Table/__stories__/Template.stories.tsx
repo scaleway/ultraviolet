@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Table from '..'
+import { Table } from '..'
 
 export const Template: ComponentStory<typeof Table> = ({ ...props }) => (
   <Table {...props} />

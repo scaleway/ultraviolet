@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal, { MODAL_PLACEMENT } from '..'
-import Button from '../../Button'
+import { MODAL_PLACEMENT, Modal } from '..'
+import { Button } from '../../Button'
 
 export const Placement: Story = props => (
   <>

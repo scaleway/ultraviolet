@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import ToastContainer, { toast } from '..'
+import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
 export const Template: ComponentStory<typeof ToastContainer> = args => (

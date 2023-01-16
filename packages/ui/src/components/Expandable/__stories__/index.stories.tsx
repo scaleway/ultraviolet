@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Expandable from '..'
+import { Expandable } from '..'
 
 export default {
   component: Expandable,

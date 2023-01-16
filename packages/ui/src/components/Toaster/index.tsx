@@ -8,8 +8,8 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import Alert from '../Alert'
-import Icon from '../Icon'
+import { Alert } from '../Alert'
+import { Icon } from '../Icon'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
@@ -90,7 +90,7 @@ const SanitizedAlertBar = ({ variant, children }: SanitizedAlertBarProps) => (
   <StyledAlert variant={variant}>{children}</StyledAlert>
 )
 
-const toast = {
+export const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
     baseToast.error(
       <SanitizedAlertBar variant="danger">{children}</SanitizedAlertBar>,
@@ -124,7 +124,7 @@ type ToastContainerProps = {
   position?: ToastOptions['position']
 }
 
-const ToastContainer = ({
+export const ToastContainer = ({
   newestOnTop,
   limit,
   position,
@@ -150,6 +150,3 @@ const ToastContainer = ({
     </>
   )
 }
-
-export default ToastContainer
-export { toast }

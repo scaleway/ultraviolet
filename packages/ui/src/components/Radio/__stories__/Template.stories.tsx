@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Radio from '..'
+import { Radio } from '..'
 
 export const Template: ComponentStory<typeof Radio> = args => (
   <Radio {...args} />

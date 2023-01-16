@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import UnitInput from '..'
+import { UnitInput } from '..'
 
 export const Template: ComponentStory<typeof UnitInput> = args => (
   <UnitInput {...args} />

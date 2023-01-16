@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Expandable from '..'
+import { Expandable } from '..'
 
 export const Template: ComponentStory<typeof Expandable> = ({
   opened,

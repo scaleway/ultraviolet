@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Tags from '..'
+import { Tags } from '..'
 
 export default {
   component: Tags,

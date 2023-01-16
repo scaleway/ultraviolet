@@ -480,8 +480,6 @@ describe('ListV2', () => {
       </LocalControlValue>,
       {
         transform: node => {
-          console.log(node)
-
           const listColumns = node.getAllByRole(
             'columnheader',
           ) as HTMLTableCellElement[]

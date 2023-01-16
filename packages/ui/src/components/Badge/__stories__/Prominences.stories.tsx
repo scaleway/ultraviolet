@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Badge, { PROMINENCES } from '..'
+import { Badge, PROMINENCES } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 export const Prominences: Story = props => (

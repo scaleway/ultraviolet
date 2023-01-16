@@ -40,7 +40,7 @@ const Text = styled('text', {
   text-anchor: middle;
 `
 
-const Loader = ({
+export const Loader = ({
   percentage = 20,
   text,
   size = 40,
@@ -106,5 +106,3 @@ const Loader = ({
     </svg>
   )
 }
-
-export default Loader

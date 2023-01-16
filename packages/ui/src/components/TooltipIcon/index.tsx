@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import type { ComponentProps, ReactNode } from 'react'
-import Icon from '../Icon'
-import Tooltip from '../Tooltip'
+import { Icon } from '../Icon'
+import { Tooltip } from '../Tooltip'
 
 type TooltipIconProps = {
   baseId?: string
@@ -11,7 +11,7 @@ type TooltipIconProps = {
   tooltip: ReactNode
 }
 
-const TooltipIcon = ({
+export const TooltipIcon = ({
   color,
   name = 'help-circle-outline',
   size = 20,
@@ -31,5 +31,3 @@ const TooltipIcon = ({
     </Tooltip>
   )
 }
-
-export default TooltipIcon

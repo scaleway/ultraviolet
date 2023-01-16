@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import ProgressBar from '..'
+import { ProgressBar } from '..'
 
 export const Cap: Story = props => (
   <>

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import BorderedBox from '../BorderedBox'
-import SelectableCard from '../SelectableCard'
-import Tooltip from '../Tooltip'
+import { BorderedBox } from '../BorderedBox'
+import { SelectableCard } from '../SelectableCard'
+import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 
 const StyledBorderedBox = styled(BorderedBox)`
@@ -66,7 +66,7 @@ type SwitchButtonProps = {
   }
 }
 
-const SwitchButton = ({
+export const SwitchButton = ({
   value,
   onChange,
   onFocus,
@@ -142,5 +142,3 @@ const SwitchButton = ({
     </Tooltip>
   )
 }
-
-export default SwitchButton

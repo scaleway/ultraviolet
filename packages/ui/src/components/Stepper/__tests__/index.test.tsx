@@ -1,4 +1,4 @@
-import Stepper from '..'
+import { Stepper } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Stepper', () => {

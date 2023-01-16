@@ -1,5 +1,5 @@
 import type { ComponentProps, ReactNode } from 'react'
-import Stack from '../Stack'
+import { Stack } from '../Stack'
 import { ListBody } from './ListBody'
 import { ListCell } from './ListCell'
 import { ListProvider } from './ListContext'

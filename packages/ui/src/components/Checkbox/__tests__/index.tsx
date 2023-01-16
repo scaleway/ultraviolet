@@ -1,6 +1,6 @@
 import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import Checkbox from '..'
+import { Checkbox } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

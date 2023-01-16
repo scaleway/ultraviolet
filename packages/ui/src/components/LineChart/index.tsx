@@ -30,7 +30,7 @@ type LineChartProps = {
   chartProps?: Partial<LineSvgProps>
 }
 
-const LineChart = ({
+export const LineChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width
   margin = { bottom: 50, left: 60, right: 25, top: 50 },
   xScale = {
@@ -136,5 +136,3 @@ const LineChart = ({
     </>
   )
 }
-
-export default LineChart

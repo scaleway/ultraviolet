@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Slider from '..'
+import { Slider } from '..'
 
 export const Template: ComponentStory<typeof Slider> = props => (
   <Slider {...props}>

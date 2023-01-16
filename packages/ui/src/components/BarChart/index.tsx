@@ -29,7 +29,7 @@ type BarChartProps = {
   chartProps?: Partial<BarSvgProps<BarDatum>>
 }
 
-const BarChart = ({
+export const BarChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width,
   margin = { bottom: 50, left: 60, right: 25, top: 50 },
   data = [],
@@ -114,5 +114,3 @@ const BarChart = ({
     </div>
   )
 }
-
-export default BarChart

@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Breadcrumbs, { Item } from '..'
+import { Breadcrumbs, Item } from '..'
 
 export default {
   component: Breadcrumbs,

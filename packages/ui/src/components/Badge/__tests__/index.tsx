@@ -1,4 +1,4 @@
-import Badge, { PROMINENCES, SIZES } from '..'
+import { Badge, PROMINENCES, SIZES } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { SENTIMENTS } from '../../../theme'
 

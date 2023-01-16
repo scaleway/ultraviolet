@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import DotSteps from '..'
+import { DotSteps } from '..'
 
 export default {
   component: DotSteps,

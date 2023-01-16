@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import LineChart from '..'
+import { LineChart } from '..'
 
 export default {
   component: LineChart,

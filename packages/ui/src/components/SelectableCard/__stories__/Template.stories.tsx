@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import SelectableCard from '..'
+import { SelectableCard } from '..'
 
 export const Template: ComponentStory<typeof SelectableCard> = ({
   ...props

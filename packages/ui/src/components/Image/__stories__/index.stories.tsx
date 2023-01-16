@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Image from '..'
+import { Image } from '..'
 
 export default {
   component: Image,

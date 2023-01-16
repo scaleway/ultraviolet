@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Avatar from '..'
-import Stack from '../../Stack'
+import { Avatar } from '..'
+import { Stack } from '../../Stack'
 
 export const Lock = (props: Omit<ComponentProps<typeof Avatar>, 'image'>) => [
   <Avatar {...props} text="Hello You" lock />,

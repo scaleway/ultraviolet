@@ -1,4 +1,4 @@
-import Expandable from '..'
+import { Expandable } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Expandable', () => {

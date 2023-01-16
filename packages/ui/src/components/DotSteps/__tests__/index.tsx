@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import { useState } from 'react'
-import DotSteps from '..'
+import { DotSteps } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const DotStepsComponent = () => {

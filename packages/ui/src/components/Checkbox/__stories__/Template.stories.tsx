@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Checkbox from '..'
+import { Checkbox } from '..'
 
 export const Template: ComponentStory<typeof Checkbox> = ({
   'aria-label': ariaLabel,

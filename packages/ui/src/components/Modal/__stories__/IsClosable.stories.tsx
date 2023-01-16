@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal from '..'
-import Button from '../../Button'
+import { Modal } from '..'
+import { Button } from '../../Button'
 
 export const IsClosable: Story = props => (
   <Modal {...props} disclosure={<Button>isClosable</Button>} isClosable={false}>

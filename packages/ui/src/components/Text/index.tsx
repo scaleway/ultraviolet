@@ -6,7 +6,7 @@ import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenSt
 import type { Color } from '../../theme'
 import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
-import Tooltip from '../Tooltip'
+import { Tooltip } from '../Tooltip'
 
 export const PROMINENCES = {
   default: '',
@@ -111,7 +111,7 @@ const StyledText = styled('div', {
   underline: boolean
 }>(generateStyles)
 
-const Text = ({
+export const Text = ({
   variant,
   children,
   as,
@@ -156,5 +156,3 @@ const Text = ({
     </Tooltip>
   )
 }
-
-export default Text

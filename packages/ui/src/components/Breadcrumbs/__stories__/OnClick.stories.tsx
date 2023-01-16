@@ -1,7 +1,7 @@
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import Breadcrumbs from '..'
+import { Breadcrumbs } from '..'
 
 export const OnClick: Story<ComponentProps<typeof Breadcrumbs>> = props => {
   const [value, setValue] = useState(1)

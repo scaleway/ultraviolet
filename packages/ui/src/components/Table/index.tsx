@@ -2,7 +2,7 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import Loader from '../Loader'
+import { Loader } from '../Loader'
 
 // Common
 const cellStyle = (theme: Theme) => css`
@@ -18,7 +18,7 @@ const StyledTable = styled.table`
   border-collapse: collapse;
 `
 
-const Table: ((props: {
+export const Table: ((props: {
   children: ReactNode
   className?: string
 }) => JSX.Element) & {
@@ -199,5 +199,3 @@ Table.Body = Body
 Table.Row = Row
 Table.HeadCell = HeadCell
 Table.BodyCell = BodyCell
-
-export default Table

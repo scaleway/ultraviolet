@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Description from '..'
+import { Description } from '..'
 
 export default {
   component: Description,

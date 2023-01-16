@@ -382,7 +382,7 @@ type IconProps = {
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
 >
 
-const Icon = forwardRef<SVGSVGElement, IconProps>(
+export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       name = 'alert',
@@ -424,5 +424,3 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(
     )
   },
 )
-
-export default Icon

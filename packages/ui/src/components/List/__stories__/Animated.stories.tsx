@@ -2,10 +2,10 @@ import { useState } from 'react'
 import List from '..'
 import { generateData } from '../../../mocks/list'
 import * as animations from '../../../utils/animations'
-import Button from '../../Button'
+import { Button } from '../../Button'
 import type { SelectOption } from '../../RichSelect'
-import RichSelect from '../../RichSelect'
-import Stack from '../../Stack'
+import { RichSelect } from '../../RichSelect'
+import { Stack } from '../../Stack'
 
 const selectableAnimations = Object.keys(animations).map(animation => ({
   label: animation,

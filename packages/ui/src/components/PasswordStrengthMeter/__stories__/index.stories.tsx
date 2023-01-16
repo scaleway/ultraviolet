@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import PasswordStrengthMeter from '..'
+import { PasswordStrengthMeter } from '..'
 
 export default {
   component: PasswordStrengthMeter,

@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal, { MODAL_WIDTH } from '..'
-import Button from '../../Button'
+import { MODAL_WIDTH, Modal } from '..'
+import { Button } from '../../Button'
 
 export const Width: Story = props => (
   <>

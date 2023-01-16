@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Container from '..'
+import { Container } from '..'
 
 export default {
   component: Container,

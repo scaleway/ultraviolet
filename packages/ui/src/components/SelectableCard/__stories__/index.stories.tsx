@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import SelectableCard from '..'
+import { SelectableCard } from '..'
 
 export default {
   component: SelectableCard,

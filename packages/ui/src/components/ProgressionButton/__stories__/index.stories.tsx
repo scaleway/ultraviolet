@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import ProgressionButton from '..'
+import { ProgressionButton } from '..'
 
 export default {
   component: ProgressionButton,

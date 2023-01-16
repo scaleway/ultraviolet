@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import { es, fr, ru } from 'date-fns/locale'
 import type { ComponentProps } from 'react'
-import DateInput from '..'
+import { DateInput } from '..'
 
 const locales = [
   { label: 'fr-FR', locale: fr },

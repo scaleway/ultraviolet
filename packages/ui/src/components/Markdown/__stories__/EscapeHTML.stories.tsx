@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Markdown from '..'
+import { Markdown } from '..'
 import { html } from './markdown_example'
 
 export const EspaceHTML: Story = props => (

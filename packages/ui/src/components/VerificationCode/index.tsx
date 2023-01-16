@@ -65,7 +65,7 @@ type VerificationCodeProps = {
   type?: 'text' | 'number'
 }
 
-const VerificationCode = ({
+export const VerificationCode = ({
   disabled = false,
   className,
   error = false,
@@ -228,5 +228,3 @@ const VerificationCode = ({
     </div>
   )
 }
-
-export default VerificationCode

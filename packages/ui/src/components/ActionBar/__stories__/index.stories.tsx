@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import ActionBar from '..'
+import { ActionBar } from '..'
 
 export default {
   component: ActionBar,

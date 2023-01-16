@@ -3,7 +3,7 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import CopyButton, { SIZES } from '../index'
+import { CopyButton, SIZES } from '../index'
 
 describe('CopyButton', () => {
   beforeAll(() => {

@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import SelectNumber from '..'
-import Stack from '../../Stack'
+import { SelectNumber } from '..'
+import { Stack } from '../../Stack'
 
 const sizes: ComponentProps<typeof SelectNumber>['size'][] = [
   'large',

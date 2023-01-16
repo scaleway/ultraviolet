@@ -8,7 +8,7 @@ import type {
 } from 'react'
 import { forwardRef } from 'react'
 import type { Color } from '../../theme'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 
 const StyledIcon = styled(Icon)``
 
@@ -113,7 +113,7 @@ export const StyledLink = styled('a', {
   }
 `
 
-const Link = forwardRef(
+export const Link = forwardRef(
   (
     {
       children,
@@ -165,5 +165,3 @@ const Link = forwardRef(
     )
   },
 )
-
-export default Link

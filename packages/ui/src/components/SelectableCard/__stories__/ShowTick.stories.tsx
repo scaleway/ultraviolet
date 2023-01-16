@@ -1,7 +1,7 @@
 import type { Story } from '@storybook/react'
 import { useState } from 'react'
-import SelectableCard from '..'
-import Stack from '../../Stack'
+import { SelectableCard } from '..'
+import { Stack } from '../../Stack'
 
 export const ShowTick: Story = () => {
   const [value, onChange] = useState('label-5')

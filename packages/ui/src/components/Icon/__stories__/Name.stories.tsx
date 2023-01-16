@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Icon, { icons } from '..'
-import Stack from '../../Stack'
+import { Icon, icons } from '..'
+import { Stack } from '../../Stack'
 
 export const Name = (args: ComponentProps<typeof Icon>) =>
   icons.map(name => (

@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 import type { ListOrder } from './types'
 
 const StyledContainer = styled.div`

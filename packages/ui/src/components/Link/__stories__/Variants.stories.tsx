@@ -1,8 +1,8 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Link from '..'
+import { Link } from '..'
 import { SENTIMENTS } from '../../../theme'
-import Stack from '../../Stack'
+import { Stack } from '../../Stack'
 
 export const Variants = (props: ComponentProps<typeof Link>) =>
   SENTIMENTS.map(variant => (

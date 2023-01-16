@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Loader from '../index'
+import { Loader } from '../index'
 
 export const StrokeWidth: Story = props => (
   <>

@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import Breadcrumbs from '..'
+import { Breadcrumbs } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Breadcrumbs', () => {

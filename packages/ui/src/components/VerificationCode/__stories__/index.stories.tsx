@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import VerificationCode from '..'
+import { VerificationCode } from '..'
 
 export default {
   component: VerificationCode,

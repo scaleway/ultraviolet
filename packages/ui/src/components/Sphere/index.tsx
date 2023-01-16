@@ -53,7 +53,7 @@ type SphereProps = {
   textColor?: string
 }
 
-const Sphere = ({
+export const Sphere = ({
   size = 32,
   colors = ['primary'],
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
@@ -74,5 +74,3 @@ const Sphere = ({
     )}
   </StyledSphere>
 )
-
-export default Sphere

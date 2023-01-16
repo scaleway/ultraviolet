@@ -1,4 +1,4 @@
-import maxDate from '../maxDate'
+import { maxDateValidator } from '../maxDate'
 
 const today = new Date()
 const hourInMs = 60 * 60 * 1000
@@ -8,20 +8,20 @@ const tomorrow = new Date(today.getTime() + 24 * hourInMs)
 
 describe('maxDate validator', () => {
   test('should not throw error', () => {
-    const validator = maxDate(tomorrow)
+    const validator = maxDateValidator(tomorrow)
     expect(validator).toBeDefined()
     expect(validator.error).toBe('MAX_DATE')
   })
 
   test('should success', () => {
-    const validator = maxDate(yesterday)
+    const validator = maxDateValidator(yesterday)
     expect(validator.validate(today, {})).toBe(false)
     expect(validator.validate(twoHoursLater, {})).toBe(false)
     expect(validator.validate(tomorrow, {})).toBe(false)
   })
 
   test('should failed', () => {
-    const validator = maxDate(tomorrow)
+    const validator = maxDateValidator(tomorrow)
     expect(validator.validate(yesterday, {})).toBe(true)
     expect(validator.validate(today, {})).toBe(true)
     expect(validator.validate(twoHoursLater, {})).toBe(true)

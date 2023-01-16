@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Text, { textVariants } from '../index'
+import { Text, textVariants } from '../index'
 
 export const Variants: ComponentStory<typeof Text> = props => (
   <>

@@ -1,4 +1,4 @@
-import Sphere from '..'
+import { Sphere } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Sphere', () => {

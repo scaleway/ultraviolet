@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import PieChart from '..'
+import { PieChart } from '..'
 
 export default {
   component: PieChart,

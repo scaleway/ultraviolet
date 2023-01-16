@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import Stack from '../Stack'
+import { Stack } from '../Stack'
 
 type ListBodyProps = {
   children: ReactNode

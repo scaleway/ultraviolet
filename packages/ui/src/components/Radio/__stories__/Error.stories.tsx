@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import { useState } from 'react'
-import Radio from '..'
+import { Radio } from '..'
 
 export const Error: Story = () => {
   const [value, onChange] = useState('error-label-1')

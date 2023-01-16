@@ -1,4 +1,4 @@
-import Alert from '..'
+import { Alert } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Alert', () => {

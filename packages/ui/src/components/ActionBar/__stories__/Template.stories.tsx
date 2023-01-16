@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
-import ActionBar from '..'
-import Button from '../../Button'
-import Stack from '../../Stack'
+import { ActionBar } from '..'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
 
 const StyledFlexDiv = styled.div`
   display: flex;

@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
-import Button from '../Button'
-import Icon from '../Icon'
-import Separator from '../Separator'
-import Text from '../Text'
-import TextBox from '../TextBox'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
+import { Separator } from '../Separator'
+import { Text } from '../Text'
+import { TextBox } from '../TextBox'
 
 const PREFIX = '.react-datepicker'
 
@@ -165,7 +165,7 @@ type DateInputProps = Pick<
   value?: Date | string
 }
 
-const DateInput = ({
+export const DateInput = ({
   autoFocus = false,
   disabled = false,
   error,
@@ -275,5 +275,3 @@ const DateInput = ({
     </>
   )
 }
-
-export default DateInput

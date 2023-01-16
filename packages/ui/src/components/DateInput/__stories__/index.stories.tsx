@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import DateInput from '..'
+import { DateInput } from '..'
 
 export default {
   component: DateInput,

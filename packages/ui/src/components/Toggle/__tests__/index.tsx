@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import Toggle from '..'
+import { Toggle } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

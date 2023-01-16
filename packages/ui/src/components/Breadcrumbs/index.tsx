@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
-import Link from '../Link'
+import { Link } from '../Link'
 
 function reverseZIndexes() {
   const count = 10
@@ -186,7 +186,7 @@ type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
   Item: typeof Item
 }
 
-const Breadcrumbs: BreadcrumbsType = ({
+export const Breadcrumbs: BreadcrumbsType = ({
   children,
   variant = 'link',
   selected: selectedProp,
@@ -216,5 +216,3 @@ const Breadcrumbs: BreadcrumbsType = ({
 }
 
 Breadcrumbs.Item = Item
-
-export default Breadcrumbs

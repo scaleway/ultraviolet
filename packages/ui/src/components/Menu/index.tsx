@@ -170,7 +170,7 @@ const MenuList = styled.div<MenuListProps>`
     hasArrow && arrowPlacementStyles[placement]?.(theme)}
 `
 
-const Menu = forwardRef(
+const FwdMenu = forwardRef(
   (
     {
       align = { left: '50%', right: 'inherit' },
@@ -232,6 +232,4 @@ const Menu = forwardRef(
   },
 )
 
-const EnhancedMenu = Object.assign(Menu, { Item })
-
-export default EnhancedMenu
+export const Menu = Object.assign(FwdMenu, { Item })

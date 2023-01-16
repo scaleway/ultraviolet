@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
-import Tooltip from '../Tooltip'
+import { Tooltip } from '../Tooltip'
 
 const TOGGLE_RADIUS = '24px'
 const TOGGLE_POINT_RADIUS = '100px'
@@ -131,7 +131,7 @@ type ToggleProps = {
   className?: string
 }
 
-const Toggle = ({
+export const Toggle = ({
   checked = false,
   disabled = false,
   id,
@@ -183,5 +183,3 @@ const Toggle = ({
     </Tooltip>
   )
 }
-
-export default Toggle

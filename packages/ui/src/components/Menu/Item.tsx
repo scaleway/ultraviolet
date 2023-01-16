@@ -2,7 +2,7 @@ import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
-import Button from '../Button'
+import { Button } from '../Button'
 
 const variantStyle = {
   danger: (theme: Theme) => `

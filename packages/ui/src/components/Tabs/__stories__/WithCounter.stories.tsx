@@ -1,4 +1,4 @@
-import Tabs from '..'
+import { Tabs } from '..'
 import { Template } from './Template.stories'
 
 export const WithCounter = Template.bind({})

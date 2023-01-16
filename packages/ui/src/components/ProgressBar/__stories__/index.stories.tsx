@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import ProgressBar from '..'
+import { ProgressBar } from '..'
 
 export default {
   component: ProgressBar,

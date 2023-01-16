@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
-import Modal from '..'
-import Button from '../../Button'
+import { Modal } from '..'
+import { Button } from '../../Button'
 
 export const DefaultDisclosure = <Button>Open Modal</Button>
 

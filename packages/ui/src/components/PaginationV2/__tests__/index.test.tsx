@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import Pagination from '..'
+import { Pagination } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Pagination', () => {

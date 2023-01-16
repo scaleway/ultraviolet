@@ -11,12 +11,12 @@ import {
   useRef,
   useState,
 } from 'react'
-import Button from '../Button'
-import Icon from '../Icon'
-import Loader from '../Loader'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
+import { Loader } from '../Loader'
 import getPageNumbers from './getPageNumbers'
 import type { UsePaginationReturn } from './usePagination'
-import usePagination from './usePagination'
+import { usePagination } from './usePagination'
 
 export type PaginationState<T> = {
   canLoadMore: boolean
@@ -283,7 +283,7 @@ export type PaginationProps<T> = {
   pageTabCount?: number
 }
 
-function Pagination<T>(
+function FwdPagination<T>(
   {
     children,
     data: dataProp,
@@ -451,9 +451,9 @@ function Pagination<T>(
  * @deprecated Use PaginationV2 instead
  */
 // @ts-expect-error it breaks on i don't know what
-const PaginationForward = forwardRef(Pagination) as (<T>(
+export const Pagination = forwardRef(FwdPagination) as (<T>(
   props: PaginationProps<T> & { ref?: ForwardedRef<PaginationState<T>> },
-) => ReturnType<typeof Pagination>) & {
+) => ReturnType<typeof FwdPagination>) & {
   RightComponent: (
     props: PaginationComponentProps<unknown>,
   ) => JSX.Element | null
@@ -471,10 +471,8 @@ const PaginationForward = forwardRef(Pagination) as (<T>(
   ) => JSX.Element | null
 }
 
-PaginationForward.LeftComponent = DefaultLeftComponent
-PaginationForward.LoaderComponent = DefaultLoaderComponent
-PaginationForward.MiddleComponent = DefaultMiddleComponent
-PaginationForward.PaginationContainer = PaginationContainer
-PaginationForward.RightComponent = DefaultRightComponent
-
-export default PaginationForward
+Pagination.LeftComponent = DefaultLeftComponent
+Pagination.LoaderComponent = DefaultLoaderComponent
+Pagination.MiddleComponent = DefaultMiddleComponent
+Pagination.PaginationContainer = PaginationContainer
+Pagination.RightComponent = DefaultRightComponent

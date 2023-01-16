@@ -1,4 +1,4 @@
-import StateBar from '..'
+import { StateBar } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('StateBar', () => {

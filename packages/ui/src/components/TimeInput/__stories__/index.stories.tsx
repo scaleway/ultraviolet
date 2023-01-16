@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import TimeInput from '..'
+import { TimeInput } from '..'
 
 export default {
   component: TimeInput,

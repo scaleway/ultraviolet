@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
-import DotSteps from '..'
+import { DotSteps } from '..'
 
 export const Template: ComponentStory<typeof DotSteps> = args => {
   const [step, setStep] = useState(1)

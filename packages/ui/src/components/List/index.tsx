@@ -17,11 +17,11 @@ import {
 } from 'react'
 import { orderBy } from '../../utils'
 import type { ComparableType } from '../../utils'
-import Pagination from '../Pagination'
+import { Pagination } from '../Pagination'
 import type { PaginationProps } from '../Pagination'
 import type { UsePaginationReturn } from '../Pagination/usePagination'
-import usePagination from '../Pagination/usePagination'
-import Text from '../Text'
+import { usePagination } from '../Pagination/usePagination'
+import { Text } from '../Text'
 import {
   DEFAULT_PLACEHOLDER_ROWS_COUNT,
   LoadingPlaceholder,

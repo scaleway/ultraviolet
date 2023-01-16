@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Notice from '..'
+import { Notice } from '..'
 
 export default {
   component: Notice,

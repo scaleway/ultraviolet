@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
-import Menu from '..'
-import Modal from '../../Modal'
+import { Menu } from '..'
+import { Modal } from '../../Modal'
 import { DefaultDisclosure } from './Template.stories'
 
 export const WithModal: ComponentStory<typeof Menu> = () => {

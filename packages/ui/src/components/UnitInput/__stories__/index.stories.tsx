@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import UnitInput from '..'
+import { UnitInput } from '..'
 
 export default {
   component: UnitInput,

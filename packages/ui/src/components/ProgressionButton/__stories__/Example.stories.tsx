@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import ProgressionButton from '..'
+import { ProgressionButton } from '..'
 
 export const Example: ComponentStory<typeof ProgressionButton> = ({
   ...props

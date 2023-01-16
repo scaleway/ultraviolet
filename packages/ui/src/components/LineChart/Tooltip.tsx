@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { Point } from '@nivo/line'
-import Text from '../Text'
+import { Text } from '../Text'
 
 const LineTooltipContainer = styled.div`
   display: flex;

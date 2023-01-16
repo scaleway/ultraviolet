@@ -10,10 +10,10 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef, isValidElement, useMemo } from 'react'
-import Icon from '../Icon'
-import Link from '../Link'
-import Loader from '../Loader'
-import Tooltip from '../Tooltip'
+import { Icon } from '../Icon'
+import { Link } from '../Link'
+import { Loader } from '../Loader'
+import { Tooltip } from '../Tooltip'
 
 const TRANSITION_DURATION = 250
 
@@ -470,8 +470,6 @@ const FwdButton = ({
   )
 }
 
-const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
+export const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
   (props, ref) => <FwdButton {...props} innerRef={ref} />,
 )
-
-export default Button

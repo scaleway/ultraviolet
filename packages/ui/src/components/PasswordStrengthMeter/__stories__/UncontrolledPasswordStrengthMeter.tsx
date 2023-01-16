@@ -1,9 +1,9 @@
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import PasswordStrengthMeter from '..'
+import { PasswordStrengthMeter } from '..'
 import { TextBox } from '../..'
 
-const UncontrolledPasswordStrengthMeter = ({
+export const UncontrolledPasswordStrengthMeter = ({
   name,
   ...props
 }: { name: string } & ComponentProps<typeof PasswordStrengthMeter>) => {
@@ -16,5 +16,3 @@ const UncontrolledPasswordStrengthMeter = ({
     </div>
   )
 }
-
-export default UncontrolledPasswordStrengthMeter

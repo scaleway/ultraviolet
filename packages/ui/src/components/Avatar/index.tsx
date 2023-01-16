@@ -2,8 +2,8 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { Color } from '../../theme'
 import type { XOR } from '../../types'
-import Icon from '../Icon'
-import Image from '../Image'
+import { Icon } from '../Icon'
+import { Image } from '../Image'
 
 const formatTextToAvatar = (text?: string): string => {
   if (!text) return ''
@@ -94,7 +94,7 @@ const AvatarContainer = styled.div<{ size: number }>`
   width: ${({ size }) => size}px;
 `
 
-const Avatar = ({
+export const Avatar = ({
   image,
   size = 32,
   text,
@@ -126,5 +126,3 @@ const Avatar = ({
     </AvatarContainer>
   )
 }
-
-export default Avatar

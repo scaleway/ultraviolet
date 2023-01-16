@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import TagsPoplist from '..'
+import { TagsPoplist } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 jest.mock('reakit/Tooltip', () => ({

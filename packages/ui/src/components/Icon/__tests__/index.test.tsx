@@ -1,4 +1,4 @@
-import Icon, { icons } from '..'
+import { Icon, icons } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Icon', () => {

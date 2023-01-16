@@ -1,4 +1,4 @@
-import BorderedBox from '..'
+import { BorderedBox } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('BorderedBox', () => {

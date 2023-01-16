@@ -2,10 +2,10 @@ import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { Children, useState } from 'react'
-import CopyButton from '../CopyButton'
-import Icon from '../Icon'
-import Stack from '../Stack'
-import Text from '../Text'
+import { CopyButton } from '../CopyButton'
+import { Icon } from '../Icon'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const LINES_BREAK_REGEX = /\r\n|\r|\n/
 
@@ -150,7 +150,7 @@ type SnippetProps = {
   hideText?: string
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
-const Snippet = ({
+export const Snippet = ({
   children,
   copyText,
   copiedText,
@@ -220,5 +220,3 @@ const Snippet = ({
     </Container>
   )
 }
-
-export default Snippet

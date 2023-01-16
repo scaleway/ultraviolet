@@ -87,7 +87,7 @@ type SliderProps = {
   children?: ReactNode
 }
 
-const Slider = ({ children, className }: SliderProps): JSX.Element => {
+export const Slider = ({ children, className }: SliderProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
@@ -166,5 +166,3 @@ const Slider = ({ children, className }: SliderProps): JSX.Element => {
 }
 
 Slider.Item = SliderItem
-
-export default Slider

@@ -1,26 +1,7 @@
-import ReactDOM from 'react-dom'
-import Text, { textVariants } from '..'
+import { Text, textVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
-// TODO: Remove any but IDK what we can put here
-jest.mock(
-  '../../Tooltip',
-  () =>
-    ({ children }: { [x: string]: unknown; children: unknown }) =>
-      children,
-)
-
 describe('Text', () => {
-  beforeEach(() => {
-    ;(ReactDOM.createPortal as unknown) = jest.fn(
-      element => element as unknown,
-    ) as unknown
-  })
-
-  afterEach(() => {
-    ;(ReactDOM.createPortal as jest.Mock).mockClear()
-  })
-
   test.each(textVariants)('renders correctly with type="%s"', variant =>
     shouldMatchEmotionSnapshot(
       <Text as="div" variant={variant}>

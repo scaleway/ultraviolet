@@ -16,7 +16,7 @@ type ExpandableProps = {
   opened?: boolean
 }
 
-const Expandable = styled('div', {
+export const Expandable = styled('div', {
   shouldForwardProp: prop => !['opened', 'height'].includes(prop),
 })<ExpandableProps>`
   transition: max-height 300ms ease-out, opacity 300ms ease-out;
@@ -35,5 +35,3 @@ const Expandable = styled('div', {
     overflow: visible;
   `}
 `
-
-export default Expandable

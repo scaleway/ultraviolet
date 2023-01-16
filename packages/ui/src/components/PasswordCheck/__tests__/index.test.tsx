@@ -1,4 +1,4 @@
-import PasswordCheck from '..'
+import { PasswordCheck } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('PasswordCheck', () => {

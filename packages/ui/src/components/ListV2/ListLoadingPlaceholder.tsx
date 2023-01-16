@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Placeholder from '../Placeholder'
+import { Placeholder } from '../Placeholder'
 import { ListCell } from './ListCell'
 import { ListRow } from './ListRow'
 

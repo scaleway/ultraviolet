@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import TextBox, { textBoxSizes } from '..'
-import Stack from '../../Stack'
+import { TextBox, textBoxSizes } from '..'
+import { Stack } from '../../Stack'
 
 export const Sizes: Story = props => (
   <>

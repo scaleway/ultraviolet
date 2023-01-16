@@ -1,4 +1,4 @@
-import Placeholder, { placeholderTypes } from '..'
+import { Placeholder, placeholderTypes } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Placeholder', () => {

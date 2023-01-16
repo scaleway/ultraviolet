@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
-import Menu from '..'
+import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
 export const Variants: ComponentStory<typeof Menu> = () => (

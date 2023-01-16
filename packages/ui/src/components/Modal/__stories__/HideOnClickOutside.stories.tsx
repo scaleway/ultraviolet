@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal from '..'
-import Button from '../../Button'
+import { Modal } from '..'
+import { Button } from '../../Button'
 
 export const HideOnClickOutside: Story = props => (
   <Modal

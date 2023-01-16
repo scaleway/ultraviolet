@@ -1,4 +1,4 @@
-import Markdown from '..'
+import { Markdown } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 export const simple = `

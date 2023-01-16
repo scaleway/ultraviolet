@@ -6,9 +6,9 @@ import type {
   ReactNode,
 } from 'react'
 import { forwardRef, useMemo, useRef } from 'react'
-import Checkbox from '../Checkbox'
-import Radio from '../Radio'
-import Tooltip from '../Tooltip'
+import { Checkbox } from '../Checkbox'
+import { Radio } from '../Radio'
+import { Tooltip } from '../Tooltip'
 
 const Container = styled.div`
   display: inline-flex;
@@ -100,7 +100,7 @@ type SelectableCardProps = {
   label?: ReactNode
 }
 
-const SelectableCard = forwardRef(
+export const SelectableCard = forwardRef(
   (
     {
       name,
@@ -168,5 +168,3 @@ const SelectableCard = forwardRef(
     )
   },
 )
-
-export default SelectableCard

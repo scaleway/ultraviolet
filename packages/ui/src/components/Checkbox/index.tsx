@@ -8,8 +8,8 @@ import type {
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
-import Loader from '../Loader'
-import Text from '../Text'
+import { Loader } from '../Loader'
+import { Text } from '../Text'
 
 const InnerCheckbox = styled.rect`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -187,7 +187,7 @@ type CheckboxProps = {
     ]
   >
 
-const Checkbox = forwardRef(
+export const Checkbox = forwardRef(
   (
     {
       checked = false,
@@ -284,5 +284,3 @@ const Checkbox = forwardRef(
     )
   },
 )
-
-export default Checkbox

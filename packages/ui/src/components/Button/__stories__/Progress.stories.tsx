@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Button from '..'
+import { Button } from '..'
 
 export const Progress: ComponentStory<typeof Button> = ({ ...props }) => (
   <>

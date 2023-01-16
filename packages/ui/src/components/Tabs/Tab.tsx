@@ -9,8 +9,8 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef, useMemo } from 'react'
-import Badge from '../Badge'
-import Tooltip from '../Tooltip'
+import { Badge } from '../Badge'
+import { Tooltip } from '../Tooltip'
 import { useTabsContext } from './TabsContext'
 
 const StyledBadge = styled(Badge)`

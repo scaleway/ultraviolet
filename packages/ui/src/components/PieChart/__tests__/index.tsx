@@ -1,6 +1,6 @@
 import { fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import PieChart from '..'
+import { PieChart } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

@@ -5,8 +5,8 @@ import type { DatumValue } from '@nivo/core'
 import type { Serie } from '@nivo/line'
 import type { ComponentProps } from 'react'
 import { getLegendColor } from '../../helpers/legend'
-import Checkbox from '../Checkbox'
-import Text from '../Text'
+import { Checkbox } from '../Checkbox'
+import { Text } from '../Text'
 import { getAverage, getCurrent, getMax, getMin, getSelected } from './helpers'
 
 const styles = {

@@ -2,8 +2,8 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import ReactMarkDown from 'react-markdown'
-import Link from '../Link'
-import Text from '../Text'
+import { Link } from '../Link'
+import { Text } from '../Text'
 
 const StyledLink = styled(Link)`
   font-size: inherit;
@@ -105,7 +105,7 @@ type MarkDownProps = {
 /**
  * @Deprecated in favor of Text component
  */
-const Markdown = ({
+export const Markdown = ({
   source,
   linkTarget,
   escapeHtml = true,
@@ -126,5 +126,3 @@ const Markdown = ({
     escapeHtml={escapeHtml}
   />
 )
-
-export default Markdown

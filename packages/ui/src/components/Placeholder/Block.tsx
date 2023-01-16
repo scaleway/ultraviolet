@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Fragment } from 'react'
-import IconPlaceholder from './IconPlaceholder'
-import Line from './Line'
+import { IconPlaceholder } from './IconPlaceholder'
+import { Line } from './Line'
 
 const StyledLine = styled.li`
   display: flex;
@@ -23,7 +23,7 @@ const StyledList = styled.ul`
   }
 `
 
-const Block = ({ length = 3 }: { length?: number }) => (
+export const Block = ({ length = 3 }: { length?: number }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
       <Fragment key={`placeholder-block-${i}`}>
@@ -35,5 +35,3 @@ const Block = ({ length = 3 }: { length?: number }) => (
     ))}
   </StyledList>
 )
-
-export default Block

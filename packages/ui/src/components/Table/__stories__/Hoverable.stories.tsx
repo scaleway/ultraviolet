@@ -1,5 +1,5 @@
-import Table from '..'
-import Button from '../../Button'
+import { Table } from '..'
+import { Button } from '../../Button'
 import { Template } from './Template.stories'
 
 export const Hoverable = Template.bind({})

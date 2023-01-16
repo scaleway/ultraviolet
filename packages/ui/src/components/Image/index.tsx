@@ -7,7 +7,14 @@ type ImageProps = {
   style?: React.CSSProperties
 }
 
-const Image = ({ alt, src, width, height, className, style }: ImageProps) => (
+export const Image = ({
+  alt,
+  src,
+  width,
+  height,
+  className,
+  style,
+}: ImageProps) => (
   <img
     alt={alt}
     src={src}
@@ -17,5 +24,3 @@ const Image = ({ alt, src, width, height, className, style }: ImageProps) => (
     style={style}
   />
 )
-
-export default Image

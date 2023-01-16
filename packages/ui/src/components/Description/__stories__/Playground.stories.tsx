@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import Description from '..'
+import { Description } from '..'
 
 export const Playground: Story<ComponentProps<typeof Description>> = props => (
   <Description {...props}>

@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Icon from '..'
-import Stack from '../../Stack'
+import { Icon } from '..'
+import { Stack } from '../../Stack'
 
 const colors: ComponentProps<typeof Icon>['color'][] = [
   'primary',

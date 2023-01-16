@@ -18,13 +18,13 @@ import {
   useRef,
   useState,
 } from 'react'
-import Button from '../Button'
-import Expandable from '../Expandable'
-import Icon from '../Icon'
-import Notice from '../Notice'
-import Separator from '../Separator'
-import Stack from '../Stack'
-import Text from '../Text'
+import { Button } from '../Button'
+import { Expandable } from '../Expandable'
+import { Icon } from '../Icon'
+import { Notice } from '../Notice'
+import { Separator } from '../Separator'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const inputSizes = {
   medium: {
@@ -356,7 +356,7 @@ const UnitLabel = styled(Text)`
   line-height: 18px;
 `
 
-const TextBox = forwardRef<
+export const TextBox = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
   TextBoxProps
 >(
@@ -657,5 +657,3 @@ const TextBox = forwardRef<
     )
   },
 )
-
-export default TextBox

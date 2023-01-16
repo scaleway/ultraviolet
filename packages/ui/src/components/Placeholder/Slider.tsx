@@ -23,7 +23,7 @@ const StyledBanner = styled.div`
   height: 33%;
 `
 
-const Slider = ({ length = 4 }: { length?: number }) => (
+export const Slider = ({ length = 4 }: { length?: number }) => (
   <StyledContainer length={length}>
     {Array.from({ length }, (_, i) => (
       <StyledCard key={`placeholder-slider-card-${i}`}>
@@ -32,5 +32,3 @@ const Slider = ({ length = 4 }: { length?: number }) => (
     ))}
   </StyledContainer>
 )
-
-export default Slider

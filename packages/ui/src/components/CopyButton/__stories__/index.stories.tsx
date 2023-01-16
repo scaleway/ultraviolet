@@ -1,6 +1,6 @@
 import type { ComponentMeta } from '@storybook/react'
-import CopyButton from '..'
-import Stack from '../../Stack'
+import { CopyButton } from '..'
+import { Stack } from '../../Stack'
 
 export default {
   component: CopyButton,

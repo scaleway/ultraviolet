@@ -7,7 +7,7 @@ import type {
 } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { getUUID } from '../../utils'
-import Tag from '../Tag'
+import { Tag } from '../Tag'
 
 const STATUS = {
   IDLE: 'idle',
@@ -107,7 +107,7 @@ type TagsProps = {
   className?: string
 }
 
-const Tags = ({
+export const Tags = ({
   disabled = false,
   id,
   manualInput = true,
@@ -259,5 +259,3 @@ const Tags = ({
     </TagsContainer>
   )
 }
-
-export default Tags

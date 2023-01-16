@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Stepper from '..'
+import { Stepper } from '..'
 
 export default {
   component: Stepper,

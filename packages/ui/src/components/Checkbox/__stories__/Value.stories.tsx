@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Checkbox from '..'
+import { Checkbox } from '..'
 
 export const Value: Story = () => (
   <>

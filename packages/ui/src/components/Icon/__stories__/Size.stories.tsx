@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Icon from '..'
-import Stack from '../../Stack'
+import { Icon } from '..'
+import { Stack } from '../../Stack'
 
 const sizes: ComponentProps<typeof Icon>['size'][] = [40, 50, 60]
 

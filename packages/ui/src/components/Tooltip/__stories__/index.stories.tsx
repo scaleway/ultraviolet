@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Tooltip from '..'
+import { Tooltip } from '..'
 
 export default {
   component: Tooltip,

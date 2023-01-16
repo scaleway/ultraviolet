@@ -12,7 +12,7 @@ type StackProps = {
   children: ReactNode
 }
 
-const Stack = styled('div', {
+export const Stack = styled('div', {
   shouldForwardProp: prop =>
     !['gap', 'direction', 'alignItems', 'justifyContent', 'wrap'].includes(
       prop,
@@ -35,5 +35,3 @@ const Stack = styled('div', {
     flex-wrap: ${typeof wrap === 'boolean' ? 'wrap' : wrap};
   `}
 `
-
-export default Stack

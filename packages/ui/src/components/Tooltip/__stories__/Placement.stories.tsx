@@ -1,6 +1,6 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Tooltip from '..'
+import { Tooltip } from '..'
 
 const PLACEMENTS: ComponentProps<typeof Tooltip>['placement'][] = [
   'auto',
