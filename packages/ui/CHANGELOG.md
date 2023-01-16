@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.18](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.17...@scaleway/ui@0.215.18) (2023-01-16)
+
+### :white_check_mark: Test
+
+- improve code coverage on verification code and slider ([#2196](https://github.com/scaleway/scaleway-ui/issues/2196)) ([1cea33e](https://github.com/scaleway/scaleway-ui/commit/1cea33e0f05088f7908300494a9af7e13704ad1f))
+
 ## [0.215.17](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.16...@scaleway/ui@0.215.17) (2023-01-16)
 
 ### :memo: Documentation
