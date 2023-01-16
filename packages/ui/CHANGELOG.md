@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.17](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.16...@scaleway/ui@0.215.17) (2023-01-16)
+
+### :memo: Documentation
+
+- improve dark theme documentation ([#2193](https://github.com/scaleway/scaleway-ui/issues/2193)) ([4fedae0](https://github.com/scaleway/scaleway-ui/commit/4fedae07ad4eb52e1c86c4f7981cf60e5bfe714f))
+
+### :bug: Bug Fixes
+
+- **Markdown:** deprecated ([#2202](https://github.com/scaleway/scaleway-ui/issues/2202)) ([3f9b8d1](https://github.com/scaleway/scaleway-ui/commit/3f9b8d1ee346eef0c923b8bd837036e3feefaa2b))
+
 ## [0.215.16](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.15...@scaleway/ui@0.215.16) (2023-01-16)
 
 ### :bug: Bug Fixes
