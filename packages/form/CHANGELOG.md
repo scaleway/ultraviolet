@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.20](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.19...@scaleway/form@1.39.20) (2023-01-17)
+
+
+### :zap: Refactor
+
+* **export:** use named export ([#2203](https://github.com/scaleway/scaleway-ui/issues/2203)) ([7e0a8d8](https://github.com/scaleway/scaleway-ui/commit/7e0a8d84c8283041638dd457c042108ab838b6ad))
+
+
+
 ## [1.39.19](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.18...@scaleway/form@1.39.19) (2023-01-16)
 
 ### :bug: Bug Fixes
