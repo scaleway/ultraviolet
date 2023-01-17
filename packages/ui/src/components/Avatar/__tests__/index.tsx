@@ -1,4 +1,4 @@
-import Avatar from '..'
+import { Avatar } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import support from '../__stories__/support.svg'
 

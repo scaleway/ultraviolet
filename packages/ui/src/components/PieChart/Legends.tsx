@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import Tooltip from '../Tooltip'
+import { Tooltip } from '../Tooltip'
 import TooltipContainer from './Tooltip'
 import patternVariants from './patterns'
 import type { Data } from './types'

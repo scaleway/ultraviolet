@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Avatar from '..'
+import { Avatar } from '..'
 
 export default {
   component: Avatar,

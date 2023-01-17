@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Bullet from '..'
+import { Bullet } from '..'
 
 export default {
   component: Bullet,

@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Text from '..'
+import { Text } from '..'
 
 export default {
   component: Text,

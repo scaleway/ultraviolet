@@ -1,5 +1,5 @@
-import Icon from '../../Icon'
-import Text from '../../Text'
+import { Icon } from '../../Icon'
+import { Text } from '../../Text'
 import { Template } from './Template.stories'
 
 export const ComplexLabel = Template.bind({})

@@ -1,4 +1,4 @@
-import Link from '..'
+import { Link } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { SENTIMENTS } from '../../../theme'
 

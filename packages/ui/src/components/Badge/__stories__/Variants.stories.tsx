@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Badge from '..'
+import { Badge } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 export const Variants: Story = props => (

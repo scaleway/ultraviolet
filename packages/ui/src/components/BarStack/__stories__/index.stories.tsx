@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import BarStack from '..'
+import { BarStack } from '..'
 
 export default {
   component: BarStack,

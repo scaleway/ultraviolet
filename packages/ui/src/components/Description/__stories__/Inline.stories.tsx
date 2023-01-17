@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import Description from '..'
+import { Description } from '..'
 
 export const Inline: Story<ComponentProps<typeof Description>> = () => (
   <Description inline>

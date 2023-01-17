@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Toggle, { SIZES } from '..'
-import Stack from '../../Stack'
+import { SIZES, Toggle } from '..'
+import { Stack } from '../../Stack'
 
 export const Sizes: Story = props => (
   <>

@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import { useState } from 'react'
-import TimeInput from '..'
+import { TimeInput } from '..'
 import type { SelectOption } from '../../RichSelect'
 
 const isSafeValue = (value: unknown): value is SelectOption =>

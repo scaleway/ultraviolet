@@ -1,4 +1,4 @@
-import Notice from '..'
+import { Notice } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Notice', () => {

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ComponentType } from 'react'
 import * as components from '../../components'
-import Stack from '../../components/Stack'
-import Table from '../../components/Table'
-import Text from '../../components/Text'
+import { Stack } from '../../components/Stack'
+import { Table } from '../../components/Table'
+import { Text } from '../../components/Text'
 
 const StyledText = styled(Text)`
   white-space: break-spaces;

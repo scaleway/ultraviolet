@@ -31,7 +31,7 @@ type ActionBarProps = {
   className?: string
 }
 
-const ActionBar = ({
+export const ActionBar = ({
   children,
   role,
   rank = 0,
@@ -49,5 +49,3 @@ const ActionBar = ({
     </StyledDiv>,
     document.body,
   )
-
-export default ActionBar

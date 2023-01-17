@@ -1,8 +1,8 @@
 import type { Story } from '@storybook/react'
 import zxcvbn from 'zxcvbn'
-import type PasswordStrengthMeter from '..'
+import type { PasswordStrengthMeter } from '..'
 import { colors } from '../../../theme'
-import UncontrolledPasswordStrengthMeter from './UncontrolledPasswordStrengthMeter'
+import { UncontrolledPasswordStrengthMeter } from './UncontrolledPasswordStrengthMeter'
 
 export const Template: Story<
   Omit<typeof PasswordStrengthMeter, 'title' | 'strength'>

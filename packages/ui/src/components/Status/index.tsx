@@ -1,7 +1,7 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { ping } from '../../utils'
-import Tooltip from '../Tooltip'
+import { Tooltip } from '../Tooltip'
 
 const HEIGHT = '10px'
 const WIDTH = '10px'
@@ -58,7 +58,7 @@ type StatusProps = {
   tooltip?: string
 }
 
-const Status = ({
+export const Status = ({
   animated = false,
   className,
   tooltip,
@@ -71,5 +71,3 @@ const Status = ({
     </Container>
   </Tooltip>
 )
-
-export default Status

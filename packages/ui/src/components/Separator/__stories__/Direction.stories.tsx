@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentStory } from '@storybook/react'
-import Separator from '..'
+import { Separator } from '..'
 
 const StyledContainer = styled.div`
   display: inline-flex;

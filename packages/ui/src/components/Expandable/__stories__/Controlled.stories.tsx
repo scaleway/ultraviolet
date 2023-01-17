@@ -1,8 +1,8 @@
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
-import Expandable from '..'
-import Button from '../../Button'
-import Stack from '../../Stack'
+import { Expandable } from '..'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
 
 export const Controlled: ComponentStory<typeof Expandable> = () => {
   const [toggled, onToggle] = useState(false)

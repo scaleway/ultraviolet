@@ -1,6 +1,6 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import ToastContainer, { toast } from '..'
+import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
 export const Variants = (props: ComponentProps<typeof ToastContainer>) => (

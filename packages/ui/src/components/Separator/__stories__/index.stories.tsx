@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Separator from '..'
+import { Separator } from '..'
 
 export default {
   component: Separator,

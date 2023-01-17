@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import Line from './Line'
+import { Line } from './Line'
 
 const CIRCLE_SIZE = 206
 
@@ -27,7 +27,7 @@ const LineList = styled.ul`
   gap: 16px;
 `
 
-const Donut = () => (
+export const Donut = () => (
   <StyledContainer>
     <StyledSVG>
       <StyledCircle cx={CIRCLE_SIZE / 2} cy={CIRCLE_SIZE / 2} r="90" />
@@ -48,5 +48,3 @@ const Donut = () => (
     </LineList>
   </StyledContainer>
 )
-
-export default Donut

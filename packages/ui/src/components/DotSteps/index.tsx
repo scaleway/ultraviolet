@@ -86,7 +86,7 @@ type DotStepsProps = {
   steps?: number
 }
 
-const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
+export const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
   <DotWrapper steps={steps}>
     {Array.from({ length: steps }, (_, i) => (
       <DotStep
@@ -97,5 +97,3 @@ const DotSteps = ({ steps = 2, step = 1, setStep }: DotStepsProps) => (
     ))}
   </DotWrapper>
 )
-
-export default DotSteps

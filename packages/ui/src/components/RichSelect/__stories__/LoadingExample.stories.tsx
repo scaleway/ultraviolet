@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { useEffect, useState } from 'react'
-import RichSelect from '..'
+import { RichSelect } from '..'
 import { Button, Loader } from '../..'
 
 export const LoadingExample: ComponentStory<typeof RichSelect> = ({

@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Bullet, { bulletSizes } from '..'
+import { Bullet, bulletSizes } from '..'
 
 export const Sizes: Story = props => (
   <>

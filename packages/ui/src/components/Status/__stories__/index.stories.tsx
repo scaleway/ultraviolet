@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Status from '..'
+import { Status } from '..'
 
 export default {
   component: Status,

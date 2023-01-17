@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Tabs from '..'
+import { Tabs } from '..'
 import { Tab } from '../Tab'
 
 export default {

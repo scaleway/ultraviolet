@@ -1,7 +1,7 @@
-import Alert from '..'
-import Button from '../../Button'
-import Stack from '../../Stack'
-import Text from '../../Text'
+import { Alert } from '..'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
 
 export const AdvancedChildren = () => (
   <Alert>

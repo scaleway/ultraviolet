@@ -10,6 +10,6 @@ const StyledScrollView = styled.div`
 
 type ScrollViewProps = HTMLAttributes<HTMLDivElement> & { children: ReactNode }
 
-const ScrollView = (props: ScrollViewProps) => <StyledScrollView {...props} />
-
-export default ScrollView
+export const ScrollView = (props: ScrollViewProps) => (
+  <StyledScrollView {...props} />
+)

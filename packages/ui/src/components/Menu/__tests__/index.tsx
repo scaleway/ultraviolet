@@ -1,4 +1,4 @@
-import Menu, { arrowPlacements } from '..'
+import { Menu, arrowPlacements } from '..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,

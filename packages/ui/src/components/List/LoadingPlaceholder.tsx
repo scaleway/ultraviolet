@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
-import Placeholder from '../Placeholder'
-import Stack from '../Stack'
+import { Placeholder } from '../Placeholder'
+import { Stack } from '../Stack'
 import type { ListColumn } from './types'
 
 type LoadingPlaceholderProps<DataType> = {

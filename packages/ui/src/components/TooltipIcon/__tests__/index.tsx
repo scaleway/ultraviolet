@@ -1,4 +1,4 @@
-import TooltipIcon from '..'
+import { TooltipIcon } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 
 describe('TooltipIcon', () => {

@@ -1,4 +1,4 @@
-import Image from '..'
+import { Image } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Image', () => {

@@ -1,6 +1,6 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Tag from '..'
+import { Tag } from '..'
 import { SENTIMENTS } from '../../../theme'
 
 export const Variants = (props: ComponentProps<typeof Tag>) =>

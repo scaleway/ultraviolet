@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
-import ProgressBar from '../ProgressBar'
-import Stack from '../Stack'
-import Text from '../Text'
+import { ProgressBar } from '../ProgressBar'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type StateBarStateProps = {
   children?: ReactNode
@@ -70,7 +70,7 @@ type StateBarType = ((props: {
   State: (props: StateBarStateProps) => JSX.Element
 }
 
-const StateBar: StateBarType = ({ children, className }) => (
+export const StateBar: StateBarType = ({ children, className }) => (
   <Stack gap={1} className={className}>
     {children}
   </Stack>
@@ -78,5 +78,3 @@ const StateBar: StateBarType = ({ children, className }) => (
 
 StateBar.Bar = StateBarBar
 StateBar.State = StateBarState
-
-export default StateBar

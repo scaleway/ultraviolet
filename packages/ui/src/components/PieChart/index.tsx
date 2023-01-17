@@ -4,7 +4,7 @@ import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'
-import Text from '../Text'
+import { Text } from '../Text'
 import Legends from './Legends'
 import type { Data } from './types'
 
@@ -48,7 +48,7 @@ type PieChartProps = {
   margin?: Box
 }
 
-const PieChart = ({
+export const PieChart = ({
   height = 206,
   width = 206,
   data = undefined,
@@ -150,5 +150,3 @@ const PieChart = ({
     </Container>
   )
 }
-
-export default PieChart

@@ -1,4 +1,4 @@
-import PasswordStrengthMeter from '..'
+import { PasswordStrengthMeter } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { colors } from '../../../theme'
 

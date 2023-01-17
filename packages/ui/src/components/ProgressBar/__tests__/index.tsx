@@ -1,4 +1,4 @@
-import ProgressBar, { progressBarVariants } from '..'
+import { ProgressBar, progressBarVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ProgressBar', () => {

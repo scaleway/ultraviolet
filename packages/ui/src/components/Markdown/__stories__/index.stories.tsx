@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Markdown from '..'
+import { Markdown } from '..'
 
 export default {
   component: Markdown,

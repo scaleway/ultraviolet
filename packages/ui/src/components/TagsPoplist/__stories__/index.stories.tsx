@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import TagsPoplist from '..'
+import { TagsPoplist } from '..'
 
 export default {
   component: TagsPoplist,

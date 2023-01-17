@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Alert from '..'
-import Stack from '../../Stack'
+import { Alert } from '..'
+import { Stack } from '../../Stack'
 
 export const Variants = (props: ComponentProps<typeof Alert>) =>
   (['danger', 'warning', 'success', 'info'] as const).map(variant => (

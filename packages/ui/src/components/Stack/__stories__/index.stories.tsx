@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Stack from '..'
+import { Stack } from '..'
 
 export default {
   component: Stack,

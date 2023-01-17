@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import Bullet from '..'
+import { Bullet } from '..'
 
 export const Icon: Story = props => (
   <>

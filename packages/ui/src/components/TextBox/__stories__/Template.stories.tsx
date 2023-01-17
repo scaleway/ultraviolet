@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
-import TextBox from '..'
+import { TextBox } from '..'
 
 export const Template: ComponentStory<typeof TextBox> = ({
   defaultValue = '',

@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import SwitchButton from '..'
+import { SwitchButton } from '..'
 
 export default {
   component: SwitchButton,

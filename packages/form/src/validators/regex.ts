@@ -1,6 +1,9 @@
 import type { ValidatorFn } from './types'
 
-const validator: ValidatorFn<string, (RegExp | RegExp[])[]> = regexes => ({
+export const regexValidator: ValidatorFn<
+  string,
+  (RegExp | RegExp[])[]
+> = regexes => ({
   error: 'REGEX',
   validate: value =>
     regexes.every(
@@ -12,5 +15,3 @@ const validator: ValidatorFn<string, (RegExp | RegExp[])[]> = regexes => ({
           : regex.test(value)),
     ),
 })
-
-export default validator

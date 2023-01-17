@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import BarChart from '..'
+import { BarChart } from '..'
 
 export default {
   component: BarChart,

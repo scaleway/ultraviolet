@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import { colors } from '../../../theme'
-import Loader from '../index'
+import { Loader } from '../index'
 
 export const Colors: Story = props => (
   <>

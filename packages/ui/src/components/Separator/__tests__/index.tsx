@@ -1,4 +1,4 @@
-import Separator from '..'
+import { Separator } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Separator', () => {

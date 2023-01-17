@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal, { MODAL_ANIMATION } from '..'
-import Button from '../../Button'
+import { MODAL_ANIMATION, Modal } from '..'
+import { Button } from '../../Button'
 
 export const Animated: Story = props => (
   <>

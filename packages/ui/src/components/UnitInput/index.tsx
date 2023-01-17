@@ -2,8 +2,8 @@ import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import type { SelectOption } from '../RichSelect'
-import RichSelect from '../RichSelect'
-import TextBox from '../TextBox'
+import { RichSelect } from '../RichSelect'
+import { TextBox } from '../TextBox'
 
 export const sizesHeight: Record<string, number> = {
   large: 48,
@@ -103,7 +103,7 @@ type UnitInputProps = Omit<
   defaultOption?: SelectOption
 }
 
-const UnitInput = ({
+export const UnitInput = ({
   name = '',
   maxValue = 99999,
   minValue = 1,
@@ -163,5 +163,3 @@ const UnitInput = ({
     </div>
   )
 }
-
-export default UnitInput

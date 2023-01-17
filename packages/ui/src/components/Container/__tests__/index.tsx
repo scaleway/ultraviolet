@@ -1,4 +1,4 @@
-import Container from '..'
+import { Container } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Container', () => {

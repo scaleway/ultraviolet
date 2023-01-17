@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useState } from 'react'
-import Text from '../Text'
+import { Text } from '../Text'
 
 const StyledTitle = styled(Text)`
   display: inline-block;
@@ -58,7 +58,7 @@ type PasswordStrengthMeterProps = {
   userInputs?: string[]
 }
 
-const PasswordStrengthMeter = ({
+export const PasswordStrengthMeter = ({
   password = '',
   onChange,
   strength,
@@ -115,5 +115,3 @@ const PasswordStrengthMeter = ({
     </div>
   )
 }
-
-export default PasswordStrengthMeter

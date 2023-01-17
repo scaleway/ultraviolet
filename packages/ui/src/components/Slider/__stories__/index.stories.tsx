@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Slider, { SliderItem } from '..'
+import { Slider, SliderItem } from '..'
 
 export default {
   component: Slider,

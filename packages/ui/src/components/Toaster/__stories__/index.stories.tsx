@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import ToastContainer from '..'
+import { ToastContainer } from '..'
 
 export default {
   component: ToastContainer,

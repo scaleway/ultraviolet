@@ -1,8 +1,8 @@
 import type { ComponentStory } from '@storybook/react'
 import { fireEvent, screen } from '@storybook/testing-library'
 import type { DisclosureProps } from '..'
-import Menu from '..'
-import Button from '../../Button'
+import { Menu } from '..'
+import { Button } from '../../Button'
 
 export const FunctionDisclosure: ComponentStory<typeof Menu> = () => {
   const CustomDisclosure = ({ visible }: DisclosureProps) => (

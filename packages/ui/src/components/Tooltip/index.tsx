@@ -122,7 +122,7 @@ type TooltipProps = {
   innerRef?: Ref<HTMLDivElement | null>
 }
 
-const Tooltip = ({
+export const Tooltip = ({
   children,
   text = '',
   placement = 'auto',
@@ -269,5 +269,3 @@ const Tooltip = ({
     </>
   )
 }
-
-export default Tooltip

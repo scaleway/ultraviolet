@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import TextBox from '..'
+import { TextBox } from '..'
 
 export default {
   component: TextBox,

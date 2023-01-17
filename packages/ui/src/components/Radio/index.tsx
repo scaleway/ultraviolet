@@ -138,7 +138,7 @@ type RadioProps = {
     | 'required'
   >
 
-const Radio = forwardRef(
+export const Radio = forwardRef(
   (
     {
       checked = false,
@@ -194,5 +194,3 @@ const Radio = forwardRef(
     )
   },
 )
-
-export default Radio

@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { format } from 'date-fns'
-import BarChart from '..'
+import { BarChart } from '..'
 import { barChartPositiveNegativeData } from './mockData'
 
 export const PositiveNegative: ComponentStory<typeof BarChart> = props => (

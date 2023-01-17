@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Button from '..'
+import { Button } from '..'
 
 export const Link: ComponentStory<typeof Button> = ({ ...props }) => (
   <Button href="https://scaleway.com" target="_blank" {...props}>

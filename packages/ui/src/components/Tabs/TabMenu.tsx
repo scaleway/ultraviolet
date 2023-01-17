@@ -6,8 +6,8 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
-import Icon from '../Icon'
-import Menu from '../Menu'
+import { Icon } from '../Icon'
+import { Menu } from '../Menu'
 import { StyledTabButton } from './Tab'
 
 const ArrowIcon = styled(Icon)``
@@ -30,7 +30,7 @@ type TabMenuProps = {
   baseId?: ComponentProps<typeof Menu>['baseId']
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'aria-disabled'>
 
-const TabMenu = forwardRef(
+export const TabMenu = forwardRef(
   (
     { children, disclosure, visible, baseId, disabled, ...props }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
@@ -56,5 +56,3 @@ const TabMenu = forwardRef(
     </Menu>
   ),
 )
-
-export default TabMenu

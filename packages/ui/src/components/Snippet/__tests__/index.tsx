@@ -1,6 +1,6 @@
 import userEvent from '@testing-library/user-event'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import Snippet from '../index'
+import { Snippet } from '../index'
 
 const TEST_VALUE_MULTILINE = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

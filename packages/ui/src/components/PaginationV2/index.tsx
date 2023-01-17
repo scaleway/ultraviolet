@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
-import Button from '../Button'
-import Icon from '../Icon'
-import getPageNumbers from './getPageNumbers'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
+import { getPageNumbers } from './getPageNumbers'
 
 const PageNumbersContainer = styled.div`
   display: flex;
@@ -83,13 +83,13 @@ export type PaginationProps = {
 /**
  * Display multiple buttons to allow navigation between a paginated resource
  */
-function Pagination({
+export const Pagination = ({
   disabled = false,
   page,
   pageCount,
   onChange,
   pageTabCount = 5,
-}: PaginationProps): JSX.Element {
+}: PaginationProps): JSX.Element => {
   const goToFirstPage = useCallback(() => {
     onChange(1)
   }, [onChange])
@@ -173,5 +173,3 @@ function Pagination({
     </StyledContainer>
   )
 }
-
-export default Pagination

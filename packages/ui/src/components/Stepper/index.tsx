@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Children, Fragment } from 'react'
 import flattenChildren from 'react-flatten-children'
-import Icon from '../Icon'
-import Text from '../Text'
+import { Icon } from '../Icon'
+import { Text } from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
 
@@ -150,7 +150,7 @@ type StepperProps = {
   className?: string
 }
 
-const Stepper = ({
+export const Stepper = ({
   children,
   selected = 0,
   animated = false,
@@ -186,5 +186,3 @@ const Stepper = ({
     </StyledContainer>
   )
 }
-
-export default Stepper

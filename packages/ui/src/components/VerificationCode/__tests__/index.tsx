@@ -1,5 +1,5 @@
 import { fireEvent } from '@testing-library/react'
-import VerificationCode from '..'
+import { VerificationCode } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

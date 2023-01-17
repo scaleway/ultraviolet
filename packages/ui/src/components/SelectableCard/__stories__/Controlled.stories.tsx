@@ -1,8 +1,8 @@
 import type { Story } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
-import SelectableCard from '..'
-import Stack from '../../Stack'
+import { SelectableCard } from '..'
+import { Stack } from '../../Stack'
 
 export const Controlled: Story = () => {
   const [value, onChange] = useState('label-1')

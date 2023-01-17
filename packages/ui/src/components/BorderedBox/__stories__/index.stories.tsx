@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import BorderedBox from '..'
+import { BorderedBox } from '..'
 
 export default {
   component: BorderedBox,

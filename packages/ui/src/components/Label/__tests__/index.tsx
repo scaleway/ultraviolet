@@ -1,4 +1,4 @@
-import Label from '..'
+import { Label } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Label', () => {

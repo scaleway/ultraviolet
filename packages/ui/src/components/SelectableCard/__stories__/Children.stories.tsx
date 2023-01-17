@@ -2,12 +2,12 @@ import type { Story } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import type { MultiValue, SingleValue } from 'react-select'
-import SelectableCard from '..'
-import Badge from '../../Badge'
-import Checkbox from '../../Checkbox'
+import { SelectableCard } from '..'
+import { Badge } from '../../Badge'
+import { Checkbox } from '../../Checkbox'
 import type { SelectOption } from '../../RichSelect'
-import RichSelect from '../../RichSelect'
-import Stack from '../../Stack'
+import { RichSelect } from '../../RichSelect'
+import { Stack } from '../../Stack'
 
 export const Children: Story = () => {
   const [value, onChange] = useState('label-9')

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import type { Story } from '@storybook/react'
-import Modal from '..'
-import Button from '../../Button'
+import { Modal } from '..'
+import { Button } from '../../Button'
 
 export const CustomStyle: Story = props => {
   const customDialogBackdropStyles = css`

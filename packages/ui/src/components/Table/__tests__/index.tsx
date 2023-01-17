@@ -1,4 +1,4 @@
-import Table from '..'
+import { Table } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Table', () => {

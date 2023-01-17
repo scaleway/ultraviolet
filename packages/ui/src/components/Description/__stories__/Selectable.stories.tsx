@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import Description from '..'
+import { Description } from '..'
 
 export const Selectable: Story<ComponentProps<typeof Description>> = () => (
   <Description userSelect>

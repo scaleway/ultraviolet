@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import Tag from '../Tag'
-import Tooltip from '../Tooltip'
+import { Tag } from '../Tag'
+import { Tooltip } from '../Tooltip'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ type TagsPoplistProps = {
   multiline?: boolean
 }
 
-const TagsPoplist = ({
+export const TagsPoplist = ({
   maxLength = 600,
   tags = [],
   threshold = 1,
@@ -113,5 +113,3 @@ const TagsPoplist = ({
     </StyledContainer>
   )
 }
-
-export default TagsPoplist

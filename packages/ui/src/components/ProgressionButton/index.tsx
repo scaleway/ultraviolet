@@ -68,7 +68,7 @@ type ProgressionButtonProps = {
   className?: string
 }
 
-const ProgressionButton = ({
+export const ProgressionButton = ({
   children,
   creation = new Date(), // Supposed start time of the progression
   duration = 120, // Approximation of the progression's duration (in seconds)
@@ -84,5 +84,3 @@ const ProgressionButton = ({
     </ProgressionContainer>
   )
 }
-
-export default ProgressionButton

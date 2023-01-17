@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import SwitchButton from '..'
+import { SwitchButton } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

@@ -93,5 +93,3 @@ export const CheckboxField = forwardRef(
     )
   },
 )
-
-export default CheckboxField

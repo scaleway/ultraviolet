@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import SelectNumber from '..'
+import { SelectNumber } from '..'
 
 export default {
   component: SelectNumber,

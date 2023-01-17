@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import VerificationCode from '..'
+import { VerificationCode } from '..'
 
 export const OnComplete: ComponentStory<typeof VerificationCode> = () => {
   const onCompleteHandler = (value: unknown) => {

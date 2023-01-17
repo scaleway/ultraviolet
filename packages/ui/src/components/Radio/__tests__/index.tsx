@@ -1,4 +1,4 @@
-import Radio from '..'
+import { Radio } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Radio', () => {

@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Button from '..'
+import { Button } from '..'
 
 export default {
   component: Button,

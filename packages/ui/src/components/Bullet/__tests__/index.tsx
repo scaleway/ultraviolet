@@ -1,4 +1,4 @@
-import Bullet, { bulletSizes, bulletVariants } from '..'
+import { Bullet, bulletSizes, bulletVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Bullet', () => {

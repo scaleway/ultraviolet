@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Table, { Body, BodyCell, Head, HeadCell, Row } from '..'
+import { Body, BodyCell, Head, HeadCell, Row, Table } from '..'
 
 export default {
   component: Table,

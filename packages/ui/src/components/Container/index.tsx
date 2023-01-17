@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import BorderedBox from '../BorderedBox'
-import Stack from '../Stack'
-import Text from '../Text'
+import { BorderedBox } from '../BorderedBox'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type ContainerBaseProps = {
   small?: boolean
@@ -34,7 +34,7 @@ type ContainerProps = ContainerBaseProps & {
   title?: string
 }
 
-const Container = ({
+export const Container = ({
   title,
   subtitle,
   header,
@@ -68,5 +68,3 @@ const Container = ({
     </StyledBorderedBox>
   </Stack>
 )
-
-export default Container

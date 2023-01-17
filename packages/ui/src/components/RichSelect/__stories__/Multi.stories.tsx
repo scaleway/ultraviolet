@@ -1,4 +1,4 @@
-import RichSelect from '..'
+import { RichSelect } from '..'
 import { Template } from './Template.stories'
 
 export const Multi = Template.bind({})

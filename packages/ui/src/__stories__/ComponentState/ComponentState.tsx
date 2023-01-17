@@ -1,7 +1,7 @@
 import * as components from '../../components'
-import Stack from '../../components/Stack'
-import Table from '../../components/Table'
-import Text from '../../components/Text'
+import { Stack } from '../../components/Stack'
+import { Table } from '../../components/Table'
+import { Text } from '../../components/Text'
 
 const componentsNames = Object.keys(components)
 let modules: PromiseSettledResult<{

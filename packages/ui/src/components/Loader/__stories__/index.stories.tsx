@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
-import Loader from '..'
-import Stack from '../../Stack'
+import { Loader } from '..'
+import { Stack } from '../../Stack'
 
 export default {
   component: Loader,

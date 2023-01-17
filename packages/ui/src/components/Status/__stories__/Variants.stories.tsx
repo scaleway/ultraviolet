@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
-import type Menu from '../../Menu'
-import Status, { statusVariants } from '../index'
+import { Status, statusVariants } from '..'
+import type { Menu } from '../../Menu'
 
 export const Variants: ComponentStory<typeof Menu> = props => (
   <>

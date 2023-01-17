@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Radio from '..'
+import { Radio } from '..'
 
 export default {
   component: Radio,

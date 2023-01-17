@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import CopyButton from '../index'
+import { CopyButton } from '../index'
 
 export const Variants = (props: ComponentProps<typeof CopyButton>) =>
   (['primary', 'neutral'] as const).map(variant => (

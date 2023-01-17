@@ -1,4 +1,4 @@
-import SelectableCard from '..'
+import { SelectableCard } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('SelectableCard', () => {

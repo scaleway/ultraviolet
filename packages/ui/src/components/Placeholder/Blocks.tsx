@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import IconPlaceholder from './IconPlaceholder'
-import Line from './Line'
+import { IconPlaceholder } from './IconPlaceholder'
+import { Line } from './Line'
 
 const StyledContainer = styled.div<{ col: number }>`
   display: grid;
@@ -18,7 +18,13 @@ const Block = styled.div`
   overflow: hidden;
 `
 
-const Blocks = ({ col = 4, length = 8 }: { col?: number; length?: number }) => (
+export const Blocks = ({
+  col = 4,
+  length = 8,
+}: {
+  col?: number
+  length?: number
+}) => (
   <StyledContainer col={col}>
     {Array.from({ length }, (_, i) => (
       <Block key={`placeholder-blocks-${i}`}>
@@ -28,5 +34,3 @@ const Blocks = ({ col = 4, length = 8 }: { col?: number; length?: number }) => (
     ))}
   </StyledContainer>
 )
-
-export default Blocks

@@ -14,7 +14,7 @@ type TabMenuItemProps = {
   value?: string | number
 } & ComponentProps<typeof StyledMenuItem>
 
-const TabMenuItem = ({
+export const TabMenuItem = ({
   value,
   children,
   onClick,
@@ -42,5 +42,3 @@ const TabMenuItem = ({
     </StyledMenuItem>
   )
 }
-
-export default TabMenuItem

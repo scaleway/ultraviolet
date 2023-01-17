@@ -1,4 +1,4 @@
-import Loader from '..'
+import { Loader } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { SENTIMENTS } from '../../../theme'
 

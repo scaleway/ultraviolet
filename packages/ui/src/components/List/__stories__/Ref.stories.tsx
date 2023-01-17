@@ -3,8 +3,8 @@ import type { ListRefType } from '..'
 import List from '..'
 import type { MockData } from '../../../mocks/list'
 import { generateData } from '../../../mocks/list'
-import Button from '../../Button'
-import Stack from '../../Stack'
+import { Button } from '../../Button'
+import { Stack } from '../../Stack'
 import { defaultColumns } from './helper'
 
 export const Ref = () => {

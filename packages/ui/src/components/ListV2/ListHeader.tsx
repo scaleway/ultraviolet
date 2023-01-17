@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { HTMLProps, MouseEvent, ReactNode } from 'react'
-import Icon from '../Icon'
-import Stack from '../Stack'
+import { Icon } from '../Icon'
+import { Stack } from '../Stack'
 
 type ListOrder = 'asc' | 'desc' | 'none'
 

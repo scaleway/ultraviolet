@@ -1,6 +1,6 @@
 import type { ComponentMeta } from '@storybook/react'
-import Snippet from '..'
-import Stack from '../../Stack'
+import { Snippet } from '..'
+import { Stack } from '../../Stack'
 
 export default {
   component: Snippet,

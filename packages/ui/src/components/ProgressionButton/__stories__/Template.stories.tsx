@@ -1,5 +1,5 @@
 import type { ComponentStory, Story } from '@storybook/react'
-import ProgressionButton from '..'
+import { ProgressionButton } from '..'
 
 export const Template: Story<
   ComponentStory<typeof ProgressionButton>

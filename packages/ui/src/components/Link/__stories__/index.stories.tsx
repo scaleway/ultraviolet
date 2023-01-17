@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Link from '..'
+import { Link } from '..'
 
 export default {
   component: Link,

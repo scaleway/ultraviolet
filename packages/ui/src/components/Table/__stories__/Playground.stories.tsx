@@ -1,4 +1,4 @@
-import Table from '..'
+import { Table } from '..'
 import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})

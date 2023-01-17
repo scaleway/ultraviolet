@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import RichSelect from '..'
+import { RichSelect } from '..'
 
 export default {
   component: RichSelect,

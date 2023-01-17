@@ -1,11 +1,11 @@
 import { fireEvent } from '@testing-library/react'
-import Tabs from '..'
+import { Tabs } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
-import Link from '../../Link'
+import { Link } from '../../Link'
 
 describe('Tabs', () => {
   test('renders correctly', () =>

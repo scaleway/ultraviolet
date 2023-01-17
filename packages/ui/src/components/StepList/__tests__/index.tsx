@@ -1,4 +1,4 @@
-import StepList from '..'
+import { StepList } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('StepList', () => {

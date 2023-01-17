@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import StateBar from '..'
+import { StateBar } from '..'
 
 export const Playground: ComponentStory<typeof StateBar> = ({ ...props }) => (
   <StateBar {...props}>

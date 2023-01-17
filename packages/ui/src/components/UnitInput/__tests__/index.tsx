@@ -1,10 +1,10 @@
 import { waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { UnitInput, sizesHeight } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import UnitInput, { sizesHeight } from '../index'
 
 describe('UnitInput', () => {
   test(`renders with default props`, () =>

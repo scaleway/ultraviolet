@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import PasswordCheck from '..'
+import { PasswordCheck } from '..'
 
 export default {
   component: PasswordCheck,

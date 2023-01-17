@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
-import Modal from '..'
-import Button from '../../Button'
+import { Modal } from '..'
+import { Button } from '../../Button'
 
 export const WithLotsOfContent: Story = props => (
   <Modal

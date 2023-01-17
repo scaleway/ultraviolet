@@ -1,4 +1,4 @@
-import Stack from '..'
+import { Stack } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Stack', () => {

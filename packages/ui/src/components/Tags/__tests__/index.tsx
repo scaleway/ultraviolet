@@ -1,6 +1,6 @@
 import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import Tags from '..'
+import { Tags } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const mockOnClick = jest.fn()

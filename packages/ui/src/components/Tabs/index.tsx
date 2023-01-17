@@ -2,9 +2,9 @@ import styled from '@emotion/styled'
 import type { HTMLAttributes, ReactNode } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { StyledTabButton, Tab } from './Tab'
-import TabMenu from './TabMenu'
-import TabMenuItem from './TabMenuItem'
-import TabsContext from './TabsContext'
+import { TabMenu } from './TabMenu'
+import { TabMenuItem } from './TabMenuItem'
+import { TabsContext } from './TabsContext'
 
 const MenuContainer = styled.div`
   display: flex;
@@ -64,7 +64,7 @@ type TabsProps = {
 
 const SHADOW_THRESHOLD = 10
 
-const Tabs = ({
+export const Tabs = ({
   children = null,
   onChange,
   moreDisclosure = 'More',
@@ -134,5 +134,3 @@ const Tabs = ({
 Tabs.Tab = Tab
 Tabs.Menu = TabMenu
 Tabs.MenuItem = TabMenuItem
-
-export default Tabs

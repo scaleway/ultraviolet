@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import Icon from '../Icon'
-import Markdown from '../Markdown'
+import { Icon } from '../Icon'
+import { Markdown } from '../Markdown'
 
 const Container = styled.div`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -16,7 +16,7 @@ type NoticeProps = {
   className?: string
 }
 
-const Notice = ({ children, className }: NoticeProps) => (
+export const Notice = ({ children, className }: NoticeProps) => (
   <Container className={className}>
     <Icon name="information-outline" size={20} />
     {typeof children === 'string' ? (
@@ -24,5 +24,3 @@ const Notice = ({ children, className }: NoticeProps) => (
     ) : null}
   </Container>
 )
-
-export default Notice

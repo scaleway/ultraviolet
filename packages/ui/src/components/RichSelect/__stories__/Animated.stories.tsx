@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import { useState } from 'react'
 import type { SingleValue } from 'react-select'
-import RichSelect from '..'
+import { RichSelect } from '..'
 import { Button } from '../..'
 import * as animations from '../../../utils/animations'
 

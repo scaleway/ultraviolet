@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Label from '..'
+import { Label } from '..'
 
 export default {
   component: Label,

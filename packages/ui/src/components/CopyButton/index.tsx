@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
-import Icon from '../Icon'
-import Tooltip from '../Tooltip'
+import { Icon } from '../Icon'
+import { Tooltip } from '../Tooltip'
 
 const COPY_DURATION = 2500
 
@@ -54,7 +54,7 @@ type CopyButtonProps = {
   className?: string
 }
 
-const CopyButton = ({
+export const CopyButton = ({
   size = 'small',
   value,
   copyText = 'Copy',
@@ -82,5 +82,3 @@ const CopyButton = ({
     </Tooltip>
   )
 }
-
-export default CopyButton

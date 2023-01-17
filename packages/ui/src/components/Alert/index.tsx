@@ -2,9 +2,9 @@ import type { SerializedStyles, Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
-import Icon from '../Icon'
-import Stack from '../Stack'
-import Text from '../Text'
+import { Icon } from '../Icon'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type AlertType = 'danger' | 'info' | 'success' | 'warning'
 
@@ -73,7 +73,7 @@ type AlertProps = {
   className?: string
 }
 
-const Alert = ({
+export const Alert = ({
   children,
   icon,
   title,
@@ -105,5 +105,3 @@ const Alert = ({
     </AlertContainer>
   </StyledStackContainer>
 )
-
-export default Alert

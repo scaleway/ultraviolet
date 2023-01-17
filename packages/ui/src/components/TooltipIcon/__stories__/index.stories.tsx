@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import TooltipIcon from '..'
+import { TooltipIcon } from '..'
 
 export default {
   component: TooltipIcon,

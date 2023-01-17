@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Alert from '..'
+import { Alert } from '..'
 
 export default {
   component: Alert,

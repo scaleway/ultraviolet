@@ -5,8 +5,8 @@ type TabsContextValue = {
   onChange: (nameOrIndex: string | number) => void
 }
 
-const TabsContext = createContext<TabsContextValue>({} as TabsContextValue)
+export const TabsContext = createContext<TabsContextValue>(
+  {} as TabsContextValue,
+)
 
 export const useTabsContext = () => useContext(TabsContext)
-
-export default TabsContext

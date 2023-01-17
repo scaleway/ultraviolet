@@ -1,8 +1,8 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
-import Icon from '../Icon'
-import Tooltip from '../Tooltip'
+import { Icon } from '../Icon'
+import { Tooltip } from '../Tooltip'
 
 const variants = {
   danger: ({ theme }: { theme: Theme }) => `
@@ -80,7 +80,7 @@ type BulletProps = {
   variant?: BulletVariant
 } & ContentProps
 
-const Bullet = ({
+export const Bullet = ({
   className,
   variant = 'default',
   size = 'medium',
@@ -95,5 +95,3 @@ const Bullet = ({
     </StyledContainer>
   </Tooltip>
 )
-
-export default Bullet

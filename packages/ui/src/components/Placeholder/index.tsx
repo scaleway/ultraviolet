@@ -1,12 +1,12 @@
 import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import Block from './Block'
-import Blocks from './Blocks'
-import BoxWithIcon from './BoxWithIcon'
-import Donut from './Donut'
-import Line from './Line'
-import List from './List'
-import Slider from './Slider'
+import { Block } from './Block'
+import { Blocks } from './Blocks'
+import { BoxWithIcon } from './BoxWithIcon'
+import { Donut } from './Donut'
+import { Line } from './Line'
+import { List } from './List'
+import { Slider } from './Slider'
 
 const shineAnimation = keyframes`
   from {
@@ -66,7 +66,7 @@ type PlaceholderProps = {
   className?: string
 }
 
-const Placeholder = ({
+export const Placeholder = ({
   variant = 'blocks',
   length,
   col,
@@ -84,5 +84,3 @@ const Placeholder = ({
 }
 
 export const placeholderTypes = Object.keys(variants) as PlaceholderVariant[]
-
-export default Placeholder

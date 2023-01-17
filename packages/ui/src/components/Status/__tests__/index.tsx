@@ -1,4 +1,4 @@
-import Status, { statusVariants } from '..'
+import { Status, statusVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Status', () => {

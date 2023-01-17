@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Placeholder from '..'
+import { Placeholder } from '..'
 
 export default {
   component: Placeholder,

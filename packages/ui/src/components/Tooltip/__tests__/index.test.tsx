@@ -1,7 +1,7 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
-import Tooltip from '..'
+import { Tooltip } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,

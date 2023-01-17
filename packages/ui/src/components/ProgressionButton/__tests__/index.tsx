@@ -1,4 +1,4 @@
-import ProgressionButton from '..'
+import { ProgressionButton } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ProgressionButton', () => {

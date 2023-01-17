@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Badge from '..'
+import { Badge } from '..'
 
 export default {
   component: Badge,

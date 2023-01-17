@@ -11,8 +11,8 @@ import type {
 } from 'react'
 import { useRef, useState } from 'react'
 import parseIntOr from '../../helpers/numbers'
-import Icon from '../Icon'
-import Tooltip from '../Tooltip'
+import { Icon } from '../Icon'
+import { Tooltip } from '../Tooltip'
 
 const bounded = (value: number, min: number, max: number) =>
   Math.max(min, Math.min(value, max))
@@ -174,7 +174,7 @@ type SelectNumberProps = {
   disabledTooltip?: string
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
-const SelectNumber = ({
+export const SelectNumber = ({
   disabled = false,
   maxValue,
   minValue = 0,
@@ -330,5 +330,3 @@ const SelectNumber = ({
     </StyledContainer>
   )
 }
-
-export default SelectNumber

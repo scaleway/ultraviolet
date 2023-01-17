@@ -1,9 +1,9 @@
 import type { Meta, Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
-import Pagination from '..'
-import Button from '../../Button'
-import Placeholder from '../../Placeholder'
+import { Pagination } from '..'
+import { Button } from '../../Button'
+import { Placeholder } from '../../Placeholder'
 import getPageNumbers from '../getPageNumbers'
 import ExampleChildren from './ExampleChildren'
 

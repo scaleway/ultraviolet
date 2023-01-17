@@ -37,7 +37,7 @@ export type UsePaginationReturn<T> = {
   setPaginatedData: Dispatch<SetStateAction<Record<number, T[]>>>
 }
 
-const usePagination = <T>({
+export const usePagination = <T>({
   data,
   page,
   pageCount,
@@ -204,5 +204,3 @@ const usePagination = <T>({
     setPaginatedData,
   }
 }
-
-export default usePagination

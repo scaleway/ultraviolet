@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import Icon from '../Icon'
-import Stack from '../Stack'
-import Text from '../Text'
+import { Icon } from '../Icon'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type Rule = {
   name: string
@@ -23,7 +23,7 @@ const PasswordCheckContainer = styled.div`
   gap: ${({ theme }) => theme.space['1']};
 `
 
-const PasswordCheck = ({ rules }: PasswordCheckProps) => (
+export const PasswordCheck = ({ rules }: PasswordCheckProps) => (
   <PasswordCheckContainer>
     {rules.map(rule => (
       <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
@@ -40,5 +40,3 @@ const PasswordCheck = ({ rules }: PasswordCheckProps) => (
     ))}
   </PasswordCheckContainer>
 )
-
-export default PasswordCheck

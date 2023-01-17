@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import type { MouseEventHandler, ReactNode } from 'react'
 import type { Color } from '../../theme'
-import Button from '../Button'
+import { Button } from '../Button'
 import type { IconName } from '../Icon'
-import Icon from '../Icon'
-import Loader from '../Loader'
+import { Icon } from '../Icon'
+import { Loader } from '../Loader'
 
 const StyledContainer = styled('span', {
   shouldForwardProp: prop => !['variant'].includes(prop),
@@ -72,7 +72,7 @@ const StyledActionButton = styled(Button)`
   height: fit-content;
 `
 
-const Tag = ({
+export const Tag = ({
   children,
   isLoading = false,
   onClose,
@@ -102,5 +102,3 @@ const Tag = ({
     {isLoading ? <Loader active size={16} /> : null}
   </StyledContainer>
 )
-
-export default Tag

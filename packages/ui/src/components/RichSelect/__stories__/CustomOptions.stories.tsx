@@ -1,5 +1,5 @@
-import RichSelect from '..'
-import Badge from '../../Badge'
+import { RichSelect } from '..'
+import { Badge } from '../../Badge'
 import { Template } from './Template.stories'
 
 export const CustomOptions = Template.bind({})

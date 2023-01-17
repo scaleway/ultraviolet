@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import ScrollView from '..'
+import { ScrollView } from '..'
 
 export default {
   component: ScrollView,

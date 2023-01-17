@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import Link from '..'
-import Stack from '../../Stack'
+import { Link } from '..'
+import { Stack } from '../../Stack'
 
 const sizes: ComponentProps<typeof Link>['size'][] = ['large', 'small']
 

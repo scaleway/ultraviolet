@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import RichSelect from '../RichSelect'
+import { RichSelect } from '../RichSelect'
 
 const hours = [
   '00:00',
@@ -205,7 +205,7 @@ type TimeInputType = ((props: TimeInputProps) => JSX.Element) & {
   options: typeof options
 }
 
-const TimeInput: TimeInputType = ({
+export const TimeInput: TimeInputType = ({
   value = defaultValue,
   schedule = 'hours',
   ...props
@@ -214,5 +214,3 @@ const TimeInput: TimeInputType = ({
 )
 
 TimeInput.options = options
-
-export default TimeInput

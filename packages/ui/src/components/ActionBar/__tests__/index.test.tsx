@@ -1,4 +1,4 @@
-import ActionBar from '..'
+import { ActionBar } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ActionBar', () => {

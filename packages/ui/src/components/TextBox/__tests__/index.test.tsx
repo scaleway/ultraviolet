@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import TextBox from '..'
+import { TextBox } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('TextBox', () => {

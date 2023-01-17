@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import IconPlaceholder from './IconPlaceholder'
-import Line from './Line'
+import { IconPlaceholder } from './IconPlaceholder'
+import { Line } from './Line'
 
 const StyledContainer = styled.div<{ col: number }>`
   display: grid;
@@ -19,7 +19,7 @@ const Block = styled.div`
   overflow: hidden;
 `
 
-const BoxWithIcon = ({
+export const BoxWithIcon = ({
   col = 4,
   length = 8,
 }: {
@@ -35,5 +35,3 @@ const BoxWithIcon = ({
     ))}
   </StyledContainer>
 )
-
-export default BoxWithIcon

@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Sphere from '..'
+import { Sphere } from '..'
 
 export default {
   component: Sphere,

@@ -1,4 +1,4 @@
-import getPageNumbers from '../getPageNumbers'
+import { getPageNumbers } from '../getPageNumbers'
 
 describe('getPageNumbers', () => {
   describe('With 5 numbers range', () => {

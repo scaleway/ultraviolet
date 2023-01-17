@@ -1,4 +1,4 @@
-import TimeInput from '..'
+import { TimeInput } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('TimeInput', () => {

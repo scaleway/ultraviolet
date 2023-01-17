@@ -1,5 +1,5 @@
 import type { ComponentMeta } from '@storybook/react'
-import Modal from '..'
+import { Modal } from '..'
 
 export default {
   component: Modal,

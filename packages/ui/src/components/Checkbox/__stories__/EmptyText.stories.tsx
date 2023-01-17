@@ -1,5 +1,5 @@
 import type { ComponentStory } from '@storybook/react'
-import Checkbox from '..'
+import { Checkbox } from '..'
 
 export const EmptyText: ComponentStory<typeof Checkbox> = ({
   onChange = console.log,

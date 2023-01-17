@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
-import Bullet from '../Bullet'
+import { Bullet } from '../Bullet'
 
 export const Steps = styled.ul`
   list-style: none;
@@ -81,10 +81,8 @@ type StepListProps = {
   className?: string
 }
 
-const StepList = ({ children, className }: StepListProps) => (
+export const StepList = ({ children, className }: StepListProps) => (
   <Steps className={className}>{children}</Steps>
 )
 
 StepList.Item = Item
-
-export default StepList

@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { format } from 'date-fns'
-import BarChart from '..'
+import { BarChart } from '..'
 import { barChartSimpleData } from './mockData'
 
 export const FormattedValuesAndTooltip: ComponentStory<

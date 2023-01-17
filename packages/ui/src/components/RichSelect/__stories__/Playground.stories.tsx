@@ -1,5 +1,5 @@
 import { fireEvent, screen } from '@storybook/testing-library'
-import RichSelect from '..'
+import { RichSelect } from '..'
 import { Template } from './Template.stories'
 
 export const Playground = Template.bind({})
