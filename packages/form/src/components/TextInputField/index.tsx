@@ -46,6 +46,7 @@ type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
       | 'noTopLabel'
       | 'unit'
       | 'valid'
+      | 'size'
     >
   > & {
     name: string
@@ -103,6 +104,7 @@ export const TextInputField = forwardRef(
       subscription,
       type,
       unit,
+      size,
       validate,
       validateFields,
       valid,
@@ -197,6 +199,7 @@ export const TextInputField = forwardRef(
         noTopLabel={noTopLabel}
         unit={unit}
         valid={valid}
+        size={size}
       />
     )
   },
