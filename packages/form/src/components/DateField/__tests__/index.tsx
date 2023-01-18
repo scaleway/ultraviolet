@@ -32,7 +32,6 @@ describe('DateField', () => {
       {
         transform: async node => {
           const select = node.getByRole('textbox')
-          console.log(select)
           await act(() =>
             fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 }),
           )
