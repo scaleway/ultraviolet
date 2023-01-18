@@ -1,7 +1,8 @@
 import { Label, Stack } from '@scaleway/ui'
 import type { Meta, Story } from '@storybook/react'
 import { useState } from 'react'
-import { Form, TextBoxField, useOnFieldChange } from '../..'
+import { Form, useOnFieldChange } from '../..'
+import { TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
 
 export default {
@@ -68,11 +69,11 @@ const FormContent = () => {
     <Stack gap={2}>
       <Stack gap={1}>
         <Label>Email</Label>
-        <TextBoxField name="email" noTopLabel valid={valid} />
+        <TextInputField name="email" noTopLabel valid={valid} />
       </Stack>
       <Stack gap={1}>
         <Label>Password</Label>
-        <TextBoxField name="password" noTopLabel />
+        <TextInputField name="password" noTopLabel />
       </Stack>
     </Stack>
   )
