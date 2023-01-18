@@ -346,6 +346,8 @@ type TextInputProps = {
   value?: string | number
   wrap?: string
   inputProps?: InputProps
+  max?: InputHTMLAttributes<HTMLInputElement>['max']
+  min?: InputHTMLAttributes<HTMLInputElement>['min']
 } & (
   | Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
   | Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
