@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.21](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.20...@scaleway/form@1.39.21) (2023-01-18)
+
+
+### :memo: Documentation
+
+* onFieldChange documentation ([#2184](https://github.com/scaleway/scaleway-ui/issues/2184)) ([9501eb1](https://github.com/scaleway/scaleway-ui/commit/9501eb1c5b2c8790f345fec6c8a7d2f4e068724b))
+
+
+
 ## [1.39.20](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.19...@scaleway/form@1.39.20) (2023-01-17)
 
 
