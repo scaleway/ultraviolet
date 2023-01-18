@@ -7,7 +7,7 @@ import { mockErrors } from '../../mocks'
 import { useOnFieldChange } from '../useOnFieldChange'
 
 type FormValues = {
-  textName: string
+  textInputName: string
   check: boolean
 }
 
