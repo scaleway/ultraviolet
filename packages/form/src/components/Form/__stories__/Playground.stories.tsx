@@ -12,7 +12,7 @@ import {
   Submit,
   SubmitErrorAlert,
   TagsField,
-  TextBoxField,
+  TextInputField,
   TimeField,
   ToggleField,
 } from '../..'
@@ -61,7 +61,7 @@ export const Playground: ComponentStory<typeof Form> = args => {
           </SelectableCardField>
         </Stack>
 
-        <TextBoxField
+        <TextInputField
           name="name"
           label="Name"
           placeholder="John"
@@ -69,7 +69,7 @@ export const Playground: ComponentStory<typeof Form> = args => {
           autoComplete="given-name"
           disabled={state}
         />
-        <TextBoxField
+        <TextInputField
           name="email"
           label="Email"
           type="email"

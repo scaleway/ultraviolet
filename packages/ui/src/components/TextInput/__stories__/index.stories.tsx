@@ -1,8 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
-import { TextBox } from '..'
+import { TextInput } from '..'
 
 export default {
-  component: TextBox,
+  component: TextInput,
   parameters: {
     docs: {
       description: {
@@ -10,8 +10,8 @@ export default {
       },
     },
   },
-  title: 'Components/Data Entry/TextBox',
-} as ComponentMeta<typeof TextBox>
+  title: 'Components/Data Entry/TextInput',
+} as ComponentMeta<typeof TextInput>
 
 export { Playground } from './Playground.stories'
 export { NoLabel } from './NoLabel.stories'

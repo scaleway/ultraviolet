@@ -1,14 +1,14 @@
 import { Stack } from '@scaleway/ui'
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { TextBoxField } from '..'
+import { TextInputField } from '..'
 import { Submit } from '../../Submit'
 
 export const MinMaxLength: Story<
-  ComponentProps<typeof TextBoxField>
+  ComponentProps<typeof TextInputField>
 > = args => (
   <Stack gap={1}>
-    <TextBoxField {...args} />
+    <TextInputField {...args} />
     <Submit>Submit</Submit>
   </Stack>
 )

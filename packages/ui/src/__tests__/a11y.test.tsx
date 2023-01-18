@@ -30,7 +30,7 @@ const testedComponents = [
   'TooltipIcon',
   'Tag',
   'Tags',
-  'TextBox',
+  'TextInput',
   'Radio',
 ]
 

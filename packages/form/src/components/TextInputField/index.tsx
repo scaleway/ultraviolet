@@ -1,4 +1,4 @@
-import { TextBox } from '@scaleway/ui'
+import { TextInput } from '@scaleway/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, FocusEvent, Ref } from 'react'
 import { forwardRef } from 'react'
@@ -6,12 +6,15 @@ import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers/ErrorContext'
 import type { BaseFieldProps } from '../../types'
 
-type TextBoxValue = NonNullable<ComponentProps<typeof TextBox>['value']>
+type TextInputValue = NonNullable<ComponentProps<typeof TextInput>['value']>
 
-type TextBoxFieldProps<T = TextBoxValue, K = string> = BaseFieldProps<T, K> &
+type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
+  T,
+  K
+> &
   Partial<
     Pick<
-      ComponentProps<typeof TextBox>,
+      ComponentProps<typeof TextInput>,
       | 'autoCapitalize'
       | 'autoComplete'
       | 'autoCorrect'
@@ -52,7 +55,7 @@ type TextBoxFieldProps<T = TextBoxValue, K = string> = BaseFieldProps<T, K> &
     regex?: (RegExp | RegExp[])[]
   }
 
-export const TextBoxField = forwardRef(
+export const TextInputField = forwardRef(
   (
     {
       afterSubmit,
@@ -104,7 +107,7 @@ export const TextBoxField = forwardRef(
       validateFields,
       valid,
       value,
-    }: TextBoxFieldProps,
+    }: TextInputFieldProps,
     ref: Ref<HTMLInputElement>,
   ): JSX.Element => {
     const { getError } = useErrors()
@@ -147,7 +150,7 @@ export const TextBoxField = forwardRef(
     })
 
     return (
-      <TextBox
+      <TextInput
         autoCapitalize={autoCapitalize}
         autoComplete={autoComplete}
         autoCorrect={autoCorrect}

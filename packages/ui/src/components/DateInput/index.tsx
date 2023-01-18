@@ -7,7 +7,7 @@ import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Separator } from '../Separator'
 import { Text } from '../Text'
-import { TextBox } from '../TextBox'
+import { TextInput } from '../TextInput'
 
 const PREFIX = '.react-datepicker'
 
@@ -204,7 +204,7 @@ export const DateInput = ({
           selected={value ? new Date(value) : undefined}
           customInput={
             <div>
-              <TextBox
+              <TextInput
                 error={error ? `${error}` : undefined}
                 id={`date-input${name ? `-${name}` : ''}`}
                 label={label}

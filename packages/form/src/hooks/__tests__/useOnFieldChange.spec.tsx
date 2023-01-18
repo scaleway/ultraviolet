@@ -2,12 +2,12 @@ import { ThemeProvider } from '@emotion/react'
 import { theme as lightTheme } from '@scaleway/ui'
 import { renderHook } from '@testing-library/react'
 import type { ReactElement } from 'react'
-import { CheckboxField, Form, TextBoxField } from '../../components'
+import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
 import { useOnFieldChange } from '../useOnFieldChange'
 
 type FormValues = {
-  textBoxName: string
+  textName: string
   check: boolean
 }
 
@@ -17,12 +17,12 @@ type Wrapers = {
 }
 
 const initial = {
-  textBoxName: 'test',
+  textInputName: 'test',
   check: true,
 }
 
 const updated = {
-  textBoxName: 'updated',
+  textInputName: 'updated',
   check: false,
 }
 
@@ -35,7 +35,7 @@ const Wrapper = ({ children, initialValues }: Wrapers) => (
     >
       {children}
       <CheckboxField name="check" />
-      <TextBoxField name="textBoxName" type="text" />
+      <TextInputField name="textInputName" type="text" />
     </Form>
   </ThemeProvider>
 )
@@ -43,7 +43,7 @@ const Wrapper = ({ children, initialValues }: Wrapers) => (
 describe('useOnFieldChange', () => {
   test('should render correctly', () => {
     const callback = jest.fn((value, values) => {
-      expect(value).toBe(updated.textBoxName)
+      expect(value).toBe(updated.textInputName)
       expect(values).toBe(updated)
     })
 
@@ -51,8 +51,8 @@ describe('useOnFieldChange', () => {
 
     const { result, rerender } = renderHook(
       () =>
-        useOnFieldChange<FormValues['textBoxName'], FormValues>(
-          'textBoxName',
+        useOnFieldChange<FormValues['textInputName'], FormValues>(
+          'textInputName',
           callback,
         ),
       {
@@ -80,8 +80,8 @@ describe('useOnFieldChange', () => {
 
     const { result, rerender } = renderHook(
       ({ enabled }) => {
-        useOnFieldChange<FormValues['textBoxName'], FormValues>(
-          'textBoxName',
+        useOnFieldChange<FormValues['textInputName'], FormValues>(
+          'textInputName',
           callback,
           // enabled will depends of rerender({ condition: '' })
           enabled,

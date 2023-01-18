@@ -1,11 +1,16 @@
 import type { Story } from '@storybook/react'
-import { TextBox, textBoxSizes } from '..'
+import { TextInput, textInputSizes } from '..'
 import { Stack } from '../../Stack'
 
 export const Sizes: Story = props => (
   <>
-    {textBoxSizes.map(size => (
-      <TextBox key={size} placeholder={`Size ${size}`} size={size} {...props} />
+    {textInputSizes.map(size => (
+      <TextInput
+        key={size}
+        placeholder={`Size ${size}`}
+        size={size}
+        {...props}
+      />
     ))}
   </>
 )
