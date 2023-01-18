@@ -37,9 +37,15 @@ type PageProps = {
   deprecated?: boolean
   deprecatedReason?: string
   migrationLink?: string
+  hideArgsTable?: boolean
 }
 
-const Page = ({ deprecated, deprecatedReason, migrationLink }: PageProps) => (
+const Page = ({
+  deprecated,
+  deprecatedReason,
+  migrationLink,
+  hideArgsTable,
+}: PageProps) => (
   <>
     <StyledHeaderContainer>
       <StyledTitle data-deprecated={deprecated}>
@@ -73,7 +79,7 @@ const Page = ({ deprecated, deprecatedReason, migrationLink }: PageProps) => (
     )}
     <Description />
     <Primary />
-    <ArgsTable story={PRIMARY_STORY} />
+    {!hideArgsTable ? <ArgsTable story={PRIMARY_STORY} /> : null}
     <Stories />
   </>
 )
