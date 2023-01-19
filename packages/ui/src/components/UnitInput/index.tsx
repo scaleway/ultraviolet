@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import type { SelectOption } from '../RichSelect'
 import { RichSelect } from '../RichSelect'
-import { TextBox } from '../TextBox'
+import { TextInput } from '../TextInput'
 
 export const sizesHeight: Record<string, number> = {
   large: 48,
@@ -11,7 +11,7 @@ export const sizesHeight: Record<string, number> = {
   small: 32,
 }
 
-const CustomTextBox = styled(TextBox)`
+const CustomTextInput = styled(TextInput)`
   input {
     border-radius: 4px 0 0 4px;
     border-right: 0;
@@ -125,7 +125,7 @@ export const UnitInput = ({
 
   return (
     <div style={{ display: 'flex' }}>
-      <CustomTextBox
+      <CustomTextInput
         height={sizesHeight[size]}
         width={textBoxWidth}
         type="number"

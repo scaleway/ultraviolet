@@ -7,7 +7,7 @@ export default {
     docs: {
       description: {
         component:
-          'UnitInput is a component made out of 2 components: a **TextBox** and a **RichSelect**.',
+          'UnitInput is a component made out of 2 components: a **TextInput** and a **RichSelect**.',
       },
     },
   },

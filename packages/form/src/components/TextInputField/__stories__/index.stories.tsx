@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react'
-import { Form, TextBoxField } from '../..'
+import { Form, TextInputField } from '../..'
 import { mockErrors } from '../../../mocks/mockErrors'
 
 export default {
-  component: TextBoxField,
+  component: TextInputField,
   decorators: [
     ChildStory => (
       <Form onRawSubmit={() => {}} errors={mockErrors}>
@@ -18,7 +18,7 @@ export default {
       },
     },
   },
-  title: 'Form/Components/Fields/TextBoxField',
+  title: 'Form/Components/Fields/TextInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -17,14 +17,14 @@ To use the library you need to put a `ThemeProvider` from `@emotion/react` with 
 
 ```tsx
 import { ThemeProvider } from '@emotion/react'
-import { Form, TextBoxField } from '@scaleway/form'
+import { Form, TextInputField } from '@scaleway/form'
 import { theme } from '@scaleway/ui'
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Form>
-        <TextBoxField name="example" />
+        <TextInputField name="example" />
       </Form>
     </ThemeProvider>
   )

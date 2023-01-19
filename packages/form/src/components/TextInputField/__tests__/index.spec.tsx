@@ -1,37 +1,39 @@
 import { act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { TextBoxField } from '..'
+import { TextInputField } from '..'
 import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
 
-describe('TextBoxField', () => {
+describe('TextInputField', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<TextBoxField name="test" />))
+    shouldMatchEmotionSnapshotFormWrapper(<TextInputField name="test" />))
 
   test('should render correctly generated', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" generated />,
+      <TextInputField name="test" generated />,
     ))
 
   test('should render correctly random', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" random="random" />,
+      <TextInputField name="test" random="random" />,
     ))
   test('should render correctly notice', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" notice="notice" />,
+      <TextInputField name="test" notice="notice" />,
     ))
 
   test('should render correctly required', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" required />,
+      <TextInputField name="test" required />,
     ))
   test('should render correctly id', () =>
-    shouldMatchEmotionSnapshotFormWrapper(<TextBoxField name="test" id="id" />))
+    shouldMatchEmotionSnapshotFormWrapper(
+      <TextInputField name="test" id="id" />,
+    ))
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" disabled />,
+      <TextInputField name="test" disabled />,
       {
         transform: node => {
           const input = node.getByRole('textbox')
@@ -42,7 +44,7 @@ describe('TextBoxField', () => {
 
   test('should render correctly with minLength', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <TextBoxField name="test" minLength={13} />,
+      <TextInputField name="test" minLength={13} />,
       {
         transform: async node => {
           await act(async () => {

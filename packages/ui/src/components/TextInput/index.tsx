@@ -52,9 +52,9 @@ const inputSizes = {
   },
 }
 
-type TextBoxSizes = keyof typeof inputSizes
+type TextInputSizes = keyof typeof inputSizes
 
-export const textBoxSizes = Object.keys(inputSizes) as TextBoxSizes[]
+export const textInputSizes = Object.keys(inputSizes) as TextInputSizes[]
 
 const StyledSeparator = styled(Separator)`
   margin-top: 1px;
@@ -179,7 +179,7 @@ type StyledInputProps = {
   isPlaceholderVisible?: boolean
   multiline?: boolean
   resizable?: boolean
-  inputSize: TextBoxSizes
+  inputSize: TextInputSizes
 } & (
   | InputHTMLAttributes<HTMLInputElement>
   | TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -307,7 +307,7 @@ const RightComponent = styled(Stack)`
   min-width: 24px;
 `
 
-type TextBoxProps = {
+type TextInputProps = {
   'data-testid'?: string
   ariaControls?: string
   autoComplete?: string
@@ -338,7 +338,7 @@ type TextBoxProps = {
   required?: boolean
   resizable?: boolean
   rows?: number
-  size?: TextBoxSizes
+  size?: TextInputSizes
   tabIndex?: number
   type?: string
   unit?: string
@@ -356,9 +356,9 @@ const UnitLabel = styled(Text)`
   line-height: 18px;
 `
 
-export const TextBox = forwardRef<
+export const TextInput = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
-  TextBoxProps
+  TextInputProps
 >(
   (
     {
@@ -496,7 +496,7 @@ export const TextBox = forwardRef<
       unit
     )
 
-    // Set the right padding to 22px when the TextBox is required. 22px allows
+    // Set the right padding to 22px when the TextInput is required. 22px allows
     // keeping the required star icon centered, since it is smaller than valid or
     // unit icons which have a right padding of 32px.
     const rightElementPadding = required ? 22 : undefined

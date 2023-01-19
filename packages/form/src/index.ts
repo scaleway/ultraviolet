@@ -13,7 +13,7 @@ export {
   Submit,
   SubmitErrorAlert,
   TagsField,
-  TextBoxField,
+  TextInputField,
   TimeField,
   ToggleField,
 } from './components'

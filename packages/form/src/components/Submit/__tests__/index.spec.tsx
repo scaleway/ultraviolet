@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event'
-import { Form, Submit, TextBoxField } from '../..'
+import { Form, Submit, TextInputField } from '../..'
 import {
   mockRandom,
   restoreRandom,
@@ -28,7 +28,7 @@ describe('Submit', () => {
         initialValues={{ toto: '4' }}
         errors={mockErrors}
       >
-        <TextBoxField name="toto" regex={[alpha]} />
+        <TextInputField name="toto" regex={[alpha]} />
         <Submit>Test</Submit>
       </Form>,
     ))

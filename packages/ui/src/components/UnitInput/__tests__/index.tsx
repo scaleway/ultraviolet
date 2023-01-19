@@ -83,7 +83,7 @@ describe('UnitInput', () => {
   })
 })
 
-test(`renders with TextBox update`, async () => {
+test(`renders with TextInput update`, async () => {
   const node = renderWithTheme(<UnitInput name="test" />)
 
   const input = node.getByRole('spinbutton') as HTMLInputElement

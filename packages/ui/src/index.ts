@@ -58,7 +58,7 @@ export {
   Tags,
   TagsPoplist,
   Text,
-  TextBox,
+  TextInput,
   TimeInput,
   ToastContainer,
   toast,
