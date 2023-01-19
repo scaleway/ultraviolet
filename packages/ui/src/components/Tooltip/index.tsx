@@ -101,8 +101,8 @@ type TooltipProps = {
         className?: string
         onBlur: () => void
         onFocus: () => void
-        onMouseEnter: () => void
-        onMouseLeave: () => void
+        onPointerEnter: () => void
+        onPointerLeave: () => void
         ref: RefObject<HTMLDivElement>
       }) => ReactNode)
   maxWidth?: number
@@ -129,24 +129,34 @@ export const Tooltip = ({
   id,
   className,
   maxWidth = 232,
-  visible = false,
+  visible,
   innerRef,
 }: TooltipProps) => {
   const childrenRef = useRef<HTMLDivElement>(null)
   useImperativeHandle(innerRef, () => childrenRef.current)
   const tooltipRef = useRef<HTMLDivElement>(null)
-  const timer = useRef<ReturnType<typeof setInterval>>()
-  const [visibleInDom, setVisibleInDom] = useState(visible)
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
+
+  // Debounce timer will be used to prevent the tooltip from flickering when the user moves the mouse out and in the children element.
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
+  const [visibleInDom, setVisibleInDom] = useState(false)
   const [reverseAnimation, setReverseAnimation] = useState(false)
   const [positions, setPositions] = useState<PositionsType>({
     ...DEFAULT_POSITIONS,
   })
   const uniqueId = useId()
   const generatedId = id ?? uniqueId
+  const isControlled = visible !== undefined
 
   const generatePositions = useCallback(() => {
     if (childrenRef.current && tooltipRef.current) {
-      setPositions(computePositions({ childrenRef, placement, tooltipRef }))
+      setPositions(
+        computePositions({
+          childrenRef,
+          placement,
+          tooltipRef,
+        }),
+      )
     }
   }, [placement])
 
@@ -164,6 +174,7 @@ export const Tooltip = ({
   const unmountTooltip = useCallback(() => {
     setVisibleInDom(false)
     setReverseAnimation(false)
+    timer.current = undefined
 
     window.removeEventListener('scroll', onScrollDetected, true)
   }, [onScrollDetected])
@@ -172,19 +183,30 @@ export const Tooltip = ({
    * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
    * end, then remove tooltip from dom.
    */
-  const onMouseEvent = useCallback(
+  const onPointerEvent = useCallback(
     (isVisible: boolean) => () => {
-      // This is when we hide the tooltip, we reverse animation then we set a timeout based on CSS animation duration
-      // then we remove it from dom
-      if (!isVisible && tooltipRef.current) {
-        setReverseAnimation(true)
-        timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
+      // This condition is for when we want to unmount the tooltip
+      // There is debounce in order to avoid tooltip to flicker when we move the mouse from children to tooltip
+      // Timer is used to follow the animation duration
+      if (!isVisible && tooltipRef.current && !debounceTimer.current) {
+        debounceTimer.current = setTimeout(() => {
+          setReverseAnimation(true)
+          timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
+        }, 200)
       } else {
-        // If a timeout is already set it means tooltip didn't have time to close completely and be removed from dom,
-        // so we clear timeout and set back opacity of tooltip to 1, so it can be visible on screen.
+        // This condition is for when we want to mount the tooltip
+        // If the timer exists it means the tooltip was about to umount, but we hovered the children again,
+        // so we clear the timer and the tooltip will not be unmounted
         if (timer.current) {
           setReverseAnimation(false)
           clearTimeout(timer.current)
+          timer.current = undefined
+        }
+        // And here is when we currently are in a debounce timer, it means tooltip was hovered during
+        // that period, and so we can clear debounce timer
+        if (debounceTimer.current) {
+          clearTimeout(debounceTimer.current)
+          debounceTimer.current = undefined
         }
         setVisibleInDom(isVisible)
       }
@@ -204,14 +226,21 @@ export const Tooltip = ({
       // Adding true as third parameter to event listener will detect nested scrolls.
       window.addEventListener('scroll', onScrollDetected, true)
     }
-  }, [
-    visibleInDom,
-    positions.tooltipPosition,
-    generatePositions,
-    placement,
-    text,
-    onScrollDetected,
-  ])
+
+    return () => {
+      window.removeEventListener('scroll', onScrollDetected, true)
+    }
+  }, [generatePositions, onScrollDetected, visibleInDom])
+
+  /**
+   * If tooltip has `visible` prop it means the tooltip is manually controlled through this prop.
+   * In this cas we don't want to display tooltip on hover, but only when `visible` is true.
+   */
+  useEffect(() => {
+    if (isControlled) {
+      onPointerEvent(visible)()
+    }
+  }, [isControlled, onPointerEvent, visible])
 
   /**
    * Will render children conditionally if children is a function or not.
@@ -219,10 +248,10 @@ export const Tooltip = ({
   const renderChildren = useCallback(() => {
     if (typeof children === 'function') {
       return children({
-        onBlur: onMouseEvent(false),
-        onFocus: onMouseEvent(true),
-        onMouseEnter: onMouseEvent(true),
-        onMouseLeave: onMouseEvent(false),
+        onBlur: !isControlled ? onPointerEvent(false) : () => {},
+        onFocus: !isControlled ? onPointerEvent(true) : () => {},
+        onPointerEnter: !isControlled ? onPointerEvent(true) : () => {},
+        onPointerLeave: !isControlled ? onPointerEvent(false) : () => {},
         ref: childrenRef,
       })
     }
@@ -230,16 +259,16 @@ export const Tooltip = ({
     return (
       <StyledChildrenContainer
         aria-describedby={generatedId}
-        onBlur={onMouseEvent(false)}
-        onFocus={onMouseEvent(true)}
-        onMouseEnter={onMouseEvent(true)}
-        onMouseLeave={onMouseEvent(false)}
+        onBlur={!isControlled ? onPointerEvent(false) : () => {}}
+        onFocus={!isControlled ? onPointerEvent(true) : () => {}}
+        onPointerEnter={!isControlled ? onPointerEvent(true) : () => {}}
+        onPointerLeave={!isControlled ? onPointerEvent(false) : () => {}}
         ref={childrenRef}
       >
         {children}
       </StyledChildrenContainer>
     )
-  }, [children, generatedId, onMouseEvent])
+  }, [children, generatedId, isControlled, onPointerEvent])
 
   if (!text) {
     if (typeof children === 'function') return null
