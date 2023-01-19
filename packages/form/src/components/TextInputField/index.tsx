@@ -1,6 +1,6 @@
 import { TextInput } from '@scaleway/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, FocusEvent, Ref } from 'react'
+import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers/ErrorContext'
@@ -46,6 +46,7 @@ type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
       | 'noTopLabel'
       | 'unit'
       | 'valid'
+      | 'size'
     >
   > & {
     name: string
@@ -103,6 +104,7 @@ export const TextInputField = forwardRef(
       subscription,
       type,
       unit,
+      size,
       validate,
       validateFields,
       valid,
@@ -171,7 +173,7 @@ export const TextInputField = forwardRef(
         multiline={multiline}
         name={input.name}
         notice={notice}
-        onBlur={(event: FocusEvent<HTMLInputElement>) => {
+        onBlur={event => {
           input.onBlur(event)
           onBlur?.(event)
         }}
@@ -179,7 +181,7 @@ export const TextInputField = forwardRef(
           input.onChange(event)
           onChange?.(event)
         }}
-        onFocus={(event: FocusEvent<HTMLInputElement>) => {
+        onFocus={event => {
           input.onFocus(event)
           onFocus?.(event)
         }}
@@ -197,6 +199,7 @@ export const TextInputField = forwardRef(
         noTopLabel={noTopLabel}
         unit={unit}
         valid={valid}
+        size={size}
       />
     )
   },
