@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.215.21 (2023-01-19)
+
+
+### :package: Chore
+
+* **release:** publish ([ae9541b](https://github.com/scaleway/scaleway-ui/commit/ae9541b7c25ddfb0c4933f0c43a5aebec510e920))
+
+
+### :zap: Refactor
+
+* **components:** rename TextBox and TextBoxField to TextInput an… ([#2207](https://github.com/scaleway/scaleway-ui/issues/2207)) ([e185c34](https://github.com/scaleway/scaleway-ui/commit/e185c34b19bcd25439910d9b884c1c41701d6dff))
+
+
+
 ## [0.215.20](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.19...@scaleway/ui@0.215.20) (2023-01-17)
 
 

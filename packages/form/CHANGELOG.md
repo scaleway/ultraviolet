@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.22](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.21...@scaleway/form@1.39.22) (2023-01-19)
+
+
+### :zap: Refactor
+
+* **components:** rename TextBox and TextBoxField to TextInput an… ([#2207](https://github.com/scaleway/scaleway-ui/issues/2207)) ([e185c34](https://github.com/scaleway/scaleway-ui/commit/e185c34b19bcd25439910d9b884c1c41701d6dff))
+
+
+
 ## [1.39.21](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.20...@scaleway/form@1.39.21) (2023-01-18)
 
 
