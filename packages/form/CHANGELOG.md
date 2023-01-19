@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.23](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.22...@scaleway/form@1.39.23) (2023-01-19)
+
+
+### :bug: Bug Fixes
+
+* **TextBoxField:** forward `size` prop to TextBox ([#2206](https://github.com/scaleway/scaleway-ui/issues/2206)) ([429c391](https://github.com/scaleway/scaleway-ui/commit/429c391b4c60bbea0d39a4cd1d53b5fcf764d379))
+
+
+
 ## [1.39.22](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.21...@scaleway/form@1.39.22) (2023-01-19)
 
 

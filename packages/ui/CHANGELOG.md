@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.22](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.21...@scaleway/ui@0.215.22) (2023-01-19)
+
+
+### :bug: Bug Fixes
+
+* **TextBoxField:** forward `size` prop to TextBox ([#2206](https://github.com/scaleway/scaleway-ui/issues/2206)) ([429c391](https://github.com/scaleway/scaleway-ui/commit/429c391b4c60bbea0d39a4cd1d53b5fcf764d379))
+* **Text:** show tooltip on ellipsis only when needed ([#2192](https://github.com/scaleway/scaleway-ui/issues/2192)) ([aaa48d0](https://github.com/scaleway/scaleway-ui/commit/aaa48d03e0480b51aadcca0774abb2bb3fc77363))
+
+
+### :package: Chore
+
+* fix ci ([#2208](https://github.com/scaleway/scaleway-ui/issues/2208)) ([94f957a](https://github.com/scaleway/scaleway-ui/commit/94f957a926893ce064d3a504115f11f5917d3451))
+
+
+
 ## 0.215.21 (2023-01-19)
 
 
