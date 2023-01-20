@@ -15,6 +15,8 @@ import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
 
 const ANIMATION_DURATION = 230 // in ms
 
+function noop() {}
+
 const animation = (positions: PositionsType) => keyframes`
   0% {
     opacity: 0;
@@ -229,6 +231,10 @@ export const Tooltip = ({
 
     return () => {
       window.removeEventListener('scroll', onScrollDetected, true)
+      if (timer.current) {
+        clearTimeout(timer.current)
+        timer.current = undefined
+      }
     }
   }, [generatePositions, onScrollDetected, visibleInDom])
 
@@ -248,10 +254,10 @@ export const Tooltip = ({
   const renderChildren = useCallback(() => {
     if (typeof children === 'function') {
       return children({
-        onBlur: !isControlled ? onPointerEvent(false) : () => {},
-        onFocus: !isControlled ? onPointerEvent(true) : () => {},
-        onPointerEnter: !isControlled ? onPointerEvent(true) : () => {},
-        onPointerLeave: !isControlled ? onPointerEvent(false) : () => {},
+        onBlur: !isControlled ? onPointerEvent(false) : noop,
+        onFocus: !isControlled ? onPointerEvent(true) : noop,
+        onPointerEnter: !isControlled ? onPointerEvent(true) : noop,
+        onPointerLeave: !isControlled ? onPointerEvent(false) : noop,
         ref: childrenRef,
       })
     }
@@ -259,10 +265,10 @@ export const Tooltip = ({
     return (
       <StyledChildrenContainer
         aria-describedby={generatedId}
-        onBlur={!isControlled ? onPointerEvent(false) : () => {}}
-        onFocus={!isControlled ? onPointerEvent(true) : () => {}}
-        onPointerEnter={!isControlled ? onPointerEvent(true) : () => {}}
-        onPointerLeave={!isControlled ? onPointerEvent(false) : () => {}}
+        onBlur={!isControlled ? onPointerEvent(false) : noop}
+        onFocus={!isControlled ? onPointerEvent(true) : noop}
+        onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
+        onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
         ref={childrenRef}
       >
         {children}
