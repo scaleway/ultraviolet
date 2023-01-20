@@ -150,7 +150,7 @@ const StyledContainer = styled('div', {
       : ''}
 `
 
-type SelectNumberProps = {
+type NumberInputProps = {
   disabled?: boolean
   maxValue?: number
   minValue?: number
@@ -171,7 +171,7 @@ type SelectNumberProps = {
   disabledTooltip?: string
 } & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 
-export const SelectNumber = ({
+export const NumberInput = ({
   disabled = false,
   maxValue,
   minValue = 0,
@@ -187,7 +187,7 @@ export const SelectNumber = ({
   value,
   disabledTooltip,
   className,
-}: SelectNumberProps) => {
+}: NumberInputProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
   const [inputValue, setInputValue] = useState(

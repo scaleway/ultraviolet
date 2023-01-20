@@ -9,7 +9,7 @@ export {
   RadioField,
   SelectableCardField,
   SelectInputField,
-  SelectNumberField,
+  NumberInputField,
   Submit,
   SubmitErrorAlert,
   TagInputField,

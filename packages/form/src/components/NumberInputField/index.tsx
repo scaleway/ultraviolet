@@ -1,19 +1,17 @@
-import { SelectNumber } from '@scaleway/ui'
+import { NumberInput } from '@scaleway/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'
 
-type SelectNumberValue = NonNullable<
-  ComponentProps<typeof SelectNumber>['value']
->
+type NumberInputValue = NonNullable<ComponentProps<typeof NumberInput>['value']>
 
-type SelectNumberValueFieldProps<
-  T = SelectNumberValue,
+type NumberInputValueFieldProps<
+  T = NumberInputValue,
   K = string,
 > = BaseFieldProps<T, K> &
   Partial<
     Pick<
-      ComponentProps<typeof SelectNumber>,
+      ComponentProps<typeof NumberInput>,
       | 'disabled'
       | 'maxValue'
       | 'minValue'
@@ -33,7 +31,7 @@ type SelectNumberValueFieldProps<
     onFocus?: FocusEventHandler<HTMLInputElement>
   }
 
-export const SelectNumberField = ({
+export const NumberInputField = ({
   disabled,
   maxValue,
   minValue,
@@ -50,7 +48,7 @@ export const SelectNumberField = ({
   validate,
   value,
   className,
-}: SelectNumberValueFieldProps) => {
+}: NumberInputValueFieldProps) => {
   const { input } = useFormField(name, {
     disabled,
     required,
@@ -60,7 +58,7 @@ export const SelectNumberField = ({
   })
 
   return (
-    <SelectNumber
+    <NumberInput
       name={name}
       disabled={disabled}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {

@@ -42,7 +42,7 @@ export {
   ScrollView,
   SelectableCard,
   SelectInput,
-  SelectNumber,
+  NumberInput,
   Separator,
   Sphere,
   Stack,

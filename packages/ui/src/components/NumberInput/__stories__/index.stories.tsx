@@ -1,8 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
-import { SelectNumber } from '..'
+import { NumberInput } from '..'
 
 export default {
-  component: SelectNumber,
+  component: NumberInput,
   decorators: [
     StoryComponent => (
       <div
@@ -15,8 +15,8 @@ export default {
       </div>
     ),
   ],
-  title: 'Components/Data Entry/SelectNumber',
-} as ComponentMeta<typeof SelectNumber>
+  title: 'Components/Data Entry/NumberInput',
+} as ComponentMeta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'
 export { Text } from './Text.stories'

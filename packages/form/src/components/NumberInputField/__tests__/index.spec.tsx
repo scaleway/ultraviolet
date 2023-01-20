@@ -1,21 +1,21 @@
 import { act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Form, SelectNumberField } from '../..'
+import { Form, NumberInputField } from '../..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
 
-describe('SelectNumberField', () => {
+describe('NumberInputField', () => {
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <SelectNumberField name="test" value={0} />,
+      <NumberInputField name="test" value={0} />,
     ))
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <SelectNumberField name="test" value={10} disabled />,
+      <NumberInputField name="test" value={10} disabled />,
       {
         transform: ({ getByLabelText }) => {
           const input = getByLabelText('Input')
@@ -36,7 +36,7 @@ describe('SelectNumberField', () => {
     const onBlur = jest.fn(() => {})
 
     return shouldMatchEmotionSnapshotFormWrapper(
-      <SelectNumberField
+      <NumberInputField
         name="test"
         value={10}
         onChange={onChange}
@@ -71,7 +71,7 @@ describe('SelectNumberField', () => {
 
     return shouldMatchEmotionSnapshot(
       <Form onRawSubmit={() => {}} errors={mockErrors}>
-        <SelectNumberField
+        <NumberInputField
           maxValue={maxValue}
           minValue={minValue}
           name="test"
