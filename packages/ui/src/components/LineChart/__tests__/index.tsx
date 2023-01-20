@@ -39,7 +39,7 @@ describe('LineChart', () => {
       />,
     ))
 
-  test('renders correctly with point formater', () =>
+  test('renders correctly with point formatter', () =>
     shouldMatchEmotionSnapshot(
       <LineChart
         data={lineChartData}

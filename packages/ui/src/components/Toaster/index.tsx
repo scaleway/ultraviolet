@@ -110,7 +110,7 @@ export const toast = {
 
 type ToastContainerProps = {
   /**
-   * Whether or not to display the newest toast on top.
+   * Whether to display the newest toast on top.
    * `Default: false`
    */
   newestOnTop?: boolean

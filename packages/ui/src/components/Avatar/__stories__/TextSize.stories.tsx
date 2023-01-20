@@ -30,6 +30,6 @@ TextSize.decorators = [
 TextSize.parameters = {
   docs: {
     storyDescription:
-      'Additionnally you can set the size of the text by using `textSize` prop. Don&lsquo;t forget to set the `size` prop to make your text fit into the component.',
+      'Additionally you can set the size of the text by using `textSize` prop. Don&lsquo;t forget to set the `size` prop to make your text fit into the component.',
   },
 }

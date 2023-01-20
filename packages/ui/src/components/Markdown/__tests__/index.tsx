@@ -45,7 +45,7 @@ describe('MarkDown', () => {
       <Markdown source={withMultipleParagraphs} inline />,
     ))
 
-  test(`render html without escaing it`, () =>
+  test(`render html without escaping it`, () =>
     shouldMatchEmotionSnapshot(
       <Markdown source={withHtml} escapeHtml={false} />,
     ))

@@ -45,9 +45,6 @@ const containerSizes = {
 }
 
 type ContainerSizesType = keyof typeof containerSizes
-export const containerSizesKeys = Object.keys(
-  containerSizes,
-) as ContainerSizesType[]
 
 const iconSizes = {
   large: 26,
@@ -102,13 +99,13 @@ const StyledCenterBox = styled('div', {
 const StyledInput = styled.input`
   color: ${({ theme }) => theme.colors.neutral.text};
   background-color: transparent;
-  font-size: 16;
+  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
   border: none;
   outline: none;
   position: relative;
-  margin-right: 4;
+  margin-right: ${({ theme }) => theme.space['0.5']};
   max-width: 100%;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   text-align: center;
 
   &::-webkit-outer-spin-button,

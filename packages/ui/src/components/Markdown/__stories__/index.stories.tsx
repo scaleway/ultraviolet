@@ -19,4 +19,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Inline } from './Inline.stories'
 export { LinkTarget } from './LinkTarget.stories'
-export { EspaceHTML } from './EscapeHTML.stories'
+export { EscapeHTML } from './EscapeHTML.stories'

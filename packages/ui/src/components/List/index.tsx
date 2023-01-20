@@ -132,7 +132,7 @@ function Body<DataType extends Record<string, unknown>>({
 
 export type ListProps<DataType> = {
   /**
-   * Used to manage row state. Enter an unique property of your row
+   * Used to manage row state. Enter a unique property of your row
    */
   idKey?: string
   /**
@@ -206,7 +206,7 @@ export type ListProps<DataType> = {
    */
   page?: number
   /**
-   * If you known the page you have (needs perPage)
+   * If you know the page you have (needs perPage)
    */
   pageCount?: number
   /**

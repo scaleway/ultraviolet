@@ -17,7 +17,7 @@ type ListCellProps = {
   onClick?: MouseEventHandler<HTMLTableCellElement>
   className?: string
   /**
-   *  Use this if you want to prevent onClick to be handle by parents (Like when you have an expandable content)
+   *  Use this if you want to prevent onClick to be handled by parents (Like when you have an expandable content)
    * */
   preventClick?: boolean
 }

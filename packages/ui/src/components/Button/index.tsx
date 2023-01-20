@@ -49,7 +49,7 @@ const borderedVariant = ({
 
     svg {
       fill: ${colorValue};
-      // safari issue prevent event propgation
+      // safari issue prevent event propagation
       pointer-events: none;
     }
 
@@ -113,7 +113,7 @@ const variants = {
 
     text-decoration: underline;
     text-decoration-color: transparent;
-    text-decoration-poisition: under;
+    text-decoration-position: under;
     text-decoration-thickness: 1px;
     transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
     vertical-align: baseline;
@@ -278,7 +278,7 @@ type StyledButtonProps = {
   /** Name of the icon. All [icons](/?path=/docs/components-icon) are supported. */
   icon?: string | JSX.Element
   iconPosition?: 'left' | 'right'
-  /** Use this properties to associate ref to button component. */
+  /** Use this property to associate ref to button component. */
   progress?: boolean | 'left' | 'right'
   iconSize?: number
   size: ButtonSize

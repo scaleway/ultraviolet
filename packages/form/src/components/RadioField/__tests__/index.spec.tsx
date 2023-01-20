@@ -6,7 +6,7 @@ import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
-import { mockErrors } from '../../../mocks/mockErrors'
+import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
 describe('RadioField', () => {

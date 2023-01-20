@@ -14,7 +14,7 @@ describe('ProgressionButton', () => {
       </ProgressionButton>,
     ))
 
-  it('renders correctly with a duration subceeding its creation date', () =>
+  it('renders correctly with a duration succeeding its creation date', () =>
     shouldMatchEmotionSnapshot(
       <ProgressionButton
         creation={new Date(new Date().setSeconds(new Date().getSeconds() - 90))}
