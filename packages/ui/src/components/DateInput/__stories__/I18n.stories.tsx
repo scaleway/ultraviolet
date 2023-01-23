@@ -2,8 +2,8 @@ import { useI18n } from '@scaleway/use-i18n'
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'
-import type { SelectOption } from '../../RichSelect'
-import { RichSelect } from '../../RichSelect'
+import type { SelectOption } from '../../SelectInput'
+import { SelectInput } from '../../SelectInput'
 
 export const I18n: Story<ComponentProps<typeof DateInput>> = () => {
   const { locales, currentLocale, switchLocale, dateFnsLocale } = useI18n()
@@ -14,7 +14,7 @@ export const I18n: Story<ComponentProps<typeof DateInput>> = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      <RichSelect
+      <SelectInput
         name="locale-switcher"
         isSearchable={false}
         value={{
@@ -27,11 +27,11 @@ export const I18n: Story<ComponentProps<typeof DateInput>> = () => {
         noTopLabel
       >
         {locales.map(locale => (
-          <RichSelect.Option value={locale} key={locale}>
+          <SelectInput.Option value={locale} key={locale}>
             {locale}
-          </RichSelect.Option>
+          </SelectInput.Option>
         ))}
-      </RichSelect>
+      </SelectInput>
       <DateInput onChange={() => {}} label={currentLocale} />
     </div>
   )

@@ -3,8 +3,8 @@ import List from '..'
 import { generateData } from '../../../mocks/list'
 import * as animations from '../../../utils/animations'
 import { Button } from '../../Button'
-import type { SelectOption } from '../../RichSelect'
-import { RichSelect } from '../../RichSelect'
+import type { SelectOption } from '../../SelectInput'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 
 const selectableAnimations = Object.keys(animations).map(animation => ({
@@ -21,7 +21,7 @@ export const Animated = () => {
 
   return (
     <Stack gap={2}>
-      <RichSelect
+      <SelectInput
         name="animated"
         value={currentAnimation}
         onChange={value => setCurrentAnimation(value as SelectOption)}

@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
-import type { SelectOption } from '../RichSelect'
-import { RichSelect } from '../RichSelect'
+import type { SelectOption } from '../SelectInput'
+import { SelectInput } from '../SelectInput'
 import { TextInput } from '../TextInput'
 
 export const sizesHeight: Record<string, number> = {
@@ -27,7 +27,7 @@ const CustomTextInput = styled(TextInput)`
   }
 `
 
-const CustomRichSelect = styled(RichSelect)<{
+const CustomSelectInput = styled(SelectInput)<{
   width?: number
   height?: number
 }>`
@@ -80,7 +80,7 @@ type UnitInputValue = {
 }
 
 type UnitInputProps = Omit<
-  Partial<ComponentProps<typeof RichSelect>>,
+  Partial<ComponentProps<typeof SelectInput>>,
   'defaultValue'
 > & {
   name?: string
@@ -93,13 +93,13 @@ type UnitInputProps = Omit<
    * @param {{value, unit}} UnitInputValue The value containing the unit select and the value in the TextInput
    */
   onChange?: (value: UnitInputValue) => void
-  /** Possible RichSelect options */
+  /** Possible SelectInput options */
   options?: SelectOption[]
   placeholder?: string
-  richSelectWidth?: number
+  selectInputWidth?: number
   size?: string
   textBoxWidth?: number
-  /** The default selected option in the RichSelect */
+  /** The default selected option in the SelectInput */
   defaultOption?: SelectOption
 }
 
@@ -112,7 +112,7 @@ export const UnitInput = ({
   placeholder = '0',
   onChange,
   textBoxWidth = 100,
-  richSelectWidth = 200,
+  selectInputWidth = 200,
   disabled = false,
   options = defaultOptionValues,
   defaultOption,
@@ -141,8 +141,8 @@ export const UnitInput = ({
         }}
         disabled={disabled}
       />
-      <CustomRichSelect
-        width={richSelectWidth}
+      <CustomSelectInput
+        width={selectInputWidth}
         noTopLabel
         height={sizesHeight[size]}
         id={`${name}-unit`}

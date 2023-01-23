@@ -1,0 +1,30 @@
+import styled from '@emotion/styled'
+import type { Meta } from '@storybook/react'
+import { Form, SelectInputField } from '../..'
+import { mockErrors } from '../../../mocks'
+
+const Container = styled.div`
+  min-height: 300px;
+`
+
+export default {
+  component: SelectInputField,
+  decorators: [
+    ChildStory => (
+      <Form onRawSubmit={() => {}} errors={mockErrors}>
+        <Container>{ChildStory()}</Container>
+      </Form>
+    ),
+  ],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A rich select field',
+      },
+    },
+  },
+  title: 'Form/Components/Fields/SelectInputField',
+} as Meta
+
+export { Playground } from './Playground.stories'
+export { Groups } from './Groups.stories'

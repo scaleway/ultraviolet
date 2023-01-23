@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import { RichSelect } from '../RichSelect'
+import { SelectInput } from '../SelectInput'
 
 const hours = [
   '00:00',
@@ -197,7 +197,7 @@ const defaultValue = {
   value: '00:00',
 }
 
-type TimeInputProps = Partial<ComponentProps<typeof RichSelect>> & {
+type TimeInputProps = Partial<ComponentProps<typeof SelectInput>> & {
   schedule?: ScheduleType
 }
 
@@ -210,7 +210,7 @@ export const TimeInput: TimeInputType = ({
   schedule = 'hours',
   ...props
 }: TimeInputProps = {}) => (
-  <RichSelect {...props} time value={value} options={options(schedule)} />
+  <SelectInput {...props} time value={value} options={options(schedule)} />
 )
 
 TimeInput.options = options
