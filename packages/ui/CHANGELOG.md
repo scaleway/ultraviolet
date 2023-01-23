@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.24](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.23...@scaleway/ui@0.215.24) (2023-01-23)
+
+
+### :bug: Bug Fixes
+
+* **Slider:** rename Slider component to Carousel ([#2213](https://github.com/scaleway/scaleway-ui/issues/2213)) ([bd44e78](https://github.com/scaleway/scaleway-ui/commit/bd44e780151b16192032c9311d25dca486699e43))
+
+
+
 ## [0.215.23](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.22...@scaleway/ui@0.215.23) (2023-01-23)
 
 
