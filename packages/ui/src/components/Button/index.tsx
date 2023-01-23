@@ -255,7 +255,7 @@ const SmartIcon = ({
     <Icon name={icon as ComponentProps<typeof Icon>['name']} size={iconSize} />
   )
 
-const StyledIconContainer = styled('div')`
+const StyledIconContainer = styled.div`
   display: flex;
   pointer-events: none;
 `
@@ -334,8 +334,8 @@ const StyledButton = styled('button', {
       & ${InhibitedStack} {
         transition: max-width 250ms ease, margin-left 250ms ease;
         max-width: 0;
-        margin-left: -${theme.space['1']}; // To counteract parent gap
-        overflow-x: clip; // hidden create a weird white square when size is small
+        margin-left: -${theme.space['1']}; /* To counteract parent gap */
+        overflow-x: clip; /* hidden create a weird white square when size is small */
       }
 
       &:focus ${InhibitedStack}, &:hover ${InhibitedStack} {
@@ -353,7 +353,7 @@ const StyledButton = styled('button', {
       flex-shrink: 0;
       ${action === 'rounded' && `border-radius: 16px;`}
       > svg {
-        // safari issue prevent event propgation
+        /* safari issue prevent event propgation */
         pointer-events: none;
       }
     `}
