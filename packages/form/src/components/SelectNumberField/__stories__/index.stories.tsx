@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { Form, SelectNumberField } from '../..'
-import { mockErrors } from '../../../mocks/mockErrors'
+import { mockErrors } from '../../../mocks'
 
 export default {
   component: SelectNumberField,

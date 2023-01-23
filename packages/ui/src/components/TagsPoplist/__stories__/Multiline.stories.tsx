@@ -5,7 +5,7 @@ export const Multiline = Template.bind({})
 Multiline.parameters = {
   docs: {
     description: {
-      story: '`multiline` can be used to allow a multilined tag container.',
+      story: '`multiline` can be used to allow a multiline tag container.',
     },
   },
 }

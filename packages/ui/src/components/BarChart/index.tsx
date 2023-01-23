@@ -7,7 +7,7 @@ import { useCallback } from 'react'
 import { getLegendColor } from '../../helpers/legend'
 import BarChartTooltip from './Tooltip'
 
-type Formater = ValueFormat<DatumValue>
+type Formatter = ValueFormat<DatumValue>
 
 type TickSpec = NonNullable<
   ComponentProps<typeof ResponsiveBar>['axisBottom']
@@ -18,9 +18,9 @@ type BarChartProps = {
   margin?: Box
   data?: BarDatum[]
   axisFormatters?: Partial<
-    Record<'bottom' | 'left' | 'right' | 'top', Formater>
+    Record<'bottom' | 'left' | 'right' | 'top', Formatter>
   >
-  pointFormatters?: Partial<Record<'x' | 'y', Formater>>
+  pointFormatters?: Partial<Record<'x' | 'y', Formatter>>
   tickValues?: Partial<Record<'bottom' | 'left' | 'right' | 'top', TickSpec>>
   keys?: string[]
   tooltipFunction?: (

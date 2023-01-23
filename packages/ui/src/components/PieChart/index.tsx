@@ -63,7 +63,7 @@ export const PieChart = ({
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data?.length === 0
 
-  const EmptyLegendDisplayer = useCallback(
+  const EmptyLegendDisplayed = useCallback(
     () =>
       emptyLegend ? (
         <EmptyLegend>
@@ -78,7 +78,7 @@ export const PieChart = ({
   const LegendDisplayer = useCallback(
     () =>
       isEmpty ? (
-        <EmptyLegendDisplayer />
+        <EmptyLegendDisplayed />
       ) : (
         <Legends
           focused={currentFocusIndex}
@@ -86,7 +86,7 @@ export const PieChart = ({
           onFocusChange={setCurrentFocusIndex}
         />
       ),
-    [isEmpty, currentFocusIndex, data, EmptyLegendDisplayer],
+    [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed],
   )
 
   return (

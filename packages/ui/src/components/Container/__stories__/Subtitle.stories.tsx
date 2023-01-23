@@ -6,7 +6,7 @@ Subtitle.args = {
   title: 'Title',
   subtitle: (
     <Badge size="small" variant="info">
-      exemple
+      example
     </Badge>
   ),
 }

@@ -450,7 +450,7 @@ function FwdPagination<T>(
 /**
  * @deprecated Use PaginationV2 instead
  */
-// @ts-expect-error it breaks on i don't know what
+// @ts-expect-error it breaks on I don't know what
 export const Pagination = forwardRef(FwdPagination) as (<T>(
   props: PaginationProps<T> & { ref?: ForwardedRef<PaginationState<T>> },
 ) => ReturnType<typeof FwdPagination>) & {

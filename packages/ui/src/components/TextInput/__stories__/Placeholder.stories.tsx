@@ -10,6 +10,6 @@ Placeholder.args = {
 Placeholder.parameters = {
   docs: {
     storyDescription:
-      'Set a placeholder using `placeholder` property. It is only visibled if the `TextInput` has been visited (an input is considered as visited after the first focus).',
+      'Set a placeholder using `placeholder` property. It is only visible if the `TextInput` has been visited (an input is considered as visited after the first focus).',
   },
 }

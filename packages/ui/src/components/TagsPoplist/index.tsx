@@ -47,7 +47,7 @@ type TagsPoplistProps = {
    */
   threshold?: number
   /**
-   * This property define maximum width of each tags. This doesn't apply for tags in tooltip.
+   * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
    */
   multiline?: boolean
 }

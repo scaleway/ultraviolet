@@ -3,7 +3,7 @@ import type { FieldState } from 'final-form'
 import type { ComponentProps, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers/ErrorContext'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 type CheckboxValue = string

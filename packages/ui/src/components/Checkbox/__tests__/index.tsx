@@ -156,7 +156,7 @@ describe('Checkbox', () => {
     await waitFor(() => expect(input.checked).toBe(true))
   })
 
-  test('shoudld not check checkbox with key A', async () => {
+  test('should not check checkbox with key A', async () => {
     const node = renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label

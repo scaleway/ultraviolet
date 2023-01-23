@@ -136,7 +136,7 @@ type ItemProps = {
    */
   variant?: Variants
   /**
-   * Id of the step, automatically injected by Breadcrumbs parent tag
+   * ID of the step, automatically injected by Breadcrumbs parent tag
    */
   step?: number
   onClick?: (

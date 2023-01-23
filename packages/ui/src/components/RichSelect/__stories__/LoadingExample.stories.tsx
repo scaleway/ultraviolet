@@ -25,7 +25,7 @@ export const LoadingExample: ComponentStory<typeof RichSelect> = ({
         Load data
       </Button>
       <RichSelect
-        name="exemple"
+        name="example"
         isLoading={isLoading}
         customComponents={{
           LoadingIndicator: () => <Loader active size={24} />,

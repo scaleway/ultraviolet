@@ -11,7 +11,7 @@ import { Children, useCallback, useMemo } from 'react'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
 import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers/ErrorContext'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 // Here we duplicate RichSelect types as they are using interfaces which are not portable
