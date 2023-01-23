@@ -63,7 +63,6 @@ export {
   ToastContainer,
   toast,
   Tooltip,
-  TooltipIcon,
   UnitInput,
   usePagination,
   VerificationCode,
