@@ -1,6 +1,6 @@
 import type { CSSObject } from '@emotion/react'
 import userEvent from '@testing-library/user-event'
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
@@ -22,13 +22,13 @@ const customStyles: Record<string, CSSObject> = {
   valueContainer: {},
 }
 
-describe('RichSelect', () => {
+describe('SelectInput', () => {
   test('renders correctly uncontrolled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="uncontrolled">
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="uncontrolled">
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
       {
         transform: async node => {
           const input = node.getByRole('combobox')
@@ -39,7 +39,7 @@ describe('RichSelect', () => {
 
   test('renders correctly with emptyState', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="emptyState"
@@ -55,73 +55,73 @@ describe('RichSelect', () => {
 
   test('renders correctly with custom styles', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="uncontrolled"
         customStyle={() => customStyles}
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('renders correctly controlled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="controlled"
         value="test"
         onChange={() => {}}
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="disabled" disabled>
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="disabled" disabled>
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('renders correctly required', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="required" required>
-        <RichSelect.Option value="11">11:00</RichSelect.Option>
-        <RichSelect.Option value="12">12:00</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="required" required>
+        <SelectInput.Option value="11">11:00</SelectInput.Option>
+        <SelectInput.Option value="12">12:00</SelectInput.Option>
+      </SelectInput>,
     ))
   test('renders correctly timed', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="time" time>
-        <RichSelect.Option value="11">11:00</RichSelect.Option>
-        <RichSelect.Option value="12">12:00</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="time" time>
+        <SelectInput.Option value="11">11:00</SelectInput.Option>
+        <SelectInput.Option value="12">12:00</SelectInput.Option>
+      </SelectInput>,
     ))
   test('renders correctly timed with error', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="time-error"
         time
         error="Test error"
       >
-        <RichSelect.Option value="11">11:00</RichSelect.Option>
-        <RichSelect.Option value="12">12:00</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="11">11:00</SelectInput.Option>
+        <SelectInput.Option value="12">12:00</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('renders correctly with click', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test">
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="test">
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
       {
         transform: async node => {
           const input = node.getByRole('combobox')
@@ -132,13 +132,13 @@ describe('RichSelect', () => {
 
   test('renders correctly with click and option disabled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test">
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-        <RichSelect.Option value="c" disabled>
+      <SelectInput inputId="test" labelId="test-label" name="test">
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+        <SelectInput.Option value="c" disabled>
           Option C
-        </RichSelect.Option>
-      </RichSelect>,
+        </SelectInput.Option>
+      </SelectInput>,
       {
         transform: async node => {
           const input = node.getByRole('combobox')
@@ -149,17 +149,17 @@ describe('RichSelect', () => {
 
   test('renders correctly with click and options', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test">
-        <RichSelect.Option value="a" isFocused>
+      <SelectInput inputId="test" labelId="test-label" name="test">
+        <SelectInput.Option value="a" isFocused>
           Option A
-        </RichSelect.Option>
-        <RichSelect.Option value="b" isSelected>
+        </SelectInput.Option>
+        <SelectInput.Option value="b" isSelected>
           Option B
-        </RichSelect.Option>
-        <RichSelect.Option value="c" disabled>
+        </SelectInput.Option>
+        <SelectInput.Option value="c" disabled>
           Option C
-        </RichSelect.Option>
-      </RichSelect>,
+        </SelectInput.Option>
+      </SelectInput>,
       {
         transform: async node => {
           const input = node.getByRole('combobox')
@@ -169,17 +169,17 @@ describe('RichSelect', () => {
     ))
   test('renders correctly disabled with click', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test" disabled>
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="test" disabled>
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
   test('renders correctly default values with click', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test" value="a">
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="test" value="a">
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
       {
         transform: async node => {
           const input = node.getByRole('combobox')
@@ -190,7 +190,7 @@ describe('RichSelect', () => {
 
   test('renders correctly animated', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="animated"
@@ -200,24 +200,24 @@ describe('RichSelect', () => {
         value="a"
         onChange={() => {}}
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
   test('renders correctly multi', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="multi" isMulti>
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-        <RichSelect.Option value="c">Option C</RichSelect.Option>
-        <RichSelect.Option value="d">Option D</RichSelect.Option>
-        <RichSelect.Option value="e">Option E</RichSelect.Option>
-        <RichSelect.Option value="f">Option F</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="multi" isMulti>
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+        <SelectInput.Option value="c">Option C</SelectInput.Option>
+        <SelectInput.Option value="d">Option D</SelectInput.Option>
+        <SelectInput.Option value="e">Option E</SelectInput.Option>
+        <SelectInput.Option value="f">Option F</SelectInput.Option>
+      </SelectInput>,
     ))
   test('renders correctly multi disabled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="multi-disabled"
@@ -225,28 +225,28 @@ describe('RichSelect', () => {
         isMulti
         disabled
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('should render correctly multi isClearable', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="loading"
         value={{ label: 'Option A', value: 'a' }}
         isClearable
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('should render correctly multi isClearable disabled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="loading"
@@ -254,27 +254,27 @@ describe('RichSelect', () => {
         isClearable
         disabled
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
   test('should render correctly multi isSearchable', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="loading"
         value={{ label: 'Option A', value: 'a' }}
         isSearchable
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('should render correctly multi isSearchable disabled', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="loading"
@@ -282,42 +282,42 @@ describe('RichSelect', () => {
         isSearchable
         disabled
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('should render correctly isLoading', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="loading" isLoading>
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+      <SelectInput inputId="test" labelId="test-label" name="loading" isLoading>
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
 
   test('should render correctly with portal', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <>
-        <RichSelect
+        <SelectInput
           inputId="test"
           labelId="test-label"
           name="test"
           menuPortalTarget={document.getElementById('test-portal')}
         >
-          <RichSelect.Option value="a">Option A</RichSelect.Option>
-          <RichSelect.Option value="b">Option B</RichSelect.Option>
-        </RichSelect>
+          <SelectInput.Option value="a">Option A</SelectInput.Option>
+          <SelectInput.Option value="b">Option B</SelectInput.Option>
+        </SelectInput>
         <div id="test-portal" />
       </>,
     ))
 
   test('should render correctly without children', () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <RichSelect inputId="test" labelId="test-label" name="test" />,
+      <SelectInput inputId="test" labelId="test-label" name="test" />,
     ))
   test('should render correctly custom isLoading', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect
+      <SelectInput
         inputId="test"
         labelId="test-label"
         name="test-loading"
@@ -326,22 +326,22 @@ describe('RichSelect', () => {
           LoadingIndicator: () => <div>Loading...</div>,
         }}
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
-        <RichSelect.Option value="b">Option B</RichSelect.Option>
-      </RichSelect>,
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
+        <SelectInput.Option value="b">Option B</SelectInput.Option>
+      </SelectInput>,
     ))
   test('should render correctly description and inlineDescription', () =>
     shouldMatchEmotionSnapshot(
-      <RichSelect inputId="test" labelId="test-label" name="test-loading">
-        <RichSelect.Option
+      <SelectInput inputId="test" labelId="test-label" name="test-loading">
+        <SelectInput.Option
           value="a"
           inlineDescription="This is an inline description"
         >
           Option A
-        </RichSelect.Option>
-        <RichSelect.Option value="b" description="This is a description">
+        </SelectInput.Option>
+        <SelectInput.Option value="b" description="This is a description">
           Option B
-        </RichSelect.Option>
-      </RichSelect>,
+        </SelectInput.Option>
+      </SelectInput>,
     ))
 })

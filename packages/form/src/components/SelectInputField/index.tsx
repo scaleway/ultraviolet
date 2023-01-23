@@ -1,5 +1,5 @@
 import type { CSSObject, Theme, css } from '@emotion/react'
-import { RichSelect } from '@scaleway/ui'
+import { SelectInput } from '@scaleway/ui'
 import type { FieldState } from 'final-form'
 import type {
   ComponentProps,
@@ -14,7 +14,7 @@ import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-// Here we duplicate RichSelect types as they are using interfaces which are not portable
+// Here we duplicate SelectInput types as they are using interfaces which are not portable
 type SelectOption = {
   value: string
   label: ReactNode
@@ -30,7 +30,7 @@ type WithSelectProps = {
 type SelectStyleProps = {
   error?: string
   /**
-   * Custom styles of the RichSelect. See [React select documentation](https://react-select.com/styles)
+   * Custom styles of the SelectInput. See [React select documentation](https://react-select.com/styles)
    */
   customStyle: (
     state: SelectProps & WithSelectProps,
@@ -65,7 +65,7 @@ type SelectProps = StyledContainerProps &
 
 type StateManagedSelect = typeof Select
 
-type RichSelectProps = Partial<
+type SelectInputProps = Partial<
   SelectProps &
     SelectStyleProps & {
       /**
@@ -80,7 +80,7 @@ type RichSelectProps = Partial<
       readOnly?: boolean
       innerRef?: ForwardedRef<StateManagedSelect>
       /**
-       * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
+       * Custom components of the SelectInput. See [React select documentation](https://react-select.com/components)
        */
       customComponents?: SelectProps['components']
       children: ReactNode
@@ -88,17 +88,17 @@ type RichSelectProps = Partial<
     }
 >
 
-type RichSelectOptionProps = OptionProps
-type RichSelectOptionElement = ReactElement<RichSelectOptionProps>
-type RichSelectOptions = SelectProps['options']
-type RichSelectOptionOrGroup = NonNullable<RichSelectOptions>[number]
-type RichSelectOption = { value: string; label: string }
+type SelectInputOptionProps = OptionProps
+type SelectInputOptionElement = ReactElement<SelectInputOptionProps>
+type SelectInputOptions = SelectProps['options']
+type SelectInputOptionOrGroup = NonNullable<SelectInputOptions>[number]
+type SelectInputOption = { value: string; label: string }
 
-export type RichSelectFieldProps<
-  T extends RichSelectOptionOrGroup = RichSelectOptionOrGroup,
+export type SelectInputFieldProps<
+  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
 > = BaseFieldProps<T> &
   Pick<
-    RichSelectProps,
+    SelectInputProps,
     | 'animation'
     | 'animationDuration'
     | 'animationOnChange'
@@ -132,8 +132,8 @@ export type RichSelectFieldProps<
 
 const identity = <T,>(x: T) => x
 
-export const RichSelectField = <
-  T extends RichSelectOptionOrGroup = RichSelectOptionOrGroup,
+export const SelectInputField = <
+  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
 >({
   animation,
   animationDuration,
@@ -167,7 +167,7 @@ export const RichSelectField = <
   noTopLabel,
   noOptionsMessage,
   customStyle,
-}: RichSelectFieldProps<T>) => {
+}: SelectInputFieldProps<T>) => {
   const { getError } = useErrors()
 
   const options = useMemo(
@@ -176,11 +176,11 @@ export const RichSelectField = <
       ((
         Children.toArray(children)
           .flat()
-          .filter(Boolean) as RichSelectOptionElement[]
+          .filter(Boolean) as SelectInputOptionElement[]
       ).map(({ props: { children: labelChild, ...option } }) => ({
         ...option,
         label: labelChild,
-      })) as RichSelectOptions),
+      })) as SelectInputOptions),
     [optionsProp, children],
   )
 
@@ -189,27 +189,29 @@ export const RichSelectField = <
       multiple
         ? parseProp
         : (option: unknown) =>
-            parseProp((option as RichSelectOption)?.value ?? null, name),
+            parseProp((option as SelectInputOption)?.value ?? null, name),
     [multiple, parseProp, name],
   )
 
   const format = useCallback(
     (val: T) => {
-      if (multiple) return formatProp(val, name) as RichSelectOption
+      if (multiple) return formatProp(val, name) as SelectInputOption
 
-      const find = (opts: RichSelectOptionOrGroup[], valueToFind: string) =>
-        opts?.find(option => (option as RichSelectOption).value === valueToFind)
+      const find = (opts: SelectInputOptionOrGroup[], valueToFind: string) =>
+        opts?.find(
+          option => (option as SelectInputOption).value === valueToFind,
+        )
 
       let selected:
-        | RichSelectOptionOrGroup
-        | (RichSelectOptionOrGroup | undefined)[]
+        | SelectInputOptionOrGroup
+        | (SelectInputOptionOrGroup | undefined)[]
         | string
         | undefined = ''
 
       if (val && options) {
         // TODO: find a proper way to simplify format with recursive options
         selected = find(
-          options as unknown as RichSelectOptionOrGroup[],
+          options as unknown as SelectInputOptionOrGroup[],
           val as unknown as string,
         )
 
@@ -217,7 +219,7 @@ export const RichSelectField = <
           selected = options
             .map(curr =>
               find(
-                (curr as unknown as { options: RichSelectOptionOrGroup[] })
+                (curr as unknown as { options: SelectInputOptionOrGroup[] })
                   .options,
                 val as unknown as string,
               ),
@@ -229,22 +231,25 @@ export const RichSelectField = <
         }
       }
 
-      return formatProp(selected as T, name) as RichSelectOption
+      return formatProp(selected as T, name) as SelectInputOption
     },
     [formatProp, multiple, name, options],
   )
 
-  const { input, meta } = useFormField<T, HTMLElement, RichSelectOption>(name, {
-    disabled,
-    format,
-    formatOnBlur,
-    maxLength,
-    minLength: minLength || required ? 1 : undefined,
-    multiple,
-    parse,
-    required,
-    value,
-  })
+  const { input, meta } = useFormField<T, HTMLElement, SelectInputOption>(
+    name,
+    {
+      disabled,
+      format,
+      formatOnBlur,
+      maxLength,
+      minLength: minLength || required ? 1 : undefined,
+      multiple,
+      parse,
+      required,
+      value,
+    },
+  )
 
   const error = getError({
     errorProp,
@@ -255,7 +260,7 @@ export const RichSelectField = <
   })
 
   return (
-    <RichSelect
+    <SelectInput
       animation={animation}
       animationDuration={animationDuration}
       animationOnChange={animationOnChange}
@@ -292,8 +297,8 @@ export const RichSelectField = <
       noOptionsMessage={noOptionsMessage}
     >
       {children}
-    </RichSelect>
+    </SelectInput>
   )
 }
 
-RichSelectField.Option = RichSelect.Option
+SelectInputField.Option = SelectInput.Option

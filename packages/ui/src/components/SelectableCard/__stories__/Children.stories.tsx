@@ -5,21 +5,21 @@ import type { MultiValue, SingleValue } from 'react-select'
 import { SelectableCard } from '..'
 import { Badge } from '../../Badge'
 import { Checkbox } from '../../Checkbox'
-import type { SelectOption } from '../../RichSelect'
-import { RichSelect } from '../../RichSelect'
+import type { SelectOption } from '../../SelectInput'
+import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 
 export const Children: Story = () => {
   const [value, onChange] = useState('label-9')
-  const [richSelectValue, richSelectOnChange] = useState<SelectOption>({
+  const [selectInputValue, selectInputOnChange] = useState<SelectOption>({
     label: 'Option 1',
     value: 'option-1',
   })
 
-  const onRichSelectSelectChange = (
+  const onSelectInputSelectChange = (
     newValue: SingleValue<SelectOption> | MultiValue<SelectOption>,
   ) => {
-    richSelectOnChange(newValue as SelectOption)
+    selectInputOnChange(newValue as SelectOption)
   }
 
   return (
@@ -62,9 +62,9 @@ export const Children: Story = () => {
             First element
           </Checkbox>
 
-          <RichSelect
-            value={richSelectValue}
-            onChange={onRichSelectSelectChange}
+          <SelectInput
+            value={selectInputValue}
+            onChange={onSelectInputSelectChange}
             options={[
               { label: 'Option 1', value: 'option-1' },
               { label: 'Option 2', value: 'option-2' },

@@ -55,9 +55,9 @@ describe('UnitInput', () => {
       shouldMatchEmotionSnapshot(<UnitInput name="default" size={size} />)),
   )
 
-  test(`renders with textBoxWidth and richSelectWidth`, () =>
+  test(`renders with textBoxWidth and selectInputWidth`, () =>
     shouldMatchEmotionSnapshot(
-      <UnitInput name="test" richSelectWidth={100} textBoxWidth={100} />,
+      <UnitInput name="test" selectInputWidth={100} textBoxWidth={100} />,
     ))
 
   test(`renders with disabled and placeHolder`, () =>
@@ -65,7 +65,7 @@ describe('UnitInput', () => {
       <UnitInput name="test" placeholder="100" disabled />,
     ))
 
-  test(`renders with RichSelect update`, async () => {
+  test(`renders with SelectInput update`, async () => {
     const node = renderWithTheme(<UnitInput name="test" />)
 
     // Role textbox is only for the searchable input
@@ -74,12 +74,12 @@ describe('UnitInput', () => {
     await userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
 
-    const richSelect = node.getByTestId('rich-select-test-unit')
-    // Real rich select value is inside a hidden input with the name put in RichSelect props.
-    const richSelectInputHidden = richSelect.querySelector(
+    const selectInput = node.getByTestId('select-input-test-unit')
+    // Real select input value is inside a hidden input with the name put in SelectInput props.
+    const selectInputInputHidden = selectInput.querySelector(
       'input[type="hidden"]',
     ) as HTMLInputElement
-    await waitFor(() => expect(richSelectInputHidden?.value).toBe('weeks'))
+    await waitFor(() => expect(selectInputInputHidden?.value).toBe('weeks'))
   })
 })
 

@@ -1,46 +1,46 @@
 import { fireEvent } from '@testing-library/dom'
 import { act } from '@testing-library/react'
-import { RichSelectField } from '..'
+import { SelectInputField } from '..'
 import {
   mockRandom,
   restoreRandom,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
 
-describe('RichSelectField', () => {
+describe('SelectInputField', () => {
   beforeAll(mockRandom)
 
   afterAll(restoreRandom)
 
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField name="test">
-        <RichSelectField.Option value="value" label="Label" />
-      </RichSelectField>,
+      <SelectInputField name="test">
+        <SelectInputField.Option value="value" label="Label" />
+      </SelectInputField>,
     ))
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField name="test" disabled>
-        <RichSelectField.Option value="value" label="Label" />
-        <RichSelectField.Option value="value2" label="Label 2" />
-      </RichSelectField>,
+      <SelectInputField name="test" disabled>
+        <SelectInputField.Option value="value" label="Label" />
+        <SelectInputField.Option value="value2" label="Label 2" />
+      </SelectInputField>,
     ))
 
   test('should render correctly multiple', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField name="test" multiple>
-        <RichSelectField.Option value="value" label="Label" />
-        <RichSelectField.Option value="value2" label="Label 2" />
-      </RichSelectField>,
+      <SelectInputField name="test" multiple>
+        <SelectInputField.Option value="value" label="Label" />
+        <SelectInputField.Option value="value2" label="Label 2" />
+      </SelectInputField>,
     ))
 
   test('should render correctly with a disabled option', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField name="test">
-        <RichSelectField.Option value="value" label="Label" />
-        <RichSelectField.Option value="value2" label="Label 2" disabled />
-      </RichSelectField>,
+      <SelectInputField name="test">
+        <SelectInputField.Option value="value" label="Label" />
+        <SelectInputField.Option value="value2" label="Label 2" disabled />
+      </SelectInputField>,
     ))
 
   test('should display right value on grouped options', () => {
@@ -56,7 +56,7 @@ describe('RichSelectField', () => {
     ]
 
     return shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField name="test" options={options} />,
+      <SelectInputField name="test" options={options} />,
       {
         transform: async ({ getByRole, getByTestId, container }) => {
           const select = getByRole('combobox') as HTMLInputElement
@@ -85,7 +85,7 @@ describe('RichSelectField', () => {
     const onChange = jest.fn()
 
     return shouldMatchEmotionSnapshotFormWrapper(
-      <RichSelectField
+      <SelectInputField
         name="test"
         options={[
           { label: 'Label', value: 'value' },

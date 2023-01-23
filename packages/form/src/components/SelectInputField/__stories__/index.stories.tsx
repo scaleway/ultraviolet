@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { Meta } from '@storybook/react'
-import { Form, RichSelectField } from '../..'
+import { Form, SelectInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 
 const Container = styled.div`
@@ -8,7 +8,7 @@ const Container = styled.div`
 `
 
 export default {
-  component: RichSelectField,
+  component: SelectInputField,
   decorators: [
     ChildStory => (
       <Form onRawSubmit={() => {}} errors={mockErrors}>
@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-  title: 'Form/Components/Fields/RichSelectField',
+  title: 'Form/Components/Fields/SelectInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'

@@ -7,7 +7,7 @@ import {
   DateField,
   Form,
   RadioField,
-  RichSelectField,
+  SelectInputField,
   SelectableCardField,
   Submit,
   SubmitErrorAlert,
@@ -78,10 +78,10 @@ export const Playground: ComponentStory<typeof Form> = args => {
           regex={[emailRegex]}
         />
 
-        <RichSelectField name="select" required>
-          <RichSelectField.Option value="1">1</RichSelectField.Option>
-          <RichSelectField.Option value="2">2</RichSelectField.Option>
-        </RichSelectField>
+        <SelectInputField name="select" required>
+          <SelectInputField.Option value="1">1</SelectInputField.Option>
+          <SelectInputField.Option value="2">2</SelectInputField.Option>
+        </SelectInputField>
 
         <TagsField name="tags" placeholder="Tags..." />
 

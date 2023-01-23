@@ -1,8 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 
 export default {
-  component: RichSelect,
+  component: SelectInput,
   decorators: [
     StoryComponent => (
       <div style={{ marginBottom: 150 }}>
@@ -14,12 +14,12 @@ export default {
     docs: {
       description: {
         component:
-          'RichSelect is a component used to select a value between different options.',
+          'SelectInput is a component used to select a value between different options.',
       },
     },
   },
-  title: 'Components/Data Entry/RichSelect',
-} as ComponentMeta<typeof RichSelect>
+  title: 'Components/Data Entry/SelectInput',
+} as ComponentMeta<typeof SelectInput>
 
 export { Playground } from './Playground.stories'
 export { Uncontrolled } from './Uncontrolled.stories'

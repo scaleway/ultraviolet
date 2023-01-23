@@ -94,7 +94,7 @@ type SelectStyleMap = Record<string, SelectStyleFactory>
 type SelectStyleProps = {
   error?: string
   /**
-   * Custom styles of the RichSelect. See [React select documentation](https://react-select.com/styles)
+   * Custom styles of the SelectInput. See [React select documentation](https://react-select.com/styles)
    */
   customStyle: (
     state: SelectProps & WithSelectProps,
@@ -347,7 +347,7 @@ const SelectContainer = (
 
   return (
     <StyledContainer
-      data-testid={`rich-select-${name}`}
+      data-testid={`select-input-${name}`}
       additionalStyles={getStyles?.('container', props)}
       isDisabled={isDisabled}
       className={[className, selectPropsClassName].filter(Boolean).join(' ')}
@@ -640,7 +640,7 @@ type SelectComponents = SelectProps['components']
 
 type StateManagedSelect = typeof Select
 
-type RichSelectProps = SelectProps &
+type SelectInputProps = SelectProps &
   SelectStyleProps & {
     /**
      * Name of the animation
@@ -654,7 +654,7 @@ type RichSelectProps = SelectProps &
     readOnly?: boolean
     innerRef?: ForwardedRef<StateManagedSelect>
     /**
-     * Custom components of the RichSelect. See [React select documentation](https://react-select.com/components)
+     * Custom components of the SelectInput. See [React select documentation](https://react-select.com/components)
      */
     customComponents?: SelectProps['components']
     children: ReactNode
@@ -663,7 +663,7 @@ type RichSelectProps = SelectProps &
 
 const defaultCustomStyle = () => ({})
 
-const FwdRichSelect = ({
+const FwdSelectInput = ({
   animation = 'pulse',
   animationDuration = 1000,
   animationOnChange = false,
@@ -691,7 +691,7 @@ const FwdRichSelect = ({
   isLoading,
   required,
   emptyState,
-}: Partial<RichSelectProps>) => {
+}: Partial<SelectInputProps>) => {
   const id = useId()
   const inputId = inputIdProp ?? id
   const theme = useTheme()
@@ -773,14 +773,14 @@ type OptionComponent = (
   props: Partial<OptionProps<SelectOption> & SelectOption>,
 ) => JSX.Element
 
-export const RichSelect = forwardRef(
-  (props: RichSelectProps, ref: ForwardedRef<StateManagedSelect>) => (
-    <FwdRichSelect innerRef={ref} {...props} />
+export const SelectInput = forwardRef(
+  (props: SelectInputProps, ref: ForwardedRef<StateManagedSelect>) => (
+    <FwdSelectInput innerRef={ref} {...props} />
   ),
-) as ForwardRefExoticComponent<Partial<RichSelectProps>> & {
+) as ForwardRefExoticComponent<Partial<SelectInputProps>> & {
   Option: OptionComponent
 }
 
-RichSelect.displayName = 'RichSelect'
+SelectInput.displayName = 'SelectInput'
 
-RichSelect.Option = Option as OptionComponent
+SelectInput.Option = Option as OptionComponent

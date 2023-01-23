@@ -1,9 +1,9 @@
 import type { Story } from '@storybook/react'
-import type { RichSelectFieldProps } from '..'
-import { RichSelectField } from '..'
+import type { SelectInputFieldProps } from '..'
+import { SelectInputField } from '..'
 
-export const Groups: Story<RichSelectFieldProps> = () => (
-  <RichSelectField
+export const Groups: Story<SelectInputFieldProps> = () => (
+  <SelectInputField
     name="options"
     options={[
       {
