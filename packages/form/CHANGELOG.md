@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.25...@scaleway/form@1.39.26) (2023-01-23)
+
+
+### :zap: Refactor
+
+* **RichSelect:** renamed RichSelect and RichSelectField to Selec… ([#2216](https://github.com/scaleway/scaleway-ui/issues/2216)) ([5b6d970](https://github.com/scaleway/scaleway-ui/commit/5b6d970d8825867cc5e74b618aae3bf1865b567c))
+
+
+
 ## [1.39.25](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.24...@scaleway/form@1.39.25) (2023-01-23)
 
 **Note:** Version bump only for package @scaleway/form

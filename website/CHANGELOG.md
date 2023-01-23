@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.25](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.24...scaleway-ui-website@0.2.25) (2023-01-23)
+
+
+### :zap: Refactor
+
+* **RichSelect:** renamed RichSelect and RichSelectField to Selec… ([#2216](https://github.com/scaleway/scaleway-ui/issues/2216)) ([5b6d970](https://github.com/scaleway/scaleway-ui/commit/5b6d970d8825867cc5e74b618aae3bf1865b567c))
+
+
+
 ## [0.2.24](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.23...scaleway-ui-website@0.2.24) (2023-01-23)
 
 **Note:** Version bump only for package scaleway-ui-website
