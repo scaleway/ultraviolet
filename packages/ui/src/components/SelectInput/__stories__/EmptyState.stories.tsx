@@ -24,7 +24,7 @@ EmptyState.args = {
 EmptyState.parameters = {
   docs: {
     description: {
-      story: 'This shows how to use `emptyState` on RichSelect.',
+      story: 'This shows how to use `emptyState` on SelectInput.',
     },
   },
 }

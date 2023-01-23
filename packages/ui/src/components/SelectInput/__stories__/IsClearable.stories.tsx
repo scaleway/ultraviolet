@@ -1,4 +1,4 @@
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import { Template } from './Template.stories'
 
 export const IsClearable = Template.bind({})
@@ -7,12 +7,12 @@ IsClearable.args = {
   isClearable: true,
   value: { label: 'Option A', value: 'a' },
   children: [
-    <RichSelect.Option value="a">Option A</RichSelect.Option>,
-    <RichSelect.Option value="b">Option B</RichSelect.Option>,
+    <SelectInput.Option value="a">Option A</SelectInput.Option>,
+    <SelectInput.Option value="b">Option B</SelectInput.Option>,
   ],
 }
 IsClearable.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isClearable` on RichSelect.',
+    storyDescription: 'This shows how to use `isClearable` on SelectInput.',
   },
 }

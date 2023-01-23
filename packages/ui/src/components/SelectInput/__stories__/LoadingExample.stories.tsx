@@ -1,9 +1,9 @@
 import type { ComponentStory } from '@storybook/react'
 import { useEffect, useState } from 'react'
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import { Button, Loader } from '../..'
 
-export const LoadingExample: ComponentStory<typeof RichSelect> = ({
+export const LoadingExample: ComponentStory<typeof SelectInput> = ({
   ...props
 }) => {
   const [isLoading, setIsLoading] = useState(true)
@@ -24,7 +24,7 @@ export const LoadingExample: ComponentStory<typeof RichSelect> = ({
       <Button size="small" onClick={() => setIsLoading(true)}>
         Load data
       </Button>
-      <RichSelect
+      <SelectInput
         name="example"
         isLoading={isLoading}
         customComponents={{
@@ -32,11 +32,11 @@ export const LoadingExample: ComponentStory<typeof RichSelect> = ({
         }}
         {...props}
       >
-        <RichSelect.Option value="a">Option A</RichSelect.Option>
+        <SelectInput.Option value="a">Option A</SelectInput.Option>
         {!isLoading && (
-          <RichSelect.Option value="b">Option B</RichSelect.Option>
+          <SelectInput.Option value="b">Option B</SelectInput.Option>
         )}
-      </RichSelect>
+      </SelectInput>
     </>
   )
 }

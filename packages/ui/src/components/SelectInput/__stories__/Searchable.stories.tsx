@@ -1,4 +1,4 @@
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import { Template } from './Template.stories'
 
 export const Searchable = Template.bind({})
@@ -6,12 +6,12 @@ Searchable.args = {
   name: 'required',
   isSearchable: true,
   children: [
-    <RichSelect.Option value="a">Option A</RichSelect.Option>,
-    <RichSelect.Option value="b">Option B</RichSelect.Option>,
+    <SelectInput.Option value="a">Option A</SelectInput.Option>,
+    <SelectInput.Option value="b">Option B</SelectInput.Option>,
   ],
 }
 Searchable.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isSearchable` on RichSelect.',
+    storyDescription: 'This shows how to use `isSearchable` on SelectInput.',
   },
 }

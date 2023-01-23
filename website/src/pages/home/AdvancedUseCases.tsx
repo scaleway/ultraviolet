@@ -47,7 +47,7 @@ import {
   Button,
   Checkbox,
   Container,
-  RichSelect,
+  SelectInput,
   TextBox,
   Text,
 } from "@scaleway/ui"
@@ -70,11 +70,11 @@ const App = () => (
         />
       </StyledFieldContainer>
       <StyledFieldContainer>
-        <RichSelect name="language" placeholder="Your favourite language">
-          <RichSelect.Option value="javascript1">Javascript</RichSelect.Option>
-          <RichSelect.Option value="javascript2">Javascript</RichSelect.Option>
-          <RichSelect.Option value="javascript3">Javascript</RichSelect.Option>
-        </RichSelect>
+        <SelectInput name="language" placeholder="Your favourite language">
+          <SelectInput.Option value="javascript1">Javascript</SelectInput.Option>
+          <SelectInput.Option value="javascript2">Javascript</SelectInput.Option>
+          <SelectInput.Option value="javascript3">Javascript</SelectInput.Option>
+        </SelectInput>
       </StyledFieldContainer>
       <StyledFieldContainer>
         <Checkbox name="terms">I agree with this form</Checkbox>

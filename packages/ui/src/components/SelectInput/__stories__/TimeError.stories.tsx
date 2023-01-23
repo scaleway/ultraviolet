@@ -1,4 +1,4 @@
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import { Template } from './Template.stories'
 
 export const TimeError = Template.bind({})
@@ -7,12 +7,12 @@ TimeError.args = {
   time: true,
   error: 'this is an error',
   children: [
-    <RichSelect.Option value="11">11:00</RichSelect.Option>,
-    <RichSelect.Option value="12">12:00</RichSelect.Option>,
+    <SelectInput.Option value="11">11:00</SelectInput.Option>,
+    <SelectInput.Option value="12">12:00</SelectInput.Option>,
   ],
 }
 TimeError.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `time-error` on RichSelect',
+    storyDescription: 'This shows how to use `time-error` on SelectInput',
   },
 }

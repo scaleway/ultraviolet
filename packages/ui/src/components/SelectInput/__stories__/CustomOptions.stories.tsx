@@ -1,4 +1,4 @@
-import { RichSelect } from '..'
+import { SelectInput } from '..'
 import { Badge } from '../../Badge'
 import { Template } from './Template.stories'
 
@@ -6,8 +6,8 @@ export const CustomOptions = Template.bind({})
 CustomOptions.args = {
   name: 'custom-options',
   children: [
-    <RichSelect.Option value="a">Option A</RichSelect.Option>,
-    <RichSelect.Option value="b">
+    <SelectInput.Option value="a">Option A</SelectInput.Option>,
+    <SelectInput.Option value="b">
       <div
         style={{
           alignItems: 'center',
@@ -17,11 +17,11 @@ CustomOptions.args = {
       >
         Option B<Badge size="small">Awesome badge</Badge>
       </div>
-    </RichSelect.Option>,
+    </SelectInput.Option>,
   ],
 }
 CustomOptions.parameters = {
   docs: {
-    storyDescription: 'This shows how to customize options in a RichSelect.',
+    storyDescription: 'This shows how to customize options in a SelectInput.',
   },
 }
