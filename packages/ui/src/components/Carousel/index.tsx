@@ -75,19 +75,22 @@ const StyledBorderWrapper = styled.div`
   }
 `
 
-type SliderItemProps = {
+type CarouselItemProps = {
   children: ReactNode
 }
-export const SliderItem = ({ children }: SliderItemProps): JSX.Element => (
+export const CarouselItem = ({ children }: CarouselItemProps): JSX.Element => (
   <StyledBorderWrapper draggable="true">{children}</StyledBorderWrapper>
 )
 
-type SliderProps = {
+type CarouselProps = {
   className?: string
   children?: ReactNode
 }
 
-export const Slider = ({ children, className }: SliderProps): JSX.Element => {
+export const Carousel = ({
+  children,
+  className,
+}: CarouselProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
@@ -165,4 +168,4 @@ export const Slider = ({ children, className }: SliderProps): JSX.Element => {
   )
 }
 
-Slider.Item = SliderItem
+Carousel.Item = CarouselItem

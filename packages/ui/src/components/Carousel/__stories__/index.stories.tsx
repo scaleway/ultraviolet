@@ -1,8 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
-import { Slider, SliderItem } from '..'
+import { Carousel, CarouselItem } from '..'
 
 export default {
-  component: Slider,
+  component: Carousel,
   parameters: {
     docs: {
       description: {
@@ -11,8 +11,8 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/Slider',
-  subcomponents: { SliderItem },
-} as ComponentMeta<typeof Slider>
+  title: 'Components/Data Display/Carousel',
+  subcomponents: { CarouselItem },
+} as ComponentMeta<typeof Carousel>
 
 export { Playground } from './Playground.stories'

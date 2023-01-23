@@ -1,34 +1,34 @@
 import { act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Slider } from '..'
+import { Carousel } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
 
-describe('Slider', () => {
+describe('Carousel', () => {
   test(`renders correctly with default props`, () =>
     shouldMatchEmotionSnapshot(
-      <Slider>
-        <Slider.Item>Item 1</Slider.Item>
-        <Slider.Item>Item 2</Slider.Item>
-        <Slider.Item>Item 3</Slider.Item>
-        <Slider.Item>Item 4</Slider.Item>
-        <Slider.Item>Item 5</Slider.Item>
-        <Slider.Item>Item 6</Slider.Item>
-      </Slider>,
+      <Carousel>
+        <Carousel.Item>Item 1</Carousel.Item>
+        <Carousel.Item>Item 2</Carousel.Item>
+        <Carousel.Item>Item 3</Carousel.Item>
+        <Carousel.Item>Item 4</Carousel.Item>
+        <Carousel.Item>Item 5</Carousel.Item>
+        <Carousel.Item>Item 6</Carousel.Item>
+      </Carousel>,
     ))
 
   test('check hover state on scrollbar', async () => {
     const container = renderWithTheme(
-      <Slider>
-        <Slider.Item>Item 1</Slider.Item>
-        <Slider.Item>Item 2</Slider.Item>
-        <Slider.Item>Item 3</Slider.Item>
-        <Slider.Item>Item 4</Slider.Item>
-        <Slider.Item>Item 5</Slider.Item>
-        <Slider.Item>Item 6</Slider.Item>
-      </Slider>,
+      <Carousel>
+        <Carousel.Item>Item 1</Carousel.Item>
+        <Carousel.Item>Item 2</Carousel.Item>
+        <Carousel.Item>Item 3</Carousel.Item>
+        <Carousel.Item>Item 4</Carousel.Item>
+        <Carousel.Item>Item 5</Carousel.Item>
+        <Carousel.Item>Item 6</Carousel.Item>
+      </Carousel>,
     )
 
     const scrollbarBefore = container.getByTestId(
