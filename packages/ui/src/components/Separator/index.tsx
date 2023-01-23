@@ -19,7 +19,6 @@ const StyledIconWrapper = styled('div', {
 `
 
 const StyledIcon = styled(Icon)`
-  background-color: ${({ theme }) => theme.colors.neutral.background};
   fill: ${({ theme }) => theme.colors.neutral.border};
 `
 
