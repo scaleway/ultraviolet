@@ -87,7 +87,7 @@ type TextProps = {
   italic?: boolean
   underline?: boolean
   id?: string
-  dir?: string
+  dir?: 'ltr' | 'rtl' | 'auto'
 }
 
 const StyledText = styled('div', {
