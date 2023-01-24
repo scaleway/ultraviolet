@@ -13,14 +13,12 @@ import { forwardRef, isValidElement, useMemo } from 'react'
 import { Icon } from '../Icon'
 import { Link } from '../Link'
 import { Loader } from '../Loader'
+import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
 const TRANSITION_DURATION = 250
 
-const StyledContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const InhibitedStack = styled(Stack)`
   pointer-events: none;
 `
 
@@ -257,19 +255,9 @@ const SmartIcon = ({
     <Icon name={icon as ComponentProps<typeof Icon>['name']} size={iconSize} />
   )
 
-type StyledIcon = {
-  margin: number
-  position?: 'left' | 'right'
-}
-
-const StyledIconContainer = styled('div', {
-  shouldForwardProp: prop => !['margin', 'position'].includes(prop),
-})<StyledIcon>`
+const StyledIconContainer = styled.div`
   display: flex;
-  ${({ margin, position }) => `
-    ${position === 'left' ? `margin-right: ${margin}px;` : ``}
-    ${position === 'right' ? `margin-left: ${margin}px;` : ``}
-    pointer-events: none;`}
+  pointer-events: none;
 `
 type StyledButtonProps = {
   action?: boolean | 'rounded'
@@ -295,12 +283,13 @@ const StyledButton = styled('button', {
   shouldForwardProp: prop =>
     !['action', 'variant', 'extend', 'icon', 'download', 'as'].includes(prop),
 })<StyledButtonProps>`
-  display: inline-flex;
+  display: flex;
+  gap: ${({ theme }) => theme.space['1']};
+  align-items: center;
+  justify-content: center;
   border-radius: ${({ theme }) => theme.radii.default};
   border-width: 0;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   text-decoration: none;
   user-select: none;
@@ -315,8 +304,6 @@ const StyledButton = styled('button', {
   &:hover,
   &:focus {
     text-decoration: none;
-    ${({ target, theme }) =>
-      target === '_blank' ? `gap: ${theme.space['1']};` : ''}
   }
 
   ${sizeStyles}
@@ -324,39 +311,36 @@ const StyledButton = styled('button', {
   ${({ disabled, theme }) =>
     disabled &&
     `
-    cursor: default;
-    pointer-events: none;
-    color: ${theme.colors.neutral.textDisabled};
-    svg {
-      fill: ${theme.colors.neutral.textDisabled};
-    }
+      cursor: default;
+      pointer-events: none;
+      color: ${theme.colors.neutral.textDisabled};
+      svg {
+        fill: ${theme.colors.neutral.textDisabled};
+      }
     `}
 
   ${({ variant, disabled, theme }) =>
     variant !== 'link' &&
     disabled &&
     `
-    background-color: ${theme.colors.neutral.backgroundDisabled};
-    border-color: ${theme.colors.neutral.borderDisabled};
-    box-shadow: none;
+      background-color: ${theme.colors.neutral.backgroundDisabled};
+      border-color: ${theme.colors.neutral.borderDisabled};
+      box-shadow: none;
     `}
 
-  ${({ extend, icon }) =>
+  ${({ extend, theme }) =>
     extend &&
     css`
-      display: inline-flex;
-      & ${StyledContent} {
-        transition: max-width 450ms ease, padding 150ms ease, margin 150ms ease;
+      & ${InhibitedStack} {
+        transition: max-width 250ms ease, margin-left 250ms ease;
         max-width: 0;
-        margin-right: 0;
-        ${icon ? 'padding-right: 0;' : 'padding-left: 0;'};
-        overflow-x: clip; // hidden create a weird white square when size is small
+        margin-left: -${theme.space['1']}; /* To counteract parent gap */
+        overflow-x: clip; /* hidden create a weird white square when size is small */
       }
 
-      &:focus ${StyledContent}, &:hover ${StyledContent} {
+      &:focus ${InhibitedStack}, &:hover ${InhibitedStack} {
         max-width: 275px;
-        margin-right: 8px;
-        ${icon ? 'padding-right: 8x;' : 'padding-left: 8px;'};
+        margin-left: 0;
       }
     `}
 
@@ -369,7 +353,7 @@ const StyledButton = styled('button', {
       flex-shrink: 0;
       ${action === 'rounded' && `border-radius: 16px;`}
       > svg {
-        // safari issue prevent event propgation
+        /* safari issue prevent event propgation */
         pointer-events: none;
       }
     `}
@@ -411,8 +395,6 @@ const FwdButton = ({
 
   const displayProgressOnly = !children
 
-  const iconMargin = extend || (progress && displayProgressOnly) ? 0 : 8
-
   return (
     <Tooltip id={tooltipBaseId} text={tooltip}>
       <StyledButton
@@ -432,10 +414,7 @@ const FwdButton = ({
         {progress === true ||
         progress === 'left' ||
         (icon && iconPosition === 'left') ? (
-          <StyledIconContainer
-            margin={iconMargin}
-            position={children ? 'left' : undefined}
-          >
+          <StyledIconContainer>
             {progress === true || progress === 'left' ? (
               <Loader
                 active
@@ -449,10 +428,12 @@ const FwdButton = ({
           </StyledIconContainer>
         ) : null}
         {(!progress || !displayProgressOnly) && children && (
-          <StyledContent>{children}</StyledContent>
+          <InhibitedStack alignItems="center" justifyContent="center">
+            {children}
+          </InhibitedStack>
         )}
         {progress === 'right' || (icon && iconPosition === 'right') ? (
-          <StyledIconContainer margin={iconMargin} position="right">
+          <StyledIconContainer>
             {progress === 'right' ? (
               <Loader
                 active

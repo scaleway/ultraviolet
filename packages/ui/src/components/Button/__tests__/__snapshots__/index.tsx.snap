@@ -18,22 +18,23 @@ exports[`Button should render correctly loading 1`] = `
   }
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -55,28 +56,27 @@ exports[`Button should render correctly loading 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -90,11 +90,15 @@ exports[`Button should render correctly loading 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -103,16 +107,20 @@ exports[`Button should render correctly loading 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -148,7 +156,7 @@ exports[`Button should render correctly loading 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -174,22 +182,23 @@ exports[`Button should render correctly loading with an icon 1`] = `
   }
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -211,28 +220,27 @@ exports[`Button should render correctly loading with an icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -246,11 +254,15 @@ exports[`Button should render correctly loading with an icon 1`] = `
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -259,15 +271,10 @@ exports[`Button should render correctly loading with an icon 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
-}
-
-.cache-n16c8f-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 8px;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -282,11 +289,11 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -322,12 +329,12 @@ exports[`Button should render correctly loading with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -344,7 +351,7 @@ exports[`Button should render correctly loading with an icon 1`] = `
 
 exports[`Button should render correctly when acting as Link 1`] = `
 <DocumentFragment>
-  .cache-1rri44g-StyledLink-StyledLink-StyledButton {
+  .cache-1swfrso-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -380,21 +387,22 @@ exports[`Button should render correctly when acting as Link 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -416,17 +424,17 @@ exports[`Button should render correctly when acting as Link 1`] = `
   color: #ffffff;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton>* {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -435,52 +443,56 @@ exports[`Button should render correctly when acting as Link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:active {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus svg {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover svg,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus svg {
   -webkit-transform: none!important;
   -moz-transform: none!important;
   -ms-transform: none!important;
   transform: none!important;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -489,15 +501,19 @@ exports[`Button should render correctly when acting as Link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <a
-    class="em6gco80 em6gco82 cache-1rri44g-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-1swfrso-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -507,7 +523,7 @@ exports[`Button should render correctly when acting as Link 1`] = `
 
 exports[`Button should render correctly when acting as Link 2`] = `
 <DocumentFragment>
-  .cache-1lpf4o4-StyledLink-StyledLink-StyledButton {
+  .cache-1swfrso-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -543,21 +559,22 @@ exports[`Button should render correctly when acting as Link 2`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -579,17 +596,17 @@ exports[`Button should render correctly when acting as Link 2`] = `
   color: #ffffff;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton>* {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -598,53 +615,56 @@ exports[`Button should render correctly when acting as Link 2`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:active {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus svg {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover svg,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus svg {
   -webkit-transform: none!important;
   -moz-transform: none!important;
   -ms-transform: none!important;
   transform: none!important;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
-  gap: 8px;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:hover,
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1lpf4o4-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -653,6 +673,10 @@ exports[`Button should render correctly when acting as Link 2`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -674,13 +698,13 @@ exports[`Button should render correctly when acting as Link 2`] = `
 }
 
 <a
-    class="em6gco80 em6gco82 cache-1lpf4o4-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-1swfrso-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -702,22 +726,23 @@ exports[`Button should render correctly when acting as Link 2`] = `
 
 exports[`Button should render correctly when acting as Link with disabled props 1`] = `
 <DocumentFragment>
-  .cache-1fs4y2x-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-je8nbb-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -745,31 +770,35 @@ exports[`Button should render correctly when acting as Link with disabled props 
   box-shadow: none;
 }
 
-.cache-1fs4y2x-StyledButton:hover,
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:hover,
+.cache-je8nbb-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fs4y2x-StyledButton:hover,
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:hover,
+.cache-je8nbb-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-1fs4y2x-StyledButton svg {
+.cache-je8nbb-StyledButton svg {
   fill: #c4c9d6;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -778,18 +807,22 @@ exports[`Button should render correctly when acting as Link with disabled props 
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="true"
-    class="cache-1fs4y2x-StyledButton em6gco80"
+    class="cache-je8nbb-StyledButton em6gco80"
     disabled=""
     href="/"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -799,7 +832,7 @@ exports[`Button should render correctly when acting as Link with disabled props 
 
 exports[`Button should render correctly when acting as dom link 1`] = `
 <DocumentFragment>
-  .cache-1rri44g-StyledLink-StyledLink-StyledButton {
+  .cache-1swfrso-StyledLink-StyledLink-StyledButton {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -835,21 +868,22 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -871,17 +905,17 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   color: #ffffff;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton>* {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton>* {
   pointer-events: none;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -890,52 +924,56 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus::after {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover::after,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus::after {
   background-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:active {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus svg {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover svg,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus svg {
   -webkit-transform: none!important;
   -moz-transform: none!important;
   -ms-transform: none!important;
   transform: none!important;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:hover,
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:hover,
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1rri44g-StyledLink-StyledLink-StyledButton:focus {
+.cache-1swfrso-StyledLink-StyledLink-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -944,15 +982,19 @@ exports[`Button should render correctly when acting as dom link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <a
-    class="em6gco80 em6gco82 cache-1rri44g-StyledLink-StyledLink-StyledButton e4bq1r50"
+    class="em6gco80 em6gco82 cache-1swfrso-StyledLink-StyledLink-StyledButton e4bq1r50"
     href="/"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -962,22 +1004,23 @@ exports[`Button should render correctly when acting as dom link 1`] = `
 
 exports[`Button should render correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1fs4y2x-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-je8nbb-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1005,31 +1048,35 @@ exports[`Button should render correctly when disabled 1`] = `
   box-shadow: none;
 }
 
-.cache-1fs4y2x-StyledButton:hover,
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:hover,
+.cache-je8nbb-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1fs4y2x-StyledButton:hover,
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:hover,
+.cache-je8nbb-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1fs4y2x-StyledButton:focus {
+.cache-je8nbb-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-1fs4y2x-StyledButton svg {
+.cache-je8nbb-StyledButton svg {
   fill: #c4c9d6;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1038,17 +1085,21 @@ exports[`Button should render correctly when disabled 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="true"
-    class="cache-1fs4y2x-StyledButton em6gco80"
+    class="cache-je8nbb-StyledButton em6gco80"
     disabled=""
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -1058,22 +1109,23 @@ exports[`Button should render correctly when disabled 1`] = `
 
 exports[`Button should render correctly when extendable 1`] = `
 <DocumentFragment>
-  .cache-njmq3k-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-14gba39-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1093,49 +1145,47 @@ exports[`Button should render correctly when extendable 1`] = `
   padding: 8px 16px;
   background-color: #4f0599;
   color: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
-.cache-njmq3k-StyledButton-StyledButton:hover,
-.cache-njmq3k-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:hover,
+.cache-14gba39-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-njmq3k-StyledButton-StyledButton:hover,
-.cache-njmq3k-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:hover,
+.cache-14gba39-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-njmq3k-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-njmq3k-StyledButton-StyledButton .em6gco83 {
-  -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
-  transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
+.cache-14gba39-StyledButton-StyledButton .em6gco83 {
+  -webkit-transition: max-width 250ms ease,margin-left 250ms ease;
+  transition: max-width 250ms ease,margin-left 250ms ease;
   max-width: 0;
-  margin-right: 0;
-  padding-left: 0;
+  margin-left: -8px;
   overflow-x: clip;
 }
 
-.cache-njmq3k-StyledButton-StyledButton:focus .em6gco83,
-.cache-njmq3k-StyledButton-StyledButton:hover .em6gco83 {
+.cache-14gba39-StyledButton-StyledButton:focus .em6gco83,
+.cache-14gba39-StyledButton-StyledButton:hover .em6gco83 {
   max-width: 275px;
-  margin-right: 8px;
-  padding-left: 8px;
+  margin-left: 0;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1144,16 +1194,20 @@ exports[`Button should render correctly when extendable 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-njmq3k-StyledButton-StyledButton em6gco80"
+    class="cache-14gba39-StyledButton-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -1163,22 +1217,23 @@ exports[`Button should render correctly when extendable 1`] = `
 
 exports[`Button should render correctly when extendable with an icon 1`] = `
 <DocumentFragment>
-  .cache-a98791-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-14gba39-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1198,50 +1253,43 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   padding: 8px 16px;
   background-color: #4f0599;
   color: #ffffff;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
-.cache-a98791-StyledButton-StyledButton:hover,
-.cache-a98791-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:hover,
+.cache-14gba39-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-a98791-StyledButton-StyledButton:hover,
-.cache-a98791-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:hover,
+.cache-14gba39-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-a98791-StyledButton-StyledButton:focus {
+.cache-14gba39-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-a98791-StyledButton-StyledButton .em6gco83 {
-  -webkit-transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
-  transition: max-width 450ms ease,padding 150ms ease,margin 150ms ease;
+.cache-14gba39-StyledButton-StyledButton .em6gco83 {
+  -webkit-transition: max-width 250ms ease,margin-left 250ms ease;
+  transition: max-width 250ms ease,margin-left 250ms ease;
   max-width: 0;
-  margin-right: 0;
-  padding-right: 0;
+  margin-left: -8px;
   overflow-x: clip;
 }
 
-.cache-a98791-StyledButton-StyledButton:focus .em6gco83,
-.cache-a98791-StyledButton-StyledButton:hover .em6gco83 {
+.cache-14gba39-StyledButton-StyledButton:focus .em6gco83,
+.cache-14gba39-StyledButton-StyledButton:hover .em6gco83 {
   max-width: 275px;
-  margin-right: 8px;
-  padding-right: 8x;
+  margin-left: 0;
 }
 
-.cache-vpgnqw-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 0px;
   pointer-events: none;
 }
 
@@ -1254,11 +1302,15 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   min-height: 1em;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1267,16 +1319,20 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-a98791-StyledButton-StyledButton em6gco80"
+    class="cache-14gba39-StyledButton-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-vpgnqw-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1288,7 +1344,7 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -1298,22 +1354,23 @@ exports[`Button should render correctly when extendable with an icon 1`] = `
 
 exports[`Button should render correctly with a custom Icon 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1335,23 +1392,23 @@ exports[`Button should render correctly with a custom Icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-1sybl11-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1362,11 +1419,11 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 <button
     aria-disabled="false"
     aria-label="icon"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       IconMock
     </div>
@@ -1376,22 +1433,23 @@ exports[`Button should render correctly with a custom Icon 1`] = `
 
 exports[`Button should render correctly with a rounded action button 1`] = `
 <DocumentFragment>
-  .cache-1voqc6n-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-c24ggg-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1420,27 +1478,27 @@ exports[`Button should render correctly with a rounded action button 1`] = `
   border-radius: 16px;
 }
 
-.cache-1voqc6n-StyledButton-StyledButton:hover,
-.cache-1voqc6n-StyledButton-StyledButton:focus {
+.cache-c24ggg-StyledButton-StyledButton:hover,
+.cache-c24ggg-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1voqc6n-StyledButton-StyledButton:hover,
-.cache-1voqc6n-StyledButton-StyledButton:focus {
+.cache-c24ggg-StyledButton-StyledButton:hover,
+.cache-c24ggg-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1voqc6n-StyledButton-StyledButton:focus {
+.cache-c24ggg-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-1voqc6n-StyledButton-StyledButton>svg {
+.cache-c24ggg-StyledButton-StyledButton>svg {
   pointer-events: none;
 }
 
-.cache-1sybl11-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1460,11 +1518,11 @@ exports[`Button should render correctly with a rounded action button 1`] = `
 <button
     aria-disabled="false"
     aria-label="check"
-    class="cache-1voqc6n-StyledButton-StyledButton em6gco80"
+    class="cache-c24ggg-StyledButton-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1485,22 +1543,23 @@ exports[`Button should render correctly with a tooltip 1`] = `
   display: inherit;
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1522,28 +1581,27 @@ exports[`Button should render correctly with a tooltip 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -1556,11 +1614,15 @@ exports[`Button should render correctly with a tooltip 1`] = `
   min-height: 1em;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1569,6 +1631,10 @@ exports[`Button should render correctly with a tooltip 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -1579,11 +1645,11 @@ exports[`Button should render correctly with a tooltip 1`] = `
     <button
       aria-describedby="test"
       aria-disabled="false"
-      class="cache-1btucg0-StyledButton em6gco80"
+      class="cache-1jxbr4b-StyledButton em6gco80"
       type="button"
     >
       <div
-        class="cache-i4evwh-StyledIconContainer em6gco81"
+        class="cache-1cny8u7-StyledIconContainer em6gco81"
       >
         <svg
           class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1595,7 +1661,7 @@ exports[`Button should render correctly with a tooltip 1`] = `
         </svg>
       </div>
       <div
-        class="cache-m245rk-StyledContent em6gco83"
+        class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
       >
         Hello
       </div>
@@ -1606,22 +1672,23 @@ exports[`Button should render correctly with a tooltip 1`] = `
 
 exports[`Button should render correctly with an action button 1`] = `
 <DocumentFragment>
-  .cache-12h0x3i-StyledButton-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1d2yfxr-StyledButton-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1649,27 +1716,27 @@ exports[`Button should render correctly with an action button 1`] = `
   flex-shrink: 0;
 }
 
-.cache-12h0x3i-StyledButton-StyledButton:hover,
-.cache-12h0x3i-StyledButton-StyledButton:focus {
+.cache-1d2yfxr-StyledButton-StyledButton:hover,
+.cache-1d2yfxr-StyledButton-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-12h0x3i-StyledButton-StyledButton:hover,
-.cache-12h0x3i-StyledButton-StyledButton:focus {
+.cache-1d2yfxr-StyledButton-StyledButton:hover,
+.cache-1d2yfxr-StyledButton-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-12h0x3i-StyledButton-StyledButton:focus {
+.cache-1d2yfxr-StyledButton-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-12h0x3i-StyledButton-StyledButton>svg {
+.cache-1d2yfxr-StyledButton-StyledButton>svg {
   pointer-events: none;
 }
 
-.cache-1sybl11-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1689,11 +1756,11 @@ exports[`Button should render correctly with an action button 1`] = `
 <button
     aria-disabled="false"
     aria-label="check"
-    class="cache-12h0x3i-StyledButton-StyledButton em6gco80"
+    class="cache-1d2yfxr-StyledButton-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1710,22 +1777,23 @@ exports[`Button should render correctly with an action button 1`] = `
 
 exports[`Button should render correctly with an icon on the right 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1747,27 +1815,31 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1776,15 +1848,18 @@ exports[`Button should render correctly with an icon on the right 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
-.cache-n16c8f-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 8px;
   pointer-events: none;
 }
 
@@ -1799,16 +1874,16 @@ exports[`Button should render correctly with an icon on the right 1`] = `
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1841,22 +1916,23 @@ exports[`Button should render correctly with as 1`] = `
   }
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1878,28 +1954,27 @@ exports[`Button should render correctly with as 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -1912,11 +1987,15 @@ exports[`Button should render correctly with as 1`] = `
   min-height: 1em;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1925,15 +2004,10 @@ exports[`Button should render correctly with as 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
-}
-
-.cache-n16c8f-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 8px;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -1949,11 +2023,11 @@ exports[`Button should render correctly with as 1`] = `
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -1965,12 +2039,12 @@ exports[`Button should render correctly with as 1`] = `
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -2027,22 +2101,23 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   }
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2064,28 +2139,27 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -2099,11 +2173,15 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   transition: stroke-dashoffset 0.5s ease 0s;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2112,15 +2190,10 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
-}
-
-.cache-n16c8f-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 8px;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -2135,11 +2208,11 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -2175,12 +2248,12 @@ exports[`Button should render correctly with progress left and icon right 1`] = 
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -2213,22 +2286,23 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   }
 }
 
-.cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+.cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2250,28 +2324,27 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-i4evwh-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8px;
   pointer-events: none;
 }
 
@@ -2284,11 +2357,15 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   min-height: 1em;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2297,15 +2374,10 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  pointer-events: none;
-}
-
-.cache-n16c8f-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 8px;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
@@ -2321,11 +2393,11 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-i4evwh-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -2337,12 +2409,12 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
       </svg>
     </div>
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
     <div
-      class="cache-n16c8f-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         aria-label="Loading"
@@ -2383,22 +2455,23 @@ exports[`Button should render correctly with progress right and icon left 1`] = 
 
 exports[`Button should render correctly without a children 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2420,26 +2493,26 @@ exports[`Button should render correctly without a children 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
 <button
     aria-disabled="false"
     aria-label="no content"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   />
 </DocumentFragment>
@@ -2447,22 +2520,23 @@ exports[`Button should render correctly without a children 1`] = `
 
 exports[`Button should render correctly without a children and an icon 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2484,23 +2558,23 @@ exports[`Button should render correctly without a children and an icon 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-1sybl11-StyledIconContainer {
+.cache-1cny8u7-StyledIconContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2520,11 +2594,11 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 <button
     aria-disabled="false"
     aria-label="check icon"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-1sybl11-StyledIconContainer em6gco81"
+      class="cache-1cny8u7-StyledIconContainer em6gco81"
     >
       <svg
         class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
@@ -2541,22 +2615,23 @@ exports[`Button should render correctly without a children and an icon 1`] = `
 
 exports[`Button size render large 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2578,27 +2653,31 @@ exports[`Button size render large 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2607,16 +2686,20 @@ exports[`Button size render large 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -2626,22 +2709,23 @@ exports[`Button size render large 1`] = `
 
 exports[`Button size render medium 1`] = `
 <DocumentFragment>
-  .cache-n4z1pk-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-veebm9-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2662,27 +2746,31 @@ exports[`Button size render medium 1`] = `
   color: #ffffff;
 }
 
-.cache-n4z1pk-StyledButton:hover,
-.cache-n4z1pk-StyledButton:focus {
+.cache-veebm9-StyledButton:hover,
+.cache-veebm9-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-n4z1pk-StyledButton:hover,
-.cache-n4z1pk-StyledButton:focus {
+.cache-veebm9-StyledButton:hover,
+.cache-veebm9-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-n4z1pk-StyledButton:focus {
+.cache-veebm9-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2691,16 +2779,20 @@ exports[`Button size render medium 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-n4z1pk-StyledButton em6gco80"
+    class="cache-veebm9-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -2710,22 +2802,23 @@ exports[`Button size render medium 1`] = `
 
 exports[`Button size render small 1`] = `
 <DocumentFragment>
-  .cache-h4hyn-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-px6vqj-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2746,27 +2839,31 @@ exports[`Button size render small 1`] = `
   color: #ffffff;
 }
 
-.cache-h4hyn-StyledButton:hover,
-.cache-h4hyn-StyledButton:focus {
+.cache-px6vqj-StyledButton:hover,
+.cache-px6vqj-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-h4hyn-StyledButton:hover,
-.cache-h4hyn-StyledButton:focus {
+.cache-px6vqj-StyledButton:hover,
+.cache-px6vqj-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-h4hyn-StyledButton:focus {
+.cache-px6vqj-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2775,16 +2872,20 @@ exports[`Button size render small 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-h4hyn-StyledButton em6gco80"
+    class="cache-px6vqj-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -2794,22 +2895,23 @@ exports[`Button size render small 1`] = `
 
 exports[`Button size render xsmall 1`] = `
 <DocumentFragment>
-  .cache-bbqt4i-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1fnrdew-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2830,27 +2932,31 @@ exports[`Button size render xsmall 1`] = `
   color: #ffffff;
 }
 
-.cache-bbqt4i-StyledButton:hover,
-.cache-bbqt4i-StyledButton:focus {
+.cache-1fnrdew-StyledButton:hover,
+.cache-1fnrdew-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-bbqt4i-StyledButton:hover,
-.cache-bbqt4i-StyledButton:focus {
+.cache-1fnrdew-StyledButton:hover,
+.cache-1fnrdew-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-bbqt4i-StyledButton:focus {
+.cache-1fnrdew-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2859,16 +2965,20 @@ exports[`Button size render xsmall 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-bbqt4i-StyledButton em6gco80"
+    class="cache-1fnrdew-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -2878,22 +2988,23 @@ exports[`Button size render xsmall 1`] = `
 
 exports[`Button size render xxsmall 1`] = `
 <DocumentFragment>
-  .cache-1dkt2fy-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-13ni5kp-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2912,27 +3023,31 @@ exports[`Button size render xxsmall 1`] = `
   color: #ffffff;
 }
 
-.cache-1dkt2fy-StyledButton:hover,
-.cache-1dkt2fy-StyledButton:focus {
+.cache-13ni5kp-StyledButton:hover,
+.cache-13ni5kp-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dkt2fy-StyledButton:hover,
-.cache-1dkt2fy-StyledButton:focus {
+.cache-13ni5kp-StyledButton:hover,
+.cache-13ni5kp-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1dkt2fy-StyledButton:focus {
+.cache-13ni5kp-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2941,16 +3056,20 @@ exports[`Button size render xxsmall 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1dkt2fy-StyledButton em6gco80"
+    class="cache-13ni5kp-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -2960,22 +3079,23 @@ exports[`Button size render xxsmall 1`] = `
 
 exports[`Button variant render info 1`] = `
 <DocumentFragment>
-  .cache-r1tku0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-srdn93-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2997,27 +3117,31 @@ exports[`Button variant render info 1`] = `
   color: #1a4dbf;
 }
 
-.cache-r1tku0-StyledButton:hover,
-.cache-r1tku0-StyledButton:focus {
+.cache-srdn93-StyledButton:hover,
+.cache-srdn93-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-r1tku0-StyledButton:hover,
-.cache-r1tku0-StyledButton:focus {
+.cache-srdn93-StyledButton:hover,
+.cache-srdn93-StyledButton:focus {
   color: #1a4dbf;
   background-color: #c4d5f8;
 }
 
-.cache-r1tku0-StyledButton:focus {
+.cache-srdn93-StyledButton:focus {
   box-shadow: 0 0 0 2px #c4d5f840;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3026,16 +3150,20 @@ exports[`Button variant render info 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-r1tku0-StyledButton em6gco80"
+    class="cache-srdn93-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3045,22 +3173,23 @@ exports[`Button variant render info 1`] = `
 
 exports[`Button variant render info-bordered 1`] = `
 <DocumentFragment>
-  .cache-qi8vud-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-uo5mvv-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3083,38 +3212,42 @@ exports[`Button variant render info-bordered 1`] = `
   color: #3f6ed8;
 }
 
-.cache-qi8vud-StyledButton:hover,
-.cache-qi8vud-StyledButton:focus {
+.cache-uo5mvv-StyledButton:hover,
+.cache-uo5mvv-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-qi8vud-StyledButton svg {
+.cache-uo5mvv-StyledButton svg {
   fill: #3f6ed8;
   pointer-events: none;
 }
 
-.cache-qi8vud-StyledButton:hover,
-.cache-qi8vud-StyledButton:focus {
+.cache-uo5mvv-StyledButton:hover,
+.cache-uo5mvv-StyledButton:focus {
   border: 1px solid #1a4dbf;
   color: #ffffff;
   background-color: #1a4dbf;
 }
 
-.cache-qi8vud-StyledButton:hover svg,
-.cache-qi8vud-StyledButton:focus svg {
+.cache-uo5mvv-StyledButton:hover svg,
+.cache-uo5mvv-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-qi8vud-StyledButton:focus {
+.cache-uo5mvv-StyledButton:focus {
   box-shadow: 0 0 0 2px #1a4dbf40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3123,16 +3256,20 @@ exports[`Button variant render info-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-qi8vud-StyledButton em6gco80"
+    class="cache-uo5mvv-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3142,22 +3279,23 @@ exports[`Button variant render info-bordered 1`] = `
 
 exports[`Button variant render link 1`] = `
 <DocumentFragment>
-  .cache-veq1u9-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1ik106b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3189,29 +3327,33 @@ exports[`Button variant render link 1`] = `
   vertical-align: baseline;
 }
 
-.cache-veq1u9-StyledButton:hover,
-.cache-veq1u9-StyledButton:focus {
+.cache-1ik106b-StyledButton:hover,
+.cache-1ik106b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-veq1u9-StyledButton:hover,
-.cache-veq1u9-StyledButton:focus {
+.cache-1ik106b-StyledButton:hover,
+.cache-1ik106b-StyledButton:focus {
   text-decoration-thickness: 1px;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-color: #1a4dbf;
 }
 
-.cache-veq1u9-StyledButton:active {
+.cache-1ik106b-StyledButton:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3220,16 +3362,20 @@ exports[`Button variant render link 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-veq1u9-StyledButton em6gco80"
+    class="cache-1ik106b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3239,22 +3385,23 @@ exports[`Button variant render link 1`] = `
 
 exports[`Button variant render primary 1`] = `
 <DocumentFragment>
-  .cache-1btucg0-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1jxbr4b-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3276,27 +3423,31 @@ exports[`Button variant render primary 1`] = `
   color: #ffffff;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1btucg0-StyledButton:hover,
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:hover,
+.cache-1jxbr4b-StyledButton:focus {
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1btucg0-StyledButton:focus {
+.cache-1jxbr4b-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3305,16 +3456,20 @@ exports[`Button variant render primary 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1btucg0-StyledButton em6gco80"
+    class="cache-1jxbr4b-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3324,22 +3479,23 @@ exports[`Button variant render primary 1`] = `
 
 exports[`Button variant render primary-bordered 1`] = `
 <DocumentFragment>
-  .cache-1blmjx2-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-10crsdn-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3362,38 +3518,42 @@ exports[`Button variant render primary-bordered 1`] = `
   color: #4f0599;
 }
 
-.cache-1blmjx2-StyledButton:hover,
-.cache-1blmjx2-StyledButton:focus {
+.cache-10crsdn-StyledButton:hover,
+.cache-10crsdn-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1blmjx2-StyledButton svg {
+.cache-10crsdn-StyledButton svg {
   fill: #4f0599;
   pointer-events: none;
 }
 
-.cache-1blmjx2-StyledButton:hover,
-.cache-1blmjx2-StyledButton:focus {
+.cache-10crsdn-StyledButton:hover,
+.cache-10crsdn-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-1blmjx2-StyledButton:hover svg,
-.cache-1blmjx2-StyledButton:focus svg {
+.cache-10crsdn-StyledButton:hover svg,
+.cache-10crsdn-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-1blmjx2-StyledButton:focus {
+.cache-10crsdn-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3402,16 +3562,20 @@ exports[`Button variant render primary-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1blmjx2-StyledButton em6gco80"
+    class="cache-10crsdn-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3421,22 +3585,23 @@ exports[`Button variant render primary-bordered 1`] = `
 
 exports[`Button variant render primary-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-141lx5i-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1xoynue-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3459,38 +3624,42 @@ exports[`Button variant render primary-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-141lx5i-StyledButton:hover,
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:hover,
+.cache-1xoynue-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-141lx5i-StyledButton svg {
+.cache-1xoynue-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-141lx5i-StyledButton:hover,
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:hover,
+.cache-1xoynue-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-141lx5i-StyledButton:hover svg,
-.cache-141lx5i-StyledButton:focus svg {
+.cache-1xoynue-StyledButton:hover svg,
+.cache-1xoynue-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3499,16 +3668,20 @@ exports[`Button variant render primary-soft-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-141lx5i-StyledButton em6gco80"
+    class="cache-1xoynue-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3518,22 +3691,23 @@ exports[`Button variant render primary-soft-bordered 1`] = `
 
 exports[`Button variant render secondary 1`] = `
 <DocumentFragment>
-  .cache-d67n1p-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1841gtf-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3555,27 +3729,31 @@ exports[`Button variant render secondary 1`] = `
   color: #4a4f62;
 }
 
-.cache-d67n1p-StyledButton:hover,
-.cache-d67n1p-StyledButton:focus {
+.cache-1841gtf-StyledButton:hover,
+.cache-1841gtf-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-d67n1p-StyledButton:hover,
-.cache-d67n1p-StyledButton:focus {
+.cache-1841gtf-StyledButton:hover,
+.cache-1841gtf-StyledButton:focus {
   color: #4a4f62;
   background-color: #d4dae7;
 }
 
-.cache-d67n1p-StyledButton:focus {
+.cache-1841gtf-StyledButton:focus {
   box-shadow: 0 0 0 2px #d4dae740;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3584,16 +3762,20 @@ exports[`Button variant render secondary 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-d67n1p-StyledButton em6gco80"
+    class="cache-1841gtf-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3603,22 +3785,23 @@ exports[`Button variant render secondary 1`] = `
 
 exports[`Button variant render secondary-bordered 1`] = `
 <DocumentFragment>
-  .cache-141lx5i-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-1xoynue-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3641,38 +3824,42 @@ exports[`Button variant render secondary-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-141lx5i-StyledButton:hover,
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:hover,
+.cache-1xoynue-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-141lx5i-StyledButton svg {
+.cache-1xoynue-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-141lx5i-StyledButton:hover,
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:hover,
+.cache-1xoynue-StyledButton:focus {
   border: 1px solid #390171;
   color: #ffffff;
   background-color: #390171;
 }
 
-.cache-141lx5i-StyledButton:hover svg,
-.cache-141lx5i-StyledButton:focus svg {
+.cache-1xoynue-StyledButton:hover svg,
+.cache-1xoynue-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-141lx5i-StyledButton:focus {
+.cache-1xoynue-StyledButton:focus {
   box-shadow: 0 0 0 2px #39017140;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3681,16 +3868,20 @@ exports[`Button variant render secondary-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-141lx5i-StyledButton em6gco80"
+    class="cache-1xoynue-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3700,22 +3891,23 @@ exports[`Button variant render secondary-bordered 1`] = `
 
 exports[`Button variant render success 1`] = `
 <DocumentFragment>
-  .cache-coctf5-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-sapn11-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3737,27 +3929,31 @@ exports[`Button variant render success 1`] = `
   color: #ffffff;
 }
 
-.cache-coctf5-StyledButton:hover,
-.cache-coctf5-StyledButton:focus {
+.cache-sapn11-StyledButton:hover,
+.cache-sapn11-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-coctf5-StyledButton:hover,
-.cache-coctf5-StyledButton:focus {
+.cache-sapn11-StyledButton:hover,
+.cache-sapn11-StyledButton:focus {
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-coctf5-StyledButton:focus {
+.cache-sapn11-StyledButton:focus {
   box-shadow: 0 0 0 2px #149a7b40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3766,16 +3962,20 @@ exports[`Button variant render success 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-coctf5-StyledButton em6gco80"
+    class="cache-sapn11-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3785,22 +3985,23 @@ exports[`Button variant render success 1`] = `
 
 exports[`Button variant render success-bordered 1`] = `
 <DocumentFragment>
-  .cache-7pqa6k-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-13i5j2e-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3823,38 +4024,42 @@ exports[`Button variant render success-bordered 1`] = `
   color: #22c8a2;
 }
 
-.cache-7pqa6k-StyledButton:hover,
-.cache-7pqa6k-StyledButton:focus {
+.cache-13i5j2e-StyledButton:hover,
+.cache-13i5j2e-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-7pqa6k-StyledButton svg {
+.cache-13i5j2e-StyledButton svg {
   fill: #22c8a2;
   pointer-events: none;
 }
 
-.cache-7pqa6k-StyledButton:hover,
-.cache-7pqa6k-StyledButton:focus {
+.cache-13i5j2e-StyledButton:hover,
+.cache-13i5j2e-StyledButton:focus {
   border: 1px solid #149a7b;
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-7pqa6k-StyledButton:hover svg,
-.cache-7pqa6k-StyledButton:focus svg {
+.cache-13i5j2e-StyledButton:hover svg,
+.cache-13i5j2e-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-7pqa6k-StyledButton:focus {
+.cache-13i5j2e-StyledButton:focus {
   box-shadow: 0 0 0 2px #149a7b40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3863,16 +4068,20 @@ exports[`Button variant render success-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-7pqa6k-StyledButton em6gco80"
+    class="cache-13i5j2e-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3882,22 +4091,23 @@ exports[`Button variant render success-bordered 1`] = `
 
 exports[`Button variant render success-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-hl5xpl-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-kyta7x-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3920,38 +4130,42 @@ exports[`Button variant render success-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-hl5xpl-StyledButton:hover,
-.cache-hl5xpl-StyledButton:focus {
+.cache-kyta7x-StyledButton:hover,
+.cache-kyta7x-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-hl5xpl-StyledButton svg {
+.cache-kyta7x-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-hl5xpl-StyledButton:hover,
-.cache-hl5xpl-StyledButton:focus {
+.cache-kyta7x-StyledButton:hover,
+.cache-kyta7x-StyledButton:focus {
   border: 1px solid #149a7b;
   color: #ffffff;
   background-color: #149a7b;
 }
 
-.cache-hl5xpl-StyledButton:hover svg,
-.cache-hl5xpl-StyledButton:focus svg {
+.cache-kyta7x-StyledButton:hover svg,
+.cache-kyta7x-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-hl5xpl-StyledButton:focus {
+.cache-kyta7x-StyledButton:focus {
   box-shadow: 0 0 0 2px #149a7b40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3960,16 +4174,20 @@ exports[`Button variant render success-soft-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-hl5xpl-StyledButton em6gco80"
+    class="cache-kyta7x-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -3979,22 +4197,23 @@ exports[`Button variant render success-soft-bordered 1`] = `
 
 exports[`Button variant render transparent 1`] = `
 <DocumentFragment>
-  .cache-1jzovje-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-16vfnry-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4016,17 +4235,21 @@ exports[`Button variant render transparent 1`] = `
   color: #4a4f62;
 }
 
-.cache-1jzovje-StyledButton:hover,
-.cache-1jzovje-StyledButton:focus {
+.cache-16vfnry-StyledButton:hover,
+.cache-16vfnry-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4035,16 +4258,20 @@ exports[`Button variant render transparent 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-1jzovje-StyledButton em6gco80"
+    class="cache-16vfnry-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -4054,22 +4281,23 @@ exports[`Button variant render transparent 1`] = `
 
 exports[`Button variant render warning 1`] = `
 <DocumentFragment>
-  .cache-62l5c4-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-g0tyv7-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4091,27 +4319,31 @@ exports[`Button variant render warning 1`] = `
   color: #ffffff;
 }
 
-.cache-62l5c4-StyledButton:hover,
-.cache-62l5c4-StyledButton:focus {
+.cache-g0tyv7-StyledButton:hover,
+.cache-g0tyv7-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-62l5c4-StyledButton:hover,
-.cache-62l5c4-StyledButton:focus {
+.cache-g0tyv7-StyledButton:hover,
+.cache-g0tyv7-StyledButton:focus {
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-62l5c4-StyledButton:focus {
+.cache-g0tyv7-StyledButton:focus {
   box-shadow: 0 0 0 2px #a6102d40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4120,16 +4352,20 @@ exports[`Button variant render warning 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-62l5c4-StyledButton em6gco80"
+    class="cache-g0tyv7-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -4139,22 +4375,23 @@ exports[`Button variant render warning 1`] = `
 
 exports[`Button variant render warning-bordered 1`] = `
 <DocumentFragment>
-  .cache-t3yhfq-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-16ev2qw-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4177,38 +4414,42 @@ exports[`Button variant render warning-bordered 1`] = `
   color: #a6102d;
 }
 
-.cache-t3yhfq-StyledButton:hover,
-.cache-t3yhfq-StyledButton:focus {
+.cache-16ev2qw-StyledButton:hover,
+.cache-16ev2qw-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-t3yhfq-StyledButton svg {
+.cache-16ev2qw-StyledButton svg {
   fill: #a6102d;
   pointer-events: none;
 }
 
-.cache-t3yhfq-StyledButton:hover,
-.cache-t3yhfq-StyledButton:focus {
+.cache-16ev2qw-StyledButton:hover,
+.cache-16ev2qw-StyledButton:focus {
   border: 1px solid #a6102d;
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-t3yhfq-StyledButton:hover svg,
-.cache-t3yhfq-StyledButton:focus svg {
+.cache-16ev2qw-StyledButton:hover svg,
+.cache-16ev2qw-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-t3yhfq-StyledButton:focus {
+.cache-16ev2qw-StyledButton:focus {
   box-shadow: 0 0 0 2px #a6102d40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4217,16 +4458,20 @@ exports[`Button variant render warning-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-t3yhfq-StyledButton em6gco80"
+    class="cache-16ev2qw-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
@@ -4236,22 +4481,23 @@ exports[`Button variant render warning-bordered 1`] = `
 
 exports[`Button variant render warning-soft-bordered 1`] = `
 <DocumentFragment>
-  .cache-12cltpa-StyledButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  .cache-t4j4tv-StyledButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4274,38 +4520,42 @@ exports[`Button variant render warning-soft-bordered 1`] = `
   color: #b2b6c3;
 }
 
-.cache-12cltpa-StyledButton:hover,
-.cache-12cltpa-StyledButton:focus {
+.cache-t4j4tv-StyledButton:hover,
+.cache-t4j4tv-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-12cltpa-StyledButton svg {
+.cache-t4j4tv-StyledButton svg {
   fill: #b2b6c3;
   pointer-events: none;
 }
 
-.cache-12cltpa-StyledButton:hover,
-.cache-12cltpa-StyledButton:focus {
+.cache-t4j4tv-StyledButton:hover,
+.cache-t4j4tv-StyledButton:focus {
   border: 1px solid #a6102d;
   color: #ffffff;
   background-color: #a6102d;
 }
 
-.cache-12cltpa-StyledButton:hover svg,
-.cache-12cltpa-StyledButton:focus svg {
+.cache-t4j4tv-StyledButton:hover svg,
+.cache-t4j4tv-StyledButton:focus svg {
   fill: #ffffff;
 }
 
-.cache-12cltpa-StyledButton:focus {
+.cache-t4j4tv-StyledButton:focus {
   box-shadow: 0 0 0 2px #a6102d40;
 }
 
-.cache-m245rk-StyledContent {
+.cache-1r86g1b-Stack-InhibitedStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4314,16 +4564,20 @@ exports[`Button variant render warning-soft-bordered 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   pointer-events: none;
 }
 
 <button
     aria-disabled="false"
-    class="cache-12cltpa-StyledButton em6gco80"
+    class="cache-t4j4tv-StyledButton em6gco80"
     type="button"
   >
     <div
-      class="cache-m245rk-StyledContent em6gco83"
+      class="cache-1r86g1b-Stack-InhibitedStack em6gco83"
     >
       Hello
     </div>
