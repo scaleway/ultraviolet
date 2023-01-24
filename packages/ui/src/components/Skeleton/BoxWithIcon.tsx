@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { IconPlaceholder } from './IconPlaceholder'
+import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 
 const StyledContainer = styled.div<{ col: number }>`
@@ -28,8 +28,8 @@ export const BoxWithIcon = ({
 }) => (
   <StyledContainer col={col}>
     {Array.from({ length }, (_, i) => (
-      <Block key={`placeholder-box-${i}`}>
-        <IconPlaceholder />
+      <Block key={`skeleton-box-${i}`}>
+        <IconSkeleton />
         <Line />
       </Block>
     ))}

@@ -25,7 +25,7 @@ const StyledList = styled.ul`
 const Item = ({ col = 3 }: { col: number }) => (
   <StyledItem>
     {Array.from({ length: col }, (_, i) => (
-      <StyledLine key={`placeholder-list-col-${i}`}>
+      <StyledLine key={`skeleton-list-col-${i}`}>
         <Line />
       </StyledLine>
     ))}
@@ -41,7 +41,7 @@ export const List = ({
 }) => (
   <StyledList>
     {Array.from({ length }, (_, i) => (
-      <Item col={col} key={`placeholder-list-${i}`} />
+      <Item col={col} key={`skeleton-list-${i}`} />
     ))}
   </StyledList>
 )

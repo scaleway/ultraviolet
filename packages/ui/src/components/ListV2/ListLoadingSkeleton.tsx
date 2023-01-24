@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Placeholder } from '../Placeholder'
+import { Skeleton } from '../Skeleton'
 import { ListCell } from './ListCell'
 import { ListRow } from './ListRow'
 
@@ -7,22 +7,22 @@ const StyledListRow = styled(ListRow)`
   cursor: progress;
 `
 
-const StyledPlaceholder = styled(Placeholder)`
+const StyledSkeleton = styled(Skeleton)`
   width: 80%;
   max-width: 100%;
 `
 
-type ListLoadingPlaceholderProps = {
+type ListLoadingSkeletonProps = {
   rows?: number
   cols?: number
   className?: string
 }
 
-export const ListLoadingPlaceholder = ({
+export const ListLoadingSkeleton = ({
   cols = 1,
   rows = 5,
   className,
-}: ListLoadingPlaceholderProps) => {
+}: ListLoadingSkeletonProps) => {
   const rowArray = Array.from({ length: rows }, (_, index) => index)
   const colArray = Array.from({ length: cols }, (_, index) => index)
 
@@ -32,13 +32,13 @@ export const ListLoadingPlaceholder = ({
         <StyledListRow
           className={className}
           checkboxRender={<div />}
-          id={`placeholder-${index}`}
+          id={`skeleton-${index}`}
           key={index}
           isHoverable={false}
         >
           {colArray.map(columnIndex => (
             <ListCell key={columnIndex}>
-              <StyledPlaceholder variant="line" />
+              <StyledSkeleton variant="line" />
             </ListCell>
           ))}
         </StyledListRow>

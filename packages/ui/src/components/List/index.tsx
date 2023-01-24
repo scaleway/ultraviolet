@@ -24,8 +24,8 @@ import { usePagination } from '../Pagination/usePagination'
 import { Text } from '../Text'
 import {
   DEFAULT_PLACEHOLDER_ROWS_COUNT,
-  LoadingPlaceholder,
-} from './LoadingPlaceholder'
+  LoadingSkeleton,
+} from './LoadingSkeleton'
 import type { ListSelectBarProps } from './SelectBar'
 import SelectBar from './SelectBar'
 import ListContext, { useListContext } from './context'
@@ -103,7 +103,7 @@ function Body<DataType extends Record<string, unknown>>({
   if (isLoading) {
     return (
       (customLoader as JSX.Element) ?? (
-        <LoadingPlaceholder<DataType>
+        <LoadingSkeleton<DataType>
           columns={columns}
           totalRows={totalLoadingRows}
           Cell={variants[variant].Cell}

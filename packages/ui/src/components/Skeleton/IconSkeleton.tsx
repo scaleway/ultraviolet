@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const IconPlaceholder = styled.div`
+export const IconSkeleton = styled.div`
   margin-right: ${({ theme }) => theme.space['1']};
   width: ${({ theme }) => theme.space['4']};
   height: ${({ theme }) => theme.space['4']};

@@ -7,7 +7,7 @@ import { ListExpandable } from './ListExpandable'
 import { ListHeader } from './ListHeader'
 import { ListHeaderRow } from './ListHeaderRow'
 import { ListHeaders } from './ListHeaders'
-import { ListLoadingPlaceholder } from './ListLoadingPlaceholder'
+import { ListLoadingSkeleton } from './ListLoadingSkeleton'
 import { ListRow } from './ListRow'
 import type { ListDataObject } from './types'
 
@@ -101,7 +101,7 @@ export const List = <T = ListDataObject,>({
           </ListHeaders>
           {isLoading ? (
             <ListBody>
-              <ListLoadingPlaceholder cols={columns.length} />
+              <ListLoadingSkeleton cols={columns.length} />
             </ListBody>
           ) : (
             children
@@ -123,7 +123,7 @@ export const List = <T = ListDataObject,>({
       <Stack gap={1} role="table">
         {isLoading ? (
           <ListBody>
-            <ListLoadingPlaceholder cols={template ? 1 : 12} />
+            <ListLoadingSkeleton cols={template ? 1 : 12} />
           </ListBody>
         ) : (
           children
@@ -139,5 +139,5 @@ List.Cell = ListCell
 List.Headers = ListHeaders
 List.HeaderRow = ListHeaderRow
 List.Header = ListHeader
-List.Placeholder = ListLoadingPlaceholder
+List.Skeleton = ListLoadingSkeleton
 List.Expandable = ListExpandable

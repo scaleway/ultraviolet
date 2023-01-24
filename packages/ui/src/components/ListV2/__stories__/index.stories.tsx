@@ -19,7 +19,7 @@ export default {
     'List.Headers': List.Headers,
     'List.HeaderRow': List.HeaderRow,
     'List.Header': List.Header,
-    'List.Placeholder': List.Placeholder,
+    'List.Skeleton': List.Skeleton,
   },
 } as ComponentMeta<typeof List>
 
