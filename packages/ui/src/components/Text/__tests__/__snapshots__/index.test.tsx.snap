@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Text renders correctly with dir 1`] = `
+<DocumentFragment>
+  .cache-gbpmfn-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+<div
+    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+  >
+    <div
+      class="cache-gbpmfn-StyledText e1tg3t120"
+      dir="rtl"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Text renders correctly with tooltip 1`] = `
 <DocumentFragment>
   .cache-gbpmfn-StyledText {
