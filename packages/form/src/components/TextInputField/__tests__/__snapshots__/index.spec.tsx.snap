@@ -814,23 +814,22 @@ exports[`TextInputField should render correctly random 1`] = `
   min-width: 24px;
 }
 
-.cache-ko0ora-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.cache-19k31i2-StyledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  border-width: 0;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -858,17 +857,17 @@ exports[`TextInputField should render correctly random 1`] = `
   flex-shrink: 0;
 }
 
-.cache-ko0ora-StyledButton:hover,
-.cache-ko0ora-StyledButton:focus {
+.cache-19k31i2-StyledButton:hover,
+.cache-19k31i2-StyledButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-ko0ora-StyledButton>svg {
+.cache-19k31i2-StyledButton>svg {
   pointer-events: none;
 }
 
-.cache-zy3rt6 {
+.cache-brwenz {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -924,12 +923,12 @@ exports[`TextInputField should render correctly random 1`] = `
           >
             <button
               aria-disabled="false"
-              class="cache-ko0ora-StyledButton em6gco80"
+              class="cache-19k31i2-StyledButton em6gco80"
               title="Randomize"
               type="button"
             >
               <div
-                class="cache-zy3rt6 em6gco81"
+                class="cache-brwenz em6gco81"
               >
                 <svg
                   class="cache-kv8vgz-sizeStyles etwatq50"
