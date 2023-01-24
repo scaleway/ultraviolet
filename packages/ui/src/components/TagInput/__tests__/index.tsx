@@ -1,24 +1,28 @@
 import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Tags } from '..'
+import { TagInput } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 const mockOnClick = jest.fn()
 
-describe('Tags', () => {
+describe('TagInput', () => {
   test('renders correctly with base props', () =>
     shouldMatchEmotionSnapshot(
-      <Tags name="radio" onChangeError={() => {}} placeholder="Tags..." />,
+      <TagInput
+        name="radio"
+        onChangeError={() => {}}
+        placeholder="TagInput..."
+      />,
     ))
 
   test('renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
-      <Tags onChange={() => {}} name="radio" tags={['hello', 'world']} />,
+      <TagInput onChange={() => {}} name="radio" tags={['hello', 'world']} />,
     ))
 
   test('renders correctly with some tags objects', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={[
@@ -30,12 +34,12 @@ describe('Tags', () => {
 
   test('renders correctly with some tags', () =>
     shouldMatchEmotionSnapshot(
-      <Tags onChange={() => {}} name="radio" tags={['hello', 'world']} />,
+      <TagInput onChange={() => {}} name="radio" tags={['hello', 'world']} />,
     ))
 
   test('renders correctly with some tags as objects', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={[
@@ -47,7 +51,7 @@ describe('Tags', () => {
 
   test('renders correctly when variant = bordered', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={['hello', 'world']}
@@ -57,7 +61,7 @@ describe('Tags', () => {
 
   test('renders correctly when variant = base', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={['hello', 'world']}
@@ -67,7 +71,7 @@ describe('Tags', () => {
 
   test('renders correctly when variant = no-border', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={['hello', 'world']}
@@ -77,7 +81,7 @@ describe('Tags', () => {
 
   test('renders correctly when manualInput is disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={['hello', 'world']}
@@ -87,7 +91,7 @@ describe('Tags', () => {
 
   test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         onChange={() => {}}
         name="radio"
         tags={['hello', 'world']}
@@ -97,7 +101,7 @@ describe('Tags', () => {
 
   test('delete tag', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {}}
         name="radio"
@@ -121,7 +125,7 @@ describe('Tags', () => {
     ))
   test('delete tag with error', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {
           throw new Error('Not Working')
@@ -146,7 +150,7 @@ describe('Tags', () => {
 
   test('add tag from input', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={mockOnClick}
         name="radio"
@@ -164,7 +168,7 @@ describe('Tags', () => {
 
   test('add tag from input with error', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {
           throw new Error('Not Working')
@@ -184,7 +188,7 @@ describe('Tags', () => {
 
   test('delete tag with backspace', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {}}
         name="radio"
@@ -205,7 +209,7 @@ describe('Tags', () => {
 
   test('add tag on paste', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {}}
         name="radio"
@@ -224,7 +228,7 @@ describe('Tags', () => {
     ))
   test('add tag on paste with error', () =>
     shouldMatchEmotionSnapshot(
-      <Tags
+      <TagInput
         id="test"
         onChange={() => {
           throw new Error('Not Working')

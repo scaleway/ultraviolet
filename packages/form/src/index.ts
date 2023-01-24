@@ -12,7 +12,7 @@ export {
   SelectNumberField,
   Submit,
   SubmitErrorAlert,
-  TagsField,
+  TagInputField,
   TextInputField,
   TimeField,
   ToggleField,

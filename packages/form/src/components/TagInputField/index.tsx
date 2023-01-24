@@ -1,14 +1,17 @@
-import { Tags } from '@scaleway/ui'
+import { TagInput } from '@scaleway/ui'
 import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'
 
-type TagsProp = ComponentProps<typeof Tags>['tags']
+type TagInputProp = ComponentProps<typeof TagInput>['tags']
 
-export type TagsFieldProps<T = TagsProp, K = string> = BaseFieldProps<T, K> &
+export type TagInputFieldProps<T = TagInputProp, K = string> = BaseFieldProps<
+  T,
+  K
+> &
   Partial<
     Pick<
-      ComponentProps<typeof Tags>,
+      ComponentProps<typeof TagInput>,
       | 'tags'
       | 'variant'
       | 'onChange'
@@ -22,7 +25,7 @@ export type TagsFieldProps<T = TagsProp, K = string> = BaseFieldProps<T, K> &
     required?: boolean
   }
 
-export const TagsField = ({
+export const TagInputField = ({
   className,
   disabled,
   id,
@@ -33,8 +36,8 @@ export const TagsField = ({
   tags,
   validate,
   variant,
-}: TagsFieldProps): JSX.Element => {
-  const { input } = useFormField<TagsProp>(name, {
+}: TagInputFieldProps): JSX.Element => {
+  const { input } = useFormField<TagInputProp>(name, {
     disabled,
     required,
     initialValue: tags,
@@ -44,7 +47,7 @@ export const TagsField = ({
   })
 
   return (
-    <Tags
+    <TagInput
       className={className}
       disabled={disabled}
       id={id}

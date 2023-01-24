@@ -55,7 +55,7 @@ export {
   Tabs,
   Table,
   Tag,
-  Tags,
+  TagInput,
   TagsPoplist,
   Text,
   TextInput,

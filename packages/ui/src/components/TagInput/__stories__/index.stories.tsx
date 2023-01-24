@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react'
-import { Tags } from '..'
+import { TagInput } from '..'
 
 export default {
-  component: Tags,
+  component: TagInput,
   parameters: {
     docs: {
       description: {
@@ -10,7 +10,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Entry/Tags',
+  title: 'Components/Data Entry/TagInput',
 } as Meta
 
 export { Playground } from './Playground.stories'

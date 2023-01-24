@@ -28,7 +28,7 @@ const testedComponents = [
   'StepList',
   'Toaster',
   'Tag',
-  'Tags',
+  'TagInput',
   'TextInput',
   'Radio',
 ]
