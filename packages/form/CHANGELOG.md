@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.27](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.26...@scaleway/form@1.39.27) (2023-01-24)
+
+
+### :bug: Bug Fixes
+
+* **Button:** proper layout on extend buttons ([#2154](https://github.com/scaleway/scaleway-ui/issues/2154)) ([21456c0](https://github.com/scaleway/scaleway-ui/commit/21456c0eb876e49ceca3f87be4657b620ef313a3))
+
+
+
 ## [1.39.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.25...@scaleway/form@1.39.26) (2023-01-23)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.215.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.25...@scaleway/ui@0.215.26) (2023-01-24)
+
+
+### :bug: Bug Fixes
+
+* **Button:** proper layout on extend buttons ([#2154](https://github.com/scaleway/scaleway-ui/issues/2154)) ([21456c0](https://github.com/scaleway/scaleway-ui/commit/21456c0eb876e49ceca3f87be4657b620ef313a3))
+* **Separator:** background color in dark theme ([#2214](https://github.com/scaleway/scaleway-ui/issues/2214)) ([c9647fc](https://github.com/scaleway/scaleway-ui/commit/c9647fcf83fccdd95157c52a2bbffb7cf959ea00))
+* **TooltipIcon:** remove component ([#2215](https://github.com/scaleway/scaleway-ui/issues/2215)) ([62c4cd4](https://github.com/scaleway/scaleway-ui/commit/62c4cd428876de1d4ea7452f01372c784b64a68a))
+
+
+
 ## [0.215.25](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.24...@scaleway/ui@0.215.25) (2023-01-23)
 
 
