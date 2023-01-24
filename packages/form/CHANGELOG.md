@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.28](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.27...@scaleway/form@1.39.28) (2023-01-24)
+
+
+### :zap: Refactor
+
+* **Tags+TagsField:** rename Tags and TagsField to TagInput and TagInputField ([#2218](https://github.com/scaleway/scaleway-ui/issues/2218)) ([eb4c22f](https://github.com/scaleway/scaleway-ui/commit/eb4c22f36ba15789c45c0955ba2afc0ded718f80))
+
+
+
 ## [1.39.27](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.26...@scaleway/form@1.39.27) (2023-01-24)
 
 
