@@ -60,13 +60,13 @@ const variants = {
 
 type Variant = keyof typeof variants
 
-type TagsContainersProps = {
+type TagInputContainersProps = {
   variant: Variant
 }
 
-const TagsContainer = styled('div', {
+const TagInputContainer = styled('div', {
   shouldForwardProp: prop => !['variant'].includes(prop),
-})<TagsContainersProps>`
+})<TagInputContainersProps>`
   display: flex;
   flex-wrap: wrap;
   background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
@@ -85,16 +85,16 @@ const StyledInput = styled.input`
   }
 `
 
-const convertTagArrayToTagStateArray = (tags?: TagsProp) =>
+const convertTagArrayToTagStateArray = (tags?: TagInputProp) =>
   (tags || [])?.map((tag, index) =>
     typeof tag === 'object'
       ? { ...tag, index: getUUID(`tag-${index}`) }
       : { index: getUUID(`tag-${index}`), label: tag },
   )
 
-type TagsProp = (string | { label: string; index: string })[]
+type TagInputProp = (string | { label: string; index: string })[]
 
-type TagsProps = {
+type TagInputProps = {
   disabled?: boolean
   id?: string
   manualInput?: boolean
@@ -102,12 +102,12 @@ type TagsProps = {
   onChange?: (tags: string[]) => void
   onChangeError?: (error: Error | string) => void
   placeholder?: string
-  tags?: TagsProp
+  tags?: TagInputProp
   variant?: Variant
   className?: string
 }
 
-export const Tags = ({
+export const TagInput = ({
   disabled = false,
   id,
   manualInput = true,
@@ -118,20 +118,20 @@ export const Tags = ({
   tags,
   variant = 'base',
   className,
-}: TagsProps): JSX.Element => {
-  const [tagsState, setTags] = useState(
+}: TagInputProps): JSX.Element => {
+  const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(tags ?? []),
   )
   const [input, setInput] = useState<string>('')
   const [status, setStatus] = useState<{ [key: string]: StatusValue }>({})
 
   useEffect(() => {
-    setTags(convertTagArrayToTagStateArray(tags))
-  }, [tags, setTags])
+    setTagInput(convertTagArrayToTagStateArray(tags))
+  }, [tags, setTagInput])
 
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const dispatchOnChange = (newState: TagsProp) => {
+  const dispatchOnChange = (newState: TagInputProp) => {
     const changes = newState.map(tag =>
       typeof tag === 'object' ? tag?.label : tag,
     )
@@ -149,35 +149,35 @@ export const Tags = ({
     setInput(e.target.value)
 
   const addTag = () => {
-    const newTags = input
-      ? [...tagsState, { index: getUUID('tag'), label: input }]
-      : tagsState
+    const newTagInput = input
+      ? [...tagInputState, { index: getUUID('tag'), label: input }]
+      : tagInputState
     setInput('')
-    setTags(newTags)
-    if (newTags.length !== tagsState.length) {
-      setStatus({ [newTags[newTags.length - 1].index]: STATUS.LOADING })
+    setTagInput(newTagInput)
+    if (newTagInput.length !== tagInputState.length) {
+      setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.LOADING })
     }
     try {
-      dispatchOnChange(newTags)
-      setStatus({ [newTags[newTags.length - 1].index]: STATUS.IDLE })
+      dispatchOnChange(newTagInput)
+      setStatus({ [newTagInput[newTagInput.length - 1].index]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
-      setTags(tagsState)
+      setTagInput(tagInputState)
     }
   }
 
   const deleteTag = (tagIndex: string) => {
     setStatus({ [tagIndex]: STATUS.LOADING })
-    const findIndex = tagsState.findIndex(({ index }) => index === tagIndex)
-    const newTags = [...tagsState]
-    newTags.splice(findIndex, 1)
+    const findIndex = tagInputState.findIndex(({ index }) => index === tagIndex)
+    const newTagInput = [...tagInputState]
+    newTagInput.splice(findIndex, 1)
     try {
-      dispatchOnChange(newTags)
-      setTags(newTags)
+      dispatchOnChange(newTagInput)
+      setTagInput(newTagInput)
       setStatus({ [tagIndex]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
-      setTags(tagsState)
+      setTagInput(tagInputState)
     }
   }
 
@@ -197,38 +197,38 @@ export const Tags = ({
     if (
       backspace.includes(key) &&
       inputRef?.current?.selectionStart === 0 &&
-      tagsState.length
+      tagInputState.length
     ) {
       e.preventDefault()
-      deleteTag(tagsState[tagsState.length - 1].index)
+      deleteTag(tagInputState[tagInputState.length - 1].index)
     }
   }
 
   const handlePaste: ClipboardEventHandler<HTMLInputElement> = e => {
     e.preventDefault()
-    const newTags = [
-      ...tagsState,
+    const newTagInput = [
+      ...tagInputState,
       { index: getUUID('tag'), label: e?.clipboardData?.getData('Text') },
     ]
-    setTags(newTags)
-    setStatus({ [newTags.length - 1]: STATUS.LOADING })
+    setTagInput(newTagInput)
+    setStatus({ [newTagInput.length - 1]: STATUS.LOADING })
     try {
-      dispatchOnChange(newTags)
-      setStatus({ [newTags.length - 1]: STATUS.IDLE })
+      dispatchOnChange(newTagInput)
+      setStatus({ [newTagInput.length - 1]: STATUS.IDLE })
     } catch (error) {
       onChangeError?.(error as Error)
-      setTags(tagsState)
+      setTagInput(tagInputState)
     }
   }
 
   return (
-    <TagsContainer
+    <TagInputContainer
       onClick={handleContainerClick}
       variant={variant}
       onBlur={addTag}
       className={className}
     >
-      {tagsState.map(tag => (
+      {tagInputState.map(tag => (
         <Tag
           variant="neutral"
           disabled={disabled}
@@ -248,7 +248,7 @@ export const Tags = ({
           name={name}
           aria-label={name}
           type="text"
-          placeholder={!tagsState.length ? placeholder : ''}
+          placeholder={!tagInputState.length ? placeholder : ''}
           value={input}
           onChange={onInputChange}
           onKeyDown={handleInputKeydown}
@@ -256,6 +256,6 @@ export const Tags = ({
           ref={inputRef}
         />
       ) : null}
-    </TagsContainer>
+    </TagInputContainer>
   )
 }

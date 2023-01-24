@@ -11,7 +11,7 @@ import {
   SelectableCardField,
   Submit,
   SubmitErrorAlert,
-  TagsField,
+  TagInputField,
   TextInputField,
   TimeField,
   ToggleField,
@@ -83,7 +83,7 @@ export const Playground: ComponentStory<typeof Form> = args => {
           <SelectInputField.Option value="2">2</SelectInputField.Option>
         </SelectInputField>
 
-        <TagsField name="tags" placeholder="Tags..." />
+        <TagInputField name="taginput" placeholder="TagInput..." />
 
         <Stack gap={2} direction="row" justifyContent="center">
           <CheckboxField name="receiveEmailUpdates">
