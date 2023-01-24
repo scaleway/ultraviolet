@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
-import { Tags } from '..'
+import { TagInput } from '..'
 
-export const Template: ComponentStory<typeof Tags> = args => (
-  <Tags name="template" {...args} />
+export const Template: ComponentStory<typeof TagInput> = args => (
+  <TagInput name="template" {...args} />
 )
