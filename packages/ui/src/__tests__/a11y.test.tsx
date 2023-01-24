@@ -27,7 +27,6 @@ const testedComponents = [
   'SelectableCard',
   'StepList',
   'Toaster',
-  'TooltipIcon',
   'Tag',
   'Tags',
   'TextInput',
