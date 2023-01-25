@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.216.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.216.0...@scaleway/ui@0.216.1) (2023-01-25)
+
+
+### :zap: Refactor
+
+* rename placeholder to skeleton ([#2217](https://github.com/scaleway/scaleway-ui/issues/2217)) ([d639eb5](https://github.com/scaleway/scaleway-ui/commit/d639eb58f0bf32dbffdd70416a2fda2f3cc7e308))
+
+
+
 ## [0.216.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.27...@scaleway/ui@0.216.0) (2023-01-25)
 
 
