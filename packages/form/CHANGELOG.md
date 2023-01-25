@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.31](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.30...@scaleway/form@1.39.31) (2023-01-25)
+
+
+### :package: Chore
+
+* **form:** export Field from react-final-form ([#2221](https://github.com/scaleway/scaleway-ui/issues/2221)) ([cea7b26](https://github.com/scaleway/scaleway-ui/commit/cea7b266800f8f28dfbd6d840d05e7e9d570bd6b))
+
+
+
 ## [1.39.30](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.29...@scaleway/form@1.39.30) (2023-01-25)
 
 **Note:** Version bump only for package @scaleway/form
