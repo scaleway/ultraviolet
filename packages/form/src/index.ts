@@ -1,7 +1,13 @@
 export { FieldArray, useFieldArray } from 'react-final-form-arrays'
 export { FORM_ERROR } from 'final-form'
 export type { FormApi } from 'final-form'
-export { FormSpy, useFormState, useForm, useField } from 'react-final-form'
+export {
+  FormSpy,
+  useFormState,
+  useForm,
+  useField,
+  Field,
+} from 'react-final-form'
 export {
   CheckboxField,
   DateField,
