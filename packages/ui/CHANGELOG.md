@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.216.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.27...@scaleway/ui@0.216.0) (2023-01-25)
+
+
+### :gear: Features
+
+* **Text:** add `dir` prop ([#2219](https://github.com/scaleway/scaleway-ui/issues/2219)) ([772d429](https://github.com/scaleway/scaleway-ui/commit/772d4290335df1801ff5564b352509943e80efa6))
+
+
+
 ## [0.215.27](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.215.26...@scaleway/ui@0.215.27) (2023-01-24)
 
 
