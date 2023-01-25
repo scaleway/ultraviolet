@@ -87,6 +87,7 @@ type TextProps = {
   italic?: boolean
   underline?: boolean
   id?: string
+  dir?: 'ltr' | 'rtl' | 'auto'
 }
 
 const StyledText = styled('div', {
@@ -123,6 +124,7 @@ export const Text = ({
   italic = false,
   underline = false,
   id,
+  dir,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -150,6 +152,7 @@ export const Text = ({
         italic={italic}
         underline={underline}
         id={id}
+        dir={dir}
       >
         {children}
       </StyledText>
