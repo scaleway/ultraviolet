@@ -175,7 +175,7 @@ export const NumberInput = ({
   disabled = false,
   maxValue,
   minValue = 0,
-  name = 'selectnumber',
+  name = 'numberinput',
   onChange,
   onFocus,
   onBlur,
