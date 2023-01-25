@@ -57,21 +57,21 @@ export const variants = {
   slider: Slider,
 } as const
 
-type PlaceholderVariant = keyof typeof variants
+type SkeletonVariant = keyof typeof variants
 
-type PlaceholderProps = {
-  variant?: PlaceholderVariant
+type SkeletonProps = {
+  variant?: SkeletonVariant
   length?: number
   col?: number
   className?: string
 }
 
-export const Placeholder = ({
+export const Skeleton = ({
   variant = 'blocks',
   length,
   col,
   className,
-}: PlaceholderProps) => {
+}: SkeletonProps) => {
   const Component = variants[variant]
 
   return (
@@ -83,4 +83,4 @@ export const Placeholder = ({
   )
 }
 
-export const placeholderTypes = Object.keys(variants) as PlaceholderVariant[]
+export const skeletonTypes = Object.keys(variants) as SkeletonVariant[]

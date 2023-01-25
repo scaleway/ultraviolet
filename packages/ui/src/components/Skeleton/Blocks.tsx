@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { IconPlaceholder } from './IconPlaceholder'
+import { IconSkeleton } from './IconSkeleton'
 import { Line } from './Line'
 
 const StyledContainer = styled.div<{ col: number }>`
@@ -27,8 +27,8 @@ export const Blocks = ({
 }) => (
   <StyledContainer col={col}>
     {Array.from({ length }, (_, i) => (
-      <Block key={`placeholder-blocks-${i}`}>
-        <IconPlaceholder />
+      <Block key={`skeleton-blocks-${i}`}>
+        <IconSkeleton />
         <Line />
       </Block>
     ))}

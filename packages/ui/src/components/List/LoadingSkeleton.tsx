@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react'
 import { useMemo } from 'react'
-import { Placeholder } from '../Placeholder'
+import { Skeleton } from '../Skeleton'
 import { Stack } from '../Stack'
 import type { ListColumn } from './types'
 
-type LoadingPlaceholderProps<DataType> = {
+type LoadingSkeletonProps<DataType> = {
   totalRows: number
   columns: ListColumn<DataType>[]
   Cell: ({ children }: { children: ReactNode }) => JSX.Element | null
@@ -13,12 +13,12 @@ type LoadingPlaceholderProps<DataType> = {
 
 export const DEFAULT_PLACEHOLDER_ROWS_COUNT = 3
 
-export const LoadingPlaceholder = <DataType,>({
+export const LoadingSkeleton = <DataType,>({
   totalRows,
   columns,
   Cell,
   Row,
-}: LoadingPlaceholderProps<DataType>) => {
+}: LoadingSkeletonProps<DataType>) => {
   const rows = useMemo(() => Array.from(Array(totalRows).keys()), [totalRows])
 
   return (
@@ -27,7 +27,7 @@ export const LoadingPlaceholder = <DataType,>({
         <Row id={index.toString()} key={index.toString()}>
           {columns.map(column => (
             <Cell key={column.label}>
-              {column.label ? <Placeholder variant="line" /> : null}
+              {column.label ? <Skeleton variant="line" /> : null}
             </Cell>
           ))}
         </Row>

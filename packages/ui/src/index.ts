@@ -35,7 +35,7 @@ export {
   PasswordCheck,
   PasswordStrengthMeter,
   PieChart,
-  Placeholder,
+  Skeleton,
   ProgressBar,
   ProgressionButton,
   Radio,

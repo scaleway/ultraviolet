@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { Pagination } from '..'
 import { Button } from '../../Button'
-import { Placeholder } from '../../Placeholder'
+import { Skeleton } from '../../Skeleton'
 import getPageNumbers from '../getPageNumbers'
 import ExampleChildren from './ExampleChildren'
 
@@ -194,7 +194,7 @@ CustomComponents.decorators = [
         LoaderComponent={() => (
           <div style={{ display: 'grid', gap: 16 }}>
             {Array.from({ length: 5 }, (_, index) => index).map(value => (
-              <Placeholder key={value} variant="line" />
+              <Skeleton key={value} variant="line" />
             ))}
           </div>
         )}

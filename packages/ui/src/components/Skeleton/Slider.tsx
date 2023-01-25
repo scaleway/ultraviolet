@@ -26,7 +26,7 @@ const StyledBanner = styled.div`
 export const Slider = ({ length = 4 }: { length?: number }) => (
   <StyledContainer length={length}>
     {Array.from({ length }, (_, i) => (
-      <StyledCard key={`placeholder-slider-card-${i}`}>
+      <StyledCard key={`skeleton-slider-card-${i}`}>
         <StyledBanner />
       </StyledCard>
     ))}

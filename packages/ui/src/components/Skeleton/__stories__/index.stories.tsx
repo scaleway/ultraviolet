@@ -1,19 +1,19 @@
 import type { ComponentMeta } from '@storybook/react'
-import { Placeholder } from '..'
+import { Skeleton } from '..'
 
 export default {
-  component: Placeholder,
+  component: Skeleton,
   decorators: [StoryComponent => <StoryComponent />],
   parameters: {
     docs: {
       description: {
         component:
-          'Placeholder will display empty blocks with animation. It can be used for loading screen or loading components. In terms of accessibility, do not forget to add aria-live and aria-busy true/false to the placeholder container.',
+          'Skeleton will display empty blocks with animation. It can be used for loading screen or loading components. In terms of accessibility, do not forget to add aria-live and aria-busy true/false to the skeleton container.',
       },
     },
   },
-  title: 'Components/Feedback/Placeholder',
-} as ComponentMeta<typeof Placeholder>
+  title: 'Components/Feedback/Skeleton',
+} as ComponentMeta<typeof Skeleton>
 
 export { Playground } from './Playground.stories'
 export { Block } from './Block.stories'

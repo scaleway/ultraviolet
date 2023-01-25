@@ -17,7 +17,7 @@ const testedComponents = [
   'Carousel',
   'Checkbox',
   'MarkDown',
-  'Placeholder',
+  'Skeleton',
   'Separator',
   'Sphere',
   'Stack',
