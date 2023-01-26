@@ -56,7 +56,7 @@ export {
   Table,
   Tag,
   TagInput,
-  TagsPoplist,
+  TagList,
   Text,
   TextInput,
   TimeInput,

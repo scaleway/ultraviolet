@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react'
-import { TagsPoplist } from '..'
+import { TagList } from '..'
 
 export default {
-  component: TagsPoplist,
+  component: TagList,
   parameters: {
     docs: {
       description: {
@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-  title: 'Components/Data Display/TagsPopList',
+  title: 'Components/Data Display/TagList',
 } as Meta
 
 export { Playground } from './Playground.stories'
