@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.33](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.32...@scaleway/form@1.39.33) (2023-01-26)
+
+**Note:** Version bump only for package @scaleway/form
+
+
+
+
+
 ## [1.39.32](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.31...@scaleway/form@1.39.32) (2023-01-26)
 
 

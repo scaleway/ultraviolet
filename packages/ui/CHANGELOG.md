@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.217.0 (2023-01-26)
+
+
+### :package: Chore
+
+* **release:** publish ([6329ac3](https://github.com/scaleway/scaleway-ui/commit/6329ac3f95d2ca375126f124db0ea8cc5b5691f1))
+
+
+### :gear: Features
+
+* **tooltip:** improve tooltip behavior and fix some issues ([#2209](https://github.com/scaleway/scaleway-ui/issues/2209)) ([7c6ea37](https://github.com/scaleway/scaleway-ui/commit/7c6ea376aac22e959f2701e08f963abe4748ff0c))
+
+
+
 ## [0.216.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.216.0...@scaleway/ui@0.216.1) (2023-01-25)
 
 
