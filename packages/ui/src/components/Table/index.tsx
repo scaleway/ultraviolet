@@ -2,7 +2,7 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { Placeholder } from '../Placeholder'
+import { Skeleton } from '../Skeleton'
 
 const sharedCellStyle = (theme: Theme) => css`
   padding: ${theme.space[1]} ${theme.space[2]};
@@ -147,7 +147,7 @@ const BodyLoader = ({
         <StyledLoadingRow key={index}>
           {colArray.map(columnIndex => (
             <BodyCell key={columnIndex}>
-              <Placeholder variant="line" />
+              <Skeleton variant="line" />
             </BodyCell>
           ))}
         </StyledLoadingRow>
