@@ -15,29 +15,25 @@ exports[`Table renders correctly 1`] = `
   border-style: solid;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow {
+.cache-3pbtvq-StyledRow-StyledRow {
   color: #4a4f62;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow a {
+.cache-3pbtvq-StyledRow-StyledRow a {
   color: inherit;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow tr:nth-of-type(even) {
-  background-color: #ffffff;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover {
+.cache-3pbtvq-StyledRow-StyledRow:hover {
   color: #390171;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover td:first-of-type {
+.cache-3pbtvq-StyledRow-StyledRow:hover td:first-of-type {
   font-weight: 500;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-3pbtvq-StyledRow-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -45,7 +41,7 @@ exports[`Table renders correctly 1`] = `
   visibility: hidden;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-3pbtvq-StyledRow-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -63,6 +59,10 @@ exports[`Table renders correctly 1`] = `
   line-height: 20px;
 }
 
+.cache-1bi7edk-StyledTBody[data-striped='true'] .efhaznt4:nth-of-type(even) {
+  background-color: #f6f6f8;
+}
+
 .cache-fhczmp-StyledBodyCell-cellStyle {
   overflow: hidden;
   white-space: nowrap;
@@ -72,66 +72,69 @@ exports[`Table renders correctly 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt5"
+    class="cache-1yrf4lq-StyledTable efhaznt6"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt4"
+      class="cache-14vf537-StyledHead efhaznt5"
     >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
         >
           Status
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
         >
           Date
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      class="cache-1bi7edk-StyledTBody efhaznt0"
+      data-striped="false"
+    >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           165
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           Ongoing
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           Yesterday
         </td>
       </tr>
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           56
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           Resolved
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
         >
           1 hour ago
         </td>
@@ -172,29 +175,25 @@ exports[`Table renders correctly while loading 1`] = `
   border-style: solid;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow {
+.cache-3pbtvq-StyledRow-StyledRow {
   color: #4a4f62;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow a {
+.cache-3pbtvq-StyledRow-StyledRow a {
   color: inherit;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow tr:nth-of-type(even) {
-  background-color: #ffffff;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover {
+.cache-3pbtvq-StyledRow-StyledRow:hover {
   color: #390171;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover td:first-of-type {
+.cache-3pbtvq-StyledRow-StyledRow:hover td:first-of-type {
   font-weight: 500;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-3pbtvq-StyledRow-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -202,7 +201,7 @@ exports[`Table renders correctly while loading 1`] = `
   visibility: hidden;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-3pbtvq-StyledRow-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -218,6 +217,10 @@ exports[`Table renders correctly while loading 1`] = `
   padding: 8px 16px;
   font-size: 14px;
   line-height: 20px;
+}
+
+.cache-1bi7edk-StyledTBody[data-striped='true'] .efhaznt4:nth-of-type(even) {
+  background-color: #f6f6f8;
 }
 
 .cache-fhczmp-StyledBodyCell-cellStyle {
@@ -251,36 +254,39 @@ exports[`Table renders correctly while loading 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt5"
+    class="cache-1yrf4lq-StyledTable efhaznt6"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt4"
+      class="cache-14vf537-StyledHead efhaznt5"
     >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
         >
           Date
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      class="cache-1bi7edk-StyledTBody efhaznt0"
+      data-striped="false"
+    >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
           colspan="2"
         >
           <div
-            class="cache-hfqqsp-LoaderWrapper efhaznt0"
+            class="cache-hfqqsp-LoaderWrapper efhaznt1"
           >
             <svg
               aria-label="Loading"

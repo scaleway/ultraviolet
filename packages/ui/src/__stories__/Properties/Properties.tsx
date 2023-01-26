@@ -11,10 +11,6 @@ const StyledText = styled(Text)`
 
 const StyledTableRow = styled(Table.Row)`
   vertical-align: top;
-
-  &:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
-  }
 `
 
 type PropertyType = {
@@ -134,7 +130,7 @@ const Properties = () => {
             <Table.HeadCell>Components usage</Table.HeadCell>
           </Table.Row>
         </Table.Head>
-        <Table.Body>
+        <Table.Body striped>
           {Object.keys(sortedPropertiesUsagesCountAndComponentsName).map(
             property => {
               const lowerCaseProperty = property.toLowerCase()

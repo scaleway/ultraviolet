@@ -57,10 +57,6 @@ const StyledRow = styled('tr', {
     color: inherit;
   }
 
-  tr:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  }
-
   ${({ highlight = true, theme }) =>
     highlight &&
     css`
@@ -177,8 +173,15 @@ const BodyLoader = ({ colSpan }: { colSpan: number }) => (
   </Row>
 )
 
+const StyledTBody = styled.tbody`
+  &[data-striped='true'] ${StyledRow}:nth-of-type(even) {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  }
+`
+
 export const Body = ({
   loading = false,
+  striped = false,
   colSpan = 1,
   children,
   className,
@@ -187,10 +190,14 @@ export const Body = ({
   colSpan?: number
   children: ReactNode
   className?: string
+  /**
+   * If true, the table will have a striped background every second row
+   */
+  striped?: boolean
 }) => (
-  <tbody className={className}>
+  <StyledTBody className={className} data-striped={striped}>
     {loading ? <BodyLoader colSpan={colSpan} /> : children}
-  </tbody>
+  </StyledTBody>
 )
 
 // Export
