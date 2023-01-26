@@ -31,6 +31,13 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
+  test('renders correctly required', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} required>
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} checked>
