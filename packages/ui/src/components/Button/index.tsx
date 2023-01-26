@@ -428,7 +428,11 @@ const FwdButton = ({
           </StyledIconContainer>
         ) : null}
         {(!progress || !displayProgressOnly) && children && (
-          <InhibitedStack alignItems="center" justifyContent="center">
+          <InhibitedStack
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
+          >
             {children}
           </InhibitedStack>
         )}
