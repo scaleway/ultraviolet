@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, ReactNode } from 'react'
 import { useCallback, useEffect, useState } from 'react'
+import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
 const TOGGLE_RADIUS = '24px'
@@ -75,6 +76,7 @@ const StyledToggle = styled.div<{
 
   &[data-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+
     &[data-checked='true'] {
       background: ${({ theme }) =>
         theme.colors.primary.backgroundStrongDisabled};
@@ -115,6 +117,12 @@ const StyledLabel = styled.label<{
   }
 `
 
+const RequiredIcon = () => (
+  <sup>
+    <Icon name="asterisk" size={10} color="danger" />
+  </sup>
+)
+
 type ToggleProps = {
   id?: string
   checked?: boolean
@@ -129,6 +137,7 @@ type ToggleProps = {
   label?: ReactNode
   disabled?: boolean
   className?: string
+  required?: boolean
 }
 
 export const Toggle = ({
@@ -141,6 +150,7 @@ export const Toggle = ({
   tooltip,
   labelPosition = 'right',
   label,
+  required,
   className,
 }: ToggleProps) => {
   const [state, setState] = useState(checked)
@@ -165,7 +175,12 @@ export const Toggle = ({
         onClick={evt => evt.stopPropagation()}
         className={className}
       >
-        {label && labelPosition === 'left' ? label : null}
+        {label && labelPosition === 'left' ? (
+          <>
+            {label}
+            {required ? <RequiredIcon /> : null}
+          </>
+        ) : null}
         <StyledToggle size={size} data-checked={state} data-disabled={disabled}>
           <StyledCheckbox
             id={id || name}
@@ -178,7 +193,12 @@ export const Toggle = ({
             type="checkbox"
           />
         </StyledToggle>
-        {label && labelPosition === 'right' ? label : null}
+        {label && labelPosition === 'right' ? (
+          <>
+            {label}
+            {required ? <RequiredIcon /> : null}
+          </>
+        ) : null}
       </StyledLabel>
     </Tooltip>
   )

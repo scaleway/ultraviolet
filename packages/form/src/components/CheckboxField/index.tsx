@@ -87,6 +87,7 @@ export const CheckboxField = forwardRef(
         ref={ref}
         className={className}
         value={input.value}
+        required={required}
       >
         {children}
       </Checkbox>

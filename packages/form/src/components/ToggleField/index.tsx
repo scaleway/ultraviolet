@@ -79,6 +79,7 @@ export const ToggleField = ({
       disabled={disabled}
       labelPosition={labelPosition}
       className={className}
+      required={required}
     />
   )
 }

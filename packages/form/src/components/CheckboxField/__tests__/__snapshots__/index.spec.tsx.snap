@@ -1006,6 +1006,15 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   stroke: #b2b6c3;
 }
 
+.cache-7wqnxk-sizeStyles {
+  vertical-align: middle;
+  fill: #a6102d;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
 .cache-eywsr3 {
   color: #a6102d;
   font-size: 14px;
@@ -1033,6 +1042,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
         aria-invalid="true"
         class="cache-1q5ftat eu28k4m2"
         name="test"
+        required=""
         type="checkbox"
         value=""
       />
@@ -1070,6 +1080,16 @@ exports[`CheckboxField should render correctly with errors 1`] = `
         </g>
       </svg>
       Checkbox field error
+      <sup>
+        <svg
+          class="cache-7wqnxk-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+          />
+        </svg>
+      </sup>
     </label>
     <p
       class="eu28k4m4 cache-eywsr3 e1tg3t120"
