@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.34](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.33...@scaleway/form@1.39.34) (2023-01-26)
+
+
+### :bug: Bug Fixes
+
+* **Button:** stack has direction column by default ([#2225](https://github.com/scaleway/scaleway-ui/issues/2225)) ([27bf78e](https://github.com/scaleway/scaleway-ui/commit/27bf78ec1a00dc8f5ed6d54a68de659662b85566))
+
+
+
 ## [1.39.33](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.32...@scaleway/form@1.39.33) (2023-01-26)
 
 **Note:** Version bump only for package @scaleway/form
