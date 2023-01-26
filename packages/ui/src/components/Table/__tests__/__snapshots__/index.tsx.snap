@@ -8,32 +8,19 @@ exports[`Table renders correctly 1`] = `
   border-collapse: collapse;
 }
 
-.cache-14vf537-StyledHead {
-  border: 0;
-  border-bottom-width: 1px;
-  border-color: #d4dae7;
-  border-style: solid;
+.cache-6z2yke-StyledHead {
+  border-bottom: 1px solid #d4dae7;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow {
+.cache-1wx805j-StyledRow {
   color: #4a4f62;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow a {
+.cache-1wx805j-StyledRow a {
   color: inherit;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow:hover {
-  color: #390171;
-}
-
-.cache-3pbtvq-StyledRow-StyledRow:hover td:first-of-type {
-  font-weight: 500;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-3pbtvq-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-1wx805j-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -41,13 +28,13 @@ exports[`Table renders correctly 1`] = `
   visibility: hidden;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-1wx805j-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
 }
 
-.cache-10t8oi4-StyledHeadCell-cellStyle {
+.cache-17yd00x-StyledHeadCell-sharedCellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,7 +50,7 @@ exports[`Table renders correctly 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-fhczmp-StyledBodyCell-cellStyle {
+.cache-s0ztax-StyledBodyCell-sharedCellStyle {
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 16px;
@@ -75,23 +62,23 @@ exports[`Table renders correctly 1`] = `
     class="cache-1yrf4lq-StyledTable efhaznt6"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt5"
+      class="cache-6z2yke-StyledHead efhaznt5"
     >
       <tr
-        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt4"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
         >
           Status
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
         >
           Date
         </th>
@@ -102,39 +89,39 @@ exports[`Table renders correctly 1`] = `
       data-striped="false"
     >
       <tr
-        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           165
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           Ongoing
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           Yesterday
         </td>
       </tr>
       <tr
-        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           56
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           Resolved
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           1 hour ago
         </td>
@@ -148,17 +135,11 @@ exports[`Table renders correctly while loading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+    left: -25%;
   }
 
   to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+    left: 100%;
   }
 }
 
@@ -168,32 +149,19 @@ exports[`Table renders correctly while loading 1`] = `
   border-collapse: collapse;
 }
 
-.cache-14vf537-StyledHead {
-  border: 0;
-  border-bottom-width: 1px;
-  border-color: #d4dae7;
-  border-style: solid;
+.cache-6z2yke-StyledHead {
+  border-bottom: 1px solid #d4dae7;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow {
+.cache-1wx805j-StyledRow {
   color: #4a4f62;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow a {
+.cache-1wx805j-StyledRow a {
   color: inherit;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow:hover {
-  color: #390171;
-}
-
-.cache-3pbtvq-StyledRow-StyledRow:hover td:first-of-type {
-  font-weight: 500;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-3pbtvq-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-1wx805j-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -201,13 +169,13 @@ exports[`Table renders correctly while loading 1`] = `
   visibility: hidden;
 }
 
-.cache-3pbtvq-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-1wx805j-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
 }
 
-.cache-10t8oi4-StyledHeadCell-cellStyle {
+.cache-17yd00x-StyledHeadCell-sharedCellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -223,7 +191,30 @@ exports[`Table renders correctly while loading 1`] = `
   background-color: #f6f6f8;
 }
 
-.cache-fhczmp-StyledBodyCell-cellStyle {
+.cache-15mp5sh-StyledRow-StyledLoadingRow {
+  color: #4a4f62;
+  cursor: progress;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow a {
+  color: inherit;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow [data-visibility='hover'] {
+  -webkit-transition: opacity 150ms;
+  transition: opacity 150ms;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow:hover [data-visibility='hover'] {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.cache-s0ztax-StyledBodyCell-sharedCellStyle {
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 16px;
@@ -231,44 +222,65 @@ exports[`Table renders correctly while loading 1`] = `
   line-height: 20px;
 }
 
-.cache-hfqqsp-LoaderWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding-top: 16px;
+.cache-bgbcvp-StyledContainer {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
 }
 
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
+.cache-1r88wor-Line {
+  height: 12px;
+  width: 120px;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: #d4dae7;
 }
 
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
+.cache-q3qai6-StyledDiv {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      #ffffff00,
+      #ffffff4D,
+      #ffffff66,
+      #ffffff4D,
+      #ffffff00
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-q3qai6-StyledDiv {
+    -webkit-animation: unset;
+    animation: unset;
+  }
 }
 
 <table
     class="cache-1yrf4lq-StyledTable efhaznt6"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt5"
+      class="cache-6z2yke-StyledHead efhaznt5"
     >
       <tr
-        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt4"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
         >
           Date
         </th>
@@ -279,47 +291,162 @@ exports[`Table renders correctly while loading 1`] = `
       data-striped="false"
     >
       <tr
-        class="cache-3pbtvq-StyledRow-StyledRow efhaznt4"
+        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt2"
-          colspan="2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
         >
           <div
-            class="cache-hfqqsp-LoaderWrapper efhaznt1"
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
           >
-            <svg
-              aria-label="Loading"
-              aria-valuemax="100"
-              aria-valuemin="0"
-              aria-valuenow="20"
-              aria-valuetext="20%"
-              class="cache-gqzzce-Loader"
-              role="progressbar"
-              style="height: 40px; width: 40px;"
-              viewBox="0 0 100 100"
-            >
-              <circle
-                cx="50"
-                cy="50"
-                fill="none"
-                r="42"
-                stroke="#d4dae7"
-                stroke-width="16"
-              />
-              <circle
-                class="cache-11f05l0-Loader"
-                cx="50"
-                cy="50"
-                fill="none"
-                r="42"
-                stroke="#4f0599"
-                stroke-dasharray="263.89378290154264"
-                stroke-dashoffset="211.11502632123413"
-                stroke-linecap="round"
-                stroke-width="16"
-              />
-            </svg>
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+        >
+          <div
+            class="cache-bgbcvp-StyledContainer e3aa5lq1"
+          >
+            <div
+              class="cache-1r88wor-Line e15slp7a0"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e3aa5lq0"
+            />
           </div>
         </td>
       </tr>
