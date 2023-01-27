@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.217.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.217.1...@scaleway/ui@0.217.2) (2023-01-27)
+
+
+### :zap: Refactor
+
+* **components:** rename TagsPopList to TagList ([#2224](https://github.com/scaleway/scaleway-ui/issues/2224)) ([4af642d](https://github.com/scaleway/scaleway-ui/commit/4af642dc0966a513dbe437ff0dd0feba51ba9ee7))
+
+
+
 ## [0.217.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.217.0...@scaleway/ui@0.217.1) (2023-01-26)
 
 
