@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 import { Skeleton } from '../Skeleton'
 
 const sharedCellStyle = (theme: Theme) => css`
-  padding: ${theme.space[1]} ${theme.space[2]};
+  padding: ${theme.space['1']} ${theme.space['2']};
   font-size: ${theme.typography.bodySmall.fontSize};
   line-height: ${theme.typography.bodySmall.lineHeight};
 `
@@ -131,6 +131,12 @@ const StyledLoadingRow = styled(Row)`
   cursor: progress;
 `
 
+const StyledSkeleton = styled(Skeleton)`
+  display: flex;
+  height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
+  align-items: center;
+`
+
 const BodyLoader = ({
   colSpan,
   rows = 5,
@@ -147,7 +153,7 @@ const BodyLoader = ({
         <StyledLoadingRow key={index}>
           {colArray.map(columnIndex => (
             <BodyCell key={columnIndex}>
-              <Skeleton variant="line" />
+              <StyledSkeleton variant="line" />
             </BodyCell>
           ))}
         </StyledLoadingRow>

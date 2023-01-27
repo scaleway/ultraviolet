@@ -46,7 +46,7 @@ exports[`Table renders correctly 1`] = `
   line-height: 20px;
 }
 
-.cache-1bi7edk-StyledTBody[data-striped='true'] .efhaznt4:nth-of-type(even) {
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
   background-color: #f6f6f8;
 }
 
@@ -59,69 +59,69 @@ exports[`Table renders correctly 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt6"
+    class="cache-1yrf4lq-StyledTable efhaznt7"
   >
     <thead
-      class="cache-6z2yke-StyledHead efhaznt5"
+      class="cache-6z2yke-StyledHead efhaznt6"
     >
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           ID
         </th>
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Status
         </th>
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Date
         </th>
       </tr>
     </thead>
     <tbody
-      class="cache-1bi7edk-StyledTBody efhaznt0"
+      class="cache-jzptjg-StyledTBody efhaznt0"
       data-striped="false"
     >
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           165
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Ongoing
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Yesterday
         </td>
       </tr>
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           56
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Resolved
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           1 hour ago
         </td>
@@ -187,7 +187,7 @@ exports[`Table renders correctly while loading 1`] = `
   line-height: 20px;
 }
 
-.cache-1bi7edk-StyledTBody[data-striped='true'] .efhaznt4:nth-of-type(even) {
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
   background-color: #f6f6f8;
 }
 
@@ -222,12 +222,21 @@ exports[`Table renders correctly while loading 1`] = `
   line-height: 20px;
 }
 
-.cache-bgbcvp-StyledContainer {
+.cache-1prxobb-StyledContainer-StyledSkeleton {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
   cursor: progress;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .cache-1r88wor-Line {
@@ -266,38 +275,38 @@ exports[`Table renders correctly while loading 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt6"
+    class="cache-1yrf4lq-StyledTable efhaznt7"
   >
     <thead
-      class="cache-6z2yke-StyledHead efhaznt5"
+      class="cache-6z2yke-StyledHead efhaznt6"
     >
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           ID
         </th>
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Date
         </th>
       </tr>
     </thead>
     <tbody
-      class="cache-1bi7edk-StyledTBody efhaznt0"
+      class="cache-jzptjg-StyledTBody efhaznt0"
       data-striped="false"
     >
       <tr
-        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -308,10 +317,10 @@ exports[`Table renders correctly while loading 1`] = `
           </div>
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -323,13 +332,13 @@ exports[`Table renders correctly while loading 1`] = `
         </td>
       </tr>
       <tr
-        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -340,10 +349,10 @@ exports[`Table renders correctly while loading 1`] = `
           </div>
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -355,13 +364,13 @@ exports[`Table renders correctly while loading 1`] = `
         </td>
       </tr>
       <tr
-        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -372,10 +381,10 @@ exports[`Table renders correctly while loading 1`] = `
           </div>
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -387,13 +396,13 @@ exports[`Table renders correctly while loading 1`] = `
         </td>
       </tr>
       <tr
-        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -404,10 +413,10 @@ exports[`Table renders correctly while loading 1`] = `
           </div>
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -419,13 +428,13 @@ exports[`Table renders correctly while loading 1`] = `
         </td>
       </tr>
       <tr
-        class="efhaznt1 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt4"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -436,10 +445,10 @@ exports[`Table renders correctly while loading 1`] = `
           </div>
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-bgbcvp-StyledContainer e181dehd1"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
             <div
               class="cache-1r88wor-Line e16zi9h40"
@@ -501,7 +510,7 @@ exports[`Table renders correctly with striped body 1`] = `
   line-height: 20px;
 }
 
-.cache-1bi7edk-StyledTBody[data-striped='true'] .efhaznt4:nth-of-type(even) {
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
   background-color: #f6f6f8;
 }
 
@@ -514,69 +523,69 @@ exports[`Table renders correctly with striped body 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt6"
+    class="cache-1yrf4lq-StyledTable efhaznt7"
   >
     <thead
-      class="cache-6z2yke-StyledHead efhaznt5"
+      class="cache-6z2yke-StyledHead efhaznt6"
     >
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           ID
         </th>
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Status
         </th>
         <th
-          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt3"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Date
         </th>
       </tr>
     </thead>
     <tbody
-      class="cache-1bi7edk-StyledTBody efhaznt0"
+      class="cache-jzptjg-StyledTBody efhaznt0"
       data-striped="true"
     >
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           165
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Ongoing
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Yesterday
         </td>
       </tr>
       <tr
-        class="cache-1wx805j-StyledRow efhaznt4"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           56
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Resolved
         </td>
         <td
-          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           1 hour ago
         </td>
