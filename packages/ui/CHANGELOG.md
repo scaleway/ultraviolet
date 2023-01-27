@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.217.2...@scaleway/ui@0.218.0) (2023-01-27)
+
+
+### :gear: Features
+
+* **table:** add  `striped` property update loading state and remove hover style ([#2222](https://github.com/scaleway/scaleway-ui/issues/2222)) ([2768808](https://github.com/scaleway/scaleway-ui/commit/2768808a8d978234784123ad6456c89c0706aa0d))
+
+
+
 ## [0.217.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.217.1...@scaleway/ui@0.217.2) (2023-01-27)
 
 
