@@ -36,7 +36,7 @@ const StyledManyTagsContainer = styled.div`
   gap: ${({ theme }) => theme.space['1']};
 `
 
-type TagsPoplistProps = {
+type TagListProps = {
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
    */
@@ -52,12 +52,12 @@ type TagsPoplistProps = {
   multiline?: boolean
 }
 
-export const TagsPoplist = ({
+export const TagList = ({
   maxLength = 600,
   tags = [],
   threshold = 1,
   multiline = false,
-}: TagsPoplistProps): JSX.Element | null => {
+}: TagListProps): JSX.Element | null => {
   let tmpThreshold = threshold
   if (
     tags?.length > 0 &&
