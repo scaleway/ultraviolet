@@ -2,16 +2,14 @@ import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { Loader } from '../Loader'
+import { Skeleton } from '../Skeleton'
 
-// Common
-const cellStyle = (theme: Theme) => css`
-  padding: ${theme.space[1]} ${theme.space[2]};
+const sharedCellStyle = (theme: Theme) => css`
+  padding: ${theme.space['1']} ${theme.space['2']};
   font-size: ${theme.typography.bodySmall.fontSize};
   line-height: ${theme.typography.bodySmall.lineHeight};
 `
 
-// Table Head
 const StyledTable = styled.table`
   table-layout: fixed;
   width: 100%;
@@ -31,12 +29,8 @@ export const Table: ((props: {
   <StyledTable className={className}>{children}</StyledTable>
 )
 
-// Table Head
 const StyledHead = styled.thead`
-  border: 0;
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-style: solid;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
 `
 
 export const Head = ({
@@ -47,32 +41,12 @@ export const Head = ({
   className?: string
 }) => <StyledHead className={className}>{children}</StyledHead>
 
-// Table Row
-const StyledRow = styled('tr', {
-  shouldForwardProp: prop => !['highlight'].includes(prop),
-})<{ highlight?: boolean }>`
+const StyledRow = styled.tr`
   color: ${({ theme }) => theme.colors.neutral.text};
 
   a {
     color: inherit;
   }
-
-  tr:nth-of-type(even) {
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  }
-
-  ${({ highlight = true, theme }) =>
-    highlight &&
-    css`
-      &:hover {
-        color: ${theme.colors.primary.text};
-
-        td:first-of-type {
-          font-weight: 500;
-          text-decoration: underline;
-        }
-      }
-    `}
 
   [data-visibility='hover'] {
     transition: opacity 150ms;
@@ -80,6 +54,7 @@ const StyledRow = styled('tr', {
     pointer-events: none;
     visibility: hidden;
   }
+
   &:hover [data-visibility='hover'] {
     opacity: 1;
     pointer-events: auto;
@@ -88,20 +63,13 @@ const StyledRow = styled('tr', {
 `
 
 export const Row = ({
-  highlight,
   children,
   className,
 }: {
-  highlight?: boolean
   children: ReactNode
   className?: string
-}) => (
-  <StyledRow className={className} highlight={highlight}>
-    {children}
-  </StyledRow>
-)
+}) => <StyledRow className={className}>{children}</StyledRow>
 
-// Table Head  Cell
 const StyledHeadCell = styled('th', {
   shouldForwardProp: prop => !['width'].includes(prop),
 })<
@@ -117,7 +85,7 @@ const StyledHeadCell = styled('th', {
   font-weight: 400;
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   text-align: left;
-  ${({ theme }) => cellStyle(theme)};
+  ${({ theme }) => sharedCellStyle(theme)};
 `
 export const HeadCell = ({
   children,
@@ -139,11 +107,10 @@ export const HeadCell = ({
   </StyledHeadCell>
 )
 
-// Table Body Cell
 const StyledBodyCell = styled.td`
   overflow: hidden;
   white-space: nowrap;
-  ${({ theme }) => cellStyle(theme)};
+  ${({ theme }) => sharedCellStyle(theme)};
 `
 
 export const BodyCell = ({
@@ -160,37 +127,69 @@ export const BodyCell = ({
   </StyledBodyCell>
 )
 
-// Table Body
-const LoaderWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: ${({ theme }) => theme.space[2]};
+const StyledLoadingRow = styled(Row)`
+  cursor: progress;
 `
 
-const BodyLoader = ({ colSpan }: { colSpan: number }) => (
-  <Row>
-    <BodyCell colSpan={colSpan}>
-      <LoaderWrapper>
-        <Loader active size={40} />
-      </LoaderWrapper>
-    </BodyCell>
-  </Row>
-)
+const StyledSkeleton = styled(Skeleton)`
+  display: flex;
+  height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
+  align-items: center;
+`
+
+const BodyLoader = ({
+  colSpan,
+  rows = 5,
+}: {
+  colSpan: number
+  rows?: number
+}) => {
+  const rowArray = Array.from({ length: rows }, (_, index) => index)
+  const colArray = Array.from({ length: colSpan }, (_, index) => index)
+
+  return (
+    <>
+      {rowArray.map(index => (
+        <StyledLoadingRow key={index}>
+          {colArray.map(columnIndex => (
+            <BodyCell key={columnIndex}>
+              <StyledSkeleton variant="line" />
+            </BodyCell>
+          ))}
+        </StyledLoadingRow>
+      ))}
+    </>
+  )
+}
+
+const StyledTBody = styled.tbody`
+  &[data-striped='true'] ${StyledRow}:nth-of-type(even) {
+    background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  }
+`
 
 export const Body = ({
   loading = false,
+  striped = false,
   colSpan = 1,
   children,
   className,
 }: {
+  /**
+   * If true, the table will show a loading state with loading cursor
+   */
   loading?: boolean
   colSpan?: number
   children: ReactNode
   className?: string
+  /**
+   * If true, the table will have a striped background every second row
+   */
+  striped?: boolean
 }) => (
-  <tbody className={className}>
+  <StyledTBody className={className} data-striped={striped}>
     {loading ? <BodyLoader colSpan={colSpan} /> : children}
-  </tbody>
+  </StyledTBody>
 )
 
 // Export

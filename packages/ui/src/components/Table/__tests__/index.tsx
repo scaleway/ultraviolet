@@ -27,6 +27,31 @@ describe('Table', () => {
       </Table>,
     ))
 
+  test('renders correctly with striped body', () =>
+    shouldMatchEmotionSnapshot(
+      <Table>
+        <Table.Head>
+          <Table.Row>
+            <Table.HeadCell>ID</Table.HeadCell>
+            <Table.HeadCell>Status</Table.HeadCell>
+            <Table.HeadCell>Date</Table.HeadCell>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body striped>
+          <Table.Row>
+            <Table.BodyCell>165</Table.BodyCell>
+            <Table.BodyCell>Ongoing</Table.BodyCell>
+            <Table.BodyCell>Yesterday</Table.BodyCell>
+          </Table.Row>
+          <Table.Row>
+            <Table.BodyCell>56</Table.BodyCell>
+            <Table.BodyCell>Resolved</Table.BodyCell>
+            <Table.BodyCell>1 hour ago</Table.BodyCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>,
+    ))
+
   test('renders correctly while loading', () =>
     shouldMatchEmotionSnapshot(
       <Table>

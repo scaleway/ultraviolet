@@ -8,36 +8,19 @@ exports[`Table renders correctly 1`] = `
   border-collapse: collapse;
 }
 
-.cache-14vf537-StyledHead {
-  border: 0;
-  border-bottom-width: 1px;
-  border-color: #d4dae7;
-  border-style: solid;
+.cache-6z2yke-StyledHead {
+  border-bottom: 1px solid #d4dae7;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow {
+.cache-1wx805j-StyledRow {
   color: #4a4f62;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow a {
+.cache-1wx805j-StyledRow a {
   color: inherit;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow tr:nth-of-type(even) {
-  background-color: #ffffff;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover {
-  color: #390171;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover td:first-of-type {
-  font-weight: 500;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-1wx805j-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -45,13 +28,13 @@ exports[`Table renders correctly 1`] = `
   visibility: hidden;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-1wx805j-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
 }
 
-.cache-10t8oi4-StyledHeadCell-cellStyle {
+.cache-17yd00x-StyledHeadCell-sharedCellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -63,7 +46,11 @@ exports[`Table renders correctly 1`] = `
   line-height: 20px;
 }
 
-.cache-fhczmp-StyledBodyCell-cellStyle {
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
+  background-color: #f6f6f8;
+}
+
+.cache-s0ztax-StyledBodyCell-sharedCellStyle {
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 16px;
@@ -72,66 +59,69 @@ exports[`Table renders correctly 1`] = `
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt5"
+    class="cache-1yrf4lq-StyledTable efhaznt7"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt4"
+      class="cache-6z2yke-StyledHead efhaznt6"
     >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Status
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Date
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      class="cache-jzptjg-StyledTBody efhaznt0"
+      data-striped="false"
+    >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           165
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Ongoing
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Yesterday
         </td>
       </tr>
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           56
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           Resolved
         </td>
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           1 hour ago
         </td>
@@ -145,17 +135,11 @@ exports[`Table renders correctly while loading 1`] = `
 <DocumentFragment>
   @keyframes animation-0 {
   from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+    left: -25%;
   }
 
   to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+    left: 100%;
   }
 }
 
@@ -165,36 +149,19 @@ exports[`Table renders correctly while loading 1`] = `
   border-collapse: collapse;
 }
 
-.cache-14vf537-StyledHead {
-  border: 0;
-  border-bottom-width: 1px;
-  border-color: #d4dae7;
-  border-style: solid;
+.cache-6z2yke-StyledHead {
+  border-bottom: 1px solid #d4dae7;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow {
+.cache-1wx805j-StyledRow {
   color: #4a4f62;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow a {
+.cache-1wx805j-StyledRow a {
   color: inherit;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow tr:nth-of-type(even) {
-  background-color: #ffffff;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover {
-  color: #390171;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow:hover td:first-of-type {
-  font-weight: 500;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.cache-1xbkkcn-StyledRow-StyledRow [data-visibility='hover'] {
+.cache-1wx805j-StyledRow [data-visibility='hover'] {
   -webkit-transition: opacity 150ms;
   transition: opacity 150ms;
   opacity: 0;
@@ -202,13 +169,13 @@ exports[`Table renders correctly while loading 1`] = `
   visibility: hidden;
 }
 
-.cache-1xbkkcn-StyledRow-StyledRow:hover [data-visibility='hover'] {
+.cache-1wx805j-StyledRow:hover [data-visibility='hover'] {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
 }
 
-.cache-10t8oi4-StyledHeadCell-cellStyle {
+.cache-17yd00x-StyledHeadCell-sharedCellStyle {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -220,7 +187,34 @@ exports[`Table renders correctly while loading 1`] = `
   line-height: 20px;
 }
 
-.cache-fhczmp-StyledBodyCell-cellStyle {
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
+  background-color: #f6f6f8;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow {
+  color: #4a4f62;
+  cursor: progress;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow a {
+  color: inherit;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow [data-visibility='hover'] {
+  -webkit-transition: opacity 150ms;
+  transition: opacity 150ms;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.cache-15mp5sh-StyledRow-StyledLoadingRow:hover [data-visibility='hover'] {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.cache-s0ztax-StyledBodyCell-sharedCellStyle {
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 16px;
@@ -228,93 +222,372 @@ exports[`Table renders correctly while loading 1`] = `
   line-height: 20px;
 }
 
-.cache-hfqqsp-LoaderWrapper {
+.cache-1prxobb-StyledContainer-StyledSkeleton {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  padding-top: 16px;
+  height: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
+.cache-1r88wor-Line {
+  height: 12px;
+  width: 120px;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: #d4dae7;
 }
 
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
+.cache-q3qai6-StyledDiv {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      #ffffff00,
+      #ffffff4D,
+      #ffffff66,
+      #ffffff4D,
+      #ffffff00
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-q3qai6-StyledDiv {
+    -webkit-animation: unset;
+    animation: unset;
+  }
 }
 
 <table
-    class="cache-1yrf4lq-StyledTable efhaznt5"
+    class="cache-1yrf4lq-StyledTable efhaznt7"
   >
     <thead
-      class="cache-14vf537-StyledHead efhaznt4"
+      class="cache-6z2yke-StyledHead efhaznt6"
     >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="cache-1wx805j-StyledRow efhaznt5"
       >
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           ID
         </th>
         <th
-          class="cache-10t8oi4-StyledHeadCell-cellStyle efhaznt2"
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
         >
           Date
         </th>
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      class="cache-jzptjg-StyledTBody efhaznt0"
+      data-striped="false"
+    >
       <tr
-        class="cache-1xbkkcn-StyledRow-StyledRow efhaznt3"
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
       >
         <td
-          class="cache-fhczmp-StyledBodyCell-cellStyle efhaznt1"
-          colspan="2"
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
         >
           <div
-            class="cache-hfqqsp-LoaderWrapper efhaznt0"
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
           >
-            <svg
-              aria-label="Loading"
-              aria-valuemax="100"
-              aria-valuemin="0"
-              aria-valuenow="20"
-              aria-valuetext="20%"
-              class="cache-gqzzce-Loader"
-              role="progressbar"
-              style="height: 40px; width: 40px;"
-              viewBox="0 0 100 100"
-            >
-              <circle
-                cx="50"
-                cy="50"
-                fill="none"
-                r="42"
-                stroke="#d4dae7"
-                stroke-width="16"
-              />
-              <circle
-                class="cache-11f05l0-Loader"
-                cx="50"
-                cy="50"
-                fill="none"
-                r="42"
-                stroke="#4f0599"
-                stroke-dasharray="263.89378290154264"
-                stroke-dashoffset="211.11502632123413"
-                stroke-linecap="round"
-                stroke-width="16"
-              />
-            </svg>
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
           </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="efhaznt2 cache-15mp5sh-StyledRow-StyledLoadingRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          <div
+            class="efhaznt1 cache-1prxobb-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1r88wor-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table renders correctly with striped body 1`] = `
+<DocumentFragment>
+  .cache-1yrf4lq-StyledTable {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cache-6z2yke-StyledHead {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-1wx805j-StyledRow {
+  color: #4a4f62;
+}
+
+.cache-1wx805j-StyledRow a {
+  color: inherit;
+}
+
+.cache-1wx805j-StyledRow [data-visibility='hover'] {
+  -webkit-transition: opacity 150ms;
+  transition: opacity 150ms;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.cache-1wx805j-StyledRow:hover [data-visibility='hover'] {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.cache-17yd00x-StyledHeadCell-sharedCellStyle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  color: #b2b6c3;
+  text-align: left;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.cache-jzptjg-StyledTBody[data-striped='true'] .efhaznt5:nth-of-type(even) {
+  background-color: #f6f6f8;
+}
+
+.cache-s0ztax-StyledBodyCell-sharedCellStyle {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+<table
+    class="cache-1yrf4lq-StyledTable efhaznt7"
+  >
+    <thead
+      class="cache-6z2yke-StyledHead efhaznt6"
+    >
+      <tr
+        class="cache-1wx805j-StyledRow efhaznt5"
+      >
+        <th
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
+        >
+          ID
+        </th>
+        <th
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
+        >
+          Status
+        </th>
+        <th
+          class="cache-17yd00x-StyledHeadCell-sharedCellStyle efhaznt4"
+        >
+          Date
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="cache-jzptjg-StyledTBody efhaznt0"
+      data-striped="true"
+    >
+      <tr
+        class="cache-1wx805j-StyledRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          165
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          Ongoing
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          Yesterday
+        </td>
+      </tr>
+      <tr
+        class="cache-1wx805j-StyledRow efhaznt5"
+      >
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          56
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          Resolved
+        </td>
+        <td
+          class="cache-s0ztax-StyledBodyCell-sharedCellStyle efhaznt3"
+        >
+          1 hour ago
         </td>
       </tr>
     </tbody>

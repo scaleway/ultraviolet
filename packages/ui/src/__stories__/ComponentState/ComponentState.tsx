@@ -45,7 +45,7 @@ const ComponentState = () => (
           <Table.HeadCell>State</Table.HeadCell>
         </Table.Row>
       </Table.Head>
-      <Table.Body>
+      <Table.Body striped>
         {modules.map(module => {
           if (module.status === 'fulfilled') {
             const desctructuredName: string[] =
