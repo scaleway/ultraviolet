@@ -2,23 +2,37 @@
 
 exports[`Description renders correctly 1`] = `
 <DocumentFragment>
-  .cache-8c6su2-BareDescription {
+  .cache-1ct1pby-BareDescription {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   margin: 0;
 }
 
-.cache-xf88sk-Term {
+.cache-16r8ct-Term {
   font-weight: 500;
   color: #151a2d;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.cache-xf88sk-Term:after {
+.cache-16r8ct-Term:after {
   content: ':';
 }
 
-.cache-ivr5h7-Desc {
+.cache-1drike1-Desc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,29 +42,29 @@ exports[`Description renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-  margin: 8px 0 0 0;
+  margin: 0;
 }
 
 <dl
-    class="cache-8c6su2-BareDescription eu9mc5y0"
+    class="cache-1ct1pby-BareDescription eu9mc5y0"
   >
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       125 GB
     </dd>
@@ -60,39 +74,38 @@ exports[`Description renders correctly 1`] = `
 
 exports[`Description renders correctly inline 1`] = `
 <DocumentFragment>
-  .cache-13t0gak-BareDescription-BareDescription {
-  font-size: 16px;
-  line-height: 16px;
-  margin: 0;
+  .cache-nktpsi-BareDescription {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0;
+  gap: 8px;
 }
 
-.cache-13t0gak-BareDescription-BareDescription .eu9mc5y1 {
-  margin: 0 0 0 8px;
-}
-
-.cache-xf88sk-Term {
+.cache-16r8ct-Term {
   font-weight: 500;
   color: #151a2d;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.cache-xf88sk-Term:after {
+.cache-16r8ct-Term:after {
   content: ':';
 }
 
-.cache-ivr5h7-Desc {
+.cache-1drike1-Desc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,29 +115,29 @@ exports[`Description renders correctly inline 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-  margin: 8px 0 0 0;
+  margin: 0;
 }
 
 <dl
-    class="cache-13t0gak-BareDescription-BareDescription eu9mc5y0"
+    class="cache-nktpsi-BareDescription eu9mc5y0"
   >
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       125 GB
     </dd>
@@ -134,51 +147,50 @@ exports[`Description renders correctly inline 1`] = `
 
 exports[`Description renders correctly seletable 1`] = `
 <DocumentFragment>
-  .cache-1y4pgcv-BareDescription-BareDescription-BareDescription {
-  font-size: 16px;
-  line-height: 16px;
-  margin: 0;
+  .cache-1sktjj9-BareDescription-BareDescription {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0;
+  gap: 8px;
 }
 
-.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1 {
-  margin: 0 0 0 8px;
-}
-
-.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1 {
+.cache-1sktjj9-BareDescription-BareDescription .eu9mc5y1 {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
 }
 
-.cache-1y4pgcv-BareDescription-BareDescription-BareDescription .eu9mc5y1::selection {
+.cache-1sktjj9-BareDescription-BareDescription .eu9mc5y1::selection {
   color: #ffffff;
   background: #4f0599;
 }
 
-.cache-xf88sk-Term {
+.cache-16r8ct-Term {
   font-weight: 500;
   color: #151a2d;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
-.cache-xf88sk-Term:after {
+.cache-16r8ct-Term:after {
   content: ':';
 }
 
-.cache-ivr5h7-Desc {
+.cache-1drike1-Desc {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,29 +200,29 @@ exports[`Description renders correctly seletable 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #4a4f62;
-  margin: 8px 0 0 0;
+  margin: 0;
 }
 
 <dl
-    class="cache-1y4pgcv-BareDescription-BareDescription-BareDescription eu9mc5y0"
+    class="cache-1sktjj9-BareDescription-BareDescription eu9mc5y0"
   >
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Name
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       Big instance
     </dd>
     <dt
-      class="cache-xf88sk-Term eu9mc5y2"
+      class="cache-16r8ct-Term eu9mc5y2"
     >
       Size
     </dt>
     <dd
-      class="cache-ivr5h7-Desc eu9mc5y1"
+      class="cache-1drike1-Desc eu9mc5y1"
     >
       125 GB
     </dd>

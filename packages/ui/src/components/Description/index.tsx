@@ -2,9 +2,9 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
 const Term = styled.dt`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   color: ${({ theme }) => theme.colors.neutral.textStrong};
-  display: inline-block;
+  display: inline-flex;
   &:after {
     content: ':';
   }
@@ -16,7 +16,7 @@ const Desc = styled('dd', {
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.neutral.text};
-  margin: ${({ theme }) => theme.space['1']} 0 0 0;
+  margin: 0;
   ${({ capitalize }) =>
     capitalize
       ? css`
@@ -36,21 +36,14 @@ const BareDescription = styled('dl', {
   shouldForwardProp: prop =>
     !['inline', 'ellipsis', 'userSelect'].includes(prop),
 })<DescriptionProps>`
-  font-size: 16px;
-  line-height: 16px;
+  display: flex;
+  font-size: ${({ theme }) => theme.typography.body.fontSize};
+  line-height: ${({ theme }) => theme.typography.body.lineHeight};
+  flex-direction: ${({ inline }) => (inline ? 'row' : 'column')};
+  align-items: ${({ inline }) => (inline ? 'center' : 'start')};
   margin: 0;
 
-  ${({ inline }) =>
-    inline
-      ? css`
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          ${Desc} {
-            margin: 0 0 0 8px;
-          }
-        `
-      : undefined};
+  ${({ inline, theme }) => (inline ? `gap: ${theme.space['1']};` : null)}
 
   ${({ ellipsis, width }) =>
     ellipsis
