@@ -19,6 +19,22 @@ describe('Toggle', () => {
       <Toggle name="test" onChange={() => {}} disabled />,
     ))
 
+  test('renders correctly when required with label', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle label="test" name="test" onChange={() => {}} required />,
+    ))
+
+  test('renders correctly when required with label left', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle
+        label="test"
+        labelPosition="left"
+        name="test"
+        onChange={() => {}}
+        required
+      />,
+    ))
+
   test('renders correctly with non default size', () =>
     shouldMatchEmotionSnapshot(
       <Toggle name="test" onChange={() => {}} size="small" />,

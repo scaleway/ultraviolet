@@ -357,7 +357,7 @@ exports[`Checkbox renders correctly checked 1`] = `
       aria-invalid="false"
       checked=""
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":r3:"
+      name=":r4:"
       type="checkbox"
       value=""
     />
@@ -558,7 +558,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       checked=""
       class="cache-mhe016-CheckboxInput eu28k4m2"
       disabled=""
-      name=":r5:"
+      name=":r6:"
       type="checkbox"
       value=""
     />
@@ -958,7 +958,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
       aria-checked="mixed"
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":r4:"
+      name=":r5:"
       type="checkbox"
       value=""
     />
@@ -1159,7 +1159,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
       disabled=""
-      name=":r6:"
+      name=":r7:"
       type="checkbox"
       value=""
     />
@@ -1359,7 +1359,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
     <input
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":r7:"
+      name=":r8:"
       type="checkbox"
       value=""
     />
@@ -1600,6 +1600,225 @@ exports[`Checkbox renders correctly no child 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Checkbox renders correctly required 1`] = `
+<DocumentFragment>
+  .cache-3lt5x-CheckboxContainer {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+  cursor: pointer;
+}
+
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #c4c9d6;
+}
+
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+  fill: #c4c9d6;
+}
+
+.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+  stroke: #c4c9d6;
+  fill: #f6f6f8;
+}
+
+.cache-3lt5x-CheckboxContainer .eu28k4m6,
+.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-mhe016-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-mhe016-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-mhe016-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 {
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:checked+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-checked='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 {
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']+.eu28k4m3 .eu28k4m7,
+.cache-mhe016-CheckboxInput[aria-invalid='mixed']+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 {
+  background-color: #eeeeff;
+  fill: #4f0599;
+}
+
+.cache-mhe016-CheckboxInput:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #4f0599;
+  fill: #eeeeff;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 {
+  background-color: #ffe1e7;
+  fill: #dd3252;
+}
+
+.cache-mhe016-CheckboxInput[aria-invalid='true']:focus+.eu28k4m3 .eu28k4m7 {
+  stroke: #dd3252;
+  fill: #ffe1e7;
+}
+
+.cache-1lcemq7-StyledIcon {
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-uzcbt1-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #b2b6c3;
+}
+
+.cache-1df1xfu-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #a6102d;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-3lt5x-CheckboxContainer eu28k4m1"
+    data-checked="false"
+    data-error="false"
+  >
+    <input
+      aria-invalid="false"
+      class="cache-mhe016-CheckboxInput eu28k4m2"
+      name=":r3:"
+      required=""
+      type="checkbox"
+      value=""
+    />
+    <svg
+      class="cache-1lcemq7-StyledIcon eu28k4m3"
+      size="24"
+      viewBox="0 0 24 24"
+    >
+      <g>
+        <rect
+          class="cache-uzcbt1-InnerCheckbox eu28k4m7"
+          height="14"
+          rx="1"
+          stroke-width="2"
+          width="14"
+          x="5"
+          y="5"
+        />
+        <rect
+          class="cache-1nkq693-CheckMixedMark eu28k4m5"
+          height="2"
+          rx="1"
+          width="8"
+          x="8"
+          y="11"
+        />
+        <rect
+          class="cache-1nu9t2r-CheckMark eu28k4m6"
+          height="8"
+          rx="1"
+          width="8"
+          x="8"
+          y="8"
+        />
+      </g>
+    </svg>
+    Checkbox Label
+    <sup>
+      <svg
+        class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+        />
+      </svg>
+    </sup>
+  </label>
+</DocumentFragment>
+`;
+
 exports[`Checkbox renders correctly with a value 1`] = `
 <DocumentFragment>
   .cache-3lt5x-CheckboxContainer {
@@ -1757,7 +1976,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
     <input
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":rc:"
+      name=":rd:"
       type="checkbox"
       value="test"
     />
@@ -1954,10 +2173,10 @@ exports[`Checkbox renders correctly with an error 1`] = `
     data-error="true"
   >
     <input
-      aria-describedby=":r8:-hint"
+      aria-describedby=":r9:-hint"
       aria-invalid="true"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":r8:"
+      name=":r9:"
       type="checkbox"
       value=""
     />
@@ -2175,7 +2394,7 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
       aria-checked="mixed"
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":rf:"
+      name=":rg:"
       type="checkbox"
       value=""
     />
@@ -2430,7 +2649,7 @@ exports[`Checkbox renders correctly with progress 1`] = `
     <input
       aria-invalid="false"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":ra:"
+      name=":rb:"
       type="checkbox"
       value=""
     />
@@ -2653,7 +2872,7 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
       aria-invalid="false"
       aria-label="check"
       class="cache-mhe016-CheckboxInput eu28k4m2"
-      name=":rb:"
+      name=":rc:"
       type="checkbox"
       value=""
     />
@@ -2818,7 +3037,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
     <input
       aria-invalid="false"
       class="cache-1yezwok-CheckboxInput eu28k4m2"
-      name=":rd:"
+      name=":re:"
       type="checkbox"
       value="test"
     />
@@ -3068,7 +3287,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
     <input
       aria-invalid="false"
       class="cache-1yezwok-CheckboxInput eu28k4m2"
-      name=":re:"
+      name=":rf:"
       type="checkbox"
       value="test"
     />

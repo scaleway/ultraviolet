@@ -8,6 +8,7 @@ import type {
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
+import { Icon } from '../Icon'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 
@@ -169,6 +170,7 @@ type CheckboxProps = {
   checked?: boolean | 'indeterminate'
   className?: string
   ['data-visibility']?: string
+  required?: boolean
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
@@ -205,6 +207,7 @@ export const Checkbox = forwardRef(
       className,
       'data-visibility': dataVisibility,
       'aria-label': ariaLabel,
+      required,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -264,6 +267,7 @@ export const Checkbox = forwardRef(
             name={computedName}
             autoFocus={autoFocus}
             ref={ref}
+            required={required}
           />
           {!progress ? (
             <StyledIcon size={size} viewBox="0 0 24 24">
@@ -274,6 +278,11 @@ export const Checkbox = forwardRef(
             </StyledIcon>
           ) : null}
           {children}
+          {required ? (
+            <sup>
+              <Icon name="asterisk" size={10} color="danger" />
+            </sup>
+          ) : null}
         </CheckboxContainer>
         {error ? (
           <PaddedText variant="bodySmall" as="p" color="danger">
