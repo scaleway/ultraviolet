@@ -40,6 +40,8 @@ const BareDescription = styled('dl', {
   font-size: ${({ theme }) => theme.typography.body.fontSize};
   line-height: ${({ theme }) => theme.typography.body.lineHeight};
   flex-direction: ${({ inline }) => (inline ? 'row' : 'column')};
+  align-items: ${({ inline }) => (inline ? 'center' : 'start')};
+  margin: 0;
 
   ${({ inline, theme }) => (inline ? `gap: ${theme.space['1']};` : null)}
 

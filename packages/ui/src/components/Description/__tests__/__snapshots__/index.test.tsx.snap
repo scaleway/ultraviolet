@@ -2,7 +2,7 @@
 
 exports[`Description renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1t3h7h5-BareDescription {
+  .cache-1ct1pby-BareDescription {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,6 +12,11 @@ exports[`Description renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  margin: 0;
 }
 
 .cache-16r8ct-Term {
@@ -41,7 +46,7 @@ exports[`Description renders correctly 1`] = `
 }
 
 <dl
-    class="cache-1t3h7h5-BareDescription eu9mc5y0"
+    class="cache-1ct1pby-BareDescription eu9mc5y0"
   >
     <dt
       class="cache-16r8ct-Term eu9mc5y2"
@@ -69,7 +74,7 @@ exports[`Description renders correctly 1`] = `
 
 exports[`Description renders correctly inline 1`] = `
 <DocumentFragment>
-  .cache-qc6057-BareDescription {
+  .cache-nktpsi-BareDescription {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -79,6 +84,11 @@ exports[`Description renders correctly inline 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
   gap: 8px;
 }
 
@@ -109,7 +119,7 @@ exports[`Description renders correctly inline 1`] = `
 }
 
 <dl
-    class="cache-qc6057-BareDescription eu9mc5y0"
+    class="cache-nktpsi-BareDescription eu9mc5y0"
   >
     <dt
       class="cache-16r8ct-Term eu9mc5y2"
@@ -137,7 +147,7 @@ exports[`Description renders correctly inline 1`] = `
 
 exports[`Description renders correctly seletable 1`] = `
 <DocumentFragment>
-  .cache-tlt704-BareDescription-BareDescription {
+  .cache-1sktjj9-BareDescription-BareDescription {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -147,17 +157,22 @@ exports[`Description renders correctly seletable 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
   gap: 8px;
 }
 
-.cache-tlt704-BareDescription-BareDescription .eu9mc5y1 {
+.cache-1sktjj9-BareDescription-BareDescription .eu9mc5y1 {
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
 }
 
-.cache-tlt704-BareDescription-BareDescription .eu9mc5y1::selection {
+.cache-1sktjj9-BareDescription-BareDescription .eu9mc5y1::selection {
   color: #ffffff;
   background: #4f0599;
 }
@@ -189,7 +204,7 @@ exports[`Description renders correctly seletable 1`] = `
 }
 
 <dl
-    class="cache-tlt704-BareDescription-BareDescription eu9mc5y0"
+    class="cache-1sktjj9-BareDescription-BareDescription eu9mc5y0"
   >
     <dt
       class="cache-16r8ct-Term eu9mc5y2"
