@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.37](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.36...@scaleway/form@1.39.37) (2023-01-31)
+
+
+### :bug: Bug Fixes
+
+* toggle and checkbox to have required icon ([#2223](https://github.com/scaleway/scaleway-ui/issues/2223)) ([a0c3a56](https://github.com/scaleway/scaleway-ui/commit/a0c3a56e3ba51e77551a88b90c14791017d8bbec))
+
+
+
 ## [1.39.36](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.35...@scaleway/form@1.39.36) (2023-01-27)
 
 **Note:** Version bump only for package @scaleway/form

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.0...@scaleway/ui@0.218.1) (2023-01-31)
+
+
+### :memo: Documentation
+
+* **Markdown:** fix deprecated parmeters in storybook ([#2227](https://github.com/scaleway/scaleway-ui/issues/2227)) ([7e7aa3d](https://github.com/scaleway/scaleway-ui/commit/7e7aa3dd8750c1cd9ba4ba1be91990c02e40efb5))
+
+
+### :bug: Bug Fixes
+
+* **description:** line height and margins ([#2226](https://github.com/scaleway/scaleway-ui/issues/2226)) ([1dfd316](https://github.com/scaleway/scaleway-ui/commit/1dfd31677fd528316056d82665c0f62e3887552c))
+* toggle and checkbox to have required icon ([#2223](https://github.com/scaleway/scaleway-ui/issues/2223)) ([a0c3a56](https://github.com/scaleway/scaleway-ui/commit/a0c3a56e3ba51e77551a88b90c14791017d8bbec))
+
+
+
 ## [0.218.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.217.2...@scaleway/ui@0.218.0) (2023-01-27)
 
 
