@@ -29,7 +29,7 @@ importers:
       '@rollup/plugin-node-resolve': 15.0.1
       '@rollup/plugin-url': 8.0.1
       '@scaleway/eslint-config-react': 3.13.7
-      '@scaleway/jest-helpers': 3.0.0
+      '@scaleway/jest-helpers': 3.0.1
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': workspace:*
       '@scaleway/use-i18n': 4.1.10
@@ -133,7 +133,7 @@ importers:
       '@rollup/plugin-node-resolve': 15.0.1_rollup@3.9.1
       '@rollup/plugin-url': 8.0.1_rollup@3.9.1
       '@scaleway/eslint-config-react': 3.13.7_iukboom6ndih5an6iafl45j2fe
-      '@scaleway/jest-helpers': 3.0.0_vwskmg7mzf6u2jufkkmcrhvxcm
+      '@scaleway/jest-helpers': 3.0.1_vwskmg7mzf6u2jufkkmcrhvxcm
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': link:packages/ui
       '@scaleway/use-i18n': 4.1.10_3pf3ktbrffvgnzxoo2eotyjcpi
@@ -4595,8 +4595,8 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers/3.0.0_vwskmg7mzf6u2jufkkmcrhvxcm:
-    resolution: {integrity: sha512-yZFDG+2MpPMIGE7BODEWU4HfdPyOkEz2UrtBz8icvonxfkBnCfhDv6gYRT1sIhUpEi242fv2aNHyekWJjaUZYw==}
+  /@scaleway/jest-helpers/3.0.1_vwskmg7mzf6u2jufkkmcrhvxcm:
+    resolution: {integrity: sha512-mUJkj+QLwqNHcjYlU90iwOZv3Hstx/Ht9jhJ31N5LkqcgAV173cvTXqg73tykT3qASAYhMFR/rl5q/7is5aRkQ==}
     engines: {node: '>=14.x'}
     peerDependencies:
       react: ^18.0.0 || 18
