@@ -269,7 +269,7 @@ importers:
       '@nivo/scales': 0.80.0
       '@nivo/tooltip': 0.80.0
       '@scaleway/random-name': 3.0.3
-      '@scaleway/use-media': 1.2.2
+      '@scaleway/use-media': 2.0.0
       '@types/react': 18.0.26
       '@types/react-datepicker': 4.8.0
       '@types/react-dom': 18.0.10
@@ -293,7 +293,7 @@ importers:
       '@nivo/scales': 0.80.0
       '@nivo/tooltip': 0.80.0_wyuiu3ihipn7hpncy62nqhyrji
       '@scaleway/random-name': 3.0.3
-      '@scaleway/use-media': 1.2.2_react@18.2.0
+      '@scaleway/use-media': 2.0.0_react@18.2.0
       deepmerge: 4.2.2
       prop-types: 15.8.1
       react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
@@ -4639,8 +4639,9 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /@scaleway/use-media/1.2.2_react@18.2.0:
-    resolution: {integrity: sha512-NsbH8uwICL8Ti8Wby4k/jXQe4X23WYnNHIljau4YYda1uQHkmgra5243K4oyidZ7rDMZmUs/hWtgQyQQNYmaiQ==}
+  /@scaleway/use-media/2.0.0_react@18.2.0:
+    resolution: {integrity: sha512-uZ2+zuVBQrPFGrUQFpk5DTFcvnRljR57bRfiG33jnjinzGESoQA6Br3vLhyBuKbydUzFHbCXcJYhZEPCFZakvQ==}
+    engines: {node: '>=14.x'}
     peerDependencies:
       react: 18.x || 18
     dependencies:
