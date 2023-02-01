@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.38](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.37...@scaleway/form@1.39.38) (2023-02-01)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @babel/runtime to v7.20.13 ([#2229](https://github.com/scaleway/scaleway-ui/issues/2229)) ([04136e7](https://github.com/scaleway/scaleway-ui/commit/04136e7842b5cf7013c6672218042b93afeffd2a))
+
+
+
 ## [1.39.37](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.36...@scaleway/form@1.39.37) (2023-01-31)
 
 
