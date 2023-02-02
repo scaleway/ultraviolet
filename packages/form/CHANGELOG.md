@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.41](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.40...@scaleway/form@1.39.41) (2023-02-02)
+
+
+### :zap: Refactor
+
+* rename SelectNumber into NumberInput ([#2211](https://github.com/scaleway/scaleway-ui/issues/2211)) ([ec694b4](https://github.com/scaleway/scaleway-ui/commit/ec694b4bc65cf30d4b6d49217da47ddf43b3fd98))
+
+
+
 ## [1.39.40](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.39...@scaleway/form@1.39.40) (2023-02-02)
 
 

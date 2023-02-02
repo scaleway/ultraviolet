@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.218.4 (2023-02-02)
+
+
+### :package: Chore
+
+* **release:** publish ([d2108ca](https://github.com/scaleway/scaleway-ui/commit/d2108cad82284b34ac6e33967350239ef938e9ee))
+
+
+### :zap: Refactor
+
+* rename SelectNumber into NumberInput ([#2211](https://github.com/scaleway/scaleway-ui/issues/2211)) ([ec694b4](https://github.com/scaleway/scaleway-ui/commit/ec694b4bc65cf30d4b6d49217da47ddf43b3fd98))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency deepmerge to v4.3.0 ([#2239](https://github.com/scaleway/scaleway-ui/issues/2239)) ([8953c53](https://github.com/scaleway/scaleway-ui/commit/8953c53afab39c83ff53c145d2ff310b5b311eb4))
+
+
+
 ## [0.218.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.2...@scaleway/ui@0.218.3) (2023-02-02)
 
 
