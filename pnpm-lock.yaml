@@ -276,7 +276,7 @@ importers:
       deepmerge: 4.3.0
       prop-types: 15.8.1
       react: 18.2.0
-      react-datepicker: 4.8.0
+      react-datepicker: 4.10.0
       react-dom: 18.2.0
       react-flatten-children: 1.1.2
       react-markdown: 5.0.3
@@ -296,7 +296,7 @@ importers:
       '@scaleway/use-media': 2.0.0_react@18.2.0
       deepmerge: 4.3.0
       prop-types: 15.8.1
-      react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
+      react-datepicker: 4.10.0_biqbaboplfbrettd7655fr4n2y
       react-flatten-children: 1.1.2
       react-markdown: 5.0.3_kzbn2opkn2327fwg5yzwzya5o4
       react-select: 5.7.0_vwskmg7mzf6u2jufkkmcrhvxcm
@@ -18366,8 +18366,8 @@ packages:
       strip-json-comments: 2.0.1
     dev: true
 
-  /react-datepicker/4.8.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg==}
+  /react-datepicker/4.10.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-6IfBCZyWj54ZZGLmEZJ9c4Yph0s9MVfEGDC2evOvf9AmVz+RRcfP2Czqad88Ff9wREbcbqa4dk7IFYeXF1d3Ag==}
     peerDependencies:
       react: ^16.9.0 || ^17 || ^18 || 18
       react-dom: ^16.9.0 || ^17 || ^18 || 18
@@ -18378,7 +18378,7 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-onclickoutside: 6.12.1_biqbaboplfbrettd7655fr4n2y
+      react-onclickoutside: 6.12.2_biqbaboplfbrettd7655fr4n2y
       react-popper: 2.3.0_r6q5zrenym2zg7je7hgi674bti
     dev: false
 
@@ -18512,11 +18512,11 @@ packages:
       - supports-color
     dev: false
 
-  /react-onclickoutside/6.12.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-a5Q7CkWznBRUWPmocCvE8b6lEYw1s6+opp/60dCunhO+G6E4tDTO2Sd2jKE+leEnnrLAE2Wj5DlDHNqj5wPv1Q==}
+  /react-onclickoutside/6.12.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-NMXGa223OnsrGVp5dJHkuKxQ4czdLmXSp5jSV9OqiCky9LOpPATn3vLldc+q5fK3gKbEHvr7J1u0yhBh/xYkpA==}
     peerDependencies:
-      react: ^15.5.x || ^16.x || ^17.x || 18
-      react-dom: ^15.5.x || ^16.x || ^17.x || 18
+      react: ^15.5.x || ^16.x || ^17.x || ^18.x || 18
+      react-dom: ^15.5.x || ^16.x || ^17.x || ^18.x || 18
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
