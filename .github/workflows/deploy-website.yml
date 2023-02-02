@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.SCW_SECRET_KEY }}
 
       - name: Build
-        uses: docker/build-push-action@v3.2.0
+        uses: docker/build-push-action@v4.0.0
         env:
           IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
         with:
