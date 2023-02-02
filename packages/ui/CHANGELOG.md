@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.2...@scaleway/ui@0.218.3) (2023-02-02)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency @scaleway/random-name to v4 ([#2231](https://github.com/scaleway/scaleway-ui/issues/2231)) ([187d62d](https://github.com/scaleway/scaleway-ui/commit/187d62dfb54037d36ba2f57b170a0c67ae498527))
+
+
+
 ## [0.218.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.1...@scaleway/ui@0.218.2) (2023-02-01)
 
 
