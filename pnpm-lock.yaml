@@ -228,7 +228,7 @@ importers:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.10
       final-form: 4.20.9
-      final-form-arrays: 3.0.2
+      final-form-arrays: 3.1.0
       final-form-focus: 1.1.2
       react: 18.2.0
       react-dom: 18.2.0
@@ -242,10 +242,10 @@ importers:
       '@emotion/styled': 11.10.5_jp5djshq6aqfasno3mth3hguci
       '@scaleway/ui': link:../ui
       final-form: 4.20.9
-      final-form-arrays: 3.0.2_final-form@4.20.9
+      final-form-arrays: 3.1.0_final-form@4.20.9
       final-form-focus: 1.1.2_final-form@4.20.9
       react-final-form: 6.5.9_zunk57bvr2t5bgdbaxawch3xh4
-      react-final-form-arrays: 3.1.4_q2za4bw4cstnp42a2pterukblu
+      react-final-form-arrays: 3.1.4_aow5e6qsraapsvmuz6go5r432e
       react-select: 5.7.0_vwskmg7mzf6u2jufkkmcrhvxcm
     devDependencies:
       '@babel/core': 7.20.12
@@ -11878,10 +11878,10 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /final-form-arrays/3.0.2_final-form@4.20.9:
-    resolution: {integrity: sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==}
+  /final-form-arrays/3.1.0_final-form@4.20.9:
+    resolution: {integrity: sha512-TWBvun+AopgBLw9zfTFHBllnKMVNEwCEyDawphPuBGGqNsuhGzhT7yewHys64KFFwzIs6KEteGLpKOwvTQEscQ==}
     peerDependencies:
-      final-form: ^4.18.2
+      final-form: ^4.20.8
     dependencies:
       final-form: 4.20.9
     dev: false
@@ -18434,7 +18434,7 @@ packages:
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
 
-  /react-final-form-arrays/3.1.4_q2za4bw4cstnp42a2pterukblu:
+  /react-final-form-arrays/3.1.4_aow5e6qsraapsvmuz6go5r432e:
     resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
     peerDependencies:
       final-form: ^4.15.0
@@ -18444,7 +18444,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.13
       final-form: 4.20.9
-      final-form-arrays: 3.0.2_final-form@4.20.9
+      final-form-arrays: 3.1.0_final-form@4.20.9
       react: 18.2.0
       react-final-form: 6.5.9_zunk57bvr2t5bgdbaxawch3xh4
     dev: false
