@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.4...@scaleway/ui@0.218.5) (2023-02-02)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-datepicker to v4.10.0 ([#2235](https://github.com/scaleway/scaleway-ui/issues/2235)) ([83a0ed6](https://github.com/scaleway/scaleway-ui/commit/83a0ed619e61c8ac47c99e281b59abaa168667c0))
+
+
+
 ## 0.218.4 (2023-02-02)
 
 
