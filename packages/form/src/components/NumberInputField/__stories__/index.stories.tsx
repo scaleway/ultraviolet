@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react'
-import { Form, SelectNumberField } from '../..'
+import { Form, NumberInputField } from '../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
-  component: SelectNumberField,
+  component: NumberInputField,
   decorators: [
     ChildStory => (
       <Form onRawSubmit={() => {}} errors={mockErrors}>
@@ -14,11 +14,11 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'A SelectNumber field',
+        component: 'A NumberInput field',
       },
     },
   },
-  title: 'Form/Components/Fields/SelectNumberField',
+  title: 'Form/Components/Fields/NumberInputField',
 } as Meta
 
 export { Playground } from './Playground.stories'

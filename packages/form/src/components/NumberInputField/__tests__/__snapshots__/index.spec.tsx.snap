@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SelectNumberField should render correctly 1`] = `
+exports[`NumberInputField should render correctly 1`] = `
 <DocumentFragment>
   .cache-8ke8uo {
   background-color: #ffffff;
@@ -120,11 +120,11 @@ exports[`SelectNumberField should render correctly 1`] = `
     novalidate=""
   >
     <div
-      class="cache-8ke8uo ermgxlz0"
+      class="cache-8ke8uo eiawj1g0"
     >
       <button
         aria-label="Minus"
-        class="cache-bkq66r ermgxlz4"
+        class="cache-bkq66r eiawj1g4"
         disabled=""
         type="button"
       >
@@ -139,12 +139,12 @@ exports[`SelectNumberField should render correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 ermgxlz3"
+        class="cache-zw5304 eiawj1g3"
         role="status"
       >
         <input
           aria-label="Input"
-          class="cache-1lq3jx2 ermgxlz2"
+          class="cache-1lq3jx2 eiawj1g2"
           name="test"
           style="width: 25px;"
           type="number"
@@ -153,7 +153,7 @@ exports[`SelectNumberField should render correctly 1`] = `
       </div>
       <button
         aria-label="Plus"
-        class="cache-1mh6k42 ermgxlz4"
+        class="cache-1mh6k42 eiawj1g4"
         type="button"
       >
         <svg
@@ -170,9 +170,9 @@ exports[`SelectNumberField should render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SelectNumberField should render correctly disabled 1`] = `
+exports[`NumberInputField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-186d4cs-StyledContainer {
+  .cache-t483l8-StyledContainer {
   background-color: #f6f6f8;
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,9 +194,9 @@ exports[`SelectNumberField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-186d4cs-StyledContainer>.ermgxlz4,
-.cache-186d4cs-StyledContainer .ermgxlz2,
-.cache-186d4cs-StyledContainer .ermgxlz3 {
+.cache-t483l8-StyledContainer>.eiawj1g4,
+.cache-t483l8-StyledContainer .eiawj1g2,
+.cache-t483l8-StyledContainer .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
@@ -286,12 +286,12 @@ exports[`SelectNumberField should render correctly disabled 1`] = `
     novalidate=""
   >
     <div
-      class="cache-186d4cs-StyledContainer ermgxlz0"
+      class="cache-t483l8-StyledContainer eiawj1g0"
       disabled=""
     >
       <button
         aria-label="Minus"
-        class="cache-bkq66r ermgxlz4"
+        class="cache-bkq66r eiawj1g4"
         disabled=""
         type="button"
       >
@@ -306,12 +306,12 @@ exports[`SelectNumberField should render correctly disabled 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 ermgxlz3"
+        class="cache-zw5304 eiawj1g3"
         role="status"
       >
         <input
           aria-label="Input"
-          class="cache-1lq3jx2 ermgxlz2"
+          class="cache-1lq3jx2 eiawj1g2"
           disabled=""
           name="test"
           style="width: 25px;"
@@ -321,7 +321,7 @@ exports[`SelectNumberField should render correctly disabled 1`] = `
       </div>
       <button
         aria-label="Plus"
-        class="cache-bkq66r ermgxlz4"
+        class="cache-bkq66r eiawj1g4"
         disabled=""
         type="button"
       >
@@ -339,7 +339,7 @@ exports[`SelectNumberField should render correctly disabled 1`] = `
 </DocumentFragment>
 `;
 
-exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] = `
+exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] = `
 <DocumentFragment>
   .cache-8ke8uo {
   background-color: #ffffff;
@@ -459,11 +459,11 @@ exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] 
     novalidate=""
   >
     <div
-      class="cache-8ke8uo ermgxlz0"
+      class="cache-8ke8uo eiawj1g0"
     >
       <button
         aria-label="Minus"
-        class="cache-1mh6k42 ermgxlz4"
+        class="cache-1mh6k42 eiawj1g4"
         type="button"
       >
         <svg
@@ -477,12 +477,12 @@ exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] 
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 ermgxlz3"
+        class="cache-zw5304 eiawj1g3"
         role="status"
       >
         <input
           aria-label="Input"
-          class="cache-1lq3jx2 ermgxlz2"
+          class="cache-1lq3jx2 eiawj1g2"
           name="test"
           style="width: 35px;"
           type="number"
@@ -491,7 +491,7 @@ exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] 
       </div>
       <button
         aria-label="Plus"
-        class="cache-bkq66r ermgxlz4"
+        class="cache-bkq66r eiawj1g4"
         disabled=""
         type="button"
       >
@@ -509,7 +509,7 @@ exports[`SelectNumberField should trigger event onMinCrossed & onMaxCrossed 1`] 
 </DocumentFragment>
 `;
 
-exports[`SelectNumberField should trigger events correctly 1`] = `
+exports[`NumberInputField should trigger events correctly 1`] = `
 <DocumentFragment>
   .cache-8ke8uo {
   background-color: #ffffff;
@@ -629,11 +629,11 @@ exports[`SelectNumberField should trigger events correctly 1`] = `
     novalidate=""
   >
     <div
-      class="cache-8ke8uo ermgxlz0"
+      class="cache-8ke8uo eiawj1g0"
     >
       <button
         aria-label="Minus"
-        class="cache-bkq66r ermgxlz4"
+        class="cache-bkq66r eiawj1g4"
         disabled=""
         type="button"
       >
@@ -648,12 +648,12 @@ exports[`SelectNumberField should trigger events correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 ermgxlz3"
+        class="cache-zw5304 eiawj1g3"
         role="status"
       >
         <input
           aria-label="Input"
-          class="cache-1lq3jx2 ermgxlz2"
+          class="cache-1lq3jx2 eiawj1g2"
           name="test"
           style="width: 25px;"
           type="number"
@@ -662,7 +662,7 @@ exports[`SelectNumberField should trigger events correctly 1`] = `
       </div>
       <button
         aria-label="Plus"
-        class="cache-1mh6k42 ermgxlz4"
+        class="cache-1mh6k42 eiawj1g4"
         type="button"
       >
         <svg

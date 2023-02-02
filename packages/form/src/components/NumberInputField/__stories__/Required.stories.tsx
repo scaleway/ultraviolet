@@ -1,14 +1,14 @@
 import { Stack } from '@scaleway/ui'
 import type { Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import { SelectNumberField } from '..'
+import { NumberInputField } from '..'
 import { Submit } from '../../Submit'
 
 export const Required: Story<
-  ComponentProps<typeof SelectNumberField>
+  ComponentProps<typeof NumberInputField>
 > = args => (
   <Stack gap={1}>
-    <SelectNumberField {...args} />
+    <NumberInputField {...args} />
     <Submit>Submit</Submit>
   </Stack>
 )

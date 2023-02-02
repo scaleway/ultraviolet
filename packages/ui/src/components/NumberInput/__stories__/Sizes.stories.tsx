@@ -1,16 +1,16 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import { SelectNumber } from '..'
+import { NumberInput } from '..'
 import { Stack } from '../../Stack'
 
-const sizes: ComponentProps<typeof SelectNumber>['size'][] = [
+const sizes: ComponentProps<typeof NumberInput>['size'][] = [
   'large',
   'medium',
   'small',
 ]
 
-export const Sizes = (props: ComponentProps<typeof SelectNumber>) =>
-  sizes.map(size => <SelectNumber {...props} size={size} />)
+export const Sizes = (props: ComponentProps<typeof NumberInput>) =>
+  sizes.map(size => <NumberInput {...props} size={size} />)
 
 Sizes.decorators = [
   Story => (

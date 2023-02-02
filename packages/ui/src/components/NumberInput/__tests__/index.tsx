@@ -1,15 +1,15 @@
 import { fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { SelectNumber } from '..'
+import { NumberInput } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
 
-describe('SelectNumber', () => {
+describe('NumberInput', () => {
   it('should renders correctly', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={0}
         maxValue={100}
         text="unit"
@@ -20,7 +20,7 @@ describe('SelectNumber', () => {
 
   it('should renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={0}
         maxValue={100}
         text="unit"
@@ -31,27 +31,27 @@ describe('SelectNumber', () => {
 
   it('should renders correctly min value', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} maxValue={100} text="unit" value={0} />,
+      <NumberInput minValue={0} maxValue={100} text="unit" value={0} />,
     ))
 
   it('should renders correctly max value', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} maxValue={100} text="unit" value={100} />,
+      <NumberInput minValue={0} maxValue={100} text="unit" value={100} />,
     ))
 
   it('should renders large size', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} maxValue={100} value={10} size="large" />,
+      <NumberInput minValue={0} maxValue={100} value={10} size="large" />,
     ))
 
   it('should renders small size', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} maxValue={100} value={10} size="small" />,
+      <NumberInput minValue={0} maxValue={100} value={10} size="small" />,
     ))
 
   it('should click on center button', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} step={1} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const inputButton = getByLabelText('Input')
@@ -65,7 +65,7 @@ describe('SelectNumber', () => {
 
   it('should click on min button', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} step={1} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const minus = getByLabelText('Minus')
@@ -82,7 +82,7 @@ describe('SelectNumber', () => {
 
   it('should click on plus button with a step value', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={0}
         step={10}
         maxValue={100}
@@ -105,7 +105,7 @@ describe('SelectNumber', () => {
 
   it('should focus input and modify value', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={0} step={10} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={10} maxValue={100} value={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const buttonContainer = getByLabelText('Input')
@@ -124,7 +124,7 @@ describe('SelectNumber', () => {
     ))
   it('should focus input and modify value onMinCrossed', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={10}
         maxValue={100}
         value={30}
@@ -145,7 +145,7 @@ describe('SelectNumber', () => {
 
   it('should focus input and modify value onMaxCrossed', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={10}
         maxValue={100}
         value={30}
@@ -166,7 +166,7 @@ describe('SelectNumber', () => {
 
   it('should increase and decrease input with arrow up and down', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber minValue={10} maxValue={100} value={30} />,
+      <NumberInput minValue={10} maxValue={100} value={30} />,
       {
         transform: async ({ getByRole }) => {
           const input = getByRole('spinbutton') as HTMLInputElement
@@ -202,7 +202,7 @@ describe('SelectNumber', () => {
 
   it('should click on plus button with a step value and an in-between value set', () =>
     shouldMatchEmotionSnapshot(
-      <SelectNumber
+      <NumberInput
         minValue={0}
         step={10}
         maxValue={100}
@@ -225,7 +225,7 @@ describe('SelectNumber', () => {
 
   it('should increase and decrease input with arrow up and down, step and an in-between value set', async () => {
     const node = renderWithTheme(
-      <SelectNumber minValue={10} maxValue={100} value={32} step={10} />,
+      <NumberInput minValue={10} maxValue={100} value={32} step={10} />,
     )
 
     const input = node.getByRole('spinbutton') as HTMLInputElement
