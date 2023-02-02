@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.40](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.39...@scaleway/form@1.39.40) (2023-02-02)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency final-form-arrays to v3.1.0 ([#2234](https://github.com/scaleway/scaleway-ui/issues/2234)) ([1b667c5](https://github.com/scaleway/scaleway-ui/commit/1b667c50b959cd36b2595ac4461d8c7f2d20b4f6))
+
+
+
 ## [1.39.39](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.38...@scaleway/form@1.39.39) (2023-02-02)
 
 **Note:** Version bump only for package @scaleway/form
