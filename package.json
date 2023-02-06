@@ -36,7 +36,7 @@
     "test:a11y": "LC_ALL=en_US.UTF-8 jest --config .jest/a11y.config.ts",
     "prepare": "husky install",
     "size": "pnpm run build && size-limit",
-    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write src/theme/tokens",
+    "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write packages/themes/src/themes/console",
     "chromatic": "chromatic --exit-zero-on-changes"
   },
   "lint-staged": {

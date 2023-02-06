@@ -1,6 +1,5 @@
+import { consoleDarkTheme, consoleLightTheme } from '@scaleway/themes'
 import deepmerge from 'deepmerge'
-import dark from './tokens/dark'
-import light from './tokens/light'
 
 const radii = {
   none: '0',
@@ -28,7 +27,7 @@ const space = {
 
 export type Spaces = keyof typeof space
 
-const { colors, shadows, typography } = light
+const { colors, shadows, typography } = consoleLightTheme
 
 const screens = {
   xsmall: 0,
@@ -64,7 +63,7 @@ const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
 
 const lightTheme: SCWUITheme = theme
 
-const darkTheme = extendTheme(dark)
+const darkTheme = extendTheme(consoleDarkTheme)
 
 // This type exclude overlay and secondary color
 type Color = Exclude<keyof typeof colors, 'overlay' | 'secondary'>
