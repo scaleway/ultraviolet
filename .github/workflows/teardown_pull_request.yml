@@ -35,14 +35,14 @@ jobs:
           scw_registry: ${{ env.IMAGE_NAME }}:${{ env.WEBSITE_BRANCH_SLUG }}
 
       - name: Remove storybook deployment
-        uses: bobheadxi/deployments@v1.3.0
+        uses: bobheadxi/deployments@v1.4.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
           env: ${{ env.STORYBOOK_BRANCH_SLUG }}
 
       - name: Remove website deployment
-        uses: bobheadxi/deployments@v1.3.0
+        uses: bobheadxi/deployments@v1.4.0
         with:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
