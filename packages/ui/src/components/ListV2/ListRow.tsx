@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react'
 import { useEffect } from 'react'
-import type { Color } from '../../theme'
+import { SENTIMENTS } from '../../theme'
 import { Checkbox } from '../Checkbox'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
@@ -34,20 +34,11 @@ const StyledCheckbox = styled(Checkbox)`
   }
 `
 
-export const LIST_ROW_SENTIMENTS: Color[] = [
-  'danger',
-  'warning',
-  'primary',
-  'success',
-  'neutral',
-  'info',
-]
-
 const StyledRow = styled('div', {})<{
   'data-disabled': boolean
   'data-hoverable': boolean
   'data-highlight': boolean
-  'data-sentiment': Color | undefined
+  'data-sentiment': typeof SENTIMENTS[number] | undefined
   'aria-expanded': boolean
 }>`
   position: relative;
@@ -63,7 +54,7 @@ const StyledRow = styled('div', {})<{
   }
 
   ${({ theme }) =>
-    LIST_ROW_SENTIMENTS.map(
+    SENTIMENTS.map(
       color => `
     &[data-sentiment="${color}"] {
       color: ${theme.colors[color].text};
@@ -161,7 +152,7 @@ type ListRowProps = {
   checkboxDisabled?: boolean
   checkboxTooltip?: string
   tooltip?: string
-  sentiment?: typeof LIST_ROW_SENTIMENTS[number]
+  sentiment?: typeof SENTIMENTS[number]
   expandable?: ReactNode
   /**
    * If expandable content visibility is controlled, specify this prop to TRUE or FALSE

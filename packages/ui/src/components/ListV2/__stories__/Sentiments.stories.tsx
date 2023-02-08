@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import { List } from '..'
-import { LIST_ROW_SENTIMENTS } from '../ListRow'
+import { SENTIMENTS } from '../../../theme'
 
 export const Sentiments: Story = () => (
   <List
@@ -10,7 +10,7 @@ export const Sentiments: Story = () => (
     ]}
     autoClose
   >
-    {LIST_ROW_SENTIMENTS.map(sentiment => (
+    {SENTIMENTS.map(sentiment => (
       <List.Row
         key={sentiment}
         id={sentiment}

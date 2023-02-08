@@ -35,7 +35,7 @@ export const ListHeaderRow = ({
     useListContext()
 
   const checkedValue = useMemo<boolean | 'indeterminate'>(() => {
-    if (!selectedIds) {
+    if (!selectedIds || Object.keys(selectableIds).length === 0) {
       return false
     }
 
