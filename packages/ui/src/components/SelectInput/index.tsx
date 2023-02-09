@@ -583,7 +583,7 @@ const DropdownIndicator = (
     <components.DropdownIndicator {...props}>
       <Stack gap={1} direction="row" alignItems="center">
         {required ? (
-          <Icon name="asterisk" size={8} color={theme.colors.danger.text} />
+          <Icon name="asterisk" size={10} color={theme.colors.danger.text} />
         ) : null}
         {time ? <StyledSeparator direction="vertical" /> : null}
         <Icon
