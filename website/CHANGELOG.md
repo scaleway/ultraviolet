@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.42](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.41...scaleway-ui-website@0.2.42) (2023-02-10)
+
+
+### :bug: Bug Fixes
+
+* **devdeps:** update all devdeps ([#2252](https://github.com/scaleway/scaleway-ui/issues/2252)) ([ce6cb78](https://github.com/scaleway/scaleway-ui/commit/ce6cb78bad37332d27f574e5f031c21f6e18bbb4))
+
+
+
 ## [0.2.41](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.40...scaleway-ui-website@0.2.41) (2023-02-10)
 
 **Note:** Version bump only for package scaleway-ui-website

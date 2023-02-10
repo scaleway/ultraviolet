@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.6...@scaleway/ui@0.218.7) (2023-02-10)
+
+
+### :bug: Bug Fixes
+
+* **devdeps:** update all devdeps ([#2252](https://github.com/scaleway/scaleway-ui/issues/2252)) ([ce6cb78](https://github.com/scaleway/scaleway-ui/commit/ce6cb78bad37332d27f574e5f031c21f6e18bbb4))
+
+
+
 ## 0.218.6 (2023-02-10)
 
 
