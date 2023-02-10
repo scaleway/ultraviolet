@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.218.6 (2023-02-10)
+
+
+### :package: Chore
+
+* **release:** publish ([ac835f3](https://github.com/scaleway/scaleway-ui/commit/ac835f34a113818bd16a94c2e1e877fec8743d56))
+
+
+### :bug: Bug Fixes
+
+* **SelectInput:** required icon to be 10px ([#2253](https://github.com/scaleway/scaleway-ui/issues/2253)) ([b6f3b1b](https://github.com/scaleway/scaleway-ui/commit/b6f3b1b64e90cb9f2ec2d06ad1c1961a7dd4979e))
+
+
+
 ## [0.218.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.4...@scaleway/ui@0.218.5) (2023-02-02)
 
 

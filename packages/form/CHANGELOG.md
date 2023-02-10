@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.39.43 (2023-02-10)
+
+
+### :package: Chore
+
+* **release:** publish ([ac835f3](https://github.com/scaleway/scaleway-ui/commit/ac835f34a113818bd16a94c2e1e877fec8743d56))
+
+
+
 ## [1.39.42](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.41...@scaleway/form@1.39.42) (2023-02-02)
 
 
