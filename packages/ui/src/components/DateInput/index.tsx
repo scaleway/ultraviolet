@@ -165,11 +165,14 @@ type DateInputProps = Pick<
   value?: Date | string
 }
 
+const defaultFormat = (value?: Date | string) =>
+  value instanceof Date ? value.toISOString() : value
+
 export const DateInput = ({
   autoFocus = false,
   disabled = false,
   error,
-  format = value => (value instanceof Date ? value?.toISOString() : value),
+  format = defaultFormat,
   label,
   locale,
   maxDate,

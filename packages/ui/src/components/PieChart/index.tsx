@@ -48,6 +48,9 @@ type PieChartProps = {
   margin?: Box
 }
 
+const defaultChartProps = {}
+const defaultMargin = { bottom: 10, left: 10, right: 10, top: 10 }
+
 /**
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
@@ -58,13 +61,13 @@ export const PieChart = ({
   emptyLegend,
   content,
   withLegend = false,
-  margin = { bottom: 10, left: 10, right: 10, top: 10 },
-  chartProps = {},
+  margin = defaultMargin,
+  chartProps = defaultChartProps,
 }: PieChartProps) => {
   const { colors } = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
   const emptyTooltip = useCallback(() => <span />, [])
-  const isEmpty = !data || data?.length === 0
+  const isEmpty = !data || data.length === 0
 
   const EmptyLegendDisplayed = useCallback(
     () =>

@@ -58,13 +58,16 @@ type PasswordStrengthMeterProps = {
   userInputs?: string[]
 }
 
+const defaultEstimate = () => ({ score: 0 })
+const defaultUserInputs: string[] = []
+
 export const PasswordStrengthMeter = ({
   password = '',
   onChange,
   strength,
   title,
-  estimate = () => ({ score: 0 }),
-  userInputs = [],
+  estimate = defaultEstimate,
+  userInputs = defaultUserInputs,
 }: PasswordStrengthMeterProps): JSX.Element => {
   const [score, setScore] = useState<number>(0)
   const theme = useTheme()

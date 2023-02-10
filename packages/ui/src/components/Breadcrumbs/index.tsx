@@ -139,10 +139,7 @@ type ItemProps = {
    * ID of the step, automatically injected by Breadcrumbs parent tag
    */
   step?: number
-  onClick?: (
-    event: ReactMouseEvent<HTMLLIElement, MouseEvent>,
-    step: number,
-  ) => void
+  onClick?: (event: ReactMouseEvent<HTMLLIElement>, step: number) => void
 }
 
 export const Item = ({

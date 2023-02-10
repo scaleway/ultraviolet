@@ -27,18 +27,16 @@ type Color = Extract<
   'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 >
 
-const SENTIMENTS = [
-  'primary',
-  'neutral',
-  'success',
-  'danger',
-  'warning',
-  'info',
-] as const
+const SENTIMENTS = Object.keys(colors).filter(
+  sentiment => sentiment !== 'overlay' && sentiment !== 'secondary',
+) as Color[]
 
-const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
-  sentiment => sentiment !== 'neutral',
-)
+const SENTIMENTS_WITHOUT_NEUTRAL = Object.keys(colors).filter(
+  sentiment =>
+    sentiment !== 'overlay' &&
+    sentiment !== 'secondary' &&
+    sentiment !== 'neutral',
+) as Exclude<Color, 'neutral'>[]
 
 export type { SCWUITheme, Color }
 

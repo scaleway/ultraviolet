@@ -58,7 +58,7 @@ describe('onKeyOnlyNumbers', () => {
       onKeyOnlyNumbers({
         key: String.fromCharCode(keyCode),
         preventDefault,
-      } as unknown as KeyboardEvent<Element>)
+      } as unknown as KeyboardEvent)
 
       expect(preventDefault).toHaveBeenCalledTimes(
         keyCode < 48 || keyCode > 57 ? 1 : 0,

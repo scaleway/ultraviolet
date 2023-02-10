@@ -6,9 +6,9 @@ import type { SelectOption } from '../../SelectInput'
 const isSafeValue = (value: unknown): value is SelectOption =>
   value !== null && !Array.isArray(value)
 
-export const Controlled: Story = ({
-  value: defaultValue = { label: '03:30', value: '03:30' },
-}) => {
+const defaultVal = { label: '03:30', value: '03:30' }
+
+export const Controlled: Story = ({ value: defaultValue = defaultVal }) => {
   const [value, setValue] = useState<SelectOption>(defaultValue as SelectOption)
 
   return (

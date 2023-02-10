@@ -52,15 +52,17 @@ type TagListProps = {
   multiline?: boolean
 }
 
+const defaultTags: string[] = []
+
 export const TagList = ({
   maxLength = 600,
-  tags = [],
+  tags = defaultTags,
   threshold = 1,
   multiline = false,
 }: TagListProps): JSX.Element | null => {
   let tmpThreshold = threshold
   if (
-    tags?.length > 0 &&
+    tags.length > 0 &&
     tags.slice(0, tmpThreshold).reduce((_, tag) => _ + tag).length > maxLength
   ) {
     // If total tags length in characters is above maxLength,

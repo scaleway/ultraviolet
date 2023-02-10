@@ -107,7 +107,7 @@ const CustomLegend = ({
           <div key={labelIndexed} css={styles.row}>
             <LongContainer>
               <Checkbox
-                checked={selected.indexOf(labelIndexed) > -1}
+                checked={selected.includes(labelIndexed)}
                 name={id}
                 onChange={() =>
                   setSelected([...getSelected(id, index, selected)])
