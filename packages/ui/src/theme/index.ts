@@ -1,53 +1,13 @@
 import { consoleDarkTheme, consoleLightTheme } from '@scaleway/themes'
 import deepmerge from 'deepmerge'
 
-const radii = {
-  none: '0',
-  default: '4px',
-  large: '8px',
-  circle: '100%',
-}
+export type Spaces = keyof typeof consoleLightTheme.space
 
-const space = {
-  0: '0',
-  0.25: '2px',
-  0.5: '4px',
-  0.75: '6px',
-  1: '8px',
-  2: '16px',
-  2.25: '18px',
-  3: '24px',
-  4: '32px',
-  5: '40px',
-  6: '48px',
-  7: '56px',
-  8: '64px',
-  9: '72px',
-}
+export type ScreenSize = keyof typeof consoleLightTheme.screens
 
-export type Spaces = keyof typeof space
+type SCWUITheme = typeof consoleLightTheme
 
-const { colors, shadows, typography } = consoleLightTheme
-
-const screens = {
-  xsmall: 0,
-  small: 576,
-  medium: 768,
-  large: 992,
-  xlarge: 1200,
-}
-export type ScreenSize = keyof typeof screens
-
-const theme = {
-  colors,
-  radii,
-  screens,
-  shadows,
-  space,
-  typography,
-}
-
-type SCWUITheme = typeof theme
+const { colors, shadows, typography, space, radii, screens } = consoleLightTheme
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>
@@ -59,20 +19,19 @@ type RecursivePartial<T> = {
  * @param {RecursivePartial<SCWUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
 const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
-  deepmerge(theme, extendedTheme) as SCWUITheme
-
-const lightTheme: SCWUITheme = theme
-
-const darkTheme = extendTheme(consoleDarkTheme)
+  deepmerge(consoleLightTheme, extendedTheme) as SCWUITheme
 
 // This type exclude overlay and secondary color
-type Color = Exclude<keyof typeof colors, 'overlay' | 'secondary'>
+type Color = Exclude<
+  keyof typeof consoleLightTheme.colors,
+  'overlay' | 'secondary'
+>
 
-const SENTIMENTS = Object.keys(colors).filter(
+const SENTIMENTS = Object.keys(consoleLightTheme.colors).filter(
   sentiment => sentiment !== 'overlay' && sentiment !== 'secondary',
 ) as Array<Color>
 
-const SENTIMENTS_WITHOUT_NEUTRAL = Object.keys(colors).filter(
+const SENTIMENTS_WITHOUT_NEUTRAL = Object.keys(consoleLightTheme.colors).filter(
   sentiment =>
     sentiment !== 'overlay' &&
     sentiment !== 'secondary' &&
@@ -87,11 +46,11 @@ export {
   space,
   radii,
   screens,
-  darkTheme,
+  consoleDarkTheme as darkTheme,
   extendTheme,
   SENTIMENTS,
   SENTIMENTS_WITHOUT_NEUTRAL,
   typography,
 }
 
-export default lightTheme
+export default consoleLightTheme

@@ -237,6 +237,9 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
 
+  packages/themes:
+    specifiers: {}
+
   packages/ui:
     specifiers:
       '@babel/core': 7.20.12
@@ -251,6 +254,7 @@ importers:
       '@nivo/scales': 0.80.0
       '@nivo/tooltip': 0.80.0
       '@scaleway/random-name': 4.0.1
+      '@scaleway/themes': workspace:*
       '@scaleway/use-media': 2.0.0
       '@types/react': 18.0.27
       '@types/react-datepicker': 4.8.0
@@ -275,6 +279,7 @@ importers:
       '@nivo/scales': 0.80.0
       '@nivo/tooltip': 0.80.0_wyuiu3ihipn7hpncy62nqhyrji
       '@scaleway/random-name': 4.0.1
+      '@scaleway/themes': link:../themes
       '@scaleway/use-media': 2.0.0_react@18.2.0
       deepmerge: 4.3.0
       prop-types: 15.8.1
