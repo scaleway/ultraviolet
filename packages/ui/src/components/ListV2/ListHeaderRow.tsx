@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ChangeEventHandler, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Checkbox } from '../Checkbox'
 import { useListContext } from './ListContext'
@@ -46,20 +46,6 @@ export const ListHeaderRow = ({
     return selectedIds.length === 0 ? false : 'indeterminate'
   }, [selectedIds, selectableIds])
 
-  const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (setSelectedIds === undefined) {
-      return false
-    }
-
-    if (event.target.checked && checkedValue !== 'indeterminate') {
-      setSelectedIds(Object.keys(selectableIds))
-    } else {
-      setSelectedIds([])
-    }
-
-    return true
-  }
-
   return (
     <StyledRow role="row" template={template} className={className}>
       {setSelectedIds !== undefined ? (
@@ -68,7 +54,13 @@ export const ListHeaderRow = ({
             name="list-radio"
             value="all"
             checked={checkedValue}
-            onChange={handleCheck}
+            onChange={event => {
+              if (event.target.checked && checkedValue !== 'indeterminate') {
+                setSelectedIds(Object.keys(selectableIds))
+              } else {
+                setSelectedIds([])
+              }
+            }}
             aria-label="select"
             disabled={Object.keys(selectableIds).length === 0}
           />

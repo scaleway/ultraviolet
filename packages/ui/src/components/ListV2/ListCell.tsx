@@ -1,18 +1,14 @@
 import styled from '@emotion/styled'
 import type { MouseEventHandler, ReactNode } from 'react'
 
-const StyledCellDiv = styled('div', {
-  shouldForwardProp: prop => prop !== 'colSpan',
-})<{ colSpan?: number }>`
+const StyledCellDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-height: 60px;
-  ${({ colSpan }) => (colSpan ? `grid-column: span ${colSpan} / span 12;` : '')}
 `
 
 type ListCellProps = {
-  colSpan?: number
   children?: ReactNode
   onClick?: MouseEventHandler<HTMLTableCellElement>
   className?: string
@@ -23,7 +19,6 @@ type ListCellProps = {
 }
 
 export const ListCell = ({
-  colSpan,
   children,
   onClick,
   className,
@@ -37,12 +32,7 @@ export const ListCell = ({
   }
 
   return (
-    <StyledCellDiv
-      role="cell"
-      colSpan={colSpan}
-      onClick={handleClick}
-      className={className}
-    >
+    <StyledCellDiv role="cell" onClick={handleClick} className={className}>
       {children}
     </StyledCellDiv>
   )

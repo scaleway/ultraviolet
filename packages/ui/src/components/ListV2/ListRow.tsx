@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ChangeEventHandler, MouseEventHandler, ReactNode } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
 import { useEffect } from 'react'
 import { SENTIMENTS } from '../../theme'
 import { Checkbox } from '../Checkbox'
@@ -192,20 +192,6 @@ export const ListRow = ({
     )
   }
 
-  const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (selectedIds === undefined || setSelectedIds === undefined) {
-      return
-    }
-
-    if (event.target.checked) {
-      setSelectedIds([...selectedIds, event.target.value])
-    } else {
-      setSelectedIds(
-        selectedIds.filter(selectedId => selectedId !== event.target.value),
-      )
-    }
-  }
-
   // Registering selectable row
   useEffect(() => {
     if (!checkboxDisabled && setSelectedIds !== undefined) {
@@ -251,7 +237,7 @@ export const ListRow = ({
         }
       >
         <ListCellContainer template={template}>
-          {setSelectedIds !== undefined ? (
+          {setSelectedIds !== undefined && selectedIds !== undefined ? (
             <ListCell preventClick>
               <StyledCheckboxContainer
                 data-visibility={
@@ -264,7 +250,17 @@ export const ListRow = ({
                     name="list-radio"
                     value={id}
                     checked={isSelected}
-                    onChange={handleCheck}
+                    onChange={event => {
+                      if (event.target.checked) {
+                        setSelectedIds([...selectedIds, event.target.value])
+                      } else {
+                        setSelectedIds(
+                          selectedIds.filter(
+                            selectedId => selectedId !== event.target.value,
+                          ),
+                        )
+                      }
+                    }}
                     disabled={isDisabled || checkboxDisabled}
                     aria-label="check"
                   />

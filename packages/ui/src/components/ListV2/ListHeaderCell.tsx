@@ -23,9 +23,8 @@ const StyledIconContainer = styled(Stack)`
 `
 
 const StyledHeader = styled('div', {
-  shouldForwardProp: prop => !['sortable', 'colSpan'].includes(prop),
+  shouldForwardProp: prop => !['sortable'].includes(prop),
 })<{
-  colSpan?: number
   'data-sorted'?: boolean
   sortable?: boolean
 }>`
@@ -38,7 +37,6 @@ const StyledHeader = styled('div', {
   font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   gap: ${({ theme }) => theme.space['1']};
-  ${({ colSpan }) => (colSpan ? `grid-column: span ${colSpan} / span 12;` : '')}
   ${({ sortable }) => (sortable ? `cursor: pointer; user-select: none;` : '')}
 
   &[data-sorted="true"] {
@@ -63,7 +61,6 @@ const SortIcon = () => (
 
 type ListHeaderCellProps = {
   children?: ReactNode
-  colSpan?: number
   className?: string
   sort?: ListOrder
   onClick?: (
@@ -75,7 +72,6 @@ type ListHeaderCellProps = {
 
 export const ListHeaderCell = ({
   children,
-  colSpan,
   className,
   onClick,
   sort,
@@ -93,7 +89,6 @@ export const ListHeaderCell = ({
     }
     role="columnheader"
     aria-sort={sort ? getAriaSort(sort) : undefined}
-    colSpan={colSpan}
     className={className}
     data-sorted={sort === 'asc' || sort === 'desc'}
     sortable={!!sort}

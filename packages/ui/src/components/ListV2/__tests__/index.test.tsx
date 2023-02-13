@@ -49,7 +49,7 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 )
 
 describe('ListV2', () => {
-  test.only('Should throw an error', () => {
+  test('Should throw an error', () => {
     const consoleErrMock = jest.spyOn(console, 'error').mockImplementation()
     expect(() => {
       renderWithTheme(
@@ -651,4 +651,24 @@ describe('ListV2', () => {
       </List>,
     )
   })
+
+  test("Should render correctly if column id isn't provided", () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        columns={columns.map(column => ({
+          label: column.label,
+          width: column.width,
+        }))}
+      >
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
 })
