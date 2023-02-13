@@ -1,0 +1,32 @@
+{
+  "name": "@scaleway/themes",
+  "version": "1.0.0",
+  "description": "Scaleway Themes",
+  "homepage": "https://github.com/scaleway/scaleway-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/scaleway-ui",
+    "directory": "packages/themes"
+  },
+  "keywords": [
+    "themes",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=7.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "jsnext:main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}
