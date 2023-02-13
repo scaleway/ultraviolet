@@ -193,7 +193,7 @@ export const ListRow = ({
   }
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (!selectedIds || !setSelectedIds) {
+    if (selectedIds === undefined || setSelectedIds === undefined) {
       return
     }
 
@@ -208,7 +208,7 @@ export const ListRow = ({
 
   // Registering selectable row
   useEffect(() => {
-    if (!checkboxDisabled && setSelectedIds) {
+    if (!checkboxDisabled && setSelectedIds !== undefined) {
       setSelectablesIds(currentSelectableIds => ({
         ...currentSelectableIds,
         [id]: true,
@@ -251,7 +251,7 @@ export const ListRow = ({
         }
       >
         <ListCellContainer template={template}>
-          {setSelectedIds ? (
+          {setSelectedIds !== undefined ? (
             <ListCell preventClick>
               <StyledCheckboxContainer
                 data-visibility={

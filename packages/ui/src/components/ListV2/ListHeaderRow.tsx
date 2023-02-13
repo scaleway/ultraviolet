@@ -47,7 +47,7 @@ export const ListHeaderRow = ({
   }, [selectedIds, selectableIds])
 
   const handleCheck: ChangeEventHandler<HTMLInputElement> = event => {
-    if (!setSelectedIds) {
+    if (setSelectedIds === undefined) {
       return false
     }
 
@@ -62,7 +62,7 @@ export const ListHeaderRow = ({
 
   return (
     <StyledRow role="row" template={template} className={className}>
-      {setSelectedIds ? (
+      {setSelectedIds !== undefined ? (
         <ListHeaderCell>
           <StyledCheckbox
             name="list-radio"
