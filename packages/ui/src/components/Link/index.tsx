@@ -5,10 +5,13 @@ import type {
   HTMLAttributeAnchorTarget,
   MouseEventHandler,
   ReactNode,
+  RefObject,
 } from 'react'
-import { forwardRef } from 'react'
+import { forwardRef, useEffect, useRef, useState } from 'react'
+import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
 import { Icon } from '../Icon'
+import { Tooltip } from '../Tooltip'
 
 const StyledIcon = styled(Icon)``
 
@@ -27,6 +30,7 @@ type LinkProps = {
   // For react router shouldn't be used directly
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
+  oneLine?: boolean
 }
 
 const ICON_SIZE = 16
@@ -39,11 +43,13 @@ const StyledExternalIconContainer = styled.span`
 `
 
 export const StyledLink = styled('a', {
-  shouldForwardProp: prop => !['variant', 'iconPosition', 'as'].includes(prop),
+  shouldForwardProp: prop =>
+    !['variant', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
   variant: Color
   size: LinkSizes
   iconPosition?: LinkIconPosition
+  oneLine?: boolean
 }>`
   background-color: transparent;
   border: none;
@@ -58,18 +64,27 @@ export const StyledLink = styled('a', {
   flex-direction: row;
   align-items: center;
   transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
+
   ${StyledIcon} {
     transition: transform ${TRANSITION_DURATION}ms ease-out;
   }
+
   gap: ${({ theme }) => theme.space['1']};
   position: relative;
-  width: fit-content;
   cursor: pointer;
 
   > * {
     // Safari issue when something is inside an anchor
     pointer-events: none;
   }
+
+  ${({ oneLine }) =>
+    oneLine
+      ? `white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;`
+      : 'width: fit-content;'}
 
   ${({ size, theme }) => {
     const variant = size === 'small' ? 'bodySmallStrong' : 'bodyStrong'
@@ -84,7 +99,6 @@ export const StyledLink = styled('a', {
       text-case: ${theme.typography[variant].textCase};
     `
   }}
-
   &:hover,
   &:focus {
     ${StyledIcon} {
@@ -93,6 +107,7 @@ export const StyledLink = styled('a', {
           ? `translate(${theme.space['0.5']}, 0)`
           : `translate(-${theme.space['0.5']}, 0)`};
     }
+
     outline: none;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -120,48 +135,65 @@ export const Link = forwardRef(
       href,
       target,
       download,
-      variant = 'primary',
+      variant = 'info',
       size = 'large',
       iconPosition,
       rel,
       className,
       onClick,
       'aria-label': ariaLabel,
+      oneLine = false,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const isBlank = target === '_blank'
     const computedRel = rel || (isBlank ? 'noopener noreferrer' : undefined)
+    const [isTruncated, setIsTruncated] = useState(false)
+    const elementRef = useRef<HTMLAnchorElement>(null)
+
+    const usedRef = (ref as RefObject<HTMLAnchorElement>) ?? elementRef
+
+    const finalStringChildren = recursivelyGetChildrenString(children)
+
+    useEffect(() => {
+      if (oneLine && usedRef && usedRef.current) {
+        const { offsetWidth, scrollWidth } = usedRef.current
+        setIsTruncated(offsetWidth < scrollWidth)
+      }
+    }, [oneLine, ref, usedRef])
 
     return (
-      <StyledLink
-        href={href}
-        target={target}
-        download={download}
-        ref={ref}
-        variant={variant}
-        rel={computedRel}
-        className={className}
-        size={size}
-        onClick={onClick}
-        iconPosition={iconPosition}
-        aria-label={ariaLabel}
-      >
-        {!isBlank && iconPosition === 'left' ? (
-          <StyledIcon name="arrow-left" size={ICON_SIZE} />
-        ) : null}
-        {children}
+      <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
+        <StyledLink
+          href={href}
+          target={target}
+          download={download}
+          ref={usedRef}
+          variant={variant}
+          rel={computedRel}
+          className={className}
+          size={size}
+          onClick={onClick}
+          iconPosition={iconPosition}
+          aria-label={ariaLabel}
+          oneLine={oneLine}
+        >
+          {!isBlank && iconPosition === 'left' ? (
+            <StyledIcon name="arrow-left" size={ICON_SIZE} />
+          ) : null}
+          {children}
 
-        {isBlank ? (
-          <StyledExternalIconContainer>
-            <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
-          </StyledExternalIconContainer>
-        ) : null}
+          {isBlank ? (
+            <StyledExternalIconContainer>
+              <StyledIcon name="open-in-new" size={BLANK_TARGET_ICON_SIZE} />
+            </StyledExternalIconContainer>
+          ) : null}
 
-        {!isBlank && iconPosition === 'right' ? (
-          <StyledIcon name="arrow-right" size={ICON_SIZE} />
-        ) : null}
-      </StyledLink>
+          {!isBlank && iconPosition === 'right' ? (
+            <StyledIcon name="arrow-right" size={ICON_SIZE} />
+          ) : null}
+        </StyledLink>
+      </Tooltip>
     )
   },
 )

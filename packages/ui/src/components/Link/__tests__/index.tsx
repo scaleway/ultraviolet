@@ -71,4 +71,13 @@ describe('Link', () => {
         ,
       </>,
     ))
+
+  test(`render correctly with oneLine`, () =>
+    shouldMatchEmotionSnapshot(
+      <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
+        <Link href="/" oneLine>
+          Hello this is a very long text that should be truncated
+        </Link>
+      </div>,
+    ))
 })
