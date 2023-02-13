@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.218.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.7...@scaleway/ui@0.218.8) (2023-02-13)
+
+
+### :bug: Bug Fixes
+
+* **Link:** default color to be info and new prop one line ([#2254](https://github.com/scaleway/scaleway-ui/issues/2254)) ([263927c](https://github.com/scaleway/scaleway-ui/commit/263927c1d380edf2df4ccfb6b399cc1b1767abdd))
+
+
+
 ## [0.218.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.6...@scaleway/ui@0.218.7) (2023-02-10)
 
 
