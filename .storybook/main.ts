@@ -22,7 +22,7 @@ export default {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    'storybook-dark-mode/register',
+    'storybook-dark-mode',
   ],
   webpackFinal: (config: Configuration) => {
     const cwd = process.cwd()

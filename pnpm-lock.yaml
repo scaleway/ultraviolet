@@ -95,7 +95,7 @@ importers:
       seedrandom: 3.0.5
       shx: 0.3.4
       size-limit: 8.1.2
-      storybook-dark-mode: 1.1.2
+      storybook-dark-mode: 2.0.5
       timekeeper: 2.2.0
       typescript: 4.9.5
       webpack: 5.75.0
@@ -192,7 +192,7 @@ importers:
       seedrandom: 3.0.5
       shx: 0.3.4
       size-limit: 8.1.2
-      storybook-dark-mode: 1.1.2_biqbaboplfbrettd7655fr4n2y
+      storybook-dark-mode: 2.0.5_biqbaboplfbrettd7655fr4n2y
       timekeeper: 2.2.0
       typescript: 4.9.5
       webpack: 5.75.0
@@ -8042,6 +8042,7 @@ packages:
 
   /bindings/1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: true
@@ -11143,6 +11144,7 @@ packages:
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -15349,6 +15351,7 @@ packages:
 
   /nan/2.17.0:
     resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -18998,8 +19001,8 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-dark-mode/1.1.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-L5QjJN49bl+ktprM6faMkTeW+LCvuMYWQaRo8/JGSMmzomIjLT7Yo20UiTsnMgMYyYWYF5O4EK/F3OvjDNp8tQ==}
+  /storybook-dark-mode/2.0.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-egOMu2tgGttGAMtFZcDLZobs1xc7LzFOh+pRVqaW59AVp05ABdQ3Hj6IX2Pz7tYGmF9AmaK+nBv0hDFxPe7Hfg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
