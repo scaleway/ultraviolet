@@ -1,4 +1,6 @@
+import { linkTo } from '@storybook/addon-links'
 import * as components from '../../components'
+import { Button } from '../../components/Button'
 import { Stack } from '../../components/Stack'
 import { Table } from '../../components/Table'
 import { Text } from '../../components/Text'
@@ -64,7 +66,12 @@ const ComponentState = () => (
               <Table.Row>
                 <Table.BodyCell>
                   <Text as="span" variant="bodyStrong">
-                    {componentName}
+                    <Button
+                      onClick={linkTo(module?.value?.default?.title)}
+                      variant="link"
+                    >
+                      {componentName}
+                    </Button>
                   </Text>
                 </Table.BodyCell>
                 <Table.BodyCell>
