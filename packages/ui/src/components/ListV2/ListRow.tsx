@@ -38,7 +38,7 @@ const StyledRow = styled('div', {})<{
   'data-disabled': boolean
   'data-hoverable': boolean
   'data-highlight': boolean
-  'data-sentiment': typeof SENTIMENTS[number] | undefined
+  'data-sentiment': (typeof SENTIMENTS)[number] | undefined
   'aria-expanded': boolean
 }>`
   position: relative;
@@ -152,7 +152,7 @@ type ListRowProps = {
   checkboxDisabled?: boolean
   checkboxTooltip?: string
   tooltip?: string
-  sentiment?: typeof SENTIMENTS[number]
+  sentiment?: (typeof SENTIMENTS)[number]
   expandable?: ReactNode
   /**
    * If expandable content visibility is controlled, specify this prop to TRUE or FALSE
@@ -226,7 +226,7 @@ export const ListRow = ({
         data-highlight={!!isHighlighted || isSelected}
         data-sentiment={sentiment}
         role={expandable && isExpanded === undefined ? 'button row' : 'row'}
-        aria-expanded={isRowExpanded}
+        aria-expanded={expandable ? isRowExpanded : undefined}
         aria-haspopup={
           expandable !== undefined && !isDisabled && isExpanded === undefined
         }
