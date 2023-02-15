@@ -57,7 +57,7 @@ type TextInputSizes = keyof typeof inputSizes
 export const textInputSizes = Object.keys(inputSizes) as TextInputSizes[]
 
 const StyledSeparator = styled(Separator)`
-  margin-top: 1px;
+  margin: 1px 0px;
   height: calc(100% - 2px);
   background-color: ${({ theme: { colors } }) =>
     colors.neutral.backgroundStrong};
