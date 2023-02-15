@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.0...@scaleway/ui@0.219.1) (2023-02-15)
+
+
+### :bug: Bug Fixes
+
+* **toggle:** add forward ref ([#2257](https://github.com/scaleway/scaleway-ui/issues/2257)) ([618a869](https://github.com/scaleway/scaleway-ui/commit/618a8698d06521e1df3f046af222dd946bb31799))
+
+
+
 ## [0.219.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.218.8...@scaleway/ui@0.219.0) (2023-02-13)
 
 
