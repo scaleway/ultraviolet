@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import type { ChangeEvent, ChangeEventHandler, ReactNode } from 'react'
-import { useCallback, useEffect, useState } from 'react'
+import { forwardRef, useCallback, useEffect, useState } from 'react'
+import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
@@ -140,66 +140,76 @@ type ToggleProps = {
   required?: boolean
 }
 
-export const Toggle = ({
-  checked = false,
-  disabled = false,
-  id,
-  name,
-  onChange,
-  size = 'large',
-  tooltip,
-  labelPosition = 'right',
-  label,
-  required,
-  className,
-}: ToggleProps) => {
-  const [state, setState] = useState(checked)
+export const Toggle = forwardRef(
+  (
+    {
+      checked = false,
+      disabled = false,
+      id,
+      name,
+      onChange,
+      size = 'large',
+      tooltip,
+      labelPosition = 'right',
+      label,
+      required,
+      className,
+    }: ToggleProps,
+    ref: Ref<HTMLInputElement>,
+  ) => {
+    const [state, setState] = useState(checked)
 
-  const onLocalChange = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (onChange) onChange?.(event)
-      else setState(event.target.checked)
-    },
-    [onChange, setState],
-  )
+    const onLocalChange = useCallback(
+      (event: ChangeEvent<HTMLInputElement>) => {
+        if (onChange) onChange?.(event)
+        else setState(event.target.checked)
+      },
+      [onChange, setState],
+    )
 
-  useEffect(() => {
-    setState(checked)
-  }, [checked, setState])
+    useEffect(() => {
+      setState(checked)
+    }, [checked, setState])
 
-  return (
-    <Tooltip text={tooltip}>
-      <StyledLabel
-        aria-disabled={disabled}
-        size={size}
-        onClick={evt => evt.stopPropagation()}
-        className={className}
-      >
-        {label && labelPosition === 'left' ? (
-          <>
-            {label}
-            {required ? <RequiredIcon /> : null}
-          </>
-        ) : null}
-        <StyledToggle size={size} data-checked={state} data-disabled={disabled}>
-          <StyledCheckbox
-            id={id || name}
-            aria-label={name}
-            checked={state}
-            aria-checked={state}
-            disabled={disabled}
-            name={name}
-            onChange={onLocalChange}
-            type="checkbox"
-          />
-        </StyledToggle>
-        {label && labelPosition === 'right' ? (
-          <>
-            {label}
-            {required ? <RequiredIcon /> : null}
-          </>
-        ) : null}
-      </StyledLabel>
-    </Tooltip>
-  )
-}
+    return (
+      <Tooltip text={tooltip}>
+        <StyledLabel
+          aria-disabled={disabled}
+          size={size}
+          onClick={evt => evt.stopPropagation()}
+          className={className}
+        >
+          {label && labelPosition === 'left' ? (
+            <>
+              {label}
+              {required ? <RequiredIcon /> : null}
+            </>
+          ) : null}
+          <StyledToggle
+            size={size}
+            data-checked={state}
+            data-disabled={disabled}
+          >
+            <StyledCheckbox
+              id={id || name}
+              aria-label={name}
+              checked={state}
+              aria-checked={state}
+              disabled={disabled}
+              name={name}
+              onChange={onLocalChange}
+              type="checkbox"
+              ref={ref}
+            />
+          </StyledToggle>
+          {label && labelPosition === 'right' ? (
+            <>
+              {label}
+              {required ? <RequiredIcon /> : null}
+            </>
+          ) : null}
+        </StyledLabel>
+      </Tooltip>
+    )
+  },
+)
