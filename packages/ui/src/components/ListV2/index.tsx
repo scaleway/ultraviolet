@@ -1,143 +1,107 @@
-import type { ComponentProps, ReactNode } from 'react'
-import { Stack } from '../Stack'
-import { ListBody } from './ListBody'
-import { ListCell } from './ListCell'
-import { ListProvider } from './ListContext'
-import { ListExpandable } from './ListExpandable'
-import { ListHeader } from './ListHeader'
-import { ListHeaderRow } from './ListHeaderRow'
-import { ListHeaders } from './ListHeaders'
-import { ListLoadingSkeleton } from './ListLoadingSkeleton'
-import { ListRow } from './ListRow'
-import type { ListDataObject } from './types'
+import styled from '@emotion/styled'
+import type { ComponentProps, ForwardedRef, ReactNode } from 'react'
+import { forwardRef } from 'react'
+import { Body } from './Body'
+import { Cell } from './Cell'
+import { HeaderCell } from './HeaderCell'
+import { HeaderRow } from './HeaderRow'
+import { ListProvider, useListContext } from './ListContext'
+import { Row } from './Row'
+import { SelectBar } from './SelectBar'
+import { SkeletonRows } from './SkeletonRows'
+import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 
-type ListColumn = Omit<
-  ComponentProps<typeof ListHeader>,
-  'children' | 'colSpan'
+const StyledList = styled('div', {
+  shouldForwardProp: prop => !['template'].includes(prop),
+})<{ template: string }>`
+  display: grid;
+  width: 100%;
+  gap: ${({ theme }) => theme.space['1']};
+
+  [role='row'],
+  [role='button row'] {
+    display: grid;
+    grid-template-columns: ${({ template }) => template};
+    overflow: auto;
+  }
+`
+
+type ColumnProps = Pick<
+  ComponentProps<typeof HeaderCell>,
+  'isOrdered' | 'onOrder' | 'orderDirection'
 > & {
-  label: ReactNode
+  label?: string
   width?: string
-  id?: string
 }
 
-type ListProps<T> = {
+type ListProps = {
+  areRowSelectable?: boolean
+  columns: ColumnProps[]
   children: ReactNode
-  /**
-   * Add checkboxes on the list
-   * */
-  isSelectable?: boolean
-  /**
-   * Row ids of the selected checkboxes
-   * */
-  selectedIds?: string[]
-  /**
-   * When selectedIds change
-   * */
-  onSelectedIdsChange?: (selectedIds: string[]) => void
-  data: T[]
-  /**
-   * The idKey of each data entry
-   * */
-  idKey: T extends ListDataObject ? keyof T : string
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
   isLoading?: boolean
   /**
-   * Auto close opened expandable row when another is opening
+   * Auto collapse is collapsing expandable row when another is expanding
    * */
-  autoClose?: boolean
-
-  columns?: ListColumn[]
-  template?: string
-  className?: string
+  autoCollapse?: boolean
 }
 
-export const List = <T = ListDataObject,>({
-  children,
-  columns,
-  template,
-  isSelectable,
-  selectedIds,
-  onSelectedIdsChange,
-  data,
-  idKey,
-  isLoading,
-  autoClose,
-  className,
-}: ListProps<T>) => {
-  if (columns) {
-    const computedTemplate = columns
-      .map(({ width }) => width ?? '1fr')
-      .join(' ')
+const BaseList = forwardRef(
+  (
+    {
+      areRowSelectable = false,
+      columns,
+      children,
+      isLoading,
+      autoCollapse = false,
+    }: ListProps,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
+    const computeTemplate = `${
+      areRowSelectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
+    }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
     return (
-      <ListProvider<T>
-        autoClose={autoClose}
-        template={computedTemplate}
-        isSelectable={isSelectable}
-        data={data}
-        idKey={idKey}
-        selectedIds={selectedIds}
-        onSelectedIdsChange={onSelectedIdsChange}
+      <ListProvider
+        areRowSelectable={areRowSelectable}
+        autoCollapse={autoCollapse}
       >
-        <Stack className={className} gap={1} role="table">
-          <ListHeaders>
-            <ListHeaderRow>
-              {columns.map(
-                ({ label, onClick, sort, className: columnClassName, id }) => (
-                  <ListHeader
-                    onClick={onClick}
-                    sort={sort}
-                    className={columnClassName}
-                    key={id}
-                    id={id}
-                  >
-                    {label}
-                  </ListHeader>
-                ),
-              )}
-            </ListHeaderRow>
-          </ListHeaders>
-          {isLoading ? (
-            <ListBody>
-              <ListLoadingSkeleton cols={columns.length} />
-            </ListBody>
-          ) : (
-            children
-          )}
-        </Stack>
+        <StyledList ref={ref} role="grid" template={computeTemplate}>
+          <HeaderRow hasSelectAllColumn={areRowSelectable}>
+            {columns.map((column, index) => (
+              <HeaderCell
+                // eslint-disable-next-line react/no-array-index-key
+                key={`header-column-${index}`}
+                isOrdered={column.isOrdered}
+                orderDirection={column.orderDirection}
+                onOrder={column.onOrder}
+              >
+                {column.label}
+              </HeaderCell>
+            ))}
+          </HeaderRow>
+          <Body>
+            {isLoading ? (
+              <SkeletonRows
+                areRowSelectable={areRowSelectable}
+                rows={5}
+                cols={columns.length}
+              />
+            ) : (
+              children
+            )}
+          </Body>
+        </StyledList>
       </ListProvider>
     )
-  }
+  },
+)
 
-  return (
-    <ListProvider
-      template={template}
-      isSelectable={isSelectable}
-      selectedIds={selectedIds}
-      onSelectedIdsChange={onSelectedIdsChange}
-      data={data}
-      idKey={idKey}
-    >
-      <Stack gap={1} role="table">
-        {isLoading ? (
-          <ListBody>
-            <ListLoadingSkeleton cols={template ? 1 : 12} />
-          </ListBody>
-        ) : (
-          children
-        )}
-      </Stack>
-    </ListProvider>
-  )
-}
-
-List.Row = ListRow
-List.Body = ListBody
-List.Cell = ListCell
-List.Headers = ListHeaders
-List.HeaderRow = ListHeaderRow
-List.Header = ListHeader
-List.Skeleton = ListLoadingSkeleton
-List.Expandable = ListExpandable
+export const List = Object.assign(BaseList, {
+  Row,
+  Cell,
+  SelectBar,
+  useListContext,
+})
