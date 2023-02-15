@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.1...@scaleway/ui@0.219.2) (2023-02-15)
+
+
+### :memo: Documentation
+
+* **ComponentState:** add link to each component main story ([#2259](https://github.com/scaleway/scaleway-ui/issues/2259)) ([69b6a0a](https://github.com/scaleway/scaleway-ui/commit/69b6a0a6d831cc244d4d81ef1f445a38b7b126ce))
+
+
+
 ## [0.219.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.0...@scaleway/ui@0.219.1) (2023-02-15)
 
 
