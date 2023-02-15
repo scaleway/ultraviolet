@@ -96,6 +96,9 @@ const StyledChildrenContainer = styled.div`
 `
 
 type TooltipProps = {
+  /**
+   * Id is automatically generated if not set. It is used for associating tooltip wrapper with tooltip portal.
+   */
   id?: string
   children:
     | ReactNode
