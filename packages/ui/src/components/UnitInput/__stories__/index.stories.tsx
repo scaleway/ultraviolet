@@ -11,6 +11,13 @@ export default {
       },
     },
   },
+  decorators: [
+    StoryComponent => (
+      <div style={{ height: 200 }}>
+        <StoryComponent />
+      </div>
+    ),
+  ],
   title: 'Components/Data Entry/UnitInput',
 } as ComponentMeta<typeof UnitInput>
 

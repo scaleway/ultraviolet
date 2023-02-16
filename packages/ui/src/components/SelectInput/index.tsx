@@ -128,8 +128,8 @@ const getSelectStyles = ({
       ? theme.colors.danger.border
       : theme.colors.neutral.borderWeak,
     borderRadius: '4px',
-    borderStyle: state.isDisabled ? 'none' : 'solid',
-    borderWidth: state.isDisabled ? 0 : '1px',
+    borderStyle: 'solid',
+    borderWidth: '1px',
     boxShadow: 'none',
     color: getControlColor({ error, state, theme }),
     fontSize: '16px',
