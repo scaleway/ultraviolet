@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.3...@scaleway/ui@0.219.4) (2023-02-16)
+
+
+### :bug: Bug Fixes
+
+* **textinput:** update margin separator value ([#2261](https://github.com/scaleway/scaleway-ui/issues/2261)) ([6f34e33](https://github.com/scaleway/scaleway-ui/commit/6f34e33b1ddd3a860a7fc71aec7fbe6068173450))
+
+
+
 ## [0.219.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.2...@scaleway/ui@0.219.3) (2023-02-15)
 
 
