@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.4...@scaleway/ui@0.219.5) (2023-02-17)
+
+
+### :bug: Bug Fixes
+
+* **Checkbox:** to use radii from theme ([#2263](https://github.com/scaleway/scaleway-ui/issues/2263)) ([653b6ea](https://github.com/scaleway/scaleway-ui/commit/653b6ea136de0c26b650d50e51e3f8666486b3fb))
+
+
+
 ## [0.219.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.3...@scaleway/ui@0.219.4) (2023-02-16)
 
 
