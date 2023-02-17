@@ -1,3 +1,4 @@
+import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   ChangeEvent,
@@ -20,12 +21,23 @@ const InnerCheckbox = styled.rect`
 const CheckMark = styled.rect``
 const CheckMixedMark = styled.rect``
 
-const CheckboxIconContainer = ({ children }: { children: ReactNode }) => (
-  <g>
-    <InnerCheckbox x="5" y="5" width="14" height="14" rx="1" strokeWidth="2" />
-    {children}
-  </g>
-)
+const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
+  const theme = useTheme()
+
+  return (
+    <g>
+      <InnerCheckbox
+        x="5"
+        y="5"
+        width="14"
+        height="14"
+        rx={theme.radii.small}
+        strokeWidth="2"
+      />
+      {children}
+    </g>
+  )
+}
 
 const PaddedText = styled(Text)`
   padding: ${({ theme }) => `0 ${theme.space['0.5']}`};

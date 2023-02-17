@@ -3,6 +3,7 @@ import { lightTheme } from './light'
 
 const radii = {
   none: '0',
+  small: '1px',
   default: '4px',
   large: '8px',
   circle: '100%',
