@@ -95,7 +95,7 @@ importers:
       seedrandom: 3.0.5
       shx: 0.3.4
       size-limit: 8.1.2
-      storybook-dark-mode: 2.0.5
+      storybook-dark-mode: 2.0.6
       timekeeper: 2.2.0
       typescript: 4.9.5
       webpack: 5.75.0
@@ -138,7 +138,7 @@ importers:
       '@storybook/client-api': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/components': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/core-events': 6.5.16
-      '@storybook/csf': 0.0.2--canary.62.4a3b146.0
+      '@storybook/csf': 0.0.2--canary.64.1cdb44b.0
       '@storybook/manager-webpack5': 6.5.16_7euak6xcflffxphocbmjdcnvcu
       '@storybook/mdx2-csf': 0.0.3
       '@storybook/preview-web': 6.5.16_biqbaboplfbrettd7655fr4n2y
@@ -192,7 +192,7 @@ importers:
       seedrandom: 3.0.5
       shx: 0.3.4
       size-limit: 8.1.2
-      storybook-dark-mode: 2.0.5_biqbaboplfbrettd7655fr4n2y
+      storybook-dark-mode: 2.0.6_biqbaboplfbrettd7655fr4n2y
       timekeeper: 2.2.0
       typescript: 4.9.5
       webpack: 5.75.0
@@ -5432,8 +5432,8 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@storybook/csf/0.0.2--canary.62.4a3b146.0:
-    resolution: {integrity: sha512-TNLWimtOwiTZbW86c39CHjNg9sCqe0Z3imAfx31EtTvxDrXvHuDBfv35yO459ZaO4JNu3jehBWLLq10wuimzHQ==}
+  /@storybook/csf/0.0.2--canary.64.1cdb44b.0:
+    resolution: {integrity: sha512-crXY91pi+/52bz42aY3AqDMQFLBunMB9rhoU1QwVwsZ8+ZMCPx1erk8WMkAL3b1lMzaPUodpQvSRuZLpUCLr1Q==}
     dependencies:
       type-fest: 2.19.0
     dev: true
@@ -5458,6 +5458,10 @@ packages:
       - react
       - react-dom
       - supports-color
+    dev: true
+
+  /@storybook/global/5.0.0:
+    resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
     dev: true
 
   /@storybook/instrumenter/6.5.16_biqbaboplfbrettd7655fr4n2y:
@@ -19001,8 +19005,8 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-dark-mode/2.0.5_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-egOMu2tgGttGAMtFZcDLZobs1xc7LzFOh+pRVqaW59AVp05ABdQ3Hj6IX2Pz7tYGmF9AmaK+nBv0hDFxPe7Hfg==}
+  /storybook-dark-mode/2.0.6_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-uQYTL6U8VSa26n8ekEImc2+UHURIIgdiwQCO4PtRpVOxoqFUj26i7EsTsQQwIDhDgyC8okEaxYGDIf29Vlb9yA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
@@ -19016,9 +19020,9 @@ packages:
       '@storybook/api': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/components': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/core-events': 6.5.16
+      '@storybook/global': 5.0.0
       '@storybook/theming': 6.5.16_biqbaboplfbrettd7655fr4n2y
       fast-deep-equal: 3.1.3
-      global: 4.4.0
       memoizerific: 1.11.3
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
