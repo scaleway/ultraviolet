@@ -1,7 +1,8 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode, Ref, RefObject } from 'react'
-import {
+import React, {
+  isValidElement,
   useCallback,
   useEffect,
   useId,
@@ -145,6 +146,7 @@ export const Tooltip = ({
   // Debounce timer will be used to prevent the tooltip from flickering when the user moves the mouse out and in the children element.
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
   const [visibleInDom, setVisibleInDom] = useState(false)
+  const [hasTooltipChilds, setHasTooltipChilds] = useState(false)
   const [reverseAnimation, setReverseAnimation] = useState(false)
   const [positions, setPositions] = useState<PositionsType>({
     ...DEFAULT_POSITIONS,
@@ -213,10 +215,24 @@ export const Tooltip = ({
           clearTimeout(debounceTimer.current)
           debounceTimer.current = undefined
         }
+
+        // Check if we have at least one Tooltip as children
+        // This allows us to render only the tooltip of the deepest Tooltip children
+        if (children && typeof children === 'object') {
+          const tooltipChilds = React.Children.map(children, child => {
+            if (isValidElement(child) && child.type.displayName === 'Tooltip') {
+              return child
+            }
+
+            return null
+          })?.length
+
+          setHasTooltipChilds(!!tooltipChilds)
+        }
         setVisibleInDom(isVisible)
       }
     },
-    [unmountTooltip],
+    [unmountTooltip, children],
   )
 
   /**
@@ -288,13 +304,14 @@ export const Tooltip = ({
   return (
     <>
       {renderChildren()}
-      {visibleInDom
+      {visibleInDom && !hasTooltipChilds
         ? createPortal(
             <StyledTooltip
               ref={tooltipRef}
               positions={positions}
               maxWidth={maxWidth}
               role="tooltip"
+              aria-describedby="tooltip-test"
               id={generatedId}
               className={className}
               reverseAnimation={reverseAnimation}
