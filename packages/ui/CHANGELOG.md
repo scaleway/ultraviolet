@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.5...@scaleway/ui@0.219.6) (2023-02-20)
+
+
+### :package: Chore
+
+* **devdeps:** update emotion monorepo to v11.10.6 ([#2268](https://github.com/scaleway/scaleway-ui/issues/2268)) ([8cb2fc8](https://github.com/scaleway/scaleway-ui/commit/8cb2fc8bb83e80fd2585b4f135235e3e985f922c))
+
+
+
 ## [0.219.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.4...@scaleway/ui@0.219.5) (2023-02-17)
 
 
