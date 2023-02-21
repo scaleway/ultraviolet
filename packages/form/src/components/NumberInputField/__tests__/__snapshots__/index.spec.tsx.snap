@@ -2,7 +2,7 @@
 
 exports[`NumberInputField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-8ke8uo {
+  .cache-10e6yle {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,6 +22,20 @@ exports[`NumberInputField should render correctly 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-10e6yle[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-10e6yle[data-disabled='true']>.eiawj1g4,
+.cache-10e6yle[data-disabled='true'] .eiawj1g2,
+.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-bkq66r {
@@ -47,7 +61,7 @@ exports[`NumberInputField should render correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-zw5304 {
+.cache-6pjflq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,11 +87,11 @@ exports[`NumberInputField should render correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-zw5304:hover:not([disabled], :focus) {
+.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-zw5304:focus-within:not([disabled]) {
+.cache-6pjflq:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -120,7 +134,8 @@ exports[`NumberInputField should render correctly 1`] = `
     novalidate=""
   >
     <div
-      class="cache-8ke8uo eiawj1g0"
+      class="cache-10e6yle eiawj1g0"
+      data-disabled="false"
     >
       <button
         aria-label="Minus"
@@ -139,7 +154,8 @@ exports[`NumberInputField should render correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 eiawj1g3"
+        class="cache-6pjflq eiawj1g3"
+        data-disabled="false"
         role="status"
       >
         <input
@@ -172,8 +188,8 @@ exports[`NumberInputField should render correctly 1`] = `
 
 exports[`NumberInputField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-t483l8-StyledContainer {
-  background-color: #f6f6f8;
+  .cache-10e6yle {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -194,9 +210,13 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-t483l8-StyledContainer>.eiawj1g4,
-.cache-t483l8-StyledContainer .eiawj1g2,
-.cache-t483l8-StyledContainer .eiawj1g3 {
+.cache-10e6yle[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-10e6yle[data-disabled='true']>.eiawj1g4,
+.cache-10e6yle[data-disabled='true'] .eiawj1g2,
+.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
@@ -227,7 +247,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   min-height: 26px;
 }
 
-.cache-zw5304 {
+.cache-6pjflq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -253,11 +273,11 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   max-width: 100%;
 }
 
-.cache-zw5304:hover:not([disabled], :focus) {
+.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-zw5304:focus-within:not([disabled]) {
+.cache-6pjflq:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -286,8 +306,8 @@ exports[`NumberInputField should render correctly disabled 1`] = `
     novalidate=""
   >
     <div
-      class="cache-t483l8-StyledContainer eiawj1g0"
-      disabled=""
+      class="cache-10e6yle eiawj1g0"
+      data-disabled="true"
     >
       <button
         aria-label="Minus"
@@ -306,7 +326,8 @@ exports[`NumberInputField should render correctly disabled 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 eiawj1g3"
+        class="cache-6pjflq eiawj1g3"
+        data-disabled="true"
         role="status"
       >
         <input
@@ -341,7 +362,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
 
 exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] = `
 <DocumentFragment>
-  .cache-8ke8uo {
+  .cache-10e6yle {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -361,6 +382,20 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-10e6yle[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-10e6yle[data-disabled='true']>.eiawj1g4,
+.cache-10e6yle[data-disabled='true'] .eiawj1g2,
+.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1mh6k42 {
@@ -386,7 +421,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   min-height: 26px;
 }
 
-.cache-zw5304 {
+.cache-6pjflq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -412,11 +447,11 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   max-width: 100%;
 }
 
-.cache-zw5304:hover:not([disabled], :focus) {
+.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-zw5304:focus-within:not([disabled]) {
+.cache-6pjflq:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -459,7 +494,8 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
     novalidate=""
   >
     <div
-      class="cache-8ke8uo eiawj1g0"
+      class="cache-10e6yle eiawj1g0"
+      data-disabled="false"
     >
       <button
         aria-label="Minus"
@@ -477,7 +513,8 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 eiawj1g3"
+        class="cache-6pjflq eiawj1g3"
+        data-disabled="false"
         role="status"
       >
         <input
@@ -511,7 +548,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
 
 exports[`NumberInputField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-8ke8uo {
+  .cache-10e6yle {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -531,6 +568,20 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-10e6yle[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-10e6yle[data-disabled='true']>.eiawj1g4,
+.cache-10e6yle[data-disabled='true'] .eiawj1g2,
+.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-bkq66r {
@@ -556,7 +607,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-zw5304 {
+.cache-6pjflq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -582,11 +633,11 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-zw5304:hover:not([disabled], :focus) {
+.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-zw5304:focus-within:not([disabled]) {
+.cache-6pjflq:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -629,7 +680,8 @@ exports[`NumberInputField should trigger events correctly 1`] = `
     novalidate=""
   >
     <div
-      class="cache-8ke8uo eiawj1g0"
+      class="cache-10e6yle eiawj1g0"
+      data-disabled="false"
     >
       <button
         aria-label="Minus"
@@ -648,7 +700,8 @@ exports[`NumberInputField should trigger events correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-zw5304 eiawj1g3"
+        class="cache-6pjflq eiawj1g3"
+        data-disabled="false"
         role="status"
       >
         <input
