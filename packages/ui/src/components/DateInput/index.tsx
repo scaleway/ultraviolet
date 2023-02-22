@@ -87,17 +87,17 @@ const StyledWrapper = styled.div`
     ${PREFIX}__day--selected {
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
-      border-radius: 50%;
+      border-radius: ${({ theme }) => theme.radii.circle};
     }
     ${PREFIX}__day--keyboard-selected {
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
-      border-radius: 50%;
+      border-radius: ${({ theme }) => theme.radii.circle};
     }
 
     ${PREFIX}__day: hover {
       color: ${({ theme }) => theme.colors.primary.text};
-      border-radius: 50%;
+      border-radius: ${({ theme }) => theme.radii.circle};
       background-color: ${({ theme }) => theme.colors.primary.background};
     }
 

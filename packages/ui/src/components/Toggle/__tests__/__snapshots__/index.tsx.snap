@@ -27,7 +27,7 @@ exports[`Toggle renders correctly 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -40,7 +40,7 @@ exports[`Toggle renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -49,34 +49,34 @@ exports[`Toggle renders correctly 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -84,16 +84,16 @@ exports[`Toggle renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -116,7 +116,7 @@ exports[`Toggle renders correctly 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -160,7 +160,7 @@ exports[`Toggle renders correctly label 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -173,7 +173,7 @@ exports[`Toggle renders correctly label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -182,34 +182,34 @@ exports[`Toggle renders correctly label 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -217,16 +217,16 @@ exports[`Toggle renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -249,7 +249,7 @@ exports[`Toggle renders correctly label 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -294,7 +294,7 @@ exports[`Toggle renders correctly when checked 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -307,7 +307,7 @@ exports[`Toggle renders correctly when checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -316,34 +316,34 @@ exports[`Toggle renders correctly when checked 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -351,16 +351,16 @@ exports[`Toggle renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -383,7 +383,7 @@ exports[`Toggle renders correctly when checked 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="true"
       data-disabled="false"
     >
@@ -428,7 +428,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -441,7 +441,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -450,34 +450,34 @@ exports[`Toggle renders correctly when disabled 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -485,16 +485,16 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -517,7 +517,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="true"
     >
@@ -562,7 +562,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -575,7 +575,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -584,34 +584,34 @@ exports[`Toggle renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -619,16 +619,16 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -660,7 +660,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -724,7 +724,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   min-height: 10px;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -737,7 +737,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -746,34 +746,34 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -781,16 +781,16 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -824,7 +824,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
       </svg>
     </sup>
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -868,7 +868,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -881,7 +881,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -890,34 +890,34 @@ exports[`Toggle renders correctly with complex label 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -925,16 +925,16 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -957,7 +957,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -1004,7 +1004,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1017,7 +1017,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -1026,34 +1026,34 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1061,16 +1061,16 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -1093,7 +1093,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
     class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -1138,7 +1138,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   color: #c4c9d6;
 }
 
-.cache-x4xq1y-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1151,7 +1151,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -1160,34 +1160,34 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   height: 24px;
 }
 
-.cache-x4xq1y-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-x4xq1y-StyledToggle:focus-within,
-.cache-x4xq1y-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1195,16 +1195,16 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus-within,
-.cache-x4xq1y-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-x4xq1y-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -1228,7 +1228,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   >
     This is a label
     <div
-      class="cache-x4xq1y-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
@@ -1272,7 +1272,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
   color: #c4c9d6;
 }
 
-.cache-bod21w-StyledToggle {
+.cache-89cup7-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1285,7 +1285,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -1294,34 +1294,34 @@ exports[`Toggle renders correctly with non default size 1`] = `
   height: 20px;
 }
 
-.cache-bod21w-StyledToggle:after {
+.cache-89cup7-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 12px;
   height: 12px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-bod21w-StyledToggle:focus-within,
-.cache-bod21w-StyledToggle:focus {
+.cache-89cup7-StyledToggle:focus-within,
+.cache-89cup7-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-bod21w-StyledToggle[data-disabled='false']:active:after {
+.cache-89cup7-StyledToggle[data-disabled='false']:active:after {
   width: 16.53px;
 }
 
-.cache-bod21w-StyledToggle[data-checked='true'] {
+.cache-89cup7-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-bod21w-StyledToggle[data-checked='true']:after {
+.cache-89cup7-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1329,16 +1329,16 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-bod21w-StyledToggle[data-checked='true']:focus-within,
-.cache-bod21w-StyledToggle[data-checked='true']:focus {
+.cache-89cup7-StyledToggle[data-checked='true']:focus-within,
+.cache-89cup7-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-bod21w-StyledToggle[data-disabled='true'] {
+.cache-89cup7-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-bod21w-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-89cup7-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -1361,7 +1361,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
     class="cache-9kpil1-StyledLabel e6hn8de0"
   >
     <div
-      class="cache-bod21w-StyledToggle e6hn8de2"
+      class="cache-89cup7-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >

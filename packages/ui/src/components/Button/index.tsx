@@ -344,14 +344,14 @@ const StyledButton = styled('button', {
       }
     `}
 
-  ${({ action }) =>
+  ${({ action, theme }) =>
     action &&
     css`
       width: 32px;
       height: 32px;
       padding: 0;
       flex-shrink: 0;
-      ${action === 'rounded' && `border-radius: 16px;`}
+      ${action === 'rounded' && `border-radius: ${theme.radii.circle};`}
       > svg {
         /* safari issue prevent event propgation */
         pointer-events: none;

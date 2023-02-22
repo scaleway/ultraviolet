@@ -5,7 +5,7 @@ const Child = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${({ theme }) => theme.space['2']};
-  border-radius: ${({ theme }) => theme.space['0.5']};
+  border-radius: ${({ theme }) => theme.radii.default};
 `
 
 const FirstChild = styled(Child)`

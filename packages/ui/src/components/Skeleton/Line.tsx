@@ -8,6 +8,6 @@ export const Line = styled.div`
   height: 12px;
   width: ${() => randomSize()}px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: ${({ theme }) => theme.radii.large};
   background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 `

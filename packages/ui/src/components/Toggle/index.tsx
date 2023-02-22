@@ -4,9 +4,6 @@ import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
-const TOGGLE_RADIUS = '24px'
-const TOGGLE_POINT_RADIUS = '100px'
-
 export const SIZES = {
   large: {
     ball: 16,
@@ -31,7 +28,7 @@ const StyledToggle = styled.div<{
   display: flex;
   align-items: center;
   border: none;
-  border-radius: ${TOGGLE_RADIUS};
+  border-radius: ${({ theme }) => theme.radii.xlarge};
   position: relative;
   transition: all 300ms;
   background-color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -45,7 +42,7 @@ const StyledToggle = styled.div<{
     left: 5px;
     width: ${({ size }) => SIZES[size].ball}px;
     height: ${({ size }) => SIZES[size].ball}px;
-    border-radius: ${TOGGLE_POINT_RADIUS};
+    border-radius: ${({ theme }) => theme.radii.circle};
     background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     transition: all 300ms;
   }

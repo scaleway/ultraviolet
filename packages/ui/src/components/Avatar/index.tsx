@@ -34,7 +34,7 @@ const StyledTextAvatar = styled.span<TextAvatarProps>`
     lock
       ? theme.colors.neutral.backgroundStrong
       : theme.colors[textBgColor as Color]?.backgroundStrong || textBgColor};
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   color: ${({ theme, textColor }) =>
     theme.colors[textColor as 'neutral']?.textStronger ||
     theme.colors[textColor as Color]?.textStrong ||

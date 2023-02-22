@@ -16,8 +16,8 @@ const StyledInput = styled.input`
   color: ${({ 'aria-invalid': error, theme }) =>
     error ? theme.colors.danger.textWeak : theme.colors.neutral.text};
   text-align: center;
-  border-radius: 4px;
-  margin-right: 8px;
+  border-radius: ${({ theme }) => theme.radii.default};
+  margin-right: ${({ theme }) => theme.space['1']};
   width: 56px;
   height: 64px;
 

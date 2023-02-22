@@ -14,7 +14,7 @@ const Block = styled.div`
   align-items: center;
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   overflow: hidden;
 `
 

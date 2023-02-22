@@ -218,7 +218,8 @@ const StyledDialog = styled(Dialog, {
   background-color: ${({ theme }) =>
     theme.colors.neutral.backgroundWeakElevated};
   position: relative;
-  border-radius: ${({ bordered }) => (bordered ? 4 : 0)}px;
+  border-radius: ${({ bordered, theme }) =>
+    bordered ? theme.radii.default : theme.radii.none};
   border: 0;
   padding: 32px;
   ${({ placement }) => MODAL_PLACEMENT[placement]}

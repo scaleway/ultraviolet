@@ -36,7 +36,7 @@ const BubbleVariant = styled.li`
   flex: 1;
   font-weight: 500;
   line-height: 24px;
-  border-radius: 24px;
+  border-radius: ${({ theme }) => theme.radii.large};
   border-style: solid;
   border-width: 1px;
   align-items: center;

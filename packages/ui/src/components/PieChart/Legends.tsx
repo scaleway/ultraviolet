@@ -38,7 +38,7 @@ const List = styled.ul`
 const ListItem = styled.li<{ isFocused: boolean }>`
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: ${({ theme }) => theme.space['1']};
   width: 100%;
   color: ${({ isFocused, theme }) =>
     isFocused ? theme.colors.primary.textWeak : theme.colors.neutral.text};
@@ -50,10 +50,10 @@ const Bullet = styled.div<{
   isFocused: boolean
 }>`
   display: inline-block;
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   width: 10px;
   height: 10px;
-  margin: 0 8px;
+  margin: 0 ${({ theme }) => theme.space['1']};
   background: ${({ color }) => color};
 
   ${({ needPattern, color, id }) => {

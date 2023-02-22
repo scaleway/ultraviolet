@@ -21,7 +21,7 @@ const StyledItemsCount = styled.div`
   height: 20px;
   line-height: 20px;
   text-align: center;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
   font-weight: 500;
   color: ${({ theme }) => theme.colors.primary.text};

@@ -17,14 +17,14 @@ const StyledStrength = styled(Text)<{ strength: Strength }>`
 
 const StyledWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-  border-radius: 5px;
+  border-radius: ${({ theme }) => theme.radii.default};
   height: 8px;
   margin-top: ${({ theme }) => theme.space['1']};
   margin-bottom: ${({ theme }) => theme.space['2']};
 `
 
 const StyledMeter = styled.div`
-  border-radius: 5px;
+  border-radius: ${({ theme }) => theme.radii.default};
   height: 100%;
   transition: all 0.5s;
 `

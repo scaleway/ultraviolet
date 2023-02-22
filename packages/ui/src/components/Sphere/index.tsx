@@ -24,7 +24,7 @@ const bordersStyles = ({
       ${isHalved ? finalColors[1] : finalColors[0]};
     border-bottom: ${size / 2}px solid
       ${isHalved ? finalColors[1] : finalColors[0]};
-    border-radius: 50%;
+    border-radius: ${theme.radii.circle};
   `
 }
 

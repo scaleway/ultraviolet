@@ -53,7 +53,7 @@ const StyledAfterScroll = styled.span`
 
 const StyledBorderWrapper = styled.div`
   display: inline-block;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   height: 261px;
   width: 248px;
@@ -71,7 +71,8 @@ const StyledBorderWrapper = styled.div`
   }
 
   img {
-    border-radius: 3px 3px 0% 0%;
+    border-radius: ${({ theme }) => theme.radii.default}
+      ${({ theme }) => theme.radii.default} 0 0;
   }
 `
 

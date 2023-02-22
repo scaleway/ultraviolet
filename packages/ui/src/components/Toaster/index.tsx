@@ -16,7 +16,7 @@ const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
 
 const styles = {
   toast: (theme: Theme) => css`
-    border-radius: 4px;
+    border-radius: ${theme.radii.default};
     box-shadow: none;
     min-height: 44px;
 

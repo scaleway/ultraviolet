@@ -5,6 +5,6 @@ export const IconSkeleton = styled.div`
   width: ${({ theme }) => theme.space['4']};
   height: ${({ theme }) => theme.space['4']};
   min-width: ${({ theme }) => theme.space['4']};
-  border-radius: 12px;
+  border-radius: ${({ theme }) => theme.radii.large};
   background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
 `

@@ -20,7 +20,7 @@ const StyledProgressContainer = styled.div`
   height: 4px;
   margin-left: 0;
   margin-right: 0;
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.radii.default};
   background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
 `
 
@@ -45,7 +45,7 @@ const StyledProgress = styled.div`
 const StyledFilled = styled('div', {
   shouldForwardProp: prop => !['variant', 'value'].includes(prop),
 })<{ variant: string; value: number }>`
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.radii.default};
   position: absolute;
   top: 0;
   left: 0;

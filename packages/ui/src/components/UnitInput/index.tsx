@@ -13,7 +13,8 @@ export const sizesHeight: Record<string, number> = {
 
 const CustomTextInput = styled(TextInput)`
   input {
-    border-radius: 4px 0 0 4px;
+    border-radius: ${({ theme }) => theme.radii.default} 0 0
+      ${({ theme }) => theme.radii.default};
     border-right: 0;
 
     &:hover,

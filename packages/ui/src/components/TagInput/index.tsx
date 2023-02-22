@@ -15,12 +15,12 @@ const STATUS = {
 } as const
 
 type Keys = keyof typeof STATUS
-type StatusValue = typeof STATUS[Keys]
+type StatusValue = (typeof STATUS)[Keys]
 
 const variants = {
-  base: ({ theme: { colors, shadows } }: { theme: Theme }) => `
+  base: ({ theme: { colors, shadows, radii } }: { theme: Theme }) => `
     padding: 8px;
-    border-radius: 4px;
+    border-radius: ${radii.default};
     border: 1px solid ${colors.neutral.borderWeak};
     &:focus-within {
       border: 1px solid ${colors.primary.borderWeak};

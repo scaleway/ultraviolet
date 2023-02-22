@@ -10,7 +10,7 @@ const StyledContainer = styled.div<{ length: number }>`
 
 const StyledCard = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   width: 239px;
   height: 261px;
   overflow: hidden;

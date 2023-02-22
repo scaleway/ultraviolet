@@ -13,11 +13,11 @@ const StyledContainer = styled('span', {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: ${({ theme }) => theme.space['0.5']};
+  border-radius: ${({ theme }) => theme.radii.default};
   padding: 0 ${({ theme }) => theme.space['1']};
   gap: ${({ theme }) => theme.space['1']};
   width: fit-content;
-  height: ${({ theme }) => theme.space['3']};
+  height: 24px;
   ${({ variant, theme }) => {
     if (variant === 'disabled') {
       return `

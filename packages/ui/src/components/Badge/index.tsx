@@ -94,7 +94,7 @@ const StyledBox = styled('div', {
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  border-radius: ${({ theme }) => theme.space['2']};
+  border-radius: ${({ theme }) => theme.radii.xlarge};
   padding: 0
     ${({ theme, size }) =>
       size === SIZES.small ? theme.space['1'] : theme.space['2']};
