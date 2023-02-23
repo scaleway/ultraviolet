@@ -158,7 +158,7 @@ export const UnitInput = ({
         )}
         options={options}
         customStyle={customSelectStyle(sizesHeight[size])}
-        disabled={disabled}
+        disabled={disabled || options.length === 1}
       />
     </div>
   )
