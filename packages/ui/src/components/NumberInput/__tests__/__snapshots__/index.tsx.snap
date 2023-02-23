@@ -2,7 +2,7 @@
 
 exports[`NumberInput should click on center button 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,6 +22,20 @@ exports[`NumberInput should click on center button 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -47,7 +61,7 @@ exports[`NumberInput should click on center button 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,11 +87,11 @@ exports[`NumberInput should click on center button 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -103,7 +117,8 @@ exports[`NumberInput should click on center button 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -121,7 +136,8 @@ exports[`NumberInput should click on center button 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -153,7 +169,7 @@ exports[`NumberInput should click on center button 1`] = `
 
 exports[`NumberInput should click on min button 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -173,6 +189,20 @@ exports[`NumberInput should click on min button 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -198,7 +228,7 @@ exports[`NumberInput should click on min button 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,11 +254,11 @@ exports[`NumberInput should click on min button 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -254,7 +284,8 @@ exports[`NumberInput should click on min button 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -272,7 +303,8 @@ exports[`NumberInput should click on min button 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -304,7 +336,7 @@ exports[`NumberInput should click on min button 1`] = `
 
 exports[`NumberInput should click on plus button with a step value 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -324,6 +356,20 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -349,7 +395,7 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,11 +421,11 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -405,7 +451,8 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -423,7 +470,8 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -455,7 +503,7 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
 
 exports[`NumberInput should click on plus button with a step value and an in-between value set 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -475,6 +523,20 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -500,7 +562,7 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -526,11 +588,11 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -556,7 +618,8 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -574,7 +637,8 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -606,7 +670,7 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
 
 exports[`NumberInput should focus input and modify value 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -626,6 +690,20 @@ exports[`NumberInput should focus input and modify value 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -651,7 +729,7 @@ exports[`NumberInput should focus input and modify value 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -677,11 +755,11 @@ exports[`NumberInput should focus input and modify value 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -707,7 +785,8 @@ exports[`NumberInput should focus input and modify value 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -725,7 +804,8 @@ exports[`NumberInput should focus input and modify value 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -757,7 +837,7 @@ exports[`NumberInput should focus input and modify value 1`] = `
 
 exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -777,6 +857,20 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -802,7 +896,7 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -828,11 +922,11 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -872,7 +966,8 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -890,7 +985,8 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -923,7 +1019,7 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
 
 exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -943,6 +1039,20 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-asskgt-StyledSelectButton {
@@ -968,7 +1078,7 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -994,11 +1104,11 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1038,7 +1148,8 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -1057,7 +1168,8 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -1089,7 +1201,7 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
 
 exports[`NumberInput should increase and decrease input with arrow up and down 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1109,6 +1221,20 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -1134,7 +1260,7 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1160,11 +1286,11 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1204,7 +1330,8 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -1222,7 +1349,8 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -1255,7 +1383,7 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
 
 exports[`NumberInput should renders correctly 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1275,6 +1403,20 @@ exports[`NumberInput should renders correctly 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -1300,7 +1442,7 @@ exports[`NumberInput should renders correctly 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1326,11 +1468,11 @@ exports[`NumberInput should renders correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1364,7 +1506,8 @@ exports[`NumberInput should renders correctly 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -1382,7 +1525,8 @@ exports[`NumberInput should renders correctly 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -1419,8 +1563,8 @@ exports[`NumberInput should renders correctly 1`] = `
 
 exports[`NumberInput should renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1hdgkhm-StyledContainer-StyledContainer {
-  background-color: #f6f6f8;
+  .cache-1akmhr4-StyledContainer {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1441,9 +1585,13 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hdgkhm-StyledContainer-StyledContainer>.eiawj1g4,
-.cache-1hdgkhm-StyledContainer-StyledContainer .eiawj1g2,
-.cache-1hdgkhm-StyledContainer-StyledContainer .eiawj1g3 {
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
@@ -1474,7 +1622,7 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1500,11 +1648,11 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1538,8 +1686,8 @@ exports[`NumberInput should renders correctly disabled 1`] = `
 }
 
 <div
-    class="cache-1hdgkhm-StyledContainer-StyledContainer eiawj1g0"
-    disabled=""
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="true"
   >
     <button
       aria-label="Minus"
@@ -1558,7 +1706,8 @@ exports[`NumberInput should renders correctly disabled 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="true"
       role="status"
     >
       <input
@@ -1597,7 +1746,7 @@ exports[`NumberInput should renders correctly disabled 1`] = `
 
 exports[`NumberInput should renders correctly max value 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1617,6 +1766,20 @@ exports[`NumberInput should renders correctly max value 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -1642,7 +1805,7 @@ exports[`NumberInput should renders correctly max value 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1668,11 +1831,11 @@ exports[`NumberInput should renders correctly max value 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1720,7 +1883,8 @@ exports[`NumberInput should renders correctly max value 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -1738,7 +1902,8 @@ exports[`NumberInput should renders correctly max value 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -1776,7 +1941,7 @@ exports[`NumberInput should renders correctly max value 1`] = `
 
 exports[`NumberInput should renders correctly min value 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1796,6 +1961,20 @@ exports[`NumberInput should renders correctly min value 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-asskgt-StyledSelectButton {
@@ -1821,7 +2000,7 @@ exports[`NumberInput should renders correctly min value 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1847,11 +2026,11 @@ exports[`NumberInput should renders correctly min value 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1899,7 +2078,8 @@ exports[`NumberInput should renders correctly min value 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -1918,7 +2098,8 @@ exports[`NumberInput should renders correctly min value 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -1955,7 +2136,7 @@ exports[`NumberInput should renders correctly min value 1`] = `
 
 exports[`NumberInput should renders large size 1`] = `
 <DocumentFragment>
-  .cache-mnp5vr-StyledContainer {
+  .cache-1akmhr4-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1975,6 +2156,20 @@ exports[`NumberInput should renders large size 1`] = `
   height: 48px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1akmhr4-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1akmhr4-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -2000,7 +2195,7 @@ exports[`NumberInput should renders large size 1`] = `
   min-height: 26px;
 }
 
-.cache-pvag7g-StyledCenterBox {
+.cache-ocqbag-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2026,11 +2221,11 @@ exports[`NumberInput should renders large size 1`] = `
   max-width: 100%;
 }
 
-.cache-pvag7g-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-ocqbag-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-pvag7g-StyledCenterBox:focus-within:not([disabled]) {
+.cache-ocqbag-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2056,7 +2251,8 @@ exports[`NumberInput should renders large size 1`] = `
 }
 
 <div
-    class="cache-mnp5vr-StyledContainer eiawj1g0"
+    class="cache-1akmhr4-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -2074,7 +2270,8 @@ exports[`NumberInput should renders large size 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-pvag7g-StyledCenterBox eiawj1g3"
+      class="cache-ocqbag-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input
@@ -2106,7 +2303,7 @@ exports[`NumberInput should renders large size 1`] = `
 
 exports[`NumberInput should renders small size 1`] = `
 <DocumentFragment>
-  .cache-gim4of-StyledContainer {
+  .cache-1ez3qhy-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2126,6 +2323,20 @@ exports[`NumberInput should renders small size 1`] = `
   height: 32px;
   border: 1px solid #d4dae7;
   border-radius: 4px;
+}
+
+.cache-1ez3qhy-StyledContainer[data-disabled='true'] {
+  background: #f6f6f8;
+}
+
+.cache-1ez3qhy-StyledContainer[data-disabled='true']>.eiawj1g4,
+.cache-1ez3qhy-StyledContainer[data-disabled='true'] .eiawj1g2,
+.cache-1ez3qhy-StyledContainer[data-disabled='true'] .eiawj1g3 {
+  background-color: #f6f6f8;
+  border: none;
+  color: #c4c9d6;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
 .cache-1h5w6a8-StyledSelectButton {
@@ -2151,7 +2362,7 @@ exports[`NumberInput should renders small size 1`] = `
   min-height: 22px;
 }
 
-.cache-1j8mamr-StyledCenterBox {
+.cache-10yi2wf-StyledCenterBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2177,11 +2388,11 @@ exports[`NumberInput should renders small size 1`] = `
   max-width: 100%;
 }
 
-.cache-1j8mamr-StyledCenterBox:hover:not([disabled], :focus) {
+.cache-10yi2wf-StyledCenterBox:hover:not([data-disabled='true'], :focus) {
   border: 1px solid #4f0599;
 }
 
-.cache-1j8mamr-StyledCenterBox:focus-within:not([disabled]) {
+.cache-10yi2wf-StyledCenterBox:focus-within:not([data-disabled='true']) {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2207,7 +2418,8 @@ exports[`NumberInput should renders small size 1`] = `
 }
 
 <div
-    class="cache-gim4of-StyledContainer eiawj1g0"
+    class="cache-1ez3qhy-StyledContainer eiawj1g0"
+    data-disabled="false"
   >
     <button
       aria-label="Minus"
@@ -2225,7 +2437,8 @@ exports[`NumberInput should renders small size 1`] = `
     </button>
     <div
       aria-live="assertive"
-      class="cache-1j8mamr-StyledCenterBox eiawj1g3"
+      class="cache-10yi2wf-StyledCenterBox eiawj1g3"
+      data-disabled="false"
       role="status"
     >
       <input

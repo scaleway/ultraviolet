@@ -1,5 +1,4 @@
 import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   ChangeEventHandler,
@@ -22,14 +21,7 @@ const roundStep = (value: number, step: number, direction: number) =>
     ? Math.floor(value / step) * step
     : Math.ceil(value / step) * step
 
-const disabledStyles = ({
-  disabled,
-  theme,
-}: {
-  disabled: boolean
-  theme: Theme
-}) =>
-  disabled &&
+const disabledStyles = ({ theme }: { theme: Theme }) =>
   `
     background-color: ${theme.colors.neutral.backgroundDisabled};
     border: none;
@@ -84,11 +76,11 @@ const StyledCenterBox = styled('div', {
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid transparent;
 
-  :hover:not([disabled], :focus) {
+  :hover:not([data-disabled='true'], :focus) {
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
 
-  :focus-within:not([disabled]) {
+  :focus-within:not([data-disabled='true']) {
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
     border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
   }
@@ -127,11 +119,8 @@ const StyledText = styled('span', {
 
 const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
-})<{ disabled: boolean; size: ContainerSizesType }>`
-  background-color: ${({ theme, disabled }) =>
-    disabled
-      ? theme.colors.neutral.backgroundDisabled
-      : theme.colors.neutral.backgroundWeak};
+})<{ size: ContainerSizesType }>`
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -139,15 +128,13 @@ const StyledContainer = styled('div', {
   font-weight: 500;
   height: ${({ size }) => containerSizes[size]}px;
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: 4px;
-  ${({ disabled, theme }) =>
-    disabled
-      ? css`
-          > ${StyledSelectButton}, ${StyledInput}, ${StyledCenterBox} {
-            ${disabledStyles({ disabled, theme })}
-          }
-        `
-      : ''}
+  border-radius: ${({ theme }) => theme.radii.default};
+  &[data-disabled='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    > ${StyledSelectButton}, ${StyledInput}, ${StyledCenterBox} {
+      ${({ theme }) => disabledStyles({ theme })}
+    }
+  }
 `
 
 type NumberInputProps = {
@@ -270,7 +257,7 @@ export const NumberInput = ({
   const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
   return (
-    <StyledContainer disabled={disabled} size={size} className={className}>
+    <StyledContainer data-disabled={disabled} size={size} className={className}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledSelectButton
           onClick={offsetFn(-1)}
@@ -291,6 +278,7 @@ export const NumberInput = ({
         }}
         aria-live="assertive"
         role="status"
+        data-disabled={disabled}
       >
         <StyledInput
           disabled={disabled}
