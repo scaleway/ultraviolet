@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.219.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.6...@scaleway/ui@0.219.7) (2023-02-23)
+
+
+### :bug: Bug Fixes
+
+* **NumberInput:** primary color on hover on disabled state ([#2269](https://github.com/scaleway/scaleway-ui/issues/2269)) ([a7203f4](https://github.com/scaleway/scaleway-ui/commit/a7203f45eb94312e6c47b05d5c88a33bcf0eba16))
+* **unitInput:** add border to disabled state and disable when there is only one option ([#2262](https://github.com/scaleway/scaleway-ui/issues/2262)) ([d6a1b11](https://github.com/scaleway/scaleway-ui/commit/d6a1b11621a0385ad1b943a7efc6674fd0083fa1))
+
+
+
 ## [0.219.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.219.5...@scaleway/ui@0.219.6) (2023-02-20)
 
 
