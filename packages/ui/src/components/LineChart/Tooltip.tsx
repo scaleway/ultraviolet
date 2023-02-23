@@ -5,7 +5,7 @@ import { Text } from '../Text'
 const LineTooltipContainer = styled.div`
   display: flex;
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: 5px 9px;
   align-items: center;

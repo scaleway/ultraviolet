@@ -6,6 +6,7 @@ const radii = {
   small: '1px',
   default: '4px',
   large: '8px',
+  xlarge: '16px',
   circle: '100%',
 }
 

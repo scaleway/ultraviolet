@@ -27,9 +27,9 @@ exports[`DotSteps renders correctly 1`] = `
   transform: translateX(-26px);
 }
 
-.cache-tzbhw9-DotStep {
+.cache-1ch0yug-DotStep {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 10px;
   height: 10px;
   margin: 8px;
@@ -38,8 +38,8 @@ exports[`DotSteps renders correctly 1`] = `
   background-color: transparent;
 }
 
-.cache-tzbhw9-DotStep::before,
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::before,
+.cache-1ch0yug-DotStep::after {
   content: '';
   position: absolute;
   border-radius: inherit;
@@ -49,27 +49,27 @@ exports[`DotSteps renders correctly 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep::before {
+.cache-1ch0yug-DotStep::before {
   width: 10px;
   height: 10px;
   margin: -5px;
   background-color: #4f0599;
 }
 
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::after {
   width: 20px;
   height: 20px;
   margin: -10px;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='true']::before {
+.cache-1ch0yug-DotStep[aria-selected='true']::before {
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:hover::before {
+.cache-1ch0yug-DotStep[aria-selected='false']:hover::before {
   -webkit-transform: scale(1.6);
   -moz-transform: scale(1.6);
   -ms-transform: scale(1.6);
@@ -78,11 +78,11 @@ exports[`DotSteps renders correctly 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:last-child::after {
+.cache-1ch0yug-DotStep[aria-selected='false']:last-child::after {
   pointer-events: none;
 }
 
-.cache-tzbhw9-DotStep:last-child::after {
+.cache-1ch0yug-DotStep:last-child::after {
   border: 1px solid #4f0599;
 }
 
@@ -91,11 +91,11 @@ exports[`DotSteps renders correctly 1`] = `
   >
     <div
       aria-selected="true"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
   </div>
 </DocumentFragment>
@@ -184,9 +184,9 @@ exports[`DotSteps renders correctly useState function 1`] = `
   transform: translateX(-234px);
 }
 
-.cache-tzbhw9-DotStep {
+.cache-1ch0yug-DotStep {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 10px;
   height: 10px;
   margin: 8px;
@@ -195,8 +195,8 @@ exports[`DotSteps renders correctly useState function 1`] = `
   background-color: transparent;
 }
 
-.cache-tzbhw9-DotStep::before,
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::before,
+.cache-1ch0yug-DotStep::after {
   content: '';
   position: absolute;
   border-radius: inherit;
@@ -206,27 +206,27 @@ exports[`DotSteps renders correctly useState function 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep::before {
+.cache-1ch0yug-DotStep::before {
   width: 10px;
   height: 10px;
   margin: -5px;
   background-color: #4f0599;
 }
 
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::after {
   width: 20px;
   height: 20px;
   margin: -10px;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='true']::before {
+.cache-1ch0yug-DotStep[aria-selected='true']::before {
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:hover::before {
+.cache-1ch0yug-DotStep[aria-selected='false']:hover::before {
   -webkit-transform: scale(1.6);
   -moz-transform: scale(1.6);
   -ms-transform: scale(1.6);
@@ -235,11 +235,11 @@ exports[`DotSteps renders correctly useState function 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:last-child::after {
+.cache-1ch0yug-DotStep[aria-selected='false']:last-child::after {
   pointer-events: none;
 }
 
-.cache-tzbhw9-DotStep:last-child::after {
+.cache-1ch0yug-DotStep:last-child::after {
   border: 1px solid #4f0599;
 }
 
@@ -248,43 +248,43 @@ exports[`DotSteps renders correctly useState function 1`] = `
   >
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="true"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
   </div>
 </DocumentFragment>
@@ -373,9 +373,9 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   transform: translateX(-234px);
 }
 
-.cache-tzbhw9-DotStep {
+.cache-1ch0yug-DotStep {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 10px;
   height: 10px;
   margin: 8px;
@@ -384,8 +384,8 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   background-color: transparent;
 }
 
-.cache-tzbhw9-DotStep::before,
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::before,
+.cache-1ch0yug-DotStep::after {
   content: '';
   position: absolute;
   border-radius: inherit;
@@ -395,27 +395,27 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep::before {
+.cache-1ch0yug-DotStep::before {
   width: 10px;
   height: 10px;
   margin: -5px;
   background-color: #4f0599;
 }
 
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::after {
   width: 20px;
   height: 20px;
   margin: -10px;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='true']::before {
+.cache-1ch0yug-DotStep[aria-selected='true']::before {
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:hover::before {
+.cache-1ch0yug-DotStep[aria-selected='false']:hover::before {
   -webkit-transform: scale(1.6);
   -moz-transform: scale(1.6);
   -ms-transform: scale(1.6);
@@ -424,11 +424,11 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:last-child::after {
+.cache-1ch0yug-DotStep[aria-selected='false']:last-child::after {
   pointer-events: none;
 }
 
-.cache-tzbhw9-DotStep:last-child::after {
+.cache-1ch0yug-DotStep:last-child::after {
   border: 1px solid #4f0599;
 }
 
@@ -437,43 +437,43 @@ exports[`DotSteps renders correctly wit 10 steps, default step=4 1`] = `
   >
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="true"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
   </div>
 </DocumentFragment>
@@ -506,9 +506,9 @@ exports[`DotSteps triggers onclick 1`] = `
   transform: translateX(-26px);
 }
 
-.cache-tzbhw9-DotStep {
+.cache-1ch0yug-DotStep {
   display: inline-block;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 10px;
   height: 10px;
   margin: 8px;
@@ -517,8 +517,8 @@ exports[`DotSteps triggers onclick 1`] = `
   background-color: transparent;
 }
 
-.cache-tzbhw9-DotStep::before,
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::before,
+.cache-1ch0yug-DotStep::after {
   content: '';
   position: absolute;
   border-radius: inherit;
@@ -528,27 +528,27 @@ exports[`DotSteps triggers onclick 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep::before {
+.cache-1ch0yug-DotStep::before {
   width: 10px;
   height: 10px;
   margin: -5px;
   background-color: #4f0599;
 }
 
-.cache-tzbhw9-DotStep::after {
+.cache-1ch0yug-DotStep::after {
   width: 20px;
   height: 20px;
   margin: -10px;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='true']::before {
+.cache-1ch0yug-DotStep[aria-selected='true']::before {
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:hover::before {
+.cache-1ch0yug-DotStep[aria-selected='false']:hover::before {
   -webkit-transform: scale(1.6);
   -moz-transform: scale(1.6);
   -ms-transform: scale(1.6);
@@ -557,11 +557,11 @@ exports[`DotSteps triggers onclick 1`] = `
   transition: transform 0.2s;
 }
 
-.cache-tzbhw9-DotStep[aria-selected='false']:last-child::after {
+.cache-1ch0yug-DotStep[aria-selected='false']:last-child::after {
   pointer-events: none;
 }
 
-.cache-tzbhw9-DotStep:last-child::after {
+.cache-1ch0yug-DotStep:last-child::after {
   border: 1px solid #4f0599;
 }
 
@@ -570,11 +570,11 @@ exports[`DotSteps triggers onclick 1`] = `
   >
     <div
       aria-selected="true"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
     <div
       aria-selected="false"
-      class="cache-tzbhw9-DotStep e1cog6k71"
+      class="cache-1ch0yug-DotStep e1cog6k71"
     />
   </div>
 </DocumentFragment>

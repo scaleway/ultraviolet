@@ -15,7 +15,7 @@ const StyledList = styled.ul`
   height: 100%;
   padding: ${({ theme }) => theme.space['2']};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   margin: 0;
 
   > ${StyledLine}:not(:last-child) {

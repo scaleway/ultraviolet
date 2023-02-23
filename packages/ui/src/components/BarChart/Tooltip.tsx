@@ -4,7 +4,7 @@ import { Text } from '../Text'
 const BarToolTipContainer = styled.div`
   display: flex;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeakElevated};
-  border-radius: 2px;
+  border-radius: ${({ theme }) => theme.radii.small};
   box-shadow: ${({ theme }) => theme.shadows.tooltip};
   padding: 5px 9px;
   align-items: center;

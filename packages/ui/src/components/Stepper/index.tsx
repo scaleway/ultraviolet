@@ -26,7 +26,7 @@ const StyledStepContainer = styled.div`
 const StyledStep = styled('div', {
   shouldForwardProp: prop => !['temporal'].includes(prop),
 })<{ temporal: Temporal }>`
-  border-radius: 100%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,9 +62,9 @@ const loadingStyle = css`
 `
 
 const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
-  border-radius: ${({ theme }) => theme.space['0.25']};
+  border-radius: ${({ theme }) => theme.radii.default};
   flex-grow: 1;
-  border-radius: ${({ theme }) => theme.space['0.25']};
+  border-radius: ${({ theme }) => theme.radii.default};
   background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
   position: relative;
 
@@ -74,7 +74,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     left: 0;
     top: 0;
     height: 100%;
-    border-radius: ${({ theme }) => theme.space['0.25']};
+    border-radius: ${({ theme }) => theme.radii.default};
     background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
     ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
     ${({ temporal, animated }) =>

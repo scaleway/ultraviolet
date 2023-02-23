@@ -15,7 +15,7 @@ const Block = styled.div`
   align-items: center;
   justify-content: space-evenly;
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
   overflow: hidden;
 `
 

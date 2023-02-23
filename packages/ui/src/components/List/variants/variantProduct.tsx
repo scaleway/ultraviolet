@@ -107,9 +107,9 @@ const StyledRow = styled('details', {
 
   border: ${BORDER_THICKNESS}px solid ${getBorderColor};
 
-  border-radius: 4px;
-  margin-bottom: 16px;
-  padding: 8px 0;
+  border-radius: ${({ theme }) => theme.radii.default};
+  margin-bottom: ${({ theme }) => theme.space['2']};
+  padding: ${({ theme }) => theme.space['1']} 0;
   transition: box-shadow 200ms ease, border-color 200ms ease;
   background-color: ${({ alert, theme }) =>
     alert ? theme.colors.warning.background : theme.colors.neutral.background};

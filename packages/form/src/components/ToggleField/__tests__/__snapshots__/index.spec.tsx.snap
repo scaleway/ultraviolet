@@ -27,7 +27,7 @@ exports[`ToggleField should render correctly 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1w4yazo {
+.cache-xmt5qh {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -40,7 +40,7 @@ exports[`ToggleField should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -49,34 +49,34 @@ exports[`ToggleField should render correctly 1`] = `
   height: 24px;
 }
 
-.cache-1w4yazo:after {
+.cache-xmt5qh:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-1w4yazo:focus-within,
-.cache-1w4yazo:focus {
+.cache-xmt5qh:focus-within,
+.cache-xmt5qh:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='false']:active:after {
+.cache-xmt5qh[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1w4yazo[data-checked='true'] {
+.cache-xmt5qh[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-1w4yazo[data-checked='true']:after {
+.cache-xmt5qh[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -84,16 +84,16 @@ exports[`ToggleField should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1w4yazo[data-checked='true']:focus-within,
-.cache-1w4yazo[data-checked='true']:focus {
+.cache-xmt5qh[data-checked='true']:focus-within,
+.cache-xmt5qh[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='true'] {
+.cache-xmt5qh[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+.cache-xmt5qh[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -119,7 +119,7 @@ exports[`ToggleField should render correctly 1`] = `
       class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de2"
+        class="cache-xmt5qh e6hn8de2"
         data-checked="false"
         data-disabled="false"
       >
@@ -164,7 +164,7 @@ exports[`ToggleField should render correctly checked 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1w4yazo {
+.cache-xmt5qh {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -177,7 +177,7 @@ exports[`ToggleField should render correctly checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -186,34 +186,34 @@ exports[`ToggleField should render correctly checked 1`] = `
   height: 24px;
 }
 
-.cache-1w4yazo:after {
+.cache-xmt5qh:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-1w4yazo:focus-within,
-.cache-1w4yazo:focus {
+.cache-xmt5qh:focus-within,
+.cache-xmt5qh:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='false']:active:after {
+.cache-xmt5qh[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1w4yazo[data-checked='true'] {
+.cache-xmt5qh[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-1w4yazo[data-checked='true']:after {
+.cache-xmt5qh[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -221,16 +221,16 @@ exports[`ToggleField should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1w4yazo[data-checked='true']:focus-within,
-.cache-1w4yazo[data-checked='true']:focus {
+.cache-xmt5qh[data-checked='true']:focus-within,
+.cache-xmt5qh[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='true'] {
+.cache-xmt5qh[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+.cache-xmt5qh[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -256,7 +256,7 @@ exports[`ToggleField should render correctly checked 1`] = `
       class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de2"
+        class="cache-xmt5qh e6hn8de2"
         data-checked="true"
         data-disabled="false"
       >
@@ -302,7 +302,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1w4yazo {
+.cache-xmt5qh {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -315,7 +315,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -324,34 +324,34 @@ exports[`ToggleField should render correctly disabled 1`] = `
   height: 24px;
 }
 
-.cache-1w4yazo:after {
+.cache-xmt5qh:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-1w4yazo:focus-within,
-.cache-1w4yazo:focus {
+.cache-xmt5qh:focus-within,
+.cache-xmt5qh:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='false']:active:after {
+.cache-xmt5qh[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1w4yazo[data-checked='true'] {
+.cache-xmt5qh[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-1w4yazo[data-checked='true']:after {
+.cache-xmt5qh[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -359,16 +359,16 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1w4yazo[data-checked='true']:focus-within,
-.cache-1w4yazo[data-checked='true']:focus {
+.cache-xmt5qh[data-checked='true']:focus-within,
+.cache-xmt5qh[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='true'] {
+.cache-xmt5qh[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+.cache-xmt5qh[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -394,7 +394,7 @@ exports[`ToggleField should render correctly disabled 1`] = `
       class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de2"
+        class="cache-xmt5qh e6hn8de2"
         data-checked="false"
         data-disabled="true"
       >
@@ -440,7 +440,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   color: #c4c9d6;
 }
 
-.cache-1w4yazo {
+.cache-xmt5qh {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -453,7 +453,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border: none;
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -462,34 +462,34 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   height: 24px;
 }
 
-.cache-1w4yazo:after {
+.cache-xmt5qh:after {
   content: '';
   position: absolute;
   top: 4px;
   left: 5px;
   width: 16px;
   height: 16px;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: #ffffff;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-.cache-1w4yazo:focus-within,
-.cache-1w4yazo:focus {
+.cache-xmt5qh:focus-within,
+.cache-xmt5qh:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='false']:active:after {
+.cache-xmt5qh[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1w4yazo[data-checked='true'] {
+.cache-xmt5qh[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.cache-1w4yazo[data-checked='true']:after {
+.cache-xmt5qh[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -497,16 +497,16 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1w4yazo[data-checked='true']:focus-within,
-.cache-1w4yazo[data-checked='true']:focus {
+.cache-xmt5qh[data-checked='true']:focus-within,
+.cache-xmt5qh[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1w4yazo[data-disabled='true'] {
+.cache-xmt5qh[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.cache-1w4yazo[data-disabled='true'][data-checked='true'] {
+.cache-xmt5qh[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
@@ -532,7 +532,7 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
       class="cache-kx305k e6hn8de0"
     >
       <div
-        class="cache-1w4yazo e6hn8de2"
+        class="cache-xmt5qh e6hn8de2"
         data-checked="true"
         data-disabled="false"
       >

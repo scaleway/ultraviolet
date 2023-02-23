@@ -28,7 +28,7 @@ const ProgressionContainer = styled.div`
   );`}
 
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.radii.default};
 
   &:before {
     content: '';

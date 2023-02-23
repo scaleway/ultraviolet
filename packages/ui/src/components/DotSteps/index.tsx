@@ -5,7 +5,7 @@ const dotSize = 10
 
 const DotStep = styled.div`
   display: inline-block;
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   width: ${dotSize}px;
   height: ${dotSize}px;
   margin: ${({ theme }) => theme.space[1]};

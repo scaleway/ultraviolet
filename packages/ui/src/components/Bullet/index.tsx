@@ -61,10 +61,10 @@ const sizeStyles = ({ size }: { size: BulletSize }) => sizes[size]
 type StyledContainerType = { variant: BulletVariant; size: BulletSize }
 const StyledContainer = styled('div')<StyledContainerType>`
   display: inline-flex;
-  border-radius: 50%;
+  border-radius: ${({ theme }) => theme.radii.circle};
   justify-content: center;
   align-items: center;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
   ${variantStyles}
   ${sizeStyles}
 `
