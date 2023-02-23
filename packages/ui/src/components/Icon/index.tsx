@@ -5,8 +5,6 @@ import { forwardRef, useMemo } from 'react'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
 
-// Non Material Design icons: 'send',
-
 const ICONS = {
   alert: () => <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />,
   anchor: () => (
@@ -361,9 +359,9 @@ const StyledIcon = styled('svg', {
         : capitalize(PROMINENCES[prominence])
 
     const themeColor = theme.colors[color as Color]
-    const text = `text${definedProminence}` as keyof typeof themeColor
+    const icon = `icon${definedProminence}` as keyof typeof themeColor
 
-    return theme.colors?.[color as Color]?.[text] || color
+    return theme.colors?.[color as Color]?.[icon] || color
   }};
 
   ${sizeStyles}
@@ -375,7 +373,7 @@ type IconProps = {
   size?: number | string
   name?: IconName
   prominence?: ProminenceProps
-  color?: Color | string
+  color?: Color
   'data-testid'?: string
 } & Pick<
   SVGProps<SVGSVGElement>,
