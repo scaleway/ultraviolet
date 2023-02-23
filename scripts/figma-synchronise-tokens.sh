@@ -62,9 +62,9 @@ function generateTokens {
               {"shadows": .}
   ')
 
-  # There are others colors for overlay for example
-  GENERATED_OTHERS_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
-    reduce (.[$theme].others | to_entries | .[]) as $sentiment
+  # There are other colors for overlay for example
+  GENERATED_OTHER_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
+    reduce (.[$theme].other | to_entries | .[]) as $sentiment
       ({}; . + {"\($sentiment.key)": $sentiment.value.value}) | {"colors": .}
   ')
 
@@ -84,7 +84,7 @@ function generateTokens {
         ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
           }))}) | {"typography": .}')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHERS_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4]')
+  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHER_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"
