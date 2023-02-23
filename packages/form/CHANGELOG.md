@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.39.54](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.53...@scaleway/form@1.39.54) (2023-02-23)
+
+
+### :bug: Bug Fixes
+
+* use radii from theme ([#2271](https://github.com/scaleway/scaleway-ui/issues/2271)) ([8075443](https://github.com/scaleway/scaleway-ui/commit/8075443d1dba73e8bab3bccf15ddb50856883592))
+
+
+
 ## [1.39.53](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.52...@scaleway/form@1.39.53) (2023-02-23)
 
 

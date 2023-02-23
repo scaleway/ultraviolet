@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.2 (2023-02-23)
+
+
+### :package: Chore
+
+* **release:** publish ([60c6ba4](https://github.com/scaleway/scaleway-ui/commit/60c6ba4623fb8bb7387ee7d6bdfa1e02c7be5ffe))
+
+
+### :bug: Bug Fixes
+
+* use radii from theme ([#2271](https://github.com/scaleway/scaleway-ui/issues/2271)) ([8075443](https://github.com/scaleway/scaleway-ui/commit/8075443d1dba73e8bab3bccf15ddb50856883592))
+
+
+
 ## 1.1.1 (2023-02-17)
 
 
