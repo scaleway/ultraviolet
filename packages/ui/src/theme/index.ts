@@ -34,7 +34,7 @@ const SENTIMENTS = [
   'danger',
   'warning',
   'info',
-]
+] as const
 
 const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
   sentiment => sentiment !== 'neutral',

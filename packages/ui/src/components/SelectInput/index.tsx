@@ -570,26 +570,16 @@ const DropdownIndicator = (
   const {
     selectProps: { isDisabled, time, required },
   } = props
-  const theme = useTheme()
-  const color = useMemo(
-    () =>
-      isDisabled
-        ? theme.colors.neutral.textDisabled
-        : theme.colors.neutral.text,
-    [theme, isDisabled],
-  )
 
   return (
     <components.DropdownIndicator {...props}>
       <Stack gap={1} direction="row" alignItems="center">
-        {required ? (
-          <Icon name="asterisk" size={10} color={theme.colors.danger.text} />
-        ) : null}
+        {required ? <Icon name="asterisk" size={10} color="danger" /> : null}
         {time ? <StyledSeparator direction="vertical" /> : null}
         <Icon
           name={time ? 'clock-outline' : 'arrow-down'}
           size={time ? 24 : 16}
-          color={color}
+          disabled={isDisabled}
         />
       </Stack>
     </components.DropdownIndicator>
@@ -599,7 +589,6 @@ const DropdownIndicator = (
 const ClearIndicator = (
   props: ClearIndicatorProps<SelectOption> & WithSelectProps,
 ) => {
-  const theme = useTheme()
   const {
     selectProps: { checked, error },
     innerProps: { ref, ...restInnerProps },
@@ -612,11 +601,7 @@ const ClearIndicator = (
         name="close"
         size={20}
         cursor="pointer"
-        color={
-          (checked && theme.colors.primary.text) ||
-          (error && theme.colors.danger.text) ||
-          theme.colors.neutral.text
-        }
+        color={(checked && 'primary') || (error && 'danger') || 'neutral'}
       />
     </components.ClearIndicator>
   )

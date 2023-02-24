@@ -618,48 +618,6 @@ exports[`Loader renders with trailColor danger 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Loader renders with trailColor info 1`] = `
-<DocumentFragment>
-  .cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<svg
-    aria-label="Loading test"
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow="20"
-    aria-valuetext="20%"
-    class="cache-0"
-    role="progressbar"
-    style="height: 40px; width: 40px;"
-    viewBox="0 0 100 100"
-  >
-    <circle
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="#3f6ed8"
-      stroke-width="16"
-    />
-    <circle
-      class="cache-11f05l0-Loader"
-      cx="50"
-      cy="50"
-      fill="none"
-      r="42"
-      stroke="#4f0599"
-      stroke-dasharray="263.89378290154264"
-      stroke-dashoffset="211.11502632123413"
-      stroke-linecap="round"
-      stroke-width="16"
-    />
-  </svg>
-</DocumentFragment>
-`;
-
 exports[`Loader renders with trailColor neutral 1`] = `
 <DocumentFragment>
   .cache-11f05l0-Loader {
@@ -768,6 +726,48 @@ exports[`Loader renders with trailColor success 1`] = `
       fill="none"
       r="42"
       stroke="#22c8a2"
+      stroke-width="16"
+    />
+    <circle
+      class="cache-11f05l0-Loader"
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#4f0599"
+      stroke-dasharray="263.89378290154264"
+      stroke-dashoffset="211.11502632123413"
+      stroke-linecap="round"
+      stroke-width="16"
+    />
+  </svg>
+</DocumentFragment>
+`;
+
+exports[`Loader renders with trailColor warning 1`] = `
+<DocumentFragment>
+  .cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<svg
+    aria-label="Loading test"
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow="20"
+    aria-valuetext="20%"
+    class="cache-0"
+    role="progressbar"
+    style="height: 40px; width: 40px;"
+    viewBox="0 0 100 100"
+  >
+    <circle
+      cx="50"
+      cy="50"
+      fill="none"
+      r="42"
+      stroke="#ff8c69"
       stroke-width="16"
     />
     <circle
