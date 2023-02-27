@@ -1,4 +1,4 @@
-import { Global, useTheme } from '@emotion/react'
+import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
@@ -181,7 +181,6 @@ export const DateInput = ({
   required = false,
   value,
 }: DateInputProps) => {
-  const theme = useTheme()
   const localeCode =
     (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
 
@@ -212,19 +211,13 @@ export const DateInput = ({
                 disabled={disabled}
               />
               <StyledIconContainer>
-                {required && (
-                  <Icon
-                    name="asterisk"
-                    color={theme.colors.danger.text}
-                    size={8}
-                  />
-                )}
+                {required ? (
+                  <Icon name="asterisk" color="danger" size={8} />
+                ) : null}
                 <StyledSeparator direction="vertical" />
                 <Icon
                   name="calendar-range"
-                  color={
-                    error ? theme.colors.danger.text : theme.colors.neutral.text
-                  }
+                  color={error ? 'danger' : 'neutral'}
                   size={24}
                 />
               </StyledIconContainer>

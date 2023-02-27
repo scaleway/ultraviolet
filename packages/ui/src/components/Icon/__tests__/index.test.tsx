@@ -22,6 +22,9 @@ describe('Icon', () => {
       <Icon name="alert" color="neutral" prominence="weak" />,
     ))
 
+  test(`render Icon with disabled`, () =>
+    shouldMatchEmotionSnapshot(<Icon name="alert" disabled />))
+
   test(`render Icon with color other than neutral and prominence stronger (should render default prominence)`, () =>
     shouldMatchEmotionSnapshot(
       <Icon name="alert" color="primary" prominence="stronger" />,

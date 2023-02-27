@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { Color } from '../../theme'
 import type { XOR } from '../../types'
@@ -102,27 +101,23 @@ export const Avatar = ({
   textColor = 'neutral',
   textSize = 10,
   lock = false,
-}: AvatarProps) => {
-  const theme = useTheme()
-
-  return (
-    <AvatarContainer size={size}>
-      {text || (!text && !image) ? (
-        <StyledTextAvatar
-          lock={lock}
-          textBgColor={textBgColor}
-          textColor={textColor}
-          textSize={textSize}
-        >
-          {lock ? (
-            <Icon name="lock" color={theme.colors.neutral.textWeak} />
-          ) : (
-            formatTextToAvatar(text)
-          )}
-        </StyledTextAvatar>
-      ) : (
-        <StyledImg src={image ?? ''} alt="" />
-      )}
-    </AvatarContainer>
-  )
-}
+}: AvatarProps) => (
+  <AvatarContainer size={size}>
+    {text || (!text && !image) ? (
+      <StyledTextAvatar
+        lock={lock}
+        textBgColor={textBgColor}
+        textColor={textColor}
+        textSize={textSize}
+      >
+        {lock ? (
+          <Icon name="lock" color="neutral" prominence="weak" />
+        ) : (
+          formatTextToAvatar(text)
+        )}
+      </StyledTextAvatar>
+    ) : (
+      <StyledImg src={image ?? ''} alt="" />
+    )}
+  </AvatarContainer>
+)

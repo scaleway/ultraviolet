@@ -5,8 +5,6 @@ import { forwardRef, useMemo } from 'react'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
 
-// Non Material Design icons: 'send',
-
 const ICONS = {
   alert: () => <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />,
   anchor: () => (
@@ -346,14 +344,16 @@ export const PROMINENCES = {
 type ProminenceProps = keyof typeof PROMINENCES
 
 const StyledIcon = styled('svg', {
-  shouldForwardProp: prop => !['size', 'color', 'prominence'].includes(prop),
+  shouldForwardProp: prop =>
+    !['size', 'color', 'prominence', 'disabled'].includes(prop),
 })<{
   color: Color | string
   size: number | string
   prominence: ProminenceProps
+  disabled?: boolean
 }>`
   vertical-align: middle;
-  fill: ${({ theme, color, prominence }) => {
+  fill: ${({ theme, color, prominence, disabled }) => {
     // stronger is available only for neutral color
     const definedProminence =
       color !== 'neutral' && prominence === 'stronger'
@@ -361,9 +361,11 @@ const StyledIcon = styled('svg', {
         : capitalize(PROMINENCES[prominence])
 
     const themeColor = theme.colors[color as Color]
-    const text = `text${definedProminence}` as keyof typeof themeColor
+    const icon = `icon${definedProminence}${
+      disabled ? 'Disabled' : ''
+    }` as keyof typeof themeColor
 
-    return theme.colors?.[color as Color]?.[text] || color
+    return theme.colors?.[color as Color]?.[icon] || color
   }};
 
   ${sizeStyles}
@@ -375,8 +377,9 @@ type IconProps = {
   size?: number | string
   name?: IconName
   prominence?: ProminenceProps
-  color?: Color | string
+  color?: Color
   'data-testid'?: string
+  disabled?: boolean
 } & Pick<
   SVGProps<SVGSVGElement>,
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
@@ -386,7 +389,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       name = 'alert',
-      color = 'currentColor',
+      color = 'neutral',
       size = '1em',
       prominence = 'default',
       className,
@@ -394,6 +397,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       stroke,
       cursor,
       strokeWidth,
+      disabled,
     },
     ref,
   ) => {
@@ -418,6 +422,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         stroke={stroke}
         cursor={cursor}
         strokeWidth={strokeWidth}
+        disabled={disabled}
       >
         {render()}
       </StyledIcon>

@@ -22,21 +22,23 @@ const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
   deepmerge(consoleLightTheme, extendedTheme) as SCWUITheme
 
 // This type exclude overlay and secondary color
-type Color = Exclude<
+type Color = Extract<
   keyof typeof consoleLightTheme.colors,
-  'overlay' | 'secondary'
+  'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
 >
 
-const SENTIMENTS = Object.keys(consoleLightTheme.colors).filter(
-  sentiment => sentiment !== 'overlay' && sentiment !== 'secondary',
-) as Array<Color>
+const SENTIMENTS = [
+  'primary',
+  'neutral',
+  'success',
+  'danger',
+  'warning',
+  'info',
+] as const
 
-const SENTIMENTS_WITHOUT_NEUTRAL = Object.keys(consoleLightTheme.colors).filter(
-  sentiment =>
-    sentiment !== 'overlay' &&
-    sentiment !== 'secondary' &&
-    sentiment !== 'neutral',
-) as Array<Exclude<Color, 'neutral'>>
+const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
+  sentiment => sentiment !== 'neutral',
+)
 
 export type { SCWUITheme, Color }
 
