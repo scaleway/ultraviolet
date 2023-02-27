@@ -75,16 +75,6 @@ const StyledCenterBox = styled('div', {
   justify-content: center;
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid transparent;
-
-  :hover:not([data-disabled='true'], :focus) {
-    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
-  }
-
-  :focus-within:not([data-disabled='true']) {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
-  }
-
   max-width: 100%;
 `
 
@@ -129,10 +119,24 @@ const StyledContainer = styled('div', {
   height: ${({ size }) => containerSizes[size]}px;
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: ${({ theme }) => theme.radii.default};
-  &[data-disabled='true'] {
+
+  &[aria-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+
     > ${StyledSelectButton}, ${StyledInput}, ${StyledCenterBox} {
       ${({ theme }) => disabledStyles({ theme })}
+    }
+  }
+
+  &:not([aria-disabled='true']) {
+    ${StyledCenterBox}:hover,
+    ${StyledCenterBox}:focus {
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
+    }
+
+    ${StyledCenterBox}:focus-within {
+      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
     }
   }
 `
@@ -257,7 +261,7 @@ export const NumberInput = ({
   const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
   return (
-    <StyledContainer data-disabled={disabled} size={size} className={className}>
+    <StyledContainer aria-disabled={disabled} size={size} className={className}>
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledSelectButton
           onClick={offsetFn(-1)}
@@ -265,7 +269,12 @@ export const NumberInput = ({
           aria-label="Minus"
           type="button"
         >
-          <Icon name="minus" size={iconSizes[size]} />
+          <Icon
+            name="minus"
+            size={iconSizes[size]}
+            color="primary"
+            disabled={isMinusDisabled}
+          />
         </StyledSelectButton>
       </Tooltip>
 
@@ -278,7 +287,6 @@ export const NumberInput = ({
         }}
         aria-live="assertive"
         role="status"
-        data-disabled={disabled}
       >
         <StyledInput
           disabled={disabled}
@@ -309,7 +317,12 @@ export const NumberInput = ({
           aria-label="Plus"
           type="button"
         >
-          <Icon name="plus" size={iconSizes[size]} />
+          <Icon
+            name="plus"
+            size={iconSizes[size]}
+            color="primary"
+            disabled={isPlusDisabled}
+          />
         </StyledSelectButton>
       </Tooltip>
     </StyledContainer>
