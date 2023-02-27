@@ -54,7 +54,8 @@ function generateTokens {
           ({}; . + {"\($keyToken.key)": (reduce($keyToken.value | to_entries | .[]) as $token
             ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }))}) |
                 {"icon": .} |
-                  {"other": .}
+                  {"other": .} |
+                    {"colors": .}
     ')
 
   echo "${GENERATED_OTHER_COLORS}"
