@@ -3,10 +3,10 @@ import type { ComponentProps } from 'react'
 import { Icon } from '..'
 import { Stack } from '../../Stack'
 
-const colors = ['primary', 'success', 'warning'] as const
+const COLORS = ['primary', 'success', 'warning'] as const
 
 export const Color = (args: ComponentProps<typeof Icon>) =>
-  colors.map(color => <Icon key={color} name="eye" color={color} {...args} />)
+  COLORS.map(color => <Icon key={color} name="eye" color={color} {...args} />)
 
 Color.parameters = {
   docs: {

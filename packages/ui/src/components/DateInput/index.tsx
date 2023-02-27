@@ -211,7 +211,9 @@ export const DateInput = ({
                 disabled={disabled}
               />
               <StyledIconContainer>
-                {required && <Icon name="asterisk" color="danger" size={8} />}
+                {required ? (
+                  <Icon name="asterisk" color="danger" size={8} />
+                ) : null}
                 <StyledSeparator direction="vertical" />
                 <Icon
                   name="calendar-range"
