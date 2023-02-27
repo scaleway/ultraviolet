@@ -2,7 +2,7 @@
 
 exports[`NumberInputField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-10e6yle {
+  .cache-od36vv {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -24,18 +24,28 @@ exports[`NumberInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-10e6yle[data-disabled='true'] {
+.cache-od36vv[aria-disabled='true'] {
   background: #f6f6f8;
 }
 
-.cache-10e6yle[data-disabled='true']>.eiawj1g4,
-.cache-10e6yle[data-disabled='true'] .eiawj1g2,
-.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+.cache-od36vv[aria-disabled='true']>.eiawj1g4,
+.cache-od36vv[aria-disabled='true'] .eiawj1g2,
+.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
   opacity: 1;
   cursor: not-allowed;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
 }
 
 .cache-bkq66r {
@@ -52,16 +62,16 @@ exports[`NumberInputField should render correctly 1`] = `
   background: #eeeeff;
 }
 
-.cache-1ok07vq-sizeStyles {
+.cache-xmmyxm-sizeStyles {
   vertical-align: middle;
-  fill: currentColor;
+  fill: #bda5df;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
 }
 
-.cache-6pjflq {
+.cache-192mx7g {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,15 +95,6 @@ exports[`NumberInputField should render correctly 1`] = `
   border-radius: 4px;
   border: 1px solid transparent;
   max-width: 100%;
-}
-
-.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
-  border: 1px solid #4f0599;
-}
-
-.cache-6pjflq:focus-within:not([data-disabled='true']) {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border: 1px solid #4f0599;
 }
 
 .cache-1lq3jx2 {
@@ -130,12 +131,21 @@ exports[`NumberInputField should render correctly 1`] = `
   background: #eeeeff;
 }
 
+.cache-18ka304-sizeStyles {
+  vertical-align: middle;
+  fill: #390171;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
 <form
     novalidate=""
   >
     <div
-      class="cache-10e6yle eiawj1g0"
-      data-disabled="false"
+      aria-disabled="false"
+      class="cache-od36vv eiawj1g0"
     >
       <button
         aria-label="Minus"
@@ -144,7 +154,7 @@ exports[`NumberInputField should render correctly 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-xmmyxm-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -154,8 +164,7 @@ exports[`NumberInputField should render correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-6pjflq eiawj1g3"
-        data-disabled="false"
+        class="cache-192mx7g eiawj1g3"
         role="status"
       >
         <input
@@ -173,7 +182,7 @@ exports[`NumberInputField should render correctly 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-18ka304-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -188,7 +197,7 @@ exports[`NumberInputField should render correctly 1`] = `
 
 exports[`NumberInputField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-10e6yle {
+  .cache-od36vv {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -210,18 +219,28 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-10e6yle[data-disabled='true'] {
+.cache-od36vv[aria-disabled='true'] {
   background: #f6f6f8;
 }
 
-.cache-10e6yle[data-disabled='true']>.eiawj1g4,
-.cache-10e6yle[data-disabled='true'] .eiawj1g2,
-.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+.cache-od36vv[aria-disabled='true']>.eiawj1g4,
+.cache-od36vv[aria-disabled='true'] .eiawj1g2,
+.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
   opacity: 1;
   cursor: not-allowed;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
 }
 
 .cache-bkq66r {
@@ -238,16 +257,16 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   background: #eeeeff;
 }
 
-.cache-1ok07vq-sizeStyles {
+.cache-xmmyxm-sizeStyles {
   vertical-align: middle;
-  fill: currentColor;
+  fill: #bda5df;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
 }
 
-.cache-6pjflq {
+.cache-192mx7g {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,15 +290,6 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border-radius: 4px;
   border: 1px solid transparent;
   max-width: 100%;
-}
-
-.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
-  border: 1px solid #4f0599;
-}
-
-.cache-6pjflq:focus-within:not([data-disabled='true']) {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border: 1px solid #4f0599;
 }
 
 .cache-1lq3jx2 {
@@ -306,8 +316,8 @@ exports[`NumberInputField should render correctly disabled 1`] = `
     novalidate=""
   >
     <div
-      class="cache-10e6yle eiawj1g0"
-      data-disabled="true"
+      aria-disabled="true"
+      class="cache-od36vv eiawj1g0"
     >
       <button
         aria-label="Minus"
@@ -316,7 +326,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-xmmyxm-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -326,8 +336,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-6pjflq eiawj1g3"
-        data-disabled="true"
+        class="cache-192mx7g eiawj1g3"
         role="status"
       >
         <input
@@ -347,7 +356,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-xmmyxm-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -362,7 +371,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
 
 exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] = `
 <DocumentFragment>
-  .cache-10e6yle {
+  .cache-od36vv {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -384,18 +393,28 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border-radius: 4px;
 }
 
-.cache-10e6yle[data-disabled='true'] {
+.cache-od36vv[aria-disabled='true'] {
   background: #f6f6f8;
 }
 
-.cache-10e6yle[data-disabled='true']>.eiawj1g4,
-.cache-10e6yle[data-disabled='true'] .eiawj1g2,
-.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+.cache-od36vv[aria-disabled='true']>.eiawj1g4,
+.cache-od36vv[aria-disabled='true'] .eiawj1g2,
+.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
   opacity: 1;
   cursor: not-allowed;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
 }
 
 .cache-1mh6k42 {
@@ -412,16 +431,16 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   background: #eeeeff;
 }
 
-.cache-1ok07vq-sizeStyles {
+.cache-18ka304-sizeStyles {
   vertical-align: middle;
-  fill: currentColor;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
 }
 
-.cache-6pjflq {
+.cache-192mx7g {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -445,15 +464,6 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border-radius: 4px;
   border: 1px solid transparent;
   max-width: 100%;
-}
-
-.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
-  border: 1px solid #4f0599;
-}
-
-.cache-6pjflq:focus-within:not([data-disabled='true']) {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border: 1px solid #4f0599;
 }
 
 .cache-1lq3jx2 {
@@ -490,12 +500,21 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   background: #eeeeff;
 }
 
+.cache-xmmyxm-sizeStyles {
+  vertical-align: middle;
+  fill: #bda5df;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
 <form
     novalidate=""
   >
     <div
-      class="cache-10e6yle eiawj1g0"
-      data-disabled="false"
+      aria-disabled="false"
+      class="cache-od36vv eiawj1g0"
     >
       <button
         aria-label="Minus"
@@ -503,7 +522,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-18ka304-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -513,8 +532,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
       </button>
       <div
         aria-live="assertive"
-        class="cache-6pjflq eiawj1g3"
-        data-disabled="false"
+        class="cache-192mx7g eiawj1g3"
         role="status"
       >
         <input
@@ -533,7 +551,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-xmmyxm-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -548,7 +566,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
 
 exports[`NumberInputField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-10e6yle {
+  .cache-od36vv {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -570,18 +588,28 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-10e6yle[data-disabled='true'] {
+.cache-od36vv[aria-disabled='true'] {
   background: #f6f6f8;
 }
 
-.cache-10e6yle[data-disabled='true']>.eiawj1g4,
-.cache-10e6yle[data-disabled='true'] .eiawj1g2,
-.cache-10e6yle[data-disabled='true'] .eiawj1g3 {
+.cache-od36vv[aria-disabled='true']>.eiawj1g4,
+.cache-od36vv[aria-disabled='true'] .eiawj1g2,
+.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
   background-color: #f6f6f8;
   border: none;
   color: #c4c9d6;
   opacity: 1;
   cursor: not-allowed;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
 }
 
 .cache-bkq66r {
@@ -598,16 +626,16 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   background: #eeeeff;
 }
 
-.cache-1ok07vq-sizeStyles {
+.cache-xmmyxm-sizeStyles {
   vertical-align: middle;
-  fill: currentColor;
+  fill: #bda5df;
   height: 26px;
   width: 26px;
   min-width: 26px;
   min-height: 26px;
 }
 
-.cache-6pjflq {
+.cache-192mx7g {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -631,15 +659,6 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border-radius: 4px;
   border: 1px solid transparent;
   max-width: 100%;
-}
-
-.cache-6pjflq:hover:not([data-disabled='true'], :focus) {
-  border: 1px solid #4f0599;
-}
-
-.cache-6pjflq:focus-within:not([data-disabled='true']) {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-  border: 1px solid #4f0599;
 }
 
 .cache-1lq3jx2 {
@@ -676,12 +695,21 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   background: #eeeeff;
 }
 
+.cache-18ka304-sizeStyles {
+  vertical-align: middle;
+  fill: #390171;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
 <form
     novalidate=""
   >
     <div
-      class="cache-10e6yle eiawj1g0"
-      data-disabled="false"
+      aria-disabled="false"
+      class="cache-od36vv eiawj1g0"
     >
       <button
         aria-label="Minus"
@@ -690,7 +718,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-xmmyxm-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -700,8 +728,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
       </button>
       <div
         aria-live="assertive"
-        class="cache-6pjflq eiawj1g3"
-        data-disabled="false"
+        class="cache-192mx7g eiawj1g3"
         role="status"
       >
         <input
@@ -719,7 +746,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
         type="button"
       >
         <svg
-          class="cache-1ok07vq-sizeStyles etwatq50"
+          class="cache-18ka304-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
