@@ -247,6 +247,42 @@ export const darkTheme = {
       textWeakHover: '#fabeab',
     },
   },
+  other: {
+    icon: {
+      category: {
+        primary: {
+          fill: '#ce80ff',
+          fillStrong: '#f3dffd',
+        },
+      },
+      product: {
+        danger: {
+          fill: '#482037',
+          fillDisabled: '#4d5266',
+          fillStrong: '#482037',
+          fillStrongDisabled: '#373d52',
+          fillWeak: '#e24b70',
+          fillWeakDisabled: '#4d5266',
+        },
+        primary: {
+          fill: '#ce80ff',
+          fillDisabled: '#4d5266',
+          fillStrong: '#f3dffd',
+          fillStrongDisabled: '#373d52',
+          fillWeak: '#2d2242',
+          fillWeakDisabled: '#4d5266',
+        },
+        warning: {
+          fill: '#603f40',
+          fillDisabled: '#4d5266',
+          fillStrong: '#413038',
+          fillStrongDisabled: '#373d52',
+          fillWeak: '#ff8c69',
+          fillWeakDisabled: '#4d5266',
+        },
+      },
+    },
+  },
   shadows: {
     bulk: '0px 4px 32px 8px #00000066',
     defaultShadow: '0px 0px 8px 2px #00000066',

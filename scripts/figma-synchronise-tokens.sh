@@ -46,6 +46,19 @@ function generateTokens {
           {"colors": .}
   ')
 
+  # other colors generated to specific theme
+  GENERATED_OTHER_COLORS=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
+    .[$global].other.icon |
+      reduce (. | to_entries | .[]) as $iconKey
+        ({}; . + {"\($iconKey.key)": (reduce($iconKey.value | to_entries | .[]) as $keyToken
+          ({}; . + {"\($keyToken.key)": (reduce($keyToken.value | to_entries | .[]) as $token
+            ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }))}) |
+                {"icon": .} |
+                  {"other": .}
+    ')
+
+  echo "${GENERATED_OTHER_COLORS}"
+
   # Gives all colors of shadows
   SHADOWS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
     reduce (.[$theme].shadows | to_entries | .[]) as $sentiment
@@ -84,7 +97,7 @@ function generateTokens {
         ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
           }))}) | {"typography": .}')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHER_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4]')
+  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHER_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"

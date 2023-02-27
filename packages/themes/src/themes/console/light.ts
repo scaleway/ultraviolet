@@ -247,6 +247,42 @@ export const lightTheme = {
       textWeakHover: '#cc4e18',
     },
   },
+  other: {
+    icon: {
+      category: {
+        primary: {
+          fill: '#4f0599',
+          fillStrong: '#a365f6',
+        },
+      },
+      product: {
+        danger: {
+          fill: '#ffe1e7',
+          fillDisabled: '#d4dae7',
+          fillStrong: '#ffe1e7',
+          fillStrongDisabled: '#f6f6f8',
+          fillWeak: '#dd3252',
+          fillWeakDisabled: '#d4dae7',
+        },
+        primary: {
+          fill: '#4f0599',
+          fillDisabled: '#d4dae7',
+          fillStrong: '#a365f6',
+          fillStrongDisabled: '#f6f6f8',
+          fillWeak: '#eeeeff',
+          fillWeakDisabled: '#d4dae7',
+        },
+        warning: {
+          fill: '#ffe3d6',
+          fillDisabled: '#d4dae7',
+          fillStrong: '#ffefe6',
+          fillStrongDisabled: '#f6f6f8',
+          fillWeak: '#ff8c69',
+          fillWeakDisabled: '#d4dae7',
+        },
+      },
+    },
+  },
   shadows: {
     bulk: '0px 4px 32px 8px #D4DAE766',
     defaultShadow: '0px 0px 8px 2px #D4DAE766',
