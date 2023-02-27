@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.55...@scaleway/form@1.40.0) (2023-02-27)
+
+
+### :gear: Features
+
+* **Icon:** new icon colors from theme ([#2274](https://github.com/scaleway/scaleway-ui/issues/2274)) ([cb2ec4f](https://github.com/scaleway/scaleway-ui/commit/cb2ec4ff9a4a5a32477eb1fae1f50d1e1f5c3313))
+
+
+
 ## [1.39.55](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.54...@scaleway/form@1.39.55) (2023-02-24)
 
 **Note:** Version bump only for package @scaleway/form
