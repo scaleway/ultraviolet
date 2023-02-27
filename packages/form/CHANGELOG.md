@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.1...@scaleway/form@1.40.2) (2023-02-27)
+
+
+### :bug: Bug Fixes
+
+* **NumberInput:** colors of icons and hover were wrong ([#2279](https://github.com/scaleway/scaleway-ui/issues/2279)) ([51529b5](https://github.com/scaleway/scaleway-ui/commit/51529b5884f5c8fcde73ecf51c74b85c77ea225b))
+
+
+
 ## [1.40.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.0...@scaleway/form@1.40.1) (2023-02-27)
 
 
