@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.0...@scaleway/form@1.40.1) (2023-02-27)
+
+
+### :bug: Bug Fixes
+
+* **Icon:** default value to currentColor ([#2280](https://github.com/scaleway/scaleway-ui/issues/2280)) ([ea3f8d4](https://github.com/scaleway/scaleway-ui/commit/ea3f8d43bece3f3f06a59787de65924de637ee63))
+
+
+
 ## [1.40.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.55...@scaleway/form@1.40.0) (2023-02-27)
 
 
