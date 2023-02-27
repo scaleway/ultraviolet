@@ -389,7 +389,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
       name = 'alert',
-      color = 'neutral',
+      color = 'currentColor',
       size = '1em',
       prominence = 'default',
       className,
