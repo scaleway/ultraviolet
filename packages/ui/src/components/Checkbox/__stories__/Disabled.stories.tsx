@@ -1,7 +1,13 @@
-import { Template } from './Template.stories'
+import type { Story } from '@storybook/react'
+import { Checkbox } from '..'
 
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  disabled: true,
-}
+export const Disabled: Story = () => (
+  <>
+    <Checkbox disabled onChange={() => {}}>
+      Checkbox disabled
+    </Checkbox>
+    <Checkbox checked disabled onChange={() => {}}>
+      Checkbox checked and disabled
+    </Checkbox>
+  </>
+)
