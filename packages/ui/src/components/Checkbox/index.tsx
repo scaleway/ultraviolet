@@ -71,7 +71,7 @@ const CheckboxInput = styled('input', {
 
   &:checked:not(:disabled)
     + ${StyledIcon},
-    &[aria-checked='mixed']
+    &[aria-checked='mixed']:not(:disabled)
     + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
