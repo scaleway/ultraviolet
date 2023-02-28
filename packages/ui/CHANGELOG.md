@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.220.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.220.2...@scaleway/ui@0.220.3) (2023-02-28)
+
+**Note:** Version bump only for package @scaleway/ui
+
+
+
+
+
 ## [0.220.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.220.1...@scaleway/ui@0.220.2) (2023-02-27)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.0 (2023-02-28)
+
+
+### :package: Chore
+
+* **release:** publish ([9d54797](https://github.com/scaleway/scaleway-ui/commit/9d547970efc874284ca6c15a0c54cfb465244232))
+
+
+### :gear: Features
+
+* new product and category colors ([#2278](https://github.com/scaleway/scaleway-ui/issues/2278)) ([7c1febd](https://github.com/scaleway/scaleway-ui/commit/7c1febdf802d49d83f34d9b0462cd78bc2c9d9fb))
+
+
+
 ## [1.1.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/themes@1.1.2...@scaleway/themes@1.1.3) (2023-02-24)
 
 
