@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.221.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.220.4...@scaleway/ui@0.221.0) (2023-03-01)
+
+
+### :gear: Features
+
+* update listV2 usages ([#2270](https://github.com/scaleway/scaleway-ui/issues/2270)) ([8d56b2f](https://github.com/scaleway/scaleway-ui/commit/8d56b2f147b7685f7a0359a87d2fc08f2a35e06d))
+
+
+
 ## [0.220.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.220.3...@scaleway/ui@0.220.4) (2023-03-01)
 
 
