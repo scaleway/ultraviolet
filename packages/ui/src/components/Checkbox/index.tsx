@@ -69,14 +69,13 @@ const CheckboxInput = styled('input', {
     cursor: not-allowed;
   }
 
-  &:checked:not(:disabled)
-    + ${StyledIcon},
-    &[aria-checked='mixed']:not(:disabled)
-    + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+  &:not(:disabled) {
+    &:checked + ${StyledIcon}, &[aria-checked='mixed'] + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      }
     }
   }
 
