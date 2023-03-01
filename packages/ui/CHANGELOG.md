@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.221.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.221.1...@scaleway/ui@0.221.2) (2023-03-01)
+
+
+### :bug: Bug Fixes
+
+* **ListV2:** add list-select-checkbox name attr on checkboxes ([#2283](https://github.com/scaleway/scaleway-ui/issues/2283)) ([7aadedb](https://github.com/scaleway/scaleway-ui/commit/7aadedb2af2d9bf82614c6a743652b3e1ab2c43f))
+
+
+
 ## [0.221.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.221.0...@scaleway/ui@0.221.1) (2023-03-01)
 
 
