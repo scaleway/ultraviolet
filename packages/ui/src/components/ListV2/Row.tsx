@@ -177,6 +177,7 @@ export const Row = forwardRef(
             >
               <Tooltip text={selectTooltip}>
                 <Checkbox
+                  name="list-select-checkbox"
                   aria-label="select"
                   checked={selectedRowIds[id]}
                   value={id}

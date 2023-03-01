@@ -2,7 +2,8 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 
 const StyledBody = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: ${({ theme }) => theme.space['2']};
 `
 
