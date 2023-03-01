@@ -37,7 +37,7 @@ const StyledHeaderCell = styled.div`
     user-select: none;
   }
 
-  &[data-sorted='true'] {
+  &[aria-sort] {
     color: ${({ theme }) => theme.colors.primary.textWeak};
   }
 
