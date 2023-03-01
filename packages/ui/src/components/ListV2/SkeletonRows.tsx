@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import { Skeleton } from '../Skeleton'
-import { ListCell } from './ListCell'
-import { ListRow } from './ListRow'
+import { Cell } from './Cell'
+import { StyledRow } from './Row'
 
-const StyledListRow = styled(ListRow)`
+const StyledLoadingRow = styled(StyledRow)`
   cursor: progress;
 `
 
@@ -13,15 +13,15 @@ const StyledSkeleton = styled(Skeleton)`
 `
 
 type ListLoadingSkeletonProps = {
-  rows?: number
-  cols?: number
-  className?: string
+  areRowSelectable: boolean
+  rows: number
+  cols: number
 }
 
-export const ListLoadingSkeleton = ({
-  cols = 1,
-  rows = 5,
-  className,
+export const SkeletonRows = ({
+  areRowSelectable,
+  rows,
+  cols,
 }: ListLoadingSkeletonProps) => {
   const rowArray = Array.from({ length: rows }, (_, index) => index)
   const colArray = Array.from({ length: cols }, (_, index) => index)
@@ -29,19 +29,19 @@ export const ListLoadingSkeleton = ({
   return (
     <>
       {rowArray.map(index => (
-        <StyledListRow
-          className={className}
-          checkboxRender={<div />}
+        <StyledLoadingRow
+          sentiment="neutral"
+          role="row"
           id={`skeleton-${index}`}
           key={index}
-          isHoverable={false}
         >
+          {areRowSelectable ? <div /> : null}
           {colArray.map(columnIndex => (
-            <ListCell key={columnIndex}>
+            <Cell key={columnIndex}>
               <StyledSkeleton variant="line" />
-            </ListCell>
+            </Cell>
           ))}
-        </StyledListRow>
+        </StyledLoadingRow>
       ))}
     </>
   )

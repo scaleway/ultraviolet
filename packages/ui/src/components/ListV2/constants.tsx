@@ -1,0 +1,1 @@
+export const SELECTABLE_CHECKBOX_SIZE = 24
