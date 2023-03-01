@@ -107,6 +107,9 @@ type TagInputProps = {
   className?: string
 }
 
+/**
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
 export const TagInput = ({
   disabled = false,
   id,

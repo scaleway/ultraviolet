@@ -205,6 +205,9 @@ type TimeInputType = ((props: TimeInputProps) => JSX.Element) & {
   options: typeof options
 }
 
+/**
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
 export const TimeInput: TimeInputType = ({
   value = defaultValue,
   schedule = 'hours',

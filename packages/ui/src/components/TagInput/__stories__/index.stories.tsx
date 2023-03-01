@@ -9,6 +9,7 @@ export default {
         component: 'Text input with multiple tag component in a row.',
       },
     },
+    experimental: true,
   },
   title: 'Components/Data Entry/TagInput',
 } as Meta
