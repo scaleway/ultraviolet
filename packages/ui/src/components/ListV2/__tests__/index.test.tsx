@@ -278,20 +278,22 @@ describe('ListV2', () => {
       </LocalControlValue>,
       {
         transform: node => {
-          const listColumns = node.getAllByRole(
-            'columnheader',
-          ) as HTMLTableCellElement[]
-          expect(listColumns).toHaveLength(columns.length)
+          const listHeaderCells = node.queryAllByRole('button', {
+            queryFallbacks: true,
+          }) as HTMLTableCellElement[]
+          expect(listHeaderCells).toHaveLength(columns.length)
 
-          expect(listColumns[0].getAttribute('aria-sort')).toBe(null)
-          userEvent.click(listColumns[0])
-          expect(listColumns[0].getAttribute('aria-sort')).toBe('ascending')
-          userEvent.click(listColumns[0])
-          expect(listColumns[0].getAttribute('aria-sort')).toBe('descending')
-          userEvent.click(listColumns[0])
-          userEvent.click(listColumns[1])
-          expect(listColumns[0].getAttribute('aria-sort')).toBe(null)
-          expect(listColumns[1].getAttribute('aria-sort')).toBe('ascending')
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          userEvent.click(listHeaderCells[0])
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+          userEvent.click(listHeaderCells[0])
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
+            'descending',
+          )
+          userEvent.click(listHeaderCells[0])
+          userEvent.click(listHeaderCells[1])
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
         },
       },
     )

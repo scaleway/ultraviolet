@@ -14,15 +14,17 @@ import { SELECTABLE_CHECKBOX_SIZE } from './constants'
 const StyledList = styled('div', {
   shouldForwardProp: prop => !['template'].includes(prop),
 })<{ template: string }>`
-  display: grid;
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   gap: ${({ theme }) => theme.space['1']};
 
   [role='row'],
   [role='button row'] {
     display: grid;
+    width: 100%;
     grid-template-columns: ${({ template }) => template};
-    overflow: auto;
+    align-items: center;
   }
 `
 

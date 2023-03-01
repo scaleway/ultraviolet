@@ -32,7 +32,7 @@ const StyledHeaderCell = styled.div`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
   gap: ${({ theme }) => theme.space['1']};
 
-  &[aria-sort] {
+  &[role*='button'] {
     cursor: pointer;
     user-select: none;
   }
@@ -74,7 +74,7 @@ export const HeaderCell = ({
 
   return (
     <StyledHeaderCell
-      role="columnheader"
+      role={onOrder ? 'button columnheader' : 'columnheader'}
       aria-sort={order}
       onClick={
         onOrder

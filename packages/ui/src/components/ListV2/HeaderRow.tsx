@@ -26,6 +26,7 @@ export const HeaderRow = ({ children, hasSelectAllColumn }: RowProps) => {
       {hasSelectAllColumn ? (
         <HeaderCell>
           <Checkbox
+            name="list-select-checkbox"
             value="all"
             aria-label="select all"
             checked={allRowSelectValue}
