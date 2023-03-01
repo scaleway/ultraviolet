@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.40.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.3...@scaleway/form@1.40.4) (2023-03-01)
+
+
+### :bug: Bug Fixes
+
+* **checkbox:** set the right color ([#2281](https://github.com/scaleway/scaleway-ui/issues/2281)) ([45db03e](https://github.com/scaleway/scaleway-ui/commit/45db03e07d89eda43f22f049b37e899943dd16dc))
+
+
+
 ## [1.40.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.2...@scaleway/form@1.40.3) (2023-02-28)
 
 **Note:** Version bump only for package @scaleway/form
