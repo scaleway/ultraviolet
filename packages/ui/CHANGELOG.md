@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.221.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.221.0...@scaleway/ui@0.221.1) (2023-03-01)
+
+
+### :bug: Bug Fixes
+
+* **ListV2:** restore sorted column color ([#2282](https://github.com/scaleway/scaleway-ui/issues/2282)) ([580bd0a](https://github.com/scaleway/scaleway-ui/commit/580bd0a35245cb0fd1e017ed248745d4e81a5218))
+
+
+
 ## [0.221.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.220.4...@scaleway/ui@0.221.0) (2023-03-01)
 
 
