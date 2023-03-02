@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 import type { Color } from '../../theme'
 import type { XOR } from '../../types'
 import { Icon } from '../Icon'
-import { Image } from '../Image'
 
 const formatTextToAvatar = (text?: string): string => {
   if (!text) return ''
@@ -42,11 +41,6 @@ const StyledTextAvatar = styled.span<TextAvatarProps>`
   display: flex;
   height: 100%;
   justify-content: center;
-  width: 100%;
-`
-
-const StyledImg = styled(Image)`
-  height: 100%;
   width: 100%;
 `
 
@@ -117,7 +111,7 @@ export const Avatar = ({
         )}
       </StyledTextAvatar>
     ) : (
-      <StyledImg src={image ?? ''} alt="" />
+      <img width="100%" height="100%" src={image ?? ''} alt="" />
     )}
   </AvatarContainer>
 )

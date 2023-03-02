@@ -18,7 +18,6 @@ export {
   DotSteps,
   Expandable,
   Icon,
-  Image,
   Label,
   LineChart,
   Link,
