@@ -52,11 +52,11 @@ type TagListProps = {
   multiline?: boolean
 }
 
-const defaultTags: string[] = []
+const DEFAULT_TAGS: string[] = []
 
 export const TagList = ({
   maxLength = 600,
-  tags = defaultTags,
+  tags = DEFAULT_TAGS,
   threshold = 1,
   multiline = false,
 }: TagListProps): JSX.Element | null => {

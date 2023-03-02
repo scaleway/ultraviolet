@@ -48,8 +48,8 @@ type PieChartProps = {
   margin?: Box
 }
 
-const defaultChartProps = {}
-const defaultMargin = { bottom: 10, left: 10, right: 10, top: 10 }
+const DEFAULT_CHARTPROPS = {}
+const DEFAULT_MARGIN = { bottom: 10, left: 10, right: 10, top: 10 }
 
 /**
  * @experimental This component is experimental and may be subject to breaking changes in the future.
@@ -61,8 +61,8 @@ export const PieChart = ({
   emptyLegend,
   content,
   withLegend = false,
-  margin = defaultMargin,
-  chartProps = defaultChartProps,
+  margin = DEFAULT_MARGIN,
+  chartProps = DEFAULT_CHARTPROPS,
 }: PieChartProps) => {
   const { colors } = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()

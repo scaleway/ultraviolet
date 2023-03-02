@@ -53,11 +53,11 @@ type SphereProps = {
   textColor?: string
 }
 
-const defaultColors = ['primary']
+const DEFAULT_COLORS = ['primary']
 
 export const Sphere = ({
   size = 32,
-  colors = defaultColors,
+  colors = DEFAULT_COLORS,
   text, // Supports only 1 char (star char for instance), that's why we take only first char if long text given
   textColor = 'primary',
 }: SphereProps): JSX.Element => (
