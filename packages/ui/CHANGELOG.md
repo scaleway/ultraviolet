@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.222.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.221.2...@scaleway/ui@0.222.0) (2023-03-03)
+
+
+### :gear: Features
+
+* remove Image component ([#2285](https://github.com/scaleway/scaleway-ui/issues/2285)) ([9ba0a82](https://github.com/scaleway/scaleway-ui/commit/9ba0a820bbf3cfb55078816af1a5de5962f712e9))
+
+
+
 ## [0.221.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.221.1...@scaleway/ui@0.221.2) (2023-03-01)
 
 
