@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.223.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.0...@scaleway/ui@0.223.1) (2023-03-06)
+
+
+### :memo: Documentation
+
+* new experimentals components in storybook ([#2284](https://github.com/scaleway/scaleway-ui/issues/2284)) ([0e8c2bc](https://github.com/scaleway/scaleway-ui/commit/0e8c2bc1dbf22f2291a153b4cb3786417cb9ee7f))
+
+
+
 ## [0.223.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.222.2...@scaleway/ui@0.223.0) (2023-03-06)
 
 
