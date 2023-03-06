@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/themes@1.2.1...@scaleway/themes@1.2.2) (2023-03-06)
+
+
+### :bug: Bug Fixes
+
+* **theme:** synchronise design tokens ([#2289](https://github.com/scaleway/scaleway-ui/issues/2289)) ([8a29cb2](https://github.com/scaleway/scaleway-ui/commit/8a29cb2f131c985c56a8d0bab7dac385ada57a64))
+
+
+
 ## 1.2.1 (2023-03-04)
 
 
