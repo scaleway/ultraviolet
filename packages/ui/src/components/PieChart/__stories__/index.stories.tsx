@@ -5,6 +5,9 @@ export default {
   component: PieChart,
   decorators: [StoryComponent => <StoryComponent />],
   title: 'Components/Data Display/Chart/PieChart',
+  parameters: {
+    experimental: true,
+  },
 } as ComponentMeta<typeof PieChart>
 
 export { Playground } from './Playground.stories'

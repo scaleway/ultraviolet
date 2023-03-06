@@ -13,6 +13,7 @@ export default {
         component: 'Make a list with sub components in it.',
       },
     },
+    experimental: true,
   },
   title: 'Components/Data Display/StepList',
 } as Meta

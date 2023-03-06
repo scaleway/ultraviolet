@@ -9,6 +9,7 @@ export default {
         component: 'A simple input to choose a time in a list.',
       },
     },
+    experimental: true,
   },
   title: 'Components/Data Entry/TimeInput',
   decorators: [

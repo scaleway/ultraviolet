@@ -50,10 +50,26 @@ export const fonts = css`
 `
 
 type ExtraProps = {
+  /**
+   * When a component is deprecated we can set this property to true
+   */
   deprecated: boolean
+  /**
+   * When a component is deprecated we can why and by what to replace it
+   */
   deprecatedReason: string
+  /**
+   * When a component is deprecated we can add a link to the migration guide
+   */
   migrationLink: string
+  /**
+   * This prop, if set to true, will hide the args table where you have the props definition and controls
+   */
   hideArgsTable?: boolean
+  /**
+   * This prop can be used to define if a component is being tested and not prod ready
+   */
+  experimental?: boolean
 }
 
 const CustomBaseContainer = BaseContainer as unknown as FunctionComponent<
@@ -95,6 +111,7 @@ const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
               deprecatedReason: context.parameters?.deprecatedReason,
               migrationLink: context.parameters?.migrationLink,
               hideArgsTable: context.parameters?.hideArgsTable,
+              experimental: context.parameters?.experimental,
             })
           : children}
       </CustomBaseContainer>

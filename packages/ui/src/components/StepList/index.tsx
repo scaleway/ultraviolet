@@ -81,6 +81,9 @@ type StepListProps = {
   className?: string
 }
 
+/**
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
 export const StepList = ({ children, className }: StepListProps) => (
   <Steps className={className}>{children}</Steps>
 )
