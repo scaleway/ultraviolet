@@ -1,15 +1,7 @@
-import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Icon } from '../Icon'
-import { Markdown } from '../Markdown'
-
-const Container = styled.div`
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  gap: ${({ theme }) => theme.space['1']};
-`
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 type NoticeProps = {
   children: ReactNode
@@ -17,10 +9,17 @@ type NoticeProps = {
 }
 
 export const Notice = ({ children, className }: NoticeProps) => (
-  <Container className={className}>
-    <Icon name="information-outline" size={20} />
+  <Stack direction="row" alignItems="center" gap={1} className={className}>
+    <Icon
+      name="information-outline"
+      size={20}
+      color="neutral"
+      prominence="weak"
+    />
     {typeof children === 'string' ? (
-      <Markdown source={children} linkTarget="_blank" />
+      <Text as="p" variant="caption" color="neutral" prominence="weak">
+        {children}
+      </Text>
     ) : null}
-  </Container>
+  </Stack>
 )
