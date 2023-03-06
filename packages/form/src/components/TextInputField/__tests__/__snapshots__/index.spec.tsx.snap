@@ -605,28 +605,49 @@ exports[`TextInputField should render correctly notice 1`] = `
   padding-top: 2px;
 }
 
-.cache-1wy3rxk {
-  color: #b2b6c3;
-  font-size: 12px;
+.cache-1gf8r99 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   margin-top: 8px;
 }
 
-.cache-qq4de9-sizeStyles {
+.cache-18ug5yg-sizeStyles {
   vertical-align: middle;
-  fill: currentColor;
+  fill: #b2b6c3;
   height: 20px;
   width: 20px;
   min-width: 20px;
   min-height: 20px;
+}
+
+.cache-1p6ku8i {
+  color: #b2b6c3;
+  font-size: 12px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <form
@@ -652,25 +673,21 @@ exports[`TextInputField should render correctly notice 1`] = `
         />
       </div>
       <div
-        class="eoko61b4 cache-1wy3rxk e1qg14600"
+        class="eoko61b4 cache-1gf8r99 e1sgck4o0"
       >
         <svg
-          class="cache-qq4de9-sizeStyles etwatq50"
+          class="cache-18ug5yg-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
             d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
           />
         </svg>
-        <div
-          class="cache-1xdhyk6 e1kf57p60"
+        <p
+          class="cache-1p6ku8i e1tg3t120"
         >
-          <p>
-            <span>
-              notice
-            </span>
-          </p>
-        </div>
+          notice
+        </p>
       </div>
     </div>
   </form>
