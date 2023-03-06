@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.223.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.222.2...@scaleway/ui@0.223.0) (2023-03-06)
+
+
+### :gear: Features
+
+* **Notice:** rework component to remove markdown handling ([#2288](https://github.com/scaleway/scaleway-ui/issues/2288)) ([6aa9082](https://github.com/scaleway/scaleway-ui/commit/6aa908291771d044ebcd9387d4e8c0b604c0dff5))
+
+
+
 ## [0.222.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.222.1...@scaleway/ui@0.222.2) (2023-03-06)
 
 **Note:** Version bump only for package @scaleway/ui

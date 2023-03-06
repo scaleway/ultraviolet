@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.10...@scaleway/form@1.41.0) (2023-03-06)
+
+
+### :gear: Features
+
+* **Notice:** rework component to remove markdown handling ([#2288](https://github.com/scaleway/scaleway-ui/issues/2288)) ([6aa9082](https://github.com/scaleway/scaleway-ui/commit/6aa908291771d044ebcd9387d4e8c0b604c0dff5))
+
+
+
 ## [1.40.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.9...@scaleway/form@1.40.10) (2023-03-06)
 
 **Note:** Version bump only for package @scaleway/form
