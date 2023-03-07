@@ -15,7 +15,6 @@ export {
   Stepper,
   DateInput,
   Description,
-  DotSteps,
   Expandable,
   Icon,
   Label,
