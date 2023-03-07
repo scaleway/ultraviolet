@@ -38,7 +38,6 @@ export {
   ProgressBar,
   ProgressionButton,
   Radio,
-  ScrollView,
   SelectableCard,
   SelectInput,
   NumberInput,
