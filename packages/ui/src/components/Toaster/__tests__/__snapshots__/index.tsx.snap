@@ -283,41 +283,47 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
 
 exports[`Toaster renders correctly with all kind of toast 2`] = `
 <DocumentFragment>
-  .cache-m8efeg-toast {
-  border-radius: 4px;
-  box-shadow: none;
-  min-height: 44px;
+  .cache-se1d56-ToastContainer {
+  top: 100px;
+  right: calc(0% + 16px);
 }
 
-.cache-m8efeg-toast .Toastify__toast-body {
+.cache-vnz96c-toast {
+  border-radius: 4px;
+  box-shadow: 0px 4px 24px 6px #D4DAE766;
+  min-height: 44px;
+  margin-bottom: 16px;
+}
+
+.cache-vnz96c-toast .Toastify__toast-body {
   margin: 0;
   padding: 0;
 }
 
-.cache-m8efeg-toast.Toastify__toast--success {
+.cache-vnz96c-toast.Toastify__toast--success {
   background-color: #eafffb;
   color: #149a7b;
 }
 
-.cache-m8efeg-toast.Toastify__toast--success .Toastify__progress-bar {
+.cache-vnz96c-toast.Toastify__toast--success .Toastify__progress-bar {
   background-color: #22c8a2;
 }
 
-.cache-m8efeg-toast.Toastify__toast--info {
+.cache-vnz96c-toast.Toastify__toast--info {
   background-color: #e1ebff;
   color: #1a4dbf;
 }
 
-.cache-m8efeg-toast.Toastify__toast--info .Toastify__progress-bar {
+.cache-vnz96c-toast.Toastify__toast--info .Toastify__progress-bar {
   background-color: #3f6ed8;
 }
 
-.cache-m8efeg-toast.Toastify__toast--error {
+.cache-vnz96c-toast.Toastify__toast--error {
   background-color: #ffe1e7;
   color: #a6102d;
 }
 
-.cache-m8efeg-toast.Toastify__toast--error .Toastify__progress-bar {
+.cache-vnz96c-toast.Toastify__toast--error .Toastify__progress-bar {
   background-color: #dd3252;
 }
 
@@ -465,10 +471,10 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right"
+      class="Toastify__toast-container Toastify__toast-container--top-right cache-se1d56-ToastContainer"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info Toastify__toast--close-on-click cache-m8efeg-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info Toastify__toast--close-on-click cache-vnz96c-toast Toastify--animate Toastify__bounce-enter--top-right"
         id="info"
         style="--nth: 1; --len: 3;"
       >
@@ -522,7 +528,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         />
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click cache-m8efeg-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click cache-vnz96c-toast Toastify--animate Toastify__bounce-enter--top-right"
         id="success"
         style="--nth: 2; --len: 3;"
       >
@@ -576,7 +582,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         />
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify__toast--close-on-click cache-m8efeg-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify__toast--close-on-click cache-vnz96c-toast Toastify--animate Toastify__bounce-enter--top-right"
         id="error"
         style="--nth: 3; --len: 3;"
       >
