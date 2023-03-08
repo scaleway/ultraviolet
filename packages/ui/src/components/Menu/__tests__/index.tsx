@@ -8,7 +8,7 @@ describe('Menu', () => {
   test('renders with disclosure not a function', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
-        baseId="menu"
+        id="menu"
         disclosure={<button type="button">Menu is visible</button>}
       >
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
@@ -17,7 +17,7 @@ describe('Menu', () => {
   test('renders with visible=false', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
-        baseId="menu"
+        id="menu"
         disclosure={() => <button type="button">Menu is visible</button>}
       >
         <Menu.Item>Menu.Item should not be visible in test</Menu.Item>
@@ -27,7 +27,7 @@ describe('Menu', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
         visible
-        baseId="menu"
+        id="menu"
         disclosure={() => <button type="button">Menu</button>}
       >
         <Menu.Item>Menu.Item</Menu.Item>
@@ -38,7 +38,7 @@ describe('Menu', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
         visible
-        baseId="menu-1"
+        id="menu-1"
         disclosure={() => <button type="button">Menu</button>}
       >
         <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
@@ -49,7 +49,7 @@ describe('Menu', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
         visible
-        baseId="menu-1"
+        id="menu-1"
         disclosure={() => <button type="button">Menu</button>}
       >
         <Menu.Item disabled>Menu.Item disabled</Menu.Item>
@@ -67,7 +67,7 @@ describe('Menu', () => {
       shouldMatchEmotionSnapshot(
         <Menu
           visible
-          baseId={placement}
+          id={placement}
           placement={placement}
           disclosure={() => <button type="button">Menu</button>}
         >
