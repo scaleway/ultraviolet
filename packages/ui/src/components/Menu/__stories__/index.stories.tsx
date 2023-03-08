@@ -19,6 +19,9 @@ export default {
     },
   },
   title: 'Components/Overlay/Menu',
+  subcomponents: {
+    'Menu.Item': Menu.Item,
+  },
 } as ComponentMeta<typeof Menu>
 
 export { Playground } from './Playground.stories'

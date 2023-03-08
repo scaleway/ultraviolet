@@ -270,7 +270,7 @@ export const Modal = memo(
     animated = false,
     animation = 'zoom',
     ariaLabel = 'modal',
-    baseId = 'modal',
+    id,
     bordered = true,
     children,
     customDialogBackdropStyles,
@@ -290,7 +290,7 @@ export const Modal = memo(
   }: ModalProps) => {
     const dialog = useDialogState({
       animated,
-      baseId,
+      baseId: id,
       modal,
       visible: opened,
     })

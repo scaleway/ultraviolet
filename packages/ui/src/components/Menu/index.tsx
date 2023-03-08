@@ -47,7 +47,7 @@ const topStyles = (theme: Theme) => css`
     top: 100%;
   }
   &:after {
-    border-top-color: ${theme.colors.primary.background};
+    border-top-color: ${theme.colors.neutral.background};
   }
   &:before {
     border-top-color: rgba(165, 165, 205, 0.4);
@@ -111,7 +111,6 @@ const arrowPlacementStyles = {
 
 type ArrowPlacement = keyof typeof arrowPlacementStyles
 type MenuListProps = {
-  align: AlignStyle
   hasArrow: boolean
   placement: ArrowPlacement
 }
@@ -119,15 +118,9 @@ export const arrowPlacements = Object.keys(
   arrowPlacementStyles,
 ) as ArrowPlacement[]
 
-type AlignStyle = {
-  left?: string | null
-  right?: string | null
-}
-
 type MenuProps = {
-  align?: AlignStyle
   ariaLabel?: string
-  baseId?: string
+  id?: string
   placement?: ArrowPlacement
   children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
   className?: string
@@ -139,9 +132,6 @@ type MenuProps = {
 const MenuList = styled.div<MenuListProps>`
   &:after,
   &:before {
-    left: ${({ align }) => align.left};
-    right: ${({ align }) => align.right};
-
     border: solid transparent;
     border-width: 9px;
     content: ' ';
@@ -173,9 +163,8 @@ const MenuList = styled.div<MenuListProps>`
 const FwdMenu = forwardRef(
   (
     {
-      align = { left: '50%', right: 'inherit' },
       ariaLabel = 'Menu',
-      baseId = 'menu',
+      id = 'menu',
       children,
       disclosure,
       hasArrow = true,
@@ -186,7 +175,7 @@ const FwdMenu = forwardRef(
     ref: Ref<HTMLButtonElement | null>,
   ) => {
     const popover = usePopoverState({
-      baseId,
+      baseId: id,
       placement,
       visible,
     })
@@ -214,7 +203,6 @@ const FwdMenu = forwardRef(
               /* Required to avoid loading menu content if not visible */
               popover.visible ? (
                 <MenuList
-                  align={align}
                   hasArrow={hasArrow}
                   placement={popover.placement as ArrowPlacement}
                   role="menu"

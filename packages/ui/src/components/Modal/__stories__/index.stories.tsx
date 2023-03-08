@@ -16,7 +16,7 @@ By default now our modal is a portal. If you want to change this you can disable
 } as ComponentMeta<typeof Modal>
 
 export { Playground } from './Playground.stories'
-export { Switch } from './Switch.stories'
+export { ToggleStory as Toggle } from './Toggle.stories'
 export { WithLotsOfContent } from './WithLotsOfContent.stories'
 export { Animated } from './Animated.stories'
 export { Width } from './Width.stories'
