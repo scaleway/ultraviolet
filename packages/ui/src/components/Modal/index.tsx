@@ -9,7 +9,7 @@ import {
   useEffect,
   useRef,
 } from 'react'
-import type { DialogProps, DialogState, DialogStateReturn } from 'reakit/Dialog'
+import type { DialogProps, DialogStateReturn } from 'reakit/Dialog'
 import {
   Dialog,
   DialogBackdrop,
@@ -246,24 +246,28 @@ const StyledContainer = styled.div`
   left: 16px;
 `
 
-type ModalProps = Partial<Omit<DialogProps, 'children'>> &
-  Partial<DialogState> & {
-    animation?: ModalAnimation
-    ariaLabel?: string
-    bordered?: boolean
-    customDialogBackdropStyles?: JSX.IntrinsicAttributes['css']
-    customDialogStyles?: JSX.IntrinsicAttributes['css']
-    disclosure?: DisclosureParam
-    height?: string
-    isClosable?: boolean
-    modal?: boolean
-    onClose?: () => void
-    onBeforeClose?: () => Promise<void> | void
-    opened?: boolean
-    placement?: ModalPlacement
-    width?: ModalWidth
-    children: ReactNode | ((args: DialogStateReturn) => ReactNode)
-  }
+type ModalProps = Partial<
+  Pick<
+    DialogProps,
+    'animated' | 'id' | 'hideOnEsc' | 'hideOnClickOutside' | 'preventBodyScroll'
+  >
+> & {
+  animation?: ModalAnimation
+  ariaLabel?: string
+  bordered?: boolean
+  customDialogBackdropStyles?: JSX.IntrinsicAttributes['css']
+  customDialogStyles?: JSX.IntrinsicAttributes['css']
+  disclosure?: DisclosureParam
+  height?: string
+  isClosable?: boolean
+  modal?: boolean
+  onClose?: () => void
+  onBeforeClose?: () => Promise<void> | void
+  opened?: boolean
+  placement?: ModalPlacement
+  width?: ModalWidth
+  children: ReactNode | ((args: DialogStateReturn) => ReactNode)
+}
 
 export const Modal = memo(
   ({

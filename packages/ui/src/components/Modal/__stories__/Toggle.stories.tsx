@@ -3,12 +3,11 @@ import { useState } from 'react'
 import { Modal } from '..'
 import { Toggle } from '../../Toggle'
 
-export const ToggleStory: Story = props => {
+export const ToggleStory: Story = () => {
   const [toggled, setToggled] = useState(false)
 
   return (
     <Modal
-      {...props}
       disclosure={dialog => (
         <Toggle
           name="toggle"

@@ -164,7 +164,7 @@ const FwdMenu = forwardRef(
   (
     {
       ariaLabel = 'Menu',
-      id = 'menu',
+      id,
       children,
       disclosure,
       hasArrow = true,
