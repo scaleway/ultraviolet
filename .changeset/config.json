@@ -1,6 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-  "changelog": "@changesets/changelog-git",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "scaleway/scaleway-ui"
+    }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
