@@ -30,6 +30,33 @@ exports[`Text renders correctly with dir 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Text renders correctly with htmlFor 1`] = `
+<DocumentFragment>
+  .cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+  >
+    <div
+      class="cache-rr62n5-StyledText e1tg3t120"
+      for="test"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Text renders correctly with tooltip 1`] = `
 <DocumentFragment>
   .cache-gbpmfn-StyledText {
