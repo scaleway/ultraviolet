@@ -41,7 +41,6 @@ export {
   SelectInput,
   NumberInput,
   Separator,
-  Sphere,
   Stack,
   StateBar,
   Status,

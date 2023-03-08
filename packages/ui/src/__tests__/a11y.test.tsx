@@ -19,7 +19,6 @@ const testedComponents = [
   'MarkDown',
   'Skeleton',
   'Separator',
-  'Sphere',
   'Stack',
   'Status',
   'Stepper',
