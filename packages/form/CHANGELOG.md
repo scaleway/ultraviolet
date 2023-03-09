@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.2...@scaleway/form@1.41.3) (2023-03-09)
+
+
+### :bug: Bug Fixes
+
+* correct non scalar default arguments as props ([#2255](https://github.com/scaleway/scaleway-ui/issues/2255)) ([28f2ce6](https://github.com/scaleway/scaleway-ui/commit/28f2ce6076327f296c22af5c811c0db12d2ab45e))
+
+
+
 ## [1.41.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.1...@scaleway/form@1.41.2) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
