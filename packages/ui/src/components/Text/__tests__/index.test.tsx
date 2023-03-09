@@ -32,6 +32,17 @@ describe('Text', () => {
       </div>,
     ))
 
+  test(`renders correctly with htmlFor`, () =>
+    shouldMatchEmotionSnapshot(
+      <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
+        <Text as="div" variant="body" htmlFor="test">
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Text>
+      </div>,
+    ))
+
   test(`with multiple nested chidldren renders correctly`, () =>
     shouldMatchEmotionSnapshot(
       <Text as="div" variant="body">

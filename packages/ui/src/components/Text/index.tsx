@@ -88,6 +88,7 @@ type TextProps = {
   underline?: boolean
   id?: string
   dir?: 'ltr' | 'rtl' | 'auto'
+  htmlFor?: string
 }
 
 const StyledText = styled('div', {
@@ -110,6 +111,7 @@ const StyledText = styled('div', {
   disabled: boolean
   italic: boolean
   underline: boolean
+  htmlFor?: string
 }>(generateStyles)
 
 export const Text = ({
@@ -125,6 +127,7 @@ export const Text = ({
   underline = false,
   id,
   dir,
+  htmlFor,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -153,6 +156,7 @@ export const Text = ({
         underline={underline}
         id={id}
         dir={dir}
+        htmlFor={htmlFor}
       >
         {children}
       </StyledText>
