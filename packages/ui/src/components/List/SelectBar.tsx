@@ -44,8 +44,9 @@ export type ListSelectBarProps<T> = {
     | ReactNode
 }
 
-const DEFAULT_TEXT = (count: number) =>
-  count === 1 ? 'item selected' : `items selected`
+const DEFAULT_TEXT: ListSelectBarProps<
+  Record<string, unknown>
+>['text'] = count => (count === 1 ? 'item selected' : `items selected`)
 
 function SelectBar<T extends Record<string, unknown>>({
   children,

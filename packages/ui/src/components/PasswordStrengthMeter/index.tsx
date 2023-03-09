@@ -59,7 +59,7 @@ type PasswordStrengthMeterProps = {
 }
 
 const DEFAULT_ESTIMATE = () => ({ score: 0 })
-const DEFAULT_USERINPUTS: string[] = []
+const DEFAULT_USERINPUTS: PasswordStrengthMeterProps['userInputs'] = []
 
 export const PasswordStrengthMeter = ({
   password = '',

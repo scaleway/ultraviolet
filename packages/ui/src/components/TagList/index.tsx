@@ -52,7 +52,7 @@ type TagListProps = {
   multiline?: boolean
 }
 
-const DEFAULT_TAGS: string[] = []
+const DEFAULT_TAGS: TagListProps['tags'] = []
 
 export const TagList = ({
   maxLength = 600,

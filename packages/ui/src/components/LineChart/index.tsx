@@ -31,13 +31,13 @@ type LineChartProps = {
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
-const DEFAULT_XSCALE: ScaleSpec = {
+const DEFAULT_XSCALE: LineChartProps['xScale'] = {
   format: '%Y-%m-%dT%H:%M:%S%Z', // 2021-08-30T02:56:07Z
   precision: 'minute',
   type: 'time',
   useUTC: false,
 }
-const DEFAULT_YSCALE: ScaleSpec = { type: 'linear' }
+const DEFAULT_YSCALE: LineChartProps['yScale'] = { type: 'linear' }
 const DEFAULT_CHARTPROPS = {}
 
 /**

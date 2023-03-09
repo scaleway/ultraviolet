@@ -165,7 +165,7 @@ type DateInputProps = Pick<
   value?: Date | string
 }
 
-const DEFAULT_FORMAT = (value?: Date | string) =>
+const DEFAULT_FORMAT: DateInputProps['format'] = value =>
   value instanceof Date ? value.toISOString() : value
 
 export const DateInput = ({

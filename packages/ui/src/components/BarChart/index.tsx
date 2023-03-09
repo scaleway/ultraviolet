@@ -30,7 +30,7 @@ type BarChartProps = {
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
-const DEFAULT_DATA: BarDatum[] = []
+const DEFAULT_DATA: BarChartProps['data'] = []
 const DEFAULT_AXISFORMATTER = {}
 const DEFAULT_KEYS = ['value']
 
