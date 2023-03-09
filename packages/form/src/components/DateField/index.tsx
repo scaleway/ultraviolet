@@ -26,8 +26,8 @@ type DateFieldProps = BaseFieldProps<Date> &
     required?: boolean
     locale?: string
     onChange?: (value: Date | null) => void
-    onBlur?: (event: FocusEvent<HTMLElement, Element>) => void
-    onFocus?: (value: FocusEvent<HTMLElement, Element>) => void
+    onBlur?: (event: FocusEvent<HTMLElement>) => void
+    onFocus?: (value: FocusEvent<HTMLElement>) => void
     autoFocus?: boolean
   }
 
@@ -101,11 +101,11 @@ export const DateField = ({
           input.onChange(newDate)
         }
       }}
-      onBlur={(e: FocusEvent<HTMLElement, Element>) => {
+      onBlur={(e: FocusEvent<HTMLElement>) => {
         input.onBlur(e)
         onBlur?.(e)
       }}
-      onFocus={(e: FocusEvent<HTMLElement, Element>) => {
+      onFocus={(e: FocusEvent<HTMLElement>) => {
         input.onFocus(e)
         onFocus?.(e)
       }}

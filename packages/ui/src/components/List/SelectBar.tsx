@@ -44,9 +44,13 @@ export type ListSelectBarProps<T> = {
     | ReactNode
 }
 
+const DEFAULT_TEXT: ListSelectBarProps<
+  Record<string, unknown>
+>['text'] = count => (count === 1 ? 'item selected' : `items selected`)
+
 function SelectBar<T extends Record<string, unknown>>({
   children,
-  text = count => (count === 1 ? 'item selected' : `items selected`),
+  text = DEFAULT_TEXT,
   ...props
 }: ListSelectBarProps<T>) {
   const { data, idKey, rowsState, unselectAll } = useListContext<T>()
@@ -55,7 +59,7 @@ function SelectBar<T extends Record<string, unknown>>({
     const itemState =
       rowsState[(item as Record<string, keyof typeof rowsState>)[idKey]]
 
-    return itemState && itemState.selected
+    return itemState?.selected
   })
 
   // Don't display the pop-in if there aren't an item selected

@@ -153,7 +153,7 @@ export const Badge = ({
       aria-label={ariaLabel}
       as="span"
       variant={
-        disabled ? generatedStyles?.['disabled'] : generatedStyles[variant]
+        disabled ? generatedStyles['disabled'] : generatedStyles[variant]
       }
       size={sizeValue}
       className={className}

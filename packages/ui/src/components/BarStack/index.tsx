@@ -29,7 +29,7 @@ type BarProps = {
 }
 
 type BarStackProps = {
-  data: Array<BarProps>
+  data: BarProps[]
   total?: number
 }
 

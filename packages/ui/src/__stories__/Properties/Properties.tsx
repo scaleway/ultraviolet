@@ -22,7 +22,7 @@ type PropertyType = {
   required: boolean
   type: {
     name: string
-    value?: Array<{ value: string }>
+    value?: { value: string }[]
   }
 }
 

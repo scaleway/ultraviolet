@@ -29,16 +29,21 @@ type BarChartProps = {
   chartProps?: Partial<BarSvgProps<BarDatum>>
 }
 
+const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
+const DEFAULT_DATA: BarChartProps['data'] = []
+const DEFAULT_AXISFORMATTER = {}
+const DEFAULT_KEYS = ['value']
+
 /**
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const BarChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width,
-  margin = { bottom: 50, left: 60, right: 25, top: 50 },
-  data = [],
-  axisFormatters = {},
+  margin = DEFAULT_MARGIN,
+  data = DEFAULT_DATA,
+  axisFormatters = DEFAULT_AXISFORMATTER,
   tickValues,
-  keys = ['value'],
+  keys = DEFAULT_KEYS,
   tooltipFunction,
   chartProps,
 }: BarChartProps) => {

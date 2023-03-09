@@ -65,6 +65,8 @@ type VerificationCodeProps = {
   type?: 'text' | 'number'
 }
 
+const DEFAULT_ON_FUNCTION = () => {}
+
 export const VerificationCode = ({
   disabled = false,
   className,
@@ -73,8 +75,8 @@ export const VerificationCode = ({
   initialValue = '',
   inputId = 'verification-code',
   inputStyle = '',
-  onChange = () => {},
-  onComplete = () => {},
+  onChange = DEFAULT_ON_FUNCTION,
+  onComplete = DEFAULT_ON_FUNCTION,
   placeholder = '',
   required = false,
   type = 'number',

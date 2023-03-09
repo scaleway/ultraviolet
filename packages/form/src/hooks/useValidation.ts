@@ -11,7 +11,7 @@ type UseValidationResult<FieldValue = unknown> = (
   value: FieldValue,
   allValues: AnyObject,
   meta?: FieldState<FieldValue>,
-) => Array<string> | undefined | unknown
+) => string[] | undefined | unknown
 
 export const useValidation = <T = unknown>({
   validators,
@@ -22,7 +22,7 @@ export const useValidation = <T = unknown>({
       value: T,
       allValues: AnyObject,
       meta?: FieldState<T>,
-    ): Array<string | unknown> | unknown | undefined => {
+    ): (string | unknown)[] | unknown | undefined => {
       if (validate) {
         const validateErr = validate(value, allValues, meta) as
           | unknown
@@ -34,7 +34,7 @@ export const useValidation = <T = unknown>({
 
       const errors = validators
         .filter(validator => !validator.validate(value, allValues, meta))
-        .map(({ error }) => error) as Array<string | unknown>
+        .map(({ error }) => error) as (string | unknown)[]
 
       return errors.length > 0 ? errors : undefined
     },

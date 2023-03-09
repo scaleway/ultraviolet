@@ -14,12 +14,6 @@ describe('Stepper', () => {
   test('renders correctly with selected prop', () =>
     shouldMatchEmotionSnapshot(
       <Stepper selected={1}>
-        {false && (
-          <>
-            <span>Step 0</span>
-            <span>Step 0</span>
-          </>
-        )}
         <span>Step 1</span>
         <span>Step 2</span>
         <span>Step 3</span>

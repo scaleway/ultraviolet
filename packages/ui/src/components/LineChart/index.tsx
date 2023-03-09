@@ -30,25 +30,30 @@ type LineChartProps = {
   chartProps?: Partial<LineSvgProps>
 }
 
+const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
+const DEFAULT_XSCALE: LineChartProps['xScale'] = {
+  format: '%Y-%m-%dT%H:%M:%S%Z', // 2021-08-30T02:56:07Z
+  precision: 'minute',
+  type: 'time',
+  useUTC: false,
+}
+const DEFAULT_YSCALE: LineChartProps['yScale'] = { type: 'linear' }
+const DEFAULT_CHARTPROPS = {}
+
 /**
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const LineChart = ({
   height = '537px', // to maintain aspect ratio based on our standard 1074px width
-  margin = { bottom: 50, left: 60, right: 25, top: 50 },
-  xScale = {
-    format: '%Y-%m-%dT%H:%M:%S%Z', // 2021-08-30T02:56:07Z
-    precision: 'minute',
-    type: 'time',
-    useUTC: false,
-  },
-  yScale = { type: 'linear' },
+  margin = DEFAULT_MARGIN,
+  xScale = DEFAULT_XSCALE,
+  yScale = DEFAULT_YSCALE,
   data,
   withLegend = false,
   axisFormatters,
   pointFormatters,
   tickValues,
-  chartProps = {},
+  chartProps = DEFAULT_CHARTPROPS,
 }: LineChartProps) => {
   const theme = useTheme()
   const dataset = {
@@ -79,7 +84,7 @@ export const LineChart = ({
   )
 
   const finalData = dataset.datasets?.filter(({ id }, index) =>
-    selected ? selected.indexOf(`${id}${index}`) > -1 : false,
+    selected ? selected.includes(`${id}${index}`) : false,
   )
 
   useEffect(() => {
