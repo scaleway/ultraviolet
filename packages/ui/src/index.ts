@@ -24,7 +24,6 @@ export {
   List,
   ListV2,
   Loader,
-  Markdown,
   Menu,
   Modal,
   Notice,
