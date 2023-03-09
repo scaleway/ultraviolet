@@ -14,3 +14,4 @@ export default {
 } as ComponentMeta<typeof Notice>
 
 export { Playground } from './Playground.stories'
+export { ComplexChildren } from './ComplexChildren.stories'
