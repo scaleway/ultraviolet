@@ -20,6 +20,8 @@ export const Notice = ({ children, className }: NoticeProps) => (
       <Text as="p" variant="caption" color="neutral" prominence="weak">
         {children}
       </Text>
-    ) : null}
+    ) : (
+      children
+    )}
   </Stack>
 )
