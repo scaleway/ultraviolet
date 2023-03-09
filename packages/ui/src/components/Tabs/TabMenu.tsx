@@ -27,17 +27,17 @@ type TabMenuProps = {
   children: ReactNode
   disclosure: ReactNode
   visible?: ComponentProps<typeof Menu>['visible']
-  baseId?: ComponentProps<typeof Menu>['baseId']
+  id?: ComponentProps<typeof Menu>['id']
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'aria-disabled'>
 
 export const TabMenu = forwardRef(
   (
-    { children, disclosure, visible, baseId, disabled, ...props }: TabMenuProps,
+    { children, disclosure, visible, id, disabled, ...props }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
     <Menu
       visible={visible}
-      baseId={baseId}
+      id={id}
       ref={ref}
       disclosure={
         <StyledMenu

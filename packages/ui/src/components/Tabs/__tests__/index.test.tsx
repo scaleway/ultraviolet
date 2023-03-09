@@ -51,7 +51,7 @@ describe('Tabs', () => {
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
         <Tabs.Tab>Very long tab name</Tabs.Tab>
-        <Tabs.Menu visible baseId="test" disclosure="Blabla">
+        <Tabs.Menu visible id="test" disclosure="Blabla">
           <Tabs.MenuItem value={3}>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={4}>Test 2</Tabs.MenuItem>
         </Tabs.Menu>
@@ -76,7 +76,7 @@ describe('Tabs', () => {
         <Tabs.Tab value={0}>First</Tabs.Tab>
         <Tabs.Tab value={1}>Second</Tabs.Tab>
         <Tabs.Tab value={2}>Very long tab name</Tabs.Tab>
-        <Tabs.Menu visible baseId="test" disclosure="More">
+        <Tabs.Menu visible id="test" disclosure="More">
           <Tabs.MenuItem>Test</Tabs.MenuItem>
           <Tabs.MenuItem disabled>Test</Tabs.MenuItem>
           <Tabs.MenuItem value={undefined}>Test</Tabs.MenuItem>

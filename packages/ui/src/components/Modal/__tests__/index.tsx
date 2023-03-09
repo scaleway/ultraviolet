@@ -40,7 +40,7 @@ describe('Modal', () => {
     shouldMatchEmotionSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
-        baseId="modal-test"
+        id="modal-test"
         disclosure={<button type="button">Test</button>}
       >
         <div>modal</div>
@@ -53,7 +53,7 @@ describe('Modal', () => {
     return shouldMatchEmotionSnapshotWithPortal(
       <Modal
         ariaLabel="modal-test"
-        baseId="modal-test"
+        id="modal-test"
         disclosure={dialog => (
           <button type="button">Test {dialog?.baseId}</button>
         )}
@@ -76,7 +76,7 @@ describe('Modal', () => {
 
   test(`renders with portal node (modal=false)`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal ariaLabel="modal-test" baseId="modal-test" modal={false}>
+      <Modal ariaLabel="modal-test" id="modal-test" modal={false}>
         <div> test</div>
       </Modal>,
     ))
