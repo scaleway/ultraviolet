@@ -14,10 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GH_SERVICE_ACCOUNT_TOKEN }}
       - name: Git Identity
         run: |
           git config --global user.name 'Scaleway Bot'

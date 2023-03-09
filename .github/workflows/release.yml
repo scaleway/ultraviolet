@@ -11,6 +11,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3.3.0
       - name: Git Identity
         run: |
           git config --global user.name 'Scaleway Bot'
@@ -18,7 +19,6 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - uses: actions/checkout@v3.3.0
       - uses: pnpm/action-setup@v2.2.4
       - name: Use Node.js
         uses: actions/setup-node@v3.6.0
