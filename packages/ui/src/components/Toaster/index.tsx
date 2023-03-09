@@ -17,8 +17,9 @@ const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
 const styles = {
   toast: (theme: Theme) => css`
     border-radius: ${theme.radii.default};
-    box-shadow: none;
+    box-shadow: ${theme.shadows.dropdown};
     min-height: 44px;
+    margin-bottom: ${theme.space['2']};
 
     ${PREFIX}__toast-body {
       margin: 0;
@@ -144,6 +145,10 @@ export const ToastContainer = ({
             newestOnTop={newestOnTop}
             limit={limit}
             position={position}
+            css={css`
+              top: 100px;
+              right: calc(0% + ${theme.space['2']});
+            `}
           />
         )}
       </ClassNames>
