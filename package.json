@@ -37,7 +37,8 @@
     "prepare": "husky install",
     "size": "pnpm run build && size-limit",
     "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write packages/themes/src/themes/console",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "release": "pnpm build && pnpm changeset publish"
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
