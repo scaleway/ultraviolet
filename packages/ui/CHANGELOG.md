@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.224.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.4...@scaleway/ui@0.224.0) (2023-03-09)
+
+
+### :gear: Features
+
+* **Markdown:** remove component ([#2290](https://github.com/scaleway/scaleway-ui/issues/2290)) ([1b8d8cb](https://github.com/scaleway/scaleway-ui/commit/1b8d8cbde7a72781d2e9d34d0dd325bd357a1405))
+
+
+### :zap: Refactor
+
+* **DotSteps:** remove component ([#2293](https://github.com/scaleway/scaleway-ui/issues/2293)) ([e69707e](https://github.com/scaleway/scaleway-ui/commit/e69707eb543dfaedeee7cbdb21fef62c4fb4f773))
+* **ScrollView:** remove component ([#2292](https://github.com/scaleway/scaleway-ui/issues/2292)) ([ca3be40](https://github.com/scaleway/scaleway-ui/commit/ca3be40b5bbde82ec815941b637f236a51bf8278))
+
+
+### :bug: Bug Fixes
+
+* scaleway ui to accept hmtlFor ([#2296](https://github.com/scaleway/scaleway-ui/issues/2296)) ([b638ca9](https://github.com/scaleway/scaleway-ui/commit/b638ca9740635c32201b3c5ac0966cd08634a009))
+* **toaster:** improve placement and fix stories snippet ([#2291](https://github.com/scaleway/scaleway-ui/issues/2291)) ([6f1c966](https://github.com/scaleway/scaleway-ui/commit/6f1c966baba28e50dbd80457ff896581d61230e2))
+
+
+
 ## [0.223.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.3...@scaleway/ui@0.223.4) (2023-03-09)
 
 
