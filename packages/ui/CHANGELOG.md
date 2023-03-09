@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.223.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.3...@scaleway/ui@0.223.4) (2023-03-09)
+
+
+### :bug: Bug Fixes
+
+* menu and modal small issues ([#2294](https://github.com/scaleway/scaleway-ui/issues/2294)) ([179ed67](https://github.com/scaleway/scaleway-ui/commit/179ed678958b56c89fa3fc9c821fcccd0f6d8fc8))
+
+
+
 ## [0.223.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.2...@scaleway/ui@0.223.3) (2023-03-09)
 
 
