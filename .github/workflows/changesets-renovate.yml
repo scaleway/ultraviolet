@@ -18,5 +18,6 @@ jobs:
         run: |
           git config --global user.name 'Scaleway Bot'
           git config --global user.email 'github@scaleway.com'
+      - uses: pnpm/action-setup@v2.2.4
       - name: Run changesets-renovate
         run: pnpm dlx @scaleway/changesets-renovate
