@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.223.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.1...@scaleway/ui@0.223.2) (2023-03-09)
+
+
+### :bug: Bug Fixes
+
+* **Notice:** allow complex children ([#2295](https://github.com/scaleway/scaleway-ui/issues/2295)) ([97f58d1](https://github.com/scaleway/scaleway-ui/commit/97f58d199604cd6cdff82e0eb4a1f1c8321ad26e))
+
+
+
 ## [0.223.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.223.0...@scaleway/ui@0.223.1) (2023-03-06)
 
 
