@@ -47,7 +47,7 @@ const StyledDiv = styled.div`
   }
 `
 
-export const variants = {
+const variants = {
   block: Block,
   blocks: Blocks,
   box: BoxWithIcon,

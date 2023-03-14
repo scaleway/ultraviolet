@@ -57,7 +57,7 @@ const StyledPageButton = styled.button`
   }
 `
 
-export type PaginationProps = {
+type PaginationProps = {
   /**
     Event function called when changing the page
   */

@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { Bullet } from '../Bullet'
 
-export const Steps = styled.ul`
+const Steps = styled.ul`
   list-style: none;
   padding-left: 0;
   text-align: left;
@@ -12,7 +12,7 @@ export const Steps = styled.ul`
   font-size: 16px;
 `
 
-export const Step = styled('li', {
+const Step = styled('li', {
   shouldForwardProp: prop => !['disabled'].includes(prop),
 })<{ disabled: boolean }>`
   display: flex;

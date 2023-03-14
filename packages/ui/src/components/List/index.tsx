@@ -52,7 +52,7 @@ export type ListRefType<DataType> = {
   unselectAll: () => void
 }
 
-export type ListBodyRenderProps<DataType> = {
+type ListBodyRenderProps<DataType> = {
   index: number
   rowData: DataType
   rowState: ListRowState
@@ -130,7 +130,7 @@ function Body<DataType extends Record<string, unknown>>({
   )
 }
 
-export type ListProps<DataType> = {
+type ListProps<DataType> = {
   /**
    * Used to manage row state. Enter a unique property of your row
    */

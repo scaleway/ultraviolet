@@ -18,7 +18,7 @@ import getPageNumbers from './getPageNumbers'
 import type { UsePaginationReturn } from './usePagination'
 import { usePagination } from './usePagination'
 
-export type PaginationState<T> = {
+type PaginationState<T> = {
   canLoadMore: boolean
   data?: T[] | null
 } & UsePaginationReturn<T>
@@ -77,7 +77,7 @@ const StyledPageButton = styled('button', {
   }
 `
 
-export type PaginationComponentProps<T> = {
+type PaginationComponentProps<T> = {
   // eslint-disable-next-line react/no-unused-prop-types
   className?: string
   // eslint-disable-next-line react/no-unused-prop-types
