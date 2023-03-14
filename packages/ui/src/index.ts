@@ -17,7 +17,6 @@ export {
   Description,
   Expandable,
   Icon,
-  Label,
   LineChart,
   Link,
   List,
