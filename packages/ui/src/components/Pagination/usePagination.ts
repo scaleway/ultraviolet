@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react'
 
-export type UsePaginationParams<T> = {
+type UsePaginationParams<T> = {
   data: T[]
   page: number
   pageCount?: number

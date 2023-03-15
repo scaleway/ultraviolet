@@ -334,7 +334,7 @@ const sizeStyles = ({ size }: { size: number | string }) => {
   `
 }
 
-export const PROMINENCES = {
+const PROMINENCES = {
   default: '',
   strong: 'strong',
   stronger: 'stronger',

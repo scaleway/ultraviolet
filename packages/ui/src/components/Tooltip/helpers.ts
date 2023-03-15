@@ -2,8 +2,8 @@ import type { RefObject } from 'react'
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
 export const ARROW_WIDTH = 6 // in px
-export const SPACE = 6 // in px
-export const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
+const SPACE = 6 // in px
+const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
 export const DEFAULT_POSITIONS = {
   arrowLeft: 50,
   arrowTop: 99,
@@ -22,7 +22,7 @@ type ComputePlacementTypes = {
 /**
  * This function will find the best placement in a window for tooltip based on children position and tooltip size
  */
-export const computePlacement = ({
+const computePlacement = ({
   childrenStructuredRef,
   tooltipStructuredRef,
 }: ComputePlacementTypes) => {

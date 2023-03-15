@@ -42,7 +42,7 @@ const StyledExternalIconContainer = styled.span`
   padding-bottom: ${({ theme }) => theme.space['0.5']};
 `
 
-export const StyledLink = styled('a', {
+const StyledLink = styled('a', {
   shouldForwardProp: prop =>
     !['variant', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{

@@ -25,7 +25,7 @@ type FakeDataType = {
   columnF: string
 }
 
-export const data: FakeDataType[] = Array.from(
+const data: FakeDataType[] = Array.from(
   { length: 10 },
   (_, index) => index + 1,
 ).map(rowNum => ({
@@ -38,11 +38,13 @@ export const data: FakeDataType[] = Array.from(
   columnF: `Row ${rowNum} expandable content`,
 }))
 
-export const columns: NonNullable<ComponentProps<typeof List>['columns']> =
-  Array.from({ length: 5 }, (_, index) => index + 1).map(columnNumber => ({
-    label: `Column ${columnNumber}`,
-    id: `${columnNumber}`,
-  }))
+const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
+  { length: 5 },
+  (_, index) => index + 1,
+).map(columnNumber => ({
+  label: `Column ${columnNumber}`,
+  id: `${columnNumber}`,
+}))
 
 const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
