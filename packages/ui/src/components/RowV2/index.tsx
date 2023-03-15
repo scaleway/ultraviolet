@@ -16,7 +16,6 @@ export const StyledRow = styled('div', {
 `
 
 type RowV2Props = {
-  id?: string
   className?: string
   'data-testid'?: string
   children: ReactNode
@@ -26,7 +25,6 @@ type RowV2Props = {
 }
 
 export const RowV2 = ({
-  id,
   className,
   'data-testid': dataTestId,
   children,
@@ -35,7 +33,6 @@ export const RowV2 = ({
   gap,
 }: RowV2Props) => (
   <StyledRow
-    id={id}
     className={className}
     data-testid={dataTestId}
     gap={gap}

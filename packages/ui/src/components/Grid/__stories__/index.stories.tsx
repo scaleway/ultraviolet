@@ -9,7 +9,7 @@ export default {
   parameters: {
     deprecated: true,
     deprecatedReason:
-      'This component is deprecated please use multiples RowV2 instead.',
+      'This component is deprecated please use Stack/RowV2 combo instead.',
     docs: {
       description: {
         component:
