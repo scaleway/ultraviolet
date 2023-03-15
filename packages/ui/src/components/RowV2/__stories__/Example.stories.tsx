@@ -5,7 +5,7 @@ import { Container, Separator, Stack, Status, Text } from '../..'
 export const Example: Story = () => (
   <Container title="Overview">
     <Stack gap={2}>
-      <RowV2 templateColumns="repeat(4, 1fr)">
+      <RowV2 templateColumns="repeat(4, 1fr)" gap={2}>
         <Stack>
           <Text as="span" variant="bodyStrong">
             Status
@@ -43,7 +43,7 @@ export const Example: Story = () => (
         </Stack>
       </RowV2>
       <Separator />
-      <RowV2 templateColumns="repeat(2, 1fr)">
+      <RowV2 templateColumns="repeat(2, 1fr)" gap={2}>
         <Stack>
           <Stack direction="row" gap={2}>
             <Text as="span" variant="bodyStrong">
@@ -66,7 +66,7 @@ export const Example: Story = () => (
         </Stack>
       </RowV2>
       <Separator />
-      <RowV2 templateColumns="repeat(3, 1fr)">
+      <RowV2 templateColumns="repeat(3, 1fr)" gap={2}>
         <div>
           <Text as="div" variant="bodyStrong">
             IPV6

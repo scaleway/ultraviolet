@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const Gap = Template.bind({})
 
 Gap.args = {
-  gap: 6,
+  gap: 2,
 }
 
 Gap.parameters = {
