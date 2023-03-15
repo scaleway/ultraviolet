@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.224.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.1...@scaleway/ui@0.224.2) (2023-03-15)
+
+
+### :bug: Bug Fixes
+
+* remove dead/stale exports ([#2299](https://github.com/scaleway/scaleway-ui/issues/2299)) ([aecb927](https://github.com/scaleway/scaleway-ui/commit/aecb927c2e6b446f5e2d295c52b0622c269450ad))
+
+
+
 ## [0.224.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.0...@scaleway/ui@0.224.1) (2023-03-09)
 
 

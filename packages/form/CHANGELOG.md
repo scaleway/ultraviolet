@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.6...@scaleway/form@1.41.7) (2023-03-15)
+
+
+### :bug: Bug Fixes
+
+* remove dead/stale exports ([#2299](https://github.com/scaleway/scaleway-ui/issues/2299)) ([aecb927](https://github.com/scaleway/scaleway-ui/commit/aecb927c2e6b446f5e2d295c52b0622c269450ad))
+
+
+
 ## [1.41.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.5...@scaleway/form@1.41.6) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
