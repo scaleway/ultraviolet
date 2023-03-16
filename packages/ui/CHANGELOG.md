@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.224.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.3...@scaleway/ui@0.224.4) (2023-03-16)
+
+
+### :bug: Bug Fixes
+
+* **stories:** fix and improve TextInput, Tabs and Bullet stories - DS-412 ([#2301](https://github.com/scaleway/scaleway-ui/issues/2301)) ([6fbd413](https://github.com/scaleway/scaleway-ui/commit/6fbd413f8e75a5db388d5c6dc661a4a1b7c277f8))
+
+
+
 ## [0.224.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.2...@scaleway/ui@0.224.3) (2023-03-16)
 
 
