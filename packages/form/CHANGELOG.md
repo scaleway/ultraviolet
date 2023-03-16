@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.7...@scaleway/form@1.41.8) (2023-03-16)
+
+
+### :zap: Refactor
+
+* **Label:** remove component ([#2298](https://github.com/scaleway/scaleway-ui/issues/2298)) ([a423959](https://github.com/scaleway/scaleway-ui/commit/a42395914e5d6d3b301e215f7e1a035955ed3908))
+
+
+
 ## [1.41.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.6...@scaleway/form@1.41.7) (2023-03-15)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.224.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.2...@scaleway/ui@0.224.3) (2023-03-16)
+
+
+### :zap: Refactor
+
+* **Label:** remove component ([#2298](https://github.com/scaleway/scaleway-ui/issues/2298)) ([a423959](https://github.com/scaleway/scaleway-ui/commit/a42395914e5d6d3b301e215f7e1a035955ed3908))
+
+
+### :bug: Bug Fixes
+
+* update snapshots with last node version ([#2303](https://github.com/scaleway/scaleway-ui/issues/2303)) ([a40ca9a](https://github.com/scaleway/scaleway-ui/commit/a40ca9aa966552c940b03e0c107fb41db14b57e3))
+
+
+
 ## [0.224.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.1...@scaleway/ui@0.224.2) (2023-03-15)
 
 
