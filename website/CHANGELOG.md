@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.77](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.76...scaleway-ui-website@0.2.77) (2023-03-17)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
 ## [0.2.76](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.75...scaleway-ui-website@0.2.76) (2023-03-17)
 
 **Note:** Version bump only for package scaleway-ui-website

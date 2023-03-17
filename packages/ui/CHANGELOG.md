@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.226.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.1...@scaleway/ui@0.226.0) (2023-03-17)
+
+
+### :gear: Features
+
+* **description:** remove Description component from scw/ui ([#2305](https://github.com/scaleway/scaleway-ui/issues/2305)) ([42ddb6d](https://github.com/scaleway/scaleway-ui/commit/42ddb6d86e2bad37ad55df87caeb58db0c72a86d))
+
+
+
 ## [0.225.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.0...@scaleway/ui@0.225.1) (2023-03-17)
 
 
