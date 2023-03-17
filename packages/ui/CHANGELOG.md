@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.225.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.4...@scaleway/ui@0.225.0) (2023-03-17)
+
+
+### :gear: Features
+
+* **Icon:** new icon email-remove-outline ([#2302](https://github.com/scaleway/scaleway-ui/issues/2302)) ([ba16bc0](https://github.com/scaleway/scaleway-ui/commit/ba16bc096414dbda9021a16dba41e7a9d89b0901))
+
+
+
 ## [0.224.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.3...@scaleway/ui@0.224.4) (2023-03-16)
 
 
