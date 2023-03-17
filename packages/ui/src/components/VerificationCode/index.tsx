@@ -20,6 +20,17 @@ const StyledInput = styled.input`
   margin-right: ${({ theme }) => theme.space['1']};
   width: 56px;
   height: 64px;
+  outline-style: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.primary.borderWeakHover};
+  }
+
+  &:focus {
+    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
+  }
 
   &:last-child {
     margin-right: 0;
