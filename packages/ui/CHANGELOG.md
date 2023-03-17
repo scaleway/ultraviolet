@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.225.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.0...@scaleway/ui@0.225.1) (2023-03-17)
+
+
+### :bug: Bug Fixes
+
+* **verification_code:** set the right color ([#2304](https://github.com/scaleway/scaleway-ui/issues/2304)) ([018cbaa](https://github.com/scaleway/scaleway-ui/commit/018cbaa306b61b60ad5919cb43b1bcd471e3e306))
+
+
+
 ## [0.225.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.4...@scaleway/ui@0.225.0) (2023-03-17)
 
 
