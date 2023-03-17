@@ -14,7 +14,6 @@ export {
   Container,
   Stepper,
   DateInput,
-  Description,
   Expandable,
   Icon,
   LineChart,
