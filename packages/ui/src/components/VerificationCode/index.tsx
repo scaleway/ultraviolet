@@ -25,11 +25,15 @@ const StyledInput = styled.input`
 
   &:hover,
   &:focus {
-    border-color: ${({ theme }) => theme.colors.primary.borderWeakHover};
+    border-color: ${({ 'aria-invalid': error, theme }) =>
+      error
+        ? theme.colors.danger.borderWeakHover
+        : theme.colors.primary.borderWeakHover};
   }
 
   &:focus {
-    box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
+    box-shadow: ${({ 'aria-invalid': error, theme: { shadows } }) =>
+      error ? shadows.focusDanger : shadows.focusPrimary};
   }
 
   &:last-child {
