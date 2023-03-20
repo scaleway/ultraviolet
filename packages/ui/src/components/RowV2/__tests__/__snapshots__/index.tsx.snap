@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RowV2 renders correctly with default props 1`] = `
+<DocumentFragment>
+  .cache-1dozwql-StyledRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+}
+
+<div
+    class="cache-1dozwql-StyledRow e1ddijpe0"
+  >
+    <div>
+      First col
+    </div>
+    <div>
+      Second col
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowV2 renders correctly with specific align 1`] = `
+<DocumentFragment>
+  .cache-166r2lt-StyledRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+    class="cache-166r2lt-StyledRow e1ddijpe0"
+  >
+    <div>
+      First col
+    </div>
+    <div>
+      Second col
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowV2 renders correctly with specific gap 1`] = `
+<DocumentFragment>
+  .cache-1nb3qk1-StyledRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+}
+
+<div
+    class="cache-1nb3qk1-StyledRow e1ddijpe0"
+  >
+    <div>
+      First col
+    </div>
+    <div>
+      Second col
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -8,6 +8,8 @@ export default {
   component: Grid,
   parameters: {
     deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please use Stack/RowV2 combo instead.',
     docs: {
       description: {
         component:
