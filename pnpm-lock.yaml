@@ -315,7 +315,7 @@ importers:
       react-schemaorg: 2.0.0
       react-syntax-highlighter: 15.5.0
       react-use-clipboard: 1.0.9
-      schema-dts: 1.1.0
+      schema-dts: 1.1.2
       typescript: 4.9.5
     dependencies:
       '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
@@ -324,10 +324,10 @@ importers:
       next: 13.1.6_pjwopsidmaokadturxaafygjp4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      react-schemaorg: 2.0.0_fbbptd4yr5srky4tv3eva3cp5y
+      react-schemaorg: 2.0.0_6bnps355to3xlx2exm773rfp4m
       react-syntax-highlighter: 15.5.0_react@18.2.0
       react-use-clipboard: 1.0.9_biqbaboplfbrettd7655fr4n2y
-      schema-dts: 1.1.0_typescript@4.9.5
+      schema-dts: 1.1.2_typescript@4.9.5
     devDependencies:
       '@babel/core': 7.20.12
       '@types/node': 18.13.0
@@ -17627,7 +17627,7 @@ packages:
       react: 18.2.0
     dev: true
 
-  /react-schemaorg/2.0.0_fbbptd4yr5srky4tv3eva3cp5y:
+  /react-schemaorg/2.0.0_6bnps355to3xlx2exm773rfp4m:
     resolution: {integrity: sha512-UqciFKA203ewNjn0zC09uYKuJSvMD8L75L1s/cW4rc7cS64w8l7vaI3SYkuoI/nwCBkJRmOkSJedWDUZBlYZwg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -17636,7 +17636,7 @@ packages:
       typescript: '>=3.1.6'
     dependencies:
       react: 18.2.0
-      schema-dts: 1.1.0_typescript@4.9.5
+      schema-dts: 1.1.2_typescript@4.9.5
       typescript: 4.9.5
     dev: false
 
@@ -18456,8 +18456,8 @@ packages:
     dependencies:
       loose-envify: 1.4.0
 
-  /schema-dts/1.1.0_typescript@4.9.5:
-    resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
+  /schema-dts/1.1.2_typescript@4.9.5:
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
     peerDependencies:
       typescript: '>=4.1.0'
     dependencies:
