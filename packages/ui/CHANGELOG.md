@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.228.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.2...@scaleway/ui@0.228.3) (2023-03-20)
+
+
+### :bug: Bug Fixes
+
+* **listV2:** add role to action bar ([#2332](https://github.com/scaleway/scaleway-ui/issues/2332)) ([fe339c5](https://github.com/scaleway/scaleway-ui/commit/fe339c56692e75db5de1c2e8696337bd06f6243b))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
+
+
+
 ## [0.228.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.1...@scaleway/ui@0.228.2) (2023-03-20)
 
 

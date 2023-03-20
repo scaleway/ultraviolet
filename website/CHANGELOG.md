@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.82](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.81...scaleway-ui-website@0.2.82) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
+
+
+
 ## [0.2.81](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.80...scaleway-ui-website@0.2.81) (2023-03-20)
 
 **Note:** Version bump only for package scaleway-ui-website
