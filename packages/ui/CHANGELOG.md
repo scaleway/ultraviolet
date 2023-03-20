@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.228.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.227.0...@scaleway/ui@0.228.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **RowV2:** new component ([#2300](https://github.com/scaleway/scaleway-ui/issues/2300)) ([8eff127](https://github.com/scaleway/scaleway-ui/commit/8eff12736171b20f45f14ba94d0199d8c26ce83d))
+
+
+
 ## [0.227.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.226.0...@scaleway/ui@0.227.0) (2023-03-20)
 
 
