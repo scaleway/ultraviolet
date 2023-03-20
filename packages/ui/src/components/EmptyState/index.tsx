@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
-import { Link, Stack, Text } from '@scaleway/ui'
 import type { ReactNode } from 'react'
+import { Link } from '../Link'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const CONTAINER_SIZES = {
   small: 720,
