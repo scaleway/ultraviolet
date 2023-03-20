@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.228.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.1...@scaleway/ui@0.228.2) (2023-03-20)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency deepmerge to v4.3.1 ([#2318](https://github.com/scaleway/scaleway-ui/issues/2318)) ([8ac45f3](https://github.com/scaleway/scaleway-ui/commit/8ac45f3e9e44673d577d10249b3c96ce5bfde406))
+
+
+
 ## [0.228.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.0...@scaleway/ui@0.228.1) (2023-03-20)
 
 
