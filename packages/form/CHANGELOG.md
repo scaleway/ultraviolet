@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.15](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.14...@scaleway/form@1.41.15) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
+
+
+
 ## [1.41.14](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.13...@scaleway/form@1.41.14) (2023-03-20)
 
 **Note:** Version bump only for package @scaleway/form

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.228.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.0...@scaleway/ui@0.228.1) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
+
+
+
 ## [0.228.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.227.0...@scaleway/ui@0.228.0) (2023-03-20)
 
 

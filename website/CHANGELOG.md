@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.80](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.79...scaleway-ui-website@0.2.80) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency schema-dts to v1.1.2 ([#2319](https://github.com/scaleway/scaleway-ui/issues/2319)) ([fc3f1e4](https://github.com/scaleway/scaleway-ui/commit/fc3f1e4d672124faba2bd9507594a4110fd726f6))
+
+
+
 ## [0.2.79](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.78...scaleway-ui-website@0.2.79) (2023-03-20)
 
 **Note:** Version bump only for package scaleway-ui-website
