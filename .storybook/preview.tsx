@@ -24,6 +24,7 @@ const STORY_SORT = {
     ['Components state', 'Properties'],
     'Guidelines',
     'Customization',
+    ['Understand Tokens'],
     ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
     'Responsive',
     'Components',
