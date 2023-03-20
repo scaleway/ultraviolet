@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.227.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.226.0...@scaleway/ui@0.227.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **StateBar:** remove StateBar component ([#2306](https://github.com/scaleway/scaleway-ui/issues/2306)) ([11000d8](https://github.com/scaleway/scaleway-ui/commit/11000d8edf3273d74055cbdee3df45bfa67b3da7))
+
+
+
 ## [0.226.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.1...@scaleway/ui@0.226.0) (2023-03-17)
 
 
