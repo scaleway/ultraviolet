@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Responsive utilities down should return null when unknown size 1`] = `""`;
+
+exports[`Responsive utilities down works with large 1`] = `"@media (max-width: 991px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities down works with medium 1`] = `"@media (max-width: 767px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities down works with small 1`] = `"@media (max-width: 575px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities down works with xlarge 1`] = `"@media (max-width: 1199px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities down works with xsmall 1`] = `"@media (max-width: -1px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities up should return null when unknown size 1`] = `""`;
+
+exports[`Responsive utilities up works with large 1`] = `"@media (min-width: 992px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities up works with medium 1`] = `"@media (min-width: 768px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities up works with small 1`] = `"@media (min-width: 576px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities up works with xlarge 1`] = `"@media (min-width: 1200px) { border: 1px solid red; }"`;
+
+exports[`Responsive utilities up works with xsmall 1`] = `"@media (min-width: 0px) { border: 1px solid red; }"`;
