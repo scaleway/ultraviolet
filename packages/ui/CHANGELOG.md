@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.3...@scaleway/ui@0.229.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **EmptyState:** add EmptyState component ([#2316](https://github.com/scaleway/scaleway-ui/issues/2316)) ([e4ebfb1](https://github.com/scaleway/scaleway-ui/commit/e4ebfb1794570b8cc62ad4d4ee689c0f8feb70ae))
+
+
+
 ## [0.228.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.2...@scaleway/ui@0.228.3) (2023-03-20)
 
 
