@@ -64,7 +64,7 @@ function SelectBar<T extends Record<string, unknown>>({
 
   // Don't display the pop-in if there aren't an item selected
   return selectedItems.length > 0 ? (
-    <ActionBar {...props} role="dialog" aria-modal="true">
+    <ActionBar {...props} >
       <StyledStack alignItems="center" direction="row">
         <StyledCheckbox
           checked

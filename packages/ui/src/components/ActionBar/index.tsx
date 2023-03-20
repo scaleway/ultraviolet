@@ -33,9 +33,9 @@ type ActionBarProps = {
 
 export const ActionBar = ({
   children,
-  role,
+  role = "dialog",
   rank = 0,
-  'aria-modal': ariaModal,
+  'aria-modal': ariaModal = 'true',
   className,
 }: ActionBarProps) =>
   createPortal(
