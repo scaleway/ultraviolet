@@ -1,7 +1,7 @@
 import { Button } from '@scaleway/ui'
 import { EmptyState } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import kapsuleLogo from './kapsule.webp'
+import kapsuleLogo from '../illustrations/kapsule.webp'
 
 describe('EmptySpace', () => {
   it('should work without parameters', () =>

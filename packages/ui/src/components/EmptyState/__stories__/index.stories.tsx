@@ -1,23 +1,23 @@
 import { Button } from '@scaleway/ui'
-import type { Meta, Story } from '@storybook/react'
-import errorImg from 'assets/illustrations/product-error.svg'
-import kapsuleLogo from 'pages/products/kapsule/assets/illustrations/kapsule.webp'
+import type { ComponentMeta, Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { EmptyState } from '..'
+import kapsuleLogo from '../illustrations/kapsule.webp'
+import errorImg from '../illustrations/product-error.svg'
 
 export default {
   component: EmptyState,
-  title: 'Components/EmptyState',
-} as Meta
+  title: 'Components/Data Display/EmptyState',
+} as ComponentMeta<typeof EmptyState>
 
 const Template: Story<ComponentProps<typeof EmptyState>> = args => (
   <EmptyState {...args} />
 )
 
-export const SplashScreen = Template.bind({})
+export const Playground = Template.bind({})
 
-SplashScreen.args = {
-  title: 'Splash Screen',
+Playground.args = {
+  title: 'Playground',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   image: kapsuleLogo,
