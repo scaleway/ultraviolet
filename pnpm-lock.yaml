@@ -29,7 +29,7 @@ importers:
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': workspace:*
       '@scaleway/use-i18n': 5.0.7
-      '@size-limit/file': 8.1.2
+      '@size-limit/file': 8.2.4
       '@size-limit/preset-big-lib': 8.1.2
       '@storybook/addon-a11y': 6.5.16
       '@storybook/addon-docs': 6.5.16
@@ -126,7 +126,7 @@ importers:
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': link:packages/ui
       '@scaleway/use-i18n': 5.0.7_3pf3ktbrffvgnzxoo2eotyjcpi
-      '@size-limit/file': 8.1.2_size-limit@8.1.2
+      '@size-limit/file': 8.2.4_size-limit@8.1.2
       '@size-limit/preset-big-lib': 8.1.2_size-limit@8.1.2
       '@storybook/addon-a11y': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-docs': 6.5.16_mww2l77lobe7324gdgr6qwe4em
@@ -4454,6 +4454,16 @@ packages:
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
       size-limit: 8.1.2
+    dependencies:
+      semver: 7.3.8
+      size-limit: 8.1.2
+    dev: true
+
+  /@size-limit/file/8.2.4_size-limit@8.1.2:
+    resolution: {integrity: sha512-xLuF97W7m7lxrRJvqXRlxO/4t7cpXtfxOnjml/t4aRVUCMXLdyvebRr9OM4jjoK8Fmiz8jomCbETUCI3jVhLzA==}
+    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
+    peerDependencies:
+      size-limit: 8.2.4
     dependencies:
       semver: 7.3.8
       size-limit: 8.1.2
