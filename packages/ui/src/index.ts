@@ -39,7 +39,6 @@ export {
   NumberInput,
   Separator,
   Stack,
-  StateBar,
   Status,
   StepList,
   Snippet,
