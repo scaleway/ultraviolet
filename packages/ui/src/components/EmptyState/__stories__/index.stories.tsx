@@ -8,6 +8,14 @@ import errorImg from '../illustrations/product-error.svg'
 export default {
   component: EmptyState,
   title: 'Components/Data Display/EmptyState',
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'Empty states are moments in an app where there is no data to display to the user. They are most commonly seen the first time a user interacts with a product or page, but can be used when data has been deleted or is unavailable.',
+      },
+    },
+  },
 } as ComponentMeta<typeof EmptyState>
 
 const Template: Story<ComponentProps<typeof EmptyState>> = args => (
