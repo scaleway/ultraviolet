@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.229.1 (2023-03-21)
+
+
+### :package: Chore
+
+* **release:** publish ([5b0fd3f](https://github.com/scaleway/scaleway-ui/commit/5b0fd3f4828e1176ed8ed14d9167d98427a2d9d7))
+
+
+### :bug: Bug Fixes
+
+* **EmptyState:** export EmptyState component ([#2335](https://github.com/scaleway/scaleway-ui/issues/2335)) ([f727491](https://github.com/scaleway/scaleway-ui/commit/f727491a1b35f2a546a9e68df345252ff87ebaa6))
+
+
+
 ## [0.229.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.3...@scaleway/ui@0.229.0) (2023-03-20)
 
 
