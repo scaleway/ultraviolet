@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.88](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.87...scaleway-ui-website@0.2.88) (2023-03-21)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency next to v13.2.4 ([#2328](https://github.com/scaleway/scaleway-ui/issues/2328)) ([9917500](https://github.com/scaleway/scaleway-ui/commit/99175007f7b76021194dde8cdf6a9c5a656017c8))
+
+
+
 ## [0.2.87](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.86...scaleway-ui-website@0.2.87) (2023-03-21)
 
 **Note:** Version bump only for package scaleway-ui-website
