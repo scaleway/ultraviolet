@@ -13,45 +13,38 @@ describe('NumberInput', () => {
         minValue={0}
         maxValue={100}
         text="unit"
-        value={10}
         onChange={() => {}}
       />,
     ))
 
   it('should renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput
-        minValue={0}
-        maxValue={100}
-        text="unit"
-        value={10}
-        disabled
-      />,
+      <NumberInput minValue={0} maxValue={100} text="unit" disabled />,
     ))
 
   it('should renders correctly min value', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} maxValue={100} text="unit" value={0} />,
+      <NumberInput minValue={0} maxValue={100} text="unit" />,
     ))
 
   it('should renders correctly max value', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} maxValue={100} text="unit" value={100} />,
+      <NumberInput minValue={0} maxValue={100} text="unit" />,
     ))
 
   it('should renders large size', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} maxValue={100} value={10} size="large" />,
+      <NumberInput minValue={0} maxValue={100} size="large" />,
     ))
 
   it('should renders small size', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} maxValue={100} value={10} size="small" />,
+      <NumberInput minValue={0} maxValue={100} size="small" />,
     ))
 
   it('should click on center button', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={1} maxValue={100} defaultValue={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const inputButton = getByLabelText('Input')
@@ -65,7 +58,7 @@ describe('NumberInput', () => {
 
   it('should click on min button', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={1} maxValue={100} defaultValue={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const minus = getByLabelText('Minus')
@@ -86,7 +79,7 @@ describe('NumberInput', () => {
         minValue={0}
         step={10}
         maxValue={100}
-        value={10}
+        defaultValue={10}
         onBlur={() => {}}
       />,
       {
@@ -105,7 +98,7 @@ describe('NumberInput', () => {
 
   it('should focus input and modify value', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} step={10} maxValue={100} value={10} />,
+      <NumberInput minValue={0} step={10} maxValue={100} defaultValue={10} />,
       {
         transform: async ({ getByRole, getByLabelText }) => {
           const buttonContainer = getByLabelText('Input')
@@ -127,7 +120,7 @@ describe('NumberInput', () => {
       <NumberInput
         minValue={10}
         maxValue={100}
-        value={30}
+        defaultValue={30}
         onMinCrossed={() => {}}
       />,
       {
@@ -148,7 +141,7 @@ describe('NumberInput', () => {
       <NumberInput
         minValue={10}
         maxValue={100}
-        value={30}
+        defaultValue={30}
         onMaxCrossed={() => {}}
       />,
       {
@@ -166,7 +159,7 @@ describe('NumberInput', () => {
 
   it('should increase and decrease input with arrow up and down', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={10} maxValue={100} value={30} />,
+      <NumberInput minValue={10} maxValue={100} defaultValue={30} />,
       {
         transform: async ({ getByRole }) => {
           const input = getByRole('spinbutton') as HTMLInputElement
@@ -206,7 +199,7 @@ describe('NumberInput', () => {
         minValue={0}
         step={10}
         maxValue={100}
-        value={12}
+        defaultValue={12}
         onBlur={() => {}}
       />,
       {
@@ -225,7 +218,7 @@ describe('NumberInput', () => {
 
   it('should increase and decrease input with arrow up and down, step and an in-between value set', async () => {
     const node = renderWithTheme(
-      <NumberInput minValue={10} maxValue={100} value={32} step={10} />,
+      <NumberInput minValue={10} maxValue={100} defaultValue={32} step={10} />,
     )
 
     const input = node.getByRole('spinbutton') as HTMLInputElement
@@ -247,7 +240,6 @@ describe('NumberInput', () => {
     await waitFor(() => expect(input.value).toBe('30'))
     await userEvent.clear(input)
     await userEvent.type(input, '12')
-
     fireEvent.keyDown(input, {
       key: 'ArrowDown',
       keyCode: 40,
@@ -262,4 +254,51 @@ describe('NumberInput', () => {
     })
     await waitFor(() => expect(input.value).toBe('100'))
   })
+
+  it('should not changed controlled value on click min button', () =>
+    shouldMatchEmotionSnapshot(
+      <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
+      {
+        transform: async ({ getByRole, getByLabelText }) => {
+          const minus = getByLabelText('Minus')
+          const input = getByRole('spinbutton') as HTMLInputElement
+
+          await userEvent.click(minus)
+          await waitFor(() => expect(input.value).toBe('10'))
+        },
+      },
+    ))
+
+  it('should use the defaultValue', () =>
+    shouldMatchEmotionSnapshot(
+      <NumberInput defaultValue={10} minValue={0} maxValue={100} />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('spinbutton') as HTMLInputElement
+          await waitFor(() => expect(input.value).toBe('10'))
+        },
+      },
+    ))
+
+  it('should use minValue instead of defaultValue if default value is lower than minValue', () =>
+    shouldMatchEmotionSnapshot(
+      <NumberInput defaultValue={10} minValue={20} maxValue={100} />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('spinbutton') as HTMLInputElement
+          await waitFor(() => expect(input.value).toBe('20'))
+        },
+      },
+    ))
+
+  it('should use maxValue instead of defaultValue if default value is higher than maxValue', () =>
+    shouldMatchEmotionSnapshot(
+      <NumberInput defaultValue={150} minValue={20} step={1} maxValue={100} />,
+      {
+        transform: async ({ getByRole }) => {
+          const input = getByRole('spinbutton') as HTMLInputElement
+          await waitFor(() => expect(input.value).toBe('100'))
+        },
+      },
+    ))
 })

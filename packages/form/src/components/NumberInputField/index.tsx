@@ -55,6 +55,7 @@ export const NumberInputField = ({
     type: 'number',
     validate,
     value,
+    defaultValue: 0,
   })
 
   return (
@@ -67,7 +68,7 @@ export const NumberInputField = ({
       }}
       onChange={event => {
         input.onChange(event)
-        onChange?.(event as number)
+        onChange?.(event)
       }}
       onFocus={(event: FocusEvent<HTMLInputElement>) => {
         input.onFocus(event)

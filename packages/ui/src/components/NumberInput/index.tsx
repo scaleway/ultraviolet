@@ -146,7 +146,7 @@ type NumberInputProps = {
   maxValue?: number
   minValue?: number
   name?: string
-  onChange?(input: number): void
+  onChange?: (input: number) => void
   onMaxCrossed?(): void
   onMinCrossed?(): void
   size?: ContainerSizesType
@@ -158,9 +158,13 @@ type NumberInputProps = {
    * Text displayed into component at the right of number value.
    */
   text?: string | ReactNode
+  defaultValue?: number
   value?: number
   disabledTooltip?: string
-} & Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
+} & Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'size' | 'onChange' | 'value' | 'defaultValue'
+>
 
 export const NumberInput = ({
   disabled = false,
@@ -175,24 +179,38 @@ export const NumberInput = ({
   size = 'large',
   step = 1,
   text,
+  defaultValue = 0,
   value,
   disabledTooltip,
   className,
 }: NumberInputProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
-  const [inputValue, setInputValue] = useState(
-    typeof value === 'number' ? value : parseIntOr(value, minValue),
-  )
+
+  // local state used if component is not controlled (no value prop provided)
+  const [inputValue, setInputValue] = useState(() => {
+    if (defaultValue < minValue) {
+      return minValue
+    }
+    if (maxValue && defaultValue > maxValue) {
+      return maxValue
+    }
+
+    return defaultValue
+  })
+
+  const currentValue = value !== undefined ? value : inputValue
 
   const setValue = (newValue: number) => {
-    setInputValue(newValue)
+    if (value === undefined) {
+      setInputValue(newValue)
+    }
     onChange?.(newValue)
   }
 
   const offsetFn = (direction: number) => () => {
     const newValue =
-      inputValue % step === 0 ? inputValue + step * direction : inputValue
+      currentValue % step === 0 ? currentValue + step * direction : currentValue
     const roundedValue = roundStep(newValue, step, direction)
     setValue(roundedValue)
   }
@@ -208,10 +226,14 @@ export const NumberInput = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    const boundedValue = bounded(inputValue, minValue, maxValue ?? inputValue)
+    const boundedValue = bounded(
+      currentValue,
+      minValue,
+      maxValue ?? currentValue,
+    )
 
-    if (maxValue && inputValue > maxValue) onMaxCrossed?.()
-    if (inputValue < minValue) onMinCrossed?.()
+    if (maxValue && currentValue > maxValue) onMaxCrossed?.()
+    if (currentValue < minValue) onMinCrossed?.()
 
     setValue(boundedValue)
 
@@ -225,7 +247,9 @@ export const NumberInput = ({
 
       const direction = 1
       const newValue =
-        inputValue % step === 0 ? inputValue + step * direction : inputValue
+        currentValue % step === 0
+          ? currentValue + step * direction
+          : currentValue
       const roundedValue = roundStep(newValue, step, direction)
 
       if (maxValue && roundedValue <= maxValue) {
@@ -240,7 +264,9 @@ export const NumberInput = ({
       const direction = -1
 
       const newValue =
-        inputValue % step === 0 ? inputValue + step * direction : inputValue
+        currentValue % step === 0
+          ? currentValue + step * direction
+          : currentValue
       const roundedValue = roundStep(newValue, step, direction)
 
       if (roundedValue >= minValue) {
@@ -250,13 +276,13 @@ export const NumberInput = ({
   }
 
   const minusRoundedValue =
-    inputValue % step === 0
-      ? roundStep(inputValue - step, step, -1)
-      : roundStep(inputValue, step, -1)
+    currentValue % step === 0
+      ? roundStep(currentValue - step, step, -1)
+      : roundStep(currentValue, step, -1)
   const plusRoundedValue =
-    inputValue % step === 0
-      ? roundStep(inputValue + step, step, 1)
-      : roundStep(inputValue, step, 1)
+    currentValue % step === 0
+      ? roundStep(currentValue + step, step, 1)
+      : roundStep(currentValue, step, 1)
   const isMinusDisabled = minusRoundedValue < minValue || disabled
   const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
@@ -297,9 +323,9 @@ export const NumberInput = ({
           onKeyDown={onKeyDown}
           ref={inputRef}
           style={{
-            width: inputValue.toString().length * 10 + 15,
+            width: currentValue.toString().length * 10 + 15,
           }}
-          value={inputValue.toString()} // A dom element can only have string attributes.
+          value={currentValue.toString()} // A dom element can only have string attributes.
           aria-label="Input"
           type="number"
         />
