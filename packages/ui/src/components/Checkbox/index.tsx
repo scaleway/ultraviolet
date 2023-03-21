@@ -77,16 +77,16 @@ const CheckboxInput = styled('input', {
         stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
       }
     }
-  }
 
-  &[aria-invalid='true']
-    + ${StyledIcon},
-    &[aria-invalid='mixed']
-    + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+    &[aria-invalid='true']
+      + ${StyledIcon},
+      &[aria-invalid='mixed']
+      + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
 
-    ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      }
     }
   }
 
