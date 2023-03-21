@@ -84,6 +84,9 @@ type RowProps = {
   children: ReactNode
   id: string
   expandable?: ReactNode
+  /**
+   * Row cannot be selected if this prop is provided. boolean true disabled selection, a string disable selection and a tooltip will be displayed on checkbox hover.
+   * */
   selectDisabled?: boolean | string
   isDisabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
@@ -116,6 +119,9 @@ export const Row = forwardRef(
       unselectRow,
     } = useListContext()
 
+    const isSelectDisabled =
+      isDisabled || (selectDisabled !== undefined && selectDisabled !== false)
+
     useEffect(() => {
       if (expandable) {
         const unregisterCallback = registerExpandableRow(id)
@@ -127,14 +133,14 @@ export const Row = forwardRef(
     }, [id, expandable, registerExpandableRow])
 
     useEffect(() => {
-      if (selectDisabled !== undefined && !isDisabled) {
+      if (!isSelectDisabled) {
         const unregisterCallback = registerSelectableRow(id)
 
         return unregisterCallback
       }
 
       return undefined
-    }, [id, registerSelectableRow, selectDisabled, isDisabled])
+    }, [id, registerSelectableRow, isSelectDisabled])
 
     const toggleRowExpand = () => {
       if (expandedRowIds[id]) {
@@ -192,10 +198,7 @@ export const Row = forwardRef(
                       selectRow(id)
                     }
                   }}
-                  disabled={
-                    isDisabled ||
-                    (selectDisabled !== undefined && selectDisabled !== false)
-                  }
+                  disabled={isSelectDisabled}
                 />
               </Tooltip>
             </StyledCheckboxContainer>
