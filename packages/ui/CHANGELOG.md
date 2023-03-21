@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.2...@scaleway/ui@0.229.3) (2023-03-21)
+
+
+### :bug: Bug Fixes
+
+* radio and checkbox error combined with disabled state ([#2333](https://github.com/scaleway/scaleway-ui/issues/2333)) ([3dfcec6](https://github.com/scaleway/scaleway-ui/commit/3dfcec62ebfbed55315cbea1132ed866b09de807))
+
+
+
 ## [0.229.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.1...@scaleway/ui@0.229.2) (2023-03-21)
 
 
