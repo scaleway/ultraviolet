@@ -496,7 +496,7 @@ describe('ListV2', () => {
     rerender(
       <List columns={columns} areRowSelectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row isSelectDisabled={id === selectedIds[0]} key={id} id={id}>
+          <List.Row selectDisabled={id === selectedIds[0]} key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>

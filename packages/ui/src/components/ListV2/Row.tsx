@@ -84,8 +84,7 @@ type RowProps = {
   children: ReactNode
   id: string
   expandable?: ReactNode
-  isSelectDisabled?: boolean
-  selectTooltip?: string
+  selectDisabled?: boolean | string
   isDisabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
   className?: string
@@ -98,8 +97,7 @@ export const Row = forwardRef(
       id,
       expandable,
       isDisabled,
-      isSelectDisabled,
-      selectTooltip,
+      selectDisabled,
       sentiment = 'neutral',
       className,
     }: RowProps,
@@ -129,14 +127,14 @@ export const Row = forwardRef(
     }, [id, expandable, registerExpandableRow])
 
     useEffect(() => {
-      if (!isSelectDisabled && !isDisabled) {
+      if (selectDisabled !== undefined && !isDisabled) {
         const unregisterCallback = registerSelectableRow(id)
 
         return unregisterCallback
       }
 
       return undefined
-    }, [id, registerSelectableRow, isSelectDisabled, isDisabled])
+    }, [id, registerSelectableRow, selectDisabled, isDisabled])
 
     const toggleRowExpand = () => {
       if (expandedRowIds[id]) {
@@ -175,7 +173,13 @@ export const Row = forwardRef(
                 allRowSelectValue === false ? 'hover' : undefined
               }
             >
-              <Tooltip text={selectTooltip}>
+              <Tooltip
+                text={
+                  typeof selectDisabled === 'string'
+                    ? selectDisabled
+                    : undefined
+                }
+              >
                 <Checkbox
                   name="list-select-checkbox"
                   aria-label="select"
@@ -188,7 +192,10 @@ export const Row = forwardRef(
                       selectRow(id)
                     }
                   }}
-                  disabled={isDisabled || isSelectDisabled}
+                  disabled={
+                    isDisabled ||
+                    (selectDisabled !== undefined && selectDisabled !== false)
+                  }
                 />
               </Tooltip>
             </StyledCheckboxContainer>
