@@ -63,6 +63,7 @@ export {
   Grid,
   Row,
   Col,
+  RowV2,
 } from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
 export type { SCWUITheme } from './theme'
