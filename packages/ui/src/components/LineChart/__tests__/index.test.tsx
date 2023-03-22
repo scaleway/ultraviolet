@@ -1,5 +1,5 @@
 import * as nivo from '@nivo/core'
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
@@ -91,9 +91,9 @@ describe('LineChart', () => {
     shouldMatchEmotionSnapshot(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
       {
-        transform: ({ getByTestId }) => {
+        transform: () => {
           const id = `label-${lineChartData[0].id.toString()}`
-          fireEvent.click(getByTestId(id))
+          fireEvent.click(screen.getByTestId(id))
         },
       },
     ))

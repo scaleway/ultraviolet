@@ -1,4 +1,5 @@
 import { css } from '@emotion/react'
+import {  screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Modal } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
@@ -65,8 +66,8 @@ describe('Modal', () => {
         <div>modal</div>
       </Modal>,
       {
-        transform: async node => {
-          const closeButton = node.getByTitle('close')
+        transform: async () => {
+          const closeButton = screen.getByTitle('close')
           await userEvent.click(closeButton)
           expect(count).toBe(1)
         },

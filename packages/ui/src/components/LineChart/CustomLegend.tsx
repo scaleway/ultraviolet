@@ -83,7 +83,7 @@ const StyledContainer = styled.div`
   margin-top: ${({ theme }) => theme.space[2]};
 `
 
-const CustomLegend = ({
+export const CustomLegend = ({
   axisTransformer = noop,
   data,
   selected,
@@ -138,4 +138,3 @@ const CustomLegend = ({
   </StyledContainer>
 )
 
-export default CustomLegend

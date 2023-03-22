@@ -1,6 +1,6 @@
 import type { Point } from '@nivo/line'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import LineChartTooltip from '../Tooltip'
+import { LineChartTooltip } from '../Tooltip'
 
 describe('LineChart Tooltip', () => {
   test('renders correctly ', () =>

@@ -1,4 +1,4 @@
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { PieChart } from '..'
 import {
@@ -53,7 +53,6 @@ describe('PieChart', () => {
     const { container } = renderWithTheme(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
     )
-
     const slice = container.querySelector('svg g path')
     if (!slice) throw new Error('PieChart slice path not found')
     await userEvent.unhover(slice)
@@ -64,10 +63,10 @@ describe('PieChart', () => {
     shouldMatchEmotionSnapshot(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
-        transform: async ({ getByTestId }) => {
+        transform: async () => {
           const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
-          await userEvent.unhover(getByTestId(id))
-          await userEvent.hover(getByTestId(id))
+          await userEvent.unhover(screen.getByTestId(id))
+          await userEvent.hover(screen.getByTestId(id))
         },
       },
     ))
@@ -76,10 +75,10 @@ describe('PieChart', () => {
     shouldMatchEmotionSnapshot(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
       {
-        transform: ({ getByTestId }) => {
+        transform: () => {
           const id = `chart-legend-${dataWithLegendsAndDetails[0].id}`
-          fireEvent.blur(getByTestId(id))
-          fireEvent.focus(getByTestId(id))
+          fireEvent.blur(screen.getByTestId(id))
+          fireEvent.focus(screen.getByTestId(id))
         },
       },
     ))

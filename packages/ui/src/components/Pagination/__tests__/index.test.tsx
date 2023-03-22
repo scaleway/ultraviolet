@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
-import { act, render, waitFor } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Pagination, usePaginationContext } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -198,19 +198,19 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          const nextButton = node.getByRole('button', { name: 'Next' })
-          const backButton = node.getByRole('button', { name: 'Back' })
-          const firstButton = node.getByRole('button', { name: 'First' })
-          const lastButton = node.getByRole('button', { name: 'Last' })
+        transform: async () => {
+          const nextButton = screen.getByRole('button', { name: 'Next' })
+          const backButton = screen.getByRole('button', { name: 'Back' })
+          const firstButton = screen.getByRole('button', { name: 'First' })
+          const lastButton = screen.getByRole('button', { name: 'Last' })
           await userEvent.click(nextButton)
           await userEvent.click(backButton)
           await userEvent.click(lastButton)
           await userEvent.click(firstButton)
-          const page3Button = node.getByRole('button', { name: 'Page 3' })
+          const page3Button = screen.getByRole('button', { name: 'Page 3' })
           await userEvent.click(page3Button)
           await userEvent.click(page3Button)
-          const page4Button = node.getByRole('button', { name: 'Page 4' })
+          const page4Button = screen.getByRole('button', { name: 'Page 4' })
           await userEvent.click(page4Button)
         },
       },
@@ -257,15 +257,15 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          const nextButton = node.getByRole('button', { name: 'Next' })
-          const lastButton = node.getByRole('button', { name: 'Last' })
+        transform: async () => {
+          const nextButton = screen.getByRole('button', { name: 'Next' })
+          const lastButton = screen.getByRole('button', { name: 'Last' })
           await userEvent.click(lastButton)
-          await node.findByText('Current : 10')
-          await node.findByRole('button', { name: 'Page 10' })
+          await screen.findByText('Current : 10')
+          await screen.findByRole('button', { name: 'Page 10' })
           await userEvent.click(nextButton)
-          await node.findByRole('button', { name: 'Page 11' })
-          await node.findByText('Item 55')
+          await screen.findByRole('button', { name: 'Page 11' })
+          await screen.findByText('Item 55')
           await waitFor(() =>
             expect(nextButton.getAttribute('aria-disabled')).toBe('false'),
           )
@@ -285,10 +285,9 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          await act(async () => {
-            await userEvent.click(node.getByRole('button', { name: 'Last' }))
-          })
+        transform: async () => {
+          const lastButton = screen.getByRole('button', { name: 'Last' })
+          await userEvent.click(lastButton)
         },
       },
     ))
@@ -329,16 +328,14 @@ describe('Pagination', () => {
         )}
       </Pagination>,
       {
-        transform: async node => {
-          await act(async () => {
-            await userEvent.click(node.getByRole('button', { name: 'Next' }))
-            await userEvent.click(
-              node.getByRole('button', { name: 'Previous' }),
-            )
-            await userEvent.click(node.getByRole('button', { name: 'Last' }))
-            await userEvent.click(node.getByRole('button', { name: '-1' }))
-            await userEvent.click(node.getByRole('button', { name: '100' }))
-          })
+        transform: async () => {
+          await userEvent.click(screen.getByRole('button', { name: 'Next' }))
+          await userEvent.click(
+            screen.getByRole('button', { name: 'Previous' }),
+          )
+          await userEvent.click(screen.getByRole('button', { name: 'Last' }))
+          await userEvent.click(screen.getByRole('button', { name: '-1' }))
+          await userEvent.click(screen.getByRole('button', { name: '100' }))
         },
       },
     ))
@@ -361,11 +358,11 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          await userEvent.click(node.getByRole('button', { name: 'Last' }))
-          const nextButton = node.getByRole('button', { name: 'Next' })
+        transform: async () => {
+          await userEvent.click(screen.getByRole('button', { name: 'Last' }))
+          const nextButton = screen.getByRole('button', { name: 'Next' })
           await userEvent.click(nextButton)
-          await node.findByText('Current : 11')
+          await screen.findByText('Current : 11')
         },
       },
     ))
@@ -382,11 +379,11 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          await userEvent.click(node.getByRole('button', { name: 'Last' }))
-          const nextButton = node.getByRole('button', { name: 'Next' })
+        transform: async () => {
+          await userEvent.click(screen.getByRole('button', { name: 'Last' }))
+          const nextButton = screen.getByRole('button', { name: 'Next' })
           await userEvent.click(nextButton)
-          await node.findByText('Current : 11')
+          await screen.findByText('Current : 11')
         },
       },
     ))
@@ -444,9 +441,9 @@ describe('Pagination', () => {
         )}
       </Pagination>,
       {
-        transform: async node => {
+        transform: async () => {
           await userEvent.click(
-            node.getByRole('button', { name: 'Set Page Data' }),
+            screen.getByRole('button', { name: 'Set Page Data' }),
           )
         },
       },
@@ -492,9 +489,9 @@ describe('Pagination', () => {
         <ExampleChildren />
       </Pagination>,
       {
-        transform: async node => {
-          await userEvent.click(node.getByRole('button', { name: 'Last' }))
-          const nextButton = node.getByRole('button', { name: 'Next' })
+        transform: async () => {
+          await userEvent.click(screen.getByRole('button', { name: 'Last' }))
+          const nextButton = screen.getByRole('button', { name: 'Next' })
           await userEvent.click(nextButton)
         },
       },

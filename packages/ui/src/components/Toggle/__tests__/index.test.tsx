@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Toggle } from '..'
 import {
@@ -71,9 +72,9 @@ describe('Toggle', () => {
     ))
 
   test('renders and click on toggle on', async () => {
-    const node = renderWithTheme(<Toggle name="test" label="This is a label" />)
+    renderWithTheme(<Toggle name="test" label="This is a label" />)
 
-    const input = node.getByRole('checkbox')
+    const input = screen.getByRole('checkbox')
     await userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
