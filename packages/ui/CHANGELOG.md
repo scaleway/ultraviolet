@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.229.4 (2023-03-22)
+
+
+### :package: Chore
+
+* **release:** publish ([876048e](https://github.com/scaleway/scaleway-ui/commit/876048e3259e83190521d97ba17b0c768f8dc224))
+
+
+### :bug: Bug Fixes
+
+* expose rowV2 component ([#2338](https://github.com/scaleway/scaleway-ui/issues/2338)) ([223a17a](https://github.com/scaleway/scaleway-ui/commit/223a17aa2077dae24e2f09c776618d182af36332))
+* **ListV2:** simplify row selection disabled usage ([#2336](https://github.com/scaleway/scaleway-ui/issues/2336)) ([7fae998](https://github.com/scaleway/scaleway-ui/commit/7fae998514513468cc9dd0f5e450e87dee22d324))
+
+
+
 ## [0.229.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.2...@scaleway/ui@0.229.3) (2023-03-21)
 
 
