@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.90](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.89...scaleway-ui-website@0.2.90) (2023-03-23)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/node to v18.15.5 ([#2340](https://github.com/scaleway/scaleway-ui/issues/2340)) ([70a3e18](https://github.com/scaleway/scaleway-ui/commit/70a3e185092b3f02102ec12c075c4f3d10764ef2))
+
+
+
 ## [0.2.89](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.88...scaleway-ui-website@0.2.89) (2023-03-22)
 
 **Note:** Version bump only for package scaleway-ui-website
