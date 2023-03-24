@@ -16,11 +16,11 @@ export const NestedExpandable: ComponentStory<typeof Expandable> = () => {
       <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
-      <Expandable opened={toggled} id="parent">
+      <Expandable opened={toggled}>
         <Button icon={toggledNested ? 'minus' : 'plus'} onClick={toggleNested}>
           Click me to {toggledNested ? 'hide' : 'show'} content
         </Button>
-        <Expandable opened={toggledNested} id="children">
+        <Expandable opened={toggledNested}>
           I am the nested expandable content
         </Expandable>
         I am the first child of the Expandable component

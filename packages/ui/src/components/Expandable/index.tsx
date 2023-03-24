@@ -21,13 +21,14 @@ type ExpandableProps = {
 }
 
 export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop => !['opened'].includes(prop),
-})<{ opened?: boolean }>`
+  shouldForwardProp: prop => !['opened', 'minHeight'].includes(prop),
+})<{ opened?: boolean; minHeight: number }>`
   transition: max-height ${ANIMATION_DURATION}ms ease-out,
     opacity ${ANIMATION_DURATION}ms ease-out;
   overflow: hidden;
   height: auto;
-  max-height: ${({ opened }) => (opened ? 'initial' : 0)};
+  max-height: ${({ opened, minHeight }) =>
+    opened ? 'initial' : `${minHeight}px`};
 `
 
 export const Expandable = ({
@@ -44,14 +45,11 @@ export const Expandable = ({
    * At mount, we set the height variable to the height of the content only if the component is closed.
    * This is to ensure we don't have animation when the component is opened at mount.
    */
-  useEffect(
-    () => {
-      if (ref.current) {
-        setHeight(ref.current.scrollHeight ?? 0)
-      }
-    }, // eslint-disable-next-line react-hooks/exhaustive-deps
-    [ref.current?.scrollHeight],
-  )
+  useEffect(() => {
+    if (ref.current) {
+      setHeight(ref.current.scrollHeight ?? 0)
+    }
+  }, [ref.current?.scrollHeight])
 
   /**
    * Here we set maxHeight to the height of the content when the component is opened
@@ -73,7 +71,7 @@ export const Expandable = ({
         ref.current.style.maxHeight = `${height}px`
         transitionTimer.current = setTimeout(() => {
           if (ref.current) {
-            ref.current.style.maxHeight = '0'
+            ref.current.style.maxHeight = `${minHeight}px`
           }
         }, 0)
       }
@@ -85,7 +83,12 @@ export const Expandable = ({
   }, [height, minHeight, opened])
 
   return (
-    <StyledExpandable ref={ref} className={className} opened={opened}>
+    <StyledExpandable
+      ref={ref}
+      className={className}
+      opened={opened}
+      minHeight={minHeight}
+    >
       {children}
     </StyledExpandable>
   )
