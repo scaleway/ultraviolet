@@ -7,7 +7,7 @@ export const OnClick: Story<ComponentProps<typeof Breadcrumbs>> = props => {
   const [value, setValue] = useState(1)
 
   return (
-    <Breadcrumbs variant="bubble" selected={value} {...props}>
+    <Breadcrumbs selected={value} {...props}>
       <Breadcrumbs.Item onClick={(_, step) => setValue(step)}>
         Step 1
       </Breadcrumbs.Item>
