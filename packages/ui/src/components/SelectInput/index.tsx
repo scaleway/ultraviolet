@@ -37,7 +37,7 @@ const StyledSeparator = styled(Separator)`
 `
 
 export type SelectOption = {
-  value: string
+  value: string | null
   label: ReactNode
   disabled?: boolean
   description?: string
@@ -104,6 +104,7 @@ type SelectStyleProps = {
    * Time of the animation
    */
   animationDuration: number
+
   /**
    * Show/hide the label inside the component
    */
@@ -526,7 +527,7 @@ const Option = ({
   return (
     <div
       data-testid={`option-${selectProps.name || ''}-${
-        isJSONString(value) ? label : value
+        value === null || isJSONString(value) ? label : value
       }`}
       onMouseOver={() => setIsFocused(true)}
       onFocus={() => setIsFocused(true)}
