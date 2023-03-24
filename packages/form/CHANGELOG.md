@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.41.23 (2023-03-24)
+
+
+### :package: Chore
+
+* **release:** publish ([fad0b35](https://github.com/scaleway/scaleway-ui/commit/fad0b3518c52fd3cb8d6d60ed7eed04803171088))
+
+
+### :bug: Bug Fixes
+
+* **deps:** downgrade final-form-arrays to 3.0.2 ([#2346](https://github.com/scaleway/scaleway-ui/issues/2346)) ([600b5c0](https://github.com/scaleway/scaleway-ui/commit/600b5c07e31070d53498ce0107070f49f60fa28c))
+
+
+
 ## 1.41.22 (2023-03-22)
 
 
