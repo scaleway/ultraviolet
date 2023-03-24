@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 
+const ANIMATION_DURATION = 300 // in ms
+
 type ExpandableProps = {
   /**
    * The content to display
@@ -19,12 +21,13 @@ type ExpandableProps = {
 }
 
 export const StyledExpandable = styled('div', {
-  shouldForwardProp: prop => !['opened', 'height'].includes(prop),
-})<ExpandableProps>`
-  transition: max-height 300ms ease-out, opacity 300ms ease-out;
+  shouldForwardProp: prop => !['opened'].includes(prop),
+})<{ opened?: boolean }>`
+  transition: max-height ${ANIMATION_DURATION}ms ease-out,
+    opacity ${ANIMATION_DURATION}ms ease-out;
   overflow: hidden;
   height: auto;
-  max-height: 0;
+  max-height: ${({ opened }) => (opened ? 'initial' : 0)};
 `
 
 export const Expandable = ({
@@ -33,16 +36,17 @@ export const Expandable = ({
   minHeight = 0,
   className,
 }: ExpandableProps) => {
-  const [height, setHeight] = useState(0)
+  const [height, setHeight] = useState<number | null>(null)
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
   const ref = useRef<HTMLDivElement>(null)
 
   /**
-   * At mount, we set the height variable to the height of the content
+   * At mount, we set the height variable to the height of the content only if the component is closed.
+   * This is to ensure we don't have animation when the component is opened at mount.
    */
   useEffect(
     () => {
-      if (!opened && ref.current) {
+      if (ref.current) {
         setHeight(ref.current.scrollHeight ?? 0)
       }
     }, // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,18 +59,17 @@ export const Expandable = ({
    * Setting it to initial is required to be able to have nested expandable or the height won't follow.
    */
   useEffect(() => {
-    if (opened) {
-      if (ref.current) {
-        ref.current.style.maxHeight = `${height}px`
-      }
+    if (opened && ref.current && height) {
+      ref.current.style.maxHeight = `${height}px`
       transitionTimer.current = setTimeout(() => {
         if (ref.current) {
           ref.current.style.maxHeight = 'initial'
         }
-      }, 300)
+      }, ANIMATION_DURATION)
     } else {
       clearTimeout(transitionTimer.current)
-      if (ref.current && ref.current.style.maxHeight === 'initial') {
+
+      if (ref.current && height) {
         ref.current.style.maxHeight = `${height}px`
         transitionTimer.current = setTimeout(() => {
           if (ref.current) {
@@ -75,10 +78,14 @@ export const Expandable = ({
         }, 0)
       }
     }
+
+    return () => {
+      clearTimeout(transitionTimer.current)
+    }
   }, [height, minHeight, opened])
 
   return (
-    <StyledExpandable ref={ref} className={className}>
+    <StyledExpandable ref={ref} className={className} opened={opened}>
       {children}
     </StyledExpandable>
   )
