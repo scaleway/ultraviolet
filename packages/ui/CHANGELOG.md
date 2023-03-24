@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.229.5 (2023-03-24)
+
+
+### :package: Chore
+
+* **release:** publish ([6e1f995](https://github.com/scaleway/scaleway-ui/commit/6e1f995e5605b4edd587b5ee06b91d3f5aff4616))
+
+
+### :zap: Refactor
+
+* **Breadcrumbs:** remove variants ([#2345](https://github.com/scaleway/scaleway-ui/issues/2345)) ([a96751a](https://github.com/scaleway/scaleway-ui/commit/a96751afa124bba4cf885c606646359239ee6c3e))
+
+
+
 ## 0.229.4 (2023-03-22)
 
 
