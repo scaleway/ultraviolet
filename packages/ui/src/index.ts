@@ -60,7 +60,6 @@ export {
   usePagination,
   VerificationCode,
   CopyButton,
-  Grid,
   Row,
   Col,
   RowV2,
