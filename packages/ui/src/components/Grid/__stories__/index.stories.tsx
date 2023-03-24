@@ -1,11 +1,9 @@
 import type { Meta, Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
-import Grid from '../Grid'
 import Row from '../Row'
 import ColWithBackground from './ColWithBackground'
 
 export default {
-  component: Grid,
   parameters: {
     deprecated: true,
     deprecatedReason:
@@ -13,38 +11,25 @@ export default {
     docs: {
       description: {
         component:
-          'These three component are built to organize your content \n\n- `Grid` allow you to create a container with some padding.\n\n- `Row` is a flex container that allow you to create a row with some margin left and right.\n\n- `Col` allow you to create a col where you can place your content.',
+          'These three component are built to organize your content \n\n- `Row` is a flex container that allow you to create a row with some margin left and right.\n\n- `Col` allow you to create a col where you can place your content.',
       },
     },
   },
   title: 'Components/Layout/Grid',
 } as Meta
 
-const Template: Story<ComponentProps<typeof Grid>> = args => (
-  <Grid {...args}>
-    <Row>
-      <ColWithBackground>One</ColWithBackground>
-      <ColWithBackground>Two</ColWithBackground>
-      <ColWithBackground>Three</ColWithBackground>
-    </Row>
-  </Grid>
+const Template: Story<ComponentProps<typeof Row>> = () => (
+  <Row>
+    <ColWithBackground>One</ColWithBackground>
+    <ColWithBackground>Two</ColWithBackground>
+    <ColWithBackground>Three</ColWithBackground>
+  </Row>
 )
 
 export const Default = Template.bind({})
 
-export const Fluid = Template.bind({})
-Fluid.args = { fluid: true }
-Fluid.parameters = {
-  docs: {
-    description: {
-      story:
-        'If you pass the `fluid` prop the grid will take the full width of its container',
-    },
-  },
-}
-
 export const Gutter: Story = () => (
-  <Grid fluid gutter={2}>
+  <div>
     <Row>
       <ColWithBackground>One</ColWithBackground>
       <ColWithBackground>Two</ColWithBackground>
@@ -60,7 +45,7 @@ export const Gutter: Story = () => (
       <ColWithBackground>Two</ColWithBackground>
       <ColWithBackground>Three</ColWithBackground>
     </Row>
-  </Grid>
+  </div>
 )
 Gutter.args = { fluid: true }
 Gutter.parameters = {
@@ -73,7 +58,7 @@ Gutter.parameters = {
 }
 
 export const Responsive: Story = () => (
-  <Grid>
+  <div>
     <Row>
       <ColWithBackground
         xsmall={12}
@@ -99,7 +84,7 @@ export const Responsive: Story = () => (
       <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
       <ColWithBackground xsmall={6}>{`xsmall={6}`}</ColWithBackground>
     </Row>
-  </Grid>
+  </div>
 )
 
 Responsive.parameters = {
