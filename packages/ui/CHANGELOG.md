@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.7...@scaleway/ui@0.229.8) (2023-03-27)
+
+
+### :bug: Bug Fixes
+
+* remove unused deprecated Grid component ([#2348](https://github.com/scaleway/scaleway-ui/issues/2348)) ([fe4afe4](https://github.com/scaleway/scaleway-ui/commit/fe4afe4cd240b6e3f9b8cb9788113a00886115cd))
+
+
+
 ## [0.229.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.6...@scaleway/ui@0.229.7) (2023-03-27)
 
 
