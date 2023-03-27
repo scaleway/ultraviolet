@@ -14,7 +14,7 @@ describe('NumberInput', () => {
         maxValue={100}
         text="unit"
         value={10}
-        onChange={() => {}}
+        onChange={() => { }}
       />,
     ))
 
@@ -55,7 +55,7 @@ describe('NumberInput', () => {
       {
         transform: async () => {
           const inputButton = screen.getByLabelText('Input')
-          const input = screen.getByRole<HTMLInputElement>('spinbutton') 
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(inputButton)
           await waitFor(() => expect(input.value).toBe('10'))
@@ -69,7 +69,7 @@ describe('NumberInput', () => {
       {
         transform: async () => {
           const minus = screen.getByLabelText('Minus')
-          const input = screen.getByRole<HTMLInputElement>('spinbutton') 
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('9'))
@@ -87,7 +87,7 @@ describe('NumberInput', () => {
         step={10}
         maxValue={100}
         value={10}
-        onBlur={() => {}}
+        onBlur={() => { }}
       />,
       {
         transform: async () => {
@@ -128,7 +128,7 @@ describe('NumberInput', () => {
         minValue={10}
         maxValue={100}
         value={30}
-        onMinCrossed={() => {}}
+        onMinCrossed={() => { }}
       />,
       {
         transform: async () => {
@@ -149,11 +149,11 @@ describe('NumberInput', () => {
         minValue={10}
         maxValue={100}
         value={30}
-        onMaxCrossed={() => {}}
+        onMaxCrossed={() => { }}
       />,
       {
         transform: async () => {
-          const input = screen.getByRole('spinbutton')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.clear(input)
           await userEvent.type(input, '120')
@@ -169,7 +169,7 @@ describe('NumberInput', () => {
       <NumberInput minValue={10} maxValue={100} value={30} />,
       {
         transform: async () => {
-          const input = screen.getByRole<HTMLInputElement>('spinbutton') 
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.click(input)
           fireEvent.keyDown(input, {
@@ -207,12 +207,12 @@ describe('NumberInput', () => {
         step={10}
         maxValue={100}
         value={12}
-        onBlur={() => {}}
+        onBlur={() => { }}
       />,
       {
         transform: async () => {
           const plus = screen.getByLabelText('Plus')
-          const input = screen.getByRole<HTMLInputElement>('spinbutton') 
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
@@ -224,7 +224,7 @@ describe('NumberInput', () => {
     ))
 
   it('should increase and decrease input with arrow up and down, step and an in-between value set', async () => {
-     renderWithTheme(
+    renderWithTheme(
       <NumberInput minValue={10} maxValue={100} value={32} step={10} />,
     )
 

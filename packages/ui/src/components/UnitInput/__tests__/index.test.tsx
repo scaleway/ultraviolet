@@ -8,7 +8,7 @@ import {
 
 describe('UnitInput', () => {
   test(`renders with default props`, () =>
-    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => {}} />))
+    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => { }} />))
 
   test(`renders with custom options`, () =>
     shouldMatchEmotionSnapshot(
@@ -69,7 +69,7 @@ describe('UnitInput', () => {
     renderWithTheme(<UnitInput name="test" />)
 
     // Role textbox is only for the searchable input
-    const valueContainer = screen.getByRole('combobox')
+    const valueContainer = screen.getByRole<HTMLInputElement>('combobox')
     await userEvent.click(valueContainer)
     await userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
@@ -86,7 +86,7 @@ describe('UnitInput', () => {
 test(`renders with TextInput update`, async () => {
   renderWithTheme(<UnitInput name="test" />)
 
-  const input = screen.getByRole('spinbutton')
+  const input = screen.getByRole<HTMLInputElement>('spinbutton')
   await waitFor(() => expect(input.value).toBe('1'))
   await userEvent.click(input)
   await userEvent.type(input, '10')

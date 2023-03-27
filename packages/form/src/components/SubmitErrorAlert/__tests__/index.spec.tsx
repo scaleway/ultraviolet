@@ -31,7 +31,7 @@ describe('SubmitErrorAlert', () => {
       {
         transform: async () => {
           await userEvent.click(
-            screen.getByText<HTMLButtonElement>('Submit').closest('button'),
+            screen.getByText('Submit').closest('button') as HTMLButtonElement,
           )
           expect(await screen.findByText('hello')).toBeInTheDocument()
         },

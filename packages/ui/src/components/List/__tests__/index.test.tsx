@@ -555,9 +555,8 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer =
-            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
-              .parentElement
+          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -726,9 +725,8 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer =
-            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
-              .parentElement
+          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -973,9 +971,8 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer =
-            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
-              .parentElement
+          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
+            .parentElement as HTMLDivElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')

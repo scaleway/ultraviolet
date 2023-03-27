@@ -25,7 +25,7 @@ describe('Submit', () => {
   test('form is invalid', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => { }}
+        onRawSubmit={() => {}}
         initialValues={{ toto: '4' }}
         errors={mockErrors}
       >
@@ -51,10 +51,10 @@ describe('Submit', () => {
       {
         transform: async () => {
           await userEvent.click(
-            screen.getByText<HTMLButtonElement>('Test').closest('button'),
+            screen.getByText('Test').closest('button') as HTMLButtonElement,
           )
           expect(
-            screen.getByText<HTMLButtonElement>('Test').closest('button'),
+            screen.getByText('Test').closest('button') as HTMLButtonElement,
           ).toBeDisabled()
         },
       },
