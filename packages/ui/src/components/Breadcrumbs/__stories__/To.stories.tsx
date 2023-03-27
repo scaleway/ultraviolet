@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 
 export const To: Story<ComponentProps<typeof Breadcrumbs>> = props => (
-  <Breadcrumbs variant="link" {...props}>
+  <Breadcrumbs {...props}>
     <Breadcrumbs.Item to="/">Step 1</Breadcrumbs.Item>
     <Breadcrumbs.Item to="/">Step 2</Breadcrumbs.Item>
     <Breadcrumbs.Item to="/">Step 3</Breadcrumbs.Item>

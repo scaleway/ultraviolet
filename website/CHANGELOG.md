@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.92](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.91...scaleway-ui-website@0.2.92) (2023-03-27)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## 0.2.91 (2023-03-24)
+
+
+### :package: Chore
+
+* **release:** publish ([6e1f995](https://github.com/scaleway/scaleway-ui/commit/6e1f995e5605b4edd587b5ee06b91d3f5aff4616))
+
+
+
 ## [0.2.90](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.89...scaleway-ui-website@0.2.90) (2023-03-23)
 
 
