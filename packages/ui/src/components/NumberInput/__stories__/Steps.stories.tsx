@@ -5,7 +5,6 @@ export const Steps = Template.bind({})
 Steps.args = {
   minValue: 0,
   maxValue: 100,
-  value: 10,
   step: 10,
 }
 

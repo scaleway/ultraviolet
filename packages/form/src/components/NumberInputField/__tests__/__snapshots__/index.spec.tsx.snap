@@ -612,23 +612,23 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border: 1px solid #4f0599;
 }
 
-.cache-bkq66r {
+.cache-1mh6k42 {
   cursor: pointer;
   background: none;
   border: 0;
   border-radius: 4px;
-  color: #c4c9d6;
+  color: #4f0599;
   padding: 0;
   margin: 0 8px;
 }
 
-.cache-bkq66r:hover:not([disabled]) {
+.cache-1mh6k42:hover:not([disabled]) {
   background: #eeeeff;
 }
 
-.cache-xmmyxm-sizeStyles {
+.cache-18ka304-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -681,29 +681,6 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   margin: 0;
 }
 
-.cache-1mh6k42 {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
-}
-
-.cache-1mh6k42:hover:not([disabled]) {
-  background: #eeeeff;
-}
-
-.cache-18ka304-sizeStyles {
-  vertical-align: middle;
-  fill: #390171;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
-}
-
 <form
     novalidate=""
   >
@@ -713,12 +690,11 @@ exports[`NumberInputField should trigger events correctly 1`] = `
     >
       <button
         aria-label="Minus"
-        class="cache-bkq66r eiawj1g4"
-        disabled=""
+        class="cache-1mh6k42 eiawj1g4"
         type="button"
       >
         <svg
-          class="cache-xmmyxm-sizeStyles etwatq50"
+          class="cache-18ka304-sizeStyles etwatq50"
           viewBox="0 0 24 24"
         >
           <path
@@ -735,9 +711,9 @@ exports[`NumberInputField should trigger events correctly 1`] = `
           aria-label="Input"
           class="cache-1lq3jx2 eiawj1g2"
           name="test"
-          style="width: 25px;"
+          style="width: 35px;"
           type="number"
-          value="0"
+          value="10"
         />
       </div>
       <button
