@@ -42,8 +42,9 @@ describe('TimeField', () => {
           const select = screen.getByRole('combobox')
           act(() => select.focus())
           fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
-          const option = screen.getByTestId('option--01:00')
-            .firstChild as HTMLElement
+          const option =
+            // eslint-disable-next-line testing-library/no-node-access
+            screen.getByTestId('option--01:00').firstChild as HTMLElement
           act(() => option.click())
           expect(onChange).toBeCalledTimes(1)
           act(() => select.blur())

@@ -74,7 +74,7 @@ describe('SelectInput', () => {
         labelId="test-label"
         name="controlled"
         value="test"
-        onChange={() => { }}
+        onChange={() => {}}
       >
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
@@ -199,7 +199,7 @@ describe('SelectInput', () => {
         animation="pulse"
         animationDuration={1000}
         value="a"
-        onChange={() => { }}
+        onChange={() => {}}
       >
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
@@ -303,12 +303,12 @@ describe('SelectInput', () => {
           inputId="test"
           labelId="test-label"
           name="test"
-          menuPortalTarget={document.getElementById('test-portal')}
+          menuPortalTarget={screen.getByTestId('test-portal')}
         >
           <SelectInput.Option value="a">Option A</SelectInput.Option>
           <SelectInput.Option value="b">Option B</SelectInput.Option>
         </SelectInput>
-        <div id="test-portal" />
+        <div data-testid="test-portal" />
       </>,
     ))
 

@@ -63,11 +63,13 @@ describe('SelectInputField', () => {
           fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
           const option = screen.getByTestId(
             `option-test-${selectedOption.value}`,
+            // eslint-disable-next-line testing-library/no-node-access
           ).firstChild as HTMLElement
 
           act(() => option.click())
 
           // react-select works with a hidden input to handle value.
+          // eslint-disable-next-line testing-library/no-node-access
           const hiddenSelectInput = container.querySelector(
             'input[type="hidden"]',
           ) as HTMLInputElement
@@ -95,8 +97,9 @@ describe('SelectInputField', () => {
         transform: () => {
           const select = screen.getByRole('combobox')
           fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
-          const option = screen.getByTestId('option-test-value')
-            .firstChild as HTMLElement
+          const option =
+            // eslint-disable-next-line testing-library/no-node-access
+            screen.getByTestId('option-test-value').firstChild as HTMLElement
 
           act(() => option.click())
           expect(onChange).toBeCalledTimes(1)

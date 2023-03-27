@@ -79,6 +79,7 @@ describe('LineChart', () => {
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
       {
         transform: async () => {
+          // eslint-disable-next-line testing-library/no-node-access
           const line = document.querySelector('svg[role="img"] g path')
           if (!line) throw new Error('LineChart line path not found')
           await userEvent.unhover(line)

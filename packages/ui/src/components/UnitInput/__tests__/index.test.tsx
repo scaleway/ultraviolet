@@ -8,7 +8,7 @@ import {
 
 describe('UnitInput', () => {
   test(`renders with default props`, () =>
-    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => { }} />))
+    shouldMatchEmotionSnapshot(<UnitInput name="test" onChange={() => {}} />))
 
   test(`renders with custom options`, () =>
     shouldMatchEmotionSnapshot(
@@ -76,6 +76,7 @@ describe('UnitInput', () => {
 
     const selectInput = screen.getByTestId('select-input-test-unit')
     // Real select input value is inside a hidden input with the name put in SelectInput props.
+    // eslint-disable-next-line testing-library/no-node-access
     const selectInputInputHidden = selectInput.querySelector(
       'input[type="hidden"]',
     ) as HTMLInputElement

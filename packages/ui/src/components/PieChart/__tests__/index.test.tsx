@@ -53,6 +53,7 @@ describe('PieChart', () => {
     const { container } = renderWithTheme(
       <PieChart data={dataWithLegendsAndDetails} withLegend />,
     )
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const slice = container.querySelector('svg g path')
     if (!slice) throw new Error('PieChart slice path not found')
     await userEvent.unhover(slice)

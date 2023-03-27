@@ -92,6 +92,7 @@ describe('NumberInputField', () => {
       {
         transform: async () => {
           const input = screen.getByLabelText<HTMLTextAreaElement>('Input')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
 
           // trigger onMinCrossed

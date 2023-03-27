@@ -555,13 +555,13 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
-          expect(iconContainer.getAttribute('aria-sort')).toBe('none')
+          const { parentElement: iconContainer } =
+            screen.getAllByTestId('arrow-up-icon')[0]
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('descending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
@@ -725,13 +725,13 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
-          expect(iconContainer.getAttribute('aria-sort')).toBe('none')
+          const { parentElement: iconContainer } =
+            screen.getAllByTestId('arrow-up-icon')[0]
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('descending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
@@ -971,13 +971,13 @@ describe('List', () => {
             name: 'sort Name',
           })
 
-          const iconContainer = screen.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
-          expect(iconContainer.getAttribute('aria-sort')).toBe('none')
+          const { parentElement: iconContainer } =
+            screen.getAllByTestId('arrow-up-icon')[0]
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
           await userEvent.click(nameHeader)
-          expect(iconContainer.getAttribute('aria-sort')).toBe('descending')
+          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
@@ -1082,11 +1082,12 @@ describe('List', () => {
           const firstRow = screen.getByTestId<HTMLDetailsElement>('row-0')
           expect(firstRow.open).toBeFalsy()
 
-          if (!firstRow.firstElementChild) throw new Error('No first child')
+          const { firstElementChild } = firstRow
+          if (!firstElementChild) throw new Error('No first child')
 
-          await userEvent.click(firstRow.firstElementChild)
+          await userEvent.click(firstElementChild)
           expect(firstRow.open).toBeTruthy()
-          await userEvent.click(firstRow.firstElementChild)
+          await userEvent.click(firstElementChild)
           expect(firstRow.open).toBeFalsy()
         },
       },
@@ -1136,9 +1137,11 @@ describe('List', () => {
           const secondRow = screen.getByTestId<HTMLDetailsElement>('row-1')
           expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeFalsy()
+          // eslint-disable-next-line testing-library/no-node-access
           await userEvent.click(firstRow.firstElementChild as Element)
           expect(firstRow.open).toBeTruthy()
           expect(secondRow.open).toBeFalsy()
+          // eslint-disable-next-line testing-library/no-node-access
           await userEvent.click(secondRow.firstElementChild as Element)
           expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeTruthy()

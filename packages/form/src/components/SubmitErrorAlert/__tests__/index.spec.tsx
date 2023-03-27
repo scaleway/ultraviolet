@@ -31,6 +31,7 @@ describe('SubmitErrorAlert', () => {
       {
         transform: async () => {
           await userEvent.click(
+            // eslint-disable-next-line testing-library/no-node-access
             screen.getByText('Submit').closest('button') as HTMLButtonElement,
           )
           expect(await screen.findByText('hello')).toBeInTheDocument()

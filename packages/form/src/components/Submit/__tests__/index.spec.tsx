@@ -51,9 +51,11 @@ describe('Submit', () => {
       {
         transform: async () => {
           await userEvent.click(
+            // eslint-disable-next-line testing-library/no-node-access
             screen.getByText('Test').closest('button') as HTMLButtonElement,
           )
           expect(
+            // eslint-disable-next-line testing-library/no-node-access
             screen.getByText('Test').closest('button') as HTMLButtonElement,
           ).toBeDisabled()
         },

@@ -13,7 +13,7 @@ describe('NumberInput', () => {
         minValue={0}
         maxValue={100}
         text="unit"
-        onChange={() => { }}
+        onChange={() => {}}
       />,
     ))
 
@@ -80,7 +80,7 @@ describe('NumberInput', () => {
         step={10}
         maxValue={100}
         defaultValue={10}
-        onBlur={() => { }}
+        onBlur={() => {}}
       />,
       {
         transform: async () => {
@@ -121,11 +121,12 @@ describe('NumberInput', () => {
         minValue={10}
         maxValue={100}
         defaultValue={30}
-        onMinCrossed={() => { }}
+        onMinCrossed={() => {}}
       />,
       {
         transform: async () => {
           const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.clear(input)
           await userEvent.type(input, '1')
@@ -142,11 +143,12 @@ describe('NumberInput', () => {
         minValue={10}
         maxValue={100}
         defaultValue={30}
-        onMaxCrossed={() => { }}
+        onMaxCrossed={() => {}}
       />,
       {
         transform: async () => {
           const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.clear(input)
           await userEvent.type(input, '120')
@@ -163,6 +165,7 @@ describe('NumberInput', () => {
       {
         transform: async () => {
           const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.click(input)
           fireEvent.keyDown(input, {
@@ -200,7 +203,7 @@ describe('NumberInput', () => {
         step={10}
         maxValue={100}
         defaultValue={12}
-        onBlur={() => { }}
+        onBlur={() => {}}
       />,
       {
         transform: async () => {
