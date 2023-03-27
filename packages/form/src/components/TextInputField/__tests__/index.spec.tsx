@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TextInputField } from '..'
 import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
@@ -50,19 +50,21 @@ describe('TextInputField', () => {
           const input = screen.getByRole('textbox')
           await userEvent.type(input, 'test')
           input.blur()
-          expect(
-            screen.getByText(
-              typeof mockErrors.MIN_LENGTH === 'function'
-                ? mockErrors.MIN_LENGTH({
-                  allValues: {},
-                  label: 'test',
-                  minLength: 13,
-                  name: 'test',
-                  value: 'test',
-                })
-                : mockErrors.MIN_LENGTH,
-            ),
-          ).toBeVisible()
+          await waitFor(() => {
+            expect(
+              screen.getByText(
+                typeof mockErrors.MIN_LENGTH === 'function'
+                  ? mockErrors.MIN_LENGTH({
+                      allValues: {},
+                      label: 'test',
+                      minLength: 13,
+                      name: 'test',
+                      value: 'test',
+                    })
+                  : mockErrors.MIN_LENGTH,
+              ),
+            ).toBeVisible()
+          })
         },
       },
     ))
