@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.25...@scaleway/form@1.41.26) (2023-03-27)
+
+
+### :bug: Bug Fixes
+
+* **NumberInput:** enable controlled NumberInput ([#2337](https://github.com/scaleway/scaleway-ui/issues/2337)) ([04f4859](https://github.com/scaleway/scaleway-ui/commit/04f4859aaf73ac76861370d9cdf02c5a2abb1c18))
+
+
+
 ## [1.41.25](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.24...@scaleway/form@1.41.25) (2023-03-27)
 
 **Note:** Version bump only for package @scaleway/form
