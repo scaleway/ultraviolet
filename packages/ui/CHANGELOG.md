@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.6...@scaleway/ui@0.229.7) (2023-03-27)
+
+
+### :bug: Bug Fixes
+
+* **NumberInput:** enable controlled NumberInput ([#2337](https://github.com/scaleway/scaleway-ui/issues/2337)) ([04f4859](https://github.com/scaleway/scaleway-ui/commit/04f4859aaf73ac76861370d9cdf02c5a2abb1c18))
+
+
+### :memo: Documentation
+
+* update documentation storybook ([#2324](https://github.com/scaleway/scaleway-ui/issues/2324)) ([39e7af5](https://github.com/scaleway/scaleway-ui/commit/39e7af5af8c2f258d1ef52cc329247a073d2ae26))
+
+
+
 ## [0.229.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.5...@scaleway/ui@0.229.6) (2023-03-27)
 
 

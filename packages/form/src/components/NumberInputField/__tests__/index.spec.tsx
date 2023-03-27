@@ -1,11 +1,12 @@
 import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Form, NumberInputField } from '../..'
+import { NumberInputField } from '../..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
 import { mockErrors } from '../../../mocks'
+import { Form } from '../../Form'
 
 describe('NumberInputField', () => {
   test('should render correctly', () =>
@@ -31,18 +32,23 @@ describe('NumberInputField', () => {
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => { })
-    const onChange = jest.fn(() => { })
-    const onBlur = jest.fn(() => { })
+    const onFocus = jest.fn(() => {})
+    const onChange = jest.fn(() => {})
+    const onBlur = jest.fn(() => {})
 
     return shouldMatchEmotionSnapshotFormWrapper(
-      <NumberInputField
-        name="test"
-        value={10}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-      />,
+      <Form
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+        initialValues={{ test: 10 }}
+      >
+        <NumberInputField
+          name="test"
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
+        />
+      </Form>,
       {
         transform: () => {
           const input = screen.getByLabelText('Input')
@@ -64,20 +70,23 @@ describe('NumberInputField', () => {
   })
 
   test('should trigger event onMinCrossed & onMaxCrossed', () => {
-    const onMinCrossed = jest.fn(() => { })
-    const onMaxCrossed = jest.fn(() => { })
+    const onMinCrossed = jest.fn(() => {})
+    const onMaxCrossed = jest.fn(() => {})
     const minValue = 5
     const maxValue = 20
 
     return shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => { }} errors={mockErrors}>
+      <Form
+        initialValues={{ test: 10 }}
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+      >
         <NumberInputField
           maxValue={maxValue}
           minValue={minValue}
           name="test"
           onMinCrossed={onMinCrossed}
           onMaxCrossed={onMaxCrossed}
-          value={10}
         />
       </Form>,
       {
