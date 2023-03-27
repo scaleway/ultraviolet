@@ -1,16 +1,7 @@
-import { Col, Grid, Row } from '..'
+import { Col, Row } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Grid', () => {
-  describe('Grid', () => {
-    test('renders correctly with default values', () =>
-      shouldMatchEmotionSnapshot(<Grid>Sample Grid</Grid>))
-    test('renders correctly when fluid', () =>
-      shouldMatchEmotionSnapshot(<Grid fluid>Sample Grid</Grid>))
-    test('renders correctly with custom gutter', () =>
-      shouldMatchEmotionSnapshot(<Grid gutter={4}>Sample Grid</Grid>))
-  })
-
   describe('Row', () => {
     test('renders correctly with default values', () =>
       shouldMatchEmotionSnapshot(<Row>Sample Row</Row>))
