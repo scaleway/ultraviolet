@@ -1,4 +1,4 @@
-import { act, waitFor } from '@testing-library/react'
+import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Form, NumberInputField } from '../..'
 import {
@@ -17,23 +17,23 @@ describe('NumberInputField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <NumberInputField name="test" value={10} disabled />,
       {
-        transform: ({ getByLabelText }) => {
-          const input = getByLabelText('Input')
+        transform: () => {
+          const input = screen.getByLabelText('Input')
           expect(input).toBeDisabled()
 
-          const inputMinus = getByLabelText('Minus')
+          const inputMinus = screen.getByLabelText('Minus')
           expect(inputMinus).toBeDisabled()
 
-          const inputPlus = getByLabelText('Plus')
+          const inputPlus = screen.getByLabelText('Plus')
           expect(inputPlus).toBeDisabled()
         },
       },
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
+    const onFocus = jest.fn(() => { })
+    const onChange = jest.fn(() => { })
+    const onBlur = jest.fn(() => { })
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <NumberInputField
@@ -44,8 +44,8 @@ describe('NumberInputField', () => {
         onBlur={onBlur}
       />,
       {
-        transform: ({ getByLabelText }) => {
-          const input = getByLabelText('Input')
+        transform: () => {
+          const input = screen.getByLabelText('Input')
           act(() => {
             input.focus()
           })
@@ -64,13 +64,13 @@ describe('NumberInputField', () => {
   })
 
   test('should trigger event onMinCrossed & onMaxCrossed', () => {
-    const onMinCrossed = jest.fn(() => {})
-    const onMaxCrossed = jest.fn(() => {})
+    const onMinCrossed = jest.fn(() => { })
+    const onMaxCrossed = jest.fn(() => { })
     const minValue = 5
     const maxValue = 20
 
     return shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form onRawSubmit={() => { }} errors={mockErrors}>
         <NumberInputField
           maxValue={maxValue}
           minValue={minValue}
@@ -81,15 +81,13 @@ describe('NumberInputField', () => {
         />
       </Form>,
       {
-        transform: async ({ getByLabelText }) => {
-          const input = getByLabelText('Input') as HTMLTextAreaElement
-          await act(async () => {
-            if (input.parentElement) await userEvent.click(input.parentElement)
+        transform: async () => {
+          const input = screen.getByLabelText<HTMLTextAreaElement>('Input')
+          if (input.parentElement) await userEvent.click(input.parentElement)
 
-            // trigger onMinCrossed
-            await userEvent.clear(input)
-            await userEvent.type(input, '1')
-          })
+          // trigger onMinCrossed
+          await userEvent.clear(input)
+          await userEvent.type(input, '1')
           await waitFor(() => expect(input.value).toBe('1'))
           act(() => {
             input.blur()
@@ -98,10 +96,8 @@ describe('NumberInputField', () => {
           expect(onMinCrossed).toBeCalledTimes(1)
 
           // trigger onMaxCrossed
-          await act(async () => {
-            await userEvent.clear(input)
-            await userEvent.type(input, '100')
-          })
+          await userEvent.clear(input)
+          await userEvent.type(input, '100')
           await waitFor(() => expect(input.value).toBe('100'))
           act(() => {
             input.blur()

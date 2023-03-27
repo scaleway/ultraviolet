@@ -1,5 +1,4 @@
-import { fireEvent } from '@testing-library/dom'
-import { act } from '@testing-library/react'
+import { act, fireEvent, screen } from '@testing-library/react'
 import { DateField } from '..'
 import {
   mockRandom,
@@ -30,12 +29,10 @@ describe('DateField', () => {
         initialValue={new Date('2022-09-01')}
       />,
       {
-        transform: async node => {
-          const select = node.getByRole('textbox')
-          await act(() =>
-            fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 }),
-          )
-          const option = node.getAllByRole('option')[0]
+        transform: () => {
+          const select = screen.getByRole('textbox')
+          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+          const option = screen.getAllByRole('option')[0]
           act(() => option?.click())
           expect(onChange).toBeCalledTimes(1)
           // Blur not working on react-datepicker:

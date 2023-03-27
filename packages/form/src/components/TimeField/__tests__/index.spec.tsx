@@ -1,5 +1,4 @@
-import { fireEvent, waitFor } from '@testing-library/dom'
-import { act } from '@testing-library/react'
+import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { TimeField } from '..'
 import {
   mockRandom,
@@ -20,8 +19,8 @@ describe('TimeField', () => {
 
   test('should render correctly checked without value', () =>
     shouldMatchEmotionSnapshotFormWrapper(<TimeField name="test" />, {
-      transform: async node => {
-        const input = node.getByRole('combobox')
+      transform: async () => {
+        const input = screen.getByRole('combobox')
         await waitFor(() => expect(input).toHaveAttribute('value', ''))
       },
     }))
@@ -39,13 +38,11 @@ describe('TimeField', () => {
         ]}
       />,
       {
-        transform: async node => {
-          const select = node.getByRole('combobox')
+        transform: () => {
+          const select = screen.getByRole('combobox')
           act(() => select.focus())
-          await act(() =>
-            fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 }),
-          )
-          const option = node.getByTestId('option--01:00')
+          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+          const option = screen.getByTestId('option--01:00')
             .firstChild as HTMLElement
           act(() => option.click())
           expect(onChange).toBeCalledTimes(1)

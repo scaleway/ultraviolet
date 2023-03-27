@@ -1,4 +1,4 @@
-import { act, waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createRef, useEffect } from 'react'
 import type { ListRefType } from '..'
@@ -383,25 +383,25 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[0])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
           await userEvent.click(checkboxes[0])
 
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           await userEvent.click(checkboxes[1])
 
-          expect(node.getByText('item selected'))
+          expect(screen.getByText('item selected'))
 
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
         },
       },
     ))
@@ -443,16 +443,16 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[1])
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
           await userEvent.click(checkboxes[0])
         },
       },
@@ -495,11 +495,11 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[0])
@@ -507,9 +507,9 @@ describe('List', () => {
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           await userEvent.click(checkboxes[1])
-          expect(node.getByText('item selected'))
+          expect(screen.getByText('item selected'))
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
         },
       },
     ))
@@ -550,13 +550,14 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const nameHeader = node.getByRole('button', {
+        transform: async () => {
+          const nameHeader = screen.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
+          const iconContainer =
+            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
+              .parentElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -565,17 +566,17 @@ describe('List', () => {
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
-          const departmentHeader = node.getByRole('button', {
+          const departmentHeader = screen.getByRole('button', {
             name: 'sort Department',
           })
           await userEvent.click(departmentHeader)
 
-          const referenceHeader = node.getByRole('button', {
+          const referenceHeader = screen.getByRole('button', {
             name: 'sort Reference',
           })
           await userEvent.click(referenceHeader)
 
-          const lastHeader = node.getByRole('button', {
+          const lastHeader = screen.getByRole('button', {
             name: 'sort 4',
           })
           await userEvent.click(lastHeader)
@@ -620,8 +621,8 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const nameHeader = node.getByRole('button', {
+        transform: async () => {
+          const nameHeader = screen.getByRole('button', {
             name: 'sort Name',
           })
           await userEvent.click(nameHeader)
@@ -668,16 +669,16 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[1])
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
           await userEvent.click(checkboxes[0])
         },
       },
@@ -720,13 +721,14 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const nameHeader = node.getByRole('button', {
+        transform: async () => {
+          const nameHeader = screen.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
+          const iconContainer =
+            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
+              .parentElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -735,17 +737,17 @@ describe('List', () => {
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
-          const departmentHeader = node.getByRole('button', {
+          const departmentHeader = screen.getByRole('button', {
             name: 'sort Department',
           })
           await userEvent.click(departmentHeader)
 
-          const referenceHeader = node.getByRole('button', {
+          const referenceHeader = screen.getByRole('button', {
             name: 'sort Reference',
           })
           await userEvent.click(referenceHeader)
 
-          const lastHeader = node.getByRole('button', {
+          const lastHeader = screen.getByRole('button', {
             name: 'sort 4',
           })
           await userEvent.click(lastHeader)
@@ -791,11 +793,11 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[0])
@@ -803,9 +805,9 @@ describe('List', () => {
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           await userEvent.click(checkboxes[1])
-          expect(node.getByText('item selected'))
+          expect(screen.getByText('item selected'))
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
         },
       },
     ))
@@ -848,16 +850,16 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[1])
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
           await userEvent.click(checkboxes[0])
         },
       },
@@ -901,11 +903,11 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           expect(checkboxes[0].value).toBe('all')
           await userEvent.click(checkboxes[0])
@@ -913,9 +915,9 @@ describe('List', () => {
           expect(checkboxes[1].name).toBe('select-rows')
           expect(checkboxes[1].value).toBe('0')
           await userEvent.click(checkboxes[1])
-          expect(node.getByText('item selected'))
+          expect(screen.getByText('item selected'))
           await userEvent.click(checkboxes[2])
-          expect(node.getByText('items selected'))
+          expect(screen.getByText('items selected'))
         },
       },
     ))
@@ -966,13 +968,14 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const nameHeader = node.getByRole('button', {
+        transform: async () => {
+          const nameHeader = screen.getByRole('button', {
             name: 'sort Name',
           })
 
-          const iconContainer = node.getAllByTestId('arrow-up-icon')[0]
-            .parentElement as HTMLDivElement
+          const iconContainer =
+            screen.getAllByTestId<HTMLDivElement>('arrow-up-icon')[0]
+              .parentElement
           expect(iconContainer.getAttribute('aria-sort')).toBe('none')
           await userEvent.click(nameHeader)
           expect(iconContainer.getAttribute('aria-sort')).toBe('ascending')
@@ -981,17 +984,17 @@ describe('List', () => {
           await userEvent.type(nameHeader, '{enter}')
           await userEvent.type(nameHeader, '{enter}')
 
-          const departmentHeader = node.getByRole('button', {
+          const departmentHeader = screen.getByRole('button', {
             name: 'sort Department',
           })
           await userEvent.click(departmentHeader)
 
-          const referenceHeader = node.getByRole('button', {
+          const referenceHeader = screen.getByRole('button', {
             name: 'sort Reference',
           })
           await userEvent.click(referenceHeader)
 
-          const lastHeader = node.getByRole('button', {
+          const lastHeader = screen.getByRole('button', {
             name: 'sort 4',
           })
           await userEvent.click(lastHeader)
@@ -1078,8 +1081,8 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const firstRow = node.getByTestId('row-0') as HTMLDetailsElement
+        transform: async () => {
+          const firstRow = screen.getByTestId<HTMLDetailsElement>('row-0')
           expect(firstRow.open).toBeFalsy()
 
           if (!firstRow.firstElementChild) throw new Error('No first child')
@@ -1131,19 +1134,15 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          const firstRow = node.getByTestId('row-0') as HTMLDetailsElement
-          const secondRow = node.getByTestId('row-1') as HTMLDetailsElement
+        transform: async () => {
+          const firstRow = screen.getByTestId<HTMLDetailsElement>('row-0')
+          const secondRow = screen.getByTestId<HTMLDetailsElement>('row-1')
           expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeFalsy()
-          await act(async () => {
-            await userEvent.click(firstRow.firstElementChild as Element)
-          })
+          await userEvent.click(firstRow.firstElementChild as Element)
           expect(firstRow.open).toBeTruthy()
           expect(secondRow.open).toBeFalsy()
-          await act(async () => {
-            await userEvent.click(secondRow.firstElementChild as Element)
-          })
+          await userEvent.click(secondRow.firstElementChild as Element)
           expect(firstRow.open).toBeFalsy()
           expect(secondRow.open).toBeTruthy()
         },
@@ -1193,11 +1192,11 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          expect(node.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = node.getAllByRole('checkbox', {
+        transform: async () => {
+          expect(screen.getByTestId('row-0')).toBeInTheDocument()
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
             hidden: true,
-          }) as HTMLInputElement[]
+          })
           expect(checkboxes[0].name).toBe('select-rows')
           await userEvent.click(checkboxes[0])
           await userEvent.click(checkboxes[0])
@@ -1522,7 +1521,7 @@ describe('List', () => {
 
   test('should render correctly with disabled', () => {
     const data = generateData(2)
-    const ref = createRef<ListRefType<typeof data[number]>>()
+    const ref = createRef<ListRefType<(typeof data)[number]>>()
 
     return shouldMatchEmotionSnapshot(
       <List
@@ -2015,26 +2014,24 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: async node => {
-          await node.findByRole('button', {
+        transform: async () => {
+          await screen.findByRole('button', {
             name: 'sort Name',
           })
-          const nameHeader = node.getByRole('button', {
+          const nameHeader = screen.getByRole<HTMLButtonElement>('button', {
             name: 'sort Name',
-          }) as HTMLButtonElement
+          })
 
-          await waitFor(async () => userEvent.click(nameHeader))
+          await userEvent.click(nameHeader)
           await waitFor(() =>
             expect(
-              (
-                node.getByRole('button', {
-                  name: 'Next',
-                }) as HTMLButtonElement
-              ).disabled,
+              screen.getByRole<HTMLButtonElement>('button', {
+                name: 'Next',
+              }).disabled,
             ).toBe(false),
           )
           await userEvent.click(
-            node.getByRole('button', {
+            screen.getByRole('button', {
               name: 'Next',
             }),
           )

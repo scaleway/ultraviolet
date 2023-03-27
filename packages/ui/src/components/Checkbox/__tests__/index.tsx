@@ -1,4 +1,4 @@
-import { fireEvent, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Checkbox } from '..'
 import {
@@ -119,43 +119,43 @@ describe('Checkbox', () => {
     ))
 
   test('renders with click event', async () => {
-    const node = renderWithTheme(
+    renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test">
         Checkbox Label
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', {
+    const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
-    }) as HTMLInputElement
+    })
     await userEvent.click(input)
     expect(input.checked).toBe(true)
   })
 
   test('renders with click event with progress', async () => {
-    const node = renderWithTheme(
+    renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test" progress>
         Checkbox Label
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', {
+    const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
-    }) as HTMLInputElement
+    })
     await userEvent.click(input)
     expect(input.checked).toBe(true)
   })
 
   test('check checkbox with space key for a11y', async () => {
-    const node = renderWithTheme(
+    renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', {
+    const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
-    }) as HTMLInputElement
+    })
 
     input.focus()
     expect(input).toHaveFocus()
@@ -164,15 +164,15 @@ describe('Checkbox', () => {
   })
 
   test('should not check checkbox with key A', async () => {
-    const node = renderWithTheme(
+    renderWithTheme(
       <Checkbox onChange={() => {}} value="test">
         Checkbox Label
       </Checkbox>,
     )
 
-    const input = node.getByRole('checkbox', {
+    const input = screen.getByRole<HTMLInputElement>('checkbox', {
       hidden: true,
-    }) as HTMLInputElement
+    })
 
     input.focus()
     fireEvent.keyDown(input, { charCode: 65, code: 'KeyA', key: 'a' })

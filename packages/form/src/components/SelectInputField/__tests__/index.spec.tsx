@@ -1,5 +1,4 @@
-import { fireEvent } from '@testing-library/dom'
-import { act } from '@testing-library/react'
+import { act, fireEvent, screen } from '@testing-library/react'
 import { SelectInputField } from '..'
 import {
   mockRandom,
@@ -58,14 +57,13 @@ describe('SelectInputField', () => {
     return shouldMatchEmotionSnapshotFormWrapper(
       <SelectInputField name="test" options={options} />,
       {
-        transform: async ({ getByRole, getByTestId, container }) => {
-          const select = getByRole('combobox') as HTMLInputElement
+        transform: ({ container }) => {
+          const select = screen.getByRole<HTMLInputElement>('combobox')
           act(() => select.focus())
-          await act(() =>
-            fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 }),
-          )
-          const option = getByTestId(`option-test-${selectedOption.value}`)
-            .firstChild as HTMLElement
+          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+          const option = screen.getByTestId(
+            `option-test-${selectedOption.value}`,
+          ).firstChild as HTMLElement
 
           act(() => option.click())
 
@@ -94,12 +92,10 @@ describe('SelectInputField', () => {
         onChange={onChange}
       />,
       {
-        transform: async node => {
-          const select = node.getByRole('combobox')
-          await act(() =>
-            fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 }),
-          )
-          const option = node.getByTestId('option-test-value')
+        transform: () => {
+          const select = screen.getByRole('combobox')
+          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+          const option = screen.getByTestId('option-test-value')
             .firstChild as HTMLElement
 
           act(() => option.click())

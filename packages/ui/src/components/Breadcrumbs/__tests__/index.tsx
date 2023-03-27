@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Breadcrumbs } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -52,8 +53,8 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
       {
-        transform: async ({ getByText }) => {
-          const step3 = getByText('Step 3')
+        transform: async () => {
+          const step3 = screen.getByText('Step 3')
           await userEvent.click(step3)
           expect(onClick).toHaveBeenCalledTimes(1)
         },
@@ -73,8 +74,8 @@ describe('Breadcrumbs', () => {
         <Breadcrumbs.Item onClick={onClick}>Step 3</Breadcrumbs.Item>
       </Breadcrumbs>,
       {
-        transform: async ({ getByText }) => {
-          const step3 = getByText('Step 3')
+        transform: async () => {
+          const step3 = screen.getByText('Step 3')
           await userEvent.click(step3)
           expect(onClick).toHaveBeenCalledTimes(1)
         },

@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Form, Submit, TextInputField } from '../..'
 import {
@@ -24,7 +25,7 @@ describe('Submit', () => {
   test('form is invalid', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => {}}
+        onRawSubmit={() => { }}
         initialValues={{ toto: '4' }}
         errors={mockErrors}
       >
@@ -48,12 +49,12 @@ describe('Submit', () => {
         <Submit>Test</Submit>
       </Form>,
       {
-        transform: async ({ getByText }) => {
+        transform: async () => {
           await userEvent.click(
-            getByText('Test').closest('button') as HTMLButtonElement,
+            screen.getByText<HTMLButtonElement>('Test').closest('button'),
           )
           expect(
-            getByText('Test').closest('button') as HTMLButtonElement,
+            screen.getByText<HTMLButtonElement>('Test').closest('button'),
           ).toBeDisabled()
         },
       },

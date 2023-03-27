@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { es, fr, ru } from 'date-fns/locale'
 import tk from 'timekeeper'
@@ -67,8 +68,8 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={fr} onChange={() => {}} />,
       {
-        transform: async ({ getByLabelText }) => {
-          const buttonContainer = getByLabelText('Date')
+        transform: async () => {
+          const buttonContainer = screen.getByLabelText('Date')
           await userEvent.click(buttonContainer)
         },
       },
@@ -78,8 +79,8 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={es} onChange={() => {}} />,
       {
-        transform: async ({ getByLabelText }) => {
-          const buttonContainer = getByLabelText('Date')
+        transform: async () => {
+          const buttonContainer = screen.getByLabelText('Date')
           await userEvent.click(buttonContainer)
         },
       },
@@ -89,8 +90,8 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput label="Date" locale={ru} onChange={() => {}} />,
       {
-        transform: async ({ getByLabelText }) => {
-          const buttonContainer = getByLabelText('Date')
+        transform: async () => {
+          const buttonContainer = screen.getByLabelText('Date')
           await userEvent.click(buttonContainer)
         },
       },

@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import { ToggleField } from '..'
 import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
 
@@ -12,8 +13,8 @@ describe('ToggleField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <ToggleField name="test" value="test" initialValue={['test']} />,
       {
-        transform: node => {
-          const element = node.getByRole('checkbox') as HTMLInputElement
+        transform: () => {
+          const element = screen.getByRole<HTMLInputElement>('checkbox')
           expect(element.checked).toBeTruthy()
         },
       },

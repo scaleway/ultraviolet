@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import { RadioField } from '..'
 import {
   mockRandom,
@@ -26,8 +26,8 @@ describe('RadioField', () => {
         Radio field disabled
       </RadioField>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           expect(input).toBeDisabled()
         },
       },
@@ -36,7 +36,7 @@ describe('RadioField', () => {
   test('should render correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => {}}
+        onRawSubmit={() => { }}
         errors={mockErrors}
         initialValues={{ test: 'checked' }}
       >
@@ -45,17 +45,17 @@ describe('RadioField', () => {
         </RadioField>
       </Form>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           expect(input).toBeChecked()
         },
       },
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
+    const onFocus = jest.fn(() => { })
+    const onChange = jest.fn(() => { })
+    const onBlur = jest.fn(() => { })
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <RadioField
@@ -68,8 +68,8 @@ describe('RadioField', () => {
         Radio field events
       </RadioField>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           act(() => input.focus())
           expect(onFocus).toBeCalledTimes(1)
           act(() => input.click())
