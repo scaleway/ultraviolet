@@ -1,4 +1,5 @@
 import type { CSSObject } from '@emotion/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { SelectInput } from '..'
 import {
@@ -30,8 +31,8 @@ describe('SelectInput', () => {
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -46,8 +47,8 @@ describe('SelectInput', () => {
         emptyState={() => 'test'}
       />,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -73,7 +74,7 @@ describe('SelectInput', () => {
         labelId="test-label"
         name="controlled"
         value="test"
-        onChange={() => {}}
+        onChange={() => { }}
       >
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
@@ -123,8 +124,8 @@ describe('SelectInput', () => {
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -140,8 +141,8 @@ describe('SelectInput', () => {
         </SelectInput.Option>
       </SelectInput>,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -161,8 +162,8 @@ describe('SelectInput', () => {
         </SelectInput.Option>
       </SelectInput>,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -181,8 +182,8 @@ describe('SelectInput', () => {
         <SelectInput.Option value="b">Option B</SelectInput.Option>
       </SelectInput>,
       {
-        transform: async node => {
-          const input = node.getByRole('combobox')
+        transform: async () => {
+          const input = screen.getByRole('combobox')
           await userEvent.click(input)
         },
       },
@@ -198,7 +199,7 @@ describe('SelectInput', () => {
         animation="pulse"
         animationDuration={1000}
         value="a"
-        onChange={() => {}}
+        onChange={() => { }}
       >
         <SelectInput.Option value="a">Option A</SelectInput.Option>
         <SelectInput.Option value="b">Option B</SelectInput.Option>
