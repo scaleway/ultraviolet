@@ -303,7 +303,7 @@ describe('SelectInput', () => {
           inputId="test"
           labelId="test-label"
           name="test"
-          menuPortalTarget={screen.getByTestId('test-portal')}
+          menuPortalTarget={screen.queryByTestId('test-portal')}
         >
           <SelectInput.Option value="a">Option A</SelectInput.Option>
           <SelectInput.Option value="b">Option B</SelectInput.Option>
