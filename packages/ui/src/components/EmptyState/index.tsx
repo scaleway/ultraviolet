@@ -68,6 +68,7 @@ type EmptyStateProps = {
   bordered?: boolean
   className?: string
   children?: ReactNode
+  'data-testid'?: string
 }
 
 export const EmptyState = ({
@@ -81,8 +82,14 @@ export const EmptyState = ({
   className,
   bordered,
   children,
+  'data-testid': dataTestId,
 }: EmptyStateProps) => (
-  <Container size={size} bordered={bordered} className={className}>
+  <Container
+    size={size}
+    bordered={bordered}
+    className={className}
+    data-testid={dataTestId}
+  >
     <StyledStack gap={3} justifyContent="center" alignItems="center">
       <Stack gap={2} justifyContent="center" alignItems="center">
         {image && typeof image === 'string' ? (

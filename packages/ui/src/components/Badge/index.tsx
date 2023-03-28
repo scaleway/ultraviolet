@@ -116,6 +116,7 @@ type BadgeProps = {
   disabled?: boolean
   className?: string
   children: ReactNode
+  'data-testid'?: string
 }
 
 export const Badge = ({
@@ -126,6 +127,7 @@ export const Badge = ({
   disabled = false,
   className,
   children,
+  'data-testid': dataTestId,
 }: BadgeProps) => {
   const theme = useTheme()
 
@@ -157,6 +159,7 @@ export const Badge = ({
       }
       size={sizeValue}
       className={className}
+      data-testid={dataTestId}
     >
       {icon && sizeValue !== SIZES.small ? (
         <Icon name={icon} size={16} />

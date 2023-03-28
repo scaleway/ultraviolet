@@ -31,6 +31,8 @@ type BarProps = {
 type BarStackProps = {
   data: BarProps[]
   total?: number
+  className?: string
+  'data-testid'?: string
 }
 
 const StyledBarWrapper = styled.div`
@@ -156,14 +158,19 @@ const StyledContainer = styled.div`
   }
 `
 
-export const BarStack = ({ data, total }: BarStackProps): JSX.Element => {
+export const BarStack = ({
+  data,
+  total,
+  className,
+  'data-testid': dataTestId,
+}: BarStackProps): JSX.Element => {
   const computedTotal = useMemo(
     () => total ?? data.reduce((acc, { value }) => acc + value, 0),
     [total, data],
   )
 
   return (
-    <StyledContainer>
+    <StyledContainer data-testid={dataTestId} className={className}>
       {data.map(
         ({
           id,

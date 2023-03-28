@@ -65,6 +65,9 @@ type AvatarProps = {
    * Used only when `text` prop is specified
    */
   lock?: boolean
+
+  className?: string
+  'data-testid'?: string
 } & XOR<
   [
     {
@@ -95,8 +98,10 @@ export const Avatar = ({
   textColor = 'neutral',
   textSize = 10,
   lock = false,
+  className,
+  'data-testid': dataTestId,
 }: AvatarProps) => (
-  <AvatarContainer size={size}>
+  <AvatarContainer size={size} className={className} data-testid={dataTestId}>
     {text || (!text && !image) ? (
       <StyledTextAvatar
         lock={lock}

@@ -23,10 +23,12 @@ type BarChartProps = {
   pointFormatters?: Partial<Record<'x' | 'y', Formatter>>
   tickValues?: Partial<Record<'bottom' | 'left' | 'right' | 'top', TickSpec>>
   keys?: string[]
+  className?: string
   tooltipFunction?: (
     props: BarTooltipProps<BarDatum>,
   ) => ComponentProps<typeof BarChartTooltip>
   chartProps?: Partial<BarSvgProps<BarDatum>>
+  'data-testid'?: string
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
@@ -46,6 +48,8 @@ export const BarChart = ({
   keys = DEFAULT_KEYS,
   tooltipFunction,
   chartProps,
+  className,
+  'data-testid': dataTestId,
 }: BarChartProps) => {
   const theme = useTheme()
   const dataset = data?.map(d => {
@@ -94,7 +98,7 @@ export const BarChart = ({
   )
 
   return (
-    <div style={{ height }}>
+    <div style={{ height }} className={className} data-testid={dataTestId}>
       <ResponsiveBar
         colors={({ id, data: localData }) => String(localData[`${id}Color`])}
         data={dataset}

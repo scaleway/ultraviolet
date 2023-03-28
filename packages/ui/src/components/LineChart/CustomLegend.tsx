@@ -77,6 +77,8 @@ type CustomLegendProps = {
   data?: Serie[]
   selected: string[]
   setSelected: (selected: string[]) => void
+  className?: string
+  'data-testid'?: string
 }
 
 const StyledContainer = styled.div`
@@ -88,8 +90,10 @@ export const CustomLegend = ({
   data,
   selected,
   setSelected,
+  className,
+  'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <StyledContainer>
+  <StyledContainer className={className} data-testid={dataTestId}>
     <div css={styles.head}>
       <LongContainer>Legend</LongContainer>
       <Cell variant="body" value="Minimum" />

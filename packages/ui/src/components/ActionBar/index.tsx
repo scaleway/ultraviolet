@@ -29,14 +29,16 @@ type ActionBarProps = {
   role?: string
   'aria-modal'?: 'true' | 'false'
   className?: string
+  'data-testid'?: string
 }
 
 export const ActionBar = ({
   children,
-  role = "dialog",
+  role = 'dialog',
   rank = 0,
   'aria-modal': ariaModal = 'true',
   className,
+  'data-testid': dataTestId,
 }: ActionBarProps) =>
   createPortal(
     <StyledDiv
@@ -44,6 +46,7 @@ export const ActionBar = ({
       role={role}
       aria-modal={ariaModal}
       className={className}
+      data-testid={dataTestId}
     >
       {children}
     </StyledDiv>,

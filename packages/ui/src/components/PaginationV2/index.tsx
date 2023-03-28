@@ -78,6 +78,8 @@ type PaginationProps = {
     Disable all buttons
   */
   disabled?: boolean
+  className?: string
+  'data-testid'?: string
 }
 
 /**
@@ -89,6 +91,8 @@ export const Pagination = ({
   pageCount,
   onChange,
   pageTabCount = 5,
+  className,
+  'data-testid': dataTestId,
 }: PaginationProps): JSX.Element => {
   const goToFirstPage = useCallback(() => {
     onChange(1)
@@ -119,7 +123,7 @@ export const Pagination = ({
   )
 
   return (
-    <StyledContainer>
+    <StyledContainer className={className} data-testid={dataTestId}>
       <PageSwitchContainer>
         <StyledPageSwitch
           aria-label="First"

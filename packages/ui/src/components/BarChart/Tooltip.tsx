@@ -24,14 +24,18 @@ type BarChartToolTipProps = {
   color: string
   indexValue: string
   formattedValue: string
+  className?: string
+  'data-testid'?: string
 }
 
 const BarChartToolTip = ({
   formattedValue,
   indexValue,
   color,
+  className,
+  'data-testid': dataTestId,
 }: BarChartToolTipProps) => (
-  <BarToolTipContainer>
+  <BarToolTipContainer className={className} data-testid={dataTestId}>
     <div>
       <BarColorSquare color={color} />
     </div>

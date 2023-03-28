@@ -163,6 +163,8 @@ type DateInputProps = Pick<
    */
   label?: string
   value?: Date | string
+  className?: string
+  'data-testid'?: string
 }
 
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
@@ -183,6 +185,8 @@ export const DateInput = ({
   onFocus,
   required = false,
   value,
+  className,
+  'data-testid': dataTestId,
 }: DateInputProps) => {
   const localeCode =
     (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
@@ -196,6 +200,8 @@ export const DateInput = ({
       <Global styles={style} />
       <StyledWrapper>
         <DatePicker
+          data-testid={dataTestId}
+          className={className}
           autoFocus={autoFocus}
           fixedHeight
           name={name}

@@ -71,6 +71,7 @@ type AlertProps = {
   title?: string
   variant?: AlertType
   className?: string
+  'data-testid'?: string
 }
 
 export const Alert = ({
@@ -79,14 +80,16 @@ export const Alert = ({
   title,
   variant = 'danger',
   className,
+  'data-testid': dataTestId,
 }: AlertProps) => (
   <StyledStackContainer
+    gap={2}
     direction="row"
     alignItems="center"
     justifyContent="flex-start"
     variant={variant}
     className={className}
-    gap={2}
+    data-testid={dataTestId}
   >
     <Icon
       name={icon || typesDefaultIcons[variant]}

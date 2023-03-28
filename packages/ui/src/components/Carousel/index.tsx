@@ -156,6 +156,8 @@ export const Carousel = ({
           e.preventDefault()
           e.stopPropagation()
         }}
+        className={className}
+        data-testid="scrollbar-wrapper"
       >
         {children}
       </StyledScrollableWrapper>
