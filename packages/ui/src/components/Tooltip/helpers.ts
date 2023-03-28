@@ -5,13 +5,13 @@ export const ARROW_WIDTH = 6 // in px
 const SPACE = 6 // in px
 const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
 export const DEFAULT_POSITIONS = {
-  arrowLeft: 50,
-  arrowTop: 99,
+  arrowLeft: -999,
+  arrowTop: -999,
   arrowTransform: 'translate(-50%, -50)',
   placement: 'top',
   rotate: 135,
-  tooltipInitialPosition: 'translate3d(0, 0, 0)',
-  tooltipPosition: 'translate3d(0, 0, 0)',
+  tooltipInitialPosition: 'translate3d(-999px, -999px, 0)',
+  tooltipPosition: 'translate3d(-999px, -999px, 0)',
 }
 
 type ComputePlacementTypes = {
