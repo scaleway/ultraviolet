@@ -1,28 +1,28 @@
-import { RowV2 } from '..'
+import { Row } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
-describe('RowV2', () => {
+describe('Row', () => {
   test('renders correctly with default props', () =>
     shouldMatchEmotionSnapshot(
-      <RowV2 templateColumns="repeat(2, 1fr)">
+      <Row templateColumns="repeat(2, 1fr)">
         <div>First col</div>
         <div>Second col</div>
-      </RowV2>,
+      </Row>,
     ))
 
   test('renders correctly with specific gap', () =>
     shouldMatchEmotionSnapshot(
-      <RowV2 templateColumns="repeat(2, 1fr)" gap={1}>
+      <Row templateColumns="repeat(2, 1fr)" gap={1}>
         <div>First col</div>
         <div>Second col</div>
-      </RowV2>,
+      </Row>,
     ))
 
   test('renders correctly with specific align', () =>
     shouldMatchEmotionSnapshot(
-      <RowV2 templateColumns="repeat(2, 1fr)" gap={1} alignItems="center">
+      <Row templateColumns="repeat(2, 1fr)" gap={1} alignItems="center">
         <div>First col</div>
         <div>Second col</div>
-      </RowV2>,
+      </Row>,
     ))
 })

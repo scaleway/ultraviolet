@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { Story } from '@storybook/react'
-import { RowV2 } from '..'
+import { Row } from '..'
 import { Separator, Stack } from '../..'
 
 const DivWithBackground = styled.div`
@@ -10,7 +10,7 @@ const DivWithBackground = styled.div`
 
 export const AlignItems: Story = () => (
   <Stack gap={2}>
-    <RowV2 templateColumns="repeat(3, 1fr)">
+    <Row templateColumns="repeat(3, 1fr)">
       <DivWithBackground style={{ height: '100px' }}>
         100px height & default align
       </DivWithBackground>
@@ -18,9 +18,9 @@ export const AlignItems: Story = () => (
         50px height & default align
       </DivWithBackground>
       <DivWithBackground>auto height & default align</DivWithBackground>
-    </RowV2>
+    </Row>
     <Separator />
-    <RowV2 templateColumns="repeat(3, 1fr)" alignItems="center">
+    <Row templateColumns="repeat(3, 1fr)" alignItems="center">
       <DivWithBackground style={{ height: '100px' }}>
         100px height & align center
       </DivWithBackground>
@@ -28,7 +28,7 @@ export const AlignItems: Story = () => (
         50px height & align center
       </DivWithBackground>
       <DivWithBackground>auto height & align center</DivWithBackground>
-    </RowV2>
+    </Row>
   </Stack>
 )
 

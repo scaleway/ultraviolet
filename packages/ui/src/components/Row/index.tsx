@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SCWUITheme } from '../../theme'
 
-type StyledRowProps = Pick<RowV2Props, 'gap' | 'templateColumns' | 'alignItems'>
+type StyledRowProps = Pick<RowProps, 'gap' | 'templateColumns' | 'alignItems'>
 export const StyledRow = styled('div', {
   shouldForwardProp: prop =>
     !['templateColumns', 'gap', 'alignItems'].includes(prop),
@@ -15,7 +15,7 @@ export const StyledRow = styled('div', {
   `}
 `
 
-type RowV2Props = {
+type RowProps = {
   className?: string
   'data-testid'?: string
   children: ReactNode
@@ -24,14 +24,14 @@ type RowV2Props = {
   alignItems?: CSSProperties['alignItems']
 }
 
-export const RowV2 = ({
+export const Row = ({
   className,
   'data-testid': dataTestId,
   children,
   templateColumns,
   alignItems,
   gap,
-}: RowV2Props) => (
+}: RowProps) => (
   <StyledRow
     className={className}
     data-testid={dataTestId}
