@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { UnitInput, sizesHeight } from '..'
 import {
@@ -66,16 +66,17 @@ describe('UnitInput', () => {
     ))
 
   test(`renders with SelectInput update`, async () => {
-    const node = renderWithTheme(<UnitInput name="test" />)
+    renderWithTheme(<UnitInput name="test" />)
 
     // Role textbox is only for the searchable input
-    const valueContainer = node.getByRole('combobox') as HTMLInputElement
+    const valueContainer = screen.getByRole<HTMLInputElement>('combobox')
     await userEvent.click(valueContainer)
     await userEvent.type(valueContainer, 'weeks{enter}')
     await waitFor(() => expect(valueContainer.value).toBe(''))
 
-    const selectInput = node.getByTestId('select-input-test-unit')
+    const selectInput = screen.getByTestId('select-input-test-unit')
     // Real select input value is inside a hidden input with the name put in SelectInput props.
+    // eslint-disable-next-line testing-library/no-node-access
     const selectInputInputHidden = selectInput.querySelector(
       'input[type="hidden"]',
     ) as HTMLInputElement
@@ -84,9 +85,9 @@ describe('UnitInput', () => {
 })
 
 test(`renders with TextInput update`, async () => {
-  const node = renderWithTheme(<UnitInput name="test" />)
+  renderWithTheme(<UnitInput name="test" />)
 
-  const input = node.getByRole('spinbutton') as HTMLInputElement
+  const input = screen.getByRole<HTMLInputElement>('spinbutton')
   await waitFor(() => expect(input.value).toBe('1'))
   await userEvent.click(input)
   await userEvent.type(input, '10')

@@ -19,7 +19,7 @@ const LineColorSquare = styled.span`
 `
 type LineChartTooltipProps = { point: Point }
 
-const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
+export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
   <LineTooltipContainer>
     <div>
       <LineColorSquare color={point.serieColor} />
@@ -39,5 +39,3 @@ const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
     </div>
   </LineTooltipContainer>
 )
-
-export default LineChartTooltip

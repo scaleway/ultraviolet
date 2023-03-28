@@ -1,4 +1,4 @@
-import { act, waitFor } from '@testing-library/react'
+import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInputField } from '../..'
 import {
@@ -18,14 +18,14 @@ describe('NumberInputField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <NumberInputField name="test" value={10} disabled />,
       {
-        transform: ({ getByLabelText }) => {
-          const input = getByLabelText('Input')
+        transform: () => {
+          const input = screen.getByLabelText('Input')
           expect(input).toBeDisabled()
 
-          const inputMinus = getByLabelText('Minus')
+          const inputMinus = screen.getByLabelText('Minus')
           expect(inputMinus).toBeDisabled()
 
-          const inputPlus = getByLabelText('Plus')
+          const inputPlus = screen.getByLabelText('Plus')
           expect(inputPlus).toBeDisabled()
         },
       },
@@ -50,8 +50,8 @@ describe('NumberInputField', () => {
         />
       </Form>,
       {
-        transform: ({ getByLabelText }) => {
-          const input = getByLabelText('Input')
+        transform: () => {
+          const input = screen.getByLabelText('Input')
           act(() => {
             input.focus()
           })
@@ -90,15 +90,14 @@ describe('NumberInputField', () => {
         />
       </Form>,
       {
-        transform: async ({ getByLabelText }) => {
-          const input = getByLabelText('Input') as HTMLTextAreaElement
-          await act(async () => {
-            if (input.parentElement) await userEvent.click(input.parentElement)
+        transform: async () => {
+          const input = screen.getByLabelText<HTMLTextAreaElement>('Input')
+          // eslint-disable-next-line testing-library/no-node-access
+          if (input.parentElement) await userEvent.click(input.parentElement)
 
-            // trigger onMinCrossed
-            await userEvent.clear(input)
-            await userEvent.type(input, '1')
-          })
+          // trigger onMinCrossed
+          await userEvent.clear(input)
+          await userEvent.type(input, '1')
           await waitFor(() => expect(input.value).toBe('1'))
           act(() => {
             input.blur()
@@ -107,10 +106,8 @@ describe('NumberInputField', () => {
           expect(onMinCrossed).toBeCalledTimes(1)
 
           // trigger onMaxCrossed
-          await act(async () => {
-            await userEvent.clear(input)
-            await userEvent.type(input, '100')
-          })
+          await userEvent.clear(input)
+          await userEvent.type(input, '100')
           await waitFor(() => expect(input.value).toBe('100'))
           act(() => {
             input.blur()

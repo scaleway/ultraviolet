@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import { userEvent } from '@storybook/testing-library'
-import { fireEvent, render } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { List } from '..'
@@ -194,8 +194,8 @@ describe('ListV2', () => {
         ))}
       </List>,
       {
-        transform: node => {
-          const checkboxes = node.getAllByRole('checkbox') as HTMLInputElement[]
+        transform: () => {
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
           const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
           const allCheckbox = checkboxes.find(({ value }) => value === 'all')
@@ -279,10 +279,13 @@ describe('ListV2', () => {
         )}
       </LocalControlValue>,
       {
-        transform: node => {
-          const listHeaderCells = node.queryAllByRole('button', {
-            queryFallbacks: true,
-          }) as HTMLTableCellElement[]
+        transform: () => {
+          const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
+            'button',
+            {
+              queryFallbacks: true,
+            },
+          )
           expect(listHeaderCells).toHaveLength(columns.length)
 
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
@@ -375,9 +378,9 @@ describe('ListV2', () => {
         )}
       </List>,
       {
-        transform: node => {
-          userEvent.click(node.getAllByRole('button')[0])
-          userEvent.click(node.getAllByRole('button')[0])
+        transform: () => {
+          userEvent.click(screen.getAllByRole('button')[0])
+          userEvent.click(screen.getAllByRole('button')[0])
         },
       },
     ))
@@ -396,8 +399,8 @@ describe('ListV2', () => {
         ))}
       </List>,
       {
-        transform: node => {
-          const cell = node.getByText(data[0].columnE)
+        transform: () => {
+          const cell = screen.getByText(data[0].columnE)
           userEvent.click(cell)
         },
       },
@@ -419,11 +422,12 @@ describe('ListV2', () => {
         )}
       </List>,
       {
-        transform: node => {
-          userEvent.click(node.getAllByRole('button')[0])
-          userEvent.click(node.getAllByRole('button')[0])
-          userEvent.click(node.getAllByRole('button')[0])
-          userEvent.click(node.getAllByRole('button')[1])
+        transform: () => {
+          const buttons = screen.getAllByRole('button')
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[1])
         },
       },
     ))
@@ -558,8 +562,8 @@ describe('ListV2', () => {
         )}
       </List>,
       {
-        transform: node => {
-          const rows = node.getAllByRole('button')
+        transform: () => {
+          const rows = screen.getAllByRole('button')
           const firstRow = rows[0]
           expect(firstRow).toHaveAttribute('tabIndex', '0')
           // Testing expanding by pressing space key

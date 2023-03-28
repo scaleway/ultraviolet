@@ -1,4 +1,4 @@
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { VerificationCode } from '..'
 import {
   renderWithTheme,
@@ -23,10 +23,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode type="number" fields={4} initialValue="1" />,
       {
-        transform: ({ container }) => {
-          const input0 = container.querySelector(
-            'input[id="verification-code-0"]',
-          ) as HTMLInputElement
+        transform: () => {
+          const input0 = screen.getByTestId('0')
           fireEvent.keyDown(input0, { keyCode: 8 }) // press backspace
           fireEvent.keyDown(input0, { keyCode: 37 }) // press arrow left
           fireEvent.keyDown(input0, { keyCode: 39 }) // press arrow right
@@ -34,9 +32,7 @@ describe('VerificationCode', () => {
           fireEvent.keyDown(input0, { keyCode: 40 }) // press arrow down
           fireEvent.keyDown(input0, { keyCode: 50 }) // press 2
 
-          const input1 = container.querySelector(
-            'input[id="verification-code-1"]',
-          ) as HTMLInputElement
+          const input1 = screen.getByTestId('1')
 
           input1.focus()
           fireEvent.keyDown(input1, { keyCode: 8 }) // press backspace
@@ -51,8 +47,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode type="number" fields={4} initialValue="1" />,
       {
-        transform: ({ getByDisplayValue }) => {
-          pasteEventWithValue(getByDisplayValue('1'), '1234')
+        transform: () => {
+          pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
         },
       },
     ))
@@ -61,8 +57,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="1" />,
       {
-        transform: ({ getByDisplayValue }) => {
-          pasteEventWithValue(getByDisplayValue('1'), '1a34')
+        transform: () => {
+          pasteEventWithValue(screen.getByDisplayValue('1'), '1a34')
         },
       },
     ))
@@ -71,8 +67,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="12" />,
       {
-        transform: ({ getByDisplayValue }) => {
-          pasteEventWithValue(getByDisplayValue('1'), '123456')
+        transform: () => {
+          pasteEventWithValue(screen.getByDisplayValue('1'), '123456')
         },
       },
     ))
@@ -81,8 +77,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode fields={4} initialValue="12" />,
       {
-        transform: ({ getByDisplayValue }) => {
-          pasteEventWithValue(getByDisplayValue('2'), '123456')
+        transform: () => {
+          pasteEventWithValue(screen.getByDisplayValue('2'), '123456')
         },
       },
     ))
@@ -91,8 +87,8 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode type="text" fields={6} initialValue="12" />,
       {
-        transform: ({ getByDisplayValue }) => {
-          pasteEventWithValue(getByDisplayValue('2'), 'h23a*6')
+        transform: () => {
+          pasteEventWithValue(screen.getByDisplayValue('2'), 'h23a*6')
         },
       },
     ))
@@ -101,7 +97,7 @@ describe('VerificationCode', () => {
     const onChange = jest.fn()
     const onComplete = jest.fn()
 
-    const { getByDisplayValue } = renderWithTheme(
+    renderWithTheme(
       <VerificationCode
         type="number"
         fields={4}
@@ -111,12 +107,12 @@ describe('VerificationCode', () => {
       />,
     )
 
-    pasteEventWithValue(getByDisplayValue('1'), '12')
+    pasteEventWithValue(screen.getByDisplayValue('1'), '12')
 
     expect(onChange).toHaveBeenLastCalledWith('12')
     expect(onChange).toHaveBeenCalledTimes(1)
 
-    pasteEventWithValue(getByDisplayValue('1'), '1234')
+    pasteEventWithValue(screen.getByDisplayValue('1'), '1234')
     expect(onComplete).toHaveBeenLastCalledWith('1234')
     expect(onComplete).toHaveBeenCalledTimes(1)
   })

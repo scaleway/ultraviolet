@@ -229,7 +229,7 @@ export const VerificationCode = ({
           pattern={type === 'number' ? '[0-9]*' : undefined}
           // eslint-disable-next-line react/no-array-index-key
           key={`${inputId}-${index}`}
-          data-id={index}
+          data-testid={index}
           value={value}
           id={inputId ? `${inputId}-${index}` : undefined}
           ref={inputRefs[index]}

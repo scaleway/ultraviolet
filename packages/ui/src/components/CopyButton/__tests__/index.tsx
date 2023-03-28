@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
   renderWithTheme,
@@ -49,9 +50,9 @@ describe('CopyButton', () => {
     ))
 
   it('should renders correctly with a complex children', async () => {
-    const node = renderWithTheme(<CopyButton value="test" />)
+    renderWithTheme(<CopyButton value="test" />)
 
-    await userEvent.click(node.getByRole('button'))
+    await userEvent.click(screen.getByRole('button'))
     // @ts-expect-error we are voluntarily based on an older browser spec
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     expect(window.clipboardData.getData()).toBe('test')

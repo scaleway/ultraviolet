@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Pagination } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -54,19 +55,19 @@ describe('Pagination', () => {
     shouldMatchEmotionSnapshot(
       <Pagination page={2} pageCount={10} onChange={() => {}} />,
       {
-        transform: async node => {
-          const nextButton = node.getByRole('button', { name: 'Next' })
-          const backButton = node.getByRole('button', { name: 'Back' })
-          const firstButton = node.getByRole('button', { name: 'First' })
-          const lastButton = node.getByRole('button', { name: 'Last' })
+        transform: async () => {
+          const nextButton = screen.getByRole('button', { name: 'Next' })
+          const backButton = screen.getByRole('button', { name: 'Back' })
+          const firstButton = screen.getByRole('button', { name: 'First' })
+          const lastButton = screen.getByRole('button', { name: 'Last' })
           await userEvent.click(nextButton)
           await userEvent.click(backButton)
           await userEvent.click(lastButton)
           await userEvent.click(firstButton)
-          const page3Button = node.getByRole('button', { name: 'Page 3' })
+          const page3Button = screen.getByRole('button', { name: 'Page 3' })
           await userEvent.click(page3Button)
           await userEvent.click(page3Button)
-          const page4Button = node.getByRole('button', { name: 'Page 4' })
+          const page4Button = screen.getByRole('button', { name: 'Page 4' })
           await userEvent.click(page4Button)
         },
       },

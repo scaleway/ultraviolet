@@ -1,4 +1,4 @@
-import { fireEvent, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TagInput } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -108,16 +108,16 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async node => {
-          const input = node.getByDisplayValue('')
+        transform: async () => {
+          const input = screen.getByDisplayValue('')
           expect(input).toBeInTheDocument()
-          const HelloTag = node.queryByText(/hello/)
+          const HelloTag = screen.queryByText(/hello/)
           expect(HelloTag).toBeInTheDocument()
 
           // remove Tag
-          const tagClose = HelloTag?.nextElementSibling as HTMLButtonElement
-          await userEvent.click(tagClose)
-
+          const tagsClose = screen.getAllByTestId('close-tag')
+          const helloCloseTags = tagsClose[0]
+          await userEvent.click(helloCloseTags)
           // check Tag was removed
           expect(HelloTag).not.toBeInTheDocument()
         },
@@ -135,15 +135,18 @@ describe('TagInput', () => {
         tags={['throw', 'error']}
       />,
       {
-        transform: async node => {
-          const input = node.getByDisplayValue('')
+        transform: async () => {
+          const input = screen.getByDisplayValue('')
           expect(input).toBeInTheDocument()
-          const ErrorTag = node.queryByText(/error/)
+          const ErrorTag = screen.queryByText(/error/)
           expect(ErrorTag).toBeInTheDocument()
 
           // remove Tag
-          const tagClose = ErrorTag?.nextElementSibling as HTMLButtonElement
-          await userEvent.click(tagClose)
+          const tagsClose = screen.getAllByTestId('close-tag')
+          const firstTag = tagsClose[0]
+          if (firstTag) {
+            await userEvent.click(firstTag)
+          }
         },
       },
     ))
@@ -157,11 +160,11 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async ({ getByDisplayValue, getByText }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByDisplayValue<HTMLInputElement>('')
           await userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
-          expect(getByText('test')).toBeInTheDocument()
+          expect(screen.getByText('test')).toBeInTheDocument()
         },
       },
     ))
@@ -178,8 +181,8 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async ({ getByDisplayValue }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByDisplayValue<HTMLInputElement>('')
           await userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
         },
@@ -195,9 +198,9 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async ({ getByDisplayValue, queryByText }) => {
-          const input = getByDisplayValue('')
-          const LastTag = queryByText(/world/)
+        transform: async () => {
+          const input = screen.getByDisplayValue('')
+          const LastTag = screen.queryByText(/world/)
           expect(LastTag).toBeInTheDocument()
           await userEvent.click(input)
           expect(input).toHaveFocus()
@@ -216,13 +219,14 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: async ({ getByDisplayValue, getByText }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByDisplayValue<HTMLInputElement>('')
           fireEvent.paste(input, {
             clipboardData: { getData: () => 'test' },
           })
           await waitFor(() => expect(input.value).toBe(''))
-          await waitFor(() => getByText('test'))
+
+          await screen.findByText('test')
         },
       },
     ))
@@ -238,8 +242,8 @@ describe('TagInput', () => {
         tags={['hello', 'world']}
       />,
       {
-        transform: ({ getByDisplayValue }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
+        transform: () => {
+          const input = screen.getByDisplayValue<HTMLInputElement>('')
           fireEvent.paste(input, {
             clipboardData: { getData: () => 'test' },
           })

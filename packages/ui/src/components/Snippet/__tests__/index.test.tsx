@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { Snippet } from '../index'
@@ -62,8 +63,8 @@ describe('Snippet', () => {
 
   it('should click on extend button to display full content on ', () =>
     shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>, {
-      transform: async ({ getByRole }) => {
-        await userEvent.click(getByRole('button', { name: 'Show' }))
+      transform: async () => {
+        await userEvent.click(screen.getByRole('button', { name: 'Show' }))
       },
     }))
 })

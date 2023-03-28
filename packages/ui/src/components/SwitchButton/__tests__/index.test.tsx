@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { SwitchButton } from '..'
 import {
@@ -60,7 +61,7 @@ describe('SwitchButton', () => {
   test('renders with on change', async () => {
     const onChange = jest.fn()
 
-    const node = renderWithTheme(
+     renderWithTheme(
       <SwitchButton
         name="test"
         onChange={onChange}
@@ -76,7 +77,7 @@ describe('SwitchButton', () => {
       />,
     )
 
-    const input = node.getAllByRole('radio', {
+    const input = screen.getAllByRole('radio', {
       hidden: true,
     })
 

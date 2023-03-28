@@ -72,20 +72,20 @@ export const Item = ({
   onClick,
   step,
 }: ItemProps) => (
-    <ItemContainer
-      aria-disabled={disabled}
-      onClick={onClick ? event => onClick(event, step ?? -1) : undefined}
-      aria-current={ariaCurrent}
-    >
-      {to ? (
-        <Link variant="primary" href={to}>
-          {contractString(children)}
-        </Link>
-      ) : (
-        contractString(children)
-      )}
-    </ItemContainer>
-  )
+  <ItemContainer
+    aria-disabled={disabled}
+    onClick={onClick ? event => onClick(event, step ?? -1) : undefined}
+    aria-current={ariaCurrent}
+  >
+    {to ? (
+      <Link variant="primary" href={to}>
+        {contractString(children)}
+      </Link>
+    ) : (
+      contractString(children)
+    )}
+  </ItemContainer>
+)
 
 type BreadcrumbsProps = {
   selected?: number

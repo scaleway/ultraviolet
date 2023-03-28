@@ -6,8 +6,8 @@ import type { ScaleSpec } from '@nivo/scales'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { getLegendColor } from '../../helpers/legend'
-import CustomLegend from './CustomLegend'
-import LineChartTooltip from './Tooltip'
+import { CustomLegend } from './CustomLegend'
+import { LineChartTooltip } from './Tooltip'
 import { getMaxChartValue, getMinChartValue } from './helpers'
 
 type LineChartProps = {

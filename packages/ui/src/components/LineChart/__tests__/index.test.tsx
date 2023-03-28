@@ -1,5 +1,5 @@
 import * as nivo from '@nivo/core'
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
@@ -79,6 +79,7 @@ describe('LineChart', () => {
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
       {
         transform: async () => {
+          // eslint-disable-next-line testing-library/no-node-access
           const line = document.querySelector('svg[role="img"] g path')
           if (!line) throw new Error('LineChart line path not found')
           await userEvent.unhover(line)
@@ -91,9 +92,9 @@ describe('LineChart', () => {
     shouldMatchEmotionSnapshot(
       <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
       {
-        transform: ({ getByTestId }) => {
+        transform: () => {
           const id = `label-${lineChartData[0].id.toString()}`
-          fireEvent.click(getByTestId(id))
+          fireEvent.click(screen.getByTestId(id))
         },
       },
     ))

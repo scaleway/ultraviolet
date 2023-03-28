@@ -1,4 +1,4 @@
-import { fireEvent, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInput } from '..'
 import {
@@ -46,9 +46,9 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput minValue={0} step={1} maxValue={100} defaultValue={10} />,
       {
-        transform: async ({ getByRole, getByLabelText }) => {
-          const inputButton = getByLabelText('Input')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const inputButton = screen.getByLabelText('Input')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(inputButton)
           await waitFor(() => expect(input.value).toBe('10'))
@@ -60,9 +60,9 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput minValue={0} step={1} maxValue={100} defaultValue={10} />,
       {
-        transform: async ({ getByRole, getByLabelText }) => {
-          const minus = getByLabelText('Minus')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const minus = screen.getByLabelText('Minus')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('9'))
@@ -83,9 +83,9 @@ describe('NumberInput', () => {
         onBlur={() => {}}
       />,
       {
-        transform: async ({ getByLabelText, getByRole }) => {
-          const plus = getByLabelText('Plus')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const plus = screen.getByLabelText('Plus')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
@@ -100,9 +100,9 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput minValue={0} step={10} maxValue={100} defaultValue={10} />,
       {
-        transform: async ({ getByRole, getByLabelText }) => {
-          const buttonContainer = getByLabelText('Input')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const buttonContainer = screen.getByLabelText('Input')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(buttonContainer)
           await waitFor(() => expect(input).toHaveFocus())
@@ -124,8 +124,9 @@ describe('NumberInput', () => {
         onMinCrossed={() => {}}
       />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.clear(input)
           await userEvent.type(input, '1')
@@ -145,8 +146,9 @@ describe('NumberInput', () => {
         onMaxCrossed={() => {}}
       />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.clear(input)
           await userEvent.type(input, '120')
@@ -161,8 +163,9 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput minValue={10} maxValue={100} defaultValue={30} />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
+          // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
           await userEvent.click(input)
           fireEvent.keyDown(input, {
@@ -203,9 +206,9 @@ describe('NumberInput', () => {
         onBlur={() => {}}
       />,
       {
-        transform: async ({ getByLabelText, getByRole }) => {
-          const plus = getByLabelText('Plus')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const plus = screen.getByLabelText('Plus')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(plus)
           await waitFor(() => expect(input.value).toBe('20'))
@@ -217,11 +220,11 @@ describe('NumberInput', () => {
     ))
 
   it('should increase and decrease input with arrow up and down, step and an in-between value set', async () => {
-    const node = renderWithTheme(
+    renderWithTheme(
       <NumberInput minValue={10} maxValue={100} defaultValue={32} step={10} />,
     )
 
-    const input = node.getByRole('spinbutton') as HTMLInputElement
+    const input = screen.getByRole<HTMLInputElement>('spinbutton')
     await waitFor(() => expect(input.value).toBe('32'))
 
     input.focus()
@@ -259,9 +262,9 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput minValue={0} step={1} maxValue={100} value={10} />,
       {
-        transform: async ({ getByRole, getByLabelText }) => {
-          const minus = getByLabelText('Minus')
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const minus = screen.getByLabelText('Minus')
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(minus)
           await waitFor(() => expect(input.value).toBe('10'))
@@ -273,8 +276,8 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput defaultValue={10} minValue={0} maxValue={100} />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
           await waitFor(() => expect(input.value).toBe('10'))
         },
       },
@@ -284,8 +287,8 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput defaultValue={10} minValue={20} maxValue={100} />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
           await waitFor(() => expect(input.value).toBe('20'))
         },
       },
@@ -295,8 +298,8 @@ describe('NumberInput', () => {
     shouldMatchEmotionSnapshot(
       <NumberInput defaultValue={150} minValue={20} step={1} maxValue={100} />,
       {
-        transform: async ({ getByRole }) => {
-          const input = getByRole('spinbutton') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },

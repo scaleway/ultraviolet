@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TextInput } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -122,8 +123,8 @@ describe('TextInput', () => {
         onFocus={() => {}}
       />,
       {
-        transform: node => {
-          const input = node.getByLabelText('Test')
+        transform: () => {
+          const input = screen.getByLabelText('Test')
           input.focus()
         },
       },
@@ -138,8 +139,8 @@ describe('TextInput', () => {
     shouldMatchEmotionSnapshot(
       <TextInput type="toggleable-password" name="password" />,
       {
-        transform: async node => {
-          const button = node.getByTitle('Show')
+        transform: async () => {
+          const button = screen.getByTitle('Show')
           await userEvent.click(button)
           await userEvent.type(button, '{enter}')
           await userEvent.type(button, '{space}')
@@ -158,8 +159,8 @@ describe('TextInput', () => {
     shouldMatchEmotionSnapshot(
       <TextInput random="test" name="test" onChange={() => {}} />,
       {
-        transform: async node => {
-          const button = node.getByTitle('Randomize')
+        transform: async () => {
+          const button = screen.getByTitle('Randomize')
           await userEvent.click(button)
           await userEvent.type(button, '{enter}')
           await userEvent.type(button, '{space}')

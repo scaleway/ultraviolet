@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Form, SelectableCardField } from '../..'
 import {
@@ -26,8 +26,8 @@ describe('SelectableCardField', () => {
         Radio field disabled
       </SelectableCardField>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           expect(input).toBeDisabled()
         },
       },
@@ -36,7 +36,7 @@ describe('SelectableCardField', () => {
   test('should render correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => {}}
+        onRawSubmit={() => { }}
         errors={mockErrors}
         initialValues={{ test: 'checked' }}
       >
@@ -45,17 +45,17 @@ describe('SelectableCardField', () => {
         </SelectableCardField>
       </Form>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           expect(input).toBeChecked()
         },
       },
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
+    const onFocus = jest.fn(() => { })
+    const onChange = jest.fn(() => { })
+    const onBlur = jest.fn(() => { })
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <SelectableCardField
@@ -68,8 +68,8 @@ describe('SelectableCardField', () => {
         Radio field events
       </SelectableCardField>,
       {
-        transform: node => {
-          const input = node.getByRole('radio', { hidden: true })
+        transform: () => {
+          const input = screen.getByRole('radio', { hidden: true })
           act(() => input.focus())
           expect(onFocus).toBeCalledTimes(1)
           act(() => input.click())
@@ -83,18 +83,16 @@ describe('SelectableCardField', () => {
 
   test('should render correctly with errors', () =>
     shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form onRawSubmit={() => { }} errors={mockErrors}>
         <SelectableCardField name="test" value="checked" required>
           Radio field error
         </SelectableCardField>
         <button type="submit">Submit</button>
       </Form>,
       {
-        transform: async node => {
-          await act(async () => {
-            await userEvent.click(node.getByRole('button'))
-          })
-          const input = node.getByRole('radio', { hidden: true })
+        transform: async () => {
+          await userEvent.click(screen.getByRole('button'))
+          const input = screen.getByRole('radio', { hidden: true })
           expect(input).toHaveAttribute('aria-invalid', 'true')
         },
       },
