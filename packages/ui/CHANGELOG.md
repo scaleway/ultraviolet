@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.9...@scaleway/ui@0.229.10) (2023-03-28)
+
+
+### :white_check_mark: Test
+
+* **lint:** add testing-library/react eslint plugin ([#2339](https://github.com/scaleway/scaleway-ui/issues/2339)) ([b9a6cff](https://github.com/scaleway/scaleway-ui/commit/b9a6cff7cb11c806f4595ba0d876b05883623e52))
+
+
+
 ## [0.229.9](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.8...@scaleway/ui@0.229.9) (2023-03-28)
 
 

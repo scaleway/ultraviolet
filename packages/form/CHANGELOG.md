@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.29](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.28...@scaleway/form@1.41.29) (2023-03-28)
+
+
+### :white_check_mark: Test
+
+* **lint:** add testing-library/react eslint plugin ([#2339](https://github.com/scaleway/scaleway-ui/issues/2339)) ([b9a6cff](https://github.com/scaleway/scaleway-ui/commit/b9a6cff7cb11c806f4595ba0d876b05883623e52))
+
+
+
 ## [1.41.28](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.27...@scaleway/form@1.41.28) (2023-03-28)
 
 **Note:** Version bump only for package @scaleway/form
