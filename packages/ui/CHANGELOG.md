@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.229.9](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.8...@scaleway/ui@0.229.9) (2023-03-28)
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** improve tooltip by hidding when generating positions ([#2359](https://github.com/scaleway/scaleway-ui/issues/2359)) ([df6fd6f](https://github.com/scaleway/scaleway-ui/commit/df6fd6f20dced947cebb6f4c5c22946960cb60ea))
+
+
+
 ## [0.229.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.7...@scaleway/ui@0.229.8) (2023-03-27)
 
 
