@@ -50,6 +50,9 @@ type TagListProps = {
    * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
    */
   multiline?: boolean
+
+  className?: string
+  'data-testid'?: string
 }
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
@@ -59,6 +62,8 @@ export const TagList = ({
   tags = DEFAULT_TAGS,
   threshold = 1,
   multiline = false,
+  className,
+  'data-testid': dataTestId,
 }: TagListProps): JSX.Element | null => {
   let tmpThreshold = threshold
   if (
@@ -77,7 +82,7 @@ export const TagList = ({
   }
 
   return (
-    <StyledContainer>
+    <StyledContainer className={className} data-testid={dataTestId}>
       <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag

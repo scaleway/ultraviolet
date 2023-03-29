@@ -10,6 +10,7 @@ type StackProps = {
   wrap?: boolean | CSSProperties['flexWrap']
   className?: string
   children: ReactNode
+  'data-testid'?: string
 }
 
 export const Stack = styled('div', {

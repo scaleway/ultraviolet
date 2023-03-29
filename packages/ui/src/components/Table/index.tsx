@@ -19,14 +19,17 @@ const StyledTable = styled.table`
 export const Table: ((props: {
   children: ReactNode
   className?: string
+  'data-testid'?: string
 }) => JSX.Element) & {
   Head: typeof Head
   Body: typeof Body
   Row: typeof Row
   HeadCell: typeof HeadCell
   BodyCell: typeof BodyCell
-} = ({ children, className }) => (
-  <StyledTable className={className}>{children}</StyledTable>
+} = ({ children, className, 'data-testid': dataTestId }) => (
+  <StyledTable className={className} data-testid={dataTestId}>
+    {children}
+  </StyledTable>
 )
 
 const StyledHead = styled.thead`

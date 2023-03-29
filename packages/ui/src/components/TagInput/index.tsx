@@ -105,6 +105,7 @@ type TagInputProps = {
   tags?: TagInputProp
   variant?: Variant
   className?: string
+  'data-testid'?: string
 }
 
 /**
@@ -121,6 +122,7 @@ export const TagInput = ({
   tags,
   variant = 'base',
   className,
+  'data-testid': dataTestId,
 }: TagInputProps): JSX.Element => {
   const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(tags ?? []),
@@ -230,6 +232,7 @@ export const TagInput = ({
       variant={variant}
       onBlur={addTag}
       className={className}
+      data-testid={dataTestId}
     >
       {tagInputState.map(tag => (
         <Tag

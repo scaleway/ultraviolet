@@ -48,6 +48,7 @@ type SeparatorProps = {
   thickness?: number
   color?: Color
   className?: string
+  'data-testid'?: string
 }
 
 export const Separator = ({
@@ -56,6 +57,7 @@ export const Separator = ({
   color = 'neutral',
   icon,
   className,
+  'data-testid': dataTestId,
 }: SeparatorProps): JSX.Element =>
   icon ? (
     <StyledIconWrapper
@@ -63,6 +65,7 @@ export const Separator = ({
       aria-orientation={direction}
       direction={direction}
       className={className}
+      data-testid={dataTestId}
     >
       <StyledHr
         direction={direction}
@@ -86,5 +89,6 @@ export const Separator = ({
       thickness={thickness}
       color={color}
       className={className}
+      data-testid={dataTestId}
     />
   )

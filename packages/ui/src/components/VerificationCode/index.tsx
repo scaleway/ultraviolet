@@ -78,6 +78,7 @@ type VerificationCodeProps = {
    * Type of the fields
    */
   type?: 'text' | 'number'
+  'data-testid'?: string
 }
 
 const DEFAULT_ON_FUNCTION = () => {}
@@ -95,6 +96,7 @@ export const VerificationCode = ({
   placeholder = '',
   required = false,
   type = 'number',
+  'data-testid': dataTestId,
 }: VerificationCodeProps): JSX.Element => {
   const valuesArray = Object.assign(
     new Array(fields).fill(''),
@@ -220,7 +222,7 @@ export const VerificationCode = ({
   }
 
   return (
-    <div className={className}>
+    <div className={className} data-testid={dataTestId}>
       {values.map((value: string, index) => (
         <StyledInput
           css={[inputStyle]}
