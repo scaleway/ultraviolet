@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.3 (2023-03-29)
+
+
+### :package: Chore
+
+* **release:** publish ([47ce858](https://github.com/scaleway/scaleway-ui/commit/47ce858b8af35805d9b45f3286a8669475732acc))
+
+
+### :bug: Bug Fixes
+
+* **theme:** synchronise design tokens ([#2369](https://github.com/scaleway/scaleway-ui/issues/2369)) ([7eb0766](https://github.com/scaleway/scaleway-ui/commit/7eb076695f045d7ba71d8ada86bf94d143185c10))
+
+
+
 ## [1.2.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/themes@1.2.1...@scaleway/themes@1.2.2) (2023-03-06)
 
 
