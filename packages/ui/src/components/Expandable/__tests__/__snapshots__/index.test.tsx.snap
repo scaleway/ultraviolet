@@ -2,23 +2,34 @@
 
 exports[`Expandable renders correctly opened 1`] = `
 <DocumentFragment>
-  .cache-1m3x0sd-Expandable {
+  .cache-7livzv-StyledExpandable {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
   overflow: hidden;
-  opacity: 0;
   height: auto;
-  margin-top: 0;
-  -webkit-transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  transition: max-height 300ms ease-in,opacity 300ms ease-in;
-  max-height: 5000px;
-  opacity: 1;
-  overflow: visible;
+  max-height: initial;
 }
 
 <div
-    class="cache-1m3x0sd-Expandable e14o3tsk0"
+    class="cache-7livzv-StyledExpandable e14o3tsk0"
+  >
+    Sample Expandable
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Expandable renders correctly with className 1`] = `
+<DocumentFragment>
+  .cache-lzuy3q-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+<div
+    class="test cache-lzuy3q-StyledExpandable e14o3tsk0"
   >
     Sample Expandable
   </div>
@@ -27,18 +38,34 @@ exports[`Expandable renders correctly opened 1`] = `
 
 exports[`Expandable renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-14x59hy-Expandable {
+  .cache-lzuy3q-StyledExpandable {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
   overflow: hidden;
-  opacity: 0;
   height: auto;
-  margin-top: 0;
+  max-height: 0px;
 }
 
 <div
-    class="cache-14x59hy-Expandable e14o3tsk0"
+    class="cache-lzuy3q-StyledExpandable e14o3tsk0"
+  >
+    Sample Expandable
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Expandable renders correctly with minHeight 1`] = `
+<DocumentFragment>
+  .cache-1klfd8t-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 5px;
+}
+
+<div
+    class="cache-1klfd8t-StyledExpandable e14o3tsk0"
   >
     Sample Expandable
   </div>
