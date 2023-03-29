@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.230.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.10...@scaleway/ui@0.230.0) (2023-03-29)
+
+
+### :gear: Features
+
+* nuke unused Col/Row ([#2360](https://github.com/scaleway/scaleway-ui/issues/2360)) ([4e793a0](https://github.com/scaleway/scaleway-ui/commit/4e793a010af75bb5b832e64b382440a9675cf195))
+
+
+
 ## [0.229.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.9...@scaleway/ui@0.229.10) (2023-03-28)
 
 
