@@ -295,7 +295,7 @@ const getSelectStyles = ({
   }),
 })
 
-export type WithSelectProps = {
+type WithSelectProps = {
   selectProps: SelectProps
 }
 

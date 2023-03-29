@@ -12,15 +12,15 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.cache-b4pk9x-LinkVariant {
+.cache-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-b4pk9x-LinkVariant[aria-current='page'] {
+.cache-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-b4pk9x-LinkVariant:not(:last-child)::after {
+.cache-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
@@ -103,11 +103,11 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
+      class="cache-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -118,7 +118,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -130,7 +130,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         Step 3
       </li>
@@ -155,7 +155,7 @@ exports[`Breadcrumbs renders correctly with invalid child 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
+      class="cache-198ohfb-StyledOl e1081fv11"
     >
       Invalid child
     </ol>
@@ -175,15 +175,15 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   display: flex;
 }
 
-.cache-b4pk9x-LinkVariant {
+.cache-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-b4pk9x-LinkVariant[aria-current='page'] {
+.cache-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-b4pk9x-LinkVariant:not(:last-child)::after {
+.cache-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
@@ -262,21 +262,21 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-decoration-thickness: 2px;
 }
 
-.cache-gkjul7-LinkVariant {
+.cache-12l1cwf-ItemContainer {
   display: inline;
   cursor: pointer;
 }
 
-.cache-gkjul7-LinkVariant[aria-current='page'] {
+.cache-12l1cwf-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-gkjul7-LinkVariant:not(:last-child)::after {
+.cache-12l1cwf-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-gkjul7-LinkVariant[aria-disabled="true"] {
+.cache-12l1cwf-ItemContainer[aria-disabled="true"] {
   pointer-events: none;
 }
 
@@ -284,11 +284,11 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
+      class="cache-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -299,7 +299,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -311,324 +311,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-gkjul7-LinkVariant e1081fv10"
-      >
-        Step 3
-      </li>
-    </ol>
-  </nav>
-</DocumentFragment>
-`;
-
-exports[`Breadcrumbs renders correctly with onClick on bubble variant 1`] = `
-<DocumentFragment>
-  .cache-198ohfb-StyledOl {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-15s7s2q-BubbleVariant {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  line-height: 24px;
-  border-radius: 8px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 48px;
-  padding-right: 24px;
-  margin-left: -24px;
-  margin-right: -24px;
-  background-color: #22c8a2;
-  color: #ffffff;
-}
-
-.cache-15s7s2q-BubbleVariant:first-of-type {
-  padding-left: 24px;
-  margin-left: 0;
-  margin-right: -24px;
-}
-
-.cache-15s7s2q-BubbleVariant:last-of-type {
-  margin-right: 0;
-}
-
-.cache-15s7s2q-BubbleVariant[aria-current='page'] {
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-15s7s2q-BubbleVariant[aria-current='page']~.cache-15s7s2q-BubbleVariant {
-  background-color: #ffffff;
-  color: #b2b6c3;
-  border-color: #d4dae7;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(1) {
-  z-index: 10;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(2) {
-  z-index: 9;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(3) {
-  z-index: 8;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(4) {
-  z-index: 7;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(5) {
-  z-index: 6;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(6) {
-  z-index: 5;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(7) {
-  z-index: 4;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(8) {
-  z-index: 3;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(9) {
-  z-index: 2;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(10) {
-  z-index: 1;
-}
-
-.cache-f9owx-StyledLink {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #390171;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.cache-f9owx-StyledLink .e4bq1r52 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.cache-f9owx-StyledLink>* {
-  pointer-events: none;
-}
-
-.cache-f9owx-StyledLink:hover,
-.cache-f9owx-StyledLink:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #390171;
-  text-decoration-color: #390171;
-}
-
-.cache-f9owx-StyledLink:hover .e4bq1r52,
-.cache-f9owx-StyledLink:focus .e4bq1r52 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
-}
-
-.cache-f9owx-StyledLink:hover::after,
-.cache-f9owx-StyledLink:focus::after {
-  background-color: #390171;
-}
-
-.cache-f9owx-StyledLink:active {
-  text-decoration-thickness: 2px;
-}
-
-.cache-oq8sg5-BubbleVariant {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  line-height: 24px;
-  border-radius: 8px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 48px;
-  padding-right: 24px;
-  margin-left: -24px;
-  margin-right: -24px;
-  background-color: #22c8a2;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.cache-oq8sg5-BubbleVariant:first-of-type {
-  padding-left: 24px;
-  margin-left: 0;
-  margin-right: -24px;
-}
-
-.cache-oq8sg5-BubbleVariant:last-of-type {
-  margin-right: 0;
-}
-
-.cache-oq8sg5-BubbleVariant[aria-current='page'] {
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-oq8sg5-BubbleVariant[aria-current='page']~.cache-oq8sg5-BubbleVariant {
-  background-color: #ffffff;
-  color: #b2b6c3;
-  border-color: #d4dae7;
-}
-
-.cache-oq8sg5-BubbleVariant[aria-disabled="true"] {
-  pointer-events: none;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(1) {
-  z-index: 10;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(2) {
-  z-index: 9;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(3) {
-  z-index: 8;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(4) {
-  z-index: 7;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(5) {
-  z-index: 6;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(6) {
-  z-index: 5;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(7) {
-  z-index: 4;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(8) {
-  z-index: 3;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(9) {
-  z-index: 2;
-}
-
-.cache-oq8sg5-BubbleVariant:nth-child(10) {
-  z-index: 1;
-}
-
-<nav
-    aria-label="breadcrumb"
-  >
-    <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
-    >
-      <li
-        aria-disabled="false"
-        class="cache-15s7s2q-BubbleVariant e1081fv11"
-      >
-        <a
-          class="cache-f9owx-StyledLink e4bq1r50"
-          href="/step1"
-        >
-          Step 1
-        </a>
-      </li>
-      <li
-        aria-disabled="false"
-        class="cache-15s7s2q-BubbleVariant e1081fv11"
-      >
-        <a
-          class="cache-f9owx-StyledLink e4bq1r50"
-          href="/step1/step2"
-        >
-          I'm a very long... long long step
-        </a>
-      </li>
-      <li
-        aria-current="page"
-        aria-disabled="false"
-        class="cache-oq8sg5-BubbleVariant e1081fv11"
+        class="cache-12l1cwf-ItemContainer e1081fv10"
       >
         Step 3
       </li>
@@ -649,15 +332,15 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   display: flex;
 }
 
-.cache-b4pk9x-LinkVariant {
+.cache-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-b4pk9x-LinkVariant[aria-current='page'] {
+.cache-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-b4pk9x-LinkVariant:not(:last-child)::after {
+.cache-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
@@ -740,11 +423,11 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
+      class="cache-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -756,7 +439,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         <a
           class="cache-f9owx-StyledLink e4bq1r50"
@@ -767,226 +450,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-b4pk9x-LinkVariant e1081fv10"
-      >
-        Step 3
-      </li>
-    </ol>
-  </nav>
-</DocumentFragment>
-`;
-
-exports[`Breadcrumbs renders correctly with variant bubble 1`] = `
-<DocumentFragment>
-  .cache-198ohfb-StyledOl {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cache-15s7s2q-BubbleVariant {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  font-weight: 500;
-  line-height: 24px;
-  border-radius: 8px;
-  border-style: solid;
-  border-width: 1px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 48px;
-  padding-right: 24px;
-  margin-left: -24px;
-  margin-right: -24px;
-  background-color: #22c8a2;
-  color: #ffffff;
-}
-
-.cache-15s7s2q-BubbleVariant:first-of-type {
-  padding-left: 24px;
-  margin-left: 0;
-  margin-right: -24px;
-}
-
-.cache-15s7s2q-BubbleVariant:last-of-type {
-  margin-right: 0;
-}
-
-.cache-15s7s2q-BubbleVariant[aria-current='page'] {
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-15s7s2q-BubbleVariant[aria-current='page']~.cache-15s7s2q-BubbleVariant {
-  background-color: #ffffff;
-  color: #b2b6c3;
-  border-color: #d4dae7;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(1) {
-  z-index: 10;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(2) {
-  z-index: 9;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(3) {
-  z-index: 8;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(4) {
-  z-index: 7;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(5) {
-  z-index: 6;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(6) {
-  z-index: 5;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(7) {
-  z-index: 4;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(8) {
-  z-index: 3;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(9) {
-  z-index: 2;
-}
-
-.cache-15s7s2q-BubbleVariant:nth-child(10) {
-  z-index: 1;
-}
-
-.cache-f9owx-StyledLink {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #390171;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
-  position: relative;
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-  paragraph-spacing: 0;
-  text-case: none;
-}
-
-.cache-f9owx-StyledLink .e4bq1r52 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
-}
-
-.cache-f9owx-StyledLink>* {
-  pointer-events: none;
-}
-
-.cache-f9owx-StyledLink:hover,
-.cache-f9owx-StyledLink:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #390171;
-  text-decoration-color: #390171;
-}
-
-.cache-f9owx-StyledLink:hover .e4bq1r52,
-.cache-f9owx-StyledLink:focus .e4bq1r52 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
-}
-
-.cache-f9owx-StyledLink:hover::after,
-.cache-f9owx-StyledLink:focus::after {
-  background-color: #390171;
-}
-
-.cache-f9owx-StyledLink:active {
-  text-decoration-thickness: 2px;
-}
-
-<nav
-    aria-label="breadcrumb"
-  >
-    <ol
-      class="cache-198ohfb-StyledOl e1081fv12"
-    >
-      <li
-        aria-disabled="false"
-        class="cache-15s7s2q-BubbleVariant e1081fv11"
-      >
-        <a
-          class="cache-f9owx-StyledLink e4bq1r50"
-          href="/step1"
-        >
-          Step 1
-        </a>
-      </li>
-      <li
-        aria-disabled="false"
-        class="cache-15s7s2q-BubbleVariant e1081fv11"
-      >
-        <a
-          class="cache-f9owx-StyledLink e4bq1r50"
-          href="/step1/step2"
-        >
-          I'm a very long... long long step
-        </a>
-      </li>
-      <li
-        aria-current="page"
-        aria-disabled="false"
-        class="cache-15s7s2q-BubbleVariant e1081fv11"
+        class="cache-3z78jo-ItemContainer e1081fv10"
       >
         Step 3
       </li>

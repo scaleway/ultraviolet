@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { BarStack } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -44,8 +45,8 @@ describe('BarStack', () => {
         ]}
       />,
       {
-        transform: async node => {
-          const helloDiv = node.getByText('Hello')
+        transform: async () => {
+          const helloDiv = screen.getByText('Hello')
           await userEvent.click(helloDiv)
           expect(onClick).toBeCalledTimes(1)
           expect(onMouseEnter).toBeCalledTimes(1)

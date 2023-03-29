@@ -56,7 +56,7 @@ const RadioInput = styled('input', {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
-  &[aria-invalid='true'] + ${StyledIcon} {
+  &[aria-invalid='true']:not([aria-disabled='true']) + ${StyledIcon} {
     fill: ${({ theme }) => theme.colors.danger.text};
   }
 

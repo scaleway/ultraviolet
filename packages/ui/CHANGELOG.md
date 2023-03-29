@@ -3,6 +3,261 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.231.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.0...@scaleway/ui@0.231.1) (2023-03-29)
+
+**Note:** Version bump only for package @scaleway/ui
+
+
+
+
+
+## [0.231.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.230.0...@scaleway/ui@0.231.0) (2023-03-29)
+
+
+### :gear: Features
+
+* rename RowV2 to Row ([#2361](https://github.com/scaleway/scaleway-ui/issues/2361)) ([34881ed](https://github.com/scaleway/scaleway-ui/commit/34881ed9a918a43d7f3aa86901478b39387d614b))
+
+
+
+## [0.230.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.10...@scaleway/ui@0.230.0) (2023-03-29)
+
+
+### :gear: Features
+
+* nuke unused Col/Row ([#2360](https://github.com/scaleway/scaleway-ui/issues/2360)) ([4e793a0](https://github.com/scaleway/scaleway-ui/commit/4e793a010af75bb5b832e64b382440a9675cf195))
+
+
+
+## [0.229.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.9...@scaleway/ui@0.229.10) (2023-03-28)
+
+
+### :white_check_mark: Test
+
+* **lint:** add testing-library/react eslint plugin ([#2339](https://github.com/scaleway/scaleway-ui/issues/2339)) ([b9a6cff](https://github.com/scaleway/scaleway-ui/commit/b9a6cff7cb11c806f4595ba0d876b05883623e52))
+
+
+
+## [0.229.9](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.8...@scaleway/ui@0.229.9) (2023-03-28)
+
+
+### :bug: Bug Fixes
+
+* **tooltip:** improve tooltip by hidding when generating positions ([#2359](https://github.com/scaleway/scaleway-ui/issues/2359)) ([df6fd6f](https://github.com/scaleway/scaleway-ui/commit/df6fd6f20dced947cebb6f4c5c22946960cb60ea))
+
+
+
+## [0.229.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.7...@scaleway/ui@0.229.8) (2023-03-27)
+
+
+### :bug: Bug Fixes
+
+* remove unused deprecated Grid component ([#2348](https://github.com/scaleway/scaleway-ui/issues/2348)) ([fe4afe4](https://github.com/scaleway/scaleway-ui/commit/fe4afe4cd240b6e3f9b8cb9788113a00886115cd))
+
+
+
+## [0.229.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.6...@scaleway/ui@0.229.7) (2023-03-27)
+
+
+### :bug: Bug Fixes
+
+* **NumberInput:** enable controlled NumberInput ([#2337](https://github.com/scaleway/scaleway-ui/issues/2337)) ([04f4859](https://github.com/scaleway/scaleway-ui/commit/04f4859aaf73ac76861370d9cdf02c5a2abb1c18))
+
+
+### :memo: Documentation
+
+* update documentation storybook ([#2324](https://github.com/scaleway/scaleway-ui/issues/2324)) ([39e7af5](https://github.com/scaleway/scaleway-ui/commit/39e7af5af8c2f258d1ef52cc329247a073d2ae26))
+
+
+
+## [0.229.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.5...@scaleway/ui@0.229.6) (2023-03-27)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/react-datepicker to v4.10.0 ([#2352](https://github.com/scaleway/scaleway-ui/issues/2352)) ([b8a8fb0](https://github.com/scaleway/scaleway-ui/commit/b8a8fb0f00381ac4e7715c675cd9601a65ef12b3))
+
+
+
+## 0.229.5 (2023-03-24)
+
+
+### :package: Chore
+
+* **release:** publish ([6e1f995](https://github.com/scaleway/scaleway-ui/commit/6e1f995e5605b4edd587b5ee06b91d3f5aff4616))
+
+
+### :zap: Refactor
+
+* **Breadcrumbs:** remove variants ([#2345](https://github.com/scaleway/scaleway-ui/issues/2345)) ([a96751a](https://github.com/scaleway/scaleway-ui/commit/a96751afa124bba4cf885c606646359239ee6c3e))
+
+
+
+## 0.229.4 (2023-03-22)
+
+
+### :package: Chore
+
+* **release:** publish ([876048e](https://github.com/scaleway/scaleway-ui/commit/876048e3259e83190521d97ba17b0c768f8dc224))
+
+
+### :bug: Bug Fixes
+
+* expose rowV2 component ([#2338](https://github.com/scaleway/scaleway-ui/issues/2338)) ([223a17a](https://github.com/scaleway/scaleway-ui/commit/223a17aa2077dae24e2f09c776618d182af36332))
+* **ListV2:** simplify row selection disabled usage ([#2336](https://github.com/scaleway/scaleway-ui/issues/2336)) ([7fae998](https://github.com/scaleway/scaleway-ui/commit/7fae998514513468cc9dd0f5e450e87dee22d324))
+
+
+
+## [0.229.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.2...@scaleway/ui@0.229.3) (2023-03-21)
+
+
+### :bug: Bug Fixes
+
+* radio and checkbox error combined with disabled state ([#2333](https://github.com/scaleway/scaleway-ui/issues/2333)) ([3dfcec6](https://github.com/scaleway/scaleway-ui/commit/3dfcec62ebfbed55315cbea1132ed866b09de807))
+
+
+
+## [0.229.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.1...@scaleway/ui@0.229.2) (2023-03-21)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.7.1 ([#2320](https://github.com/scaleway/scaleway-ui/issues/2320)) ([cefaac9](https://github.com/scaleway/scaleway-ui/commit/cefaac9cf1a30e16299c24b1331ab5035996ba91))
+
+
+
+## 0.229.1 (2023-03-21)
+
+
+### :package: Chore
+
+* **release:** publish ([5b0fd3f](https://github.com/scaleway/scaleway-ui/commit/5b0fd3f4828e1176ed8ed14d9167d98427a2d9d7))
+
+
+### :bug: Bug Fixes
+
+* **EmptyState:** export EmptyState component ([#2335](https://github.com/scaleway/scaleway-ui/issues/2335)) ([f727491](https://github.com/scaleway/scaleway-ui/commit/f727491a1b35f2a546a9e68df345252ff87ebaa6))
+
+
+
+## [0.229.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.3...@scaleway/ui@0.229.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **EmptyState:** add EmptyState component ([#2316](https://github.com/scaleway/scaleway-ui/issues/2316)) ([e4ebfb1](https://github.com/scaleway/scaleway-ui/commit/e4ebfb1794570b8cc62ad4d4ee689c0f8feb70ae))
+
+
+
+## [0.228.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.2...@scaleway/ui@0.228.3) (2023-03-20)
+
+
+### :bug: Bug Fixes
+
+* **listV2:** add role to action bar ([#2332](https://github.com/scaleway/scaleway-ui/issues/2332)) ([fe339c5](https://github.com/scaleway/scaleway-ui/commit/fe339c56692e75db5de1c2e8696337bd06f6243b))
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
+
+
+
+## [0.228.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.1...@scaleway/ui@0.228.2) (2023-03-20)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency deepmerge to v4.3.1 ([#2318](https://github.com/scaleway/scaleway-ui/issues/2318)) ([8ac45f3](https://github.com/scaleway/scaleway-ui/commit/8ac45f3e9e44673d577d10249b3c96ce5bfde406))
+
+
+
+## [0.228.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.228.0...@scaleway/ui@0.228.1) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
+
+
+
+## [0.228.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.227.0...@scaleway/ui@0.228.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **RowV2:** new component ([#2300](https://github.com/scaleway/scaleway-ui/issues/2300)) ([8eff127](https://github.com/scaleway/scaleway-ui/commit/8eff12736171b20f45f14ba94d0199d8c26ce83d))
+
+
+
+## [0.227.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.226.0...@scaleway/ui@0.227.0) (2023-03-20)
+
+
+### :gear: Features
+
+* **StateBar:** remove StateBar component ([#2306](https://github.com/scaleway/scaleway-ui/issues/2306)) ([11000d8](https://github.com/scaleway/scaleway-ui/commit/11000d8edf3273d74055cbdee3df45bfa67b3da7))
+
+
+
+## [0.226.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.1...@scaleway/ui@0.226.0) (2023-03-17)
+
+
+### :gear: Features
+
+* **description:** remove Description component from scw/ui ([#2305](https://github.com/scaleway/scaleway-ui/issues/2305)) ([42ddb6d](https://github.com/scaleway/scaleway-ui/commit/42ddb6d86e2bad37ad55df87caeb58db0c72a86d))
+
+
+
+## [0.225.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.225.0...@scaleway/ui@0.225.1) (2023-03-17)
+
+
+### :bug: Bug Fixes
+
+* **verification_code:** set the right color ([#2304](https://github.com/scaleway/scaleway-ui/issues/2304)) ([018cbaa](https://github.com/scaleway/scaleway-ui/commit/018cbaa306b61b60ad5919cb43b1bcd471e3e306))
+
+
+
+## [0.225.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.4...@scaleway/ui@0.225.0) (2023-03-17)
+
+
+### :gear: Features
+
+* **Icon:** new icon email-remove-outline ([#2302](https://github.com/scaleway/scaleway-ui/issues/2302)) ([ba16bc0](https://github.com/scaleway/scaleway-ui/commit/ba16bc096414dbda9021a16dba41e7a9d89b0901))
+
+
+
+## [0.224.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.3...@scaleway/ui@0.224.4) (2023-03-16)
+
+
+### :bug: Bug Fixes
+
+* **stories:** fix and improve TextInput, Tabs and Bullet stories - DS-412 ([#2301](https://github.com/scaleway/scaleway-ui/issues/2301)) ([6fbd413](https://github.com/scaleway/scaleway-ui/commit/6fbd413f8e75a5db388d5c6dc661a4a1b7c277f8))
+
+
+
+## [0.224.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.2...@scaleway/ui@0.224.3) (2023-03-16)
+
+
+### :zap: Refactor
+
+* **Label:** remove component ([#2298](https://github.com/scaleway/scaleway-ui/issues/2298)) ([a423959](https://github.com/scaleway/scaleway-ui/commit/a42395914e5d6d3b301e215f7e1a035955ed3908))
+
+
+### :bug: Bug Fixes
+
+* update snapshots with last node version ([#2303](https://github.com/scaleway/scaleway-ui/issues/2303)) ([a40ca9a](https://github.com/scaleway/scaleway-ui/commit/a40ca9aa966552c940b03e0c107fb41db14b57e3))
+
+
+
+## [0.224.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.1...@scaleway/ui@0.224.2) (2023-03-15)
+
+
+### :bug: Bug Fixes
+
+* remove dead/stale exports ([#2299](https://github.com/scaleway/scaleway-ui/issues/2299)) ([aecb927](https://github.com/scaleway/scaleway-ui/commit/aecb927c2e6b446f5e2d295c52b0622c269450ad))
+
+
+
 ## [0.224.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.224.0...@scaleway/ui@0.224.1) (2023-03-09)
 
 

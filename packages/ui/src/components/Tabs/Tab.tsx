@@ -88,7 +88,7 @@ export const StyledTabButton = styled.button`
     filter: grayscale(1) opacity(50%);
   }
 `
-export type TabProps<T extends ElementType = 'button'> = {
+type TabProps<T extends ElementType = 'button'> = {
   as?: T
   badge?: ReactNode
   children?: ReactNode

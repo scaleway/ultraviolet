@@ -1,4 +1,4 @@
-import { act } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TextInputField } from '..'
 import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
@@ -35,8 +35,8 @@ describe('TextInputField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <TextInputField name="test" disabled />,
       {
-        transform: node => {
-          const input = node.getByRole('textbox')
+        transform: () => {
+          const input = screen.getByRole('textbox')
           expect(input).toBeDisabled()
         },
       },
@@ -46,25 +46,25 @@ describe('TextInputField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <TextInputField name="test" minLength={13} />,
       {
-        transform: async node => {
-          await act(async () => {
-            const input = node.getByRole('textbox')
-            await userEvent.type(input, 'test')
-            input.blur()
+        transform: async () => {
+          const input = screen.getByRole('textbox')
+          await userEvent.type(input, 'test')
+          input.blur()
+          await waitFor(() => {
+            expect(
+              screen.getByText(
+                typeof mockErrors.MIN_LENGTH === 'function'
+                  ? mockErrors.MIN_LENGTH({
+                      allValues: {},
+                      label: 'test',
+                      minLength: 13,
+                      name: 'test',
+                      value: 'test',
+                    })
+                  : mockErrors.MIN_LENGTH,
+              ),
+            ).toBeVisible()
           })
-          expect(
-            node.getByText(
-              typeof mockErrors.MIN_LENGTH === 'function'
-                ? mockErrors.MIN_LENGTH({
-                    allValues: {},
-                    label: 'test',
-                    minLength: 13,
-                    name: 'test',
-                    value: 'test',
-                  })
-                : mockErrors.MIN_LENGTH,
-            ),
-          ).toBeVisible()
         },
       },
     ))

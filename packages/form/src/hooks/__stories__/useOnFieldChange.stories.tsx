@@ -1,4 +1,4 @@
-import { Label, Stack } from '@scaleway/ui'
+import { Stack, Text } from '@scaleway/ui'
 import type { Meta, Story } from '@storybook/react'
 import { useState } from 'react'
 import { Form, useOnFieldChange } from '../..'
@@ -68,11 +68,15 @@ const FormContent = () => {
   return (
     <Stack gap={2}>
       <Stack gap={1}>
-        <Label>Email</Label>
+        <Text as="label" variant="bodyStrong">
+          Email
+        </Text>
         <TextInputField name="email" noTopLabel valid={valid} />
       </Stack>
       <Stack gap={1}>
-        <Label>Password</Label>
+        <Text as="label" variant="bodyStrong">
+          Password
+        </Text>
         <TextInputField name="password" noTopLabel />
       </Stack>
     </Stack>

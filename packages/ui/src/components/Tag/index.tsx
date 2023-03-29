@@ -93,6 +93,7 @@ export const Tag = ({
         onClick={onClose}
         disabled={disabled}
         aria-label="Close tag"
+        data-testid="close-tag"
         action
         variant="transparent"
         icon="close"

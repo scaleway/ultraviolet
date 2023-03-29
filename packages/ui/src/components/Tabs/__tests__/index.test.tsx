@@ -1,4 +1,4 @@
-import { fireEvent } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import { Tabs } from '..'
 import {
   renderWithTheme,
@@ -57,14 +57,14 @@ describe('Tabs', () => {
         </Tabs.Menu>
       </Tabs>,
       {
-        transform: node => {
-          fireEvent.scroll(node.getByRole('tablist'), {})
-          fireEvent.click(node.getByText('More'))
+        transform: () => {
+          fireEvent.scroll(screen.getByRole('tablist'), {})
+          fireEvent.click(screen.getByText('More'))
           Object.defineProperty(HTMLElement.prototype, 'scrollWidth', {
             configurable: true,
             value: 500,
           })
-          fireEvent.scroll(node.getByRole('tablist'), {})
+          fireEvent.scroll(screen.getByRole('tablist'), {})
         },
       },
     )
@@ -125,7 +125,7 @@ describe('Tabs', () => {
   test('updates tab on keydown', () => {
     const onChange = jest.fn()
     const onFirstTabClick = jest.fn()
-    const { getByText } = renderWithTheme(
+    renderWithTheme(
       <Tabs onChange={onChange}>
         <Tabs.Tab value={1} onClick={onFirstTabClick}>
           First
@@ -137,15 +137,15 @@ describe('Tabs', () => {
         <Tabs.Tab>No value</Tabs.Tab>
       </Tabs>,
     )
-    fireEvent.keyDown(getByText('First'), { code: 'Enter' })
+    fireEvent.keyDown(screen.getByText('First'), { code: 'Enter' })
     expect(onChange).toHaveBeenCalledTimes(1)
-    fireEvent.keyDown(getByText('Second'), { code: 'Enter' })
+    fireEvent.keyDown(screen.getByText('Second'), { code: 'Enter' })
     expect(onChange).toHaveBeenCalledTimes(2)
     onChange.mockReset()
 
-    fireEvent.keyDown(getByText('Disabled'), { code: 'Enter' })
+    fireEvent.keyDown(screen.getByText('Disabled'), { code: 'Enter' })
     expect(onChange).not.toHaveBeenCalled()
-    fireEvent.keyDown(getByText('No value'), { code: 'Enter' })
+    fireEvent.keyDown(screen.getByText('No value'), { code: 'Enter' })
     expect(onChange).not.toHaveBeenCalled()
     expect(onFirstTabClick).toHaveBeenCalledTimes(0)
   })
@@ -153,7 +153,7 @@ describe('Tabs', () => {
   test('updates tab on click', () => {
     const onChange = jest.fn()
     const onFirstTabClick = jest.fn()
-    const { getByText } = renderWithTheme(
+    renderWithTheme(
       <Tabs onChange={onChange}>
         <Tabs.Tab value="first" onClick={onFirstTabClick}>
           First
@@ -169,23 +169,23 @@ describe('Tabs', () => {
         </Tabs.Menu>
       </Tabs>,
     )
-    fireEvent.click(getByText('First'))
+    fireEvent.click(screen.getByText('First'))
     expect(onChange).toHaveBeenLastCalledWith('first')
-    fireEvent.click(getByText('Second'))
+    fireEvent.click(screen.getByText('Second'))
     expect(onChange).toHaveBeenLastCalledWith('second')
-    fireEvent.click(getByText('Item'))
+    fireEvent.click(screen.getByText('Item'))
     expect(onChange).toHaveBeenLastCalledWith(1)
     onChange.mockReset()
-    fireEvent.click(getByText('Item no value'))
-    fireEvent.click(getByText('Disabled'))
-    fireEvent.click(getByText('No value'))
+    fireEvent.click(screen.getByText('Item no value'))
+    fireEvent.click(screen.getByText('Disabled'))
+    fireEvent.click(screen.getByText('No value'))
     expect(onChange).not.toHaveBeenCalled()
     expect(onFirstTabClick).toHaveBeenCalledTimes(1)
   })
 
   test('no onChange', () => {
     const onClick = jest.fn()
-    const { getByText, unmount } = renderWithTheme(
+    const { unmount } = renderWithTheme(
       <Tabs onChange={() => {}}>
         <Tabs.Tab value="first" onClick={onClick}>
           First
@@ -205,12 +205,12 @@ describe('Tabs', () => {
         </Tabs.Menu>
       </Tabs>,
     )
-    fireEvent.click(getByText('First'))
-    fireEvent.click(getByText('Second'))
-    fireEvent.click(getByText('No value'))
-    fireEvent.click(getByText('Disabled'))
-    fireEvent.click(getByText('Item'))
-    fireEvent.click(getByText('Item no value'))
+    fireEvent.click(screen.getByText('First'))
+    fireEvent.click(screen.getByText('Second'))
+    fireEvent.click(screen.getByText('No value'))
+    fireEvent.click(screen.getByText('Disabled'))
+    fireEvent.click(screen.getByText('Item'))
+    fireEvent.click(screen.getByText('Item no value'))
     expect(onClick).toHaveBeenCalledTimes(5)
     unmount()
   })

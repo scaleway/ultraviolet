@@ -6,7 +6,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'An enhanced text box.',
+        component:
+          'TextInput component allows users to input text, with options for customization and validation. It supports various input types and should be appropriately sized with clear labeling.',
       },
     },
   },

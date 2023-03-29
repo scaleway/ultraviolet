@@ -2,7 +2,7 @@
 
 exports[`VerificationCode renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -12,33 +12,45 @@ exports[`VerificationCode renders correctly with default values 1`] = `
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -47,8 +59,8 @@ exports[`VerificationCode renders correctly with default values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -57,8 +69,8 @@ exports[`VerificationCode renders correctly with default values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -67,8 +79,8 @@ exports[`VerificationCode renders correctly with default values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
@@ -81,7 +93,7 @@ exports[`VerificationCode renders correctly with default values 1`] = `
 
 exports[`VerificationCode renders correctly with initial value and placeholder and 6 fields 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -91,33 +103,45 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder="0"
@@ -126,8 +150,8 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder="0"
@@ -136,8 +160,8 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder="3"
@@ -146,8 +170,8 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder="7"
@@ -156,8 +180,8 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="4"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="4"
       id="verification-code-4"
       pattern="[0-9]*"
       placeholder=""
@@ -166,8 +190,8 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="5"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="5"
       id="verification-code-5"
       pattern="[0-9]*"
       placeholder=""
@@ -180,7 +204,7 @@ exports[`VerificationCode renders correctly with initial value and placeholder a
 
 exports[`VerificationCode should handle and replace non number with "" when type is number 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -190,33 +214,45 @@ exports[`VerificationCode should handle and replace non number with "" when type
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -225,8 +261,8 @@ exports[`VerificationCode should handle and replace non number with "" when type
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -235,8 +271,8 @@ exports[`VerificationCode should handle and replace non number with "" when type
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -245,8 +281,8 @@ exports[`VerificationCode should handle and replace non number with "" when type
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
@@ -259,7 +295,7 @@ exports[`VerificationCode should handle and replace non number with "" when type
 
 exports[`VerificationCode should handle error 1`] = `
 <DocumentFragment>
-  .cache-wnn471-StyledInput-VerificationCode {
+  .cache-3q3dda-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #dd3252;
   font-size: 24px;
@@ -269,33 +305,45 @@ exports[`VerificationCode should handle error 1`] = `
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-wnn471-StyledInput-VerificationCode:last-child {
+.cache-3q3dda-StyledInput-VerificationCode:hover,
+.cache-3q3dda-StyledInput-VerificationCode:focus {
+  border-color: #a6102d;
+}
+
+.cache-3q3dda-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #DD325240;
+}
+
+.cache-3q3dda-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-wnn471-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-3q3dda-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-wnn471-StyledInput-VerificationCode::-moz-placeholder {
+.cache-3q3dda-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-wnn471-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-3q3dda-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-wnn471-StyledInput-VerificationCode::placeholder {
+.cache-3q3dda-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="true"
-      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-3q3dda-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -304,8 +352,8 @@ exports[`VerificationCode should handle error 1`] = `
     />
     <input
       aria-invalid="true"
-      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-3q3dda-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -314,8 +362,8 @@ exports[`VerificationCode should handle error 1`] = `
     />
     <input
       aria-invalid="true"
-      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-3q3dda-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -324,8 +372,8 @@ exports[`VerificationCode should handle error 1`] = `
     />
     <input
       aria-invalid="true"
-      class="cache-wnn471-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-3q3dda-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
@@ -338,7 +386,7 @@ exports[`VerificationCode should handle error 1`] = `
 
 exports[`VerificationCode should handle keyDown and special key cases and focus/change events 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -348,43 +396,55 @@ exports[`VerificationCode should handle keyDown and special key cases and focus/
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
       type="tel"
-      value=""
+      value="1"
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -393,8 +453,8 @@ exports[`VerificationCode should handle keyDown and special key cases and focus/
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -403,8 +463,8 @@ exports[`VerificationCode should handle keyDown and special key cases and focus/
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
@@ -417,7 +477,7 @@ exports[`VerificationCode should handle keyDown and special key cases and focus/
 
 exports[`VerificationCode should handle paste when type is not number 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -427,82 +487,94 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
-      placeholder=""
-      type="text"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
-      id="verification-code-1"
       placeholder=""
       type="text"
       value="h"
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
-      id="verification-code-2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
+      id="verification-code-1"
       placeholder=""
       type="text"
       value="2"
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
-      id="verification-code-3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
+      id="verification-code-2"
       placeholder=""
       type="text"
       value="3"
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="4"
-      id="verification-code-4"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
+      id="verification-code-3"
       placeholder=""
       type="text"
       value="a"
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="5"
-      id="verification-code-5"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="4"
+      id="verification-code-4"
       placeholder=""
       type="text"
       value="*"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="5"
+      id="verification-code-5"
+      placeholder=""
+      type="text"
+      value="6"
     />
   </div>
 </DocumentFragment>
@@ -510,7 +582,7 @@ exports[`VerificationCode should handle paste when type is not number 1`] = `
 
 exports[`VerificationCode should handle paste with no overflowing values 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -520,33 +592,45 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -555,8 +639,8 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -565,8 +649,8 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -575,8 +659,8 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
@@ -589,7 +673,7 @@ exports[`VerificationCode should handle paste with no overflowing values 1`] = `
 
 exports[`VerificationCode should handle paste with overflowing values 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -599,33 +683,45 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -634,8 +730,8 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
       pattern="[0-9]*"
       placeholder=""
@@ -644,8 +740,8 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
       id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
@@ -654,13 +750,33 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
       id="verification-code-3"
       pattern="[0-9]*"
       placeholder=""
       type="tel"
       value="4"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="4"
+      id="verification-code-4"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="5"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="5"
+      id="verification-code-5"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="6"
     />
   </div>
 </DocumentFragment>
@@ -668,7 +784,7 @@ exports[`VerificationCode should handle paste with overflowing values 1`] = `
 
 exports[`VerificationCode should handle paste with overflowing values at different index than 0 1`] = `
 <DocumentFragment>
-  .cache-1kx0bbi-StyledInput-VerificationCode {
+  .cache-uxqmnp-StyledInput-VerificationCode {
   background: #ffffff;
   border: solid 1px #d4dae7;
   font-size: 24px;
@@ -678,33 +794,45 @@ exports[`VerificationCode should handle paste with overflowing values at differe
   margin-right: 8px;
   width: 56px;
   height: 64px;
+  outline-style: none;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:last-child {
+.cache-uxqmnp-StyledInput-VerificationCode:hover,
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  border-color: #4f0599;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:focus {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-uxqmnp-StyledInput-VerificationCode:last-child {
   margin-right: 0;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-webkit-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-webkit-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::-moz-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::-moz-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode:-ms-input-placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode:-ms-input-placeholder {
   color: #b2b6c3;
 }
 
-.cache-1kx0bbi-StyledInput-VerificationCode::placeholder {
+.cache-uxqmnp-StyledInput-VerificationCode::placeholder {
   color: #b2b6c3;
 }
 
 <div>
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="0"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="0"
       id="verification-code-0"
       pattern="[0-9]*"
       placeholder=""
@@ -713,19 +841,9 @@ exports[`VerificationCode should handle paste with overflowing values at differe
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="1"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="1"
       id="verification-code-1"
-      pattern="[0-9]*"
-      placeholder=""
-      type="tel"
-      value="1"
-    />
-    <input
-      aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="2"
-      id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
       type="tel"
@@ -733,13 +851,43 @@ exports[`VerificationCode should handle paste with overflowing values at differe
     />
     <input
       aria-invalid="false"
-      class="cache-1kx0bbi-StyledInput-VerificationCode e1odpyad0"
-      data-id="3"
-      id="verification-code-3"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="2"
+      id="verification-code-2"
       pattern="[0-9]*"
       placeholder=""
       type="tel"
       value="3"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="3"
+      id="verification-code-3"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="4"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="4"
+      id="verification-code-4"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="5"
+    />
+    <input
+      aria-invalid="false"
+      class="cache-uxqmnp-StyledInput-VerificationCode e1odpyad0"
+      data-testid="5"
+      id="verification-code-5"
+      pattern="[0-9]*"
+      placeholder=""
+      type="tel"
+      value="6"
     />
   </div>
 </DocumentFragment>

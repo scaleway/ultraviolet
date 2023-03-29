@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TagInputField } from '../..'
 import { shouldMatchEmotionSnapshotFormWrapper } from '../../../../.jest/helpers'
@@ -37,11 +37,11 @@ describe('ToggleField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <TagInputField name="formTags" placeholder="placeholder" />,
       {
-        transform: async ({ getByDisplayValue, getByText }) => {
-          const input = getByDisplayValue('') as HTMLInputElement
+        transform: async () => {
+          const input = screen.getByDisplayValue<HTMLInputElement>('')
           await userEvent.type(input, 'test{enter}')
           await waitFor(() => expect(input.value).toBe(''))
-          expect(getByText('test')).toBeInTheDocument()
+          expect(screen.getByText('test')).toBeInTheDocument()
         },
       },
       {

@@ -3,6 +3,241 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.99](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.98...scaleway-ui-website@0.2.99) (2023-03-29)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.98](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.97...scaleway-ui-website@0.2.98) (2023-03-29)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.97](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.96...scaleway-ui-website@0.2.97) (2023-03-29)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.96](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.95...scaleway-ui-website@0.2.96) (2023-03-28)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.95](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.94...scaleway-ui-website@0.2.95) (2023-03-28)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.94](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.93...scaleway-ui-website@0.2.94) (2023-03-27)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.93](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.92...scaleway-ui-website@0.2.93) (2023-03-27)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.92](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.91...scaleway-ui-website@0.2.92) (2023-03-27)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## 0.2.91 (2023-03-24)
+
+
+### :package: Chore
+
+* **release:** publish ([6e1f995](https://github.com/scaleway/scaleway-ui/commit/6e1f995e5605b4edd587b5ee06b91d3f5aff4616))
+
+
+
+## [0.2.90](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.89...scaleway-ui-website@0.2.90) (2023-03-23)
+
+
+### :package: Chore
+
+* **devdeps:** update dependency @types/node to v18.15.5 ([#2340](https://github.com/scaleway/scaleway-ui/issues/2340)) ([70a3e18](https://github.com/scaleway/scaleway-ui/commit/70a3e185092b3f02102ec12c075c4f3d10764ef2))
+
+
+
+## [0.2.89](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.88...scaleway-ui-website@0.2.89) (2023-03-22)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.88](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.87...scaleway-ui-website@0.2.88) (2023-03-21)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency next to v13.2.4 ([#2328](https://github.com/scaleway/scaleway-ui/issues/2328)) ([9917500](https://github.com/scaleway/scaleway-ui/commit/99175007f7b76021194dde8cdf6a9c5a656017c8))
+
+
+
+## [0.2.87](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.86...scaleway-ui-website@0.2.87) (2023-03-21)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.86](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.85...scaleway-ui-website@0.2.86) (2023-03-21)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.85](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.84...scaleway-ui-website@0.2.85) (2023-03-21)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.84](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.83...scaleway-ui-website@0.2.84) (2023-03-21)
+
+
+### :package: Chore
+
+* **devdeps:** update node.js to v18.15 ([#2327](https://github.com/scaleway/scaleway-ui/issues/2327)) ([f0a67cd](https://github.com/scaleway/scaleway-ui/commit/f0a67cdd704bbd2baac3f4ca452ab581a543d4e3))
+
+
+
+## [0.2.83](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.82...scaleway-ui-website@0.2.83) (2023-03-20)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.82](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.81...scaleway-ui-website@0.2.82) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
+
+
+
+## [0.2.81](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.80...scaleway-ui-website@0.2.81) (2023-03-20)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.80](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.79...scaleway-ui-website@0.2.80) (2023-03-20)
+
+
+### :package: Chore
+
+* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency schema-dts to v1.1.2 ([#2319](https://github.com/scaleway/scaleway-ui/issues/2319)) ([fc3f1e4](https://github.com/scaleway/scaleway-ui/commit/fc3f1e4d672124faba2bd9507594a4110fd726f6))
+
+
+
+## [0.2.79](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.78...scaleway-ui-website@0.2.79) (2023-03-20)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.78](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.77...scaleway-ui-website@0.2.78) (2023-03-20)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.77](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.76...scaleway-ui-website@0.2.77) (2023-03-17)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.76](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.75...scaleway-ui-website@0.2.76) (2023-03-17)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.75](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.74...scaleway-ui-website@0.2.75) (2023-03-17)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.74](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.73...scaleway-ui-website@0.2.74) (2023-03-16)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.73](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.72...scaleway-ui-website@0.2.73) (2023-03-16)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
+## [0.2.72](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.71...scaleway-ui-website@0.2.72) (2023-03-15)
+
+**Note:** Version bump only for package scaleway-ui-website
+
+
+
+
+
 ## [0.2.71](https://github.com/scaleway/scaleway-ui/compare/scaleway-ui-website@0.2.70...scaleway-ui-website@0.2.71) (2023-03-09)
 
 **Note:** Version bump only for package scaleway-ui-website

@@ -14,10 +14,9 @@ export {
   Container,
   Stepper,
   DateInput,
-  Description,
+  EmptyState,
   Expandable,
   Icon,
-  Label,
   LineChart,
   Link,
   List,
@@ -41,7 +40,6 @@ export {
   NumberInput,
   Separator,
   Stack,
-  StateBar,
   Status,
   StepList,
   Snippet,
@@ -62,9 +60,7 @@ export {
   usePagination,
   VerificationCode,
   CopyButton,
-  Grid,
   Row,
-  Col,
 } from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
 export type { SCWUITheme } from './theme'

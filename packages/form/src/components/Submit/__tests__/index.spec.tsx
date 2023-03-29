@@ -1,3 +1,4 @@
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Form, Submit, TextInputField } from '../..'
 import {
@@ -48,12 +49,14 @@ describe('Submit', () => {
         <Submit>Test</Submit>
       </Form>,
       {
-        transform: async ({ getByText }) => {
+        transform: async () => {
           await userEvent.click(
-            getByText('Test').closest('button') as HTMLButtonElement,
+            // eslint-disable-next-line testing-library/no-node-access
+            screen.getByText('Test').closest('button') as HTMLButtonElement,
           )
           expect(
-            getByText('Test').closest('button') as HTMLButtonElement,
+            // eslint-disable-next-line testing-library/no-node-access
+            screen.getByText('Test').closest('button') as HTMLButtonElement,
           ).toBeDisabled()
         },
       },

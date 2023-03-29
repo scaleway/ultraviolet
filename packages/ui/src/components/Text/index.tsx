@@ -8,7 +8,7 @@ import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
 import { Tooltip } from '../Tooltip'
 
-export const PROMINENCES = {
+const PROMINENCES = {
   default: '',
   strong: 'strong',
   stronger: 'stronger',
@@ -16,7 +16,7 @@ export const PROMINENCES = {
 }
 
 type ProminenceProps = keyof typeof PROMINENCES
-export type TextVariant = keyof typeof typography
+type TextVariant = keyof typeof typography
 export const textVariants = Object.keys(typography) as TextVariant[]
 
 /**

@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Form } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -37,8 +37,8 @@ describe('Form', () => {
         <button type="submit">Submit</button>
       </Form>,
       {
-        transform: async ({ getByText }) => {
-          await userEvent.click(getByText('Submit'))
+        transform: async () => {
+          await userEvent.click(screen.getByText('Submit'))
           await waitFor(() => expect(onRawSubmit).toBeCalledTimes(1))
         },
       },

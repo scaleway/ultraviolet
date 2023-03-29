@@ -1,4 +1,4 @@
-import { waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { FORM_ERROR } from 'final-form'
 import { Form, Submit, SubmitErrorAlert } from '../..'
@@ -29,11 +29,12 @@ describe('SubmitErrorAlert', () => {
         <SubmitErrorAlert />,
       </Form>,
       {
-        transform: async ({ getByText }) => {
+        transform: async () => {
           await userEvent.click(
-            getByText('Submit').closest('button') as HTMLButtonElement,
+            // eslint-disable-next-line testing-library/no-node-access
+            screen.getByText('Submit').closest('button') as HTMLButtonElement,
           )
-          await waitFor(() => expect(getByText('hello')).toBeInTheDocument())
+          expect(await screen.findByText('hello')).toBeInTheDocument()
         },
       },
     )
