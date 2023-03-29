@@ -1,19 +1,26 @@
+import type { Story } from '@storybook/react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
-import { Template } from './Template.stories'
+import { Card } from '../index'
 
-export const Disabled = Template.bind({})
-Disabled.args = {
-  header: 'Disabled Card',
-  children: ({ disabled }) => (
-    <Stack gap={1}>
-      <Text as="p" variant="body" disabled={disabled}>
-        We are using the disabled state returned from Card to disable its
-        children
-      </Text>
-      <Button disabled={disabled}>Button</Button>
-    </Stack>
-  ),
-  disabled: true,
+export const Disabled: Story = () => (
+  <Card header="Disabled Card" disabled>
+    {({ disabled }) => (
+      <Stack gap={1}>
+        <Text as="p" variant="body" disabled={disabled}>
+          We are using the disabled state returned from Card to disable its
+          children
+        </Text>
+        <Button disabled={disabled}>Button</Button>
+      </Stack>
+    )}
+  </Card>
+)
+
+Disabled.parameters = {
+  docs: {
+    storyDescription:
+      'You can disable a Card by passing the `disabled` prop. It will disable the Card and you can use the `disabled` state returned from Card to disable its children.',
+  },
 }

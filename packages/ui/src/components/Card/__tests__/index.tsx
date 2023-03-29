@@ -2,27 +2,44 @@ import { Card } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Card', () => {
-  test('renders correctly', () =>
-    shouldMatchEmotionSnapshot(<Card title="Title">Hello</Card>))
+  test('renders correctly with header', () =>
+    shouldMatchEmotionSnapshot(<Card header="Title">Hello</Card>))
 
-  test('renders correctly on edition mode', () =>
+  test('renders correctly with advanced header', () =>
     shouldMatchEmotionSnapshot(
-      <Card title="Title" edition>
+      <Card header={<h2>Advanced Title</h2>}>Hello</Card>,
+    ))
+
+  test('renders correctly without header', () =>
+    shouldMatchEmotionSnapshot(<Card>Hello</Card>))
+
+  test('renders correctly with disabled', () =>
+    shouldMatchEmotionSnapshot(<Card disabled>Hello</Card>))
+
+  test('renders correctly with disabled and header', () =>
+    shouldMatchEmotionSnapshot(
+      <Card header="Title" disabled>
         Hello
       </Card>,
     ))
 
-  test('renders correctly with small variant', () =>
-    shouldMatchEmotionSnapshot(
-      <Card title="Title" small>
-        Hello
-      </Card>,
-    ))
+  test('renders correctly with isActive', () =>
+    shouldMatchEmotionSnapshot(<Card isActive>Hello</Card>))
 
-  test('renders correctly when disabled', () =>
+  test('renders correctly with className', () =>
+    shouldMatchEmotionSnapshot(<Card className="test">Hello</Card>))
+
+  test('renders correctly with data-testid', () =>
+    shouldMatchEmotionSnapshot(<Card data-testid="test">Hello</Card>))
+
+  test('renders correctly with advanced children', () =>
     shouldMatchEmotionSnapshot(
-      <Card title="Title" disabled>
-        Hello
+      <Card data-testid="test">
+        {({ disabled, isActive }) => (
+          <p>
+            {disabled} and {isActive}
+          </p>
+        )}
       </Card>,
     ))
 })
