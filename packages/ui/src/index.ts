@@ -60,8 +60,6 @@ export {
   usePagination,
   VerificationCode,
   CopyButton,
-  Row,
-  Col,
   RowV2,
 } from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
