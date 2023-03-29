@@ -1,0 +1,56 @@
+import { Meta } from '@storybook/addon-docs'
+import Variants from './Variants'
+import Sizes from './Sizes'
+import ThemeWrapper from '../components/ThemeWrapper'
+
+<Meta title="Migrations/Button(v1) to ButtonV2" />
+
+# Migrate Button to ButtonV2
+
+Welcome to the migration of Button into ButtonV2, here we will see how to easily migrate to ButtonV2 component.
+
+## Variants match
+
+<ThemeWrapper>
+  <Variants />
+</ThemeWrapper>
+
+## Size match
+
+<ThemeWrapper>
+  <Sizes />
+</ThemeWrapper>
+
+## Others Old/New props matching
+
+- `href` &rarr; : ButtonV2 do not support href, we recommand to use `Link` component for that case, otherwise create the behavior using `onClick` prop.
+
+---
+
+- `download` &rarr; : ButtonV2 do not support download prop, we recommand to use `Link` component for that case, otherwise create the behavior using `onClick` prop.
+
+---
+
+- `progress` &rarr; : Loader (if prop `isLoading` if provided) replaces or use the `icon` spot. If you have no icon you can still use `iconPosition="right"` to put the Loader on the right.
+
+---
+
+- `as` &rarr; : ButtonV2 do not support `as` prop and always renders a button.
+
+---
+
+- `tooltip` &rarr; : ButtonV2 do not support `tooltip` prop. Please wrap your button with the `Tooltip` component.
+
+---
+
+- `action` &rarr; : ButtonV2 do not support `support` prop. Simply provide an `icon` without `children`.
+
+---
+
+- `extend` &rarr; : We removed this behavior, we recommand to still use a `icon` + `text (children)`..
+
+---
+
+- `iconSize` &rarr; : ButtonV2 do not support `iconSize` prop, the icon size is define internally depending of variant/size to make it consistent.
+
+---

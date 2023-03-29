@@ -9,6 +9,7 @@ export {
   Breadcrumbs,
   Bullet,
   Button,
+  ButtonV2,
   Carousel,
   Checkbox,
   Container,
