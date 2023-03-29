@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.231.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.230.0...@scaleway/ui@0.231.0) (2023-03-29)
+
+
+### :gear: Features
+
+* rename RowV2 to Row ([#2361](https://github.com/scaleway/scaleway-ui/issues/2361)) ([34881ed](https://github.com/scaleway/scaleway-ui/commit/34881ed9a918a43d7f3aa86901478b39387d614b))
+
+
+
 ## [0.230.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.229.10...@scaleway/ui@0.230.0) (2023-03-29)
 
 
