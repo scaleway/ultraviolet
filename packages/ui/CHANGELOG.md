@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.231.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.1...@scaleway/ui@0.231.2) (2023-03-29)
+
+
+### :zap: Refactor
+
+* **Expandable:** smart expandable ([#2349](https://github.com/scaleway/scaleway-ui/issues/2349)) ([de2853a](https://github.com/scaleway/scaleway-ui/commit/de2853a91d50ca80639bbe09567ed2dfeb2d8766))
+
+
+
 ## [0.231.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.0...@scaleway/ui@0.231.1) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/ui
