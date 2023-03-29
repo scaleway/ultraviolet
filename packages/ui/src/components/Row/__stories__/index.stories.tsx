@@ -1,8 +1,8 @@
 import type { ComponentMeta } from '@storybook/react'
-import { RowV2 } from '..'
+import { Row } from '..'
 
 export default {
-  component: RowV2,
+  component: Row,
   parameters: {
     docs: {
       description: {
@@ -11,8 +11,8 @@ export default {
     },
     experimental: true,
   },
-  title: 'Components/Layout/RowV2',
-} as ComponentMeta<typeof RowV2>
+  title: 'Components/Layout/Row',
+} as ComponentMeta<typeof Row>
 
 export { Playground } from './Playground.stories'
 export { Gap } from './Gap.stories'

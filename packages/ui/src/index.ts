@@ -60,7 +60,7 @@ export {
   usePagination,
   VerificationCode,
   CopyButton,
-  RowV2,
+  Row,
 } from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
 export type { SCWUITheme } from './theme'
