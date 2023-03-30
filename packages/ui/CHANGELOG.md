@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.231.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.3...@scaleway/ui@0.231.4) (2023-03-30)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.7.2 ([#2372](https://github.com/scaleway/scaleway-ui/issues/2372)) ([82c2113](https://github.com/scaleway/scaleway-ui/commit/82c21131270cf670ea41e437d7aa34b6e756e02b))
+
+
+
 ## 0.231.3 (2023-03-30)
 
 
