@@ -8,7 +8,9 @@ const StyledWrapper = styled.div`
   margin-right: -100px;
 `
 
-const StyledBeforeScroll = styled.span`
+const StyledBeforeScroll = styled('span', {
+  shouldForwardProp: prop => ['data-testid'].includes(prop),
+})<{ 'data-testid'?: string }>`
   position: absolute;
   width: 100px;
   height: 100%;
@@ -22,7 +24,9 @@ const StyledBeforeScroll = styled.span`
   z-index: auto;
 `
 
-const StyledScrollableWrapper = styled.div`
+const StyledScrollableWrapper = styled('div', {
+  shouldForwardProp: prop => ['data-testid'].includes(prop),
+})<{ 'data-testid'?: string }>`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -35,7 +39,9 @@ const StyledScrollableWrapper = styled.div`
   }
 `
 
-const StyledAfterScroll = styled.span`
+const StyledAfterScroll = styled('span', {
+  shouldForwardProp: prop => ['data-testid'].includes(prop),
+})<{ 'data-testid'?: string }>`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -51,7 +57,9 @@ const StyledAfterScroll = styled.span`
   );
 `
 
-const StyledBorderWrapper = styled.div`
+const StyledBorderWrapper = styled('div', {
+  shouldForwardProp: prop => ['data-testid'].includes(prop),
+})<{ 'data-testid'?: string }>`
   display: inline-block;
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
@@ -86,11 +94,13 @@ export const CarouselItem = ({ children }: CarouselItemProps): JSX.Element => (
 type CarouselProps = {
   className?: string
   children?: ReactNode
+  'data-testid'?: string
 }
 
 export const Carousel = ({
   children,
   className,
+  'data-testid': dataTestId = 'scrollbar',
 }: CarouselProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
@@ -127,9 +137,9 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper className={className}>
+    <StyledWrapper className={className} data-testid={dataTestId}>
       <StyledBeforeScroll
-        data-testid="scrollbar-before"
+        data-testid={`${dataTestId}-before`}
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
       />
@@ -157,13 +167,13 @@ export const Carousel = ({
           e.stopPropagation()
         }}
         className={className}
-        data-testid="scrollbar-wrapper"
+        data-testid={`${dataTestId}-wrapper`}
       >
         {children}
       </StyledScrollableWrapper>
 
       <StyledAfterScroll
-        data-testid="scrollbar-after"
+        data-testid={`${dataTestId}-after`}
         onMouseOver={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
       />

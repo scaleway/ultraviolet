@@ -35,32 +35,6 @@ exports[`Carousel renders correctly with default props 1`] = `
   margin-right: 16px;
 }
 
-.cache-3tra8z-StyledBorderWrapper {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #d4dae7;
-  height: 261px;
-  width: 248px;
-  max-width: 240px;
-  overflow-wrap: break-word;
-  white-space: normal;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.cache-3tra8z-StyledBorderWrapper:hover,
-.cache-3tra8z-StyledBorderWrapper:active,
-.cache-3tra8z-StyledBorderWrapper:focus {
-  border: 1px solid #390171;
-  -webkit-transition: box-shadow 0.2s ease;
-  transition: box-shadow 0.2s ease;
-  box-shadow: 0px 0px 0px 3px #4F059940;
-}
-
-.cache-3tra8z-StyledBorderWrapper img {
-  border-radius: 4px 4px 0 0;
-}
-
 .cache-w86y5s-StyledAfterScroll {
   position: absolute;
   bottom: 0;
@@ -79,6 +53,7 @@ exports[`Carousel renders correctly with default props 1`] = `
 
 <div
     class="cache-vz5p1b-StyledWrapper eam0u74"
+    data-testid="scrollbar"
   >
     <span
       class="cache-qrxupe-StyledBeforeScroll eam0u73"
@@ -87,44 +62,7 @@ exports[`Carousel renders correctly with default props 1`] = `
     <div
       class="cache-1khe6nh-StyledScrollableWrapper eam0u72"
       data-testid="scrollbar-wrapper"
-    >
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 1
-      </div>
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 2
-      </div>
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 3
-      </div>
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 4
-      </div>
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 5
-      </div>
-      <div
-        class="cache-3tra8z-StyledBorderWrapper eam0u70"
-        draggable="true"
-      >
-        Item 6
-      </div>
-    </div>
+    />
     <span
       class="cache-w86y5s-StyledAfterScroll eam0u71"
       data-testid="scrollbar-after"
