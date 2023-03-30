@@ -41,7 +41,7 @@ exports[`Snippet renders correctly 1`] = `
   width: 100%;
 }
 
-.cache-1u5ent2-StyledText-PreText {
+.cache-10p8wxu-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -58,9 +58,6 @@ exports[`Snippet renders correctly 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 52px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -136,7 +133,7 @@ exports[`Snippet renders correctly 1`] = `
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-10p8wxu-StyledText-PreText e1tg3t120"
       >
         <span
           class="cache-1e05ne7-StyledSpan eryi49r7"
@@ -213,7 +210,15 @@ exports[`Snippet renders correctly in multiline  1`] = `
   width: 100%;
 }
 
-.cache-11vrwt6-StyledText-PreText {
+.cache-1ou0y3f-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -226,12 +231,9 @@ exports[`Snippet renders correctly in multiline  1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -359,40 +361,44 @@ exports[`Snippet renders correctly in multiline  1`] = `
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-1ou0y3f-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
@@ -484,7 +490,15 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-11vrwt6-StyledText-PreText {
+.cache-1ou0y3f-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -497,12 +511,9 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -645,40 +656,44 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-1ou0y3f-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-13sh0rb-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-13sh0rb-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
@@ -770,7 +785,15 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   width: 100%;
 }
 
-.cache-11vrwt6-StyledText-PreText {
+.cache-1ou0y3f-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -783,12 +806,9 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -932,40 +952,44 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-1ou0y3f-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-5snhyo-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-5snhyo-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
@@ -1056,7 +1080,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   width: 100%;
 }
 
-.cache-1u5ent2-StyledText-PreText {
+.cache-10p8wxu-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1073,9 +1097,6 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 52px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -1151,7 +1172,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-10p8wxu-StyledText-PreText e1tg3t120"
       >
         <span
           class="cache-1e05ne7-StyledSpan eryi49r7"
@@ -1227,7 +1248,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
   width: 100%;
 }
 
-.cache-1u5ent2-StyledText-PreText {
+.cache-10p8wxu-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1244,9 +1265,6 @@ exports[`Snippet renders correctly with copyText 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 52px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -1322,7 +1340,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-10p8wxu-StyledText-PreText e1tg3t120"
       >
         <span
           class="cache-1e05ne7-StyledSpan eryi49r7"
@@ -1399,7 +1417,15 @@ exports[`Snippet renders correctly with hideText 1`] = `
   width: 100%;
 }
 
-.cache-11vrwt6-StyledText-PreText {
+.cache-1ou0y3f-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1412,12 +1438,9 @@ exports[`Snippet renders correctly with hideText 1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -1545,40 +1568,44 @@ exports[`Snippet renders correctly with hideText 1`] = `
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-1ou0y3f-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
@@ -1670,7 +1697,15 @@ exports[`Snippet renders correctly with showText 1`] = `
   width: 100%;
 }
 
-.cache-11vrwt6-StyledText-PreText {
+.cache-1ou0y3f-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 120px;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1683,12 +1718,9 @@ exports[`Snippet renders correctly with showText 1`] = `
   margin: 0;
   padding: 16px;
   padding-right: 72px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 120px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -1816,40 +1848,44 @@ exports[`Snippet renders correctly with showText 1`] = `
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-11vrwt6-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-1ou0y3f-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >
@@ -1940,7 +1976,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-1u5ent2-StyledText-PreText {
+.cache-10p8wxu-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -1957,9 +1993,6 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 52px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -2050,7 +2083,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-10p8wxu-StyledText-PreText e1tg3t120"
       >
         <span
           class="cache-1v2261c-StyledSpan eryi49r7"
@@ -2126,7 +2159,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   width: 100%;
 }
 
-.cache-1u5ent2-StyledText-PreText {
+.cache-10p8wxu-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -2143,9 +2176,6 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   overflow-y: hidden;
   white-space: nowrap;
   height: auto;
-  max-height: 52px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -2237,7 +2267,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
       <pre
-        class="eryi49r8 cache-1u5ent2-StyledText-PreText e1tg3t120"
+        class="eryi49r8 cache-10p8wxu-StyledText-PreText e1tg3t120"
       >
         <span
           class="cache-a6s7lw-StyledSpan eryi49r7"
@@ -2314,7 +2344,15 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   width: 100%;
 }
 
-.cache-1f7scj0-StyledText-PreText {
+.cache-7livzv-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: initial;
+}
+
+.cache-1r11idl-StyledText-PreText {
   color: #4a4f62;
   font-size: 14px;
   font-family: JetBrains;
@@ -2330,9 +2368,6 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   overflow-x: auto;
   overflow-y: hidden;
   height: auto;
-  max-height: 152px;
-  -webkit-transition: max-height 300ms ease-in-out;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 }
 
@@ -2460,40 +2495,44 @@ exports[`Snippet should click on extend button to display full content on  1`] =
     <div
       class="cache-cf30m9-Stack-StyledStack eryi49r5"
     >
-      <pre
-        class="eryi49r8 cache-1f7scj0-StyledText-PreText e1tg3t120"
+      <div
+        class="cache-7livzv-StyledExpandable e14o3tsk0"
       >
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
+        <pre
+          class="eryi49r8 cache-1r11idl-StyledText-PreText e1tg3t120"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </span>
-        <span
-          class="cache-bsg2e2-StyledSpan eryi49r7"
-        >
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </span>
-      </pre>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan eryi49r7"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
       <div
         class="cache-l8v6uo-ButtonContainer eryi49r4"
       >

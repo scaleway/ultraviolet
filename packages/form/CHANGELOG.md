@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.41.35](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.34...@scaleway/form@1.41.35) (2023-03-30)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.7.2 ([#2372](https://github.com/scaleway/scaleway-ui/issues/2372)) ([82c2113](https://github.com/scaleway/scaleway-ui/commit/82c21131270cf670ea41e437d7aa34b6e756e02b))
+
+
+
+## 1.41.34 (2023-03-30)
+
+
+### :package: Chore
+
+* **release:** publish ([5be166d](https://github.com/scaleway/scaleway-ui/commit/5be166d10e4521f9427231a6bf8663d841a0a563))
+
+
+
+## [1.41.33](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.32...@scaleway/form@1.41.33) (2023-03-29)
+
+
+### :zap: Refactor
+
+* **Expandable:** smart expandable ([#2349](https://github.com/scaleway/scaleway-ui/issues/2349)) ([de2853a](https://github.com/scaleway/scaleway-ui/commit/de2853a91d50ca80639bbe09567ed2dfeb2d8766))
+
+
+
 ## [1.41.32](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.31...@scaleway/form@1.41.32) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/form

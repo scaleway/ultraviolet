@@ -1,8 +1,8 @@
-import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { Children, useState } from 'react'
 import { CopyButton } from '../CopyButton'
+import { Expandable } from '../Expandable'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -13,17 +13,11 @@ type Prefixes = 'lines' | 'command'
 
 const PreText = styled(Text, {
   shouldForwardProp: prop =>
-    ![
-      'multiline',
-      'hasShowMoreButton',
-      'showMore',
-      'maxHeightExtended',
-    ].includes(prop),
+    !['multiline', 'hasShowMoreButton', 'showMore'].includes(prop),
 })<{
   multiline?: boolean
   hasShowMoreButton?: boolean
   showMore?: boolean
-  maxHeightExtended: number
 }>`
   margin: 0;
   padding: ${({ theme }) => theme.space['2']};
@@ -33,9 +27,6 @@ const PreText = styled(Text, {
   overflow-y: hidden;
   ${({ multiline }) => (!multiline ? 'white-space: nowrap;' : '')}
   height: auto;
-  max-height: ${({ multiline, showMore, maxHeightExtended }) =>
-    multiline && !showMore ? '120' : maxHeightExtended}px;
-  transition: max-height 300ms ease-in-out;
   counter-reset: section;
 `
 
@@ -137,6 +128,42 @@ const AnimatedArrowIcon = styled(Icon, {
   transition: transform 300ms ease-in-out;
 `
 
+type CodeContentProps = {
+  children: string
+  prefix?: Prefixes
+  multiline?: boolean
+  showMore?: boolean
+  hasShowMoreButton?: boolean
+  lines?: string[]
+}
+
+const CodeContent = ({
+  children,
+  prefix,
+  multiline,
+  showMore,
+  hasShowMoreButton,
+  lines,
+}: CodeContentProps) => (
+  <PreText
+    as="pre"
+    variant="code"
+    multiline={multiline}
+    hasShowMoreButton={hasShowMoreButton}
+    showMore={showMore}
+  >
+    {multiline ? (
+      Children.map(lines, child => (
+        <StyledSpan multiline prefix={prefix}>
+          {child}
+        </StyledSpan>
+      ))
+    ) : (
+      <StyledSpan prefix={prefix}>{children}</StyledSpan>
+    )}
+  </PreText>
+)
+
 type SnippetProps = {
   className?: string
   children: string
@@ -159,7 +186,6 @@ export const Snippet = ({
   prefix,
   className,
 }: SnippetProps) => {
-  const theme = useTheme()
   const [showMore, setShowMore] = useState(false)
 
   const lines = children.split(LINES_BREAK_REGEX).filter(Boolean)
@@ -167,35 +193,20 @@ export const Snippet = ({
   const multiline = numberOfLines > 1
   const hasShowMoreButton = numberOfLines > 4 && multiline
 
-  /**
-   * This is used to calculate the max height of the snippet in order to add an animation when the show more button is clicked.
-   * The max height is calculated by multiplying the number of lines by the line height of the text plus the padding (2 times).
-   */
-  const maxHeightExtended =
-    numberOfLines * Number(theme.typography.code.lineHeight.replace('px', '')) +
-    Number(theme.space['2'].replace('px', '')) * 2
-
   return (
     <Container multiline={multiline} className={className}>
       <StyledStack>
-        <PreText
-          as="pre"
-          variant="code"
-          multiline={multiline}
-          hasShowMoreButton={hasShowMoreButton}
-          showMore={showMore}
-          maxHeightExtended={maxHeightExtended}
-        >
-          {multiline ? (
-            Children.map(lines, child => (
-              <StyledSpan multiline prefix={prefix}>
-                {child}
-              </StyledSpan>
-            ))
-          ) : (
-            <StyledSpan prefix={prefix}>{children}</StyledSpan>
-          )}
-        </PreText>
+        {hasShowMoreButton ? (
+          <Expandable minHeight={120} opened={showMore}>
+            <CodeContent prefix={prefix} multiline={multiline} lines={lines}>
+              {children}
+            </CodeContent>
+          </Expandable>
+        ) : (
+          <CodeContent prefix={prefix} multiline={multiline} lines={lines}>
+            {children}
+          </CodeContent>
+        )}
         <ButtonContainer multiline={multiline && numberOfLines > 1}>
           <CopyButton
             value={children}

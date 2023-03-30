@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.231.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.3...@scaleway/ui@0.231.4) (2023-03-30)
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-select to v5.7.2 ([#2372](https://github.com/scaleway/scaleway-ui/issues/2372)) ([82c2113](https://github.com/scaleway/scaleway-ui/commit/82c21131270cf670ea41e437d7aa34b6e756e02b))
+
+
+
+## 0.231.3 (2023-03-30)
+
+
+### :package: Chore
+
+* **release:** publish ([5be166d](https://github.com/scaleway/scaleway-ui/commit/5be166d10e4521f9427231a6bf8663d841a0a563))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.1.2 ([#2373](https://github.com/scaleway/scaleway-ui/issues/2373)) ([7ed3699](https://github.com/scaleway/scaleway-ui/commit/7ed3699117ba091e12d86c1aaec7e91c62acb439))
+
+
+
+## [0.231.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.1...@scaleway/ui@0.231.2) (2023-03-29)
+
+
+### :zap: Refactor
+
+* **Expandable:** smart expandable ([#2349](https://github.com/scaleway/scaleway-ui/issues/2349)) ([de2853a](https://github.com/scaleway/scaleway-ui/commit/de2853a91d50ca80639bbe09567ed2dfeb2d8766))
+
+
+
 ## [0.231.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.0...@scaleway/ui@0.231.1) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/ui

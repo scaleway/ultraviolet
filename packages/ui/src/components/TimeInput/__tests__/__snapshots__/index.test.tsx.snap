@@ -269,15 +269,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   min-height: 24px;
 }
 
-.cache-fojapx-Expandable-ExpandableWithHiddenOverflow {
+.cache-lzuy3q-StyledExpandable {
   -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
   transition: max-height 300ms ease-out,opacity 300ms ease-out;
-  max-height: 0;
   overflow: hidden;
-  opacity: 0;
   height: auto;
-  margin-top: 0;
-  overflow: hidden;
+  max-height: 0px;
 }
 
 .cache-1k8ev0-StyledError {
@@ -287,7 +284,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
 }
 
 <div
-    class=" cache-w1hmin-StyledContainer-container-StyledContainer e1o1qsrh5"
+    class=" cache-w1hmin-StyledContainer-container-StyledContainer e1o1qsrh4"
     data-testid="select-input-timeinput-test-0"
   >
     <span
@@ -356,7 +353,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
           >
             <hr
               aria-orientation="vertical"
-              class="e1o1qsrh6 cache-bi3giz-StyledHr-StyledSeparator eoti1h20"
+              class="e1o1qsrh5 cache-bi3giz-StyledHr-StyledSeparator eoti1h20"
               role="separator"
             />
             <svg
@@ -377,10 +374,10 @@ exports[`TimeInput renders correctly with base props 1`] = `
       value="00:00"
     />
     <div
-      class="cache-fojapx-Expandable-ExpandableWithHiddenOverflow e1o1qsrh3"
+      class="cache-lzuy3q-StyledExpandable e14o3tsk0"
     >
       <div
-        class="cache-1k8ev0-StyledError e1o1qsrh4"
+        class="cache-1k8ev0-StyledError e1o1qsrh3"
       />
     </div>
   </div>
