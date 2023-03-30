@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.231.3 (2023-03-30)
+
+
+### :package: Chore
+
+* **release:** publish ([5be166d](https://github.com/scaleway/scaleway-ui/commit/5be166d10e4521f9427231a6bf8663d841a0a563))
+
+
+### :bug: Bug Fixes
+
+* **deps:** update dependency react-toastify to v9.1.2 ([#2373](https://github.com/scaleway/scaleway-ui/issues/2373)) ([7ed3699](https://github.com/scaleway/scaleway-ui/commit/7ed3699117ba091e12d86c1aaec7e91c62acb439))
+
+
+
 ## [0.231.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.1...@scaleway/ui@0.231.2) (2023-03-29)
 
 
