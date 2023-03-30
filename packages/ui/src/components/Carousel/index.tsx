@@ -8,9 +8,7 @@ const StyledWrapper = styled.div`
   margin-right: -100px;
 `
 
-const StyledBeforeScroll = styled('span', {
-  shouldForwardProp: prop => ['data-testid'].includes(prop),
-})<{ 'data-testid'?: string }>`
+const StyledBeforeScroll = styled.span`
   position: absolute;
   width: 100px;
   height: 100%;
@@ -24,9 +22,7 @@ const StyledBeforeScroll = styled('span', {
   z-index: auto;
 `
 
-const StyledScrollableWrapper = styled('div', {
-  shouldForwardProp: prop => ['data-testid'].includes(prop),
-})<{ 'data-testid'?: string }>`
+const StyledScrollableWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -39,9 +35,7 @@ const StyledScrollableWrapper = styled('div', {
   }
 `
 
-const StyledAfterScroll = styled('span', {
-  shouldForwardProp: prop => ['data-testid'].includes(prop),
-})<{ 'data-testid'?: string }>`
+const StyledAfterScroll = styled.span`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -57,9 +51,7 @@ const StyledAfterScroll = styled('span', {
   );
 `
 
-const StyledBorderWrapper = styled('div', {
-  shouldForwardProp: prop => ['data-testid'].includes(prop),
-})<{ 'data-testid'?: string }>`
+const StyledBorderWrapper = styled.div`
   display: inline-block;
   border-radius: ${({ theme }) => theme.radii.default};
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
