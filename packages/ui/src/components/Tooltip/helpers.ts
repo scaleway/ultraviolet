@@ -1,8 +1,8 @@
 import type { RefObject } from 'react'
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
-export const ARROW_WIDTH = 6 // in px
-const SPACE = 6 // in px
+export const ARROW_WIDTH = 8 // in px
+const SPACE = 4 // in px
 const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
 export const DEFAULT_POSITIONS = {
   arrowLeft: -999,

@@ -72,7 +72,7 @@ const StyledTooltip = styled.div<StyledTooltipProps>`
     css`
       ${ANIMATION_DURATION}ms ${!reverseAnimation
         ? animation(positions)
-        : exitAnimation(positions)}
+        : exitAnimation(positions)} forwards
     `};
 
   &::after {
@@ -181,7 +181,6 @@ export const Tooltip = ({
   const unmountTooltip = useCallback(() => {
     setVisibleInDom(false)
     setReverseAnimation(false)
-    timer.current = undefined
 
     window.removeEventListener('scroll', onScrollDetected, true)
   }, [onScrollDetected])
@@ -200,7 +199,7 @@ export const Tooltip = ({
           setReverseAnimation(true)
           timer.current = setTimeout(() => unmountTooltip(), ANIMATION_DURATION)
         }, 200)
-      } else {
+      } else if (isVisible) {
         // This condition is for when we want to mount the tooltip
         // If the timer exists it means the tooltip was about to umount, but we hovered the children again,
         // so we clear the timer and the tooltip will not be unmounted
@@ -215,7 +214,7 @@ export const Tooltip = ({
           clearTimeout(debounceTimer.current)
           debounceTimer.current = undefined
         }
-        setVisibleInDom(isVisible)
+        setVisibleInDom(true)
       }
     },
     [unmountTooltip],
