@@ -103,12 +103,12 @@ const ContentWrapper = ({
 )
 
 type PopoverProps = {
-  variant: VariantType
-  visible?: boolean
   children: ReactNode
   content: ReactNode
   title: string
-  size?: 'small' | 'medium' | 'large'
+  variant?: VariantType
+  visible?: boolean
+  size?: keyof typeof SIZES_WIDTH
   onClose?: () => void
   className?: string
   'data-testid'?: string

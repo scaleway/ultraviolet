@@ -1,0 +1,66 @@
+import type { ComponentStory } from '@storybook/react'
+import { useCallback, useState } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
+import { Button } from '../../Button'
+import { Popover } from '../index'
+
+export const Sizes: ComponentStory<typeof Popover> = () => {
+  const [openedSmall, setOpenedSmall] = useState(false)
+  const [openedMedium, setOpenedMedium] = useState(false)
+  const [openedLarge, setOpenedLarge] = useState(false)
+
+  const onCloseCallBack = useCallback(
+    (setValue: Dispatch<SetStateAction<boolean>>) => {
+      setValue(false)
+    },
+    [],
+  )
+
+  return (
+    <div style={{ gap: '16px', display: 'inline-flex' }}>
+      <Popover
+        visible={openedSmall}
+        title="Popover Title"
+        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+        onClose={() => onCloseCallBack(setOpenedSmall)}
+        size="small"
+      >
+        <Button variant="secondary" onClick={() => setOpenedSmall(true)}>
+          Open Popover small size
+        </Button>
+      </Popover>
+
+      <Popover
+        visible={openedMedium}
+        title="Popover Title"
+        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+        onClose={() => onCloseCallBack(setOpenedMedium)}
+        size="medium"
+      >
+        <Button variant="secondary" onClick={() => setOpenedMedium(true)}>
+          Open Popover medium size
+        </Button>
+      </Popover>
+
+      <Popover
+        visible={openedLarge}
+        title="Popover Title"
+        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+        onClose={() => onCloseCallBack(setOpenedLarge)}
+        size="large"
+      >
+        <Button variant="secondary" onClick={() => setOpenedLarge(true)}>
+          Open Popover large size
+        </Button>
+      </Popover>
+    </div>
+  )
+}
+
+Sizes.parameters = {
+  docs: {
+    description: {
+      story: `Popover has two variants: \`default\` and \`primary\`. You can change the variant by passing \`variant\` prop to the component. The default variant is \`default\`.`,
+    },
+  },
+}
