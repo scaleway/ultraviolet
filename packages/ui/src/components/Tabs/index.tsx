@@ -60,6 +60,8 @@ type TabsProps = {
   selected?: string | number
   onChange: (data: string | number) => void
   moreDisclosure?: ReactNode
+  className?: string
+  'data-testid'?: string
 } & Omit<HTMLAttributes<HTMLElement>, 'onChange' | 'role'>
 
 const SHADOW_THRESHOLD = 10
@@ -69,6 +71,8 @@ export const Tabs = ({
   onChange,
   moreDisclosure = 'More',
   selected,
+  className,
+  'data-testid': dataTestId,
   ...props
 }: TabsProps) => {
   const tabsRef = useRef<HTMLDivElement>({} as HTMLDivElement)
@@ -119,7 +123,13 @@ export const Tabs = ({
 
   return (
     <TabsContext.Provider value={value}>
-      <TabsContainer ref={tabsRef} role="tablist" {...props}>
+      <TabsContainer
+        ref={tabsRef}
+        role="tablist"
+        className={className}
+        data-testid={dataTestId}
+        {...props}
+      >
         {children}
         {displayMore ? (
           <StyledTabMenu ref={moreStaticRef} disclosure={moreDisclosure}>

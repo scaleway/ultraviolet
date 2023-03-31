@@ -15,6 +15,8 @@ type PasswordCheckProps = {
    * with the rule and `valid` is a boolean that determine if the rule is respected or not.
    */
   rules: Rule[]
+  className?: string
+  'data-testid'?: string
 }
 
 const PasswordCheckContainer = styled.div`
@@ -23,8 +25,12 @@ const PasswordCheckContainer = styled.div`
   gap: ${({ theme }) => theme.space['1']};
 `
 
-export const PasswordCheck = ({ rules }: PasswordCheckProps) => (
-  <PasswordCheckContainer>
+export const PasswordCheck = ({
+  rules,
+  className,
+  'data-testid': dataTestId,
+}: PasswordCheckProps) => (
+  <PasswordCheckContainer className={className} data-testid={dataTestId}>
     {rules.map(rule => (
       <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
         <Icon

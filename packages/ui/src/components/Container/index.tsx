@@ -32,6 +32,7 @@ type ContainerProps = ContainerBaseProps & {
   rightTitle?: ReactNode
   subtitle?: ReactNode
   title?: string
+  'data-testid'?: string
 }
 
 export const Container = ({
@@ -44,8 +45,9 @@ export const Container = ({
   small = false,
   children,
   className,
+  'data-testid': dataTestId,
 }: ContainerProps) => (
-  <Stack gap={1} className={className}>
+  <Stack gap={1} className={className} data-testid={dataTestId}>
     {title ? (
       <Stack
         gap={2}

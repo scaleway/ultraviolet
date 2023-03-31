@@ -65,6 +65,7 @@ type TagProps = {
   icon?: IconName
   className?: string
   children: ReactNode
+  'data-testid'?: string
 }
 
 const StyledActionButton = styled(Button)`
@@ -80,10 +81,12 @@ export const Tag = ({
   disabled = false,
   variant = 'neutral',
   className,
+  'data-testid': dataTestId,
 }: TagProps) => (
   <StyledContainer
     variant={disabled ? 'disabled' : variant}
     className={className}
+    data-testid={dataTestId}
   >
     {icon ? <Icon name={icon} size={16} /> : null}
     <StyledTag aria-disabled={disabled}>{children}</StyledTag>

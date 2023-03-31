@@ -28,6 +28,7 @@ type LineChartProps = {
     Record<'bottom' | 'left' | 'right' | 'top', number | string>
   >
   chartProps?: Partial<LineSvgProps>
+  'data-testid'?: string
 }
 
 const DEFAULT_MARGIN = { bottom: 50, left: 60, right: 25, top: 50 }
@@ -54,6 +55,7 @@ export const LineChart = ({
   pointFormatters,
   tickValues,
   chartProps = DEFAULT_CHARTPROPS,
+  'data-testid': dataTestId,
 }: LineChartProps) => {
   const theme = useTheme()
   const dataset = {
@@ -130,6 +132,7 @@ export const LineChart = ({
           theme={chartTheme}
           curve="monotoneX"
           tooltip={LineChartTooltip}
+          data-testid={dataTestId}
           {...chartProps}
         />
       </div>

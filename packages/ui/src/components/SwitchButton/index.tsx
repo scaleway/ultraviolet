@@ -64,6 +64,8 @@ type SwitchButtonProps = {
     value: string
     disabled?: boolean
   }
+  className?: string
+  'data-testid'?: string
 }
 
 export const SwitchButton = ({
@@ -75,6 +77,8 @@ export const SwitchButton = ({
   leftButton,
   rightButton,
   tooltip,
+  className,
+  'data-testid': dataTestId,
 }: SwitchButtonProps) => {
   const leftButtonRef = useRef<HTMLDivElement>(null)
   const rightButtonRef = useRef<HTMLDivElement>(null)
@@ -101,7 +105,11 @@ export const SwitchButton = ({
 
   return (
     <Tooltip text={tooltip}>
-      <div style={{ display: 'inline-flex' }}>
+      <div
+        style={{ display: 'inline-flex' }}
+        className={className}
+        data-testid={dataTestId}
+      >
         <StyledBorderedBox
           onMouseDown={setMouseDown(true)}
           onMouseUp={setMouseDown(false)}

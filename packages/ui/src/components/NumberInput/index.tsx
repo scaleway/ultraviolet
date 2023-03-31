@@ -161,6 +161,8 @@ type NumberInputProps = {
   defaultValue?: number
   value?: number
   disabledTooltip?: string
+  className?: string
+  'data-testid'?: string
 } & Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'size' | 'onChange' | 'value' | 'defaultValue'
@@ -183,6 +185,7 @@ export const NumberInput = ({
   value,
   disabledTooltip,
   className,
+  'data-testid': dataTestId,
 }: NumberInputProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
@@ -287,7 +290,12 @@ export const NumberInput = ({
   const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
   return (
-    <StyledContainer aria-disabled={disabled} size={size} className={className}>
+    <StyledContainer
+      aria-disabled={disabled}
+      size={size}
+      className={className}
+      data-testid={dataTestId}
+    >
       <Tooltip text={isMinusDisabled && disabledTooltip}>
         <StyledSelectButton
           onClick={offsetFn(-1)}

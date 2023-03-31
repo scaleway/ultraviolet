@@ -31,6 +31,7 @@ type LinkProps = {
   onClick?: MouseEventHandler<HTMLAnchorElement>
   'aria-label'?: string
   oneLine?: boolean
+  'data-testid'?: string
 }
 
 const ICON_SIZE = 16
@@ -143,6 +144,7 @@ export const Link = forwardRef(
       onClick,
       'aria-label': ariaLabel,
       oneLine = false,
+      'data-testid': dataTestId,
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -177,6 +179,7 @@ export const Link = forwardRef(
           iconPosition={iconPosition}
           aria-label={ariaLabel}
           oneLine={oneLine}
+          data-testid={dataTestId}
         >
           {!isBlank && iconPosition === 'left' ? (
             <StyledIcon name="arrow-left" size={ICON_SIZE} />

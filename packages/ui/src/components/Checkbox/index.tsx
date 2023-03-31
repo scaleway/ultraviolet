@@ -185,6 +185,7 @@ type CheckboxProps = {
   className?: string
   ['data-visibility']?: string
   required?: boolean
+  'data-testid'?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
@@ -222,6 +223,7 @@ export const Checkbox = forwardRef(
       'data-visibility': dataVisibility,
       'aria-label': ariaLabel,
       required,
+      'data-testid': dataTestId,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -258,6 +260,7 @@ export const Checkbox = forwardRef(
           data-visibility={dataVisibility}
           data-checked={state}
           data-error={!!error}
+          data-testid={dataTestId}
         >
           {progress ? (
             <StyledActivityContainer>

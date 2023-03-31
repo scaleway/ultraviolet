@@ -267,6 +267,8 @@ type ModalProps = Partial<
   placement?: ModalPlacement
   width?: ModalWidth
   children: ReactNode | ((args: DialogStateReturn) => ReactNode)
+  className?: string
+  'data-testid'?: string
 }
 
 export const Modal = memo(
@@ -291,6 +293,8 @@ export const Modal = memo(
     placement = 'center',
     preventBodyScroll = true,
     width = 'small',
+    className,
+    'data-testid': dataTestId,
   }: ModalProps) => {
     const dialog = useDialogState({
       animated,
@@ -327,6 +331,8 @@ export const Modal = memo(
             preventBodyScroll={preventBodyScroll}
             {...dialog}
             hide={onClose || onCloseCallBack}
+            className={className}
+            data-testid={dataTestId}
           >
             <>
               {dialog.visible &&

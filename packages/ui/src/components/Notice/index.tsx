@@ -6,10 +6,21 @@ import { Text } from '../Text'
 type NoticeProps = {
   children: ReactNode
   className?: string
+  'data-testid'?: string
 }
 
-export const Notice = ({ children, className }: NoticeProps) => (
-  <Stack direction="row" alignItems="center" gap={1} className={className}>
+export const Notice = ({
+  children,
+  className,
+  'data-testid': dataTestId,
+}: NoticeProps) => (
+  <Stack
+    direction="row"
+    alignItems="center"
+    gap={1}
+    data-testid={dataTestId}
+    className={className}
+  >
     <Icon
       name="information-outline"
       size={20}

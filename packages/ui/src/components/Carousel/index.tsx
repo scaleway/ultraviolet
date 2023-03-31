@@ -86,11 +86,13 @@ export const CarouselItem = ({ children }: CarouselItemProps): JSX.Element => (
 type CarouselProps = {
   className?: string
   children?: ReactNode
+  'data-testid'?: string
 }
 
 export const Carousel = ({
   children,
   className,
+  'data-testid': dataTestId = 'scrollbar',
 }: CarouselProps): JSX.Element => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
@@ -127,9 +129,9 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper className={className}>
+    <StyledWrapper className={className} data-testid={dataTestId}>
       <StyledBeforeScroll
-        data-testid="scrollbar-before"
+        data-testid={`${dataTestId}-before`}
         onMouseOver={handleScrollRight}
         onMouseLeave={() => clearInterval(intervalRight)}
       />
@@ -156,12 +158,14 @@ export const Carousel = ({
           e.preventDefault()
           e.stopPropagation()
         }}
+        className={className}
+        data-testid={`${dataTestId}-wrapper`}
       >
         {children}
       </StyledScrollableWrapper>
 
       <StyledAfterScroll
-        data-testid="scrollbar-after"
+        data-testid={`${dataTestId}-after`}
         onMouseOver={handleScrollLeft}
         onMouseLeave={() => clearInterval(intervalLeft)}
       />

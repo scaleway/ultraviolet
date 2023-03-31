@@ -90,6 +90,8 @@ export const Item = ({
 type BreadcrumbsProps = {
   selected?: number
   children: ReactNode
+  className?: string
+  'data-testid'?: string
 }
 
 type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
@@ -99,12 +101,14 @@ type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
 export const Breadcrumbs: BreadcrumbsType = ({
   children,
   selected: selectedProp,
+  className,
+  'data-testid': dataTestId,
 }) => {
   const selected =
     selectedProp !== undefined ? selectedProp : Children.count(children) - 1
 
   return (
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
       <StyledOl>
         {Children.map(children, (child, index: number) => {
           if (!isValidElement<ItemProps>(child)) {

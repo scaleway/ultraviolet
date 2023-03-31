@@ -56,6 +56,7 @@ type StatusProps = {
   className?: string
   variant: StatusVariant
   tooltip?: string
+  'data-testid'?: string
 }
 
 export const Status = ({
@@ -63,9 +64,10 @@ export const Status = ({
   className,
   tooltip,
   variant,
+  'data-testid': dataTestId,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
-    <Container className={className}>
+    <Container className={className} data-testid={dataTestId}>
       {animated ? <StyledAnimatedCircle variant={variant} /> : null}
       <StyledCircle variant={variant} />
     </Container>

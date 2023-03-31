@@ -45,7 +45,7 @@ const Container = styled.div`
       &[data-cheked='false'] {
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
       }
-    }}
+    }
   }
 `
 
@@ -98,6 +98,7 @@ type SelectableCardProps = {
   id?: string
   tooltip?: string
   label?: ReactNode
+  'data-testid'?: string
 }
 
 export const SelectableCard = forwardRef(
@@ -118,6 +119,7 @@ export const SelectableCard = forwardRef(
       tooltip,
       id,
       label,
+      'data-testid': dataTestId,
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -141,6 +143,7 @@ export const SelectableCard = forwardRef(
           data-checked={checked}
           data-disabled={disabled}
           data-error={isError}
+          data-testid={dataTestId}
           ref={ref}
         >
           <Element

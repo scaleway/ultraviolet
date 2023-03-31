@@ -127,6 +127,7 @@ type MenuProps = {
   disclosure: DisclosureElement
   hasArrow?: boolean
   visible?: boolean
+  'data-testid'?: string
 }
 
 const MenuList = styled.div<MenuListProps>`
@@ -171,6 +172,7 @@ const FwdMenu = forwardRef(
       placement = 'bottom',
       visible = false,
       className,
+      'data-testid': dataTestId,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -203,6 +205,8 @@ const FwdMenu = forwardRef(
               /* Required to avoid loading menu content if not visible */
               popover.visible ? (
                 <MenuList
+                  data-testid={dataTestId}
+                  className={className}
                   hasArrow={hasArrow}
                   placement={popover.placement as ArrowPlacement}
                   role="menu"

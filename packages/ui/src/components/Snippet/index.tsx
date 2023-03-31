@@ -175,6 +175,7 @@ type SnippetProps = {
   prefix?: Prefixes
   showText?: string
   hideText?: string
+  'data-testid'?: string
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 export const Snippet = ({
@@ -185,6 +186,7 @@ export const Snippet = ({
   hideText = 'Hide',
   prefix,
   className,
+  'data-testid': dataTestId,
 }: SnippetProps) => {
   const [showMore, setShowMore] = useState(false)
 
@@ -194,7 +196,11 @@ export const Snippet = ({
   const hasShowMoreButton = numberOfLines > 4 && multiline
 
   return (
-    <Container multiline={multiline} className={className}>
+    <Container
+      multiline={multiline}
+      className={className}
+      data-testid={dataTestId}
+    >
       <StyledStack>
         {hasShowMoreButton ? (
           <Expandable minHeight={120} opened={showMore}>

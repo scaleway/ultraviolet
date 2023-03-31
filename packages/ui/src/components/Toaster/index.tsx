@@ -123,12 +123,15 @@ type ToastContainerProps = {
    * Position of the toast container
    */
   position?: ToastOptions['position']
+
+  'data-testid'?: string
 }
 
 export const ToastContainer = ({
   newestOnTop,
   limit,
   position,
+  'data-testid': dataTestId,
 }: ToastContainerProps) => {
   const theme = useTheme()
 
@@ -138,6 +141,7 @@ export const ToastContainer = ({
       <ClassNames>
         {({ css: localCss }) => (
           <BaseToastContainer
+            data-testid={dataTestId}
             closeButton={<CloseButton />}
             toastClassName={localCss(styles.toast(theme))}
             autoClose={AUTOCLOSE_DELAY}

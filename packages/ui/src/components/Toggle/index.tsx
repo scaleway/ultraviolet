@@ -135,6 +135,7 @@ type ToggleProps = {
   disabled?: boolean
   className?: string
   required?: boolean
+  'data-testid'?: string
 }
 
 export const Toggle = forwardRef(
@@ -151,6 +152,7 @@ export const Toggle = forwardRef(
       label,
       required,
       className,
+      'data-testid': dataTestId,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -175,6 +177,7 @@ export const Toggle = forwardRef(
           size={size}
           onClick={evt => evt.stopPropagation()}
           className={className}
+          data-testid={dataTestId}
         >
           {label && labelPosition === 'left' ? (
             <>

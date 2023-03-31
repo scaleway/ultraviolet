@@ -52,6 +52,7 @@ type CopyButtonProps = {
   variant?: 'primary' | 'neutral'
   noBorder?: boolean
   className?: string
+  'data-testid'?: string
 }
 
 export const CopyButton = ({
@@ -62,6 +63,7 @@ export const CopyButton = ({
   variant = 'primary',
   noBorder,
   className,
+  'data-testid': dataTestId,
 }: CopyButtonProps) => {
   const [isCopied, setCopied] = useClipboard(value, {
     successDuration: COPY_DURATION,
@@ -76,6 +78,7 @@ export const CopyButton = ({
         variant={variant}
         noBorder={noBorder}
         className={className}
+        data-testid={dataTestId}
       >
         <Icon name={isCopied ? 'check' : 'copy-content'} size={16} />
       </StyledButton>

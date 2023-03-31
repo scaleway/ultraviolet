@@ -78,6 +78,7 @@ type BulletProps = {
   tooltip?: string
   tooltipBaseId?: string
   variant?: BulletVariant
+  'data-testid'?: string
 } & ContentProps
 
 export const Bullet = ({
@@ -88,9 +89,15 @@ export const Bullet = ({
   text,
   tooltip,
   tooltipBaseId,
+  'data-testid': dataTestId,
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
-    <StyledContainer variant={variant} size={size} className={className}>
+    <StyledContainer
+      variant={variant}
+      size={size}
+      className={className}
+      data-testid={dataTestId}
+    >
       {icon ? <Icon name={icon} size="50%" /> : text}
     </StyledContainer>
   </Tooltip>

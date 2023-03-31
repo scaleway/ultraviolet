@@ -273,6 +273,8 @@ type StyledButtonProps = {
   tooltip?: string
   tooltipBaseId?: string
   variant: ButtonVariant
+  className?: string
+  'data-testid'?: string
 } & ButtonHTMLAttributes<HTMLButtonElement> &
   Pick<
     AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -384,6 +386,8 @@ const FwdButton = ({
   tooltipBaseId,
   type = 'button',
   variant = 'primary',
+  className,
+  'data-testid': dataTestId,
   ...props
 }: ButtonProps) => {
   const as = useMemo(() => {
@@ -410,6 +414,8 @@ const FwdButton = ({
         extend={extend}
         icon={icon}
         type={type}
+        className={className}
+        data-testid={dataTestId}
       >
         {progress === true ||
         progress === 'left' ||
