@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.232.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.232.0...@scaleway/ui@0.232.1) (2023-03-31)
+
+
+### :bug: Bug Fixes
+
+* **VerificationCode:** correct data-id ([#2379](https://github.com/scaleway/scaleway-ui/issues/2379)) ([24ea7eb](https://github.com/scaleway/scaleway-ui/commit/24ea7eb2974865eed20bcdd556e2502017867338))
+
+
+
 ## [0.232.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.4...@scaleway/ui@0.232.0) (2023-03-31)
 
 
