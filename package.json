@@ -37,7 +37,8 @@
     "prepare": "husky install",
     "size": "pnpm run build && size-limit",
     "tokens:update": "./scripts/figma-synchronise-tokens.sh https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json && pnpm prettier --write packages/themes/src/themes/console",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "release": "pnpm build && pnpm changeset publish"
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
@@ -81,6 +82,8 @@
     "@babel/preset-react": "7.18.6",
     "@babel/preset-typescript": "7.21.0",
     "@babel/runtime": "7.21.0",
+    "@changesets/changelog-github": "0.4.8",
+    "@changesets/cli": "2.26.1",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@emotion/babel-plugin": "11.10.6",
@@ -148,7 +151,6 @@
     "jest-axe": "7.0.1",
     "jest-environment-jsdom": "29.5.0",
     "jest-junit": "15.0.0",
-    "lerna": "6.5.1",
     "lint-staged": "13.2.0",
     "postcss": "8.4.21",
     "prettier": "2.8.7",

@@ -66,9 +66,9 @@ describe('CheckboxField', () => {
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => { })
-    const onChange = jest.fn(() => { })
-    const onBlur = jest.fn(() => { })
+    const onFocus = jest.fn(() => {})
+    const onChange = jest.fn(() => {})
+    const onBlur = jest.fn(() => {})
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <CheckboxField
@@ -95,7 +95,7 @@ describe('CheckboxField', () => {
 
   test('should render correctly with errors', () =>
     shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => { }} errors={mockErrors}>
+      <Form onRawSubmit={() => {}} errors={mockErrors}>
         <CheckboxField name="test" required>
           Checkbox field error
         </CheckboxField>

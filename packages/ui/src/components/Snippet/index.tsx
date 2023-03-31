@@ -145,24 +145,24 @@ const CodeContent = ({
   hasShowMoreButton,
   lines,
 }: CodeContentProps) => (
-    <PreText
-      as="pre"
-      variant="code"
-      multiline={multiline}
-      hasShowMoreButton={hasShowMoreButton}
-      showMore={showMore}
-    >
-      {multiline ? (
-        Children.map(lines, child => (
-          <StyledSpan multiline prefix={prefix}>
-            {child}
-          </StyledSpan>
-        ))
-      ) : (
-        <StyledSpan prefix={prefix}>{children}</StyledSpan>
-      )}
-    </PreText>
-  )
+  <PreText
+    as="pre"
+    variant="code"
+    multiline={multiline}
+    hasShowMoreButton={hasShowMoreButton}
+    showMore={showMore}
+  >
+    {multiline ? (
+      Children.map(lines, child => (
+        <StyledSpan multiline prefix={prefix}>
+          {child}
+        </StyledSpan>
+      ))
+    ) : (
+      <StyledSpan prefix={prefix}>{children}</StyledSpan>
+    )}
+  </PreText>
+)
 
 type SnippetProps = {
   className?: string

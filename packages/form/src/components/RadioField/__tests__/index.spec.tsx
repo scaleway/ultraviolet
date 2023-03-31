@@ -36,7 +36,7 @@ describe('RadioField', () => {
   test('should render correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => { }}
+        onRawSubmit={() => {}}
         errors={mockErrors}
         initialValues={{ test: 'checked' }}
       >
@@ -53,9 +53,9 @@ describe('RadioField', () => {
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => { })
-    const onChange = jest.fn(() => { })
-    const onBlur = jest.fn(() => { })
+    const onFocus = jest.fn(() => {})
+    const onChange = jest.fn(() => {})
+    const onBlur = jest.fn(() => {})
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <RadioField

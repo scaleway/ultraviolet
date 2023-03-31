@@ -36,7 +36,7 @@ describe('SelectableCardField', () => {
   test('should render correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Form
-        onRawSubmit={() => { }}
+        onRawSubmit={() => {}}
         errors={mockErrors}
         initialValues={{ test: 'checked' }}
       >
@@ -53,9 +53,9 @@ describe('SelectableCardField', () => {
     ))
 
   test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => { })
-    const onChange = jest.fn(() => { })
-    const onBlur = jest.fn(() => { })
+    const onFocus = jest.fn(() => {})
+    const onChange = jest.fn(() => {})
+    const onBlur = jest.fn(() => {})
 
     return shouldMatchEmotionSnapshotFormWrapper(
       <SelectableCardField
@@ -83,7 +83,7 @@ describe('SelectableCardField', () => {
 
   test('should render correctly with errors', () =>
     shouldMatchEmotionSnapshot(
-      <Form onRawSubmit={() => { }} errors={mockErrors}>
+      <Form onRawSubmit={() => {}} errors={mockErrors}>
         <SelectableCardField name="test" value="checked" required>
           Radio field error
         </SelectableCardField>

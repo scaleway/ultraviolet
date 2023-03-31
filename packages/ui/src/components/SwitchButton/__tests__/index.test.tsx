@@ -61,7 +61,7 @@ describe('SwitchButton', () => {
   test('renders with on change', async () => {
     const onChange = jest.fn()
 
-     renderWithTheme(
+    renderWithTheme(
       <SwitchButton
         name="test"
         onChange={onChange}
