@@ -89,6 +89,7 @@ type TextProps = {
   id?: string
   dir?: 'ltr' | 'rtl' | 'auto'
   htmlFor?: string
+  'data-testid'?: string
 }
 
 const StyledText = styled('div', {
@@ -128,6 +129,7 @@ export const Text = ({
   id,
   dir,
   htmlFor,
+  'data-testid': dataTestId,
 }: TextProps) => {
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
@@ -157,6 +159,7 @@ export const Text = ({
         id={id}
         dir={dir}
         htmlFor={htmlFor}
+        data-testid={dataTestId}
       >
         {children}
       </StyledText>

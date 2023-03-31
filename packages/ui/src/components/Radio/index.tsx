@@ -105,6 +105,7 @@ const RadioContainer = styled.label<{ htmlFor: string }>`
       }
     }
   }
+
   &[aria-disabled='true'] {
     cursor: not-allowed;
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
@@ -125,6 +126,7 @@ type RadioProps = {
   size?: number
   value: string | number
   className?: string
+  'data-testid'?: string
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
@@ -154,6 +156,7 @@ export const Radio = forwardRef(
       className,
       autoFocus,
       onKeyDown,
+      'data-testid': dataTestId,
     }: RadioProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -168,6 +171,7 @@ export const Radio = forwardRef(
         className={className}
         data-checked={checked}
         data-error={error}
+        data-testid={dataTestId}
       >
         <RadioInput
           type="radio"

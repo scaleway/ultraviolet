@@ -56,6 +56,8 @@ type PasswordStrengthMeterProps = {
    * An array of string that defines what word shouldn't be used in the password.
    */
   userInputs?: string[]
+  className?: string
+  'data-testid'?: string
 }
 
 const DEFAULT_ESTIMATE = () => ({ score: 0 })
@@ -68,6 +70,8 @@ export const PasswordStrengthMeter = ({
   title,
   estimate = DEFAULT_ESTIMATE,
   userInputs = DEFAULT_USERINPUTS,
+  className,
+  'data-testid': dataTestId,
 }: PasswordStrengthMeterProps): JSX.Element => {
   const [score, setScore] = useState<number>(0)
   const theme = useTheme()
@@ -94,7 +98,13 @@ export const PasswordStrengthMeter = ({
   }, [getScore, handleChange, password, score, strength])
 
   return (
-    <div title={title} role="alert" aria-live="polite">
+    <div
+      title={title}
+      role="alert"
+      aria-live="polite"
+      className={className}
+      data-testid={dataTestId}
+    >
       <StyledTitle variant="bodySmallStrong" as="p">
         {title}
       </StyledTitle>

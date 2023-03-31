@@ -62,6 +62,7 @@ type ProgressBarProps = {
   /** Put ProgressBar in a loading state */
   progress?: boolean
   className?: string
+  'data-testid'?: string
 }
 
 export const ProgressBar = ({
@@ -69,6 +70,7 @@ export const ProgressBar = ({
   value = 0,
   variant = 'primary',
   className,
+  'data-testid': dataTestId,
 }: ProgressBarProps) => (
   <StyledProgressContainer
     role="progressbar"
@@ -76,6 +78,7 @@ export const ProgressBar = ({
     aria-valuemin={0}
     aria-valuemax={100}
     className={className}
+    data-testid={dataTestId}
   >
     {progress ? (
       <StyledProgress />

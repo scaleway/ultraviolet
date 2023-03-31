@@ -148,6 +148,7 @@ type SnippetProps = {
   prefix?: Prefixes
   showText?: string
   hideText?: string
+  'data-testid'?: string
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 export const Snippet = ({
@@ -158,6 +159,7 @@ export const Snippet = ({
   hideText = 'Hide',
   prefix,
   className,
+  'data-testid': dataTestId,
 }: SnippetProps) => {
   const theme = useTheme()
   const [showMore, setShowMore] = useState(false)
@@ -176,7 +178,11 @@ export const Snippet = ({
     Number(theme.space['2'].replace('px', '')) * 2
 
   return (
-    <Container multiline={multiline} className={className}>
+    <Container
+      multiline={multiline}
+      className={className}
+      data-testid={dataTestId}
+    >
       <StyledStack>
         <PreText
           as="pre"

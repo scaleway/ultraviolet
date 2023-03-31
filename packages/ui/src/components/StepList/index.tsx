@@ -79,13 +79,20 @@ const Item = ({
 type StepListProps = {
   children: ReactNode
   className?: string
+  'data-testid'?: string
 }
 
 /**
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
-export const StepList = ({ children, className }: StepListProps) => (
-  <Steps className={className}>{children}</Steps>
+export const StepList = ({
+  children,
+  className,
+  'data-testid': dataTestId,
+}: StepListProps) => (
+  <Steps className={className} data-testid={dataTestId}>
+    {children}
+  </Steps>
 )
 
 StepList.Item = Item

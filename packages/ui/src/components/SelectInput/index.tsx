@@ -644,6 +644,7 @@ type SelectInputProps = SelectProps &
     customComponents?: SelectProps['components']
     children: ReactNode
     emptyState?: ComponentProps<Select>['noOptionsMessage']
+    'data-testid'?: string
   }
 
 const defaultCustomStyle = () => ({})
@@ -676,6 +677,7 @@ const FwdSelectInput = ({
   isLoading,
   required,
   emptyState,
+  'data-testid': dataTestId,
 }: Partial<SelectInputProps>) => {
   const id = useId()
   const inputId = inputIdProp ?? id
@@ -750,6 +752,7 @@ const FwdSelectInput = ({
       isLoading={isLoading}
       required={required}
       noOptionsMessage={emptyState}
+      data-testid={dataTestId}
     />
   )
 }

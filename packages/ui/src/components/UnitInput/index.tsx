@@ -102,6 +102,7 @@ type UnitInputProps = Omit<
   textBoxWidth?: number
   /** The default selected option in the SelectInput */
   defaultOption?: SelectOption
+  'data-testid'?: string
 }
 
 export const UnitInput = ({
@@ -117,6 +118,8 @@ export const UnitInput = ({
   disabled = false,
   options = defaultOptionValues,
   defaultOption,
+  className,
+  'data-testid': dataTestId,
 }: UnitInputProps): JSX.Element => {
   const [value, setValue] = useState({
     unit: defaultOption?.value || options?.[0]?.value,
@@ -125,7 +128,11 @@ export const UnitInput = ({
   useEffect(() => onChange?.(value), [onChange, value])
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div
+      style={{ display: 'flex' }}
+      className={className}
+      data-testid={dataTestId}
+    >
       <CustomTextInput
         height={sizesHeight[size]}
         width={textBoxWidth}
