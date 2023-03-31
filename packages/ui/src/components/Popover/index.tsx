@@ -35,17 +35,14 @@ const StyledTooltip = styled(Tooltip, {
       }
       `
     }
-    if (variant === 'primary') {
-      return `
+
+    return `
       background: ${theme.colors.primary.backgroundStrong};
       box-shadow: ${theme.shadows.popover};
       &::after {
         border-color: ${theme.colors.primary.backgroundStrong} transparent transparent transparent;
       }
       `
-    }
-
-    return ''
   }}
 `
 

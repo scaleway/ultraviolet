@@ -1,11 +1,11 @@
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import type { ComponentProps } from 'react'
 import { Popover } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import { ComponentProps } from 'react'
-import { screen, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 
 describe('Tooltip', () => {
   test('should render correctly with required props', () =>
@@ -18,6 +18,13 @@ describe('Tooltip', () => {
   test('should render correctly with required props and visible', () =>
     shouldMatchEmotionSnapshot(
       <Popover title="Test" content="Test" visible>
+        Children
+      </Popover>,
+    ))
+
+  test('should render correctly with component in content prop', () =>
+    shouldMatchEmotionSnapshot(
+      <Popover title="Test" content={<p>Test</p>} visible>
         Children
       </Popover>,
     ))
