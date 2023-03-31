@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.232.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.4...@scaleway/ui@0.232.0) (2023-03-31)
+
+
+### :gear: Features
+
+* **components:** add className and data-testid - Part 1 ([#2363](https://github.com/scaleway/scaleway-ui/issues/2363)) ([f350ffb](https://github.com/scaleway/scaleway-ui/commit/f350ffb6a8a39e9a866b39a0c401273322ef64a2)), closes [#2370](https://github.com/scaleway/scaleway-ui/issues/2370)
+
+
+
 ## [0.231.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/ui@0.231.3...@scaleway/ui@0.231.4) (2023-03-30)
 
 
