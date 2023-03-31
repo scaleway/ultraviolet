@@ -232,6 +232,7 @@ export const VerificationCode = ({
           // eslint-disable-next-line react/no-array-index-key
           key={`${inputId}-${index}`}
           data-testid={index}
+          data-id={index}
           value={value}
           id={inputId ? `${inputId}-${index}` : undefined}
           ref={inputRefs[index]}
