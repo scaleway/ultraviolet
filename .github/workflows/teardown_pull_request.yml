@@ -25,7 +25,7 @@ jobs:
           echo "WEBSITE_BRANCH_SLUG=$SAFE_WEBSITE_HEAD_REF" >> $GITHUB_ENV
 
       - name: Delete Website Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.0.8
+        uses: philibea/scaleway-containers-deploy@v1.1.0
         with:
           type: 'teardown'
           scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
