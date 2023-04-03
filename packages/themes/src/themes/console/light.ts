@@ -43,7 +43,6 @@ export const lightTheme = {
       textWeakDisabled: '#fbbac6',
       textWeakHover: '#a6102d',
     },
-    data: null,
     info: {
       background: '#e1ebff',
       backgroundDisabled: '#f4f7ff',
@@ -130,6 +129,26 @@ export const lightTheme = {
       textWeakHover: '#4a4f62',
     },
     other: {
+      data: {
+        charts: {
+          danger: '#ce2f4c',
+          data1: '#5e47be',
+          data10: '#96edf2',
+          data11: '#002e50',
+          data12: '#2c8564',
+          data13: '#e3a3ff',
+          data14: '#bada53',
+          data2: '#0083e6',
+          data3: '#3ebd8f',
+          data4: '#ac2740',
+          data5: '#9a85ec',
+          data6: '#ff602e',
+          data7: '#483800',
+          data8: '#02a5ad',
+          data9: '#ffa488',
+          success: '#45d19f',
+        },
+      },
       icon: {
         category: {
           primary: {
