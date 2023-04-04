@@ -14,7 +14,7 @@ export const Showcase: ComponentStory<typeof ButtonV2> = () => {
           {buttonVariants.map(variant => (
             <Table.HeadCell key={variant}>
               <Text as="span" variant="bodyStrong">
-                {variant.toUpperCase()} (& Disabled)
+                {variant.toUpperCase()}
               </Text>
             </Table.HeadCell>
           ))}

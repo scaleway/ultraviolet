@@ -70,40 +70,23 @@ const StyledButton = styled('button', {
         `}
 
   /* We can't use Text component because of button hover effect, so we need to duplicate */
-  ${({ theme, size }) => `
-    font-size: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .fontSize
-    };
-    font-family: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .fontFamily
-    };
-    font-weight: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .weight
-    };
-    letter-spacing: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .letterSpacing
-    };
-    line-height: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .lineHeight
-    };
-    paragraph-spacing: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .paragraphSpacing
-    };
-    text-case: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .textCase
-    };
-    text-decoration: ${
-      theme.typography[size === 'large' ? 'bodyStrong' : 'bodySmallStrong']
-        .textDecoration
-    };
-  `}
+  ${({ theme, size }) => {
+    const font =
+      size === 'large'
+        ? theme.typography.bodyStrong
+        : theme.typography.bodyStrong
+
+    return `
+    font-size: ${font.fontSize};
+    font-family: ${font.fontFamily};
+    font-weight: ${font.fontWeight};
+    letter-spacing: ${font.letterSpacing};
+    line-height: ${font.lineHeight};
+    paragraph-spacing: ${font.paragraphSpacing};
+    text-case: ${font.textCase};
+    text-decoration: ${font.textDecoration};
+  `
+  }}
 `
 const StyledFilledButton = styled(StyledButton)`
   background: ${({ theme, sentiment }) =>
@@ -234,13 +217,14 @@ type ButtonProps = {
   'data-testid'?: string
   sentiment?: SENTIMENT
   disabled?: boolean
-  icon?: ComponentProps<typeof Icon>['name']
   iconPosition?: 'left' | 'right'
   fullWidth?: boolean
   isLoading?: boolean
   onClick: ButtonHTMLAttributes<HTMLButtonElement>['onClick']
-  children?: ReactNode
-}
+} & (
+  | { children: ReactNode; icon?: ComponentProps<typeof Icon>['name'] }
+  | { children?: ReactNode; icon: ComponentProps<typeof Icon>['name'] }
+)
 
 export const ButtonV2 = forwardRef(
   (
