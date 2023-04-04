@@ -5,6 +5,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { ButtonV2 } from '../ButtonV2'
 
 type AlertType = 'danger' | 'info' | 'success' | 'warning'
 
@@ -20,6 +21,7 @@ const alertStyles = ({
   return css`
     background-color: ${sentiment.background};
     color: ${sentiment.text};
+    border-left: 4px solid ${sentiment.borderWeak};
   `
 }
 
@@ -38,47 +40,36 @@ const StyledStackContainer = styled(Stack, {
 })<{ variant: AlertType }>`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['2']};
-  ${alertStyles}
+  ${alertStyles};
+  flex-wrap: wrap;
 `
 
-const AlertContainer = styled.div`
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+const StyledStack = styled(Stack)`
+  color: ${({ theme }) => theme.colors.neutral.text};
+  flex-wrap: wrap;
 `
-
-type TitleProps = {
-  text: string
-}
-
-const InheritedColorText = styled(Text)`
-  color: inherit;
-`
-
-const Title = ({ text }: TitleProps) => (
-  <InheritedColorText variant="bodyStrong" as="p">
-    {text}
-  </InheritedColorText>
-)
 
 type AlertProps = {
   children: ReactNode
-  icon?: ComponentProps<typeof Icon>['name']
   /**
    * Add a title at the top of your alert.
    */
   title?: string
   variant?: AlertType
+  buttonText?: string
+  onButtonClick?: () => void
+  isClosable?: boolean
   className?: string
   'data-testid'?: string
 }
 
 export const Alert = ({
   children,
-  icon,
   title,
   variant = 'danger',
+  buttonText,
+  onButtonClick,
+  isClosable,
   className,
   'data-testid': dataTestId,
 }: AlertProps) => (
@@ -86,25 +77,36 @@ export const Alert = ({
     gap={2}
     direction="row"
     alignItems="center"
-    justifyContent="flex-start"
     variant={variant}
     className={className}
     data-testid={dataTestId}
+    justifyContent="space-between"
   >
-    <Icon
-      name={icon || typesDefaultIcons[variant]}
-      size={24}
-      aria-hidden="true"
-    />
-    <AlertContainer>
-      {title && <Title text={title} />}
-      {typeof children === 'string' ? (
-        <InheritedColorText variant="body" as="p">
-          {children}
-        </InheritedColorText>
-      ) : (
-        children
-      )}
-    </AlertContainer>
+    <Stack alignItems="start" direction="row" gap={2}>
+      <Icon name={typesDefaultIcons[variant]} size={24} aria-hidden="true" />
+      <StyledStack gap={0.5} direction="row">
+        {title ? (
+          <Text variant="bodyStronger" as="span" color={variant}>
+            {title}
+          </Text>
+        ) : null}
+        {typeof children === 'string' ? (
+          <Text variant="body" as="p">
+            {children}
+          </Text>
+        ) : (
+          children
+        )}
+      </StyledStack>
+    </Stack>
+    {buttonText || isClosable ? (
+      <Stack direction="row" gap={1}>
+        {buttonText ? (
+          <ButtonV2 sentiment={variant} onClick={onButtonClick} size="small">
+            {buttonText}
+          </ButtonV2>
+        ) : null}
+      </Stack>
+    ) : null}
   </StyledStackContainer>
 )

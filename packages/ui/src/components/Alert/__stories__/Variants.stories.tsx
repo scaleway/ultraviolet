@@ -5,8 +5,12 @@ import { Stack } from '../../Stack'
 
 export const Variants = (props: ComponentProps<typeof Alert>) =>
   (['danger', 'warning', 'success', 'info'] as const).map(variant => (
-    <Alert {...props} variant={variant}>
-      This is a notification bar with the {variant} variant.
+    <Alert
+      {...props}
+      title={`${variant.charAt(0).toUpperCase() + variant.slice(1)} title`}
+      variant={variant}
+    >
+      This is an Alert with the {variant} variant.
     </Alert>
   ))
 
