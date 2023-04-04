@@ -10,11 +10,13 @@ export default {
       </div>
     ),
   ],
+
   parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please use ButtonV2 instead.',
+    migrationLink: 'migrations-button-v1-to-buttonv2--page',
     docs: {
-      deprecated: true,
-      deprecatedReason:
-        'This component is deprecated please use ButtonV2 instead.',
       description: {
         component:
           'A button is a component used to define a call to action (or a link, but that should be avoid if possible)',
