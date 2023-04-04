@@ -270,7 +270,11 @@ export const ButtonV2 = forwardRef(
             color="currentColor"
           />
         ) : null}
-        {children}
+        {children && typeof children !== 'string' ? (
+          <div>{children}</div>
+        ) : (
+          children
+        )}
       </Component>
     )
   },
