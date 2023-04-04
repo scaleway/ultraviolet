@@ -266,7 +266,7 @@ importers:
       deepmerge: 4.3.1
       prop-types: 15.8.1
       react: 18.2.0
-      react-datepicker: 4.10.0
+      react-datepicker: 4.11.0
       react-dom: 18.2.0
       react-flatten-children: 1.1.2
       react-select: 5.7.2
@@ -286,7 +286,7 @@ importers:
       '@scaleway/use-media': 2.0.0_react@18.2.0
       deepmerge: 4.3.1
       prop-types: 15.8.1
-      react-datepicker: 4.10.0_biqbaboplfbrettd7655fr4n2y
+      react-datepicker: 4.11.0_biqbaboplfbrettd7655fr4n2y
       react-flatten-children: 1.1.2
       react-select: 5.7.2_zula6vjvt3wdocc4mwcxqa6nzi
       react-toastify: 9.1.2_biqbaboplfbrettd7655fr4n2y
@@ -2169,34 +2169,10 @@ packages:
       '@commitlint/types': 17.4.4
     dev: true
 
-  /@commitlint/load/17.4.4:
-    resolution: {integrity: sha512-z6uFIQ7wfKX5FGBe1AkOF4l/ShOQsaa1ml/nLMkbW7R/xF8galGS7Zh0yHvzVp/srtfS0brC+0bUfQfmpMPFVQ==}
-    engines: {node: '>=v14'}
-    requiresBuild: true
-    dependencies:
-      '@commitlint/config-validator': 17.4.4
-      '@commitlint/execute-rule': 17.4.0
-      '@commitlint/resolve-extends': 17.4.4
-      '@commitlint/types': 17.4.4
-      '@types/node': 18.15.10
-      chalk: 4.1.2
-      cosmiconfig: 8.1.0
-      cosmiconfig-typescript-loader: 4.3.0_ya2kjwxs6t2hzddsxeptinqozu
-      lodash.isplainobject: 4.0.6
-      lodash.merge: 4.6.2
-      lodash.uniq: 4.5.0
-      resolve-from: 5.0.0
-      ts-node: 10.9.1_z3vu5dg2hu3jqyh3anri5tms2q
-      typescript: 4.9.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-    dev: true
-    optional: true
-
   /@commitlint/load/17.5.0:
     resolution: {integrity: sha512-l+4W8Sx4CD5rYFsrhHH8HP01/8jEP7kKf33Xlx2Uk2out/UKoKPYMOIRcDH5ppT8UXLMV+x6Wm5osdRKKgaD1Q==}
     engines: {node: '>=v14'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 17.4.4
       '@commitlint/execute-rule': 17.4.0
@@ -8666,7 +8642,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.3
     optionalDependencies:
-      '@commitlint/load': 17.4.4
+      '@commitlint/load': 17.5.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -15771,8 +15747,8 @@ packages:
       webpack: 4.46.0
     dev: true
 
-  /react-datepicker/4.10.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-6IfBCZyWj54ZZGLmEZJ9c4Yph0s9MVfEGDC2evOvf9AmVz+RRcfP2Czqad88Ff9wREbcbqa4dk7IFYeXF1d3Ag==}
+  /react-datepicker/4.11.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-50n93o7mQwBEhg05tbopjFKgs8qgi8VBCAOMC4VqrKut72eAjESc/wXS/k5hRtnP0oe2FCGw7MJuIwh37wuXOw==}
     peerDependencies:
       react: ^16.9.0 || ^17 || ^18 || 18
       react-dom: ^16.9.0 || ^17 || ^18 || 18
