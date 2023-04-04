@@ -30,7 +30,7 @@ importers:
       '@scaleway/jest-helpers': 3.0.3
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': workspace:*
-      '@scaleway/use-i18n': 5.1.1
+      '@scaleway/use-i18n': 5.1.2
       '@size-limit/file': 8.2.4
       '@size-limit/preset-big-lib': 8.2.4
       '@storybook/addon-a11y': 6.5.16
@@ -129,7 +129,7 @@ importers:
       '@scaleway/jest-helpers': 3.0.3_6hfup3cnntiu7o7txcf7sadj7u
       '@scaleway/tsconfig': 1.1.0
       '@scaleway/ui': link:packages/ui
-      '@scaleway/use-i18n': 5.1.1_3pf3ktbrffvgnzxoo2eotyjcpi
+      '@scaleway/use-i18n': 5.1.2_3pf3ktbrffvgnzxoo2eotyjcpi
       '@size-limit/file': 8.2.4_size-limit@8.2.4
       '@size-limit/preset-big-lib': 8.2.4_size-limit@8.2.4
       '@storybook/addon-a11y': 6.5.16_biqbaboplfbrettd7655fr4n2y
@@ -3563,8 +3563,8 @@ packages:
     resolution: {integrity: sha512-dZyeub6snbFUD0oTTgiUsdHYYOcyZDbQ5lSgAaZBCVS6FxF2R2HiLVwtrD6pw9IebhyPne2z8M4BsZQ4Rg+K1w==}
     dev: true
 
-  /@scaleway/use-i18n/5.1.1_3pf3ktbrffvgnzxoo2eotyjcpi:
-    resolution: {integrity: sha512-rpEJ0b74xmiLgL/rEadqj027u2JJQdSpzj2Hua5n8WP7qQWj7j0QWFwgKrUdWPi0icW7MaEcdflEPytOgdq4PQ==}
+  /@scaleway/use-i18n/5.1.2_3pf3ktbrffvgnzxoo2eotyjcpi:
+    resolution: {integrity: sha512-e3F0+hsv7sgs+ceZXFckgog/0drvG6sHcYjlaS13zYAeG8PuJt2PXKRWFK5urV6rsdcg3ouEwEZcy2SxIc+40Q==}
     engines: {node: '>=14.x'}
     peerDependencies:
       date-fns: 2.x
@@ -3574,7 +3574,7 @@ packages:
       '@formatjs/ecma402-abstract': 1.14.3
       '@formatjs/fast-memoize': 2.0.1
       date-fns: 2.29.3
-      filesize: 10.0.6
+      filesize: 10.0.7
       international-types: 0.3.7
       intl-messageformat: 10.3.3
       react: 18.2.0
@@ -10196,8 +10196,8 @@ packages:
     dev: true
     optional: true
 
-  /filesize/10.0.6:
-    resolution: {integrity: sha512-rzpOZ4C9vMFDqOa6dNpog92CoLYjD79dnjLk2TYDDtImRIyLTOzqojCb05Opd1WuiWjs+fshhCgTd8cl7y5t+g==}
+  /filesize/10.0.7:
+    resolution: {integrity: sha512-iMRG7Qo9nayLoU3PNCiLizYtsy4W1ClrapeCwEgtiQelOAOuRJiw4QaLI+sSr8xr901dgHv+EYP2bCusGZgoiA==}
     engines: {node: '>= 10.4.0'}
     dev: true
 
