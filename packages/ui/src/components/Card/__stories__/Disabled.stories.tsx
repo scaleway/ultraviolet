@@ -6,15 +6,13 @@ import { Card } from '../index'
 
 export const Disabled: Story = () => (
   <Card header="Disabled Card" disabled>
-    {({ disabled }) => (
-      <Stack gap={1}>
-        <Text as="p" variant="body" disabled={disabled}>
-          We are using the disabled state returned from Card to disable its
-          children
-        </Text>
-        <Button disabled={disabled}>Button</Button>
-      </Stack>
-    )}
+    <Stack gap={1}>
+      <Text as="p" variant="body" disabled>
+        We are using the disabled state returned from Card to disable its
+        children
+      </Text>
+      <Button disabled>Button</Button>
+    </Stack>
   </Card>
 )
 

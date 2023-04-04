@@ -4,13 +4,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 type CardProps = {
-  /**
-   * Children can be a component, but it can also be a function to get disabled and
-   * isActive state from Card.
-   */
-  children:
-    | ReactNode
-    | ((renderProps: { disabled?: boolean; isActive?: boolean }) => ReactNode)
+  children: ReactNode
   /**
    * Header can be a string but also a component if you need more complex header.
    */
@@ -66,9 +60,7 @@ export const Card = ({
       header
     )}
     <BorderedBox data-isActive={isActive} data-disabled={disabled}>
-      {typeof children === 'function'
-        ? children({ disabled, isActive })
-        : children}
+      {children}
     </BorderedBox>
   </StyledStack>
 )

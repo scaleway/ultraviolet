@@ -31,15 +31,4 @@ describe('Card', () => {
 
   test('renders correctly with data-testid', () =>
     shouldMatchEmotionSnapshot(<Card data-testid="test">Hello</Card>))
-
-  test('renders correctly with advanced children', () =>
-    shouldMatchEmotionSnapshot(
-      <Card data-testid="test">
-        {({ disabled, isActive }) => (
-          <p>
-            {disabled} and {isActive}
-          </p>
-        )}
-      </Card>,
-    ))
 })

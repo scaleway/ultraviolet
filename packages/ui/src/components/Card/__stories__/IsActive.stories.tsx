@@ -10,38 +10,36 @@ export const IsActive: Story = () => {
 
   return (
     <Card header="Active Card" isActive={active}>
-      {({ isActive }) => (
-        <Stack gap={6} direction="row" justifyContent="space-between">
-          <Text as="p" variant="body" color={isActive ? 'primary' : 'neutral'}>
-            This card is currently highlighted through isActive prop. In this
-            example we use it to show the content is being edited.
-          </Text>
+      <Stack gap={6} direction="row" justifyContent="space-between">
+        <Text as="p" variant="body" color={active ? 'primary' : 'neutral'}>
+          This card is currently highlighted through isActive prop. In this
+          example we use it to show the content is being edited.
+        </Text>
 
-          {active ? (
-            <Stack gap={1} direction="row">
-              <Button
-                variant="success-bordered"
-                icon="check"
-                size="small"
-                onClick={() => setActive(false)}
-              />
-              <Button
-                variant="warning-bordered"
-                icon="cancel"
-                size="small"
-                onClick={() => setActive(false)}
-              />
-            </Stack>
-          ) : (
+        {active ? (
+          <Stack gap={1} direction="row">
             <Button
-              variant="secondary"
-              icon="pencil"
+              variant="success-bordered"
+              icon="check"
               size="small"
-              onClick={() => setActive(true)}
+              onClick={() => setActive(false)}
             />
-          )}
-        </Stack>
-      )}
+            <Button
+              variant="warning-bordered"
+              icon="cancel"
+              size="small"
+              onClick={() => setActive(false)}
+            />
+          </Stack>
+        ) : (
+          <Button
+            variant="secondary"
+            icon="pencil"
+            size="small"
+            onClick={() => setActive(true)}
+          />
+        )}
+      </Stack>
     </Card>
   )
 }
