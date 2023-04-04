@@ -74,7 +74,7 @@ const StyledButton = styled('button', {
     const font =
       size === 'large'
         ? theme.typography.bodyStrong
-        : theme.typography.bodyStrong
+        : theme.typography.bodySmallStrong
 
     return `
     font-size: ${font.fontSize};
