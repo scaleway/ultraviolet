@@ -47,6 +47,6 @@ export const IsActive: Story = () => {
 IsActive.parameters = {
   docs: {
     storyDescription:
-      'You can highlight a Card by passing the `isActive` prop. It will highlight the Card and you can use the `isActive` state returned from Card to highlight its children.',
+      'You can highlight a Card by passing the `isActive` prop.',
   },
 }
