@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import { useCallback, useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
-import { Button } from '../../Button'
+import { ButtonV2 } from '../../ButtonV2'
 import { Popover } from '../index'
 
 export const Variants: ComponentStory<typeof Popover> = () => {
@@ -24,9 +24,9 @@ export const Variants: ComponentStory<typeof Popover> = () => {
         variant="default"
         onClose={() => onCloseCallBack(setDefaultOpened)}
       >
-        <Button variant="secondary" onClick={() => setDefaultOpened(true)}>
+        <ButtonV2 sentiment="neutral" onClick={() => setDefaultOpened(true)}>
           Open Popover default variant
-        </Button>
+        </ButtonV2>
       </Popover>
 
       <Popover
@@ -36,9 +36,9 @@ export const Variants: ComponentStory<typeof Popover> = () => {
         variant="primary"
         onClose={() => onCloseCallBack(setPrimaryOpened)}
       >
-        <Button onClick={() => setPrimaryOpened(true)}>
+        <ButtonV2 onClick={() => setPrimaryOpened(true)}>
           Open Popover primary variant
-        </Button>
+        </ButtonV2>
       </Popover>
     </div>
   )

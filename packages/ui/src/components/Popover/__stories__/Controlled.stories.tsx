@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
 import { useCallback, useState } from 'react'
-import { Button } from '../../Button'
+import { ButtonV2 } from '../../ButtonV2'
 import { Popover } from '../index'
 
 export const Controlled: ComponentStory<typeof Popover> = () => {
@@ -17,9 +17,9 @@ export const Controlled: ComponentStory<typeof Popover> = () => {
       content="This is a simple text content inside the popover. You can customize it by passing text into content property."
       onClose={onCloseCallBack}
     >
-      <Button onClick={() => setOpened(true)} variant="secondary">
+      <ButtonV2 onClick={() => setOpened(true)} sentiment="neutral">
         Open Popover
-      </Button>
+      </ButtonV2>
     </Popover>
   )
 }
