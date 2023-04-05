@@ -16,7 +16,6 @@ export default {
 } as ComponentMeta<typeof Popover>
 
 export { Playground } from './Playground.stories'
-export { Uncontrolled } from './Uncontrolled.stories'
 export { Controlled } from './Controlled.stories'
 export { Variants } from './Variants.stories'
 export { Sizes } from './Sizes.stories'

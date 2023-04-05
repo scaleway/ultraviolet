@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
-import { useCallback, useEffect, useState } from 'react'
-import { Button } from '../Button'
+import { ButtonV2 } from '../ButtonV2'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -67,9 +66,10 @@ const ContentWrapper = ({
         {title}
       </Text>
       <ButtonV2
-        variant="ghost"
-        sentiment={variant}
+        variant={variant === 'default' ? 'ghost' : 'filled'}
+        sentiment={variant === 'default' ? 'neutral' : 'primary'}
         onClick={onClose}
+        size="small"
         icon="close"
       />
     </Stack>
@@ -110,38 +110,21 @@ export const Popover = ({
   onClose,
   className,
   'data-testid': dataTestId,
-}: PopoverProps) => {
-  const [opened, setOpened] = useState(visible)
-
-  useEffect(() => {
-    setOpened(visible)
-  }, [visible])
-
-  const onCloseCallBack = useCallback(() => {
-    setOpened(false)
-    onClose?.()
-  }, [onClose])
-
-  return (
-    <StyledTooltip
-      visible={opened}
-      placement={placement}
-      text={
-        <ContentWrapper
-          title={title}
-          onClose={onCloseCallBack}
-          variant={variant}
-        >
-          {content}
-        </ContentWrapper>
-      }
-      className={className}
-      variant={variant}
-      data-testid={dataTestId}
-      size={size}
-      role="dialog"
-    >
-      {children}
-    </StyledTooltip>
-  )
-}
+}: PopoverProps) => (
+  <StyledTooltip
+    visible={visible}
+    placement={placement}
+    text={
+      <ContentWrapper title={title} onClose={onClose} variant={variant}>
+        {content}
+      </ContentWrapper>
+    }
+    className={className}
+    variant={variant}
+    data-testid={dataTestId}
+    size={size}
+    role="dialog"
+  >
+    {children}
+  </StyledTooltip>
+)
