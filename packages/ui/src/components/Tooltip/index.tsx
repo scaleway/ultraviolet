@@ -125,6 +125,7 @@ type TooltipProps = {
    */
   visible?: boolean
   innerRef?: Ref<HTMLDivElement | null>
+  role?: string
   'data-testid'?: string
 }
 
@@ -137,6 +138,7 @@ export const Tooltip = ({
   maxWidth = 232,
   visible,
   innerRef,
+  role = 'tooltip',
   'data-testid': dataTestId,
 }: TooltipProps) => {
   const childrenRef = useRef<HTMLDivElement>(null)
@@ -295,7 +297,7 @@ export const Tooltip = ({
               ref={tooltipRef}
               positions={positions}
               maxWidth={maxWidth}
-              role="tooltip"
+              role={role}
               id={generatedId}
               className={className}
               reverseAnimation={reverseAnimation}

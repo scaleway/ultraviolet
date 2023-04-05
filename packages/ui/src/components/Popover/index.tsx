@@ -46,15 +46,6 @@ const StyledTooltip = styled(Tooltip, {
   }}
 `
 
-const CloseButton = styled(Button)`
-  width: auto;
-  height: 24px;
-
-  &[data-variant='primary'] {
-    color: ${({ theme }) => theme.colors.neutral.iconStronger};
-  }
-`
-
 type ContentWrapperProps = Pick<
   PopoverProps,
   'title' | 'onClose' | 'variant' | 'children'
@@ -75,14 +66,11 @@ const ContentWrapper = ({
       >
         {title}
       </Text>
-      <CloseButton
+      <ButtonV2
+        variant="ghost"
+        sentiment={variant}
         onClick={onClose}
-        title="close"
-        variant="transparent"
         icon="close"
-        iconSize={24}
-        action
-        data-variant={variant}
       />
     </Stack>
     {typeof children === 'string' ? (
@@ -151,6 +139,7 @@ export const Popover = ({
       variant={variant}
       data-testid={dataTestId}
       size={size}
+      role="dialog"
     >
       {children}
     </StyledTooltip>
