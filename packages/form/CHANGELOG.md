@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.41.38
+
+### Patch Changes
+
+- [#2390](https://github.com/scaleway/scaleway-ui/pull/2390) [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559) Thanks [@matthprost](https://github.com/matthprost)! - Fix flickering effect on tooltip when un-hovering
+
+- [#2390](https://github.com/scaleway/scaleway-ui/pull/2390) [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559) Thanks [@matthprost](https://github.com/matthprost)! - Updated dependency `@types/react` to `18.0.32`.
+
+- [#2390](https://github.com/scaleway/scaleway-ui/pull/2390) [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559) Thanks [@matthprost](https://github.com/matthprost)! - Updated dependency `@babel/core` to `7.21.4`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.21.4`.
+  Updated dependency `@babel/preset-typescript` to `7.21.4`.
+- Updated dependencies [[`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559), [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559), [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559), [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559), [`109317e9`](https://github.com/scaleway/scaleway-ui/commit/109317e9c216b3c1b85d60b06dd2f7db4f9a1559)]:
+  - @scaleway/ui@0.233.0
+
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
@@ -7,729 +21,430 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.36](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.35...@scaleway/form@1.41.36) (2023-03-31)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.35](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.34...@scaleway/form@1.41.35) (2023-03-30)
-
 
 ### :bug: Bug Fixes
 
-* **deps:** update dependency react-select to v5.7.2 ([#2372](https://github.com/scaleway/scaleway-ui/issues/2372)) ([82c2113](https://github.com/scaleway/scaleway-ui/commit/82c21131270cf670ea41e437d7aa34b6e756e02b))
-
-
+- **deps:** update dependency react-select to v5.7.2 ([#2372](https://github.com/scaleway/scaleway-ui/issues/2372)) ([82c2113](https://github.com/scaleway/scaleway-ui/commit/82c21131270cf670ea41e437d7aa34b6e756e02b))
 
 ## 1.41.34 (2023-03-30)
 
-
 ### :package: Chore
 
-* **release:** publish ([5be166d](https://github.com/scaleway/scaleway-ui/commit/5be166d10e4521f9427231a6bf8663d841a0a563))
-
-
+- **release:** publish ([5be166d](https://github.com/scaleway/scaleway-ui/commit/5be166d10e4521f9427231a6bf8663d841a0a563))
 
 ## [1.41.33](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.32...@scaleway/form@1.41.33) (2023-03-29)
 
-
 ### :zap: Refactor
 
-* **Expandable:** smart expandable ([#2349](https://github.com/scaleway/scaleway-ui/issues/2349)) ([de2853a](https://github.com/scaleway/scaleway-ui/commit/de2853a91d50ca80639bbe09567ed2dfeb2d8766))
-
-
+- **Expandable:** smart expandable ([#2349](https://github.com/scaleway/scaleway-ui/issues/2349)) ([de2853a](https://github.com/scaleway/scaleway-ui/commit/de2853a91d50ca80639bbe09567ed2dfeb2d8766))
 
 ## [1.41.32](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.31...@scaleway/form@1.41.32) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.31](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.30...@scaleway/form@1.41.31) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.41.30](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.29...@scaleway/form@1.41.30) (2023-03-29)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.29](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.28...@scaleway/form@1.41.29) (2023-03-28)
-
 
 ### :white_check_mark: Test
 
-* **lint:** add testing-library/react eslint plugin ([#2339](https://github.com/scaleway/scaleway-ui/issues/2339)) ([b9a6cff](https://github.com/scaleway/scaleway-ui/commit/b9a6cff7cb11c806f4595ba0d876b05883623e52))
-
-
+- **lint:** add testing-library/react eslint plugin ([#2339](https://github.com/scaleway/scaleway-ui/issues/2339)) ([b9a6cff](https://github.com/scaleway/scaleway-ui/commit/b9a6cff7cb11c806f4595ba0d876b05883623e52))
 
 ## [1.41.28](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.27...@scaleway/form@1.41.28) (2023-03-28)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.27](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.26...@scaleway/form@1.41.27) (2023-03-27)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.25...@scaleway/form@1.41.26) (2023-03-27)
-
 
 ### :bug: Bug Fixes
 
-* **NumberInput:** enable controlled NumberInput ([#2337](https://github.com/scaleway/scaleway-ui/issues/2337)) ([04f4859](https://github.com/scaleway/scaleway-ui/commit/04f4859aaf73ac76861370d9cdf02c5a2abb1c18))
-
-
+- **NumberInput:** enable controlled NumberInput ([#2337](https://github.com/scaleway/scaleway-ui/issues/2337)) ([04f4859](https://github.com/scaleway/scaleway-ui/commit/04f4859aaf73ac76861370d9cdf02c5a2abb1c18))
 
 ## [1.41.25](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.24...@scaleway/form@1.41.25) (2023-03-27)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.24](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.23...@scaleway/form@1.41.24) (2023-03-24)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## 1.41.23 (2023-03-24)
-
 
 ### :package: Chore
 
-* **release:** publish ([fad0b35](https://github.com/scaleway/scaleway-ui/commit/fad0b3518c52fd3cb8d6d60ed7eed04803171088))
-
+- **release:** publish ([fad0b35](https://github.com/scaleway/scaleway-ui/commit/fad0b3518c52fd3cb8d6d60ed7eed04803171088))
 
 ### :bug: Bug Fixes
 
-* **deps:** downgrade final-form-arrays to 3.0.2 ([#2346](https://github.com/scaleway/scaleway-ui/issues/2346)) ([600b5c0](https://github.com/scaleway/scaleway-ui/commit/600b5c07e31070d53498ce0107070f49f60fa28c))
-
-
+- **deps:** downgrade final-form-arrays to 3.0.2 ([#2346](https://github.com/scaleway/scaleway-ui/issues/2346)) ([600b5c0](https://github.com/scaleway/scaleway-ui/commit/600b5c07e31070d53498ce0107070f49f60fa28c))
 
 ## 1.41.22 (2023-03-22)
 
-
 ### :package: Chore
 
-* **release:** publish ([876048e](https://github.com/scaleway/scaleway-ui/commit/876048e3259e83190521d97ba17b0c768f8dc224))
-
-
+- **release:** publish ([876048e](https://github.com/scaleway/scaleway-ui/commit/876048e3259e83190521d97ba17b0c768f8dc224))
 
 ## [1.41.21](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.20...@scaleway/form@1.41.21) (2023-03-21)
 
-
 ### :bug: Bug Fixes
 
-* radio and checkbox error combined with disabled state ([#2333](https://github.com/scaleway/scaleway-ui/issues/2333)) ([3dfcec6](https://github.com/scaleway/scaleway-ui/commit/3dfcec62ebfbed55315cbea1132ed866b09de807))
-
-
+- radio and checkbox error combined with disabled state ([#2333](https://github.com/scaleway/scaleway-ui/issues/2333)) ([3dfcec6](https://github.com/scaleway/scaleway-ui/commit/3dfcec62ebfbed55315cbea1132ed866b09de807))
 
 ## [1.41.20](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.19...@scaleway/form@1.41.20) (2023-03-21)
 
-
 ### :bug: Bug Fixes
 
-* **deps:** update dependency react-select to v5.7.1 ([#2320](https://github.com/scaleway/scaleway-ui/issues/2320)) ([cefaac9](https://github.com/scaleway/scaleway-ui/commit/cefaac9cf1a30e16299c24b1331ab5035996ba91))
-
-
+- **deps:** update dependency react-select to v5.7.1 ([#2320](https://github.com/scaleway/scaleway-ui/issues/2320)) ([cefaac9](https://github.com/scaleway/scaleway-ui/commit/cefaac9cf1a30e16299c24b1331ab5035996ba91))
 
 ## 1.41.19 (2023-03-21)
 
-
 ### :package: Chore
 
-* **release:** publish ([5b0fd3f](https://github.com/scaleway/scaleway-ui/commit/5b0fd3f4828e1176ed8ed14d9167d98427a2d9d7))
-
-
+- **release:** publish ([5b0fd3f](https://github.com/scaleway/scaleway-ui/commit/5b0fd3f4828e1176ed8ed14d9167d98427a2d9d7))
 
 ## [1.41.18](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.17...@scaleway/form@1.41.18) (2023-03-20)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.17](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.16...@scaleway/form@1.41.17) (2023-03-20)
-
 
 ### :package: Chore
 
-* **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
-
-
+- **devdeps:** update babel monorepo ([#2323](https://github.com/scaleway/scaleway-ui/issues/2323)) ([98009be](https://github.com/scaleway/scaleway-ui/commit/98009be29c7e1c9d143e251f455f924b16c76ac5))
 
 ## [1.41.16](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.15...@scaleway/form@1.41.16) (2023-03-20)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.15](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.14...@scaleway/form@1.41.15) (2023-03-20)
-
 
 ### :package: Chore
 
-* **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
-
-
+- **devdeps:** update react monorepo ([#2310](https://github.com/scaleway/scaleway-ui/issues/2310)) ([f9e013b](https://github.com/scaleway/scaleway-ui/commit/f9e013b646531bb8c0f8c49ba61b556eb98e2eff))
 
 ## [1.41.14](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.13...@scaleway/form@1.41.14) (2023-03-20)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.13](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.12...@scaleway/form@1.41.13) (2023-03-20)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.41.12](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.11...@scaleway/form@1.41.12) (2023-03-17)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.11](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.10...@scaleway/form@1.41.11) (2023-03-17)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.41.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.9...@scaleway/form@1.41.10) (2023-03-17)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.9](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.8...@scaleway/form@1.41.9) (2023-03-16)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.7...@scaleway/form@1.41.8) (2023-03-16)
-
 
 ### :zap: Refactor
 
-* **Label:** remove component ([#2298](https://github.com/scaleway/scaleway-ui/issues/2298)) ([a423959](https://github.com/scaleway/scaleway-ui/commit/a42395914e5d6d3b301e215f7e1a035955ed3908))
-
-
+- **Label:** remove component ([#2298](https://github.com/scaleway/scaleway-ui/issues/2298)) ([a423959](https://github.com/scaleway/scaleway-ui/commit/a42395914e5d6d3b301e215f7e1a035955ed3908))
 
 ## [1.41.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.6...@scaleway/form@1.41.7) (2023-03-15)
 
-
 ### :bug: Bug Fixes
 
-* remove dead/stale exports ([#2299](https://github.com/scaleway/scaleway-ui/issues/2299)) ([aecb927](https://github.com/scaleway/scaleway-ui/commit/aecb927c2e6b446f5e2d295c52b0622c269450ad))
-
-
+- remove dead/stale exports ([#2299](https://github.com/scaleway/scaleway-ui/issues/2299)) ([aecb927](https://github.com/scaleway/scaleway-ui/commit/aecb927c2e6b446f5e2d295c52b0622c269450ad))
 
 ## [1.41.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.5...@scaleway/form@1.41.6) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.4...@scaleway/form@1.41.5) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.41.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.3...@scaleway/form@1.41.4) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.2...@scaleway/form@1.41.3) (2023-03-09)
-
 
 ### :bug: Bug Fixes
 
-* correct non scalar default arguments as props ([#2255](https://github.com/scaleway/scaleway-ui/issues/2255)) ([28f2ce6](https://github.com/scaleway/scaleway-ui/commit/28f2ce6076327f296c22af5c811c0db12d2ab45e))
-
-
+- correct non scalar default arguments as props ([#2255](https://github.com/scaleway/scaleway-ui/issues/2255)) ([28f2ce6](https://github.com/scaleway/scaleway-ui/commit/28f2ce6076327f296c22af5c811c0db12d2ab45e))
 
 ## [1.41.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.1...@scaleway/form@1.41.2) (2023-03-09)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.41.0...@scaleway/form@1.41.1) (2023-03-06)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.41.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.10...@scaleway/form@1.41.0) (2023-03-06)
-
 
 ### :gear: Features
 
-* **Notice:** rework component to remove markdown handling ([#2288](https://github.com/scaleway/scaleway-ui/issues/2288)) ([6aa9082](https://github.com/scaleway/scaleway-ui/commit/6aa908291771d044ebcd9387d4e8c0b604c0dff5))
-
-
+- **Notice:** rework component to remove markdown handling ([#2288](https://github.com/scaleway/scaleway-ui/issues/2288)) ([6aa9082](https://github.com/scaleway/scaleway-ui/commit/6aa908291771d044ebcd9387d4e8c0b604c0dff5))
 
 ## [1.40.10](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.9...@scaleway/form@1.40.10) (2023-03-06)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.40.9](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.8...@scaleway/form@1.40.9) (2023-03-04)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.40.8](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.7...@scaleway/form@1.40.8) (2023-03-03)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.40.7](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.6...@scaleway/form@1.40.7) (2023-03-01)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.40.6](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.5...@scaleway/form@1.40.6) (2023-03-01)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.40.5](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.4...@scaleway/form@1.40.5) (2023-03-01)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.40.4](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.3...@scaleway/form@1.40.4) (2023-03-01)
-
 
 ### :bug: Bug Fixes
 
-* **checkbox:** set the right color ([#2281](https://github.com/scaleway/scaleway-ui/issues/2281)) ([45db03e](https://github.com/scaleway/scaleway-ui/commit/45db03e07d89eda43f22f049b37e899943dd16dc))
-
-
+- **checkbox:** set the right color ([#2281](https://github.com/scaleway/scaleway-ui/issues/2281)) ([45db03e](https://github.com/scaleway/scaleway-ui/commit/45db03e07d89eda43f22f049b37e899943dd16dc))
 
 ## [1.40.3](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.2...@scaleway/form@1.40.3) (2023-02-28)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.40.2](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.1...@scaleway/form@1.40.2) (2023-02-27)
-
 
 ### :bug: Bug Fixes
 
-* **NumberInput:** colors of icons and hover were wrong ([#2279](https://github.com/scaleway/scaleway-ui/issues/2279)) ([51529b5](https://github.com/scaleway/scaleway-ui/commit/51529b5884f5c8fcde73ecf51c74b85c77ea225b))
-
-
+- **NumberInput:** colors of icons and hover were wrong ([#2279](https://github.com/scaleway/scaleway-ui/issues/2279)) ([51529b5](https://github.com/scaleway/scaleway-ui/commit/51529b5884f5c8fcde73ecf51c74b85c77ea225b))
 
 ## [1.40.1](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.40.0...@scaleway/form@1.40.1) (2023-02-27)
 
-
 ### :bug: Bug Fixes
 
-* **Icon:** default value to currentColor ([#2280](https://github.com/scaleway/scaleway-ui/issues/2280)) ([ea3f8d4](https://github.com/scaleway/scaleway-ui/commit/ea3f8d43bece3f3f06a59787de65924de637ee63))
-
-
+- **Icon:** default value to currentColor ([#2280](https://github.com/scaleway/scaleway-ui/issues/2280)) ([ea3f8d4](https://github.com/scaleway/scaleway-ui/commit/ea3f8d43bece3f3f06a59787de65924de637ee63))
 
 ## [1.40.0](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.55...@scaleway/form@1.40.0) (2023-02-27)
 
-
 ### :gear: Features
 
-* **Icon:** new icon colors from theme ([#2274](https://github.com/scaleway/scaleway-ui/issues/2274)) ([cb2ec4f](https://github.com/scaleway/scaleway-ui/commit/cb2ec4ff9a4a5a32477eb1fae1f50d1e1f5c3313))
-
-
+- **Icon:** new icon colors from theme ([#2274](https://github.com/scaleway/scaleway-ui/issues/2274)) ([cb2ec4f](https://github.com/scaleway/scaleway-ui/commit/cb2ec4ff9a4a5a32477eb1fae1f50d1e1f5c3313))
 
 ## [1.39.55](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.54...@scaleway/form@1.39.55) (2023-02-24)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.54](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.53...@scaleway/form@1.39.54) (2023-02-23)
-
 
 ### :bug: Bug Fixes
 
-* use radii from theme ([#2271](https://github.com/scaleway/scaleway-ui/issues/2271)) ([8075443](https://github.com/scaleway/scaleway-ui/commit/8075443d1dba73e8bab3bccf15ddb50856883592))
-
-
+- use radii from theme ([#2271](https://github.com/scaleway/scaleway-ui/issues/2271)) ([8075443](https://github.com/scaleway/scaleway-ui/commit/8075443d1dba73e8bab3bccf15ddb50856883592))
 
 ## [1.39.53](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.52...@scaleway/form@1.39.53) (2023-02-23)
 
-
 ### :bug: Bug Fixes
 
-* **NumberInput:** primary color on hover on disabled state ([#2269](https://github.com/scaleway/scaleway-ui/issues/2269)) ([a7203f4](https://github.com/scaleway/scaleway-ui/commit/a7203f45eb94312e6c47b05d5c88a33bcf0eba16))
-* **unitInput:** add border to disabled state and disable when there is only one option ([#2262](https://github.com/scaleway/scaleway-ui/issues/2262)) ([d6a1b11](https://github.com/scaleway/scaleway-ui/commit/d6a1b11621a0385ad1b943a7efc6674fd0083fa1))
-
-
+- **NumberInput:** primary color on hover on disabled state ([#2269](https://github.com/scaleway/scaleway-ui/issues/2269)) ([a7203f4](https://github.com/scaleway/scaleway-ui/commit/a7203f45eb94312e6c47b05d5c88a33bcf0eba16))
+- **unitInput:** add border to disabled state and disable when there is only one option ([#2262](https://github.com/scaleway/scaleway-ui/issues/2262)) ([d6a1b11](https://github.com/scaleway/scaleway-ui/commit/d6a1b11621a0385ad1b943a7efc6674fd0083fa1))
 
 ## [1.39.52](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.51...@scaleway/form@1.39.52) (2023-02-20)
 
-
 ### :package: Chore
 
-* **devdeps:** update emotion monorepo to v11.10.6 ([#2268](https://github.com/scaleway/scaleway-ui/issues/2268)) ([8cb2fc8](https://github.com/scaleway/scaleway-ui/commit/8cb2fc8bb83e80fd2585b4f135235e3e985f922c))
-
-
+- **devdeps:** update emotion monorepo to v11.10.6 ([#2268](https://github.com/scaleway/scaleway-ui/issues/2268)) ([8cb2fc8](https://github.com/scaleway/scaleway-ui/commit/8cb2fc8bb83e80fd2585b4f135235e3e985f922c))
 
 ## [1.39.51](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.50...@scaleway/form@1.39.51) (2023-02-17)
 
-
 ### :bug: Bug Fixes
 
-* **Checkbox:** to use radii from theme ([#2263](https://github.com/scaleway/scaleway-ui/issues/2263)) ([653b6ea](https://github.com/scaleway/scaleway-ui/commit/653b6ea136de0c26b650d50e51e3f8666486b3fb))
-
-
+- **Checkbox:** to use radii from theme ([#2263](https://github.com/scaleway/scaleway-ui/issues/2263)) ([653b6ea](https://github.com/scaleway/scaleway-ui/commit/653b6ea136de0c26b650d50e51e3f8666486b3fb))
 
 ## [1.39.50](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.49...@scaleway/form@1.39.50) (2023-02-16)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.49](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.48...@scaleway/form@1.39.49) (2023-02-15)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.39.48](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.47...@scaleway/form@1.39.48) (2023-02-15)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.47](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.46...@scaleway/form@1.39.47) (2023-02-15)
 
 **Note:** Version bump only for package @scaleway/form
-
-
-
-
 
 ## [1.39.46](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.45...@scaleway/form@1.39.46) (2023-02-13)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.45](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.44...@scaleway/form@1.39.45) (2023-02-13)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.44](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.43...@scaleway/form@1.39.44) (2023-02-10)
-
 
 ### :bug: Bug Fixes
 
-* **devdeps:** update all devdeps ([#2252](https://github.com/scaleway/scaleway-ui/issues/2252)) ([ce6cb78](https://github.com/scaleway/scaleway-ui/commit/ce6cb78bad37332d27f574e5f031c21f6e18bbb4))
-
-
+- **devdeps:** update all devdeps ([#2252](https://github.com/scaleway/scaleway-ui/issues/2252)) ([ce6cb78](https://github.com/scaleway/scaleway-ui/commit/ce6cb78bad37332d27f574e5f031c21f6e18bbb4))
 
 ## 1.39.43 (2023-02-10)
 
-
 ### :package: Chore
 
-* **release:** publish ([ac835f3](https://github.com/scaleway/scaleway-ui/commit/ac835f34a113818bd16a94c2e1e877fec8743d56))
-
-
+- **release:** publish ([ac835f3](https://github.com/scaleway/scaleway-ui/commit/ac835f34a113818bd16a94c2e1e877fec8743d56))
 
 ## [1.39.42](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.41...@scaleway/form@1.39.42) (2023-02-02)
 
-
 ### :bug: Bug Fixes
 
-* **deps:** update dependency react-datepicker to v4.10.0 ([#2235](https://github.com/scaleway/scaleway-ui/issues/2235)) ([83a0ed6](https://github.com/scaleway/scaleway-ui/commit/83a0ed619e61c8ac47c99e281b59abaa168667c0))
-
-
+- **deps:** update dependency react-datepicker to v4.10.0 ([#2235](https://github.com/scaleway/scaleway-ui/issues/2235)) ([83a0ed6](https://github.com/scaleway/scaleway-ui/commit/83a0ed619e61c8ac47c99e281b59abaa168667c0))
 
 ## [1.39.41](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.40...@scaleway/form@1.39.41) (2023-02-02)
 
-
 ### :zap: Refactor
 
-* rename SelectNumber into NumberInput ([#2211](https://github.com/scaleway/scaleway-ui/issues/2211)) ([ec694b4](https://github.com/scaleway/scaleway-ui/commit/ec694b4bc65cf30d4b6d49217da47ddf43b3fd98))
-
-
+- rename SelectNumber into NumberInput ([#2211](https://github.com/scaleway/scaleway-ui/issues/2211)) ([ec694b4](https://github.com/scaleway/scaleway-ui/commit/ec694b4bc65cf30d4b6d49217da47ddf43b3fd98))
 
 ## [1.39.40](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.39...@scaleway/form@1.39.40) (2023-02-02)
 
-
 ### :bug: Bug Fixes
 
-* **deps:** update dependency final-form-arrays to v3.1.0 ([#2234](https://github.com/scaleway/scaleway-ui/issues/2234)) ([1b667c5](https://github.com/scaleway/scaleway-ui/commit/1b667c50b959cd36b2595ac4461d8c7f2d20b4f6))
-
-
+- **deps:** update dependency final-form-arrays to v3.1.0 ([#2234](https://github.com/scaleway/scaleway-ui/issues/2234)) ([1b667c5](https://github.com/scaleway/scaleway-ui/commit/1b667c50b959cd36b2595ac4461d8c7f2d20b4f6))
 
 ## [1.39.39](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.38...@scaleway/form@1.39.39) (2023-02-02)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.38](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.37...@scaleway/form@1.39.38) (2023-02-01)
-
 
 ### :bug: Bug Fixes
 
-* **deps:** update dependency @babel/runtime to v7.20.13 ([#2229](https://github.com/scaleway/scaleway-ui/issues/2229)) ([04136e7](https://github.com/scaleway/scaleway-ui/commit/04136e7842b5cf7013c6672218042b93afeffd2a))
-
-
+- **deps:** update dependency @babel/runtime to v7.20.13 ([#2229](https://github.com/scaleway/scaleway-ui/issues/2229)) ([04136e7](https://github.com/scaleway/scaleway-ui/commit/04136e7842b5cf7013c6672218042b93afeffd2a))
 
 ## [1.39.37](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.36...@scaleway/form@1.39.37) (2023-01-31)
 
-
 ### :bug: Bug Fixes
 
-* toggle and checkbox to have required icon ([#2223](https://github.com/scaleway/scaleway-ui/issues/2223)) ([a0c3a56](https://github.com/scaleway/scaleway-ui/commit/a0c3a56e3ba51e77551a88b90c14791017d8bbec))
-
-
+- toggle and checkbox to have required icon ([#2223](https://github.com/scaleway/scaleway-ui/issues/2223)) ([a0c3a56](https://github.com/scaleway/scaleway-ui/commit/a0c3a56e3ba51e77551a88b90c14791017d8bbec))
 
 ## [1.39.36](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.35...@scaleway/form@1.39.36) (2023-01-27)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.35](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.34...@scaleway/form@1.39.35) (2023-01-27)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.34](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.33...@scaleway/form@1.39.34) (2023-01-26)
-
 
 ### :bug: Bug Fixes
 
-* **Button:** stack has direction column by default ([#2225](https://github.com/scaleway/scaleway-ui/issues/2225)) ([27bf78e](https://github.com/scaleway/scaleway-ui/commit/27bf78ec1a00dc8f5ed6d54a68de659662b85566))
-
-
+- **Button:** stack has direction column by default ([#2225](https://github.com/scaleway/scaleway-ui/issues/2225)) ([27bf78e](https://github.com/scaleway/scaleway-ui/commit/27bf78ec1a00dc8f5ed6d54a68de659662b85566))
 
 ## [1.39.33](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.32...@scaleway/form@1.39.33) (2023-01-26)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.32](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.31...@scaleway/form@1.39.32) (2023-01-26)
-
 
 ### :bug: Bug Fixes
 
-* **deps:** update dependency final-form to v4.20.9 ([#2220](https://github.com/scaleway/scaleway-ui/issues/2220)) ([184cee1](https://github.com/scaleway/scaleway-ui/commit/184cee12c754c7b0bceec0cad2c01adc1e71ade3))
-
-
+- **deps:** update dependency final-form to v4.20.9 ([#2220](https://github.com/scaleway/scaleway-ui/issues/2220)) ([184cee1](https://github.com/scaleway/scaleway-ui/commit/184cee12c754c7b0bceec0cad2c01adc1e71ade3))
 
 ## [1.39.31](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.30...@scaleway/form@1.39.31) (2023-01-25)
 
-
 ### :package: Chore
 
-* **form:** export Field from react-final-form ([#2221](https://github.com/scaleway/scaleway-ui/issues/2221)) ([cea7b26](https://github.com/scaleway/scaleway-ui/commit/cea7b266800f8f28dfbd6d840d05e7e9d570bd6b))
-
-
+- **form:** export Field from react-final-form ([#2221](https://github.com/scaleway/scaleway-ui/issues/2221)) ([cea7b26](https://github.com/scaleway/scaleway-ui/commit/cea7b266800f8f28dfbd6d840d05e7e9d570bd6b))
 
 ## [1.39.30](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.29...@scaleway/form@1.39.30) (2023-01-25)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.29](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.28...@scaleway/form@1.39.29) (2023-01-25)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.28](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.27...@scaleway/form@1.39.28) (2023-01-24)
-
 
 ### :zap: Refactor
 
-* **Tags+TagsField:** rename Tags and TagsField to TagInput and TagInputField ([#2218](https://github.com/scaleway/scaleway-ui/issues/2218)) ([eb4c22f](https://github.com/scaleway/scaleway-ui/commit/eb4c22f36ba15789c45c0955ba2afc0ded718f80))
-
-
+- **Tags+TagsField:** rename Tags and TagsField to TagInput and TagInputField ([#2218](https://github.com/scaleway/scaleway-ui/issues/2218)) ([eb4c22f](https://github.com/scaleway/scaleway-ui/commit/eb4c22f36ba15789c45c0955ba2afc0ded718f80))
 
 ## [1.39.27](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.26...@scaleway/form@1.39.27) (2023-01-24)
 
-
 ### :bug: Bug Fixes
 
-* **Button:** proper layout on extend buttons ([#2154](https://github.com/scaleway/scaleway-ui/issues/2154)) ([21456c0](https://github.com/scaleway/scaleway-ui/commit/21456c0eb876e49ceca3f87be4657b620ef313a3))
-
-
+- **Button:** proper layout on extend buttons ([#2154](https://github.com/scaleway/scaleway-ui/issues/2154)) ([21456c0](https://github.com/scaleway/scaleway-ui/commit/21456c0eb876e49ceca3f87be4657b620ef313a3))
 
 ## [1.39.26](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.25...@scaleway/form@1.39.26) (2023-01-23)
 
-
 ### :zap: Refactor
 
-* **RichSelect:** renamed RichSelect and RichSelectField to Selec… ([#2216](https://github.com/scaleway/scaleway-ui/issues/2216)) ([5b6d970](https://github.com/scaleway/scaleway-ui/commit/5b6d970d8825867cc5e74b618aae3bf1865b567c))
-
-
+- **RichSelect:** renamed RichSelect and RichSelectField to Selec… ([#2216](https://github.com/scaleway/scaleway-ui/issues/2216)) ([5b6d970](https://github.com/scaleway/scaleway-ui/commit/5b6d970d8825867cc5e74b618aae3bf1865b567c))
 
 ## [1.39.25](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.24...@scaleway/form@1.39.25) (2023-01-23)
 
 **Note:** Version bump only for package @scaleway/form
 
-
-
-
-
 ## [1.39.24](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.23...@scaleway/form@1.39.24) (2023-01-23)
-
 
 ### :bug: Bug Fixes
 
-* code clean up ([#2210](https://github.com/scaleway/scaleway-ui/issues/2210)) ([f8bfb95](https://github.com/scaleway/scaleway-ui/commit/f8bfb9556e3b9d1449d9fc77c978e21d38aae1d6))
-
-
+- code clean up ([#2210](https://github.com/scaleway/scaleway-ui/issues/2210)) ([f8bfb95](https://github.com/scaleway/scaleway-ui/commit/f8bfb9556e3b9d1449d9fc77c978e21d38aae1d6))
 
 ## [1.39.23](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.22...@scaleway/form@1.39.23) (2023-01-19)
 
-
 ### :bug: Bug Fixes
 
-* **TextBoxField:** forward `size` prop to TextBox ([#2206](https://github.com/scaleway/scaleway-ui/issues/2206)) ([429c391](https://github.com/scaleway/scaleway-ui/commit/429c391b4c60bbea0d39a4cd1d53b5fcf764d379))
-
-
+- **TextBoxField:** forward `size` prop to TextBox ([#2206](https://github.com/scaleway/scaleway-ui/issues/2206)) ([429c391](https://github.com/scaleway/scaleway-ui/commit/429c391b4c60bbea0d39a4cd1d53b5fcf764d379))
 
 ## [1.39.22](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.21...@scaleway/form@1.39.22) (2023-01-19)
 
-
 ### :zap: Refactor
 
-* **components:** rename TextBox and TextBoxField to TextInput an… ([#2207](https://github.com/scaleway/scaleway-ui/issues/2207)) ([e185c34](https://github.com/scaleway/scaleway-ui/commit/e185c34b19bcd25439910d9b884c1c41701d6dff))
-
-
+- **components:** rename TextBox and TextBoxField to TextInput an… ([#2207](https://github.com/scaleway/scaleway-ui/issues/2207)) ([e185c34](https://github.com/scaleway/scaleway-ui/commit/e185c34b19bcd25439910d9b884c1c41701d6dff))
 
 ## [1.39.21](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.20...@scaleway/form@1.39.21) (2023-01-18)
 
-
 ### :memo: Documentation
 
-* onFieldChange documentation ([#2184](https://github.com/scaleway/scaleway-ui/issues/2184)) ([9501eb1](https://github.com/scaleway/scaleway-ui/commit/9501eb1c5b2c8790f345fec6c8a7d2f4e068724b))
-
-
+- onFieldChange documentation ([#2184](https://github.com/scaleway/scaleway-ui/issues/2184)) ([9501eb1](https://github.com/scaleway/scaleway-ui/commit/9501eb1c5b2c8790f345fec6c8a7d2f4e068724b))
 
 ## [1.39.20](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.19...@scaleway/form@1.39.20) (2023-01-17)
 
-
 ### :zap: Refactor
 
-* **export:** use named export ([#2203](https://github.com/scaleway/scaleway-ui/issues/2203)) ([7e0a8d8](https://github.com/scaleway/scaleway-ui/commit/7e0a8d84c8283041638dd457c042108ab838b6ad))
-
-
+- **export:** use named export ([#2203](https://github.com/scaleway/scaleway-ui/issues/2203)) ([7e0a8d8](https://github.com/scaleway/scaleway-ui/commit/7e0a8d84c8283041638dd457c042108ab838b6ad))
 
 ## [1.39.19](https://github.com/scaleway/scaleway-ui/compare/@scaleway/form@1.39.18...@scaleway/form@1.39.19) (2023-01-16)
 
