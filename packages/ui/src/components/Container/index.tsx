@@ -35,6 +35,9 @@ type ContainerProps = ContainerBaseProps & {
   'data-testid'?: string
 }
 
+/**
+ * @deprecated BorderedBox and Containers where quite similar they have been merged into a single component called Card, use this component instead.
+ */
 export const Container = ({
   title,
   subtitle,
