@@ -10,10 +10,19 @@ import type {
 import { forwardRef, useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
+import capitalize from '../../utils/capitalize'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
 const StyledIcon = styled(Icon)``
+
+export const PROMINENCES = {
+  default: '',
+  weak: 'weak',
+  strong: 'strong',
+}
+
+export type ProminenceProps = keyof typeof PROMINENCES
 
 type LinkSizes = 'large' | 'small'
 type LinkIconPosition = 'left' | 'right'
@@ -22,6 +31,7 @@ type LinkProps = {
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
   variant?: Color
+  prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
   rel?: AnchorHTMLAttributes<HTMLAnchorElement>['rel']
@@ -48,6 +58,7 @@ const StyledLink = styled('a', {
     !['variant', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
   variant: Color
+  prominence?: ProminenceProps
   size: LinkSizes
   iconPosition?: LinkIconPosition
   oneLine?: boolean
@@ -55,8 +66,15 @@ const StyledLink = styled('a', {
   background-color: transparent;
   border: none;
   padding: 0;
-  color: ${({ theme, variant }) =>
-    theme.colors[variant]?.text ?? theme.colors.neutral.text};
+  color: ${({ theme, variant, prominence }) => {
+    const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+    const themeColor = theme.colors[variant]
+    const text = `text${definedProminence}` as keyof typeof themeColor
+
+    console.log(variant, text)
+
+    return theme.colors[variant]?.[text] ?? theme.colors.neutral.text
+  }};
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -137,6 +155,7 @@ export const Link = forwardRef(
       target,
       download,
       variant = 'info',
+      prominence,
       size = 'large',
       iconPosition,
       rel,
@@ -172,6 +191,7 @@ export const Link = forwardRef(
           download={download}
           ref={usedRef}
           variant={variant}
+          prominence={prominence}
           rel={computedRel}
           className={className}
           size={size}
