@@ -128,10 +128,17 @@ const StyledLink = styled('a', {
     outline: none;
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    color: ${({ theme, variant }) =>
-      theme.colors[variant]?.text ?? theme.colors.neutral.text};
-    text-decoration-color: ${({ theme, variant }) =>
-      theme.colors[variant]?.text ?? theme.colors.neutral.text};
+    ${({ theme, variant, prominence }) => {
+      const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
+      const themeColor = theme.colors[variant]
+      const text = `text${definedProminence}` as keyof typeof themeColor
+
+      return `
+        color: ${theme.colors[variant]?.[text] ?? theme.colors.neutral.text};
+        text-decoration-color: ${
+          theme.colors[variant]?.[text] ?? theme.colors.neutral.text
+        };`
+    }}
   }
 
   &:hover::after,
