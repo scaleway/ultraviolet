@@ -2,10 +2,11 @@ import type { SerializedStyles, Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
+import { useState } from 'react'
+import { ButtonV2 } from '../ButtonV2'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { ButtonV2 } from '../ButtonV2'
 
 type AlertType = 'danger' | 'info' | 'success' | 'warning'
 
@@ -16,7 +17,7 @@ const alertStyles = ({
   theme: Theme
   variant: AlertType
 }): SerializedStyles => {
-  const sentiment = theme.colors[variant] || theme.colors.danger
+  const sentiment = theme.colors[variant]
 
   return css`
     background-color: ${sentiment.background};
@@ -41,12 +42,24 @@ const StyledStackContainer = styled(Stack, {
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['2']};
   ${alertStyles};
+`
+
+const TextStack = styled(Stack)`
+  color: ${({ theme }) => theme.colors.neutral.text};
   flex-wrap: wrap;
 `
 
-const StyledStack = styled(Stack)`
-  color: ${({ theme }) => theme.colors.neutral.text};
+const WrapStack = styled(Stack)`
   flex-wrap: wrap;
+  width: 100%;
+`
+
+const StyledButton = styled(ButtonV2)`
+  margin-left: ${({ theme }) => theme.space['5']};
+`
+
+const CloseButton = styled(ButtonV2)`
+  align-self: start;
 `
 
 type AlertProps = {
@@ -58,6 +71,7 @@ type AlertProps = {
   variant?: AlertType
   buttonText?: string
   onButtonClick?: () => void
+  onClose?: () => void
   isClosable?: boolean
   className?: string
   'data-testid'?: string
@@ -70,43 +84,73 @@ export const Alert = ({
   buttonText,
   onButtonClick,
   isClosable,
+  onClose,
   className,
   'data-testid': dataTestId,
-}: AlertProps) => (
-  <StyledStackContainer
-    gap={2}
-    direction="row"
-    alignItems="center"
-    variant={variant}
-    className={className}
-    data-testid={dataTestId}
-    justifyContent="space-between"
-  >
-    <Stack alignItems="start" direction="row" gap={2}>
-      <Icon name={typesDefaultIcons[variant]} size={24} aria-hidden="true" />
-      <StyledStack gap={0.5} direction="row">
-        {title ? (
-          <Text variant="bodyStronger" as="span" color={variant}>
-            {title}
-          </Text>
-        ) : null}
-        {typeof children === 'string' ? (
-          <Text variant="body" as="p">
-            {children}
-          </Text>
-        ) : (
-          children
-        )}
-      </StyledStack>
-    </Stack>
-    {buttonText || isClosable ? (
-      <Stack direction="row" gap={1}>
-        {buttonText ? (
-          <ButtonV2 sentiment={variant} onClick={onButtonClick} size="small">
-            {buttonText}
-          </ButtonV2>
-        ) : null}
-      </Stack>
-    ) : null}
-  </StyledStackContainer>
-)
+}: AlertProps) => {
+  const [opened, setOpened] = useState(true)
+
+  if (!opened) return null
+
+  return (
+    <StyledStackContainer
+      gap={1}
+      direction="row"
+      variant={variant}
+      className={className}
+      data-testid={dataTestId}
+    >
+      <WrapStack
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+        gap={2}
+      >
+        <Stack alignItems="start" direction="row" gap={2}>
+          <Icon
+            name={typesDefaultIcons[variant]}
+            size={24}
+            aria-hidden="true"
+          />
+          <TextStack gap={0.5} direction="row">
+            {title ? (
+              <Text variant="bodyStronger" as="span" color={variant}>
+                {title}
+              </Text>
+            ) : null}
+            {typeof children === 'string' ? (
+              <Text variant="body" as="p">
+                {children}
+              </Text>
+            ) : (
+              children
+            )}
+          </TextStack>
+        </Stack>
+        <Stack direction="row" gap={2}>
+          {buttonText ? (
+            <StyledButton
+              sentiment={variant}
+              onClick={onButtonClick}
+              size="small"
+            >
+              {buttonText}
+            </StyledButton>
+          ) : null}
+        </Stack>
+      </WrapStack>
+      {isClosable ? (
+        <CloseButton
+          variant="ghost"
+          size="small"
+          onClick={() => {
+            setOpened(false)
+            onClose?.()
+          }}
+          icon="close"
+          sentiment={variant}
+        />
+      ) : null}
+    </StyledStackContainer>
+  )
+}

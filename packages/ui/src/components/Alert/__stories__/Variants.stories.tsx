@@ -9,6 +9,8 @@ export const Variants = (props: ComponentProps<typeof Alert>) =>
       {...props}
       title={`${variant.charAt(0).toUpperCase() + variant.slice(1)} title`}
       variant={variant}
+      buttonText="More info"
+      onButtonClick={() => alert('Button clicked')}
     >
       This is an Alert with the {variant} variant.
     </Alert>
