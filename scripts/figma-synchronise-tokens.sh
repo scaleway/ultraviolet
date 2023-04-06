@@ -29,6 +29,28 @@ function generateTokens {
       reduce($sentiment.value | to_entries | .[]) as $shade
         ({}; . + { "\($shade.key)": ($shade.value.value | ascii_downcase) })) })
   ')
+
+  # Gives all shades of other data colors
+  PARSED_OTHER_DATA=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
+  reduce (.[$theme].other.data | to_entries | .[]) as $shade
+    ({}; . + {"\($shade.key)": ($shade.value.value | ascii_downcase) })
+  ')
+
+  echo "${PARSED_OTHER_DATA}"
+
+  # Match tokens and shades colors
+  GENERATED_DATA_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_OTHER_DATA}" '
+    .[$global].other.data.charts |
+      reduce (. | to_entries | .[]) as $dataValue
+        ({}; . + {"\($dataValue.key)": ($dataValue.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[3]] )}) |
+          {"charts": .} |
+            {"data": .} |
+              {"other": .} |
+                {"colors": .}
+    ')
+
+  echo "${GENERATED_DATA_TOKENS_COLOR}"
+
   # Match tokens and shades colors
   GENERATED_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
   .[$global] | with_entries(select(.value | has("backgroundStrong"))) |
@@ -37,6 +59,7 @@ function generateTokens {
         ({}; . + { "\($token.key)": ($token.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[2]][$number[3]]) })) }) |
           {"colors": .}
   ')
+
   # Overload of tokens colors specific to each theme, depending
   GENERATED_OVERLOADED_COLORS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" --argjson shades "${PARSED_SHADES}" '
   .[$theme] | with_entries(select(.value | has("backgroundWeakElevated"))) |
@@ -46,8 +69,8 @@ function generateTokens {
           {"colors": .}
   ')
 
-  # other colors generated to specific theme
-  GENERATED_OTHER_COLORS=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
+  # other colors icon generated to specific theme
+  GENERATED_OTHER_COLORS_ICON=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
     .[$global].other.icon |
       reduce (. | to_entries | .[]) as $iconKey
         ({}; . + {"\($iconKey.key)": (reduce($iconKey.value | to_entries | .[]) as $keyToken
@@ -57,8 +80,6 @@ function generateTokens {
                   {"other": .} |
                     {"colors": .}
     ')
-
-  echo "${GENERATED_OTHER_COLORS}"
 
   # Gives all colors of shadows
   SHADOWS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
@@ -76,10 +97,9 @@ function generateTokens {
               {"shadows": .}
   ')
 
-  # There are other colors for overlay for example
-  GENERATED_OTHER_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
-    reduce (.[$theme].other | to_entries | .[]) as $sentiment
-      ({}; . + {"\($sentiment.key)": $sentiment.value.value}) | {"colors": .}
+  # Overlay colors
+  GENERATED_OVERLAY_TOKENS=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
+    ({"overlay": .[$theme].other.overlay.value}) | {"colors": .}
   ')
 
   # Line height generated used for typography
@@ -98,7 +118,7 @@ function generateTokens {
         ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
           }))}) | {"typography": .}')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OTHER_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5]')
+  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"

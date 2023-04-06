@@ -129,6 +129,26 @@ export const darkTheme = {
       textWeakHover: '#e0e5f0',
     },
     other: {
+      data: {
+        charts: {
+          danger: '#e24d69',
+          data1: '#7c61e7',
+          data10: '#b4f2f6',
+          data11: '#005899',
+          data12: '#2c8666',
+          data13: '#e2a1ff',
+          data14: '#92ac41',
+          data2: '#008df7',
+          data3: '#3cb589',
+          data4: '#ea8396',
+          data5: '#a795ef',
+          data6: '#ff602e',
+          data7: '#a07f00',
+          data8: '#029aa2',
+          data9: '#ffa285',
+          success: '#44d09e',
+        },
+      },
       icon: {
         category: {
           primary: {
