@@ -71,8 +71,6 @@ const StyledLink = styled('a', {
     const themeColor = theme.colors[variant]
     const text = `text${definedProminence}` as keyof typeof themeColor
 
-    console.log(variant, text)
-
     return theme.colors[variant]?.[text] ?? theme.colors.neutral.text
   }};
   text-decoration: underline;
