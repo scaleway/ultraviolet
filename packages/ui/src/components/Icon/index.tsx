@@ -385,7 +385,7 @@ type IconProps = {
   disabled?: boolean
 } & Pick<
   SVGProps<SVGSVGElement>,
-  'className' | 'stroke' | 'cursor' | 'strokeWidth'
+  'className' | 'stroke' | 'cursor' | 'strokeWidth' | 'onClick'
 >
 
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
@@ -401,6 +401,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       cursor,
       strokeWidth,
       disabled,
+      onClick,
     },
     ref,
   ) => {
@@ -426,6 +427,7 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         cursor={cursor}
         strokeWidth={strokeWidth}
         disabled={disabled}
+        onClick={onClick}
       >
         {render()}
       </StyledIcon>
