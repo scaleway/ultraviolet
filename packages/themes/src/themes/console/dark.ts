@@ -43,6 +43,7 @@ export const darkTheme = {
       textWeakDisabled: '#60233c',
       textWeakHover: '#fa7995',
     },
+    data: null,
     info: {
       background: '#203355',
       backgroundDisabled: '#19233c',

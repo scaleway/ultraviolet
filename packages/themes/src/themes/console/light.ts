@@ -43,6 +43,7 @@ export const lightTheme = {
       textWeakDisabled: '#fbbac6',
       textWeakHover: '#a6102d',
     },
+    data: null,
     info: {
       background: '#e1ebff',
       backgroundDisabled: '#f4f7ff',
