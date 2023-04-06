@@ -1,5 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Link prominence render prominence default 1`] = `
+<DocumentFragment>
+  .cache-94sddu-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #1a4dbf;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-94sddu-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-94sddu-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-94sddu-StyledLink:hover,
+.cache-94sddu-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #1a4dbf;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-94sddu-StyledLink:hover .e4bq1r52,
+.cache-94sddu-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-94sddu-StyledLink:hover::after,
+.cache-94sddu-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-94sddu-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-94sddu-StyledLink e4bq1r50"
+    href="/"
+    prominence="default"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link prominence render prominence strong 1`] = `
+<DocumentFragment>
+  .cache-1g9g2xp-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #ffffff;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-1g9g2xp-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1g9g2xp-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1g9g2xp-StyledLink:hover,
+.cache-1g9g2xp-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #1a4dbf;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-1g9g2xp-StyledLink:hover .e4bq1r52,
+.cache-1g9g2xp-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1g9g2xp-StyledLink:hover::after,
+.cache-1g9g2xp-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-1g9g2xp-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-1g9g2xp-StyledLink e4bq1r50"
+    href="/"
+    prominence="strong"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link prominence render prominence weak 1`] = `
+<DocumentFragment>
+  .cache-82fdh5-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f6ed8;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-82fdh5-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-82fdh5-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-82fdh5-StyledLink:hover,
+.cache-82fdh5-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #1a4dbf;
+  text-decoration-color: #1a4dbf;
+}
+
+.cache-82fdh5-StyledLink:hover .e4bq1r52,
+.cache-82fdh5-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-82fdh5-StyledLink:hover::after,
+.cache-82fdh5-StyledLink:focus::after {
+  background-color: #1a4dbf;
+}
+
+.cache-82fdh5-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-82fdh5-StyledLink e4bq1r50"
+    href="/"
+    prominence="weak"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
 exports[`Link render correctly with bad variant 1`] = `
 <DocumentFragment>
   .cache-1hfav5i-StyledLink {
