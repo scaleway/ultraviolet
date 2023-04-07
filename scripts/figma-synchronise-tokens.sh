@@ -36,8 +36,6 @@ function generateTokens {
     ({}; . + {"\($shade.key)": ($shade.value.value | ascii_downcase) })
   ')
 
-  echo "${PARSED_OTHER_DATA}"
-
   # Match tokens and shades colors
   GENERATED_DATA_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_OTHER_DATA}" '
     .[$global].other.data.charts |
@@ -49,7 +47,22 @@ function generateTokens {
                 {"colors": .}
     ')
 
-  echo "${GENERATED_DATA_TOKENS_COLOR}"
+  # Gives all gradient colors
+  PARSED_OTHER_GRADIENT=$(echo "${JSON}" | jq --sort-keys --arg theme "${THEME}" '
+  reduce (.[$theme].other.gradients | to_entries | .[]) as $shade
+    ({}; . + {"\($shade.key)": ($shade.value.value | ascii_downcase) })
+  ')
+
+  # Match tokens and shades colors
+  GENERATED_GRADIENT_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_OTHER_GRADIENT}" '
+        .[$global].other.gradients.background |
+          reduce (. | to_entries | .[]) as $gradientValue
+            ({}; . + {"\($gradientValue.key)": ($gradientValue.value.value | gsub("[$]"; ".") | split(".") as $number | $shades[$number[3]] )}) |
+              {"background": .} |
+                {"gradients": .} |
+                  {"other": .} |
+                    {"colors": .}
+        ')
 
   # Match tokens and shades colors
   GENERATED_TOKENS_COLOR=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" --argjson shades "${PARSED_SHADES}" '
@@ -118,7 +131,7 @@ function generateTokens {
         ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
           }))}) | {"typography": .}')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6]')
+  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"
