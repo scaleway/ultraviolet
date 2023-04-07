@@ -99,7 +99,7 @@ const StyledFilledButton = styled(StyledButton)`
     disabled
       ? `
             background: ${theme.colors[sentiment].backgroundStrongDisabled};
-            color: 
+            color:
               ${
                 theme.colors[sentiment][
                   sentiment === 'neutral'
@@ -112,7 +112,7 @@ const StyledFilledButton = styled(StyledButton)`
             &:hover, &:active
             {
                 background: ${theme.colors[sentiment].backgroundStrongHover};
-                color: 
+                color:
                 ${
                   theme.colors[sentiment][
                     sentiment === 'neutral' ? 'textHover' : 'textStrongHover'
@@ -134,7 +134,7 @@ const StyledOutlinedButton = styled(StyledButton)`
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-        color: 
+        color:
           ${
             theme.colors[sentiment][
               sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
@@ -147,13 +147,13 @@ const StyledOutlinedButton = styled(StyledButton)`
               : 'borderWeakDisabled'
           ]
         };
-        
+
     `
       : `
         &:hover, &:active
        {
             background: ${theme.colors[sentiment].backgroundWeakHover};
-            color: 
+            color:
             ${
               theme.colors[sentiment][
                 sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
@@ -179,7 +179,7 @@ const StyledGhostButton = styled(StyledButton)`
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-        color: 
+        color:
           ${
             theme.colors[sentiment][
               sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
@@ -190,7 +190,7 @@ const StyledGhostButton = styled(StyledButton)`
         &:hover, &:active
         {
             background: ${theme.colors[sentiment].backgroundWeakHover};
-            color: 
+            color:
               ${
                 theme.colors[sentiment][
                   sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
@@ -220,6 +220,8 @@ type ButtonProps = {
   iconPosition?: 'left' | 'right'
   fullWidth?: boolean
   isLoading?: boolean
+  name?: string
+  'aria-label'?: string
   onClick: ButtonHTMLAttributes<HTMLButtonElement>['onClick']
 } & (
   | { children: ReactNode; icon?: ComponentProps<typeof Icon>['name'] }
@@ -242,6 +244,8 @@ export const ButtonV2 = forwardRef(
       isLoading = false,
       onClick,
       children,
+      name,
+      'aria-label': ariaLabel,
     }: ButtonProps,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
@@ -260,6 +264,8 @@ export const ButtonV2 = forwardRef(
         type={type}
         onClick={onClick}
         ref={ref}
+        name={name}
+        aria-label={ariaLabel}
       >
         {!isLoading && icon ? <Icon name={icon} size={16} /> : null}
         {isLoading ? (
