@@ -14,11 +14,10 @@ const Container = styled('div', {
 })<{ type: Type; size: Size }>`
   padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
   border-radius: ${({ theme }) => theme.radii.large};
-  /* TODO set a gradient instead of a hard color */
-  background-color: ${({ theme, type }) =>
+  background: ${({ theme, type }) =>
     type === 'info'
       ? theme.colors.primary.background
-      : theme.colors.primary.backgroundStrong};
+      : theme.colors.other.gradients.background.blue};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
