@@ -1,4 +1,5 @@
-import { Link } from '..'
+import type { ProminenceProps } from '..'
+import { Link, PROMINENCES } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { SENTIMENTS } from '../../../theme'
 
@@ -15,6 +16,21 @@ describe('Link', () => {
             Hello
           </Link>,
         ),
+    )
+  })
+
+  describe('prominence', () => {
+    test.each(
+      Object.keys(PROMINENCES).map(prominence => [
+        `render prominence ${prominence}`,
+        prominence,
+      ]),
+    )('%s', (_, prominence) =>
+      shouldMatchEmotionSnapshot(
+        <Link href="/" prominence={prominence as ProminenceProps}>
+          Hello
+        </Link>,
+      ),
     )
   })
 
