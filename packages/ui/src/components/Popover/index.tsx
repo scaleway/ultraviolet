@@ -71,6 +71,7 @@ const ContentWrapper = ({
         onClick={onClose}
         size="small"
         icon="close"
+        aria-label="close"
       />
     </Stack>
     {typeof children === 'string' ? (

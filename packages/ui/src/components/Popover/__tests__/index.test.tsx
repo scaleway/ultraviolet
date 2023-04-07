@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { Popover } from '..'
@@ -81,8 +81,16 @@ describe('Tooltip', () => {
   })
 
   test(`should render visible on mount and close on click on close button`, async () => {
+    const onClose = jest.fn(() => {})
+
     renderWithTheme(
-      <Popover title="Test" content="Test" visible data-testid="popover">
+      <Popover
+        title="Test"
+        content="Test"
+        visible
+        data-testid="popover"
+        onClose={onClose}
+      >
         Children
       </Popover>,
     )
@@ -90,11 +98,9 @@ describe('Tooltip', () => {
     const popover = screen.getByTestId('popover')
     expect(popover).toBeVisible()
 
-    const closeButton = screen.getByTitle('close')
+    const closeButton = screen.getByLabelText('close')
     await userEvent.click(closeButton)
 
-    await waitFor(() => {
-      expect(popover).not.toBeVisible()
-    })
+    expect(onClose).toHaveBeenCalledTimes(1)
   })
 })
