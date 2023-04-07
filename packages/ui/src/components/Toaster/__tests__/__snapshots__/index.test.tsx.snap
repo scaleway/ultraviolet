@@ -2,23 +2,23 @@
 
 exports[`Toaster renders correctly with all kind of toast 1`] = `
 [
-  .cache-1596gs8-Stack-StyledStackContainer-alertStyles-StyledAlert {
+  .cache-1ku1528-Stack-StyledStackContainer-alertStyles-StyledAlert {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -27,74 +27,11 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   padding: 16px;
   background-color: #e1ebff;
   color: #1a4dbf;
+  border-left: 4px solid #3f6ed8;
   padding: 0;
 }
 
-.cache-wp3con-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.cache-db05j6-AlertContainer {
-  color: inherit;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.cache-1sluwr9-StyledText-InheritedColorText {
-  color: #4a4f62;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-}
-
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="e1txm9iz0 cache-1596gs8-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
-      >
-        <svg
-          class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
-          />
-        </svg>
-        <div
-          class="cache-db05j6-AlertContainer eenhiht1"
-        >
-          <p
-            class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
-          >
-            This is an info
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>,
-  .cache-1prui9w-Stack-StyledStackContainer-alertStyles-StyledAlert {
+.cache-ymsbdb-Stack-WrapStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,10 +44,171 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cache-1yndguk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-wp3con-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-1dhscq3-Stack-TextStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #4a4f62;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    class="Toastify__toast-body"
+    role="alert"
+  >
+    <div>
+      <div
+        class="e1txm9iz0 cache-1ku1528-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
+      >
+        <div
+          class="cache-ymsbdb-Stack-WrapStack eenhiht2"
+        >
+          <div
+            class="cache-1yndguk-Stack e1sgck4o0"
+          >
+            <svg
+              class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+              />
+            </svg>
+            <div
+              class="cache-1dhscq3-Stack-TextStack eenhiht3"
+            >
+              <p
+                class="cache-rr62n5-StyledText e1tg3t120"
+              >
+                This is an info
+              </p>
+            </div>
+          </div>
+          <div
+            class="cache-6874q2-Stack e1sgck4o0"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  .cache-gdb0sw-Stack-StyledStackContainer-alertStyles-StyledAlert {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -119,74 +217,11 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   padding: 16px;
   background-color: #eafffb;
   color: #149a7b;
+  border-left: 4px solid #22c8a2;
   padding: 0;
 }
 
-.cache-wp3con-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
-}
-
-.cache-db05j6-AlertContainer {
-  color: inherit;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.cache-1sluwr9-StyledText-InheritedColorText {
-  color: #4a4f62;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 24px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-}
-
-<div
-    class="Toastify__toast-body"
-    role="alert"
-  >
-    <div>
-      <div
-        class="e1txm9iz0 cache-1prui9w-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
-      >
-        <svg
-          class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
-          />
-        </svg>
-        <div
-          class="cache-db05j6-AlertContainer eenhiht1"
-        >
-          <p
-            class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
-          >
-            This is a success
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>,
-  .cache-r1gait-Stack-StyledStackContainer-alertStyles-StyledAlert {
+.cache-ymsbdb-Stack-WrapStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -199,19 +234,41 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
-  padding: 16px;
-  background-color: #ffe1e7;
-  color: #a6102d;
-  padding: 0;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cache-1yndguk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-wp3con-StyledIcon-sizeStyles {
@@ -223,21 +280,35 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   min-height: 24px;
 }
 
-.cache-db05j6-AlertContainer {
-  color: inherit;
+.cache-1dhscq3-Stack-TextStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #4a4f62;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.cache-1sluwr9-StyledText-InheritedColorText {
+.cache-rr62n5-StyledText {
   color: #4a4f62;
   font-size: 16px;
   font-family: Asap;
@@ -247,7 +318,29 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: inherit;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <div
@@ -256,24 +349,225 @@ exports[`Toaster renders correctly with all kind of toast 1`] = `
   >
     <div>
       <div
-        class="e1txm9iz0 cache-r1gait-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
+        class="e1txm9iz0 cache-gdb0sw-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
       >
-        <svg
-          class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-          />
-        </svg>
         <div
-          class="cache-db05j6-AlertContainer eenhiht1"
+          class="cache-ymsbdb-Stack-WrapStack eenhiht2"
         >
-          <p
-            class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
+          <div
+            class="cache-1yndguk-Stack e1sgck4o0"
           >
-            This is an error
-          </p>
+            <svg
+              class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+              />
+            </svg>
+            <div
+              class="cache-1dhscq3-Stack-TextStack eenhiht3"
+            >
+              <p
+                class="cache-rr62n5-StyledText e1tg3t120"
+              >
+                This is a success
+              </p>
+            </div>
+          </div>
+          <div
+            class="cache-6874q2-Stack e1sgck4o0"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  .cache-a28zqv-Stack-StyledStackContainer-alertStyles-StyledAlert {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #ffe1e7;
+  color: #a6102d;
+  border-left: 4px solid #dd3252;
+  padding: 0;
+}
+
+.cache-ymsbdb-Stack-WrapStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cache-1yndguk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-wp3con-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-1dhscq3-Stack-TextStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #4a4f62;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    class="Toastify__toast-body"
+    role="alert"
+  >
+    <div>
+      <div
+        class="e1txm9iz0 cache-a28zqv-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
+      >
+        <div
+          class="cache-ymsbdb-Stack-WrapStack eenhiht2"
+        >
+          <div
+            class="cache-1yndguk-Stack e1sgck4o0"
+          >
+            <svg
+              class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+              />
+            </svg>
+            <div
+              class="cache-1dhscq3-Stack-TextStack eenhiht3"
+            >
+              <p
+                class="cache-rr62n5-StyledText e1tg3t120"
+              >
+                This is an error
+              </p>
+            </div>
+          </div>
+          <div
+            class="cache-6874q2-Stack e1sgck4o0"
+          />
         </div>
       </div>
     </div>
@@ -327,7 +621,36 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   background-color: #dd3252;
 }
 
-.cache-1596gs8-Stack-StyledStackContainer-alertStyles-StyledAlert {
+.cache-1ku1528-Stack-StyledStackContainer-alertStyles-StyledAlert {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #e1ebff;
+  color: #1a4dbf;
+  border-left: 4px solid #3f6ed8;
+  padding: 0;
+}
+
+.cache-ymsbdb-Stack-WrapStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -340,19 +663,41 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
-  padding: 16px;
-  background-color: #e1ebff;
-  color: #1a4dbf;
-  padding: 0;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cache-1yndguk-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-wp3con-StyledIcon-sizeStyles {
@@ -364,21 +709,35 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   min-height: 24px;
 }
 
-.cache-db05j6-AlertContainer {
-  color: inherit;
+.cache-1dhscq3-Stack-TextStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #4a4f62;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.cache-1sluwr9-StyledText-InheritedColorText {
+.cache-rr62n5-StyledText {
   color: #4a4f62;
   font-size: 16px;
   font-family: Asap;
@@ -388,7 +747,29 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: inherit;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-1klpfky-CloseButtonWrapper {
@@ -411,23 +792,23 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   margin-left: 8px;
 }
 
-.cache-1prui9w-Stack-StyledStackContainer-alertStyles-StyledAlert {
+.cache-gdb0sw-Stack-StyledStackContainer-alertStyles-StyledAlert {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -436,26 +817,27 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   padding: 16px;
   background-color: #eafffb;
   color: #149a7b;
+  border-left: 4px solid #22c8a2;
   padding: 0;
 }
 
-.cache-r1gait-Stack-StyledStackContainer-alertStyles-StyledAlert {
+.cache-a28zqv-Stack-StyledStackContainer-alertStyles-StyledAlert {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 16px;
+  gap: 8px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -464,6 +846,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   padding: 16px;
   background-color: #ffe1e7;
   color: #a6102d;
+  border-left: 4px solid #dd3252;
   padding: 0;
 }
 
@@ -484,24 +867,35 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         >
           <div>
             <div
-              class="e1txm9iz0 cache-1596gs8-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
+              class="e1txm9iz0 cache-1ku1528-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
             >
-              <svg
-                class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
-                />
-              </svg>
               <div
-                class="cache-db05j6-AlertContainer eenhiht1"
+                class="cache-ymsbdb-Stack-WrapStack eenhiht2"
               >
-                <p
-                  class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
+                <div
+                  class="cache-1yndguk-Stack e1sgck4o0"
                 >
-                  This is an info
-                </p>
+                  <svg
+                    class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+                    />
+                  </svg>
+                  <div
+                    class="cache-1dhscq3-Stack-TextStack eenhiht3"
+                  >
+                    <p
+                      class="cache-rr62n5-StyledText e1tg3t120"
+                    >
+                      This is an info
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-6874q2-Stack e1sgck4o0"
+                />
               </div>
             </div>
           </div>
@@ -538,24 +932,35 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         >
           <div>
             <div
-              class="e1txm9iz0 cache-1prui9w-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
+              class="e1txm9iz0 cache-gdb0sw-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
             >
-              <svg
-                class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
-                />
-              </svg>
               <div
-                class="cache-db05j6-AlertContainer eenhiht1"
+                class="cache-ymsbdb-Stack-WrapStack eenhiht2"
               >
-                <p
-                  class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
+                <div
+                  class="cache-1yndguk-Stack e1sgck4o0"
                 >
-                  This is a success
-                </p>
+                  <svg
+                    class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"
+                    />
+                  </svg>
+                  <div
+                    class="cache-1dhscq3-Stack-TextStack eenhiht3"
+                  >
+                    <p
+                      class="cache-rr62n5-StyledText e1tg3t120"
+                    >
+                      This is a success
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-6874q2-Stack e1sgck4o0"
+                />
               </div>
             </div>
           </div>
@@ -592,24 +997,35 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         >
           <div>
             <div
-              class="e1txm9iz0 cache-r1gait-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht2"
+              class="e1txm9iz0 cache-a28zqv-Stack-StyledStackContainer-alertStyles-StyledAlert eenhiht4"
             >
-              <svg
-                class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-                />
-              </svg>
               <div
-                class="cache-db05j6-AlertContainer eenhiht1"
+                class="cache-ymsbdb-Stack-WrapStack eenhiht2"
               >
-                <p
-                  class="eenhiht0 cache-1sluwr9-StyledText-InheritedColorText e1tg3t120"
+                <div
+                  class="cache-1yndguk-Stack e1sgck4o0"
                 >
-                  This is an error
-                </p>
+                  <svg
+                    class="cache-wp3con-StyledIcon-sizeStyles etwatq50"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+                    />
+                  </svg>
+                  <div
+                    class="cache-1dhscq3-Stack-TextStack eenhiht3"
+                  >
+                    <p
+                      class="cache-rr62n5-StyledText e1tg3t120"
+                    >
+                      This is an error
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="cache-6874q2-Stack e1sgck4o0"
+                />
               </div>
             </div>
           </div>

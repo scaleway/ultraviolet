@@ -80,7 +80,35 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   pointer-events: none;
 }
 
-.cache-1v4uk27-alertStyles {
+.cache-c7ycvc-alertStyles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #ffe1e7;
+  color: #a6102d;
+  border-left: 4px solid #dd3252;
+}
+
+.cache-awdzpq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,18 +121,41 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  border-radius: 4px;
-  padding: 16px;
-  background-color: #ffe1e7;
-  color: #a6102d;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cache-14uwbmp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-bqy7up-sizeStyles {
@@ -116,21 +167,35 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   min-height: 24px;
 }
 
-.cache-oaar7r {
-  color: inherit;
+.cache-1y609yl {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #4a4f62;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.cache-1gw1wgs {
+.cache-f7f63x {
   color: #4a4f62;
   font-size: 16px;
   font-family: Asap;
@@ -140,7 +205,29 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: inherit;
+}
+
+.cache-pjzp28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 <form
@@ -158,24 +245,35 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
       </div>
     </button>
     <div
-      class="cache-1v4uk27-alertStyles eenhiht2"
+      class="cache-c7ycvc-alertStyles eenhiht4"
     >
-      <svg
-        class="cache-bqy7up-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
-        />
-      </svg>
       <div
-        class="cache-oaar7r eenhiht1"
+        class="cache-awdzpq eenhiht2"
       >
-        <p
-          class="eenhiht0 cache-1gw1wgs e1tg3t120"
+        <div
+          class="cache-14uwbmp e1sgck4o0"
         >
-          hello
-        </p>
+          <svg
+            class="cache-bqy7up-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"
+            />
+          </svg>
+          <div
+            class="cache-1y609yl eenhiht3"
+          >
+            <p
+              class="cache-f7f63x e1tg3t120"
+            >
+              hello
+            </p>
+          </div>
+        </div>
+        <div
+          class="cache-pjzp28 e1sgck4o0"
+        />
       </div>
     </div>
     ,
