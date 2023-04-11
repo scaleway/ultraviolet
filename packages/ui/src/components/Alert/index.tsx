@@ -149,6 +149,7 @@ export const Alert = ({
           }}
           icon="close"
           sentiment={variant}
+          aria-label="close"
         />
       ) : null}
     </StyledStackContainer>
