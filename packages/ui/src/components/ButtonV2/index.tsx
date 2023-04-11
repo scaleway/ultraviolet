@@ -8,6 +8,7 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
+import type { XOR } from 'src/types'
 import type { SENTIMENTS } from '../../theme'
 import { Icon } from '../Icon'
 import { Loader } from '../Loader'
@@ -41,7 +42,7 @@ const FOCUS_RING_KEY = {
 // VARIANTS
 type StyledButtonProps = Required<
   Pick<
-    FinalProps,
+    CommonProps,
     'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
   >
 >
@@ -253,48 +254,26 @@ type CommonProps = {
   'aria-label'?: string
   onClick?: MouseEventHandler<HTMLElement>
 }
-// @note: using XOR utility was generating some lint erros
-type FinalProps = CommonProps &
-  (
-    | {
-        // Button : Children + optional Icon
-        children: ReactNode
-        icon?: ComponentProps<typeof Icon>['name']
-        name?: string
-        href?: never
-        target?: never
-        download?: never
-      }
-    | {
-        // Button : Icon only
-        children?: never
-        icon: ComponentProps<typeof Icon>['name']
-        name?: string
-        href?: never
-        target?: never
-        download?: never
-      }
-    | {
-        // Anchor : Children + optional Icon
-        children: ReactNode
-        icon?: ComponentProps<typeof Icon>['name']
-        name?: never
-        href: string
-        target?: string
-        download?: string
-      }
-    | {
-        // Anchor : Children + Icon Only
-        children?: never
-        icon: ComponentProps<typeof Icon>['name']
-        name?: never
-        href: string
-        target?: string
-        download?: string
-      }
-  )
+type ContentProps = XOR<
+  [
+    {
+      children: ReactNode
+      icon?: ComponentProps<typeof Icon>['name']
+    },
+    {
+      icon: ComponentProps<typeof Icon>['name']
+    },
+  ]
+>
+type ButtonProps = CommonProps &
+  XOR<
+    [
+      ContentProps & { name: string },
+      ContentProps & { href: string; target?: string; download?: string },
+    ]
+  >
 
-export const ButtonV2 = forwardRef<Element, FinalProps>(
+export const ButtonV2 = forwardRef<Element, ButtonProps>(
   (
     {
       type = 'button',
