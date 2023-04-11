@@ -900,7 +900,7 @@ exports[`Alert renders correctly with buttonText and onButtonClick 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1mu2xyu-StyledButton-StyledFilledButton-StyledButton {
+.cache-1mglvwa-StyledButton-StyledFilledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -938,12 +938,12 @@ exports[`Alert renders correctly with buttonText and onButtonClick 1`] = `
   margin-left: 40px;
 }
 
-.cache-1mu2xyu-StyledButton-StyledFilledButton-StyledButton:active {
+.cache-1mglvwa-StyledButton-StyledFilledButton-StyledButton:active {
   box-shadow: 0px 0px 0px 3px #DD325240;
 }
 
-.cache-1mu2xyu-StyledButton-StyledFilledButton-StyledButton:hover,
-.cache-1mu2xyu-StyledButton-StyledFilledButton-StyledButton:active {
+.cache-1mglvwa-StyledButton-StyledFilledButton-StyledButton:hover,
+.cache-1mglvwa-StyledButton-StyledFilledButton-StyledButton:active {
   background: #a6102d;
   color: #ffffff;
 }
@@ -979,7 +979,7 @@ exports[`Alert renders correctly with buttonText and onButtonClick 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       >
         <button
-          class="eenhiht1 cache-1mu2xyu-StyledButton-StyledFilledButton-StyledButton e1su13oj2"
+          class="eenhiht1 cache-1mglvwa-StyledButton-StyledFilledButton-StyledButton e1su13oj2"
           type="button"
         >
           Button
@@ -1502,7 +1502,7 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-184in4o-StyledButton-StyledGhostButton-CloseButton {
+.cache-1onujcl-StyledButton-StyledGhostButton-CloseButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1542,12 +1542,12 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   align-self: start;
 }
 
-.cache-184in4o-StyledButton-StyledGhostButton-CloseButton:active {
+.cache-1onujcl-StyledButton-StyledGhostButton-CloseButton:active {
   box-shadow: 0px 0px 0px 3px #DD325240;
 }
 
-.cache-184in4o-StyledButton-StyledGhostButton-CloseButton:hover,
-.cache-184in4o-StyledButton-StyledGhostButton-CloseButton:active {
+.cache-1onujcl-StyledButton-StyledGhostButton-CloseButton:hover,
+.cache-1onujcl-StyledButton-StyledGhostButton-CloseButton:active {
   background: #ffe1e7;
   color: #a6102d;
 }
@@ -1593,7 +1593,8 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
       />
     </div>
     <button
-      class="eenhiht0 cache-184in4o-StyledButton-StyledGhostButton-CloseButton e1su13oj0"
+      aria-label="close"
+      class="eenhiht0 cache-1onujcl-StyledButton-StyledGhostButton-CloseButton e1su13oj0"
       type="button"
     >
       <svg
