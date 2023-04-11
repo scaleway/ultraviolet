@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.42.1
+
+### Minor Changes
+
+- [#2411](https://github.com/scaleway/scaleway-ui/pull/2411) [`1731b8aa`](https://github.com/scaleway/scaleway-ui/commit/1731b8aac460d5b7e174064db2eee52d7a6be58f) Thanks [@philibea](https://github.com/philibea)! - Fix type issue with meta field from `getErrors` function
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - New component Card. It will replace Container and BorderedBox
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-label` and `name` properties to button
+
+### Patch Changes
+
+- Updated dependencies [[`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408)]:
+  - @scaleway/ui@0.234.0
+
 ## 1.41.38
 
 ### Patch Changes
