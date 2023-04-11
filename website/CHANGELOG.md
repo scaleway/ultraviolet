@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.107
+
+### Patch Changes
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Updated dependency `@types/node` to `18.15.11`.
+
+- Updated dependencies [[`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408)]:
+  - @scaleway/ui@0.234.0
+
 ## 0.2.106
 
 ### Patch Changes
