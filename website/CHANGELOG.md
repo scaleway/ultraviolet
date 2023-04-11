@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.107
+
+### Patch Changes
+
+- [#2383](https://github.com/scaleway/scaleway-ui/pull/2383) [`020bab8f`](https://github.com/scaleway/scaleway-ui/commit/020bab8fac536b2d2a65001ec1ce112cd8b61f04) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `18.15.11`.
+
+- Updated dependencies [[`e82efb79`](https://github.com/scaleway/scaleway-ui/commit/e82efb7993158cfca3d3ccb6e893ab5e9e5da273), [`b07ffa83`](https://github.com/scaleway/scaleway-ui/commit/b07ffa8306533b2d359b1d09f3b62d0fcf7f928a), [`1fd91c86`](https://github.com/scaleway/scaleway-ui/commit/1fd91c864ed8ab6f90d2a3ddbcc7343fb26e986d)]:
+  - @scaleway/ui@0.234.0
+
 ## 0.2.106
 
 ### Patch Changes
