@@ -49,7 +49,7 @@ export const NumberInputField = ({
   value,
   className,
 }: NumberInputValueFieldProps) => {
-  const { input } = useFormField(name, {
+  const { input } = useFormField<number>(name, {
     disabled,
     required,
     type: 'number',

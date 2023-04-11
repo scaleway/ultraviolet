@@ -11,12 +11,6 @@ const HookWrapper = ({ children }: { children: ReactNode }) => (
     render={() => <ErrorProvider errors={mockErrors}>{children}</ErrorProvider>}
   />
 )
-const baseMeta = {
-  blur: () => {},
-  change: () => {},
-  focus: () => {},
-  name: 'test',
-}
 
 describe('ErrorProvider', () => {
   test('renders correctly ', () =>
@@ -36,7 +30,6 @@ describe('ErrorProvider', () => {
     const requiredTouchedAndEmpty = {
       label: 'test',
       meta: {
-        ...baseMeta,
         error: ['REQUIRED'],
         touched: true,
       },
@@ -50,7 +43,6 @@ describe('ErrorProvider', () => {
     const minLengthTouchedAndInvalid = {
       label: 'test',
       meta: {
-        ...baseMeta,
         error: ['MIN_LENGTH'],
         touched: true,
       },
@@ -65,7 +57,6 @@ describe('ErrorProvider', () => {
     const minLengthWithInvalidInitialValue = {
       label: 'test',
       meta: {
-        ...baseMeta,
         dirty: false,
         error: ['MIN_LENGTH'],
         touched: false,
@@ -82,7 +73,6 @@ describe('ErrorProvider', () => {
     const minLengthWithInvalidValueAndCustomErrorMessage = {
       label: 'test',
       meta: {
-        ...baseMeta,
         error: customErrorString,
         touched: true,
       },
@@ -111,7 +101,6 @@ describe('ErrorProvider', () => {
     const requiredAndNotEmpty = {
       label: 'test',
       meta: {
-        ...baseMeta,
         touched: true,
       },
       name: 'test',
@@ -124,7 +113,6 @@ describe('ErrorProvider', () => {
     const requiredDirtyAndEmpty = {
       label: 'test',
       meta: {
-        ...baseMeta,
         dirty: true,
         error: ['REQUIRED'],
         touched: false,
@@ -142,11 +130,7 @@ describe('ErrorProvider', () => {
         allValues: {},
         label: 'test',
         meta: {
-          blur: () => {},
-          change: () => {},
           error: [],
-          focus: () => {},
-          name: 'test',
         },
         minLength: 3,
         name: 'test',
