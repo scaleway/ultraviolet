@@ -1,13 +1,5 @@
 # Change Log
 
-## 1.3.0
-
-### Minor Changes
-
-- [#2375](https://github.com/scaleway/scaleway-ui/pull/2375) [`7164e30a`](https://github.com/scaleway/scaleway-ui/commit/7164e30ad3a89725e188b5d067985c68ad022219) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New charts data colors
-
-- [#2406](https://github.com/scaleway/scaleway-ui/pull/2406) [`558ed0d2`](https://github.com/scaleway/scaleway-ui/commit/558ed0d2b2d22f2b6a8a6e7f053544e3059a7c03) Thanks [@matthprost](https://github.com/matthprost)! - New gradient colors
-
 ## 1.2.4
 
 ### Patch Changes
