@@ -1,20 +1,5 @@
 # Change Log
 
-## 0.234.0
-
-### Minor Changes
-
-- [#2362](https://github.com/scaleway/scaleway-ui/pull/2362) [`e82efb79`](https://github.com/scaleway/scaleway-ui/commit/e82efb7993158cfca3d3ccb6e893ab5e9e5da273) Thanks [@matthprost](https://github.com/matthprost)! - New component Card. It will replace Container and BorderedBox
-
-- [#2407](https://github.com/scaleway/scaleway-ui/pull/2407) [`b07ffa83`](https://github.com/scaleway/scaleway-ui/commit/b07ffa8306533b2d359b1d09f3b62d0fcf7f928a) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-label` and `name` properties to button
-
-- [#2403](https://github.com/scaleway/scaleway-ui/pull/2403) [`1fd91c86`](https://github.com/scaleway/scaleway-ui/commit/1fd91c864ed8ab6f90d2a3ddbcc7343fb26e986d) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add new `prominence` props to `Link` component
-
-### Patch Changes
-
-- Updated dependencies [[`7164e30a`](https://github.com/scaleway/scaleway-ui/commit/7164e30ad3a89725e188b5d067985c68ad022219), [`558ed0d2`](https://github.com/scaleway/scaleway-ui/commit/558ed0d2b2d22f2b6a8a6e7f053544e3059a7c03)]:
-  - @scaleway/themes@1.3.0
-
 ## 0.233.0
 
 ### Minor Changes
