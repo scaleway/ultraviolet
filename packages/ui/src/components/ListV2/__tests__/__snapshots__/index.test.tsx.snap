@@ -567,6 +567,588 @@ exports[`ListV2 Should expand a row by pressing Space 1`] = `
 </DocumentFragment>
 `;
 
+exports[`ListV2 Should not collapse a row by clicking on expandable content 1`] = `
+<DocumentFragment>
+  .cache-1kb6kq-StyledList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 8px;
+}
+
+.cache-1kb6kq-StyledList [role='row'],
+.cache-1kb6kq-StyledList [role='button row'] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-rq7qmd-StyledHeaderRow {
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+}
+
+.cache-vwequq-StyledHeaderCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Asap;
+  color: #b2b6c3;
+  gap: 8px;
+}
+
+.cache-vwequq-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-vwequq-StyledHeaderCell[aria-sort] {
+  color: #4f0599;
+}
+
+.cache-vwequq-StyledHeaderCell[aria-sort='ascending'] .eklb3bm2 {
+  color: #4f0599;
+}
+
+.cache-vwequq-StyledHeaderCell[aria-sort='descending'] .eklb3bm3 {
+  color: #4f0599;
+}
+
+.cache-1un1bn2-StyledBody {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cache-1vyhqu2-StyledRow {
+  position: relative;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+  box-shadow: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+  color: #4a4f62;
+  border-color: #e6e9f0;
+  background-color: #ffffff;
+}
+
+.cache-1vyhqu2-StyledRow[role='button row'] {
+  cursor: pointer;
+}
+
+.cache-1vyhqu2-StyledRow [data-expandable-content] {
+  border-color: #e6e9f0;
+}
+
+.cache-1vyhqu2-StyledRow:hover {
+  border-color: #390171;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-1vyhqu2-StyledRow[data-highlight='true'] {
+  border-color: #390171;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-1vyhqu2-StyledRow[aria-disabled='true'] {
+  border: 1px solid #d4dae7;
+  background-color: #f6f6f8;
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-1vyhqu2-StyledRow [data-visibility='hover'] {
+  opacity: 0;
+}
+
+.cache-1vyhqu2-StyledRow:hover [data-visibility='hover'] {
+  opacity: 1;
+}
+
+.cache-1bcbf7v-StyledCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 60px;
+}
+
+.cache-19xdbk0-ExpandableWrapper {
+  grid-column: 1/-1;
+  grid-column-start: 1;
+  border-top: 1px solid #d4dae7;
+  margin: 0 -16px;
+  padding: 16px;
+  cursor: auto;
+}
+
+<div
+    class="cache-1kb6kq-StyledList ejaje5r0"
+    role="grid"
+  >
+    <div
+      class="cache-rq7qmd-StyledHeaderRow eremjkx0"
+      role="row"
+    >
+      <div
+        class="cache-vwequq-StyledHeaderCell eklb3bm0"
+        role="columnheader"
+      >
+        Column 1
+      </div>
+      <div
+        class="cache-vwequq-StyledHeaderCell eklb3bm0"
+        role="columnheader"
+      >
+        Column 2
+      </div>
+      <div
+        class="cache-vwequq-StyledHeaderCell eklb3bm0"
+        role="columnheader"
+      >
+        Column 3
+      </div>
+      <div
+        class="cache-vwequq-StyledHeaderCell eklb3bm0"
+        role="columnheader"
+      >
+        Column 4
+      </div>
+      <div
+        class="cache-vwequq-StyledHeaderCell eklb3bm0"
+        role="columnheader"
+      >
+        Column 5
+      </div>
+    </div>
+    <div
+      class="cache-1un1bn2-StyledBody e1wqyf6d0"
+      role="rowgroup"
+    >
+      <div
+        aria-expanded="true"
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 1 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 1 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 1 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 1 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 1 Column 5
+        </div>
+        <div
+          class="cache-19xdbk0-ExpandableWrapper e1s0ox3p2"
+          data-expandable-content="true"
+        >
+          Row 1 expandable content
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 2 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 2 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 2 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 2 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 2 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 3 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 3 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 3 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 3 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 3 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 4 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 4 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 4 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 4 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 4 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 5 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 5 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 5 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 5 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 5 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 6 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 6 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 6 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 6 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 6 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 7 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 7 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 7 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 7 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 7 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 8 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 8 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 8 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 8 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 8 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 9 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 9 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 9 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 9 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 9 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-1vyhqu2-StyledRow e1s0ox3p1"
+        data-highlight="false"
+        role="button row"
+        tabindex="0"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 10 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 10 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 10 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 10 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell eh6ex7n0"
+          role="cell"
+        >
+          Row 10 Column 5
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`ListV2 Should render correctly 1`] = `
 <DocumentFragment>
   .cache-1kb6kq-StyledList {
@@ -5693,12 +6275,13 @@ exports[`ListV2 Should render correctly with isExpandable and autoClose rows the
   min-height: 60px;
 }
 
-.cache-1n8ws5d-ExpandableWrapper {
+.cache-19xdbk0-ExpandableWrapper {
   grid-column: 1/-1;
   grid-column-start: 1;
   border-top: 1px solid #d4dae7;
   margin: 0 -16px;
   padding: 16px;
+  cursor: auto;
 }
 
 <div
@@ -5819,7 +6402,7 @@ exports[`ListV2 Should render correctly with isExpandable and autoClose rows the
           Row 2 Column 5
         </div>
         <div
-          class="cache-1n8ws5d-ExpandableWrapper e1s0ox3p2"
+          class="cache-19xdbk0-ExpandableWrapper e1s0ox3p2"
           data-expandable-content="true"
         >
           Row 2 expandable content
