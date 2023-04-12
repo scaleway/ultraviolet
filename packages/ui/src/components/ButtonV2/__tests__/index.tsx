@@ -92,4 +92,11 @@ describe('ButtonV2', () => {
         Hello
       </ButtonV2>,
     ))
+
+  test(`render as an anchor with href prop`, () =>
+    shouldMatchEmotionSnapshot(
+      <ButtonV2 onClick={MockOnClick} href="http://scaleway.com">
+        Scaleway
+      </ButtonV2>,
+    ))
 })
