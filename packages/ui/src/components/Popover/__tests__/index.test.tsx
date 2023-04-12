@@ -106,4 +106,33 @@ describe('Tooltip', () => {
 
     expect(onClose).toHaveBeenCalledTimes(1)
   })
+
+  test(`should render visible on mount and close on click outside`, async () => {
+    const onClose = jest.fn(() => {})
+
+    renderWithTheme(
+      <div>
+        <div style={{ height: '500px', width: '500px' }}>
+          <Popover
+            title="Test"
+            content="Test"
+            visible
+            data-testid="popover"
+            onClose={onClose}
+          >
+            Children
+          </Popover>
+        </div>
+        <div data-testid="outside-element">Outside element</div>
+      </div>,
+    )
+
+    const popover = screen.getByTestId('popover')
+    expect(popover).toBeVisible()
+
+    const outsideElement = screen.getByTestId('outside-element')
+    await userEvent.click(outsideElement)
+
+    expect(onClose).toHaveBeenCalledTimes(1)
+  })
 })
