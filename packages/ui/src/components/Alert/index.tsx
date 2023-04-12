@@ -148,7 +148,7 @@ export const Alert = ({
             onClose?.()
           }}
           icon="close"
-          sentiment={variant}
+          sentiment="neutral"
           aria-label="close"
         />
       ) : null}
