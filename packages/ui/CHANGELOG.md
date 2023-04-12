@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.235.0
+
+### Minor Changes
+
+- [#2402](https://github.com/scaleway/scaleway-ui/pull/2402) [`e12eb27c`](https://github.com/scaleway/scaleway-ui/commit/e12eb27c121c23fe122aacc0793c35d959acd72a) Thanks [@fabienhebert](https://github.com/fabienhebert)! - ButtonV2 now supports href
+
 ## 0.234.0
 
 ### Minor Changes
