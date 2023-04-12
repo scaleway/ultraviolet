@@ -62,6 +62,7 @@ export {
   VerificationCode,
   CopyButton,
   Row,
+  Card,
 } from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
 export type { SCWUITheme } from './theme'
