@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { ButtonV2 } from '../ButtonV2'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -115,23 +115,22 @@ export const Popover = ({
 }: PopoverProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
-  const handleClickOutside = (event: Event) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
-      onClose()
-    }
-  }
-
-  useEffect(
-    () => {
-      document.addEventListener('click', handleClickOutside, true)
-
-      return () => {
-        document.removeEventListener('click', handleClickOutside, true)
+  const handleClickOutside = useCallback(
+    (event: Event) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        onClose()
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [onClose],
   )
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true)
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true)
+    }
+  }, [handleClickOutside])
 
   return (
     <StyledTooltip
