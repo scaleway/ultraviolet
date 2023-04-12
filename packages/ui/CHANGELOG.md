@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.236.0
+
+### Minor Changes
+
+- [#2416](https://github.com/scaleway/scaleway-ui/pull/2416) [`1fdd05ac`](https://github.com/scaleway/scaleway-ui/commit/1fdd05aca71e4fbc14ebdad56a8aaa241d670a2d) Thanks [@matthprost](https://github.com/matthprost)! - missing `Card` export
+
 ## 0.235.0
 
 ### Minor Changes
