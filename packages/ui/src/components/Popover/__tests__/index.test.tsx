@@ -10,21 +10,21 @@ import {
 describe('Tooltip', () => {
   test('should render correctly with required props', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content="Test">
+      <Popover title="Test" content="Test" onClose={() => {}}>
         Children
       </Popover>,
     ))
 
   test('should render correctly with required props and visible', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content="Test" visible>
+      <Popover title="Test" content="Test" onClose={() => {}} visible>
         Children
       </Popover>,
     ))
 
   test('should render correctly with component in content prop', () =>
     shouldMatchEmotionSnapshot(
-      <Popover title="Test" content={<p>Test</p>} visible>
+      <Popover title="Test" content={<p>Test</p>} onClose={() => {}} visible>
         Children
       </Popover>,
     ))
@@ -38,6 +38,7 @@ describe('Tooltip', () => {
             content="Test"
             visible
             placement={placement as ComponentProps<typeof Popover>['placement']}
+            onClose={() => {}}
           >
             <p data-testid="children">Children</p>
           </Popover>,
@@ -55,6 +56,7 @@ describe('Tooltip', () => {
             content="Test"
             visible
             variant={variant as ComponentProps<typeof Popover>['variant']}
+            onClose={() => {}}
           >
             <p data-testid="children">Children</p>
           </Popover>,
@@ -72,6 +74,7 @@ describe('Tooltip', () => {
             content="Test"
             visible
             size={size as ComponentProps<typeof Popover>['size']}
+            onClose={() => {}}
           >
             <p data-testid="children">Children</p>
           </Popover>,

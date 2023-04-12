@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
+import { useEffect, useRef } from 'react'
 import { ButtonV2 } from '../ButtonV2'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -95,7 +96,7 @@ type PopoverProps = {
   variant?: VariantType
   visible?: boolean
   size?: keyof typeof SIZES_WIDTH
-  onClose?: () => void
+  onClose: () => void
   className?: string
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Tooltip>, 'placement'>
@@ -111,21 +112,44 @@ export const Popover = ({
   onClose,
   className,
   'data-testid': dataTestId,
-}: PopoverProps) => (
-  <StyledTooltip
-    visible={visible}
-    placement={placement}
-    text={
-      <ContentWrapper title={title} onClose={onClose} variant={variant}>
-        {content}
-      </ContentWrapper>
+}: PopoverProps) => {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const handleClickOutside = (event: Event) => {
+    if (ref.current && !ref.current.contains(event.target as Node)) {
+      onClose()
     }
-    className={className}
-    variant={variant}
-    data-testid={dataTestId}
-    size={size}
-    role="dialog"
-  >
-    {children}
-  </StyledTooltip>
-)
+  }
+
+  useEffect(
+    () => {
+      document.addEventListener('click', handleClickOutside, true)
+
+      return () => {
+        document.removeEventListener('click', handleClickOutside, true)
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  )
+
+  return (
+    <StyledTooltip
+      visible={visible}
+      placement={placement}
+      text={
+        <ContentWrapper title={title} onClose={onClose} variant={variant}>
+          {content}
+        </ContentWrapper>
+      }
+      className={className}
+      variant={variant}
+      data-testid={dataTestId}
+      size={size}
+      role="dialog"
+      ref={ref}
+    >
+      {children}
+    </StyledTooltip>
+  )
+}
