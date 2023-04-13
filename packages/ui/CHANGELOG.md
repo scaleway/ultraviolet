@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.237.0
+
+### Minor Changes
+
+- [#2378](https://github.com/scaleway/scaleway-ui/pull/2378) [`19195338`](https://github.com/scaleway/scaleway-ui/commit/19195338415a3a276975c11195fed5204304504a) Thanks [@matthprost](https://github.com/matthprost)! - New component Popover
+
+### Patch Changes
+
+- [#2418](https://github.com/scaleway/scaleway-ui/pull/2418) [`4ddd711c`](https://github.com/scaleway/scaleway-ui/commit/4ddd711cf809476252746ca18fbc1e8e7f5c8239) Thanks [@fabienhebert](https://github.com/fabienhebert)! - ListV2: click of expanded content do not collapse the row anymore
+
+- [#2421](https://github.com/scaleway/scaleway-ui/pull/2421) [`480cf021`](https://github.com/scaleway/scaleway-ui/commit/480cf021124f51e742e77f2d77e91dbcdc96ff95) Thanks [@matthprost](https://github.com/matthprost)! - Fix `Card` component to accept `ref` property
+
 ## 0.236.0
 
 ### Minor Changes
