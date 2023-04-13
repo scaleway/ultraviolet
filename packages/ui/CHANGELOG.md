@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.237.1
+
+### Patch Changes
+
+- [#2422](https://github.com/scaleway/scaleway-ui/pull/2422) [`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0) Thanks [@matthprost](https://github.com/matthprost)! - update pnpm version
+
 ## 0.237.0
 
 ### Minor Changes
