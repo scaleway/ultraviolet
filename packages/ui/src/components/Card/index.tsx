@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ReactNode , Ref } from 'react'
+import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -38,29 +39,35 @@ const BorderedBox = styled.div`
   }
 `
 
-export const Card = ({
-  header,
-  disabled = false,
-  isActive = false,
-  children,
-  className,
-  'data-testid': dataTestId,
-}: CardProps) => (
-  <StyledStack
-    gap={1}
-    className={className}
-    data-testid={dataTestId}
-    data-disabled={disabled}
-  >
-    {typeof header === 'string' ? (
-      <Text variant="heading" as="h2" disabled={disabled}>
-        {header}
-      </Text>
-    ) : (
-      header
-    )}
-    <BorderedBox data-isActive={isActive} data-disabled={disabled}>
-      {children}
-    </BorderedBox>
-  </StyledStack>
+export const Card = forwardRef(
+  (
+    {
+      header,
+      disabled = false,
+      isActive = false,
+      children,
+      className,
+      'data-testid': dataTestId,
+    }: CardProps,
+    ref: Ref<HTMLDivElement>,
+  ) => (
+    <StyledStack
+      gap={1}
+      className={className}
+      data-testid={dataTestId}
+      data-disabled={disabled}
+      ref={ref}
+    >
+      {typeof header === 'string' ? (
+        <Text variant="heading" as="h2" disabled={disabled}>
+          {header}
+        </Text>
+      ) : (
+        header
+      )}
+      <BorderedBox data-isActive={isActive} data-disabled={disabled}>
+        {children}
+      </BorderedBox>
+    </StyledStack>
+  ),
 )
