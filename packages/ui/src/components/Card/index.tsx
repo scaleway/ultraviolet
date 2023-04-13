@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode , Ref } from 'react'
+import type { ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -50,24 +50,35 @@ export const Card = forwardRef(
       'data-testid': dataTestId,
     }: CardProps,
     ref: Ref<HTMLDivElement>,
-  ) => (
-    <StyledStack
-      gap={1}
-      className={className}
-      data-testid={dataTestId}
-      data-disabled={disabled}
-      ref={ref}
-    >
-      {typeof header === 'string' ? (
-        <Text variant="heading" as="h2" disabled={disabled}>
-          {header}
-        </Text>
-      ) : (
-        header
-      )}
-      <BorderedBox data-isActive={isActive} data-disabled={disabled}>
+  ) =>
+    header ? (
+      <StyledStack
+        gap={1}
+        className={className}
+        data-testid={dataTestId}
+        data-disabled={disabled}
+        ref={ref}
+      >
+        {typeof header === 'string' ? (
+          <Text variant="heading" as="h2" disabled={disabled}>
+            {header}
+          </Text>
+        ) : (
+          header
+        )}
+        <BorderedBox data-isActive={isActive} data-disabled={disabled}>
+          {children}
+        </BorderedBox>
+      </StyledStack>
+    ) : (
+      <BorderedBox
+        data-isActive={isActive}
+        data-disabled={disabled}
+        className={className}
+        data-testid={dataTestId}
+        ref={ref}
+      >
         {children}
       </BorderedBox>
-    </StyledStack>
-  ),
+    ),
 )
