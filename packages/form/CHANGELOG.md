@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.42.5
+
+### Patch Changes
+
+- [#2422](https://github.com/scaleway/scaleway-ui/pull/2422) [`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0) Thanks [@matthprost](https://github.com/matthprost)! - update pnpm version
+
+- Updated dependencies [[`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0)]:
+  - @scaleway/ui@0.237.1
+
 ## 1.42.4
 
 ### Patch Changes
