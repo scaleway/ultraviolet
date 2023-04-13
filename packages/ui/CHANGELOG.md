@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.237.2
+
+### Patch Changes
+
+- [#2425](https://github.com/scaleway/scaleway-ui/pull/2425) [`ad877a91`](https://github.com/scaleway/scaleway-ui/commit/ad877a918ded13325b0ae2613663e12ed1a4f67e) Thanks [@matthprost](https://github.com/matthprost)! - fix `Card` by changing the number of element in the dom depending on `header` prop
+
 ## 0.237.1
 
 ### Patch Changes
