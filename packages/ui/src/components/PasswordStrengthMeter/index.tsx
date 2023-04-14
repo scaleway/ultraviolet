@@ -55,13 +55,14 @@ type PasswordStrengthMeterProps = {
   /**
    * An array of string that defines what word shouldn't be used in the password.
    */
-  userInputs?: string[]
+  forbiddenInputs?: string[]
   className?: string
   'data-testid'?: string
 }
 
 const DEFAULT_ESTIMATE = () => ({ score: 0 })
-const DEFAULT_USERINPUTS: PasswordStrengthMeterProps['userInputs'] = []
+const DEFAULT_FORBIDDEN_WORDS: PasswordStrengthMeterProps['forbiddenInputs'] =
+  []
 
 export const PasswordStrengthMeter = ({
   password = '',
@@ -69,7 +70,7 @@ export const PasswordStrengthMeter = ({
   strength,
   title,
   estimate = DEFAULT_ESTIMATE,
-  userInputs = DEFAULT_USERINPUTS,
+  forbiddenInputs = DEFAULT_FORBIDDEN_WORDS,
   className,
   'data-testid': dataTestId,
 }: PasswordStrengthMeterProps): JSX.Element => {
@@ -82,8 +83,8 @@ export const PasswordStrengthMeter = ({
 
   const getScore = useCallback(
     (passwordToTest: string) =>
-      estimate(passwordToTest || '', userInputs)?.score || 0,
-    [estimate, userInputs],
+      estimate(passwordToTest || '', forbiddenInputs).score || 0,
+    [estimate, forbiddenInputs],
   )
 
   const handleChange = useCallback((e: number) => onChange?.(e), [onChange])
