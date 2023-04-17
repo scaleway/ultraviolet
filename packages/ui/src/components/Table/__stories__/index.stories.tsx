@@ -6,7 +6,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'TabGroup gives a navigation made out of tabs.',
+        component:
+          'A visual element that presents data in a structured format with rows and columns, commonly used for displaying tabular information.',
       },
     },
   },
