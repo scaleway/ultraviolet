@@ -16,7 +16,8 @@
         "project": ["tsconfig.json"]
       },
       "rules": {
-        "react/jsx-props-no-spreading": "warn"
+        "react/jsx-props-no-spreading": "warn",
+        "@typescript-eslint/no-unnecessary-condition": "off"
       }
     },
     {
@@ -33,7 +34,8 @@
         "no-alert": "off",
         "react/jsx-props-no-spreading": "off",
         // Allow inline nested components (for code snippets)
-        "react/no-unstable-nested-components": "off"
+        "react/no-unstable-nested-components": "off",
+        "@typescript-eslint/no-unnecessary-condition": "off"
       }
     },
     {

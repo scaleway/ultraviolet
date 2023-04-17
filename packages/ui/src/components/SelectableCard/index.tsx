@@ -135,7 +135,7 @@ export const SelectableCard = forwardRef(
       <Tooltip text={tooltip}>
         <Container
           onClick={() => {
-            if (innerRef && innerRef.current) {
+            if (innerRef?.current) {
               innerRef.current.click()
             }
           }}

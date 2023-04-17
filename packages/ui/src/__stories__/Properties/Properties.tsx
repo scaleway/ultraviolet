@@ -46,15 +46,15 @@ const Properties = () => {
   const componentsList = Object.values(components) as ModuleType[]
 
   /* eslint-disable no-underscore-dangle */
-  const componentNameAndProperties = componentsList.reduce((acc, component) => {
-    if (component?.__docgenInfo?.props) {
+  const componentNameAndProperties = componentsList.reduce<Record<string, Record<string, unknown>>>((acc, component) => {
+    if (component.__docgenInfo.props) {
       return {
         ...acc,
         [component.displayName]: component.__docgenInfo.props,
       }
     }
 
-    if (component?.type?.__docgenInfo?.props) {
+    if (component.type.__docgenInfo.props) {
       return {
         ...acc,
         [component.type.displayName]: component.type.__docgenInfo.props,
@@ -62,14 +62,14 @@ const Properties = () => {
     }
 
     return acc
-  }, {} as Record<string, Record<string, unknown>>)
+  }, {})
   /* eslint-enable no-underscore-dangle */
 
   const propertiesList = Object.keys(componentNameAndProperties)
     .map(key => Object.keys(componentNameAndProperties[key]))
     .flat()
 
-  const countPropertiesUsages = propertiesList.reduce((acc, property) => {
+  const countPropertiesUsages = propertiesList.reduce<Record<string, number>>((acc, property) => {
     if (!acc[property]) {
       acc[property] = 1
     } else {
@@ -77,34 +77,34 @@ const Properties = () => {
     }
 
     return acc
-  }, {} as Record<string, number>)
+  }, {})
 
   const propertiesUsagesCountAndComponentsName = Object.entries(
     countPropertiesUsages,
-  ).reduce((acc, [property, count]) => {
+  ).reduce<Record<string, { count: number; components: string[] }>>((acc, [property, count]) => {
     const componentsMatching = Object.entries(
       componentNameAndProperties,
-    ).reduce((accumulator, [component, properties]) => {
+    ).reduce<string[]>((accumulator, [component, properties]) => {
       if (Object.keys(properties).includes(property)) {
         return [...accumulator, component]
       }
 
       return accumulator
-    }, [] as string[])
+    }, [])
 
     return { ...acc, [property]: { count, components: componentsMatching } }
-  }, {} as Record<string, { count: number; components: string[] }>)
+  }, {})
 
   const sortedPropertiesUsagesCountAndComponentsName = Object.entries(
     propertiesUsagesCountAndComponentsName,
   )
     .sort(([, { count: countA }], [, { count: countB }]) => countB - countA)
-    .reduce(
+    .reduce<Record<string, { count: number; components: string[] }>>(
       (acc, [property, value]) => ({
         ...acc,
         [property]: value,
       }),
-      {} as Record<string, { count: number; components: string[] }>,
+      {},
     )
 
   return (

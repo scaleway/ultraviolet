@@ -33,7 +33,7 @@ describe('DateField', () => {
           const select = screen.getByRole('textbox')
           fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
           const option = screen.getAllByRole('option')[0]
-          act(() => option?.click())
+          act(() => option.click())
           expect(onChange).toBeCalledTimes(1)
           // Blur not working on react-datepicker:
           // https://github.com/Hacker0x01/react-datepicker/issues/2028
