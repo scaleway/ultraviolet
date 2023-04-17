@@ -20,7 +20,7 @@ describe('DateInput', () => {
         name="test"
         autoFocus={false}
         format={value =>
-          value instanceof Date ? value?.toISOString() : value?.toString()
+          value instanceof Date ? value.toISOString() : value?.toString()
         }
       />,
     ))

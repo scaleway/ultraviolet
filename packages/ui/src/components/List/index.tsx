@@ -478,7 +478,7 @@ const List = forwardRef(
       () =>
         Object.keys(selectableItems).length > 0 &&
         (pagination.pageData as [])
-          .filter(item => selectableItems[item[idKey] as string] === true)
+          .filter(item => selectableItems[item[idKey] as string])
           .every(
             item =>
               rowsState[item[idKey] as string] &&

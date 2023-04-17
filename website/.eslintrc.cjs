@@ -6,5 +6,6 @@ module.exports = {
       'error',
       { packageDir: [__dirname, join(__dirname, '../')] },
     ],
+    "@typescript-eslint/no-unnecessary-condition": "off"
   },
 }

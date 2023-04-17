@@ -1614,7 +1614,7 @@ describe('List', () => {
                 const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                     })
                   }
@@ -1657,7 +1657,7 @@ describe('List', () => {
                 const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                     })
                   }
@@ -1700,7 +1700,7 @@ describe('List', () => {
                 const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                     })
                   }
@@ -1743,7 +1743,7 @@ describe('List', () => {
                 const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                       selected: true,
                     })
@@ -1789,7 +1789,7 @@ describe('List', () => {
 
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                       selected: true,
                     })
@@ -1833,7 +1833,7 @@ describe('List', () => {
                 const { rowData, setRowState, rowState } = props
                 useEffect(() => {
                   if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState?.(rowData.id, {
+                    setRowState(rowData.id, {
                       highlighted: true,
                       selected: true,
                     })

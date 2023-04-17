@@ -171,7 +171,7 @@ export const Row = forwardRef(
         sentiment={sentiment}
         aria-disabled={isDisabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={selectedRowIds[id] === true}
+        data-highlight={!!selectedRowIds[id]}
       >
         {areRowSelectable ? (
           <Cell preventClick>
