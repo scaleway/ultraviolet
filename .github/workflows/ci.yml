@@ -55,7 +55,7 @@ jobs:
       - run: pnpm run build
       - run: pnpm install
       - run: pnpm run test:unit:coverage
-      - uses: codecov/codecov-action@v3.1.1
+      - uses: codecov/codecov-action@v3.1.2
   accessibility:
     runs-on: ubuntu-20.04
     steps:
