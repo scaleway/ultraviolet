@@ -11,7 +11,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.0
+      - uses: actions/checkout@v3.5.2
       - name: Git Identity
         run: |
           git config --global user.name 'Scaleway Bot'
