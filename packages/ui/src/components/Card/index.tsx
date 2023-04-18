@@ -30,7 +30,7 @@ const BorderedBox = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['3']};
 
-  &[data-isActive='true'] {
+  &[data-is-active='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -66,13 +66,13 @@ export const Card = forwardRef(
         ) : (
           header
         )}
-        <BorderedBox data-isActive={isActive} data-disabled={disabled}>
+        <BorderedBox data-is-active={isActive} data-disabled={disabled}>
           {children}
         </BorderedBox>
       </StyledStack>
     ) : (
       <BorderedBox
-        data-isActive={isActive}
+        data-is-active={isActive}
         data-disabled={disabled}
         className={className}
         data-testid={dataTestId}
