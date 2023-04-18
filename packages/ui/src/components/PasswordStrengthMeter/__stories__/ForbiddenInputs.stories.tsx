@@ -4,7 +4,7 @@ import { colors } from '../../../theme'
 import { TextInput } from '../../TextInput'
 import { PasswordStrengthMeter } from '../index'
 
-export const forbiddenInputs = () => {
+export const ForbiddenInputs = () => {
   const [value, setValue] = useState('')
 
   return (
@@ -32,7 +32,7 @@ export const forbiddenInputs = () => {
   )
 }
 
-forbiddenInputs.parameters = {
+ForbiddenInputs.parameters = {
   docs: {
     storyDescription: `__forbiddenInputs__ properties can be used to specify which word shouldn't be used for a password. That way you can force user to avoid using sensitive data such as: their email, login, name, etc.
 
