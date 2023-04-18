@@ -24,7 +24,7 @@ export const Cell = forwardRef(
     { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const handleClick: MouseEventHandler<HTMLTableCellElement> = event => {
+    const handleClick: MouseEventHandler<HTMLDivElement> = event => {
       if (preventClick) {
         event.stopPropagation()
       }
