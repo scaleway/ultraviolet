@@ -7,17 +7,37 @@ Group.args = {
   name: 'group',
   options: [
     {
-      label: 'Group 1',
+      label: 'option1',
       options: [
-        { label: 'Option A', value: 'a' },
-        { label: 'Option B', value: 'b' },
+        {
+          label: '1-A',
+          value: '1-A',
+        },
+        {
+          label: '1-B',
+          value: '1-B',
+        },
+        {
+          label: '1-B',
+          value: '1-B',
+        },
       ],
     },
     {
-      label: 'Group 2',
+      label: 'option2',
       options: [
-        { label: 'Option C', value: 'c' },
-        { label: 'Option D', value: 'd' },
+        {
+          label: '2-A',
+          value: '2-A',
+        },
+        {
+          label: '2-B',
+          value: '2-B',
+        },
+        {
+          label: '2-B',
+          value: '2-B',
+        },
       ],
     },
   ],
