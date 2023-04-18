@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.42.7
+
+### Patch Changes
+
+- Updated dependencies [[`a054026f`](https://github.com/scaleway/scaleway-ui/commit/a054026fac55f6dd68e69bb4db004578475361f8)]:
+  - @scaleway/ui@0.237.3
+
 ## 1.42.6
 
 ### Patch Changes
