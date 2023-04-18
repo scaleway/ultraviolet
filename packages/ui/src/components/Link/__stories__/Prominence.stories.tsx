@@ -1,7 +1,7 @@
 import type { DecoratorFunction } from '@storybook/addons'
 import type { ComponentProps } from 'react'
-import { Link, PROMINENCES } from '..'
 import type { ProminenceProps } from '..'
+import { Link, PROMINENCES } from '..'
 import { Stack } from '../../Stack'
 
 export const Prominence = (props: ComponentProps<typeof Link>) =>

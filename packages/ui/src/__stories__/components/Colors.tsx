@@ -16,7 +16,7 @@ const CapitalizedText = styled(Text)`
   text-transform: capitalize;
 `
 
-type AvailableContexts = keyof typeof lightTheme['colors'][Color]
+type AvailableContexts = keyof (typeof lightTheme)['colors'][Color]
 
 const Colors = () => {
   const theme = useTheme()
