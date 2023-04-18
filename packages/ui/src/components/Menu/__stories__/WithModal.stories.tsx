@@ -1,5 +1,4 @@
 import type { ComponentStory } from '@storybook/react'
-import { fireEvent, screen } from '@storybook/testing-library'
 import { Menu } from '..'
 import { Modal } from '../../Modal'
 import { DefaultDisclosure } from './Template.stories'
@@ -35,15 +34,6 @@ WithModal.parameters = {
   docs: {
     storyDescription: 'This show how to use a modal on MenuItem.',
   },
-}
-
-WithModal.play = async () => {
-  fireEvent.click(screen.getByRole('button'))
-  const modalMenu = await screen.findByText('MenuItem with Modal')
-  const button = modalMenu.closest('button')
-  if (button !== null) {
-    fireEvent.click(button)
-  }
 }
 
 WithModal.decorators = [

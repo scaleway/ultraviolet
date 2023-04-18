@@ -1,5 +1,4 @@
 import type { ComponentStory } from '@storybook/react'
-import { fireEvent, screen } from '@storybook/testing-library'
 import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
@@ -42,10 +41,6 @@ Borderless.parameters = {
   docs: {
     storyDescription: 'Property `borderless` removes border of the menu item.',
   },
-}
-
-Borderless.play = () => {
-  fireEvent.click(screen.getByRole('button'))
 }
 
 Borderless.decorators = [

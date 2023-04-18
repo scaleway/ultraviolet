@@ -1,6 +1,6 @@
 import type { ComponentStory } from '@storybook/react'
-import { useCallback, useState } from 'react'
 import type { Dispatch, SetStateAction } from 'react'
+import { useCallback, useState } from 'react'
 import { ButtonV2 } from '../../ButtonV2'
 import { Popover } from '../index'
 

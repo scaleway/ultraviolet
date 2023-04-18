@@ -1,5 +1,4 @@
 import type { ComponentStory } from '@storybook/react'
-import { fireEvent, screen } from '@storybook/testing-library'
 import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
@@ -52,10 +51,6 @@ Variants.parameters = {
 - \`to\` to define as a \`React Router Link\`.
 - \`href\` to define as a native link \`a\`.`,
   },
-}
-
-Variants.play = () => {
-  fireEvent.click(screen.getByRole('button'))
 }
 
 Variants.decorators = [

@@ -15,10 +15,10 @@ import {
   useRef,
   useState,
 } from 'react'
-import { orderBy } from '../../utils'
 import type { ComparableType } from '../../utils'
-import { Pagination } from '../Pagination'
+import { orderBy } from '../../utils'
 import type { PaginationProps } from '../Pagination'
+import { Pagination } from '../Pagination'
 import type { UsePaginationReturn } from '../Pagination/usePagination'
 import { usePagination } from '../Pagination/usePagination'
 import { Text } from '../Text'

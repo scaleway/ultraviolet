@@ -1,5 +1,4 @@
 import type { ComponentStory } from '@storybook/react'
-import { fireEvent, screen } from '@storybook/testing-library'
 import type { DisclosureProps } from '..'
 import { Menu } from '..'
 import { Button } from '../../Button'
@@ -23,10 +22,6 @@ FunctionDisclosure.parameters = {
     storyDescription:
       'You can specify a function as disclosure and get popover props as argument',
   },
-}
-
-FunctionDisclosure.play = () => {
-  fireEvent.click(screen.getByRole('button'))
 }
 
 FunctionDisclosure.decorators = [

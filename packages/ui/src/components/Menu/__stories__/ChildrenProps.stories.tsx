@@ -1,5 +1,4 @@
 import type { ComponentStory } from '@storybook/react'
-import { fireEvent, screen } from '@storybook/testing-library'
 import { Menu } from '..'
 import { DefaultDisclosure } from './Template.stories'
 
@@ -36,10 +35,6 @@ ChildrenProps.parameters = {
     storyDescription: `Use children props :
 - \`toggle\` to toggle menu with action`,
   },
-}
-
-ChildrenProps.play = () => {
-  fireEvent.click(screen.getByRole('button'))
 }
 
 ChildrenProps.decorators = [

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import { Children, cloneElement, isValidElement } from 'react'
 import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
+import { Children, cloneElement, isValidElement } from 'react'
 import { Link } from '../Link'
 
 const contractString = (str: ReactNode): ReactNode => {
