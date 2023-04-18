@@ -14,4 +14,4 @@ export default {
 } as ComponentMeta<typeof PasswordStrengthMeter>
 
 export { Playground } from './Playground.stories'
-export { UserInputs } from './UserInputs.stories'
+export { ForbiddenInputs } from './ForbiddenInputs.stories'
