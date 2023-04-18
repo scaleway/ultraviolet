@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.237.3
+
+### Patch Changes
+
+- [#2439](https://github.com/scaleway/scaleway-ui/pull/2439) [`a054026f`](https://github.com/scaleway/scaleway-ui/commit/a054026fac55f6dd68e69bb4db004578475361f8) Thanks [@ModuloM](https://github.com/ModuloM)! - fix(Card): rename data-is-active attribute to match React rules
+
 ## 0.237.2
 
 ### Patch Changes
