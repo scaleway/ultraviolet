@@ -9,11 +9,11 @@ const findComponentState = (parameters: {
   deprecated?: boolean
   experimental?: boolean
 }) => {
-  if (parameters.deprecated) {
+  if (parameters?.deprecated) {
     return '⚠️ Deprecated'
   }
 
-  if (parameters.experimental) {
+  if (parameters?.experimental) {
     return '🧪 Experimental'
   }
 
@@ -135,7 +135,7 @@ const ComponentState = () => (
                 )
 
                 return (
-                  <Table.Row>
+                  <Table.Row key={module.value.default.title}>
                     <Table.BodyCell>
                       <Text as="span" variant="bodyStrong">
                         <Button
