@@ -20,11 +20,16 @@ type StatusValue = (typeof STATUS)[Keys]
 const variants = {
   base: ({ theme: { colors, shadows, radii } }: { theme: Theme }) => `
     padding: 8px;
+    cursor: text;
     border-radius: ${radii.default};
     border: 1px solid ${colors.neutral.borderWeak};
     &:focus-within {
       border: 1px solid ${colors.primary.borderWeak};
       box-shadow: ${shadows.focusPrimary};
+    }
+
+    &:hover {
+      border: 1px solid ${colors.primary.borderWeak};
     }
 
     & > * {
