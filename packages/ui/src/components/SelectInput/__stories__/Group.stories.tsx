@@ -54,6 +54,6 @@ Group.decorators = [
 Group.parameters = {
   docs: {
     storyDescription:
-      'By using `options` prop you can regroup options by category/group (no jsx way to do that).',
+      'By using the `options` prop you can regroup options by category/group (not possible when using JSX).',
   },
 }
