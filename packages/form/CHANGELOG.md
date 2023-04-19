@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.42.9
+
+### Patch Changes
+
+- [#2444](https://github.com/scaleway/scaleway-ui/pull/2444) [`3336ce12`](https://github.com/scaleway/scaleway-ui/commit/3336ce12eb33d40a52f0a6d1e640b7b18f207035) Thanks [@matthprost](https://github.com/matthprost)! - Added hover state on `TagsInput` and cursor `text` in css
+
+- Updated dependencies [[`3336ce12`](https://github.com/scaleway/scaleway-ui/commit/3336ce12eb33d40a52f0a6d1e640b7b18f207035), [`8e140ed1`](https://github.com/scaleway/scaleway-ui/commit/8e140ed1c23702df2f2cbf48f40f92a7172b3bfd)]:
+  - @scaleway/ui@0.239.0
+
 ## 1.42.8
 
 ### Patch Changes
