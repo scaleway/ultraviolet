@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.239.0
+
+### Minor Changes
+
+- [#2404](https://github.com/scaleway/scaleway-ui/pull/2404) [`8e140ed1`](https://github.com/scaleway/scaleway-ui/commit/8e140ed1c23702df2f2cbf48f40f92a7172b3bfd) Thanks [@matthprost](https://github.com/matthprost)! - Refactor of `Alert` component and new design
+
+### Patch Changes
+
+- [#2444](https://github.com/scaleway/scaleway-ui/pull/2444) [`3336ce12`](https://github.com/scaleway/scaleway-ui/commit/3336ce12eb33d40a52f0a6d1e640b7b18f207035) Thanks [@matthprost](https://github.com/matthprost)! - Added hover state on `TagsInput` and cursor `text` in css
+
 ## 0.238.0
 
 ### Minor Changes
