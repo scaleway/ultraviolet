@@ -69,7 +69,7 @@ type AlertProps = {
    */
   title?: string
   variant?: AlertType
-  buttonText?: string
+  buttonText?: ComponentProps<typeof ButtonV2>['children']
   onButtonClick?: () => void
   onClose?: () => void
   isClosable?: boolean
@@ -127,17 +127,15 @@ export const Alert = ({
             )}
           </TextStack>
         </Stack>
-        <Stack direction="row" gap={2}>
-          {buttonText ? (
-            <StyledButton
-              sentiment={variant}
-              onClick={onButtonClick}
-              size="small"
-            >
-              {buttonText}
-            </StyledButton>
-          ) : null}
-        </Stack>
+        {buttonText ? (
+          <StyledButton
+            sentiment={variant}
+            onClick={onButtonClick}
+            size="small"
+          >
+            {buttonText}
+          </StyledButton>
+        ) : null}
       </WrapStack>
       {isClosable ? (
         <CloseButton
