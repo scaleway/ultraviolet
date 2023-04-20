@@ -46,7 +46,7 @@ import {
   theme,
   Button,
   Checkbox,
-  Container,
+  Card,
   SelectInput,
   TextBox,
   Text,
@@ -59,7 +59,7 @@ const StyledFieldContainer = styled.div\`
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Container>
+    <Card>
       <Text as="h1" variant="headingLarge">Welcome to this form example</Text>
       <StyledFieldContainer>
         <TextBox
@@ -84,7 +84,7 @@ const App = () => (
           Submit
         </Button>
       </StyledFieldContainer>
-    </Container>
+    </Card>
   </ThemeProvider>
 )
 
