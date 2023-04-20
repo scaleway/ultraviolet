@@ -1,18 +1,26 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
   ToastContainer as BaseToastContainer,
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import { Alert } from '../Alert'
 import { Icon } from '../Icon'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 
 const PREFIX = '.Toastify'
 const AUTOCLOSE_DELAY = 6000 // Delay to close the toast in ms
+
+const TOAST_ICONS = {
+  warning: 'alert',
+  info: 'information-outline',
+  success: 'checkbox-circle-outline',
+  danger: 'alert',
+} as const
 
 const styles = {
   toast: (theme: Theme) => css`
@@ -79,34 +87,27 @@ const CloseButton = ({ closeToast }: CloseButtonProps) => (
   </CloseButtonWrapper>
 )
 
-const StyledAlert = styled(Alert)`
-  padding: 0;
-`
-
-type SanitizedAlertBarProps = {
+type ContentProps = {
   children?: ReactNode
-} & ComponentProps<typeof Alert>
+  variant: 'danger' | 'info' | 'success'
+}
 
-const SanitizedAlertBar = ({ variant, children }: SanitizedAlertBarProps) => (
-  <StyledAlert variant={variant}>{children}</StyledAlert>
+const Content = ({ variant, children }: ContentProps) => (
+  <Stack gap={2} direction="row">
+    <Icon name={TOAST_ICONS[variant]} size={24} />
+    <Text variant="body" as="span" color={variant}>
+      {children}
+    </Text>
+  </Stack>
 )
 
 export const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.error(
-      <SanitizedAlertBar variant="danger">{children}</SanitizedAlertBar>,
-      options,
-    ),
+    baseToast.error(<Content variant="danger">{children}</Content>, options),
   info: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.info(
-      <SanitizedAlertBar variant="info">{children}</SanitizedAlertBar>,
-      options,
-    ),
+    baseToast.info(<Content variant="info">{children}</Content>, options),
   success: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.success(
-      <SanitizedAlertBar variant="success">{children}</SanitizedAlertBar>,
-      options,
-    ),
+    baseToast.success(<Content variant="success">{children}</Content>, options),
 }
 
 type ToastContainerProps = {
