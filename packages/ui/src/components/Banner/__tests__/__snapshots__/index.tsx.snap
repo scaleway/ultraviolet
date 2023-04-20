@@ -2,10 +2,10 @@
 
 exports[`Banner renders correctly with a button 1`] = `
 <DocumentFragment>
-  .cache-1v4zbsf-Container {
+  .cache-1twbgc4-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +19,7 @@ exports[`Banner renders correctly with a button 1`] = `
   gap: 18px;
 }
 
-.cache-1v4zbsf-Container>svg:first-child {
+.cache-1twbgc4-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -118,13 +118,13 @@ exports[`Banner renders correctly with a button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-myi3of-StyledButton-StyledFilledButton {
+.cache-1yupk6n-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 48px;
-  padding: 0 16px;
+  height: 40px;
+  padding: 0 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -141,11 +141,11 @@ exports[`Banner renders correctly with a button 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   outline-offset: 2px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Asap;
   font-weight: Medium;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
   -webkit-text-decoration: none;
@@ -155,27 +155,74 @@ exports[`Banner renders correctly with a button 1`] = `
   color: #ffffff;
 }
 
-.cache-myi3of-StyledButton-StyledFilledButton:active {
+.cache-1yupk6n-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-myi3of-StyledButton-StyledFilledButton:hover,
-.cache-myi3of-StyledButton-StyledFilledButton:active {
+.cache-1yupk6n-StyledFilledButton:hover,
+.cache-1yupk6n-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1v4zbsf-Container ep7uxlq0"
+    class="cache-1twbgc4-Container ep7uxlq0"
   >
     <div
       class="cache-1i393eq-Stack e1sgck4o0"
@@ -200,32 +247,36 @@ exports[`Banner renders correctly with a button 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       >
         <button
-          class="cache-myi3of-StyledButton-StyledFilledButton e1su13oj2"
+          class="cache-1yupk6n-StyledFilledButton e1su13oj2"
           type="button"
         >
           Button
         </button>
       </div>
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with a link 1`] = `
 <DocumentFragment>
-  .cache-1v4zbsf-Container {
+  .cache-1twbgc4-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,7 +290,7 @@ exports[`Banner renders correctly with a link 1`] = `
   gap: 18px;
 }
 
-.cache-1v4zbsf-Container>svg:first-child {
+.cache-1twbgc4-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -338,7 +389,7 @@ exports[`Banner renders correctly with a link 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-5e45t9-StyledLink {
+.cache-rsqpcw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -367,26 +418,26 @@ exports[`Banner renders correctly with a link 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Asap;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
 }
 
-.cache-5e45t9-StyledLink .e4bq1r52 {
+.cache-rsqpcw-StyledLink .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-5e45t9-StyledLink>* {
+.cache-rsqpcw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-5e45t9-StyledLink:hover,
-.cache-5e45t9-StyledLink:focus {
+.cache-rsqpcw-StyledLink:hover,
+.cache-rsqpcw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -395,20 +446,20 @@ exports[`Banner renders correctly with a link 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:hover .e4bq1r52,
-.cache-5e45t9-StyledLink:focus .e4bq1r52 {
+.cache-rsqpcw-StyledLink:hover .e4bq1r52,
+.cache-rsqpcw-StyledLink:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-5e45t9-StyledLink:hover::after,
-.cache-5e45t9-StyledLink:focus::after {
+.cache-rsqpcw-StyledLink:hover::after,
+.cache-rsqpcw-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:active {
+.cache-rsqpcw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -429,17 +480,64 @@ exports[`Banner renders correctly with a link 1`] = `
   min-height: 14px;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1v4zbsf-Container ep7uxlq0"
+    class="cache-1twbgc4-Container ep7uxlq0"
   >
     <div
       class="cache-1i393eq-Stack e1sgck4o0"
@@ -464,7 +562,7 @@ exports[`Banner renders correctly with a link 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="cache-rsqpcw-StyledLink e4bq1r50"
           href=""
           prominence="default"
           rel="noopener noreferrer"
@@ -486,25 +584,29 @@ exports[`Banner renders correctly with a link 1`] = `
         </a>
       </div>
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with an image 1`] = `
 <DocumentFragment>
-  .cache-1v4zbsf-Container {
+  .cache-1twbgc4-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -518,7 +620,7 @@ exports[`Banner renders correctly with an image 1`] = `
   gap: 18px;
 }
 
-.cache-1v4zbsf-Container>svg:first-child {
+.cache-1twbgc4-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -617,17 +719,64 @@ exports[`Banner renders correctly with an image 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1v4zbsf-Container ep7uxlq0"
+    class="cache-1twbgc4-Container ep7uxlq0"
   >
     <svg
       fill="none"
@@ -686,25 +835,29 @@ exports[`Banner renders correctly with an image 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       />
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-1v4zbsf-Container {
+  .cache-1twbgc4-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -718,7 +871,7 @@ exports[`Banner renders correctly with default values 1`] = `
   gap: 18px;
 }
 
-.cache-1v4zbsf-Container>svg:first-child {
+.cache-1twbgc4-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -817,17 +970,64 @@ exports[`Banner renders correctly with default values 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1v4zbsf-Container ep7uxlq0"
+    class="cache-1twbgc4-Container ep7uxlq0"
   >
     <div
       class="cache-1i393eq-Stack e1sgck4o0"
@@ -852,25 +1052,29 @@ exports[`Banner renders correctly with default values 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       />
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .cache-1v4zbsf-Container {
+  .cache-1twbgc4-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -884,7 +1088,7 @@ exports[`Banner renders correctly with direction row 1`] = `
   gap: 18px;
 }
 
-.cache-1v4zbsf-Container>svg:first-child {
+.cache-1twbgc4-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -983,17 +1187,64 @@ exports[`Banner renders correctly with direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1v4zbsf-Container ep7uxlq0"
+    class="cache-1twbgc4-Container ep7uxlq0"
   >
     <div
       class="cache-142nvv6-Stack e1sgck4o0"
@@ -1018,25 +1269,29 @@ exports[`Banner renders correctly with direction row 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       />
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with size small 1`] = `
 <DocumentFragment>
-  .cache-19fh70k-Container {
+  .cache-ps7rz8-Container {
   padding: 16px;
   border-radius: 8px;
-  background-color: #eeeeff;
+  background: #eeeeff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1050,7 +1305,7 @@ exports[`Banner renders correctly with size small 1`] = `
   gap: 18px;
 }
 
-.cache-19fh70k-Container>svg:first-child {
+.cache-ps7rz8-Container>svg:first-child {
   height: 100px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -1149,17 +1404,64 @@ exports[`Banner renders correctly with size small 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ber5s8-StyledIcon-sizeStyles {
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #4a4f62;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-19fh70k-Container ep7uxlq0"
+    class="cache-ps7rz8-Container ep7uxlq0"
   >
     <div
       class="cache-1i393eq-Stack e1sgck4o0"
@@ -1184,25 +1486,29 @@ exports[`Banner renders correctly with size small 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       />
     </div>
-    <svg
-      class="cache-ber5s8-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Banner renders correctly with type promotional 1`] = `
 <DocumentFragment>
-  .cache-1cfrmyz-Container {
+  .cache-8vq7i5-Container {
   padding: 24px;
   border-radius: 8px;
-  background-color: #4f0599;
+  background: #4f0599;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1216,7 +1522,7 @@ exports[`Banner renders correctly with type promotional 1`] = `
   gap: 18px;
 }
 
-.cache-1cfrmyz-Container>svg:first-child {
+.cache-8vq7i5-Container>svg:first-child {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
@@ -1315,17 +1621,64 @@ exports[`Banner renders correctly with type promotional 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1yk4klc-StyledIcon-sizeStyles {
+.cache-5ar1u3-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-5ar1u3-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-5ar1u3-StyledFilledButton:hover,
+.cache-5ar1u3-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #ffffff;
-  height: 24px;
-  width: 24px;
-  min-width: 24px;
-  min-height: 24px;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
-    class="cache-1cfrmyz-Container ep7uxlq0"
+    class="cache-8vq7i5-Container ep7uxlq0"
   >
     <div
       class="cache-1i393eq-Stack e1sgck4o0"
@@ -1350,15 +1703,19 @@ exports[`Banner renders correctly with type promotional 1`] = `
         class="cache-6874q2-Stack e1sgck4o0"
       />
     </div>
-    <svg
-      class="cache-1yk4klc-StyledIcon-sizeStyles etwatq50"
-      cursor="pointer"
-      viewBox="0 0 24 24"
+    <button
+      class="cache-5ar1u3-StyledFilledButton e1su13oj2"
+      type="button"
     >
-      <path
-        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-      />
-    </svg>
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
   </div>
 </DocumentFragment>
 `;

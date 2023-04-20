@@ -1,12 +1,11 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { ButtonV2 } from '../ButtonV2'
-import { Icon } from '../Icon'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-type Type = 'info' | 'promotional'
+type Type = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
 
 const Container = styled('div', {
@@ -15,9 +14,9 @@ const Container = styled('div', {
   padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
   border-radius: ${({ theme }) => theme.radii.large};
   background: ${({ theme, type }) =>
-    type === 'info'
+    type === 'intro'
       ? theme.colors.primary.background
-      : theme.colors.other.gradients.background.blue};
+      : theme.colors.primary.backgroundStrong};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,7 +34,7 @@ type BannerProps = {
   title: string
   children: ReactNode
   direction?: 'row' | 'column'
-  onClose?: ComponentProps<typeof Icon>['onClick']
+  onClose?: ComponentProps<typeof ButtonV2>['onClick']
   buttonText?: string
   onClickButton?: ComponentProps<typeof ButtonV2>['onClick']
   linkText?: string
@@ -45,7 +44,7 @@ type BannerProps = {
 }
 
 export const Banner = ({
-  type = 'info',
+  type = 'intro',
   size = 'medium',
   title,
   children,
@@ -72,7 +71,7 @@ export const Banner = ({
           as="p"
           variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
           color="primary"
-          prominence={type === 'info' ? 'default' : 'strong'}
+          prominence={type === 'intro' ? 'default' : 'strong'}
         >
           {title}
         </Text>
@@ -80,7 +79,7 @@ export const Banner = ({
           as="p"
           variant="body"
           color="neutral"
-          prominence={type === 'info' ? 'default' : 'stronger'}
+          prominence={type === 'intro' ? 'default' : 'stronger'}
         >
           {children}
         </Text>
@@ -88,7 +87,8 @@ export const Banner = ({
       <Stack direction="row" gap={2}>
         {buttonText ? (
           <ButtonV2
-            sentiment={type === 'info' ? 'primary' : 'neutral'}
+            size="medium"
+            sentiment={type === 'intro' ? 'primary' : 'neutral'}
             onClick={onClickButton}
           >
             {buttonText}
@@ -97,22 +97,22 @@ export const Banner = ({
         {linkText && direction === 'column' ? (
           <Link
             variant="primary"
+            size="small"
             target="_blank"
             href={linkHref ?? ''}
-            prominence={type === 'info' ? 'default' : 'strong'}
+            prominence={type === 'intro' ? 'default' : 'strong'}
           >
             {linkText}
           </Link>
         ) : null}
       </Stack>
     </Stack>
-    <Icon
-      color="neutral"
-      prominence={type === 'info' ? 'default' : 'stronger'}
-      name="close"
-      size={24}
+    <ButtonV2
+      icon="close"
+      size="small"
+      variant={type === 'intro' ? 'ghost' : 'filled'}
+      sentiment={type === 'intro' ? 'neutral' : 'primary'}
       onClick={onClose}
-      cursor="pointer"
     />
   </Container>
 )

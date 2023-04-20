@@ -9,7 +9,7 @@ export const Types: Story = () => (
       image={<Image />}
       buttonText="Apply now"
       linkText="Learn more"
-      type="info"
+      type="intro"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, infrastructure advisors and startup experts to develop your
@@ -32,7 +32,7 @@ export const Types: Story = () => (
 Types.parameters = {
   docs: {
     storyDescription:
-      'We have two different type of Banner: info and promotional.',
+      'We have two different type of Banner: intro and promotional.',
   },
 }
 
