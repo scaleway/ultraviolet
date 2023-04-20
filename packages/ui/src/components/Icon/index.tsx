@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { MouseEventHandler, SVGProps } from 'react'
+import type { SVGProps } from 'react'
 import { forwardRef, useMemo } from 'react'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -385,7 +385,6 @@ type IconProps = {
   color?: Color
   'data-testid'?: string
   disabled?: boolean
-  onClick?: MouseEventHandler<Element>
 } & Pick<
   SVGProps<SVGSVGElement>,
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
@@ -404,7 +403,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
       cursor,
       strokeWidth,
       disabled,
-      onClick,
     },
     ref,
   ) => {
@@ -430,7 +428,6 @@ export const Icon = forwardRef<SVGSVGElement, IconProps>(
         cursor={cursor}
         strokeWidth={strokeWidth}
         disabled={disabled}
-        onClick={onClick}
       >
         {render()}
       </StyledIcon>
