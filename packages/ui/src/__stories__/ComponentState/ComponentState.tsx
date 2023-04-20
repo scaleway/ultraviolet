@@ -119,8 +119,8 @@ const ComponentState = () => (
             {modules.map(module => {
               if (module.status === 'fulfilled') {
                 const desctructuredName: string[] =
-                  module?.value?.default?.title
-                    ?.replace('Components/', '')
+                  module.value.default.title
+                    .replace('Components/', '')
                     .split('/') ?? []
 
                 const componentCategory = desctructuredName[1]
@@ -131,15 +131,15 @@ const ComponentState = () => (
                   : desctructuredName[0]
 
                 const componentState = findComponentState(
-                  module?.value?.default?.parameters,
+                  module.value.default.parameters,
                 )
 
                 return (
-                  <Table.Row>
+                  <Table.Row key={module.value.default.title}>
                     <Table.BodyCell>
                       <Text as="span" variant="bodyStrong">
                         <Button
-                          onClick={linkTo(module?.value?.default?.title)}
+                          onClick={linkTo(module.value.default.title)}
                           variant="link"
                         >
                           {componentName}

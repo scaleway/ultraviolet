@@ -7,7 +7,8 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
 export { Title } from './Title.stories'
-export { Icon } from './Icon.stories'
-export { AdvancedChildren } from './AdvancedChildren.stories'
+export { Button } from './Button.stories'
+export { Variants } from './Variants.stories'
+export { Closable } from './Closable.stories'
+export { LongChildren } from './LongChildren.stories'

@@ -1,17 +1,12 @@
-import type {
-  AnyObject,
-  FieldState,
-  FieldSubscription,
-  FieldValidator,
-} from 'final-form'
-import type { UseFieldConfig } from 'react-final-form'
+import type { AnyObject, FieldSubscription, FieldValidator } from 'final-form'
+import type { FieldMetaState, UseFieldConfig } from 'react-final-form'
 
 export type FormErrorFunctionParams<InputValue = unknown> = {
   label: string
   name: string
   value: InputValue
   allValues: AnyObject
-  meta?: FieldState<InputValue>
+  meta?: FieldMetaState<InputValue>
 }
 
 type RequiredErrors = {
@@ -58,7 +53,7 @@ export type ValidatorObject<InputValue = unknown> = {
   validate: (
     value: InputValue,
     allValues?: AnyObject,
-    meta?: FieldState<InputValue>,
+    meta?: FieldMetaState<InputValue>,
   ) => boolean
   error: keyof RequiredErrors
 }

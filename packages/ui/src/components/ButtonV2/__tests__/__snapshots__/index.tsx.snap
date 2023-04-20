@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonV2 render large 1`] = `
+exports[`ButtonV2 render as an anchor with href prop 1`] = `
 <DocumentFragment>
-  .cache-myi3of-StyledButton-StyledFilledButton {
+  .cache-cv0g44-link-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,18 +39,77 @@ exports[`ButtonV2 render large 1`] = `
   color: #ffffff;
 }
 
-.cache-myi3of-StyledButton-StyledFilledButton:active {
+.cache-cv0g44-link-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-myi3of-StyledButton-StyledFilledButton:hover,
-.cache-myi3of-StyledButton-StyledFilledButton:active {
+.cache-cv0g44-link-StyledFilledButton:hover,
+.cache-cv0g44-link-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
+}
+
+<a
+    class="cache-cv0g44-link-StyledFilledButton e1su13oj3"
+    href="http://scaleway.com"
+    type="button"
+  >
+    Scaleway
+  </a>
+</DocumentFragment>
+`;
+
+exports[`ButtonV2 render large 1`] = `
+<DocumentFragment>
+  .cache-zz851f-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-zz851f-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-zz851f-StyledFilledButton:hover,
+.cache-zz851f-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-myi3of-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-zz851f-StyledFilledButton e1su13oj2"
     type="button"
   >
     Hello
@@ -60,7 +119,7 @@ exports[`ButtonV2 render large 1`] = `
 
 exports[`ButtonV2 render medium 1`] = `
 <DocumentFragment>
-  .cache-260sr0-StyledButton-StyledFilledButton {
+  .cache-1yupk6n-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -97,18 +156,18 @@ exports[`ButtonV2 render medium 1`] = `
   color: #ffffff;
 }
 
-.cache-260sr0-StyledButton-StyledFilledButton:active {
+.cache-1yupk6n-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-260sr0-StyledButton-StyledFilledButton:hover,
-.cache-260sr0-StyledButton-StyledFilledButton:active {
+.cache-1yupk6n-StyledFilledButton:hover,
+.cache-1yupk6n-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-260sr0-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1yupk6n-StyledFilledButton e1su13oj2"
     type="button"
   >
     Hello
@@ -118,7 +177,7 @@ exports[`ButtonV2 render medium 1`] = `
 
 exports[`ButtonV2 render small 1`] = `
 <DocumentFragment>
-  .cache-1pir1ef-StyledButton-StyledFilledButton {
+  .cache-5ar1u3-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -155,18 +214,18 @@ exports[`ButtonV2 render small 1`] = `
   color: #ffffff;
 }
 
-.cache-1pir1ef-StyledButton-StyledFilledButton:active {
+.cache-5ar1u3-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1pir1ef-StyledButton-StyledFilledButton:hover,
-.cache-1pir1ef-StyledButton-StyledFilledButton:active {
+.cache-5ar1u3-StyledFilledButton:hover,
+.cache-5ar1u3-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-1pir1ef-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-5ar1u3-StyledFilledButton e1su13oj2"
     type="button"
   >
     Hello
@@ -176,7 +235,7 @@ exports[`ButtonV2 render small 1`] = `
 
 exports[`ButtonV2 render with fullWidth 1`] = `
 <DocumentFragment>
-  .cache-18l9cyw-StyledButton-StyledFilledButton {
+  .cache-17lf7ho-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -213,18 +272,18 @@ exports[`ButtonV2 render with fullWidth 1`] = `
   color: #ffffff;
 }
 
-.cache-18l9cyw-StyledButton-StyledFilledButton:active {
+.cache-17lf7ho-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-18l9cyw-StyledButton-StyledFilledButton:hover,
-.cache-18l9cyw-StyledButton-StyledFilledButton:active {
+.cache-17lf7ho-StyledFilledButton:hover,
+.cache-17lf7ho-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-18l9cyw-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-17lf7ho-StyledFilledButton e1su13oj2"
     type="button"
   >
     Hello
@@ -234,7 +293,7 @@ exports[`ButtonV2 render with fullWidth 1`] = `
 
 exports[`ButtonV2 render with icon 1`] = `
 <DocumentFragment>
-  .cache-cqsvoi-StyledButton-StyledFilledButton {
+  .cache-1vg6vdc-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -283,7 +342,7 @@ exports[`ButtonV2 render with icon 1`] = `
 }
 
 <button
-    class="cache-cqsvoi-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1vg6vdc-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -302,7 +361,7 @@ exports[`ButtonV2 render with icon 1`] = `
 
 exports[`ButtonV2 render with icon on the right 1`] = `
 <DocumentFragment>
-  .cache-1c79nq5-StyledButton-StyledFilledButton {
+  .cache-1ucpf0l-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -351,7 +410,7 @@ exports[`ButtonV2 render with icon on the right 1`] = `
 }
 
 <button
-    class="cache-1c79nq5-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1ucpf0l-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -370,7 +429,7 @@ exports[`ButtonV2 render with icon on the right 1`] = `
 
 exports[`ButtonV2 render with icon only 1`] = `
 <DocumentFragment>
-  .cache-1c79nq5-StyledButton-StyledFilledButton {
+  .cache-1ucpf0l-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -419,7 +478,7 @@ exports[`ButtonV2 render with icon only 1`] = `
 }
 
 <button
-    class="cache-1c79nq5-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1ucpf0l-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -453,7 +512,7 @@ exports[`ButtonV2 render with isLoading with icon 1`] = `
   }
 }
 
-.cache-cqsvoi-StyledButton-StyledFilledButton {
+.cache-1vg6vdc-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -503,7 +562,7 @@ exports[`ButtonV2 render with isLoading with icon 1`] = `
 }
 
 <button
-    class="cache-cqsvoi-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1vg6vdc-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -562,7 +621,7 @@ exports[`ButtonV2 render with isLoading without icon 1`] = `
   }
 }
 
-.cache-cqsvoi-StyledButton-StyledFilledButton {
+.cache-1vg6vdc-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -612,7 +671,7 @@ exports[`ButtonV2 render with isLoading without icon 1`] = `
 }
 
 <button
-    class="cache-cqsvoi-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1vg6vdc-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -655,7 +714,7 @@ exports[`ButtonV2 render with isLoading without icon 1`] = `
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger 1`] = `
 <DocumentFragment>
-  .cache-1t86p37-StyledButton-StyledFilledButton {
+  .cache-108p2p9-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -695,7 +754,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger 1`
 }
 
 <button
-    class="cache-1t86p37-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-108p2p9-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -706,7 +765,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-1t86p37-StyledButton-StyledFilledButton {
+  .cache-108p2p9-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -746,7 +805,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger di
 }
 
 <button
-    class="cache-1t86p37-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-108p2p9-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -757,7 +816,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&danger di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&info 1`] = `
 <DocumentFragment>
-  .cache-1db60yp-StyledButton-StyledFilledButton {
+  .cache-erizk7-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -797,7 +856,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&info 1`] 
 }
 
 <button
-    class="cache-1db60yp-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-erizk7-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -808,7 +867,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&info 1`] 
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&info disabled 1`] = `
 <DocumentFragment>
-  .cache-1db60yp-StyledButton-StyledFilledButton {
+  .cache-erizk7-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -848,7 +907,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&info disa
 }
 
 <button
-    class="cache-1db60yp-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-erizk7-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -859,7 +918,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&info disa
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral 1`] = `
 <DocumentFragment>
-  .cache-ai44sa-StyledButton-StyledFilledButton {
+  .cache-hs8vhb-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -899,7 +958,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral 1
 }
 
 <button
-    class="cache-ai44sa-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-hs8vhb-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -910,7 +969,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral 1
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-ai44sa-StyledButton-StyledFilledButton {
+  .cache-hs8vhb-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -950,7 +1009,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral d
 }
 
 <button
-    class="cache-ai44sa-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-hs8vhb-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -961,7 +1020,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&neutral d
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary 1`] = `
 <DocumentFragment>
-  .cache-cqsvoi-StyledButton-StyledFilledButton {
+  .cache-1vg6vdc-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1001,7 +1060,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary 1
 }
 
 <button
-    class="cache-cqsvoi-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1vg6vdc-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1012,7 +1071,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary 1
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-cqsvoi-StyledButton-StyledFilledButton {
+  .cache-1vg6vdc-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1052,7 +1111,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary d
 }
 
 <button
-    class="cache-cqsvoi-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-1vg6vdc-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1063,7 +1122,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&primary d
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&success 1`] = `
 <DocumentFragment>
-  .cache-1dpi5yd-StyledButton-StyledFilledButton {
+  .cache-8eylvx-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1103,7 +1162,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&success 1
 }
 
 <button
-    class="cache-1dpi5yd-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-8eylvx-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1114,7 +1173,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&success 1
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1dpi5yd-StyledButton-StyledFilledButton {
+  .cache-8eylvx-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1154,7 +1213,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&success d
 }
 
 <button
-    class="cache-1dpi5yd-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-8eylvx-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1165,7 +1224,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&success d
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning 1`] = `
 <DocumentFragment>
-  .cache-sczhe3-StyledButton-StyledFilledButton {
+  .cache-178epit-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1205,7 +1264,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning 1
 }
 
 <button
-    class="cache-sczhe3-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-178epit-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1216,7 +1275,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning 1
 
 exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-sczhe3-StyledButton-StyledFilledButton {
+  .cache-178epit-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1256,7 +1315,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning d
 }
 
 <button
-    class="cache-sczhe3-StyledButton-StyledFilledButton e1su13oj2"
+    class="cache-178epit-StyledFilledButton e1su13oj2"
     disabled=""
     type="button"
   >
@@ -1267,7 +1326,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render filled&warning d
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger 1`] = `
 <DocumentFragment>
-  .cache-nlx975-StyledButton-StyledGhostButton {
+  .cache-7bbll3-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1306,7 +1365,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger 1`]
 }
 
 <button
-    class="cache-nlx975-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-7bbll3-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1317,7 +1376,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger 1`]
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-nlx975-StyledButton-StyledGhostButton {
+  .cache-7bbll3-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1356,7 +1415,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger dis
 }
 
 <button
-    class="cache-nlx975-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-7bbll3-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1367,7 +1426,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&danger dis
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info 1`] = `
 <DocumentFragment>
-  .cache-tok9j3-StyledButton-StyledGhostButton {
+  .cache-j6uq56-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1406,7 +1465,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info 1`] =
 }
 
 <button
-    class="cache-tok9j3-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-j6uq56-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1417,7 +1476,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info 1`] =
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info disabled 1`] = `
 <DocumentFragment>
-  .cache-tok9j3-StyledButton-StyledGhostButton {
+  .cache-j6uq56-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1456,7 +1515,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info disab
 }
 
 <button
-    class="cache-tok9j3-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-j6uq56-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1467,7 +1526,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&info disab
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral 1`] = `
 <DocumentFragment>
-  .cache-1j6glqz-StyledButton-StyledGhostButton {
+  .cache-183i6es-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1506,7 +1565,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral 1`
 }
 
 <button
-    class="cache-1j6glqz-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-183i6es-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1517,7 +1576,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-1j6glqz-StyledButton-StyledGhostButton {
+  .cache-183i6es-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1556,7 +1615,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral di
 }
 
 <button
-    class="cache-1j6glqz-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-183i6es-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1567,7 +1626,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&neutral di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary 1`] = `
 <DocumentFragment>
-  .cache-1gwi2mv-StyledButton-StyledGhostButton {
+  .cache-18gx3o0-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1606,7 +1665,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary 1`
 }
 
 <button
-    class="cache-1gwi2mv-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-18gx3o0-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1617,7 +1676,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1gwi2mv-StyledButton-StyledGhostButton {
+  .cache-18gx3o0-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1656,7 +1715,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary di
 }
 
 <button
-    class="cache-1gwi2mv-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-18gx3o0-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1667,7 +1726,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&primary di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success 1`] = `
 <DocumentFragment>
-  .cache-1cdbuye-StyledButton-StyledGhostButton {
+  .cache-1u63utx-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1706,7 +1765,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success 1`
 }
 
 <button
-    class="cache-1cdbuye-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-1u63utx-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1717,7 +1776,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1cdbuye-StyledButton-StyledGhostButton {
+  .cache-1u63utx-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1756,7 +1815,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success di
 }
 
 <button
-    class="cache-1cdbuye-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-1u63utx-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1767,7 +1826,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&success di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning 1`] = `
 <DocumentFragment>
-  .cache-1jkxz6c-StyledButton-StyledGhostButton {
+  .cache-8mtcck-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1806,7 +1865,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning 1`
 }
 
 <button
-    class="cache-1jkxz6c-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-8mtcck-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1817,7 +1876,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-1jkxz6c-StyledButton-StyledGhostButton {
+  .cache-8mtcck-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1856,7 +1915,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning di
 }
 
 <button
-    class="cache-1jkxz6c-StyledButton-StyledGhostButton e1su13oj0"
+    class="cache-8mtcck-StyledGhostButton e1su13oj0"
     disabled=""
     type="button"
   >
@@ -1867,7 +1926,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render ghost&warning di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger 1`] = `
 <DocumentFragment>
-  .cache-14e9tmu-StyledButton-StyledOutlinedButton {
+  .cache-1a5o7pj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1907,7 +1966,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger 
 }
 
 <button
-    class="cache-14e9tmu-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1a5o7pj-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -1918,7 +1977,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger 
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-14e9tmu-StyledButton-StyledOutlinedButton {
+  .cache-1a5o7pj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1958,7 +2017,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger 
 }
 
 <button
-    class="cache-14e9tmu-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1a5o7pj-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -1969,7 +2028,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&danger 
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info 1`] = `
 <DocumentFragment>
-  .cache-4iv0ck-StyledButton-StyledOutlinedButton {
+  .cache-1s20l9l-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2009,7 +2068,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info 1`
 }
 
 <button
-    class="cache-4iv0ck-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1s20l9l-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2020,7 +2079,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info 1`
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info disabled 1`] = `
 <DocumentFragment>
-  .cache-4iv0ck-StyledButton-StyledOutlinedButton {
+  .cache-1s20l9l-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2060,7 +2119,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info di
 }
 
 <button
-    class="cache-4iv0ck-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1s20l9l-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2071,7 +2130,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&info di
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral 1`] = `
 <DocumentFragment>
-  .cache-anhzt-StyledButton-StyledOutlinedButton {
+  .cache-17khscn-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2111,7 +2170,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral
 }
 
 <button
-    class="cache-anhzt-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-17khscn-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2122,7 +2181,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-anhzt-StyledButton-StyledOutlinedButton {
+  .cache-17khscn-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2162,7 +2221,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral
 }
 
 <button
-    class="cache-anhzt-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-17khscn-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2173,7 +2232,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&neutral
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary 1`] = `
 <DocumentFragment>
-  .cache-1edbo5l-StyledButton-StyledOutlinedButton {
+  .cache-1yyaff7-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2213,7 +2272,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary
 }
 
 <button
-    class="cache-1edbo5l-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1yyaff7-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2224,7 +2283,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1edbo5l-StyledButton-StyledOutlinedButton {
+  .cache-1yyaff7-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2264,7 +2323,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary
 }
 
 <button
-    class="cache-1edbo5l-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-1yyaff7-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2275,7 +2334,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&primary
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success 1`] = `
 <DocumentFragment>
-  .cache-h0pu6d-StyledButton-StyledOutlinedButton {
+  .cache-3a9rva-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2315,7 +2374,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success
 }
 
 <button
-    class="cache-h0pu6d-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-3a9rva-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2326,7 +2385,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success disabled 1`] = `
 <DocumentFragment>
-  .cache-h0pu6d-StyledButton-StyledOutlinedButton {
+  .cache-3a9rva-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2366,7 +2425,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success
 }
 
 <button
-    class="cache-h0pu6d-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-3a9rva-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2377,7 +2436,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&success
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&warning 1`] = `
 <DocumentFragment>
-  .cache-fmlo7t-StyledButton-StyledOutlinedButton {
+  .cache-18xpwke-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2417,7 +2476,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&warning
 }
 
 <button
-    class="cache-fmlo7t-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-18xpwke-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >
@@ -2428,7 +2487,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&warning
 
 exports[`ButtonV2 variant-sentiment-disabled combination render outlined&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-fmlo7t-StyledButton-StyledOutlinedButton {
+  .cache-18xpwke-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2468,7 +2527,7 @@ exports[`ButtonV2 variant-sentiment-disabled combination render outlined&warning
 }
 
 <button
-    class="cache-fmlo7t-StyledButton-StyledOutlinedButton e1su13oj1"
+    class="cache-18xpwke-StyledOutlinedButton e1su13oj1"
     disabled=""
     type="button"
   >

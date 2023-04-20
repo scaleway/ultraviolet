@@ -37,8 +37,7 @@ const foundFiles: string[] = []
 const searchFileFromDir = (startPath: string, filter: string) => {
   const files = fs.readdirSync(startPath)
 
-  for (let i = 0; i < files.length; i += 1) {
-    const fileName = files[i]
+  for (const fileName of files) {
     const filePath = path.join(startPath, fileName)
     const stat = fs.lstatSync(filePath)
 

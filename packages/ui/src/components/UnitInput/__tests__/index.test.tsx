@@ -80,7 +80,7 @@ describe('UnitInput', () => {
     const selectInputInputHidden = selectInput.querySelector(
       'input[type="hidden"]',
     ) as HTMLInputElement
-    await waitFor(() => expect(selectInputInputHidden?.value).toBe('weeks'))
+    await waitFor(() => expect(selectInputInputHidden.value).toBe('weeks'))
   })
 })
 

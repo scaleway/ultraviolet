@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import { userEvent } from '@storybook/testing-library'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { List } from '..'
@@ -576,6 +576,37 @@ describe('ListV2', () => {
           // Testing another key
           fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
           expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+        },
+      },
+    ))
+
+  test('Should not collapse a row by clicking on expandable content', () =>
+    shouldMatchEmotionSnapshot(
+      <List autoCollapse columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
+        )}
+      </List>,
+      {
+        transform: async () => {
+          const rows = screen.getAllByRole('button')
+          const firstRow = rows[0]
+          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+          fireEvent.click(firstRow)
+          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+          const expandableContent = await within(firstRow).findByText(
+            'Row 1 expandable content',
+          )
+          fireEvent.click(expandableContent)
+          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
         },
       },
     ))

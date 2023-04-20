@@ -1,9 +1,11 @@
+import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   ButtonHTMLAttributes,
   ComponentProps,
-  ForwardedRef,
+  MouseEventHandler,
   ReactNode,
+  Ref,
 } from 'react'
 import { forwardRef } from 'react'
 import type { SENTIMENTS } from '../../theme'
@@ -39,44 +41,46 @@ const FOCUS_RING_KEY = {
 // VARIANTS
 type StyledButtonProps = Required<
   Pick<
-    ButtonProps,
+    FinalProps,
     'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
   >
 >
-const StyledButton = styled('button', {
-  shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
-})<StyledButtonProps>`
-  display: inline-flex;
-  height: ${({ size }) => `${SIZE_HEIGHT[size]}px`};
-  padding: 0 ${({ theme, size }) => theme.space[SIZE_SPACING_KEY[size]]};
-  flex-direction: ${({ iconPosition }) =>
-    iconPosition === 'right' ? 'row-reverse' : 'row'};
-  gap: ${({ theme }) => theme.space['1']};
-  border-radius: ${({ theme }) => theme.radii.default};
+const coreStyle = ({
+  theme,
+  size,
+  sentiment,
+  iconPosition,
+  fullWidth,
+  disabled,
+}: { theme: Theme } & StyledButtonProps) => {
+  const font =
+    size === 'large'
+      ? theme.typography.bodyStrong
+      : theme.typography.bodySmallStrong
+
+  return `display: inline-flex;
+  height: ${SIZE_HEIGHT[size]}px;
+  padding: 0 ${theme.space[SIZE_SPACING_KEY[size]]};
+  flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
+  gap: ${theme.space['1']};
+  border-radius: ${theme.radii.default};
   align-items: center;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+  cursor: ${disabled ? 'not-allowed' : 'pointer'};
+  width: ${fullWidth ? '100%' : 'auto'};
   justify-content: center;
   outline-offset: 2px;
 
-  ${({ theme, sentiment, disabled }) =>
+  ${
     disabled
       ? ''
       : `
           &:active {
             box-shadow: ${theme.shadows[FOCUS_RING_KEY[sentiment]]};
           }
-        `}
+        `
+  }
 
   /* We can't use Text component because of button hover effect, so we need to duplicate */
-  ${({ theme, size }) => {
-    const font =
-      size === 'large'
-        ? theme.typography.bodyStrong
-        : theme.typography.bodySmallStrong
-
-    return `
     font-size: ${font.fontSize};
     font-family: ${font.fontFamily};
     font-weight: ${font.fontWeight};
@@ -85,10 +89,15 @@ const StyledButton = styled('button', {
     paragraph-spacing: ${font.paragraphSpacing};
     text-case: ${font.textCase};
     text-decoration: ${font.textDecoration};
-  `
-  }}
 `
-const StyledFilledButton = styled(StyledButton)`
+}
+
+const StyledFilledButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
   background: ${({ theme, sentiment }) =>
     theme.colors[sentiment].backgroundStrong};
   border: none;
@@ -99,7 +108,7 @@ const StyledFilledButton = styled(StyledButton)`
     disabled
       ? `
             background: ${theme.colors[sentiment].backgroundStrongDisabled};
-            color: 
+            color:
               ${
                 theme.colors[sentiment][
                   sentiment === 'neutral'
@@ -112,7 +121,7 @@ const StyledFilledButton = styled(StyledButton)`
             &:hover, &:active
             {
                 background: ${theme.colors[sentiment].backgroundStrongHover};
-                color: 
+                color:
                 ${
                   theme.colors[sentiment][
                     sentiment === 'neutral' ? 'textHover' : 'textStrongHover'
@@ -121,7 +130,13 @@ const StyledFilledButton = styled(StyledButton)`
             }
   `}
 `
-const StyledOutlinedButton = styled(StyledButton)`
+
+const StyledOutlinedButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
   background: none;
   border: 1px solid
     ${({ theme, sentiment }) =>
@@ -134,7 +149,7 @@ const StyledOutlinedButton = styled(StyledButton)`
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-        color: 
+        color:
           ${
             theme.colors[sentiment][
               sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
@@ -147,13 +162,13 @@ const StyledOutlinedButton = styled(StyledButton)`
               : 'borderWeakDisabled'
           ]
         };
-        
+
     `
       : `
         &:hover, &:active
        {
             background: ${theme.colors[sentiment].backgroundWeakHover};
-            color: 
+            color:
             ${
               theme.colors[sentiment][
                 sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
@@ -170,7 +185,13 @@ const StyledOutlinedButton = styled(StyledButton)`
         }
 `};
 `
-const StyledGhostButton = styled(StyledButton)`
+
+const StyledGhostButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
   background: none;
   border: none;
   color: ${({ theme, sentiment }) =>
@@ -179,7 +200,7 @@ const StyledGhostButton = styled(StyledButton)`
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
-        color: 
+        color:
           ${
             theme.colors[sentiment][
               sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
@@ -190,7 +211,7 @@ const StyledGhostButton = styled(StyledButton)`
         &:hover, &:active
         {
             background: ${theme.colors[sentiment].backgroundWeakHover};
-            color: 
+            color:
               ${
                 theme.colors[sentiment][
                   sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
@@ -200,16 +221,25 @@ const StyledGhostButton = styled(StyledButton)`
 `}
 `
 const VARIANTS_COMPONENTS = {
-  filled: StyledFilledButton,
-  outlined: StyledOutlinedButton,
-  ghost: StyledGhostButton,
+  filled: {
+    button: StyledFilledButton,
+    link: StyledFilledButton.withComponent('a'),
+  },
+  outlined: {
+    button: StyledOutlinedButton,
+    link: StyledOutlinedButton.withComponent('a'),
+  },
+  ghost: {
+    button: StyledGhostButton,
+    link: StyledGhostButton.withComponent('a'),
+  },
 }
 type ButtonVariant = keyof typeof VARIANTS_COMPONENTS
 export const buttonVariants = Object.keys(
   VARIANTS_COMPONENTS,
 ) as ButtonVariant[]
 
-type ButtonProps = {
+type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
   variant?: ButtonVariant
   size?: ButtonSize
@@ -220,13 +250,51 @@ type ButtonProps = {
   iconPosition?: 'left' | 'right'
   fullWidth?: boolean
   isLoading?: boolean
-  onClick: ButtonHTMLAttributes<HTMLButtonElement>['onClick']
-} & (
-  | { children: ReactNode; icon?: ComponentProps<typeof Icon>['name'] }
-  | { children?: ReactNode; icon: ComponentProps<typeof Icon>['name'] }
-)
+  'aria-label'?: string
+  onClick?: MouseEventHandler<HTMLElement>
+}
+// @note: using XOR utility was generating some lint erros
+type FinalProps = CommonProps &
+  (
+    | {
+        // Button : Children + optional Icon
+        children: ReactNode
+        icon?: ComponentProps<typeof Icon>['name']
+        name?: string
+        href?: never
+        target?: never
+        download?: never
+      }
+    | {
+        // Button : Icon only
+        children?: never
+        icon: ComponentProps<typeof Icon>['name']
+        name?: string
+        href?: never
+        target?: never
+        download?: never
+      }
+    | {
+        // Anchor : Children + optional Icon
+        children: ReactNode
+        icon?: ComponentProps<typeof Icon>['name']
+        name?: never
+        href: string
+        target?: string
+        download?: string
+      }
+    | {
+        // Anchor : Children + Icon Only
+        children?: never
+        icon: ComponentProps<typeof Icon>['name']
+        name?: never
+        href: string
+        target?: string
+        download?: string
+      }
+  )
 
-export const ButtonV2 = forwardRef(
+export const ButtonV2 = forwardRef<Element, FinalProps>(
   (
     {
       type = 'button',
@@ -240,27 +308,19 @@ export const ButtonV2 = forwardRef(
       iconPosition = 'left',
       fullWidth = false,
       isLoading = false,
-      onClick,
       children,
-    }: ButtonProps,
-    ref: ForwardedRef<HTMLButtonElement>,
+      onClick,
+      name,
+      'aria-label': ariaLabel,
+      href,
+      download,
+      target,
+    },
+    ref,
   ) => {
-    const Component = VARIANTS_COMPONENTS[variant]
     const computeIsDisabled = disabled || isLoading
-
-    return (
-      <Component
-        className={className}
-        data-testid={dataTestId}
-        disabled={computeIsDisabled}
-        fullWidth={fullWidth}
-        iconPosition={iconPosition}
-        sentiment={sentiment}
-        size={size}
-        type={type}
-        onClick={onClick}
-        ref={ref}
-      >
+    const content = (
+      <>
         {!isLoading && icon ? <Icon name={icon} size={16} /> : null}
         {isLoading ? (
           <Loader
@@ -275,6 +335,52 @@ export const ButtonV2 = forwardRef(
         ) : (
           children
         )}
+      </>
+    )
+
+    if (href) {
+      const Component = VARIANTS_COMPONENTS[variant].link
+
+      return (
+        <Component
+          className={className}
+          data-testid={dataTestId}
+          disabled={computeIsDisabled}
+          fullWidth={fullWidth}
+          iconPosition={iconPosition}
+          sentiment={sentiment}
+          size={size}
+          type={type}
+          onClick={onClick}
+          aria-label={ariaLabel}
+          href={href}
+          target={target}
+          download={download}
+          ref={ref as Ref<HTMLAnchorElement>}
+        >
+          {content}
+        </Component>
+      )
+    }
+
+    const Component = VARIANTS_COMPONENTS[variant].button
+
+    return (
+      <Component
+        className={className}
+        data-testid={dataTestId}
+        disabled={computeIsDisabled}
+        fullWidth={fullWidth}
+        iconPosition={iconPosition}
+        sentiment={sentiment}
+        size={size}
+        type={type}
+        onClick={onClick}
+        ref={ref as Ref<HTMLButtonElement>}
+        name={name}
+        aria-label={ariaLabel}
+      >
+        {content}
       </Component>
     )
   },

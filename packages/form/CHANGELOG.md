@@ -1,5 +1,73 @@
 # Change Log
 
+## 1.42.8
+
+### Patch Changes
+
+- [#2428](https://github.com/scaleway/scaleway-ui/pull/2428) [`12872cfe`](https://github.com/scaleway/scaleway-ui/commit/12872cfe782c7760a44efeddbfe70e0bd68b459d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.0.35`.
+
+- Updated dependencies [[`e40e9dfb`](https://github.com/scaleway/scaleway-ui/commit/e40e9dfb4aed5dadb28885ebb5e81b63240876a5), [`12872cfe`](https://github.com/scaleway/scaleway-ui/commit/12872cfe782c7760a44efeddbfe70e0bd68b459d), [`82cda3ed`](https://github.com/scaleway/scaleway-ui/commit/82cda3ed475de268a0af25bd1c79b28966063774)]:
+  - @scaleway/ui@0.238.0
+
+## 1.42.7
+
+### Patch Changes
+
+- Updated dependencies [[`a054026f`](https://github.com/scaleway/scaleway-ui/commit/a054026fac55f6dd68e69bb4db004578475361f8)]:
+  - @scaleway/ui@0.237.3
+
+## 1.42.6
+
+### Patch Changes
+
+- Updated dependencies [[`ad877a91`](https://github.com/scaleway/scaleway-ui/commit/ad877a918ded13325b0ae2613663e12ed1a4f67e)]:
+  - @scaleway/ui@0.237.2
+
+## 1.42.5
+
+### Patch Changes
+
+- [#2422](https://github.com/scaleway/scaleway-ui/pull/2422) [`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0) Thanks [@matthprost](https://github.com/matthprost)! - update pnpm version
+
+- Updated dependencies [[`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0)]:
+  - @scaleway/ui@0.237.1
+
+## 1.42.4
+
+### Patch Changes
+
+- Updated dependencies [[`19195338`](https://github.com/scaleway/scaleway-ui/commit/19195338415a3a276975c11195fed5204304504a), [`4ddd711c`](https://github.com/scaleway/scaleway-ui/commit/4ddd711cf809476252746ca18fbc1e8e7f5c8239), [`480cf021`](https://github.com/scaleway/scaleway-ui/commit/480cf021124f51e742e77f2d77e91dbcdc96ff95)]:
+  - @scaleway/ui@0.237.0
+
+## 1.42.3
+
+### Patch Changes
+
+- Updated dependencies [[`1fdd05ac`](https://github.com/scaleway/scaleway-ui/commit/1fdd05aca71e4fbc14ebdad56a8aaa241d670a2d)]:
+  - @scaleway/ui@0.236.0
+
+## 1.42.2
+
+### Patch Changes
+
+- Updated dependencies [[`e12eb27c`](https://github.com/scaleway/scaleway-ui/commit/e12eb27c121c23fe122aacc0793c35d959acd72a)]:
+  - @scaleway/ui@0.235.0
+
+## 1.42.1
+
+### Minor Changes
+
+- [#2411](https://github.com/scaleway/scaleway-ui/pull/2411) [`1731b8aa`](https://github.com/scaleway/scaleway-ui/commit/1731b8aac460d5b7e174064db2eee52d7a6be58f) Thanks [@philibea](https://github.com/philibea)! - Fix type issue with meta field from `getErrors` function
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - New component Card. It will replace Container and BorderedBox
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-label` and `name` properties to button
+
+### Patch Changes
+
+- Updated dependencies [[`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408)]:
+  - @scaleway/ui@0.234.0
+
 ## 1.41.38
 
 ### Patch Changes

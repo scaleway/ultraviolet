@@ -10,16 +10,16 @@ export const Groups: Story<SelectInputFieldProps> = () => (
         label: 'option1',
         options: [
           {
-            label: 'AA',
-            value: 'AA',
+            label: '1-A',
+            value: '1-A',
           },
           {
-            label: 'AB',
-            value: 'AB',
+            label: '1-B',
+            value: '1-B',
           },
           {
-            label: 'AC',
-            value: 'AC',
+            label: '1-B',
+            value: '1-B',
           },
         ],
       },
@@ -27,16 +27,16 @@ export const Groups: Story<SelectInputFieldProps> = () => (
         label: 'option2',
         options: [
           {
-            label: 'BA',
-            value: 'BA',
+            label: '2-A',
+            value: '2-A',
           },
           {
-            label: 'BB',
-            value: 'BB',
+            label: '2-B',
+            value: '2-B',
           },
           {
-            label: 'BC',
-            value: 'BC',
+            label: '2-B',
+            value: '2-B',
           },
         ],
       },

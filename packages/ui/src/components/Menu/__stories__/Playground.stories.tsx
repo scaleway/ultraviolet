@@ -1,4 +1,3 @@
-import { fireEvent, screen } from '@storybook/testing-library'
 import { Menu } from '..'
 import { Template } from './Template.stories'
 
@@ -9,10 +8,6 @@ Playground.args = {
     <Menu.Item>Menu Item 1</Menu.Item>,
     <Menu.Item>Menu Item 2</Menu.Item>,
   ],
-}
-
-Playground.play = () => {
-  fireEvent.click(screen.getByRole('button'))
 }
 
 Playground.decorators = [

@@ -10,33 +10,33 @@
 
 # Scaleway UI Core
 
+> :warning: This library is still WIP. We are actively working on it. Our goal is to have an easy-to-use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
+
+> :warning: We are going to break a lot of things towards V1. This library is not yet production ready.
+
+📝 You can still participate in its development and [start contributing](/CONTRIBUTING.md) to it.
+
+
 Scaleway UI Core contains the core features of the Scaleway UI library. 
 It is set of React library that can be used to build fast application.
 
 - [Scaleway UI](./packages/ui): The main library that includes a set of components and utilities to build fast application.
 - [Scaleway Form](./packages/form): A library to build forms with Scaleway UI components, it is using React Final Form under the hood.
+- [Scaleway Themes](./packages/themes): A set of themes for the Scaleway UI library (default theme is included in `@scaleway/ui`).
 
 ## Installation
 
-### Scaleway UI
+### Quick start
 
 ```sh
 $ pnpm add @scaleway/ui @emotion/react @emotion/styled
 ```
 
-#### Usage
+### Documentation
 
-See [Scaleway UI](./packages/ui) documentation.
-
-### Scaleway Form
-
-```sh
-$ pnpm add @scaleway/form @emotion/react @emotion/styled
-```
-
-#### Usage
-
-See [Scaleway Form](./packages/form) documentation.
+- #### [Scaleway UI](./packages/ui)
+- #### [Scaleway Form](./packages/form)
+- #### [Scaleway Theme](./packages/themes)
 
 ## Development
 

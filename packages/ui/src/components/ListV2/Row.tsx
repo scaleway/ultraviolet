@@ -13,6 +13,7 @@ const ExpandableWrapper = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   margin: 0 -${({ theme }) => theme.space['2']};
   padding: ${({ theme }) => theme.space['2']};
+  cursor: auto;
 `
 
 export const StyledRow = styled('div', {
@@ -170,7 +171,7 @@ export const Row = forwardRef(
         sentiment={sentiment}
         aria-disabled={isDisabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
-        data-highlight={selectedRowIds[id] === true}
+        data-highlight={!!selectedRowIds[id]}
       >
         {areRowSelectable ? (
           <Cell preventClick>
@@ -206,7 +207,12 @@ export const Row = forwardRef(
         ) : null}
         {children}
         {expandable && expandedRowIds[id] ? (
-          <ExpandableWrapper data-expandable-content>
+          <ExpandableWrapper
+            data-expandable-content
+            onClick={e => {
+              e.stopPropagation()
+            }}
+          >
             {expandable}
           </ExpandableWrapper>
         ) : null}

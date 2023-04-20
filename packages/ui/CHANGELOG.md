@@ -1,5 +1,74 @@
 # Change Log
 
+## 0.238.0
+
+### Minor Changes
+
+- [#2424](https://github.com/scaleway/scaleway-ui/pull/2424) [`e40e9dfb`](https://github.com/scaleway/scaleway-ui/commit/e40e9dfb4aed5dadb28885ebb5e81b63240876a5) Thanks [@matthprost](https://github.com/matthprost)! - change state handle of `VerificationCode`
+
+- [#2427](https://github.com/scaleway/scaleway-ui/pull/2427) [`82cda3ed`](https://github.com/scaleway/scaleway-ui/commit/82cda3ed475de268a0af25bd1c79b28966063774) Thanks [@matthprost](https://github.com/matthprost)! - `PasswordStrengthMeter` rename prop `userInputs` to `forbiddenInputs`
+
+### Patch Changes
+
+- [#2428](https://github.com/scaleway/scaleway-ui/pull/2428) [`12872cfe`](https://github.com/scaleway/scaleway-ui/commit/12872cfe782c7760a44efeddbfe70e0bd68b459d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.0.35`.
+
+## 0.237.3
+
+### Patch Changes
+
+- [#2439](https://github.com/scaleway/scaleway-ui/pull/2439) [`a054026f`](https://github.com/scaleway/scaleway-ui/commit/a054026fac55f6dd68e69bb4db004578475361f8) Thanks [@ModuloM](https://github.com/ModuloM)! - fix(Card): rename data-is-active attribute to match React rules
+
+## 0.237.2
+
+### Patch Changes
+
+- [#2425](https://github.com/scaleway/scaleway-ui/pull/2425) [`ad877a91`](https://github.com/scaleway/scaleway-ui/commit/ad877a918ded13325b0ae2613663e12ed1a4f67e) Thanks [@matthprost](https://github.com/matthprost)! - fix `Card` by changing the number of element in the dom depending on `header` prop
+
+## 0.237.1
+
+### Patch Changes
+
+- [#2422](https://github.com/scaleway/scaleway-ui/pull/2422) [`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0) Thanks [@matthprost](https://github.com/matthprost)! - update pnpm version
+
+## 0.237.0
+
+### Minor Changes
+
+- [#2378](https://github.com/scaleway/scaleway-ui/pull/2378) [`19195338`](https://github.com/scaleway/scaleway-ui/commit/19195338415a3a276975c11195fed5204304504a) Thanks [@matthprost](https://github.com/matthprost)! - New component Popover
+
+### Patch Changes
+
+- [#2418](https://github.com/scaleway/scaleway-ui/pull/2418) [`4ddd711c`](https://github.com/scaleway/scaleway-ui/commit/4ddd711cf809476252746ca18fbc1e8e7f5c8239) Thanks [@fabienhebert](https://github.com/fabienhebert)! - ListV2: click of expanded content do not collapse the row anymore
+
+- [#2421](https://github.com/scaleway/scaleway-ui/pull/2421) [`480cf021`](https://github.com/scaleway/scaleway-ui/commit/480cf021124f51e742e77f2d77e91dbcdc96ff95) Thanks [@matthprost](https://github.com/matthprost)! - Fix `Card` component to accept `ref` property
+
+## 0.236.0
+
+### Minor Changes
+
+- [#2416](https://github.com/scaleway/scaleway-ui/pull/2416) [`1fdd05ac`](https://github.com/scaleway/scaleway-ui/commit/1fdd05aca71e4fbc14ebdad56a8aaa241d670a2d) Thanks [@matthprost](https://github.com/matthprost)! - missing `Card` export
+
+## 0.235.0
+
+### Minor Changes
+
+- [#2402](https://github.com/scaleway/scaleway-ui/pull/2402) [`e12eb27c`](https://github.com/scaleway/scaleway-ui/commit/e12eb27c121c23fe122aacc0793c35d959acd72a) Thanks [@fabienhebert](https://github.com/fabienhebert)! - ButtonV2 now supports href
+
+## 0.234.0
+
+### Minor Changes
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - New component Card. It will replace Container and BorderedBox
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Add `aria-label` and `name` properties to button
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Add new `prominence` props to `Link` component
+
+### Patch Changes
+
+- Updated dependencies [[`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408)]:
+  - @scaleway/themes@1.3.0
+
 ## 0.233.0
 
 ### Minor Changes

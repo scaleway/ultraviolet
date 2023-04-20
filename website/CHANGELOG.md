@@ -1,5 +1,67 @@
 # Change Log
 
+## 0.2.114
+
+### Patch Changes
+
+- [#2428](https://github.com/scaleway/scaleway-ui/pull/2428) [`12872cfe`](https://github.com/scaleway/scaleway-ui/commit/12872cfe782c7760a44efeddbfe70e0bd68b459d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.0.35`.
+
+- [#2437](https://github.com/scaleway/scaleway-ui/pull/2437) [`4d6a5c02`](https://github.com/scaleway/scaleway-ui/commit/4d6a5c0285a855001071a19248e89b792a53d9a1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `13.3.0`.
+
+- Updated dependencies [[`e40e9dfb`](https://github.com/scaleway/scaleway-ui/commit/e40e9dfb4aed5dadb28885ebb5e81b63240876a5), [`12872cfe`](https://github.com/scaleway/scaleway-ui/commit/12872cfe782c7760a44efeddbfe70e0bd68b459d), [`82cda3ed`](https://github.com/scaleway/scaleway-ui/commit/82cda3ed475de268a0af25bd1c79b28966063774)]:
+  - @scaleway/ui@0.238.0
+
+## 0.2.113
+
+### Patch Changes
+
+- Updated dependencies [[`a054026f`](https://github.com/scaleway/scaleway-ui/commit/a054026fac55f6dd68e69bb4db004578475361f8)]:
+  - @scaleway/ui@0.237.3
+
+## 0.2.112
+
+### Patch Changes
+
+- Updated dependencies [[`ad877a91`](https://github.com/scaleway/scaleway-ui/commit/ad877a918ded13325b0ae2613663e12ed1a4f67e)]:
+  - @scaleway/ui@0.237.2
+
+## 0.2.111
+
+### Patch Changes
+
+- Updated dependencies [[`05514454`](https://github.com/scaleway/scaleway-ui/commit/0551445475108d28ed8a6f758a25d6ca64d3e8c0)]:
+  - @scaleway/ui@0.237.1
+
+## 0.2.110
+
+### Patch Changes
+
+- Updated dependencies [[`19195338`](https://github.com/scaleway/scaleway-ui/commit/19195338415a3a276975c11195fed5204304504a), [`4ddd711c`](https://github.com/scaleway/scaleway-ui/commit/4ddd711cf809476252746ca18fbc1e8e7f5c8239), [`480cf021`](https://github.com/scaleway/scaleway-ui/commit/480cf021124f51e742e77f2d77e91dbcdc96ff95)]:
+  - @scaleway/ui@0.237.0
+
+## 0.2.109
+
+### Patch Changes
+
+- Updated dependencies [[`1fdd05ac`](https://github.com/scaleway/scaleway-ui/commit/1fdd05aca71e4fbc14ebdad56a8aaa241d670a2d)]:
+  - @scaleway/ui@0.236.0
+
+## 0.2.108
+
+### Patch Changes
+
+- Updated dependencies [[`e12eb27c`](https://github.com/scaleway/scaleway-ui/commit/e12eb27c121c23fe122aacc0793c35d959acd72a)]:
+  - @scaleway/ui@0.235.0
+
+## 0.2.107
+
+### Patch Changes
+
+- [#2412](https://github.com/scaleway/scaleway-ui/pull/2412) [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408) Thanks [@matthprost](https://github.com/matthprost)! - Updated dependency `@types/node` to `18.15.11`.
+
+- Updated dependencies [[`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408), [`3661ff1a`](https://github.com/scaleway/scaleway-ui/commit/3661ff1a8a04ea8972ed52e4f545f26f891d9408)]:
+  - @scaleway/ui@0.234.0
+
 ## 0.2.106
 
 ### Patch Changes

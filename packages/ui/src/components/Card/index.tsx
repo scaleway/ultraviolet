@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ReactNode, Ref } from 'react'
+import { forwardRef } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
@@ -29,7 +30,7 @@ const BorderedBox = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['3']};
 
-  &[data-isActive='true'] {
+  &[data-is-active='true'] {
     border: 1px solid ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -38,29 +39,46 @@ const BorderedBox = styled.div`
   }
 `
 
-export const Card = ({
-  header,
-  disabled = false,
-  isActive = false,
-  children,
-  className,
-  'data-testid': dataTestId,
-}: CardProps) => (
-  <StyledStack
-    gap={1}
-    className={className}
-    data-testid={dataTestId}
-    data-disabled={disabled}
-  >
-    {typeof header === 'string' ? (
-      <Text variant="heading" as="h2" disabled={disabled}>
-        {header}
-      </Text>
+export const Card = forwardRef(
+  (
+    {
+      header,
+      disabled = false,
+      isActive = false,
+      children,
+      className,
+      'data-testid': dataTestId,
+    }: CardProps,
+    ref: Ref<HTMLDivElement>,
+  ) =>
+    header ? (
+      <StyledStack
+        gap={1}
+        className={className}
+        data-testid={dataTestId}
+        data-disabled={disabled}
+        ref={ref}
+      >
+        {typeof header === 'string' ? (
+          <Text variant="heading" as="h2" disabled={disabled}>
+            {header}
+          </Text>
+        ) : (
+          header
+        )}
+        <BorderedBox data-is-active={isActive} data-disabled={disabled}>
+          {children}
+        </BorderedBox>
+      </StyledStack>
     ) : (
-      header
-    )}
-    <BorderedBox data-isActive={isActive} data-disabled={disabled}>
-      {children}
-    </BorderedBox>
-  </StyledStack>
+      <BorderedBox
+        data-is-active={isActive}
+        data-disabled={disabled}
+        className={className}
+        data-testid={dataTestId}
+        ref={ref}
+      >
+        {children}
+      </BorderedBox>
+    ),
 )
