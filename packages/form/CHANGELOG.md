@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.42.10
+
+### Patch Changes
+
+- [`1b58f5be`](https://github.com/scaleway/scaleway-ui/commit/1b58f5bebc8342f157b4cd4e2e6decc9557a51a1) Thanks [@matthprost](https://github.com/matthprost)! - Fix Alert useless `<Stack />` and fixed typing of `buttonText`
+
+- Updated dependencies [[`1b58f5be`](https://github.com/scaleway/scaleway-ui/commit/1b58f5bebc8342f157b4cd4e2e6decc9557a51a1)]:
+  - @scaleway/ui@0.239.1
+
 ## 1.42.9
 
 ### Patch Changes
