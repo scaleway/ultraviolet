@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.239.2
+
+### Patch Changes
+
+- [#2450](https://github.com/scaleway/scaleway-ui/pull/2450) [`ec0d20c1`](https://github.com/scaleway/scaleway-ui/commit/ec0d20c1dabe2ce0f1e81cffa8c4ce00e63aa2be) Thanks [@matthprost](https://github.com/matthprost)! - Remove `Toaster` dependency from `Toaster`
+
 ## 0.239.1
 
 ### Patch Changes
