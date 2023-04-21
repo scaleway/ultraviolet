@@ -1,12 +1,12 @@
 import type { Story } from '@storybook/react'
 import { Banner } from '..'
-import { Image } from './Image'
+import image from './Image.png'
 
 export const Directions: Story = () => (
   <>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<Image />}
+      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       direction="row"
@@ -17,7 +17,7 @@ export const Directions: Story = () => (
     </Banner>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<Image />}
+      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       direction="column"

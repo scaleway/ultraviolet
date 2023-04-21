@@ -22,7 +22,8 @@ const Container = styled('div', {
   justify-content: space-between;
   gap: ${({ theme }) => theme.space['2.25']};
 
-  > svg:first-child {
+  > svg:first-child,
+  > img {
     height: ${({ size }) => (size === 'medium' ? '140px' : '100px')};
     align-self: center;
   }
