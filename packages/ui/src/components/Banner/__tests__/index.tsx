@@ -1,6 +1,6 @@
 import { Banner } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import { Image } from '../__stories__/Image'
+import image from '../__stories__/Image.png'
 
 describe('Banner', () => {
   test('renders correctly with default values', () =>
@@ -8,7 +8,7 @@ describe('Banner', () => {
 
   test('renders correctly with an image', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" image={<Image />}>
+      <Banner title="Title" image={<img src={image} alt="" />}>
         Description
       </Banner>,
     ))
