@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.240.0
+
+### Minor Changes
+
+- [#2405](https://github.com/scaleway/scaleway-ui/pull/2405) [`bf994fb0`](https://github.com/scaleway/scaleway-ui/commit/bf994fb0c2325809a77ad090727c25ace3c9e4bf) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add new `Banner` component
+
+- [#2447](https://github.com/scaleway/scaleway-ui/pull/2447) [`ce1a9006`](https://github.com/scaleway/scaleway-ui/commit/ce1a900609037b7f4b9704d37cbd89cf176aea58) Thanks [@matthprost](https://github.com/matthprost)! - Removed `BorderedBox` and `Container` they were deprecated and have been replaced by new component `Card`
+
+### Patch Changes
+
+- [#2462](https://github.com/scaleway/scaleway-ui/pull/2462) [`49a7086e`](https://github.com/scaleway/scaleway-ui/commit/49a7086ee2023f153a2d42669d558d77149f1a95) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Fix ButtonV2 font style
+
 ## 0.239.2
 
 ### Patch Changes
