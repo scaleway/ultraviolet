@@ -87,11 +87,8 @@ export const PieChart = ({
       if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
         return -1
       }
-      if (Number(a.replace('data', '')) > Number(b.replace('data', ''))) {
-        return 1
-      }
 
-      return 0
+      return 1
     })
     .map(
       key =>
