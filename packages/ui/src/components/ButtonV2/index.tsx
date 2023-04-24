@@ -83,7 +83,7 @@ const coreStyle = ({
   /* We can't use Text component because of button hover effect, so we need to duplicate */
     font-size: ${font.fontSize};
     font-family: ${font.fontFamily};
-    font-weight: ${font.fontWeight};
+    font-weight: ${font.weight};
     letter-spacing: ${font.letterSpacing};
     line-height: ${font.lineHeight};
     paragraph-spacing: ${font.paragraphSpacing};
