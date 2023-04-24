@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
+import { useState } from 'react'
 import { ButtonV2 } from '../ButtonV2'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
@@ -35,7 +36,7 @@ type BannerProps = {
   title: string
   children: ReactNode
   direction?: 'row' | 'column'
-  onClose?: ComponentProps<typeof ButtonV2>['onClick']
+  onClose?: () => void
   buttonText?: string
   onClickButton?: ComponentProps<typeof ButtonV2>['onClick']
   linkText?: string
@@ -57,63 +58,72 @@ export const Banner = ({
   linkHref,
   image,
   className,
-}: BannerProps) => (
-  <Container type={type} size={size} className={className}>
-    {image}
-    <Stack
-      direction={direction}
-      gap={2}
-      justifyContent="space-between"
-      alignItems={direction === 'column' ? 'start' : 'center'}
-      style={{ flex: 1 }}
-    >
-      <Stack gap={0.5} style={{ flex: 1 }}>
-        <Text
-          as="p"
-          variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
-          color="primary"
-          prominence={type === 'intro' ? 'default' : 'strong'}
-        >
-          {title}
-        </Text>
-        <Text
-          as="p"
-          variant="body"
-          color="neutral"
-          prominence={type === 'intro' ? 'default' : 'stronger'}
-        >
-          {children}
-        </Text>
-      </Stack>
-      <Stack direction="row" gap={2}>
-        {buttonText ? (
-          <ButtonV2
-            size="medium"
-            sentiment={type === 'intro' ? 'primary' : 'neutral'}
-            onClick={onClickButton}
-          >
-            {buttonText}
-          </ButtonV2>
-        ) : null}
-        {linkText && direction === 'column' ? (
-          <Link
-            variant="primary"
-            size="small"
-            target="_blank"
-            href={linkHref ?? ''}
+}: BannerProps) => {
+  const [opened, setOpened] = useState(true)
+
+  if (!opened) return null
+
+  return (
+    <Container type={type} size={size} className={className}>
+      {image}
+      <Stack
+        direction={direction}
+        gap={2}
+        justifyContent="space-between"
+        alignItems={direction === 'column' ? 'start' : 'center'}
+        style={{ flex: 1 }}
+      >
+        <Stack gap={0.5} style={{ flex: 1 }}>
+          <Text
+            as="p"
+            variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
+            color="primary"
             prominence={type === 'intro' ? 'default' : 'strong'}
           >
-            {linkText}
-          </Link>
-        ) : null}
+            {title}
+          </Text>
+          <Text
+            as="p"
+            variant="body"
+            color="neutral"
+            prominence={type === 'intro' ? 'default' : 'stronger'}
+          >
+            {children}
+          </Text>
+        </Stack>
+        <Stack direction="row" gap={2}>
+          {buttonText ? (
+            <ButtonV2
+              size="medium"
+              sentiment={type === 'intro' ? 'primary' : 'neutral'}
+              onClick={onClickButton}
+            >
+              {buttonText}
+            </ButtonV2>
+          ) : null}
+          {linkText && direction === 'column' ? (
+            <Link
+              variant="primary"
+              size="small"
+              target="_blank"
+              href={linkHref ?? ''}
+              prominence={type === 'intro' ? 'default' : 'strong'}
+            >
+              {linkText}
+            </Link>
+          ) : null}
+        </Stack>
       </Stack>
-    </Stack>
-    <ButtonV2
-      icon="close"
-      size="small"
-      variant={type === 'intro' ? 'ghost' : 'filled'}
-      sentiment={type === 'intro' ? 'neutral' : 'primary'}
-      onClick={onClose}
-    />
-  </Container>
-)
+      <ButtonV2
+        icon="close"
+        size="small"
+        variant={type === 'intro' ? 'ghost' : 'filled'}
+        sentiment={type === 'intro' ? 'neutral' : 'primary'}
+        onClick={() => {
+          setOpened(false)
+          onClose?.()
+        }}
+      />
+    </Container>
+  )
+}
