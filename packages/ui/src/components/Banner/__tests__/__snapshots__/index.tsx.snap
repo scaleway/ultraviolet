@@ -1,0 +1,1698 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner renders correctly with a button 1`] = `
+<DocumentFragment>
+  .cache-qg5a63-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-qg5a63-Container>svg:first-child,
+.cache-qg5a63-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tqu70a-StyledText {
+  color: #390171;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1yupk6n-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 40px;
+  padding: 0 12px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-1yupk6n-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1yupk6n-StyledFilledButton:hover,
+.cache-1yupk6n-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-qg5a63-Container ep7uxlq0"
+  >
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1tqu70a-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      >
+        <button
+          class="cache-1yupk6n-StyledFilledButton e1su13oj2"
+          type="button"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with a link 1`] = `
+<DocumentFragment>
+  .cache-qg5a63-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-qg5a63-Container>svg:first-child,
+.cache-qg5a63-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tqu70a-StyledText {
+  color: #390171;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-rsqpcw-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #390171;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-rsqpcw-StyledLink .e4bq1r52 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-rsqpcw-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-rsqpcw-StyledLink:hover,
+.cache-rsqpcw-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #390171;
+  text-decoration-color: #390171;
+}
+
+.cache-rsqpcw-StyledLink:hover .e4bq1r52,
+.cache-rsqpcw-StyledLink:focus .e4bq1r52 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-rsqpcw-StyledLink:hover::after,
+.cache-rsqpcw-StyledLink:focus::after {
+  background-color: #390171;
+}
+
+.cache-rsqpcw-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+.cache-1tang38-StyledExternalIconContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-bottom: 4px;
+}
+
+.cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 14px;
+  width: 14px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-qg5a63-Container ep7uxlq0"
+  >
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1tqu70a-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      >
+        <a
+          class="cache-rsqpcw-StyledLink e4bq1r50"
+          href=""
+          prominence="default"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Link
+          <span
+            class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
+          >
+            <svg
+              class="e4bq1r52 cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
+              />
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with an image 1`] = `
+<DocumentFragment>
+  .cache-qg5a63-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-qg5a63-Container>svg:first-child,
+.cache-qg5a63-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tqu70a-StyledText {
+  color: #390171;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-qg5a63-Container ep7uxlq0"
+  >
+    <img
+      alt=""
+      src="test-file-stub"
+    />
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1tqu70a-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      />
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with default values 1`] = `
+<DocumentFragment>
+  .cache-qg5a63-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-qg5a63-Container>svg:first-child,
+.cache-qg5a63-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tqu70a-StyledText {
+  color: #390171;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-qg5a63-Container ep7uxlq0"
+  >
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1tqu70a-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      />
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with direction row 1`] = `
+<DocumentFragment>
+  .cache-qg5a63-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-qg5a63-Container>svg:first-child,
+.cache-qg5a63-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-142nvv6-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tqu70a-StyledText {
+  color: #390171;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-qg5a63-Container ep7uxlq0"
+  >
+    <div
+      class="cache-142nvv6-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1tqu70a-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      />
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with size small 1`] = `
+<DocumentFragment>
+  .cache-ym2qx1-Container {
+  padding: 16px;
+  border-radius: 8px;
+  background: #eeeeff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-ym2qx1-Container>svg:first-child,
+.cache-ym2qx1-Container>img {
+  height: 100px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-xz80lf-StyledText {
+  color: #390171;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-rr62n5-StyledText {
+  color: #4a4f62;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1iw4034-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+}
+
+.cache-1iw4034-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1iw4034-StyledGhostButton:hover,
+.cache-1iw4034-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-ym2qx1-Container ep7uxlq0"
+  >
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-xz80lf-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-rr62n5-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      />
+    </div>
+    <button
+      class="cache-1iw4034-StyledGhostButton e1su13oj0"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner renders correctly with type promotional 1`] = `
+<DocumentFragment>
+  .cache-h5sfue-Container {
+  padding: 24px;
+  border-radius: 8px;
+  background: #4f0599;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.cache-h5sfue-Container>svg:first-child,
+.cache-h5sfue-Container>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1i393eq-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-py9amj-StyledText {
+  color: #ffffff;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1n7nno8-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-5ar1u3-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: Medium;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-5ar1u3-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-5ar1u3-StyledFilledButton:hover,
+.cache-5ar1u3-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-h5sfue-Container ep7uxlq0"
+  >
+    <div
+      class="cache-1i393eq-Stack e1sgck4o0"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1r8thn3-Stack e1sgck4o0"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-py9amj-StyledText e1tg3t120"
+        >
+          Title
+        </p>
+        <p
+          class="cache-1n7nno8-StyledText e1tg3t120"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-6874q2-Stack e1sgck4o0"
+      />
+    </div>
+    <button
+      class="cache-5ar1u3-StyledFilledButton e1su13oj2"
+      type="button"
+    >
+      <svg
+        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
