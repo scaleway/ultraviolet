@@ -110,11 +110,12 @@ type LegendsProps = {
   data?: Data[]
   focused?: string
   onFocusChange(index?: string): void
+  colors: string[]
 }
 
-const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
+const Legends = ({ focused, data, onFocusChange, colors }: LegendsProps) => (
   <List>
-    {data?.map(item => {
+    {data?.map((item, index) => {
       const isSegmentFocused = focused !== undefined && item.id === focused
 
       const id = `chart-legend-${item.id}`
@@ -135,7 +136,7 @@ const Legends = ({ focused, data, onFocusChange }: LegendsProps) => (
               onBlur={() => onFocusChange()}
             />
             <Bullet
-              color={item.color}
+              color={colors[index]}
               isFocused={isSegmentFocused}
               needPattern={item.needPattern}
               id={`chart-legend-${item.id}`}

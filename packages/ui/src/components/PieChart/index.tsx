@@ -81,6 +81,23 @@ export const PieChart = ({
     [emptyLegend],
   )
 
+  const localColors = Object.keys(colors.other.data.charts)
+    .filter(key => !['success', 'danger'].includes(key))
+    .sort((a, b) => {
+      if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
+        return -1
+      }
+      if (Number(a.replace('data', '')) > Number(b.replace('data', ''))) {
+        return 1
+      }
+
+      return 0
+    })
+    .map(
+      key =>
+        colors.other.data.charts[key as keyof typeof colors.other.data.charts],
+    )
+
   const LegendDisplayer = useCallback(
     () =>
       isEmpty ? (
@@ -90,16 +107,17 @@ export const PieChart = ({
           focused={currentFocusIndex}
           data={data}
           onFocusChange={setCurrentFocusIndex}
+          colors={localColors}
         />
       ),
-    [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed],
+    [isEmpty, currentFocusIndex, data, EmptyLegendDisplayed, localColors],
   )
 
   return (
     <Container height={height}>
       <div style={{ position: 'relative' }}>
         <Pie
-          colors={d => d.data.color}
+          colors={localColors}
           height={height}
           width={width}
           value="percent"
@@ -110,7 +128,6 @@ export const PieChart = ({
               ? data
               : [
                   {
-                    color: colors.neutral.backgroundStrong,
                     id: 'empty',
                     percent: 100,
                   },
@@ -138,6 +155,7 @@ export const PieChart = ({
           margin={margin}
           innerRadius={0.8}
           cornerRadius={0}
+          padAngle={1}
           activeOuterRadiusOffset={!isEmpty ? 4 : 0}
           tooltip={emptyTooltip}
           onMouseEnter={(datum, event) => {
