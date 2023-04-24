@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { BorderedBox, Text } from '@scaleway/ui'
+import { Card as ScwUICard, Text } from '@scaleway/ui'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
 
@@ -10,7 +10,7 @@ type CardProps = {
   className?: string
 }
 
-const StyledBorderedBox = styled(BorderedBox)`
+const StyledBorderedBox = styled(ScwUICard)`
   display: grid;
   grid-template-columns: fit-content(20%) 3fr;
   gap: ${({ theme }) => theme.space['2']};

@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { BorderedBox } from '../../components/BorderedBox'
+import { Card } from '../../components/Card'
 import { Separator } from '../../components/Separator'
 import { Stack } from '../../components/Stack'
 import { Text } from '../../components/Text'
@@ -14,6 +14,18 @@ const StyledSeparator = styled(Separator)`
 
 const CapitalizedText = styled(Text)`
   text-transform: capitalize;
+`
+
+const StyledCard = styled(Card, {
+  shouldForwardProp: prop => !['sentiment', 'context'].includes(prop),
+})<{ sentiment: Color; context: keyof (typeof lightTheme)['colors'][Color] }>`
+  align-items: center;
+  background-color: ${({ sentiment, context, theme }) =>
+    theme.colors[sentiment][context]};
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  width: 275px;
 `
 
 type AvailableContexts = keyof (typeof lightTheme)['colors'][Color]
@@ -54,17 +66,13 @@ const Colors = () => {
                         </Text>
                       </Stack>
 
-                      <BorderedBox
+                      <StyledCard
                         key={context}
-                        style={{
-                          alignItems: 'center',
-                          backgroundColor: theme.colors[sentiment][context],
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          padding: 8,
-                          width: 275,
-                        }}
-                      />
+                        sentiment={sentiment}
+                        context={context}
+                      >
+                        {' '}
+                      </StyledCard>
                     </Stack>
                   ))}
               </div>
@@ -74,7 +82,7 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('text'))
                   .map(context => (
-                    <Stack>
+                    <Stack key={context}>
                       <Stack
                         direction="row"
                         alignItems="center"
@@ -87,17 +95,9 @@ const Colors = () => {
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <BorderedBox
-                        key={context}
-                        style={{
-                          alignItems: 'center',
-                          backgroundColor: theme.colors[sentiment][context],
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          padding: 8,
-                          width: 275,
-                        }}
-                      />
+                      <StyledCard sentiment={sentiment} context={context}>
+                        {' '}
+                      </StyledCard>
                     </Stack>
                   ))}
               </div>
@@ -107,7 +107,7 @@ const Colors = () => {
                 {colorContextKeys
                   .filter(context => context.includes('border'))
                   .map(context => (
-                    <Stack>
+                    <Stack key={context}>
                       <Stack
                         direction="row"
                         alignItems="center"
@@ -120,17 +120,9 @@ const Colors = () => {
                           {theme.colors[sentiment][context]}
                         </Text>
                       </Stack>
-                      <BorderedBox
-                        key={context}
-                        style={{
-                          alignItems: 'center',
-                          backgroundColor: theme.colors[sentiment][context],
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          padding: 8,
-                          width: 275,
-                        }}
-                      />
+                      <StyledCard sentiment={sentiment} context={context}>
+                        {' '}
+                      </StyledCard>
                     </Stack>
                   ))}
               </div>

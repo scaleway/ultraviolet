@@ -1,9 +1,9 @@
 import type { Story } from '@storybook/react'
 import { Row } from '..'
-import { Container, Separator, Stack, Status, Text } from '../..'
+import { Card, Separator, Stack, Status, Text } from '../..'
 
 export const Example: Story = () => (
-  <Container title="Overview">
+  <Card header="Overview">
     <Stack gap={2}>
       <Row templateColumns="repeat(4, 1fr)" gap={2}>
         <Stack>
@@ -93,5 +93,5 @@ export const Example: Story = () => (
         </div>
       </Row>
     </Stack>
-  </Container>
+  </Card>
 )

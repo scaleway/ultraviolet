@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, FocusEventHandler } from 'react'
 import { useEffect, useRef, useState } from 'react'
-import { BorderedBox } from '../BorderedBox'
 import { SelectableCard } from '../SelectableCard'
 import { Tooltip } from '../Tooltip'
 import { FocusOverlay } from './FocusOverlay'
 
-const StyledBorderedBox = styled(BorderedBox)`
+const StyledBorderedBox = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['0.5']};
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
