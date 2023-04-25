@@ -122,12 +122,28 @@ describe('Tooltip', () => {
           </Tooltip>,
         )
 
-        const input = screen.getByTestId('children')
-        await userEvent.hover(input)
+        const children = screen.getByTestId('children')
+        await userEvent.hover(children)
 
         const tooltipPortal = screen.getByText('test success!')
         expect(tooltipPortal).toBeVisible()
       })
     })
+  })
+
+  test(`should verify accessibility`, async () => {
+    renderWithTheme(
+      <Tooltip text="test success!" maxWidth={100}>
+        <p data-testid="children">Hover me</p>
+      </Tooltip>,
+    )
+
+    await userEvent.keyboard('{Tab}')
+
+    const tooltipPortal = screen.getByText('test success!')
+    expect(tooltipPortal).toBeVisible()
+
+    await userEvent.keyboard('{Escape}')
+    expect(tooltipPortal).not.toBeVisible()
   })
 })
