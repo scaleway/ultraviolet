@@ -18,14 +18,14 @@ Hoverable.args = {
         <Table.BodyCell>999</Table.BodyCell>
         <Table.BodyCell>Just now</Table.BodyCell>
         <Table.BodyCell>
-          <Button size="small" icon="eye" data-visibility="hover" />
+          <Button size="small" icon="eye" />
         </Table.BodyCell>
       </Table.Row>
       <Table.Row>
         <Table.BodyCell>165</Table.BodyCell>
         <Table.BodyCell>Yesterday</Table.BodyCell>
         <Table.BodyCell>
-          <Button size="small" icon="eye" data-visibility="hover" />
+          <Button size="small" icon="eye" />
         </Table.BodyCell>
       </Table.Row>
     </Table.Body>,

@@ -68,75 +68,65 @@ exports[`Modal renders with customStyle 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -161,25 +151,26 @@ exports[`Modal renders with customStyle 1`] = `
         <div
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
-          <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
-            type="button"
+          <div
+            aria-describedby=":r2:"
+            class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+            tabindex="0"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <button
+              aria-label="close"
+              class="cache-1tocl8q-StyledGhostButton em6gco80"
+              type="button"
             >
               <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+                class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
                   d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
                 />
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -253,75 +244,65 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -347,25 +328,26 @@ exports[`Modal renders with default Props 1`] = `
         <div
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
-          <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
-            type="button"
+          <div
+            aria-describedby=":r0:"
+            class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+            tabindex="0"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <button
+              aria-label="close"
+              class="cache-1tocl8q-StyledGhostButton em6gco80"
+              type="button"
             >
               <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+                class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
                   d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
                 />
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -441,75 +423,65 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -535,25 +507,26 @@ exports[`Modal renders with disclosure 1`] = `
         <div
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
-          <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
-            type="button"
+          <div
+            aria-describedby=":r3:"
+            class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+            tabindex="0"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <button
+              aria-label="close"
+              class="cache-1tocl8q-StyledGhostButton em6gco80"
+              type="button"
             >
               <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+                class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
                   d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
                 />
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -635,75 +608,65 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -719,6 +682,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
         aria-modal="true"
         class="cache-lw1g3t-StyledDialog e1x6rvve1"
         data-dialog="true"
+        data-testid="test"
         id="modal-test"
         role="dialog"
         style=""
@@ -730,25 +694,27 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
         <div
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
-          <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
-            type="button"
+          <div
+            aria-describedby=":r4:"
+            class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+            tabindex="0"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <button
+              aria-label="close"
+              class="cache-1tocl8q-StyledGhostButton em6gco80"
+              data-testid="test-close-button"
+              type="button"
             >
               <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+                class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
                   d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
                 />
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -759,6 +725,67 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+}
+
+.cache-1knqcpt-StyledTooltip-StyledTooltip {
+  background: #4a4f62;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+}
+
+.cache-1knqcpt-StyledTooltip-StyledTooltip::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #4a4f62 transparent transparent transparent;
+  pointer-events: none;
+}
+
+<div
+    class="cache-1knqcpt-StyledTooltip-StyledTooltip ep3agpf1"
+    id=":r4:"
+    role="tooltip"
+  >
+    close
+  </div>
 </DocumentFragment>
 `;
 
@@ -828,75 +855,65 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -921,25 +938,26 @@ exports[`Modal renders with opened={true} 1`] = `
         <div
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
-          <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
-            type="button"
+          <div
+            aria-describedby=":r1:"
+            class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+            tabindex="0"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <button
+              aria-label="close"
+              class="cache-1tocl8q-StyledGhostButton em6gco80"
+              type="button"
             >
               <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+                class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
                 viewBox="0 0 24 24"
               >
                 <path
                   d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
                 />
               </svg>
-            </div>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1013,75 +1031,65 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -1103,25 +1111,26 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
       <div
         class="cache-v3mj59-StyledContainer e1x6rvve0"
       >
-        <button
-          aria-disabled="false"
-          class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-          title="close"
-          type="button"
+        <div
+          aria-describedby=":r5:"
+          class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
         >
-          <div
-            class="cache-1cny8u7-StyledIconContainer em6gco81"
+          <button
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            type="button"
           >
             <svg
-              class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
                 d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
               />
             </svg>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>

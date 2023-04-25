@@ -1,20 +1,21 @@
 import type { ComponentStory } from '@storybook/react'
 import { Button } from '..'
+import { Stack } from '../..'
 
-export const IconPosition: ComponentStory<typeof Button> = ({ ...props }) => (
-  <>
-    <Button iconPosition="left" icon="lock" {...props}>
+export const IconPosition: ComponentStory<typeof Button> = () => (
+  <Stack alignItems="center" gap={2} direction="row">
+    <Button icon="pencil" onClick={() => {}} iconPosition="left">
       Left
     </Button>
-    <Button iconPosition="right" icon="lock" {...props}>
+    <Button icon="pencil" onClick={() => {}} iconPosition="right">
       Right
     </Button>
-  </>
+  </Stack>
 )
 
 IconPosition.parameters = {
   docs: {
     storyDescription:
-      'This show how to use `iconPosition` on Button. ⚠️ It requires an `icon`.',
+      'You can change the icon/loader using the prop `iconPosition`.',
   },
 }

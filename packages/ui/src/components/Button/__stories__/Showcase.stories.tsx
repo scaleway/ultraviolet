@@ -1,9 +1,9 @@
 import type { ComponentStory } from '@storybook/react'
-import { ButtonV2, buttonVariants } from '..'
+import { Button, buttonVariants } from '..'
 import { Stack, Table, Text } from '../..'
 import { SENTIMENTS } from '../../../theme'
 
-export const Showcase: ComponentStory<typeof ButtonV2> = () => {
+export const Showcase: ComponentStory<typeof Button> = () => {
   const onClick = () => {}
 
   return (
@@ -31,13 +31,13 @@ export const Showcase: ComponentStory<typeof ButtonV2> = () => {
             {buttonVariants.map(variant => (
               <Table.BodyCell key={variant}>
                 <Stack direction="row" gap={2}>
-                  <ButtonV2
+                  <Button
                     onClick={onClick}
                     variant={variant}
                     sentiment={sentiment}
                   >
                     Button
-                  </ButtonV2>
+                  </Button>
                 </Stack>
               </Table.BodyCell>
             ))}

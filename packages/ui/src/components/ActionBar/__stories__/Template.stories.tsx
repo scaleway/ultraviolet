@@ -28,9 +28,7 @@ export const Template: ComponentStory<typeof ActionBar> = args => {
 
   return (
     <>
-      <Button variant="primary" onClick={toggle}>
-        Click on me to display
-      </Button>
+      <Button onClick={toggle}>Click on me to display</Button>
       {state ? (
         <ActionBar {...args}>
           <FullHeightStack
@@ -40,7 +38,12 @@ export const Template: ComponentStory<typeof ActionBar> = args => {
           >
             <div>I am the Playground Action Bar</div>
             <StyledFlexDiv>
-              <Button action variant="warning-bordered" icon="delete" />
+              <Button
+                variant="outlined"
+                sentiment="danger"
+                icon="delete"
+                size="small"
+              />
             </StyledFlexDiv>
           </FullHeightStack>
         </ActionBar>

@@ -137,10 +137,14 @@ describe('TextInput', () => {
 
   test('should handle events on toggleable password', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput type="toggleable-password" name="password" />,
+      <TextInput
+        type="toggleable-password"
+        name="password"
+        data-testid="test"
+      />,
       {
         transform: async () => {
-          const button = screen.getByTitle('Show')
+          const button = screen.getByTestId('test-visibility-button')
           await userEvent.click(button)
           await userEvent.type(button, '{enter}')
           await userEvent.type(button, '{space}')
@@ -157,10 +161,15 @@ describe('TextInput', () => {
 
   test('should handle events on random button', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput random="test" name="test" onChange={() => {}} />,
+      <TextInput
+        random="test"
+        name="test"
+        data-testid="test"
+        onChange={() => {}}
+      />,
       {
         transform: async () => {
-          const button = screen.getByTitle('Randomize')
+          const button = screen.getByTestId('test-randomize-button')
           await userEvent.click(button)
           await userEvent.type(button, '{enter}')
           await userEvent.type(button, '{space}')

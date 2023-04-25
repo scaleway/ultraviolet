@@ -1,8 +1,8 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ComponentProps, Ref } from 'react'
+import type { MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
-import { Button } from '../Button'
+import { Tooltip } from '../Tooltip'
 
 const variantStyle = {
   danger: (theme: Theme) => `
@@ -32,7 +32,7 @@ const variantStyle = {
   `,
 } as const
 
-const StyledButton = styled(Button, {
+const StyledItem = styled('button', {
   shouldForwardProp: prop => !['borderless', 'itemVariant'].includes(prop),
 })<{
   borderless?: boolean
@@ -89,18 +89,27 @@ const StyledButton = styled(Button, {
 
   ${({ borderless }) => (borderless ? `border: 0;` : null)}
 `
+const StyledLinkItem = styled(StyledItem)`
+  text-decoration: none;
+`.withComponent('a')
 
 type VariantItem = keyof typeof variantStyle
 
-type ItemProps = Pick<
-  ComponentProps<typeof Button>,
-  'disabled' | 'onClick' | 'href' | 'children' | 'tooltip' | 'className'
-> & {
+type ItemProps = {
+  href?: string | undefined
+  disabled?: boolean | undefined
+  /**
+   * @deprecated : wrap Menu.Item with a Tooltip
+   */
+  tooltip?: string | undefined
+  className?: string | undefined
+  children: ReactNode
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined
   borderless?: boolean
   variant?: VariantItem
 }
 
-const Item = forwardRef(
+const Item = forwardRef<HTMLElement, ItemProps>(
   (
     {
       borderless = false,
@@ -111,25 +120,44 @@ const Item = forwardRef(
       children,
       tooltip,
       className,
-    }: ItemProps,
-    ref: Ref<HTMLButtonElement>,
-  ) => (
-    <StyledButton
-      ref={ref}
-      variant="transparent"
-      role="menuitem"
-      disabled={disabled}
-      onClick={onClick}
-      href={href}
-      as={href ? 'a' : undefined}
-      borderless={borderless}
-      itemVariant={itemVariant}
-      tooltip={tooltip}
-      className={className}
-    >
-      {children}
-    </StyledButton>
-  ),
+    },
+    ref,
+  ) => {
+    if (href) {
+      return (
+        <Tooltip text={tooltip}>
+          <StyledLinkItem
+            href={href}
+            // @ts-expect-error: somehow refuse cast HTMLAnchorElement
+            ref={ref}
+            role="menuitem"
+            disabled={disabled}
+            itemVariant={itemVariant}
+            className={className}
+          >
+            {children}
+          </StyledLinkItem>
+        </Tooltip>
+      )
+    }
+
+    return (
+      <Tooltip text={tooltip}>
+        <StyledItem
+          type="button"
+          ref={ref as Ref<HTMLButtonElement>}
+          role="menuitem"
+          disabled={disabled}
+          onClick={onClick}
+          borderless={borderless}
+          itemVariant={itemVariant}
+          className={className}
+        >
+          {children}
+        </StyledItem>
+      </Tooltip>
+    )
+  },
 )
 
 export default Item

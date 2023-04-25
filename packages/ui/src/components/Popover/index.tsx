@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
-import { ButtonV2 } from '../ButtonV2'
+import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -66,7 +66,7 @@ const ContentWrapper = ({
       >
         {title}
       </Text>
-      <ButtonV2
+      <Button
         variant={variant === 'default' ? 'ghost' : 'filled'}
         sentiment={variant === 'default' ? 'neutral' : 'primary'}
         onClick={onClose}

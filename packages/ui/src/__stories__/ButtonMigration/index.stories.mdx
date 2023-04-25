@@ -1,13 +1,13 @@
 import { Meta } from '@storybook/addon-docs'
-import { Variants, VariantsAction } from './Variants'
+import { Variants } from './Variants'
 import { Sizes } from './Sizes'
 import ThemeWrapper from '../components/ThemeWrapper'
 
-<Meta title="Migrations/Button(v1) to ButtonV2" />
+<Meta title="Migrations/Button" />
 
-# Migrate Button to ButtonV2
+# Migrate to the new Button version
 
-Welcome to the migration of Button into ButtonV2, here we will see how to easily migrate to ButtonV2 component.
+Welcome to the migration of the new version of button, here we will see how to easily migrate to the new version of the component.
 
 ## Variants match
 
@@ -28,15 +28,11 @@ Welcome to the migration of Button into ButtonV2, here we will see how to easily
 
 ---
 
-- `as` &rarr; : ButtonV2 do not support `as` prop and always renders a button expect if you provide an href then an anchor will be rendered.
+- `as` &rarr; : Button do not support `as` prop and always renders a button expect if you provide an href prop then an anchor will be rendered.
 
 ---
 
-- `tooltip` &rarr; : ButtonV2 do not support `tooltip` prop. Please wrap your button with the `Tooltip` component.
-
----
-
-- `action` &rarr; : ButtonV2 do not support `support` prop. Simply provide an `icon` without `children`.
+- `action` &rarr; : Button do not support `support` prop. Simply provide an `icon` without `children`.
 
 ---
 
@@ -44,6 +40,6 @@ Welcome to the migration of Button into ButtonV2, here we will see how to easily
 
 ---
 
-- `iconSize` &rarr; : ButtonV2 do not support `iconSize` prop, the icon size is define internally depending of variant/size to make it consistent.
+- `iconSize` &rarr; : Button do not support `iconSize` prop, the icon size is define internally depending of variant/size to make it consistent.
 
 ---

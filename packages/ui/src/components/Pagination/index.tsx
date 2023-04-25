@@ -39,42 +39,9 @@ const PageNumbersContainer = styled.div`
   margin: 0 ${({ theme }) => theme.space['2']};
 `
 
-const StyledPageSwitch = styled(Button)`
-  width: ${({ theme }) => theme.space['4']};
-  height: ${({ theme }) => theme.space['6']};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 const PageSwitchContainer = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
-`
-
-const StyledPageButton = styled('button', {
-  shouldForwardProp: prop => !['current'].includes(prop),
-})<{ current?: boolean }>`
-  color: ${({ theme }) => theme.colors.neutral.textStrong};
-  line-height: ${({ theme }) => theme.space['3']};
-  width: ${({ theme }) => theme.space['6']};
-  height: ${({ theme }) => theme.space['6']};
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  border: 1px solid transparent;
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &[aria-current='true'] {
-    color: ${({ theme }) => theme.colors.primary.text};
-    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
-  }
-
-  &[aria-current='false']:hover {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
-    border-color: ${({ theme }) => theme.colors.neutral.borderStrong};
-  }
 `
 
 type PaginationComponentProps<T> = {
@@ -116,61 +83,67 @@ function DefaultMiddleComponent<T>({
   return (
     <div style={{ display: 'flex' }}>
       <PageSwitchContainer>
-        <StyledPageSwitch
+        <Button
+          variant="outlined"
+          sentiment="primary"
           aria-label="First"
           disabled={page === 1 || isLoadingPage}
-          variant="primary-bordered"
           onClick={goToFirstPage}
         >
           <div>
             <Icon name="arrow-left-double" />
           </div>
-        </StyledPageSwitch>
-        <StyledPageSwitch
+        </Button>
+        <Button
+          variant="outlined"
+          sentiment="primary"
           aria-label="Back"
           disabled={page === 1 || isLoadingPage}
-          variant="primary-bordered"
           onClick={goToPreviousPage}
         >
           <div>
             <Icon name="arrow-left" />
           </div>
-        </StyledPageSwitch>
+        </Button>
       </PageSwitchContainer>
       <PageNumbersContainer>
         {pageNumbersToDisplay.map(pageNumber => (
-          <StyledPageButton
+          <Button
             aria-label={`Page ${pageNumber}`}
             key={`pagination-page-${pageNumber}`}
             disabled={isLoadingPage}
             aria-current={pageNumber === page}
             onClick={handlePageClick(pageNumber)}
+            variant="outlined"
+            sentiment={pageNumber === page ? 'primary' : 'neutral'}
           >
             {pageNumber}
-          </StyledPageButton>
+          </Button>
         ))}
       </PageNumbersContainer>
       <PageSwitchContainer>
-        <StyledPageSwitch
+        <Button
+          variant="outlined"
+          sentiment="primary"
           aria-label="Next"
           disabled={(page === maxPage && !canLoadMore) || isLoadingPage}
-          variant="primary-bordered"
           onClick={goToNextPage}
         >
           <div>
             <Icon name="arrow-right" />
           </div>
-        </StyledPageSwitch>
-        <StyledPageSwitch
+        </Button>
+        <Button
+          variant="outlined"
+          sentiment="primary"
           aria-label="Last"
           disabled={page === maxPage || isLoadingPage}
-          variant="primary-bordered"
           onClick={goToLastPage}
         >
           <div>
             <Icon name="arrow-right-double" />
           </div>
-        </StyledPageSwitch>
+        </Button>
       </PageSwitchContainer>
     </div>
   )

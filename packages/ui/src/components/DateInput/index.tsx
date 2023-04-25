@@ -254,18 +254,16 @@ export const DateInput = ({
               </TopHeaderDiv>
               <StyledSpan>
                 <Button
-                  action="rounded"
+                  size="small"
                   icon="arrow-left"
-                  iconSize={16}
-                  variant="secondary"
+                  sentiment="neutral"
                   onClick={decreaseMonth}
                   disabled={prevMonthButtonDisabled}
                 />
                 <Button
-                  action="rounded"
+                  size="small"
                   icon="arrow-right"
-                  iconSize={16}
-                  variant="secondary"
+                  sentiment="neutral"
                   onClick={increaseMonth}
                   disabled={nextMonthButtonDisabled}
                 />
