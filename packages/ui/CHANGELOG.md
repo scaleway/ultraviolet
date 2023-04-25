@@ -1,5 +1,23 @@
 # Change Log
 
+## 0.241.0
+
+### Minor Changes
+
+- [#2464](https://github.com/scaleway/scaleway-ui/pull/2464) [`96f1ad3b`](https://github.com/scaleway/scaleway-ui/commit/96f1ad3ba182947fb3815dab18f141560d2c12d8) Thanks [@matthprost](https://github.com/matthprost)! - New data colors used into piechart and compatible with theme
+
+- [#2469](https://github.com/scaleway/scaleway-ui/pull/2469) [`b3738e44`](https://github.com/scaleway/scaleway-ui/commit/b3738e44d0191e34b1c58baac971d94232c44409) Thanks [@matthprost](https://github.com/matthprost)! - Tooltip is now focusable for the voice over to be able to read it
+
+- [#2473](https://github.com/scaleway/scaleway-ui/pull/2473) [`277bf359`](https://github.com/scaleway/scaleway-ui/commit/277bf3592f52791dea4f6e47470d02d063e659ae) Thanks [@matthprost](https://github.com/matthprost)! - - In `Alert` rename `onButtonClick` into `onClickButton`
+
+  - In `Banner` rename prop `type` into `variant`
+
+- [#2472](https://github.com/scaleway/scaleway-ui/pull/2472) [`69ed20af`](https://github.com/scaleway/scaleway-ui/commit/69ed20af0d484005eef92bccc6d8d534f4fd161d) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Remove `UnitInput` component
+
+### Patch Changes
+
+- [#2452](https://github.com/scaleway/scaleway-ui/pull/2452) [`997b8905`](https://github.com/scaleway/scaleway-ui/commit/997b8905cfeb36b276ae18a9cc6bd859f16b5726) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.0.38`.
+
 ## 0.240.0
 
 ### Minor Changes
