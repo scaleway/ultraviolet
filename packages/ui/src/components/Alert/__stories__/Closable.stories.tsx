@@ -7,7 +7,7 @@ Closable.args = {
   variant: 'info',
   title: 'Information',
   buttonText: 'More info',
-  onButtonClick: () => alert('Button clicked'),
+  onClickButton: () => alert('Button clicked'),
   isClosable: true,
 }
 

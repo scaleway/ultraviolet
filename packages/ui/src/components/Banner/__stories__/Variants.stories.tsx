@@ -2,14 +2,14 @@ import type { Story } from '@storybook/react'
 import { Banner } from '..'
 import image from './Image.png'
 
-export const Types: Story = () => (
+export const Variants: Story = () => (
   <>
     <Banner
       title="Apply to Scaleway Startup programs"
       image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
-      type="intro"
+      variant="intro"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, infrastructure advisors and startup experts to develop your
@@ -20,7 +20,7 @@ export const Types: Story = () => (
       image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
-      type="promotional"
+      variant="promotional"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
       credits, infrastructure advisors and startup experts to develop your
@@ -29,14 +29,14 @@ export const Types: Story = () => (
   </>
 )
 
-Types.parameters = {
+Variants.parameters = {
   docs: {
     storyDescription:
-      'We have two different type of Banner: intro and promotional.',
+      'We have two different variant of Banner: intro and promotional.',
   },
 }
 
-Types.decorators = [
+Variants.decorators = [
   StoryComponent => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       <StoryComponent />

@@ -6,16 +6,16 @@ import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-type Type = 'intro' | 'promotional'
+type Variant = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
 
 const Container = styled('div', {
-  shouldForwardProp: prop => !['type', 'size'].includes(prop),
-})<{ type: Type; size: Size }>`
+  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
+})<{ variant: Variant; size: Size }>`
   padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
   border-radius: ${({ theme }) => theme.radii.large};
-  background: ${({ theme, type }) =>
-    type === 'intro'
+  background: ${({ theme, variant }) =>
+    variant === 'intro'
       ? theme.colors.primary.background
       : theme.colors.primary.backgroundStrong};
   display: flex;
@@ -31,7 +31,7 @@ const Container = styled('div', {
 `
 
 type BannerProps = {
-  type?: Type
+  variant?: Variant
   size?: 'small' | 'medium'
   title: string
   children: ReactNode
@@ -46,7 +46,7 @@ type BannerProps = {
 }
 
 export const Banner = ({
-  type = 'intro',
+  variant = 'intro',
   size = 'medium',
   title,
   children,
@@ -64,7 +64,7 @@ export const Banner = ({
   if (!opened) return null
 
   return (
-    <Container type={type} size={size} className={className}>
+    <Container variant={variant} size={size} className={className}>
       {image}
       <Stack
         direction={direction}
@@ -78,7 +78,7 @@ export const Banner = ({
             as="p"
             variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
             color="primary"
-            prominence={type === 'intro' ? 'default' : 'strong'}
+            prominence={variant === 'intro' ? 'default' : 'strong'}
           >
             {title}
           </Text>
@@ -86,7 +86,7 @@ export const Banner = ({
             as="p"
             variant="body"
             color="neutral"
-            prominence={type === 'intro' ? 'default' : 'stronger'}
+            prominence={variant === 'intro' ? 'default' : 'stronger'}
           >
             {children}
           </Text>
@@ -95,7 +95,7 @@ export const Banner = ({
           {buttonText ? (
             <ButtonV2
               size="medium"
-              sentiment={type === 'intro' ? 'primary' : 'neutral'}
+              sentiment={variant === 'intro' ? 'primary' : 'neutral'}
               onClick={onClickButton}
             >
               {buttonText}
@@ -107,7 +107,7 @@ export const Banner = ({
               size="small"
               target="_blank"
               href={linkHref ?? ''}
-              prominence={type === 'intro' ? 'default' : 'strong'}
+              prominence={variant === 'intro' ? 'default' : 'strong'}
             >
               {linkText}
             </Link>
@@ -117,8 +117,8 @@ export const Banner = ({
       <ButtonV2
         icon="close"
         size="small"
-        variant={type === 'intro' ? 'ghost' : 'filled'}
-        sentiment={type === 'intro' ? 'neutral' : 'primary'}
+        variant={variant === 'intro' ? 'ghost' : 'filled'}
+        sentiment={variant === 'intro' ? 'neutral' : 'primary'}
         onClick={() => {
           setOpened(false)
           onClose?.()

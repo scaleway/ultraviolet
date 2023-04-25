@@ -5,7 +5,7 @@ export const Button = Template.bind({})
 Button.args = {
   variant: 'info',
   buttonText: 'More info',
-  onButtonClick: () => alert('Button clicked'),
+  onClickButton: () => alert('Button clicked'),
   title: 'Information',
   children: 'This is an alert content.',
 }
@@ -13,6 +13,6 @@ Button.args = {
 Button.parameters = {
   docs: {
     storyDescription:
-      'Using `Button` prop you can add a custom Button and use `onButtonClick` prop to handle the click event.',
+      'Using `Button` prop you can add a custom Button and use `onClickButton` prop to handle the click event.',
   },
 }

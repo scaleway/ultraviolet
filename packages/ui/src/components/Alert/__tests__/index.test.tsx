@@ -28,9 +28,9 @@ describe('Alert', () => {
   test('renders correctly with title', () =>
     shouldMatchEmotionSnapshot(<Alert title="title">Sample Alert</Alert>))
 
-  test('renders correctly with buttonText and onButtonClick', () =>
+  test('renders correctly with buttonText and onClickButton', () =>
     shouldMatchEmotionSnapshot(
-      <Alert buttonText="Button" onButtonClick={() => 'ok'}>
+      <Alert buttonText="Button" onClickButton={() => 'ok'}>
         Sample Alert
       </Alert>,
     ))

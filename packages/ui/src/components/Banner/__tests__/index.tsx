@@ -36,7 +36,7 @@ describe('Banner', () => {
 
   test('renders correctly with type promotional', () =>
     shouldMatchEmotionSnapshot(
-      <Banner title="Title" type="promotional">
+      <Banner title="Title" variant="promotional">
         Description
       </Banner>,
     ))

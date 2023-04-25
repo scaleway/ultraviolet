@@ -70,7 +70,7 @@ type AlertProps = {
   title?: string
   variant?: AlertType
   buttonText?: ComponentProps<typeof ButtonV2>['children']
-  onButtonClick?: () => void
+  onClickButton?: () => void
   onClose?: () => void
   isClosable?: boolean
   className?: string
@@ -82,7 +82,7 @@ export const Alert = ({
   title,
   variant = 'danger',
   buttonText,
-  onButtonClick,
+  onClickButton,
   isClosable,
   onClose,
   className,
@@ -130,7 +130,7 @@ export const Alert = ({
         {buttonText ? (
           <StyledButton
             sentiment={variant}
-            onClick={onButtonClick}
+            onClick={onClickButton}
             size="small"
           >
             {buttonText}
