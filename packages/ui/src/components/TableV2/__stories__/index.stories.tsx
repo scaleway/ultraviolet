@@ -11,6 +11,7 @@ export default {
     },
   },
   title: 'Components/Data Display/TableV2',
+  subcomponents: { Row: TableV2.Row, Cell: TableV2.Cell },
 } as Meta
 
 export { Playground } from './Playground.stories'

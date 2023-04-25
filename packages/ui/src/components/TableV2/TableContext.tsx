@@ -11,7 +11,7 @@ import type { Checkbox } from '../Checkbox'
 type RowState = Record<string, boolean>
 
 type TableContextValue = {
-  separated: boolean
+  bordered: boolean
   stripped: boolean
   // ============ Selectable logic ============
   selectedRowIds: RowState
@@ -32,14 +32,14 @@ const TableContext = createContext<TableContextValue | undefined>(undefined)
 type TableProviderProps = {
   children: ReactNode
   areRowSelectable: boolean
-  separated: boolean
+  bordered: boolean
   stripped: boolean
 }
 
 export const TableProvider = ({
   children,
   areRowSelectable,
-  separated,
+  bordered,
   stripped,
 }: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -120,7 +120,7 @@ export const TableProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
-      separated,
+      bordered,
       stripped,
     }),
     [
@@ -132,7 +132,7 @@ export const TableProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
-      separated,
+      bordered,
       stripped,
     ],
   )

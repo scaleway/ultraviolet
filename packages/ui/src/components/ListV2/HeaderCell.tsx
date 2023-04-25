@@ -84,9 +84,12 @@ export const HeaderCell = ({
       onKeyDown={
         handleOrder
           ? event => {
-              if (event.key === ' ') {
+              if (event.key === ' ' || event.key === 'Enter') {
                 handleOrder()
-                event.preventDefault()
+                if (event.key === ' ') {
+                  // @note: it avoid scroll when pressing Space
+                  event.preventDefault()
+                }
               }
             }
           : undefined
@@ -96,7 +99,7 @@ export const HeaderCell = ({
     >
       {children}
       {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon data-sorted={order !== undefined} aria-disabled={!onOrder} />
+        <SortIcon data-sorted={order !== undefined} />
       ) : null}
     </StyledHeaderCell>
   )

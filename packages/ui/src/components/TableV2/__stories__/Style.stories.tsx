@@ -4,10 +4,10 @@ import { Stack, Text } from '../..'
 import { columns, data } from './resources'
 
 const combos = [
-  { stripped: false, separated: false },
-  { stripped: true, separated: false },
-  { stripped: false, separated: true },
-  { stripped: true, separated: true },
+  { stripped: false, bordered: false },
+  { stripped: true, bordered: false },
+  { stripped: false, bordered: true },
+  { stripped: true, bordered: true },
 ]
 
 export const Style: Story = () => (
@@ -16,11 +16,11 @@ export const Style: Story = () => (
       <Stack gap={1}>
         <Text as="h6" variant="headingSmall">
           {combo.stripped ? '✅' : '❌'} Stripped |{' '}
-          {combo.separated ? '✅' : '❌'} Separator
+          {combo.bordered ? '✅' : '❌'} Bordered
         </Text>
         <TableV2
           columns={columns}
-          separated={combo.separated}
+          bordered={combo.bordered}
           stripped={combo.stripped}
         >
           <TableV2.Body>
@@ -42,6 +42,6 @@ export const Style: Story = () => (
 Style.parameters = {
   docs: {
     storyDescription:
-      'You can customize the Table with two props `stripped` and `separated`.',
+      'You can customize the Table with two props `stripped` and `bordered`.',
   },
 }

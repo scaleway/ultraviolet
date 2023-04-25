@@ -288,14 +288,15 @@ describe('ListV2', () => {
           )
           expect(listHeaderCells).toHaveLength(columns.length)
 
+          expect(listHeaderCells).toHaveLength(columns.length)
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
           userEvent.click(listHeaderCells[0])
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-          userEvent.click(listHeaderCells[0])
+          fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
             'descending',
           )
-          userEvent.click(listHeaderCells[0])
+          fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
           userEvent.click(listHeaderCells[1])
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
           expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')

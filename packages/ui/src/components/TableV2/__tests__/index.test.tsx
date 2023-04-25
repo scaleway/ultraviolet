@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import { userEvent } from '@storybook/testing-library'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { TableV2 } from '..'
@@ -214,25 +214,28 @@ describe('TableV2', () => {
       </LocalControlValue>,
       {
         transform: () => {
-          const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
+          const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
             'button',
             {
               queryFallbacks: true,
             },
           )
-          expect(listHeaderCells).toHaveLength(columns.length)
-
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          userEvent.click(listHeaderCells[0])
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
-          userEvent.click(listHeaderCells[0])
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
+          expect(tableHeaderCells).toHaveLength(columns.length)
+          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          userEvent.click(tableHeaderCells[0])
+          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(
+            'ascending',
+          )
+          fireEvent.keyDown(tableHeaderCells[0], { key: 'Enter' })
+          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(
             'descending',
           )
-          userEvent.click(listHeaderCells[0])
-          userEvent.click(listHeaderCells[1])
-          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+          fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
+          userEvent.click(tableHeaderCells[1])
+          expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          expect(tableHeaderCells[1].getAttribute('aria-sort')).toBe(
+            'ascending',
+          )
         },
       },
     )
@@ -321,7 +324,7 @@ describe('TableV2', () => {
 
   test('Should render correctly with stipped', () =>
     shouldMatchEmotionSnapshot(
-      <TableV2 columns={columns} stripped separated>
+      <TableV2 columns={columns} stripped bordered>
         <TableV2.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <TableV2.Row key={id} id={id}>

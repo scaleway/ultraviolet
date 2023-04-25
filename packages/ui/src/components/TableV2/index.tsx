@@ -13,16 +13,16 @@ import { TableProvider, useTableContext } from './TableContext'
 
 type StyledTableProps = {
   stripped: boolean
-  separated: boolean
+  bordered: boolean
 }
 const StyledTable = styled('table', {
-  shouldForwardProp: prop => !['separated', 'stripped'].includes(prop),
+  shouldForwardProp: prop => !['bordered', 'stripped'].includes(prop),
 })<StyledTableProps>`
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
 
-  ${({ theme, stripped, separated }) => `
+  ${({ theme, stripped, bordered }) => `
   ${
     stripped
       ? `& tbody tr:nth-of-type(even) {
@@ -32,7 +32,7 @@ const StyledTable = styled('table', {
   }
 
   ${
-    separated
+    bordered
       ? `& tbody tr {
     border-bottom: 1px solid ${theme.colors.neutral.borderWeak};
   }`
@@ -59,7 +59,7 @@ type TableV2Props = {
    * Set it to true if you want to display a placeholder during loading
    * */
   isLoading?: boolean
-  separated?: boolean
+  bordered?: boolean
   stripped?: boolean
 }
 
@@ -70,7 +70,7 @@ export const BaseTableV2 = forwardRef<HTMLTableElement, TableV2Props>(
       children,
       columns,
       isLoading,
-      separated = false,
+      bordered = false,
       stripped = false,
     },
     ref,
@@ -78,9 +78,9 @@ export const BaseTableV2 = forwardRef<HTMLTableElement, TableV2Props>(
     <TableProvider
       areRowSelectable={areRowSelectable}
       stripped={stripped}
-      separated={separated}
+      bordered={bordered}
     >
-      <StyledTable ref={ref} stripped={stripped} separated={separated}>
+      <StyledTable ref={ref} stripped={stripped} bordered={bordered}>
         <Header>
           <HeaderRow hasSelectAllColumn={areRowSelectable}>
             {columns.map((column, index) => (

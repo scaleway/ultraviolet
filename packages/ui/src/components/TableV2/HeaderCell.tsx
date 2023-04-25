@@ -2,9 +2,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
-
-const ArrowDownIcon = styled(Icon)``
-const ArrowUpIcon = styled(Icon)``
+import { Text } from '../Text'
 
 const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -17,24 +15,22 @@ const StyledIconContainer = styled(Stack)`
     cursor: pointer;
     user-select: none;
   }
-
-  &[aria-sort] {
-    color: ${({ theme }) => theme.colors.primary.iconWeak};
-  }
-
-  &[aria-sort='ascending'] ${ArrowUpIcon} {
-    color: ${({ theme }) => theme.colors.primary.iconWeak};
-  }
-
-  &[aria-sort='descending'] ${ArrowDownIcon} {
-    color: ${({ theme }) => theme.colors.primary.iconWeak};
-  }
 `
 
-const SortIcon = () => (
+const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
   <StyledIconContainer>
-    <ArrowUpIcon name="arrow-up" size={10} />
-    <ArrowDownIcon name="arrow-down" size={10} />
+    <Icon
+      name="arrow-up"
+      size={10}
+      color={order === 'ascending' ? 'primary' : 'neutral'}
+      prominence="weak"
+    />
+    <Icon
+      name="arrow-down"
+      size={10}
+      color={order === 'descending' ? 'primary' : 'neutral'}
+      prominence="weak"
+    />
   </StyledIconContainer>
 )
 
@@ -54,17 +50,11 @@ const StyledHeaderCell = styled('th', {
   padding: ${({ theme }) => theme.space['1']};
 `
 
-const HeaderCellContent = styled('div')`
+const StyledText = styled(Text)`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: ${({ theme }) => theme.space['1']};
-
-  text-align: left;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
-  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
 `
 
 type HeaderCellProps = {
@@ -101,15 +91,17 @@ export const HeaderCell = ({
 
   return (
     <StyledHeaderCell
-      aria-sort={order}
       className={className}
       onClick={handleOrder}
       onKeyDown={
         handleOrder
           ? event => {
-              if (event.key === ' ') {
+              if (event.key === ' ' || event.key === 'Enter') {
                 handleOrder()
-                event.preventDefault()
+                if (event.key === ' ') {
+                  // @note: it avoid scroll when pressing Space
+                  event.preventDefault()
+                }
               }
             }
           : undefined
@@ -119,16 +111,18 @@ export const HeaderCell = ({
       maxWidth={maxWidth}
       minWidth={minWidth}
       tabIndex={handleOrder ? 0 : -1}
+      aria-sort={order}
     >
-      <HeaderCellContent>
+      <StyledText
+        as="div"
+        variant="bodySmall"
+        color={order !== undefined ? 'primary' : 'neutral'}
+      >
         {children}
         {orderDirection !== undefined && isOrdered !== undefined ? (
-          <SortIcon
-            data-sorted={order !== undefined}
-            aria-disabled={!onOrder}
-          />
+          <SortIcon aria-disabled={!onOrder} order={order} />
         ) : null}
-      </HeaderCellContent>
+      </StyledText>
     </StyledHeaderCell>
   )
 }
