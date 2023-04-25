@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode, Ref, RefObject } from 'react'
+import type { KeyboardEventHandler, ReactNode, Ref, RefObject } from 'react'
 import {
   forwardRef,
   useCallback,
@@ -266,6 +266,15 @@ export const Tooltip = forwardRef(
       }
     }, [isControlled, onPointerEvent, visible])
 
+    const onKeyDown: KeyboardEventHandler = useCallback(
+      event => {
+        if (event.code === 'Escape') {
+          unmountTooltip()
+        }
+      },
+      [unmountTooltip],
+    )
+
     /**
      * Will render children conditionally if children is a function or not.
      */
@@ -288,11 +297,13 @@ export const Tooltip = forwardRef(
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
+          tabIndex={0}
+          onKeyDown={onKeyDown}
         >
           {children}
         </StyledChildrenContainer>
       )
-    }, [children, generatedId, isControlled, onPointerEvent])
+    }, [children, generatedId, isControlled, onKeyDown, onPointerEvent])
 
     if (!text) {
       if (typeof children === 'function') return null
