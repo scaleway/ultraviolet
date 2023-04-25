@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.3.0
+
+### Minor Changes
+
+- [#2447](https://github.com/scaleway/scaleway-ui/pull/2447) [`ce1a9006`](https://github.com/scaleway/scaleway-ui/commit/ce1a900609037b7f4b9704d37cbd89cf176aea58) Thanks [@matthprost](https://github.com/matthprost)! - Removed `BorderedBox` and `Container` they were deprecated and have been replaced by new component `Card`
+
+### Patch Changes
+
+- Updated dependencies [[`bf994fb0`](https://github.com/scaleway/scaleway-ui/commit/bf994fb0c2325809a77ad090727c25ace3c9e4bf), [`49a7086e`](https://github.com/scaleway/scaleway-ui/commit/49a7086ee2023f153a2d42669d558d77149f1a95), [`ce1a9006`](https://github.com/scaleway/scaleway-ui/commit/ce1a900609037b7f4b9704d37cbd89cf176aea58)]:
+  - @scaleway/ui@0.240.0
+
 ## 0.2.117
 
 ### Patch Changes
