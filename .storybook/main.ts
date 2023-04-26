@@ -1,10 +1,6 @@
 import { join } from 'path'
 import { Configuration } from 'webpack'
-
 export default {
-  core: {
-    builder: 'webpack5',
-  },
   features: {
     // storyStoreV7: true,
     previewMdx2: true,
@@ -23,6 +19,7 @@ export default {
     '@storybook/addon-links',
     '@storybook/addon-a11y',
     'storybook-dark-mode',
+    '@storybook/addon-mdx-gfm',
   ],
   webpackFinal: (config: Configuration) => {
     const cwd = process.cwd()
@@ -43,7 +40,13 @@ export default {
         path: require.resolve('path-browserify'),
       },
     }
-
     return config
+  },
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: true,
   },
 }
