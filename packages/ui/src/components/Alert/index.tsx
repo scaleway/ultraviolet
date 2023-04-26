@@ -75,6 +75,10 @@ type AlertProps = {
   isClosable?: boolean
   className?: string
   'data-testid'?: string
+  /**
+   * Disabled the alert button.
+   */
+  disabled?: boolean
 }
 
 export const Alert = ({
@@ -86,6 +90,7 @@ export const Alert = ({
   isClosable,
   onClose,
   className,
+  disabled,
   'data-testid': dataTestId,
 }: AlertProps) => {
   const [opened, setOpened] = useState(true)
@@ -132,6 +137,7 @@ export const Alert = ({
             sentiment={variant}
             onClick={onClickButton}
             size="small"
+            disabled={disabled}
           >
             {buttonText}
           </StyledButton>

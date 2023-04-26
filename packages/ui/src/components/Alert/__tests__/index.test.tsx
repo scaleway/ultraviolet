@@ -68,4 +68,11 @@ describe('Alert', () => {
       expect(alert).not.toBeVisible()
     })
   })
+
+  test('renders correctly with disabled', () =>
+    shouldMatchEmotionSnapshot(
+      <Alert disabled buttonText="button">
+        Sample Alert
+      </Alert>,
+    ))
 })
