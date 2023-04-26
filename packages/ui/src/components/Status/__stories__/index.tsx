@@ -1,0 +1,19 @@
+import type { Meta } from '@storybook/react'
+import { Status } from '..'
+
+export default {
+  component: Status,
+  parameters: {
+    docs: {
+      description: {
+        component: 'Colorful circle that can be used to indicated state.',
+      },
+    },
+  },
+  title: 'Components/Feedback/Status',
+} as Meta
+
+export { Playground } from './Playground'
+export { Variants } from './Variants'
+export { Tooltip } from './Tooltip'
+export { Animated } from './Animated'

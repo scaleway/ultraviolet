@@ -48,7 +48,7 @@ export default {
   title: 'Components/Action/Button',
 } as ComponentMeta<typeof Button>
 
-export { Playground } from './Playground.stories'
+export { Playground } from './Playground'
 ```
 
 Here we have the `component` parameter that is used to define the component that the story is related to. The `decorators`
@@ -73,7 +73,7 @@ export const Template: ComponentStory<typeof Button> = ({ ...props }) => (
 `Playground.stories.tsx` contains the playground of a story. This story will be the one user will manually change properties on storybook itself. Here is an example:
 
 ```tsx
-import { Template } from './Template.stories'
+import { Template } from './Template'
 
 export const Playground = Template.bind({})
 

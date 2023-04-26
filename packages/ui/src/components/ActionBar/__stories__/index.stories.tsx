@@ -17,5 +17,5 @@ and will not be affected by the layout of the page it is on.`,
   },
 } as Meta
 
-export { Playground } from './Playground.stories'
-export { Ranks } from './Ranks.stories'
+export { Playground } from './Playground'
+export { Ranks } from './Ranks'

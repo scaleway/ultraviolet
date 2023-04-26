@@ -1,5 +1,5 @@
 import { Table } from '..'
-import { Template } from './Template.stories'
+import { Template } from './Template'
 
 export const ColumnWidth = Template.bind({})
 
