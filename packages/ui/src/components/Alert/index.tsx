@@ -143,7 +143,7 @@ export const Alert = ({
           </StyledButton>
         ) : null}
       </WrapStack>
-      {isClosable ? (
+      {isClosable || onClose ? (
         <CloseButton
           variant="ghost"
           size="small"
