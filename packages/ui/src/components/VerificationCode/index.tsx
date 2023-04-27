@@ -5,7 +5,7 @@ import type {
   FocusEventHandler,
   KeyboardEventHandler,
 } from 'react'
-import { createRef, useState } from 'react'
+import { createRef, useId, useState } from 'react'
 
 const StyledInput = styled.input`
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -79,6 +79,7 @@ type VerificationCodeProps = {
    */
   type?: 'text' | 'number'
   'data-testid'?: string
+  'aria-label'?: string
 }
 
 const DEFAULT_ON_FUNCTION = () => {}
@@ -89,7 +90,7 @@ export const VerificationCode = ({
   error = false,
   fields = 4,
   initialValue = '',
-  inputId = 'verification-code',
+  inputId,
   inputStyle = '',
   onChange = DEFAULT_ON_FUNCTION,
   onComplete = DEFAULT_ON_FUNCTION,
@@ -97,7 +98,9 @@ export const VerificationCode = ({
   required = false,
   type = 'number',
   'data-testid': dataTestId,
+  'aria-label': ariaLabel = 'Verification code',
 }: VerificationCodeProps): JSX.Element => {
+  const uniqueId = useId()
   const valuesArray = Object.assign(
     new Array(fields).fill(''),
     initialValue.substring(0, fields).split(''),
@@ -233,10 +236,10 @@ export const VerificationCode = ({
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : undefined}
           // eslint-disable-next-line react/no-array-index-key
-          key={`${inputId}-${index}`}
+          key={index}
           data-testid={index}
           value={value}
-          id={inputId ? `${inputId}-${index}` : undefined}
+          id={`${inputId || uniqueId}-${index}`}
           ref={inputRefs[index]}
           onChange={inputOnChange(index)}
           onKeyDown={inputOnKeyDown(index)}
@@ -245,6 +248,7 @@ export const VerificationCode = ({
           disabled={disabled}
           required={required}
           placeholder={placeholder?.[index] ?? ''}
+          aria-label={`${ariaLabel} ${index}`}
         />
       ))}
     </div>

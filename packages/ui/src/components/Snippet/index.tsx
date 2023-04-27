@@ -220,6 +220,7 @@ export const Snippet = ({
             copiedText={copiedText}
             noBorder
             variant="neutral"
+            aria-label="Copy code snippet"
           />
         </ButtonContainer>
         {hasShowMoreButton ? (

@@ -29,7 +29,14 @@ const testedComponents = [
   'Tag',
   'TagInput',
   'TextInput',
+  'Tooltip',
   'Radio',
+  'VerificationCode',
+  'DatInput',
+  'NumberInput',
+  'Toggle',
+  'Snippet',
+  'SwitchButton',
 ]
 
 const foundFiles: string[] = []

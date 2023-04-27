@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
-import { forwardRef, useCallback, useEffect, useState } from 'react'
+import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
@@ -157,6 +157,7 @@ export const Toggle = forwardRef(
     ref: Ref<HTMLInputElement>,
   ) => {
     const [state, setState] = useState(checked)
+    const uniqueId = useId()
 
     const onLocalChange = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
@@ -191,8 +192,7 @@ export const Toggle = forwardRef(
             data-disabled={disabled}
           >
             <StyledCheckbox
-              id={id || name}
-              aria-label={name}
+              id={id || uniqueId}
               checked={state}
               aria-checked={state}
               disabled={disabled}

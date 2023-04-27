@@ -1,7 +1,7 @@
-import { Button } from '@scaleway/ui'
 import type { ComponentMeta, Story } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { EmptyState } from '..'
+import { Button } from '../../Button'
 import kapsuleLogo from '../illustrations/kapsule.webp'
 import errorImg from '../illustrations/product-error.svg'
 
