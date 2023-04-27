@@ -29,7 +29,7 @@ const styles = {
       margin-left: 16px;
       width: 32px;
       height: 2px;
-      background-color: ${getLegendColor(index, theme)};
+      background-color: ${getLegendColor(theme)[index]};
     `,
   row: css`
     display: flex;

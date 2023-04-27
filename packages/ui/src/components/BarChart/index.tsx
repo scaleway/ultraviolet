@@ -52,19 +52,6 @@ export const BarChart = ({
   'data-testid': dataTestId,
 }: BarChartProps) => {
   const theme = useTheme()
-  const dataset = data?.map(d => {
-    const colors = keys?.reduce<Record<string, string>>((acc, key, index) => {
-      const colorKeyName = `${key}Color`
-      acc[colorKeyName] = getLegendColor(index, theme)
-
-      return acc
-    }, {})
-
-    return {
-      ...d,
-      ...colors,
-    }
-  })
 
   const chartTheme = {
     axis: {
@@ -100,8 +87,8 @@ export const BarChart = ({
   return (
     <div style={{ height }} className={className} data-testid={dataTestId}>
       <ResponsiveBar
-        colors={({ id, data: localData }) => String(localData[`${id}Color`])}
-        data={dataset}
+        colors={getLegendColor(theme)}
+        data={data}
         margin={margin}
         axisBottom={{
           format: axisFormatters?.bottom,
