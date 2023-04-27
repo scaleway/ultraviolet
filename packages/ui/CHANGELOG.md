@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.242.0
+
+### Minor Changes
+
+- [#2477](https://github.com/scaleway/scaleway-ui/pull/2477) [`53debe1f`](https://github.com/scaleway/scaleway-ui/commit/53debe1ff476df3a8e97c54a97e892534fde33b6) Thanks [@matthprost](https://github.com/matthprost)! - Add prop `disabled` to `Alert` so it can disable the button
+
+### Patch Changes
+
+- [#2484](https://github.com/scaleway/scaleway-ui/pull/2484) [`210035a1`](https://github.com/scaleway/scaleway-ui/commit/210035a198f283ffc4b3ed7ebaf584a3034cbcf6) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Forward `data-testid` prop of ListV2's `Row` & `Cell`
+
 ## 0.241.0
 
 ### Minor Changes
