@@ -92,6 +92,7 @@ type RowProps = {
   isDisabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
   className?: string
+  'data-testid'?: string
 }
 
 export const Row = forwardRef(
@@ -104,6 +105,7 @@ export const Row = forwardRef(
       selectDisabled,
       sentiment = 'neutral',
       className,
+      'data-testid': dataTestid,
     }: RowProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -172,6 +174,7 @@ export const Row = forwardRef(
         aria-disabled={isDisabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
         data-highlight={!!selectedRowIds[id]}
+        data-testid={dataTestid}
       >
         {areRowSelectable ? (
           <Cell preventClick>

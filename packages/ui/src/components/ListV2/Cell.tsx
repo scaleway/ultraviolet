@@ -16,11 +16,12 @@ type CellProps = {
    *  Use this if you want to prevent onClick to be handled by parents (Like when you have an expandable content)
    * */
   preventClick?: boolean
+  'data-testid'?: string
 }
 
 export const Cell = forwardRef(
   (
-    { children, className, preventClick }: CellProps,
+    { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const handleClick: MouseEventHandler<HTMLTableCellElement> = event => {
@@ -35,6 +36,7 @@ export const Cell = forwardRef(
         role="cell"
         className={className}
         onClick={handleClick}
+        data-testid={dataTestid}
       >
         {children}
       </StyledCell>
