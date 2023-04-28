@@ -37,7 +37,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -72,7 +72,11 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id} disabled={rowData.reference === 1}>
+                  <list.Row
+                    id={rowData.id}
+                    disabled={rowData.reference === 1}
+                    key={rowData.id}
+                  >
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -108,7 +112,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -368,7 +372,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -428,7 +432,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -480,7 +484,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -536,7 +540,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -606,7 +610,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -653,7 +657,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
@@ -706,7 +710,7 @@ describe('List', () => {
                 const { rowData } = props
 
                 return (
-                  <list.Row id={rowData.id}>
+                  <list.Row id={rowData.id} key={rowData.id}>
                     <list.Cell>{rowData.name}</list.Cell>
                     <list.Cell>{rowData.description}</list.Cell>
                     <list.Cell>{rowData.department}</list.Cell>
