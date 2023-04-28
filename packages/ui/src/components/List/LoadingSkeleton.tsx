@@ -24,9 +24,9 @@ export const LoadingSkeleton = <DataType,>({
   return (
     <Stack>
       {rows.map(index => (
-        <Row id={index.toString()} key={index.toString()}>
+        <Row id={index.toString()} key={`loading-row-${index}`}>
           {columns.map(column => (
-            <Cell key={column.label}>
+            <Cell key={`loading-cell-${column.label?.toString() ?? ''}`}>
               {column.label ? <Skeleton variant="line" /> : null}
             </Cell>
           ))}
