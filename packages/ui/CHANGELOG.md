@@ -1,5 +1,19 @@
 # Change Log
 
+## 0.243.0
+
+### Minor Changes
+
+- [#2486](https://github.com/scaleway/scaleway-ui/pull/2486) [`8d66447c`](https://github.com/scaleway/scaleway-ui/commit/8d66447c3e0112083268841c762cfb822e59d112) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Alert />` to show close button when `onClose` is given
+
+### Patch Changes
+
+- [#2489](https://github.com/scaleway/scaleway-ui/pull/2489) [`e416b11e`](https://github.com/scaleway/scaleway-ui/commit/e416b11e92de4feabcff1e2a0dfab597b562bc8e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.10.8`.
+  Updated dependency `@emotion/styled` to `11.10.8`.
+  Updated dependency `@emotion/babel-plugin` to `11.10.8`.
+  Updated dependency `@emotion/cache` to `11.10.8`.
+  Updated dependency `@emotion/jest` to `11.10.8`.
+
 ## 0.242.0
 
 ### Minor Changes
