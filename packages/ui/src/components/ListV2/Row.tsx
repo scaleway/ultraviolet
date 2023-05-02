@@ -123,15 +123,16 @@ export const Row = forwardRef(
     const isSelectDisabled =
       isDisabled || (selectDisabled !== undefined && selectDisabled !== false)
 
+    const hasExpandable = !!expandable
     useEffect(() => {
-      if (expandable) {
+      if (hasExpandable) {
         const unregisterCallback = registerExpandableRow(id)
 
         return unregisterCallback
       }
 
       return undefined
-    }, [id, expandable, registerExpandableRow])
+    }, [id, hasExpandable, registerExpandableRow])
 
     useEffect(() => {
       if (!isSelectDisabled) {
