@@ -19,7 +19,7 @@ describe('NumberInputField', () => {
       <NumberInputField name="test" value={10} disabled />,
       {
         transform: () => {
-          const input = screen.getByLabelText('Input')
+          const input = screen.getByLabelText('Number Input')
           expect(input).toBeDisabled()
 
           const inputMinus = screen.getByLabelText('Minus')
@@ -51,7 +51,7 @@ describe('NumberInputField', () => {
       </Form>,
       {
         transform: () => {
-          const input = screen.getByLabelText('Input')
+          const input = screen.getByLabelText('Number Input')
           act(() => {
             input.focus()
           })
@@ -91,7 +91,8 @@ describe('NumberInputField', () => {
       </Form>,
       {
         transform: async () => {
-          const input = screen.getByLabelText<HTMLTextAreaElement>('Input')
+          const input =
+            screen.getByLabelText<HTMLTextAreaElement>('Number Input')
           // eslint-disable-next-line testing-library/no-node-access
           if (input.parentElement) await userEvent.click(input.parentElement)
 

@@ -79,6 +79,7 @@ export const CopyButton = ({
         noBorder={noBorder}
         className={className}
         data-testid={dataTestId}
+        aria-label="Copy"
       >
         <Icon name={isCopied ? 'check' : 'copy-content'} size={16} />
       </StyledButton>

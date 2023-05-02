@@ -220,12 +220,15 @@ export const Snippet = ({
             copiedText={copiedText}
             noBorder
             variant="neutral"
-            aria-label="Copy code snippet"
           />
         </ButtonContainer>
         {hasShowMoreButton ? (
           <ShowMoreContainer showMore={showMore}>
-            <StyledButton type="button" onClick={() => setShowMore(!showMore)}>
+            <StyledButton
+              type="button"
+              onClick={() => setShowMore(!showMore)}
+              aria-label="Show more"
+            >
               <AlignCenterText as="span" variant="bodySmallStrong">
                 {showMore ? hideText : showText}
                 &nbsp;
