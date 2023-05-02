@@ -1,16 +1,19 @@
 import type { Theme } from '@emotion/react'
 
-const legendColors = (theme: Theme): string[] => [
-  theme.colors.success.backgroundStrong,
-  theme.colors.secondary.backgroundStrong,
-  theme.colors.info.backgroundStrong,
-  theme.colors.danger.backgroundStrong,
-  theme.colors.primary.backgroundStrong,
-  theme.colors.warning.backgroundStrong,
-]
+export const getLegendColor = (theme: Theme): string[] => {
+  const { colors } = theme
 
-export const getLegendColor = (index: number, theme: Theme): string => {
-  const colors = legendColors(theme)
+  return Object.keys(colors.other.data.charts)
+    .filter(key => !['success', 'danger'].includes(key))
+    .sort((a, b) => {
+      if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
+        return -1
+      }
 
-  return colors[index] || colors[colors.length % index]
+      return 1
+    })
+    .map(
+      key =>
+        colors.other.data.charts[key as keyof typeof colors.other.data.charts],
+    )
 }
