@@ -63,6 +63,70 @@ exports[`Separator renders correctly with custom color 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Separator renders correctly with custom color and icon 1`] = `
+<DocumentFragment>
+  .cache-1gpqkcp-StyledIconWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-885ddd-StyledHr {
+  margin: 0;
+  border: 0;
+  width: auto;
+  height: 1px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background-color: #390171;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-nwqmla-StyledIcon-sizeStyles-StyledIcon {
+  vertical-align: middle;
+  fill: #390171;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  fill: #390171;
+}
+
+<div
+    aria-orientation="horizontal"
+    class="cache-1gpqkcp-StyledIconWrapper eoti1h22"
+    role="separator"
+  >
+    <hr
+      class="cache-885ddd-StyledHr eoti1h20"
+    />
+    <svg
+      class="eoti1h21 cache-nwqmla-StyledIcon-sizeStyles-StyledIcon etwatq50"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M1,12L5,16V13H17.17C17.58,14.17 18.69,15 20,15A3,3 0 0,0 23,12A3,3 0 0,0 20,9C18.69,9 17.58,9.83 17.17,11H5V8L1,12Z"
+        style="transform: rotate(-90deg); transform-origin: 50% 50%;"
+      />
+    </svg>
+    <hr
+      class="cache-885ddd-StyledHr eoti1h20"
+    />
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Separator renders correctly with custom icon 1`] = `
 <DocumentFragment>
   .cache-1gpqkcp-StyledIconWrapper {
