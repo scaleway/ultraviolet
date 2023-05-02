@@ -21,7 +21,7 @@ export const Context: Story = () => {
   }
 
   return (
-    <List columns={columns} areRowSelectable>
+    <List columns={columns} selectable>
       {data.map(planet => (
         <List.Row
           key={planet.id}

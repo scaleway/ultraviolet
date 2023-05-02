@@ -17,7 +17,7 @@ type TableContextValue = {
   selectedRowIds: RowState
   selectRow: (rowId: string) => void
   unselectRow: (rowId: string) => void
-  areRowSelectable: boolean
+  selectable: boolean
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   selectAll: () => void
   unselectAll: () => void
@@ -31,14 +31,14 @@ const TableContext = createContext<TableContextValue | undefined>(undefined)
 
 type TableProviderProps = {
   children: ReactNode
-  areRowSelectable: boolean
+  selectable: boolean
   bordered: boolean
   stripped: boolean
 }
 
 export const TableProvider = ({
   children,
-  areRowSelectable,
+  selectable,
   bordered,
   stripped,
 }: TableProviderProps) => {
@@ -116,7 +116,7 @@ export const TableProvider = ({
       selectedRowIds,
       selectRow,
       unselectRow,
-      areRowSelectable,
+      selectable,
       selectAll,
       unselectAll,
       allRowSelectValue,
@@ -128,7 +128,7 @@ export const TableProvider = ({
       selectedRowIds,
       selectRow,
       unselectRow,
-      areRowSelectable,
+      selectable,
       selectAll,
       unselectAll,
       allRowSelectValue,

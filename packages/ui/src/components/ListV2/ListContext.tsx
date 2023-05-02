@@ -27,7 +27,7 @@ type ListContextValue = {
   selectedRowIds: RowState
   selectRow: (rowId: string) => void
   unselectRow: (rowId: string) => void
-  areRowSelectable: boolean
+  selectable: boolean
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   selectAll: () => void
   unselectAll: () => void
@@ -38,13 +38,13 @@ const ListContext = createContext<ListContextValue | undefined>(undefined)
 type ListProviderProps = {
   children: ReactNode
   autoCollapse: boolean
-  areRowSelectable: boolean
+  selectable: boolean
 }
 
 export const ListProvider = ({
   children,
   autoCollapse,
-  areRowSelectable,
+  selectable,
 }: ListProviderProps) => {
   const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
@@ -154,7 +154,7 @@ export const ListProvider = ({
       selectedRowIds,
       selectRow,
       unselectRow,
-      areRowSelectable,
+      selectable,
       selectAll,
       unselectAll,
       allRowSelectValue,
@@ -168,7 +168,7 @@ export const ListProvider = ({
       selectedRowIds,
       selectRow,
       unselectRow,
-      areRowSelectable,
+      selectable,
       selectAll,
       unselectAll,
       allRowSelectValue,

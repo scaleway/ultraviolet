@@ -100,9 +100,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with areRowSelectable', () =>
+  test('Should render correctly with selectable', () =>
     shouldMatchEmotionSnapshot(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -115,9 +115,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with isLoading', () =>
+  test('Should render correctly with loading', () =>
     shouldMatchEmotionSnapshot(
-      <List columns={columns} isLoading>
+      <List columns={columns} loading>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -130,9 +130,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with isLoading with areRowSelectable', () =>
+  test('Should render correctly with loading with selectable', () =>
     shouldMatchEmotionSnapshot(
-      <List columns={columns} isLoading areRowSelectable>
+      <List columns={columns} loading selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -149,7 +149,7 @@ describe('ListV2', () => {
     shouldMatchEmotionSnapshot(
       <List columns={columns}>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row key={id} isDisabled id={id}>
+          <List.Row key={id} disabled id={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -177,9 +177,9 @@ describe('ListV2', () => {
       </List>,
     ))
 
-  test('Should render correctly with areRowSelectable then click on first row then uncheck all, then check all', () =>
+  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
     shouldMatchEmotionSnapshot(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -305,9 +305,9 @@ describe('ListV2', () => {
     )
   })
 
-  test('Should render correctly with areRowSelectable but then change theme', () => {
+  test('Should render correctly with selectable but then change theme', () => {
     const { rerender } = render(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -323,7 +323,7 @@ describe('ListV2', () => {
       },
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -336,7 +336,7 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -349,7 +349,7 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -457,7 +457,7 @@ describe('ListV2', () => {
   test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -473,9 +473,9 @@ describe('ListV2', () => {
       },
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
-          <List.Row isDisabled={id === selectedIds[0]} key={id} id={id}>
+          <List.Row disabled={id === selectedIds[0]} key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
             <List.Cell>{columnB}</List.Cell>
             <List.Cell>{columnC}</List.Cell>
@@ -486,7 +486,7 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -499,7 +499,7 @@ describe('ListV2', () => {
       </List>,
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
           <List.Row selectDisabled={id === selectedIds[0]} key={id} id={id}>
             <List.Cell>{columnA}</List.Cell>
@@ -531,7 +531,7 @@ describe('ListV2', () => {
       },
     )
     rerender(
-      <List columns={columns} areRowSelectable>
+      <List columns={columns} selectable>
         {data
           .filter((_, index) => index !== 0)
           .map(({ id, columnA, columnB, columnC, columnD, columnE }) => (

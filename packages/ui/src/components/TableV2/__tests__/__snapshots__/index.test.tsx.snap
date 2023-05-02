@@ -12,11 +12,19 @@ exports[`TableV2 Should render correctly 1`] = `
   border-bottom: 1px solid #d4dae7;
 }
 
-.cache-xnxezw-StyledHeaderCell {
+.cache-147y6no-StyledHeaderCell {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
   padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cache-17lbabt-StyledText-StyledText {
@@ -56,7 +64,7 @@ exports[`TableV2 Should render correctly 1`] = `
     >
       <tr>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -66,7 +74,7 @@ exports[`TableV2 Should render correctly 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -76,7 +84,7 @@ exports[`TableV2 Should render correctly 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -86,7 +94,7 @@ exports[`TableV2 Should render correctly 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -96,7 +104,7 @@ exports[`TableV2 Should render correctly 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -383,7 +391,7 @@ exports[`TableV2 Should render correctly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`TableV2 Should render correctly with areRowSelectable then click on first row then uncheck all, then check all 1`] = `
+exports[`TableV2 Should render correctly with bad sort value 1`] = `
 <DocumentFragment>
   .cache-1cxqow1-StyledTable {
   width: 100%;
@@ -395,9 +403,1359 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
   border-bottom: 1px solid #d4dae7;
 }
 
-.cache-13yv4qz-StyledHeaderCell {
+.cache-147y6no-StyledHeaderCell {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-17lbabt-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-17xrsc3-StyledCell {
+  padding: 8px;
+  font-size: 14px;
+}
+
+<table
+    class="cache-1cxqow1-StyledTable e1cvnv8n0"
+  >
+    <thead
+      class="cache-13ufast-StyledHeader e1i47wce0"
+    >
+      <tr>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 1
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 3
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 4
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 5
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TableV2 Should render correctly with loading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.cache-1cxqow1-StyledTable {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.cache-13ufast-StyledHeader {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-147y6no-StyledHeaderCell {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-17lbabt-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-1hraf4-StyledLoadingRow {
+  cursor: progress;
+}
+
+.cache-17xrsc3-StyledCell {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.cache-1nv1w7d-StyledContainer-StyledSkeleton {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+  width: 80%;
+  max-width: 100%;
+}
+
+.cache-1gmiakp-Line {
+  height: 12px;
+  width: 120px;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: #d4dae7;
+}
+
+.cache-q3qai6-StyledDiv {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      #ffffff00,
+      #ffffff4D,
+      #ffffff66,
+      #ffffff4D,
+      #ffffff00
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-q3qai6-StyledDiv {
+    -webkit-animation: unset;
+    animation: unset;
+  }
+}
+
+<table
+    class="cache-1cxqow1-StyledTable e1cvnv8n0"
+  >
+    <thead
+      class="cache-13ufast-StyledHeader e1i47wce0"
+    >
+      <tr>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 1
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 3
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 4
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 5
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="cache-1hraf4-StyledLoadingRow eai219y1"
+        id="skeleton-0"
+        role="row"
+      >
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="cache-1hraf4-StyledLoadingRow eai219y1"
+        id="skeleton-1"
+        role="row"
+      >
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="cache-1hraf4-StyledLoadingRow eai219y1"
+        id="skeleton-2"
+        role="row"
+      >
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="cache-1hraf4-StyledLoadingRow eai219y1"
+        id="skeleton-3"
+        role="row"
+      >
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="cache-1hraf4-StyledLoadingRow eai219y1"
+        id="skeleton-4"
+        role="row"
+      >
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          <div
+            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
+          >
+            <div
+              class="cache-1gmiakp-Line e16zi9h40"
+            />
+            <div
+              class="cache-q3qai6-StyledDiv e181dehd0"
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TableV2 Should render correctly with selectDisabled as a string 1`] = `
+<DocumentFragment>
+  .cache-1cxqow1-StyledTable {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.cache-13ufast-StyledHeader {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-147y6no-StyledHeaderCell {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-17lbabt-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-17xrsc3-StyledCell {
+  padding: 8px;
+  font-size: 14px;
+}
+
+<table
+    class="cache-1cxqow1-StyledTable e1cvnv8n0"
+  >
+    <thead
+      class="cache-13ufast-StyledHeader e1i47wce0"
+    >
+      <tr>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 1
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 3
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 4
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
+          tabindex="-1"
+        >
+          <div
+            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 5
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 1 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 2 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 3 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 4 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 5 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 6 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 7 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 8 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 9 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e15xssjj0"
+        >
+          Row 10 Column 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`TableV2 Should render correctly with selectable then click on first row then uncheck all, then check all 1`] = `
+<DocumentFragment>
+  .cache-1cxqow1-StyledTable {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.cache-13ufast-StyledHeader {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-pxcwbf-StyledHeaderCell {
   width: 24px;
   padding: 8px;
+}
+
+.cache-pxcwbf-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cache-17lbabt-StyledText-StyledText {
@@ -570,11 +1928,19 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
   stroke: #b2b6c3;
 }
 
-.cache-xnxezw-StyledHeaderCell {
+.cache-147y6no-StyledHeaderCell {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
   padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cache-17xrsc3-StyledCell {
@@ -598,7 +1964,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
     >
       <tr>
         <th
-          class="cache-13yv4qz-StyledHeaderCell e1yeeiw91"
+          class="cache-pxcwbf-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -655,7 +2021,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -665,7 +2031,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -675,7 +2041,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -685,7 +2051,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -695,7 +2061,7 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -1542,1324 +2908,6 @@ exports[`TableV2 Should render correctly with areRowSelectable then click on fir
 </DocumentFragment>
 `;
 
-exports[`TableV2 Should render correctly with bad sort value 1`] = `
-<DocumentFragment>
-  .cache-1cxqow1-StyledTable {
-  width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
-}
-
-.cache-13ufast-StyledHeader {
-  border-bottom: 1px solid #d4dae7;
-}
-
-.cache-xnxezw-StyledHeaderCell {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.cache-17lbabt-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.cache-17xrsc3-StyledCell {
-  padding: 8px;
-  font-size: 14px;
-}
-
-<table
-    class="cache-1cxqow1-StyledTable e1cvnv8n0"
-  >
-    <thead
-      class="cache-13ufast-StyledHeader e1i47wce0"
-    >
-      <tr>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 1
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 2
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 3
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 4
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 5
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 5
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`TableV2 Should render correctly with isLoading 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    left: -25%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-.cache-1cxqow1-StyledTable {
-  width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
-}
-
-.cache-13ufast-StyledHeader {
-  border-bottom: 1px solid #d4dae7;
-}
-
-.cache-xnxezw-StyledHeaderCell {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.cache-17lbabt-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.cache-1hraf4-StyledLoadingRow {
-  cursor: progress;
-}
-
-.cache-17xrsc3-StyledCell {
-  padding: 8px;
-  font-size: 14px;
-}
-
-.cache-1nv1w7d-StyledContainer-StyledSkeleton {
-  position: relative;
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  cursor: progress;
-  width: 80%;
-  max-width: 100%;
-}
-
-.cache-1gmiakp-Line {
-  height: 12px;
-  width: 120px;
-  max-width: 100%;
-  border-radius: 8px;
-  background-color: #d4dae7;
-}
-
-.cache-q3qai6-StyledDiv {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 25%;
-  opacity: 0.8;
-  background: linear-gradient(
-      90deg,
-      #ffffff00,
-      #ffffff4D,
-      #ffffff66,
-      #ffffff4D,
-      #ffffff00
-    );
-  -webkit-animation: animation-0 1s linear infinite;
-  animation: animation-0 1s linear infinite;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cache-q3qai6-StyledDiv {
-    -webkit-animation: unset;
-    animation: unset;
-  }
-}
-
-<table
-    class="cache-1cxqow1-StyledTable e1cvnv8n0"
-  >
-    <thead
-      class="cache-13ufast-StyledHeader e1i47wce0"
-    >
-      <tr>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 1
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 2
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 3
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 4
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 5
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        class="cache-1hraf4-StyledLoadingRow eai219y1"
-        id="skeleton-0"
-        role="row"
-      >
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="cache-1hraf4-StyledLoadingRow eai219y1"
-        id="skeleton-1"
-        role="row"
-      >
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="cache-1hraf4-StyledLoadingRow eai219y1"
-        id="skeleton-2"
-        role="row"
-      >
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="cache-1hraf4-StyledLoadingRow eai219y1"
-        id="skeleton-3"
-        role="row"
-      >
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="cache-1hraf4-StyledLoadingRow eai219y1"
-        id="skeleton-4"
-        role="row"
-      >
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          <div
-            class="eai219y0 cache-1nv1w7d-StyledContainer-StyledSkeleton e181dehd1"
-          >
-            <div
-              class="cache-1gmiakp-Line e16zi9h40"
-            />
-            <div
-              class="cache-q3qai6-StyledDiv e181dehd0"
-            />
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
-exports[`TableV2 Should render correctly with selectDisabled as a string 1`] = `
-<DocumentFragment>
-  .cache-1cxqow1-StyledTable {
-  width: 100%;
-  box-sizing: content-box;
-  border-collapse: collapse;
-}
-
-.cache-13ufast-StyledHeader {
-  border-bottom: 1px solid #d4dae7;
-}
-
-.cache-xnxezw-StyledHeaderCell {
-  width: 100px;
-  max-width: 200px;
-  min-width: 100px;
-  padding: 8px;
-}
-
-.cache-17lbabt-StyledText-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.cache-17xrsc3-StyledCell {
-  padding: 8px;
-  font-size: 14px;
-}
-
-<table
-    class="cache-1cxqow1-StyledTable e1cvnv8n0"
-  >
-    <thead
-      class="cache-13ufast-StyledHeader e1i47wce0"
-    >
-      <tr>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 1
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 2
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 3
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 4
-          </div>
-        </th>
-        <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
-          tabindex="-1"
-        >
-          <div
-            class="e1yeeiw90 cache-17lbabt-StyledText-StyledText e1tg3t120"
-          >
-            Column 5
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 1 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 2 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 3 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 4 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 5 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 6 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 7 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 8 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 9 Column 5
-        </td>
-      </tr>
-      <tr>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 1
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 2
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 3
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 4
-        </td>
-        <td
-          class="cache-17xrsc3-StyledCell e15xssjj0"
-        >
-          Row 10 Column 5
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</DocumentFragment>
-`;
-
 exports[`TableV2 Should render correctly with sort then click 1`] = `
 <DocumentFragment>
   .cache-1cxqow1-StyledTable {
@@ -2872,11 +2920,19 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
   border-bottom: 1px solid #d4dae7;
 }
 
-.cache-xnxezw-StyledHeaderCell {
+.cache-147y6no-StyledHeaderCell {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
   padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cache-17lbabt-StyledText-StyledText {
@@ -2995,7 +3051,7 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
       >
         <tr>
           <th
-            class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+            class="cache-147y6no-StyledHeaderCell e1yeeiw91"
             role="button columnheader"
             tabindex="0"
           >
@@ -3027,7 +3083,7 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
           </th>
           <th
             aria-sort="ascending"
-            class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+            class="cache-147y6no-StyledHeaderCell e1yeeiw91"
             role="button columnheader"
             tabindex="0"
           >
@@ -3058,7 +3114,7 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
             </div>
           </th>
           <th
-            class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+            class="cache-147y6no-StyledHeaderCell e1yeeiw91"
             role="button columnheader"
             tabindex="0"
           >
@@ -3089,7 +3145,7 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
             </div>
           </th>
           <th
-            class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+            class="cache-147y6no-StyledHeaderCell e1yeeiw91"
             role="button columnheader"
             tabindex="0"
           >
@@ -3120,7 +3176,7 @@ exports[`TableV2 Should render correctly with sort then click 1`] = `
             </div>
           </th>
           <th
-            class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+            class="cache-147y6no-StyledHeaderCell e1yeeiw91"
             role="button columnheader"
             tabindex="0"
           >
@@ -3449,11 +3505,19 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
   border-bottom: 1px solid #d4dae7;
 }
 
-.cache-xnxezw-StyledHeaderCell {
+.cache-147y6no-StyledHeaderCell {
   width: 100px;
   max-width: 200px;
   min-width: 100px;
   padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cache-17lbabt-StyledText-StyledText {
@@ -3493,7 +3557,7 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
     >
       <tr>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -3503,7 +3567,7 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -3513,7 +3577,7 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -3523,7 +3587,7 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div
@@ -3533,7 +3597,7 @@ exports[`TableV2 Should render correctly with stipped 1`] = `
           </div>
         </th>
         <th
-          class="cache-xnxezw-StyledHeaderCell e1yeeiw91"
+          class="cache-147y6no-StyledHeaderCell e1yeeiw91"
           tabindex="-1"
         >
           <div

@@ -72,7 +72,7 @@ export const StyledRow = styled('div', {
   & [data-visibility='hover'] {
     opacity: 0;
   }
-  &:hover [data-visibility='hover'] {
+  &:hover:not([aria-disabled='true']) [data-visibility='hover'] {
     opacity: 1;
   }
 `
@@ -89,7 +89,7 @@ type RowProps = {
    * Row cannot be selected if this prop is provided. boolean true disabled selection, a string disable selection and a tooltip will be displayed on checkbox hover.
    * */
   selectDisabled?: boolean | string
-  isDisabled?: boolean
+  disabled?: boolean
   sentiment?: (typeof SENTIMENTS)[number]
   className?: string
   'data-testid'?: string
@@ -101,7 +101,7 @@ export const Row = forwardRef(
       children,
       id,
       expandable,
-      isDisabled,
+      disabled,
       selectDisabled,
       sentiment = 'neutral',
       className,
@@ -111,7 +111,7 @@ export const Row = forwardRef(
   ) => {
     const {
       allRowSelectValue,
-      areRowSelectable,
+      selectable,
       registerExpandableRow,
       expandedRowIds,
       expandRow,
@@ -123,7 +123,7 @@ export const Row = forwardRef(
     } = useListContext()
 
     const isSelectDisabled =
-      isDisabled || (selectDisabled !== undefined && selectDisabled !== false)
+      disabled || (selectDisabled !== undefined && selectDisabled !== false)
 
     const hasExpandable = !!expandable
     useEffect(() => {
@@ -158,10 +158,10 @@ export const Row = forwardRef(
       <StyledRow
         className={className}
         ref={ref}
-        role={!isDisabled && expandable ? 'button row' : 'row'}
-        onClick={!isDisabled && expandable ? toggleRowExpand : undefined}
+        role={!disabled && expandable ? 'button row' : 'row'}
+        onClick={!disabled && expandable ? toggleRowExpand : undefined}
         onKeyDown={
-          !isDisabled && expandable
+          !disabled && expandable
             ? event => {
                 if (event.key === ' ') {
                   toggleRowExpand()
@@ -170,14 +170,14 @@ export const Row = forwardRef(
               }
             : undefined
         }
-        tabIndex={!isDisabled && expandable ? 0 : -1}
+        tabIndex={!disabled && expandable ? 0 : -1}
         sentiment={sentiment}
-        aria-disabled={isDisabled}
+        aria-disabled={disabled}
         aria-expanded={expandable ? expandedRowIds[id] : undefined}
         data-highlight={!!selectedRowIds[id]}
         data-testid={dataTestid}
       >
-        {areRowSelectable ? (
+        {selectable ? (
           <Cell preventClick>
             <StyledCheckboxContainer
               data-visibility={

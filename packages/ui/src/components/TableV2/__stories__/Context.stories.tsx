@@ -20,7 +20,7 @@ export const Context: Story = () => {
   }
 
   return (
-    <TableV2 columns={columns} areRowSelectable>
+    <TableV2 columns={columns} selectable>
       <TableV2.Body>
         {data.map(movie => (
           <TableV2.Row key={movie.id} id={movie.id}>

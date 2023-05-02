@@ -46,8 +46,12 @@ const StyledHeaderCell = styled('th', {
     ${maxWidth ? `max-width: ${maxWidth};` : ''}
     ${minWidth ? `min-width: ${minWidth};` : ''}
   `}
-
   padding: ${({ theme }) => theme.space['1']};
+
+  &[role*='button'] {
+    cursor: pointer;
+    user-select: none;
+  }
 `
 
 const StyledText = styled(Text)`

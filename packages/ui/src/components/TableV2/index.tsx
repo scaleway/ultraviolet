@@ -52,13 +52,13 @@ type ColumnProps = Pick<
 }
 
 type TableV2Props = {
-  areRowSelectable?: boolean
+  selectable?: boolean
   columns: ColumnProps[]
   children: ReactNode
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
-  isLoading?: boolean
+  loading?: boolean
   bordered?: boolean
   stripped?: boolean
 }
@@ -66,23 +66,23 @@ type TableV2Props = {
 export const BaseTableV2 = forwardRef<HTMLTableElement, TableV2Props>(
   (
     {
-      areRowSelectable = false,
+      selectable = false,
       children,
       columns,
-      isLoading,
+      loading,
       bordered = false,
       stripped = false,
     },
     ref,
   ) => (
     <TableProvider
-      areRowSelectable={areRowSelectable}
+      selectable={selectable}
       stripped={stripped}
       bordered={bordered}
     >
       <StyledTable ref={ref} stripped={stripped} bordered={bordered}>
         <Header>
-          <HeaderRow hasSelectAllColumn={areRowSelectable}>
+          <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
                 // eslint-disable-next-line react/no-array-index-key
@@ -99,10 +99,10 @@ export const BaseTableV2 = forwardRef<HTMLTableElement, TableV2Props>(
             ))}
           </HeaderRow>
         </Header>
-        {isLoading ? (
+        {loading ? (
           <Body>
             <SkeletonRows
-              areRowSelectable={areRowSelectable}
+              selectable={selectable}
               rows={5}
               cols={columns.length}
             />

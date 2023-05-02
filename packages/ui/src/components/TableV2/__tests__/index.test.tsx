@@ -88,9 +88,9 @@ describe('TableV2', () => {
       </TableV2>,
     ))
 
-  test('Should render correctly with isLoading', () =>
+  test('Should render correctly with loading', () =>
     shouldMatchEmotionSnapshot(
-      <TableV2 columns={columns} isLoading>
+      <TableV2 columns={columns} loading>
         <TableV2.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <TableV2.Row key={id} id={id}>
@@ -105,9 +105,9 @@ describe('TableV2', () => {
       </TableV2>,
     ))
 
-  test('Should render correctly with areRowSelectable then click on first row then uncheck all, then check all', () =>
+  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
     shouldMatchEmotionSnapshot(
-      <TableV2 columns={columns} areRowSelectable>
+      <TableV2 columns={columns} selectable>
         <TableV2.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <TableV2.Row key={id} id={id}>
@@ -267,7 +267,7 @@ describe('TableV2', () => {
   test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
     const selectedIds = ['1']
     const { rerender } = render(
-      <TableV2 columns={columns} areRowSelectable>
+      <TableV2 columns={columns} selectable>
         <TableV2.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <TableV2.Row key={id} id={id}>
@@ -285,7 +285,7 @@ describe('TableV2', () => {
       },
     )
     rerender(
-      <TableV2 columns={columns} areRowSelectable>
+      <TableV2 columns={columns} selectable>
         <TableV2.Body>
           {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
             <TableV2.Row
