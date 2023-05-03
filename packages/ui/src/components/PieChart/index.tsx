@@ -4,6 +4,7 @@ import type { Box } from '@nivo/core'
 import { Pie } from '@nivo/pie'
 import type { ReactNode } from 'react'
 import { useCallback, useState } from 'react'
+import { getLegendColor } from '../../helpers/legend'
 import { Text } from '../Text'
 import Legends from './Legends'
 import type { Data } from './types'
@@ -64,7 +65,7 @@ export const PieChart = ({
   margin = DEFAULT_MARGIN,
   chartProps = DEFAULT_CHARTPROPS,
 }: PieChartProps) => {
-  const { colors } = useTheme()
+  const theme = useTheme()
   const [currentFocusIndex, setCurrentFocusIndex] = useState<string>()
   const emptyTooltip = useCallback(() => <span />, [])
   const isEmpty = !data || data.length === 0
@@ -81,19 +82,7 @@ export const PieChart = ({
     [emptyLegend],
   )
 
-  const localColors = Object.keys(colors.other.data.charts)
-    .filter(key => !['success', 'danger'].includes(key))
-    .sort((a, b) => {
-      if (Number(a.replace('data', '')) < Number(b.replace('data', ''))) {
-        return -1
-      }
-
-      return 1
-    })
-    .map(
-      key =>
-        colors.other.data.charts[key as keyof typeof colors.other.data.charts],
-    )
+  const localColors = getLegendColor(theme)
 
   const LegendDisplayer = useCallback(
     () =>
@@ -133,7 +122,7 @@ export const PieChart = ({
           defs={[
             {
               background: 'inherit',
-              color: colors.neutral.textStrong,
+              color: theme.colors.neutral.textStrong,
               id: 'lines',
               lineWidth: 2,
               rotation: 0,
