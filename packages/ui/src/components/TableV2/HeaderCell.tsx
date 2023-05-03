@@ -2,9 +2,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
-
-const ArrowDownIcon = styled(Icon)``
-const ArrowUpIcon = styled(Icon)``
+import { Text } from '../Text'
 
 const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -12,42 +10,55 @@ const StyledIconContainer = styled(Stack)`
   &[aria-disabled='true'] {
     cursor: not-allowed;
   }
-`
-
-const SortIcon = () => (
-  <StyledIconContainer>
-    <ArrowUpIcon name="arrow-up" size={10} />
-    <ArrowDownIcon name="arrow-down" size={10} />
-  </StyledIconContainer>
-)
-
-const StyledHeaderCell = styled.div`
-  display: flex;
-  text-align: left;
-  flex-direction: row;
-  align-items: center;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
-  font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
-  gap: ${({ theme }) => theme.space['1']};
 
   &[role*='button'] {
     cursor: pointer;
     user-select: none;
   }
+`
 
-  &[aria-sort] {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
-  }
+const SortIcon = ({ order }: { order?: 'ascending' | 'descending' }) => (
+  <StyledIconContainer>
+    <Icon
+      name="arrow-up"
+      size={10}
+      color={order === 'ascending' ? 'primary' : 'neutral'}
+      prominence="weak"
+    />
+    <Icon
+      name="arrow-down"
+      size={10}
+      color={order === 'descending' ? 'primary' : 'neutral'}
+      prominence="weak"
+    />
+  </StyledIconContainer>
+)
 
-  &[aria-sort='ascending'] ${ArrowUpIcon} {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
-  }
+type StyledHeaderCellProps = Pick<
+  HeaderCellProps,
+  'width' | 'maxWidth' | 'minWidth'
+>
+const StyledHeaderCell = styled('th', {
+  shouldForwardProp: prop => !['width', 'maxWidth', 'minWidth'].includes(prop),
+})<StyledHeaderCellProps>`
+  ${({ width, maxWidth, minWidth }) => `
+    ${width ? `width: ${width};` : ''}
+    ${maxWidth ? `max-width: ${maxWidth};` : ''}
+    ${minWidth ? `min-width: ${minWidth};` : ''}
+  `}
+  padding: ${({ theme }) => theme.space['1']};
 
-  &[aria-sort='descending'] ${ArrowDownIcon} {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
+  &[role*='button'] {
+    cursor: pointer;
+    user-select: none;
   }
+`
+
+const StyledText = styled(Text)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
 `
 
 type HeaderCellProps = {
@@ -56,14 +67,20 @@ type HeaderCellProps = {
   isOrdered?: boolean
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
+  width?: string
+  minWidth?: string
+  maxWidth?: string
 }
 
 export const HeaderCell = ({
   children,
-  isOrdered,
-  orderDirection,
-  onOrder,
   className,
+  isOrdered,
+  onOrder,
+  orderDirection,
+  width,
+  maxWidth,
+  minWidth,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -78,7 +95,6 @@ export const HeaderCell = ({
 
   return (
     <StyledHeaderCell
-      aria-sort={order}
       className={className}
       onClick={handleOrder}
       onKeyDown={
@@ -95,12 +111,22 @@ export const HeaderCell = ({
           : undefined
       }
       role={onOrder ? 'button columnheader' : undefined}
+      width={width}
+      maxWidth={maxWidth}
+      minWidth={minWidth}
       tabIndex={handleOrder ? 0 : -1}
+      aria-sort={order}
     >
-      {children}
-      {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon data-sorted={order !== undefined} />
-      ) : null}
+      <StyledText
+        as="div"
+        variant="bodySmall"
+        color={order !== undefined ? 'primary' : 'neutral'}
+      >
+        {children}
+        {orderDirection !== undefined && isOrdered !== undefined ? (
+          <SortIcon aria-disabled={!onOrder} order={order} />
+        ) : null}
+      </StyledText>
     </StyledHeaderCell>
   )
 }

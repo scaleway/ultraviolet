@@ -26,10 +26,10 @@ Sentiments.args = {
       <List.Row
         id="disabled"
         sentiment="primary"
-        isDisabled
+        disabled
         expandable="expandable content"
       >
-        <List.Cell>Sentiment is ignored if row `isDisabled`</List.Cell>
+        <List.Cell>Sentiment is ignored if row `disabled`</List.Cell>
         <List.Cell>An example text...</List.Cell>
       </List.Row>
     </>
@@ -39,6 +39,6 @@ Sentiments.args = {
 Sentiments.parameters = {
   docs: {
     storyDescription:
-      'You can provide the prop `sentiment` of a `Row`. Default value is `neutral`. `Row` prop `isDisabled` overide sentiment.',
+      'You can provide the prop `sentiment` of a `Row`. Default value is `neutral`. `Row` prop `disabled` overide sentiment.',
   },
 }

@@ -26,7 +26,7 @@ export const Example: Story = () => {
 
   return (
     <List
-      areRowSelectable
+      selectable
       columns={[
         {
           label: 'Solar system Planet',

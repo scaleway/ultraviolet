@@ -1,11 +1,11 @@
 import type { Story } from '@storybook/react'
 import { useMemo } from 'react'
-import { List } from '..'
+import { TableV2 } from '..'
 import { columns, data } from './resources'
 
 export const Context: Story = () => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
-    const { selectedRowIds } = List.useListContext()
+    const { selectedRowIds } = TableV2.useTableContext()
 
     const selectedItems = useMemo(
       () => srcData.filter(item => selectedRowIds[item.id]),
@@ -13,39 +13,33 @@ export const Context: Story = () => {
     )
 
     return (
-      <div>
-        Selected planet(s):{' '}
-        {selectedItems.map(planet => planet.name).join(', ')}
-      </div>
+      <caption>
+        Selected movies(s): {selectedItems.map(movie => movie.name).join(', ')}
+      </caption>
     )
   }
 
   return (
-    <List columns={columns} selectable>
-      {data.map(planet => (
-        <List.Row
-          key={planet.id}
-          id={planet.id}
-          expandable="Planet description"
-        >
-          <List.Cell>{planet.name}</List.Cell>
-          <List.Cell>{planet.perihelion}AU</List.Cell>
-          <List.Cell>{planet.aphelion}AU</List.Cell>
-        </List.Row>
-      ))}
+    <TableV2 columns={columns} selectable>
+      <TableV2.Body>
+        {data.map(movie => (
+          <TableV2.Row key={movie.id} id={movie.id}>
+            <TableV2.Cell>{movie.name}</TableV2.Cell>
+            <TableV2.Cell>{movie.releaseYear}</TableV2.Cell>
+            <TableV2.Cell>{movie.trilogy}</TableV2.Cell>
+            <TableV2.Cell>{movie.director}</TableV2.Cell>
+          </TableV2.Row>
+        ))}
+      </TableV2.Body>
       <SubComponent srcData={data} />
-    </List>
+    </TableV2>
   )
 }
 
 Context.parameters = {
   docs: {
-    storyDescription: `You can use \`List.useListContext\` to get this hydrated properties about the list:
+    storyDescription: `You can use \`TableV2.useTableContext\` to get this hydrated properties about the table:
 
-- expandedRowIds : [Object] Expanded rows (key is row id, value is a boolean, true mean the related row is expanded)
-- expandRow : [Function] expand a row by providing its id
-- collapseRow : [Function] expand a row by providing its id
-\n\n
 - selectedRowIds : [Object] Selected rows (key is row id, value is a boolean, true mean the related row is selected)
 - selectRow : [Function] select a row by providing its id
 - unselectRow : [Function] unselect a row by providing its id

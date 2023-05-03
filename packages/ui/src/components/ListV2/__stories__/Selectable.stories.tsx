@@ -9,14 +9,14 @@ export const Selectable = Template.bind({})
 
 Selectable.args = {
   ...Template.args,
-  areRowSelectable: true,
+  selectable: true,
   children: (
     <>
       {data.map(planet => (
         <List.Row
           key={planet.id}
           id={planet.id}
-          isDisabled={planet.id === 'mercury'}
+          disabled={planet.id === 'mercury'}
           selectDisabled={
             planet.id === 'home-sweet-home'
               ? "Earth isn't selectable"
@@ -66,6 +66,6 @@ Selectable.args = {
 Selectable.parameters = {
   docs: {
     storyDescription:
-      "By adding the prop `areRowSelectable` on the `List` a new column will be automatically added to allow user to select a row, each row is identified by its prop `id`.\n\nYou can use the utility `List.SelectBar` to quickly get selectedItems providing the `data` and the data's property key used to provite the `id` of each `List.Row`.\n\nFor other usages about selected items, check our `Context` example.\n\nA disabled Row `isDisabled` cannot be selected.\n\nProviding the prop `selectDisabled` prevents the row to be selected (it can be a boolean or a string to give user a disable reason shown as a tooltip).",
+      "By adding the prop `selectable` on the `List` a new column will be automatically added to allow user to select a row, each row is identified by its prop `id`.\n\nYou can use the utility `List.SelectBar` to quickly get selectedItems providing the `data` and the data's property key used to provite the `id` of each `List.Row`.\n\nFor other usages about selected items, check our `Context` example.\n\nA disabled Row `disabled` cannot be selected.\n\nProviding the prop `selectDisabled` prevents the row to be selected (it can be a boolean or a string to give user a disable reason shown as a tooltip).",
   },
 }

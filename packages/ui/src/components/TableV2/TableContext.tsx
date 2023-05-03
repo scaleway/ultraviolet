@@ -10,20 +10,10 @@ import type { Checkbox } from '../Checkbox'
 
 type RowState = Record<string, boolean>
 
-type ListContextValue = {
-  // ============ Expandable logic ============
-  /**
-   * @returns an unregister function
-   * */
-  registerExpandableRow: (rowId: string) => () => void
-  expandedRowIds: RowState
-  expandRow: (rowId: string) => void
-  collapseRow: (rowId: string) => void
+type TableContextValue = {
+  bordered: boolean
+  stripped: boolean
   // ============ Selectable logic ============
-  /**
-   * @returns an unregister function
-   * */
-  registerSelectableRow: (rowId: string) => () => void
   selectedRowIds: RowState
   selectRow: (rowId: string) => void
   unselectRow: (rowId: string) => void
@@ -31,35 +21,28 @@ type ListContextValue = {
   allRowSelectValue: ComponentProps<typeof Checkbox>['checked']
   selectAll: () => void
   unselectAll: () => void
+  /**
+   * @returns an unregister function
+   * */
+  registerSelectableRow: (rowId: string) => () => void
 }
 
-const ListContext = createContext<ListContextValue | undefined>(undefined)
+const TableContext = createContext<TableContextValue | undefined>(undefined)
 
-type ListProviderProps = {
+type TableProviderProps = {
   children: ReactNode
-  autoCollapse: boolean
   selectable: boolean
+  bordered: boolean
+  stripped: boolean
 }
 
-export const ListProvider = ({
+export const TableProvider = ({
   children,
-  autoCollapse,
   selectable,
-}: ListProviderProps) => {
-  const [expandedRowIds, setExpandedRowIds] = useState<RowState>({})
+  bordered,
+  stripped,
+}: TableProviderProps) => {
   const [selectedRowIds, setSelectedRowIds] = useState<RowState>({})
-
-  const registerExpandableRow = useCallback((rowId: string) => {
-    setExpandedRowIds(current => ({ ...current, [rowId]: false }))
-
-    return () => {
-      setExpandedRowIds(current => {
-        const { [rowId]: relatedId, ...otherIds } = current
-
-        return otherIds
-      })
-    }
-  }, [])
 
   const registerSelectableRow = useCallback((rowId: string) => {
     setSelectedRowIds(current => ({ ...current, [rowId]: false }))
@@ -71,23 +54,6 @@ export const ListProvider = ({
         return otherIds
       })
     }
-  }, [])
-
-  const expandRow = useCallback(
-    (rowId: string) => {
-      setExpandedRowIds(current => ({
-        ...(autoCollapse ? {} : current),
-        [rowId]: true,
-      }))
-    },
-    [autoCollapse],
-  )
-
-  const collapseRow = useCallback((rowId: string) => {
-    setExpandedRowIds(current => ({
-      ...current,
-      [rowId]: false,
-    }))
   }, [])
 
   const allRowSelectValue = useMemo<
@@ -144,12 +110,8 @@ export const ListProvider = ({
     }))
   }, [])
 
-  const value = useMemo<ListContextValue>(
+  const value = useMemo<TableContextValue>(
     () => ({
-      registerExpandableRow,
-      expandedRowIds,
-      expandRow,
-      collapseRow,
       registerSelectableRow,
       selectedRowIds,
       selectRow,
@@ -158,12 +120,10 @@ export const ListProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
+      bordered,
+      stripped,
     }),
     [
-      registerExpandableRow,
-      expandedRowIds,
-      expandRow,
-      collapseRow,
       registerSelectableRow,
       selectedRowIds,
       selectRow,
@@ -172,16 +132,18 @@ export const ListProvider = ({
       selectAll,
       unselectAll,
       allRowSelectValue,
+      bordered,
+      stripped,
     ],
   )
 
-  return <ListContext.Provider value={value}>{children}</ListContext.Provider>
+  return <TableContext.Provider value={value}>{children}</TableContext.Provider>
 }
 
-export const useListContext = () => {
-  const context = useContext(ListContext)
+export const useTableContext = () => {
+  const context = useContext(TableContext)
   if (!context) {
-    throw new Error('useListContext should be used inside a List component')
+    throw new Error('useTableContext should be used inside a TableV2 component')
   }
 
   return context
