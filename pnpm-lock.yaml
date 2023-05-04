@@ -247,6 +247,9 @@ importers:
       react:
         specifier: 18.2.0
         version: 18.2.0
+      react-docgen-typescript-plugin:
+        specifier: ^1.0.5
+        version: 1.0.5(typescript@5.0.4)(webpack@5.79.0)
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
@@ -8333,7 +8336,7 @@ packages:
     dev: true
 
   /concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
   /concat-stream@1.6.2:
@@ -15544,6 +15547,25 @@ packages:
       react-onclickoutside: 6.12.2(react-dom@18.2.0)(react@18.2.0)
       react-popper: 2.3.0(@popperjs/core@2.11.6)(react-dom@18.2.0)(react@18.2.0)
     dev: false
+
+  /react-docgen-typescript-plugin@1.0.5(typescript@5.0.4)(webpack@5.79.0):
+    resolution: {integrity: sha512-Ds6s2ioyIlH45XSfEVMNwRcDkzuff3xQCPxDFOzTc8GEshy+hksas8RYlmV4JEQREI+OGEGybhMCJk3vFbQZNQ==}
+    peerDependencies:
+      typescript: '>= 4.x'
+      webpack: '>= 4'
+    dependencies:
+      debug: 4.3.4
+      endent: 2.1.0
+      find-cache-dir: 3.3.2
+      flat-cache: 3.0.4
+      micromatch: 4.0.5
+      react-docgen-typescript: 2.2.2(typescript@5.0.4)
+      tslib: 2.5.0
+      typescript: 5.0.4
+      webpack: 5.79.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /react-docgen-typescript@2.2.2(typescript@5.0.4):
     resolution: {integrity: sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==}

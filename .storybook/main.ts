@@ -24,6 +24,9 @@ export default {
     '@storybook/addon-a11y',
     'storybook-dark-mode',
   ],
+  typescript: {
+    reactDocgen: 'react-docgen-typescript-plugin',
+  },
   webpackFinal: (config: Configuration) => {
     const cwd = process.cwd()
     // TODO: remove when storybook supports emotion 11
