@@ -11,7 +11,7 @@ Expandable.args = {
       key={planet.id}
       id={planet.id}
       expandable="Planet description"
-      isDisabled={planet.id === 'mercury'}
+      disabled={planet.id === 'mercury'}
     >
       <List.Cell>
         {planet.name}{' '}
@@ -26,6 +26,6 @@ Expandable.args = {
 Expandable.parameters = {
   docs: {
     storyDescription:
-      'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `isDisabled` on the row will prevent the expanding on click.',
+      'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `disabled` on the row will prevent the expanding on click.',
   },
 }

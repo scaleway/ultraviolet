@@ -72,20 +72,34 @@ export const HeaderCell = ({
     order = 'descending'
   }
 
+  const handleOrder = onOrder
+    ? () => onOrder(order === 'ascending' ? 'desc' : 'asc')
+    : undefined
+
   return (
     <StyledHeaderCell
-      role={onOrder ? 'button columnheader' : 'columnheader'}
       aria-sort={order}
-      onClick={
-        onOrder
-          ? () => onOrder(order === 'ascending' ? 'desc' : 'asc')
+      className={className}
+      onClick={handleOrder}
+      onKeyDown={
+        handleOrder
+          ? event => {
+              if (event.key === ' ' || event.key === 'Enter') {
+                handleOrder()
+                if (event.key === ' ') {
+                  // @note: it avoid scroll when pressing Space
+                  event.preventDefault()
+                }
+              }
+            }
           : undefined
       }
-      className={className}
+      role={onOrder ? 'button columnheader' : undefined}
+      tabIndex={handleOrder ? 0 : -1}
     >
       {children}
       {orderDirection !== undefined && isOrdered !== undefined ? (
-        <SortIcon data-sorted={order !== undefined} aria-disabled={!onOrder} />
+        <SortIcon data-sorted={order !== undefined} />
       ) : null}
     </StyledHeaderCell>
   )

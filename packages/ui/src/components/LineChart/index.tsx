@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import type { DatumValue, Box as NivoBox, ValueFormat } from '@nivo/core'
-import type { LineSvgProps, Point, Serie } from '@nivo/line'
+import type { LineSvgProps, Serie } from '@nivo/line'
 import { ResponsiveLine } from '@nivo/line'
 import type { ScaleSpec } from '@nivo/scales'
 import type { ComponentProps } from 'react'
@@ -59,11 +59,10 @@ export const LineChart = ({
 }: LineChartProps) => {
   const theme = useTheme()
   const dataset = {
-    datasets: data?.map((d, i) => ({
+    datasets: data?.map(d => ({
       data: d.data,
       id: d.id,
       label: d?.['label'] as string,
-      serieColor: getLegendColor(i, theme),
     })),
   }
 
@@ -96,11 +95,13 @@ export const LineChart = ({
     setSelected(dataset.datasets?.map(({ id }, index) => `${id}${index}`))
   }, [dataset.datasets, selected])
 
+  const localColors = getLegendColor(theme)
+
   return (
     <>
       <div style={{ height }}>
         <ResponsiveLine
-          colors={(point: Point) => point.serieColor}
+          colors={localColors}
           data={finalData ?? []}
           margin={margin}
           xScale={xScale}

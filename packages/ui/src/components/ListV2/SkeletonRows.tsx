@@ -13,13 +13,13 @@ const StyledSkeleton = styled(Skeleton)`
 `
 
 type ListLoadingSkeletonProps = {
-  areRowSelectable: boolean
+  selectable: boolean
   rows: number
   cols: number
 }
 
 export const SkeletonRows = ({
-  areRowSelectable,
+  selectable,
   rows,
   cols,
 }: ListLoadingSkeletonProps) => {
@@ -35,7 +35,7 @@ export const SkeletonRows = ({
           id={`skeleton-${index}`}
           key={index}
         >
-          {areRowSelectable ? <div /> : null}
+          {selectable ? <div /> : null}
           {colArray.map(columnIndex => (
             <Cell key={columnIndex}>
               <StyledSkeleton variant="line" />

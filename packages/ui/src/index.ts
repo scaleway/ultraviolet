@@ -46,6 +46,7 @@ export {
   SwitchButton,
   Tabs,
   Table,
+  TableV2,
   Tag,
   TagInput,
   TagList,

@@ -21,7 +21,7 @@ export const Context: Story = () => {
   }
 
   return (
-    <List columns={columns} areRowSelectable>
+    <List columns={columns} selectable>
       {data.map(planet => (
         <List.Row
           key={planet.id}
@@ -40,7 +40,7 @@ export const Context: Story = () => {
 
 Context.parameters = {
   docs: {
-    storyDescription: `By passing a \`ref\` prop it will be hydrated with:
+    storyDescription: `You can use \`List.useListContext\` to get this hydrated properties about the list:
 
 - expandedRowIds : [Object] Expanded rows (key is row id, value is a boolean, true mean the related row is expanded)
 - expandRow : [Function] expand a row by providing its id

@@ -18,8 +18,8 @@ const StyledIconWrapper = styled('div', {
   align-items: center;
 `
 
-const StyledIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.neutral.border};
+const StyledIcon = styled(Icon)<{ color: Color }>`
+  fill: ${({ color, theme }) => theme.colors[color].border};
 `
 
 type HorizontalSeparatorProps = SeparatorProps & {
@@ -73,7 +73,7 @@ export const Separator = ({
         color={color}
         hasIcon
       />
-      <StyledIcon name={icon} size={24} color="neutral" />
+      <StyledIcon name={icon} size={24} color={color} />
       <StyledHr
         direction={direction}
         thickness={thickness}

@@ -37,13 +37,13 @@ type ColumnProps = Pick<
 }
 
 type ListProps = {
-  areRowSelectable?: boolean
+  selectable?: boolean
   columns: ColumnProps[]
   children: ReactNode
   /**
    * Set it to true if you want to display a placeholder during loading
    * */
-  isLoading?: boolean
+  loading?: boolean
   /**
    * Auto collapse is collapsing expandable row when another is expanding
    * */
@@ -53,25 +53,22 @@ type ListProps = {
 const BaseList = forwardRef(
   (
     {
-      areRowSelectable = false,
+      selectable = false,
       columns,
       children,
-      isLoading,
+      loading,
       autoCollapse = false,
     }: ListProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const computeTemplate = `${
-      areRowSelectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
+      selectable ? `${SELECTABLE_CHECKBOX_SIZE}px ` : ''
     }${columns.map(({ width }) => width ?? 'minmax(0, 1fr)').join(' ')}`
 
     return (
-      <ListProvider
-        areRowSelectable={areRowSelectable}
-        autoCollapse={autoCollapse}
-      >
+      <ListProvider selectable={selectable} autoCollapse={autoCollapse}>
         <StyledList ref={ref} role="grid" template={computeTemplate}>
-          <HeaderRow hasSelectAllColumn={areRowSelectable}>
+          <HeaderRow hasSelectAllColumn={selectable}>
             {columns.map((column, index) => (
               <HeaderCell
                 // eslint-disable-next-line react/no-array-index-key
@@ -85,9 +82,9 @@ const BaseList = forwardRef(
             ))}
           </HeaderRow>
           <Body>
-            {isLoading ? (
+            {loading ? (
               <SkeletonRows
-                areRowSelectable={areRowSelectable}
+                selectable={selectable}
                 rows={5}
                 cols={columns.length}
               />
