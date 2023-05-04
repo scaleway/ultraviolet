@@ -10,8 +10,7 @@ export default {
     previewMdx2: true,
   },
   typescript: {
-    // also valid 'react-docgen-typescript' | false
-    reactDocgen: 'react-docgen-typescript',
+    reactDocgen: 'react-docgen-typescript-plugin',
   },
   stories: [
     '../**/__stories__/**/*.stories.mdx',
@@ -24,9 +23,6 @@ export default {
     '@storybook/addon-a11y',
     'storybook-dark-mode',
   ],
-  typescript: {
-    reactDocgen: 'react-docgen-typescript-plugin',
-  },
   webpackFinal: (config: Configuration) => {
     const cwd = process.cwd()
     // TODO: remove when storybook supports emotion 11
