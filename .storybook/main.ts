@@ -10,8 +10,7 @@ export default {
     previewMdx2: true,
   },
   typescript: {
-    // also valid 'react-docgen-typescript' | false
-    reactDocgen: 'react-docgen-typescript',
+    reactDocgen: 'react-docgen-typescript-plugin',
   },
   stories: [
     '../**/__stories__/**/*.stories.mdx',

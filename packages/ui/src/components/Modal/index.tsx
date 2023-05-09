@@ -176,7 +176,9 @@ type DisclosureProps = {
 }
 const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   // if you need dialog inside your component, use function, otherwise component is fine
-  const target = isValidElement(disclosure) ? disclosure : disclosure(dialog)
+  const target = isValidElement<any>(disclosure)
+    ? disclosure
+    : disclosure(dialog)
   const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
 
   return (
