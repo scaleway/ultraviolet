@@ -1,5 +1,26 @@
 # Change Log
 
+## 0.244.0
+
+### Minor Changes
+
+- [#2487](https://github.com/scaleway/scaleway-ui/pull/2487) [`d1379cb4`](https://github.com/scaleway/scaleway-ui/commit/d1379cb4daf749a30af3a43bde2dcc60e3441273) Thanks [@matthprost](https://github.com/matthprost)! - Update BarChart and LineChart to have new data colors
+
+- [#2468](https://github.com/scaleway/scaleway-ui/pull/2468) [`722c22c7`](https://github.com/scaleway/scaleway-ui/commit/722c22c7e6e94f6c888c83bdcaf564b89dad7c18) Thanks [@fabienhebert](https://github.com/fabienhebert)! - New component TableV2
+
+### Patch Changes
+
+- [#2497](https://github.com/scaleway/scaleway-ui/pull/2497) [`352df2f0`](https://github.com/scaleway/scaleway-ui/commit/352df2f01570011bc384736239e97b8e20c94c1c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.21.8`.
+  Updated dependency `@babel/runtime` to `7.21.5`.
+  Updated dependency `@babel/eslint-parser` to `7.21.8`.
+  Updated dependency `@babel/preset-env` to `7.21.5`.
+  Updated dependency `@babel/preset-typescript` to `7.21.5`.
+
+- [#2503](https://github.com/scaleway/scaleway-ui/pull/2503) [`0940738d`](https://github.com/scaleway/scaleway-ui/commit/0940738d0f17738786838075e710ec8d19a426a8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.0`.
+  Updated dependency `@types/react-dom` to `18.2.1`.
+
+- [#2496](https://github.com/scaleway/scaleway-ui/pull/2496) [`4fae7fd7`](https://github.com/scaleway/scaleway-ui/commit/4fae7fd72c41fdc0ac778dfef28ddfd1312c0788) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Avoid row expandableRow to unregister if parent component is re-render
+
 ## 0.243.0
 
 ### Minor Changes
