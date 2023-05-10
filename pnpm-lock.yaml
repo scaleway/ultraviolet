@@ -119,8 +119,8 @@ importers:
         specifier: 6.5.16
         version: 6.5.16(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
-        specifier: 6.5.16
-        version: 6.5.16
+        specifier: 7.0.7
+        version: 7.0.7
       '@storybook/csf':
         specifier: canary
         version: 0.1.1--canary.f0d3083.0
@@ -4668,6 +4668,10 @@ packages:
 
   /@storybook/core-events@7.0.5:
     resolution: {integrity: sha512-bYQFZlJR3n5gFk5GVIemuL3m6aYPF6DVnzj6n9UcMZDlHcOZ2B2WbTmAUrGy0bmtj/Fd6ZJKDpBhh3cRRsYkbA==}
+    dev: true
+
+  /@storybook/core-events@7.0.7:
+    resolution: {integrity: sha512-XNsR2RgaL2vBwuqsu+KA1DzGmB1UFfrAhpxhmyWTKDCniwtTLlaXgfKbqwcrOrPu/o1YswgIup/9UHepRHaf4A==}
     dev: true
 
   /@storybook/core-server@6.5.16(@storybook/builder-webpack5@6.5.16)(@storybook/manager-webpack5@6.5.16)(@storybook/mdx2-csf@1.0.0)(eslint@8.39.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4):
@@ -17040,7 +17044,7 @@ packages:
       '@storybook/addons': 7.0.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/api': 7.0.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/components': 7.0.5(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-events': 7.0.5
+      '@storybook/core-events': 7.0.7
       '@storybook/global': 5.0.0
       '@storybook/theming': 7.0.5(react-dom@18.2.0)(react@18.2.0)
       fast-deep-equal: 3.1.3
