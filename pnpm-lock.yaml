@@ -83,8 +83,8 @@ importers:
         specifier: workspace:*
         version: link:packages/ui
       '@scaleway/use-i18n':
-        specifier: 5.2.1
-        version: 5.2.1(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.2.2
+        version: 5.2.2(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 8.2.4
         version: 8.2.4(size-limit@8.2.4)
@@ -2636,8 +2636,8 @@ packages:
       '@floating-ui/core': 1.2.2
     dev: false
 
-  /@formatjs/ecma402-abstract@1.14.3:
-    resolution: {integrity: sha512-SlsbRC/RX+/zg4AApWIFNDdkLtFbkq3LNoZWXZCE/nHVKqoIJyaoQyge/I0Y38vLxowUn9KTtXgusLD91+orbg==}
+  /@formatjs/ecma402-abstract@1.15.0:
+    resolution: {integrity: sha512-7bAYAv0w4AIao9DNg0avfOLTCPE9woAgs6SpXuMq11IN3A+l+cq8ghczwqSZBM11myvPSJA7vLn72q0rJ0QK6Q==}
     dependencies:
       '@formatjs/intl-localematcher': 0.2.32
       tslib: 2.5.0
@@ -2649,18 +2649,18 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@formatjs/icu-messageformat-parser@2.3.1:
-    resolution: {integrity: sha512-knF2AkAKN4Upv4oIiKY4Wd/dLH68TNMPgV/tJMu/T6FP9aQwbv8fpj7U3lkyniPaNVxvia56Gxax8MKOjtxLSQ==}
+  /@formatjs/icu-messageformat-parser@2.4.0:
+    resolution: {integrity: sha512-6Dh5Z/gp4F/HovXXu/vmd0If5NbYLB5dZrmhWVNb+BOGOEU3wt7Z/83KY1dtd7IDhAnYHasbmKE1RbTE0J+3hw==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
-      '@formatjs/icu-skeleton-parser': 1.3.18
+      '@formatjs/ecma402-abstract': 1.15.0
+      '@formatjs/icu-skeleton-parser': 1.4.0
       tslib: 2.5.0
     dev: true
 
-  /@formatjs/icu-skeleton-parser@1.3.18:
-    resolution: {integrity: sha512-ND1ZkZfmLPcHjAH1sVpkpQxA+QYfOX3py3SjKWMUVGDow18gZ0WPqz3F+pJLYQMpS2LnnQ5zYR2jPVYTbRwMpg==}
+  /@formatjs/icu-skeleton-parser@1.4.0:
+    resolution: {integrity: sha512-Qq347VM616rVLkvN6QsKJELazRyNlbCiN47LdH0Mc5U7E2xV0vatiVhGqd3KFgbc055BvtnUXR7XX60dCGFuWg==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
+      '@formatjs/ecma402-abstract': 1.15.0
       tslib: 2.5.0
     dev: true
 
@@ -3634,20 +3634,20 @@ packages:
     resolution: {integrity: sha512-dZyeub6snbFUD0oTTgiUsdHYYOcyZDbQ5lSgAaZBCVS6FxF2R2HiLVwtrD6pw9IebhyPne2z8M4BsZQ4Rg+K1w==}
     dev: true
 
-  /@scaleway/use-i18n@5.2.1(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Ral2JJv71uFXXCzl3hPY0rtDiu1jOnnXUbyNi4mABI/Wuuw2M5WP8EcAdghWu2YmPWgZtUHxsVEwG6CcJzU20Q==}
+  /@scaleway/use-i18n@5.2.2(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-oNfcHhvu2imPruKdKMn94ci9PAWNKEHbJkJ5oOR+Am2utiIArU8ayYmHH4mBQhxJJ6/thQE2Nxxnn99OyLHFbw==}
     engines: {node: '>=14.x'}
     peerDependencies:
       date-fns: 2.x
       react: 18.x || 18
       react-dom: 18.x || 18
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
+      '@formatjs/ecma402-abstract': 1.15.0
       '@formatjs/fast-memoize': 2.0.1
       date-fns: 2.30.0
       filesize: 10.0.7
       international-types: 0.4.1
-      intl-messageformat: 10.3.4
+      intl-messageformat: 10.3.5
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -11733,12 +11733,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /intl-messageformat@10.3.4:
-    resolution: {integrity: sha512-/FxUIrlbPtuykSNX85CB5sp2FjLVeTmdD7TfRkVFPft2n4FgcSlAcilFytYiFAEmPHc+0PvpLCIPXeaGFzIvOg==}
+  /intl-messageformat@10.3.5:
+    resolution: {integrity: sha512-6kPkftF8Jg3XJCkGKa5OD+nYQ+qcSxF4ZkuDdXZ6KGG0VXn+iblJqRFyDdm9VvKcMyC0Km2+JlVQffFM52D0YA==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.14.3
+      '@formatjs/ecma402-abstract': 1.15.0
       '@formatjs/fast-memoize': 2.0.1
-      '@formatjs/icu-messageformat-parser': 2.3.1
+      '@formatjs/icu-messageformat-parser': 2.4.0
       tslib: 2.5.0
     dev: true
 
