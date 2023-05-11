@@ -197,8 +197,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       chromatic:
-        specifier: 6.17.3
-        version: 6.17.3
+        specifier: 6.17.4
+        version: 6.17.4
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -4900,7 +4900,7 @@ packages:
       memoizerific: 1.11.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      semver: 7.3.8
+      semver: 7.5.0
       store2: 2.14.2
       telejson: 7.1.0
       ts-dedent: 2.2.0
@@ -6356,7 +6356,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.59.5(typescript@5.0.4)
       eslint: 8.39.0
       eslint-scope: 5.1.1
-      semver: 7.3.8
+      semver: 7.5.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8091,13 +8091,13 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@6.17.3:
-    resolution: {integrity: sha512-x6WAHLBqub/BYiGXEOsgw9T3m459SmwOvIz0Ra7rCriE2A9AqDKRmVdAEhzVud24ut6ehd54FJpDtArnR5/TbA==}
+  /chromatic@6.17.4:
+    resolution: {integrity: sha512-vnlvsv2lkp8BVtTn1OumJzqkDk2qB3pcGxEDIfZtVboKtzIPjnIlGa+c1fVKQe8NvHDU8R39k8klqgKHIXUVJw==}
     hasBin: true
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
       '@types/webpack-env': 1.18.0
-      snyk-nodejs-lockfile-parser: 1.48.0
+      snyk-nodejs-lockfile-parser: 1.49.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -16929,8 +16929,8 @@ packages:
       - supports-color
     dev: true
 
-  /snyk-nodejs-lockfile-parser@1.48.0:
-    resolution: {integrity: sha512-kq4gVwL5V0SUatDxyyzbptKkaX4Ew9N3ZDNR5r7sqBRparY+U+xGuYBhTaJdweBUD+jkvs7rKO1JV1h0Z8c2ew==}
+  /snyk-nodejs-lockfile-parser@1.49.0:
+    resolution: {integrity: sha512-73iqwHB8YSWex/PTx+TRUwtNPyKn5wP4n/kxEPbX9EfN3uSIcw6mSKiLm8gSKl5gtf8hcP0R0f1tBFjjdzQvRQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -16945,6 +16945,7 @@ packages:
       lodash.isempty: 4.4.0
       lodash.topairs: 4.3.0
       micromatch: 4.0.5
+      p-map: 4.0.0
       semver: 7.5.0
       snyk-config: 5.1.0
       tslib: 1.14.1
