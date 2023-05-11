@@ -335,8 +335,8 @@ importers:
         specifier: 3.1.4
         version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0)
       react-select:
-        specifier: 5.7.2
-        version: 5.7.2(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.7.3
+        version: 5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: 7.21.8
@@ -404,8 +404,8 @@ importers:
         specifier: 1.1.2
         version: 1.1.2
       react-select:
-        specifier: 5.7.2
-        version: 5.7.2(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.7.3
+        version: 5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
       react-toastify:
         specifier: 9.1.2
         version: 9.1.2(react-dom@18.2.0)(react@18.2.0)
@@ -2447,16 +2447,6 @@ packages:
       find-root: 1.1.0
       source-map: 0.5.7
       stylis: 4.1.4
-
-  /@emotion/cache@11.10.5:
-    resolution: {integrity: sha512-dGYHWyzTdmK+f2+EnIGBpkz1lKc4Zbj2KHd4cX3Wi8/OWr5pKslNjc3yABKH4adRGCvSX4VDC0i04mrrq0aiRA==}
-    dependencies:
-      '@emotion/memoize': 0.8.1
-      '@emotion/sheet': 1.2.1
-      '@emotion/utils': 1.2.1
-      '@emotion/weak-memoize': 0.3.0
-      stylis: 4.1.3
-    dev: false
 
   /@emotion/cache@11.10.8:
     resolution: {integrity: sha512-5fyqGHi51LU95o7qQ/vD1jyvC4uCY5GcBT+UgP4LHdpO9jPDlXqhrRr9/wCKmfoAvh5G/F7aOh4MwQa+8uEqhA==}
@@ -15882,14 +15872,14 @@ packages:
       typescript: 5.0.4
     dev: false
 
-  /react-select@5.7.2(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-cTlJkQ8YjV6T/js8wW0owTzht0hHGABh29vjLscY4HfZGkv7hc3FFTmRp9NzY/Ib1uQ36GieAKEjxpHdpCFpcA==}
+  /react-select@5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-z8i3NCuFFWL3w27xq92rBkVI2onT0jzIIPe480HlBjXJ3b5o6Q+Clp4ydyeKrj9DZZ3lrjawwLC5NGl0FSvUDg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
       '@babel/runtime': 7.21.5
-      '@emotion/cache': 11.10.5
+      '@emotion/cache': 11.10.8
       '@emotion/react': 11.10.8(@types/react@18.2.6)(react@18.2.0)
       '@floating-ui/dom': 1.2.3
       '@types/react-transition-group': 4.4.5
@@ -17458,10 +17448,6 @@ packages:
       postcss: 8.4.23
       postcss-selector-parser: 6.0.11
     dev: true
-
-  /stylis@4.1.3:
-    resolution: {integrity: sha512-GP6WDNWf+o403jrEp9c5jibKavrtLW+/qYGhFxFrG8maXhwTBI7gLLhiBb0o7uFccWN+EOS9aMO6cGHWAO07OA==}
-    dev: false
 
   /stylis@4.1.4:
     resolution: {integrity: sha512-USf5pszRYwuE6hg9by0OkKChkQYEXfkeTtm0xKw+jqQhwyjCVLdYyMBK7R+n7dhzsblAWJnGxju4vxq5eH20GQ==}
