@@ -1,5 +1,18 @@
 # Change Log
 
+## 0.244.1
+
+### Patch Changes
+
+- [#2511](https://github.com/scaleway/scaleway-ui/pull/2511) [`f602f7e8`](https://github.com/scaleway/scaleway-ui/commit/f602f7e828204608b0383e79ee4b56d0efbc53a7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.6`.
+  Updated dependency `@types/react-dom` to `18.2.4`.
+
+- [#2504](https://github.com/scaleway/scaleway-ui/pull/2504) [`cbbbb8f7`](https://github.com/scaleway/scaleway-ui/commit/cbbbb8f7aafd95e403839527ae1e8d0ed0418a2a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.11.2`.
+
+- [#2506](https://github.com/scaleway/scaleway-ui/pull/2506) [`b1e522fb`](https://github.com/scaleway/scaleway-ui/commit/b1e522fb3884f19dc871d002e7c60adbfc2f42c1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/serialize` to `1.1.2`.
+
+- [#2516](https://github.com/scaleway/scaleway-ui/pull/2516) [`b982a610`](https://github.com/scaleway/scaleway-ui/commit/b982a6102a750f2583e45c1c418f934558a218b6) Thanks [@ModuloM](https://github.com/ModuloM)! - fix(Modal): set tabIndex to focus dialog element first
+
 ## 0.244.0
 
 ### Minor Changes
