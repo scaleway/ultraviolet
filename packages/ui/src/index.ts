@@ -32,7 +32,6 @@ export {
   PieChart,
   Skeleton,
   ProgressBar,
-  ProgressionButton,
   Radio,
   SelectableCard,
   SelectInput,
