@@ -322,6 +322,7 @@ export const Modal = memo(
           <StyledDialog
             aria-label={ariaLabel}
             role="dialog"
+            tabIndex={0}
             animation={animation}
             bordered={bordered}
             height={height}
