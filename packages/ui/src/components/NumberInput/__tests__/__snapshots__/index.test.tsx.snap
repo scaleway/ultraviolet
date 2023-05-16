@@ -2,7 +2,30 @@
 
 exports[`NumberInput should click on center button 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,58 +141,86 @@ exports[`NumberInput should click on center button 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="10"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":ri:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="10"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should click on min button 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -285,58 +336,86 @@ exports[`NumberInput should click on min button 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="8"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":rl:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="8"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should click on plus button with a step value 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -452,58 +531,86 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="30"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":ro:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="30"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should click on plus button with a step value and an in-between value set 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -619,58 +726,86 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="30"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r17:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="30"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should focus input and modify value 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -786,58 +921,86 @@ exports[`NumberInput should focus input and modify value 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="10"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":rr:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="10"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -976,59 +1139,87 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 45px;"
-        type="number"
-        value="100"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r11:"
+          name="numberinput"
+          style="width: 45px;"
+          type="number"
+          value="100"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1167,59 +1358,87 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="10"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":ru:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="10"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should increase and decrease input with arrow up and down 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1358,59 +1577,87 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 45px;"
-        type="number"
-        value="30"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r14:"
+          name="numberinput"
+          style="width: 45px;"
+          type="number"
+          value="30"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should not changed controlled value on click min button 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1526,58 +1773,86 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="10"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r1d:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="10"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders correctly 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1724,64 +1999,92 @@ exports[`NumberInput should renders correctly 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-      <span
-        class="cache-1qlmcqr-StyledText eiawj1g1"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        unit
-      </span>
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r0:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+        <span
+          class="cache-1qlmcqr-StyledText eiawj1g1"
+        >
+          unit
+        </span>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1905,66 +2208,94 @@ exports[`NumberInput should renders correctly disabled 1`] = `
 }
 
 <div
-    aria-disabled="true"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="true"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
         disabled=""
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-      <span
-        class="cache-1uero4z-StyledText eiawj1g1"
+        type="button"
       >
-        unit
-      </span>
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          disabled=""
+          id=":r3:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+        <span
+          class="cache-1uero4z-StyledText eiawj1g1"
+        >
+          unit
+        </span>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders correctly max value 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2111,64 +2442,92 @@ exports[`NumberInput should renders correctly max value 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-      <span
-        class="cache-1qlmcqr-StyledText eiawj1g1"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        unit
-      </span>
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r9:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+        <span
+          class="cache-1qlmcqr-StyledText eiawj1g1"
+        >
+          unit
+        </span>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders correctly min value 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2315,64 +2674,92 @@ exports[`NumberInput should renders correctly min value 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-      <span
-        class="cache-1qlmcqr-StyledText eiawj1g1"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        unit
-      </span>
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r6:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+        <span
+          class="cache-1qlmcqr-StyledText eiawj1g1"
+        >
+          unit
+        </span>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders large size 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2511,59 +2898,87 @@ exports[`NumberInput should renders large size 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":rc:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should renders small size 1`] = `
 <DocumentFragment>
-  .cache-1o444ku-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1o444ku-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2702,59 +3117,87 @@ exports[`NumberInput should renders small size 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-1o444ku-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1tuarzc-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-10fgw5z-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-1o444ku-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 25px;"
-        type="number"
-        value="0"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-1tuarzc-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-10fgw5z-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":rf:"
+          name="numberinput"
+          style="width: 25px;"
+          type="number"
+          value="0"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should use maxValue instead of defaultValue if default value is higher than maxValue 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2893,59 +3336,87 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 45px;"
-        type="number"
-        value="100"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r1m:"
+          name="numberinput"
+          style="width: 45px;"
+          type="number"
+          value="100"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
+      >
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should use minValue instead of defaultValue if default value is lower than minValue 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3084,59 +3555,87 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-asskgt-StyledSelectButton eiawj1g4"
-      disabled=""
-      type="button"
-    >
-      <svg
-        class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="20"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-asskgt-StyledSelectButton eiawj1g4"
+        disabled=""
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r1j:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="20"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`NumberInput should use the defaultValue 1`] = `
 <DocumentFragment>
-  .cache-101r5xn-StyledContainer {
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-101r5xn-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3252,51 +3751,56 @@ exports[`NumberInput should use the defaultValue 1`] = `
 }
 
 <div
-    aria-disabled="false"
-    class="cache-101r5xn-StyledContainer eiawj1g0"
+    class="cache-7hpczr-Stack e1sgck4o0"
   >
-    <button
-      aria-label="Minus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19,13H5V11H19V13Z"
-        />
-      </svg>
-    </button>
     <div
-      aria-live="assertive"
-      class="cache-3i90o1-StyledCenterBox eiawj1g3"
-      role="status"
+      aria-disabled="false"
+      class="cache-101r5xn-StyledContainer eiawj1g0"
     >
-      <input
-        aria-label="Input"
-        class="cache-kk0u3u-StyledInput eiawj1g2"
-        name="numberinput"
-        style="width: 35px;"
-        type="number"
-        value="10"
-      />
-    </div>
-    <button
-      aria-label="Plus"
-      class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-      type="button"
-    >
-      <svg
-        class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="Minus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
       >
-        <path
-          d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H5V11H19V13Z"
+          />
+        </svg>
+      </button>
+      <div
+        aria-live="assertive"
+        class="cache-3i90o1-StyledCenterBox eiawj1g3"
+        role="status"
+      >
+        <input
+          aria-label="Number Input"
+          class="cache-kk0u3u-StyledInput eiawj1g2"
+          id=":r1g:"
+          name="numberinput"
+          style="width: 35px;"
+          type="number"
+          value="10"
         />
-      </svg>
-    </button>
+      </div>
+      <button
+        aria-label="Plus"
+        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
+        type="button"
+      >
+        <svg
+          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;

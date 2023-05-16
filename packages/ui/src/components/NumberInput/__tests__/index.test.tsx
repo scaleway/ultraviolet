@@ -47,7 +47,7 @@ describe('NumberInput', () => {
       <NumberInput minValue={0} step={1} maxValue={100} defaultValue={10} />,
       {
         transform: async () => {
-          const inputButton = screen.getByLabelText('Input')
+          const inputButton = screen.getByLabelText('Number Input')
           const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(inputButton)
@@ -101,7 +101,7 @@ describe('NumberInput', () => {
       <NumberInput minValue={0} step={10} maxValue={100} defaultValue={10} />,
       {
         transform: async () => {
-          const buttonContainer = screen.getByLabelText('Input')
+          const buttonContainer = screen.getByLabelText('Number Input')
           const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           await userEvent.click(buttonContainer)

@@ -8,9 +8,11 @@ import type {
   MutableRefObject,
   ReactNode,
 } from 'react'
-import { useRef, useState } from 'react'
+import { useId, useRef, useState } from 'react'
 import parseIntOr from '../../helpers/numbers'
 import { Icon } from '../Icon'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 const bounded = (value: number, min: number, max: number) =>
@@ -163,6 +165,10 @@ type NumberInputProps = {
   disabledTooltip?: string
   className?: string
   'data-testid'?: string
+  label?: string
+  'aria-label'?: string
+  'aria-describedby'?: string
+  id?: string
 } & Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'size' | 'onChange' | 'value' | 'defaultValue'
@@ -185,10 +191,16 @@ export const NumberInput = ({
   value,
   disabledTooltip,
   className,
+  label,
+  id,
+  'aria-label': ariaLabel,
+  'aria-describedby': ariaDescribedBy,
   'data-testid': dataTestId,
 }: NumberInputProps) => {
   const inputRef =
     useRef<HTMLInputElement>() as MutableRefObject<HTMLInputElement>
+
+  const uniqueId = useId()
 
   // local state used if component is not controlled (no value prop provided)
   const [inputValue, setInputValue] = useState(() => {
@@ -290,75 +302,84 @@ export const NumberInput = ({
   const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
 
   return (
-    <StyledContainer
-      aria-disabled={disabled}
-      size={size}
-      className={className}
-      data-testid={dataTestId}
-    >
-      <Tooltip text={isMinusDisabled && disabledTooltip}>
-        <StyledSelectButton
-          onClick={offsetFn(-1)}
-          disabled={isMinusDisabled}
-          aria-label="Minus"
-          type="button"
-        >
-          <Icon
-            name="minus"
-            size={iconSizes[size]}
-            color="primary"
-            disabled={isMinusDisabled}
-          />
-        </StyledSelectButton>
-      </Tooltip>
-
-      <StyledCenterBox
+    <Stack gap={1}>
+      {label ? (
+        <Text variant="bodyStrong" as="label" htmlFor={id || uniqueId}>
+          {label}
+        </Text>
+      ) : null}
+      <StyledContainer
+        aria-disabled={disabled}
         size={size}
-        onClick={() => {
-          if (inputRef?.current) {
-            inputRef.current.focus()
-          }
-        }}
-        aria-live="assertive"
-        role="status"
+        className={className}
+        data-testid={dataTestId}
       >
-        <StyledInput
-          disabled={disabled}
-          name={name}
-          onBlur={handleOnBlur}
-          onChange={handleChange}
-          onFocus={handleOnFocus}
-          onKeyDown={onKeyDown}
-          ref={inputRef}
-          style={{
-            width: currentValue.toString().length * 10 + 15,
-          }}
-          value={currentValue.toString()} // A dom element can only have string attributes.
-          aria-label="Input"
-          type="number"
-        />
-        {typeof text === 'string' ? (
-          <StyledText disabled={disabled}>{text}</StyledText>
-        ) : (
-          text
-        )}
-      </StyledCenterBox>
+        <Tooltip text={isMinusDisabled && disabledTooltip}>
+          <StyledSelectButton
+            onClick={offsetFn(-1)}
+            disabled={isMinusDisabled}
+            aria-label="Minus"
+            type="button"
+          >
+            <Icon
+              name="minus"
+              size={iconSizes[size]}
+              color="primary"
+              disabled={isMinusDisabled}
+            />
+          </StyledSelectButton>
+        </Tooltip>
 
-      <Tooltip text={isPlusDisabled && disabledTooltip}>
-        <StyledSelectButton
-          onClick={offsetFn(1)}
-          disabled={isPlusDisabled}
-          aria-label="Plus"
-          type="button"
+        <StyledCenterBox
+          size={size}
+          onClick={() => {
+            if (inputRef?.current) {
+              inputRef.current.focus()
+            }
+          }}
+          aria-live="assertive"
+          role="status"
         >
-          <Icon
-            name="plus"
-            size={iconSizes[size]}
-            color="primary"
-            disabled={isPlusDisabled}
+          <StyledInput
+            disabled={disabled}
+            name={name}
+            onBlur={handleOnBlur}
+            onChange={handleChange}
+            onFocus={handleOnFocus}
+            onKeyDown={onKeyDown}
+            ref={inputRef}
+            style={{
+              width: currentValue.toString().length * 10 + 15,
+            }}
+            value={currentValue.toString()} // A dom element can only have string attributes.
+            type="number"
+            id={id || uniqueId}
+            aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
+            aria-describedby={ariaDescribedBy}
           />
-        </StyledSelectButton>
-      </Tooltip>
-    </StyledContainer>
+          {typeof text === 'string' ? (
+            <StyledText disabled={disabled}>{text}</StyledText>
+          ) : (
+            text
+          )}
+        </StyledCenterBox>
+
+        <Tooltip text={isPlusDisabled && disabledTooltip}>
+          <StyledSelectButton
+            onClick={offsetFn(1)}
+            disabled={isPlusDisabled}
+            aria-label="Plus"
+            type="button"
+          >
+            <Icon
+              name="plus"
+              size={iconSizes[size]}
+              color="primary"
+              disabled={isPlusDisabled}
+            />
+          </StyledSelectButton>
+        </Tooltip>
+      </StyledContainer>
+    </Stack>
   )
 }
