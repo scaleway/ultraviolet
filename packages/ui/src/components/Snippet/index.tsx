@@ -227,7 +227,7 @@ export const Snippet = ({
             <StyledButton
               type="button"
               onClick={() => setShowMore(!showMore)}
-              aria-label="Show more"
+              aria-expanded={showMore}
             >
               <AlignCenterText as="span" variant="bodySmallStrong">
                 {showMore ? hideText : showText}
