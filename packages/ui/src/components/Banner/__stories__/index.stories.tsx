@@ -3,7 +3,7 @@ import { Banner } from '..'
 
 export default {
   component: Banner,
-  title: 'Components/Alerts/Banner',
+  title: 'Components/Other/Banner',
 } as ComponentMeta<typeof Banner>
 
 export { Playground } from './Playground.stories'
