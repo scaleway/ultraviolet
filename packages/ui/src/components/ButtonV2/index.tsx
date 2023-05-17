@@ -69,6 +69,7 @@ const coreStyle = ({
   width: ${fullWidth ? '100%' : 'auto'};
   justify-content: center;
   outline-offset: 2px;
+  white-space: nowrap;
 
   ${
     disabled
@@ -166,7 +167,7 @@ const StyledOutlinedButton = styled('button', {
     `
       : `
         &:hover, &:active
-       {
+        {
             background: ${theme.colors[sentiment].backgroundWeakHover};
             color:
             ${
