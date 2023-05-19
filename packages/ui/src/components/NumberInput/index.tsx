@@ -1,4 +1,3 @@
-import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   ChangeEventHandler,
@@ -6,31 +5,19 @@ import type {
   InputHTMLAttributes,
   KeyboardEventHandler,
   MutableRefObject,
-  ReactNode,
 } from 'react'
-import { useId, useRef, useState } from 'react'
-import parseIntOr from '../../helpers/numbers'
+import { useId, useMemo, useRef, useState } from 'react'
+import { ButtonV2 } from '../ButtonV2'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
-
-const bounded = (value: number, min: number, max: number) =>
-  Math.max(min, Math.min(value, max))
-
-const roundStep = (value: number, step: number, direction: number) =>
-  direction === -1
-    ? Math.floor(value / step) * step
-    : Math.ceil(value / step) * step
-
-const disabledStyles = ({ theme }: { theme: Theme }) =>
-  `
-    background-color: ${theme.colors.neutral.backgroundDisabled};
-    border: none;
-    color: ${theme.colors.neutral.textDisabled};
-    opacity: 1;
-    cursor: not-allowed;
-  `
+import {
+  bounded,
+  getMinusRoundedValue,
+  getPlusRoundedValue,
+  roundStep,
+} from './helpers'
 
 const containerSizes = {
   large: 48,
@@ -46,23 +33,12 @@ const iconSizes = {
   small: 22,
 }
 
-const StyledSelectButton = styled.button`
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: ${({ theme }) => theme.radii.default};
+const BASE_INPUT_WIDTH = 34
 
-  color: ${({ theme, disabled }) =>
-    disabled
-      ? theme.colors.neutral.textDisabled
-      : theme.colors.primary.textWeak};
-
-  :hover:not([disabled]) {
-    background: ${({ theme }) => theme.colors.primary.background};
-  }
-
-  padding: 0;
+const StyledSelectButton = styled(ButtonV2)`
   margin: 0 ${({ theme }) => theme.space['1']};
+  width: 32px;
+  height: 32px;
 `
 
 const StyledCenterBox = styled('div', {
@@ -98,7 +74,16 @@ const StyledInput = styled.input`
     margin: 0;
   }
 
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.neutral.textWeak};
+  }
+
   -moz-appearance: textfield;
+
+  &[disabled] {
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
+    cursor: not-allowed;
+  }
 `
 
 const StyledText = styled('span', {
@@ -107,6 +92,7 @@ const StyledText = styled('span', {
   color: ${({ theme, disabled }) =>
     disabled ? theme.colors.neutral.textDisabled : theme.colors.neutral.text};
   user-select: none;
+  margin-right: ${({ theme }) => theme.space['1']};
 `
 
 const StyledContainer = styled('div', {
@@ -124,10 +110,7 @@ const StyledContainer = styled('div', {
 
   &[aria-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-
-    > ${StyledSelectButton}, ${StyledInput}, ${StyledCenterBox} {
-      ${({ theme }) => disabledStyles({ theme })}
-    }
+    cursor: not-allowed;
   }
 
   &:not([aria-disabled='true']) {
@@ -148,7 +131,7 @@ type NumberInputProps = {
   maxValue?: number
   minValue?: number
   name?: string
-  onChange?: (input: number) => void
+  onChange?: (input: number | undefined) => void
   onMaxCrossed?(): void
   onMinCrossed?(): void
   size?: ContainerSizesType
@@ -159,7 +142,7 @@ type NumberInputProps = {
   /**
    * Text displayed into component at the right of number value.
    */
-  text?: string | ReactNode
+  text?: string
   defaultValue?: number
   value?: number
   disabledTooltip?: string
@@ -169,6 +152,7 @@ type NumberInputProps = {
   'aria-label'?: string
   'aria-describedby'?: string
   id?: string
+  placeholder?: string
 } & Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'size' | 'onChange' | 'value' | 'defaultValue'
@@ -187,12 +171,13 @@ export const NumberInput = ({
   size = 'large',
   step = 1,
   text,
-  defaultValue = 0,
+  defaultValue,
   value,
   disabledTooltip,
   className,
   label,
   id,
+  placeholder,
   'aria-label': ariaLabel,
   'aria-describedby': ariaDescribedBy,
   'data-testid': dataTestId,
@@ -203,11 +188,11 @@ export const NumberInput = ({
   const uniqueId = useId()
 
   // local state used if component is not controlled (no value prop provided)
-  const [inputValue, setInputValue] = useState(() => {
-    if (defaultValue < minValue) {
+  const [inputValue, setInputValue] = useState<number | undefined>(() => {
+    if (defaultValue && minValue && defaultValue < minValue) {
       return minValue
     }
-    if (maxValue && defaultValue > maxValue) {
+    if (defaultValue && maxValue && defaultValue > maxValue) {
       return maxValue
     }
 
@@ -216,24 +201,51 @@ export const NumberInput = ({
 
   const currentValue = value !== undefined ? value : inputValue
 
-  const setValue = (newValue: number) => {
+  const setValue = (
+    newValue: number | undefined,
+    /**
+     * If true, will check if newValue is between minValue and maxValue and set it to minValue or maxValue if it's not.
+     */
+    hasMinMaxVerification = true,
+  ) => {
     if (value === undefined) {
+      if (hasMinMaxVerification) {
+        if (newValue !== undefined && newValue < minValue) {
+          setInputValue(minValue)
+
+          return
+        }
+
+        if (
+          newValue !== undefined &&
+          maxValue !== undefined &&
+          newValue > maxValue
+        ) {
+          setInputValue(maxValue)
+
+          return
+        }
+      }
+
       setInputValue(newValue)
     }
     onChange?.(newValue)
   }
 
   const offsetFn = (direction: number) => () => {
+    const localValue = currentValue ?? 0
     const newValue =
-      currentValue % step === 0 ? currentValue + step * direction : currentValue
+      localValue % step === 0 ? localValue + step * direction : localValue
     const roundedValue = roundStep(newValue, step, direction)
+
     setValue(roundedValue)
   }
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = event => {
-    event.stopPropagation()
-    const parsedValue = parseIntOr(event.currentTarget.value, 0)
-    setValue(parsedValue)
+    setValue(
+      event.currentTarget.value ? Number(event.currentTarget.value) : undefined,
+      false,
+    )
   }
 
   const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
@@ -241,18 +253,20 @@ export const NumberInput = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    const boundedValue = bounded(
-      currentValue,
-      minValue,
-      maxValue ?? currentValue,
-    )
+    if (currentValue) {
+      const boundedValue = bounded(
+        currentValue,
+        minValue ?? currentValue,
+        maxValue ?? currentValue,
+      )
 
-    if (maxValue && currentValue > maxValue) onMaxCrossed?.()
-    if (currentValue < minValue) onMinCrossed?.()
+      if (maxValue && currentValue > maxValue) onMaxCrossed?.()
+      if (minValue && currentValue < minValue) onMinCrossed?.()
 
-    setValue(boundedValue)
+      setValue(boundedValue)
 
-    if (onBlur) onBlur(event)
+      if (onBlur) onBlur(event)
+    }
   }
 
   const onKeyDown: KeyboardEventHandler = event => {
@@ -261,14 +275,22 @@ export const NumberInput = ({
       event.preventDefault()
 
       const direction = 1
+      const localValue = currentValue ?? 0
+
       const newValue =
-        currentValue % step === 0
-          ? currentValue + step * direction
-          : currentValue
+        localValue % step === 0 ? localValue + step * direction : localValue
       const roundedValue = roundStep(newValue, step, direction)
 
-      if (maxValue && roundedValue <= maxValue) {
+      if (maxValue === undefined) {
         setValue(roundedValue)
+
+        return
+      }
+
+      if (roundedValue <= maxValue) {
+        setValue(roundedValue)
+      } else {
+        setValue(maxValue)
       }
     }
 
@@ -277,29 +299,49 @@ export const NumberInput = ({
       event.preventDefault()
 
       const direction = -1
+      const localValue = currentValue ?? 0
 
       const newValue =
-        currentValue % step === 0
-          ? currentValue + step * direction
-          : currentValue
+        localValue % step === 0 ? localValue + step * direction : localValue
       const roundedValue = roundStep(newValue, step, direction)
 
       if (roundedValue >= minValue) {
         setValue(roundedValue)
+      } else {
+        setValue(minValue)
       }
     }
   }
 
-  const minusRoundedValue =
-    currentValue % step === 0
-      ? roundStep(currentValue - step, step, -1)
-      : roundStep(currentValue, step, -1)
-  const plusRoundedValue =
-    currentValue % step === 0
-      ? roundStep(currentValue + step, step, 1)
-      : roundStep(currentValue, step, 1)
-  const isMinusDisabled = minusRoundedValue < minValue || disabled
-  const isPlusDisabled = (maxValue && plusRoundedValue > maxValue) || disabled
+  const isMinusDisabled = useMemo(() => {
+    if (currentValue === undefined) return false
+    if (getMinusRoundedValue(currentValue, step) < minValue) {
+      return true
+    }
+
+    return disabled
+  }, [currentValue, disabled, minValue, step])
+
+  const isPlusDisabled = useMemo(() => {
+    if (currentValue === undefined) return false
+    if (maxValue && getPlusRoundedValue(currentValue, step) > maxValue) {
+      return true
+    }
+
+    return disabled
+  }, [currentValue, disabled, maxValue, step])
+
+  const inputWidth = useMemo(() => {
+    if (placeholder && currentValue === undefined) {
+      return placeholder.length * 12
+    }
+
+    if (currentValue !== undefined) {
+      return currentValue.toString().length * 16
+    }
+
+    return BASE_INPUT_WIDTH
+  }, [currentValue, placeholder])
 
   return (
     <Stack gap={1}>
@@ -320,6 +362,9 @@ export const NumberInput = ({
             disabled={isMinusDisabled}
             aria-label="Minus"
             type="button"
+            variant="ghost"
+            sentiment="primary"
+            size="small"
           >
             <Icon
               name="minus"
@@ -349,19 +394,21 @@ export const NumberInput = ({
             onKeyDown={onKeyDown}
             ref={inputRef}
             style={{
-              width: currentValue.toString().length * 10 + 15,
+              width: inputWidth,
             }}
-            value={currentValue.toString()} // A dom element can only have string attributes.
+            value={
+              currentValue !== undefined ? currentValue.toString() : undefined
+            } // A dom element can only have string attributes.
             type="number"
             id={id || uniqueId}
             aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
             aria-describedby={ariaDescribedBy}
+            placeholder={placeholder}
           />
-          {typeof text === 'string' ? (
+          {/* eslint-disable-next-line no-nested-ternary */}
+          {currentValue !== undefined ? (
             <StyledText disabled={disabled}>{text}</StyledText>
-          ) : (
-            text
-          )}
+          ) : null}
         </StyledCenterBox>
 
         <Tooltip text={isPlusDisabled && disabledTooltip}>
@@ -370,6 +417,9 @@ export const NumberInput = ({
             disabled={isPlusDisabled}
             aria-label="Plus"
             type="button"
+            variant="ghost"
+            sentiment="primary"
+            size="small"
           >
             <Icon
               name="plus"

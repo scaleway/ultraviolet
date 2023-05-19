@@ -25,7 +25,7 @@ exports[`NumberInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-od36vv {
+.cache-r5mbn6 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -47,42 +47,60 @@ exports[`NumberInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-od36vv[aria-disabled='true'] {
+.cache-r5mbn6[aria-disabled='true'] {
   background: #f6f6f8;
-}
-
-.cache-od36vv[aria-disabled='true']>.eiawj1g4,
-.cache-od36vv[aria-disabled='true'] .eiawj1g2,
-.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
   cursor: not-allowed;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-bkq66r {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-14xjn9t {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
-}
-
-.cache-bkq66r:hover:not([disabled]) {
-  background: #eeeeff;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -120,7 +138,7 @@ exports[`NumberInputField should render correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-1lq3jx2 {
+.cache-qc3n7b {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -134,24 +152,90 @@ exports[`NumberInputField should render correctly 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-1lq3jx2::-webkit-outer-spin-button,
-.cache-1lq3jx2::-webkit-inner-spin-button {
+.cache-qc3n7b::-webkit-outer-spin-button,
+.cache-qc3n7b::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1mh6k42 {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-qc3n7b::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1mh6k42:hover:not([disabled]) {
+.cache-qc3n7b::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-1dons5m {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-s9nfd6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.cache-s9nfd6:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-s9nfd6:hover,
+.cache-s9nfd6:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-18ka304-sizeStyles {
@@ -171,22 +255,24 @@ exports[`NumberInputField should render correctly 1`] = `
     >
       <div
         aria-disabled="false"
-        class="cache-od36vv eiawj1g0"
+        class="cache-r5mbn6 eiawj1g0"
       >
         <button
           aria-label="Minus"
-          class="cache-bkq66r eiawj1g4"
+          class="eiawj1g4 cache-14xjn9t e1su13oj0"
           disabled=""
           type="button"
         >
-          <svg
-            class="cache-xmmyxm-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-xmmyxm-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
         <div
           aria-live="assertive"
@@ -195,27 +281,32 @@ exports[`NumberInputField should render correctly 1`] = `
         >
           <input
             aria-label="Number Input"
-            class="cache-1lq3jx2 eiawj1g2"
+            class="cache-qc3n7b eiawj1g2"
             id=":r0:"
             name="test"
             style="width: 25px;"
             type="number"
             value="0"
           />
+          <span
+            class="cache-1dons5m eiawj1g1"
+          />
         </div>
         <button
           aria-label="Plus"
-          class="cache-1mh6k42 eiawj1g4"
+          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
           type="button"
         >
-          <svg
-            class="cache-18ka304-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-18ka304-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -248,7 +339,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-od36vv {
+.cache-r5mbn6 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -270,42 +361,60 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-od36vv[aria-disabled='true'] {
+.cache-r5mbn6[aria-disabled='true'] {
   background: #f6f6f8;
-}
-
-.cache-od36vv[aria-disabled='true']>.eiawj1g4,
-.cache-od36vv[aria-disabled='true'] .eiawj1g2,
-.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
   cursor: not-allowed;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-bkq66r {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-14xjn9t {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
-}
-
-.cache-bkq66r:hover:not([disabled]) {
-  background: #eeeeff;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -343,7 +452,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   max-width: 100%;
 }
 
-.cache-1lq3jx2 {
+.cache-qc3n7b {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -357,10 +466,40 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-1lq3jx2::-webkit-outer-spin-button,
-.cache-1lq3jx2::-webkit-inner-spin-button {
+.cache-qc3n7b::-webkit-outer-spin-button,
+.cache-qc3n7b::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-qc3n7b::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-2i31lf {
+  color: #c4c9d6;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <form
@@ -371,22 +510,24 @@ exports[`NumberInputField should render correctly disabled 1`] = `
     >
       <div
         aria-disabled="true"
-        class="cache-od36vv eiawj1g0"
+        class="cache-r5mbn6 eiawj1g0"
       >
         <button
           aria-label="Minus"
-          class="cache-bkq66r eiawj1g4"
+          class="eiawj1g4 cache-14xjn9t e1su13oj0"
           disabled=""
           type="button"
         >
-          <svg
-            class="cache-xmmyxm-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-xmmyxm-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
         <div
           aria-live="assertive"
@@ -395,7 +536,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
         >
           <input
             aria-label="Number Input"
-            class="cache-1lq3jx2 eiawj1g2"
+            class="cache-qc3n7b eiawj1g2"
             disabled=""
             id=":r3:"
             name="test"
@@ -403,21 +544,26 @@ exports[`NumberInputField should render correctly disabled 1`] = `
             type="number"
             value="0"
           />
+          <span
+            class="cache-2i31lf eiawj1g1"
+          />
         </div>
         <button
           aria-label="Plus"
-          class="cache-bkq66r eiawj1g4"
+          class="eiawj1g4 cache-14xjn9t e1su13oj0"
           disabled=""
           type="button"
         >
-          <svg
-            class="cache-xmmyxm-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-xmmyxm-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -450,7 +596,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   flex-wrap: nowrap;
 }
 
-.cache-od36vv {
+.cache-r5mbn6 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -472,42 +618,69 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border-radius: 4px;
 }
 
-.cache-od36vv[aria-disabled='true'] {
+.cache-r5mbn6[aria-disabled='true'] {
   background: #f6f6f8;
-}
-
-.cache-od36vv[aria-disabled='true']>.eiawj1g4,
-.cache-od36vv[aria-disabled='true'] .eiawj1g2,
-.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
   cursor: not-allowed;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1mh6k42 {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-s9nfd6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1mh6k42:hover:not([disabled]) {
+.cache-s9nfd6:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-s9nfd6:hover,
+.cache-s9nfd6:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-18ka304-sizeStyles {
@@ -545,7 +718,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   max-width: 100%;
 }
 
-.cache-1lq3jx2 {
+.cache-qc3n7b {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -559,24 +732,81 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   -moz-appearance: textfield;
 }
 
-.cache-1lq3jx2::-webkit-outer-spin-button,
-.cache-1lq3jx2::-webkit-inner-spin-button {
+.cache-qc3n7b::-webkit-outer-spin-button,
+.cache-qc3n7b::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-bkq66r {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
-  margin: 0 8px;
+.cache-qc3n7b::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-bkq66r:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-qc3n7b::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-1dons5m {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-14xjn9t {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -596,21 +826,23 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
     >
       <div
         aria-disabled="false"
-        class="cache-od36vv eiawj1g0"
+        class="cache-r5mbn6 eiawj1g0"
       >
         <button
           aria-label="Minus"
-          class="cache-1mh6k42 eiawj1g4"
+          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
           type="button"
         >
-          <svg
-            class="cache-18ka304-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-18ka304-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
         <div
           aria-live="assertive"
@@ -619,28 +851,33 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
         >
           <input
             aria-label="Number Input"
-            class="cache-1lq3jx2 eiawj1g2"
+            class="cache-qc3n7b eiawj1g2"
             id=":r9:"
             name="test"
             style="width: 35px;"
             type="number"
             value="20"
           />
+          <span
+            class="cache-1dons5m eiawj1g1"
+          />
         </div>
         <button
           aria-label="Plus"
-          class="cache-bkq66r eiawj1g4"
+          class="eiawj1g4 cache-14xjn9t e1su13oj0"
           disabled=""
           type="button"
         >
-          <svg
-            class="cache-xmmyxm-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-xmmyxm-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>
@@ -673,7 +910,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-od36vv {
+.cache-r5mbn6 {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -695,42 +932,69 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-od36vv[aria-disabled='true'] {
+.cache-r5mbn6[aria-disabled='true'] {
   background: #f6f6f8;
-}
-
-.cache-od36vv[aria-disabled='true']>.eiawj1g4,
-.cache-od36vv[aria-disabled='true'] .eiawj1g2,
-.cache-od36vv[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
   cursor: not-allowed;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-od36vv:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1mh6k42 {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-s9nfd6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1mh6k42:hover:not([disabled]) {
+.cache-s9nfd6:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-s9nfd6:hover,
+.cache-s9nfd6:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-18ka304-sizeStyles {
@@ -768,7 +1032,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-1lq3jx2 {
+.cache-qc3n7b {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -782,10 +1046,40 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-1lq3jx2::-webkit-outer-spin-button,
-.cache-1lq3jx2::-webkit-inner-spin-button {
+.cache-qc3n7b::-webkit-outer-spin-button,
+.cache-qc3n7b::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-qc3n7b::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-qc3n7b[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-1dons5m {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <form
@@ -796,21 +1090,23 @@ exports[`NumberInputField should trigger events correctly 1`] = `
     >
       <div
         aria-disabled="false"
-        class="cache-od36vv eiawj1g0"
+        class="cache-r5mbn6 eiawj1g0"
       >
         <button
           aria-label="Minus"
-          class="cache-1mh6k42 eiawj1g4"
+          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
           type="button"
         >
-          <svg
-            class="cache-18ka304-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-18ka304-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
         <div
           aria-live="assertive"
@@ -819,27 +1115,32 @@ exports[`NumberInputField should trigger events correctly 1`] = `
         >
           <input
             aria-label="Number Input"
-            class="cache-1lq3jx2 eiawj1g2"
+            class="cache-qc3n7b eiawj1g2"
             id=":r6:"
             name="test"
             style="width: 35px;"
             type="number"
             value="10"
           />
+          <span
+            class="cache-1dons5m eiawj1g1"
+          />
         </div>
         <button
           aria-label="Plus"
-          class="cache-1mh6k42 eiawj1g4"
+          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
           type="button"
         >
-          <svg
-            class="cache-18ka304-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+          <div>
+            <svg
+              class="cache-18ka304-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
         </button>
       </div>
     </div>

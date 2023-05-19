@@ -19,6 +19,7 @@ export default {
 } as ComponentMeta<typeof NumberInput>
 
 export { Playground } from './Playground.stories'
+export { Placeholder } from './Placeholder.stories'
 export { Text } from './Text.stories'
 export { DisabledTooltip } from './DisabledTooltip.stories'
 export { Steps } from './Steps.stories'
