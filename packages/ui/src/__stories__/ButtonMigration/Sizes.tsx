@@ -14,7 +14,7 @@ const SIZE_MATCH: Record<
   xxsmall: 'small',
 }
 
-const Sizes = () => (
+export const Sizes = () => (
   <Table>
     <Table.Head>
       <Table.HeadCell>Button V1 size</Table.HeadCell>
@@ -38,5 +38,3 @@ const Sizes = () => (
     </Table.Body>
   </Table>
 )
-
-export default Sizes

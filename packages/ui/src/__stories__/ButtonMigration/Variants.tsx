@@ -27,7 +27,7 @@ const VARIANT_MATCH: Record<
   'warning-soft-bordered': { variant: 'outlined', sentiment: 'neutral' },
 }
 
-const Variants = () => (
+export const Variants = () => (
   <Table>
     <Table.Head>
       <Table.HeadCell>Button V1 variant</Table.HeadCell>
@@ -59,4 +59,33 @@ const Variants = () => (
   </Table>
 )
 
-export default Variants
+export const VariantsAction = () => (
+  <Table>
+    <Table.Head>
+      <Table.HeadCell>Button V1 variant action</Table.HeadCell>
+      <Table.HeadCell>
+        Button V2 variant + sentiment + size=small
+      </Table.HeadCell>
+    </Table.Head>
+    <Table.Body>
+      {(Object.keys(VARIANT_MATCH) as (keyof typeof VARIANT_MATCH)[]).map(
+        buttonV1Variant => (
+          <Table.Row>
+            <Table.BodyCell>
+              <Button variant={buttonV1Variant} action icon="dots-horizontal" />
+            </Table.BodyCell>
+            <Table.BodyCell>
+              <ButtonV2
+                icon="dots-horizontal"
+                variant={VARIANT_MATCH[buttonV1Variant].variant}
+                sentiment={VARIANT_MATCH[buttonV1Variant].sentiment}
+                onClick={MOCK_ONCLICK}
+                size="small"
+              />
+            </Table.BodyCell>
+          </Table.Row>
+        ),
+      )}
+    </Table.Body>
+  </Table>
+)
