@@ -67,7 +67,8 @@ type StateManagedSelect = typeof Select
 
 type SelectInputProps = Partial<
   SelectProps &
-    SelectStyleProps & {
+    SelectStyleProps &
+    Pick<ComponentProps<typeof SelectInput>, 'data-testid'> & {
       /**
        * Name of the animation
        */
@@ -123,6 +124,7 @@ export type SelectInputFieldProps<
     | 'noTopLabel'
     | 'noOptionsMessage'
     | 'customStyle'
+    | 'data-testid'
   > & {
     label?: string
     maxLength?: number
@@ -167,6 +169,7 @@ export const SelectInputField = <
   noTopLabel,
   noOptionsMessage,
   customStyle,
+  'data-testid': dataTestId,
 }: SelectInputFieldProps<T>) => {
   const { getError } = useErrors()
 
@@ -295,6 +298,7 @@ export const SelectInputField = <
       noTopLabel={noTopLabel}
       required={required}
       noOptionsMessage={noOptionsMessage}
+      data-testid={dataTestId}
     >
       {children}
     </SelectInput>

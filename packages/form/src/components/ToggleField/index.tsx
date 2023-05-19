@@ -13,6 +13,7 @@ type ToggleFieldProps<T = unknown, K = unknown> = BaseFieldProps<T, K> &
     | 'tooltip'
     | 'labelPosition'
     | 'className'
+    | 'data-testid'
   > & {
     name: string
     required?: boolean
@@ -43,6 +44,7 @@ export const ToggleField = ({
   validateFields,
   value,
   labelPosition,
+  'data-testid': dataTestId,
 }: ToggleFieldProps) => {
   const { input } = useFormField(name, {
     afterSubmit,
@@ -80,6 +82,7 @@ export const ToggleField = ({
       labelPosition={labelPosition}
       className={className}
       required={required}
+      data-testid={dataTestId}
     />
   )
 }

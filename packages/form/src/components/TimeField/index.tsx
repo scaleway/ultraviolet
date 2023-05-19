@@ -45,6 +45,7 @@ export const TimeField = ({
   className,
   isSearchable,
   options,
+  'data-testid': dataTestId,
 }: TimeFieldProps) => {
   const { input, meta } = useFormField<Date>(name, {
     disabled,
@@ -97,6 +98,7 @@ export const TimeField = ({
       inputId={inputId}
       id={id}
       options={options}
+      data-testid={dataTestId}
     />
   )
 }

@@ -11,7 +11,14 @@ type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
   Partial<
     Pick<
       ComponentProps<typeof Radio>,
-      'disabled' | 'id' | 'onBlur' | 'onChange' | 'onFocus' | 'size' | 'value'
+      | 'disabled'
+      | 'id'
+      | 'onBlur'
+      | 'onChange'
+      | 'onFocus'
+      | 'size'
+      | 'value'
+      | 'data-testid'
     >
   > & {
     children?: ReactNode
@@ -24,6 +31,7 @@ type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
 export const RadioField = ({
   children,
   className,
+  'data-testid': dataTestId,
   disabled,
   id,
   label = '',
@@ -57,6 +65,7 @@ export const RadioField = ({
     <Radio
       checked={input.checked}
       className={className}
+      data-testid={dataTestId}
       disabled={disabled}
       error={error}
       id={id}

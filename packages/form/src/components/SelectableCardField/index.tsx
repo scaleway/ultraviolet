@@ -28,6 +28,7 @@ type SelectableCardFieldProps<
       | 'name'
       | 'tooltip'
       | 'label'
+      | 'data-testid'
     >
   > & {
     name: string
@@ -51,6 +52,7 @@ export const SelectableCardField = ({
   tooltip,
   id,
   label,
+  'data-testid': dataTestId,
 }: SelectableCardFieldProps): JSX.Element => {
   const { getError } = useErrors()
 
@@ -94,6 +96,7 @@ export const SelectableCardField = ({
       id={id}
       tooltip={tooltip}
       label={label}
+      data-testid={dataTestId}
     >
       {children}
     </SelectableCard>
