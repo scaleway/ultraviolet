@@ -2,7 +2,7 @@
 
 exports[`Breadcrumbs renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-198ohfb-StyledOl {
+  .css-198ohfb-StyledOl {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -12,20 +12,20 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.css-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
+.css-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.css-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-5e45t9-StyledLink {
+.css-5e45t9-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -63,17 +63,17 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   text-case: none;
 }
 
-.cache-5e45t9-StyledLink .e4bq1r52 {
+.css-5e45t9-StyledLink .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-5e45t9-StyledLink>* {
+.css-5e45t9-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-5e45t9-StyledLink:hover,
-.cache-5e45t9-StyledLink:focus {
+.css-5e45t9-StyledLink:hover,
+.css-5e45t9-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -82,20 +82,20 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:hover .e4bq1r52,
-.cache-5e45t9-StyledLink:focus .e4bq1r52 {
+.css-5e45t9-StyledLink:hover .e4bq1r52,
+.css-5e45t9-StyledLink:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-5e45t9-StyledLink:hover::after,
-.cache-5e45t9-StyledLink:focus::after {
+.css-5e45t9-StyledLink:hover::after,
+.css-5e45t9-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:active {
+.css-5e45t9-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -103,14 +103,14 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv11"
+      class="css-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -118,10 +118,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -130,7 +130,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         Step 3
       </li>
@@ -141,7 +141,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
 
 exports[`Breadcrumbs renders correctly with invalid child 1`] = `
 <DocumentFragment>
-  .cache-198ohfb-StyledOl {
+  .css-198ohfb-StyledOl {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -155,7 +155,7 @@ exports[`Breadcrumbs renders correctly with invalid child 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv11"
+      class="css-198ohfb-StyledOl e1081fv11"
     >
       Invalid child
     </ol>
@@ -165,7 +165,7 @@ exports[`Breadcrumbs renders correctly with invalid child 1`] = `
 
 exports[`Breadcrumbs renders correctly with onClick 1`] = `
 <DocumentFragment>
-  .cache-198ohfb-StyledOl {
+  .css-198ohfb-StyledOl {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -175,20 +175,20 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.css-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
+.css-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.css-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-5e45t9-StyledLink {
+.css-5e45t9-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -226,17 +226,17 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-case: none;
 }
 
-.cache-5e45t9-StyledLink .e4bq1r52 {
+.css-5e45t9-StyledLink .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-5e45t9-StyledLink>* {
+.css-5e45t9-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-5e45t9-StyledLink:hover,
-.cache-5e45t9-StyledLink:focus {
+.css-5e45t9-StyledLink:hover,
+.css-5e45t9-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -245,38 +245,38 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:hover .e4bq1r52,
-.cache-5e45t9-StyledLink:focus .e4bq1r52 {
+.css-5e45t9-StyledLink:hover .e4bq1r52,
+.css-5e45t9-StyledLink:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-5e45t9-StyledLink:hover::after,
-.cache-5e45t9-StyledLink:focus::after {
+.css-5e45t9-StyledLink:hover::after,
+.css-5e45t9-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:active {
+.css-5e45t9-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-12l1cwf-ItemContainer {
+.css-12l1cwf-ItemContainer {
   display: inline;
   cursor: pointer;
 }
 
-.cache-12l1cwf-ItemContainer[aria-current='page'] {
+.css-12l1cwf-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-12l1cwf-ItemContainer:not(:last-child)::after {
+.css-12l1cwf-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-12l1cwf-ItemContainer[aria-disabled="true"] {
+.css-12l1cwf-ItemContainer[aria-disabled="true"] {
   pointer-events: none;
 }
 
@@ -284,14 +284,14 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv11"
+      class="css-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -299,10 +299,10 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -311,7 +311,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-12l1cwf-ItemContainer e1081fv10"
+        class="css-12l1cwf-ItemContainer e1081fv10"
       >
         Step 3
       </li>
@@ -322,7 +322,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
 
 exports[`Breadcrumbs renders correctly with selected item 1`] = `
 <DocumentFragment>
-  .cache-198ohfb-StyledOl {
+  .css-198ohfb-StyledOl {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -332,20 +332,20 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.css-3z78jo-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
+.css-3z78jo-ItemContainer[aria-current='page'] {
   color: #b2b6c3;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.css-3z78jo-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-5e45t9-StyledLink {
+.css-5e45t9-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -383,17 +383,17 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   text-case: none;
 }
 
-.cache-5e45t9-StyledLink .e4bq1r52 {
+.css-5e45t9-StyledLink .e4bq1r52 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-5e45t9-StyledLink>* {
+.css-5e45t9-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-5e45t9-StyledLink:hover,
-.cache-5e45t9-StyledLink:focus {
+.css-5e45t9-StyledLink:hover,
+.css-5e45t9-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -402,20 +402,20 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   text-decoration-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:hover .e4bq1r52,
-.cache-5e45t9-StyledLink:focus .e4bq1r52 {
+.css-5e45t9-StyledLink:hover .e4bq1r52,
+.css-5e45t9-StyledLink:focus .e4bq1r52 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-5e45t9-StyledLink:hover::after,
-.cache-5e45t9-StyledLink:focus::after {
+.css-5e45t9-StyledLink:hover::after,
+.css-5e45t9-StyledLink:focus::after {
   background-color: #390171;
 }
 
-.cache-5e45t9-StyledLink:active {
+.css-5e45t9-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -423,14 +423,14 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
     aria-label="breadcrumb"
   >
     <ol
-      class="cache-198ohfb-StyledOl e1081fv11"
+      class="css-198ohfb-StyledOl e1081fv11"
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1"
         >
           Step 1
@@ -439,10 +439,10 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         <a
-          class="cache-5e45t9-StyledLink e4bq1r50"
+          class="css-5e45t9-StyledLink e4bq1r50"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -450,7 +450,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer e1081fv10"
+        class="css-3z78jo-ItemContainer e1081fv10"
       >
         Step 3
       </li>
