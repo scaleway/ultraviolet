@@ -5,8 +5,9 @@ import {
   Primary,
   ArgsTable,
   Stories,
+  Controls,
   PRIMARY_STORY,
-} from '@storybook/addon-docs'
+} from '@storybook/blocks'
 import { Badge, Button, Text, Stack, Link } from '../../packages/ui/src'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
@@ -101,7 +102,7 @@ const Page = ({
       {experimental ? (
         <Text as="h2" variant="bodyStronger" color="warning">
           This component is at an unstable stage and is subject to change in
-          future releases.{' '}
+          future releases.&nbsp;
           <Link
             href="/?path=/docs/state-components-state--page"
             iconPosition="right"

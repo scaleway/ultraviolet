@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { composeStories } from '@storybook/testing-react'
+import { composeStories } from '@storybook/react'
 import { cleanup } from '@testing-library/react'
 import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'

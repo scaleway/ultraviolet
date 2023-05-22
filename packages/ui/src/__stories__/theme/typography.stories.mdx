@@ -1,6 +1,6 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from '@storybook/addon-docs'
 
-<Meta title="Customization/Typography"/>
+<Meta title="Customization/Typography" />
 
 # Typography
 
@@ -18,7 +18,7 @@ import { Text, extendTheme } from '@scaleway/ui'
 import AsapRegularWoff2 from 'assets/fonts/asap/Asap-Regular.woff2'
 
 const fonts = css`
-    @font-face {
+  @font-face {
     font-family: 'Asap';
     font-style: normal;
     src: url(${AsapRegularWoff2}) format('woff2');
@@ -39,15 +39,17 @@ function App() {
         paragraphSpacing: 'none',
         textCase: 'none',
         textDecoration: 'none',
-        weight: '400'
-      }
-    }
+        weight: '400',
+      },
+    },
   })
 
   return (
     <ThemeProvider theme={myTheme}>
-        <Global styles={[fonts]}/>
-        <Text as="p" variant="myTypography">Example</Text>
+      <Global styles={[fonts]} />
+      <Text as="p" variant="myTypography">
+        Example
+      </Text>
     </ThemeProvider>
   )
 }

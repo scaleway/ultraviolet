@@ -1,4 +1,5 @@
-import { Description } from '@storybook/addon-docs'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Markdown } from '@storybook/blocks'
 import { useState } from 'react'
 // eslint-disable-next-line import/no-relative-packages
 import ChangelogMdForm from '../../../../form/CHANGELOG.md'
@@ -20,10 +21,10 @@ export const Changelog = () => {
       </Tabs>
 
       {selected === 'components' && (
-        <Description markdown={ChangelogMdComponents} />
+        <Markdown>{ChangelogMdComponents}</Markdown>
       )}
-      {selected === 'form' && <Description markdown={ChangelogMdForm} />}
-      {selected === 'themes' && <Description markdown={ChangelogMdThemes} />}
+      {selected === 'form' && <Markdown>{ChangelogMdForm}</Markdown>}
+      {selected === 'themes' && <Markdown>{ChangelogMdThemes}</Markdown>}
     </Stack>
   )
 }
