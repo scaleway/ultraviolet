@@ -19,6 +19,7 @@ type CheckboxFieldProps<T = CheckboxValue, K = string> = BaseFieldProps<T, K> &
       | 'progress'
       | 'size'
       | 'value'
+      | 'data-testid'
     >
   > & {
     name: string
@@ -44,6 +45,7 @@ export const CheckboxField = forwardRef(
       onBlur,
       onFocus,
       value,
+      'data-testid': dataTestId,
     }: CheckboxFieldProps,
     ref: Ref<HTMLInputElement>,
   ): JSX.Element => {
@@ -88,6 +90,7 @@ export const CheckboxField = forwardRef(
         className={className}
         value={input.value}
         required={required}
+        data-testid={dataTestId}
       >
         {children}
       </Checkbox>

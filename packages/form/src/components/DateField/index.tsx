@@ -54,6 +54,7 @@ export const DateField = ({
   onFocus,
   formatOnBlur,
   autoFocus = false,
+  'data-testid': dataTestId,
 }: DateFieldProps) => {
   const { getError } = useErrors()
 
@@ -115,6 +116,7 @@ export const DateField = ({
       disabled={disabled}
       autoFocus={autoFocus}
       name={input.name}
+      data-testid={dataTestId}
     />
   )
 }

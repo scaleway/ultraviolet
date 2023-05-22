@@ -19,6 +19,7 @@ export type TagInputFieldProps<T = TagInputProp, K = string> = BaseFieldProps<
       | 'disabled'
       | 'className'
       | 'id'
+      | 'data-testid'
     >
   > & {
     name: string
@@ -27,6 +28,7 @@ export type TagInputFieldProps<T = TagInputProp, K = string> = BaseFieldProps<
 
 export const TagInputField = ({
   className,
+  'data-testid': dataTestId,
   disabled,
   id,
   name,
@@ -59,6 +61,7 @@ export const TagInputField = ({
       placeholder={placeholder}
       variant={variant}
       tags={input.value}
+      data-testid={dataTestId}
     />
   )
 }

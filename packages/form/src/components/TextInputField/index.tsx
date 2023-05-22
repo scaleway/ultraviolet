@@ -21,6 +21,7 @@ type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
       | 'autoFocus'
       | 'autoSave'
       | 'cols'
+      | 'data-testid'
       | 'disabled'
       | 'fillAvailable'
       | 'generated'
@@ -69,6 +70,7 @@ export const TextInputField = forwardRef(
       beforeSubmit,
       className,
       cols,
+      'data-testid': dataTestId,
       defaultValue,
       disabled,
       fillAvailable,
@@ -160,6 +162,7 @@ export const TextInputField = forwardRef(
         autoSave={autoSave}
         className={className}
         cols={cols}
+        data-testid={dataTestId}
         disabled={disabled}
         error={error}
         fillAvailable={fillAvailable}

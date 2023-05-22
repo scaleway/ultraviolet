@@ -23,6 +23,7 @@ type NumberInputValueFieldProps<
       | 'value'
       | 'onChange'
       | 'className'
+      | 'data-testid'
     >
   > & {
     name: string
@@ -48,6 +49,7 @@ export const NumberInputField = ({
   validate,
   value,
   className,
+  'data-testid': dataTestId,
 }: NumberInputValueFieldProps) => {
   const { input } = useFormField<number>(name, {
     disabled,
@@ -83,6 +85,7 @@ export const NumberInputField = ({
       text={text}
       value={input.value}
       className={className}
+      data-testid={dataTestId}
     />
   )
 }
