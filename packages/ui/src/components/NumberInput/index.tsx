@@ -413,7 +413,6 @@ export const NumberInput = ({
               aria-describedby={ariaDescribedBy}
               placeholder={placeholder}
             />
-            {/* eslint-disable-next-line no-nested-ternary */}
             {currentValue !== undefined ? (
               <StyledText disabled={disabled}>{text}</StyledText>
             ) : null}

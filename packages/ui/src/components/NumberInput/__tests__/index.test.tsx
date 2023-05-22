@@ -18,8 +18,14 @@ describe('NumberInput', () => {
     ))
 
   it('should renders correctly disabled', () =>
+    shouldMatchEmotionSnapshot(<NumberInput disabled />))
+
+  it('should renders correctly with error', () =>
+    shouldMatchEmotionSnapshot(<NumberInput error="This is an error" />))
+
+  it('should renders correctly with placeholder', () =>
     shouldMatchEmotionSnapshot(
-      <NumberInput minValue={0} maxValue={100} text="unit" disabled />,
+      <NumberInput placeholder="Enter a value here" />,
     ))
 
   it('should renders correctly min value', () =>

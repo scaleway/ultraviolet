@@ -6,7 +6,7 @@ import { Button, Stack } from '../..'
 export const Controlled: ComponentStory<typeof NumberInput> = () => {
   const min = 10
   const max = 100
-  const [value, setState] = useState(20)
+  const [value, setState] = useState<number | undefined>(20)
 
   return (
     <Stack gap={2}>
