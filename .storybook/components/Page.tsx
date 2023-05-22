@@ -5,7 +5,6 @@ import {
   Primary,
   ArgsTable,
   Stories,
-  Controls,
   PRIMARY_STORY,
 } from '@storybook/blocks'
 import { Badge, Button, Text, Stack, Link } from '../../packages/ui/src'

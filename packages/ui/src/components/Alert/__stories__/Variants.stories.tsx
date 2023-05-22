@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Alert } from '..'
 import { Stack } from '../../Stack'
@@ -22,7 +22,7 @@ Variants.decorators = [
       <StoryComponent />
     </Stack>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]
 
 Variants.parameters = {
   docs: {

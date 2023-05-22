@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Snippet } from '../index'
 
@@ -30,4 +30,4 @@ Prefixes.decorators = [
       <StoryComponent />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

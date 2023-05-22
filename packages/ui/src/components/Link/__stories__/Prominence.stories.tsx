@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
@@ -21,4 +21,4 @@ Prominence.decorators = [
       <StoryComponent />
     </Stack>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

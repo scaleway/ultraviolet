@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Markdown } from '@storybook/blocks'
 import { useState } from 'react'
 // eslint-disable-next-line import/no-relative-packages

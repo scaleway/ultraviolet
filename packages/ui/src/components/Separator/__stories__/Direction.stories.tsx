@@ -1,13 +1,12 @@
 import styled from '@emotion/styled'
-import type { DecoratorFunction } from '@storybook/addons'
-import type { ComponentStory } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react'
 import { Separator } from '..'
 
 const StyledContainer = styled.div`
   display: inline-flex;
 `
 
-export const Direction: ComponentStory<typeof Separator> = args => (
+export const Direction: StoryFn<typeof Separator> = args => (
   <>
     <div style={{ marginRight: 8 }}>left part</div>
     <Separator {...args} />
@@ -25,4 +24,4 @@ Direction.decorators = [
       <Story />
     </StyledContainer>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

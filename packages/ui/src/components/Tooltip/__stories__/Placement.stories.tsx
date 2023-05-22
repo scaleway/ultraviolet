@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Tooltip } from '..'
 
@@ -37,4 +37,4 @@ Placement.decorators = [
       <Story />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

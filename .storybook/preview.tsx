@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
