@@ -1,5 +1,18 @@
 # Change Log
 
+## 0.245.1
+
+### Patch Changes
+
+- [#2524](https://github.com/scaleway/scaleway-ui/pull/2524) [`02ec378c`](https://github.com/scaleway/scaleway-ui/commit/02ec378c3a3d79821e48fbc9dae584d71a8208e1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.11.0`.
+  Updated dependency `@emotion/styled` to `11.11.0`.
+  Updated dependency `@emotion/babel-plugin` to `11.11.0`.
+  Updated dependency `@emotion/cache` to `11.11.0`.
+  Updated dependency `@emotion/eslint-plugin` to `11.11.0`.
+  Updated dependency `@emotion/jest` to `11.11.0`.
+
+- [#2526](https://github.com/scaleway/scaleway-ui/pull/2526) [`1071b65d`](https://github.com/scaleway/scaleway-ui/commit/1071b65d300a997dd82564eba702981e61ec308c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-toastify` to `9.1.3`.
+
 ## 0.245.0
 
 ### Minor Changes
