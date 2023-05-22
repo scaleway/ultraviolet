@@ -490,6 +490,7 @@ export const TextInput = forwardRef<
             data-testid={
               dataTestId ? `${dataTestId}-visibility-button` : undefined
             }
+            aria-label={passwordVisible ? 'hide' : 'show'}
             key="password-visible"
             onClick={handlePassVisibilityClick}
             variant="ghost"
@@ -506,6 +507,7 @@ export const TextInput = forwardRef<
             data-testid={
               dataTestId ? `${dataTestId}-randomize-button` : undefined
             }
+            aria-label="randomize"
             onClick={handleClickRandomize}
             disabled={disabled}
             icon="auto-fix"

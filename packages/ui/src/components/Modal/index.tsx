@@ -352,7 +352,6 @@ export const Modal = memo(
                     icon="close"
                     sentiment="neutral"
                     aria-label="close"
-                    tooltip="close"
                   />
                 )}
               </StyledContainer>

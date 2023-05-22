@@ -10,7 +10,7 @@ export const Showcase: ComponentStory<typeof Button> = () => {
     <Table>
       <Table.Head>
         <Table.Row>
-          <Table.HeadCell width="120px" />
+          <Table.HeadCell width="120px">Combination</Table.HeadCell>
           {buttonVariants.map(variant => (
             <Table.HeadCell key={variant}>
               <Text as="span" variant="bodyStrong">
