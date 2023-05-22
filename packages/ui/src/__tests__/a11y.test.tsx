@@ -109,7 +109,12 @@ describe('A11y', () => {
   foundFiles.forEach((file, index) => {
     describe(`${file.split('/')[2]}`, () =>
       test(file.split('/')[4].split('.')[0], async () => {
-        const module = await moduleArray[index]
+        const module = {
+          // @ts-expect-error grab the first named export and pretend that module
+          // is a default export
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          default: (await moduleArray[index])[0],
+        }
         const components = composeStories(module)
 
         for (const componentName of Object.keys(components)) {
