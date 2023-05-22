@@ -2,7 +2,7 @@
 
 exports[`Toggle renders correctly 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18,16 +18,16 @@ exports[`Toggle renders correctly 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -49,7 +49,7 @@ exports[`Toggle renders correctly 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -62,21 +62,21 @@ exports[`Toggle renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -84,20 +84,20 @@ exports[`Toggle renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -107,22 +107,22 @@ exports[`Toggle renders correctly 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":r0:"
         name="test"
         type="checkbox"
@@ -134,7 +134,7 @@ exports[`Toggle renders correctly 1`] = `
 
 exports[`Toggle renders correctly label 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -150,16 +150,16 @@ exports[`Toggle renders correctly label 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -181,7 +181,7 @@ exports[`Toggle renders correctly label 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -194,21 +194,21 @@ exports[`Toggle renders correctly label 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -216,20 +216,20 @@ exports[`Toggle renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -239,22 +239,22 @@ exports[`Toggle renders correctly label 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":rc:"
         name="test"
         type="checkbox"
@@ -267,7 +267,7 @@ exports[`Toggle renders correctly label 1`] = `
 
 exports[`Toggle renders correctly when checked 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,16 +283,16 @@ exports[`Toggle renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -314,7 +314,7 @@ exports[`Toggle renders correctly when checked 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -327,21 +327,21 @@ exports[`Toggle renders correctly when checked 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -349,20 +349,20 @@ exports[`Toggle renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -372,23 +372,23 @@ exports[`Toggle renders correctly when checked 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="true"
       data-disabled="false"
     >
       <input
         aria-checked="true"
         checked=""
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":r2:"
         name="test"
         type="checkbox"
@@ -400,7 +400,7 @@ exports[`Toggle renders correctly when checked 1`] = `
 
 exports[`Toggle renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -416,16 +416,16 @@ exports[`Toggle renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -447,7 +447,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -460,21 +460,21 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -482,20 +482,20 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -505,22 +505,22 @@ exports[`Toggle renders correctly when disabled 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="true"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="true"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         disabled=""
         id=":r4:"
         name="test"
@@ -533,7 +533,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
 
 exports[`Toggle renders correctly when required with label 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,16 +549,16 @@ exports[`Toggle renders correctly when required with label 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -580,7 +580,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -593,21 +593,21 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -615,20 +615,20 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -638,11 +638,11 @@ exports[`Toggle renders correctly when required with label 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
-.css-1df1xfu-StyledIcon-sizeStyles {
+.cache-1df1xfu-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #a6102d;
   height: 10px;
@@ -653,16 +653,16 @@ exports[`Toggle renders correctly when required with label 1`] = `
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":r6:"
         name="test"
         type="checkbox"
@@ -671,7 +671,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
     test
     <sup>
       <svg
-        class="css-1df1xfu-StyledIcon-sizeStyles etwatq50"
+        class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
         viewBox="0 0 24 24"
       >
         <path
@@ -685,7 +685,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
 
 exports[`Toggle renders correctly when required with label left 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -701,16 +701,16 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-1df1xfu-StyledIcon-sizeStyles {
+.cache-1df1xfu-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: #a6102d;
   height: 10px;
@@ -719,7 +719,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   min-height: 10px;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -741,7 +741,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -754,21 +754,21 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -776,20 +776,20 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -799,18 +799,18 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     test
     <sup>
       <svg
-        class="css-1df1xfu-StyledIcon-sizeStyles etwatq50"
+        class="cache-1df1xfu-StyledIcon-sizeStyles etwatq50"
         viewBox="0 0 24 24"
       >
         <path
@@ -819,13 +819,13 @@ exports[`Toggle renders correctly when required with label left 1`] = `
       </svg>
     </sup>
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":r8:"
         name="test"
         type="checkbox"
@@ -837,7 +837,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
 
 exports[`Toggle renders correctly with complex label 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -853,16 +853,16 @@ exports[`Toggle renders correctly with complex label 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -884,7 +884,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -897,21 +897,21 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -919,20 +919,20 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -942,22 +942,22 @@ exports[`Toggle renders correctly with complex label 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":ri:"
         name="test"
         type="checkbox"
@@ -972,7 +972,7 @@ exports[`Toggle renders correctly with complex label 1`] = `
 
 exports[`Toggle renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -988,16 +988,16 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1019,7 +1019,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1032,21 +1032,21 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1054,20 +1054,20 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1077,22 +1077,22 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":rg:"
         name="test"
         type="checkbox"
@@ -1105,7 +1105,7 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
 
 exports[`Toggle renders correctly with labels on left 1`] = `
 <DocumentFragment>
-  .css-uo0qp6-StyledLabel {
+  .cache-uo0qp6-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1121,16 +1121,16 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   cursor: pointer;
 }
 
-.css-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-uo0qp6-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.css-uo0qp6-StyledLabel[aria-disabled='true'] {
+.cache-uo0qp6-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-a78dvj-StyledToggle {
+.cache-a78dvj-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1152,7 +1152,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   height: 24px;
 }
 
-.css-a78dvj-StyledToggle:after {
+.cache-a78dvj-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1165,21 +1165,21 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transition: all 300ms;
 }
 
-.css-a78dvj-StyledToggle:focus-within,
-.css-a78dvj-StyledToggle:focus {
+.cache-a78dvj-StyledToggle:focus-within,
+.cache-a78dvj-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='false']:active:after {
+.cache-a78dvj-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:after {
+.cache-a78dvj-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1187,20 +1187,20 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.css-a78dvj-StyledToggle[data-checked='true']:focus-within,
-.css-a78dvj-StyledToggle[data-checked='true']:focus {
+.cache-a78dvj-StyledToggle[data-checked='true']:focus-within,
+.cache-a78dvj-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-a78dvj-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1210,23 +1210,23 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-uo0qp6-StyledLabel e6hn8de0"
+    class="cache-uo0qp6-StyledLabel e6hn8de0"
   >
     This is a label
     <div
-      class="css-a78dvj-StyledToggle e6hn8de2"
+      class="cache-a78dvj-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":re:"
         name="test"
         type="checkbox"
@@ -1238,7 +1238,7 @@ exports[`Toggle renders correctly with labels on left 1`] = `
 
 exports[`Toggle renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .css-9kpil1-StyledLabel {
+  .cache-9kpil1-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1254,16 +1254,16 @@ exports[`Toggle renders correctly with non default size 1`] = `
   cursor: pointer;
 }
 
-.css-9kpil1-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
+.cache-9kpil1-StyledLabel:active .e6hn8de2[data-disabled='false']:after {
   width: 16.53px;
 }
 
-.css-9kpil1-StyledLabel[aria-disabled='true'] {
+.cache-9kpil1-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.css-89cup7-StyledToggle {
+.cache-89cup7-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1285,7 +1285,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
   height: 20px;
 }
 
-.css-89cup7-StyledToggle:after {
+.cache-89cup7-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1298,21 +1298,21 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transition: all 300ms;
 }
 
-.css-89cup7-StyledToggle:focus-within,
-.css-89cup7-StyledToggle:focus {
+.cache-89cup7-StyledToggle:focus-within,
+.cache-89cup7-StyledToggle:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-89cup7-StyledToggle[data-disabled='false']:active:after {
+.cache-89cup7-StyledToggle[data-disabled='false']:active:after {
   width: 16.53px;
 }
 
-.css-89cup7-StyledToggle[data-checked='true'] {
+.cache-89cup7-StyledToggle[data-checked='true'] {
   color: #151a2d;
   background-color: #4f0599;
 }
 
-.css-89cup7-StyledToggle[data-checked='true']:after {
+.cache-89cup7-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1320,20 +1320,20 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.css-89cup7-StyledToggle[data-checked='true']:focus-within,
-.css-89cup7-StyledToggle[data-checked='true']:focus {
+.cache-89cup7-StyledToggle[data-checked='true']:focus-within,
+.cache-89cup7-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-89cup7-StyledToggle[data-disabled='true'] {
+.cache-89cup7-StyledToggle[data-disabled='true'] {
   background: #d4dae7;
 }
 
-.css-89cup7-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-89cup7-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #bda5df;
 }
 
-.css-1myp2ct-StyledCheckbox {
+.cache-1myp2ct-StyledCheckbox {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -1343,22 +1343,22 @@ exports[`Toggle renders correctly with non default size 1`] = `
   cursor: pointer;
 }
 
-.css-1myp2ct-StyledCheckbox[disabled] {
+.cache-1myp2ct-StyledCheckbox[disabled] {
   cursor: not-allowed;
 }
 
 <label
     aria-disabled="false"
-    class="css-9kpil1-StyledLabel e6hn8de0"
+    class="cache-9kpil1-StyledLabel e6hn8de0"
   >
     <div
-      class="css-89cup7-StyledToggle e6hn8de2"
+      class="cache-89cup7-StyledToggle e6hn8de2"
       data-checked="false"
       data-disabled="false"
     >
       <input
         aria-checked="false"
-        class="css-1myp2ct-StyledCheckbox e6hn8de1"
+        class="cache-1myp2ct-StyledCheckbox e6hn8de1"
         id=":ra:"
         name="test"
         type="checkbox"

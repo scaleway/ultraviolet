@@ -2,13 +2,13 @@
 
 exports[`Carousel renders correctly with default props 1`] = `
 <DocumentFragment>
-  .css-vz5p1b-StyledWrapper {
+  .cache-vz5p1b-StyledWrapper {
   position: relative;
   margin-left: -100px;
   margin-right: -100px;
 }
 
-.css-qrxupe-StyledBeforeScroll {
+.cache-qrxupe-StyledBeforeScroll {
   position: absolute;
   width: 100px;
   height: 100%;
@@ -22,7 +22,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
 }
 
-.css-1khe6nh-StyledScrollableWrapper {
+.cache-1khe6nh-StyledScrollableWrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -31,11 +31,11 @@ exports[`Carousel renders correctly with default props 1`] = `
   padding-bottom: 16px;
 }
 
-.css-1khe6nh-StyledScrollableWrapper>*:not(:last-child) {
+.cache-1khe6nh-StyledScrollableWrapper>*:not(:last-child) {
   margin-right: 16px;
 }
 
-.css-3tra8z-StyledBorderWrapper {
+.cache-3tra8z-StyledBorderWrapper {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #d4dae7;
@@ -48,20 +48,20 @@ exports[`Carousel renders correctly with default props 1`] = `
   cursor: grab;
 }
 
-.css-3tra8z-StyledBorderWrapper:hover,
-.css-3tra8z-StyledBorderWrapper:active,
-.css-3tra8z-StyledBorderWrapper:focus {
+.cache-3tra8z-StyledBorderWrapper:hover,
+.cache-3tra8z-StyledBorderWrapper:active,
+.cache-3tra8z-StyledBorderWrapper:focus {
   border: 1px solid #390171;
   -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.css-3tra8z-StyledBorderWrapper img {
+.cache-3tra8z-StyledBorderWrapper img {
   border-radius: 4px 4px 0 0;
 }
 
-.css-w86y5s-StyledAfterScroll {
+.cache-w86y5s-StyledAfterScroll {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -78,56 +78,56 @@ exports[`Carousel renders correctly with default props 1`] = `
 }
 
 <div
-    class="css-vz5p1b-StyledWrapper eam0u74"
+    class="cache-vz5p1b-StyledWrapper eam0u74"
     data-testid="scrollbar"
   >
     <span
-      class="css-qrxupe-StyledBeforeScroll eam0u73"
+      class="cache-qrxupe-StyledBeforeScroll eam0u73"
       data-testid="scrollbar-before"
     />
     <div
-      class="css-1khe6nh-StyledScrollableWrapper eam0u72"
+      class="cache-1khe6nh-StyledScrollableWrapper eam0u72"
       data-testid="scrollbar-wrapper"
     >
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 1
       </div>
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 2
       </div>
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 3
       </div>
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 4
       </div>
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 5
       </div>
       <div
-        class="css-3tra8z-StyledBorderWrapper eam0u70"
+        class="cache-3tra8z-StyledBorderWrapper eam0u70"
         draggable="true"
       >
         Item 6
       </div>
     </div>
     <span
-      class="css-w86y5s-StyledAfterScroll eam0u71"
+      class="cache-w86y5s-StyledAfterScroll eam0u71"
       data-testid="scrollbar-after"
     />
   </div>
