@@ -123,7 +123,7 @@ importers:
         version: 7.0.12
       '@storybook/csf':
         specifier: canary
-        version: 0.0.2--canary.65.ef100c4.0
+        version: 0.1.1--canary.f0d3083.0
       '@storybook/manager-webpack5':
         specifier: 6.5.16
         version: 6.5.16(eslint@8.40.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.0.4)
@@ -254,8 +254,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       react-router-dom:
-        specifier: 6.11.1
-        version: 6.11.1(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.11.2
+        version: 6.11.2(react-dom@18.2.0)(react@18.2.0)
       read-pkg:
         specifier: 8.0.0
         version: 8.0.0
@@ -3491,8 +3491,8 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@remix-run/router@1.6.1:
-    resolution: {integrity: sha512-YUkWj+xs0oOzBe74OgErsuR3wVn+efrFhXBWrit50kOiED+pvQe2r6MWY0iJMQU/mSVKxvNzL4ZaYvjdX+G7ZA==}
+  /@remix-run/router@1.6.2:
+    resolution: {integrity: sha512-LzqpSrMK/3JBAVBI9u3NWtOhWNw5AMQfrUFYB0+bDHTSw17z++WJLsPsxAuK+oSddsxk4d7F/JcdDPM1M5YAhA==}
     engines: {node: '>=14'}
     dev: true
 
@@ -4814,12 +4814,6 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@storybook/csf@0.0.2--canary.65.ef100c4.0:
-    resolution: {integrity: sha512-nz88X3B0702VNOoFYvnXKNozYCaYlfLCY/SQEttzG0ZTPDKxDMFF3LjNDSTu2/mp9/XlUO1r/NwrJriGTKsjWA==}
-    dependencies:
-      type-fest: 2.19.0
-    dev: true
-
   /@storybook/csf@0.0.2--canary.87bc651.0:
     resolution: {integrity: sha512-ajk1Uxa+rBpFQHKrCcTmJyQBXZ5slfwHVEaKlkuFaW77it8RgbPJp/ccna3sgoi8oZ7FkkOyvv1Ve4SmwFqRqw==}
     dependencies:
@@ -4828,6 +4822,12 @@ packages:
 
   /@storybook/csf@0.1.0:
     resolution: {integrity: sha512-uk+jMXCZ8t38jSTHk2o5btI+aV2Ksbvl6DoOv3r6VaCM1KZqeuMwtwywIQdflkA8/6q/dKT8z8L+g8hC4GC3VQ==}
+    dependencies:
+      type-fest: 2.19.0
+    dev: true
+
+  /@storybook/csf@0.1.1--canary.f0d3083.0:
+    resolution: {integrity: sha512-3A9IhpgYi9k3Kk4shRV0Fhhp/et7pbPlztaja8wVcdu++9fCFXav+633dyoas3ZsVYZcO3+A19gL21V0or8XzQ==}
     dependencies:
       type-fest: 2.19.0
     dev: true
@@ -15806,26 +15806,26 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-router-dom@6.11.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-dPC2MhoPeTQ1YUOt5uIK376SMNWbwUxYRWk2ZmTT4fZfwlOvabF8uduRKKJIyfkCZvMgiF0GSCQckmkGGijIrg==}
+  /react-router-dom@6.11.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-JNbKtAeh1VSJQnH6RvBDNhxNwemRj7KxCzc5jb7zvDSKRnPWIFj9pO+eXqjM69gQJ0r46hSz1x4l9y0651DKWw==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8 || 18'
       react-dom: '>=16.8 || 18'
     dependencies:
-      '@remix-run/router': 1.6.1
+      '@remix-run/router': 1.6.2
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.11.1(react@18.2.0)
+      react-router: 6.11.2(react@18.2.0)
     dev: true
 
-  /react-router@6.11.1(react@18.2.0):
-    resolution: {integrity: sha512-OZINSdjJ2WgvAi7hgNLazrEV8SGn6xrKA+MkJe9wVDMZ3zQ6fdJocUjpCUCI0cNrelWjcvon0S/QK/j0NzL3KA==}
+  /react-router@6.11.2(react@18.2.0):
+    resolution: {integrity: sha512-74z9xUSaSX07t3LM+pS6Un0T55ibUE/79CzfZpy5wsPDZaea1F8QkrsiyRnA2YQ7LwE/umaydzXZV80iDCPkMg==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16.8 || 18'
     dependencies:
-      '@remix-run/router': 1.6.1
+      '@remix-run/router': 1.6.2
       react: 18.2.0
     dev: true
 
