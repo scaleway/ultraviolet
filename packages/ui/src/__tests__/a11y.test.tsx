@@ -29,12 +29,23 @@ const testedComponents = [
   'Tag',
   'TagInput',
   'TextInput',
+  'Tooltip',
   'Radio',
+  'VerificationCode',
+  'DatInput',
+  'NumberInput',
+  'Toggle',
+  'Snippet',
+  'SwitchButton',
 ]
 
 const foundFiles: string[] = []
 
-const searchFileFromDir = (startPath: string, filter: string) => {
+const searchFileFromDir = (
+  startPath: string,
+  filter: string,
+  exclude?: string[],
+) => {
   const files = fs.readdirSync(startPath)
 
   for (const fileName of files) {
@@ -43,8 +54,11 @@ const searchFileFromDir = (startPath: string, filter: string) => {
 
     if (stat.isDirectory()) {
       // recursive search in case if directory
-      searchFileFromDir(filePath, filter)
-    } else if (filePath.includes(filter)) {
+      searchFileFromDir(filePath, filter, exclude)
+    } else if (
+      filePath.includes(filter) &&
+      !exclude?.find(e => filePath.includes(e))
+    ) {
       const isTested = testedComponents.some(component =>
         filePath.match(`^packages/ui/src/components/${component}/`),
       )
@@ -57,9 +71,12 @@ const searchFileFromDir = (startPath: string, filter: string) => {
 }
 // Check if a path was given as input argument, if not we check all stories
 if (process.argv[4]) {
-  searchFileFromDir(process.argv[4], '.stories.tsx')
+  searchFileFromDir(process.argv[4], '.stories.tsx', ['index', 'Template'])
 } else {
-  searchFileFromDir('packages/ui/src/components', '.stories.tsx')
+  searchFileFromDir('packages/ui/src/components', '.stories.tsx', [
+    'index',
+    'Template',
+  ])
 }
 
 expect.extend(toHaveNoViolations)

@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.42.18
+
+### Patch Changes
+
+- [#2507](https://github.com/scaleway/scaleway-ui/pull/2507) [`a72f1538`](https://github.com/scaleway/scaleway-ui/commit/a72f153878344bbd44d7eb0e3d7587760e992562) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.3`.
+
+- Updated dependencies [[`44f0cc83`](https://github.com/scaleway/scaleway-ui/commit/44f0cc8323cedf6ae3abb0880ade68dfc4b17369), [`f6fda915`](https://github.com/scaleway/scaleway-ui/commit/f6fda9159db9119089dd596a21e79c0b00191a41), [`a72f1538`](https://github.com/scaleway/scaleway-ui/commit/a72f153878344bbd44d7eb0e3d7587760e992562), [`75f46ff6`](https://github.com/scaleway/scaleway-ui/commit/75f46ff6df51a47ec0d60e2300eed7d8e00764c3)]:
+  - @scaleway/ui@0.245.0
+
 ## 1.42.17
 
 ### Patch Changes
