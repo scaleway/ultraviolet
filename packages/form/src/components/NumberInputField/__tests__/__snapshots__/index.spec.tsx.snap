@@ -25,7 +25,30 @@ exports[`NumberInputField should render correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r5mbn6 {
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-2ii60v {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -47,17 +70,21 @@ exports[`NumberInputField should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-r5mbn6[aria-disabled='true'] {
+.cache-2ii60v[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-2ii60v[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -254,60 +281,65 @@ exports[`NumberInputField should render correctly 1`] = `
       class="cache-kwbqjp e1sgck4o0"
     >
       <div
-        aria-disabled="false"
-        class="cache-r5mbn6 eiawj1g0"
+        class="cache-6hw7ss e1sgck4o0"
       >
-        <button
-          aria-label="Minus"
-          class="eiawj1g4 cache-14xjn9t e1su13oj0"
-          disabled=""
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-xmmyxm-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H5V11H19V13Z"
-              />
-            </svg>
-          </div>
-        </button>
         <div
-          aria-live="assertive"
-          class="cache-192mx7g eiawj1g3"
-          role="status"
+          aria-disabled="false"
+          class="cache-2ii60v eiawj1g0"
+          data-error="false"
         >
-          <input
-            aria-label="Number Input"
-            class="cache-qc3n7b eiawj1g2"
-            id=":r0:"
-            name="test"
-            style="width: 25px;"
-            type="number"
-            value="0"
-          />
-          <span
-            class="cache-1dons5m eiawj1g1"
-          />
-        </div>
-        <button
-          aria-label="Plus"
-          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-18ka304-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-              />
-            </svg>
+          <button
+            aria-label="Minus"
+            class="eiawj1g4 cache-14xjn9t e1su13oj0"
+            disabled=""
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-xmmyxm-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            aria-live="assertive"
+            class="cache-192mx7g eiawj1g3"
+            role="status"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-qc3n7b eiawj1g2"
+              id=":r0:"
+              name="test"
+              style="width: 16px;"
+              type="number"
+              value="0"
+            />
+            <span
+              class="cache-1dons5m eiawj1g1"
+            />
           </div>
-        </button>
+          <button
+            aria-label="Plus"
+            class="eiawj1g4 cache-s9nfd6 e1su13oj0"
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-18ka304-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </form>
@@ -339,7 +371,30 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r5mbn6 {
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-2ii60v {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -361,17 +416,21 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-r5mbn6[aria-disabled='true'] {
+.cache-2ii60v[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-2ii60v[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -509,62 +568,67 @@ exports[`NumberInputField should render correctly disabled 1`] = `
       class="cache-kwbqjp e1sgck4o0"
     >
       <div
-        aria-disabled="true"
-        class="cache-r5mbn6 eiawj1g0"
+        class="cache-6hw7ss e1sgck4o0"
       >
-        <button
-          aria-label="Minus"
-          class="eiawj1g4 cache-14xjn9t e1su13oj0"
-          disabled=""
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-xmmyxm-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H5V11H19V13Z"
-              />
-            </svg>
-          </div>
-        </button>
         <div
-          aria-live="assertive"
-          class="cache-192mx7g eiawj1g3"
-          role="status"
+          aria-disabled="true"
+          class="cache-2ii60v eiawj1g0"
+          data-error="false"
         >
-          <input
-            aria-label="Number Input"
-            class="cache-qc3n7b eiawj1g2"
+          <button
+            aria-label="Minus"
+            class="eiawj1g4 cache-14xjn9t e1su13oj0"
             disabled=""
-            id=":r3:"
-            name="test"
-            style="width: 25px;"
-            type="number"
-            value="0"
-          />
-          <span
-            class="cache-2i31lf eiawj1g1"
-          />
-        </div>
-        <button
-          aria-label="Plus"
-          class="eiawj1g4 cache-14xjn9t e1su13oj0"
-          disabled=""
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-xmmyxm-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-              />
-            </svg>
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-xmmyxm-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            aria-live="assertive"
+            class="cache-192mx7g eiawj1g3"
+            role="status"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-qc3n7b eiawj1g2"
+              disabled=""
+              id=":r3:"
+              name="test"
+              style="width: 16px;"
+              type="number"
+              value="0"
+            />
+            <span
+              class="cache-2i31lf eiawj1g1"
+            />
           </div>
-        </button>
+          <button
+            aria-label="Plus"
+            class="eiawj1g4 cache-14xjn9t e1su13oj0"
+            disabled=""
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-xmmyxm-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </form>
@@ -596,7 +660,30 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   flex-wrap: nowrap;
 }
 
-.cache-r5mbn6 {
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-2ii60v {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -618,17 +705,21 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border-radius: 4px;
 }
 
-.cache-r5mbn6[aria-disabled='true'] {
+.cache-2ii60v[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-2ii60v[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -825,60 +916,65 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
       class="cache-kwbqjp e1sgck4o0"
     >
       <div
-        aria-disabled="false"
-        class="cache-r5mbn6 eiawj1g0"
+        class="cache-6hw7ss e1sgck4o0"
       >
-        <button
-          aria-label="Minus"
-          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-18ka304-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H5V11H19V13Z"
-              />
-            </svg>
-          </div>
-        </button>
         <div
-          aria-live="assertive"
-          class="cache-192mx7g eiawj1g3"
-          role="status"
+          aria-disabled="false"
+          class="cache-2ii60v eiawj1g0"
+          data-error="false"
         >
-          <input
-            aria-label="Number Input"
-            class="cache-qc3n7b eiawj1g2"
-            id=":r9:"
-            name="test"
-            style="width: 35px;"
-            type="number"
-            value="20"
-          />
-          <span
-            class="cache-1dons5m eiawj1g1"
-          />
-        </div>
-        <button
-          aria-label="Plus"
-          class="eiawj1g4 cache-14xjn9t e1su13oj0"
-          disabled=""
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-xmmyxm-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-              />
-            </svg>
+          <button
+            aria-label="Minus"
+            class="eiawj1g4 cache-s9nfd6 e1su13oj0"
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-18ka304-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            aria-live="assertive"
+            class="cache-192mx7g eiawj1g3"
+            role="status"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-qc3n7b eiawj1g2"
+              id=":r9:"
+              name="test"
+              style="width: 32px;"
+              type="number"
+              value="20"
+            />
+            <span
+              class="cache-1dons5m eiawj1g1"
+            />
           </div>
-        </button>
+          <button
+            aria-label="Plus"
+            class="eiawj1g4 cache-14xjn9t e1su13oj0"
+            disabled=""
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-xmmyxm-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </form>
@@ -910,7 +1006,30 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-r5mbn6 {
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-2ii60v {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -932,17 +1051,21 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-r5mbn6[aria-disabled='true'] {
+.cache-2ii60v[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-2ii60v[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-r5mbn6:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-2ii60v:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1089,59 +1212,64 @@ exports[`NumberInputField should trigger events correctly 1`] = `
       class="cache-kwbqjp e1sgck4o0"
     >
       <div
-        aria-disabled="false"
-        class="cache-r5mbn6 eiawj1g0"
+        class="cache-6hw7ss e1sgck4o0"
       >
-        <button
-          aria-label="Minus"
-          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-18ka304-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H5V11H19V13Z"
-              />
-            </svg>
-          </div>
-        </button>
         <div
-          aria-live="assertive"
-          class="cache-192mx7g eiawj1g3"
-          role="status"
+          aria-disabled="false"
+          class="cache-2ii60v eiawj1g0"
+          data-error="false"
         >
-          <input
-            aria-label="Number Input"
-            class="cache-qc3n7b eiawj1g2"
-            id=":r6:"
-            name="test"
-            style="width: 35px;"
-            type="number"
-            value="10"
-          />
-          <span
-            class="cache-1dons5m eiawj1g1"
-          />
-        </div>
-        <button
-          aria-label="Plus"
-          class="eiawj1g4 cache-s9nfd6 e1su13oj0"
-          type="button"
-        >
-          <div>
-            <svg
-              class="cache-18ka304-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-              />
-            </svg>
+          <button
+            aria-label="Minus"
+            class="eiawj1g4 cache-s9nfd6 e1su13oj0"
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-18ka304-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+          <div
+            aria-live="assertive"
+            class="cache-192mx7g eiawj1g3"
+            role="status"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-qc3n7b eiawj1g2"
+              id=":r6:"
+              name="test"
+              style="width: 32px;"
+              type="number"
+              value="10"
+            />
+            <span
+              class="cache-1dons5m eiawj1g1"
+            />
           </div>
-        </button>
+          <button
+            aria-label="Plus"
+            class="eiawj1g4 cache-s9nfd6 e1su13oj0"
+            type="button"
+          >
+            <div>
+              <svg
+                class="cache-18ka304-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   </form>

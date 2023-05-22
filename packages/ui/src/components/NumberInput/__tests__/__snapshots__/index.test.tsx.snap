@@ -25,7 +25,30 @@ exports[`NumberInput should click on center button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -47,17 +70,21 @@ exports[`NumberInput should click on center button 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -201,59 +228,64 @@ exports[`NumberInput should click on center button 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":ri:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":ri:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -284,7 +316,30 @@ exports[`NumberInput should click on min button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -306,17 +361,21 @@ exports[`NumberInput should click on min button 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -460,59 +519,64 @@ exports[`NumberInput should click on min button 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":rl:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="8"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rl:"
+            name="numberinput"
+            style="width: 16px;"
+            type="number"
+            value="8"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -543,7 +607,30 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -565,17 +652,21 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -719,59 +810,64 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":ro:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="30"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":ro:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="30"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -802,7 +898,30 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -824,17 +943,21 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -978,59 +1101,64 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r17:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="30"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r17:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="30"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1061,7 +1189,30 @@ exports[`NumberInput should focus input and modify value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1083,17 +1234,21 @@ exports[`NumberInput should focus input and modify value 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1237,59 +1392,64 @@ exports[`NumberInput should focus input and modify value 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":rr:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rr:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1320,7 +1480,30 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1342,17 +1525,21 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1546,60 +1733,65 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r11:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="100"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
-        disabled=""
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r11:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="100"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1630,7 +1822,30 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1652,17 +1867,21 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -1856,60 +2075,65 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
-        disabled=""
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":ru:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":ru:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1940,7 +2164,30 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1962,17 +2209,21 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2166,60 +2417,65 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r14:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="30"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
-        disabled=""
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r14:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="30"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2250,7 +2506,30 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2272,17 +2551,21 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2426,59 +2709,64 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r1d:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1d:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2509,7 +2797,30 @@ exports[`NumberInput should renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2531,17 +2842,21 @@ exports[`NumberInput should renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2676,56 +2991,61 @@ exports[`NumberInput should renders correctly 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r0:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r0:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2756,7 +3076,30 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2778,17 +3121,21 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -2923,57 +3270,62 @@ exports[`NumberInput should renders correctly disabled 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="true"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="true"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          disabled=""
-          id=":r3:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            disabled=""
+            id=":r3:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3004,7 +3356,30 @@ exports[`NumberInput should renders correctly max value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3026,17 +3401,21 @@ exports[`NumberInput should renders correctly max value 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -3171,56 +3550,61 @@ exports[`NumberInput should renders correctly max value 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r9:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r9:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3251,7 +3635,30 @@ exports[`NumberInput should renders correctly min value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3273,17 +3680,21 @@ exports[`NumberInput should renders correctly min value 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -3418,56 +3829,61 @@ exports[`NumberInput should renders correctly min value 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r6:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r6:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3498,7 +3914,30 @@ exports[`NumberInput should renders large size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3520,17 +3959,21 @@ exports[`NumberInput should renders large size 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -3665,56 +4108,61 @@ exports[`NumberInput should renders large size 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":rc:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rc:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3745,7 +4193,30 @@ exports[`NumberInput should renders small size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-qyjurd-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1djred1-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3767,17 +4238,21 @@ exports[`NumberInput should renders small size 1`] = `
   border-radius: 4px;
 }
 
-.cache-qyjurd-StyledContainer[aria-disabled='true'] {
+.cache-1djred1-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1djred1-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-qyjurd-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-qyjurd-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-qyjurd-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -3912,56 +4387,61 @@ exports[`NumberInput should renders small size 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-qyjurd-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-10fgw5z-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1djred1-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":rf:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value=""
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-10fgw5z-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rf:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3992,7 +4472,30 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4014,17 +4517,21 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -4218,60 +4725,65 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r1m:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="100"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
-        disabled=""
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1m:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="100"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -4302,7 +4814,30 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4324,17 +4859,21 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -4528,60 +5067,65 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
-        disabled=""
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r1j:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="20"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1j:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="20"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -4612,7 +5156,30 @@ exports[`NumberInput should use the defaultValue 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1hpvj0h-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4634,17 +5201,21 @@ exports[`NumberInput should use the defaultValue 1`] = `
   border-radius: 4px;
 }
 
-.cache-1hpvj0h-StyledContainer[aria-disabled='true'] {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
   background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1hpvj0h-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
@@ -4788,59 +5359,64 @@ exports[`NumberInput should use the defaultValue 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1hpvj0h-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H5V11H19V13Z"
-            />
-          </svg>
-        </div>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-cps3s5-StyledInput eiawj1g2"
-          id=":r1g:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-        <span
-          class="cache-an460x-StyledText eiawj1g1"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
-        type="button"
-      >
-        <div>
-          <svg
-            class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
-            />
-          </svg>
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1g:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
+          />
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
         </div>
-      </button>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -108,6 +108,10 @@ const StyledContainer = styled('div', {
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   border-radius: ${({ theme }) => theme.radii.default};
 
+  &[data-error='true'] {
+    border: 1px solid ${({ theme }) => theme.colors.danger.borderWeak};
+  }
+
   &[aria-disabled='true'] {
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
@@ -153,6 +157,7 @@ type NumberInputProps = {
   'aria-describedby'?: string
   id?: string
   placeholder?: string
+  error?: string | boolean
 } & Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'size' | 'onChange' | 'value' | 'defaultValue'
@@ -178,6 +183,7 @@ export const NumberInput = ({
   label,
   id,
   placeholder,
+  error,
   'aria-label': ariaLabel,
   'aria-describedby': ariaDescribedBy,
   'data-testid': dataTestId,
@@ -350,86 +356,94 @@ export const NumberInput = ({
           {label}
         </Text>
       ) : null}
-      <StyledContainer
-        aria-disabled={disabled}
-        size={size}
-        className={className}
-        data-testid={dataTestId}
-      >
-        <Tooltip text={isMinusDisabled && disabledTooltip}>
-          <StyledSelectButton
-            onClick={offsetFn(-1)}
-            disabled={isMinusDisabled}
-            aria-label="Minus"
-            type="button"
-            variant="ghost"
-            sentiment="primary"
-            size="small"
-          >
-            <Icon
-              name="minus"
-              size={iconSizes[size]}
-              color="primary"
-              disabled={isMinusDisabled}
-            />
-          </StyledSelectButton>
-        </Tooltip>
-
-        <StyledCenterBox
+      <Stack gap={0.5}>
+        <StyledContainer
+          aria-disabled={disabled}
+          data-error={!!error}
           size={size}
-          onClick={() => {
-            if (inputRef?.current) {
-              inputRef.current.focus()
-            }
-          }}
-          aria-live="assertive"
-          role="status"
+          className={className}
+          data-testid={dataTestId}
         >
-          <StyledInput
-            disabled={disabled}
-            name={name}
-            onBlur={handleOnBlur}
-            onChange={handleChange}
-            onFocus={handleOnFocus}
-            onKeyDown={onKeyDown}
-            ref={inputRef}
-            style={{
-              width: inputWidth,
-            }}
-            value={
-              currentValue !== undefined ? currentValue.toString() : undefined
-            } // A dom element can only have string attributes.
-            type="number"
-            id={id || uniqueId}
-            aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
-            aria-describedby={ariaDescribedBy}
-            placeholder={placeholder}
-          />
-          {/* eslint-disable-next-line no-nested-ternary */}
-          {currentValue !== undefined ? (
-            <StyledText disabled={disabled}>{text}</StyledText>
-          ) : null}
-        </StyledCenterBox>
+          <Tooltip text={isMinusDisabled && disabledTooltip}>
+            <StyledSelectButton
+              onClick={offsetFn(-1)}
+              disabled={isMinusDisabled}
+              aria-label="Minus"
+              type="button"
+              variant="ghost"
+              sentiment="primary"
+              size="small"
+            >
+              <Icon
+                name="minus"
+                size={iconSizes[size]}
+                color="primary"
+                disabled={isMinusDisabled}
+              />
+            </StyledSelectButton>
+          </Tooltip>
 
-        <Tooltip text={isPlusDisabled && disabledTooltip}>
-          <StyledSelectButton
-            onClick={offsetFn(1)}
-            disabled={isPlusDisabled}
-            aria-label="Plus"
-            type="button"
-            variant="ghost"
-            sentiment="primary"
-            size="small"
+          <StyledCenterBox
+            size={size}
+            onClick={() => {
+              if (inputRef?.current) {
+                inputRef.current.focus()
+              }
+            }}
+            aria-live="assertive"
+            role="status"
           >
-            <Icon
-              name="plus"
-              size={iconSizes[size]}
-              color="primary"
-              disabled={isPlusDisabled}
+            <StyledInput
+              disabled={disabled}
+              name={name}
+              onBlur={handleOnBlur}
+              onChange={handleChange}
+              onFocus={handleOnFocus}
+              onKeyDown={onKeyDown}
+              ref={inputRef}
+              style={{
+                width: inputWidth,
+              }}
+              value={
+                currentValue !== undefined ? currentValue.toString() : undefined
+              } // A dom element can only have string attributes.
+              type="number"
+              id={id || uniqueId}
+              aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
+              aria-describedby={ariaDescribedBy}
+              placeholder={placeholder}
             />
-          </StyledSelectButton>
-        </Tooltip>
-      </StyledContainer>
+            {/* eslint-disable-next-line no-nested-ternary */}
+            {currentValue !== undefined ? (
+              <StyledText disabled={disabled}>{text}</StyledText>
+            ) : null}
+          </StyledCenterBox>
+
+          <Tooltip text={isPlusDisabled && disabledTooltip}>
+            <StyledSelectButton
+              onClick={offsetFn(1)}
+              disabled={isPlusDisabled}
+              aria-label="Plus"
+              type="button"
+              variant="ghost"
+              sentiment="primary"
+              size="small"
+            >
+              <Icon
+                name="plus"
+                size={iconSizes[size]}
+                color="primary"
+                disabled={isPlusDisabled}
+              />
+            </StyledSelectButton>
+          </Tooltip>
+        </StyledContainer>
+        {typeof error === 'string' ? (
+          <Text as="span" variant="bodySmall" color="danger" prominence="weak">
+            {error}
+          </Text>
+        ) : null}
+      </Stack>
     </Stack>
   )
 }
