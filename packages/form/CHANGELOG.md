@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.44.0
+
+### Minor Changes
+
+- [#2547](https://github.com/scaleway/scaleway-ui/pull/2547) [`544b1628`](https://github.com/scaleway/scaleway-ui/commit/544b1628988eff6a6f594f6a4131014b7f46f2b9) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Button: Use new version of button and rename component
+
+### Patch Changes
+
+- Updated dependencies [[`544b1628`](https://github.com/scaleway/scaleway-ui/commit/544b1628988eff6a6f594f6a4131014b7f46f2b9)]:
+  - @scaleway/ui@0.246.0
+
 ## 1.43.0
 
 ### Minor Changes
