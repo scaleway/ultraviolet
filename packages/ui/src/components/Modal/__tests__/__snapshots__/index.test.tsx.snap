@@ -68,75 +68,61 @@ exports[`Modal renders with customStyle 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -162,23 +148,18 @@ exports[`Modal renders with customStyle 1`] = `
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
           <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
             type="button"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -253,75 +234,61 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -348,23 +315,18 @@ exports[`Modal renders with default Props 1`] = `
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
           <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
             type="button"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -441,75 +403,61 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -536,23 +484,18 @@ exports[`Modal renders with disclosure 1`] = `
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
           <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
             type="button"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -635,75 +578,61 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -719,6 +648,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
         aria-modal="true"
         class="cache-lw1g3t-StyledDialog e1x6rvve1"
         data-dialog="true"
+        data-testid="test"
         id="modal-test"
         role="dialog"
         style=""
@@ -731,23 +661,19 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
           <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            data-testid="test-close-button"
             type="button"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -828,75 +754,61 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -922,23 +834,18 @@ exports[`Modal renders with opened={true} 1`] = `
           class="cache-v3mj59-StyledContainer e1x6rvve0"
         >
           <button
-            aria-disabled="false"
-            class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-            title="close"
+            aria-label="close"
+            class="cache-1tocl8q-StyledGhostButton em6gco80"
             type="button"
           >
-            <div
-              class="cache-1cny8u7-StyledIconContainer em6gco81"
+            <svg
+              class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-                />
-              </svg>
-            </div>
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
           </button>
         </div>
       </div>
@@ -1013,75 +920,61 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.cache-13fr1so-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-1tocl8q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-13fr1so-StyledButton-StyledButton:hover,
-.cache-13fr1so-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
 }
 
-.cache-13fr1so-StyledButton-StyledButton>svg {
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-1tocl8q-StyledGhostButton:hover,
+.cache-1tocl8q-StyledGhostButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
-.cache-ahx3oi-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
@@ -1104,23 +997,18 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
         class="cache-v3mj59-StyledContainer e1x6rvve0"
       >
         <button
-          aria-disabled="false"
-          class="cache-13fr1so-StyledButton-StyledButton em6gco80"
-          title="close"
+          aria-label="close"
+          class="cache-1tocl8q-StyledGhostButton em6gco80"
           type="button"
         >
-          <div
-            class="cache-1cny8u7-StyledIconContainer em6gco81"
+          <svg
+            class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-ahx3oi-StyledIcon-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </div>
     </div>

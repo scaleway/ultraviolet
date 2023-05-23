@@ -1,4 +1,3 @@
-import { Button } from '@scaleway/ui'
 import { EmptyState } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import kapsuleLogo from '../illustrations/kapsule.webp'
@@ -26,14 +25,20 @@ describe('EmptySpace', () => {
 
   it('should work with primary button', () =>
     shouldMatchEmotionSnapshot(
-      <EmptyState description="test" primaryButton={<Button>Test</Button>}>
+      <EmptyState
+        description="test"
+        primaryButton={<button type="button">Test</button>}
+      >
         content
       </EmptyState>,
     ))
 
   it('should work with secondary button', () =>
     shouldMatchEmotionSnapshot(
-      <EmptyState description="test" secondaryButton={<Button>Test</Button>}>
+      <EmptyState
+        description="test"
+        secondaryButton={<button type="button">Test</button>}
+      >
         content
       </EmptyState>,
     ))

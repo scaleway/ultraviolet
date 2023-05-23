@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
-import { ButtonV2 } from '../ButtonV2'
+import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -54,11 +54,11 @@ const WrapStack = styled(Stack)`
   width: 100%;
 `
 
-const StyledButton = styled(ButtonV2)`
+const StyledButton = styled(Button)`
   margin-left: ${({ theme }) => theme.space['5']};
 `
 
-const CloseButton = styled(ButtonV2)`
+const CloseButton = styled(Button)`
   align-self: start;
 `
 
@@ -69,7 +69,7 @@ type AlertProps = {
    */
   title?: string
   variant?: AlertType
-  buttonText?: ComponentProps<typeof ButtonV2>['children']
+  buttonText?: ComponentProps<typeof Button>['children']
   onClickButton?: () => void
   onClose?: () => void
   isClosable?: boolean

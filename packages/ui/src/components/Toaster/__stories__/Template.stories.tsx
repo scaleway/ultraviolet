@@ -5,7 +5,10 @@ import { Button } from '../../index'
 export const Template: ComponentStory<typeof ToastContainer> = args => (
   <>
     <ToastContainer {...args} />
-    <Button variant="success" onClick={() => toast.success('This is success')}>
+    <Button
+      sentiment="success"
+      onClick={() => toast.success('This is success')}
+    >
       Success
     </Button>
   </>

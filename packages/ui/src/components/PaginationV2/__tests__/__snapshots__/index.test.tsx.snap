@@ -17,118 +17,44 @@ exports[`Pagination should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-iiepid-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -149,132 +75,117 @@ exports[`Pagination should render correctly 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-ijlo5y-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-ijlo5y-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:hover,
+.cache-ijlo5y-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+}
+
+.cache-1mke81b-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-1mke81b-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1mke81b-StyledOutlinedButton:hover,
+.cache-1mke81b-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
-  height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -289,15 +200,12 @@ exports[`Pagination should render correctly 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -310,61 +218,63 @@ exports[`Pagination should render correctly 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="true"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 2"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        2
+        <div>
+          2
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 3"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        3
+        <div>
+          3
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -376,14 +286,11 @@ exports[`Pagination should render correctly 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -419,118 +326,44 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-iiepid-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -551,52 +384,59 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1djae1b-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
   color: #c4c9d6;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -611,15 +451,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -632,49 +469,49 @@ exports[`Pagination should render correctly component with disabled 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1djae1b-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
-        aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1djae1b-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -686,15 +523,12 @@ exports[`Pagination should render correctly component with disabled 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -730,118 +564,44 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-iiepid-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -862,52 +622,59 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1djae1b-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
   color: #c4c9d6;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -922,15 +689,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -943,49 +707,49 @@ exports[`Pagination should render correctly component with disabled 2`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1djae1b-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
-        aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1djae1b-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -997,15 +761,12 @@ exports[`Pagination should render correctly component with disabled 2`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1041,108 +802,53 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   gap: 8px;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
+.cache-ijlo5y-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:hover,
+.cache-ijlo5y-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -1163,51 +869,67 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1mke81b-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-1mke81b-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1mke81b-StyledOutlinedButton:hover,
+.cache-1mke81b-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="First"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1222,14 +944,11 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1242,45 +961,45 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
-        aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1292,14 +1011,11 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1335,108 +1051,53 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   gap: 8px;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
+.cache-ijlo5y-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:hover,
+.cache-ijlo5y-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -1457,51 +1118,67 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1mke81b-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-1mke81b-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1mke81b-StyledOutlinedButton:hover,
+.cache-1mke81b-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="First"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1516,14 +1193,11 @@ exports[`Pagination should render correctly with pageClick 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1536,61 +1210,63 @@ exports[`Pagination should render correctly with pageClick 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="false"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
       <button
-        aria-current="true"
         aria-label="Page 2"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        2
+        <div>
+          2
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 3"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        3
+        <div>
+          3
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
-        aria-current="false"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1mke81b-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1602,14 +1278,11 @@ exports[`Pagination should render correctly with pageClick 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1645,118 +1318,44 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-iiepid-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
+  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 .cache-190f6hx-StyledIcon-sizeStyles {
@@ -1777,52 +1376,68 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-ijlo5y-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
-  border: 1px solid #d4dae7;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+.cache-ijlo5y-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-ijlo5y-StyledOutlinedButton:hover,
+.cache-ijlo5y-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1837,15 +1452,12 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1858,30 +1470,28 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
-        aria-current="true"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-ijlo5y-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"
@@ -1893,15 +1503,12 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
         </div>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-iiepid-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-        >
+        <div>
           <svg
             class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
             viewBox="0 0 16 16"

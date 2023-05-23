@@ -10,7 +10,9 @@ export const Disabled: Story = () => (
       <Text as="p" variant="body" disabled>
         This is a disabled card children.
       </Text>
-      <Button disabled>Button</Button>
+      <Button sentiment="neutral" disabled>
+        Button
+      </Button>
     </Stack>
   </Card>
 )

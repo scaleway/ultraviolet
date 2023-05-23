@@ -1,5 +1,5 @@
 import { TableV2 } from '..'
-import { ButtonV2 } from '../../ButtonV2'
+import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
@@ -39,7 +39,7 @@ Selectable.args = {
             <Text variant="bodyStrong" as="p" color="primary">
               {selectedItems.length} item(s) selected
             </Text>
-            <ButtonV2
+            <Button
               sentiment="danger"
               size="small"
               onClick={() => {
@@ -48,7 +48,7 @@ Selectable.args = {
               }}
             >
               Delete
-            </ButtonV2>
+            </Button>
           </Stack>
         )}
       </TableV2.SelectBar>

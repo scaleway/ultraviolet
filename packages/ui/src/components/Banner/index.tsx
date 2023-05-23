@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
-import { ButtonV2 } from '../ButtonV2'
+import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -38,7 +38,7 @@ type BannerProps = {
   direction?: 'row' | 'column'
   onClose?: () => void
   buttonText?: string
-  onClickButton?: ComponentProps<typeof ButtonV2>['onClick']
+  onClickButton?: ComponentProps<typeof Button>['onClick']
   linkText?: string
   linkHref?: string
   image?: ReactNode
@@ -93,13 +93,13 @@ export const Banner = ({
         </Stack>
         <Stack direction="row" gap={2}>
           {buttonText ? (
-            <ButtonV2
+            <Button
               size="medium"
               sentiment={variant === 'intro' ? 'primary' : 'neutral'}
               onClick={onClickButton}
             >
               {buttonText}
-            </ButtonV2>
+            </Button>
           ) : null}
           {linkText && direction === 'column' ? (
             <Link
@@ -114,7 +114,7 @@ export const Banner = ({
           ) : null}
         </Stack>
       </Stack>
-      <ButtonV2
+      <Button
         icon="close"
         size="small"
         variant={variant === 'intro' ? 'ghost' : 'filled'}

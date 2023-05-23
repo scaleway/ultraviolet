@@ -68,9 +68,10 @@ type TagProps = {
   'data-testid'?: string
 }
 
-const StyledActionButton = styled(Button)`
+const StyledCloseButton = styled(Button)`
   width: fit-content;
   height: fit-content;
+  padding: 2px;
 `
 
 export const Tag = ({
@@ -91,16 +92,17 @@ export const Tag = ({
     {icon ? <Icon name={icon} size={16} /> : null}
     <StyledTag aria-disabled={disabled}>{children}</StyledTag>
 
+    {/* @check: Size issue here, Clickable icon ? */}
     {onClose && !isLoading ? (
-      <StyledActionButton
+      <StyledCloseButton
         onClick={onClose}
         disabled={disabled}
         aria-label="Close tag"
         data-testid="close-tag"
-        action
-        variant="transparent"
+        variant="ghost"
+        sentiment="neutral"
         icon="close"
-        iconSize={16}
+        size="small"
       />
     ) : null}
     {isLoading ? <Loader active size={16} /> : null}

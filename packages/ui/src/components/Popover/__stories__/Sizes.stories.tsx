@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useState } from 'react'
-import { ButtonV2 } from '../../ButtonV2'
+import { Button } from '../../Button'
 import { Popover } from '../index'
 
 export const Sizes: ComponentStory<typeof Popover> = () => {
@@ -25,9 +25,9 @@ export const Sizes: ComponentStory<typeof Popover> = () => {
         onClose={() => onCloseCallBack(setOpenedSmall)}
         size="small"
       >
-        <ButtonV2 sentiment="neutral" onClick={() => setOpenedSmall(true)}>
+        <Button sentiment="neutral" onClick={() => setOpenedSmall(true)}>
           Open Popover small size
-        </ButtonV2>
+        </Button>
       </Popover>
 
       <Popover
@@ -37,9 +37,9 @@ export const Sizes: ComponentStory<typeof Popover> = () => {
         onClose={() => onCloseCallBack(setOpenedMedium)}
         size="medium"
       >
-        <ButtonV2 sentiment="neutral" onClick={() => setOpenedMedium(true)}>
+        <Button sentiment="neutral" onClick={() => setOpenedMedium(true)}>
           Open Popover medium size
-        </ButtonV2>
+        </Button>
       </Popover>
 
       <Popover
@@ -49,9 +49,9 @@ export const Sizes: ComponentStory<typeof Popover> = () => {
         onClose={() => onCloseCallBack(setOpenedLarge)}
         size="large"
       >
-        <ButtonV2 sentiment="neutral" onClick={() => setOpenedLarge(true)}>
+        <Button sentiment="neutral" onClick={() => setOpenedLarge(true)}>
           Open Popover large size
-        </ButtonV2>
+        </Button>
       </Popover>
     </div>
   )

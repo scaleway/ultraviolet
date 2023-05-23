@@ -21,7 +21,7 @@ export const LoadingExample: ComponentStory<typeof SelectInput> = ({
 
   return (
     <>
-      <Button size="small" onClick={() => setIsLoading(true)}>
+      <Button size="large" onClick={() => setIsLoading(true)}>
         Load data
       </Button>
       <SelectInput

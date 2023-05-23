@@ -5,13 +5,16 @@ import { Button } from '../../index'
 export const Variants = () => (
   <>
     <ToastContainer />
-    <Button variant="success" onClick={() => toast.success('This is success')}>
+    <Button
+      sentiment="success"
+      onClick={() => toast.success('This is success')}
+    >
       Success
     </Button>
-    <Button variant="info" onClick={() => toast.info('This is info')}>
+    <Button sentiment="info" onClick={() => toast.info('This is info')}>
       Info
     </Button>
-    <Button variant="warning" onClick={() => toast.error('This is error')}>
+    <Button sentiment="danger" onClick={() => toast.error('This is error')}>
       Error
     </Button>
   </>

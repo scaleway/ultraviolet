@@ -3,14 +3,13 @@ import { Template } from './Template.stories'
 export const Disabled = Template.bind({})
 
 Disabled.args = {
+  ...Template.args,
   disabled: true,
-  children: 'Disabled',
-  icon: 'plus',
-  variant: 'primary-bordered',
 }
 
 Disabled.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `disabled` on Button.',
+    storyDescription:
+      'You can use the prop `disable` to disable a Button. Please note that `isLoading` prop also disable the button.',
   },
 }

@@ -4,31 +4,27 @@ import { useEffect, useState } from 'react'
 import { useFormState } from 'react-final-form'
 
 type SubmitProps = {
-  action?: ComponentProps<typeof Button>['action']
   children?: ReactNode
   className?: string
   disabled?: boolean
   icon?: ComponentProps<typeof Button>['icon']
-  iconSize?: ComponentProps<typeof Button>['iconSize']
   iconPosition?: ComponentProps<typeof Button>['iconPosition']
   size?: ComponentProps<typeof Button>['size']
-  tooltip?: ComponentProps<typeof Button>['tooltip']
-  tooltipBaseId?: ComponentProps<typeof Button>['tooltipBaseId']
   variant?: ComponentProps<typeof Button>['variant']
+  sentiment?: ComponentProps<typeof Button>['sentiment']
+  tooltip?: ComponentProps<typeof Button>['tooltip']
 }
 
 export const Submit = ({
-  action,
   children,
   className,
   disabled = false,
   icon,
-  iconSize,
   iconPosition,
   size,
+  variant = 'filled',
+  sentiment = 'success',
   tooltip,
-  tooltipBaseId,
-  variant = 'success',
 }: SubmitProps): JSX.Element => {
   const { invalid, submitting, hasValidationErrors, dirtySinceLastSubmit } =
     useFormState({
@@ -50,18 +46,16 @@ export const Submit = ({
 
   return (
     <Button
-      action={action}
       className={className}
       disabled={isDisabled}
       icon={icon}
-      iconSize={iconSize}
       iconPosition={iconPosition}
-      progress={submitting}
+      isLoading={submitting}
       size={size}
-      tooltip={tooltip}
-      tooltipBaseId={tooltipBaseId}
       type="submit"
       variant={variant}
+      sentiment={sentiment}
+      tooltip={tooltip}
     >
       {children}
     </Button>

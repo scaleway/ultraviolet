@@ -19,23 +19,22 @@ export const IsActive: Story = () => {
         {active ? (
           <Stack gap={1} direction="row">
             <Button
-              variant="success-bordered"
+              variant="outlined"
+              sentiment="success"
               icon="check"
-              size="small"
               onClick={() => setActive(false)}
             />
             <Button
-              variant="warning-bordered"
+              variant="outlined"
+              sentiment="danger"
               icon="cancel"
-              size="small"
               onClick={() => setActive(false)}
             />
           </Stack>
         ) : (
           <Button
-            variant="secondary"
+            sentiment="neutral"
             icon="pencil"
-            size="small"
             onClick={() => setActive(true)}
           />
         )}

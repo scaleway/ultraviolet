@@ -343,12 +343,15 @@ export const Modal = memo(
               <StyledContainer>
                 {isClosable && (
                   <Button
+                    data-testid={
+                      dataTestId ? `${dataTestId}-close-button` : undefined
+                    }
                     onClick={onClose || onCloseCallBack}
-                    title="close"
-                    variant="transparent"
+                    variant="ghost"
+                    size="small"
                     icon="close"
-                    iconSize={20}
-                    action
+                    sentiment="neutral"
+                    aria-label="close"
                   />
                 )}
               </StyledContainer>

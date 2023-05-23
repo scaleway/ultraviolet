@@ -89,7 +89,7 @@ const Page = ({
           </Text>
           {migrationLink ? (
             <p>
-              <Button onClick={linkTo(migrationLink)} variant="link">
+              <Button onClick={linkTo(migrationLink)} variant="ghost">
                 How to migrate?
               </Button>
             </p>
