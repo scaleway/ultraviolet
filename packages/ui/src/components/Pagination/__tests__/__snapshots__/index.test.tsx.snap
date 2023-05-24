@@ -48,7 +48,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -60,12 +60,13 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -106,7 +107,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -118,12 +119,13 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -144,18 +146,18 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -167,12 +169,13 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -193,12 +196,12 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -237,7 +240,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -259,7 +262,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -281,8 +284,9 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -290,8 +294,9 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -304,7 +309,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -322,7 +327,7 @@ exports[`Pagination should render correctly PaginationContainer 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -420,7 +425,7 @@ exports[`Pagination should render correctly component 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -432,12 +437,13 @@ exports[`Pagination should render correctly component 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -478,7 +484,7 @@ exports[`Pagination should render correctly component 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -490,12 +496,13 @@ exports[`Pagination should render correctly component 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -516,18 +523,18 @@ exports[`Pagination should render correctly component 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -539,12 +546,13 @@ exports[`Pagination should render correctly component 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -565,12 +573,12 @@ exports[`Pagination should render correctly component 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -609,7 +617,7 @@ exports[`Pagination should render correctly component 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -631,7 +639,7 @@ exports[`Pagination should render correctly component 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -653,8 +661,9 @@ exports[`Pagination should render correctly component 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -662,8 +671,9 @@ exports[`Pagination should render correctly component 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -671,8 +681,9 @@ exports[`Pagination should render correctly component 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -680,8 +691,9 @@ exports[`Pagination should render correctly component 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -689,8 +701,9 @@ exports[`Pagination should render correctly component 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -703,7 +716,7 @@ exports[`Pagination should render correctly component 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -721,7 +734,7 @@ exports[`Pagination should render correctly component 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -819,7 +832,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -831,12 +844,13 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -877,7 +891,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -889,12 +903,13 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -915,18 +930,18 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -938,12 +953,13 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -964,12 +980,12 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -1008,7 +1024,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -1030,7 +1046,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -1052,8 +1068,9 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1061,8 +1078,9 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1070,8 +1088,9 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1084,7 +1103,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1102,7 +1121,7 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1215,7 +1234,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   gap: 8px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1227,12 +1246,13 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1253,12 +1273,12 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -1282,7 +1302,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   margin: 0 16px;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1294,12 +1314,13 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1320,12 +1341,12 @@ exports[`Pagination should render correctly controlled with page 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -1364,7 +1385,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1385,7 +1406,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1406,8 +1427,9 @@ exports[`Pagination should render correctly controlled with page 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 1"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1415,8 +1437,9 @@ exports[`Pagination should render correctly controlled with page 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1424,8 +1447,9 @@ exports[`Pagination should render correctly controlled with page 1`] = `
             </div>
           </button>
           <button
+            aria-current="true"
             aria-label="Page 3"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1433,8 +1457,9 @@ exports[`Pagination should render correctly controlled with page 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1442,8 +1467,9 @@ exports[`Pagination should render correctly controlled with page 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1456,7 +1482,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1474,7 +1500,7 @@ exports[`Pagination should render correctly controlled with page 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -1803,7 +1829,7 @@ exports[`Pagination should render correctly function 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1815,12 +1841,13 @@ exports[`Pagination should render correctly function 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1861,7 +1888,7 @@ exports[`Pagination should render correctly function 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1873,12 +1900,13 @@ exports[`Pagination should render correctly function 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1899,18 +1927,18 @@ exports[`Pagination should render correctly function 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1922,12 +1950,13 @@ exports[`Pagination should render correctly function 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1948,12 +1977,12 @@ exports[`Pagination should render correctly function 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -1992,7 +2021,7 @@ exports[`Pagination should render correctly function 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2014,7 +2043,7 @@ exports[`Pagination should render correctly function 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2036,8 +2065,9 @@ exports[`Pagination should render correctly function 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2045,8 +2075,9 @@ exports[`Pagination should render correctly function 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2054,8 +2085,9 @@ exports[`Pagination should render correctly function 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2063,8 +2095,9 @@ exports[`Pagination should render correctly function 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2072,8 +2105,9 @@ exports[`Pagination should render correctly function 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2086,7 +2120,7 @@ exports[`Pagination should render correctly function 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2104,7 +2138,7 @@ exports[`Pagination should render correctly function 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -2259,7 +2293,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2271,12 +2305,13 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2350,7 +2385,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2372,7 +2407,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2394,8 +2429,9 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2409,7 +2445,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2428,7 +2464,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2584,7 +2620,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2596,12 +2632,13 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2642,7 +2679,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   margin: 0 16px;
 }
 
-.cache-1djae1b-StyledOutlinedButton {
+.cache-kp1ejs-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2654,12 +2691,13 @@ exports[`Pagination should render correctly loadable with no data and initial pa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2715,7 +2753,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2737,7 +2775,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2759,8 +2797,9 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 1"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2774,7 +2813,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2793,7 +2832,7 @@ exports[`Pagination should render correctly loadable with no data and initial pa
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -2892,7 +2931,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   gap: 8px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2904,12 +2943,13 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2930,12 +2970,12 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -2959,7 +2999,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2971,12 +3011,13 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2997,18 +3038,18 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3020,12 +3061,13 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3081,7 +3123,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3102,7 +3144,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3123,8 +3165,9 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3132,8 +3175,9 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3141,8 +3185,9 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3150,8 +3195,9 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3159,8 +3205,9 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="true"
             aria-label="Page 11"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3173,7 +3220,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3191,7 +3238,7 @@ exports[`Pagination should render correctly loadable with pageClick 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -3290,7 +3337,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3302,12 +3349,13 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3348,7 +3396,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3360,12 +3408,13 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3386,18 +3435,18 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3409,12 +3458,13 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3435,12 +3485,12 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -3479,7 +3529,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -3501,7 +3551,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -3523,8 +3573,9 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3532,8 +3583,9 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3541,8 +3593,9 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3550,8 +3603,9 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3559,8 +3613,9 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3573,7 +3628,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3591,7 +3646,7 @@ exports[`Pagination should render correctly onLoadPage 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3689,7 +3744,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3701,12 +3756,13 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3747,7 +3803,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3759,12 +3815,13 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3785,18 +3842,18 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3808,12 +3865,13 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -3834,12 +3892,12 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -3878,7 +3936,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -3900,7 +3958,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -3922,8 +3980,9 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3931,8 +3990,9 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3940,8 +4000,9 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3949,8 +4010,9 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3958,8 +4020,9 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3972,7 +4035,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -3990,7 +4053,7 @@ exports[`Pagination should render correctly onLoadPage and pageCount 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4223,7 +4286,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4235,12 +4298,13 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4281,7 +4345,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4293,12 +4357,13 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4319,12 +4384,12 @@ exports[`Pagination should render correctly perPage 0 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -4363,7 +4428,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4385,7 +4450,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4407,8 +4472,9 @@ exports[`Pagination should render correctly perPage 0 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4421,7 +4487,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4440,7 +4506,7 @@ exports[`Pagination should render correctly perPage 0 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4599,7 +4665,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4611,12 +4677,13 @@ exports[`Pagination should render correctly with controlled 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4657,7 +4724,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4669,12 +4736,13 @@ exports[`Pagination should render correctly with controlled 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4695,18 +4763,18 @@ exports[`Pagination should render correctly with controlled 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4718,12 +4786,13 @@ exports[`Pagination should render correctly with controlled 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -4744,12 +4813,12 @@ exports[`Pagination should render correctly with controlled 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -4788,7 +4857,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4810,7 +4879,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -4832,8 +4901,9 @@ exports[`Pagination should render correctly with controlled 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4841,8 +4911,9 @@ exports[`Pagination should render correctly with controlled 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4855,7 +4926,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4873,7 +4944,7 @@ exports[`Pagination should render correctly with controlled 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -4971,7 +5042,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4983,12 +5054,13 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5029,7 +5101,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5041,12 +5113,13 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5067,12 +5140,12 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -5111,7 +5184,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5133,7 +5206,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5155,8 +5228,9 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -5169,7 +5243,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5188,7 +5262,7 @@ exports[`Pagination should render correctly with data (controlled component) 1`]
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5271,7 +5345,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5283,12 +5357,13 @@ exports[`Pagination should render correctly with empty data 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5329,7 +5404,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5341,12 +5416,13 @@ exports[`Pagination should render correctly with empty data 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5367,12 +5443,12 @@ exports[`Pagination should render correctly with empty data 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -5411,7 +5487,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5433,7 +5509,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5455,8 +5531,9 @@ exports[`Pagination should render correctly with empty data 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -5469,7 +5546,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5488,7 +5565,7 @@ exports[`Pagination should render correctly with empty data 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5571,7 +5648,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5583,12 +5660,13 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5629,7 +5707,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5641,12 +5719,13 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5667,12 +5746,12 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -5711,7 +5790,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5733,7 +5812,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5755,8 +5834,9 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -5769,7 +5849,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5788,7 +5868,7 @@ exports[`Pagination should render correctly with empty initialData 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -5887,7 +5967,7 @@ exports[`Pagination should render correctly with initial page greater than max a
   gap: 8px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5899,12 +5979,13 @@ exports[`Pagination should render correctly with initial page greater than max a
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5925,12 +6006,12 @@ exports[`Pagination should render correctly with initial page greater than max a
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -5954,7 +6035,7 @@ exports[`Pagination should render correctly with initial page greater than max a
   margin: 0 16px;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5966,12 +6047,13 @@ exports[`Pagination should render correctly with initial page greater than max a
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -5992,18 +6074,18 @@ exports[`Pagination should render correctly with initial page greater than max a
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6015,12 +6097,13 @@ exports[`Pagination should render correctly with initial page greater than max a
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6076,7 +6159,7 @@ exports[`Pagination should render correctly with initial page greater than max a
         >
           <button
             aria-label="First"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6097,7 +6180,7 @@ exports[`Pagination should render correctly with initial page greater than max a
           </button>
           <button
             aria-label="Back"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6118,8 +6201,9 @@ exports[`Pagination should render correctly with initial page greater than max a
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6127,8 +6211,9 @@ exports[`Pagination should render correctly with initial page greater than max a
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6136,8 +6221,9 @@ exports[`Pagination should render correctly with initial page greater than max a
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6145,8 +6231,9 @@ exports[`Pagination should render correctly with initial page greater than max a
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6154,8 +6241,9 @@ exports[`Pagination should render correctly with initial page greater than max a
             </div>
           </button>
           <button
+            aria-current="true"
             aria-label="Page 10"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6168,7 +6256,7 @@ exports[`Pagination should render correctly with initial page greater than max a
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -6187,7 +6275,7 @@ exports[`Pagination should render correctly with initial page greater than max a
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -6286,7 +6374,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6298,12 +6386,13 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6344,7 +6433,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6356,12 +6445,13 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6382,18 +6472,18 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6405,12 +6495,13 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6431,12 +6522,12 @@ exports[`Pagination should render correctly with initial page less than 1 and no
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -6475,7 +6566,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -6497,7 +6588,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -6519,8 +6610,9 @@ exports[`Pagination should render correctly with initial page less than 1 and no
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6528,8 +6620,9 @@ exports[`Pagination should render correctly with initial page less than 1 and no
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6537,8 +6630,9 @@ exports[`Pagination should render correctly with initial page less than 1 and no
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6546,8 +6640,9 @@ exports[`Pagination should render correctly with initial page less than 1 and no
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6555,8 +6650,9 @@ exports[`Pagination should render correctly with initial page less than 1 and no
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6569,7 +6665,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6587,7 +6683,7 @@ exports[`Pagination should render correctly with initial page less than 1 and no
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6685,7 +6781,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   gap: 8px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6697,12 +6793,13 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6723,12 +6820,12 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -6752,7 +6849,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6764,12 +6861,13 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -6790,12 +6888,12 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -6834,7 +6932,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6855,7 +6953,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6876,8 +6974,9 @@ exports[`Pagination should render correctly with pageClick 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6885,8 +6984,9 @@ exports[`Pagination should render correctly with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6894,8 +6994,9 @@ exports[`Pagination should render correctly with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="true"
             aria-label="Page 4"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6903,8 +7004,9 @@ exports[`Pagination should render correctly with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6912,8 +7014,9 @@ exports[`Pagination should render correctly with pageClick 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6926,7 +7029,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -6944,7 +7047,7 @@ exports[`Pagination should render correctly with pageClick 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -7099,7 +7202,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7111,12 +7214,13 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7157,7 +7261,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   margin: 0 16px;
 }
 
-.cache-1djae1b-StyledOutlinedButton {
+.cache-kp1ejs-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7169,12 +7273,13 @@ exports[`Pagination should render correctly with pageClick and load and empty re
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7230,7 +7335,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7252,7 +7357,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7274,8 +7379,9 @@ exports[`Pagination should render correctly with pageClick and load and empty re
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7284,8 +7390,9 @@ exports[`Pagination should render correctly with pageClick and load and empty re
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7294,8 +7401,9 @@ exports[`Pagination should render correctly with pageClick and load and empty re
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7304,8 +7412,9 @@ exports[`Pagination should render correctly with pageClick and load and empty re
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7314,8 +7423,9 @@ exports[`Pagination should render correctly with pageClick and load and empty re
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7329,7 +7439,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7348,7 +7458,7 @@ exports[`Pagination should render correctly with pageClick and load and empty re
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7504,7 +7614,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7516,12 +7626,13 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7562,7 +7673,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   margin: 0 16px;
 }
 
-.cache-1djae1b-StyledOutlinedButton {
+.cache-kp1ejs-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7574,12 +7685,13 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7635,7 +7747,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7657,7 +7769,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7679,8 +7791,9 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 6"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7689,8 +7802,9 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 7"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7699,8 +7813,9 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 8"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7709,8 +7824,9 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 9"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7719,8 +7835,9 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 10"
-            class="cache-1djae1b-StyledOutlinedButton em6gco81"
+            class="cache-kp1ejs-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7734,7 +7851,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7753,7 +7870,7 @@ exports[`Pagination should render correctly with pageClick and load and no emtpy
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -7836,7 +7953,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   gap: 8px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7848,12 +7965,13 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7874,12 +7992,12 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
@@ -7903,7 +8021,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7915,12 +8033,13 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -7941,18 +8060,18 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7964,12 +8083,13 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -8025,7 +8145,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8046,7 +8166,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8067,8 +8187,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="false"
             aria-label="Page 46"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8076,8 +8197,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 47"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8085,8 +8207,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 48"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8094,8 +8217,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 49"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8103,8 +8227,9 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
             </div>
           </button>
           <button
+            aria-current="true"
             aria-label="Page 50"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8117,7 +8242,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -8136,7 +8261,7 @@ exports[`Pagination should render correctly with pageClick and pageCount 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -8223,7 +8348,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   gap: 8px;
 }
 
-.cache-iiepid-StyledOutlinedButton {
+.cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8235,12 +8360,13 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -8281,7 +8407,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   margin: 0 16px;
 }
 
-.cache-ijlo5y-StyledOutlinedButton {
+.cache-1kda3b2-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8293,12 +8419,13 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -8319,18 +8446,18 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   color: #4f0599;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-ijlo5y-StyledOutlinedButton:hover,
-.cache-ijlo5y-StyledOutlinedButton:active {
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
   background: #eeeeff;
   color: #4f0599;
   border: 1px solid #4f0599;
 }
 
-.cache-1mke81b-StyledOutlinedButton {
+.cache-esz0g5-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8342,12 +8469,13 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -8368,12 +8496,12 @@ exports[`Pagination should render correctly with setPageData 1`] = `
   color: #4a4f62;
 }
 
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1mke81b-StyledOutlinedButton:hover,
-.cache-1mke81b-StyledOutlinedButton:active {
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
   background: #e6e9f0;
   color: #4a4f62;
   border: 1px solid #d4dae7;
@@ -8412,7 +8540,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
         >
           <button
             aria-label="First"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -8434,7 +8562,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
           </button>
           <button
             aria-label="Back"
-            class="cache-iiepid-StyledOutlinedButton em6gco81"
+            class="cache-116zjhj-StyledOutlinedButton em6gco81"
             disabled=""
             type="button"
           >
@@ -8456,8 +8584,9 @@ exports[`Pagination should render correctly with setPageData 1`] = `
           class="cache-2sizh-PageNumbersContainer equt9o86"
         >
           <button
+            aria-current="true"
             aria-label="Page 1"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8465,8 +8594,9 @@ exports[`Pagination should render correctly with setPageData 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 2"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8474,8 +8604,9 @@ exports[`Pagination should render correctly with setPageData 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 3"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8483,8 +8614,9 @@ exports[`Pagination should render correctly with setPageData 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 4"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8492,8 +8624,9 @@ exports[`Pagination should render correctly with setPageData 1`] = `
             </div>
           </button>
           <button
+            aria-current="false"
             aria-label="Page 5"
-            class="cache-1mke81b-StyledOutlinedButton em6gco81"
+            class="cache-esz0g5-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8506,7 +8639,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
         >
           <button
             aria-label="Next"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
@@ -8524,7 +8657,7 @@ exports[`Pagination should render correctly with setPageData 1`] = `
           </button>
           <button
             aria-label="Last"
-            class="cache-ijlo5y-StyledOutlinedButton em6gco81"
+            class="cache-1kda3b2-StyledOutlinedButton em6gco81"
             type="button"
           >
             <div>
