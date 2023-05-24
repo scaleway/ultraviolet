@@ -420,7 +420,7 @@ exports[`Tag renders correctly with onClose 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-qdxux-StyledGhostButton-StyledCloseButton {
+.cache-vzqo0n-StyledGhostButton-StyledCloseButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -432,12 +432,13 @@ exports[`Tag renders correctly with onClose 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -465,12 +466,12 @@ exports[`Tag renders correctly with onClose 1`] = `
   padding: 2px;
 }
 
-.cache-qdxux-StyledGhostButton-StyledCloseButton:active {
+.cache-vzqo0n-StyledGhostButton-StyledCloseButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-qdxux-StyledGhostButton-StyledCloseButton:hover,
-.cache-qdxux-StyledGhostButton-StyledCloseButton:active {
+.cache-vzqo0n-StyledGhostButton-StyledCloseButton:hover,
+.cache-vzqo0n-StyledGhostButton-StyledCloseButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -495,7 +496,7 @@ exports[`Tag renders correctly with onClose 1`] = `
     </span>
     <button
       aria-label="Close tag"
-      class="e1vt8sjg0 cache-qdxux-StyledGhostButton-StyledCloseButton em6gco80"
+      class="e1vt8sjg0 cache-vzqo0n-StyledGhostButton-StyledCloseButton em6gco80"
       data-testid="close-tag"
       type="button"
     >

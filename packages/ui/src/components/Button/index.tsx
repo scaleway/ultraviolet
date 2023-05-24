@@ -46,7 +46,7 @@ type StyledButtonProps = Required<
     FinalProps,
     'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
   >
->
+> & { iconOnly: boolean }
 const coreStyle = ({
   theme,
   size,
@@ -54,11 +54,19 @@ const coreStyle = ({
   iconPosition,
   fullWidth,
   disabled,
+  iconOnly,
 }: { theme: Theme } & StyledButtonProps) => {
   const font =
     size === 'large'
       ? theme.typography.bodyStrong
       : theme.typography.bodySmallStrong
+
+  let width = 'auto'
+  if (fullWidth) {
+    width = '100%'
+  } else if (iconOnly) {
+    width = `${SIZE_HEIGHT[size]}px`
+  }
 
   return `display: inline-flex;
   height: ${SIZE_HEIGHT[size]}px;
@@ -66,9 +74,10 @@ const coreStyle = ({
   flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
   gap: ${theme.space['1']};
   border-radius: ${theme.radii.default};
+  box-sizing: border-box;
+  width: ${width};
   align-items: center;
   cursor: ${disabled ? 'not-allowed' : 'pointer'};
-  width: ${fullWidth ? '100%' : 'auto'};
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
@@ -256,6 +265,7 @@ type CommonProps = {
   fullWidth?: boolean
   isLoading?: boolean
   'aria-label'?: string
+  'aria-current'?: boolean
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
 }
@@ -319,6 +329,7 @@ export const Button = forwardRef<Element, FinalProps>(
       onClick,
       name,
       'aria-label': ariaLabel,
+      'aria-current': ariaCurrent,
       href,
       download,
       target,
@@ -364,10 +375,12 @@ export const Button = forwardRef<Element, FinalProps>(
             type={type}
             onClick={onClick}
             aria-label={ariaLabel}
+            aria-current={ariaCurrent}
             href={href}
             target={target}
             download={download}
             ref={ref as Ref<HTMLAnchorElement>}
+            iconOnly={!!icon && !children}
           >
             {content}
           </Component>
@@ -393,6 +406,8 @@ export const Button = forwardRef<Element, FinalProps>(
           ref={ref as Ref<HTMLButtonElement>}
           name={name}
           aria-label={ariaLabel}
+          aria-current={ariaCurrent}
+          iconOnly={!!icon && !children}
         >
           {content}
         </Component>

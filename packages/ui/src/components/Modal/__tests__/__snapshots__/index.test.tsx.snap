@@ -68,7 +68,7 @@ exports[`Modal renders with customStyle 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -80,12 +80,13 @@ exports[`Modal renders with customStyle 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -106,12 +107,12 @@ exports[`Modal renders with customStyle 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -149,7 +150,7 @@ exports[`Modal renders with customStyle 1`] = `
         >
           <button
             aria-label="close"
-            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            class="cache-pw162u-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -234,7 +235,7 @@ exports[`Modal renders with default Props 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -246,12 +247,13 @@ exports[`Modal renders with default Props 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -272,12 +274,12 @@ exports[`Modal renders with default Props 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -316,7 +318,7 @@ exports[`Modal renders with default Props 1`] = `
         >
           <button
             aria-label="close"
-            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            class="cache-pw162u-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -403,7 +405,7 @@ exports[`Modal renders with disclosure 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -415,12 +417,13 @@ exports[`Modal renders with disclosure 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -441,12 +444,12 @@ exports[`Modal renders with disclosure 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -485,7 +488,7 @@ exports[`Modal renders with disclosure 1`] = `
         >
           <button
             aria-label="close"
-            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            class="cache-pw162u-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -578,7 +581,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -590,12 +593,13 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -616,12 +620,12 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -662,7 +666,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
         >
           <button
             aria-label="close"
-            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            class="cache-pw162u-StyledGhostButton em6gco80"
             data-testid="test-close-button"
             type="button"
           >
@@ -754,7 +758,7 @@ exports[`Modal renders with opened={true} 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -766,12 +770,13 @@ exports[`Modal renders with opened={true} 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -792,12 +797,12 @@ exports[`Modal renders with opened={true} 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -835,7 +840,7 @@ exports[`Modal renders with opened={true} 1`] = `
         >
           <button
             aria-label="close"
-            class="cache-1tocl8q-StyledGhostButton em6gco80"
+            class="cache-pw162u-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -920,7 +925,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   left: 16px;
 }
 
-.cache-1tocl8q-StyledGhostButton {
+.cache-pw162u-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -932,12 +937,13 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -958,12 +964,12 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
   color: #4a4f62;
 }
 
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1tocl8q-StyledGhostButton:hover,
-.cache-1tocl8q-StyledGhostButton:active {
+.cache-pw162u-StyledGhostButton:hover,
+.cache-pw162u-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -998,7 +1004,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
       >
         <button
           aria-label="close"
-          class="cache-1tocl8q-StyledGhostButton em6gco80"
+          class="cache-pw162u-StyledGhostButton em6gco80"
           type="button"
         >
           <svg

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
-import { Icon } from '../Icon'
 import { getPageNumbers } from './getPageNumbers'
 
 const PageNumbersContainer = styled.div`
@@ -93,33 +92,22 @@ export const Pagination = ({
           variant="outlined"
           sentiment="primary"
           onClick={goToFirstPage}
-        >
-          <Icon name="arrow-left-double" />
-        </Button>
+          icon="arrow-left-double"
+        />
         <Button
           aria-label="Back"
           disabled={page <= 1 || disabled}
           variant="outlined"
           sentiment="primary"
           onClick={goToPreviousPage}
-        >
-          <Icon name="arrow-left" />
-        </Button>
+          icon="arrow-left"
+        />
       </PageSwitchContainer>
       <PageNumbersContainer>
         {pageNumbersToDisplay.map(pageNumber => (
-          // <StyledPageButton
-          //   aria-label={`Page ${pageNumber}`}
-          //   key={`pagination-page-${pageNumber}`}
-          //   disabled={disabled}
-          //   aria-current={pageNumber === page}
-          //   onClick={handlePageClick(pageNumber)}
-          //   type="button"
-          // >
-          //   {pageNumber}
-          // </StyledPageButton>
           <Button
             aria-label={`Page ${pageNumber}`}
+            aria-current={pageNumber === page}
             key={`pagination-page-${pageNumber}`}
             disabled={disabled}
             variant="outlined"
@@ -138,18 +126,16 @@ export const Pagination = ({
           variant="outlined"
           sentiment="primary"
           onClick={goToNextPage}
-        >
-          <Icon name="arrow-right" />
-        </Button>
+          icon="arrow-right"
+        />
         <Button
           aria-label="Last"
           disabled={page >= pageCount || disabled}
           variant="outlined"
           sentiment="primary"
           onClick={goToLastPage}
-        >
-          <Icon name="arrow-right-double" />
-        </Button>
+          icon="arrow-right-double"
+        />
       </PageSwitchContainer>
     </StyledContainer>
   )

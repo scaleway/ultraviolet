@@ -2,7 +2,7 @@
 
 exports[`Button render as an anchor with href prop 1`] = `
 <DocumentFragment>
-  .cache-1uhpoxg-link-StyledFilledButton {
+  .cache-5xvk6l-link-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -14,12 +14,13 @@ exports[`Button render as an anchor with href prop 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -40,18 +41,18 @@ exports[`Button render as an anchor with href prop 1`] = `
   color: #ffffff;
 }
 
-.cache-1uhpoxg-link-StyledFilledButton:active {
+.cache-5xvk6l-link-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1uhpoxg-link-StyledFilledButton:hover,
-.cache-1uhpoxg-link-StyledFilledButton:active {
+.cache-5xvk6l-link-StyledFilledButton:hover,
+.cache-5xvk6l-link-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <a
-    class="cache-1uhpoxg-link-StyledFilledButton em6gco83"
+    class="cache-5xvk6l-link-StyledFilledButton em6gco83"
     href="http://scaleway.com"
     type="button"
   >
@@ -62,7 +63,7 @@ exports[`Button render as an anchor with href prop 1`] = `
 
 exports[`Button render large 1`] = `
 <DocumentFragment>
-  .cache-fn9st1-StyledFilledButton {
+  .cache-1kah2fx-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -74,12 +75,13 @@ exports[`Button render large 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -100,18 +102,18 @@ exports[`Button render large 1`] = `
   color: #ffffff;
 }
 
-.cache-fn9st1-StyledFilledButton:active {
+.cache-1kah2fx-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-fn9st1-StyledFilledButton:hover,
-.cache-fn9st1-StyledFilledButton:active {
+.cache-1kah2fx-StyledFilledButton:hover,
+.cache-1kah2fx-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-fn9st1-StyledFilledButton em6gco82"
+    class="cache-1kah2fx-StyledFilledButton em6gco82"
     type="button"
   >
     Hello
@@ -121,7 +123,7 @@ exports[`Button render large 1`] = `
 
 exports[`Button render medium 1`] = `
 <DocumentFragment>
-  .cache-an9m7n-StyledFilledButton {
+  .cache-jj26uv-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -133,12 +135,13 @@ exports[`Button render medium 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -159,18 +162,18 @@ exports[`Button render medium 1`] = `
   color: #ffffff;
 }
 
-.cache-an9m7n-StyledFilledButton:active {
+.cache-jj26uv-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-an9m7n-StyledFilledButton:hover,
-.cache-an9m7n-StyledFilledButton:active {
+.cache-jj26uv-StyledFilledButton:hover,
+.cache-jj26uv-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-an9m7n-StyledFilledButton em6gco82"
+    class="cache-jj26uv-StyledFilledButton em6gco82"
     type="button"
   >
     Hello
@@ -180,7 +183,7 @@ exports[`Button render medium 1`] = `
 
 exports[`Button render small 1`] = `
 <DocumentFragment>
-  .cache-fmeecm-StyledFilledButton {
+  .cache-3u7v7f-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -192,12 +195,13 @@ exports[`Button render small 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -218,18 +222,18 @@ exports[`Button render small 1`] = `
   color: #ffffff;
 }
 
-.cache-fmeecm-StyledFilledButton:active {
+.cache-3u7v7f-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-fmeecm-StyledFilledButton:hover,
-.cache-fmeecm-StyledFilledButton:active {
+.cache-3u7v7f-StyledFilledButton:hover,
+.cache-3u7v7f-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-fmeecm-StyledFilledButton em6gco82"
+    class="cache-3u7v7f-StyledFilledButton em6gco82"
     type="button"
   >
     Hello
@@ -243,7 +247,7 @@ exports[`Button render with a tooltip 1`] = `
   display: inherit;
 }
 
-.cache-fn9st1-StyledFilledButton {
+.cache-1kah2fx-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -255,12 +259,13 @@ exports[`Button render with a tooltip 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -281,12 +286,12 @@ exports[`Button render with a tooltip 1`] = `
   color: #ffffff;
 }
 
-.cache-fn9st1-StyledFilledButton:active {
+.cache-1kah2fx-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-fn9st1-StyledFilledButton:hover,
-.cache-fn9st1-StyledFilledButton:active {
+.cache-1kah2fx-StyledFilledButton:hover,
+.cache-1kah2fx-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
@@ -297,7 +302,7 @@ exports[`Button render with a tooltip 1`] = `
     tabindex="0"
   >
     <button
-      class="cache-fn9st1-StyledFilledButton em6gco82"
+      class="cache-1kah2fx-StyledFilledButton em6gco82"
       type="button"
     >
       Hello
@@ -308,7 +313,7 @@ exports[`Button render with a tooltip 1`] = `
 
 exports[`Button render with fullWidth 1`] = `
 <DocumentFragment>
-  .cache-1dsc55e-StyledFilledButton {
+  .cache-vaecpf-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -320,12 +325,13 @@ exports[`Button render with fullWidth 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
-  width: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -346,18 +352,18 @@ exports[`Button render with fullWidth 1`] = `
   color: #ffffff;
 }
 
-.cache-1dsc55e-StyledFilledButton:active {
+.cache-vaecpf-StyledFilledButton:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1dsc55e-StyledFilledButton:hover,
-.cache-1dsc55e-StyledFilledButton:active {
+.cache-vaecpf-StyledFilledButton:hover,
+.cache-vaecpf-StyledFilledButton:active {
   background: #390171;
   color: #ffffff;
 }
 
 <button
-    class="cache-1dsc55e-StyledFilledButton em6gco82"
+    class="cache-vaecpf-StyledFilledButton em6gco82"
     type="button"
   >
     Hello
@@ -367,7 +373,7 @@ exports[`Button render with fullWidth 1`] = `
 
 exports[`Button render with icon 1`] = `
 <DocumentFragment>
-  .cache-1or6myv-StyledFilledButton {
+  .cache-1ksa3fj-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -379,12 +385,13 @@ exports[`Button render with icon 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -417,7 +424,7 @@ exports[`Button render with icon 1`] = `
 }
 
 <button
-    class="cache-1or6myv-StyledFilledButton em6gco82"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -436,7 +443,7 @@ exports[`Button render with icon 1`] = `
 
 exports[`Button render with icon on the right 1`] = `
 <DocumentFragment>
-  .cache-tw9dv3-StyledFilledButton {
+  .cache-noas22-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -448,12 +455,13 @@ exports[`Button render with icon on the right 1`] = `
   flex-direction: row-reverse;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -486,7 +494,7 @@ exports[`Button render with icon on the right 1`] = `
 }
 
 <button
-    class="cache-tw9dv3-StyledFilledButton em6gco82"
+    class="cache-noas22-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -505,7 +513,7 @@ exports[`Button render with icon on the right 1`] = `
 
 exports[`Button render with icon only 1`] = `
 <DocumentFragment>
-  .cache-tw9dv3-StyledFilledButton {
+  .cache-1h5ftck-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -517,12 +525,13 @@ exports[`Button render with icon only 1`] = `
   flex-direction: row-reverse;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -555,7 +564,7 @@ exports[`Button render with icon only 1`] = `
 }
 
 <button
-    class="cache-tw9dv3-StyledFilledButton em6gco82"
+    class="cache-1h5ftck-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -589,7 +598,7 @@ exports[`Button render with isLoading with icon 1`] = `
   }
 }
 
-.cache-1or6myv-StyledFilledButton {
+.cache-1ksa3fj-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -601,12 +610,13 @@ exports[`Button render with isLoading with icon 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -640,7 +650,7 @@ exports[`Button render with isLoading with icon 1`] = `
 }
 
 <button
-    class="cache-1or6myv-StyledFilledButton em6gco82"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -699,7 +709,7 @@ exports[`Button render with isLoading without icon 1`] = `
   }
 }
 
-.cache-1or6myv-StyledFilledButton {
+.cache-1ksa3fj-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -711,12 +721,13 @@ exports[`Button render with isLoading without icon 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -750,7 +761,7 @@ exports[`Button render with isLoading without icon 1`] = `
 }
 
 <button
-    class="cache-1or6myv-StyledFilledButton em6gco82"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -793,7 +804,7 @@ exports[`Button render with isLoading without icon 1`] = `
 
 exports[`Button variant-sentiment-disabled combination render filled&danger 1`] = `
 <DocumentFragment>
-  .cache-2si6a5-StyledFilledButton {
+  .cache-n45762-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -805,12 +816,13 @@ exports[`Button variant-sentiment-disabled combination render filled&danger 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -834,7 +846,7 @@ exports[`Button variant-sentiment-disabled combination render filled&danger 1`] 
 }
 
 <button
-    class="cache-2si6a5-StyledFilledButton em6gco82"
+    class="cache-n45762-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -845,7 +857,7 @@ exports[`Button variant-sentiment-disabled combination render filled&danger 1`] 
 
 exports[`Button variant-sentiment-disabled combination render filled&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-2si6a5-StyledFilledButton {
+  .cache-n45762-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -857,12 +869,13 @@ exports[`Button variant-sentiment-disabled combination render filled&danger disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -886,7 +899,7 @@ exports[`Button variant-sentiment-disabled combination render filled&danger disa
 }
 
 <button
-    class="cache-2si6a5-StyledFilledButton em6gco82"
+    class="cache-n45762-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -897,7 +910,7 @@ exports[`Button variant-sentiment-disabled combination render filled&danger disa
 
 exports[`Button variant-sentiment-disabled combination render filled&info 1`] = `
 <DocumentFragment>
-  .cache-uim1ji-StyledFilledButton {
+  .cache-1qnnu3g-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -909,12 +922,13 @@ exports[`Button variant-sentiment-disabled combination render filled&info 1`] = 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -938,7 +952,7 @@ exports[`Button variant-sentiment-disabled combination render filled&info 1`] = 
 }
 
 <button
-    class="cache-uim1ji-StyledFilledButton em6gco82"
+    class="cache-1qnnu3g-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -949,7 +963,7 @@ exports[`Button variant-sentiment-disabled combination render filled&info 1`] = 
 
 exports[`Button variant-sentiment-disabled combination render filled&info disabled 1`] = `
 <DocumentFragment>
-  .cache-uim1ji-StyledFilledButton {
+  .cache-1qnnu3g-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -961,12 +975,13 @@ exports[`Button variant-sentiment-disabled combination render filled&info disabl
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -990,7 +1005,7 @@ exports[`Button variant-sentiment-disabled combination render filled&info disabl
 }
 
 <button
-    class="cache-uim1ji-StyledFilledButton em6gco82"
+    class="cache-1qnnu3g-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1001,7 +1016,7 @@ exports[`Button variant-sentiment-disabled combination render filled&info disabl
 
 exports[`Button variant-sentiment-disabled combination render filled&neutral 1`] = `
 <DocumentFragment>
-  .cache-11089ei-StyledFilledButton {
+  .cache-6sxnx0-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1013,12 +1028,13 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1042,7 +1058,7 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral 1`]
 }
 
 <button
-    class="cache-11089ei-StyledFilledButton em6gco82"
+    class="cache-6sxnx0-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1053,7 +1069,7 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral 1`]
 
 exports[`Button variant-sentiment-disabled combination render filled&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-11089ei-StyledFilledButton {
+  .cache-6sxnx0-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1065,12 +1081,13 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral dis
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1094,7 +1111,7 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral dis
 }
 
 <button
-    class="cache-11089ei-StyledFilledButton em6gco82"
+    class="cache-6sxnx0-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1105,7 +1122,7 @@ exports[`Button variant-sentiment-disabled combination render filled&neutral dis
 
 exports[`Button variant-sentiment-disabled combination render filled&primary 1`] = `
 <DocumentFragment>
-  .cache-1or6myv-StyledFilledButton {
+  .cache-1ksa3fj-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1117,12 +1134,13 @@ exports[`Button variant-sentiment-disabled combination render filled&primary 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1146,7 +1164,7 @@ exports[`Button variant-sentiment-disabled combination render filled&primary 1`]
 }
 
 <button
-    class="cache-1or6myv-StyledFilledButton em6gco82"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1157,7 +1175,7 @@ exports[`Button variant-sentiment-disabled combination render filled&primary 1`]
 
 exports[`Button variant-sentiment-disabled combination render filled&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1or6myv-StyledFilledButton {
+  .cache-1ksa3fj-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1169,12 +1187,13 @@ exports[`Button variant-sentiment-disabled combination render filled&primary dis
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1198,7 +1217,7 @@ exports[`Button variant-sentiment-disabled combination render filled&primary dis
 }
 
 <button
-    class="cache-1or6myv-StyledFilledButton em6gco82"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1209,7 +1228,7 @@ exports[`Button variant-sentiment-disabled combination render filled&primary dis
 
 exports[`Button variant-sentiment-disabled combination render filled&success 1`] = `
 <DocumentFragment>
-  .cache-2kjmjr-StyledFilledButton {
+  .cache-1299ox2-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1221,12 +1240,13 @@ exports[`Button variant-sentiment-disabled combination render filled&success 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1250,7 +1270,7 @@ exports[`Button variant-sentiment-disabled combination render filled&success 1`]
 }
 
 <button
-    class="cache-2kjmjr-StyledFilledButton em6gco82"
+    class="cache-1299ox2-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1261,7 +1281,7 @@ exports[`Button variant-sentiment-disabled combination render filled&success 1`]
 
 exports[`Button variant-sentiment-disabled combination render filled&success disabled 1`] = `
 <DocumentFragment>
-  .cache-2kjmjr-StyledFilledButton {
+  .cache-1299ox2-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1273,12 +1293,13 @@ exports[`Button variant-sentiment-disabled combination render filled&success dis
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1302,7 +1323,7 @@ exports[`Button variant-sentiment-disabled combination render filled&success dis
 }
 
 <button
-    class="cache-2kjmjr-StyledFilledButton em6gco82"
+    class="cache-1299ox2-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1313,7 +1334,7 @@ exports[`Button variant-sentiment-disabled combination render filled&success dis
 
 exports[`Button variant-sentiment-disabled combination render filled&warning 1`] = `
 <DocumentFragment>
-  .cache-xtyb6a-StyledFilledButton {
+  .cache-1ccarpo-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1325,12 +1346,13 @@ exports[`Button variant-sentiment-disabled combination render filled&warning 1`]
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1354,7 +1376,7 @@ exports[`Button variant-sentiment-disabled combination render filled&warning 1`]
 }
 
 <button
-    class="cache-xtyb6a-StyledFilledButton em6gco82"
+    class="cache-1ccarpo-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1365,7 +1387,7 @@ exports[`Button variant-sentiment-disabled combination render filled&warning 1`]
 
 exports[`Button variant-sentiment-disabled combination render filled&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-xtyb6a-StyledFilledButton {
+  .cache-1ccarpo-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1377,12 +1399,13 @@ exports[`Button variant-sentiment-disabled combination render filled&warning dis
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1406,7 +1429,7 @@ exports[`Button variant-sentiment-disabled combination render filled&warning dis
 }
 
 <button
-    class="cache-xtyb6a-StyledFilledButton em6gco82"
+    class="cache-1ccarpo-StyledFilledButton em6gco82"
     disabled=""
     type="button"
   >
@@ -1417,7 +1440,7 @@ exports[`Button variant-sentiment-disabled combination render filled&warning dis
 
 exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] = `
 <DocumentFragment>
-  .cache-sov7bv-StyledGhostButton {
+  .cache-1sgzw6q-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1429,12 +1452,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] =
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1457,7 +1481,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] =
 }
 
 <button
-    class="cache-sov7bv-StyledGhostButton em6gco80"
+    class="cache-1sgzw6q-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1468,7 +1492,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] =
 
 exports[`Button variant-sentiment-disabled combination render ghost&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-sov7bv-StyledGhostButton {
+  .cache-1sgzw6q-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1480,12 +1504,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger disab
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1508,7 +1533,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger disab
 }
 
 <button
-    class="cache-sov7bv-StyledGhostButton em6gco80"
+    class="cache-1sgzw6q-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1519,7 +1544,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&danger disab
 
 exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
 <DocumentFragment>
-  .cache-pv7ug8-StyledGhostButton {
+  .cache-1ccecqx-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1531,12 +1556,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1559,7 +1585,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
 }
 
 <button
-    class="cache-pv7ug8-StyledGhostButton em6gco80"
+    class="cache-1ccecqx-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1570,7 +1596,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
 
 exports[`Button variant-sentiment-disabled combination render ghost&info disabled 1`] = `
 <DocumentFragment>
-  .cache-pv7ug8-StyledGhostButton {
+  .cache-1ccecqx-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1582,12 +1608,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&info disable
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1610,7 +1637,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&info disable
 }
 
 <button
-    class="cache-pv7ug8-StyledGhostButton em6gco80"
+    class="cache-1ccecqx-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1621,7 +1648,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&info disable
 
 exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] = `
 <DocumentFragment>
-  .cache-s12eiy-StyledGhostButton {
+  .cache-njfhbk-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1633,12 +1660,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1661,7 +1689,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] 
 }
 
 <button
-    class="cache-s12eiy-StyledGhostButton em6gco80"
+    class="cache-njfhbk-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1672,7 +1700,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] 
 
 exports[`Button variant-sentiment-disabled combination render ghost&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-s12eiy-StyledGhostButton {
+  .cache-njfhbk-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1684,12 +1712,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1712,7 +1741,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral disa
 }
 
 <button
-    class="cache-s12eiy-StyledGhostButton em6gco80"
+    class="cache-njfhbk-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1723,7 +1752,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&neutral disa
 
 exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] = `
 <DocumentFragment>
-  .cache-1v3j1n8-StyledGhostButton {
+  .cache-4gxcti-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1735,12 +1764,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1763,7 +1793,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] 
 }
 
 <button
-    class="cache-1v3j1n8-StyledGhostButton em6gco80"
+    class="cache-4gxcti-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1774,7 +1804,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] 
 
 exports[`Button variant-sentiment-disabled combination render ghost&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1v3j1n8-StyledGhostButton {
+  .cache-4gxcti-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1786,12 +1816,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1814,7 +1845,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary disa
 }
 
 <button
-    class="cache-1v3j1n8-StyledGhostButton em6gco80"
+    class="cache-4gxcti-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1825,7 +1856,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary disa
 
 exports[`Button variant-sentiment-disabled combination render ghost&success 1`] = `
 <DocumentFragment>
-  .cache-1b9r5cd-StyledGhostButton {
+  .cache-143k4tc-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1837,12 +1868,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&success 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1865,7 +1897,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&success 1`] 
 }
 
 <button
-    class="cache-1b9r5cd-StyledGhostButton em6gco80"
+    class="cache-143k4tc-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1876,7 +1908,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&success 1`] 
 
 exports[`Button variant-sentiment-disabled combination render ghost&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1b9r5cd-StyledGhostButton {
+  .cache-143k4tc-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1888,12 +1920,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&success disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1916,7 +1949,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&success disa
 }
 
 <button
-    class="cache-1b9r5cd-StyledGhostButton em6gco80"
+    class="cache-143k4tc-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1927,7 +1960,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&success disa
 
 exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] = `
 <DocumentFragment>
-  .cache-h0cgq7-StyledGhostButton {
+  .cache-5w9ekw-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1939,12 +1972,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1967,7 +2001,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] 
 }
 
 <button
-    class="cache-h0cgq7-StyledGhostButton em6gco80"
+    class="cache-5w9ekw-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -1978,7 +2012,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] 
 
 exports[`Button variant-sentiment-disabled combination render ghost&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-h0cgq7-StyledGhostButton {
+  .cache-5w9ekw-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1990,12 +2024,13 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2018,7 +2053,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning disa
 }
 
 <button
-    class="cache-h0cgq7-StyledGhostButton em6gco80"
+    class="cache-5w9ekw-StyledGhostButton em6gco80"
     disabled=""
     type="button"
   >
@@ -2029,7 +2064,7 @@ exports[`Button variant-sentiment-disabled combination render ghost&warning disa
 
 exports[`Button variant-sentiment-disabled combination render outlined&danger 1`] = `
 <DocumentFragment>
-  .cache-141i0xg-StyledOutlinedButton {
+  .cache-bfn9ib-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2041,12 +2076,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger 1`
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2070,7 +2106,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger 1`
 }
 
 <button
-    class="cache-141i0xg-StyledOutlinedButton em6gco81"
+    class="cache-bfn9ib-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2081,7 +2117,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger 1`
 
 exports[`Button variant-sentiment-disabled combination render outlined&danger disabled 1`] = `
 <DocumentFragment>
-  .cache-141i0xg-StyledOutlinedButton {
+  .cache-bfn9ib-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2093,12 +2129,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger di
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2122,7 +2159,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger di
 }
 
 <button
-    class="cache-141i0xg-StyledOutlinedButton em6gco81"
+    class="cache-bfn9ib-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2133,7 +2170,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&danger di
 
 exports[`Button variant-sentiment-disabled combination render outlined&info 1`] = `
 <DocumentFragment>
-  .cache-96b8cr-StyledOutlinedButton {
+  .cache-9q0je-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2145,12 +2182,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&info 1`] 
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2174,7 +2212,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&info 1`] 
 }
 
 <button
-    class="cache-96b8cr-StyledOutlinedButton em6gco81"
+    class="cache-9q0je-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2185,7 +2223,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&info 1`] 
 
 exports[`Button variant-sentiment-disabled combination render outlined&info disabled 1`] = `
 <DocumentFragment>
-  .cache-96b8cr-StyledOutlinedButton {
+  .cache-9q0je-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2197,12 +2235,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&info disa
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2226,7 +2265,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&info disa
 }
 
 <button
-    class="cache-96b8cr-StyledOutlinedButton em6gco81"
+    class="cache-9q0je-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2237,7 +2276,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&info disa
 
 exports[`Button variant-sentiment-disabled combination render outlined&neutral 1`] = `
 <DocumentFragment>
-  .cache-1djae1b-StyledOutlinedButton {
+  .cache-kp1ejs-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2249,12 +2288,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral 1
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2278,7 +2318,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral 1
 }
 
 <button
-    class="cache-1djae1b-StyledOutlinedButton em6gco81"
+    class="cache-kp1ejs-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2289,7 +2329,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral 1
 
 exports[`Button variant-sentiment-disabled combination render outlined&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-1djae1b-StyledOutlinedButton {
+  .cache-kp1ejs-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2301,12 +2341,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral d
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2330,7 +2371,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral d
 }
 
 <button
-    class="cache-1djae1b-StyledOutlinedButton em6gco81"
+    class="cache-kp1ejs-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2341,7 +2382,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&neutral d
 
 exports[`Button variant-sentiment-disabled combination render outlined&primary 1`] = `
 <DocumentFragment>
-  .cache-iiepid-StyledOutlinedButton {
+  .cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2353,12 +2394,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary 1
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2382,7 +2424,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary 1
 }
 
 <button
-    class="cache-iiepid-StyledOutlinedButton em6gco81"
+    class="cache-116zjhj-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2393,7 +2435,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary 1
 
 exports[`Button variant-sentiment-disabled combination render outlined&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-iiepid-StyledOutlinedButton {
+  .cache-116zjhj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2405,12 +2447,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary d
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2434,7 +2477,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary d
 }
 
 <button
-    class="cache-iiepid-StyledOutlinedButton em6gco81"
+    class="cache-116zjhj-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2445,7 +2488,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary d
 
 exports[`Button variant-sentiment-disabled combination render outlined&success 1`] = `
 <DocumentFragment>
-  .cache-1m74v8h-StyledOutlinedButton {
+  .cache-11lyw4g-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2457,12 +2500,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&success 1
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2486,7 +2530,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&success 1
 }
 
 <button
-    class="cache-1m74v8h-StyledOutlinedButton em6gco81"
+    class="cache-11lyw4g-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2497,7 +2541,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&success 1
 
 exports[`Button variant-sentiment-disabled combination render outlined&success disabled 1`] = `
 <DocumentFragment>
-  .cache-1m74v8h-StyledOutlinedButton {
+  .cache-11lyw4g-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2509,12 +2553,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&success d
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2538,7 +2583,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&success d
 }
 
 <button
-    class="cache-1m74v8h-StyledOutlinedButton em6gco81"
+    class="cache-11lyw4g-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2549,7 +2594,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&success d
 
 exports[`Button variant-sentiment-disabled combination render outlined&warning 1`] = `
 <DocumentFragment>
-  .cache-kbwjgt-StyledOutlinedButton {
+  .cache-1amc0kj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2561,12 +2606,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning 1
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2590,7 +2636,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning 1
 }
 
 <button
-    class="cache-kbwjgt-StyledOutlinedButton em6gco81"
+    class="cache-1amc0kj-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
@@ -2601,7 +2647,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning 1
 
 exports[`Button variant-sentiment-disabled combination render outlined&warning disabled 1`] = `
 <DocumentFragment>
-  .cache-kbwjgt-StyledOutlinedButton {
+  .cache-1amc0kj-StyledOutlinedButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2613,12 +2659,13 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning d
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   cursor: not-allowed;
-  width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -2642,7 +2689,7 @@ exports[`Button variant-sentiment-disabled combination render outlined&warning d
 }
 
 <button
-    class="cache-kbwjgt-StyledOutlinedButton em6gco81"
+    class="cache-1amc0kj-StyledOutlinedButton em6gco81"
     disabled=""
     type="button"
   >
