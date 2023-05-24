@@ -271,7 +271,7 @@ export const NumberInput = ({
 
       setValue(boundedValue)
 
-      if (onBlur) onBlur(event)
+      onBlur?.(event)
     }
   }
 
@@ -293,11 +293,7 @@ export const NumberInput = ({
         return
       }
 
-      if (roundedValue <= maxValue) {
-        setValue(roundedValue)
-      } else {
-        setValue(maxValue)
-      }
+      setValue(Math.min(roundedValue, maxValue))
     }
 
     if (event.key === 'ArrowDown') {
@@ -311,15 +307,12 @@ export const NumberInput = ({
         localValue % step === 0 ? localValue + step * direction : localValue
       const roundedValue = roundStep(newValue, step, direction)
 
-      if (roundedValue >= minValue) {
-        setValue(roundedValue)
-      } else {
-        setValue(minValue)
-      }
+      setValue(Math.max(roundedValue, minValue))
     }
   }
 
   const isMinusDisabled = useMemo(() => {
+    if (disabled) return true
     if (currentValue === undefined) return false
     if (getMinusRoundedValue(currentValue, step) < minValue) {
       return true
@@ -329,6 +322,7 @@ export const NumberInput = ({
   }, [currentValue, disabled, minValue, step])
 
   const isPlusDisabled = useMemo(() => {
+    if (disabled) return true
     if (currentValue === undefined) return false
     if (maxValue && getPlusRoundedValue(currentValue, step) > maxValue) {
       return true

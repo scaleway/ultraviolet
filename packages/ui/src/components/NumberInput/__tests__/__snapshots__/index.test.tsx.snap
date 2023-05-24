@@ -3140,7 +3140,7 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   border: 1px solid #4f0599;
 }
 
-.cache-14ovykp-StyledGhostButton-StyledSelectButton {
+.cache-cuagco-StyledGhostButton-StyledSelectButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3156,7 +3156,7 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: not-allowed;
   width: auto;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -3175,24 +3175,15 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   background: none;
   border: none;
   color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
   width: 32px;
   height: 32px;
 }
 
-.cache-14ovykp-StyledGhostButton-StyledSelectButton:active {
-  box-shadow: 0px 0px 0px 3px #4F059940;
-}
-
-.cache-14ovykp-StyledGhostButton-StyledSelectButton:hover,
-.cache-14ovykp-StyledGhostButton-StyledSelectButton:active {
-  background: #eeeeff;
-  color: #4f0599;
-}
-
-.cache-19qo8zl-StyledIcon-sizeStyles {
+.cache-1g7yqhm-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #390171;
+  fill: #bda5df;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -3279,12 +3270,13 @@ exports[`NumberInput should renders correctly disabled 1`] = `
       >
         <button
           aria-label="Minus"
-          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
           type="button"
         >
           <div>
             <svg
-              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
@@ -3311,12 +3303,13 @@ exports[`NumberInput should renders correctly disabled 1`] = `
         </div>
         <button
           aria-label="Plus"
-          class="eiawj1g4 cache-14ovykp-StyledGhostButton-StyledSelectButton e1su13oj0"
+          class="eiawj1g4 cache-cuagco-StyledGhostButton-StyledSelectButton e1su13oj0"
+          disabled=""
           type="button"
         >
           <div>
             <svg
-              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
               viewBox="0 0 24 24"
             >
               <path
