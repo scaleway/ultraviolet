@@ -77,7 +77,7 @@ const RadioInput = styled('input', {
   }
 `
 
-const RadioContainer = styled.label<{ htmlFor: string }>`
+const RadioContainer = styled.div`
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -88,7 +88,7 @@ const RadioContainer = styled.label<{ htmlFor: string }>`
   }
 
   :hover[aria-disabled='false'] {
-    ${RadioInput}[id=${({ htmlFor }) => htmlFor}] + ${StyledIcon} {
+    ${RadioInput} + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.primary.background};
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       ${InnerCircleRing} {
@@ -96,8 +96,7 @@ const RadioContainer = styled.label<{ htmlFor: string }>`
       }
     }
 
-    ${RadioInput}[id=${({ htmlFor }) =>
-      htmlFor}][aria-invalid='true']  + ${StyledIcon} {
+    ${RadioInput}[aria-invalid='true'] + ${StyledIcon} {
       background-color: ${({ theme }) => theme.colors.danger.background};
       fill: ${({ theme }) => theme.colors.danger.text};
       ${InnerCircleRing} {
@@ -120,7 +119,6 @@ const RadioContainer = styled.label<{ htmlFor: string }>`
 `
 
 type RadioProps = {
-  children: ReactNode
   error?: string | ReactNode
   checked?: boolean
   size?: number
@@ -138,7 +136,17 @@ type RadioProps = {
     | 'id'
     | 'name'
     | 'required'
-  >
+  > &
+  (
+    | {
+        'aria-label': string
+        children?: never
+      }
+    | {
+        'aria-label'?: never
+        children: ReactNode
+      }
+  )
 
 export const Radio = forwardRef(
   (
@@ -156,6 +164,7 @@ export const Radio = forwardRef(
       className,
       autoFocus,
       onKeyDown,
+      'aria-label': ariaLabel,
       'data-testid': dataTestId,
     }: RadioProps,
     ref: ForwardedRef<HTMLInputElement>,
@@ -165,9 +174,7 @@ export const Radio = forwardRef(
 
     return (
       <RadioContainer
-        as="label"
         aria-disabled={disabled}
-        htmlFor={`${computedName}-${value}`}
         className={className}
         data-checked={checked}
         data-error={error}
@@ -177,6 +184,7 @@ export const Radio = forwardRef(
           type="radio"
           aria-invalid={!!error}
           aria-disabled={disabled}
+          aria-label={ariaLabel}
           checked={checked}
           id={`${computedName}-${value}`}
           onChange={onChange}
@@ -193,7 +201,9 @@ export const Radio = forwardRef(
         <StyledIcon size={size} viewBox="0 0 24 24">
           <RadioMarkedIcon />
         </StyledIcon>
-        {children}
+        {children ? (
+          <label htmlFor={`${computedName}-${value}`}>{children}</label>
+        ) : null}
       </RadioContainer>
     )
   },
