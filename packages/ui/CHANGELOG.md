@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.246.1
+
+### Patch Changes
+
+- [#2552](https://github.com/scaleway/scaleway-ui/pull/2552) [`5760aa6b`](https://github.com/scaleway/scaleway-ui/commit/5760aa6bdfc7a90fb3e5832208d1609a158c4443) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Pagination: restore aria-current and make sure button icon only are square
+
 ## 0.246.0
 
 ### Minor Changes
