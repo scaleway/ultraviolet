@@ -18,7 +18,6 @@ const parameters = {
   darkMode: {
     dark: { ...themes.dark, ...dark },
     light: { ...themes.normal, ...light },
-    stylePreview: true,
   },
   backgrounds: {
     disable: true,
