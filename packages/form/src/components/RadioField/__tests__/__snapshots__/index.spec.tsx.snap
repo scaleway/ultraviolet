@@ -2,7 +2,7 @@
 
 exports[`RadioField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-fs2trx {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,38 +15,43 @@ exports[`RadioField should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-fs2trx[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-fs2trx[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -125,7 +130,7 @@ exports[`RadioField should render correctly 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-fs2trx e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="false"
     >
       <input
@@ -175,7 +180,7 @@ exports[`RadioField should render correctly 1`] = `
 
 exports[`RadioField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-fs2trx {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -188,38 +193,43 @@ exports[`RadioField should render correctly checked 1`] = `
   gap: 8px;
 }
 
-.cache-fs2trx[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-fs2trx[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -298,7 +308,7 @@ exports[`RadioField should render correctly checked 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-fs2trx e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="true"
     >
       <input
@@ -349,7 +359,7 @@ exports[`RadioField should render correctly checked 1`] = `
 
 exports[`RadioField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-fs2trx {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -362,38 +372,43 @@ exports[`RadioField should render correctly disabled 1`] = `
   gap: 8px;
 }
 
-.cache-fs2trx[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-fs2trx[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -472,7 +487,7 @@ exports[`RadioField should render correctly disabled 1`] = `
   >
     <div
       aria-disabled="true"
-      class="cache-fs2trx e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="false"
     >
       <input
@@ -523,7 +538,7 @@ exports[`RadioField should render correctly disabled 1`] = `
 
 exports[`RadioField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-fs2trx {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -536,38 +551,43 @@ exports[`RadioField should trigger events correctly 1`] = `
   gap: 8px;
 }
 
-.cache-fs2trx[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-fs2trx:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-fs2trx[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-fs2trx[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -646,7 +666,7 @@ exports[`RadioField should trigger events correctly 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-fs2trx e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="true"
     >
       <input

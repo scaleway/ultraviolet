@@ -83,7 +83,8 @@ const RadioContainer = styled.div`
   align-items: flex-start;
   gap: ${({ theme }) => theme.space['1']};
 
-  &[aria-disabled='false'] {
+  &[aria-disabled='false'],
+  &[aria-disabled='false'] > label {
     cursor: pointer;
   }
 
@@ -107,6 +108,9 @@ const RadioContainer = styled.div`
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
+    & > label {
+      cursor: not-allowed;
+    }
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     ${StyledIcon} {
