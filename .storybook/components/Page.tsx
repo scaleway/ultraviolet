@@ -82,7 +82,7 @@ const Page = ({
       </StyledHeaderContainer>
       {deprecated ? (
         <FlexDiv>
-          <Text as="h2" variant="bodyStronger" color="danger">
+          <Text as="h3" variant="bodyStronger" color="danger">
             {deprecatedReason
               ? deprecatedReason
               : 'This component is deprecated please do not use it any more.'}
@@ -99,7 +99,7 @@ const Page = ({
         <Subtitle />
       )}
       {experimental ? (
-        <Text as="h2" variant="bodyStronger" color="warning">
+        <Text as="h3" variant="bodyStronger" color="warning">
           This component is at an unstable stage and is subject to change in
           future releases.&nbsp;
           <Link
