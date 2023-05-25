@@ -1,9 +1,9 @@
 import type { ComponentStory } from '@storybook/react'
 import { Menu } from '..'
-import { Button } from '../../Button'
+import { Button } from '../../index'
 
 export const DefaultDisclosure = (
-  <Button action icon="dots-horizontal" iconSize={24} variant="transparent" />
+  <Button icon="dots-horizontal" variant="ghost" size="small" />
 )
 
 export const Template: ComponentStory<typeof Menu> = ({

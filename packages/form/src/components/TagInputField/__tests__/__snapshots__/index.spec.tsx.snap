@@ -182,72 +182,60 @@ exports[`ToggleField should render correctly with default tags 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-26x052-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-5cn5nj {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
+  background: none;
+  border: none;
   color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 2px;
 }
 
-.cache-26x052-StyledButton:hover,
-.cache-26x052-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-5cn5nj:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-26x052-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-zy3rt6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-5cn5nj:hover,
+.cache-5cn5nj:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
 .cache-1ah7xw8-sizeStyles {
@@ -299,24 +287,19 @@ exports[`ToggleField should render correctly with default tags 1`] = `
           tags-1
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <span
@@ -329,24 +312,19 @@ exports[`ToggleField should render correctly with default tags 1`] = `
           tags-2
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <input
@@ -429,72 +407,60 @@ exports[`ToggleField should render correctly with default tags on initialValues 
   text-overflow: ellipsis;
 }
 
-.cache-26x052-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-5cn5nj {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
+  background: none;
+  border: none;
   color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 2px;
 }
 
-.cache-26x052-StyledButton:hover,
-.cache-26x052-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-5cn5nj:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-26x052-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-zy3rt6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-5cn5nj:hover,
+.cache-5cn5nj:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
 .cache-1ah7xw8-sizeStyles {
@@ -546,24 +512,19 @@ exports[`ToggleField should render correctly with default tags on initialValues 
           tags-1
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <span
@@ -576,24 +537,19 @@ exports[`ToggleField should render correctly with default tags on initialValues 
           tags-2
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <input
@@ -676,72 +632,60 @@ exports[`ToggleField should render correctly with default tags on initialValues 
   text-overflow: ellipsis;
 }
 
-.cache-26x052-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-5cn5nj {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
+  background: none;
+  border: none;
   color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 2px;
 }
 
-.cache-26x052-StyledButton:hover,
-.cache-26x052-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-5cn5nj:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-26x052-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-zy3rt6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-5cn5nj:hover,
+.cache-5cn5nj:active {
+  background: #e6e9f0;
+  color: #4a4f62;
 }
 
 .cache-1ah7xw8-sizeStyles {
@@ -793,24 +737,19 @@ exports[`ToggleField should render correctly with default tags on initialValues 
           tags-1
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <span
@@ -823,24 +762,19 @@ exports[`ToggleField should render correctly with default tags on initialValues 
           tags-2
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <span
@@ -853,24 +787,19 @@ exports[`ToggleField should render correctly with default tags on initialValues 
           test
         </span>
         <button
-          aria-disabled="false"
           aria-label="Close tag"
-          class="e1vt8sjg0 cache-26x052-StyledButton em6gco80"
+          class="e1vt8sjg0 cache-5cn5nj em6gco80"
           data-testid="close-tag"
           type="button"
         >
-          <div
-            class="cache-zy3rt6 em6gco81"
+          <svg
+            class="cache-1ah7xw8-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class="cache-1ah7xw8-sizeStyles etwatq50"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </div>
+            <path
+              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+            />
+          </svg>
         </button>
       </span>
       <input

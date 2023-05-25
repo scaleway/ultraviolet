@@ -3,23 +3,10 @@ import { Button } from '..'
 
 export default {
   component: Button,
-  decorators: [
-    StoryComponent => (
-      <div style={{ display: 'flex', gap: 16 }}>
-        <StoryComponent />
-      </div>
-    ),
-  ],
-
   parameters: {
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated please use ButtonV2 instead.',
-    migrationLink: 'migrations-button-v1-to-buttonv2--page',
     docs: {
       description: {
-        component:
-          'A button is a component used to define a call to action (or a link, but that should be avoid if possible)',
+        component: 'A button is a component used to define a call to action.',
       },
     },
   },
@@ -27,15 +14,11 @@ export default {
 } as ComponentMeta<typeof Button>
 
 export { Playground } from './Playground.stories'
-export { Variant } from './Variant.stories'
-export { Link } from './Link.stories'
+export { Showcase } from './Showcase.stories'
 export { Size } from './Size.stories'
-export { Disabled } from './Disabled.stories'
-export { Tooltip } from './Tooltip.stories'
-export { Icon } from './Icon.stories'
-export { IconSize } from './IconSize.stories'
+export { IconOnly } from './IconOnly.stories'
 export { IconPosition } from './IconPosition.stories'
-export { Extend } from './Extend.stories'
-export { Progress } from './Progress.stories'
-export { Action } from './Action.stories'
-export { Download } from './Download.stories'
+export { IsLoading } from './IsLoading.stories'
+export { FullWidth } from './FullWidth.stories'
+export { Tooltip } from './Tooltip.stories'
+export { AsLink } from './AsLink.stories'

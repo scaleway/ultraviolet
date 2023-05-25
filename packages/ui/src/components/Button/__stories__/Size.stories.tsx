@@ -1,36 +1,19 @@
 import type { ComponentStory } from '@storybook/react'
-import { Button } from '..'
+import { Button, buttonSizes } from '..'
+import { Stack } from '../..'
 
-export const Size: ComponentStory<typeof Button> = ({ ...props }) => (
-  <>
-    <Button size="large" {...props}>
-      large
-    </Button>
-    <Button size="medium" {...props}>
-      medium
-    </Button>
-    <Button size="small" {...props}>
-      small
-    </Button>
-    <Button size="xsmall" {...props}>
-      xsmall
-    </Button>
-    <Button size="xxsmall" {...props}>
-      xxsmall
-    </Button>
-  </>
+export const Size: ComponentStory<typeof Button> = () => (
+  <Stack alignItems="center" gap={2} direction="row">
+    {buttonSizes.map(size => (
+      <Button key={size} icon="pencil" onClick={() => {}} size={size}>
+        {size}
+      </Button>
+    ))}
+  </Stack>
 )
 
 Size.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `size` on Button.',
+    storyDescription: 'You can change the button size using the prop `size`.',
   },
 }
-
-Size.decorators = [
-  StoryComponent => (
-    <div style={{ alignItems: 'center', display: 'flex', gap: 16 }}>
-      <StoryComponent />
-    </div>
-  ),
-]

@@ -1,21 +1,12 @@
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
 import { Button } from '../Button'
-import { Icon } from '../Icon'
 import { getPageNumbers } from './getPageNumbers'
 
 const PageNumbersContainer = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.space['2']};
   margin: 0 ${({ theme }) => theme.space['2']};
-`
-
-const StyledPageSwitch = styled(Button)`
-  width: 32px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 const PageSwitchContainer = styled.div`
@@ -25,36 +16,6 @@ const PageSwitchContainer = styled.div`
 
 const StyledContainer = styled.div`
   display: flex;
-`
-
-const StyledPageButton = styled.button`
-  color: ${({ theme }) => theme.colors.neutral.textStrong};
-  line-height: ${({ theme }) => theme.typography.bodyStrong.lineHeight};
-  font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
-  font-weight: ${({ theme }) => theme.typography.bodyStrong.fontWeight};
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.colors.neutral.background};
-  border: 1px solid transparent;
-  border-radius: ${({ theme }) => theme.radii.default};
-
-  &:disabled {
-    pointer-events: none;
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
-    border: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
-  }
-
-  &[aria-current='true']:not(:disabled) {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
-    border-color: ${({ theme }) => theme.colors.primary.borderWeak};
-  }
-
-  &[aria-current='false']:hover {
-    color: ${({ theme }) => theme.colors.primary.textHover};
-    border-color: ${({ theme }) => theme.colors.neutral.borderStrong};
-  }
 `
 
 type PaginationProps = {
@@ -125,54 +86,56 @@ export const Pagination = ({
   return (
     <StyledContainer className={className} data-testid={dataTestId}>
       <PageSwitchContainer>
-        <StyledPageSwitch
+        <Button
           aria-label="First"
           disabled={page <= 1 || disabled}
-          variant="primary-bordered"
+          variant="outlined"
+          sentiment="primary"
           onClick={goToFirstPage}
-        >
-          <Icon name="arrow-left-double" />
-        </StyledPageSwitch>
-        <StyledPageSwitch
+          icon="arrow-left-double"
+        />
+        <Button
           aria-label="Back"
           disabled={page <= 1 || disabled}
-          variant="primary-bordered"
+          variant="outlined"
+          sentiment="primary"
           onClick={goToPreviousPage}
-        >
-          <Icon name="arrow-left" />
-        </StyledPageSwitch>
+          icon="arrow-left"
+        />
       </PageSwitchContainer>
       <PageNumbersContainer>
         {pageNumbersToDisplay.map(pageNumber => (
-          <StyledPageButton
+          <Button
             aria-label={`Page ${pageNumber}`}
+            aria-current={pageNumber === page}
             key={`pagination-page-${pageNumber}`}
             disabled={disabled}
-            aria-current={pageNumber === page}
+            variant="outlined"
+            sentiment={pageNumber === page ? 'primary' : 'neutral'}
             onClick={handlePageClick(pageNumber)}
             type="button"
           >
             {pageNumber}
-          </StyledPageButton>
+          </Button>
         ))}
       </PageNumbersContainer>
       <PageSwitchContainer>
-        <StyledPageSwitch
+        <Button
           aria-label="Next"
           disabled={page >= pageCount || disabled}
-          variant="primary-bordered"
+          variant="outlined"
+          sentiment="primary"
           onClick={goToNextPage}
-        >
-          <Icon name="arrow-right" />
-        </StyledPageSwitch>
-        <StyledPageSwitch
+          icon="arrow-right"
+        />
+        <Button
           aria-label="Last"
           disabled={page >= pageCount || disabled}
-          variant="primary-bordered"
+          variant="outlined"
+          sentiment="primary"
           onClick={goToLastPage}
-        >
-          <Icon name="arrow-right-double" />
-        </StyledPageSwitch>
+          icon="arrow-right-double"
+        />
       </PageSwitchContainer>
     </StyledContainer>
   )

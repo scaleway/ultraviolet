@@ -1,385 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should render correctly loading 1`] = `
+exports[`Button render as an anchor with href prop 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 1em; width: 1em;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="transparent"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="currentColor"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly loading with an icon 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 1em; width: 1em;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="transparent"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="currentColor"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly when acting as Link 1`] = `
-<DocumentFragment>
-  .cache-t4oqyr-StyledLink-StyledLink-StyledButton {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #1a4dbf;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
+  .cache-5xvk6l-link-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
-  position: relative;
   cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
   font-size: 16px;
   font-family: Asap;
   font-weight: 500;
@@ -387,171 +34,60 @@ exports[`Button should render correctly when acting as Link 1`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
+  background: #4f0599;
+  border: none;
   color: #ffffff;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton .e4bq1r52 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
+.cache-5xvk6l-link-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton>* {
-  pointer-events: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #1a4dbf;
-  text-decoration-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus::after {
-  background-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:active {
-  text-decoration-thickness: 2px;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus svg {
-  -webkit-transform: none!important;
-  -moz-transform: none!important;
-  -ms-transform: none!important;
-  transform: none!important;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
+.cache-5xvk6l-link-StyledFilledButton:hover,
+.cache-5xvk6l-link-StyledFilledButton:active {
+  background: #390171;
   color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
 }
 
 <a
-    class="em6gco80 em6gco82 cache-t4oqyr-StyledLink-StyledLink-StyledButton e4bq1r50"
-    href="/"
+    class="cache-5xvk6l-link-StyledFilledButton em6gco83"
+    href="http://scaleway.com"
+    type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Scaleway
   </a>
 </DocumentFragment>
 `;
 
-exports[`Button should render correctly when acting as Link 2`] = `
+exports[`Button render large 1`] = `
 <DocumentFragment>
-  .cache-t4oqyr-StyledLink-StyledLink-StyledButton {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #1a4dbf;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
+  .cache-1kah2fx-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
-  position: relative;
   cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
   font-size: 16px;
   font-family: Asap;
   font-weight: 500;
@@ -559,4029 +95,2605 @@ exports[`Button should render correctly when acting as Link 2`] = `
   line-height: 24px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
+  background: #4f0599;
+  border: none;
   color: #ffffff;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton .e4bq1r52 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
+.cache-1kah2fx-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton>* {
-  pointer-events: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #1a4dbf;
-  text-decoration-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus::after {
-  background-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:active {
-  text-decoration-thickness: 2px;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus svg {
-  -webkit-transform: none!important;
-  -moz-transform: none!important;
-  -ms-transform: none!important;
-  transform: none!important;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
+.cache-1kah2fx-StyledFilledButton:hover,
+.cache-1kah2fx-StyledFilledButton:active {
+  background: #390171;
   color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-1tang38-StyledExternalIconContainer {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding-bottom: 4px;
-}
-
-.cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 14px;
-  width: 14px;
-  min-width: 14px;
-  min-height: 14px;
-}
-
-<a
-    class="em6gco80 em6gco82 cache-t4oqyr-StyledLink-StyledLink-StyledButton e4bq1r50"
-    href="/"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <span
-      class="cache-1tang38-StyledExternalIconContainer e4bq1r51"
-    >
-      <svg
-        class="e4bq1r52 cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-        />
-      </svg>
-    </span>
-  </a>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly when acting as Link with disabled props 1`] = `
-<DocumentFragment>
-  .cache-je8nbb-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-}
-
-.cache-je8nbb-StyledButton:hover,
-.cache-je8nbb-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-je8nbb-StyledButton:hover,
-.cache-je8nbb-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-je8nbb-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-je8nbb-StyledButton svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
 }
 
 <button
-    aria-disabled="true"
-    class="cache-je8nbb-StyledButton em6gco80"
-    disabled=""
-    href="/"
+    class="cache-1kah2fx-StyledFilledButton em6gco82"
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button should render correctly when acting as dom link 1`] = `
+exports[`Button render medium 1`] = `
 <DocumentFragment>
-  .cache-t4oqyr-StyledLink-StyledLink-StyledButton {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #1a4dbf;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: transparent;
+  .cache-jj26uv-StyledFilledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  height: 40px;
+  padding: 0 12px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  gap: 8px;
-  position: relative;
   cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 16px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
   font-family: Asap;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
+  background: #4f0599;
+  border: none;
   color: #ffffff;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton .e4bq1r52 {
-  -webkit-transition: -webkit-transform 250ms ease-out;
-  transition: transform 250ms ease-out;
+.cache-jj26uv-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton>* {
-  pointer-events: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  outline: none;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  color: #1a4dbf;
-  text-decoration-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover .e4bq1r52,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus .e4bq1r52 {
-  -webkit-transform: translate(-4px, 0);
-  -moz-transform: translate(-4px, 0);
-  -ms-transform: translate(-4px, 0);
-  transform: translate(-4px, 0);
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover::after,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus::after {
-  background-color: #1a4dbf;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:active {
-  text-decoration-thickness: 2px;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover svg,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus svg {
-  -webkit-transform: none!important;
-  -moz-transform: none!important;
-  -ms-transform: none!important;
-  transform: none!important;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:hover,
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
+.cache-jj26uv-StyledFilledButton:hover,
+.cache-jj26uv-StyledFilledButton:active {
+  background: #390171;
   color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-t4oqyr-StyledLink-StyledLink-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<a
-    class="em6gco80 em6gco82 cache-t4oqyr-StyledLink-StyledLink-StyledButton e4bq1r50"
-    href="/"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </a>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly when disabled 1`] = `
-<DocumentFragment>
-  .cache-je8nbb-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-}
-
-.cache-je8nbb-StyledButton:hover,
-.cache-je8nbb-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-je8nbb-StyledButton:hover,
-.cache-je8nbb-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-je8nbb-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-je8nbb-StyledButton svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
 }
 
 <button
-    aria-disabled="true"
-    class="cache-je8nbb-StyledButton em6gco80"
-    disabled=""
+    class="cache-jj26uv-StyledFilledButton em6gco82"
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button should render correctly when extendable 1`] = `
+exports[`Button render small 1`] = `
 <DocumentFragment>
-  .cache-14gba39-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-14gba39-StyledButton-StyledButton:hover,
-.cache-14gba39-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-14gba39-StyledButton-StyledButton:hover,
-.cache-14gba39-StyledButton-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-14gba39-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-14gba39-StyledButton-StyledButton .em6gco83 {
-  -webkit-transition: max-width 250ms ease,margin-left 250ms ease;
-  transition: max-width 250ms ease,margin-left 250ms ease;
-  max-width: 0;
-  margin-left: -8px;
-  overflow-x: clip;
-}
-
-.cache-14gba39-StyledButton-StyledButton:focus .em6gco83,
-.cache-14gba39-StyledButton-StyledButton:hover .em6gco83 {
-  max-width: 275px;
-  margin-left: 0;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-14gba39-StyledButton-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly when extendable with an icon 1`] = `
-<DocumentFragment>
-  .cache-14gba39-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-14gba39-StyledButton-StyledButton:hover,
-.cache-14gba39-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-14gba39-StyledButton-StyledButton:hover,
-.cache-14gba39-StyledButton-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-14gba39-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-14gba39-StyledButton-StyledButton .em6gco83 {
-  -webkit-transition: max-width 250ms ease,margin-left 250ms ease;
-  transition: max-width 250ms ease,margin-left 250ms ease;
-  max-width: 0;
-  margin-left: -8px;
-  overflow-x: clip;
-}
-
-.cache-14gba39-StyledButton-StyledButton:focus .em6gco83,
-.cache-14gba39-StyledButton-StyledButton:hover .em6gco83 {
-  max-width: 275px;
-  margin-left: 0;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-14gba39-StyledButton-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with a custom Icon 1`] = `
-<DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    aria-label="icon"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      IconMock
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with a rounded action button 1`] = `
-<DocumentFragment>
-  .cache-egestm-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-  width: 32px;
+  .cache-3u7v7f-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 100%;
-}
-
-.cache-egestm-StyledButton-StyledButton:hover,
-.cache-egestm-StyledButton-StyledButton:focus {
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-egestm-StyledButton-StyledButton:hover,
-.cache-egestm-StyledButton-StyledButton:focus {
+  background: #4f0599;
+  border: none;
   color: #ffffff;
-  background-color: #390171;
 }
 
-.cache-egestm-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
+.cache-3u7v7f-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-egestm-StyledButton-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+.cache-3u7v7f-StyledFilledButton:hover,
+.cache-3u7v7f-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
 }
 
 <button
-    aria-disabled="false"
-    aria-label="check"
-    class="cache-egestm-StyledButton-StyledButton em6gco80"
+    class="cache-3u7v7f-StyledFilledButton em6gco82"
     type="button"
   >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button should render correctly with a tooltip 1`] = `
+exports[`Button render with a tooltip 1`] = `
 <DocumentFragment>
   .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+.cache-1kah2fx-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-1kah2fx-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1kah2fx-StyledFilledButton:hover,
+.cache-1kah2fx-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
 }
 
 <div
-    aria-describedby="test"
+    aria-describedby=":r1e:"
     class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
     tabindex="0"
   >
     <button
-      aria-describedby="test"
-      aria-disabled="false"
-      class="cache-1jxbr4b-StyledButton em6gco80"
+      class="cache-1kah2fx-StyledFilledButton em6gco82"
       type="button"
     >
-      <div
-        class="cache-1cny8u7-StyledIconContainer em6gco81"
-      >
-        <svg
-          class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-          />
-        </svg>
-      </div>
-      <div
-        class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-      >
-        Hello
-      </div>
+      Hello
     </button>
   </div>
 </DocumentFragment>
 `;
 
-exports[`Button should render correctly with an action button 1`] = `
+exports[`Button render with fullWidth 1`] = `
 <DocumentFragment>
-  .cache-1d2yfxr-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.cache-1d2yfxr-StyledButton-StyledButton:hover,
-.cache-1d2yfxr-StyledButton-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1d2yfxr-StyledButton-StyledButton:hover,
-.cache-1d2yfxr-StyledButton-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1d2yfxr-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1d2yfxr-StyledButton-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-<button
-    aria-disabled="false"
-    aria-label="check"
-    class="cache-1d2yfxr-StyledButton-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with an icon on the right 1`] = `
-<DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-vaecpf-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with as 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   border-radius: 4px;
-  border-width: 0;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
   white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
   font-size: 16px;
-  line-height: 32px;
+  font-family: Asap;
   font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 1em; width: 1em;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="transparent"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="currentColor"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with progress left and icon right 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 1em; width: 1em;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="transparent"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="currentColor"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly with progress right and icon left 1`] = `
-<DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
-}
-
-.cache-11f05l0-Loader {
-  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
-  transition: stroke-dashoffset 0.5s ease 0s;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"
-        />
-      </svg>
-    </div>
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        aria-label="Loading"
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="20"
-        aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
-        role="progressbar"
-        style="height: 1em; width: 1em;"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="transparent"
-          stroke-width="16"
-        />
-        <circle
-          class="cache-11f05l0-Loader"
-          cx="50"
-          cy="50"
-          fill="none"
-          r="42"
-          stroke="currentColor"
-          stroke-dasharray="263.89378290154264"
-          stroke-dashoffset="211.11502632123413"
-          stroke-linecap="round"
-          stroke-width="16"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly without a children 1`] = `
-<DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-<button
-    aria-disabled="false"
-    aria-label="no content"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  />
-</DocumentFragment>
-`;
-
-exports[`Button should render correctly without a children and an icon 1`] = `
-<DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
-}
-
-.cache-190f6hx-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-<button
-    aria-disabled="false"
-    aria-label="check icon"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-1cny8u7-StyledIconContainer em6gco81"
-    >
-      <svg
-        class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
-        />
-      </svg>
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button size render large 1`] = `
-<DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button size render medium 1`] = `
-<DocumentFragment>
-  .cache-veebm9-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
+  letter-spacing: 0;
   line-height: 24px;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-veebm9-StyledButton:hover,
-.cache-veebm9-StyledButton:focus {
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-veebm9-StyledButton:hover,
-.cache-veebm9-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-veebm9-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-veebm9-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button size render small 1`] = `
-<DocumentFragment>
-  .cache-px6vqj-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 16px;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-px6vqj-StyledButton:hover,
-.cache-px6vqj-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-px6vqj-StyledButton:hover,
-.cache-px6vqj-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-px6vqj-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-px6vqj-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button size render xsmall 1`] = `
-<DocumentFragment>
-  .cache-1fnrdew-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 8px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1fnrdew-StyledButton:hover,
-.cache-1fnrdew-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1fnrdew-StyledButton:hover,
-.cache-1fnrdew-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1fnrdew-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1fnrdew-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button size render xxsmall 1`] = `
-<DocumentFragment>
-  .cache-13ni5kp-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 12px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-13ni5kp-StyledButton:hover,
-.cache-13ni5kp-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-13ni5kp-StyledButton:hover,
-.cache-13ni5kp-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-13ni5kp-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-13ni5kp-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render info 1`] = `
-<DocumentFragment>
-  .cache-srdn93-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #e1ebff;
-  color: #1a4dbf;
-}
-
-.cache-srdn93-StyledButton:hover,
-.cache-srdn93-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-srdn93-StyledButton:hover,
-.cache-srdn93-StyledButton:focus {
-  color: #1a4dbf;
-  background-color: #c4d5f8;
-}
-
-.cache-srdn93-StyledButton:focus {
-  box-shadow: 0 0 0 2px #c4d5f840;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-srdn93-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render info-bordered 1`] = `
-<DocumentFragment>
-  .cache-uo5mvv-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #3f6ed8;
-  background-color: #ffffff;
-  color: #3f6ed8;
-}
-
-.cache-uo5mvv-StyledButton:hover,
-.cache-uo5mvv-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-uo5mvv-StyledButton svg {
-  fill: #3f6ed8;
-  pointer-events: none;
-}
-
-.cache-uo5mvv-StyledButton:hover,
-.cache-uo5mvv-StyledButton:focus {
-  border: 1px solid #1a4dbf;
-  color: #ffffff;
-  background-color: #1a4dbf;
-}
-
-.cache-uo5mvv-StyledButton:hover svg,
-.cache-uo5mvv-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-uo5mvv-StyledButton:focus {
-  box-shadow: 0 0 0 2px #1a4dbf40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-uo5mvv-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render link 1`] = `
-<DocumentFragment>
-  .cache-1ik106b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
+  background: #4f0599;
   border: none;
-  padding: 0;
-  color: #1a4dbf;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-decoration-position: under;
-  text-decoration-thickness: 1px;
-  -webkit-transition: text-decoration-color 250ms ease-out;
-  transition: text-decoration-color 250ms ease-out;
-  vertical-align: baseline;
+  color: #ffffff;
 }
 
-.cache-1ik106b-StyledButton:hover,
-.cache-1ik106b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-vaecpf-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1ik106b-StyledButton:hover,
-.cache-1ik106b-StyledButton:focus {
-  text-decoration-thickness: 1px;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #1a4dbf;
-}
-
-.cache-1ik106b-StyledButton:active {
-  text-decoration-thickness: 2px;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+.cache-vaecpf-StyledFilledButton:hover,
+.cache-vaecpf-StyledFilledButton:active {
+  background: #390171;
+  color: #ffffff;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-1ik106b-StyledButton em6gco80"
+    class="cache-vaecpf-StyledFilledButton em6gco82"
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render primary 1`] = `
+exports[`Button render with icon 1`] = `
 <DocumentFragment>
-  .cache-1jxbr4b-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #4f0599;
-  color: #ffffff;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1jxbr4b-StyledButton:hover,
-.cache-1jxbr4b-StyledButton:focus {
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1jxbr4b-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-1ksa3fj-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-1jxbr4b-StyledButton em6gco80"
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+    <svg
+      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+      viewBox="0 0 24 24"
     >
-      Hello
-    </div>
+      <path
+        d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+      />
+    </svg>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render primary-bordered 1`] = `
+exports[`Button render with icon on the right 1`] = `
 <DocumentFragment>
-  .cache-10crsdn-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  .cache-noas22-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<button
+    class="cache-noas22-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    <svg
+      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+      />
+    </svg>
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button render with icon only 1`] = `
+<DocumentFragment>
+  .cache-1h5ftck-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
   white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
   font-size: 16px;
-  line-height: 32px;
+  font-family: Asap;
   font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<button
+    class="cache-1h5ftck-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    <svg
+      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button render with isLoading with icon 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-1ksa3fj-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<button
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 1em; width: 1em;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="transparent"
+        stroke-width="16"
+      />
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="currentColor"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button render with isLoading without icon 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.cache-1ksa3fj-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+.cache-gqzzce-Loader {
+  -webkit-animation: animation-0 0.75s linear infinite;
+  animation: animation-0 0.75s linear infinite;
+}
+
+.cache-11f05l0-Loader {
+  -webkit-transition: stroke-dashoffset 0.5s ease 0s;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+<button
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    <svg
+      aria-label="Loading"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="20"
+      aria-valuetext="20%"
+      class="cache-gqzzce-Loader"
+      role="progressbar"
+      style="height: 1em; width: 1em;"
+      viewBox="0 0 100 100"
+    >
+      <circle
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="transparent"
+        stroke-width="16"
+      />
+      <circle
+        class="cache-11f05l0-Loader"
+        cx="50"
+        cy="50"
+        fill="none"
+        r="42"
+        stroke="currentColor"
+        stroke-dasharray="263.89378290154264"
+        stroke-dashoffset="211.11502632123413"
+        stroke-linecap="round"
+        stroke-width="16"
+      />
+    </svg>
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&danger 1`] = `
+<DocumentFragment>
+  .cache-n45762-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #dd3252;
+  border: none;
+  color: #ffffff;
+  background: #fbbac6;
+  color: #fff5f7;
+}
+
+<button
+    class="cache-n45762-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&danger disabled 1`] = `
+<DocumentFragment>
+  .cache-n45762-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #dd3252;
+  border: none;
+  color: #ffffff;
+  background: #fbbac6;
+  color: #fff5f7;
+}
+
+<button
+    class="cache-n45762-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&info 1`] = `
+<DocumentFragment>
+  .cache-1qnnu3g-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #3f6ed8;
+  border: none;
+  color: #ffffff;
+  background: #a8bff1;
+  color: #f4f7ff;
+}
+
+<button
+    class="cache-1qnnu3g-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&info disabled 1`] = `
+<DocumentFragment>
+  .cache-1qnnu3g-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #3f6ed8;
+  border: none;
+  color: #ffffff;
+  background: #a8bff1;
+  color: #f4f7ff;
+}
+
+<button
+    class="cache-1qnnu3g-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&neutral 1`] = `
+<DocumentFragment>
+  .cache-6sxnx0-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #f6f6f8;
+  border: none;
+  color: #4a4f62;
+  background: #f6f6f8;
+  color: #c4c9d6;
+}
+
+<button
+    class="cache-6sxnx0-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&neutral disabled 1`] = `
+<DocumentFragment>
+  .cache-6sxnx0-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #f6f6f8;
+  border: none;
+  color: #4a4f62;
+  background: #f6f6f8;
+  color: #c4c9d6;
+}
+
+<button
+    class="cache-6sxnx0-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&primary 1`] = `
+<DocumentFragment>
+  .cache-1ksa3fj-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+<button
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&primary disabled 1`] = `
+<DocumentFragment>
+  .cache-1ksa3fj-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #4f0599;
+  border: none;
+  color: #ffffff;
+  background: #bda5df;
+  color: #f9f9ff;
+}
+
+<button
+    class="cache-1ksa3fj-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&success 1`] = `
+<DocumentFragment>
+  .cache-1299ox2-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #22c8a2;
+  border: none;
+  color: #ffffff;
+  background: #9fefdd;
+  color: #f5fff6;
+}
+
+<button
+    class="cache-1299ox2-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&success disabled 1`] = `
+<DocumentFragment>
+  .cache-1299ox2-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #22c8a2;
+  border: none;
+  color: #ffffff;
+  background: #9fefdd;
+  color: #f5fff6;
+}
+
+<button
+    class="cache-1299ox2-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&warning 1`] = `
+<DocumentFragment>
+  .cache-1ccarpo-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #ff8c69;
+  border: none;
+  color: #ffffff;
+  background: #ffd7c1;
+  color: #fffcfa;
+}
+
+<button
+    class="cache-1ccarpo-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&warning disabled 1`] = `
+<DocumentFragment>
+  .cache-1ccarpo-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: #ff8c69;
+  border: none;
+  color: #ffffff;
+  background: #ffd7c1;
+  color: #fffcfa;
+}
+
+<button
+    class="cache-1ccarpo-StyledFilledButton em6gco82"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&danger 1`] = `
+<DocumentFragment>
+  .cache-1sgzw6q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #dd3252;
+  color: #fbbac6;
+}
+
+<button
+    class="cache-1sgzw6q-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&danger disabled 1`] = `
+<DocumentFragment>
+  .cache-1sgzw6q-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #dd3252;
+  color: #fbbac6;
+}
+
+<button
+    class="cache-1sgzw6q-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&info 1`] = `
+<DocumentFragment>
+  .cache-1ccecqx-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #3f6ed8;
+  color: #a8bff1;
+}
+
+<button
+    class="cache-1ccecqx-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&info disabled 1`] = `
+<DocumentFragment>
+  .cache-1ccecqx-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #3f6ed8;
+  color: #a8bff1;
+}
+
+<button
+    class="cache-1ccecqx-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&neutral 1`] = `
+<DocumentFragment>
+  .cache-njfhbk-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+  color: #c4c9d6;
+}
+
+<button
+    class="cache-njfhbk-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&neutral disabled 1`] = `
+<DocumentFragment>
+  .cache-njfhbk-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4a4f62;
+  color: #c4c9d6;
+}
+
+<button
+    class="cache-njfhbk-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&primary 1`] = `
+<DocumentFragment>
+  .cache-4gxcti-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-}
-
-.cache-10crsdn-StyledButton:hover,
-.cache-10crsdn-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-10crsdn-StyledButton svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-10crsdn-StyledButton:hover,
-.cache-10crsdn-StyledButton:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-10crsdn-StyledButton:hover svg,
-.cache-10crsdn-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-10crsdn-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  color: #bda5df;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-10crsdn-StyledButton em6gco80"
+    class="cache-4gxcti-StyledGhostButton em6gco80"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render primary-soft-bordered 1`] = `
+exports[`Button variant-sentiment-disabled combination render ghost&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-1xoynue-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #b2b6c3;
-  background-color: #ffffff;
-  color: #b2b6c3;
-}
-
-.cache-1xoynue-StyledButton:hover,
-.cache-1xoynue-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1xoynue-StyledButton svg {
-  fill: #b2b6c3;
-  pointer-events: none;
-}
-
-.cache-1xoynue-StyledButton:hover,
-.cache-1xoynue-StyledButton:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1xoynue-StyledButton:hover svg,
-.cache-1xoynue-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1xoynue-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-4gxcti-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-1xoynue-StyledButton em6gco80"
+    class="cache-4gxcti-StyledGhostButton em6gco80"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render secondary 1`] = `
+exports[`Button variant-sentiment-disabled combination render ghost&success 1`] = `
 <DocumentFragment>
-  .cache-1841gtf-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-}
-
-.cache-1841gtf-StyledButton:hover,
-.cache-1841gtf-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1841gtf-StyledButton:hover,
-.cache-1841gtf-StyledButton:focus {
-  color: #4a4f62;
-  background-color: #d4dae7;
-}
-
-.cache-1841gtf-StyledButton:focus {
-  box-shadow: 0 0 0 2px #d4dae740;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-143k4tc-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1841gtf-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render secondary-bordered 1`] = `
-<DocumentFragment>
-  .cache-1xoynue-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
   white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
   font-size: 16px;
-  line-height: 32px;
+  font-family: Asap;
   font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #b2b6c3;
-  background-color: #ffffff;
-  color: #b2b6c3;
-}
-
-.cache-1xoynue-StyledButton:hover,
-.cache-1xoynue-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-1xoynue-StyledButton svg {
-  fill: #b2b6c3;
-  pointer-events: none;
-}
-
-.cache-1xoynue-StyledButton:hover,
-.cache-1xoynue-StyledButton:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1xoynue-StyledButton:hover svg,
-.cache-1xoynue-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1xoynue-StyledButton:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-1xoynue-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render success 1`] = `
-<DocumentFragment>
-  .cache-sapn11-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #22c8a2;
-  color: #ffffff;
-}
-
-.cache-sapn11-StyledButton:hover,
-.cache-sapn11-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-sapn11-StyledButton:hover,
-.cache-sapn11-StyledButton:focus {
-  color: #ffffff;
-  background-color: #149a7b;
-}
-
-.cache-sapn11-StyledButton:focus {
-  box-shadow: 0 0 0 2px #149a7b40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
-}
-
-<button
-    aria-disabled="false"
-    class="cache-sapn11-StyledButton em6gco80"
-    type="button"
-  >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
-  </button>
-</DocumentFragment>
-`;
-
-exports[`Button variant render success-bordered 1`] = `
-<DocumentFragment>
-  .cache-13i5j2e-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #22c8a2;
-  background-color: #ffffff;
+  background: none;
+  border: none;
   color: #22c8a2;
-}
-
-.cache-13i5j2e-StyledButton:hover,
-.cache-13i5j2e-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-13i5j2e-StyledButton svg {
-  fill: #22c8a2;
-  pointer-events: none;
-}
-
-.cache-13i5j2e-StyledButton:hover,
-.cache-13i5j2e-StyledButton:focus {
-  border: 1px solid #149a7b;
-  color: #ffffff;
-  background-color: #149a7b;
-}
-
-.cache-13i5j2e-StyledButton:hover svg,
-.cache-13i5j2e-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-13i5j2e-StyledButton:focus {
-  box-shadow: 0 0 0 2px #149a7b40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  color: #9fefdd;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-13i5j2e-StyledButton em6gco80"
+    class="cache-143k4tc-StyledGhostButton em6gco80"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render success-soft-bordered 1`] = `
+exports[`Button variant-sentiment-disabled combination render ghost&success disabled 1`] = `
 <DocumentFragment>
-  .cache-kyta7x-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #b2b6c3;
-  background-color: #ffffff;
-  color: #b2b6c3;
-}
-
-.cache-kyta7x-StyledButton:hover,
-.cache-kyta7x-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-kyta7x-StyledButton svg {
-  fill: #b2b6c3;
-  pointer-events: none;
-}
-
-.cache-kyta7x-StyledButton:hover,
-.cache-kyta7x-StyledButton:focus {
-  border: 1px solid #149a7b;
-  color: #ffffff;
-  background-color: #149a7b;
-}
-
-.cache-kyta7x-StyledButton:hover svg,
-.cache-kyta7x-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-kyta7x-StyledButton:focus {
-  box-shadow: 0 0 0 2px #149a7b40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-143k4tc-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #22c8a2;
+  color: #9fefdd;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-kyta7x-StyledButton em6gco80"
+    class="cache-143k4tc-StyledGhostButton em6gco80"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render transparent 1`] = `
+exports[`Button variant-sentiment-disabled combination render ghost&warning 1`] = `
 <DocumentFragment>
-  .cache-16vfnry-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  .cache-5w9ekw-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  background: none;
+  border: none;
+  color: #ff8c69;
+  color: #ffc8a9;
+}
+
+<button
+    class="cache-5w9ekw-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&warning disabled 1`] = `
+<DocumentFragment>
+  .cache-5w9ekw-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
   white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
   font-size: 16px;
-  line-height: 32px;
+  font-family: Asap;
   font-weight: 500;
-  padding: 8px 16px;
-  background-color: transparent;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #ff8c69;
+  color: #ffc8a9;
+}
+
+<button
+    class="cache-5w9ekw-StyledGhostButton em6gco80"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&danger 1`] = `
+<DocumentFragment>
+  .cache-bfn9ib-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #dd3252;
+  color: #dd3252;
+  color: #fbbac6;
+  border: 1px solid #fbbac6;
+}
+
+<button
+    class="cache-bfn9ib-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&danger disabled 1`] = `
+<DocumentFragment>
+  .cache-bfn9ib-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #dd3252;
+  color: #dd3252;
+  color: #fbbac6;
+  border: 1px solid #fbbac6;
+}
+
+<button
+    class="cache-bfn9ib-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&info 1`] = `
+<DocumentFragment>
+  .cache-9q0je-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #3f6ed8;
+  color: #3f6ed8;
+  color: #a8bff1;
+  border: 1px solid #a8bff1;
+}
+
+<button
+    class="cache-9q0je-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&info disabled 1`] = `
+<DocumentFragment>
+  .cache-9q0je-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #3f6ed8;
+  color: #3f6ed8;
+  color: #a8bff1;
+  border: 1px solid #a8bff1;
+}
+
+<button
+    class="cache-9q0je-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&neutral 1`] = `
+<DocumentFragment>
+  .cache-kp1ejs-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
   color: #4a4f62;
-}
-
-.cache-16vfnry-StyledButton:hover,
-.cache-16vfnry-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  color: #c4c9d6;
+  border: 1px solid #d4dae7;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-16vfnry-StyledButton em6gco80"
+    class="cache-kp1ejs-StyledOutlinedButton em6gco81"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render warning 1`] = `
+exports[`Button variant-sentiment-disabled combination render outlined&neutral disabled 1`] = `
 <DocumentFragment>
-  .cache-g0tyv7-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #dd3252;
-  color: #ffffff;
-}
-
-.cache-g0tyv7-StyledButton:hover,
-.cache-g0tyv7-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-g0tyv7-StyledButton:hover,
-.cache-g0tyv7-StyledButton:focus {
-  color: #ffffff;
-  background-color: #a6102d;
-}
-
-.cache-g0tyv7-StyledButton:focus {
-  box-shadow: 0 0 0 2px #a6102d40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-kp1ejs-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+  color: #c4c9d6;
+  border: 1px solid #d4dae7;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-g0tyv7-StyledButton em6gco80"
+    class="cache-kp1ejs-StyledOutlinedButton em6gco81"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render warning-bordered 1`] = `
+exports[`Button variant-sentiment-disabled combination render outlined&primary 1`] = `
 <DocumentFragment>
-  .cache-16ev2qw-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #a6102d;
-  background-color: #ffffff;
-  color: #a6102d;
-}
-
-.cache-16ev2qw-StyledButton:hover,
-.cache-16ev2qw-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-16ev2qw-StyledButton svg {
-  fill: #a6102d;
-  pointer-events: none;
-}
-
-.cache-16ev2qw-StyledButton:hover,
-.cache-16ev2qw-StyledButton:focus {
-  border: 1px solid #a6102d;
-  color: #ffffff;
-  background-color: #a6102d;
-}
-
-.cache-16ev2qw-StyledButton:hover svg,
-.cache-16ev2qw-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-16ev2qw-StyledButton:focus {
-  box-shadow: 0 0 0 2px #a6102d40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-116zjhj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-16ev2qw-StyledButton em6gco80"
+    class="cache-116zjhj-StyledOutlinedButton em6gco81"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
   </button>
 </DocumentFragment>
 `;
 
-exports[`Button variant render warning-soft-bordered 1`] = `
+exports[`Button variant-sentiment-disabled combination render outlined&primary disabled 1`] = `
 <DocumentFragment>
-  .cache-t4j4tv-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #b2b6c3;
-  background-color: #ffffff;
-  color: #b2b6c3;
-}
-
-.cache-t4j4tv-StyledButton:hover,
-.cache-t4j4tv-StyledButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-t4j4tv-StyledButton svg {
-  fill: #b2b6c3;
-  pointer-events: none;
-}
-
-.cache-t4j4tv-StyledButton:hover,
-.cache-t4j4tv-StyledButton:focus {
-  border: 1px solid #a6102d;
-  color: #ffffff;
-  background-color: #a6102d;
-}
-
-.cache-t4j4tv-StyledButton:hover svg,
-.cache-t4j4tv-StyledButton:focus svg {
-  fill: #ffffff;
-}
-
-.cache-t4j4tv-StyledButton:focus {
-  box-shadow: 0 0 0 2px #a6102d40;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  .cache-116zjhj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 <button
-    aria-disabled="false"
-    class="cache-t4j4tv-StyledButton em6gco80"
+    class="cache-116zjhj-StyledOutlinedButton em6gco81"
+    disabled=""
     type="button"
   >
-    <div
-      class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
-    >
-      Hello
-    </div>
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&success 1`] = `
+<DocumentFragment>
+  .cache-11lyw4g-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #22c8a2;
+  color: #22c8a2;
+  color: #9fefdd;
+  border: 1px solid #9fefdd;
+}
+
+<button
+    class="cache-11lyw4g-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&success disabled 1`] = `
+<DocumentFragment>
+  .cache-11lyw4g-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #22c8a2;
+  color: #22c8a2;
+  color: #9fefdd;
+  border: 1px solid #9fefdd;
+}
+
+<button
+    class="cache-11lyw4g-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&warning 1`] = `
+<DocumentFragment>
+  .cache-1amc0kj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #ff8c69;
+  color: #ff8c69;
+  color: #ffc8a9;
+  border: 1px solid #ffc8a9;
+}
+
+<button
+    class="cache-1amc0kj-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&warning disabled 1`] = `
+<DocumentFragment>
+  .cache-1amc0kj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #ff8c69;
+  color: #ff8c69;
+  color: #ffc8a9;
+  border: 1px solid #ffc8a9;
+}
+
+<button
+    class="cache-1amc0kj-StyledOutlinedButton em6gco81"
+    disabled=""
+    type="button"
+  >
+    Hello
   </button>
 </DocumentFragment>
 `;

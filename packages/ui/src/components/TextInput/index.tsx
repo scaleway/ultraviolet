@@ -425,40 +425,12 @@ export const TextInput = forwardRef<
       [togglePasswordVisibility],
     )
 
-    const handlePassVisiblityKeyDown: KeyboardEventHandler<
-      HTMLButtonElement | HTMLDivElement
-    > = useCallback(
-      event => {
-        const keyCode = event.key.charCodeAt(0)
-        // SPACE key is pressed
-        if (keyCode === 32) {
-          event.preventDefault()
-          togglePasswordVisibility()
-        }
-      },
-      [togglePasswordVisibility],
-    )
-
     const randomize = useCallback(
       () => onChange?.(randomName(random)),
       [onChange, random],
     )
 
     const handleClickRandomize = useCallback(() => randomize(), [randomize])
-
-    const handleKeyDownRandomize: KeyboardEventHandler<
-      HTMLButtonElement | HTMLDivElement
-    > = useCallback(
-      event => {
-        const keyCode = event.key.charCodeAt(0)
-        // SPACE key is pressed
-        if (keyCode === 32) {
-          event.preventDefault()
-          randomize()
-        }
-      },
-      [randomize],
-    )
 
     const handleFocus: FocusEventHandler<
       HTMLInputElement | HTMLTextAreaElement
@@ -515,31 +487,40 @@ export const TextInput = forwardRef<
       if (isPassToggleable && !generated) {
         rightComponents.push(
           <Button
-            action
+            data-testid={
+              dataTestId ? `${dataTestId}-visibility-button` : undefined
+            }
+            aria-label={passwordVisible ? 'hide' : 'show'}
+            key="password-visible"
             onClick={handlePassVisibilityClick}
-            onKeyDown={handlePassVisiblityKeyDown}
-            title={passwordVisible ? 'Hide' : 'Show'}
-            variant="transparent"
+            variant="ghost"
+            sentiment="neutral"
             icon={passwordVisible ? 'eye-off' : 'eye'}
+            size="small"
           />,
         )
       }
       if (random) {
         rightComponents.push(
           <Button
-            action
+            key="random"
+            data-testid={
+              dataTestId ? `${dataTestId}-randomize-button` : undefined
+            }
+            aria-label="randomize"
             onClick={handleClickRandomize}
-            onKeyDown={handleKeyDownRandomize}
             disabled={disabled}
-            title="Randomize"
             icon="auto-fix"
-            variant="transparent"
+            variant="ghost"
+            sentiment="neutral"
+            size="small"
           />,
         )
       }
       if (valid === false || valid === true) {
         rightComponents.push(
           <Icon
+            key="valid"
             name={!valid ? 'close' : 'check'}
             color={!valid ? 'danger' : 'success'}
             size={20}
@@ -548,7 +529,7 @@ export const TextInput = forwardRef<
       }
       if (unit) {
         rightComponents.push(
-          <UnitLabel variant="bodySmall" as="p" prominence="weak">
+          <UnitLabel key="unit" variant="bodySmall" as="p" prominence="weak">
             {unit}
           </UnitLabel>,
         )
@@ -559,14 +540,13 @@ export const TextInput = forwardRef<
       disabled,
       generated,
       handleClickRandomize,
-      handleKeyDownRandomize,
       handlePassVisibilityClick,
-      handlePassVisiblityKeyDown,
       isPassToggleable,
       passwordVisible,
       random,
       unit,
       valid,
+      dataTestId,
     ])
 
     return (

@@ -140,7 +140,7 @@ const ComponentState = () => (
                       <Text as="span" variant="bodyStrong">
                         <Button
                           onClick={linkTo(module.value.default.title)}
-                          variant="link"
+                          variant="ghost"
                         >
                           {componentName}
                         </Button>

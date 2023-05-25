@@ -56,7 +56,6 @@ const Home = () => (
         </div>
       </Stack>
       <Button
-        title="Join Slack Community"
         href="https://scaleway-community.slack.com/archives/C02M4HDPGB0"
         size="large"
         aria-label="join slack community"

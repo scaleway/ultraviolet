@@ -1,123 +1,103 @@
 import { Button, buttonSizes, buttonVariants } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { SENTIMENTS } from '../../../theme'
 
-const SampleIcon = () => <>IconMock</>
+const MockOnClick = () => {}
 
 describe('Button', () => {
-  describe('variant', () => {
+  describe('variant-sentiment-disabled combination', () => {
     buttonVariants.forEach(variant => {
-      test(`render ${variant}`, () =>
-        shouldMatchEmotionSnapshot(<Button variant={variant}>Hello</Button>))
+      SENTIMENTS.forEach(sentiment => {
+        test(`render ${variant}&${sentiment}`, () =>
+          shouldMatchEmotionSnapshot(
+            <Button
+              onClick={MockOnClick}
+              variant={variant}
+              sentiment={sentiment}
+              disabled
+            >
+              Hello
+            </Button>,
+          ))
+        test(`render ${variant}&${sentiment} disabled`, () =>
+          shouldMatchEmotionSnapshot(
+            <Button
+              onClick={MockOnClick}
+              variant={variant}
+              sentiment={sentiment}
+              disabled
+            >
+              Hello
+            </Button>,
+          ))
+      })
     })
   })
 
-  describe('size', () => {
-    buttonSizes.forEach(size => {
-      test(`render ${size}`, () =>
-        shouldMatchEmotionSnapshot(<Button size={size}>Hello</Button>))
-    })
+  buttonSizes.forEach(size => {
+    test(`render ${size}`, () =>
+      shouldMatchEmotionSnapshot(
+        <Button onClick={MockOnClick} size={size}>
+          Hello
+        </Button>,
+      ))
   })
 
-  test(`should render correctly when disabled`, () =>
-    shouldMatchEmotionSnapshot(<Button disabled>Hello</Button>))
-
-  test(`should render correctly without a children`, () =>
-    shouldMatchEmotionSnapshot(<Button aria-label="no content" />))
-
-  test(`should render correctly without a children and an icon`, () =>
-    shouldMatchEmotionSnapshot(<Button icon="check" aria-label="check icon" />))
-
-  test(`should render correctly with a custom Icon`, () =>
+  test(`render with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button icon={<SampleIcon />} aria-label="icon" />,
-    ))
-
-  test(`should render correctly when acting as Link`, () =>
-    shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>))
-
-  test(`should render correctly when acting as Link`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button href="/" target="_blank">
+      <Button onClick={MockOnClick} disabled icon="pencil">
         Hello
       </Button>,
     ))
 
-  test(`should render correctly when acting as Link with disabled props`, () =>
+  test(`render with icon on the right`, () =>
     shouldMatchEmotionSnapshot(
-      <Button href="/" disabled>
+      <Button onClick={MockOnClick} disabled icon="pencil" iconPosition="right">
         Hello
       </Button>,
     ))
 
-  test(`should render correctly when acting as dom link`, () =>
-    shouldMatchEmotionSnapshot(<Button href="/">Hello</Button>))
-
-  test(`should render correctly when extendable`, () =>
-    shouldMatchEmotionSnapshot(<Button extend>Hello</Button>))
-
-  test(`should render correctly when extendable with an icon`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button extend icon="check">
-        Hello
-      </Button>,
-    ))
-
-  test(`should render correctly loading`, () =>
-    shouldMatchEmotionSnapshot(<Button progress>Hello</Button>))
-
-  test(`should render correctly loading with an icon`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button progress icon="check" iconPosition="right">
-        Hello
-      </Button>,
-    ))
-
-  test(`should render correctly with an icon on the right`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button icon="check" iconPosition="right">
-        Hello
-      </Button>,
-    ))
-
-  test(`should render correctly with an action button`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button action icon="check" aria-label="check" />,
-    ))
-
-  test(`should render correctly with a rounded action button`, () =>
-    shouldMatchEmotionSnapshot(
-      <Button action="rounded" icon="check" aria-label="check" />,
-    ))
-
-  test(`should render correctly with a tooltip`, () =>
+  test(`render with icon only`, () =>
     shouldMatchEmotionSnapshot(
       <Button
-        icon="check"
-        tooltipBaseId="test"
-        tooltip="world"
-        aria-describedby="test"
-      >
+        onClick={MockOnClick}
+        disabled
+        icon="pencil"
+        iconPosition="right"
+      />,
+    ))
+
+  test(`render with fullWidth`, () =>
+    shouldMatchEmotionSnapshot(
+      <Button onClick={MockOnClick} fullWidth>
         Hello
       </Button>,
     ))
 
-  test('should render correctly with progress left and icon right', () =>
+  test(`render with isLoading without icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button progress="left" icon="lock" iconPosition="right">
+      <Button onClick={MockOnClick} isLoading>
         Hello
       </Button>,
     ))
 
-  test('should render correctly with progress right and icon left', () =>
+  test(`render with isLoading with icon`, () =>
     shouldMatchEmotionSnapshot(
-      <Button progress="right" icon="lock" iconPosition="left">
+      <Button onClick={MockOnClick} isLoading icon="pencil">
         Hello
       </Button>,
     ))
 
-  test('should render correctly with as', () =>
+  test(`render as an anchor with href prop`, () =>
     shouldMatchEmotionSnapshot(
-      <Button progress="right" icon="lock" as="button" iconPosition="left">
+      <Button onClick={MockOnClick} href="http://scaleway.com">
+        Scaleway
+      </Button>,
+    ))
+
+  test(`render with a tooltip`, () =>
+    shouldMatchEmotionSnapshot(
+      <Button onClick={MockOnClick} tooltip="Hello world !">
         Hello
       </Button>,
     ))

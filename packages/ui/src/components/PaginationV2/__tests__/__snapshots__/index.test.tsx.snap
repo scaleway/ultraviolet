@@ -17,127 +17,54 @@ exports[`Pagination should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-1j3wjbj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -149,253 +76,283 @@ exports[`Pagination should render correctly 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1kda3b2-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-1kda3b2-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+}
+
+.cache-esz0g5-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
+}
+
+.cache-esz0g5-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
-  color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
+.cache-khhoj9-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
+.cache-khhoj9-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
+.cache-khhoj9-StyledOutlinedButton:hover,
+.cache-khhoj9-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="true"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1kda3b2-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 2"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        2
+        <div>
+          2
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 3"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        3
+        <div>
+          3
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -419,127 +376,54 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-1j3wjbj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -551,162 +435,200 @@ exports[`Pagination should render correctly component with disabled 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-kp1ejs-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
   color: #c4c9d6;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+.cache-116zjhj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-kp1ejs-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
         aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-116zjhj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-kp1ejs-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -730,127 +652,54 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-1j3wjbj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -862,162 +711,200 @@ exports[`Pagination should render correctly component with disabled 2`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-kp1ejs-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
   color: #c4c9d6;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+.cache-116zjhj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-kp1ejs-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
         aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-116zjhj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-kp1ejs-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -1041,117 +928,63 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   gap: 8px;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
+.cache-khhoj9-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-khhoj9-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-khhoj9-StyledOutlinedButton:hover,
+.cache-khhoj9-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -1163,155 +996,211 @@ exports[`Pagination should render correctly component with pageTabCount 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-esz0g5-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-esz0g5-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+.cache-1kda3b2-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+.cache-1kda3b2-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="First"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
         aria-current="true"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1kda3b2-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 6"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        6
+        <div>
+          6
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -1335,117 +1224,63 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   gap: 8px;
 }
 
-.cache-1hg5tkx-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  width: 32px;
+.cache-khhoj9-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:hover svg,
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-1hg5tkx-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-khhoj9-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-khhoj9-StyledOutlinedButton:hover,
+.cache-khhoj9-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
+}
+
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -1457,171 +1292,231 @@ exports[`Pagination should render correctly with pageClick 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-esz0g5-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #d4dae7;
+  color: #4a4f62;
 }
 
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
+.cache-esz0g5-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-esz0g5-StyledOutlinedButton:hover,
+.cache-esz0g5-StyledOutlinedButton:active {
+  background: #e6e9f0;
+  color: #4a4f62;
   border: 1px solid #d4dae7;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+.cache-1kda3b2-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+.cache-1kda3b2-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="First"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Back"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="false"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
       <button
         aria-current="true"
         aria-label="Page 2"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1kda3b2-StyledOutlinedButton em6gco81"
         type="button"
       >
-        2
+        <div>
+          2
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 3"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        3
+        <div>
+          3
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 4"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        4
+        <div>
+          4
+        </div>
       </button>
       <button
         aria-current="false"
         aria-label="Page 5"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-esz0g5-StyledOutlinedButton em6gco81"
         type="button"
       >
-        5
+        <div>
+          5
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="false"
         aria-label="Next"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="false"
         aria-label="Last"
-        class="e2j7atg3 cache-1hg5tkx-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-khhoj9-StyledOutlinedButton em6gco81"
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -1645,127 +1540,54 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   gap: 8px;
 }
 
-.cache-zbjhiz-StyledButton-StyledPageSwitch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border: 1px solid #4f0599;
-  background-color: #ffffff;
-  color: #4f0599;
-  cursor: default;
-  pointer-events: none;
-  color: #c4c9d6;
-  background-color: #f6f6f8;
-  border-color: #d4dae7;
-  box-shadow: none;
-  width: 32px;
+.cache-1j3wjbj-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #4f0599;
-  pointer-events: none;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  border: 1px solid #390171;
-  color: #ffffff;
-  background-color: #390171;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:hover svg,
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus svg {
-  fill: #ffffff;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch:focus {
-  box-shadow: 0 0 0 2px #39017140;
-}
-
-.cache-zbjhiz-StyledButton-StyledPageSwitch svg {
-  fill: #c4c9d6;
-}
-
-.cache-ikfsk6-Stack-InhibitedStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
+  padding: 0 16px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  pointer-events: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
+  color: #4f0599;
+  color: #bda5df;
+  border: 1px solid #bda5df;
 }
 
-.cache-190f6hx-StyledIcon-sizeStyles {
+.cache-kbjega-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-2sizh-PageNumbersContainer {
@@ -1777,143 +1599,145 @@ exports[`Pagination should render correctly with pageCount is 1 1`] = `
   margin: 0 16px;
 }
 
-.cache-1senakc-StyledPageButton {
-  color: #151a2d;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: Medium;
-  width: 48px;
+.cache-1kda3b2-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid transparent;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-}
-
-.cache-1senakc-StyledPageButton:disabled {
-  pointer-events: none;
-  background-color: #f6f6f8;
-  color: #c4c9d6;
-  border: 1px solid #d4dae7;
-}
-
-.cache-1senakc-StyledPageButton[aria-current='true']:not(:disabled) {
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #4f0599;
   color: #4f0599;
-  border-color: #4f0599;
 }
 
-.cache-1senakc-StyledPageButton[aria-current='false']:hover {
-  color: #390171;
-  border-color: #d4dae7;
+.cache-1kda3b2-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1kda3b2-StyledOutlinedButton:hover,
+.cache-1kda3b2-StyledOutlinedButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+  border: 1px solid #4f0599;
 }
 
 <div
-    class="cache-a1981g-StyledContainer e2j7atg1"
+    class="cache-a1981g-StyledContainer e2j7atg0"
   >
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="First"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
-            />
-            <path
-              d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.29289 9.2823C6.90237 8.89178 6.90237 8.25861 7.29289 7.86809L11.2929 3.86809C11.6834 3.47756 12.3166 3.47756 12.7071 3.86809C13.0976 4.25861 13.0976 4.89178 12.7071 5.2823L9.41421 8.5752L12.7071 11.8681C13.0976 12.2586 13.0976 12.8918 12.7071 13.2823C12.3166 13.6728 11.6834 13.6728 11.2929 13.2823L7.29289 9.2823Z"
+          />
+          <path
+            d="M1.29289 9.2823C0.902369 8.89178 0.902369 8.25861 1.29289 7.86809L5.29289 3.86809C5.68342 3.47756 6.31658 3.47756 6.70711 3.86809C7.09763 4.25861 7.09763 4.89178 6.70711 5.2823L3.41421 8.5752L6.70711 11.8681C7.09763 12.2586 7.09763 12.8918 6.70711 13.2823C6.31658 13.6728 5.68342 13.6728 5.29289 13.2823L1.29289 9.2823Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Back"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+          />
+        </svg>
       </button>
     </div>
     <div
-      class="cache-2sizh-PageNumbersContainer e2j7atg4"
+      class="cache-2sizh-PageNumbersContainer e2j7atg2"
     >
       <button
         aria-current="true"
         aria-label="Page 1"
-        class="cache-1senakc-StyledPageButton e2j7atg0"
+        class="cache-1kda3b2-StyledOutlinedButton em6gco81"
         type="button"
       >
-        1
+        <div>
+          1
+        </div>
       </button>
     </div>
     <div
-      class="cache-14uy6tf-PageSwitchContainer e2j7atg2"
+      class="cache-14uy6tf-PageSwitchContainer e2j7atg1"
     >
       <button
-        aria-disabled="true"
         aria-label="Next"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+          />
+        </svg>
       </button>
       <button
-        aria-disabled="true"
         aria-label="Last"
-        class="e2j7atg3 cache-zbjhiz-StyledButton-StyledPageSwitch em6gco80"
+        class="cache-1j3wjbj-StyledOutlinedButton em6gco81"
         disabled=""
         type="button"
       >
-        <div
-          class="cache-ikfsk6-Stack-InhibitedStack em6gco83"
+        <svg
+          class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+          viewBox="0 0 16 16"
         >
-          <svg
-            class="cache-190f6hx-StyledIcon-sizeStyles etwatq50"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
-            />
-            <path
-              d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
-            />
-          </svg>
-        </div>
+          <path
+            d="M7.70711 7.86809C8.09763 8.25861 8.09763 8.89178 7.70711 9.2823L3.70711 13.2823C3.31658 13.6728 2.68342 13.6728 2.29289 13.2823C1.90237 12.8918 1.90237 12.2586 2.29289 11.8681L5.58579 8.57519L2.29289 5.2823C1.90237 4.89178 1.90237 4.25861 2.29289 3.86809C2.68342 3.47756 3.31658 3.47756 3.70711 3.86809L7.70711 7.86809Z"
+          />
+          <path
+            d="M13.7071 7.86809C14.0976 8.25861 14.0976 8.89178 13.7071 9.2823L9.70711 13.2823C9.31658 13.6728 8.68342 13.6728 8.29289 13.2823C7.90237 12.8918 7.90237 12.2586 8.29289 11.8681L11.5858 8.57519L8.29289 5.2823C7.90237 4.89178 7.90237 4.25861 8.29289 3.86809C8.68342 3.47756 9.31658 3.47756 9.70711 3.86809L13.7071 7.86809Z"
+          />
+        </svg>
       </button>
     </div>
   </div>

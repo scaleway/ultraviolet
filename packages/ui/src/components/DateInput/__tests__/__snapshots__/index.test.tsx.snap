@@ -2301,77 +2301,53 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
   gap: 8px;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-qqaqbu-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 100%;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  background: #f6f6f8;
+  border: none;
   color: #4a4f62;
-  background-color: #d4dae7;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #d4dae740;
+.cache-qqaqbu-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-qqaqbu-StyledFilledButton:hover,
+.cache-qqaqbu-StyledFilledButton:active {
+  background: #d4dae7;
+  color: #4a4f62;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2493,40 +2469,30 @@ exports[`DateInput renders correctly with date-fns locale es 1`] = `
                   class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+                      />
+                    </svg>
                   </button>
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div
@@ -3323,77 +3289,53 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
   gap: 8px;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-qqaqbu-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 100%;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  background: #f6f6f8;
+  border: none;
   color: #4a4f62;
-  background-color: #d4dae7;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #d4dae740;
+.cache-qqaqbu-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-qqaqbu-StyledFilledButton:hover,
+.cache-qqaqbu-StyledFilledButton:active {
+  background: #d4dae7;
+  color: #4a4f62;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -3515,40 +3457,30 @@ exports[`DateInput renders correctly with date-fns locale fr 1`] = `
                   class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+                      />
+                    </svg>
                   </button>
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div
@@ -4345,77 +4277,53 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
   gap: 8px;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.cache-qqaqbu-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border-radius: 4px;
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
+  outline-offset: 2px;
   white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
   font-weight: 500;
-  -webkit-transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: 500;
-  padding: 8px 16px;
-  background-color: #f6f6f8;
-  color: #4a4f62;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  border-radius: 100%;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-cz4ozz-StyledButton-StyledButton:hover,
-.cache-cz4ozz-StyledButton-StyledButton:focus {
+  background: #f6f6f8;
+  border: none;
   color: #4a4f62;
-  background-color: #d4dae7;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton:focus {
-  box-shadow: 0 0 0 2px #d4dae740;
+.cache-qqaqbu-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-cz4ozz-StyledButton-StyledButton>svg {
-  pointer-events: none;
-}
-
-.cache-1cny8u7-StyledIconContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  pointer-events: none;
+.cache-qqaqbu-StyledFilledButton:hover,
+.cache-qqaqbu-StyledFilledButton:active {
+  background: #d4dae7;
+  color: #4a4f62;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -4537,40 +4445,30 @@ exports[`DateInput renders correctly with date-fns locale ru 1`] = `
                   class="cache-sior7n-StyledSpan e17s8tvr3"
                 >
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M5.3 8.7a1 1 0 0 1 0-1.4l4-4a1 1 0 1 1 1.4 1.4L7.42 8l3.3 3.3a1 1 0 0 1-1.42 1.4l-4-4Z"
+                      />
+                    </svg>
                   </button>
                   <button
-                    aria-disabled="false"
-                    class="cache-cz4ozz-StyledButton-StyledButton em6gco80"
+                    class="cache-qqaqbu-StyledFilledButton em6gco82"
                     type="button"
                   >
-                    <div
-                      class="cache-1cny8u7-StyledIconContainer em6gco81"
+                    <svg
+                      class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
+                      viewBox="0 0 16 16"
                     >
-                      <svg
-                        class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
-                        />
-                      </svg>
-                    </div>
+                      <path
+                        d="M10.7071 7.29289C11.0976 7.68342 11.0976 8.31658 10.7071 8.70711L6.70711 12.7071C6.31658 13.0976 5.68342 13.0976 5.29289 12.7071C4.90237 12.3166 4.90237 11.6834 5.29289 11.2929L8.58579 8L5.29289 4.70711C4.90237 4.31658 4.90237 3.68342 5.29289 3.29289C5.68342 2.90237 6.31658 2.90237 6.70711 3.29289L10.7071 7.29289Z"
+                      />
+                    </svg>
                   </button>
                 </span>
                 <div

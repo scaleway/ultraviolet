@@ -266,9 +266,7 @@ describe('Pagination', () => {
           await userEvent.click(nextButton)
           await screen.findByRole('button', { name: 'Page 11' })
           await screen.findByText('Item 55')
-          await waitFor(() =>
-            expect(nextButton.getAttribute('aria-disabled')).toBe('false'),
-          )
+          await waitFor(() => expect(nextButton).not.toBeDisabled())
         },
       },
     ))

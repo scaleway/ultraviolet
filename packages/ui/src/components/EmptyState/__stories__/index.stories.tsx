@@ -30,11 +30,11 @@ Playground.args = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   image: kapsuleLogo,
   primaryButton: (
-    <Button variant="success" icon="plus">
+    <Button sentiment="success" icon="plus">
       Create
     </Button>
   ),
-  secondaryButton: <Button variant="secondary">More info</Button>,
+  secondaryButton: <Button sentiment="neutral">More info</Button>,
   learnMore: {
     link: 'https://scaleway.com',
     text: 'Learn more',
@@ -49,7 +49,7 @@ EmptyList.args = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   image: kapsuleLogo,
   primaryButton: (
-    <Button variant="success" icon="plus">
+    <Button sentiment="success" icon="plus">
       Create
     </Button>
   ),
@@ -62,7 +62,11 @@ InATinySpace.args = {
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   image: kapsuleLogo,
-  primaryButton: <Button variant="primary-bordered">Create a product</Button>,
+  primaryButton: (
+    <Button variant="outlined" sentiment="primary">
+      Create a product
+    </Button>
+  ),
   size: 'small',
   learnMore: {
     link: 'https://scaleway.com',
@@ -85,7 +89,9 @@ AnErrorOccurred.args = {
     'Our team has been notified and will look into it. In the meantime, you can try refreshing the page.',
   image: errorImg,
   primaryButton: (
-    <Button variant="primary-bordered">Go back to dashboard</Button>
+    <Button variant="outlined" sentiment="primary">
+      Go back to dashboard
+    </Button>
   ),
   size: 'medium',
 }

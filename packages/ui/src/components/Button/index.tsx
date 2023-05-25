@@ -1,469 +1,417 @@
 import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
-  AnchorHTMLAttributes,
+  AriaRole,
   ButtonHTMLAttributes,
   ComponentProps,
-  ElementType,
+  MouseEventHandler,
   ReactNode,
   Ref,
 } from 'react'
-import { forwardRef, isValidElement, useMemo } from 'react'
+import { forwardRef } from 'react'
+import type { SENTIMENTS } from '../../theme'
 import { Icon } from '../Icon'
-import { Link } from '../Link'
 import { Loader } from '../Loader'
-import { Stack } from '../Stack'
 import { Tooltip } from '../Tooltip'
 
-const TRANSITION_DURATION = 250
+type SENTIMENT = (typeof SENTIMENTS)[number]
 
-const InhibitedStack = styled(Stack)`
-  pointer-events: none;
-`
+// SIZE
+export const SIZE_HEIGHT = {
+  large: 48,
+  medium: 40,
+  small: 32,
+} as const
+type ButtonSize = keyof typeof SIZE_HEIGHT
+export const SIZE_SPACING_KEY = {
+  large: 2,
+  medium: 1.5,
+  small: 1,
+} as const
+export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 
-// Remove the animation of the Link
-const StyledLink = styled(Link)`
-  &:hover,
-  &:focus {
-    svg {
-      transform: none !important;
-    }
-  }
-`
-
-const borderedVariant = ({
-  colorValue,
-  bgColorValue,
-  hoverColorValue,
-}: {
-  colorValue: string
-  bgColorValue: string
-  hoverColorValue: string
-}) => `
-    border: 1px solid ${colorValue};
-    background-color: ${bgColorValue};
-    color: ${colorValue};
-
-    svg {
-      fill: ${colorValue};
-      // safari issue prevent event propagation
-      pointer-events: none;
-    }
-
-    &:hover,
-    &:focus {
-      border: 1px solid ${hoverColorValue};
-      color: ${bgColorValue};
-      background-color: ${hoverColorValue};
-
-      svg {
-        fill: ${bgColorValue};
-      }
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${hoverColorValue}40;
-    }
-  `
-
-const plainVariant = ({
-  bgColorValue,
-  textColorValue,
-  hoverColorValue,
-}: {
-  bgColorValue: string
-  textColorValue: string
-  hoverColorValue: string
-}) => `
-    background-color: ${bgColorValue};
-    color: ${textColorValue};
-
-    &:hover,
-    &:focus {
-      color: ${textColorValue};
-      background-color: ${hoverColorValue};
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 2px ${hoverColorValue}40;
-    }
-  `
-
-const variants = {
-  info: ({ theme }: { theme: Theme }) =>
-    plainVariant({
-      bgColorValue: theme.colors.info.background,
-      hoverColorValue: theme.colors.info.backgroundHover,
-      textColorValue: theme.colors.info.text,
-    }),
-  'info-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.info.backgroundWeak,
-      colorValue: theme.colors.info.textWeak,
-      hoverColorValue: theme.colors.info.backgroundStrongHover,
-    }),
-  link: ({ theme }: { theme: Theme }) => `
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    color: ${theme.colors.info.text};
-
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-decoration-position: under;
-    text-decoration-thickness: 1px;
-    transition: text-decoration-color ${TRANSITION_DURATION}ms ease-out;
-    vertical-align: baseline;
-
-    &:hover,
-    &:focus {
-      text-decoration-thickness: 1px;
-      text-decoration: underline;
-      text-decoration-color: ${theme.colors.info.text};
-    }
-
-    &:active {
-      text-decoration-thickness: 2px;
-    }
-  `,
-  primary: ({ theme }: { theme: Theme }) =>
-    plainVariant({
-      bgColorValue: theme.colors.primary.backgroundStrong,
-      hoverColorValue: theme.colors.primary.backgroundStrongHover,
-      textColorValue: theme.colors.primary.textStrong,
-    }),
-  'primary-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.primary.backgroundWeak,
-      colorValue: theme.colors.primary.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundStrongHover,
-    }),
-  'primary-soft-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.neutral.backgroundWeak,
-      colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundStrongHover,
-    }),
-  secondary: ({ theme }: { theme: Theme }) =>
-    plainVariant({
-      bgColorValue: theme.colors.neutral.backgroundStrong,
-      hoverColorValue: theme.colors.neutral.backgroundStrongHover,
-      textColorValue: theme.colors.neutral.text,
-    }),
-  'secondary-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.neutral.backgroundWeak,
-      colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.primary.backgroundStrongHover,
-    }),
-  success: ({ theme }: { theme: Theme }) =>
-    plainVariant({
-      bgColorValue: theme.colors.success.backgroundStrong,
-      hoverColorValue: theme.colors.success.backgroundStrongHover,
-      textColorValue: theme.colors.success.textStrong,
-    }),
-  'success-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.success.backgroundWeak,
-      colorValue: theme.colors.success.textWeak,
-      hoverColorValue: theme.colors.success.backgroundStrongHover,
-    }),
-  'success-soft-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.neutral.backgroundWeak,
-      colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.success.backgroundStrongHover,
-    }),
-  transparent: ({ theme: { colors } }: { theme: Theme }) => `
-    background-color: transparent;
-    color: ${colors.neutral.text};
-  `,
-  warning: ({ theme }: { theme: Theme }) =>
-    plainVariant({
-      bgColorValue: theme.colors.danger.backgroundStrong,
-      hoverColorValue: theme.colors.danger.backgroundStrongHover,
-      textColorValue: theme.colors.danger.textStrong,
-    }),
-  'warning-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.danger.backgroundWeak,
-      colorValue: theme.colors.danger.text,
-      hoverColorValue: theme.colors.danger.backgroundStrongHover,
-    }),
-  'warning-soft-bordered': ({ theme }: { theme: Theme }) =>
-    borderedVariant({
-      bgColorValue: theme.colors.neutral.backgroundWeak,
-      colorValue: theme.colors.neutral.textWeak,
-      hoverColorValue: theme.colors.danger.backgroundStrongHover,
-    }),
+// FOCUS RING
+const FOCUS_RING_KEY = {
+  danger: 'focusDanger',
+  info: 'focusInfo',
+  neutral: 'focusNeutral',
+  primary: 'focusPrimary',
+  success: 'focusSuccess',
+  warning: 'focusWarning',
 } as const
 
-type ButtonVariant = keyof typeof variants
-export const buttonVariants = Object.keys(variants) as ButtonVariant[]
-
-const sizes = {
-  large: `
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 500;
-    padding: 8px 16px;
-  `,
-  medium: `
-    font-size: 16px;
-    line-height: 24px;
-    padding: 8px 16px;
-  `,
-  small: `
-    font-size: 16px;
-    line-height: 16px;
-    padding: 8px 16px;
-  `,
-  xsmall: `
-    font-size: 14px;
-    line-height: 20px;
-    padding: 8px;
-  `,
-  xxsmall: `
-    font-size: 12px;
-  `,
-} as const
-
-type ButtonSize = keyof typeof sizes
-export const buttonSizes = Object.keys(sizes) as ButtonSize[]
-
-const variantStyles = ({
-  variant,
+// VARIANTS
+type StyledButtonProps = Required<
+  Pick<
+    FinalProps,
+    'size' | 'sentiment' | 'disabled' | 'iconPosition' | 'fullWidth'
+  >
+> & { iconOnly: boolean }
+const coreStyle = ({
   theme,
-  ...props
-}: {
-  variant: ButtonVariant
-  theme: Theme
-}) => variants[variant]?.({ theme, ...props })
-const sizeStyles = ({ size }: { size: ButtonSize }) => sizes[size]
+  size,
+  sentiment,
+  iconPosition,
+  fullWidth,
+  disabled,
+  iconOnly,
+}: { theme: Theme } & StyledButtonProps) => {
+  const font =
+    size === 'large'
+      ? theme.typography.bodyStrong
+      : theme.typography.bodySmallStrong
 
-const SmartIcon = ({
-  icon,
-  iconSize,
-}: {
-  icon: ReactNode | string
-  iconSize?: number
-}) =>
-  isValidElement(icon) ? (
-    icon
-  ) : (
-    <Icon name={icon as ComponentProps<typeof Icon>['name']} size={iconSize} />
-  )
+  let width = 'auto'
+  if (fullWidth) {
+    width = '100%'
+  } else if (iconOnly) {
+    width = `${SIZE_HEIGHT[size]}px`
+  }
 
-const StyledIconContainer = styled.div`
-  display: flex;
-  pointer-events: none;
+  return `display: inline-flex;
+  height: ${SIZE_HEIGHT[size]}px;
+  padding: 0 ${theme.space[SIZE_SPACING_KEY[size]]};
+  flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
+  gap: ${theme.space['1']};
+  border-radius: ${theme.radii.default};
+  box-sizing: border-box;
+  width: ${width};
+  align-items: center;
+  cursor: ${disabled ? 'not-allowed' : 'pointer'};
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+
+  ${
+    disabled
+      ? ''
+      : `
+          &:active {
+            box-shadow: ${theme.shadows[FOCUS_RING_KEY[sentiment]]};
+          }
+        `
+  }
+
+  /* We can't use Text component because of button hover effect, so we need to duplicate */
+    font-size: ${font.fontSize};
+    font-family: ${font.fontFamily};
+    font-weight: ${font.weight};
+    letter-spacing: ${font.letterSpacing};
+    line-height: ${font.lineHeight};
+    paragraph-spacing: ${font.paragraphSpacing};
+    text-case: ${font.textCase};
+    text-decoration: ${font.textDecoration};
 `
-type StyledButtonProps = {
-  action?: boolean | 'rounded'
-  disabled?: boolean
-  extend?: boolean
-  /** Name of the icon. All [icons](/?path=/docs/components-icon) are supported. */
-  icon?: string | JSX.Element
-  iconPosition?: 'left' | 'right'
-  /** Use this property to associate ref to button component. */
-  progress?: boolean | 'left' | 'right'
-  iconSize?: number
-  size: ButtonSize
-  tooltip?: string
-  tooltipBaseId?: string
-  variant: ButtonVariant
+}
+
+const StyledFilledButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
+  background: ${({ theme, sentiment }) =>
+    theme.colors[sentiment].backgroundStrong};
+  border: none;
+  color: ${({ theme, sentiment }) =>
+    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textStrong']};
+
+  ${({ theme, sentiment, disabled }) =>
+    disabled
+      ? `
+            background: ${theme.colors[sentiment].backgroundStrongDisabled};
+            color:
+              ${
+                theme.colors[sentiment][
+                  sentiment === 'neutral'
+                    ? 'textDisabled'
+                    : 'textStrongDisabled'
+                ]
+              };
+        `
+      : `
+            &:hover, &:active
+            {
+                background: ${theme.colors[sentiment].backgroundStrongHover};
+                color:
+                ${
+                  theme.colors[sentiment][
+                    sentiment === 'neutral' ? 'textHover' : 'textStrongHover'
+                  ]
+                };
+            }
+  `}
+`
+
+const StyledOutlinedButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
+  background: none;
+  border: 1px solid
+    ${({ theme, sentiment }) =>
+      theme.colors[sentiment][
+        sentiment === 'neutral' ? 'borderStrong' : 'borderWeak'
+      ]};
+  color: ${({ theme, sentiment }) =>
+    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textWeak']};
+
+  ${({ theme, sentiment, disabled }) =>
+    disabled
+      ? `
+        color:
+          ${
+            theme.colors[sentiment][
+              sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
+            ]
+          };
+        border: 1px solid ${
+          theme.colors[sentiment][
+            sentiment === 'neutral'
+              ? 'borderStrongDisabled'
+              : 'borderWeakDisabled'
+          ]
+        };
+
+    `
+      : `
+        &:hover, &:active
+       {
+            background: ${theme.colors[sentiment].backgroundWeakHover};
+            color:
+            ${
+              theme.colors[sentiment][
+                sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
+              ]
+            };
+            border: 1px solid ${
+              theme.colors[sentiment][
+                sentiment === 'neutral'
+                  ? 'borderStrongHover'
+                  : 'borderWeakHover'
+              ]
+            };
+
+        }
+`};
+`
+
+const StyledGhostButton = styled('button', {
+  shouldForwardProp: prop =>
+    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+})<StyledButtonProps>`
+  ${args => coreStyle(args)}
+
+  background: none;
+  border: none;
+  color: ${({ theme, sentiment }) =>
+    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textWeak']};
+
+  ${({ theme, sentiment, disabled }) =>
+    disabled
+      ? `
+        color:
+          ${
+            theme.colors[sentiment][
+              sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
+            ]
+          };
+      `
+      : `
+        &:hover, &:active
+        {
+            background: ${theme.colors[sentiment].backgroundWeakHover};
+            color:
+              ${
+                theme.colors[sentiment][
+                  sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
+                ]
+              };
+        }
+`}
+`
+
+const VARIANTS_COMPONENTS = {
+  filled: {
+    button: StyledFilledButton,
+    link: StyledFilledButton.withComponent('a'),
+  },
+  outlined: {
+    button: StyledOutlinedButton,
+    link: StyledOutlinedButton.withComponent('a'),
+  },
+  ghost: {
+    button: StyledGhostButton,
+    link: StyledGhostButton.withComponent('a'),
+  },
+}
+type ButtonVariant = keyof typeof VARIANTS_COMPONENTS
+export const buttonVariants = Object.keys(
+  VARIANTS_COMPONENTS,
+) as ButtonVariant[]
+
+type CommonProps = {
+  type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
+  variant?: ButtonVariant
+  role?: AriaRole
+  size?: ButtonSize
   className?: string
   'data-testid'?: string
-} & ButtonHTMLAttributes<HTMLButtonElement> &
-  Pick<
-    AnchorHTMLAttributes<HTMLAnchorElement>,
-    'href' | 'target' | 'download' | 'rel'
-  >
-
-const StyledButton = styled('button', {
-  shouldForwardProp: prop =>
-    !['action', 'variant', 'extend', 'icon', 'download', 'as'].includes(prop),
-})<StyledButtonProps>`
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
-  align-items: center;
-  justify-content: center;
-  border-radius: ${({ theme }) => theme.radii.default};
-  border-width: 0;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  outline: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-weight: 500;
-
-  transition: color 150ms ease-in-out, background-color 150ms ease-in-out,
-    border-color 150ms ease-in-out;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-
-  ${sizeStyles}
-  ${variantStyles}
-  ${({ disabled, theme }) =>
-    disabled &&
-    `
-      cursor: default;
-      pointer-events: none;
-      color: ${theme.colors.neutral.textDisabled};
-      svg {
-        fill: ${theme.colors.neutral.textDisabled};
-      }
-    `}
-
-  ${({ variant, disabled, theme }) =>
-    variant !== 'link' &&
-    disabled &&
-    `
-      background-color: ${theme.colors.neutral.backgroundDisabled};
-      border-color: ${theme.colors.neutral.borderDisabled};
-      box-shadow: none;
-    `}
-
-  ${({ extend, theme }) =>
-    extend &&
-    css`
-      & ${InhibitedStack} {
-        transition: max-width 250ms ease, margin-left 250ms ease;
-        max-width: 0;
-        margin-left: -${theme.space['1']}; /* To counteract parent gap */
-        overflow-x: clip; /* hidden create a weird white square when size is small */
-      }
-
-      &:focus ${InhibitedStack}, &:hover ${InhibitedStack} {
-        max-width: 275px;
-        margin-left: 0;
-      }
-    `}
-
-  ${({ action, theme }) =>
-    action &&
-    css`
-      width: 32px;
-      height: 32px;
-      padding: 0;
-      flex-shrink: 0;
-      ${action === 'rounded' && `border-radius: ${theme.radii.circle};`}
-      > svg {
-        /* safari issue prevent event propgation */
-        pointer-events: none;
-      }
-    `}
-`
-
-type ButtonProps = Omit<StyledButtonProps, 'variant' | 'size' | 'download'> & {
-  children?: ReactNode
-  variant?: ButtonVariant
-  innerRef: Ref<Element>
-  size?: ButtonSize
-  download?: boolean | string
-  as?: ElementType
+  sentiment?: SENTIMENT
+  disabled?: boolean
+  iconPosition?: 'left' | 'right'
+  fullWidth?: boolean
+  isLoading?: boolean
+  'aria-label'?: string
+  'aria-current'?: boolean
+  onClick?: MouseEventHandler<HTMLElement>
+  tooltip?: string
 }
 
-const FwdButton = ({
-  children,
-  disabled = false,
-  download,
-  extend,
-  href,
-  icon,
-  iconPosition = 'left',
-  iconSize,
-  innerRef,
-  progress,
-  size = 'large',
-  tooltip,
-  tooltipBaseId,
-  type = 'button',
-  variant = 'primary',
-  className,
-  'data-testid': dataTestId,
-  ...props
-}: ButtonProps) => {
-  const as = useMemo(() => {
-    if (disabled) return 'button'
-    if (href || download) return StyledLink
-
-    return 'button'
-  }, [disabled, href, download])
-
-  const displayProgressOnly = !children
-
-  return (
-    <Tooltip id={tooltipBaseId} text={tooltip}>
-      <StyledButton
-        {...props}
-        href={href}
-        download={download}
-        ref={innerRef as Ref<HTMLButtonElement>}
-        as={as}
-        disabled={as === 'button' && disabled}
-        aria-disabled={disabled}
-        variant={variant}
-        size={size}
-        extend={extend}
-        icon={icon}
-        type={type}
-        className={className}
-        data-testid={dataTestId}
-      >
-        {progress === true ||
-        progress === 'left' ||
-        (icon && iconPosition === 'left') ? (
-          <StyledIconContainer>
-            {progress === true || progress === 'left' ? (
-              <Loader
-                active
-                trailColor="transparent"
-                color="currentColor"
-                size="1em"
-              />
-            ) : (
-              <SmartIcon icon={icon} iconSize={iconSize} />
-            )}
-          </StyledIconContainer>
-        ) : null}
-        {(!progress || !displayProgressOnly) && children && (
-          <InhibitedStack
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {children}
-          </InhibitedStack>
-        )}
-        {progress === 'right' || (icon && iconPosition === 'right') ? (
-          <StyledIconContainer>
-            {progress === 'right' ? (
-              <Loader
-                active
-                trailColor="transparent"
-                color="currentColor"
-                size="1em"
-              />
-            ) : (
-              <SmartIcon icon={icon} iconSize={iconSize} />
-            )}
-          </StyledIconContainer>
-        ) : null}
-      </StyledButton>
-    </Tooltip>
+// @note: using XOR utility was generating some lint erros
+type FinalProps = CommonProps &
+  (
+    | {
+        // Button : Children + optional Icon
+        children: ReactNode
+        icon?: ComponentProps<typeof Icon>['name']
+        name?: string
+        href?: never
+        target?: never
+        download?: never
+      }
+    | {
+        // Button : Icon only
+        children?: never
+        icon: ComponentProps<typeof Icon>['name']
+        name?: string
+        href?: never
+        target?: never
+        download?: never
+      }
+    | {
+        // Anchor : Children + optional Icon
+        children: ReactNode
+        icon?: ComponentProps<typeof Icon>['name']
+        name?: never
+        href: string
+        target?: string
+        download?: string
+      }
+    | {
+        // Anchor : Children + Icon Only
+        children?: never
+        icon: ComponentProps<typeof Icon>['name']
+        name?: never
+        href: string
+        target?: string
+        download?: string
+      }
   )
-}
 
-/**
- * @deprecated Has been replaced by component ButtonV2, please this one instead.
- */
-export const Button = forwardRef<Element, Omit<ButtonProps, 'innerRef'>>(
-  (props, ref) => <FwdButton {...props} innerRef={ref} />,
+export const Button = forwardRef<Element, FinalProps>(
+  (
+    {
+      type = 'button',
+      className,
+      'data-testid': dataTestId,
+      sentiment = 'primary',
+      variant = 'filled',
+      size = 'large',
+      disabled = false,
+      icon,
+      iconPosition = 'left',
+      fullWidth = false,
+      isLoading = false,
+      children,
+      onClick,
+      name,
+      'aria-label': ariaLabel,
+      'aria-current': ariaCurrent,
+      href,
+      download,
+      target,
+      role,
+      tooltip,
+    },
+    ref,
+  ) => {
+    const computeIsDisabled = disabled || isLoading
+    const content = (
+      <>
+        {!isLoading && icon ? <Icon name={icon} size={16} /> : null}
+        {isLoading ? (
+          <Loader
+            active
+            trailColor="transparent"
+            size="1em"
+            color="currentColor"
+          />
+        ) : null}
+        {children && typeof children !== 'string' ? (
+          <div>{children}</div>
+        ) : (
+          children
+        )}
+      </>
+    )
+
+    if (href) {
+      const Component = VARIANTS_COMPONENTS[variant].link
+
+      return (
+        <Tooltip text={tooltip}>
+          <Component
+            role={role}
+            className={className}
+            data-testid={dataTestId}
+            disabled={computeIsDisabled}
+            fullWidth={fullWidth}
+            iconPosition={iconPosition}
+            sentiment={sentiment}
+            size={size}
+            type={type}
+            onClick={onClick}
+            aria-label={ariaLabel}
+            aria-current={ariaCurrent}
+            href={href}
+            target={target}
+            download={download}
+            ref={ref as Ref<HTMLAnchorElement>}
+            iconOnly={!!icon && !children}
+          >
+            {content}
+          </Component>
+        </Tooltip>
+      )
+    }
+
+    const Component = VARIANTS_COMPONENTS[variant].button
+
+    return (
+      <Tooltip text={tooltip}>
+        <Component
+          role={role}
+          className={className}
+          data-testid={dataTestId}
+          disabled={computeIsDisabled}
+          fullWidth={fullWidth}
+          iconPosition={iconPosition}
+          sentiment={sentiment}
+          size={size}
+          type={type}
+          onClick={onClick}
+          ref={ref as Ref<HTMLButtonElement>}
+          name={name}
+          aria-label={ariaLabel}
+          aria-current={ariaCurrent}
+          iconOnly={!!icon && !children}
+        >
+          {content}
+        </Component>
+      </Tooltip>
+    )
+  },
 )

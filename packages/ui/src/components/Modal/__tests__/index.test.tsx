@@ -62,12 +62,13 @@ describe('Modal', () => {
         onBeforeClose={async () => {
           count += 1
         }}
+        data-testid="test"
       >
         <div>modal</div>
       </Modal>,
       {
         transform: async () => {
-          const closeButton = screen.getByTitle('close')
+          const closeButton = screen.getByTestId('test-close-button')
           await userEvent.click(closeButton)
           expect(count).toBe(1)
         },

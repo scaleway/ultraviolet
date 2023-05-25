@@ -227,7 +227,7 @@ CustomComponents.decorators = [
                 <Button
                   key={pageNumber}
                   disabled={isLoadingPage}
-                  variant={page === pageNumber ? 'primary' : 'secondary'}
+                  sentiment={page === pageNumber ? 'primary' : 'neutral'}
                   onClick={handlePageClick(pageNumber)}
                 >
                   {pageNumber}
