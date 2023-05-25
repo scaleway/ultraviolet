@@ -7,7 +7,7 @@ import type {
   MutableRefObject,
 } from 'react'
 import { useId, useMemo, useRef, useState } from 'react'
-import { ButtonV2 } from '../ButtonV2'
+import { Button } from '../Button'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -35,7 +35,7 @@ const iconSizes = {
 
 const BASE_INPUT_WIDTH = 34
 
-const StyledSelectButton = styled(ButtonV2)`
+const StyledSelectButton = styled(Button)`
   margin: 0 ${({ theme }) => theme.space['1']};
   width: 32px;
   height: 32px;
