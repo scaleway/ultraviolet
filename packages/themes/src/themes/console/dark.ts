@@ -149,18 +149,6 @@ export const darkTheme = {
           success: '#44d09e',
         },
       },
-      gradients: {
-        background: {
-          aqua: 'linear-gradient(199.45deg, #03d5e0 14.03%, #4f0599 88.52%)',
-          blue: 'linear-gradient(200.14deg, #0092ff 19.89%, #4f0599 80.37%)',
-          fuschia: 'linear-gradient(200.02deg, #ff1c6e 13.34%, #4f0599 86.64%)',
-          green: 'linear-gradient(202.33deg, #45d29f 15.16%, #4f0599 85.44%)',
-          orange: 'linear-gradient(201.62deg, #ff5d2a 14.62%, #4f0599 85.81%)',
-          pink: 'linear-gradient(200.94deg, #ff0cd2 14.71%, #4f0599 86.16%)',
-          primary: 'linear-gradient(0deg, #151a2d 0%, #4f0599 100%)',
-          purple: 'linear-gradient(197.81deg, #8430d9 12.89%, #4f0599 87.84%)',
-        },
-      },
       icon: {
         category: {
           primary: {
@@ -315,6 +303,14 @@ export const darkTheme = {
       textWeakHover: '#fabeab',
     },
   },
+  radii: {
+    circle: '100%',
+    default: '4px',
+    large: '8px',
+    none: '0',
+    small: '2px',
+    xlarge: '16px',
+  },
   shadows: {
     bulk: '0px 4px 32px 8px #00000066',
     defaultShadow: '0px 0px 8px 2px #00000066',
@@ -333,6 +329,22 @@ export const darkTheme = {
     modal: '0px 8px 40px 10px #0000008C',
     popover: '0px 4px 32px 8px #0000008C',
     tooltip: '0px 4px 32px 8px #00000066',
+  },
+  space: {
+    '0': '0',
+    '0.25': '2px',
+    '0.5': '4px',
+    '1': '8px',
+    '1.5': '12px',
+    '10': '80px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px',
+    '7': '56px',
+    '8': '64px',
+    '9': '72px',
   },
   typography: {
     body: {

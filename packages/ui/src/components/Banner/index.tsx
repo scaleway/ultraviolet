@@ -21,7 +21,7 @@ const Container = styled('div', {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: ${({ theme }) => theme.space['2.25']};
+  gap: ${({ theme }) => theme.space['2']};
 
   > svg:first-child,
   > img {

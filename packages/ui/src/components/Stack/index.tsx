@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import type { SCWUITheme } from '../../theme'
 
 type StackProps = {
-  gap?: keyof SCWUITheme['space']
+  gap?: keyof SCWUITheme['space'] | number
   direction?: 'row' | 'column'
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
@@ -29,7 +29,7 @@ export const Stack = styled('div', {
     justifyContent = 'normal',
     wrap = 'nowrap',
   }) => `
-    gap: ${theme.space[gap]};
+    gap: ${theme.space[gap as keyof SCWUITheme['space']]};
     flex-direction: ${direction};
     align-items: ${alignItems};
     justify-content: ${justifyContent};
