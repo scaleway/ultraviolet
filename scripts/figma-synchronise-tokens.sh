@@ -139,7 +139,10 @@ function generateTokens {
   SPACE=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" '.[$global].space |
     reduce (. | to_entries | .[]) as $space ({}; . + {"\($space.key | sub(","; "."))": ($space.value.value)}) | {"space": .}')
 
-  FINAL_RESULT=$(echo "${SPACE}" "${RADII}" "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7] * .[8]')
+  # Theme name
+  THEME_NAME="{\"theme\": \"$THEME\"}"
+
+  FINAL_RESULT=$(echo "${THEME_NAME}" "${SPACE}" "${RADII}" "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7] * .[8] * .[9] * .[10]')
 }
 
 # Generate theme tokens and create file into "src/theme/tokens"

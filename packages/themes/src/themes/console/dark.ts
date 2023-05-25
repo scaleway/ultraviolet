@@ -149,6 +149,18 @@ export const darkTheme = {
           success: '#44d09e',
         },
       },
+      gradients: {
+        background: {
+          aqua: 'linear-gradient(199.45deg, #03d5e0 14.03%, #4f0599 88.52%)',
+          blue: 'linear-gradient(200.14deg, #0092ff 19.89%, #4f0599 80.37%)',
+          fuschia: 'linear-gradient(200.02deg, #ff1c6e 13.34%, #4f0599 86.64%)',
+          green: 'linear-gradient(202.33deg, #45d29f 15.16%, #4f0599 85.44%)',
+          orange: 'linear-gradient(201.62deg, #ff5d2a 14.62%, #4f0599 85.81%)',
+          pink: 'linear-gradient(200.94deg, #ff0cd2 14.71%, #4f0599 86.16%)',
+          primary: 'linear-gradient(0deg, #151a2d 0%, #4f0599 100%)',
+          purple: 'linear-gradient(197.81deg, #8430d9 12.89%, #4f0599 87.84%)',
+        },
+      },
       icon: {
         category: {
           primary: {
@@ -346,6 +358,7 @@ export const darkTheme = {
     '8': '64px',
     '9': '72px',
   },
+  theme: 'dark',
   typography: {
     body: {
       fontFamily: 'Asap',
