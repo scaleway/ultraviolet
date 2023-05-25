@@ -2,8 +2,7 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "website"
+    "packages/*"
   ],
   "packageManager": "pnpm@8.6.1",
   "engines": {
@@ -15,16 +14,14 @@
     "linux"
   ],
   "scripts": {
-    "build": "pnpm recursive --filter='!scaleway-ui-website' exec -- rollup -c ../../rollup.config.mjs",
+    "build": "pnpm recursive exec -- rollup -c ../../rollup.config.mjs",
     "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "pnpm run build && STORYBOOK_ENVIRONMENT=production storybook build",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",
-    "build:website": "pnpm run -r --filter scaleway-ui-website build && pnpm run -r --filter scaleway-ui-website export",
     "check:deps": "npx depcheck . --skip-missing=true --ignores='bin,eslint,webpack,jest,husky,@commitlint/*,@babel/*,babel-*'",
     "commit": "npx git-cz -a",
     "start": "STORYBOOK_ENVIRONMENT=development storybook dev -p 6006",
     "start:production": "STORYBOOK_ENVIRONMENT=production storybook dev -p 6006",
-    "start:website": "pnpm run -r --filter scaleway-ui-website dev",
     "format": "prettier --write '**/*.{ts,tsx,js,json,md,mdx}'",
     "lint:fix": "pnpm run lint --fix",
     "lint": "eslint --report-unused-disable-directives --cache --ext js,mjs,ts,tsx .",
