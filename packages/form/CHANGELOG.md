@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.45.0
+
+### Minor Changes
+
+- [#2536](https://github.com/scaleway/scaleway-ui/pull/2536) [`d0747c1c`](https://github.com/scaleway/scaleway-ui/commit/d0747c1c8c2af5a7ac8c64f70631377a0559a4fa) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `NumberInput` to implement new properties and change behavior
+
+### Patch Changes
+
+- Updated dependencies [[`d0747c1c`](https://github.com/scaleway/scaleway-ui/commit/d0747c1c8c2af5a7ac8c64f70631377a0559a4fa)]:
+  - @scaleway/ui@0.247.0
+
 ## 1.44.1
 
 ### Patch Changes
