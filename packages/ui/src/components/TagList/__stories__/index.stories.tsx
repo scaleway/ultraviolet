@@ -17,3 +17,4 @@ export default {
 export { Playground } from './Playground.stories'
 export { Threshold } from './Threshold.stories'
 export { Multiline } from './Multiline.stories'
+export { Copiable } from './Copiable.stories'

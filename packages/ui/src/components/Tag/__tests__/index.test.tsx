@@ -21,4 +21,7 @@ describe('Tag', () => {
 
   test('renders correctly with onClose', () =>
     shouldMatchEmotionSnapshot(<Tag onClose={() => {}}>test</Tag>))
+
+  test('renders correctly with copiable', () =>
+    shouldMatchEmotionSnapshot(<Tag copiable>test</Tag>))
 })

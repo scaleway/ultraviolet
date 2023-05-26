@@ -59,4 +59,11 @@ describe('TagList', () => {
         />
       </div>,
     ))
+
+  test('renders correctly with copiable', () =>
+    shouldMatchEmotionSnapshot(
+      <div>
+        <TagList copiable threshold={2} tags={['scaleway', 'cloud']} />
+      </div>,
+    ))
 })
