@@ -46,10 +46,17 @@ const generateStorybookTheme = ({
     barSelectedColor: theme.colors.primary.textWeak,
     barBg: theme.colors.neutral.backgroundWeak,
 
+    buttonBg: theme.colors.neutral.backgroundStrong,
+    buttonBorder: theme.colors.neutral.borderStrong,
+
+    // BIZARRE
+    booleanBg: theme.colors.neutral.backgroundStrong,
+    booleanSelectedBg: theme.colors.primary.background,
+
     // Form colors
-    inputBg: 'white',
-    inputBorder: 'silver',
-    inputTextColor: 'black',
+    inputBg: theme.colors.neutral.backgroundStrong,
+    inputBorder: theme.colors.neutral.borderStrong,
+    inputTextColor: theme.colors.neutral.text,
     inputBorderRadius: 4,
   })
 

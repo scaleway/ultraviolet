@@ -1,13 +1,8 @@
-import {
-  isValidElement,
-  cloneElement,
-  FunctionComponent,
-  ReactNode,
-} from 'react'
+import { isValidElement, cloneElement, ReactNode } from 'react'
 import {
   DocsContainer as BaseContainer,
-  DocsContainerProps,
-} from '@storybook/addon-docs'
+  DocsContainerProps as BaseContainerProps,
+} from '@storybook/blocks'
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
 import { darkTheme } from '../../packages/ui/src'
@@ -72,49 +67,31 @@ type ExtraProps = {
   experimental?: boolean
 }
 
-const CustomBaseContainer = BaseContainer as unknown as FunctionComponent<
-  DocsContainerProps & { children: ReactNode } & {
-    context: {
-      parameters: ExtraProps
-    }
-  }
->
+type DocsContainerProps = BaseContainerProps & {
+  context: { attachedCSFFile: { meta: { parameters?: ExtraProps } } }
+} & { children: ReactNode }
 
-const DocsContainer: typeof CustomBaseContainer = ({ context, children }) => {
+const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const isDarkTheme = useDarkMode()
-  const currentTheme = isDarkTheme ? darkTheme : lightTheme
 
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Global styles={[fonts]} />
-      <CustomBaseContainer
-        context={{
-          ...context,
-          storyById: (id: any) => {
-            const storyContext = context.storyById(id)
-            return {
-              ...storyContext,
-              parameters: {
-                ...storyContext?.parameters,
-                docs: {
-                  ...storyContext?.parameters?.['docs'],
-                  theme: isDarkTheme ? dark : light,
-                },
-              },
-            }
-          },
-        }}
-      >
+      <BaseContainer theme={isDarkTheme ? dark : light} context={context}>
         {isValidElement<ExtraProps>(children)
           ? cloneElement(children, {
-              deprecated: context.parameters?.deprecated,
-              deprecatedReason: context.parameters?.deprecatedReason,
-              migrationLink: context.parameters?.migrationLink,
-              hideArgsTable: context.parameters?.hideArgsTable,
-              experimental: context.parameters?.experimental,
+              deprecated: context.attachedCSFFile.meta.parameters?.deprecated,
+              deprecatedReason:
+                context.attachedCSFFile.meta.parameters?.deprecatedReason,
+              migrationLink:
+                context.attachedCSFFile.meta.parameters?.migrationLink,
+              hideArgsTable:
+                context.attachedCSFFile.meta.parameters?.hideArgsTable,
+              experimental:
+                context.attachedCSFFile.meta.parameters?.experimental,
             })
           : children}
-      </CustomBaseContainer>
+      </BaseContainer>
     </ThemeProvider>
   )
 }

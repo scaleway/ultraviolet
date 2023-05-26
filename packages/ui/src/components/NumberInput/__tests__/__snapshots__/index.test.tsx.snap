@@ -25,7 +25,30 @@ exports[`NumberInput should click on center button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -47,42 +70,75 @@ exports[`NumberInput should click on center button 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -120,7 +176,7 @@ exports[`NumberInput should click on center button 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -134,62 +190,104 @@ exports[`NumberInput should click on center button 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":ri:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r19:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -220,7 +318,30 @@ exports[`NumberInput should click on min button 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,42 +363,75 @@ exports[`NumberInput should click on min button 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -315,7 +469,7 @@ exports[`NumberInput should click on min button 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -329,62 +483,104 @@ exports[`NumberInput should click on min button 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":rl:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="8"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1e:"
+            name="numberinput"
+            style="width: 16px;"
+            type="number"
+            value="8"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -415,7 +611,30 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -437,42 +656,75 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -510,7 +762,7 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -524,62 +776,104 @@ exports[`NumberInput should click on plus button with a step value 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":ro:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="30"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1j:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="30"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -610,7 +904,30 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -632,42 +949,75 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -705,7 +1055,7 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -719,62 +1069,104 @@ exports[`NumberInput should click on plus button with a step value and an in-bet
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r17:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="30"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r2c:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="30"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -805,7 +1197,30 @@ exports[`NumberInput should focus input and modify value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -827,42 +1242,75 @@ exports[`NumberInput should focus input and modify value 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -900,7 +1348,7 @@ exports[`NumberInput should focus input and modify value 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -914,62 +1362,104 @@ exports[`NumberInput should focus input and modify value 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":rr:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1o:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1000,7 +1490,30 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1022,42 +1535,75 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -1095,7 +1641,7 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -1109,24 +1655,83 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -1142,53 +1747,65 @@ exports[`NumberInput should focus input and modify value onMaxCrossed 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r11:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="100"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r22:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="100"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1219,7 +1836,30 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1241,42 +1881,66 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
-}
-
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -1314,7 +1978,7 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -1328,24 +1992,92 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -1361,53 +2093,65 @@ exports[`NumberInput should focus input and modify value onMinCrossed 1`] = `
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":ru:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r1t:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1438,7 +2182,30 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1460,42 +2227,75 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -1533,7 +2333,7 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -1547,24 +2347,83 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -1580,53 +2439,65 @@ exports[`NumberInput should increase and decrease input with arrow up and down 1
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r14:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="30"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r27:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="30"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1657,7 +2528,30 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1679,42 +2573,75 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -1752,7 +2679,7 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -1766,62 +2693,104 @@ exports[`NumberInput should not changed controlled value on click min button 1`]
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r1d:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r2m:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -1852,7 +2821,30 @@ exports[`NumberInput should renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1874,47 +2866,80 @@ exports[`NumberInput should renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
-.cache-1g7yqhm-StyledIcon-sizeStyles {
+.cache-19qo8zl-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -1947,7 +2972,7 @@ exports[`NumberInput should renders correctly 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -1961,99 +2986,92 @@ exports[`NumberInput should renders correctly 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1qlmcqr-StyledText {
-  color: #4a4f62;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-19qo8zl-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #390171;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r0:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-        <span
-          class="cache-1qlmcqr-StyledText eiawj1g1"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          unit
-        </span>
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r0:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2084,7 +3102,30 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2106,42 +3147,66 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
-}
-
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -2179,7 +3244,7 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -2193,78 +3258,95 @@ exports[`NumberInput should renders correctly disabled 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1uero4z-StyledText {
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
   color: #c4c9d6;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  cursor: not-allowed;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="true"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="true"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
           disabled=""
-          id=":r3:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-        <span
-          class="cache-1uero4z-StyledText eiawj1g1"
+          type="button"
         >
-          unit
-        </span>
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            disabled=""
+            id=":r5:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2295,7 +3377,30 @@ exports[`NumberInput should renders correctly max value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2317,47 +3422,80 @@ exports[`NumberInput should renders correctly max value 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
-.cache-1g7yqhm-StyledIcon-sizeStyles {
+.cache-19qo8zl-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -2390,7 +3528,7 @@ exports[`NumberInput should renders correctly max value 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -2404,99 +3542,92 @@ exports[`NumberInput should renders correctly max value 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1qlmcqr-StyledText {
-  color: #4a4f62;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-19qo8zl-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #390171;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r9:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-        <span
-          class="cache-1qlmcqr-StyledText eiawj1g1"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          unit
-        </span>
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rq:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2527,7 +3658,30 @@ exports[`NumberInput should renders correctly min value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2549,47 +3703,80 @@ exports[`NumberInput should renders correctly min value 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
-.cache-1g7yqhm-StyledIcon-sizeStyles {
+.cache-19qo8zl-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -2622,7 +3809,7 @@ exports[`NumberInput should renders correctly min value 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -2636,32 +3823,236 @@ exports[`NumberInput should renders correctly min value 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1qlmcqr-StyledText {
-  color: #4a4f62;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+<div
+    class="cache-7hpczr-Stack e1sgck4o0"
+  >
+    <div
+      class="cache-1r8thn3-Stack e1sgck4o0"
+    >
+      <div
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
+      >
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rl:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NumberInput should renders correctly with error 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
   border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
+  cursor: not-allowed;
+}
+
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -2673,62 +4064,431 @@ exports[`NumberInput should renders correctly min value 1`] = `
   min-height: 26px;
 }
 
+.cache-3i90o1-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-cps3s5-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-1xgulfu-StyledText {
+  color: #dd3252;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="true"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r6:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-        <span
-          class="cache-1qlmcqr-StyledText eiawj1g1"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          unit
-        </span>
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":ra:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+      <span
+        class="cache-1xgulfu-StyledText e1tg3t120"
+      >
+        This is an error
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NumberInput should renders correctly with placeholder 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 48px;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+}
+
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
+}
+
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
+  cursor: not-allowed;
+}
+
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+  border: 1px solid #4f0599;
+}
+
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+  border: 1px solid #4f0599;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  background: #eeeeff;
+  color: #4f0599;
+}
+
+.cache-19qo8zl-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #390171;
+  height: 26px;
+  width: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+
+.cache-3i90o1-StyledCenterBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.cache-cps3s5-StyledInput {
+  color: #4a4f62;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+<div
+    class="cache-7hpczr-Stack e1sgck4o0"
+  >
+    <div
+      class="cache-1r8thn3-Stack e1sgck4o0"
+    >
+      <div
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
+      >
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rg:"
+            name="numberinput"
+            placeholder="Enter a value here"
+            style="width: 216px;"
+            type="number"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2759,7 +4519,30 @@ exports[`NumberInput should renders large size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2781,47 +4564,80 @@ exports[`NumberInput should renders large size 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
-.cache-1g7yqhm-StyledIcon-sizeStyles {
+.cache-19qo8zl-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 26px;
   width: 26px;
   min-width: 26px;
@@ -2854,7 +4670,7 @@ exports[`NumberInput should renders large size 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -2868,86 +4684,92 @@ exports[`NumberInput should renders large size 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-19qo8zl-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #390171;
-  height: 26px;
-  width: 26px;
-  min-width: 26px;
-  min-height: 26px;
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":rc:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":rv:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -2978,7 +4800,30 @@ exports[`NumberInput should renders small size 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1o444ku-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1djred1-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3000,47 +4845,80 @@ exports[`NumberInput should renders small size 1`] = `
   border-radius: 4px;
 }
 
-.cache-1o444ku-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1djred1-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-1o444ku-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-1o444ku-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-1o444ku-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1djred1-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-1o444ku-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-1o444ku-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-1o444ku-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1djred1-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
-.cache-1tuarzc-StyledIcon-sizeStyles {
+.cache-3wctzm-StyledIcon-sizeStyles {
   vertical-align: middle;
-  fill: #bda5df;
+  fill: #390171;
   height: 22px;
   width: 22px;
   min-width: 22px;
@@ -3073,7 +4951,7 @@ exports[`NumberInput should renders small size 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -3087,86 +4965,92 @@ exports[`NumberInput should renders small size 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-3wctzm-StyledIcon-sizeStyles {
-  vertical-align: middle;
-  fill: #390171;
-  height: 22px;
-  width: 22px;
-  min-width: 22px;
-  min-height: 22px;
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-1o444ku-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1tuarzc-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-10fgw5z-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1djred1-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":rf:"
-          name="numberinput"
-          style="width: 25px;"
-          type="number"
-          value="0"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-10fgw5z-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r14:"
+            name="numberinput"
+            style="width: 34px;"
+            type="number"
+            value=""
           />
-        </svg>
-      </button>
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-3wctzm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3197,7 +5081,30 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3219,42 +5126,75 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -3292,7 +5232,7 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -3306,24 +5246,83 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -3339,53 +5338,65 @@ exports[`NumberInput should use maxValue instead of defaultValue if default valu
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r1m:"
-          name="numberinput"
-          style="width: 45px;"
-          type="number"
-          value="100"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r35:"
+            name="numberinput"
+            style="width: 48px;"
+            type="number"
+            value="100"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3416,7 +5427,30 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3438,42 +5472,66 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-asskgt-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1yu2a8w-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  color: #c4c9d6;
-  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  color: #bda5df;
   margin: 0 8px;
-}
-
-.cache-asskgt-StyledSelectButton:hover:not([disabled]) {
-  background: #eeeeff;
+  width: 32px;
+  height: 32px;
 }
 
 .cache-1g7yqhm-StyledIcon-sizeStyles {
@@ -3511,7 +5569,7 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -3525,24 +5583,92 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
-  border-radius: 4px;
-  color: #4f0599;
-  padding: 0;
-  margin: 0 8px;
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #4f0599;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -3558,53 +5684,65 @@ exports[`NumberInput should use minValue instead of defaultValue if default valu
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-asskgt-StyledSelectButton eiawj1g4"
-        disabled=""
-        type="button"
-      >
-        <svg
-          class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r1j:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="20"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1yu2a8w-StyledGhostButton-StyledSelectButton em6gco80"
+          disabled=""
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-1g7yqhm-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r30:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="20"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -3635,7 +5773,30 @@ exports[`NumberInput should use the defaultValue 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-101r5xn-StyledContainer {
+.cache-1r8thn3-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1lzycvk-StyledContainer {
   background-color: #ffffff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3657,42 +5818,75 @@ exports[`NumberInput should use the defaultValue 1`] = `
   border-radius: 4px;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true'] {
-  background: #f6f6f8;
+.cache-1lzycvk-StyledContainer[data-error='true'] {
+  border: 1px solid #dd3252;
 }
 
-.cache-101r5xn-StyledContainer[aria-disabled='true']>.eiawj1g4,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g2,
-.cache-101r5xn-StyledContainer[aria-disabled='true'] .eiawj1g3 {
-  background-color: #f6f6f8;
-  border: none;
-  color: #c4c9d6;
-  opacity: 1;
+.cache-1lzycvk-StyledContainer[aria-disabled='true'] {
+  background: #f6f6f8;
   cursor: not-allowed;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:hover,
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus {
   border: 1px solid #4f0599;
 }
 
-.cache-101r5xn-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
+.cache-1lzycvk-StyledContainer:not([aria-disabled='true']) .eiawj1g3:focus-within {
   box-shadow: 0px 0px 0px 3px #4F059940;
   border: 1px solid #4f0599;
 }
 
-.cache-1h5w6a8-StyledSelectButton {
-  cursor: pointer;
-  background: none;
-  border: 0;
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background: none;
+  border: none;
   color: #4f0599;
-  padding: 0;
   margin: 0 8px;
+  width: 32px;
+  height: 32px;
 }
 
-.cache-1h5w6a8-StyledSelectButton:hover:not([disabled]) {
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
+  box-shadow: 0px 0px 0px 3px #4F059940;
+}
+
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:hover,
+.cache-1jnnpbz-StyledGhostButton-StyledSelectButton:active {
   background: #eeeeff;
+  color: #4f0599;
 }
 
 .cache-19qo8zl-StyledIcon-sizeStyles {
@@ -3730,7 +5924,7 @@ exports[`NumberInput should use the defaultValue 1`] = `
   max-width: 100%;
 }
 
-.cache-kk0u3u-StyledInput {
+.cache-cps3s5-StyledInput {
   color: #4a4f62;
   background-color: transparent;
   font-size: 16px;
@@ -3744,62 +5938,104 @@ exports[`NumberInput should use the defaultValue 1`] = `
   -moz-appearance: textfield;
 }
 
-.cache-kk0u3u-StyledInput::-webkit-outer-spin-button,
-.cache-kk0u3u-StyledInput::-webkit-inner-spin-button {
+.cache-cps3s5-StyledInput::-webkit-outer-spin-button,
+.cache-cps3s5-StyledInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.cache-cps3s5-StyledInput::-webkit-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::-moz-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput:-ms-input-placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput::placeholder {
+  color: #b2b6c3;
+}
+
+.cache-cps3s5-StyledInput[disabled] {
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-an460x-StyledText {
+  color: #4a4f62;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
 }
 
 <div
     class="cache-7hpczr-Stack e1sgck4o0"
   >
     <div
-      aria-disabled="false"
-      class="cache-101r5xn-StyledContainer eiawj1g0"
+      class="cache-1r8thn3-Stack e1sgck4o0"
     >
-      <button
-        aria-label="Minus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M19,13H5V11H19V13Z"
-          />
-        </svg>
-      </button>
       <div
-        aria-live="assertive"
-        class="cache-3i90o1-StyledCenterBox eiawj1g3"
-        role="status"
+        aria-disabled="false"
+        class="cache-1lzycvk-StyledContainer eiawj1g0"
+        data-error="false"
       >
-        <input
-          aria-label="Number Input"
-          class="cache-kk0u3u-StyledInput eiawj1g2"
-          id=":r1g:"
-          name="numberinput"
-          style="width: 35px;"
-          type="number"
-          value="10"
-        />
-      </div>
-      <button
-        aria-label="Plus"
-        class="cache-1h5w6a8-StyledSelectButton eiawj1g4"
-        type="button"
-      >
-        <svg
-          class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
-          viewBox="0 0 24 24"
+        <button
+          aria-label="Minus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
         >
-          <path
-            d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H5V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-live="assertive"
+          class="cache-3i90o1-StyledCenterBox eiawj1g3"
+          role="status"
+        >
+          <input
+            aria-label="Number Input"
+            class="cache-cps3s5-StyledInput eiawj1g2"
+            id=":r2r:"
+            name="numberinput"
+            style="width: 32px;"
+            type="number"
+            value="10"
           />
-        </svg>
-      </button>
+          <span
+            class="cache-an460x-StyledText eiawj1g1"
+          />
+        </div>
+        <button
+          aria-label="Plus"
+          class="eiawj1g4 cache-1jnnpbz-StyledGhostButton-StyledSelectButton em6gco80"
+          type="button"
+        >
+          <div>
+            <svg
+              class="cache-19qo8zl-StyledIcon-sizeStyles etwatq50"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </DocumentFragment>

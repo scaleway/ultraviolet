@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import { composeStories } from '@storybook/testing-react'
+import { composeStories } from '@storybook/react'
 import { cleanup } from '@testing-library/react'
 import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'
@@ -109,7 +109,12 @@ describe('A11y', () => {
   foundFiles.forEach((file, index) => {
     describe(`${file.split('/')[2]}`, () =>
       test(file.split('/')[4].split('.')[0], async () => {
-        const module = await moduleArray[index]
+        const module = {
+          // @ts-expect-error grab the first named export and pretend that module
+          // is a default export
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+          default: (await moduleArray[index])[0],
+        }
         const components = composeStories(module)
 
         for (const componentName of Object.keys(components)) {

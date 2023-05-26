@@ -315,6 +315,14 @@ export const darkTheme = {
       textWeakHover: '#fabeab',
     },
   },
+  radii: {
+    circle: '100%',
+    default: '4px',
+    large: '8px',
+    none: '0',
+    small: '2px',
+    xlarge: '16px',
+  },
   shadows: {
     bulk: '0px 4px 32px 8px #00000066',
     defaultShadow: '0px 0px 8px 2px #00000066',
@@ -334,6 +342,23 @@ export const darkTheme = {
     popover: '0px 4px 32px 8px #0000008C',
     tooltip: '0px 4px 32px 8px #00000066',
   },
+  space: {
+    '0': '0',
+    '0.25': '2px',
+    '0.5': '4px',
+    '1': '8px',
+    '1.5': '12px',
+    '10': '80px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px',
+    '7': '56px',
+    '8': '64px',
+    '9': '72px',
+  },
+  theme: 'dark',
   typography: {
     body: {
       fontFamily: 'Asap',

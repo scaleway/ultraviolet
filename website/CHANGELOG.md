@@ -1,5 +1,23 @@
 # Change Log
 
+## 0.4.3
+
+### Patch Changes
+
+- Updated dependencies [[`46fc6182`](https://github.com/scaleway/scaleway-ui/commit/46fc618216dea025af3dd6f4c3914889a9d0d5bf)]:
+  - @scaleway/ui@0.248.0
+
+## 0.4.2
+
+### Patch Changes
+
+- [#2537](https://github.com/scaleway/scaleway-ui/pull/2537) [`2097ec10`](https://github.com/scaleway/scaleway-ui/commit/2097ec1058d23d56c314d51b2c8f3e5e5986302d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `next` to `13.4.2`.
+
+- [#2540](https://github.com/scaleway/scaleway-ui/pull/2540) [`a77e6222`](https://github.com/scaleway/scaleway-ui/commit/a77e622278759ab1e9bd4317cda68401c146874c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `18.16.13`.
+
+- Updated dependencies [[`d0747c1c`](https://github.com/scaleway/scaleway-ui/commit/d0747c1c8c2af5a7ac8c64f70631377a0559a4fa)]:
+  - @scaleway/ui@0.247.0
+
 ## 0.4.1
 
 ### Patch Changes

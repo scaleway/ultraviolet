@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import { es, fr, ru } from 'date-fns/locale'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'
@@ -27,4 +27,4 @@ Localized.decorators = [
       <StoryComponent />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

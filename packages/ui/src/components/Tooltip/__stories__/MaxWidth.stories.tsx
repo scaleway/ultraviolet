@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import { Template } from './Template.stories'
 
 export const MaxWidth = Template.bind({})
@@ -9,7 +9,7 @@ MaxWidth.decorators = [
       <Story />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]
 
 MaxWidth.args = {
   maxWidth: 200,

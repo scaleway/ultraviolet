@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
@@ -35,4 +35,4 @@ Variants.decorators = [
       <StoryComponent />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

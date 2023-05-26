@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.0
+
+### Minor Changes
+
+- [#2554](https://github.com/scaleway/scaleway-ui/pull/2554) [`46fc6182`](https://github.com/scaleway/scaleway-ui/commit/46fc618216dea025af3dd6f4c3914889a9d0d5bf) Thanks [@matthprost](https://github.com/matthprost)! - Sync spaces and radii from theme
+
 ## 1.3.0
 
 ### Minor Changes

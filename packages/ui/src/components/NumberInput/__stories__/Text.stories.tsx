@@ -4,6 +4,7 @@ export const Text = Template.bind({})
 
 Text.args = {
   text: 'GB',
+  placeholder: 'Storage in GB',
 }
 
 Text.parameters = {
