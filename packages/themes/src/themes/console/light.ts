@@ -315,6 +315,14 @@ export const lightTheme = {
       textWeakHover: '#cc4e18',
     },
   },
+  radii: {
+    circle: '100%',
+    default: '4px',
+    large: '8px',
+    none: '0',
+    small: '2px',
+    xlarge: '16px',
+  },
   shadows: {
     bulk: '0px 4px 32px 8px #D4DAE766',
     defaultShadow: '0px 0px 8px 2px #D4DAE766',
@@ -334,6 +342,23 @@ export const lightTheme = {
     popover: '0px 4px 32px 8px #151A2D5C',
     tooltip: '0px 4px 32px 8px #D4DAE766',
   },
+  space: {
+    '0': '0',
+    '0.25': '2px',
+    '0.5': '4px',
+    '1': '8px',
+    '1.5': '12px',
+    '10': '80px',
+    '2': '16px',
+    '3': '24px',
+    '4': '32px',
+    '5': '40px',
+    '6': '48px',
+    '7': '56px',
+    '8': '64px',
+    '9': '72px',
+  },
+  theme: 'light',
   typography: {
     body: {
       fontFamily: 'Asap',
