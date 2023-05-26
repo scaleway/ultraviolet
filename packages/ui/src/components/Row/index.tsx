@@ -10,7 +10,7 @@ export const StyledRow = styled('div', {
   display: grid;
   ${({ theme, gap, alignItems = 'normal', templateColumns }) => `
     grid-template-columns: ${templateColumns};
-    ${gap ? `gap: ${theme.space[gap]};` : ''}
+    ${gap ? `gap: ${theme.space[gap as keyof SCWUITheme['space']]};` : ''}
     align-items: ${alignItems};
   `}
 `
@@ -20,7 +20,7 @@ type RowProps = {
   'data-testid'?: string
   children: ReactNode
   templateColumns: string
-  gap?: keyof SCWUITheme['space']
+  gap?: keyof SCWUITheme['space'] | number
   alignItems?: CSSProperties['alignItems']
 }
 

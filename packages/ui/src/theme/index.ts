@@ -1,8 +1,6 @@
 import { consoleDarkTheme, consoleLightTheme } from '@scaleway/themes'
 import deepmerge from 'deepmerge'
 
-export type Spaces = keyof typeof consoleLightTheme.space
-
 export type ScreenSize = keyof typeof consoleLightTheme.screens
 
 type SCWUITheme = typeof consoleLightTheme
