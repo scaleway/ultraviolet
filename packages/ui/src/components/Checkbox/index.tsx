@@ -111,18 +111,23 @@ const CheckboxInput = styled('input', {
   }
 `
 
-const CheckboxContainer = styled.label`
+const CheckboxContainer = styled.div`
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: ${({ theme }) => theme.space['1']};
 
-  &[aria-disabled='false'] {
+  &[aria-disabled='false'],
+  &[aria-disabled='false'] > label {
     cursor: pointer;
   }
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
+
+    & > label {
+      cursor: not-allowed;
+    }
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     ${StyledIcon} {
@@ -268,6 +273,7 @@ export const Checkbox = forwardRef(
             </StyledActivityContainer>
           ) : null}
           <CheckboxInput
+            id={computedName}
             type="checkbox"
             aria-invalid={!!error}
             aria-describedby={error ? `${computedName}-hint` : undefined}
@@ -294,7 +300,7 @@ export const Checkbox = forwardRef(
               </CheckboxIconContainer>
             </StyledIcon>
           ) : null}
-          {children}
+          {children ? <label htmlFor={computedName}>{children}</label> : null}
           {required ? (
             <sup>
               <Icon name="asterisk" size={10} color="danger" />

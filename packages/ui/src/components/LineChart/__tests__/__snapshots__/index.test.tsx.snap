@@ -745,7 +745,7 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -758,26 +758,31 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -787,36 +792,36 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -982,9 +987,9 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -992,6 +997,7 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartSerie"
               name="lineChartSerie"
               type="checkbox"
               value=""
@@ -1029,20 +1035,24 @@ exports[`LineChart renders correctly when chart is hovered 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartSerie"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                line chart values
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartSerie"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  line chart values
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartSerie"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -2481,7 +2491,7 @@ exports[`LineChart renders correctly when data is async 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2494,26 +2504,31 @@ exports[`LineChart renders correctly when data is async 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2523,36 +2538,36 @@ exports[`LineChart renders correctly when data is async 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -2732,15 +2747,16 @@ exports[`LineChart renders correctly when data is async 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
               aria-invalid="false"
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple1"
               name="lineChartMultiple1"
               type="checkbox"
               value=""
@@ -2778,20 +2794,24 @@ exports[`LineChart renders correctly when data is async 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple1"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 1
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartMultiple1"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 1
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartMultiple1"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -2820,15 +2840,16 @@ exports[`LineChart renders correctly when data is async 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
               aria-invalid="false"
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple2"
               name="lineChartMultiple2"
               type="checkbox"
               value=""
@@ -2866,20 +2887,24 @@ exports[`LineChart renders correctly when data is async 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple2"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 2
-              </span>
               <div
-                class="cache-gv8bfd-legend"
-                data-testid="label-lineChartMultiple2"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 2
+                </span>
+                <div
+                  class="cache-gv8bfd-legend"
+                  data-testid="label-lineChartMultiple2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -2908,15 +2933,16 @@ exports[`LineChart renders correctly when data is async 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
             <input
               aria-invalid="false"
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple3"
               name="lineChartMultiple3"
               type="checkbox"
               value=""
@@ -2954,20 +2980,24 @@ exports[`LineChart renders correctly when data is async 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple3"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 3
-              </span>
               <div
-                class="cache-1ypaxp0-legend"
-                data-testid="label-lineChartMultiple3"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 3
+                </span>
+                <div
+                  class="cache-1ypaxp0-legend"
+                  data-testid="label-lineChartMultiple3"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -3673,7 +3703,7 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3686,26 +3716,31 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -3715,36 +3750,36 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -3910,9 +3945,9 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="false"
             data-error="false"
           >
@@ -3920,6 +3955,7 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartSerie"
               name="lineChartSerie"
               type="checkbox"
               value=""
@@ -3957,20 +3993,24 @@ exports[`LineChart renders correctly when legend is deselected 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartSerie"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                line chart values
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartSerie"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  line chart values
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartSerie"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -6113,7 +6153,7 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6126,26 +6166,31 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6155,36 +6200,36 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -6350,9 +6395,9 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -6360,6 +6405,7 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartSerie"
               name="lineChartSerie"
               type="checkbox"
               value=""
@@ -6397,20 +6443,24 @@ exports[`LineChart renders correctly with detailed legend 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartSerie"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                line chart values
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartSerie"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  line chart values
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartSerie"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -7849,7 +7899,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -7862,26 +7912,31 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -7891,36 +7946,36 @@ exports[`LineChart renders correctly with multiple series 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -8100,9 +8155,9 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -8110,6 +8165,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple1"
               name="lineChartMultiple1"
               type="checkbox"
               value=""
@@ -8147,20 +8203,24 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple1"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 1
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartMultiple1"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 1
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartMultiple1"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -8189,9 +8249,9 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -8199,6 +8259,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple2"
               name="lineChartMultiple2"
               type="checkbox"
               value=""
@@ -8236,20 +8297,24 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple2"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 2
-              </span>
               <div
-                class="cache-gv8bfd-legend"
-                data-testid="label-lineChartMultiple2"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 2
+                </span>
+                <div
+                  class="cache-gv8bfd-legend"
+                  data-testid="label-lineChartMultiple2"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -8278,9 +8343,9 @@ exports[`LineChart renders correctly with multiple series 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -8288,6 +8353,7 @@ exports[`LineChart renders correctly with multiple series 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartMultiple3"
               name="lineChartMultiple3"
               type="checkbox"
               value=""
@@ -8325,20 +8391,24 @@ exports[`LineChart renders correctly with multiple series 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartMultiple3"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                Serie 3
-              </span>
               <div
-                class="cache-1ypaxp0-legend"
-                data-testid="label-lineChartMultiple3"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  Serie 3
+                </span>
+                <div
+                  class="cache-1ypaxp0-legend"
+                  data-testid="label-lineChartMultiple3"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"
@@ -9974,7 +10044,7 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   margin-right: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9987,26 +10057,31 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -10016,36 +10091,36 @@ exports[`LineChart renders correctly with timeline data 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -10211,9 +10286,9 @@ exports[`LineChart renders correctly with timeline data 1`] = `
         <div
           class="cache-qp094k-LongContainer eaefwd71"
         >
-          <label
+          <div
             aria-disabled="false"
-            class="cache-3lt5x-CheckboxContainer eu28k4m1"
+            class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
             data-checked="true"
             data-error="false"
           >
@@ -10221,6 +10296,7 @@ exports[`LineChart renders correctly with timeline data 1`] = `
               aria-invalid="false"
               checked=""
               class="cache-88zkug-CheckboxInput eu28k4m2"
+              id="lineChartHours"
               name="lineChartHours"
               type="checkbox"
               value=""
@@ -10258,20 +10334,24 @@ exports[`LineChart renders correctly with timeline data 1`] = `
                 />
               </g>
             </svg>
-            <div
-              class="cache-3xyhdp-CellValueContainer eaefwd72"
+            <label
+              for="lineChartHours"
             >
-              <span
-                class="cache-197m6sv-StyledText e1tg3t120"
-              >
-                line chart hours values
-              </span>
               <div
-                class="cache-suenwm-legend"
-                data-testid="label-lineChartHours"
-              />
-            </div>
-          </label>
+                class="cache-3xyhdp-CellValueContainer eaefwd72"
+              >
+                <span
+                  class="cache-197m6sv-StyledText e1tg3t120"
+                >
+                  line chart hours values
+                </span>
+                <div
+                  class="cache-suenwm-legend"
+                  data-testid="label-lineChartHours"
+                />
+              </div>
+            </label>
+          </div>
         </div>
         <span
           class="eaefwd73 cache-1igd88g-StyledText-StyledText e1tg3t120"

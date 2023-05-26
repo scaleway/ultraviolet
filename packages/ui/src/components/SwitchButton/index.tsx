@@ -37,11 +37,11 @@ const StyledSelectableCard = styled(SelectableCard)`
     border: none;
   }
 
-  &[data-checked='true'] > label {
+  &[data-checked='true'] label {
     color: ${({ theme }) => theme.colors.primary.textStrong};
   }
 
-  &:not([data-checked='true']) > label {
+  &:not([data-checked='true']) label {
     &:hover {
       color: ${({ theme }) => theme.colors.primary.textWeak};
     }

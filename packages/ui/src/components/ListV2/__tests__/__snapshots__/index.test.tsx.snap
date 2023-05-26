@@ -5330,7 +5330,7 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
   color: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5343,26 +5343,31 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -5372,36 +5377,36 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -5610,9 +5615,9 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
         tabindex="-1"
       >
-        <label
+        <div
           aria-disabled="true"
-          class="cache-3lt5x-CheckboxContainer eu28k4m1"
+          class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
           data-checked="false"
           data-error="false"
         >
@@ -5621,6 +5626,7 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
             aria-label="select all"
             class="cache-88zkug-CheckboxInput eu28k4m2"
             disabled=""
+            id="list-select-checkbox"
             name="list-select-checkbox"
             type="checkbox"
             value="all"
@@ -5658,7 +5664,7 @@ exports[`ListV2 Should render correctly with loading with selectable 1`] = `
               />
             </g>
           </svg>
-        </label>
+        </div>
       </div>
       <div
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
@@ -6748,7 +6754,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
   color: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6761,26 +6767,31 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -6790,36 +6801,36 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -6989,9 +7000,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
         tabindex="-1"
       >
-        <label
+        <div
           aria-disabled="false"
-          class="cache-3lt5x-CheckboxContainer eu28k4m1"
+          class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
           data-checked="false"
           data-error="false"
         >
@@ -6999,6 +7010,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             aria-invalid="false"
             aria-label="select all"
             class="cache-88zkug-CheckboxInput eu28k4m2"
+            id="list-select-checkbox"
             name="list-select-checkbox"
             type="checkbox"
             value="all"
@@ -7036,7 +7048,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
               />
             </g>
           </svg>
-        </label>
+        </div>
       </div>
       <div
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
@@ -7087,9 +7099,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7097,6 +7109,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="1"
@@ -7134,7 +7147,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7182,9 +7195,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7192,6 +7205,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="2"
@@ -7229,7 +7243,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7277,9 +7291,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7287,6 +7301,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="3"
@@ -7324,7 +7339,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7372,9 +7387,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7382,6 +7397,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="4"
@@ -7419,7 +7435,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7467,9 +7483,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7477,6 +7493,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="5"
@@ -7514,7 +7531,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7562,9 +7579,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7572,6 +7589,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="6"
@@ -7609,7 +7627,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7657,9 +7675,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7667,6 +7685,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="7"
@@ -7704,7 +7723,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7752,9 +7771,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7762,6 +7781,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="8"
@@ -7799,7 +7819,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7847,9 +7867,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7857,6 +7877,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="9"
@@ -7894,7 +7915,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -7942,9 +7963,9 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
             data-visibility="hover"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="false"
               data-error="false"
             >
@@ -7952,6 +7973,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="10"
@@ -7989,7 +8011,7 @@ exports[`ListV2 Should render correctly with selectable 1`] = `
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8100,7 +8122,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
   color: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer {
+.cache-1nl2ehs-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -8113,26 +8135,31 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
   gap: 8px;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='false'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false'],
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 {
   fill: #c4c9d6;
 }
 
-.cache-3lt5x-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer[aria-disabled='true'] .eu28k4m3 .eu28k4m7 {
   stroke: #c4c9d6;
   fill: #f6f6f8;
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m6,
-.cache-3lt5x-CheckboxContainer .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m6,
+.cache-1nl2ehs-CheckboxContainer .eu28k4m5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -8142,36 +8169,36 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
   transform: scale(0);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2:checked+.eu28k4m3 .eu28k4m6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
+.cache-1nl2ehs-CheckboxContainer .eu28k4m2[aria-checked="mixed"]+.eu28k4m3 .eu28k4m5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2+.eu28k4m3 .eu28k4m7 {
   stroke: #4f0599;
   fill: #eeeeff;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 {
   background-color: #ffe1e7;
   fill: #dd3252;
 }
 
-.cache-3lt5x-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
+.cache-1nl2ehs-CheckboxContainer:hover[aria-disabled='false'] .eu28k4m2[aria-invalid="true"]+.eu28k4m3 .eu28k4m7 {
   stroke: #dd3252;
   fill: #ffe1e7;
 }
@@ -8341,9 +8368,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
         tabindex="-1"
       >
-        <label
+        <div
           aria-disabled="false"
-          class="cache-3lt5x-CheckboxContainer eu28k4m1"
+          class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
           data-checked="true"
           data-error="false"
         >
@@ -8351,6 +8378,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
             aria-invalid="false"
             aria-label="select all"
             class="cache-88zkug-CheckboxInput eu28k4m2"
+            id="list-select-checkbox"
             name="list-select-checkbox"
             type="checkbox"
             value="all"
@@ -8388,7 +8416,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
               />
             </g>
           </svg>
-        </label>
+        </div>
       </div>
       <div
         class="cache-vwequq-StyledHeaderCell eklb3bm0"
@@ -8438,9 +8466,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8448,6 +8476,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="1"
@@ -8485,7 +8514,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8532,9 +8561,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8542,6 +8571,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="2"
@@ -8579,7 +8609,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8626,9 +8656,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8636,6 +8666,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="3"
@@ -8673,7 +8704,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8720,9 +8751,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8730,6 +8761,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="4"
@@ -8767,7 +8799,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8814,9 +8846,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8824,6 +8856,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="5"
@@ -8861,7 +8894,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -8908,9 +8941,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -8918,6 +8951,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="6"
@@ -8955,7 +8989,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -9002,9 +9036,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -9012,6 +9046,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="7"
@@ -9049,7 +9084,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -9096,9 +9131,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -9106,6 +9141,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="8"
@@ -9143,7 +9179,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -9190,9 +9226,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -9200,6 +9236,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="9"
@@ -9237,7 +9274,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div
@@ -9284,9 +9321,9 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
           <div
             class="cache-atewdf-StyledCheckboxContainer e1s0ox3p0"
           >
-            <label
+            <div
               aria-disabled="false"
-              class="cache-3lt5x-CheckboxContainer eu28k4m1"
+              class="cache-1nl2ehs-CheckboxContainer eu28k4m1"
               data-checked="true"
               data-error="false"
             >
@@ -9294,6 +9331,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                 aria-invalid="false"
                 aria-label="select"
                 class="cache-88zkug-CheckboxInput eu28k4m2"
+                id="list-select-checkbox"
                 name="list-select-checkbox"
                 type="checkbox"
                 value="10"
@@ -9331,7 +9369,7 @@ exports[`ListV2 Should render correctly with selectable then click on first row 
                   />
                 </g>
               </svg>
-            </label>
+            </div>
           </div>
         </div>
         <div

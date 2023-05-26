@@ -2,7 +2,7 @@
 
 exports[`RadioField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1fdj0xh {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,38 +15,43 @@ exports[`RadioField should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1fdj0xh[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1fdj0xh:hover[aria-disabled='false'] .e1duuirp1[id=test-test]+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1fdj0xh:hover[aria-disabled='false'] .e1duuirp1[id=test-test]+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1fdj0xh:hover[aria-disabled='false'] .e1duuirp1[id=test-test][aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1fdj0xh:hover[aria-disabled='false'] .e1duuirp1[id=test-test][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1fdj0xh[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1fdj0xh[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1fdj0xh[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -123,11 +128,10 @@ exports[`RadioField should render correctly 1`] = `
 <form
     novalidate=""
   >
-    <label
+    <div
       aria-disabled="false"
-      class="cache-1fdj0xh e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="false"
-      for="test-test"
     >
       <input
         aria-disabled="false"
@@ -164,15 +168,19 @@ exports[`RadioField should render correctly 1`] = `
           />
         </g>
       </svg>
-      Radio field
-    </label>
+      <label
+        for="test-test"
+      >
+        Radio field
+      </label>
+    </div>
   </form>
 </DocumentFragment>
 `;
 
 exports[`RadioField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-1imu6pm {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,38 +193,43 @@ exports[`RadioField should render correctly checked 1`] = `
   gap: 8px;
 }
 
-.cache-1imu6pm[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1imu6pm:hover[aria-disabled='false'] .e1duuirp1[id=test-checked]+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1imu6pm:hover[aria-disabled='false'] .e1duuirp1[id=test-checked]+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1imu6pm:hover[aria-disabled='false'] .e1duuirp1[id=test-checked][aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1imu6pm:hover[aria-disabled='false'] .e1duuirp1[id=test-checked][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1imu6pm[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1imu6pm[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1imu6pm[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -293,11 +306,10 @@ exports[`RadioField should render correctly checked 1`] = `
 <form
     novalidate=""
   >
-    <label
+    <div
       aria-disabled="false"
-      class="cache-1imu6pm e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="true"
-      for="test-checked"
     >
       <input
         aria-disabled="false"
@@ -335,15 +347,19 @@ exports[`RadioField should render correctly checked 1`] = `
           />
         </g>
       </svg>
-      Radio field checked
-    </label>
+      <label
+        for="test-checked"
+      >
+        Radio field checked
+      </label>
+    </div>
   </form>
 </DocumentFragment>
 `;
 
 exports[`RadioField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1o5kav0 {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -356,38 +372,43 @@ exports[`RadioField should render correctly disabled 1`] = `
   gap: 8px;
 }
 
-.cache-1o5kav0[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1o5kav0:hover[aria-disabled='false'] .e1duuirp1[id=test-disabled]+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1o5kav0:hover[aria-disabled='false'] .e1duuirp1[id=test-disabled]+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1o5kav0:hover[aria-disabled='false'] .e1duuirp1[id=test-disabled][aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1o5kav0:hover[aria-disabled='false'] .e1duuirp1[id=test-disabled][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1o5kav0[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1o5kav0[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1o5kav0[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -464,11 +485,10 @@ exports[`RadioField should render correctly disabled 1`] = `
 <form
     novalidate=""
   >
-    <label
+    <div
       aria-disabled="true"
-      class="cache-1o5kav0 e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="false"
-      for="test-disabled"
     >
       <input
         aria-disabled="true"
@@ -506,15 +526,19 @@ exports[`RadioField should render correctly disabled 1`] = `
           />
         </g>
       </svg>
-      Radio field disabled
-    </label>
+      <label
+        for="test-disabled"
+      >
+        Radio field disabled
+      </label>
+    </div>
   </form>
 </DocumentFragment>
 `;
 
 exports[`RadioField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-1o6cmnv {
+  .cache-wu04le {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -527,38 +551,43 @@ exports[`RadioField should trigger events correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1o6cmnv[aria-disabled='false'] {
+.cache-wu04le[aria-disabled='false'],
+.cache-wu04le[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1o6cmnv:hover[aria-disabled='false'] .e1duuirp1[id=test-events]+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 {
   background-color: #eeeeff;
   fill: #4f0599;
 }
 
-.cache-1o6cmnv:hover[aria-disabled='false'] .e1duuirp1[id=test-events]+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1+.e1duuirp2 .e1duuirp4 {
   fill: #eeeeff;
 }
 
-.cache-1o6cmnv:hover[aria-disabled='false'] .e1duuirp1[id=test-events][aria-invalid='true']+.e1duuirp2 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 {
   background-color: #ffe1e7;
   fill: #a6102d;
 }
 
-.cache-1o6cmnv:hover[aria-disabled='false'] .e1duuirp1[id=test-events][aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
+.cache-wu04le:hover[aria-disabled='false'] .e1duuirp1[aria-invalid='true']+.e1duuirp2 .e1duuirp4 {
   fill: #ffe1e7;
 }
 
-.cache-1o6cmnv[aria-disabled='true'] {
+.cache-wu04le[aria-disabled='true'] {
   cursor: not-allowed;
   color: #c4c9d6;
 }
 
-.cache-1o6cmnv[aria-disabled='true'] .e1duuirp2 {
+.cache-wu04le[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 {
   fill: #c4c9d6;
 }
 
-.cache-1o6cmnv[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
+.cache-wu04le[aria-disabled='true'] .e1duuirp2 .e1duuirp4 {
   fill: #f6f6f8;
 }
 
@@ -635,11 +664,10 @@ exports[`RadioField should trigger events correctly 1`] = `
 <form
     novalidate=""
   >
-    <label
+    <div
       aria-disabled="false"
-      class="cache-1o6cmnv e1duuirp0"
+      class="cache-wu04le e1duuirp0"
       data-checked="true"
-      for="test-events"
     >
       <input
         aria-disabled="false"
@@ -676,8 +704,12 @@ exports[`RadioField should trigger events correctly 1`] = `
           />
         </g>
       </svg>
-      Radio field events
-    </label>
+      <label
+        for="test-events"
+      >
+        Radio field events
+      </label>
+    </div>
   </form>
 </DocumentFragment>
 `;
