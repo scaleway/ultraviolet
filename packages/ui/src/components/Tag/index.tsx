@@ -89,10 +89,9 @@ type TagProps = {
   'data-testid'?: string
 }
 
-type TagInnerProps = Pick<
+type TagInnerProps = Omit<
   TagProps,
-  'children' | 'isLoading' | 'onClose',
-  'icon' | 'disabled'
+  'copiable' | 'copyText' | 'copiedText' | 'className' | 'data-testid'
 >
 
 const StyledCloseButton = styled(Button)`
