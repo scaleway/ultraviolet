@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Icon } from '..'
 import { Stack } from '../../Stack'
@@ -20,4 +20,4 @@ Size.decorators = [
       <Story />
     </Stack>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

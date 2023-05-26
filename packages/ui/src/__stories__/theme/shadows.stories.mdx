@@ -1,6 +1,6 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from '@storybook/blocks'
 
-<Meta title="Customization/Shadows"/>
+<Meta title="Customization/Shadows" />
 
 # Shadows
 
@@ -18,15 +18,15 @@ import { Tooltip, extendTheme } from '@scaleway/ui'
 function App() {
   const myTheme = extendTheme({
     shadows: {
-        tooltip: '10px 0px 20px 16px #000000'
-    }
+      tooltip: '10px 0px 20px 16px #000000',
+    },
   })
 
   return (
     <ThemeProvider theme={myTheme}>
-        <Tooltip text="I'm a tooltip">
-            <p>Example</p>
-        </Tooltip>
+      <Tooltip text="I'm a tooltip">
+        <p>Example</p>
+      </Tooltip>
     </ThemeProvider>
   )
 }

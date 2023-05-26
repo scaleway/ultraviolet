@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { NumberInput } from '..'
 import { Stack } from '../../Stack'
@@ -18,4 +18,4 @@ Sizes.decorators = [
       <Story />
     </Stack>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

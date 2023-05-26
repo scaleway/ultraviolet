@@ -1,7 +1,7 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const Template: ComponentStory<typeof Checkbox> = ({
+export const Template: StoryFn<typeof Checkbox> = ({
   'aria-label': ariaLabel,
   ...args
 }) => (

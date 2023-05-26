@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Checkbox } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     ),
   ],
   title: 'Components/Data Entry/Checkbox',
-} as ComponentMeta<typeof Checkbox>
+} as Meta<typeof Checkbox>
 
 export { Playground } from './Playground.stories'
 export { Checked } from './Checked.stories'

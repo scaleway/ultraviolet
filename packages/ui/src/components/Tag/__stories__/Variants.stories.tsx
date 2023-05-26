@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Tag } from '..'
 import { SENTIMENTS } from '../../../theme'
@@ -25,4 +25,4 @@ Variants.decorators = [
       <StoryComponent />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]

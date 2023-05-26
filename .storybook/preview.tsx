@@ -1,97 +1,64 @@
 import { useCallback } from 'react'
 import I18n from '@scaleway/use-i18n'
-import { Story } from '@storybook/react'
+import { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
-import normalize from '../packages/ui/src/utils/normalize'
+import normalize from '@scaleway/ui/src/utils/normalize'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
-import lightTheme, { darkTheme } from '../packages/ui/src/theme'
+import lightTheme, { darkTheme } from '@scaleway/ui/src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import isChromatic from 'chromatic/isChromatic'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
 
-const STORY_SORT = {
-  order: [
-    'Get started',
-    'Components state',
-    'Testing',
-    'Changelog',
-    'State',
-    ['Components state', 'Properties'],
-    'Guidelines',
-    'Migrations',
-    'Customization',
-    ['Understand Tokens'],
-    ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
-    'Responsive',
-    'Components',
-    'Form',
-    ['Introduction', 'Changelog', 'Components'],
-  ],
-}
-
-const darkMode = {
-  dark: { ...themes.dark, ...dark },
-  light: { ...themes.normal, ...light },
-}
-
-const ENV_PARAMETERS = {
-  development: {
-    darkMode,
-    backgrounds: {
+const parameters = {
+  darkMode: {
+    dark: { ...themes.dark, ...dark },
+    light: { ...themes.normal, ...light },
+  },
+  backgrounds: {
+    disable: true,
+    grid: {
       disable: true,
-      grid: {
-        disable: true,
-      },
-    },
-    viewMode: 'docs',
-    previewTabs: {
-      canvas: { hidden: false },
-    },
-    viewport: {
-      viewports: {},
-    },
-    options: {
-      storySort: STORY_SORT,
-    },
-    docs: {
-      container: DocsContainer,
-      page: Page,
-      source: { excludeDecorators: true }, // Exclude decorators from source code
     },
   },
-  production: {
-    darkMode,
-    backgrounds: {
-      disable: true,
-      grid: {
-        disable: true,
-      },
-    },
-    viewMode: 'docs',
-    previewTabs: { canvas: { hidden: true } },
-    options: {
-      storySort: STORY_SORT,
-    },
-    docs: {
-      container: DocsContainer,
-      page: Page,
-      source: { excludeDecorators: true }, // Exclude decorators from source code
+  viewMode: 'docs',
+  previewTabs: {
+    canvas: { hidden: false },
+  },
+  viewport: {
+    viewports: {},
+  },
+  options: {
+    storySort: {
+      order: [
+        'Get started',
+        'Components state',
+        'Testing',
+        'Changelog',
+        'State',
+        ['Components state', 'Properties'],
+        'Guidelines',
+        'Migrations',
+        'Customization',
+        ['Understand Tokens'],
+        ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
+        'Responsive',
+        'Components',
+        'Form',
+        ['Introduction', 'Changelog', 'Components'],
+      ],
     },
   },
-  visual: {},
-  layout: 'centered',
+  docs: {
+    container: DocsContainer,
+    page: Page,
+    source: { excludeDecorators: true }, // Exclude decorators from source code
+  },
 }
-ENV_PARAMETERS.visual = ENV_PARAMETERS.production
-
-export const parameters =
-  ENV_PARAMETERS[
-    process.env?.['STORYBOOK_ENVIRONMENT'] as keyof typeof ENV_PARAMETERS
-  ] || ENV_PARAMETERS.production
 
 const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
   ...ancestorTheme,
@@ -120,8 +87,8 @@ export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
     }
   `
 
-export const decorators = [
-  (StoryComponent: Story) => {
+const decorators: Preview['decorators'] = [
+  StoryComponent => {
     const mode = useDarkMode() ? 'dark' : 'light'
 
     const generatedTheme = useCallback(
@@ -151,3 +118,8 @@ export const decorators = [
     )
   },
 ]
+
+export default {
+  parameters,
+  decorators,
+} satisfies Preview

@@ -1,6 +1,6 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta } from '@storybook/blocks'
 
-<Meta title="Guidelines/Documentation Guidelines"/>
+<Meta title="Guidelines/Documentation Guidelines" />
 
 # Documentation Guidelines
 
@@ -40,8 +40,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component:
-          'A button is a component used to define a call to action',
+        component: 'A button is a component used to define a call to action',
       },
     },
   },
@@ -105,13 +104,12 @@ export default {
   parameters: {
     docs: {
       description: {
-        component:
-          'A button is a component used to define a call to action',
+        component: 'A button is a component used to define a call to action',
       },
     },
     deprecated: true,
     deprecatedReason: 'This component is deprecated please use ListV2 instead.', // You can also add a reason to be shown on the storybook page
-    migrationLink: '?path=/docs/components-action-button--playground' // The link should be a storybook path
+    migrationLink: '?path=/docs/components-action-button--playground', // The link should be a storybook path
   },
   title: 'Components/Action/Button',
 } as ComponentMeta<typeof Button>
@@ -125,8 +123,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component:
-          'A button is a component used to define a call to action',
+        component: 'A button is a component used to define a call to action',
       },
     },
     experimental: true,

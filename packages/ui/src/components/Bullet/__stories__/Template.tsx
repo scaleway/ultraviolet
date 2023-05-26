@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Bullet } from '..'
 
-export const Template: ComponentStory<typeof Bullet> = ({ ...props }) => (
+export const Template: StoryFn<typeof Bullet> = ({ ...props }) => (
   <Bullet {...props} />
 )

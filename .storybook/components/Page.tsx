@@ -6,7 +6,7 @@ import {
   ArgsTable,
   Stories,
   PRIMARY_STORY,
-} from '@storybook/addon-docs'
+} from '@storybook/blocks'
 import { Badge, Button, Text, Stack, Link } from '../../packages/ui/src'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
@@ -82,7 +82,7 @@ const Page = ({
       </StyledHeaderContainer>
       {deprecated ? (
         <FlexDiv>
-          <Text as="h2" variant="bodyStronger" color="danger">
+          <Text as="h3" variant="bodyStronger" color="danger">
             {deprecatedReason
               ? deprecatedReason
               : 'This component is deprecated please do not use it any more.'}
@@ -99,9 +99,9 @@ const Page = ({
         <Subtitle />
       )}
       {experimental ? (
-        <Text as="h2" variant="bodyStronger" color="warning">
+        <Text as="h3" variant="bodyStronger" color="warning">
           This component is at an unstable stage and is subject to change in
-          future releases.{' '}
+          future releases.&nbsp;
           <Link
             href="/?path=/docs/state-components-state--page"
             iconPosition="right"

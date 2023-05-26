@@ -1,6 +1,6 @@
-import { Meta } from "@storybook/addon-docs";
-import { Alert } from "../../components/Alert";
-import ThemeWrapper from "../components/ThemeWrapper";
+import { Meta } from '@storybook/blocks'
+import { Alert } from '../../components/Alert'
+import ThemeWrapper from '../components/ThemeWrapper'
 
 <Meta title="Customization/Understand Tokens" />
 
@@ -49,6 +49,7 @@ Let's define background color by asking previous questions:
 
 This way we will get the following background color: `theme.colors.info.background`. <br />
 We can now redo the same for Text and Icon, and we will get: `theme.colors.info.text`.
+
 > **Note:** we only use `theme.colors.info.text` for both Icon and Text as we consider Icons the same usage as Text.
 
 All those colors combined will result in:
@@ -74,7 +75,9 @@ Text and Icon color will be: `theme.colors.info.textStrong`.
 All those colors combined will result in:
 
 <ThemeWrapper>
-  <Alert variant="info">This is a simple alert with info sentiment and strong prominence</Alert>
+  <Alert variant="info">
+    This is a simple alert with info sentiment and strong prominence
+  </Alert>
 </ThemeWrapper>
 
 If we redo the same with weak prominence, we will get:
@@ -83,7 +86,9 @@ Background color will be `theme.colors.info.backgroundWeak`
 Text and Icon colors will be `theme.colors.info.textWeak`<br/>
 
 <ThemeWrapper>
-  <Alert variant="info">This is a simple alert with info sentiment and weak prominence</Alert>
+  <Alert variant="info">
+    This is a simple alert with info sentiment and weak prominence
+  </Alert>
 </ThemeWrapper>
 
 Here we have 2 alerts with different prominence, one is strong and the other one is weak.

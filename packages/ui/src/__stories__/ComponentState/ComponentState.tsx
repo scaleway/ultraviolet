@@ -31,7 +31,7 @@ let modules: PromiseSettledResult<{
 }>[]
 
 Promise.allSettled(
-  componentsNames.map(
+  componentsNames?.map(
     name => import(`../../components/${name}/__stories__/index.stories`),
   ),
 )
