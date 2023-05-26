@@ -1,4 +1,4 @@
-import type { DecoratorFunction } from '@storybook/addons'
+import type { Decorator } from '@storybook/react'
 import { Template } from './Template.stories'
 
 export const Copiable = Template.bind({})
@@ -25,4 +25,4 @@ Copiable.decorators = [
       <StoryComponent />
     </div>
   ),
-] as DecoratorFunction<JSX.Element>[]
+] as Decorator[]
