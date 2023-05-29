@@ -295,7 +295,7 @@ const StyledInput = styled('input', {
   ${({ hasRightElement, rightElementPadding }) =>
     hasRightElement &&
     `
-    padding-right: ${rightElementPadding || 32}px;
+    padding-right: ${rightElementPadding || 48}px;
   `}
 `
 
