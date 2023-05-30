@@ -3,6 +3,7 @@ export {
   Alert,
   Avatar,
   Badge,
+  Banner,
   BarChart,
   BarStack,
   Breadcrumbs,
