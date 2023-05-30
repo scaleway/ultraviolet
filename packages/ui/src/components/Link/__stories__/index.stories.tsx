@@ -7,7 +7,7 @@ export default {
     docs: {
       description: {
         component:
-          'An Expandable is a container that can hide or show its content',
+          'Link is a component used to navigate between pages or to external websites.',
       },
     },
   },

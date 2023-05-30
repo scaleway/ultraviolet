@@ -1,20 +1,29 @@
+import styled from '@emotion/styled'
 import type { ComponentStory } from '@storybook/react'
 import { Link } from '../index'
+
+const Container = styled.div`
+  margin-bottom: ${({ theme }) => theme.space['2']};
+  margin-top: ${({ theme }) => theme.space['1']};
+  width: 200px;
+  background: ${({ theme }) => theme.colors.info.background};
+  padding: ${({ theme }) => theme.space['1']};
+`
 
 export const OneLine: ComponentStory<typeof Link> = () => (
   <>
     <strong>Without ellipsis</strong>
-    <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
+    <Container>
       <Link href="https://scaleway.com">
         This link is quite long and is displayed on two lines.
       </Link>
-    </div>
+    </Container>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
-    <div style={{ marginBottom: 16, marginTop: 8, width: 200 }}>
+    <Container>
       <Link href="https://scaleway.com" oneLine>
         This link is quite long and is cut in order to avoid two lines.
       </Link>
-    </div>
+    </Container>
   </>
 )
 
