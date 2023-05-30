@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import type { ComponentProps } from 'react'
 import { Tag } from '../Tag'
 import { Tooltip } from '../Tooltip'
 
@@ -50,13 +51,9 @@ type TagListProps = {
    * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
    */
   multiline?: boolean
-  copiable?: boolean
-  copyText?: string
-  copiedText?: string
-
   className?: string
   'data-testid'?: string
-}
+} & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
 
