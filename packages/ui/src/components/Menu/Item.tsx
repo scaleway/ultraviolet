@@ -104,7 +104,7 @@ type ItemProps = {
   tooltip?: string | undefined
   className?: string | undefined
   children: ReactNode
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined
+  onClick?: MouseEventHandler<HTMLElement> | undefined
   borderless?: boolean
   variant?: VariantItem
 }
@@ -130,6 +130,8 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             href={href}
             // @ts-expect-error: somehow refuse cast HTMLAnchorElement
             ref={ref}
+            // @ts-expect-error: somehow refuse cast HTMLAnchorElement
+            onClick={onClick as HTMLAnchorElement}
             role="menuitem"
             disabled={disabled}
             itemVariant={itemVariant}
