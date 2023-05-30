@@ -54,10 +54,10 @@ importers:
         version: 11.11.0
       '@emotion/react':
         specifier: 11.11.0
-        version: 11.11.0(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@emotion/styled':
         specifier: 11.11.0
-        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.7)(react@18.2.0)
       '@jest/types':
         specifier: 29.5.0
         version: 29.5.0
@@ -75,7 +75,7 @@ importers:
         version: 3.15.12(eslint@8.41.0)(typescript@5.0.4)
       '@scaleway/jest-helpers':
         specifier: 3.0.6
-        version: 3.0.6(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 3.0.6(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
       '@scaleway/tsconfig':
         specifier: 1.1.0
         version: 1.1.0
@@ -170,8 +170,8 @@ importers:
         specifier: 15.7.5
         version: 15.7.5
       '@types/react':
-        specifier: 18.2.6
-        version: 18.2.6
+        specifier: 18.2.7
+        version: 18.2.7
       '@types/react-datepicker':
         specifier: 4.11.2
         version: 4.11.2(react-dom@18.2.0)(react@18.2.0)
@@ -312,10 +312,10 @@ importers:
         version: 11.11.0
       '@emotion/react':
         specifier: 11.11.0
-        version: 11.11.0(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@emotion/styled':
         specifier: 11.11.0
-        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.7)(react@18.2.0)
       '@scaleway/ui':
         specifier: workspace:*
         version: link:../ui
@@ -336,7 +336,7 @@ importers:
         version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0)
       react-select:
         specifier: 5.7.3
-        version: 5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 5.7.3(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: 7.21.8
@@ -345,8 +345,8 @@ importers:
         specifier: 1.1.3
         version: 1.1.3
       '@types/react':
-        specifier: 18.2.6
-        version: 18.2.6
+        specifier: 18.2.7
+        version: 18.2.7
       '@types/react-dom':
         specifier: 18.2.4
         version: 18.2.4
@@ -405,7 +405,7 @@ importers:
         version: 1.1.2
       react-select:
         specifier: 5.7.3
-        version: 5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 5.7.3(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
       react-toastify:
         specifier: 9.1.3
         version: 9.1.3(react-dom@18.2.0)(react@18.2.0)
@@ -424,13 +424,13 @@ importers:
         version: 11.11.0
       '@emotion/react':
         specifier: 11.11.0
-        version: 11.11.0(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@emotion/styled':
         specifier: 11.11.0
-        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.7)(react@18.2.0)
       '@types/react':
-        specifier: 18.2.6
-        version: 18.2.6
+        specifier: 18.2.7
+        version: 18.2.7
       '@types/react-datepicker':
         specifier: 4.11.2
         version: 4.11.2(react-dom@18.2.0)(react@18.2.0)
@@ -448,10 +448,10 @@ importers:
     dependencies:
       '@emotion/react':
         specifier: 11.11.0
-        version: 11.11.0(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@emotion/styled':
         specifier: 11.11.0
-        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.6)(react@18.2.0)
+        version: 11.11.0(@emotion/react@11.11.0)(@types/react@18.2.7)(react@18.2.0)
       '@scaleway/ui':
         specifier: workspace:*
         version: link:../packages/ui
@@ -484,8 +484,8 @@ importers:
         specifier: 18.16.13
         version: 18.16.13
       '@types/react':
-        specifier: 18.2.6
-        version: 18.2.6
+        specifier: 18.2.7
+        version: 18.2.7
       '@types/react-syntax-highlighter':
         specifier: 15.5.6
         version: 15.5.6
@@ -2351,7 +2351,7 @@ packages:
   /@emotion/memoize@0.8.1:
     resolution: {integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==}
 
-  /@emotion/react@11.11.0(@types/react@18.2.6)(react@18.2.0):
+  /@emotion/react@11.11.0(@types/react@18.2.7)(react@18.2.0):
     resolution: {integrity: sha512-ZSK3ZJsNkwfjT3JpDAWJZlrGD81Z3ytNDsxw1LKq1o+xkmO5pnWfr6gmCC8gHEFf3nSSX/09YrG67jybNPxSUw==}
     peerDependencies:
       '@types/react': '*'
@@ -2367,7 +2367,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
       '@emotion/utils': 1.2.1
       '@emotion/weak-memoize': 0.3.1
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
 
@@ -2383,7 +2383,7 @@ packages:
   /@emotion/sheet@1.2.2:
     resolution: {integrity: sha512-0QBtGvaqtWi+nx6doRwDdBIzhNdZrXUppvTM4dtZZWEGTXL/XE/yJxLMGlDT1Gt+UHH5IX1n+jkXyytE/av7OA==}
 
-  /@emotion/styled@11.11.0(@emotion/react@11.11.0)(@types/react@18.2.6)(react@18.2.0):
+  /@emotion/styled@11.11.0(@emotion/react@11.11.0)(@types/react@18.2.7)(react@18.2.0):
     resolution: {integrity: sha512-hM5Nnvu9P3midq5aaXj4I+lnSfNi7Pmd4EWk1fOZ3pxookaQTNew6bp4JaCBYM4HVFZF9g7UjJmsUmC2JlxOng==}
     peerDependencies:
       '@emotion/react': ^11.0.0-rc.0
@@ -2396,11 +2396,11 @@ packages:
       '@babel/runtime': 7.21.5
       '@emotion/babel-plugin': 11.11.0
       '@emotion/is-prop-valid': 1.2.1
-      '@emotion/react': 11.11.0(@types/react@18.2.6)(react@18.2.0)
+      '@emotion/react': 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@emotion/serialize': 1.1.2
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
       '@emotion/utils': 1.2.1
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
       react: 18.2.0
 
   /@emotion/unitless@0.8.1:
@@ -3038,7 +3038,7 @@ packages:
       react: '>=16 || 18'
     dependencies:
       '@types/mdx': 2.0.5
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
       react: 18.2.0
     dev: true
 
@@ -3563,7 +3563,7 @@ packages:
       - typescript
     dev: true
 
-  /@scaleway/jest-helpers@3.0.6(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0):
+  /@scaleway/jest-helpers@3.0.6(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-7fm72M98lRKCK8qzsO6iNJYoqi8WmDeJ5Uq59Jehy1vk5aDSRwAMLAgaJO2r8WoXj7FNDMs8GUgccbudJgZKQQ==}
     engines: {node: '>=14.x'}
     peerDependencies:
@@ -3571,7 +3571,7 @@ packages:
     dependencies:
       '@emotion/cache': 11.11.0
       '@emotion/jest': 11.11.0
-      '@emotion/react': 11.11.0(@types/react@18.2.6)(react@18.2.0)
+      '@emotion/react': 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@testing-library/react': 13.4.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
     transitivePeerDependencies:
@@ -5480,7 +5480,7 @@ packages:
     resolution: {integrity: sha512-ELYyX3lb3K1WltqdlF1hbnaDGgzlF6PIR5T4W38cSEcfrQDIrPE+Ioq5pwRe/KEJ+ihHMjvTVZQkwJx0pWMNHQ==}
     dependencies:
       '@popperjs/core': 2.11.6
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
       date-fns: 2.29.3
       react-popper: 2.3.0(@popperjs/core@2.11.6)(react-dom@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
@@ -5491,23 +5491,23 @@ packages:
   /@types/react-dom@18.2.4:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
     dev: true
 
   /@types/react-syntax-highlighter@15.5.6:
     resolution: {integrity: sha512-i7wFuLbIAFlabTeD2I1cLjEOrG/xdMa/rpx2zwzAoGHuXJDhSqp9BSfDlMHSh9JSuNfxHk9eEmMX6D55GiyjGg==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
     dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
     dev: false
 
-  /@types/react@18.2.6:
-    resolution: {integrity: sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==}
+  /@types/react@18.2.7:
+    resolution: {integrity: sha512-ojrXpSH2XFCmHm7Jy3q44nXDyN54+EYKP2lBhJ2bqfyPj6cIUW/FZW/Csdia34NQgq7KYcAlHi5184m4X88+yw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -13253,7 +13253,7 @@ packages:
       typescript: 5.0.4
     dev: false
 
-  /react-select@5.7.3(@types/react@18.2.6)(react-dom@18.2.0)(react@18.2.0):
+  /react-select@5.7.3(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-z8i3NCuFFWL3w27xq92rBkVI2onT0jzIIPe480HlBjXJ3b5o6Q+Clp4ydyeKrj9DZZ3lrjawwLC5NGl0FSvUDg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
@@ -13261,7 +13261,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.5
       '@emotion/cache': 11.11.0
-      '@emotion/react': 11.11.0(@types/react@18.2.6)(react@18.2.0)
+      '@emotion/react': 11.11.0(@types/react@18.2.7)(react@18.2.0)
       '@floating-ui/dom': 1.2.3
       '@types/react-transition-group': 4.4.5
       memoize-one: 6.0.0
@@ -13269,7 +13269,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.6)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.7)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -15035,7 +15035,7 @@ packages:
       requires-port: 1.0.0
     dev: true
 
-  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.6)(react@18.2.0):
+  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.7)(react@18.2.0):
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
@@ -15044,7 +15044,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.2.7
       react: 18.2.0
     dev: false
 
