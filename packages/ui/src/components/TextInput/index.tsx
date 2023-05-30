@@ -292,10 +292,10 @@ const StyledInput = styled('input', {
     padding-top: 8px;
   `}
 
-  ${({ hasRightElement, rightElementPadding }) =>
+  ${({ hasRightElement, rightElementPadding, theme }) =>
     hasRightElement &&
     `
-    padding-right: ${rightElementPadding || 32}px;
+    padding-right: ${rightElementPadding || theme.space['6']}px;
   `}
 `
 
