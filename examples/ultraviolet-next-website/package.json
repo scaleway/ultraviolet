@@ -1,0 +1,36 @@
+{
+  "name": "ultraviolet-next-website",
+  "version": "1.0.0",
+  "homepage": "https://ultraviolet.scaleway.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/scaleway-ui",
+    "directory": "website"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@scaleway/ui": "workspace:*",
+    "next": "13.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-schemaorg": "2.0.0",
+    "react-syntax-highlighter": "15.5.0",
+    "react-use-clipboard": "1.0.9",
+    "schema-dts": "1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.21.8",
+    "@types/node": "18.16.13",
+    "@types/react": "18.2.6",
+    "@types/react-syntax-highlighter": "15.5.6",
+    "next-transpile-modules": "10.0.0"
+  }
+}
