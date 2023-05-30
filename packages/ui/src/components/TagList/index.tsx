@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import type { ComponentProps } from 'react'
 import { Tag } from '../Tag'
 import { Tooltip } from '../Tooltip'
 
@@ -50,10 +51,9 @@ type TagListProps = {
    * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
    */
   multiline?: boolean
-
   className?: string
   'data-testid'?: string
-}
+} & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
 
@@ -62,6 +62,9 @@ export const TagList = ({
   tags = DEFAULT_TAGS,
   threshold = 1,
   multiline = false,
+  copiable,
+  copyText,
+  copiedText,
   className,
   'data-testid': dataTestId,
 }: TagListProps): JSX.Element | null => {
@@ -89,6 +92,9 @@ export const TagList = ({
             // useful when two tags are identical `${tag}-${index}`
             // eslint-disable-next-line react/no-array-index-key
             key={`${tag}-${index}`}
+            copiable={copiable}
+            copyText={copyText}
+            copiedText={copiedText}
           >
             {tag}
           </Tag>

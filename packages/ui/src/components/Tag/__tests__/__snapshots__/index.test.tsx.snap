@@ -2,7 +2,7 @@
 
 exports[`Tag renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1q42p0o-StyledContainer {
+  .cache-ttcibm-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,7 +39,7 @@ exports[`Tag renders correctly 1`] = `
 }
 
 <span
-    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+    class="cache-ttcibm-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
@@ -53,7 +53,7 @@ exports[`Tag renders correctly 1`] = `
 
 exports[`Tag renders correctly colored 1`] = `
 <DocumentFragment>
-  .cache-hs7kz3-StyledContainer {
+  .cache-jtms1t-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -90,7 +90,7 @@ exports[`Tag renders correctly colored 1`] = `
 }
 
 <span
-    class="cache-hs7kz3-StyledContainer e1vt8sjg2"
+    class="cache-jtms1t-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
@@ -104,7 +104,7 @@ exports[`Tag renders correctly colored 1`] = `
 
 exports[`Tag renders correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-u1scug-StyledContainer {
+  .cache-1yir632-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -142,7 +142,7 @@ exports[`Tag renders correctly disabled 1`] = `
 }
 
 <span
-    class="cache-u1scug-StyledContainer e1vt8sjg2"
+    class="cache-1yir632-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="true"
@@ -156,7 +156,7 @@ exports[`Tag renders correctly disabled 1`] = `
 
 exports[`Tag renders correctly neutral 1`] = `
 <DocumentFragment>
-  .cache-1q42p0o-StyledContainer {
+  .cache-ttcibm-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -193,7 +193,7 @@ exports[`Tag renders correctly neutral 1`] = `
 }
 
 <span
-    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+    class="cache-ttcibm-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
@@ -205,9 +205,81 @@ exports[`Tag renders correctly neutral 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Tag renders correctly with copiable 1`] = `
+<DocumentFragment>
+  .cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tfylds-Container-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1tfylds-Container-StyledContainer:hover,
+.cache-1tfylds-Container-StyledContainer:active {
+  cursor: pointer;
+  background: #e6e9f0;
+  border-color: #d4dae7;
+}
+
+.cache-1tfylds-Container-StyledContainer:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+<div
+    aria-describedby=":r1:"
+    class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+    tabindex="0"
+  >
+    <button
+      class="cache-1tfylds-Container-StyledContainer e1vt8sjg3"
+    >
+      <span
+        aria-disabled="false"
+        class="cache-t6vuyb-StyledTag e1vt8sjg1"
+      >
+        test
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Tag renders correctly with icon 1`] = `
 <DocumentFragment>
-  .cache-1q42p0o-StyledContainer {
+  .cache-ttcibm-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -253,7 +325,7 @@ exports[`Tag renders correctly with icon 1`] = `
 }
 
 <span
-    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+    class="cache-ttcibm-StyledContainer e1vt8sjg2"
   >
     <svg
       class="cache-kbjega-StyledIcon-sizeStyles etwatq50"
@@ -291,7 +363,7 @@ exports[`Tag renders correctly with isLoading 1`] = `
   }
 }
 
-.cache-1q42p0o-StyledContainer {
+.cache-ttcibm-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -338,7 +410,7 @@ exports[`Tag renders correctly with isLoading 1`] = `
 }
 
 <span
-    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+    class="cache-ttcibm-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
@@ -384,7 +456,7 @@ exports[`Tag renders correctly with isLoading 1`] = `
 
 exports[`Tag renders correctly with onClose 1`] = `
 <DocumentFragment>
-  .cache-1q42p0o-StyledContainer {
+  .cache-ttcibm-StyledContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -486,7 +558,7 @@ exports[`Tag renders correctly with onClose 1`] = `
 }
 
 <span
-    class="cache-1q42p0o-StyledContainer e1vt8sjg2"
+    class="cache-ttcibm-StyledContainer e1vt8sjg2"
   >
     <span
       aria-disabled="false"
