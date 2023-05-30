@@ -224,12 +224,18 @@ export const VerificationCode = ({
         return newArray
       })
 
+      const nextIndex = Math.min(
+        currentIndex + pastedValue.length,
+        inputRefs.length - 1,
+      )
+      const next = inputRefs[nextIndex]
+      next?.current?.focus()
       triggerChange(pastedValue)
     }
 
   return (
     <div className={className} data-testid={dataTestId}>
-      {values.map((value: string, index) => (
+      {values.map((value: string, index: number) => (
         <StyledInput
           css={[inputStyle]}
           aria-invalid={error}
