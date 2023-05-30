@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.249.0
+
+### Minor Changes
+
+- [#2566](https://github.com/scaleway/scaleway-ui/pull/2566) [`b879729d`](https://github.com/scaleway/scaleway-ui/commit/b879729dd4f5d2a67760d2baa38c992182f4cee5) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add copiable options to Tag & TagList
+
 ## 0.248.1
 
 ### Patch Changes
