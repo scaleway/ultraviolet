@@ -1,5 +1,16 @@
 # Change Log
 
+## 0.4.4
+
+### Patch Changes
+
+- [#2568](https://github.com/scaleway/scaleway-ui/pull/2568) [`dd4193f7`](https://github.com/scaleway/scaleway-ui/commit/dd4193f791868afa08265a7b5b82adb15db05417) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-syntax-highlighter` to `15.5.7`.
+
+- [#2556](https://github.com/scaleway/scaleway-ui/pull/2556) [`0b94cb44`](https://github.com/scaleway/scaleway-ui/commit/0b94cb443934b4da647998ad006f72f88b18a845) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.7`.
+
+- Updated dependencies [[`63cabedb`](https://github.com/scaleway/scaleway-ui/commit/63cabedb8890a3e3eaf562ba0a655aa1c29e7da9), [`952775a4`](https://github.com/scaleway/scaleway-ui/commit/952775a4252da617f0dc2b570524f1efa00b2073), [`0b94cb44`](https://github.com/scaleway/scaleway-ui/commit/0b94cb443934b4da647998ad006f72f88b18a845)]:
+  - @scaleway/ui@0.248.1
+
 ## 0.4.3
 
 ### Patch Changes

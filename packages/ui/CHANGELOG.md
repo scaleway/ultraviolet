@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.248.1
+
+### Patch Changes
+
+- [#2551](https://github.com/scaleway/scaleway-ui/pull/2551) [`63cabedb`](https://github.com/scaleway/scaleway-ui/commit/63cabedb8890a3e3eaf562ba0a655aa1c29e7da9) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Refactor radio label
+
+- [#2575](https://github.com/scaleway/scaleway-ui/pull/2575) [`952775a4`](https://github.com/scaleway/scaleway-ui/commit/952775a4252da617f0dc2b570524f1efa00b2073) Thanks [@fabienhebert](https://github.com/fabienhebert)! - `Menu.Item`: restore onClick if the element is an anchor
+
+- [#2556](https://github.com/scaleway/scaleway-ui/pull/2556) [`0b94cb44`](https://github.com/scaleway/scaleway-ui/commit/0b94cb443934b4da647998ad006f72f88b18a845) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.7`.
+
 ## 0.248.0
 
 ### Minor Changes
