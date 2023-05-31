@@ -87,6 +87,21 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: pnpm install
       - run: pnpm run build
+  build-examples: # This will build all projects in the examples folder, it assures that all examples are working
+    strategy:
+      matrix:
+        node: [ '18' ]
+    runs-on: ubuntu-20.04
+    needs: [ lint, test ]
+    steps:
+      - uses: actions/checkout@v3.5.2
+      - uses: pnpm/action-setup@v2.2.4
+      - name: Use Node.js
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: ${{ matrix.node }}
+      - run: pnpm install
+      - run: pnpm run build:examples
   chromatic-deployment:
     runs-on: ubuntu-20.04
     env:
