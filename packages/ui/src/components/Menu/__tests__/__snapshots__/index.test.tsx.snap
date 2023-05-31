@@ -2,43 +2,35 @@
 
 exports[`Menu Menu.Item render with borderless props 1`] = `
 <DocumentFragment>
-  .cache-16wmr9b-StyledItem {
+  .cache-1ol0zd8-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #e6e9f0;
+  border: none;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
-  border: 0;
+  color: #4a4f62;
+  background: none;
 }
 
-.cache-16wmr9b-StyledItem:hover,
-.cache-16wmr9b-StyledItem:focus {
-  color: #390171;
+.cache-1ol0zd8-StyledItem svg {
+  fill: #4a4f62;
 }
 
-.cache-16wmr9b-StyledItem:hover svg,
-.cache-16wmr9b-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
+.cache-1ol0zd8-StyledItem:hover,
+.cache-1ol0zd8-StyledItem:focus {
+  color: #4a4f62;
 }
 
-.cache-16wmr9b-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
+.cache-1ol0zd8-StyledItem:hover svg,
+.cache-1ol0zd8-StyledItem:focus svg {
+  fill: #4a4f62;
 }
 
 <button
-    class="cache-16wmr9b-StyledItem epxin6a1"
+    class="cache-1ol0zd8-StyledItem epxin6a1"
     role="menuitem"
     type="button"
   >
@@ -49,42 +41,36 @@ exports[`Menu Menu.Item render with borderless props 1`] = `
 
 exports[`Menu Menu.Item render with default props 1`] = `
 <DocumentFragment>
-  .cache-1taej8p-StyledItem {
+  .cache-13wcph2-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
+  border: none;
   border-bottom: 1px solid #e6e9f0;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
+  color: #4a4f62;
+  background: none;
 }
 
-.cache-1taej8p-StyledItem:hover,
-.cache-1taej8p-StyledItem:focus {
-  color: #390171;
+.cache-13wcph2-StyledItem svg {
+  fill: #4a4f62;
 }
 
-.cache-1taej8p-StyledItem:hover svg,
-.cache-1taej8p-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
+.cache-13wcph2-StyledItem:hover,
+.cache-13wcph2-StyledItem:focus {
+  color: #4a4f62;
 }
 
-.cache-1taej8p-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
+.cache-13wcph2-StyledItem:hover svg,
+.cache-13wcph2-StyledItem:focus svg {
+  fill: #4a4f62;
 }
 
 <button
-    class="cache-1taej8p-StyledItem epxin6a1"
+    class="cache-13wcph2-StyledItem epxin6a1"
     role="menuitem"
     type="button"
   >
@@ -95,55 +81,27 @@ exports[`Menu Menu.Item render with default props 1`] = `
 
 exports[`Menu Menu.Item render with disabled props 1`] = `
 <DocumentFragment>
-  .cache-y6ofzm-StyledItem {
+  .cache-1rmr08u-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
+  border: none;
   border-bottom: 1px solid #e6e9f0;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
-  cursor: not-allowed;
   color: #c4c9d6;
+  cursor: not-allowed;
+  background: none;
 }
 
-.cache-y6ofzm-StyledItem:hover,
-.cache-y6ofzm-StyledItem:focus {
-  color: #390171;
-}
-
-.cache-y6ofzm-StyledItem:hover svg,
-.cache-y6ofzm-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
-}
-
-.cache-y6ofzm-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-y6ofzm-StyledItem:hover,
-.cache-y6ofzm-StyledItem:focus {
-  color: #4a4f62;
-  background-color: #ffffff;
-}
-
-.cache-y6ofzm-StyledItem:hover svg,
-.cache-y6ofzm-StyledItem:focus svg {
-  fill: #4a4f62;
+.cache-1rmr08u-StyledItem svg {
+  fill: #c4c9d6;
 }
 
 <button
-    class="cache-y6ofzm-StyledItem epxin6a1"
+    class="cache-1rmr08u-StyledItem epxin6a1"
     disabled=""
     role="menuitem"
     type="button"
@@ -155,123 +113,41 @@ exports[`Menu Menu.Item render with disabled props 1`] = `
 
 exports[`Menu Menu.Item render with variant danger 1`] = `
 <DocumentFragment>
-  .cache-10970vx-StyledItem {
+  .cache-1rspo64-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
+  border: none;
   border-bottom: 1px solid #e6e9f0;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
   color: #a6102d;
+  background: none;
 }
 
-.cache-10970vx-StyledItem:hover,
-.cache-10970vx-StyledItem:focus {
-  color: #390171;
-}
-
-.cache-10970vx-StyledItem:hover svg,
-.cache-10970vx-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
-}
-
-.cache-10970vx-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-10970vx-StyledItem:hover,
-.cache-10970vx-StyledItem:focus {
-  color: #a6102d;
-}
-
-.cache-10970vx-StyledItem:hover svg,
-.cache-10970vx-StyledItem:focus svg {
+.cache-1rspo64-StyledItem svg {
   fill: #a6102d;
 }
 
-.cache-10970vx-StyledItem svg {
+.cache-1rspo64-StyledItem:hover,
+.cache-1rspo64-StyledItem:focus {
+  color: #a6102d;
+}
+
+.cache-1rspo64-StyledItem:hover svg,
+.cache-1rspo64-StyledItem:focus svg {
   fill: #a6102d;
 }
 
 <button
-    class="cache-10970vx-StyledItem epxin6a1"
+    class="cache-1rspo64-StyledItem epxin6a1"
     role="menuitem"
     type="button"
   >
     Danger
   </button>
-</DocumentFragment>
-`;
-
-exports[`Menu Menu.Item render with variant nav 1`] = `
-<DocumentFragment>
-  .cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #e6e9f0;
-  cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
-  font-size: 16px;
-  line-height: 24px;
-  color: #b2b6c3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:hover,
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:focus {
-  color: #390171;
-}
-
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:hover svg,
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
-}
-
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:hover,
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:focus {
-  color: #390171;
-}
-
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:hover svg,
-.cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem:focus svg {
-  fill: #390171;
-}
-
-<a
-    class="cache-z46zsy-StyledLinkItem-StyledItem-StyledLinkItem epxin6a2"
-    href="/test"
-    role="menuitem"
-  >
-    Nav
-  </a>
 </DocumentFragment>
 `;
 
@@ -431,38 +307,32 @@ exports[`Menu renders with Menu.Item 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-1taej8p-StyledItem {
+.cache-13wcph2-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
+  border: none;
   border-bottom: 1px solid #e6e9f0;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
+  color: #4a4f62;
+  background: none;
 }
 
-.cache-1taej8p-StyledItem:hover,
-.cache-1taej8p-StyledItem:focus {
-  color: #390171;
+.cache-13wcph2-StyledItem svg {
+  fill: #4a4f62;
 }
 
-.cache-1taej8p-StyledItem:hover svg,
-.cache-1taej8p-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
+.cache-13wcph2-StyledItem:hover,
+.cache-13wcph2-StyledItem:focus {
+  color: #4a4f62;
 }
 
-.cache-1taej8p-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
+.cache-13wcph2-StyledItem:hover svg,
+.cache-13wcph2-StyledItem:focus svg {
+  fill: #4a4f62;
 }
 
 <div
@@ -482,7 +352,7 @@ exports[`Menu renders with Menu.Item 1`] = `
         role="menu"
       >
         <button
-          class="cache-1taej8p-StyledItem epxin6a1"
+          class="cache-13wcph2-StyledItem epxin6a1"
           role="menuitem"
           type="button"
         >
@@ -572,100 +442,23 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-y6ofzm-StyledItem {
+.cache-1rmr08u-StyledItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
+  border: none;
   border-bottom: 1px solid #e6e9f0;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
-  cursor: not-allowed;
   color: #c4c9d6;
-}
-
-.cache-y6ofzm-StyledItem:hover,
-.cache-y6ofzm-StyledItem:focus {
-  color: #390171;
-}
-
-.cache-y6ofzm-StyledItem:hover svg,
-.cache-y6ofzm-StyledItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
-}
-
-.cache-y6ofzm-StyledItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-y6ofzm-StyledItem:hover,
-.cache-y6ofzm-StyledItem:focus {
-  color: #4a4f62;
-  background-color: #ffffff;
-}
-
-.cache-y6ofzm-StyledItem:hover svg,
-.cache-y6ofzm-StyledItem:focus svg {
-  fill: #4a4f62;
-}
-
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: inherit;
-  padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #e6e9f0;
-  cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-  min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
   cursor: not-allowed;
-  color: #c4c9d6;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  background: none;
 }
 
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:hover,
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:focus {
-  color: #390171;
-}
-
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:hover svg,
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
-}
-
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:hover,
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:focus {
-  color: #4a4f62;
-  background-color: #ffffff;
-}
-
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:hover svg,
-.cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem:focus svg {
-  fill: #4a4f62;
+.cache-1rmr08u-StyledItem svg {
+  fill: #c4c9d6;
 }
 
 <div
@@ -685,29 +478,21 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
         role="menu"
       >
         <button
-          class="cache-y6ofzm-StyledItem epxin6a1"
+          class="cache-1rmr08u-StyledItem epxin6a1"
           disabled=""
           role="menuitem"
           type="button"
         >
           Menu.Item disabled
         </button>
-        <a
-          class="cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem epxin6a2"
+        <button
+          class="cache-1rmr08u-StyledItem epxin6a1"
           disabled=""
-          href="/link"
           role="menuitem"
+          type="button"
         >
           Menu.Item Link disabled
-        </a>
-        <a
-          class="cache-o8p6bj-StyledLinkItem-StyledItem-StyledLinkItem epxin6a2"
-          disabled=""
-          href="https://link"
-          role="menuitem"
-        >
-          Menu.Item Link disabled
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -792,40 +577,32 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem {
+.cache-1fmo3nd-StyledLinkItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
   font-weight: inherit;
   padding: 4px 8px;
-  color: #4a4f62;
-  border: 0;
-  border-bottom: 1px solid #e6e9f0;
+  border: none;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: 0;
+  color: #4a4f62;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem:hover,
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem:focus {
-  color: #390171;
+.cache-1fmo3nd-StyledLinkItem svg {
+  fill: #4a4f62;
 }
 
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem:hover svg,
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem:focus svg {
-  -webkit-transition: fill 300ms;
-  transition: fill 300ms;
-  fill: #390171;
+.cache-1fmo3nd-StyledLinkItem:hover,
+.cache-1fmo3nd-StyledLinkItem:focus {
+  color: #4a4f62;
 }
 
-.cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem:last-child {
-  border-bottom: 0;
-  border-radius: 0 0 4px 4px;
+.cache-1fmo3nd-StyledLinkItem:hover svg,
+.cache-1fmo3nd-StyledLinkItem:focus svg {
+  fill: #4a4f62;
 }
 
 <div
@@ -845,7 +622,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
         role="menu"
       >
         <a
-          class="cache-sltgua-StyledLinkItem-StyledItem-StyledLinkItem epxin6a2"
+          class="cache-1fmo3nd-StyledLinkItem epxin6a0"
           href="/link"
           role="menuitem"
         >

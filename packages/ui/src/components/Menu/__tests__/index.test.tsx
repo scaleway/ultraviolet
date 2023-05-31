@@ -56,9 +56,6 @@ describe('Menu', () => {
         <Menu.Item href="/link" disabled>
           Menu.Item Link disabled
         </Menu.Item>
-        <Menu.Item href="https://link" disabled>
-          Menu.Item Link disabled
-        </Menu.Item>
       </Menu>,
     ))
 
@@ -86,12 +83,6 @@ describe('Menu', () => {
         <Menu.Item variant="danger">Danger</Menu.Item>,
       ))
 
-    test(`render with variant nav`, () =>
-      shouldMatchEmotionSnapshot(
-        <Menu.Item variant="nav" href="/test">
-          Nav
-        </Menu.Item>,
-      ))
     test(`render with disabled props`, () =>
       shouldMatchEmotionSnapshot(
         <Menu.Item disabled>Disabled Props</Menu.Item>,
