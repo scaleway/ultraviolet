@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.45.4
+
+### Patch Changes
+
+- Updated dependencies [[`766a0c4c`](https://github.com/scaleway/scaleway-ui/commit/766a0c4cbe1f61d0cb2617ba67033a785bef33ec), [`2c4e807b`](https://github.com/scaleway/scaleway-ui/commit/2c4e807bc2c0727e1275acfcb731d6256bfc6679), [`612cde1d`](https://github.com/scaleway/scaleway-ui/commit/612cde1d8e7b81729ba40b14b74b7703de99ef96)]:
+  - @scaleway/ui@0.249.1
+
 ## 1.45.3
 
 ### Patch Changes
