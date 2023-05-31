@@ -1,24 +1,33 @@
+import styled from '@emotion/styled'
 import type { ComponentStory } from '@storybook/react'
 import { Text } from '../index'
+
+const Container = styled.div`
+  margin-bottom: ${({ theme }) => theme.space['2']};
+  margin-top: ${({ theme }) => theme.space['1']};
+  width: 200px;
+  background: ${({ theme }) => theme.colors.info.background};
+  padding: ${({ theme }) => theme.space['1']};
+`
 
 export const OneLine: ComponentStory<typeof Text> = () => (
   <>
     <strong>Without ellipsis</strong>
-    <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
+    <Container>
       <Text as="div" variant="body">
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Text>
-    </div>
+    </Container>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
-    <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
+    <Container>
       <Text as="div" variant="body" oneLine>
         This text is quite long. Lorem ipsum dolor sit amet, consectetur
         adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </Text>
-    </div>
+    </Container>
   </>
 )
 
