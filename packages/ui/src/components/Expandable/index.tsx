@@ -62,6 +62,7 @@ export const Expandable = ({
       transitionTimer.current = setTimeout(() => {
         if (ref.current) {
           ref.current.style.maxHeight = 'initial'
+          ref.current.style.overflow = 'visible'
         }
       }, ANIMATION_DURATION)
     } else {
@@ -72,6 +73,7 @@ export const Expandable = ({
         transitionTimer.current = setTimeout(() => {
           if (ref.current) {
             ref.current.style.maxHeight = `${minHeight}px`
+            ref.current.style.overflow = 'hidden'
           }
         }, 0)
       }
