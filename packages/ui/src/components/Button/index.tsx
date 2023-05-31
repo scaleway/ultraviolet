@@ -21,12 +21,14 @@ export const SIZE_HEIGHT = {
   large: 48,
   medium: 40,
   small: 32,
+  xsmall: 24,
 } as const
 type ButtonSize = keyof typeof SIZE_HEIGHT
 export const SIZE_SPACING_KEY = {
   large: 2,
   medium: 1.5,
   small: 1,
+  xsmall: 0.5,
 } as const
 export const buttonSizes = Object.keys(SIZE_HEIGHT) as ButtonSize[]
 

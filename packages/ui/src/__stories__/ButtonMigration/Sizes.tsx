@@ -4,8 +4,8 @@ const SIZE_MATCH = {
   large: 'large',
   medium: 'medium',
   small: 'small',
-  xsmall: 'small',
-  xxsmall: 'small',
+  xsmall: 'xsmall',
+  xxsmall: 'xsmall',
 } as const
 
 export const Sizes = () => (
