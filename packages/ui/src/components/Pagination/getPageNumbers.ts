@@ -5,11 +5,11 @@
  * @param range The number of pages wanted
  * @returns List of page numbers around currentPage
  */
-export default function getPageNumbers(
+export const getPageNumbers = (
   currentPage: number,
   pageCount: number,
   range = 5,
-): number[] {
+): number[] => {
   const gap = Math.floor(range / 2)
   let end = currentPage + gap
   let remaining = 0
@@ -19,12 +19,12 @@ export default function getPageNumbers(
   }
   let start = currentPage - gap - remaining
   if (start < 1) {
-    remaining = -start + 1
+    remaining = Math.abs(start - 1)
     start = 1
   }
   if (end < pageCount) {
-    end += remaining
+    end = Math.min(end + remaining, pageCount)
   }
 
-  return [...Array(end - start + 1).keys()].map(k => start + k)
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index)
 }

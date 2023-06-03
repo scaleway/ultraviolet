@@ -1,5 +1,5 @@
 import type { Story } from '@storybook/react'
-import { TableV2 } from '..'
+import { Table } from '..'
 import { Stack, Text } from '../..'
 import { columns, data } from './resources'
 
@@ -19,22 +19,22 @@ export const Style: Story = () => (
           {combo.stripped ? '✅' : '❌'} Stripped |{' '}
           {combo.bordered ? '✅' : '❌'} Bordered
         </Text>
-        <TableV2
+        <Table
           columns={columns}
           bordered={combo.bordered}
           stripped={combo.stripped}
         >
-          <TableV2.Body>
+          <Table.Body>
             {data.slice(0, 3).map(movie => (
-              <TableV2.Row key={movie.id} id={movie.id}>
-                <TableV2.Cell>{movie.name}</TableV2.Cell>
-                <TableV2.Cell>{movie.releaseYear}</TableV2.Cell>
-                <TableV2.Cell>{movie.trilogy}</TableV2.Cell>
-                <TableV2.Cell>{movie.director}</TableV2.Cell>
-              </TableV2.Row>
+              <Table.Row key={movie.id} id={movie.id}>
+                <Table.Cell>{movie.name}</Table.Cell>
+                <Table.Cell>{movie.releaseYear}</Table.Cell>
+                <Table.Cell>{movie.trilogy}</Table.Cell>
+                <Table.Cell>{movie.director}</Table.Cell>
+              </Table.Row>
             ))}
-          </TableV2.Body>
-        </TableV2>
+          </Table.Body>
+        </Table>
       </Stack>
     ))}
   </Stack>

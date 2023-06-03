@@ -1,11 +1,11 @@
 import type { Story } from '@storybook/react'
 import { useMemo } from 'react'
-import { TableV2 } from '..'
+import { Table } from '..'
 import { columns, data } from './resources'
 
 export const Context: Story = () => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
-    const { selectedRowIds } = TableV2.useTableContext()
+    const { selectedRowIds } = Table.useTableContext()
 
     const selectedItems = useMemo(
       () => srcData.filter(item => selectedRowIds[item.id]),
@@ -20,25 +20,25 @@ export const Context: Story = () => {
   }
 
   return (
-    <TableV2 columns={columns} selectable>
-      <TableV2.Body>
+    <Table columns={columns} selectable>
+      <Table.Body>
         {data.map(movie => (
-          <TableV2.Row key={movie.id} id={movie.id}>
-            <TableV2.Cell>{movie.name}</TableV2.Cell>
-            <TableV2.Cell>{movie.releaseYear}</TableV2.Cell>
-            <TableV2.Cell>{movie.trilogy}</TableV2.Cell>
-            <TableV2.Cell>{movie.director}</TableV2.Cell>
-          </TableV2.Row>
+          <Table.Row key={movie.id} id={movie.id}>
+            <Table.Cell>{movie.name}</Table.Cell>
+            <Table.Cell>{movie.releaseYear}</Table.Cell>
+            <Table.Cell>{movie.trilogy}</Table.Cell>
+            <Table.Cell>{movie.director}</Table.Cell>
+          </Table.Row>
         ))}
-      </TableV2.Body>
+      </Table.Body>
       <SubComponent srcData={data} />
-    </TableV2>
+    </Table>
   )
 }
 
 Context.parameters = {
   docs: {
-    storyDescription: `You can use \`TableV2.useTableContext\` to get this hydrated properties about the table:
+    storyDescription: `You can use \`Table.useTableContext\` to get this hydrated properties about the table:
 
 - selectedRowIds : [Object] Selected rows (key is row id, value is a boolean, true mean the related row is selected)
 - selectRow : [Function] select a row by providing its id

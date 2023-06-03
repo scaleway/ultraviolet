@@ -1,89 +1,54 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
+import { useMemo } from 'react'
 import { ActionBar } from '../ActionBar'
-import { Checkbox } from '../Checkbox'
-import { Stack } from '../Stack'
-import { Text } from '../Text'
-import { useListContext } from './context'
+import { useListContext } from './ListContext'
 
-const StyledStack = styled(Stack)`
-  height: 100%;
-  padding: 0 ${({ theme }) => theme.space['2']};
-`
-
-const StyledCheckbox = styled(Checkbox)`
-  justify-content: center;
+const StyledActionBar = styled(ActionBar)`
   display: flex;
-  margin-right: ${({ theme }) => theme.space['2']};
+  align-items: center;
+  padding: 0 ${({ theme }) => theme.space['1']};
 `
 
-const StyledItemsCount = styled.div`
-  height: 20px;
-  line-height: 20px;
-  text-align: center;
-  border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.primary.text};
-`
-
-const MargedText = styled(Text)`
-  margin-left: ${({ theme }) => theme.space['1']};
-`
-
-const StyledContainer = styled.div`
-  display: flex;
+const FlexDiv = styled.div`
   flex: 1;
-  justify-content: flex-end;
 `
 
-export type ListSelectBarProps<T> = {
-  text?: ReactNode | ((length: number) => string)
-  children?:
-    | ((props: { selectedItems: T[]; unselectAll: () => void }) => ReactNode)
-    | ReactNode
+type SelectBarProps<T> = {
+  className?: string
+  children: (p: { selectedItems: T[]; unselectAll: () => void }) => ReactNode
+  data: T[]
+  /**
+   * The idKey of each data entry
+   * */
+  idKey: keyof T
 }
 
-const DEFAULT_TEXT: ListSelectBarProps<
-  Record<string, unknown>
->['text'] = count => (count === 1 ? 'item selected' : `items selected`)
-
-function SelectBar<T extends Record<string, unknown>>({
+export function SelectBar<T>({
   children,
-  text = DEFAULT_TEXT,
-  ...props
-}: ListSelectBarProps<T>) {
-  const { data, idKey, rowsState, unselectAll } = useListContext<T>()
+  data,
+  idKey,
+  className,
+}: SelectBarProps<T>) {
+  const { selectedRowIds, unselectAll } = useListContext()
 
-  const selectedItems = data.filter(item => {
-    const itemState =
-      rowsState[(item as Record<string, keyof typeof rowsState>)[idKey]]
+  const selectedItems = useMemo(
+    () => data.filter(item => selectedRowIds[item[idKey] as string]),
+    [data, idKey, selectedRowIds],
+  )
 
-    return itemState?.selected
-  })
+  if (selectedItems.length === 0) {
+    return null
+  }
 
-  // Don't display the pop-in if there aren't an item selected
-  return selectedItems.length > 0 ? (
-    <ActionBar {...props}>
-      <StyledStack alignItems="center" direction="row">
-        <StyledCheckbox
-          checked
-          onChange={unselectAll}
-          autoFocus
-          aria-label="unselect-all"
-        />
-        <StyledItemsCount>{selectedItems.length}</StyledItemsCount>
-        <MargedText color="primary" variant="bodyStrong" as="p">
-          {typeof text === 'function' ? text(selectedItems.length) : text}
-        </MargedText>
-        <StyledContainer>
-          {typeof children === 'function'
-            ? children({ selectedItems, unselectAll })
-            : children}
-        </StyledContainer>
-      </StyledStack>
-    </ActionBar>
-  ) : null
+  return (
+    <StyledActionBar className={className}>
+      <FlexDiv>
+        {children({
+          selectedItems,
+          unselectAll,
+        })}
+      </FlexDiv>
+    </StyledActionBar>
+  )
 }
-
-export default SelectBar

@@ -1,6 +1,6 @@
 import type { Story } from '@storybook/react'
 import { useMemo, useState } from 'react'
-import { TableV2 } from '..'
+import { Table } from '..'
 import { data as sourceData } from './resources'
 
 export const Ordering: Story = () => {
@@ -25,7 +25,7 @@ export const Ordering: Story = () => {
   }, [currentOrder])
 
   return (
-    <TableV2
+    <Table
       columns={[
         {
           label: 'Movie name',
@@ -45,17 +45,17 @@ export const Ordering: Story = () => {
         { label: 'Director' },
       ]}
     >
-      <TableV2.Body>
+      <Table.Body>
         {sortedData.map(movie => (
-          <TableV2.Row key={movie.id} id={movie.id}>
-            <TableV2.Cell>{movie.name}</TableV2.Cell>
-            <TableV2.Cell>{movie.releaseYear}</TableV2.Cell>
-            <TableV2.Cell>{movie.trilogy}</TableV2.Cell>
-            <TableV2.Cell>{movie.director}</TableV2.Cell>
-          </TableV2.Row>
+          <Table.Row key={movie.id} id={movie.id}>
+            <Table.Cell>{movie.name}</Table.Cell>
+            <Table.Cell>{movie.releaseYear}</Table.Cell>
+            <Table.Cell>{movie.trilogy}</Table.Cell>
+            <Table.Cell>{movie.director}</Table.Cell>
+          </Table.Row>
         ))}
-      </TableV2.Body>
-    </TableV2>
+      </Table.Body>
+    </Table>
   )
 }
 

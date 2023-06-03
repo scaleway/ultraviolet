@@ -1,5 +1,5 @@
 import type { ComponentProps } from 'react'
-import type { TableV2 } from '..'
+import type { Table } from '..'
 
 export const data = [
   {
@@ -76,7 +76,7 @@ export const data = [
   },
 ]
 
-export const columns: NonNullable<ComponentProps<typeof TableV2>['columns']> = [
+export const columns: NonNullable<ComponentProps<typeof Table>['columns']> = [
   { label: 'Movie name' },
   { label: 'Release year' },
   { label: 'Trilogy' },

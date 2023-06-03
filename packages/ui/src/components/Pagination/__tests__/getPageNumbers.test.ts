@@ -1,4 +1,4 @@
-import getPageNumbers from '../getPageNumbers'
+import { getPageNumbers } from '../getPageNumbers'
 
 describe('getPageNumbers', () => {
   describe('With 5 numbers range', () => {
@@ -17,6 +17,9 @@ describe('getPageNumbers', () => {
     it('should get 1,2,3,4 if current page is 3, with 4 pages', () => {
       expect(getPageNumbers(3, 4)).toEqual([1, 2, 3, 4])
     })
+    it('should get 1,2,3,4 if current page is 1, with 4 pages', () => {
+      expect(getPageNumbers(1, 4)).toEqual([1, 2, 3, 4])
+    })
     it('should get 1,2,3,4,5 if current page is 3, with 5 pages', () => {
       expect(getPageNumbers(3, 5)).toEqual([1, 2, 3, 4, 5])
     })
@@ -26,13 +29,13 @@ describe('getPageNumbers', () => {
     it('should get 3,4,5,6,7 if current page is 7, with 7 pages', () => {
       expect(getPageNumbers(7, 7)).toEqual([3, 4, 5, 6, 7])
     })
-    it('should get 1,2,3,4 but get 1,2,3,4,5 if current page is 1, with 4 pages - it is a known bug - use Pagination v2 ', () => {
-      expect(getPageNumbers(1, 4)).toEqual([1, 2, 3, 4, 5])
+    it('should get 1,2,3,4 if current page is 1, with 4 pages', () => {
+      expect(getPageNumbers(1, 4)).toEqual([1, 2, 3, 4])
     })
-    it('should get 1,2,3,4 but get 1,2,3,4,5 if current page is 0, with 4 pages - it is a known bug - use Pagination v2', () => {
-      expect(getPageNumbers(0, 4)).toEqual([1, 2, 3, 4, 5])
+    it('should get 1,2,3,4 if current page is 0, with 4 pages', () => {
+      expect(getPageNumbers(0, 4)).toEqual([1, 2, 3, 4])
     })
-    it('should get 1,2,3,4,5 if current page is 0, with 5 pages', () => {
+    it('should get 1,2,3,4, 5 if current page is 0, with 5 pages', () => {
       expect(getPageNumbers(0, 5)).toEqual([1, 2, 3, 4, 5])
     })
     it('should get 1,2,3,4 if current page is 5, with 4 pages', () => {

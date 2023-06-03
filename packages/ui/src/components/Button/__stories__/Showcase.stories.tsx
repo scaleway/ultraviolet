@@ -3,33 +3,25 @@ import { Button, buttonVariants } from '..'
 import { Stack, Table, Text } from '../..'
 import { SENTIMENTS } from '../../../theme'
 
+const COLUMNS = buttonVariants.map(variant => ({
+  label: variant.toUpperCase(),
+}))
+
 export const Showcase: ComponentStory<typeof Button> = () => {
   const onClick = () => {}
 
   return (
-    <Table>
-      <Table.Head>
-        <Table.Row>
-          <Table.HeadCell width="120px">Combination</Table.HeadCell>
-          {buttonVariants.map(variant => (
-            <Table.HeadCell key={variant}>
-              <Text as="span" variant="bodyStrong">
-                {variant.toUpperCase()}
-              </Text>
-            </Table.HeadCell>
-          ))}
-        </Table.Row>
-      </Table.Head>
+    <Table columns={COLUMNS}>
       <Table.Body>
         {SENTIMENTS.map(sentiment => (
-          <Table.Row key={sentiment}>
-            <Table.BodyCell>
+          <Table.Row key={sentiment} id={sentiment}>
+            <Table.Cell>
               <Text as="span" variant="bodyStrong">
                 {sentiment.toUpperCase()}
               </Text>
-            </Table.BodyCell>
+            </Table.Cell>
             {buttonVariants.map(variant => (
-              <Table.BodyCell key={variant}>
+              <Table.Cell key={variant}>
                 <Stack direction="row" gap={2}>
                   <Button
                     onClick={onClick}
@@ -39,7 +31,7 @@ export const Showcase: ComponentStory<typeof Button> = () => {
                     Button
                   </Button>
                 </Stack>
-              </Table.BodyCell>
+              </Table.Cell>
             ))}
           </Table.Row>
         ))}
