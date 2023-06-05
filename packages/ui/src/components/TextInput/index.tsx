@@ -217,8 +217,8 @@ const StyledInput = styled('input', {
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: ${({ theme }) => theme.space[1]};
-  padding-right: ${({ theme }) => theme.space[1]};
+  padding-left: ${({ theme }) => theme.space['1']};
+  padding-right: ${({ theme }) => theme.space['1']};
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
