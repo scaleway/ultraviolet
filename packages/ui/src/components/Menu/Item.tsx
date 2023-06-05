@@ -72,6 +72,10 @@ const StyledLinkItem = styled('a', {
   ${({ theme, borderless, sentiment, disabled }) =>
     itemCoreStyle({ theme, borderless, sentiment, disabled })}
   text-decoration: none;
+  
+  &:focus {
+    text-decoration: none;
+  }
 `
 
 type ItemProps = {
