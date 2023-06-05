@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.249.2
+
+### Patch Changes
+
+- [#2583](https://github.com/scaleway/scaleway-ui/pull/2583) [`d94c70b4`](https://github.com/scaleway/scaleway-ui/commit/d94c70b4e05e46269ad4deeef131142611b69191) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Button: add a xsmall size
+
+- [#2586](https://github.com/scaleway/scaleway-ui/pull/2586) [`ec661b35`](https://github.com/scaleway/scaleway-ui/commit/ec661b35e70502b097a467785f6202fcf34ef11e) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Menu: fix Item styles
+
 ## 0.249.1
 
 ### Patch Changes

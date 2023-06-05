@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.45.5
+
+### Patch Changes
+
+- [#2583](https://github.com/scaleway/scaleway-ui/pull/2583) [`d94c70b4`](https://github.com/scaleway/scaleway-ui/commit/d94c70b4e05e46269ad4deeef131142611b69191) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Button: add a xsmall size
+
+- Updated dependencies [[`d94c70b4`](https://github.com/scaleway/scaleway-ui/commit/d94c70b4e05e46269ad4deeef131142611b69191), [`ec661b35`](https://github.com/scaleway/scaleway-ui/commit/ec661b35e70502b097a467785f6202fcf34ef11e)]:
+  - @scaleway/ui@0.249.2
+
 ## 1.45.4
 
 ### Patch Changes
