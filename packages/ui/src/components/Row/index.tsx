@@ -2,16 +2,26 @@ import styled from '@emotion/styled'
 import type { CSSProperties, ReactNode } from 'react'
 import type { SCWUITheme } from '../../theme'
 
-type StyledRowProps = Pick<RowProps, 'gap' | 'templateColumns' | 'alignItems'>
+type StyledRowProps = Pick<
+  RowProps,
+  'gap' | 'templateColumns' | 'alignItems' | 'justifyContent'
+>
 export const StyledRow = styled('div', {
   shouldForwardProp: prop =>
-    !['templateColumns', 'gap', 'alignItems'].includes(prop),
+    !['templateColumns', 'gap', 'alignItems', 'justifyContent'].includes(prop),
 })<StyledRowProps>`
   display: grid;
-  ${({ theme, gap, alignItems = 'normal', templateColumns }) => `
+  ${({
+    theme,
+    gap,
+    alignItems = 'normal',
+    templateColumns,
+    justifyContent = 'normal',
+  }) => `
     grid-template-columns: ${templateColumns};
     ${gap ? `gap: ${theme.space[gap as keyof SCWUITheme['space']]};` : ''}
     align-items: ${alignItems};
+    justify-content: ${justifyContent};
   `}
 `
 
@@ -22,6 +32,7 @@ type RowProps = {
   templateColumns: string
   gap?: keyof SCWUITheme['space'] | number
   alignItems?: CSSProperties['alignItems']
+  justifyContent?: CSSProperties['justifyContent']
 }
 
 export const Row = ({
@@ -30,6 +41,7 @@ export const Row = ({
   children,
   templateColumns,
   alignItems,
+  justifyContent,
   gap,
 }: RowProps) => (
   <StyledRow
@@ -38,6 +50,7 @@ export const Row = ({
     gap={gap}
     templateColumns={templateColumns}
     alignItems={alignItems}
+    justifyContent={justifyContent}
   >
     {children}
   </StyledRow>
