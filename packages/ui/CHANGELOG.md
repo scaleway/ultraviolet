@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.250.0
+
+### Minor Changes
+
+- [#2549](https://github.com/scaleway/scaleway-ui/pull/2549) [`cedd5678`](https://github.com/scaleway/scaleway-ui/commit/cedd56787a243f7d7cce81abedc94ed4e20addb4) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Add justify-content property to Row
+
+### Patch Changes
+
+- [#2585](https://github.com/scaleway/scaleway-ui/pull/2585) [`21670b9b`](https://github.com/scaleway/scaleway-ui/commit/21670b9b38ddd90a2acc9964e2f112431e2fb6a6) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Change overflow to visible when Expandable is open
+
 ## 0.249.2
 
 ### Patch Changes
