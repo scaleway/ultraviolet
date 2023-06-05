@@ -1,22 +1,22 @@
 import styled from '@emotion/styled'
 import type { Story } from '@storybook/react'
-import { TableV2 } from '..'
+import { Table } from '..'
 import { columns, data } from './resources'
 
-const StyledTrilogyCell = styled(TableV2.Cell)`
+const StyledTrilogyCell = styled(Table.Cell)`
   background: ${({ theme }) => theme.colors.warning.background};
 `
 
-const StyledDirectorCell = styled(TableV2.Cell)`
+const StyledDirectorCell = styled(Table.Cell)`
   background: ${({ theme }) => theme.colors.success.background};
 `
 
-const StyledStoryByCell = styled(TableV2.Cell)`
+const StyledStoryByCell = styled(Table.Cell)`
   background: ${({ theme }) => theme.colors.info.background};
 `
 
 export const Spanning: Story = () => (
-  <TableV2
+  <Table
     columns={[
       ...columns,
       {
@@ -24,11 +24,11 @@ export const Spanning: Story = () => (
       },
     ]}
   >
-    <TableV2.Body>
+    <Table.Body>
       {data.map((movie, index) => (
-        <TableV2.Row key={movie.id} id={movie.id}>
-          <TableV2.Cell>{movie.name}</TableV2.Cell>
-          <TableV2.Cell>{movie.releaseYear}</TableV2.Cell>
+        <Table.Row key={movie.id} id={movie.id}>
+          <Table.Cell>{movie.name}</Table.Cell>
+          <Table.Cell>{movie.releaseYear}</Table.Cell>
           {index % 3 === 0 ? (
             <StyledTrilogyCell rowSpan={3}>{movie.trilogy}</StyledTrilogyCell>
           ) : null}
@@ -40,10 +40,10 @@ export const Spanning: Story = () => (
           {movie.director !== movie.storyBy ? (
             <StyledStoryByCell>{movie.storyBy}</StyledStoryByCell>
           ) : null}
-        </TableV2.Row>
+        </Table.Row>
       ))}
-    </TableV2.Body>
-  </TableV2>
+    </Table.Body>
+  </Table>
 )
 
 Spanning.parameters = {

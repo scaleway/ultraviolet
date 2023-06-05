@@ -128,17 +128,17 @@ const Properties = () => {
           : {Object.keys(propertiesUsagesCountAndComponentsName).length}
         </Text>
       </Stack>
-      <Table>
-        <Table.Head>
-          <Table.Row>
-            <Table.HeadCell>Property Name</Table.HeadCell>
-            <Table.HeadCell>Number of usages</Table.HeadCell>
-            <Table.HeadCell>Values</Table.HeadCell>
-            <Table.HeadCell>Similar property name</Table.HeadCell>
-            <Table.HeadCell>Components usage</Table.HeadCell>
-          </Table.Row>
-        </Table.Head>
-        <Table.Body striped>
+      <Table
+        columns={[
+          { label: 'Property Name' },
+          { label: 'Number of usages' },
+          { label: 'Values' },
+          { label: 'Similar property name' },
+          { label: 'Components usage' },
+        ]}
+        stripped
+      >
+        <Table.Body>
           {Object.keys(sortedPropertiesUsagesCountAndComponentsName).map(
             property => {
               const lowerCaseProperty = property.toLowerCase()
@@ -234,37 +234,37 @@ const Properties = () => {
               ]
 
               return (
-                <StyledTableRow key={property}>
-                  <Table.BodyCell>
+                <StyledTableRow key={property} id={property}>
+                  <Table.Cell>
                     <Text as="span" variant="bodyStrong">
                       {property}
                     </Text>
-                  </Table.BodyCell>
-                  <Table.BodyCell>
+                  </Table.Cell>
+                  <Table.Cell>
                     <Text as="span" variant="body">
                       {
                         sortedPropertiesUsagesCountAndComponentsName[property]
                           .count
                       }
                     </Text>
-                  </Table.BodyCell>
-                  <Table.BodyCell>
+                  </Table.Cell>
+                  <Table.Cell>
                     <StyledText as="span" variant="body">
                       {propertyValues.join(', ')}
                     </StyledText>
-                  </Table.BodyCell>
-                  <Table.BodyCell>
+                  </Table.Cell>
+                  <Table.Cell>
                     <StyledText as="span" variant="body">
                       {findSimilarProperty.join(', ')}
                     </StyledText>
-                  </Table.BodyCell>
-                  <Table.BodyCell>
+                  </Table.Cell>
+                  <Table.Cell>
                     <StyledText as="span" variant="body">
                       {sortedPropertiesUsagesCountAndComponentsName[
                         property
                       ].components.join(', ')}
                     </StyledText>
-                  </Table.BodyCell>
+                  </Table.Cell>
                 </StyledTableRow>
               )
             },

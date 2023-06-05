@@ -1,2082 +1,614 @@
-import { screen, waitFor } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { createRef, useEffect } from 'react'
-import type { ListRefType } from '..'
-import List from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import { generateData } from '../../../mocks/list'
-import { getUUID } from '../../../utils'
+import { ThemeProvider } from '@emotion/react'
+import { userEvent } from '@storybook/testing-library'
+import { fireEvent, render, screen, within } from '@testing-library/react'
+import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
+import { useState } from 'react'
+import { List } from '..'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../../.jest/helpers'
+import defaultTheme from '../../../theme'
 
-type ListRowData = {
-  id: string
-  name: string
-  description: string
-  department: string
-  reference: string
+type WrapperProps = {
+  theme?: typeof defaultTheme
+  children: ReactNode
 }
 
+type FakeDataType = {
+  id: string
+  columnA: string
+  columnB: string
+  columnC: string
+  columnD: string
+  columnE: string
+  columnF: string
+}
+
+const data: FakeDataType[] = Array.from(
+  { length: 10 },
+  (_, index) => index + 1,
+).map(rowNum => ({
+  id: `${rowNum}`,
+  columnA: `Row ${rowNum} Column 1`,
+  columnB: `Row ${rowNum} Column 2`,
+  columnC: `Row ${rowNum} Column 3`,
+  columnD: `Row ${rowNum} Column 4`,
+  columnE: `Row ${rowNum} Column 5`,
+  columnF: `Row ${rowNum} expandable content`,
+}))
+
+const columns: NonNullable<ComponentProps<typeof List>['columns']> = Array.from(
+  { length: 5 },
+  (_, index) => index + 1,
+).map(columnNumber => ({
+  label: `Column ${columnNumber}`,
+  id: `${columnNumber}`,
+}))
+
+const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+)
+
 describe('List', () => {
-  test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
+  test('Should throw an error', () => {
+    const consoleErrMock = jest.spyOn(console, 'error').mockImplementation()
+    expect(() => {
+      renderWithTheme(
+        data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        )),
+      )
+    }).toThrow()
+    expect(consoleErrMock).toHaveBeenCalled()
+    consoleErrMock.mockRestore()
+  })
 
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row
-                    id={rowData.id}
-                    disabled={rowData.reference === 1}
-                    key={rowData.id}
-                  >
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly with sort', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns.map(column => ({ ...column, sort: 'none' }))}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly variant table', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>actions</list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly with selectable', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly variant explorer', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly with loading', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns} loading>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly multiselect', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-        multiselect
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly with loading with selectable', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns} loading selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly multiselect table', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        variant="table"
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
+  test('Should render correctly with disabled rows', () =>
+    shouldMatchEmotionSnapshot(
+      <List columns={columns}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} disabled id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     ))
-  test('should render correctly multiselect explorer', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
 
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-  test('should render correctly multiselect with condition', () =>
+  test('Should render correctly with expandable rows', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        selectable={data => data.filter(({ name }) => name.includes('1'))}
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
+      <List columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
         )}
       </List>,
     ))
 
-  test('should render correctly multiselect with condition, table variant', () =>
+  test('Should render correctly with selectable then click on first row then uncheck all, then check all', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        multiselect
-        selectable={data => data.filter(({ name }) => name.includes('1'))}
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly multiselect and with click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+            <List.SelectBar data={data} idKey="id">
+              {({ selectedItems }) => <div>{selectedItems.length} items</div>}
+            </List.SelectBar>
+          </List.Row>
+        ))}
       </List>,
       {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[0])
-          expect(screen.getByText('items selected'))
-          await userEvent.click(checkboxes[0])
+        transform: () => {
+          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
-          expect(checkboxes[1].name).toBe('select-rows')
-          expect(checkboxes[1].value).toBe('0')
-          await userEvent.click(checkboxes[1])
-
-          expect(screen.getByText('item selected'))
-
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
+          const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
+          const allCheckbox = checkboxes.find(({ value }) => value === 'all')
+          expect(firstRowCheckbox).toBeInTheDocument()
+          expect(allCheckbox).toBeInTheDocument()
+          if (!firstRowCheckbox) {
+            fail('First checkbox is not defined')
+          }
+          if (!allCheckbox) {
+            fail('Select all checkbox is not defined')
+          }
+          userEvent.click(firstRowCheckbox)
+          expect(firstRowCheckbox).toBeChecked()
+          userEvent.click(firstRowCheckbox)
+          expect(firstRowCheckbox).not.toBeChecked()
+          userEvent.click(firstRowCheckbox)
+          userEvent.click(allCheckbox)
+          expect(firstRowCheckbox).not.toBeChecked()
+          userEvent.click(allCheckbox)
+          expect(firstRowCheckbox).toBeChecked()
         },
       },
     ))
 
-  test('should render correctly multiselect and click indeterminate', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[1])
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-          await userEvent.click(checkboxes[0])
+  test('Should render correctly with sort then click', () => {
+    const LocalControlValue = ({
+      children,
+    }: {
+      children: ({
+        value,
+        setValue,
+      }: {
+        value: {
+          columnIndex?: number
+          order?: 'asc' | 'desc'
+        }
+        setValue: Dispatch<
+          SetStateAction<{
+            columnIndex?: number
+            order?: 'asc' | 'desc'
+          }>
+        >
+      }) => ReactNode
+    }) => {
+      const [value, setValue] = useState(
+        {} as {
+          columnIndex?: number
+          order?: 'asc' | 'desc'
         },
-      },
-    ))
+      )
 
-  test('should render correctly multiselect and with click and not functional SelectBar children', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>Test SelectBar</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[0])
-          await userEvent.click(checkboxes[0])
-          expect(checkboxes[1].name).toBe('select-rows')
-          expect(checkboxes[1].value).toBe('0')
-          await userEvent.click(checkboxes[1])
-          expect(screen.getByText('item selected'))
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-        },
-      },
-    ))
-
-  test('should render correctly multiselect and with sort click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const nameHeader = screen.getByRole('button', {
-            name: 'sort Name',
-          })
-
-          const { parentElement: iconContainer } =
-            screen.getAllByTestId('arrow-up-icon')[0]
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
-          await userEvent.type(nameHeader, '{enter}')
-          await userEvent.type(nameHeader, '{enter}')
-
-          const departmentHeader = screen.getByRole('button', {
-            name: 'sort Department',
-          })
-          await userEvent.click(departmentHeader)
-
-          const referenceHeader = screen.getByRole('button', {
-            name: 'sort Reference',
-          })
-          await userEvent.click(referenceHeader)
-
-          const lastHeader = screen.getByRole('button', {
-            name: 'sort 4',
-          })
-          await userEvent.click(lastHeader)
-          await userEvent.type(lastHeader, '{space}')
-        },
-      },
-    ))
-
-  test('should render correctly multiselect and with custom sort click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: item => (item as ListRowData).name },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const nameHeader = screen.getByRole('button', {
-            name: 'sort Name',
-          })
-          await userEvent.click(nameHeader)
-          await userEvent.click(nameHeader)
-        },
-      },
-    ))
-
-  test('should render correctly multiselect and click indeterminate, table variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[1])
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-          await userEvent.click(checkboxes[0])
-        },
-      },
-    ))
-
-  test('should render correctly multiselect, table variant and with sort click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id} key={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const nameHeader = screen.getByRole('button', {
-            name: 'sort Name',
-          })
-
-          const { parentElement: iconContainer } =
-            screen.getAllByTestId('arrow-up-icon')[0]
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
-          await userEvent.type(nameHeader, '{enter}')
-          await userEvent.type(nameHeader, '{enter}')
-
-          const departmentHeader = screen.getByRole('button', {
-            name: 'sort Department',
-          })
-          await userEvent.click(departmentHeader)
-
-          const referenceHeader = screen.getByRole('button', {
-            name: 'sort Reference',
-          })
-          await userEvent.click(referenceHeader)
-
-          const lastHeader = screen.getByRole('button', {
-            name: 'sort 4',
-          })
-          await userEvent.click(lastHeader)
-          await userEvent.type(lastHeader, '{enter}')
-        },
-      },
-    ))
-  test('should render correctly multiselect, table variant and with click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[0])
-          await userEvent.click(checkboxes[0])
-          expect(checkboxes[1].name).toBe('select-rows')
-          expect(checkboxes[1].value).toBe('0')
-          await userEvent.click(checkboxes[1])
-          expect(screen.getByText('item selected'))
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-        },
-      },
-    ))
-
-  test('should render correctly multiselect and click indeterminate, explorer variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[1])
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-          await userEvent.click(checkboxes[0])
-        },
-      },
-    ))
-
-  test('should render correctly multiselect, explorer variant and with click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name' },
-          { label: 'Description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar>{() => <>Test SelectBar</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          expect(checkboxes[0].value).toBe('all')
-          await userEvent.click(checkboxes[0])
-          await userEvent.click(checkboxes[0])
-          expect(checkboxes[1].name).toBe('select-rows')
-          expect(checkboxes[1].value).toBe('0')
-          await userEvent.click(checkboxes[1])
-          expect(screen.getByText('item selected'))
-          await userEvent.click(checkboxes[2])
-          expect(screen.getByText('items selected'))
-        },
-      },
-    ))
-
-  test('should render correctly multiselect, explorer variant and with sort click', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        multiselect
-        idKey="id"
-        data={[
-          ...generateData(5).reverse(),
-          {
-            department: `Front`,
-            description: `Fake message for row 6`,
-            id: `6`,
-            name: `Scaler 1`,
-            reference: 1,
-          },
-        ]}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const nameHeader = screen.getByRole('button', {
-            name: 'sort Name',
-          })
-
-          const { parentElement: iconContainer } =
-            screen.getAllByTestId('arrow-up-icon')[0]
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('none')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('ascending')
-          await userEvent.click(nameHeader)
-          expect(iconContainer?.getAttribute('aria-sort')).toBe('descending')
-          await userEvent.type(nameHeader, '{enter}')
-          await userEvent.type(nameHeader, '{enter}')
-
-          const departmentHeader = screen.getByRole('button', {
-            name: 'sort Department',
-          })
-          await userEvent.click(departmentHeader)
-
-          const referenceHeader = screen.getByRole('button', {
-            name: 'sort Reference',
-          })
-          await userEvent.click(referenceHeader)
-
-          const lastHeader = screen.getByRole('button', {
-            name: 'sort 4',
-          })
-          await userEvent.click(lastHeader)
-          await userEvent.type(lastHeader, '{enter}')
-        },
-      },
-    ))
-
-  test('should render correctly with isLoading', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        isLoading
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with ExpendableContent', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row
-                    id={rowData.id}
-                    expandableClassName="expandableClass"
-                  >
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const firstRow = screen.getByTestId<HTMLDetailsElement>('row-0')
-          expect(firstRow.open).toBeFalsy()
-
-          const { firstElementChild } = firstRow
-          if (!firstElementChild) throw new Error('No first child')
-
-          await userEvent.click(firstElementChild)
-          expect(firstRow.open).toBeTruthy()
-          await userEvent.click(firstElementChild)
-          expect(firstRow.open).toBeFalsy()
-        },
-      },
-    ))
-
-  test('should render correctly with autoClose and ExpendableContent', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        autoClose
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      ExpendableContent {rowData.id}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          const firstRow = screen.getByTestId<HTMLDetailsElement>('row-0')
-          const secondRow = screen.getByTestId<HTMLDetailsElement>('row-1')
-          expect(firstRow.open).toBeFalsy()
-          expect(secondRow.open).toBeFalsy()
-          // eslint-disable-next-line testing-library/no-node-access
-          await userEvent.click(firstRow.firstElementChild as Element)
-          expect(firstRow.open).toBeTruthy()
-          expect(secondRow.open).toBeFalsy()
-          // eslint-disable-next-line testing-library/no-node-access
-          await userEvent.click(secondRow.firstElementChild as Element)
-          expect(firstRow.open).toBeFalsy()
-          expect(secondRow.open).toBeTruthy()
-        },
-      },
-    ))
-  test('should render correctly with unusual props', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="id"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row
-                    id={rowData.id}
-                    alert={rowData.id === '1'}
-                    locked={rowData.id === '2'}
-                  >
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-            <list.SelectBar text="Hello">{() => <>Test</>}</list.SelectBar>
-          </>
-        )}
-      </List>,
-      {
-        transform: async () => {
-          expect(screen.getByTestId('row-0')).toBeInTheDocument()
-          const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox', {
-            hidden: true,
-          })
-          expect(checkboxes[0].name).toBe('select-rows')
-          await userEvent.click(checkboxes[0])
-          await userEvent.click(checkboxes[0])
-        },
-      },
-    ))
-
-  test('should render correctly with no data', () =>
-    shouldMatchEmotionSnapshot(
-      <List<{
-        id: string
-        name: string
-        description: string
-        department: string
-        reference: string
-      }>
-        emptyListComponent="Test"
-        multiselect
-        idKey="id"
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with empty data', () =>
-    shouldMatchEmotionSnapshot(
-      <List<ReturnType<typeof generateData>[0]>
-        multiselect
-        idKey="id"
-        data={[]}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with bad idKey', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        idKey="badKey"
-        data={generateData(5)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with defaultSort', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        data={generateData(5)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with alert', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row alert id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with animated', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row animated id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                    <list.ExpendableContent>
-                      {() => <>ExpendableContent {rowData.id}</>}
-                    </list.ExpendableContent>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with animated, table variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row animated id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with disabled', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row disabled id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with disabled', () => {
-    const data = generateData(2)
-    const ref = createRef<ListRefType<(typeof data)[number]>>()
+      return <div>{children({ value, setValue })}</div>
+    }
 
     return shouldMatchEmotionSnapshot(
-      <List
-        ref={ref}
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row disabled id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
+      <LocalControlValue>
+        {({ value, setValue }) => (
+          <List
+            columns={columns.map((column, index) => ({
+              ...column,
+              isOrdered: value.columnIndex === index,
+              orderDirection: value.order,
+              onOrder: newOrder => {
+                setValue({
+                  columnIndex: index,
+                  order: newOrder,
+                })
+              },
+            }))}
+          >
+            {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+              <List.Row key={id} id={id}>
+                <List.Cell>{columnA}</List.Cell>
+                <List.Cell>{columnB}</List.Cell>
+                <List.Cell>{columnC}</List.Cell>
+                <List.Cell>{columnD}</List.Cell>
+                <List.Cell>{columnE}</List.Cell>
+              </List.Row>
+            ))}
+          </List>
         )}
+      </LocalControlValue>,
+      {
+        transform: () => {
+          const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
+            'button',
+            {
+              queryFallbacks: true,
+            },
+          )
+          expect(listHeaderCells).toHaveLength(columns.length)
+
+          expect(listHeaderCells).toHaveLength(columns.length)
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          userEvent.click(listHeaderCells[0])
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
+          fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
+            'descending',
+          )
+          fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
+          userEvent.click(listHeaderCells[1])
+          expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
+          expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
+        },
+      },
+    )
+  })
+
+  test('Should render correctly with selectable but then change theme', () => {
+    const { rerender } = render(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+      {
+        wrapper: Wrapper,
+      },
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
       </List>,
     )
   })
 
-  test('should render correctly with isHoverable', () =>
+  test('Should render correctly with isExpandable rows then click', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        data={generateData(3)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row isHoverable id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        data={generateData(3)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row isHoverable id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted, table variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted, explorer variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted and selected', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        multiselect
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                      selected: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted and selected, table variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="table"
-        multiselect
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                      selected: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with highlighted and selected, explorer variant', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        variant="explorer"
-        data={generateData(2)}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData, setRowState, rowState } = props
-                useEffect(() => {
-                  if (rowData.id.includes('1') && !rowState.highlighted) {
-                    setRowState(rowData.id, {
-                      highlighted: true,
-                      selected: true,
-                    })
-                  }
-                }, [rowData.id, setRowState, rowState])
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with custom loader', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        data={generateData(2)}
-        isLoading
-        customLoader={<div>Loading....</div>}
-        columns={[
-          { defaultSort: 'desc', label: 'Name', sort: 'name' },
-          { label: 'Description', sort: 'description', width: '15%' },
-          { label: 'Department', width: '64px' },
-          { label: 'Reference', sort: 'reference', width: '64px' },
-          { justifyContent: 'center', padding: '2px', width: '128px' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                    <list.Cell>{rowData.reference}</list.Cell>
-                    <list.Cell>actions</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with pagination', async () => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.4155913669444804)
-    await shouldMatchEmotionSnapshot(
-      <List
-        perPage={5}
-        onLoadPage={({ perPage }) =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              const newData = generateData(perPage, getUUID())
-              resolve(newData)
-            }, 300)
-          })
-        }
-        multiselect
-        idKey="id"
-        notSelectableText="Can't select"
-        data={generateData(20)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description' },
-          { label: 'Department' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    )
-    jest.spyOn(global.Math, 'random').mockRestore()
-  })
-
-  test('should render correctly with pagination and bad idKey', () =>
-    shouldMatchEmotionSnapshot(
-      <List
-        perPage={5}
-        idKey="badKey"
-        data={generateData(20)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description' },
-          { label: 'Department' },
-        ]}
-        customLoader={<div>Loading...</div>}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
-        )}
-      </List>,
-    ))
-
-  test('should render correctly with pagination and page loading', () =>
-    shouldMatchEmotionSnapshot(
-      <List<ReturnType<typeof generateData>[0]>
-        perPage={5}
-        pageCount={10}
-        onLoadPage={({ perPage }) =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              const newData = generateData(perPage, getUUID())
-              resolve(newData)
-            }, 300)
-          })
-        }
-        idKey="id"
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description' },
-          { label: 'Department' },
-        ]}
-        customLoader={<div>Loading...</div>}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
-
-                return (
-                  <list.Row id={rowData.id}>
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
+      <List columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
         )}
       </List>,
       {
-        transform: async () => {
-          await screen.findByRole('button', {
-            name: 'sort Name',
-          })
-          const nameHeader = screen.getByRole<HTMLButtonElement>('button', {
-            name: 'sort Name',
-          })
-
-          await userEvent.click(nameHeader)
-          await waitFor(() =>
-            expect(
-              screen.getByRole<HTMLButtonElement>('button', {
-                name: 'Next',
-              }).disabled,
-            ).toBe(false),
-          )
-          await userEvent.click(
-            screen.getByRole('button', {
-              name: 'Next',
-            }),
-          )
+        transform: () => {
+          userEvent.click(screen.getAllByRole('button')[0])
+          userEvent.click(screen.getAllByRole('button')[0])
         },
       },
     ))
 
-  test('should render correctly with animation on Row', () =>
+  test('Should render correctly with preventClick cell then click but event is prevented', () =>
     shouldMatchEmotionSnapshot(
-      <List
-        idKey="id"
-        data={generateData(1)}
-        columns={[
-          { label: 'Name', sort: 'name' },
-          { label: 'Description' },
-          { label: 'Department' },
-        ]}
-      >
-        {list => (
-          <>
-            <list.Header />
-            <list.Body>
-              {props => {
-                const { rowData } = props
+      <List columns={columns}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell preventClick>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+      {
+        transform: () => {
+          const cell = screen.getByText(data[0].columnE)
+          userEvent.click(cell)
+        },
+      },
+    ))
 
-                return (
-                  <list.Row
-                    id={rowData.id}
-                    animated
-                    animation="pulse"
-                    animationDuration={700}
-                  >
-                    <list.Cell>{rowData.name}</list.Cell>
-                    <list.Cell>{rowData.description}</list.Cell>
-                    <list.Cell>{rowData.department}</list.Cell>
-                  </list.Row>
-                )
-              }}
-            </list.Body>
-          </>
+  test('Should render correctly with isExpandable and autoClose rows then click', () =>
+    shouldMatchEmotionSnapshot(
+      <List autoCollapse columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
         )}
       </List>,
+      {
+        transform: () => {
+          const buttons = screen.getAllByRole('button')
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[0])
+          userEvent.click(buttons[1])
+        },
+      },
+    ))
+
+  test('Should render correctly with bad sort value', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        // @ts-expect-error Wrong value used
+        columns={columns.map(column => ({
+          ...column,
+          orderDirection: 'badValue',
+        }))}
+      >
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
+
+  test('Should render correctly with isSelectable and selectedIds but then disable/enable them', () => {
+    const selectedIds = ['1']
+    const { rerender } = render(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+      {
+        wrapper: Wrapper,
+      },
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row disabled={id === selectedIds[0]} key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row selectDisabled={id === selectedIds[0]} key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    )
+  })
+
+  test('Should unregister expandable row if unmount', () => {
+    const { rerender } = render(
+      <List columns={columns}>
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id} expandable="test">
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+      {
+        wrapper: Wrapper,
+      },
+    )
+    rerender(
+      <List columns={columns} selectable>
+        {data
+          .filter((_, index) => index !== 0)
+          .map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <List.Row key={id} id={id} expandable="test">
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ))}
+      </List>,
+    )
+  })
+
+  test('Should expand a row by pressing Space', () =>
+    shouldMatchEmotionSnapshot(
+      <List autoCollapse columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
+        )}
+      </List>,
+      {
+        transform: () => {
+          const rows = screen.getAllByRole('button')
+          const firstRow = rows[0]
+          expect(firstRow).toHaveAttribute('tabIndex', '0')
+          // Testing expanding by pressing space key
+          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+          fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+          // Testing collapsing by pressing space key
+          fireEvent.keyDown(firstRow, { charCode: 32, code: 'Space', key: ' ' })
+          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+          // Testing another key
+          fireEvent.keyDown(firstRow, { charCode: 65, code: 'KeyA', key: 'a' })
+          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+        },
+      },
+    ))
+
+  test('Should not collapse a row by clicking on expandable content', () =>
+    shouldMatchEmotionSnapshot(
+      <List autoCollapse columns={columns}>
+        {data.map(
+          ({ id, columnA, columnB, columnC, columnD, columnE, columnF }) => (
+            <List.Row key={id} id={id} expandable={columnF}>
+              <List.Cell>{columnA}</List.Cell>
+              <List.Cell>{columnB}</List.Cell>
+              <List.Cell>{columnC}</List.Cell>
+              <List.Cell>{columnD}</List.Cell>
+              <List.Cell>{columnE}</List.Cell>
+            </List.Row>
+          ),
+        )}
+      </List>,
+      {
+        transform: async () => {
+          const rows = screen.getAllByRole('button')
+          const firstRow = rows[0]
+          expect(firstRow).toHaveAttribute('aria-expanded', 'false')
+          fireEvent.click(firstRow)
+          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+          const expandableContent = await within(firstRow).findByText(
+            'Row 1 expandable content',
+          )
+          fireEvent.click(expandableContent)
+          expect(firstRow).toHaveAttribute('aria-expanded', 'true')
+        },
+      },
     ))
 })

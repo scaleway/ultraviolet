@@ -1,64 +1,45 @@
 import styled from '@emotion/styled'
-import type { HTMLAttributes } from 'react'
-import { useListContext } from './context'
-import type { ListColumn } from './types'
+import type { ForwardedRef, MouseEventHandler, ReactNode } from 'react'
+import { forwardRef } from 'react'
 
-const StyledCell = styled('div', {
-  shouldForwardProp: prop => !['multiselect', 'columns'].includes(prop),
-})`
+const StyledCell = styled.div`
   display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  text-overflow: ellipsis;
-
-  ${({
-    columns,
-    multiselect,
-  }: {
-    columns: ListColumn<Record<string, unknown>>[]
-    multiselect?: boolean
-  }) =>
-    columns.map(
-      (column, index) =>
-        `&:nth-of-type(${index + (multiselect ? 2 : 1)}) {
-              align-items: ${column.alignItems ?? 'center'};
-              ${column.width ? `width :${column.width};` : 'flex : 1;'}
-              ${column.padding ? `padding: ${column.padding};` : ''}
-              ${
-                column.justifyContent
-                  ? `justify-content: ${column.justifyContent};`
-                  : ''
-              }}`,
-    )}
+  justify-content: center;
+  flex-direction: column;
+  min-height: 60px;
 `
 
-const Cell = ({
-  children,
-  className,
-  role,
-  'aria-label': ariaLabel,
-  tabIndex,
-  onClick,
-  onKeyPress,
-  style,
-}: HTMLAttributes<HTMLDivElement>) => {
-  const { columns, multiselect } = useListContext()
-
-  return (
-    <StyledCell
-      aria-label={ariaLabel}
-      tabIndex={tabIndex}
-      onClick={onClick}
-      onKeyPress={onKeyPress}
-      role={role}
-      className={className}
-      columns={columns}
-      multiselect={multiselect}
-      style={style}
-    >
-      {children}
-    </StyledCell>
-  )
+type CellProps = {
+  children?: ReactNode
+  className?: string
+  /**
+   *  Use this if you want to prevent onClick to be handled by parents (Like when you have an expandable content)
+   * */
+  preventClick?: boolean
+  'data-testid'?: string
 }
 
-export default Cell
+export const Cell = forwardRef(
+  (
+    { children, className, preventClick, 'data-testid': dataTestid }: CellProps,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => {
+    const handleClick: MouseEventHandler<HTMLDivElement> = event => {
+      if (preventClick) {
+        event.stopPropagation()
+      }
+    }
+
+    return (
+      <StyledCell
+        ref={ref}
+        role="cell"
+        className={className}
+        onClick={handleClick}
+        data-testid={dataTestid}
+      >
+        {children}
+      </StyledCell>
+    )
+  },
+)

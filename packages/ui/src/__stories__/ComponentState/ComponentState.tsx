@@ -107,16 +107,16 @@ const ComponentState = () => (
           </Text>
           : {componentsNames.length}
         </Text>
-        <Table>
-          <Table.Head>
-            <Table.Row>
-              <Table.HeadCell>Name</Table.HeadCell>
-              <Table.HeadCell>Category</Table.HeadCell>
-              <Table.HeadCell>State</Table.HeadCell>
-            </Table.Row>
-          </Table.Head>
-          <Table.Body striped>
-            {modules.map(module => {
+        <Table
+          columns={[
+            { label: 'Name' },
+            { label: 'Category' },
+            { label: 'State' },
+          ]}
+          stripped
+        >
+          <Table.Body>
+            {modules?.map(module => {
               if (module.status === 'fulfilled') {
                 const desctructuredName: string[] =
                   module.value.default.title
@@ -135,8 +135,11 @@ const ComponentState = () => (
                 )
 
                 return (
-                  <Table.Row key={module.value.default.title}>
-                    <Table.BodyCell>
+                  <Table.Row
+                    key={module.value.default.title}
+                    id={module.value.default.title}
+                  >
+                    <Table.Cell>
                       <Text as="span" variant="bodyStrong">
                         <Button
                           onClick={linkTo(module.value.default.title)}
@@ -145,17 +148,17 @@ const ComponentState = () => (
                           {componentName}
                         </Button>
                       </Text>
-                    </Table.BodyCell>
-                    <Table.BodyCell>
+                    </Table.Cell>
+                    <Table.Cell>
                       <Text as="span" variant="body">
                         {componentCategory}
                       </Text>
-                    </Table.BodyCell>
-                    <Table.BodyCell>
+                    </Table.Cell>
+                    <Table.Cell>
                       <Text as="span" variant="body">
                         {componentState}
                       </Text>
-                    </Table.BodyCell>
+                    </Table.Cell>
                   </Table.Row>
                 )
               }

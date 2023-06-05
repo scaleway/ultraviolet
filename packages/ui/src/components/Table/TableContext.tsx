@@ -143,7 +143,7 @@ export const TableProvider = ({
 export const useTableContext = () => {
   const context = useContext(TableContext)
   if (!context) {
-    throw new Error('useTableContext should be used inside a TableV2 component')
+    throw new Error('useTableContext should be used inside a Table component')
   }
 
   return context
