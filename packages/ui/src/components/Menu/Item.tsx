@@ -4,96 +4,79 @@ import type { MouseEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Tooltip } from '../Tooltip'
 
-const variantStyle = {
-  danger: (theme: Theme) => `
-    color: ${theme.colors.danger.text};
-    &:hover,
-    &:focus {
-      color: ${theme.colors.danger.textHover};
-      svg {
-        fill: ${theme.colors.danger.textHover};
-      }
-    }
-    svg {
-      fill: ${theme.colors.danger.text};
-    }
-  `,
-  nav: (theme: Theme) => `
-    font-size: ${theme.typography.body.fontSize};
-    line-height: ${theme.typography.body.lineHeight};
-    color: ${theme.colors.neutral.textWeak};
-    &:hover,
-    &:focus {
-      color: ${theme.colors.primary.text};
-      svg {
-        fill: ${theme.colors.primary.text};
-      }
-    }
-  `,
-} as const
+type MenuItemSentiment = 'neutral' | 'danger'
 
-const StyledItem = styled('button', {
-  shouldForwardProp: prop => !['borderless', 'itemVariant'].includes(prop),
-})<{
-  borderless?: boolean
-  disabled?: boolean
-  itemVariant?: keyof typeof variantStyle
-}>`
+const itemCoreStyle = ({
+  theme,
+  borderless,
+  sentiment,
+  disabled,
+}: {
+  theme: Theme
+  borderless: boolean
+  sentiment: MenuItemSentiment
+  disabled: boolean
+}) => `
   display: inline-block;
-  font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
-  line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
+  font-size: ${theme.typography.bodySmall.fontSize};
+  line-height: ${theme.typography.bodySmall.lineHeight};
   font-weight: inherit;
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  color: ${({ theme }) => theme.colors.neutral.text};
-  border: 0;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral.border};
+  padding: ${`${theme.space['0.5']} ${theme.space['1']}`};
+  border: none;
+  ${
+    borderless ? '' : `border-bottom: 1px solid ${theme.colors.neutral.border};`
+  }
   cursor: pointer;
-  transition: color 300ms;
   min-width: 110px;
-  background-color: transparent;
-  border-radius: ${({ theme }) => theme.radii.none};
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colors.primary.textHover};
-    svg {
-      transition: fill 300ms;
-      fill: ${({ theme }) => theme.colors.primary.textHover};
-    }
+
+  color: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
+  svg {
+    fill: ${theme.colors[sentiment][disabled ? 'textDisabled' : 'text']};
   }
 
-  &:last-child {
-    border-bottom: 0;
-    border-radius: 0 0
-      ${({ theme }) => ` ${theme.radii.default} ${theme.radii.default}`};
-  }
-
-  ${({ itemVariant, theme }) =>
-    itemVariant ? variantStyle[itemVariant]?.(theme) : null}
-
-  ${({ disabled, theme }) =>
+  ${
     disabled
       ? `
-    cursor: not-allowed;
-    color: ${theme.colors.neutral.textDisabled};
-
-    &:hover,
-    &:focus {
-      color: ${theme.colors.neutral.textHover};
-      background-color: ${theme.colors.neutral.backgroundWeak};
-      svg {
-        fill: ${theme.colors.neutral.textHover};
-      }
-    }
+        cursor: not-allowed;
+      `
+      : `
+          &:hover,
+          &:focus {
+            color: ${theme.colors[sentiment].textHover};
+            svg {
+              fill: ${theme.colors[sentiment].textHover};
+            }
+          }`
+  }
   `
-      : null}
 
-  ${({ borderless }) => (borderless ? `border: 0;` : null)}
+const StyledItem = styled('button', {
+  shouldForwardProp: prop => !['borderless', 'sentiment'].includes(prop),
+})<{
+  borderless: boolean
+  disabled: boolean
+  sentiment: MenuItemSentiment
+}>`
+  ${({ theme, borderless, sentiment, disabled }) =>
+    itemCoreStyle({ theme, borderless, sentiment, disabled })}
+  background: none;
 `
-const StyledLinkItem = styled(StyledItem)`
-  text-decoration: none;
-`.withComponent('a')
 
-type VariantItem = keyof typeof variantStyle
+const StyledLinkItem = styled('a', {
+  shouldForwardProp: prop => !['borderless', 'sentiment'].includes(prop),
+})<{
+  borderless: boolean
+  disabled: boolean
+  sentiment: MenuItemSentiment
+}>`
+  ${({ theme, borderless, sentiment, disabled }) =>
+    itemCoreStyle({ theme, borderless, sentiment, disabled })}
+  text-decoration: none;
+
+  &:focus {
+    text-decoration: none;
+  }
+`
 
 type ItemProps = {
   href?: string | undefined
@@ -106,7 +89,12 @@ type ItemProps = {
   children: ReactNode
   onClick?: MouseEventHandler<HTMLElement> | undefined
   borderless?: boolean
-  variant?: VariantItem
+  /**
+   * @deprecated : use `sentiment` prop instead
+   */
+  variant?: MenuItemSentiment
+  sentiment?: MenuItemSentiment
+  'data-testid'?: string
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
@@ -115,27 +103,35 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       borderless = false,
       disabled = false,
       onClick,
-      variant: itemVariant,
+      variant,
+      sentiment,
       href,
       children,
       tooltip,
       className,
+      'data-testid': dataTestId,
     },
     ref,
   ) => {
-    if (href) {
+    const finalSentiment = sentiment ?? variant ?? 'neutral'
+
+    if (href && !disabled) {
       return (
         <Tooltip text={tooltip}>
           <StyledLinkItem
+            borderless
             href={href}
-            // @ts-expect-error: somehow refuse cast HTMLAnchorElement
-            ref={ref}
-            // @ts-expect-error: somehow refuse cast HTMLAnchorElement
-            onClick={onClick as HTMLAnchorElement}
+            ref={ref as Ref<HTMLAnchorElement>}
+            onClick={
+              disabled
+                ? undefined
+                : (onClick as MouseEventHandler<HTMLAnchorElement>)
+            }
             role="menuitem"
             disabled={disabled}
-            itemVariant={itemVariant}
+            sentiment={finalSentiment}
             className={className}
+            data-testid={dataTestId}
           >
             {children}
           </StyledLinkItem>
@@ -152,8 +148,9 @@ const Item = forwardRef<HTMLElement, ItemProps>(
           disabled={disabled}
           onClick={onClick}
           borderless={borderless}
-          itemVariant={itemVariant}
+          sentiment={finalSentiment}
           className={className}
+          data-testid={dataTestId}
         >
           {children}
         </StyledItem>

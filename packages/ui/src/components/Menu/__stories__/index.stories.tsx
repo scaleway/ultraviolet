@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Menu } from '..'
 
 export default {
@@ -22,11 +22,10 @@ export default {
   subcomponents: {
     'Menu.Item': Menu.Item,
   },
-} as ComponentMeta<typeof Menu>
+} as Meta<typeof Menu>
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Borderless } from './Borderless.stories'
-export { ChildrenProps } from './ChildrenProps.stories'
 export { WithModal } from './WithModal.stories'
 export { FunctionDisclosure } from './FunctionDisclosure.stories'
