@@ -72,7 +72,7 @@ const StyledLinkItem = styled('a', {
   ${({ theme, borderless, sentiment, disabled }) =>
     itemCoreStyle({ theme, borderless, sentiment, disabled })}
   text-decoration: none;
-  
+
   &:focus {
     text-decoration: none;
   }
@@ -94,6 +94,7 @@ type ItemProps = {
    */
   variant?: MenuItemSentiment
   sentiment?: MenuItemSentiment
+  'data-testid'?: string
 }
 
 const Item = forwardRef<HTMLElement, ItemProps>(
@@ -108,6 +109,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       children,
       tooltip,
       className,
+      'data-testid': dataTestId,
     },
     ref,
   ) => {
@@ -129,6 +131,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             disabled={disabled}
             sentiment={finalSentiment}
             className={className}
+            data-testid={dataTestId}
           >
             {children}
           </StyledLinkItem>
@@ -147,6 +150,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
           borderless={borderless}
           sentiment={finalSentiment}
           className={className}
+          data-testid={dataTestId}
         >
           {children}
         </StyledItem>

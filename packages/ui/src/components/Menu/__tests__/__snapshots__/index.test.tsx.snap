@@ -577,7 +577,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   border-bottom-color: transparent;
 }
 
-.cache-1fmo3nd-StyledLinkItem {
+.cache-15mzmmw-StyledLinkItem {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
@@ -591,18 +591,23 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
   text-decoration: none;
 }
 
-.cache-1fmo3nd-StyledLinkItem svg {
+.cache-15mzmmw-StyledLinkItem svg {
   fill: #4a4f62;
 }
 
-.cache-1fmo3nd-StyledLinkItem:hover,
-.cache-1fmo3nd-StyledLinkItem:focus {
+.cache-15mzmmw-StyledLinkItem:hover,
+.cache-15mzmmw-StyledLinkItem:focus {
   color: #4a4f62;
 }
 
-.cache-1fmo3nd-StyledLinkItem:hover svg,
-.cache-1fmo3nd-StyledLinkItem:focus svg {
+.cache-15mzmmw-StyledLinkItem:hover svg,
+.cache-15mzmmw-StyledLinkItem:focus svg {
   fill: #4a4f62;
+}
+
+.cache-15mzmmw-StyledLinkItem:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -622,7 +627,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
         role="menu"
       >
         <a
-          class="cache-1fmo3nd-StyledLinkItem epxin6a0"
+          class="cache-15mzmmw-StyledLinkItem epxin6a0"
           href="/link"
           role="menuitem"
         >
