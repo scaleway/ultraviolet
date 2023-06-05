@@ -217,8 +217,8 @@ const StyledInput = styled('input', {
   outline: none;
   position: relative;
   width: 100%;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: ${({ theme }) => theme.space['1']};
+  padding-right: ${({ theme }) => theme.space['1']};
   padding-top: 14px;
   font-size: 16px;
   line-height: 24px;
@@ -285,17 +285,19 @@ const StyledInput = styled('input', {
     resize: ${resizable === false ? 'none' : 'vertical'};
   `}
 
-  ${({ multiline, hasLabel }) =>
+  ${({ multiline, hasLabel, theme }) =>
     multiline &&
     !hasLabel &&
     `
-    padding-top: 8px;
+    padding-top: ${theme.space['1']};
   `}
 
   ${({ hasRightElement, rightElementPadding, theme }) =>
     hasRightElement &&
     `
-    padding-right: ${rightElementPadding || theme.space['6']}px;
+    padding-right: ${
+      rightElementPadding ? `${rightElementPadding}px` : theme.space['6']
+    };
   `}
 `
 
