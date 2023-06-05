@@ -289,14 +289,14 @@ const StyledInput = styled('input', {
     multiline &&
     !hasLabel &&
     `
-    padding-top: ${theme.space[1]};
+    padding-top: ${theme.space['1']};
   `}
 
   ${({ hasRightElement, rightElementPadding, theme }) =>
     hasRightElement &&
     `
     padding-right: ${
-      rightElementPadding ? `${rightElementPadding}px` : theme.space[6]
+      rightElementPadding ? `${rightElementPadding}px` : theme.space['6']
     };
   `}
 `
