@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.251.0
+
+### Minor Changes
+
+- [#2590](https://github.com/scaleway/scaleway-ui/pull/2590) [`8cc6c1e8`](https://github.com/scaleway/scaleway-ui/commit/8cc6c1e80b15b0bb69a4b49600860eb219fbfc84) Thanks [@matthprost](https://github.com/matthprost)! - ListV2, PaginationV2 and TableV2 have been renamed into List, Pagination and Table
+
 ## 0.250.0
 
 ### Minor Changes
