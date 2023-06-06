@@ -175,7 +175,7 @@ type StyledInputProps = {
   fillAvailable?: boolean
   hasLabel?: boolean
   hasRightElement?: boolean
-  rightElementPadding?: number
+  rightElementPadding: number
   isPlaceholderVisible?: boolean
   multiline?: boolean
   resizable?: boolean
@@ -292,12 +292,10 @@ const StyledInput = styled('input', {
     padding-top: ${theme.space['1']};
   `}
 
-  ${({ hasRightElement, rightElementPadding, theme }) =>
+  ${({ hasRightElement, rightElementPadding }) =>
     hasRightElement &&
     `
-    padding-right: ${
-      rightElementPadding ? `${rightElementPadding}px` : theme.space['6']
-    };
+    padding-right: ${rightElementPadding}px
   `}
 `
 
@@ -468,11 +466,6 @@ export const TextInput = forwardRef<
       unit
     )
 
-    // Set the right padding to 22px when the TextInput is required. 22px allows
-    // keeping the required star icon centered, since it is smaller than valid or
-    // unit icons which have a right padding of 32px.
-    const rightElementPadding = required ? 22 : undefined
-
     const getType = () => {
       if (isPassToggleable) {
         return passwordVisible || generated ? 'text' : 'password'
@@ -550,6 +543,11 @@ export const TextInput = forwardRef<
       valid,
       dataTestId,
     ])
+
+    const rightElementPadding =
+      rightComponentsArray.length * 32 +
+      (required ? 32 : 0) +
+      (unit || hasRightElement ? 8 : 0)
 
     return (
       <div className={className}>
