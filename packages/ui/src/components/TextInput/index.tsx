@@ -174,8 +174,7 @@ type StyledInputProps = {
   error?: boolean
   fillAvailable?: boolean
   hasLabel?: boolean
-  hasRightElement?: boolean
-  rightElementPadding: number
+  paddingRightFactor: number
   isPlaceholderVisible?: boolean
   multiline?: boolean
   resizable?: boolean
@@ -197,12 +196,11 @@ const StyledInput = styled('input', {
       'error',
       'fillAvailable',
       'hasLabel',
-      'hasRightElement',
       'isPlaceholderVisible',
       'multiline',
       'resizable',
       'inputSize',
-      'rightElementPadding',
+      'paddingRightFactor',
     ].includes(prop),
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -292,10 +290,10 @@ const StyledInput = styled('input', {
     padding-top: ${theme.space['1']};
   `}
 
-  ${({ hasRightElement, rightElementPadding }) =>
-    hasRightElement &&
+  ${({ paddingRightFactor, theme }) =>
+    paddingRightFactor > 0 &&
     `
-    padding-right: ${rightElementPadding}px
+    padding-right: calc(${paddingRightFactor} * ${theme.space['4']});
   `}
 `
 
@@ -544,10 +542,11 @@ export const TextInput = forwardRef<
       dataTestId,
     ])
 
-    const rightElementPadding =
-      rightComponentsArray.length * 32 +
-      (required ? 32 : 0) +
-      (unit || hasRightElement ? 8 : 0)
+    const showSeparator = (required && hasRightElement) || unit
+    const paddingRightFactor =
+      rightComponentsArray.length +
+      (required ? 1 : 0) +
+      (showSeparator ? 0.5 : 0)
 
     return (
       <div className={className}>
@@ -566,8 +565,7 @@ export const TextInput = forwardRef<
             error={!!error}
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
-            hasRightElement={hasRightElement}
-            rightElementPadding={rightElementPadding}
+            paddingRightFactor={paddingRightFactor}
             id={id}
             inputSize={inputSize}
             isPlaceholderVisible={isPlaceholderVisible}
@@ -612,9 +610,7 @@ export const TextInput = forwardRef<
               {required ? (
                 <Icon name="asterisk" color="danger" size={10} />
               ) : null}
-              {(required && hasRightElement) || unit ? (
-                <StyledSeparator direction="vertical" />
-              ) : null}
+              {showSeparator ? <StyledSeparator direction="vertical" /> : null}
               {rightComponentsArray.length > 0 ? (
                 <RightComponent
                   justifyContent="center"
