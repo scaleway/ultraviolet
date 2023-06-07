@@ -58,6 +58,8 @@ export const NumberInputField = ({
     validate,
     value,
     defaultValue: 0,
+    max: maxValue,
+    min: minValue,
   })
 
   return (
