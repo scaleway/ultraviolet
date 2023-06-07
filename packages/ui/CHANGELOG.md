@@ -1,5 +1,21 @@
 # Change Log
 
+## 0.251.1
+
+### Patch Changes
+
+- [#2597](https://github.com/scaleway/scaleway-ui/pull/2597) [`0d65713f`](https://github.com/scaleway/scaleway-ui/commit/0d65713f363f15bb1aae020212a1ef782044471e) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Button: fix xsmall specs (gap)
+
+- [#2601](https://github.com/scaleway/scaleway-ui/pull/2601) [`4125401f`](https://github.com/scaleway/scaleway-ui/commit/4125401fc1ec5174e53ff2e86cad98c0a7ba7867) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@emotion/react` to `11.11.1`.
+
+- [#2584](https://github.com/scaleway/scaleway-ui/pull/2584) [`8f24c560`](https://github.com/scaleway/scaleway-ui/commit/8f24c560e6382981268de77ef85002d22525171e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.0`.
+  Updated dependency `@babel/runtime` to `7.22.0`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.0`.
+  Updated dependency `@babel/preset-env` to `7.22.0`.
+  Updated dependency `@babel/preset-react` to `7.22.0`.
+
+- [#2596](https://github.com/scaleway/scaleway-ui/pull/2596) [`85059961`](https://github.com/scaleway/scaleway-ui/commit/85059961fe38be85875ebec0220aa7ab5619b072) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Fix right padding on TextInput when having multiple right components (unit, valid, required...)
+
 ## 0.251.0
 
 ### Minor Changes
