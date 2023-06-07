@@ -7,7 +7,7 @@ import { Tooltip } from '../Tooltip'
 const HEIGHT = '10px'
 const WIDTH = '10px'
 
-const variants = {
+const sentiments = {
   danger: ({ theme }: { theme: Theme }) => `
       background-color: ${theme.colors.danger.backgroundStrong};
     `,
@@ -24,16 +24,16 @@ const variants = {
       background-color: ${theme.colors.warning.backgroundStrong};
     `,
 } as const
-type StatusVariant = keyof typeof variants
-export const statusVariants = Object.keys(variants) as StatusVariant[]
+type StatusSentiment = keyof typeof sentiments
+export const statusSentiments = Object.keys(sentiments) as StatusSentiment[]
 
-type StyledCircleProps = Pick<StatusProps, 'variant'>
+type StyledCircleProps = Pick<StatusProps, 'sentiment'>
 const StyledCircle = styled.span<StyledCircleProps>`
   display: inline-block;
   width: ${WIDTH};
   height: ${HEIGHT};
   border-radius: ${({ theme }) => theme.radii.circle};
-  ${({ variant }) => variants[variant]};
+  ${({ sentiment }) => sentiments[sentiment]};
 `
 
 const StyledAnimatedCircle = styled.span<StyledCircleProps>`
@@ -43,7 +43,7 @@ const StyledAnimatedCircle = styled.span<StyledCircleProps>`
   opacity: 0.75;
   border-radius: ${({ theme }) => theme.radii.circle};
   animation: ${ping} 1.1s cubic-bezier(0, 0, 0.2, 1) infinite;
-  ${({ variant }) => variants[variant]};
+  ${({ sentiment }) => sentiments[sentiment]};
 `
 
 const Container = styled.span`
@@ -55,7 +55,7 @@ const Container = styled.span`
 type StatusProps = {
   animated?: boolean
   className?: string
-  variant: StatusVariant
+  sentiment: StatusSentiment
   tooltip?: string
   'data-testid'?: string
 }
@@ -64,13 +64,13 @@ export const Status = ({
   animated = false,
   className,
   tooltip,
-  variant,
+  sentiment,
   'data-testid': dataTestId,
 }: StatusProps): JSX.Element => (
   <Tooltip text={tooltip}>
     <Container className={className} data-testid={dataTestId}>
-      {animated ? <StyledAnimatedCircle variant={variant} /> : null}
-      <StyledCircle variant={variant} />
+      {animated ? <StyledAnimatedCircle sentiment={sentiment} /> : null}
+      <StyledCircle sentiment={sentiment} />
     </Container>
   </Tooltip>
 )

@@ -11,7 +11,7 @@ export const Prominences: StoryFn = props => (
           <Badge
             {...props}
             key={`${prominence}-${sentiment}`}
-            variant={sentiment}
+            sentiment={sentiment}
             prominence={prominence as keyof typeof PROMINENCES}
           >
             {sentiment}

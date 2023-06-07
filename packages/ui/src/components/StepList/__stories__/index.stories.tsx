@@ -70,18 +70,18 @@ Disabled.decorators = [
   ),
 ]
 
-export const Variant = Template.bind({})
-Variant.parameters = {
+export const Sentiment = Template.bind({})
+Sentiment.parameters = {
   docs: {
     story: {
-      description: 'Set a bullet variant state using `variant` property.',
+      description: 'Set a bullet sentiment state using `sentiment` property.',
     },
   },
 }
-Variant.decorators = [
+Sentiment.decorators = [
   () => (
     <StepList>
-      <StepList.Item bulletText="A" variant="success">
+      <StepList.Item bulletText="A" sentiment="success">
         success
       </StepList.Item>
       <StepList.Item bulletText="A">default</StepList.Item>
@@ -100,7 +100,7 @@ BulletIcon.parameters = {
 BulletIcon.decorators = [
   () => (
     <StepList>
-      <StepList.Item bulletIcon="check" variant="success">
+      <StepList.Item bulletIcon="check" sentiment="success">
         check success
       </StepList.Item>
       <StepList.Item bulletIcon="check">check default</StepList.Item>
@@ -119,7 +119,7 @@ BulletIcon.parameters = {
 ComplexChild.decorators = [
   () => (
     <StepList>
-      <StepList.Item bulletIcon="check" variant="success">
+      <StepList.Item bulletIcon="check" sentiment="success">
         <Stack gap={1}>
           <Text as="h4" variant="headingSmall">
             Lorem ipsum

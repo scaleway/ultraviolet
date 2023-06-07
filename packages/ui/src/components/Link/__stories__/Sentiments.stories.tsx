@@ -4,14 +4,14 @@ import { Link } from '..'
 import { SENTIMENTS } from '../../../theme'
 import { Stack } from '../../Stack'
 
-export const Variants = (props: ComponentProps<typeof Link>) =>
-  SENTIMENTS.map(variant => (
-    <Link {...props} key={variant} variant={variant}>
-      {variant}
+export const Sentiments = (props: ComponentProps<typeof Link>) =>
+  SENTIMENTS.map(sentiment => (
+    <Link {...props} key={sentiment} sentiment={sentiment}>
+      {sentiment}
     </Link>
   ))
 
-Variants.decorators = [
+Sentiments.decorators = [
   StoryComponent => (
     <Stack>
       <StoryComponent />

@@ -15,7 +15,7 @@ export const Borderless: StoryFn<typeof Menu> = () => (
       Link Neutral
     </Menu.Item>
     <Menu.Item
-      variant="danger"
+      sentiment="danger"
       href="/?path=/docs/components-navigation-menu--borderless"
       borderless
     >

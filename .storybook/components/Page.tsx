@@ -62,12 +62,12 @@ const Page = ({
           <Title />
         </StyledTitle>
         {deprecated ? (
-          <Badge variant="danger" size="large" icon="alert">
+          <Badge sentiment="danger" size="large" icon="alert">
             Deprecated
           </Badge>
         ) : null}
         {experimental ? (
-          <Badge variant="warning" size="large">
+          <Badge sentiment="warning" size="large">
             <Stack direction="row" alignItems="center" gap={1}>
               <svg viewBox="0 0 100 100" role="img" width="18px">
                 <path

@@ -47,15 +47,15 @@ describe('Tooltip', () => {
     })
   })
 
-  describe(`should render correctly with variant`, () => {
-    ;['default', 'primary'].forEach(variant => {
-      test(`should renders tooltip with placement ${variant}`, async () => {
+  describe(`should render correctly with sentiment`, () => {
+    ;(['neutral', 'primary'] as const).forEach(sentiment => {
+      test(`should renders tooltip with placement ${sentiment}`, async () => {
         await shouldMatchEmotionSnapshot(
           <Popover
             title="Test"
             content="Test"
             visible
-            variant={variant as ComponentProps<typeof Popover>['variant']}
+            sentiment={sentiment}
             onClose={() => {}}
           >
             <p data-testid="children">Children</p>

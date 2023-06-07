@@ -7,7 +7,7 @@ export default {
 } as Meta<typeof Bullet>
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Icon } from './Icon.stories'
 export { Sizes } from './Sizes.stories'
 export { Text } from './Text.stories'

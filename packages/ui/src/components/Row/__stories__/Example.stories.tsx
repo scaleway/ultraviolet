@@ -11,7 +11,7 @@ export const Example: StoryFn = () => (
             Status
           </Text>
           <Stack direction="row" gap={1} alignItems="center">
-            <Status variant="success" />
+            <Status sentiment="success" />
             <Text as="span" variant="body">
               Running
             </Text>

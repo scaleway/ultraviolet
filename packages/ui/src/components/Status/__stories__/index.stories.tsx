@@ -14,6 +14,6 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Tooltip } from './Tooltip.stories'
 export { Animated } from './Animated.stories'

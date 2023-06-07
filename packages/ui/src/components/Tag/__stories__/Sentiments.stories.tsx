@@ -3,23 +3,23 @@ import type { ComponentProps } from 'react'
 import { Tag } from '..'
 import { SENTIMENTS } from '../../../theme'
 
-export const Variants = (props: ComponentProps<typeof Tag>) =>
+export const Sentiments = (props: ComponentProps<typeof Tag>) =>
   SENTIMENTS.map(sentiment => (
-    <Tag {...props} key={sentiment} variant={sentiment}>
+    <Tag {...props} key={sentiment} sentiment={sentiment}>
       {sentiment}
     </Tag>
   ))
 
-Variants.parameters = {
+Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Variants defines different colors of you component. You can define it using `variant` property.',
+        'Sentiments defines different colors of you component. You can define it using `sentiment` property.',
     },
   },
 }
 
-Variants.decorators = [
+Sentiments.decorators = [
   StoryComponent => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       <StoryComponent />

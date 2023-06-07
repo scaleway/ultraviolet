@@ -163,7 +163,7 @@ export const Tab = forwardRef(
           {children}
           {typeof counter === 'number' || typeof counter === 'string' ? (
             <StyledBadge
-              variant={isSelected ? 'primary' : 'neutral'}
+              sentiment={isSelected ? 'primary' : 'neutral'}
               prominence={isSelected ? 'default' : 'strong'}
               size="medium"
             >

@@ -30,7 +30,7 @@ type LinkProps = {
   children: ReactNode
   target?: HTMLAttributeAnchorTarget
   download?: string | boolean
-  variant?: Color
+  sentiment?: Color
   prominence?: ProminenceProps
   size?: LinkSizes
   iconPosition?: LinkIconPosition
@@ -55,9 +55,9 @@ const StyledExternalIconContainer = styled.span`
 
 const StyledLink = styled('a', {
   shouldForwardProp: prop =>
-    !['variant', 'iconPosition', 'as', 'oneLine'].includes(prop),
+    !['sentiment', 'iconPosition', 'as', 'oneLine'].includes(prop),
 })<{
-  variant: Color
+  sentiment: Color
   prominence?: ProminenceProps
   size: LinkSizes
   iconPosition?: LinkIconPosition
@@ -66,12 +66,12 @@ const StyledLink = styled('a', {
   background-color: transparent;
   border: none;
   padding: 0;
-  color: ${({ theme, variant, prominence }) => {
+  color: ${({ theme, sentiment, prominence }) => {
     const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-    const themeColor = theme.colors[variant]
+    const themeColor = theme.colors[sentiment]
     const text = `text${definedProminence}` as keyof typeof themeColor
 
-    return theme.colors[variant]?.[text] ?? theme.colors.neutral.text
+    return theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
   }};
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -128,23 +128,23 @@ const StyledLink = styled('a', {
     outline: none;
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    ${({ theme, variant, prominence }) => {
+    ${({ theme, sentiment, prominence }) => {
       const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
-      const themeColor = theme.colors[variant]
+      const themeColor = theme.colors[sentiment]
       const text = `text${definedProminence}` as keyof typeof themeColor
 
       return `
-        color: ${theme.colors[variant]?.[text] ?? theme.colors.neutral.text};
+        color: ${theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text};
         text-decoration-color: ${
-          theme.colors[variant]?.[text] ?? theme.colors.neutral.text
+          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
         };`
     }}
   }
 
   &:hover::after,
   &:focus::after {
-    background-color: ${({ theme, variant }) =>
-      theme.colors[variant]?.text ?? theme.colors.neutral.text};
+    background-color: ${({ theme, sentiment }) =>
+      theme.colors[sentiment]?.text ?? theme.colors.neutral.text};
   }
 
   &:active {
@@ -159,7 +159,7 @@ export const Link = forwardRef(
       href,
       target,
       download,
-      variant = 'info',
+      sentiment = 'info',
       prominence,
       size = 'large',
       iconPosition,
@@ -195,7 +195,7 @@ export const Link = forwardRef(
           target={target}
           download={download}
           ref={usedRef}
-          variant={variant}
+          sentiment={sentiment}
           prominence={prominence}
           rel={computedRel}
           className={className}

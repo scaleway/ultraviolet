@@ -6,7 +6,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
-type VariantType = 'default' | 'primary'
+type SentimentType = 'neutral' | 'primary'
 
 const SIZES_WIDTH = {
   small: 320,
@@ -15,9 +15,9 @@ const SIZES_WIDTH = {
 }
 
 const StyledTooltip = styled(Tooltip, {
-  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
+  shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
 })<{
-  variant: VariantType
+  sentiment: SentimentType
   size: keyof typeof SIZES_WIDTH
 }>`
   padding: ${({ theme }) => theme.space['2']};
@@ -25,8 +25,8 @@ const StyledTooltip = styled(Tooltip, {
   max-width: ${({ size }) => SIZES_WIDTH[size]}px;
   text-align: initial;
 
-  ${({ theme, variant }) => {
-    if (variant === 'default') {
+  ${({ theme, sentiment }) => {
+    if (sentiment === 'neutral') {
       return `
       background: ${theme.colors.neutral.background};
       box-shadow: ${theme.shadows.popover};
@@ -48,27 +48,27 @@ const StyledTooltip = styled(Tooltip, {
 
 type ContentWrapperProps = Pick<
   PopoverProps,
-  'title' | 'onClose' | 'variant' | 'children'
+  'title' | 'onClose' | 'sentiment' | 'children'
 >
 
 const ContentWrapper = ({
   title,
   onClose,
   children,
-  variant,
+  sentiment,
 }: ContentWrapperProps) => (
   <Stack gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text
         variant="bodyStrong"
         as="h3"
-        prominence={variant === 'default' ? 'strong' : 'stronger'}
+        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
       >
         {title}
       </Text>
       <Button
-        variant={variant === 'default' ? 'ghost' : 'filled'}
-        sentiment={variant === 'default' ? 'neutral' : 'primary'}
+        variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
         onClick={onClose}
         size="small"
         icon="close"
@@ -79,7 +79,7 @@ const ContentWrapper = ({
       <Text
         variant="bodySmall"
         as="p"
-        prominence={variant === 'default' ? 'strong' : 'stronger'}
+        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
       >
         {children}
       </Text>
@@ -93,7 +93,7 @@ type PopoverProps = {
   children: ReactNode
   content: ReactNode
   title: string
-  variant?: VariantType
+  sentiment?: SentimentType
   visible?: boolean
   size?: keyof typeof SIZES_WIDTH
   onClose: () => void
@@ -107,7 +107,7 @@ export const Popover = ({
   placement,
   content,
   title,
-  variant = 'default',
+  sentiment = 'neutral',
   size = 'medium',
   onClose,
   className,
@@ -137,12 +137,12 @@ export const Popover = ({
       visible={visible}
       placement={placement}
       text={
-        <ContentWrapper title={title} onClose={onClose} variant={variant}>
+        <ContentWrapper title={title} onClose={onClose} sentiment={sentiment}>
           {content}
         </ContentWrapper>
       }
       className={className}
-      variant={variant}
+      sentiment={sentiment}
       data-testid={dataTestId}
       size={size}
       role="dialog"

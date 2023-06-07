@@ -1,4 +1,4 @@
-import { Bullet, bulletSizes, bulletVariants } from '..'
+import { Bullet, bulletSentiments, bulletSizes } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Bullet', () => {
@@ -8,10 +8,10 @@ describe('Bullet', () => {
   test('renders correctly with an icon', () =>
     shouldMatchEmotionSnapshot(<Bullet icon="moon" />))
 
-  describe('variant', () => {
-    bulletVariants.forEach(variant => {
-      test(`render ${variant}`, () =>
-        shouldMatchEmotionSnapshot(<Bullet variant={variant} text="1" />))
+  describe('sentiment', () => {
+    bulletSentiments.forEach(sentiment => {
+      test(`render ${sentiment}`, () =>
+        shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment} text="1" />))
     })
   })
 

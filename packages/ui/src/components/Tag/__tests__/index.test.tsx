@@ -5,13 +5,13 @@ describe('Tag', () => {
   test('renders correctly', () => shouldMatchEmotionSnapshot(<Tag>test</Tag>))
 
   test('renders correctly neutral', () =>
-    shouldMatchEmotionSnapshot(<Tag variant="neutral">test</Tag>))
+    shouldMatchEmotionSnapshot(<Tag sentiment="neutral">test</Tag>))
 
   test('renders correctly disabled', () =>
     shouldMatchEmotionSnapshot(<Tag disabled>test</Tag>))
 
   test('renders correctly colored', () =>
-    shouldMatchEmotionSnapshot(<Tag variant="primary">test</Tag>))
+    shouldMatchEmotionSnapshot(<Tag sentiment="primary">test</Tag>))
 
   test('renders correctly with icon', () =>
     shouldMatchEmotionSnapshot(<Tag icon="lock">test</Tag>))

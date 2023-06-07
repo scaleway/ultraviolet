@@ -60,7 +60,7 @@ export const Sizes: StoryFn<typeof Popover> = () => {
 Sizes.parameters = {
   docs: {
     description: {
-      story: `Popover has two variants: \`default\` and \`primary\`. You can change the variant by passing \`variant\` prop to the component. The default variant is \`default\`.`,
+      story: `Popover has two sentiments: \`neutral\` and \`primary\`. You can change the sentiment by passing \`sentiment\` prop to the component. The default sentiment is \`neutral\`.`,
     },
   },
 }

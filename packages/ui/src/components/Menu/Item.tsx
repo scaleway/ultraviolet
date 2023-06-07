@@ -89,10 +89,6 @@ type ItemProps = {
   children: ReactNode
   onClick?: MouseEventHandler<HTMLElement> | undefined
   borderless?: boolean
-  /**
-   * @deprecated : use `sentiment` prop instead
-   */
-  variant?: MenuItemSentiment
   sentiment?: MenuItemSentiment
   'data-testid'?: string
 }
@@ -103,8 +99,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
       borderless = false,
       disabled = false,
       onClick,
-      variant,
-      sentiment,
+      sentiment = 'neutral',
       href,
       children,
       tooltip,
@@ -113,8 +108,6 @@ const Item = forwardRef<HTMLElement, ItemProps>(
     },
     ref,
   ) => {
-    const finalSentiment = sentiment ?? variant ?? 'neutral'
-
     if (href && !disabled) {
       return (
         <Tooltip text={tooltip}>
@@ -129,7 +122,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             }
             role="menuitem"
             disabled={disabled}
-            sentiment={finalSentiment}
+            sentiment={sentiment}
             className={className}
             data-testid={dataTestId}
           >
@@ -148,7 +141,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
           disabled={disabled}
           onClick={onClick}
           borderless={borderless}
-          sentiment={finalSentiment}
+          sentiment={sentiment}
           className={className}
           data-testid={dataTestId}
         >

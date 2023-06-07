@@ -1,10 +1,12 @@
-import { ProgressBar, progressBarVariants } from '..'
+import { ProgressBar, progressBarSentiments } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('ProgressBar', () => {
-  progressBarVariants.forEach(variant => {
-    it(`renders ${variant}`, () =>
-      shouldMatchEmotionSnapshot(<ProgressBar value={40} variant={variant} />))
+  progressBarSentiments.forEach(sentiment => {
+    it(`renders ${sentiment}`, () =>
+      shouldMatchEmotionSnapshot(
+        <ProgressBar value={40} sentiment={sentiment} />,
+      ))
   })
 
   it(`renders progression`, () =>

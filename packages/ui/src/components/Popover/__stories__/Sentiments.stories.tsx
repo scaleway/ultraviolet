@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
 
-export const Variants: StoryFn<typeof Popover> = () => {
+export const Sentiments: StoryFn<typeof Popover> = () => {
   const [primaryOpened, setPrimaryOpened] = useState(false)
   const [defaultOpened, setDefaultOpened] = useState(false)
 
@@ -21,11 +21,11 @@ export const Variants: StoryFn<typeof Popover> = () => {
         visible={defaultOpened}
         title="Popover Title"
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        variant="default"
+        sentiment="neutral"
         onClose={() => onCloseCallBack(setDefaultOpened)}
       >
         <Button sentiment="neutral" onClick={() => setDefaultOpened(true)}>
-          Open Popover default variant
+          Open Popover neutral sentiment
         </Button>
       </Popover>
 
@@ -33,21 +33,21 @@ export const Variants: StoryFn<typeof Popover> = () => {
         visible={primaryOpened}
         title="Popover Title"
         content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-        variant="primary"
+        sentiment="primary"
         onClose={() => onCloseCallBack(setPrimaryOpened)}
       >
         <Button onClick={() => setPrimaryOpened(true)}>
-          Open Popover primary variant
+          Open Popover primary sentiment
         </Button>
       </Popover>
     </div>
   )
 }
 
-Variants.parameters = {
+Sentiments.parameters = {
   docs: {
     description: {
-      story: `Popover has two variants: \`default\` and \`primary\`. You can change the variant by passing \`variant\` prop to the component. The default variant is \`default\`.`,
+      story: `Popover has two sentiments: \`neutral\` and \`primary\`. You can change the sentiment by passing \`sentiment\` prop to the component. The default sentiment is \`neutral\`.`,
     },
   },
 }

@@ -35,25 +35,25 @@ describe('Alert', () => {
       </Alert>,
     ))
 
-  test('renders correctly with isClosable and onClose', () =>
+  test('renders correctly with closable and onClose', () =>
     shouldMatchEmotionSnapshot(
-      <Alert isClosable onClose={() => 'ok'}>
+      <Alert closable onClose={() => 'ok'}>
         Sample Alert
       </Alert>,
     ))
 
-  describe(`renders correctly with all variants`, () => {
-    ;(['info', 'warning', 'danger', 'success'] as const).forEach(variant => {
-      test(`renders correctly variant ${variant}`, () =>
+  describe(`renders correctly with all sentiments`, () => {
+    ;(['info', 'warning', 'danger', 'success'] as const).forEach(sentiment => {
+      test(`renders correctly sentiment ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(
-          <Alert variant={variant}>Sample Alert</Alert>,
+          <Alert sentiment={sentiment}>Sample Alert</Alert>,
         ))
     })
   })
 
   test(`should render alert and then close it`, async () => {
     renderWithTheme(
-      <Alert isClosable onClose={() => 'ok'} data-testid="alert">
+      <Alert closable onClose={() => 'ok'} data-testid="alert">
         Sample Alert
       </Alert>,
     )

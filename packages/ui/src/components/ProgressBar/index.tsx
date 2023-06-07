@@ -12,7 +12,12 @@ const shineAnimation = keyframes`
   }
 `
 
-export const progressBarVariants = ['primary', 'success', 'warning', 'info']
+export const progressBarSentiments = [
+  'primary',
+  'success',
+  'warning',
+  'info',
+] as const
 
 const StyledProgressContainer = styled.div`
   overflow: hidden;
@@ -43,21 +48,21 @@ const StyledProgress = styled.div`
 `
 
 const StyledFilled = styled('div', {
-  shouldForwardProp: prop => !['variant', 'value'].includes(prop),
-})<{ variant: string; value: number }>`
+  shouldForwardProp: prop => !['sentiment', 'value'].includes(prop),
+})<{ sentiment: string; value: number }>`
   border-radius: ${({ theme }) => theme.radii.default};
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: ${({ theme, variant }) =>
-    theme.colors[variant as Color].backgroundStrong ?? 'inherit'};
+  background-color: ${({ theme, sentiment }) =>
+    theme.colors[sentiment as Color].backgroundStrong ?? 'inherit'};
   transition: 0.3s width;
   width: ${({ value }) => Math.max(0, Math.min(100, value))}%;
 `
 
 type ProgressBarProps = {
-  variant?: string
+  sentiment?: (typeof progressBarSentiments)[number]
   value?: number
   /** Put ProgressBar in a loading state */
   progress?: boolean
@@ -68,7 +73,7 @@ type ProgressBarProps = {
 export const ProgressBar = ({
   progress = false,
   value = 0,
-  variant = 'primary',
+  sentiment = 'primary',
   className,
   'data-testid': dataTestId,
 }: ProgressBarProps) => (
@@ -83,7 +88,7 @@ export const ProgressBar = ({
     {progress ? (
       <StyledProgress />
     ) : (
-      <StyledFilled variant={variant} value={value} />
+      <StyledFilled sentiment={sentiment} value={value} />
     )}
   </StyledProgressContainer>
 )

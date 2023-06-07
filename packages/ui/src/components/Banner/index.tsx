@@ -103,7 +103,7 @@ export const Banner = ({
           ) : null}
           {linkText && direction === 'column' ? (
             <Link
-              variant="primary"
+              sentiment="primary"
               size="small"
               target="_blank"
               href={linkHref ?? ''}

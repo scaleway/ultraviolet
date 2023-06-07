@@ -8,26 +8,32 @@ import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-type AlertType = 'danger' | 'info' | 'success' | 'warning'
+export const ALERT_SENTIMENTS = [
+  'danger',
+  'info',
+  'success',
+  'warning',
+] as const
+type AlertSentiment = (typeof ALERT_SENTIMENTS)[number]
 
 const alertStyles = ({
   theme,
-  variant,
+  sentiment,
 }: {
   theme: Theme
-  variant: AlertType
+  sentiment: AlertSentiment
 }): SerializedStyles => {
-  const sentiment = theme.colors[variant]
+  const sentimentColor = theme.colors[sentiment]
 
   return css`
-    background-color: ${sentiment.background};
-    color: ${sentiment.text};
-    border-left: 4px solid ${sentiment.borderWeak};
+    background-color: ${sentimentColor.background};
+    color: ${sentimentColor.text};
+    border-left: 4px solid ${sentimentColor.borderWeak};
   `
 }
 
 const typesDefaultIcons: Record<
-  AlertType,
+  AlertSentiment,
   ComponentProps<typeof Icon>['name']
 > = {
   warning: 'alert',
@@ -37,8 +43,8 @@ const typesDefaultIcons: Record<
 }
 
 const StyledStackContainer = styled(Stack, {
-  shouldForwardProp: prop => !['variant'].includes(prop),
-})<{ variant: AlertType }>`
+  shouldForwardProp: prop => !['sentiment'].includes(prop),
+})<{ sentiment: AlertSentiment }>`
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) => theme.space['2']};
   ${alertStyles};
@@ -68,11 +74,11 @@ type AlertProps = {
    * Add a title at the top of your alert.
    */
   title?: string
-  variant?: AlertType
+  sentiment?: AlertSentiment
   buttonText?: ComponentProps<typeof Button>['children']
   onClickButton?: () => void
   onClose?: () => void
-  isClosable?: boolean
+  closable?: boolean
   className?: string
   'data-testid'?: string
   /**
@@ -84,10 +90,10 @@ type AlertProps = {
 export const Alert = ({
   children,
   title,
-  variant = 'danger',
+  sentiment = 'danger',
   buttonText,
   onClickButton,
-  isClosable,
+  closable,
   onClose,
   className,
   disabled,
@@ -101,7 +107,7 @@ export const Alert = ({
     <StyledStackContainer
       gap={1}
       direction="row"
-      variant={variant}
+      sentiment={sentiment}
       className={className}
       data-testid={dataTestId}
     >
@@ -113,13 +119,13 @@ export const Alert = ({
       >
         <Stack alignItems="start" direction="row" gap={2}>
           <Icon
-            name={typesDefaultIcons[variant]}
+            name={typesDefaultIcons[sentiment]}
             size={24}
             aria-hidden="true"
           />
           <TextStack gap={0.5} direction="row">
             {title ? (
-              <Text variant="bodyStronger" as="span" color={variant}>
+              <Text variant="bodyStronger" as="span" color={sentiment}>
                 {title}
               </Text>
             ) : null}
@@ -134,7 +140,7 @@ export const Alert = ({
         </Stack>
         {buttonText ? (
           <StyledButton
-            sentiment={variant}
+            sentiment={sentiment}
             onClick={onClickButton}
             size="small"
             disabled={disabled}
@@ -143,7 +149,7 @@ export const Alert = ({
           </StyledButton>
         ) : null}
       </WrapStack>
-      {isClosable || onClose ? (
+      {closable || onClose ? (
         <CloseButton
           variant="ghost"
           size="small"

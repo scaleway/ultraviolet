@@ -14,9 +14,11 @@ describe('Badge', () => {
   test('renders correctly when disabled', () =>
     shouldMatchEmotionSnapshot(<Badge disabled>Sample badge</Badge>))
 
-  SENTIMENTS.forEach(variant => {
-    test(`renders correctly variant ${variant}`, () =>
-      shouldMatchEmotionSnapshot(<Badge variant={variant}>Sample badge</Badge>))
+  SENTIMENTS.forEach(sentiment => {
+    test(`renders correctly sentiment ${sentiment}`, () =>
+      shouldMatchEmotionSnapshot(
+        <Badge sentiment={sentiment}>Sample badge</Badge>,
+      ))
   })
 
   Object.keys(SIZES).forEach(size => {

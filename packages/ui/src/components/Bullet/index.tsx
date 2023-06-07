@@ -4,12 +4,12 @@ import type { ComponentProps } from 'react'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
-const variants = {
+const sentiments = {
   danger: ({ theme }: { theme: Theme }) => `
     background-color: ${theme.colors.danger.background};
     color: ${theme.colors.danger.text};
   `,
-  default: ({ theme }: { theme: Theme }) => `
+  neutral: ({ theme }: { theme: Theme }) => `
     border: 1px solid ${theme.colors.neutral.borderWeak};
     background-color: ${theme.colors.neutral.background};
     color: ${theme.colors.neutral.text};
@@ -36,8 +36,8 @@ const variants = {
     color: ${theme.colors.warning.text};
   `,
 } as const
-type BulletVariant = keyof typeof variants
-export const bulletVariants = Object.keys(variants) as BulletVariant[]
+type BulletSentiment = keyof typeof sentiments
+export const bulletSentiments = Object.keys(sentiments) as BulletSentiment[]
 
 const sizes = {
   medium: `
@@ -54,18 +54,18 @@ const sizes = {
 type BulletSize = keyof typeof sizes
 export const bulletSizes = Object.keys(sizes) as BulletSize[]
 
-const variantStyles = ({ variant }: { variant: BulletVariant }) =>
-  variants[variant]
+const sentimentStyles = ({ sentiment }: { sentiment: BulletSentiment }) =>
+  sentiments[sentiment]
 const sizeStyles = ({ size }: { size: BulletSize }) => sizes[size]
 
-type StyledContainerType = { variant: BulletVariant; size: BulletSize }
+type StyledContainerType = { sentiment: BulletSentiment; size: BulletSize }
 const StyledContainer = styled('div')<StyledContainerType>`
   display: inline-flex;
   border-radius: ${({ theme }) => theme.radii.circle};
   justify-content: center;
   align-items: center;
   font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
-  ${variantStyles}
+  ${sentimentStyles}
   ${sizeStyles}
 `
 
@@ -77,13 +77,13 @@ type BulletProps = {
   size?: BulletSize
   tooltip?: string
   tooltipBaseId?: string
-  variant?: BulletVariant
+  sentiment?: BulletSentiment
   'data-testid'?: string
 } & ContentProps
 
 export const Bullet = ({
   className,
-  variant = 'default',
+  sentiment = 'neutral',
   size = 'medium',
   icon,
   text,
@@ -93,7 +93,7 @@ export const Bullet = ({
 }: BulletProps) => (
   <Tooltip id={tooltipBaseId} text={tooltip}>
     <StyledContainer
-      variant={variant}
+      sentiment={sentiment}
       size={size}
       className={className}
       data-testid={dataTestId}

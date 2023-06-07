@@ -7,7 +7,7 @@ export const Sizes: StoryFn = props => (
       <Badge
         {...props}
         key={size}
-        variant="primary"
+        sentiment="primary"
         size={size as keyof typeof SIZES}
       >
         {size}

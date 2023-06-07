@@ -2,28 +2,28 @@ import type { StoryFn } from '@storybook/react'
 import { Badge } from '..'
 import { SENTIMENTS } from '../../../theme'
 
-export const Variants: StoryFn = props => (
+export const Sentiments: StoryFn = props => (
   <>
     {SENTIMENTS.map(sentiment => (
-      <Badge {...props} key={sentiment} variant={sentiment}>
+      <Badge {...props} key={sentiment} sentiment={sentiment}>
         {sentiment}
       </Badge>
     ))}
   </>
 )
 
-Variants.parameters = {
+Sentiments.parameters = {
   docs: {
     storyDescription:
-      'Variant defines different colors of your component. You can define it using `variant` property.',
+      'Sentiment defines different colors of your component. You can define it using `sentiment` property.',
   },
 }
 
-Variants.args = {
+Sentiments.args = {
   children: [],
 }
 
-Variants.decorators = [
+Sentiments.decorators = [
   StoryComponent => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       <StoryComponent />

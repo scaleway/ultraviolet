@@ -9,6 +9,6 @@ export default {
 export { Playground } from './Playground.stories'
 export { Title } from './Title.stories'
 export { Button } from './Button.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Closable } from './Closable.stories'
 export { LongChildren } from './LongChildren.stories'

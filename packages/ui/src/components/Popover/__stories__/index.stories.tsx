@@ -17,5 +17,5 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'

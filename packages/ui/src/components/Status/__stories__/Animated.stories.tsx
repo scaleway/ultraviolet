@@ -4,7 +4,7 @@ export const Animated = Template.bind({})
 
 Animated.args = {
   animated: true,
-  variant: 'info',
+  sentiment: 'info',
 }
 
 Animated.parameters = {
