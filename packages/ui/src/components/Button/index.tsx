@@ -17,16 +17,22 @@ import { Tooltip } from '../Tooltip'
 type SENTIMENT = (typeof SENTIMENTS)[number]
 
 // SIZE
-export const SIZE_HEIGHT = {
+const SIZE_HEIGHT = {
   large: 48,
   medium: 40,
   small: 32,
   xsmall: 24,
 } as const
 type ButtonSize = keyof typeof SIZE_HEIGHT
-export const SIZE_SPACING_KEY = {
+const SIZE_PADDING_KEY = {
   large: 2,
   medium: 1.5,
+  small: 1,
+  xsmall: 0.5,
+} as const
+const SIZE_GAP_KEY = {
+  large: 1,
+  medium: 1,
   small: 1,
   xsmall: 0.5,
 } as const
@@ -72,9 +78,9 @@ const coreStyle = ({
 
   return `display: inline-flex;
   height: ${SIZE_HEIGHT[size]}px;
-  padding: 0 ${theme.space[SIZE_SPACING_KEY[size]]};
+  padding: 0 ${theme.space[SIZE_PADDING_KEY[size]]};
   flex-direction: ${iconPosition === 'right' ? 'row-reverse' : 'row'};
-  gap: ${theme.space['1']};
+  gap: ${theme.space[SIZE_GAP_KEY[size]]};
   border-radius: ${theme.radii.default};
   box-sizing: border-box;
   width: ${width};
