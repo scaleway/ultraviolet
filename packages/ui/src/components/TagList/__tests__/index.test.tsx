@@ -13,28 +13,36 @@ describe('TagList', () => {
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(
       <div>
-        <TagList tags={['scaleway', 'cloud']} />{' '}
+        <TagList popoverTitle="Additional" tags={['scaleway', 'cloud']} />
       </div>,
     ))
 
   test('renders correctly with not tags', () =>
     shouldMatchEmotionSnapshot(
       <div>
-        <TagList />
+        <TagList popoverTitle="Additional" />
       </div>,
     ))
 
   test('renders correctly with custom threshold', () =>
     shouldMatchEmotionSnapshot(
       <div>
-        <TagList threshold={2} tags={['scaleway', 'cloud']} />
+        <TagList
+          popoverTitle="Additional"
+          threshold={2}
+          tags={['scaleway', 'cloud']}
+        />
       </div>,
     ))
 
   test('renders correctly with custom threshold and extra tags', () =>
     shouldMatchEmotionSnapshot(
       <div>
-        <TagList threshold={2} tags={['scaleway', 'cloud', 'provider']} />
+        <TagList
+          popoverTitle="Additional"
+          threshold={2}
+          tags={['scaleway', 'cloud', 'provider']}
+        />
       </div>,
     ))
 
@@ -42,6 +50,7 @@ describe('TagList', () => {
     shouldMatchEmotionSnapshot(
       <div>
         <TagList
+          popoverTitle="Additional"
           maxLength={10}
           threshold={2}
           tags={['scaleway', 'cloud', 'provider']}
@@ -53,6 +62,7 @@ describe('TagList', () => {
     shouldMatchEmotionSnapshot(
       <div>
         <TagList
+          popoverTitle="Additional"
           multiline
           threshold={2}
           tags={['scaleway', 'cloud', 'provider']}
@@ -63,7 +73,36 @@ describe('TagList', () => {
   test('renders correctly with copiable', () =>
     shouldMatchEmotionSnapshot(
       <div>
-        <TagList copiable threshold={2} tags={['scaleway', 'cloud']} />
+        <TagList
+          popoverTitle="Additional"
+          copiable
+          threshold={2}
+          tags={['scaleway', 'cloud']}
+        />
+      </div>,
+    ))
+
+  test('renders correctly with custom popover', () =>
+    shouldMatchEmotionSnapshot(
+      <div>
+        <TagList
+          popoverTitle="Custom title"
+          copiable
+          threshold={2}
+          tags={['scaleway', 'cloud']}
+        >
+          {({ tags }) => (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {tags.map((tag, index) => (
+                // useful when two tags are identical `${tag}-${index}`
+                // eslint-disable-next-line react/no-array-index-key
+                <span key={`${tag}-${index}`} style={{ color: 'black' }}>
+                  Tag: {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </TagList>
       </div>,
     ))
 })
