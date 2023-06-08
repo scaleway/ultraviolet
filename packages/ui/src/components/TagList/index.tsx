@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, JSX } from 'react'
 import { Tag } from '../Tag'
 import { Tooltip } from '../Tooltip'
 
