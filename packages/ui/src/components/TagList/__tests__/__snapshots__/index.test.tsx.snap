@@ -62,7 +62,8 @@ exports[`TagList renders correctly 1`] = `
   display: inherit;
 }
 
-.cache-15hi38u-StyledTooltipReference {
+.cache-1bf3n67-StyledTooltipReference {
+  cursor: pointer;
   color: #390171;
   border: none;
   font-size: 14px;
@@ -80,10 +81,10 @@ exports[`TagList renders correctly 1`] = `
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-sqaep6-StyledTagContainer ed8izcl1"
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
       >
         <span
           class="cache-ttcibm-StyledContainer e1vt8sjg2"
@@ -102,13 +103,12 @@ exports[`TagList renders correctly 1`] = `
         tabindex="0"
       >
         <span
-          class="cache-15hi38u-StyledTooltipReference ed8izcl2"
+          class="cache-1bf3n67-StyledTooltipReference ed8izcl1"
         >
           +1
         </span>
       </div>
     </div>
-     
   </div>
 </DocumentFragment>
 `;
@@ -188,10 +188,10 @@ exports[`TagList renders correctly with copiable 1`] = `
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-sqaep6-StyledTagContainer ed8izcl1"
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
       >
         <div
           aria-describedby=":r4:"
@@ -211,6 +211,124 @@ exports[`TagList renders correctly with copiable 1`] = `
         </div>
         <div
           aria-describedby=":r5:"
+          class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <button
+            class="cache-1tfylds-Container-StyledContainer e1vt8sjg3"
+          >
+            <span
+              aria-disabled="false"
+              class="cache-t6vuyb-StyledTag e1vt8sjg1"
+            >
+              cloud
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TagList renders correctly with custom popover 1`] = `
+<DocumentFragment>
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-sqaep6-StyledTagContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #4a4f62;
+  gap: 8px;
+}
+
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1tfylds-Container-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #4a4f62;
+  background: #ffffff;
+  border: solid 1px #e6e9f0;
+}
+
+.cache-1tfylds-Container-StyledContainer:hover,
+.cache-1tfylds-Container-StyledContainer:active {
+  cursor: pointer;
+  background: #e6e9f0;
+  border-color: #d4dae7;
+}
+
+.cache-1tfylds-Container-StyledContainer:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+<div>
+    <div
+      class="cache-a1981g-StyledContainer ed8izcl2"
+    >
+      <div
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
+      >
+        <div
+          aria-describedby=":r6:"
+          class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <button
+            class="cache-1tfylds-Container-StyledContainer e1vt8sjg3"
+          >
+            <span
+              aria-disabled="false"
+              class="cache-t6vuyb-StyledTag e1vt8sjg1"
+            >
+              scaleway
+            </span>
+          </button>
+        </div>
+        <div
+          aria-describedby=":r7:"
           class="cache-yb56yg-StyledChildrenContainer ep3agpf0"
           tabindex="0"
         >
@@ -291,10 +409,10 @@ exports[`TagList renders correctly with custom threshold 1`] = `
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-sqaep6-StyledTagContainer ed8izcl1"
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
       >
         <span
           class="cache-ttcibm-StyledContainer e1vt8sjg2"
@@ -384,7 +502,8 @@ exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
   display: inherit;
 }
 
-.cache-15hi38u-StyledTooltipReference {
+.cache-1bf3n67-StyledTooltipReference {
+  cursor: pointer;
   color: #390171;
   border: none;
   font-size: 14px;
@@ -402,10 +521,10 @@ exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-sqaep6-StyledTagContainer ed8izcl1"
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
       >
         <span
           class="cache-ttcibm-StyledContainer e1vt8sjg2"
@@ -434,7 +553,7 @@ exports[`TagList renders correctly with custom threshold and extra tags 1`] = `
         tabindex="0"
       >
         <span
-          class="cache-15hi38u-StyledTooltipReference ed8izcl2"
+          class="cache-1bf3n67-StyledTooltipReference ed8izcl1"
         >
           +1
         </span>
@@ -506,7 +625,8 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
   display: inherit;
 }
 
-.cache-15hi38u-StyledTooltipReference {
+.cache-1bf3n67-StyledTooltipReference {
+  cursor: pointer;
   color: #390171;
   border: none;
   font-size: 14px;
@@ -524,10 +644,10 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-sqaep6-StyledTagContainer ed8izcl1"
+        class="cache-sqaep6-StyledTagContainer ed8izcl0"
       >
         <span
           class="cache-ttcibm-StyledContainer e1vt8sjg2"
@@ -546,7 +666,7 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
         tabindex="0"
       >
         <span
-          class="cache-15hi38u-StyledTooltipReference ed8izcl2"
+          class="cache-1bf3n67-StyledTooltipReference ed8izcl1"
         >
           +2
         </span>
@@ -622,7 +742,8 @@ exports[`TagList renders correctly with multiline 1`] = `
   display: inherit;
 }
 
-.cache-15hi38u-StyledTooltipReference {
+.cache-1bf3n67-StyledTooltipReference {
+  cursor: pointer;
   color: #390171;
   border: none;
   font-size: 14px;
@@ -640,10 +761,10 @@ exports[`TagList renders correctly with multiline 1`] = `
 
 <div>
     <div
-      class="cache-a1981g-StyledContainer ed8izcl3"
+      class="cache-a1981g-StyledContainer ed8izcl2"
     >
       <div
-        class="cache-1q3mcxl-StyledTagContainer ed8izcl1"
+        class="cache-1q3mcxl-StyledTagContainer ed8izcl0"
       >
         <span
           class="cache-ttcibm-StyledContainer e1vt8sjg2"
@@ -672,7 +793,7 @@ exports[`TagList renders correctly with multiline 1`] = `
         tabindex="0"
       >
         <span
-          class="cache-15hi38u-StyledTooltipReference ed8izcl2"
+          class="cache-1bf3n67-StyledTooltipReference ed8izcl1"
         >
           +1
         </span>
