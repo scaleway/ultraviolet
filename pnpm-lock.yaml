@@ -69,8 +69,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3(@babel/core@7.22.1)(rollup@3.23.1)
       '@rollup/plugin-node-resolve':
-        specifier: 15.0.2
-        version: 15.0.2(rollup@3.23.1)
+        specifier: 15.1.0
+        version: 15.1.0(rollup@3.23.1)
       '@rollup/plugin-url':
         specifier: 8.0.1
         version: 8.0.1(rollup@3.23.1)
@@ -4544,8 +4544,8 @@ packages:
       rollup: 3.23.1
     dev: true
 
-  /@rollup/plugin-node-resolve@15.0.2(rollup@3.23.1):
-    resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
+  /@rollup/plugin-node-resolve@15.1.0(rollup@3.23.1):
+    resolution: {integrity: sha512-xeZHCgsiZ9pzYVgAo9580eCGqwh/XCEUM9q6iQfGNocjgkufHAqC3exA+45URvhiYV8sBF9RlBai650eNs7AsA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.78.0||^3.0.0
@@ -4558,7 +4558,7 @@ packages:
       deepmerge: 4.3.1
       is-builtin-module: 3.2.1
       is-module: 1.0.0
-      resolve: 1.22.1
+      resolve: 1.22.2
       rollup: 3.23.1
     dev: true
 
