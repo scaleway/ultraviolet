@@ -3,13 +3,7 @@ import { Template } from './Template.stories'
 
 export const MaxWidth = Template.bind({})
 
-MaxWidth.decorators = [
-  Story => (
-    <div style={{ alignItems: 'center', display: 'flex' }}>
-      <Story />
-    </div>
-  ),
-] as Decorator[]
+MaxWidth.decorators = [Story => <Story />] as Decorator[]
 
 MaxWidth.args = {
   maxWidth: 200,
