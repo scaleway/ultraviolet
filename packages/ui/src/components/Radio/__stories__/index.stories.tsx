@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Radio } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     },
   },
   title: 'Components/Data Entry/Radio',
-} as ComponentMeta<typeof Radio>
+} as Meta<typeof Radio>
 
 export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'

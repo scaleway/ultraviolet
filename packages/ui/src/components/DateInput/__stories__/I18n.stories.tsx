@@ -1,11 +1,11 @@
 import { useI18n } from '@scaleway/use-i18n'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'
 import type { SelectOption } from '../../SelectInput'
 import { SelectInput } from '../../SelectInput'
 
-export const I18n: Story<ComponentProps<typeof DateInput>> = () => {
+export const I18n: StoryFn<ComponentProps<typeof DateInput>> = () => {
   const { locales, currentLocale, switchLocale, dateFnsLocale } = useI18n()
 
   if (!dateFnsLocale) {

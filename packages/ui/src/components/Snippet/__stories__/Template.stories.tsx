@@ -1,6 +1,4 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Snippet } from '..'
 
-export const Template: ComponentStory<typeof Snippet> = props => (
-  <Snippet {...props} />
-)
+export const Template: StoryFn<typeof Snippet> = props => <Snippet {...props} />

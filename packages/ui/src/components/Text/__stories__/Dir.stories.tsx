@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Stack } from '../../Stack'
 import { Text } from '../index'
 
-export const Dir: ComponentStory<typeof Text> = () => (
+export const Dir: StoryFn<typeof Text> = () => (
   <Stack gap={2}>
     <div>
       <strong>ltr</strong>

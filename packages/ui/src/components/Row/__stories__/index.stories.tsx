@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Row } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     experimental: true,
   },
   title: 'Components/Layout/Row',
-} as ComponentMeta<typeof Row>
+} as Meta<typeof Row>
 
 export { Playground } from './Playground.stories'
 export { Gap } from './Gap.stories'

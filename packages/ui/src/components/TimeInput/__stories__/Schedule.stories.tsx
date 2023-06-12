@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { TimeInput, schedules } from '..'
 import { Stack } from '../../Stack'
 
-export const Schedule: Story = props => (
+export const Schedule: StoryFn = props => (
   <>
     {Object.keys(schedules).map(schedule => (
       <TimeInput

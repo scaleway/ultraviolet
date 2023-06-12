@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { SelectableCard } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     },
   },
   title: 'Components/Data Entry/SelectableCard',
-} as ComponentMeta<typeof SelectableCard>
+} as Meta<typeof SelectableCard>
 
 export { Playground } from './Playground.stories'
 export { Children } from './Children.stories'

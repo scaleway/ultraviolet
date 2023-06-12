@@ -1,11 +1,11 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
 
-export const IsActive: Story = () => {
+export const IsActive: StoryFn = () => {
   const [active, setActive] = useState(true)
 
   return (

@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { List } from '..'
 
 export default {
@@ -15,7 +15,7 @@ export default {
     'List.Row': List.Row,
     'List.Cell': List.Cell,
   },
-} as ComponentMeta<typeof List>
+} as Meta<typeof List>
 
 export { Playground } from './Playground.stories'
 export { Loading } from './Loading.stories'

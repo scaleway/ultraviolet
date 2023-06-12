@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { ProgressBar } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     },
   },
   title: 'Components/Feedback/ProgressBar',
-} as ComponentMeta<typeof ProgressBar>
+} as Meta<typeof ProgressBar>
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'

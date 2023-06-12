@@ -1,9 +1,9 @@
 import { css } from '@emotion/react'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
 
-export const CustomStyle: Story = props => {
+export const CustomStyle: StoryFn = props => {
   const customDialogBackdropStyles = css`
     background-color: aliceblue;
   `

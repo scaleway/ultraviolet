@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { BarChart } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     },
   },
   title: 'Components/Data Display/Chart/BarChart',
-} as ComponentMeta<typeof BarChart>
+} as Meta<typeof BarChart>
 
 export { Playground } from './Playground.stories'
 export { FormattedValuesAndTooltip } from './FormattedValuesAndTooltip.stories'

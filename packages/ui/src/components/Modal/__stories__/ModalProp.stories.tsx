@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
 
-export const ModalProp: Story = props => (
+export const ModalProp: StoryFn = props => (
   <Modal
     {...props}
     disclosure={<Button>modal</Button>}

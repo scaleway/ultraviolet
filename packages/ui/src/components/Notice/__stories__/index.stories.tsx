@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Notice } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     },
   },
   title: 'Components/Feedback/Notice',
-} as ComponentMeta<typeof Notice>
+} as Meta<typeof Notice>
 
 export { Playground } from './Playground.stories'
 export { ComplexChildren } from './ComplexChildren.stories'

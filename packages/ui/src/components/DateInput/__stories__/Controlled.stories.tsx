@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { DateInput } from '..'
 
-export const Controlled: Story<ComponentProps<typeof DateInput>> = () => {
+export const Controlled: StoryFn<ComponentProps<typeof DateInput>> = () => {
   const [value, setValue] = useState<Date | null>(
     new Date('December 17, 1995 03:24:00'),
   )

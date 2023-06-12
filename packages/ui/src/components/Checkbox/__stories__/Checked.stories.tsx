@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const Checked: Story = () => (
+export const Checked: StoryFn = () => (
   <>
     <Checkbox checked onChange={() => {}}>
       Checked checkbox

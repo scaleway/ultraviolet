@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useMemo, useState } from 'react'
 import { List } from '..'
 import { data as sourceData } from './resources'
 
-export const Ordering: Story = () => {
+export const Ordering: StoryFn = () => {
   const [currentOrder, setCurrentOrder] = useState<{
     columnId: 'name' | 'perihelion'
     order: 'asc' | 'desc'

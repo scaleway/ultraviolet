@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Snippet } from '..'
 import { Stack } from '../../Stack'
 
@@ -20,7 +20,7 @@ export default {
     },
   },
   title: 'Components/Data Display/Snippet',
-} as ComponentMeta<typeof Snippet>
+} as Meta<typeof Snippet>
 
 export { Playground } from './Playground.stories'
 export { SingleLine } from './SingleLine.stories'

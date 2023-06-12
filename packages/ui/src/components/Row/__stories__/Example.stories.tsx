@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Row } from '..'
 import { Card, Separator, Stack, Status, Text } from '../..'
 
-export const Example: Story = () => (
+export const Example: StoryFn = () => (
   <Card header="Overview">
     <Stack gap={2}>
       <Row templateColumns="repeat(4, 1fr)" gap={2}>

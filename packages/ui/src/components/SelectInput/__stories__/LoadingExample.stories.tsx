@@ -1,11 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useEffect, useState } from 'react'
 import { SelectInput } from '..'
 import { Button, Loader } from '../..'
 
-export const LoadingExample: ComponentStory<typeof SelectInput> = ({
-  ...props
-}) => {
+export const LoadingExample: StoryFn<typeof SelectInput> = ({ ...props }) => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     let timeout: number

@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { CheckboxField } from '..'
 
-export const Template: ComponentStory<typeof CheckboxField> = args => (
+export const Template: StoryFn<typeof CheckboxField> = args => (
   <CheckboxField {...args}>Checkbox</CheckboxField>
 )

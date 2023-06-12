@@ -1,5 +1,5 @@
 import { Stack } from '@scaleway/ui'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { DateField } from '..'
 import { Submit } from '../../Submit'
@@ -7,7 +7,7 @@ import { TimeField } from '../../TimeField'
 
 const now = new Date()
 
-export const MinMaxDateWithTimeField: Story<
+export const MinMaxDateWithTimeField: StoryFn<
   ComponentProps<typeof DateField>
 > = ({ name, minDate, maxDate, required }) => (
   <Stack gap={1}>

@@ -1,10 +1,10 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
 
-export const Disabled: Story = () => (
+export const Disabled: StoryFn = () => (
   <Card header="Disabled Card" disabled>
     <Stack gap={1}>
       <Text as="p" variant="body" disabled>

@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Loader } from '../index'
 
-export const Active: Story = () => <Loader active />
+export const Active: StoryFn = () => <Loader active />
 
 Active.parameters = {
   docs: {

@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Radio } from '..'
 
-export const Controlled: Story = () => {
+export const Controlled: StoryFn = () => {
   const [value, onChange] = useState('label-1')
 
   return (

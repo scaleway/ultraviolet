@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Tabs } from '..'
 import { Tab } from '../Tab'
 
@@ -13,7 +13,7 @@ export default {
   },
   subcomponents: { Tab },
   title: 'Components/Navigation/Tabs',
-} as ComponentMeta<typeof Tabs>
+} as Meta<typeof Tabs>
 
 export { Playground } from './Playground.stories'
 export { Disabled } from './Disabled.stories'

@@ -1,10 +1,10 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Controlled: Story = () => {
+export const Controlled: StoryFn = () => {
   const [value, onChange] = useState('label-1')
 
   return (

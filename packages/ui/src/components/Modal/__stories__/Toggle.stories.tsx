@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Modal } from '..'
 import { Toggle } from '../../Toggle'
 
-export const ToggleStory: Story = () => {
+export const ToggleStory: StoryFn = () => {
   const [toggled, setToggled] = useState(false)
 
   return (

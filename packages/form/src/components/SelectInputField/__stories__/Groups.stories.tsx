@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { SelectInputFieldProps } from '..'
 import { SelectInputField } from '..'
 
-export const Groups: Story<SelectInputFieldProps> = () => (
+export const Groups: StoryFn<SelectInputFieldProps> = () => (
   <SelectInputField
     name="options"
     options={[

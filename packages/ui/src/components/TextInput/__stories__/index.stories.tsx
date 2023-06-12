@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { TextInput } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     },
   },
   title: 'Components/Data Entry/TextInput',
-} as ComponentMeta<typeof TextInput>
+} as Meta<typeof TextInput>
 
 export { Playground } from './Playground.stories'
 export { NoLabel } from './NoLabel.stories'

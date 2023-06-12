@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { CopyButton } from '..'
 import { Stack } from '../../Stack'
 
@@ -19,7 +19,7 @@ export default {
     },
   },
   title: 'Components/Action/CopyButton',
-} as ComponentMeta<typeof CopyButton>
+} as Meta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'

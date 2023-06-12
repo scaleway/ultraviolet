@@ -1,11 +1,11 @@
 import { Checkbox, Stack } from '@scaleway/ui'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { useState } from 'react'
 import { TextInputField } from '..'
 import { Submit } from '../../Submit'
 
-export const DynamicRequired: Story<
+export const DynamicRequired: StoryFn<
   ComponentProps<typeof TextInputField>
 > = () => {
   const [isRequired, setIsRequired] = useState(true)

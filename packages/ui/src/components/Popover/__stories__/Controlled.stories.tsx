@@ -1,9 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
 
-export const Controlled: ComponentStory<typeof Popover> = () => {
+export const Controlled: StoryFn<typeof Popover> = () => {
   const [opened, setOpened] = useState(false)
 
   const onCloseCallBack = useCallback(() => {

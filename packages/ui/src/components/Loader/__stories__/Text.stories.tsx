@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Loader } from '../index'
 
-export const Text: Story = props => (
+export const Text: StoryFn = props => (
   <>
     {[0, 25, 50, 75, 100].map(percentage => (
       <Loader

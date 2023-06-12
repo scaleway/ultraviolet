@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Badge, SIZES } from '..'
 
-export const Sizes: Story = props => (
+export const Sizes: StoryFn = props => (
   <>
     {Object.keys(SIZES).map(size => (
       <Badge

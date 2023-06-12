@@ -1,4 +1,4 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Icon } from '..'
 
-export const Template: ComponentStory<typeof Icon> = args => <Icon {...args} />
+export const Template: StoryFn<typeof Icon> = args => <Icon {...args} />

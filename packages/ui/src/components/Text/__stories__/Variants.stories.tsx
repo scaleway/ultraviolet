@@ -1,7 +1,7 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Text, textVariants } from '../index'
 
-export const Variants: ComponentStory<typeof Text> = props => (
+export const Variants: StoryFn<typeof Text> = props => (
   <>
     {textVariants.map(variant => (
       <Text {...props} as="div" key={variant} variant={variant}>

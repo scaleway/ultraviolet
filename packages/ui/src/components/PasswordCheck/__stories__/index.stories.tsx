@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { PasswordCheck } from '..'
 
 export default {
@@ -12,6 +12,6 @@ export default {
     },
   },
   title: 'Components/Feedback/PasswordCheck',
-} as ComponentMeta<typeof PasswordCheck>
+} as Meta<typeof PasswordCheck>
 
 export { Playground } from './Playground.stories'

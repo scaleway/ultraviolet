@@ -1,6 +1,4 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Stack } from '..'
 
-export const Template: ComponentStory<typeof Stack> = props => (
-  <Stack {...props} />
-)
+export const Template: StoryFn<typeof Stack> = props => <Stack {...props} />

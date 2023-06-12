@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Table } from '..'
 import { columns, data } from './resources'
 
@@ -15,7 +15,7 @@ const StyledStoryByCell = styled(Table.Cell)`
   background: ${({ theme }) => theme.colors.info.background};
 `
 
-export const Spanning: Story = () => (
+export const Spanning: StoryFn = () => (
   <Table
     columns={[
       ...columns,

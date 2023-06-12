@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Bullet, bulletVariants } from '..'
 
-export const Variants: Story = props => (
+export const Variants: StoryFn = props => (
   <>
     {bulletVariants.map(variant => (
       <Bullet {...props} key={variant} variant={variant} text="1" />

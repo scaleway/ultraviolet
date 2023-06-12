@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Link } from '../index'
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: ${({ theme }) => theme.space['1']};
 `
 
-export const OneLine: ComponentStory<typeof Link> = () => (
+export const OneLine: StoryFn<typeof Link> = () => (
   <>
     <strong>Without ellipsis</strong>
     <Container>

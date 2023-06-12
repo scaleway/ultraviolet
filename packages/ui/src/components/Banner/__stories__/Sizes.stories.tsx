@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Banner } from '..'
 import image from './Image.png'
 
-export const Sizes: Story = () => (
+export const Sizes: StoryFn = () => (
   <>
     <Banner
       title="Apply to Scaleway Startup programs"
