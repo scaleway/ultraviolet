@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { PasswordStrengthMeter } from '..'
 
 export default {
@@ -11,7 +11,8 @@ export default {
     },
   },
   title: 'Components/Feedback/PasswordStrengthMeter',
-} as ComponentMeta<typeof PasswordStrengthMeter>
+} as Meta<typeof PasswordStrengthMeter>
 
 export { Playground } from './Playground.stories'
 export { ForbiddenInputs } from './ForbiddenInputs.stories'
+export { Estimate } from './Estimate.stories'
