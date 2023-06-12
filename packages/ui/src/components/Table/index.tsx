@@ -49,6 +49,7 @@ type ColumnProps = Pick<
   width?: string
   minWidth?: string
   maxWidth?: string
+  tooltipInfo?: string
 }
 
 type TableProps = {
@@ -93,6 +94,7 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
                 width={column.width}
                 minWidth={column.minWidth}
                 maxWidth={column.maxWidth}
+                tooltipInfo={column.tooltipInfo}
               >
                 {column.label}
               </HeaderCell>

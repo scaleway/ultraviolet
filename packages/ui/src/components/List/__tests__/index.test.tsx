@@ -611,4 +611,21 @@ describe('List', () => {
         },
       },
     ))
+
+  test('Should render correctly with tooltipInfo', () =>
+    shouldMatchEmotionSnapshot(
+      <List
+        columns={columns.map(column => ({ ...column, tooltipInfo: 'example' }))}
+      >
+        {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+          <List.Row key={id} id={id}>
+            <List.Cell>{columnA}</List.Cell>
+            <List.Cell>{columnB}</List.Cell>
+            <List.Cell>{columnC}</List.Cell>
+            <List.Cell>{columnD}</List.Cell>
+            <List.Cell>{columnE}</List.Cell>
+          </List.Row>
+        ))}
+      </List>,
+    ))
 })

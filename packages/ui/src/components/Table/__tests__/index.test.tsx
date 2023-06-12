@@ -334,4 +334,28 @@ describe('Table', () => {
         </Table.Body>
       </Table>,
     ))
+
+  test('Should render correctly with tooltipInfo', () =>
+    shouldMatchEmotionSnapshot(
+      <Table
+        columns={[
+          { label: 'Name', tooltipInfo: 'This column is important' },
+          ...columns.slice(1, 3),
+        ]}
+        stripped
+        bordered
+      >
+        <Table.Body>
+          {data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
+            <Table.Row key={id} id={id}>
+              <Table.Cell>{columnA}</Table.Cell>
+              <Table.Cell>{columnB}</Table.Cell>
+              <Table.Cell>{columnC}</Table.Cell>
+              <Table.Cell>{columnD}</Table.Cell>
+              <Table.Cell>{columnE}</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>,
+    ))
 })

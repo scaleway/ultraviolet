@@ -10693,3 +10693,655 @@ exports[`List Should render correctly with sort then click 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`List Should render correctly with tooltipInfo 1`] = `
+<DocumentFragment>
+  .cache-1kb6kq-StyledList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 8px;
+}
+
+.cache-1kb6kq-StyledList [role='row'],
+.cache-1kb6kq-StyledList [role='button row'] {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-rq7qmd-StyledHeaderRow {
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+}
+
+.cache-yvfah-StyledHeaderCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Asap;
+  color: #b2b6c3;
+  gap: 8px;
+}
+
+.cache-yvfah-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-yvfah-StyledHeaderCell[aria-sort] {
+  color: #4f0599;
+}
+
+.cache-yvfah-StyledHeaderCell[aria-sort='ascending'] .e15194jb2 {
+  color: #4f0599;
+}
+
+.cache-yvfah-StyledHeaderCell[aria-sort='descending'] .e15194jb3 {
+  color: #4f0599;
+}
+
+.cache-fqcxly-StyledChildrenContainer {
+  display: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cache-dwb18c-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #b2b6c3;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.cache-1un1bn2-StyledBody {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cache-n81z9q-StyledRow {
+  position: relative;
+  border: 1px solid #d4dae7;
+  border-radius: 4px;
+  -webkit-transition: box-shadow 200ms ease,border-color 200ms ease;
+  transition: box-shadow 200ms ease,border-color 200ms ease;
+  box-shadow: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  -webkit-column-gap: 16px;
+  column-gap: 16px;
+  padding: 0 16px;
+  color: #4a4f62;
+  border-color: #e6e9f0;
+  background-color: #ffffff;
+}
+
+.cache-n81z9q-StyledRow[role='button row'] {
+  cursor: pointer;
+}
+
+.cache-n81z9q-StyledRow [data-expandable-content] {
+  border-color: #e6e9f0;
+}
+
+.cache-n81z9q-StyledRow:hover {
+  border-color: #390171;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-n81z9q-StyledRow[data-highlight='true'] {
+  border-color: #390171;
+  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+}
+
+.cache-n81z9q-StyledRow[aria-disabled='true'] {
+  border: 1px solid #d4dae7;
+  background-color: #f6f6f8;
+  color: #c4c9d6;
+  cursor: not-allowed;
+}
+
+.cache-n81z9q-StyledRow [data-visibility='hover'] {
+  opacity: 0;
+}
+
+.cache-n81z9q-StyledRow:hover:not([aria-disabled='true']) [data-visibility='hover'] {
+  opacity: 1;
+}
+
+.cache-1bcbf7v-StyledCell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 60px;
+}
+
+<div
+    class="cache-1kb6kq-StyledList e1nh26ji0"
+    role="grid"
+  >
+    <div
+      class="cache-rq7qmd-StyledHeaderRow e1fs0ki10"
+      role="row"
+    >
+      <div
+        class="cache-yvfah-StyledHeaderCell e15194jb0"
+        tabindex="-1"
+      >
+        Column 1
+        <div
+          aria-describedby=":r38:"
+          class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <svg
+            class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="cache-yvfah-StyledHeaderCell e15194jb0"
+        tabindex="-1"
+      >
+        Column 2
+        <div
+          aria-describedby=":r39:"
+          class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <svg
+            class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="cache-yvfah-StyledHeaderCell e15194jb0"
+        tabindex="-1"
+      >
+        Column 3
+        <div
+          aria-describedby=":r3a:"
+          class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <svg
+            class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="cache-yvfah-StyledHeaderCell e15194jb0"
+        tabindex="-1"
+      >
+        Column 4
+        <div
+          aria-describedby=":r3b:"
+          class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <svg
+            class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="cache-yvfah-StyledHeaderCell e15194jb0"
+        tabindex="-1"
+      >
+        Column 5
+        <div
+          aria-describedby=":r3c:"
+          class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+          tabindex="0"
+        >
+          <svg
+            class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="cache-1un1bn2-StyledBody erdl1mf0"
+      role="rowgroup"
+    >
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 1 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 1 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 1 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 1 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 1 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 2 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 2 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 2 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 2 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 2 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 3 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 3 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 3 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 3 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 3 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 4 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 4 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 4 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 4 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 4 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 5 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 5 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 5 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 5 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 5 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 6 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 6 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 6 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 6 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 6 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 7 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 7 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 7 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 7 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 7 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 8 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 8 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 8 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 8 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 8 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 9 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 9 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 9 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 9 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 9 Column 5
+        </div>
+      </div>
+      <div
+        class="cache-n81z9q-StyledRow e156fsz1"
+        data-highlight="false"
+        role="row"
+        tabindex="-1"
+      >
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 10 Column 1
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 10 Column 2
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 10 Column 3
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 10 Column 4
+        </div>
+        <div
+          class="cache-1bcbf7v-StyledCell e1ipwytk0"
+          role="cell"
+        >
+          Row 10 Column 5
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -41,6 +41,7 @@ export const Ordering: StoryFn = () => {
           orderDirection: currentOrder.order,
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'perihelion', order: newOrder }),
+          tooltipInfo: 'Nearest to the Sun',
         },
         {
           label: 'Aphelion',

@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
+import { Tooltip } from '../Tooltip'
 
 const ArrowDownIcon = styled(Icon)``
 const ArrowUpIcon = styled(Icon)``
@@ -56,6 +57,7 @@ type HeaderCellProps = {
   isOrdered?: boolean
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
+  tooltipInfo?: string
 }
 
 export const HeaderCell = ({
@@ -64,6 +66,7 @@ export const HeaderCell = ({
   orderDirection,
   onOrder,
   className,
+  tooltipInfo,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -98,6 +101,16 @@ export const HeaderCell = ({
       tabIndex={handleOrder ? 0 : -1}
     >
       {children}
+      {tooltipInfo ? (
+        <Tooltip text={tooltipInfo}>
+          <Icon
+            name="information-outline"
+            size={20}
+            prominence="weak"
+            color="neutral"
+          />
+        </Tooltip>
+      ) : null}
       {orderDirection !== undefined && isOrdered !== undefined ? (
         <SortIcon data-sorted={order !== undefined} />
       ) : null}

@@ -3899,3 +3899,424 @@ exports[`Table Should render correctly with stipped 1`] = `
   </table>
 </DocumentFragment>
 `;
+
+exports[`Table Should render correctly with tooltipInfo 1`] = `
+<DocumentFragment>
+  .cache-7phqeb-StyledTable {
+  width: 100%;
+  box-sizing: content-box;
+  border-collapse: collapse;
+}
+
+.cache-7phqeb-StyledTable tbody tr:nth-of-type(even) {
+  background: #f6f6f8;
+}
+
+.cache-7phqeb-StyledTable tbody tr {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-13ufast-StyledHeader {
+  border-bottom: 1px solid #d4dae7;
+}
+
+.cache-dxa3d3-StyledHeaderCell {
+  padding: 8px;
+}
+
+.cache-dxa3d3-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-17lbabt-StyledText-StyledText {
+  color: #4a4f62;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-fqcxly-StyledChildrenContainer {
+  display: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cache-dwb18c-StyledIcon-sizeStyles {
+  vertical-align: middle;
+  fill: #b2b6c3;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.cache-147y6no-StyledHeaderCell {
+  width: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  padding: 8px;
+}
+
+.cache-147y6no-StyledHeaderCell[role*='button'] {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-17xrsc3-StyledCell {
+  padding: 8px;
+  font-size: 14px;
+}
+
+<table
+    class="cache-7phqeb-StyledTable efhaznt0"
+  >
+    <thead
+      class="cache-13ufast-StyledHeader e1dildlo0"
+    >
+      <tr>
+        <th
+          class="cache-dxa3d3-StyledHeaderCell e18q5bcx1"
+          tabindex="-1"
+        >
+          <div
+            class="e18q5bcx0 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Name
+            <div
+              aria-describedby=":r2l:"
+              class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+              tabindex="0"
+            >
+              <svg
+                class="cache-dwb18c-StyledIcon-sizeStyles etwatq50"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e18q5bcx1"
+          tabindex="-1"
+        >
+          <div
+            class="e18q5bcx0 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          class="cache-147y6no-StyledHeaderCell e18q5bcx1"
+          tabindex="-1"
+        >
+          <div
+            class="e18q5bcx0 cache-17lbabt-StyledText-StyledText e1tg3t120"
+          >
+            Column 3
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 1 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 1 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 1 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 1 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 1 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 2 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 2 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 2 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 2 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 2 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 3 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 3 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 3 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 3 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 3 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 4 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 4 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 4 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 4 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 4 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 5 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 5 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 5 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 5 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 5 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 6 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 6 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 6 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 6 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 6 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 7 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 7 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 7 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 7 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 7 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 8 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 8 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 8 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 8 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 8 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 9 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 9 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 9 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 9 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 9 Column 5
+        </td>
+      </tr>
+      <tr>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 10 Column 1
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 10 Column 2
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 10 Column 3
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 10 Column 4
+        </td>
+        <td
+          class="cache-17xrsc3-StyledCell e14frfwk0"
+        >
+          Row 10 Column 5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

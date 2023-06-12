@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
 const StyledIconContainer = styled(Stack)`
   color: ${({ theme }) => theme.colors.neutral.textWeak};
@@ -70,6 +71,7 @@ type HeaderCellProps = {
   width?: string
   minWidth?: string
   maxWidth?: string
+  tooltipInfo?: string
 }
 
 export const HeaderCell = ({
@@ -81,6 +83,7 @@ export const HeaderCell = ({
   width,
   maxWidth,
   minWidth,
+  tooltipInfo,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -123,6 +126,16 @@ export const HeaderCell = ({
         color={order !== undefined ? 'primary' : 'neutral'}
       >
         {children}
+        {tooltipInfo ? (
+          <Tooltip text={tooltipInfo}>
+            <Icon
+              name="information-outline"
+              size={20}
+              prominence="weak"
+              color="neutral"
+            />
+          </Tooltip>
+        ) : null}
         {orderDirection !== undefined && isOrdered !== undefined ? (
           <SortIcon aria-disabled={!onOrder} order={order} />
         ) : null}
