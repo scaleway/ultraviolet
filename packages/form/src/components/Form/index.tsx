@@ -1,7 +1,7 @@
 import type { Decorator } from 'final-form'
 import arrayMutators from 'final-form-arrays'
 import createDecorator from 'final-form-focus'
-import type { ReactNode } from 'react'
+import type { JSX, ReactNode } from 'react'
 import type {
   FormRenderProps,
   FormProps as ReactFinalFormProps,

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { useCallback, useMemo } from 'react'
+import type { JSX } from 'react'
 import { Button } from '../Button'
 import { getPageNumbers } from './getPageNumbers'
 

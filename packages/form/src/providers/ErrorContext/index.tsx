@@ -1,5 +1,5 @@
 import type { AnyObject } from 'final-form'
-import type { ReactNode } from 'react'
+import type { JSX, ReactNode } from 'react'
 import { createContext, useCallback, useContext, useMemo } from 'react'
 import { useFormState } from 'react-final-form'
 import type { FormErrorFunctionParams, FormErrors } from '../../types'

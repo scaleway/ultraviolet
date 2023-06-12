@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, JSX } from 'react'
 import type { Color } from '../../theme'
 import { Icon } from '../Icon'
 

@@ -1,5 +1,5 @@
 import { Button } from '@scaleway/ui'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps, JSX, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { useFormState } from 'react-final-form'
 

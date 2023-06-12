@@ -1,6 +1,6 @@
 import { Checkbox } from '@scaleway/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, ReactNode, Ref } from 'react'
+import type { ComponentProps, JSX, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'

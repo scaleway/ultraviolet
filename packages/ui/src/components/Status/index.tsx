@@ -1,5 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { JSX } from 'react'
 import { ping } from '../../utils'
 import { Tooltip } from '../Tooltip'
 

@@ -5,6 +5,7 @@ import type {
   ChangeEvent,
   FocusEventHandler,
   InputHTMLAttributes,
+  JSX,
   KeyboardEventHandler,
   LabelHTMLAttributes,
   TextareaHTMLAttributes,

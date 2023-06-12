@@ -1,5 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { JSX } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Text } from '../Text'
 
