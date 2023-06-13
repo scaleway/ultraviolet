@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import type { ComponentProps, ReactNode } from 'react'
+import type { ComponentProps } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
@@ -51,7 +51,6 @@ type TagListProps = {
   popoverTitle: string
   className?: string
   'data-testid'?: string
-  children?: ({ tags }: { tags: string[] }) => ReactNode
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
@@ -67,7 +66,6 @@ export const TagList = ({
   copiedText,
   className,
   'data-testid': dataTestId,
-  children,
 }: TagListProps): JSX.Element | null => {
   let tmpThreshold = threshold
   if (
@@ -109,24 +107,20 @@ export const TagList = ({
           visible={isVisible}
           onClose={() => setIsVisible(false)}
           content={
-            children ? (
-              children({ tags: tags.slice(visibleTagsCount) })
-            ) : (
-              <StyledTagContainer multiline>
-                {tags.slice(visibleTagsCount).map((tag, index) => (
-                  <Tag
-                    // useful when two tags are identical `${tag}-${index}`
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={`${tag}-${index}`}
-                    copiable={copiable}
-                    copyText={copyText}
-                    copiedText={copiedText}
-                  >
-                    {tag}
-                  </Tag>
-                ))}
-              </StyledTagContainer>
-            )
+            <StyledTagContainer multiline>
+              {tags.slice(visibleTagsCount).map((tag, index) => (
+                <Tag
+                  // useful when two tags are identical `${tag}-${index}`
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${tag}-${index}`}
+                  copiable={copiable}
+                  copyText={copyText}
+                  copiedText={copiedText}
+                >
+                  {tag}
+                </Tag>
+              ))}
+            </StyledTagContainer>
           }
         >
           <TagsWrapper

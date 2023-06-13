@@ -87,30 +87,6 @@ describe('TagList', () => {
       </div>,
     ))
 
-  test('renders correctly with custom popover', () =>
-    shouldMatchEmotionSnapshot(
-      <div>
-        <TagList
-          popoverTitle="Custom title"
-          copiable
-          threshold={2}
-          tags={['scaleway', 'cloud']}
-        >
-          {({ tags }) => (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {tags.map((tag, index) => (
-                // useful when two tags are identical `${tag}-${index}`
-                // eslint-disable-next-line react/no-array-index-key
-                <span key={`${tag}-${index}`} style={{ color: 'black' }}>
-                  Tag: {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </TagList>
-      </div>,
-    ))
-
   test('renders correctly when clicking on popover', async () => {
     renderWithTheme(
       <TagList
