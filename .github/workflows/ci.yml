@@ -90,9 +90,9 @@ jobs:
   build-examples: # This will build all projects in the examples folder, it assures that all examples are working
     strategy:
       matrix:
-        node: [ '18' ]
+        node: ['18']
     runs-on: ubuntu-20.04
-    needs: [ lint, test ]
+    needs: [lint, test]
     steps:
       - uses: actions/checkout@v3.5.2
       - uses: pnpm/action-setup@v2.2.4
