@@ -1,5 +1,21 @@
 # Change Log
 
+## 0.251.2
+
+### Patch Changes
+
+- [#2618](https://github.com/scaleway/scaleway-ui/pull/2618) [`7bdaa019`](https://github.com/scaleway/scaleway-ui/commit/7bdaa01908e3e69407f5b07b4a65e6eec14609e1) Thanks [@philibea](https://github.com/philibea)! - add possibility to make an async estimate on PasswordStrengthMeter
+
+- [#2600](https://github.com/scaleway/scaleway-ui/pull/2600) [`49776b61`](https://github.com/scaleway/scaleway-ui/commit/49776b61a23c71abaa37aafd60ae43d24d886277) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Tooltip: fix alignment
+
+- [#2613](https://github.com/scaleway/scaleway-ui/pull/2613) [`cf4da571`](https://github.com/scaleway/scaleway-ui/commit/cf4da571080ecc42bc2cff711cae18081e4eca2d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.5`.
+  Updated dependency `@babel/runtime` to `7.22.5`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.5`.
+  Updated dependency `@babel/preset-env` to `7.22.5`.
+  Updated dependency `@babel/preset-react` to `7.22.5`.
+
+- [#2574](https://github.com/scaleway/scaleway-ui/pull/2574) [`0f99c0ac`](https://github.com/scaleway/scaleway-ui/commit/0f99c0acaf159e69f8ec2288527ffd0ab61c430f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.12.0`.
+
 ## 0.251.1
 
 ### Patch Changes
