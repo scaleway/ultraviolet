@@ -41,11 +41,22 @@ type Strength = {
   t: string
 }
 
+type Score = 0 | 1 | 2 | 3 | 4
+
+type ResponseEstimate = {
+  score: Score
+}
+
 type PasswordStrengthMeterProps = {
   /**
    * A function that should return a score based on password (index of strength array). The higher score is the stronger password is.
    */
-  estimate?: (passwordToTest: string, userInputs: string[]) => { score: number }
+  estimate?:
+    | ((
+        passwordToTest: string,
+        userInputs: string[],
+      ) => Promise<ResponseEstimate>)
+    | ((passwordToTest: string, userInputs: string[]) => ResponseEstimate)
   onChange?: (score: number) => unknown
   password?: string
   /**
@@ -61,7 +72,7 @@ type PasswordStrengthMeterProps = {
   'data-testid'?: string
 }
 
-const DEFAULT_ESTIMATE = () => ({ score: 0 })
+const DEFAULT_ESTIMATE = () => ({ score: 0 as Score })
 const DEFAULT_FORBIDDEN_WORDS: PasswordStrengthMeterProps['forbiddenInputs'] =
   []
 
@@ -83,8 +94,14 @@ export const PasswordStrengthMeter = ({
   const [width, setWidth] = useState<number | string>(0)
 
   const getScore = useCallback(
-    (passwordToTest: string) =>
-      estimate(passwordToTest || '', forbiddenInputs).score || 0,
+    async (passwordToTest: string) => {
+      const { score: internalScore = 0 } = await estimate(
+        passwordToTest || '',
+        forbiddenInputs,
+      )
+
+      return internalScore
+    },
     [estimate, forbiddenInputs],
   )
 
@@ -93,7 +110,9 @@ export const PasswordStrengthMeter = ({
   useEffect(() => {
     setBackgroundColor(strength[score].color)
     handleChange(score)
-    setScore(getScore(password))
+    getScore(password)
+      .then(s => setScore(s))
+      .catch(null)
 
     const toValue = ((score + 1) / strength.length) * 100
     setWidth(`${toValue}%`)
