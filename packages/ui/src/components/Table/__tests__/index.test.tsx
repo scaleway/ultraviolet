@@ -335,11 +335,11 @@ describe('Table', () => {
       </Table>,
     ))
 
-  test('Should render correctly with tooltipInfo', () =>
+  test('Should render correctly with info', () =>
     shouldMatchEmotionSnapshot(
       <Table
         columns={[
-          { label: 'Name', tooltipInfo: 'This column is important' },
+          { label: 'Name', info: 'This column is important' },
           ...columns.slice(1, 3),
         ]}
         stripped

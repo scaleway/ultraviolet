@@ -2,13 +2,13 @@ import type { ComponentStory } from '@storybook/react'
 import { Table } from '..'
 import { columns, data } from './resources'
 
-export const TooltipInfo: ComponentStory<typeof Table> = ({ ...props }) => (
+export const ColumnInfo: ComponentStory<typeof Table> = ({ ...props }) => (
   <Table {...props} />
 )
 
-TooltipInfo.args = {
+ColumnInfo.args = {
   columns: [
-    { label: 'Name', tooltipInfo: 'This column is important' },
+    { label: 'Name', info: 'This column is important' },
     ...columns.slice(1, 3),
   ],
   children: (

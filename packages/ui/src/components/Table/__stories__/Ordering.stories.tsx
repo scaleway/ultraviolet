@@ -33,7 +33,7 @@ export const Ordering: StoryFn = () => {
           orderDirection: currentOrder.order,
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'name', order: newOrder }),
-          tooltipInfo: 'tooltipInfo works fine with the ordering',
+          info: 'info works fine with the ordering',
         },
         {
           label: 'Release year',

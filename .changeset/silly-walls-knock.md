@@ -2,4 +2,4 @@
 '@scaleway/ui': minor
 ---
 
-Table & List: support a new tooltipInfo prop on headerCell
+Table & List: support a new info prop on headerCell

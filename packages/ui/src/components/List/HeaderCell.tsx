@@ -57,7 +57,7 @@ type HeaderCellProps = {
   isOrdered?: boolean
   orderDirection?: 'asc' | 'desc' | 'none'
   onOrder?: (newOrder: 'asc' | 'desc') => void
-  tooltipInfo?: string
+  info?: string
 }
 
 export const HeaderCell = ({
@@ -66,7 +66,7 @@ export const HeaderCell = ({
   orderDirection,
   onOrder,
   className,
-  tooltipInfo,
+  info,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -101,8 +101,8 @@ export const HeaderCell = ({
       tabIndex={handleOrder ? 0 : -1}
     >
       {children}
-      {tooltipInfo ? (
-        <Tooltip text={tooltipInfo}>
+      {info ? (
+        <Tooltip text={info}>
           <Icon
             name="information-outline"
             size={20}

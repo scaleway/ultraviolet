@@ -1,7 +1,7 @@
 import { List } from '..'
 import { data } from './resources'
 
-export const TooltipInfo = () => (
+export const ColumnInfo = () => (
   <List
     columns={[
       {
@@ -9,12 +9,12 @@ export const TooltipInfo = () => (
       },
       {
         label: 'Perihelion',
-        tooltipInfo: 'Nearest to the Sun',
+        info: 'Nearest to the Sun',
       },
       {
         label: 'Aphelion',
         width: '200px',
-        tooltipInfo: 'Farthest to the Sun',
+        info: 'Farthest to the Sun',
       },
     ]}
   >

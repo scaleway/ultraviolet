@@ -71,7 +71,7 @@ type HeaderCellProps = {
   width?: string
   minWidth?: string
   maxWidth?: string
-  tooltipInfo?: string
+  info?: string
 }
 
 export const HeaderCell = ({
@@ -83,7 +83,7 @@ export const HeaderCell = ({
   width,
   maxWidth,
   minWidth,
-  tooltipInfo,
+  info,
 }: HeaderCellProps) => {
   let order: undefined | 'ascending' | 'descending'
   if (isOrdered && orderDirection === 'asc') {
@@ -126,8 +126,8 @@ export const HeaderCell = ({
         color={order !== undefined ? 'primary' : 'neutral'}
       >
         {children}
-        {tooltipInfo ? (
-          <Tooltip text={tooltipInfo}>
+        {info ? (
+          <Tooltip text={info}>
             <Icon
               name="information-outline"
               size={20}

@@ -34,7 +34,7 @@ type ColumnProps = Pick<
 > & {
   label?: string
   width?: string
-  tooltipInfo?: string
+  info?: string
 }
 
 type ListProps = {
@@ -77,7 +77,7 @@ const BaseList = forwardRef(
                 isOrdered={column.isOrdered}
                 orderDirection={column.orderDirection}
                 onOrder={column.onOrder}
-                tooltipInfo={column.tooltipInfo}
+                info={column.info}
               >
                 {column.label}
               </HeaderCell>
