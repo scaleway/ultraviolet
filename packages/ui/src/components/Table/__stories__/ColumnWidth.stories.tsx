@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Table } from '..'
 import { columns, data } from './resources'
 
-export const ColumnWidth: ComponentStory<typeof Table> = ({ ...props }) => (
+export const ColumnWidth: StoryFn<typeof Table> = ({ ...props }) => (
   <Table {...props} />
 )
 

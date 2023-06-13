@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Skeleton } from '..'
 
-export const Template: ComponentStory<typeof Skeleton> = props => (
+export const Template: StoryFn<typeof Skeleton> = props => (
   <Skeleton {...props} />
 )

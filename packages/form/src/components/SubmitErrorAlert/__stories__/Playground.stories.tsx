@@ -1,11 +1,11 @@
 import { Stack } from '@scaleway/ui'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { FORM_ERROR, Submit, SubmitErrorAlert } from '../../..'
 import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
-export const Playground: Story<
+export const Playground: StoryFn<
   ComponentProps<typeof SubmitErrorAlert>
 > = () => (
   <Form

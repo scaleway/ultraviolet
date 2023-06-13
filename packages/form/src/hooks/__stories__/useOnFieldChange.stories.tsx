@@ -1,5 +1,5 @@
 import { Stack, Text } from '@scaleway/ui'
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Form, useOnFieldChange } from '../..'
 import { TextInputField } from '../../components'
@@ -83,7 +83,7 @@ const FormContent = () => {
   )
 }
 
-export const Usage: Story = () => (
+export const Usage: StoryFn = () => (
   <Form
     initialValues={{ email: 'test@test.com' }}
     onRawSubmit={() => {}}

@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { MODAL_PLACEMENT, Modal } from '..'
 import { Button } from '../../Button'
 
-export const Placement: Story = props => (
+export const Placement: StoryFn = props => (
   <>
     {Object.keys(MODAL_PLACEMENT).map(placement => (
       <div style={{ display: 'inline-block', padding: 16 }} key={placement}>

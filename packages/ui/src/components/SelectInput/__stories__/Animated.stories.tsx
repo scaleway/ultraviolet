@@ -1,4 +1,4 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import type { SingleValue } from 'react-select'
 import { SelectInput } from '..'
@@ -7,7 +7,7 @@ import * as animations from '../../../utils/animations'
 
 type OptionType = { label: string; value: string }
 
-export const Animated: ComponentStory<typeof SelectInput> = ({ ...props }) => {
+export const Animated: StoryFn<typeof SelectInput> = ({ ...props }) => {
   const [options] = useState(
     Object.keys(animations).map(animation => ({
       label: animation,

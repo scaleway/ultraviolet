@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Stack } from '..'
 
 export default {
@@ -12,7 +12,7 @@ export default {
     },
   },
   title: 'Components/Layout/Stack',
-} as ComponentMeta<typeof Stack>
+} as Meta<typeof Stack>
 
 export { Playground } from './Playground.stories'
 export { Gap } from './Gap.stories'

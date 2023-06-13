@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useCallback, useState } from 'react'
 import { Checkbox } from '..'
 
-export const Progress: Story = () => {
+export const Progress: StoryFn = () => {
   const [checked, setChecked] = useState(false)
   const handleChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked)

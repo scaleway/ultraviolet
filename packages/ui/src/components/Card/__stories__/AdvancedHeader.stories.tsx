@@ -1,11 +1,11 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Alert } from '../../Alert'
 import { Badge } from '../../Badge'
 import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
 
-export const AdvancedHeader: Story = () => {
+export const AdvancedHeader: StoryFn = () => {
   const CustomHeader = (
     <Stack gap={1}>
       <Stack gap={1} direction="row" alignItems="center">

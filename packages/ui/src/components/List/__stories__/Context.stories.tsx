@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useMemo } from 'react'
 import { List } from '..'
 import { columns, data } from './resources'
 
-export const Context: Story = () => {
+export const Context: StoryFn = () => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
     const { selectedRowIds } = List.useListContext()
 

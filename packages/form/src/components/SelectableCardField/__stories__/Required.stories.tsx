@@ -1,10 +1,10 @@
 import { Stack } from '@scaleway/ui'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { SelectableCardField } from '..'
 import { Submit } from '../../Submit'
 
-export const Required: Story<
+export const Required: StoryFn<
   ComponentProps<typeof SelectableCardField>
 > = args => (
   <Stack gap={1}>

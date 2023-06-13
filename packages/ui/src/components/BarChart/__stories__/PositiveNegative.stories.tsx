@@ -1,10 +1,10 @@
 import { useTheme } from '@emotion/react'
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartPositiveNegativeData } from './mockData'
 
-export const PositiveNegative: ComponentStory<typeof BarChart> = props => {
+export const PositiveNegative: StoryFn<typeof BarChart> = props => {
   const theme = useTheme()
 
   return (

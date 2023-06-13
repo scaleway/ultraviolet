@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { NumberInput } from '..'
 
-export const Template: ComponentStory<typeof NumberInput> = props => (
+export const Template: StoryFn<typeof NumberInput> = props => (
   <NumberInput {...props} />
 )

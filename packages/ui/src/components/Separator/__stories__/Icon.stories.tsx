@@ -1,7 +1,7 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Separator } from '..'
 
-export const Icon: ComponentStory<typeof Separator> = ({ icon }) => (
+export const Icon: StoryFn<typeof Separator> = ({ icon }) => (
   <>
     <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
       <div>horizontal start</div>
@@ -26,4 +26,4 @@ Icon.decorators = [
       <Story />
     </div>
   ),
-] as ComponentStory<typeof Separator>['decorators']
+] as StoryFn<typeof Separator>['decorators']

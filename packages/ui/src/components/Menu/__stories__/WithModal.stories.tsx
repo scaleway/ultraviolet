@@ -1,9 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Menu } from '..'
 import { Modal } from '../../Modal'
 import { DefaultDisclosure } from './Template.stories'
 
-export const WithModal: ComponentStory<typeof Menu> = () => {
+export const WithModal: StoryFn<typeof Menu> = () => {
   const NestedModal = () => (
     <Modal
       animated

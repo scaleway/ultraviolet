@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { TagInputFieldProps } from '..'
 import { TagInputField } from '..'
 
-export const Template: Story<TagInputFieldProps> = args => (
+export const Template: StoryFn<TagInputFieldProps> = args => (
   <TagInputField {...args} />
 )

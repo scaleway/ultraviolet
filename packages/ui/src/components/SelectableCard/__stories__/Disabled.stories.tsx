@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Disabled: Story = () => {
+export const Disabled: StoryFn = () => {
   const [value, onChange] = useState('label-8')
 
   return (

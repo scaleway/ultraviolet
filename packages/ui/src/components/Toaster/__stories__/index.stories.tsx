@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { ToastContainer } from '..'
 
 export default {
@@ -15,7 +15,7 @@ Toaster is separated in two parts, first the \`ToastContainer\` which is where t
     },
   },
   title: 'Components/Feedback/Toaster',
-} as ComponentMeta<typeof ToastContainer>
+} as Meta<typeof ToastContainer>
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'

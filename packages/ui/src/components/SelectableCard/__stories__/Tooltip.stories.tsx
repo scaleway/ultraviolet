@@ -1,9 +1,9 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Tooltip: Story = () => {
+export const Tooltip: StoryFn = () => {
   const [value, onChange] = useState('label-14')
 
   return (

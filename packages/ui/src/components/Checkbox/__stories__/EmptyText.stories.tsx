@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const EmptyText: ComponentStory<typeof Checkbox> = ({
+export const EmptyText: StoryFn<typeof Checkbox> = ({
   onChange = console.log,
 }) => <Checkbox onChange={onChange} aria-label="empty-text" />

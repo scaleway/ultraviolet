@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Table } from '..'
 import { Stack, Text } from '../..'
 import { columns, data } from './resources'
@@ -10,7 +10,7 @@ const combos = [
   { stripped: true, bordered: true },
 ]
 
-export const Style: Story = () => (
+export const Style: StoryFn = () => (
   <Stack gap={2}>
     {combos.map((combo, index) => (
       // eslint-disable-next-line react/no-array-index-key

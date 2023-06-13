@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Loader } from '../index'
 
-export const StrokeWidth: Story = props => (
+export const StrokeWidth: StoryFn = props => (
   <>
     {[2, 8, 16, 24].map(strokeWidth => (
       <Loader {...props} strokeWidth={strokeWidth} key={strokeWidth} />

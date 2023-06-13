@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Button } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     },
   },
   title: 'Components/Action/Button',
-} as ComponentMeta<typeof Button>
+} as Meta<typeof Button>
 
 export { Playground } from './Playground.stories'
 export { Showcase } from './Showcase.stories'

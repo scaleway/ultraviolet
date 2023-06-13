@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { TextInput, textInputSizes } from '..'
 import { Stack } from '../../Stack'
 
-export const Sizes: Story = props => (
+export const Sizes: StoryFn = props => (
   <>
     {textInputSizes.map(size => (
       <TextInput

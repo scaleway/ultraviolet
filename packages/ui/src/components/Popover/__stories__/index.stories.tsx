@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Popover } from '..'
 
 export default {
@@ -13,7 +13,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Popover>
+} as Meta<typeof Popover>
 
 export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'

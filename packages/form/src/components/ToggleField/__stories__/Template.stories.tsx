@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { ToggleField } from '..'
 
-export const Template: Story<ComponentProps<typeof ToggleField>> = args => (
+export const Template: StoryFn<ComponentProps<typeof ToggleField>> = args => (
   <ToggleField {...args} />
 )
 

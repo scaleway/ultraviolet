@@ -1,7 +1,7 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Carousel } from '..'
 
-export const Template: ComponentStory<typeof Carousel> = props => (
+export const Template: StoryFn<typeof Carousel> = props => (
   <Carousel {...props}>
     <Carousel.Item>Item 1</Carousel.Item>
     <Carousel.Item>Item 2</Carousel.Item>

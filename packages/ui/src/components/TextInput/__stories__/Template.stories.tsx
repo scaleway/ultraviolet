@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { TextInput } from '..'
 
-export const Template: ComponentStory<typeof TextInput> = ({
+export const Template: StoryFn<typeof TextInput> = ({
   defaultValue = '',
   ...args
 }) => {

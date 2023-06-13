@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { PieChart } from '..'
 
 export default {
@@ -8,7 +8,7 @@ export default {
   parameters: {
     experimental: true,
   },
-} as ComponentMeta<typeof PieChart>
+} as Meta<typeof PieChart>
 
 export { Playground } from './Playground.stories'
 export { Content } from './Content.stories'

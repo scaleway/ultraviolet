@@ -1,10 +1,10 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
 
-export const Sizes: ComponentStory<typeof Popover> = () => {
+export const Sizes: StoryFn<typeof Popover> = () => {
   const [openedSmall, setOpenedSmall] = useState(false)
   const [openedMedium, setOpenedMedium] = useState(false)
   const [openedLarge, setOpenedLarge] = useState(false)

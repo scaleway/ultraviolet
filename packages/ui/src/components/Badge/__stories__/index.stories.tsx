@@ -1,10 +1,10 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Badge } from '..'
 
 export default {
   component: Badge,
   title: 'Components/Badges/Badge',
-} as ComponentMeta<typeof Badge>
+} as Meta<typeof Badge>
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'

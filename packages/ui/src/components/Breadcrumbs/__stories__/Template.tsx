@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Breadcrumbs } from '..'
 
-export const Template: Story<ComponentProps<typeof Breadcrumbs>> = props => (
+export const Template: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
   <Breadcrumbs {...props}>
     <Breadcrumbs.Item to="/step1">Step 1</Breadcrumbs.Item>
     <Breadcrumbs.Item to="/step1/step2">Step 2</Breadcrumbs.Item>

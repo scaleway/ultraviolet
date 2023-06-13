@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Modal } from '..'
 
 export default {
@@ -13,7 +13,7 @@ By default now our modal is a portal. If you want to change this you can disable
     },
   },
   title: 'Components/Overlay/Modal',
-} as ComponentMeta<typeof Modal>
+} as Meta<typeof Modal>
 
 export { Playground } from './Playground.stories'
 export { ToggleStory as Toggle } from './Toggle.stories'
