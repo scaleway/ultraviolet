@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
+  JSX,
   KeyboardEventHandler,
 } from 'react'
 import { useEffect, useRef, useState } from 'react'

@@ -1,6 +1,6 @@
 import { TextInput } from '@scaleway/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, Ref } from 'react'
+import type { ComponentProps, JSX, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'

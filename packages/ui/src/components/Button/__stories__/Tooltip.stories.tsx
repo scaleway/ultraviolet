@@ -1,13 +1,11 @@
-import type { ComponentStory } from '@storybook/react'
-import { Button } from '..'
+import { Template } from './Template.stories'
 
-export const Tooltip: ComponentStory<typeof Button> = () => (
-  <div style={{ display: 'flex' }}>
-    <Button onClick={() => {}} tooltip="Tooltip text">
-      Click me
-    </Button>
-  </div>
-)
+export const Tooltip = Template.bind({})
+
+Tooltip.args = {
+  ...Template.args,
+  tooltip: 'Tooltip text',
+}
 
 Tooltip.parameters = {
   docs: {

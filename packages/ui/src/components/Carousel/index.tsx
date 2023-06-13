@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { JSX, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 
 const StyledWrapper = styled.div`

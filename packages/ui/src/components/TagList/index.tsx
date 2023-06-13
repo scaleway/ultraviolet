@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, JSX } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 

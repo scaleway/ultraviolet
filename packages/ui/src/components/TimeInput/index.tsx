@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, JSX } from 'react'
 import { SelectInput } from '../SelectInput'
 
 const hours = [

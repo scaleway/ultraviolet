@@ -3,6 +3,7 @@ import type {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
+  JSX,
   KeyboardEventHandler,
 } from 'react'
 import { createRef, useId, useState } from 'react'

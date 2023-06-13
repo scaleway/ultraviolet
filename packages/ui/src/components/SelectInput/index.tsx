@@ -5,6 +5,7 @@ import type {
   ComponentProps,
   ForwardRefExoticComponent,
   ForwardedRef,
+  JSX,
   ReactElement,
   ReactNode,
 } from 'react'

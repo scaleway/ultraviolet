@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { MouseEvent as ReactMouseEvent, ReactNode } from 'react'
+import type { JSX, MouseEvent as ReactMouseEvent, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement } from 'react'
 import { Link } from '../Link'
 

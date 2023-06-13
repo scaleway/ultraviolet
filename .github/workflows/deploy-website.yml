@@ -15,7 +15,7 @@ jobs:
       DEPLOYMENT_NAME: 'website'
 
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v3.5.3
       - name: Cache Docker layers
         uses: actions/cache@v3.3.1
         with:
@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.SCW_SECRET_KEY }}
 
       - name: Build
-        uses: docker/build-push-action@v4.0.0
+        uses: docker/build-push-action@v4.1.0
         env:
           IMAGE: ${{ env.IMAGE_NAME }}:${{ env.BRANCH_SLUG }}
         with:

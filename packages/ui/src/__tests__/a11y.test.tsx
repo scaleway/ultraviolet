@@ -5,6 +5,7 @@ import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as path from 'path'
 import * as process from 'process'
+import type { JSX } from 'react'
 import { renderWithTheme } from '../../.jest/helpers'
 
 const testedComponents = [

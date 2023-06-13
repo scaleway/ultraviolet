@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactElement, ReactNode, RefObject } from 'react'
+import type { JSX, ReactElement, ReactNode, RefObject } from 'react'
 import {
   cloneElement,
   isValidElement,

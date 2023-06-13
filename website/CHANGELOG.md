@@ -1,5 +1,20 @@
 # Change Log
 
+## 0.4.11
+
+### Patch Changes
+
+- [#2613](https://github.com/scaleway/scaleway-ui/pull/2613) [`cf4da571`](https://github.com/scaleway/scaleway-ui/commit/cf4da571080ecc42bc2cff711cae18081e4eca2d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.5`.
+  Updated dependency `@babel/runtime` to `7.22.5`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.5`.
+  Updated dependency `@babel/preset-env` to `7.22.5`.
+  Updated dependency `@babel/preset-react` to `7.22.5`.
+
+- [#2571](https://github.com/scaleway/scaleway-ui/pull/2571) [`e1d98c1a`](https://github.com/scaleway/scaleway-ui/commit/e1d98c1aa571f5063d1d2ad4a47f6a711ae3da33) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `18.16.16`.
+
+- Updated dependencies [[`7bdaa019`](https://github.com/scaleway/scaleway-ui/commit/7bdaa01908e3e69407f5b07b4a65e6eec14609e1), [`49776b61`](https://github.com/scaleway/scaleway-ui/commit/49776b61a23c71abaa37aafd60ae43d24d886277), [`cf4da571`](https://github.com/scaleway/scaleway-ui/commit/cf4da571080ecc42bc2cff711cae18081e4eca2d), [`0f99c0ac`](https://github.com/scaleway/scaleway-ui/commit/0f99c0acaf159e69f8ec2288527ffd0ab61c430f)]:
+  - @scaleway/ui@0.251.2
+
 ## 0.4.10
 
 ### Patch Changes
