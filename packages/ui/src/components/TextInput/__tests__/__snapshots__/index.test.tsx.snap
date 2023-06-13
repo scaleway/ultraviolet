@@ -137,7 +137,7 @@ exports[`TextInput should handle events on random button 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -162,6 +162,8 @@ exports[`TextInput should handle events on random button 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -169,19 +171,22 @@ exports[`TextInput should handle events on random button 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -229,7 +234,7 @@ exports[`TextInput should handle events on random button 1`] = `
         >
           <button
             aria-label="randomize"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             data-testid="test-randomize-button"
             type="button"
           >
@@ -393,7 +398,7 @@ exports[`TextInput should handle events on toggleable password 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -418,6 +423,8 @@ exports[`TextInput should handle events on toggleable password 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -425,19 +432,22 @@ exports[`TextInput should handle events on toggleable password 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -485,7 +495,7 @@ exports[`TextInput should handle events on toggleable password 1`] = `
         >
           <button
             aria-label="show"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             data-testid="test-visibility-button"
             type="button"
           >
@@ -2821,7 +2831,7 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2846,6 +2856,8 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -2853,19 +2865,22 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -2954,7 +2969,7 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
         >
           <button
             aria-label="show"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -2968,7 +2983,7 @@ exports[`TextInput should render correctly with multiple right components 1`] = 
           </button>
           <button
             aria-label="randomize"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -5255,7 +5270,7 @@ exports[`TextInput should render random 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5280,6 +5295,8 @@ exports[`TextInput should render random 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -5287,19 +5304,22 @@ exports[`TextInput should render random 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -5346,7 +5366,7 @@ exports[`TextInput should render random 1`] = `
         >
           <button
             aria-label="randomize"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -5521,7 +5541,7 @@ exports[`TextInput should render random 2`] = `
   min-width: 24px;
 }
 
-.cache-1x1g2x9-StyledGhostButton {
+.cache-e8w95g-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5546,6 +5566,8 @@ exports[`TextInput should render random 2`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -5553,12 +5575,15 @@ exports[`TextInput should render random 2`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
   color: #c4c9d6;
+}
+
+.cache-e8w95g-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -5612,7 +5637,7 @@ exports[`TextInput should render random 2`] = `
         >
           <button
             aria-label="randomize"
-            class="cache-1x1g2x9-StyledGhostButton em6gco80"
+            class="cache-e8w95g-StyledGhostButton em6gco80"
             disabled=""
             type="button"
           >
@@ -5799,7 +5824,7 @@ exports[`TextInput should render random with required 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5824,6 +5849,8 @@ exports[`TextInput should render random with required 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -5831,19 +5858,22 @@ exports[`TextInput should render random with required 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -5903,7 +5933,7 @@ exports[`TextInput should render random with required 1`] = `
         >
           <button
             aria-label="randomize"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -6066,7 +6096,7 @@ exports[`TextInput should render toggleable password 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6091,6 +6121,8 @@ exports[`TextInput should render toggleable password 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -6098,19 +6130,22 @@ exports[`TextInput should render toggleable password 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -6157,7 +6192,7 @@ exports[`TextInput should render toggleable password 1`] = `
         >
           <button
             aria-label="show"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg
@@ -6343,7 +6378,7 @@ exports[`TextInput should render toggleable password with required 1`] = `
   min-width: 24px;
 }
 
-.cache-pw162u-StyledGhostButton {
+.cache-g0kfbi-StyledGhostButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -6368,6 +6403,8 @@ exports[`TextInput should render toggleable password with required 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -6375,19 +6412,22 @@ exports[`TextInput should render toggleable password with required 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
 }
 
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-g0kfbi-StyledGhostButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-pw162u-StyledGhostButton:hover,
-.cache-pw162u-StyledGhostButton:active {
+.cache-g0kfbi-StyledGhostButton:hover,
+.cache-g0kfbi-StyledGhostButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -6447,7 +6487,7 @@ exports[`TextInput should render toggleable password with required 1`] = `
         >
           <button
             aria-label="show"
-            class="cache-pw162u-StyledGhostButton em6gco80"
+            class="cache-g0kfbi-StyledGhostButton em6gco80"
             type="button"
           >
             <svg

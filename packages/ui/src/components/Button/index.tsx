@@ -89,6 +89,11 @@ const coreStyle = ({
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  
 
   ${
     disabled
@@ -101,14 +106,13 @@ const coreStyle = ({
   }
 
   /* We can't use Text component because of button hover effect, so we need to duplicate */
-    font-size: ${font.fontSize};
-    font-family: ${font.fontFamily};
-    font-weight: ${font.weight};
-    letter-spacing: ${font.letterSpacing};
-    line-height: ${font.lineHeight};
-    paragraph-spacing: ${font.paragraphSpacing};
-    text-case: ${font.textCase};
-    text-decoration: ${font.textDecoration};
+  font-size: ${font.fontSize};
+  font-family: ${font.fontFamily};
+  font-weight: ${font.weight};
+  letter-spacing: ${font.letterSpacing};
+  line-height: ${font.lineHeight};
+  paragraph-spacing: ${font.paragraphSpacing};
+  text-case: ${font.textCase};
 `
 }
 
@@ -372,7 +376,8 @@ export const Button = forwardRef<Element, FinalProps>(
       </>
     )
 
-    if (href) {
+    // @note: an anchor can't be disabled
+    if (href && !computeIsDisabled) {
       const Component = VARIANTS_COMPONENTS[variant].link
 
       return (
@@ -381,7 +386,7 @@ export const Button = forwardRef<Element, FinalProps>(
             role={role}
             className={className}
             data-testid={dataTestId}
-            disabled={computeIsDisabled}
+            disabled={false}
             fullWidth={fullWidth}
             iconPosition={iconPosition}
             sentiment={sentiment}

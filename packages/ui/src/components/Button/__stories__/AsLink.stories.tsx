@@ -1,13 +1,23 @@
-import { Template } from './Template.stories'
+import type { ComponentStory } from '@storybook/react'
+import { Button, buttonVariants } from '..'
+import { Stack } from '../..'
 
-export const AsLink = Template.bind({})
-
-AsLink.args = {
-  href: 'https://www.scaleway.com/',
-  variant: 'ghost',
-  sentiment: 'info',
-  children: 'Click me',
-}
+export const AsLink: ComponentStory<typeof Button> = () => (
+  <Stack alignItems="center" gap={2} direction="row">
+    {buttonVariants.map(variant => (
+      <Button
+        href="https://ultraviolet.scaleway.com/"
+        target="_blank"
+        key={variant}
+        icon="pencil"
+        onClick={() => {}}
+        variant={variant}
+      >
+        Click me
+      </Button>
+    ))}
+  </Stack>
+)
 
 AsLink.parameters = {
   docs: {
