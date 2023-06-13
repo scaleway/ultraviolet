@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
   display: flex;
 `
 
-const StyledTooltipReference = styled.span`
+const TagsWrapper = styled.span`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary.text};
   border: none;
@@ -129,9 +129,12 @@ export const TagList = ({
             )
           }
         >
-          <StyledTooltipReference onClick={() => setIsVisible(true)}>
+          <TagsWrapper
+            data-testid={`${dataTestId ?? 'taglist'}-open`}
+            onClick={() => setIsVisible(true)}
+          >
             +{tags.length - tmpThreshold}
-          </StyledTooltipReference>
+          </TagsWrapper>
         </Popover>
       )}
     </StyledContainer>

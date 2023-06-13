@@ -1,6 +1,11 @@
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import type { ReactNode } from 'react'
 import { TagList } from '..'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../../.jest/helpers'
 
 jest.mock('reakit/Tooltip', () => ({
   Tooltip: ({ children }: { children: ReactNode }) => children,
@@ -105,4 +110,28 @@ describe('TagList', () => {
         </TagList>
       </div>,
     ))
+
+  test('renders correctly when clicking on popover', async () => {
+    renderWithTheme(
+      <TagList
+        popoverTitle="Additional"
+        threshold={1}
+        tags={['scaleway', 'cloud']}
+      />,
+    )
+
+    expect(screen.queryByText('Additional')).not.toBeInTheDocument()
+
+    const plus = screen.getByTestId('taglist-open')
+    await userEvent.click(plus)
+
+    expect(screen.getByText('Additional')).toBeInTheDocument()
+
+    const closeButton = screen.getByLabelText('close')
+    await userEvent.click(closeButton)
+
+    await waitFor(() => {
+      expect(screen.queryByText('Additional')).not.toBeInTheDocument()
+    })
+  })
 })
