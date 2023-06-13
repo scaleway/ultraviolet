@@ -46,7 +46,7 @@ type TagListProps = {
    */
   multiline?: boolean
   /**
-   * This propery define the title of the Popover, when some tags are hidden because of the threshold.
+   * This property define the title of the Popover, when some tags are hidden because of the threshold.
    */
   popoverTitle: string
   className?: string
