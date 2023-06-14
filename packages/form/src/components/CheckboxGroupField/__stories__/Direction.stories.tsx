@@ -3,11 +3,11 @@ import { Stack } from '@ultraviolet/ui'
 import { useFormContext } from 'react-hook-form'
 import { CheckboxGroupField } from '..'
 
-const CheckboxGroupFieldStory: StoryFn<typeof CheckboxGroupField> = args => {
+export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
   const { watch } = useFormContext()
 
   return (
-    <Stack gap={2}>
+    <Stack gap={1}>
       <CheckboxGroupField {...args}>
         <CheckboxGroupField.Checkbox
           name="termsAndConditions"
@@ -26,11 +26,20 @@ const CheckboxGroupFieldStory: StoryFn<typeof CheckboxGroupField> = args => {
   )
 }
 
-export const Template: StoryFn<typeof CheckboxGroupField> = args => (
-  <CheckboxGroupFieldStory {...args} />
+export const Direction: StoryFn<typeof CheckboxGroupField> = args => (
+  <DirectionStory {...args} />
 )
 
-Template.args = {
+Direction.parameters = {
+  docs: {
+    description: {
+      story: 'Use the `direction` prop to change the direction of the group.',
+    },
+  },
+}
+
+Direction.args = {
   name: 'conditions',
   legend: 'Conditions',
+  direction: 'row',
 }

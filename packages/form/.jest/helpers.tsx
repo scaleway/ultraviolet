@@ -34,7 +34,7 @@ export const shouldMatchEmotionSnapshotFormWrapper = (
       errors={mockErrors}
       initialValues={initialValues}
     >
-      {() => children}
+      {children}
     </Form>,
     options,
   )
