@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.46.0
+
+### Minor Changes
+
+- [#2607](https://github.com/scaleway/scaleway-ui/pull/2607) [`ea89985d`](https://github.com/scaleway/scaleway-ui/commit/ea89985d3748ea7de7a0396ce080b2bc34cc1dba) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Rename some `variant` prop to `sentiment`
+
+### Patch Changes
+
+- Updated dependencies [[`ea89985d`](https://github.com/scaleway/scaleway-ui/commit/ea89985d3748ea7de7a0396ce080b2bc34cc1dba)]:
+  - @scaleway/ui@0.253.0
+
 ## 1.45.10
 
 ### Patch Changes
