@@ -33,6 +33,7 @@ export const Ordering: StoryFn = () => {
           orderDirection: currentOrder.order,
           onOrder: newOrder =>
             setCurrentOrder({ columnId: 'name', order: newOrder }),
+          info: 'info works fine with the ordering',
         },
         {
           label: 'Release year',
@@ -61,7 +62,9 @@ export const Ordering: StoryFn = () => {
 
 Ordering.parameters = {
   docs: {
-    storyDescription:
-      'You can indicate that a column is ordered by providing `isOrdered`, `orderDirection`. `onOrder` callback provides the opposite of current order as param for an easier sorting (DESC if currently ASC, otherwhile ASC)',
+    description: {
+      story:
+        'You can indicate that a column is ordered by providing `isOrdered`, `orderDirection`. `onOrder` callback provides the opposite of current order as param for an easier sorting (DESC if currently ASC, otherwhile ASC)',
+    },
   },
 }
