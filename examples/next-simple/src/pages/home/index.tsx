@@ -1,3 +1,5 @@
 import { Button } from '@scaleway/ui'
 
-export const Home = () => <Button>Hello there!</Button>
+const Home = () => <Button>Hello there!</Button>
+
+export default Home

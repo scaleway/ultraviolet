@@ -101,6 +101,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: pnpm install
+      - run: pnpm build
+      - run: pnpm install
       - run: pnpm run build:examples
   chromatic-deployment:
     runs-on: ubuntu-20.04
