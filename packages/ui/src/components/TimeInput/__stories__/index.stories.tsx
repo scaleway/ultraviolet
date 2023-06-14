@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { TimeInput } from '..'
 
 export default {
@@ -19,7 +19,7 @@ export default {
       </div>
     ),
   ],
-} as ComponentMeta<typeof TimeInput>
+} as Meta<typeof TimeInput>
 
 export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'

@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { Status } from '../index'
 
-export const Template: Story<ComponentProps<typeof Status>> = args => (
+export const Template: StoryFn<ComponentProps<typeof Status>> = args => (
   <Status {...args} />
 )

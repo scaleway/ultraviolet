@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { colors } from '../../../theme'
 import { Loader } from '../index'
 
-export const Colors: Story = props => (
+export const Colors: StoryFn = props => (
   <>
     {[...Object.keys(colors), 'tomato', '#6EB5FF'].map(color => (
       <Loader {...props} color={color} key={color} />

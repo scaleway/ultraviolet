@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { MODAL_WIDTH, Modal } from '..'
 import { Button } from '../../Button'
 
-export const Width: Story = props => (
+export const Width: StoryFn = props => (
   <>
     {Object.keys(MODAL_WIDTH).map(width => (
       <div style={{ display: 'inline-block', padding: 16 }} key={width}>

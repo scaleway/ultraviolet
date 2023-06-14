@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Bullet, bulletSizes } from '..'
 
-export const Sizes: Story = props => (
+export const Sizes: StoryFn = props => (
   <>
     {bulletSizes.map(size => (
       <div key={size}>

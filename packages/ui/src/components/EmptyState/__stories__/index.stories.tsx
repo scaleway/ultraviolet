@@ -1,4 +1,4 @@
-import type { ComponentMeta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { EmptyState } from '..'
 import { Button } from '../../Button'
@@ -16,9 +16,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof EmptyState>
+} as Meta<typeof EmptyState>
 
-const Template: Story<ComponentProps<typeof EmptyState>> = args => (
+const Template: StoryFn<ComponentProps<typeof EmptyState>> = args => (
   <EmptyState {...args} />
 )
 

@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { CopyButton } from '..'
 
-export const Template: ComponentStory<typeof CopyButton> = props => (
+export const Template: StoryFn<typeof CopyButton> = props => (
   <CopyButton {...props} value="Text that will be copied" />
 )

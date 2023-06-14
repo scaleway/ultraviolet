@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { MODAL_ANIMATION, Modal } from '..'
 import { Button } from '../../Button'
 
-export const Animated: Story = props => (
+export const Animated: StoryFn = props => (
   <>
     {Object.keys(MODAL_ANIMATION).map(animation => (
       <div style={{ display: 'inline-block', padding: 16 }} key={animation}>

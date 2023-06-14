@@ -1,10 +1,10 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Expandable } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
-export const MinHeight: ComponentStory<typeof Expandable> = () => {
+export const MinHeight: StoryFn<typeof Expandable> = () => {
   const [toggled, onToggle] = useState(false)
   const toggle = () => onToggle(state => !state)
 

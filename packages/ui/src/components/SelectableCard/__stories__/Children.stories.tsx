@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import type { MultiValue, SingleValue } from 'react-select'
@@ -9,7 +9,7 @@ import type { SelectOption } from '../../SelectInput'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 
-export const Children: Story = () => {
+export const Children: StoryFn = () => {
   const [value, onChange] = useState('label-9')
   const [selectInputValue, selectInputOnChange] = useState<SelectOption>({
     label: 'Option 1',

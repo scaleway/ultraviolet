@@ -7,7 +7,6 @@ const config: Config.InitialOptions = {
   collectCoverageFrom: [
     '**/src/**/*.{js,jsx,ts,tsx}',
     '!**/src/**/__stories__/**/*.{js,ts,tsx,mdx}',
-    '!website/**',
     '!**/dist/**',
   ],
   coverageReporters: ['text', 'cobertura'],

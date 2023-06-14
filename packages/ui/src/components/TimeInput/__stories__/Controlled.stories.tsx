@@ -1,4 +1,4 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { TimeInput } from '..'
 import type { SelectOption } from '../../SelectInput'
@@ -8,7 +8,7 @@ const isSafeValue = (value: unknown): value is SelectOption =>
 
 const DEFAULT_VAL = { label: '03:30', value: '03:30' }
 
-export const Controlled: Story = ({ value: defaultValue = DEFAULT_VAL }) => {
+export const Controlled: StoryFn = ({ value: defaultValue = DEFAULT_VAL }) => {
   const [value, setValue] = useState<SelectOption>(defaultValue as SelectOption)
 
   return (

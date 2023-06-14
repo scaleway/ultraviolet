@@ -1,13 +1,11 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import type { SingleValue } from 'react-select'
 import { SelectInput } from '..'
 
 type OptionType = { label: string; value: string }
 
-export const Controlled: ComponentStory<typeof SelectInput> = ({
-  ...props
-}) => {
+export const Controlled: StoryFn<typeof SelectInput> = ({ ...props }) => {
   const [value, setValue] = useState<OptionType>()
 
   const handleChange = (newValue: SingleValue<OptionType>) => {

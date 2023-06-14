@@ -1,5 +1,5 @@
 import { Checkbox, Stack } from '@scaleway/ui'
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {
@@ -18,7 +18,7 @@ import {
 } from '../..'
 import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 
-export const Playground: ComponentStory<typeof Form> = args => {
+export const Playground: StoryFn<typeof Form> = args => {
   const [state, setState] = useState(false)
 
   return (

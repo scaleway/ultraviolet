@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
 
-export const NotBordered: Story = props => (
+export const NotBordered: StoryFn = props => (
   <Modal {...props} disclosure={<Button>bordered</Button>} bordered={false}>
     <p>Your Modal is not bordered</p>
   </Modal>

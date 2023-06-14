@@ -1,9 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { NumberInput } from '..'
 import { Button, Stack } from '../..'
 
-export const Controlled: ComponentStory<typeof NumberInput> = () => {
+export const Controlled: StoryFn<typeof NumberInput> = () => {
   const min = 10
   const max = 100
   const [value, setState] = useState<number | undefined>(20)

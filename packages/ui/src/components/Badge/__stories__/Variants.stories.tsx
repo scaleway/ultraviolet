@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Badge } from '..'
 import { SENTIMENTS } from '../../../theme'
 
-export const Variants: Story = props => (
+export const Variants: StoryFn = props => (
   <>
     {SENTIMENTS.map(sentiment => (
       <Badge {...props} key={sentiment} variant={sentiment}>

@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Carousel, CarouselItem } from '..'
 
 export default {
@@ -13,6 +13,6 @@ export default {
   },
   title: 'Components/Data Display/Carousel',
   subcomponents: { CarouselItem },
-} as ComponentMeta<typeof Carousel>
+} as Meta<typeof Carousel>
 
 export { Playground } from './Playground.stories'

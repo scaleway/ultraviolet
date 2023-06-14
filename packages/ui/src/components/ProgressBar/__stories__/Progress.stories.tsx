@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { ProgressBar } from '..'
 
-export const Progress: Story = () => <ProgressBar progress />
+export const Progress: StoryFn = () => <ProgressBar progress />
 
 Progress.parameters = {
   docs: {

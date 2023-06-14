@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Skeleton } from '..'
 
 export default {
@@ -13,7 +13,7 @@ export default {
     },
   },
   title: 'Components/Feedback/Skeleton',
-} as ComponentMeta<typeof Skeleton>
+} as Meta<typeof Skeleton>
 
 export { Playground } from './Playground.stories'
 export { Block } from './Block.stories'

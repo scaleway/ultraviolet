@@ -1,6 +1,6 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Badge } from '..'
 
-export const Template: ComponentStory<typeof Badge> = ({ ...props }) => (
+export const Template: StoryFn<typeof Badge> = ({ ...props }) => (
   <Badge {...props} />
 )

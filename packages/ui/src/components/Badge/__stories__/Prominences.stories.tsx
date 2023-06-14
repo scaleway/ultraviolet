@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Badge, PROMINENCES } from '..'
 import { SENTIMENTS } from '../../../theme'
 
-export const Prominences: Story = props => (
+export const Prominences: StoryFn = props => (
   <>
     {Object.keys(PROMINENCES).map(prominence => (
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>

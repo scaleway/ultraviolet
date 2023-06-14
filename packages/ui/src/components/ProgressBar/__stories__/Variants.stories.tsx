@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { progressBarVariants } from '..'
 import UncontrolledProgressBar from './UncontrolledProgressBar'
 
-export const Variants: Story = props => (
+export const Variants: StoryFn = props => (
   <>
     {progressBarVariants.map(variant => (
       <UncontrolledProgressBar key={variant} variant={variant} {...props} />

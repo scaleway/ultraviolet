@@ -1,7 +1,7 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'
 
-export const Template: Story<ComponentProps<typeof DateInput>> = props => (
+export const Template: StoryFn<ComponentProps<typeof DateInput>> = props => (
   <DateInput {...props} />
 )

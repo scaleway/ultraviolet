@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Row } from '..'
 import { Separator, Stack } from '../..'
 
@@ -8,7 +8,7 @@ const DivWithBackground = styled.div`
   color: ${({ theme }) => theme.colors.primary.text};
 `
 
-export const AlignItems: Story = () => (
+export const AlignItems: StoryFn = () => (
   <Stack gap={2}>
     <Row templateColumns="repeat(3, 1fr)">
       <DivWithBackground style={{ height: '100px' }}>

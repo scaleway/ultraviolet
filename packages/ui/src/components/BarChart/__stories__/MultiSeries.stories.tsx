@@ -1,9 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartMultiData } from './mockData'
 
-export const MultiSeries: ComponentStory<typeof BarChart> = props => (
+export const MultiSeries: StoryFn<typeof BarChart> = props => (
   <BarChart
     {...props}
     keys={['sent', 'received']}

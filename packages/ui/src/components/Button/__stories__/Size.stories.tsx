@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Button, buttonSizes } from '..'
 import { Stack } from '../..'
 
-export const Size: ComponentStory<typeof Button> = () => (
+export const Size: StoryFn<typeof Button> = () => (
   <Stack alignItems="center" gap={2} direction="row">
     {buttonSizes.map(size => (
       <Button key={size} icon="pencil" onClick={() => {}} size={size}>

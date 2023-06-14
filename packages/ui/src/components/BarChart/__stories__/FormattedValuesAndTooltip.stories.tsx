@@ -1,11 +1,9 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { format } from 'date-fns'
 import { BarChart } from '..'
 import { barChartSimpleData } from './mockData'
 
-export const FormattedValuesAndTooltip: ComponentStory<
-  typeof BarChart
-> = props => (
+export const FormattedValuesAndTooltip: StoryFn<typeof BarChart> = props => (
   <BarChart
     {...props}
     data={barChartSimpleData}

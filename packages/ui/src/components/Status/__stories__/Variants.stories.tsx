@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Status, statusVariants } from '..'
 import type { Menu } from '../../Menu'
 
-export const Variants: ComponentStory<typeof Menu> = props => (
+export const Variants: StoryFn<typeof Menu> = props => (
   <>
     {statusVariants.map(variant => (
       <Status key={variant} variant={variant} {...props} />

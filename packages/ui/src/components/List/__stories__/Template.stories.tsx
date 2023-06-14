@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { List } from '..'
 import { columns, data } from './resources'
 
-export const Template: ComponentStory<typeof List> = args => <List {...args} />
+export const Template: StoryFn<typeof List> = args => <List {...args} />
 
 Template.args = {
   columns,

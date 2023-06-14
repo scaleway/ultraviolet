@@ -1,6 +1,4 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Stepper } from '..'
 
-export const Template: ComponentStory<typeof Stepper> = args => (
-  <Stepper {...args} />
-)
+export const Template: StoryFn<typeof Stepper> = args => <Stepper {...args} />

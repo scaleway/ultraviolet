@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Toggle } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
     },
   },
   title: 'Components/Data Entry/Toggle',
-} as ComponentMeta<typeof Toggle>
+} as Meta<typeof Toggle>
 
 export { Playground } from './Playground.stories'
 export { Label } from './Label.stories'

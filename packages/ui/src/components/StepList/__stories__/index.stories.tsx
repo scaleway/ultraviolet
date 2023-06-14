@@ -1,4 +1,4 @@
-import type { Meta, Story } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import type { ComponentProps } from 'react'
 import type { Sizes as SizesType } from '..'
 import { StepList } from '..'
@@ -18,7 +18,7 @@ export default {
   title: 'Components/Data Display/StepList',
 } as Meta
 
-const Template: Story<ComponentProps<typeof StepList>> = args => (
+const Template: StoryFn<ComponentProps<typeof StepList>> = args => (
   <StepList {...args}>
     <StepList.Item bulletText="1">First</StepList.Item>
     <StepList.Item bulletText="2">Second</StepList.Item>

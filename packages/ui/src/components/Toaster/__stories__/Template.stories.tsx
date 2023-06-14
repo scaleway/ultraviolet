@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
-export const Template: ComponentStory<typeof ToastContainer> = args => (
+export const Template: StoryFn<typeof ToastContainer> = args => (
   <>
     <ToastContainer {...args} />
     <Button

@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Popover } from '..'
 import { Icon } from '../../Icon'
 
-export const Template: ComponentStory<typeof Popover> = props => (
+export const Template: StoryFn<typeof Popover> = props => (
   <Popover
     visible
     {...props}

@@ -1,10 +1,10 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { Bullet } from '..'
 
 export default {
   component: Bullet,
   title: 'Components/Badges/Bullet',
-} as ComponentMeta<typeof Bullet>
+} as Meta<typeof Bullet>
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'

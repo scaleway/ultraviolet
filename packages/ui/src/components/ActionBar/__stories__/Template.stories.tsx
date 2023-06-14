@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { ActionBar } from '..'
 import { Button } from '../../Button'
@@ -16,7 +16,7 @@ const FullHeightStack = styled(Stack)`
   padding: 0 ${({ theme }) => theme.space['2']};
 `
 
-export const Template: ComponentStory<typeof ActionBar> = args => {
+export const Template: StoryFn<typeof ActionBar> = args => {
   const [state, setState] = useState(false)
 
   const toggle = () => {

@@ -1,4 +1,4 @@
-import type { ComponentMeta } from '@storybook/react'
+import type { Meta } from '@storybook/react'
 import { VerificationCode } from '..'
 
 export default {
@@ -11,7 +11,7 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof VerificationCode>
+} as Meta<typeof VerificationCode>
 
 export { Playground } from './Playground.stories'
 export { Fields } from './Fields.stories'

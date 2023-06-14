@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
 
-export const WithLotsOfContent: Story = props => (
+export const WithLotsOfContent: StoryFn = props => (
   <Modal
     animated
     animation="scaleUp"

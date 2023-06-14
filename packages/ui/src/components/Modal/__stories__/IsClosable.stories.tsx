@@ -1,8 +1,8 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
 
-export const IsClosable: Story = props => (
+export const IsClosable: StoryFn = props => (
   <Modal {...props} disclosure={<Button>isClosable</Button>} isClosable={false}>
     {({ hide }: { hide: () => void }) => (
       <>
