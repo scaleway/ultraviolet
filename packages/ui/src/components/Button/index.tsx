@@ -114,7 +114,9 @@ const coreStyle = ({
 
 const StyledFilledButton = styled('button', {
   shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
+      prop,
+    ),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
@@ -153,7 +155,9 @@ const StyledFilledButton = styled('button', {
 
 const StyledOutlinedButton = styled('button', {
   shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
+      prop,
+    ),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
@@ -208,7 +212,9 @@ const StyledOutlinedButton = styled('button', {
 
 const StyledGhostButton = styled('button', {
   shouldForwardProp: prop =>
-    !['size', 'sentiment', 'iconPosition', 'fullWidth'].includes(prop),
+    !['size', 'sentiment', 'iconPosition', 'fullWidth', 'iconOnly'].includes(
+      prop,
+    ),
 })<StyledButtonProps>`
   ${args => coreStyle(args)}
 
