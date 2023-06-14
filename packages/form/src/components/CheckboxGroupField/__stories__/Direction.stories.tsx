@@ -1,10 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useFormState } from 'react-final-form'
+import { useFormContext } from 'react-hook-form'
 import { CheckboxGroupField } from '..'
 
 export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
-  const { values } = useFormState()
+  const { watch } = useFormContext()
 
   return (
     <Stack gap={1}>
@@ -20,7 +20,7 @@ export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
         </CheckboxGroupField.Checkbox>
       </CheckboxGroupField>
       <span>
-        <b>Form content:</b> {JSON.stringify(values)}
+        <b>Form content:</b> {JSON.stringify(watch())}
       </span>
     </Stack>
   )

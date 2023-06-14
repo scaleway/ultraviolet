@@ -1,13 +1,4 @@
-export { FieldArray, useFieldArray } from 'react-final-form-arrays'
-export { FORM_ERROR } from 'final-form'
-export type { FormApi } from 'final-form'
-export {
-  FormSpy,
-  useFormState,
-  useForm,
-  useField,
-  Field,
-} from 'react-final-form'
+export { FORM_ERROR } from './constants'
 export {
   CheckboxField,
   CheckboxGroupField,
@@ -24,8 +15,19 @@ export {
   TimeField,
   ToggleField,
   RadioGroupField,
+  FormSpy,
 } from './components'
-export { useValidation, useOnFieldChange } from './hooks'
 export type { BaseFieldProps, FormErrors } from './types'
-export { pickValidators } from './helpers'
 export { useErrors, ErrorProvider } from './providers/ErrorContext'
+export {
+  useFormStateDeprecated,
+  useFieldDeprecated,
+  useFormDeprecated,
+  useFieldArrayDeprecated,
+  useOnFieldChange,
+} from './hooks'
+
+// eslint-disable-next-line no-restricted-syntax
+export * from 'react-hook-form'
+// eslint-disable-next-line no-restricted-syntax
+export type * from 'react-hook-form'

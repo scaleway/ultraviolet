@@ -1,7 +1,6 @@
 import { Button } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
-import { useEffect, useState } from 'react'
-import { useFormState } from 'react-final-form'
+import { useFormState } from 'react-hook-form'
 
 type SubmitProps = {
   children?: ReactNode
@@ -30,23 +29,9 @@ export const Submit = ({
   fullWidth,
   onClick,
 }: SubmitProps) => {
-  const { invalid, submitting, hasValidationErrors, dirtySinceLastSubmit } =
-    useFormState({
-      subscription: {
-        dirtySinceLastSubmit: true,
-        hasValidationErrors: true,
-        invalid: true,
-        submitting: true,
-      },
-    })
-  const [isLoading, setIsLoading] = useState(true)
-  const isDisabled =
-    disabled ||
-    submitting ||
-    isLoading ||
-    (invalid && hasValidationErrors && !dirtySinceLastSubmit)
+  const { isSubmitting, isValid } = useFormState()
 
-  useEffect(() => setIsLoading(false), [])
+  const isDisabled = disabled || isSubmitting || !isValid
 
   return (
     <Button
@@ -54,7 +39,7 @@ export const Submit = ({
       disabled={isDisabled}
       icon={icon}
       iconPosition={iconPosition}
-      isLoading={submitting}
+      isLoading={isSubmitting}
       size={size}
       type="submit"
       variant={variant}

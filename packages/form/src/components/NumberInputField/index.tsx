@@ -1,38 +1,32 @@
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldValues } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type NumberInputValue = NonNullable<ComponentProps<typeof NumberInput>['value']>
+type NumberInputValueFieldProps<TFieldValues extends FieldValues> =
+  BaseFieldProps<TFieldValues> &
+    Partial<
+      Pick<
+        ComponentProps<typeof NumberInput>,
+        | 'disabled'
+        | 'maxValue'
+        | 'minValue'
+        | 'onMaxCrossed'
+        | 'onMinCrossed'
+        | 'size'
+        | 'step'
+        | 'text'
+        | 'value'
+        | 'onChange'
+        | 'className'
+      >
+    > & {
+      onBlur?: FocusEventHandler<HTMLInputElement>
+      onFocus?: FocusEventHandler<HTMLInputElement>
+    }
 
-type NumberInputValueFieldProps<
-  T = NumberInputValue,
-  K = string,
-> = BaseFieldProps<T, K> &
-  Partial<
-    Pick<
-      ComponentProps<typeof NumberInput>,
-      | 'disabled'
-      | 'maxValue'
-      | 'minValue'
-      | 'onMaxCrossed'
-      | 'onMinCrossed'
-      | 'size'
-      | 'step'
-      | 'text'
-      | 'value'
-      | 'onChange'
-      | 'className'
-      | 'data-testid'
-    >
-  > & {
-    name: string
-    required?: boolean
-    onBlur?: FocusEventHandler<HTMLInputElement>
-    onFocus?: FocusEventHandler<HTMLInputElement>
-  }
-
-export const NumberInputField = ({
+export const NumberInputField = <TFieldValues extends FieldValues>({
   disabled,
   maxValue,
   minValue,
@@ -46,48 +40,41 @@ export const NumberInputField = ({
   size,
   step,
   text,
-  validate,
-  value,
+  // validate,
+  // value,
+  rules,
   className,
-  'data-testid': dataTestId,
-}: NumberInputValueFieldProps) => {
-  const { input } = useFormField<number>(name, {
-    disabled,
-    required,
-    type: 'number',
-    validate,
-    value,
-    defaultValue: 0,
-    max: maxValue,
-    min: minValue,
-  })
-
-  return (
-    <NumberInput
-      name={name}
-      disabled={disabled}
-      onBlur={(event: FocusEvent<HTMLInputElement>) => {
-        input.onBlur(event)
-        onBlur?.(event)
-      }}
-      onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
-      }}
-      onFocus={(event: FocusEvent<HTMLInputElement>) => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
-      maxValue={maxValue}
-      minValue={minValue}
-      onMinCrossed={onMinCrossed}
-      onMaxCrossed={onMaxCrossed}
-      size={size}
-      step={step}
-      text={text}
-      value={input.value}
-      className={className}
-      data-testid={dataTestId}
-    />
-  )
-}
+}: NumberInputValueFieldProps<TFieldValues>) => (
+  <Controller
+    name={name}
+    rules={{
+      required,
+      max: maxValue,
+      min: minValue,
+      ...rules,
+    }}
+    render={({ field }) => (
+      <NumberInput
+        {...field}
+        disabled={disabled}
+        onBlur={(event: FocusEvent<HTMLInputElement>) => {
+          field.onBlur()
+          onBlur?.(event)
+        }}
+        onChange={event => {
+          field.onChange(event)
+          onChange?.(event as number)
+        }}
+        onFocus={onFocus}
+        maxValue={maxValue}
+        minValue={minValue}
+        onMinCrossed={onMinCrossed}
+        onMaxCrossed={onMaxCrossed}
+        size={size}
+        step={step}
+        text={text}
+        className={className}
+      />
+    )}
+  />
+)

@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useFormState } from 'react-final-form'
+import { useFormContext } from 'react-hook-form'
 import { RadioGroupField } from '..'
 import { Submit } from '../..'
 
 export const RequiredStory: StoryFn<typeof RadioGroupField> = args => {
-  const { values } = useFormState()
+  const { watch } = useFormContext()
 
   return (
     <Stack gap={1}>
@@ -15,7 +15,7 @@ export const RequiredStory: StoryFn<typeof RadioGroupField> = args => {
       </RadioGroupField>
       <Submit>Submit</Submit>
       <span>
-        <b>Form content:</b> {JSON.stringify(values)}
+        <b>Form content:</b> {JSON.stringify(watch())}
       </span>
     </Stack>
   )

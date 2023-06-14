@@ -108,7 +108,7 @@ describe('CheckboxField', () => {
           // to trigger error
           await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
           await userEvent.click(screen.getByText('Focus'))
-          const error = screen.getByText(mockErrors.REQUIRED as string)
+          const error = screen.getByText(mockErrors.required({ label: '' }))
           expect(error).toBeVisible()
         },
       },
