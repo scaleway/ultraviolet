@@ -25,7 +25,7 @@ type KeyValue = { key: string; value: string; required?: boolean }
 
 export const FormContent = () => {
   const [confirmResetForm, setConfirmResetForm] = useState(false)
-  const { fields } = useFieldArray<KeyValue>('sentiments')
+  const { fields, remove } = useFieldArray<KeyValue>('sentiments')
   const { errors } = useFormState()
   const { reset } = useForm()
 
@@ -155,7 +155,7 @@ export const FormContent = () => {
                     variant="filled"
                     sentiment="neutral"
                     size="large"
-                    onClick={() => fields.remove(index)}
+                    onClick={() => remove(index)}
                   />
                 ) : null}
               </Stack>

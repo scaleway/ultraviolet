@@ -5,8 +5,6 @@ import { DateField } from '..'
 import { Submit } from '../../Submit'
 import { TimeField } from '../../TimeField'
 
-const now = new Date()
-
 export const MinMaxDateWithTimeField: StoryFn<
   ComponentProps<typeof DateField>
 > = ({ name, minDate, maxDate, required }) => (
@@ -14,7 +12,6 @@ export const MinMaxDateWithTimeField: StoryFn<
     <DateField
       name={name}
       minDate={minDate}
-      initialValue={now}
       maxDate={maxDate}
       required={required}
     />
