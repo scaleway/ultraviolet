@@ -89,7 +89,7 @@ exports[`NumberInputField should render correctly 1`] = `
   border: 1px solid #4f0599;
 }
 
-.cache-4a2mo8 {
+.cache-t2av8k {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -114,6 +114,8 @@ exports[`NumberInputField should render correctly 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -121,8 +123,6 @@ exports[`NumberInputField should render correctly 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -130,6 +130,11 @@ exports[`NumberInputField should render correctly 1`] = `
   margin: 0 8px;
   width: 32px;
   height: 32px;
+}
+
+.cache-t2av8k:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -217,7 +222,7 @@ exports[`NumberInputField should render correctly 1`] = `
   margin-right: 8px;
 }
 
-.cache-hvjz0t {
+.cache-8bavuj {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -242,6 +247,8 @@ exports[`NumberInputField should render correctly 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -249,8 +256,6 @@ exports[`NumberInputField should render correctly 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -259,12 +264,17 @@ exports[`NumberInputField should render correctly 1`] = `
   height: 32px;
 }
 
-.cache-hvjz0t:active {
+.cache-8bavuj:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-8bavuj:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-hvjz0t:hover,
-.cache-hvjz0t:active {
+.cache-8bavuj:hover,
+.cache-8bavuj:active {
   background: #eeeeff;
   color: #4f0599;
 }
@@ -294,7 +304,7 @@ exports[`NumberInputField should render correctly 1`] = `
         >
           <button
             aria-label="Minus"
-            class="eiawj1g4 cache-4a2mo8 em6gco80"
+            class="eiawj1g4 cache-t2av8k em6gco80"
             disabled=""
             type="button"
           >
@@ -329,7 +339,7 @@ exports[`NumberInputField should render correctly 1`] = `
           </div>
           <button
             aria-label="Plus"
-            class="eiawj1g4 cache-hvjz0t em6gco80"
+            class="eiawj1g4 cache-8bavuj em6gco80"
             type="button"
           >
             <div>
@@ -439,7 +449,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   border: 1px solid #4f0599;
 }
 
-.cache-4a2mo8 {
+.cache-t2av8k {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -464,6 +474,8 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -471,8 +483,6 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -480,6 +490,11 @@ exports[`NumberInputField should render correctly disabled 1`] = `
   margin: 0 8px;
   width: 32px;
   height: 32px;
+}
+
+.cache-t2av8k:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -583,7 +598,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
         >
           <button
             aria-label="Minus"
-            class="eiawj1g4 cache-4a2mo8 em6gco80"
+            class="eiawj1g4 cache-t2av8k em6gco80"
             disabled=""
             type="button"
           >
@@ -619,7 +634,7 @@ exports[`NumberInputField should render correctly disabled 1`] = `
           </div>
           <button
             aria-label="Plus"
-            class="eiawj1g4 cache-4a2mo8 em6gco80"
+            class="eiawj1g4 cache-t2av8k em6gco80"
             disabled=""
             type="button"
           >
@@ -730,7 +745,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   border: 1px solid #4f0599;
 }
 
-.cache-hvjz0t {
+.cache-8bavuj {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -755,6 +770,8 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -762,8 +779,6 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -772,12 +787,17 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   height: 32px;
 }
 
-.cache-hvjz0t:active {
+.cache-8bavuj:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-8bavuj:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-hvjz0t:hover,
-.cache-hvjz0t:active {
+.cache-8bavuj:hover,
+.cache-8bavuj:active {
   background: #eeeeff;
   color: #4f0599;
 }
@@ -867,7 +887,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   margin-right: 8px;
 }
 
-.cache-4a2mo8 {
+.cache-t2av8k {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -892,6 +912,8 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -899,8 +921,6 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -908,6 +928,11 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
   margin: 0 8px;
   width: 32px;
   height: 32px;
+}
+
+.cache-t2av8k:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .cache-xmmyxm-sizeStyles {
@@ -935,7 +960,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
         >
           <button
             aria-label="Minus"
-            class="eiawj1g4 cache-hvjz0t em6gco80"
+            class="eiawj1g4 cache-8bavuj em6gco80"
             type="button"
           >
             <div>
@@ -969,7 +994,7 @@ exports[`NumberInputField should trigger event onMinCrossed & onMaxCrossed 1`] =
           </div>
           <button
             aria-label="Plus"
-            class="eiawj1g4 cache-4a2mo8 em6gco80"
+            class="eiawj1g4 cache-t2av8k em6gco80"
             disabled=""
             type="button"
           >
@@ -1080,7 +1105,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   border: 1px solid #4f0599;
 }
 
-.cache-hvjz0t {
+.cache-8bavuj {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1105,6 +1130,8 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -1112,8 +1139,6 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4f0599;
@@ -1122,12 +1147,17 @@ exports[`NumberInputField should trigger events correctly 1`] = `
   height: 32px;
 }
 
-.cache-hvjz0t:active {
+.cache-8bavuj:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-8bavuj:active {
   box-shadow: 0px 0px 0px 3px #4F059940;
 }
 
-.cache-hvjz0t:hover,
-.cache-hvjz0t:active {
+.cache-8bavuj:hover,
+.cache-8bavuj:active {
   background: #eeeeff;
   color: #4f0599;
 }
@@ -1233,7 +1263,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
         >
           <button
             aria-label="Minus"
-            class="eiawj1g4 cache-hvjz0t em6gco80"
+            class="eiawj1g4 cache-8bavuj em6gco80"
             type="button"
           >
             <div>
@@ -1267,7 +1297,7 @@ exports[`NumberInputField should trigger events correctly 1`] = `
           </div>
           <button
             aria-label="Plus"
-            class="eiawj1g4 cache-hvjz0t em6gco80"
+            class="eiawj1g4 cache-8bavuj em6gco80"
             type="button"
           >
             <div>

@@ -773,7 +773,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   text-decoration: none;
 }
 
-.cache-kp8cja-StyledFilledButton-StyledButton {
+.cache-iaxme3-StyledFilledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -798,6 +798,8 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -805,20 +807,23 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: #dd3252;
   border: none;
   color: #ffffff;
   margin-left: 40px;
 }
 
-.cache-kp8cja-StyledFilledButton-StyledButton:active {
+.cache-iaxme3-StyledFilledButton-StyledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-iaxme3-StyledFilledButton-StyledButton:active {
   box-shadow: 0px 0px 0px 3px #DD325240;
 }
 
-.cache-kp8cja-StyledFilledButton-StyledButton:hover,
-.cache-kp8cja-StyledFilledButton-StyledButton:active {
+.cache-iaxme3-StyledFilledButton-StyledButton:hover,
+.cache-iaxme3-StyledFilledButton-StyledButton:active {
   background: #a6102d;
   color: #ffffff;
 }
@@ -851,7 +856,7 @@ exports[`Alert renders correctly with buttonText and onClickButton 1`] = `
         </div>
       </div>
       <button
-        class="eenhiht1 cache-kp8cja-StyledFilledButton-StyledButton em6gco82"
+        class="eenhiht1 cache-iaxme3-StyledFilledButton-StyledButton em6gco82"
         type="button"
       >
         Button
@@ -1298,7 +1303,7 @@ exports[`Alert renders correctly with disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-xxo6h-StyledFilledButton-StyledButton {
+.cache-1fu33av-StyledFilledButton-StyledButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1323,6 +1328,8 @@ exports[`Alert renders correctly with disabled 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -1330,14 +1337,17 @@ exports[`Alert renders correctly with disabled 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: #dd3252;
   border: none;
   color: #ffffff;
   background: #fbbac6;
   color: #fff5f7;
   margin-left: 40px;
+}
+
+.cache-1fu33av-StyledFilledButton-StyledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -1368,7 +1378,7 @@ exports[`Alert renders correctly with disabled 1`] = `
         </div>
       </div>
       <button
-        class="eenhiht1 cache-xxo6h-StyledFilledButton-StyledButton em6gco82"
+        class="eenhiht1 cache-1fu33av-StyledFilledButton-StyledButton em6gco82"
         disabled=""
         type="button"
       >
@@ -1508,7 +1518,7 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   text-decoration: none;
 }
 
-.cache-p9wx10-StyledGhostButton-CloseButton {
+.cache-y1vuao-StyledGhostButton-CloseButton {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1533,6 +1543,8 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   justify-content: center;
   outline-offset: 2px;
   white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -1540,8 +1552,6 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   line-height: 20px;
   paragraph-spacing: 0;
   text-case: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   background: none;
   border: none;
   color: #4a4f62;
@@ -1550,12 +1560,17 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
   align-self: start;
 }
 
-.cache-p9wx10-StyledGhostButton-CloseButton:active {
+.cache-y1vuao-StyledGhostButton-CloseButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-y1vuao-StyledGhostButton-CloseButton:active {
   box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-p9wx10-StyledGhostButton-CloseButton:hover,
-.cache-p9wx10-StyledGhostButton-CloseButton:active {
+.cache-y1vuao-StyledGhostButton-CloseButton:hover,
+.cache-y1vuao-StyledGhostButton-CloseButton:active {
   background: #e6e9f0;
   color: #4a4f62;
 }
@@ -1599,7 +1614,7 @@ exports[`Alert renders correctly with isClosable and onClose 1`] = `
     </div>
     <button
       aria-label="close"
-      class="eenhiht0 cache-p9wx10-StyledGhostButton-CloseButton em6gco80"
+      class="eenhiht0 cache-y1vuao-StyledGhostButton-CloseButton em6gco80"
       type="button"
     >
       <svg
