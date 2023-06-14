@@ -10,7 +10,6 @@ jobs:
     env:
       IMAGE_NAME: rg.fr-par.scw.cloud/console-scw/scaleway-ui
       STORYBOOK_DEPLOYMENT_NAME: storybook
-      WEBSITE_DEPLOYMENT_NAME: website
 
     steps:
       - uses: actions/checkout@v3.5.3
@@ -21,18 +20,6 @@ jobs:
         run: |
           SAFE_STORYBOOK_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$STORYBOOK_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
           echo "STORYBOOK_BRANCH_SLUG=$SAFE_STORYBOOK_HEAD_REF" >> $GITHUB_ENV
-          SAFE_WEBSITE_HEAD_REF=$(echo $GITHUB_HEAD_REF_SLUG_URL-$WEBSITE_DEPLOYMENT_NAME | rev | cut -c-37 | rev | sed 's/^-//g')
-          echo "WEBSITE_BRANCH_SLUG=$SAFE_WEBSITE_HEAD_REF" >> $GITHUB_ENV
-
-      - name: Delete Website Serverless Container Scaleway
-        uses: philibea/scaleway-containers-deploy@v1.1.0
-        with:
-          type: 'teardown'
-          scw_access_key: ${{ secrets.SCW_ACCESS_KEY }}
-          scw_secret_key: ${{ secrets.SCW_SECRET_KEY }}
-          scw_dns: ${{ secrets.SCW_DNS }}
-          scw_containers_namespace_id: ${{ secrets.SCW_CONTAINERS_WEBSITE_NAMESPACE_ID }}
-          scw_registry: ${{ env.IMAGE_NAME }}:${{ env.WEBSITE_BRANCH_SLUG }}
 
       - name: Remove storybook deployment
         uses: bobheadxi/deployments@v1.4.0
@@ -40,10 +27,3 @@ jobs:
           step: delete-env
           token: ${{ secrets.GH_TOKEN }}
           env: ${{ env.STORYBOOK_BRANCH_SLUG }}
-
-      - name: Remove website deployment
-        uses: bobheadxi/deployments@v1.4.0
-        with:
-          step: delete-env
-          token: ${{ secrets.GH_TOKEN }}
-          env: ${{ env.WEBSITE_BRANCH_SLUG }}
