@@ -105,6 +105,7 @@ export const TagList = ({
         <Popover
           title={popoverTitle}
           visible={isVisible}
+          size="small"
           onClose={() => setIsVisible(false)}
           content={
             <StyledTagContainer multiline>
