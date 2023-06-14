@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.45.10
+
+### Patch Changes
+
+- [#2619](https://github.com/scaleway/scaleway-ui/pull/2619) [`da0392ae`](https://github.com/scaleway/scaleway-ui/commit/da0392aeb572a955e035abb81985644c3c3c2885) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Button: prevent text-decoration
+
+- Updated dependencies [[`42ef178d`](https://github.com/scaleway/scaleway-ui/commit/42ef178dfc364011d161b06070fa1ef8eb1437f0), [`c8957252`](https://github.com/scaleway/scaleway-ui/commit/c8957252b33abeb5515061e6a9a6642629d22ce9), [`42ef178d`](https://github.com/scaleway/scaleway-ui/commit/42ef178dfc364011d161b06070fa1ef8eb1437f0), [`da0392ae`](https://github.com/scaleway/scaleway-ui/commit/da0392aeb572a955e035abb81985644c3c3c2885), [`f2d211b5`](https://github.com/scaleway/scaleway-ui/commit/f2d211b57750866cce6e5679ed9bf47953ec9294)]:
+  - @scaleway/ui@0.252.0
+
 ## 1.45.9
 
 ### Patch Changes
