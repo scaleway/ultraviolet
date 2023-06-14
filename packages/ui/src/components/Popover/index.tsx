@@ -60,7 +60,7 @@ const ContentWrapper = ({
   <Stack gap={1}>
     <Stack direction="row" justifyContent="space-between">
       <Text
-        variant="headingSmall"
+        variant="bodyStrong"
         as="h3"
         prominence={variant === 'default' ? 'strong' : 'stronger'}
       >

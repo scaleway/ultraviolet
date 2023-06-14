@@ -1,13 +1,15 @@
 import styled from '@emotion/styled'
+import { useState } from 'react'
 import type { ComponentProps, JSX } from 'react'
+import { Popover } from '../Popover'
 import { Tag } from '../Tag'
-import { Tooltip } from '../Tooltip'
 
 const StyledContainer = styled.div`
   display: flex;
 `
 
-const StyledTooltipReference = styled.span`
+const TagsWrapper = styled.span`
+  cursor: pointer;
   color: ${({ theme }) => theme.colors.primary.text};
   border: none;
   font-size: 14px;
@@ -29,14 +31,6 @@ const StyledTagContainer = styled.div<{ multiline?: boolean }>`
   ${({ multiline }) => multiline && `flex-wrap: wrap;`};
 `
 
-const StyledManyTagsContainer = styled.div`
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: ${({ theme }) => theme.space['1']};
-`
-
 type TagListProps = {
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
@@ -51,6 +45,10 @@ type TagListProps = {
    * This property define maximum width of each tag. This doesn't apply for tags in tooltip.
    */
   multiline?: boolean
+  /**
+   * This property define the title of the Popover, when some tags are hidden because of the threshold.
+   */
+  popoverTitle: string
   className?: string
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Tag>, 'copiable' | 'copyText' | 'copiedText'>
@@ -62,6 +60,7 @@ export const TagList = ({
   tags = DEFAULT_TAGS,
   threshold = 1,
   multiline = false,
+  popoverTitle,
   copiable,
   copyText,
   copiedText,
@@ -79,6 +78,8 @@ export const TagList = ({
   }
   const hasManyTags = tags.length > tmpThreshold || false
   const visibleTagsCount = hasManyTags ? tmpThreshold : tags.length
+
+  const [isVisible, setIsVisible] = useState(false)
 
   if (!tags.length) {
     return null
@@ -101,27 +102,35 @@ export const TagList = ({
         ))}
       </StyledTagContainer>
       {hasManyTags && (
-        <Tooltip
-          maxWidth={600}
-          text={
-            <StyledManyTagsContainer>
+        <Popover
+          title={popoverTitle}
+          visible={isVisible}
+          size="small"
+          onClose={() => setIsVisible(false)}
+          content={
+            <StyledTagContainer multiline>
               {tags.slice(visibleTagsCount).map((tag, index) => (
-                // useful when two tags are identical `${tag}-${index}`
-                <span
+                <Tag
+                  // useful when two tags are identical `${tag}-${index}`
                   // eslint-disable-next-line react/no-array-index-key
                   key={`${tag}-${index}`}
+                  copiable={copiable}
+                  copyText={copyText}
+                  copiedText={copiedText}
                 >
                   {tag}
-                  {index < tags.slice(visibleTagsCount).length - 1 ? ',' : null}
-                </span>
+                </Tag>
               ))}
-            </StyledManyTagsContainer>
+            </StyledTagContainer>
           }
         >
-          <StyledTooltipReference>
+          <TagsWrapper
+            data-testid={`${dataTestId ?? 'taglist'}-open`}
+            onClick={() => setIsVisible(true)}
+          >
             +{tags.length - tmpThreshold}
-          </StyledTooltipReference>
-        </Tooltip>
+          </TagsWrapper>
+        </Popover>
       )}
     </StyledContainer>
   )
