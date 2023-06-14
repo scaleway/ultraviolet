@@ -277,9 +277,7 @@ exports[`CheckboxField should render correctly 1`] = `
   flex: 1;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       aria-disabled="false"
       class="cache-4zx8kl eqr7bqq1"
@@ -614,9 +612,7 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
   flex: 1;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       aria-disabled="false"
       class="cache-4zx8kl eqr7bqq1"
@@ -631,7 +627,7 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
         id="checked"
         name="checked"
         type="checkbox"
-        value=""
+        value="true"
       />
       <svg
         class="cache-55x4xn eqr7bqq4"
@@ -952,9 +948,7 @@ exports[`CheckboxField should render correctly disabled 1`] = `
   flex: 1;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       aria-disabled="true"
       class="cache-4zx8kl eqr7bqq1"
@@ -1707,9 +1701,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   padding-top: 4px;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       aria-disabled="false"
       class="cache-4zx8kl eqr7bqq1"
@@ -1725,7 +1717,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
         name="test"
         required=""
         type="checkbox"
-        value=""
+        value="false"
       />
       <svg
         class="cache-55x4xn eqr7bqq4"
@@ -2075,9 +2067,7 @@ exports[`CheckboxField should trigger events correctly 1`] = `
   width: 100%;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       aria-disabled="false"
       class="cache-4zx8kl eqr7bqq1"
@@ -2091,7 +2081,7 @@ exports[`CheckboxField should trigger events correctly 1`] = `
         id="test"
         name="test"
         type="checkbox"
-        value=""
+        value="true"
       />
       <svg
         class="cache-55x4xn eqr7bqq4"

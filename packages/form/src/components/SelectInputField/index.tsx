@@ -1,6 +1,5 @@
 import type { CSSObject, Theme, css } from '@emotion/react'
 import { SelectInput } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type {
   ComponentProps,
   ForwardedRef,
@@ -8,10 +7,10 @@ import type {
   ReactNode,
 } from 'react'
 import { Children, useCallback, useMemo } from 'react'
+import type { FieldValues } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
-import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 // Here we duplicate SelectInput types as they are using interfaces which are not portable
@@ -67,8 +66,7 @@ type StateManagedSelect = typeof Select
 
 type SelectInputProps = Partial<
   SelectProps &
-    SelectStyleProps &
-    Pick<ComponentProps<typeof SelectInput>, 'data-testid'> & {
+    SelectStyleProps & {
       /**
        * Name of the animation
        */
@@ -96,84 +94,81 @@ type SelectInputOptionOrGroup = NonNullable<SelectInputOptions>[number]
 type SelectInputOption = { value: string; label: string }
 
 export type SelectInputFieldProps<
-  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
-> = BaseFieldProps<T> &
-  Pick<
-    SelectInputProps,
-    | 'animation'
-    | 'animationDuration'
-    | 'animationOnChange'
-    | 'children'
-    | 'className'
-    | 'disabled'
-    | 'error'
-    | 'id'
-    | 'inputId'
-    | 'isClearable'
-    | 'isLoading'
-    | 'isSearchable'
-    | 'menuPortalTarget'
-    | 'onBlur'
-    | 'onChange'
-    | 'onFocus'
-    | 'options'
-    | 'placeholder'
-    | 'readOnly'
-    | 'required'
-    | 'value'
-    | 'noTopLabel'
-    | 'noOptionsMessage'
-    | 'customStyle'
-    | 'data-testid'
+  TFieldValues extends FieldValues = FieldValues,
+> = BaseFieldProps<TFieldValues> &
+  Partial<
+    Pick<
+      SelectInputProps,
+      | 'animation'
+      | 'animationDuration'
+      | 'animationOnChange'
+      | 'children'
+      | 'className'
+      | 'disabled'
+      | 'error'
+      | 'id'
+      | 'inputId'
+      | 'isClearable'
+      | 'isLoading'
+      | 'isSearchable'
+      | 'menuPortalTarget'
+      | 'onBlur'
+      | 'onChange'
+      | 'onFocus'
+      | 'options'
+      | 'placeholder'
+      | 'readOnly'
+      | 'required'
+      | 'value'
+      | 'noTopLabel'
+      | 'noOptionsMessage'
+      | 'customStyle'
+    >
   > & {
     label?: string
-    maxLength?: number
-    minLength?: number
+    multiple?: boolean
+    parse?: (value: unknown, name?: string) => unknown
+    format?: (value: unknown, name: string) => unknown
     name: string
   }
 
-const identity = <T,>(x: T) => x
+const identity = (x: unknown) => x
+// const identity = <T,>(x: T) => x
 
-export const SelectInputField = <
-  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
->({
+export const SelectInputField = <TFieldValues extends FieldValues>({
   animation,
   animationDuration,
   animationOnChange,
   children,
   className,
   disabled,
-  error: errorProp,
-  format: formatProp = identity as NonNullable<BaseFieldProps<T>['format']>,
-  formatOnBlur,
+  // error: errorProp,
+  format: formatProp = identity,
+  // formatOnBlur,
   id,
   inputId,
   isClearable,
   isLoading,
   isSearchable,
-  label = '',
-  maxLength,
+  // label = '',
+  // maxLength,
   menuPortalTarget,
-  minLength,
+  // minLength,
   multiple,
   name,
   onBlur,
   onChange,
   onFocus,
   options: optionsProp,
-  parse: parseProp = identity as NonNullable<BaseFieldProps<T>['parse']>,
+  parse: parseProp = identity,
   placeholder,
   readOnly,
   required,
-  value,
+  rules,
   noTopLabel,
   noOptionsMessage,
   customStyle,
-  validate,
-  'data-testid': dataTestId,
-}: SelectInputFieldProps<T>) => {
-  const { getError } = useErrors()
-
+}: SelectInputFieldProps<TFieldValues>) => {
   const options = useMemo(
     () =>
       optionsProp ||
@@ -198,7 +193,7 @@ export const SelectInputField = <
   )
 
   const format = useCallback(
-    (val: T) => {
+    (val: unknown) => {
       if (multiple) return formatProp(val, name) as SelectInputOption
 
       const find = (opts: SelectInputOptionOrGroup[], valueToFind: string) =>
@@ -235,75 +230,57 @@ export const SelectInputField = <
         }
       }
 
-      return formatProp(selected as T, name) as SelectInputOption
+      return formatProp(selected, name) as SelectInputOption
     },
     [formatProp, multiple, name, options],
   )
 
-  const { input, meta } = useFormField<T, HTMLElement, SelectInputOption>(
-    name,
-    {
-      disabled,
-      format,
-      formatOnBlur,
-      maxLength,
-      minLength: minLength || required ? 1 : undefined,
-      multiple,
-      parse,
-      required,
-      value,
-      validate,
-    },
-  )
-
-  const error = getError({
-    errorProp,
-    label,
-    meta: meta as FieldState<unknown>,
-    name,
-    value: input.value,
-  })
-
   return (
-    <SelectInput
-      animation={animation}
-      animationDuration={animationDuration}
-      animationOnChange={animationOnChange}
-      className={className}
-      disabled={disabled}
-      error={error}
-      id={id}
-      inputId={inputId}
-      isClearable={isClearable}
-      isLoading={isLoading}
-      isMulti={input.multiple}
-      customStyle={customStyle}
-      isSearchable={isSearchable}
-      menuPortalTarget={menuPortalTarget}
+    <Controller
       name={name}
-      onBlur={event => {
-        input.onBlur(event)
-        onBlur?.(event)
+      rules={{
+        required,
+        ...rules,
       }}
-      onChange={(event, action) => {
-        input.onChange(event)
-        onChange?.(event, action)
-      }}
-      onFocus={event => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
-      options={options}
-      placeholder={placeholder}
-      readOnly={readOnly}
-      value={input.value}
-      noTopLabel={noTopLabel}
-      required={required}
-      noOptionsMessage={noOptionsMessage}
-      data-testid={dataTestId}
-    >
-      {children}
-    </SelectInput>
+      render={({ field, fieldState: { error } }) => (
+        <SelectInput
+          {...field}
+          animation={animation}
+          animationDuration={animationDuration}
+          animationOnChange={animationOnChange}
+          className={className}
+          disabled={disabled}
+          error={error?.message}
+          id={id}
+          inputId={inputId}
+          isClearable={isClearable}
+          isLoading={isLoading}
+          isMulti={multiple}
+          customStyle={customStyle}
+          isSearchable={isSearchable}
+          menuPortalTarget={menuPortalTarget}
+          onBlur={event => {
+            field.onBlur()
+            onBlur?.(event)
+          }}
+          onChange={(event, action) => {
+            field.onChange(parse(event))
+            onChange?.(event, action)
+          }}
+          onFocus={onFocus}
+          options={options}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          noTopLabel={noTopLabel}
+          required={required}
+          // value={value}
+          value={format(field.value)}
+          noOptionsMessage={noOptionsMessage}
+        >
+          {children}
+        </SelectInput>
+      )}
+    />
   )
 }
 
