@@ -4,11 +4,11 @@ export const Closable = Template.bind({})
 
 Closable.args = {
   children: 'This is a closable alert',
-  variant: 'info',
+  sentiment: 'info',
   title: 'Information',
   buttonText: 'More info',
   onClickButton: () => alert('Button clicked'),
-  isClosable: true,
+  closable: true,
 }
 
 Closable.parameters = {

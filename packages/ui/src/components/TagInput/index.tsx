@@ -242,7 +242,7 @@ export const TagInput = ({
     >
       {tagInputState.map(tag => (
         <Tag
-          variant="neutral"
+          sentiment="neutral"
           disabled={disabled}
           key={tag.index}
           isLoading={status[tag.index] === STATUS.LOADING}

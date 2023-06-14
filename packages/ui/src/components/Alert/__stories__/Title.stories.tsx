@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const Title = Template.bind({})
 
 Title.args = {
-  variant: 'info',
+  sentiment: 'info',
   title: 'Information',
   children: 'This is an alert content.',
 }

@@ -16,10 +16,10 @@ describe('StepList', () => {
       </StepList>,
     ))
 
-  test('renders correctly with bulletIcon & variant', () =>
+  test('renders correctly with bulletIcon & sentiment', () =>
     shouldMatchEmotionSnapshot(
       <StepList>
-        <StepList.Item bulletIcon="alert" variant="success">
+        <StepList.Item bulletIcon="alert" sentiment="success">
           Item 1
         </StepList.Item>
       </StepList>,

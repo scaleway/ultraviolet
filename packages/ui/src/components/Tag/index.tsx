@@ -11,8 +11,8 @@ import { Tooltip } from '../Tooltip'
 const COPY_DURATION = 2500
 
 const StyledContainer = styled('span', {
-  shouldForwardProp: prop => !['variant', 'copiable'].includes(prop),
-})<{ variant: Color | 'disabled'; copiable?: boolean }>`
+  shouldForwardProp: prop => !['sentiment', 'copiable'].includes(prop),
+})<{ sentiment: Color | 'disabled'; copiable?: boolean }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,8 @@ const StyledContainer = styled('span', {
     }
   `}
 
-  ${({ variant, theme }) => {
-    if (variant === 'disabled') {
+  ${({ sentiment, theme }) => {
+    if (sentiment === 'disabled') {
       return `
       color: ${theme.colors.neutral.textDisabled};
       background: ${theme.colors.neutral.backgroundDisabled};
@@ -46,7 +46,7 @@ const StyledContainer = styled('span', {
 
     `
     }
-    if (variant === 'neutral') {
+    if (sentiment === 'neutral') {
       return `
       color: ${theme.colors.neutral.text};
       background: ${theme.colors.neutral.background};
@@ -55,9 +55,9 @@ const StyledContainer = styled('span', {
     }
 
     return `
-      color: ${theme.colors[variant].text};
-      background: ${theme.colors[variant].background};
-      border: solid 1px ${theme.colors[variant].background};
+      color: ${theme.colors[sentiment].text};
+      background: ${theme.colors[sentiment].background};
+      border: solid 1px ${theme.colors[sentiment].background};
     `
   }}
 `
@@ -75,7 +75,7 @@ const StyledTag = styled.span`
 type TagProps = {
   isLoading?: boolean
   onClose?: MouseEventHandler<HTMLButtonElement>
-  variant?: Color
+  sentiment?: Color
   disabled?: boolean
   /**
    * Defines icon to display on left side of badge. **Only available on medium and large sizes**.
@@ -137,7 +137,7 @@ export const Tag = ({
   copyText = 'Copy',
   copiedText = 'Copied!',
   disabled,
-  variant = 'neutral',
+  sentiment = 'neutral',
   className,
   'data-testid': dataTestId,
 }: TagProps) => {
@@ -154,7 +154,8 @@ export const Tag = ({
     return (
       <Tooltip text={isCopied ? copiedText : copyText}>
         <Container
-          variant={disabled ? 'disabled' : variant}
+          // @note: sending disabled as a special sentiment is a bit weird
+          sentiment={disabled ? 'disabled' : sentiment}
           copiable
           onClick={setCopied}
           className={className}
@@ -175,7 +176,7 @@ export const Tag = ({
 
   return (
     <StyledContainer
-      variant={disabled ? 'disabled' : variant}
+      sentiment={disabled ? 'disabled' : sentiment}
       className={className}
       data-testid={dataTestId}
     >

@@ -149,6 +149,52 @@ exports[`Tooltip should render correctly with required props and visible 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Tooltip should render correctly with sentiment should renders tooltip with placement neutral 1`] = `
+<DocumentFragment>
+  .cache-fqcxly-StyledChildrenContainer {
+  display: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+<div
+    aria-describedby=":ro:"
+    class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+    tabindex="0"
+  >
+    <p
+      data-testid="children"
+    >
+      Children
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Tooltip should render correctly with sentiment should renders tooltip with placement primary 1`] = `
+<DocumentFragment>
+  .cache-fqcxly-StyledChildrenContainer {
+  display: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+<div
+    aria-describedby=":rs:"
+    class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
+    tabindex="0"
+  >
+    <p
+      data-testid="children"
+    >
+      Children
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Tooltip should render correctly with sizes should renders tooltip with placement large 1`] = `
 <DocumentFragment>
   .cache-fqcxly-StyledChildrenContainer {
@@ -206,52 +252,6 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
 
 <div
     aria-describedby=":r10:"
-    class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
-    tabindex="0"
-  >
-    <p
-      data-testid="children"
-    >
-      Children
-    </p>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tooltip should render correctly with variant should renders tooltip with placement default 1`] = `
-<DocumentFragment>
-  .cache-fqcxly-StyledChildrenContainer {
-  display: inherit;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-<div
-    aria-describedby=":ro:"
-    class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
-    tabindex="0"
-  >
-    <p
-      data-testid="children"
-    >
-      Children
-    </p>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Tooltip should render correctly with variant should renders tooltip with placement primary 1`] = `
-<DocumentFragment>
-  .cache-fqcxly-StyledChildrenContainer {
-  display: inherit;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-<div
-    aria-describedby=":rs:"
     class="cache-fqcxly-StyledChildrenContainer ep3agpf0"
     tabindex="0"
   >

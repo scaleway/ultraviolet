@@ -23,14 +23,16 @@ describe('CopyButton', () => {
     shouldMatchEmotionSnapshot(<CopyButton value="Test" />))
 
   Object.keys(SIZES).forEach(size => {
-    test(`renders correctly variant ${size}`, () =>
+    test(`renders correctly sentiment ${size}`, () =>
       shouldMatchEmotionSnapshot(
         <CopyButton value="Test" size={size as keyof typeof SIZES} />,
       ))
   })
-  ;(['primary', 'neutral'] as const).forEach(variant => {
-    test(`renders correctly variant ${variant}`, () =>
-      shouldMatchEmotionSnapshot(<CopyButton value="Test" variant={variant} />))
+  ;(['primary', 'neutral'] as const).forEach(sentiment => {
+    test(`renders correctly sentiment ${sentiment}`, () =>
+      shouldMatchEmotionSnapshot(
+        <CopyButton value="Test" sentiment={sentiment} />,
+      ))
   })
 
   test('renders correctly with no border', () =>

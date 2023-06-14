@@ -15,7 +15,7 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Target } from './Target.stories'
 export { Size } from './Size.stories'
 export { OneLine } from './OneLine.stories'

@@ -4,15 +4,15 @@ import { Bullet } from '..'
 export const Icon: StoryFn = props => (
   <>
     <Bullet {...props} icon="check" />
-    <Bullet {...props} icon="check" variant="success" />
-    <Bullet {...props} icon="check" variant="success" size="small" />
+    <Bullet {...props} icon="check" sentiment="success" />
+    <Bullet {...props} icon="check" sentiment="success" size="small" />
   </>
 )
 
 Icon.parameters = {
   docs: {
     storyDescription:
-      'Set `icon` using icon property. Variant and size props affect icon.',
+      'Set `icon` using icon property. Sentiment and size props affect icon.',
   },
 }
 

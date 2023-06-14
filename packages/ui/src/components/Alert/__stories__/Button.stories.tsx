@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const Button = Template.bind({})
 
 Button.args = {
-  variant: 'info',
+  sentiment: 'info',
   buttonText: 'More info',
   onClickButton: () => alert('Button clicked'),
   title: 'Information',

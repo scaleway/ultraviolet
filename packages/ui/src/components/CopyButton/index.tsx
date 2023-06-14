@@ -15,17 +15,17 @@ export const SIZES = {
  * TODO: replace when buttonV2 will be available
  */
 const StyledButton = styled('button', {
-  shouldForwardProp: prop => !['size', 'variant', 'noBorder'].includes(prop),
-})<{ size: number; variant: Color; noBorder?: boolean }>`
+  shouldForwardProp: prop => !['size', 'sentiment', 'noBorder'].includes(prop),
+})<{ size: number; sentiment: Color; noBorder?: boolean }>`
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
   background: transparent;
-  color: ${({ theme, variant }) =>
-    variant === 'primary'
+  color: ${({ theme, sentiment }) =>
+    sentiment === 'primary'
       ? theme.colors.primary.textWeak
       : theme.colors.neutral.text};
-  border: ${({ theme, noBorder, variant }) =>
-    noBorder ? 'none' : `1px solid ${theme.colors[variant].borderWeak}`};
+  border: ${({ theme, noBorder, sentiment }) =>
+    noBorder ? 'none' : `1px solid ${theme.colors[sentiment].borderWeak}`};
   border-radius: ${({ theme }) => theme.radii.default};
   display: flex;
   cursor: pointer;
@@ -34,8 +34,8 @@ const StyledButton = styled('button', {
   outline: none;
 
   &:hover {
-    background: ${({ theme, variant }) =>
-      theme.colors[variant].backgroundWeakHover};
+    background: ${({ theme, sentiment }) =>
+      theme.colors[sentiment].backgroundWeakHover};
   }
 
   &active,
@@ -49,7 +49,7 @@ type CopyButtonProps = {
   value: string
   copyText?: string
   copiedText?: string
-  variant?: 'primary' | 'neutral'
+  sentiment?: 'primary' | 'neutral'
   noBorder?: boolean
   className?: string
   'data-testid'?: string
@@ -60,7 +60,7 @@ export const CopyButton = ({
   value,
   copyText = 'Copy',
   copiedText = 'Copied!',
-  variant = 'primary',
+  sentiment = 'primary',
   noBorder,
   className,
   'data-testid': dataTestId,
@@ -75,7 +75,7 @@ export const CopyButton = ({
         type="button"
         onClick={setCopied}
         size={SIZES[size]}
-        variant={variant}
+        sentiment={sentiment}
         noBorder={noBorder}
         className={className}
         data-testid={dataTestId}

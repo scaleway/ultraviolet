@@ -78,7 +78,7 @@ export const Item = ({
     aria-current={ariaCurrent}
   >
     {to ? (
-      <Link variant="primary" href={to}>
+      <Link sentiment="primary" href={to}>
         {contractString(children)}
       </Link>
     ) : (

@@ -1,14 +1,14 @@
-import { Status, statusVariants } from '..'
+import { Status, statusSentiments } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('Status', () => {
-  test.each(statusVariants)('renders correctly with type="%s"', variant =>
-    shouldMatchEmotionSnapshot(<Status variant={variant} />),
+  test.each(statusSentiments)('renders correctly with type="%s"', sentiment =>
+    shouldMatchEmotionSnapshot(<Status sentiment={sentiment} />),
   )
 
   test(`render animated`, () =>
-    shouldMatchEmotionSnapshot(<Status variant="success" animated />))
+    shouldMatchEmotionSnapshot(<Status sentiment="success" animated />))
 
   test(`render with className`, () =>
-    shouldMatchEmotionSnapshot(<Status variant="success" className="test" />))
+    shouldMatchEmotionSnapshot(<Status sentiment="success" className="test" />))
 })

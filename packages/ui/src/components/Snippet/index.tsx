@@ -219,7 +219,7 @@ export const Snippet = ({
             copyText={copyText}
             copiedText={copiedText}
             noBorder
-            variant="neutral"
+            sentiment="neutral"
           />
         </ButtonContainer>
         {hasShowMoreButton ? (

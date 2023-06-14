@@ -117,7 +117,7 @@ export const EmptyState = ({
           <Link
             href={learnMore.link}
             target={learnMore.target}
-            variant="info"
+            sentiment="info"
             iconPosition="right"
           >
             {learnMore.text}

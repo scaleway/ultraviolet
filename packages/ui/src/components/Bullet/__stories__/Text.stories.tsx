@@ -6,7 +6,7 @@ export const Text: StoryFn = props => <Bullet {...props} text="A" />
 Text.parameters = {
   docs: {
     storyDescription:
-      'Set `text` using text property. Variant and size props affect text.',
+      'Set `text` using text property. Sentiment and size props affect text.',
   },
 }
 

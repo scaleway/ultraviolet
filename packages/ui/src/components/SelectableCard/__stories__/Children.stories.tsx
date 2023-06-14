@@ -38,7 +38,7 @@ export const Children: StoryFn = () => {
           <>
             I am a children with a badge &nbsp;
             <Badge
-              variant={checked ? 'info' : 'neutral'}
+              sentiment={checked ? 'info' : 'neutral'}
               prominence={checked ? 'default' : 'strong'}
             >
               info

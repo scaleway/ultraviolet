@@ -9,7 +9,7 @@ WithBadge.args = {
     <Tabs.Tab
       value={1}
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
@@ -20,7 +20,7 @@ WithBadge.args = {
       value={2}
       counter={1}
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
@@ -31,7 +31,7 @@ WithBadge.args = {
       value={3}
       counter={10}
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
@@ -42,7 +42,7 @@ WithBadge.args = {
       value={4}
       disabled
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
@@ -54,7 +54,7 @@ WithBadge.args = {
       disabled
       counter={1}
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }
@@ -66,7 +66,7 @@ WithBadge.args = {
       disabled
       counter={10}
       badge={
-        <Badge variant="warning" size="small">
+        <Badge sentiment="warning" size="small">
           Beta
         </Badge>
       }

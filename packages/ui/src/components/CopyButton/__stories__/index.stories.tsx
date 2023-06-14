@@ -22,7 +22,7 @@ export default {
 } as Meta<typeof CopyButton>
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'
 export { Sizes } from './Sizes.stories'
 export { NoBorder } from './NoBorder.stories'
 export { CustomTexts } from './CustomTexts.stories'

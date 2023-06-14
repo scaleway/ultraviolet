@@ -41,7 +41,7 @@ type ContentProps =
   | { bulletIcon?: never; bulletText: string }
 
 type ItemProps = {
-  variant?: ComponentProps<typeof Bullet>['variant']
+  sentiment?: ComponentProps<typeof Bullet>['sentiment']
   size?: Sizes
   disabled?: boolean
   children: ReactNode
@@ -51,7 +51,7 @@ type ItemProps = {
 const Item = ({
   bulletText,
   bulletIcon,
-  variant,
+  sentiment,
   children,
   size = 'medium',
   disabled = false,
@@ -62,14 +62,14 @@ const Item = ({
       <Bullet
         icon={bulletIcon}
         size={size}
-        variant={disabled ? 'disabled' : variant}
+        sentiment={disabled ? 'disabled' : sentiment}
       />
     ) : null}
     {bulletText ? (
       <Bullet
         text={bulletText}
         size={size}
-        variant={disabled ? 'disabled' : variant}
+        sentiment={disabled ? 'disabled' : sentiment}
       />
     ) : null}
     <StyledDiv size={size}>{children}</StyledDiv>

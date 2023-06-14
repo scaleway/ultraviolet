@@ -35,7 +35,7 @@ export const PROMINENCES = {
 }
 
 /**
- * Generate all styles available for badge based on prominence and variants
+ * Generate all styles available for badge based on prominence and sentiments
  * @param prominence
  * @param theme
  */
@@ -88,8 +88,8 @@ const generateStyles = ({
 }
 
 const StyledBox = styled('div', {
-  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
-})<{ size: number; variant: string }>`
+  shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
+})<{ size: number; sentiment: string }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -102,11 +102,11 @@ const StyledBox = styled('div', {
     size === SIZES.small ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
   height: ${({ size }) => size}px;
-  ${({ variant }) => variant}
+  ${({ sentiment }) => sentiment}
 `
 
 type BadgeProps = {
-  variant?: Color
+  sentiment?: Color
   size?: keyof typeof SIZES
   prominence?: keyof typeof PROMINENCES
   /**
@@ -120,7 +120,7 @@ type BadgeProps = {
 }
 
 export const Badge = ({
-  variant = 'neutral',
+  sentiment = 'neutral',
   size = 'medium',
   prominence = 'default',
   icon,
@@ -136,10 +136,10 @@ export const Badge = ({
    */
   const ariaLabel = useMemo(
     () =>
-      ['neutral', 'primary'].some(baseVariant => baseVariant === variant)
+      ['neutral', 'primary'].some(baseSentiment => baseSentiment === sentiment)
         ? undefined
-        : variant,
-    [variant],
+        : sentiment,
+    [sentiment],
   )
 
   const generatedStyles = useMemo(
@@ -154,8 +154,8 @@ export const Badge = ({
       role="status"
       aria-label={ariaLabel}
       as="span"
-      variant={
-        disabled ? generatedStyles['disabled'] : generatedStyles[variant]
+      sentiment={
+        disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
       size={sizeValue}
       className={className}

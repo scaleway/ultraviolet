@@ -78,9 +78,9 @@ describe('Menu', () => {
     test(`render with default props`, () =>
       shouldMatchEmotionSnapshot(<Menu.Item>Default Props</Menu.Item>))
 
-    test(`render with variant danger`, () =>
+    test(`render with sentiment danger`, () =>
       shouldMatchEmotionSnapshot(
-        <Menu.Item variant="danger">Danger</Menu.Item>,
+        <Menu.Item sentiment="danger">Danger</Menu.Item>,
       ))
 
     test(`render with disabled props`, () =>

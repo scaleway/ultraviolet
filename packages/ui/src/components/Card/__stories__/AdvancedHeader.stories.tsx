@@ -12,11 +12,11 @@ export const AdvancedHeader: StoryFn = () => {
         <Text variant="heading" as="h2">
           Advanced Header
         </Text>
-        <Badge variant="success" size="small">
+        <Badge sentiment="success" size="small">
           New
         </Badge>
       </Stack>
-      <Alert variant="info">This is an info alert in the header</Alert>
+      <Alert sentiment="info">This is an info alert in the header</Alert>
     </Stack>
   )
 
