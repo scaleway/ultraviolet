@@ -1,18 +1,12 @@
 import { Alert } from '@ultraviolet/ui'
-import { FormSpy } from 'react-final-form'
+import { useFormState } from 'react-hook-form'
 
-export const SubmitErrorAlert = <FormValues,>({
-  className,
-}: {
-  className?: string
-}) => (
-  <FormSpy<FormValues> subscription={{ submitError: true }}>
-    {({ submitError }) =>
-      submitError ? (
-        <Alert className={className} sentiment="danger">
-          {submitError}
-        </Alert>
-      ) : null
-    }
-  </FormSpy>
-)
+export const SubmitErrorAlert = ({ className }: { className?: string }) => {
+  const { errors } = useFormState()
+
+  return errors?.root?.['submit'] ? (
+    <Alert className={className} sentiment="danger">
+      {errors.root['submit'].message}
+    </Alert>
+  ) : null
+}

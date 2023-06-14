@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react'
-import { Checkbox, Stack } from '@ultraviolet/ui'
-import type { ChangeEvent } from 'react'
-import { useState } from 'react'
+import { Stack } from '@ultraviolet/ui'
+import { useForm } from 'react-hook-form'
 import {
   CheckboxField,
   DateField,
   Form,
+  NumberInputField,
   RadioField,
   SelectInputField,
   SelectableCardField,
@@ -18,20 +18,49 @@ import {
 } from '../..'
 import { emailRegex, mockErrors } from '../../../mocks/mockErrors'
 
-export const Playground: StoryFn<typeof Form> = args => {
-  const [state, setState] = useState(false)
+type FormValues = {
+  receiveEmailUpdates: boolean
+  choice: string
+  tags: string[]
+  selectableCard: string
+  disableName: boolean
+  email: string
+}
+
+export const Playground: StoryFn<typeof Form> = () => {
+  const methods = useForm({
+    mode: 'onChange',
+    defaultValues: {
+      receiveEmailUpdates: true,
+      choice: '2',
+      tags: ['cloud', 'of', 'choice'],
+      selectableCard: '1',
+      disableName: false,
+      email: 'email',
+    },
+  })
+
+  const disableName = methods.watch('disableName')
+
+  console.log({ disableName })
 
   return (
-    <Form {...args}>
+    <Form<FormValues>
+      errors={mockErrors}
+      methods={methods}
+      onRawSubmit={() =>
+        new Promise(rejects => {
+          setTimeout(
+            () => rejects({ 'FINAL_FORM/form-error': 'SERVER ERROR' }),
+            5000,
+          )
+        })
+      }
+    >
       <Stack gap={3}>
-        <Checkbox
-          checked={state}
-          onChange={(event: ChangeEvent<HTMLInputElement>) =>
-            setState(event.target.checked)
-          }
-        >
+        <CheckboxField name="disableName">
           I&apos;m disabling the field name to remove validation
-        </Checkbox>
+        </CheckboxField>
         <Stack gap={2} direction="row">
           <RadioField name="choice" value="1" required label="1" />
           <RadioField name="choice" value="2" required label="2" />
@@ -59,17 +88,23 @@ export const Playground: StoryFn<typeof Form> = args => {
           name="name"
           label="Name"
           placeholder="John"
-          required
           autoComplete="given-name"
-          disabled={state}
+          required={!disableName}
+          disabled={disableName}
         />
+        <NumberInputField name="age" minValue={1} maxValue={99} />
         <TextInputField
           name="email"
           label="Email"
           type="email"
           placeholder="john.smith@email.com"
           required
-          regex={[emailRegex]}
+          rules={{
+            pattern: {
+              value: emailRegex,
+              message: 'Must be an email',
+            },
+          }}
         />
 
         <SelectInputField name="select" required>
@@ -95,14 +130,15 @@ export const Playground: StoryFn<typeof Form> = args => {
 }
 
 Playground.args = {
-  errors: mockErrors,
-  initialValues: {
-    receiveEmailUpdates: true,
-    choice: '2',
-    tags: ['cloud', 'of', 'choice'],
-    selectableCard: '1',
-  },
   onRawSubmit: values => {
     console.log('Submit', values)
   },
+  // initialValues: {
+  //   receiveEmailUpdates: true,
+  //   choice: '2',
+  //   tags: ['cloud', 'of', 'choice'],
+  //   selectableCard: '1',
+  //   disableName: false,
+  //   email: 'email'
+  // }
 }

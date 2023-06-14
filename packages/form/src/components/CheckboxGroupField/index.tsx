@@ -1,32 +1,29 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFieldArray } from 'react-final-form-arrays'
+import type { FieldValues } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type CheckboxGroupValue = string[]
+type CheckboxGroupFieldProps<TFieldValues extends FieldValues> =
+  BaseFieldProps<TFieldValues> &
+    Partial<
+      Pick<
+        ComponentProps<typeof CheckboxGroup>,
+        | 'className'
+        | 'helper'
+        | 'onChange'
+        | 'required'
+        | 'direction'
+        | 'children'
+        | 'value'
+        | 'error'
+        | 'legend'
+      >
+    > &
+    Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend' | 'name'>>
 
-type CheckboxGroupFieldProps<
-  T = CheckboxGroupValue,
-  K = string,
-> = BaseFieldProps<T, K> &
-  Partial<
-    Pick<
-      ComponentProps<typeof CheckboxGroup>,
-      | 'className'
-      | 'helper'
-      | 'onChange'
-      | 'required'
-      | 'direction'
-      | 'children'
-      | 'value'
-      | 'error'
-      | 'legend'
-    >
-  > &
-  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend' | 'name'>>
-
-export const CheckboxGroupField = ({
+export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   legend,
   value,
   className,
@@ -34,48 +31,45 @@ export const CheckboxGroupField = ({
   direction,
   children,
   onChange,
+  label = '',
   error: customError,
   name,
   required = false,
-}: CheckboxGroupFieldProps) => {
+}: CheckboxGroupFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
 
-  const { fields, meta } = useFieldArray(name, {
-    type: 'checkbox',
-    value,
-    validate: localValue =>
-      required && localValue?.length === 0 ? 'Required' : undefined,
-  })
-
-  const error = getError({
-    label: legend,
-    meta,
-    value: fields.value,
-    name,
-  })
-
   return (
-    <CheckboxGroup
-      legend={legend}
-      name={fields.name}
-      value={fields.value}
-      onChange={event => {
-        if (fields.value?.includes(event.currentTarget.value)) {
-          fields.remove(fields.value.indexOf(event.currentTarget?.value))
-        } else {
-          fields.push(event.currentTarget.value)
-        }
+    <Controller
+      name={name}
+      render={({ field, fieldState: { error } }) => (
+        <CheckboxGroup
+          legend={legend}
+          name={name}
+          value={value}
+          onChange={event => {
+            const fieldValue = field.value as string[]
+            if (fieldValue?.includes(event.currentTarget.value)) {
+              field.onChange(
+                fieldValue?.filter(
+                  currentValue => currentValue === event.currentTarget.value,
+                ),
+              )
+            } else {
+              field.onChange([...field.value, event.currentTarget.value])
+            }
 
-        onChange?.(event)
-      }}
-      error={error ?? customError}
-      className={className}
-      direction={direction}
-      helper={helper}
-      required={required}
-    >
-      {children}
-    </CheckboxGroup>
+            onChange?.(event)
+          }}
+          error={getError({ label }, error) ?? customError}
+          className={className}
+          direction={direction}
+          helper={helper}
+          required={required}
+        >
+          {children}
+        </CheckboxGroup>
+      )}
+    />
   )
 }
 

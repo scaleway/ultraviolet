@@ -1,11 +1,11 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import { useFormState } from 'react-final-form'
+import { useWatch } from 'react-hook-form'
 import { ToggleGroupField } from '..'
 import { Submit } from '../..'
 
 export const RequiredStory: StoryFn<typeof ToggleGroupField> = args => {
-  const { values } = useFormState()
+  const values = useWatch()
 
   return (
     <Stack gap={1}>

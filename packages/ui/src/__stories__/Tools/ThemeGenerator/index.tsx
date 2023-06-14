@@ -135,14 +135,14 @@ export const ThemeGenerator = () => {
             onRawSubmit={onSubmit}
             initialValues={savedFormValues ?? INITIAL_VALUES}
             errors={{
-              TOO_LOW: '',
-              TOO_HIGH: '',
-              MIN_LENGTH: '',
-              MAX_LENGTH: '',
-              REGEX: 'The hexadecimal color is not valid.',
-              REQUIRED: '',
-              MAX_DATE: '',
-              MIN_DATE: '',
+              min: () => '',
+              max: () => '',
+              minLength: () => '',
+              maxLength: () => '',
+              pattern: () => 'The hexadecimal color is not valid.',
+              required: () => '',
+              maxDate: () => '',
+              minDate: () => '',
             }}
           >
             <FormContent />

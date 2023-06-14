@@ -1,29 +1,36 @@
 import { useEffect, useRef } from 'react'
-import { useField, useFormState } from 'react-final-form'
+import type { DeepPartial, FieldPath, FieldValues } from 'react-hook-form'
+import { useFormContext } from 'react-hook-form'
 
-type CallbackFn<FieldValue, AllValues> = (
-  value: FieldValue,
-  values: AllValues,
-) => unknown
+type CallbackFn<TFieldValues extends FieldValues, T> = (
+  value: T,
+  values: DeepPartial<TFieldValues>,
+) => void | Promise<void>
 
-export const useOnFieldChange = <FieldValue = unknown, AllValues = unknown>(
-  name: string,
-  callback: CallbackFn<FieldValue, AllValues>,
+/**
+ * @deprecated
+ */
+export const useOnFieldChange = <
+  T,
+  TFieldValues extends FieldValues = FieldValues,
+>(
+  fieldName: FieldPath<TFieldValues>,
+  callback: CallbackFn<TFieldValues, T>,
   enabled = true,
 ): void => {
-  const { values } = useFormState<AllValues>()
-  const {
-    input: { value },
-  } = useField<FieldValue>(name, {
-    allowNull: true,
-    subscription: { value: true },
-  })
-  const previousValues = useRef(value)
+  const { watch, getValues } = useFormContext<TFieldValues>()
+  const previousValues = useRef<DeepPartial<TFieldValues> | null>(
+    getValues(fieldName),
+  )
 
   useEffect(() => {
-    if (previousValues.current !== value && enabled) {
-      previousValues.current = value
-      callback(value, values)
-    }
-  }, [value, values, callback, enabled])
+    const subscription = watch(value => {
+      if (previousValues.current !== value[fieldName] && enabled) {
+        previousValues.current = value[fieldName]
+        void callback(value[fieldName], value)
+      }
+    })
+
+    return () => subscription.unsubscribe()
+  }, [callback, enabled, watch, getValues, fieldName])
 }

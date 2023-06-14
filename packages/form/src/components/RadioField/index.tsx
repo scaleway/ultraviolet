@@ -1,13 +1,13 @@
 import { Radio } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps, JSX } from 'react'
-import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers'
+import type { FieldValues } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type RadioValue = NonNullable<ComponentProps<typeof Radio>['value']>
-
-type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
+type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
+  BaseFieldProps<TFieldValues>,
+  'label'
+> &
   Partial<
     Pick<
       ComponentProps<typeof Radio>,
@@ -27,63 +27,49 @@ type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
     required?: boolean
   }
 
-export const RadioField = ({
+export const RadioField = <TFieldValues extends FieldValues>({
   className,
   'data-testid': dataTestId,
   disabled,
   id,
-  label = '',
   name,
   onBlur,
+  label = '',
   onChange,
   onFocus,
   required,
-  validate,
   value,
+  rules,
   tooltip,
-}: RadioFieldProps): JSX.Element => {
-  const { getError } = useErrors()
-
-  const { input, meta } = useFormField(name, {
-    required,
-    type: 'radio',
-    validate,
-    value,
-  })
-
-  const error = getError({
-    disabled,
-    label: label as string,
-    meta: meta as FieldState<unknown>,
-    name,
-    value: input.value,
-  })
-
-  return (
-    <Radio
-      checked={input.checked}
-      className={className}
-      data-testid={dataTestId}
-      disabled={disabled}
-      error={error}
-      id={id}
-      name={input.name}
-      onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
-      }}
-      onBlur={event => {
-        input.onBlur(event)
-        onBlur?.(event)
-      }}
-      onFocus={event => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
-      required={required}
-      value={input.value}
-      label={label}
-      tooltip={tooltip}
-    />
-  )
-}
+}: RadioFieldProps<TFieldValues>): JSX.Element => (
+  <Controller
+    name={name}
+    rules={{
+      required,
+      ...rules,
+    }}
+    render={({ field, fieldState: { error } }) => (
+      <Radio
+        checked={field.value === value}
+        className={className}
+        data-testid={dataTestId}
+        disabled={disabled}
+        error={error?.message}
+        id={id}
+        onChange={event => {
+          field.onChange(value)
+          onChange?.(event)
+        }}
+        onBlur={event => {
+          field.onBlur()
+          onBlur?.(event)
+        }}
+        onFocus={onFocus}
+        required={required}
+        value={value ?? ''}
+        label={label}
+        tooltip={tooltip}
+      />
+    )}
+  />
+)

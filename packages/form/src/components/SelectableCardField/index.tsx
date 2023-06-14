@@ -1,18 +1,13 @@
 import { SelectableCard } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX } from 'react'
-import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers'
+import type { ComponentProps } from 'react'
+import type { FieldValues } from 'react-hook-form'
+import { Controller } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type SelectableCardValue = NonNullable<
-  ComponentProps<typeof SelectableCard>['value']
->
-
-type SelectableCardFieldProps<
-  T = SelectableCardValue,
-  K = string,
-> = BaseFieldProps<T, K> &
+type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
+  BaseFieldProps<TFieldValues>,
+  'label'
+> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCard>,
@@ -28,15 +23,12 @@ type SelectableCardFieldProps<
       | 'name'
       | 'tooltip'
       | 'label'
-      | 'data-testid'
     >
   > & {
-    name: string
-    required?: boolean
     className?: string
   }
 
-export const SelectableCardField = ({
+export const SelectableCardField = <TFieldValues extends FieldValues>({
   name,
   value,
   onChange,
@@ -48,57 +40,43 @@ export const SelectableCardField = ({
   onFocus,
   onBlur,
   required,
-  validate,
   tooltip,
   id,
   label,
-  'data-testid': dataTestId,
-}: SelectableCardFieldProps): JSX.Element => {
-  const { getError } = useErrors()
-
-  const { input, meta } = useFormField(name, {
-    disabled,
-    required,
-    type: type ?? 'radio',
-    validate,
-    value,
-  })
-
-  const error = getError({
-    label: name,
-    meta: meta as FieldState<unknown>,
-    name,
-    value: input.value,
-  })
-
-  return (
-    <SelectableCard
-      isError={!!error}
-      showTick={showTick}
-      checked={input.checked}
-      className={className}
-      disabled={disabled}
-      name={input.name}
-      onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
-      }}
-      onBlur={event => {
-        input.onBlur(event)
-        onBlur?.(event)
-      }}
-      onFocus={event => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
-      type={type}
-      value={input.value}
-      id={id}
-      tooltip={tooltip}
-      label={label}
-      data-testid={dataTestId}
-    >
-      {children}
-    </SelectableCard>
-  )
-}
+  rules,
+}: SelectableCardFieldProps<TFieldValues>) => (
+  <Controller
+    name={name}
+    rules={{
+      required,
+      ...rules,
+    }}
+    render={({ field, fieldState: { error } }) => (
+      <SelectableCard
+        isError={!!error}
+        showTick={showTick}
+        checked={field.value === value}
+        className={className}
+        disabled={disabled}
+        onChange={event => {
+          field.onChange(event)
+          onChange?.(event)
+        }}
+        onBlur={event => {
+          field.onBlur()
+          onBlur?.(event)
+        }}
+        onFocus={event => {
+          onFocus?.(event)
+        }}
+        type={type}
+        id={id}
+        tooltip={tooltip}
+        label={label}
+        value={value ?? ''}
+      >
+        {children}
+      </SelectableCard>
+    )}
+  />
+)
