@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
-import { Stack, Text } from '@scaleway/ui'
+import { Stack, Text } from '@ultraviolet/ui'
 import CopyBox from '../../components/CopyBoxCommand'
 
 const useCase1 = `import { ThemeProvider } from '@emotion/react'
-import { theme as lightTheme, dark as darkTheme, Button, Text } from '@scaleway/ui'
+import { theme as lightTheme, dark as darkTheme, Button, Text } from '@ultraviolet/ui'
 import React, { useCallback, useState } from 'react'
 
 const App = () => {
@@ -50,7 +50,7 @@ import {
   SelectInput,
   TextBox,
   Text,
-} from "@scaleway/ui"
+} from "@ultraviolet/ui"
 import React from "react"
 
 const StyledFieldContainer = styled.div\`

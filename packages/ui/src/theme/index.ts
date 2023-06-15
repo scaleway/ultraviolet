@@ -1,4 +1,4 @@
-import { consoleDarkTheme, consoleLightTheme } from '@scaleway/themes'
+import { consoleDarkTheme, consoleLightTheme } from '@ultraviolet/themes'
 import deepmerge from 'deepmerge'
 
 export type ScreenSize = keyof typeof consoleLightTheme.screens

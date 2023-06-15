@@ -1,4 +1,4 @@
-import { Checkbox } from '@scaleway/ui'
+import { Checkbox } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, JSX, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'

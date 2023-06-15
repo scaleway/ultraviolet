@@ -1,24 +1,24 @@
-# Scaleway Form
+# Ultraviolet Form
 
 [![npm version](https://badge.fury.io/js/%40scaleway%2Fform.svg)](https://badge.fury.io/js/%40scaleway%2Fform)
 
-Scaleway Form is an extension of Scaleway UI including everything to build forms using React.
+Ultraviolet Form is an extension of Ultraviolet UI including everything to build forms using React.
 It is using [React Final Form](https://final-form.org/react) under the hood.
 
 ## Installation
 
 ```sh
-$ pnpm add @scaleway/form @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/form @emotion/react @emotion/styled
 ```
 
 ### Usage
 
-To use the library you need to put a `ThemeProvider` from `@emotion/react` with the theme that comes from `@scaleway/ui` then wrap all your fields inside a `Form`:
+To use the library you need to put a `ThemeProvider` from `@emotion/react` with the theme that comes from `@ultraviolet/ui` then wrap all your fields inside a `Form`:
 
 ```tsx
 import { ThemeProvider } from '@emotion/react'
-import { Form, TextInputField } from '@scaleway/form'
-import { theme } from '@scaleway/ui'
+import { Form, TextInputField } from '@ultraviolet/form'
+import { theme } from '@ultraviolet/ui'
 
 export default function App() {
   return (
@@ -43,4 +43,4 @@ export default function App() {
 
 ## Documentation
 
-Checkout our [documentation website](https://storybook.ui.scaleway.com/).
+Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

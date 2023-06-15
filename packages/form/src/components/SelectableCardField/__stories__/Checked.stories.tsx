@@ -1,5 +1,5 @@
-import { Stack } from '@scaleway/ui'
 import type { StoryFn } from '@storybook/react'
+import { Stack } from '@ultraviolet/ui'
 import { SelectableCardField } from '..'
 import type { FormProps } from '../../Form'
 import { Form } from '../../Form'

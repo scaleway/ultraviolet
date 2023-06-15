@@ -1,42 +1,35 @@
 ![](.storybook/assets/logo-dark.svg#gh-dark-mode-only)
 ![](.storybook/assets/logo-light.svg#gh-light-mode-only)
 
-![Codecov](https://img.shields.io/codecov/c/github/scaleway/scaleway-ui)
-![GitHub last commit](https://img.shields.io/github/last-commit/scaleway/scaleway-ui)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/scaleway/scaleway-ui)
-![GitHub contributors](https://img.shields.io/github/contributors/scaleway/scaleway-ui)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/scaleway/scaleway-ui)
-![GitHub](https://img.shields.io/github/license/scaleway/scaleway-ui)
+![Codecov](https://img.shields.io/codecov/c/github/scaleway/ultraviolet)
+![GitHub last commit](https://img.shields.io/github/last-commit/scaleway/ultraviolet)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/scaleway/ultraviolet)
+![GitHub contributors](https://img.shields.io/github/contributors/scaleway/ultraviolet)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/scaleway/ultraviolet)
+![GitHub](https://img.shields.io/github/license/scaleway/ultraviolet)
 
-# Scaleway UI Core
+# Ultraviolet Core
 
-> :warning: This library is still WIP. We are actively working on it. Our goal is to have an easy-to-use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
-
-> :warning: We are going to break a lot of things towards V1. This library is not yet production ready.
-
-📝 You can still participate in its development and [start contributing](/CONTRIBUTING.md) to it.
-
-
-Scaleway UI Core contains the core features of the Scaleway UI library. 
+Ultraviolet Core contains the core features of the Ultraviolet UI library. 
 It is set of React library that can be used to build fast application.
 
-- [Scaleway UI](./packages/ui): The main library that includes a set of components and utilities to build fast application.
-- [Scaleway Form](./packages/form): A library to build forms with Scaleway UI components, it is using React Final Form under the hood.
-- [Scaleway Themes](./packages/themes): A set of themes for the Scaleway UI library (default theme is included in `@scaleway/ui`).
+- [Ultraviolet UI](./packages/ui): The main library that includes a set of components and utilities to build fast application.
+- [Ultraviolet Form](./packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
+- [Ultraviolet Themes](./packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
 
 ## Installation
 
 ### Quick start
 
 ```sh
-$ pnpm add @scaleway/ui @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 ```
 
 ### Documentation
 
-- #### [Scaleway UI](./packages/ui)
-- #### [Scaleway Form](./packages/form)
-- #### [Scaleway Theme](./packages/themes)
+- #### [Ultraviolet UI](./packages/ui)
+- #### [Ultraviolet Form](./packages/form)
+- #### [Ultraviolet Themes](./packages/themes)
 
 ## Development
 
@@ -48,10 +41,10 @@ $ pnpm install
 
 ### Storybook
 
-Our storybook includes both `@scaleway/ui` and `@scaleway/form`.
+Our storybook includes both `@ultraviolet/ui` and `@ultraviolet/form`.
 
 In order to start storybook without errors you will need to build the project once 
-(this is because `@scaleway/form` uses `@scaleway/ui` build to run).
+(this is because `@ultraviolet/form` uses `@ultraviolet/ui` build to run).
 
 ```sh
 $ pnpm build
@@ -103,19 +96,19 @@ You might want to test your local changes against a React application.
 $ pnpm install --global yalc # Make sure to have the yalc binary
 ```
 
-Here is an example for using `@scaleway/ui` as a local package:
+Here is an example for using `@ultraviolet/ui` as a local package:
 
 ```bash
 $ pnpm run build && cd packages/ui && yalc publish
 $ # Now it's ready to install in your project
 $ cd ../project-something
-$ yalc add @scaleway/ui
-$ cd ../scaleway-ui
+$ yalc add @ultraviolet/ui
+$ cd ../ultraviolet
 $ # If you do some changes into your package
 $ pnpm run build && yalc publish --push --sig # --push will automatically update the package on projects where it have been added, --sig updates the signature hash to trigger webpack update
 ```
 
-You can redo the same with `@scaleway/form` if you want to test it.
+You can redo the same with `@ultraviolet/form` if you want to test it.
 
 > :warning: since [1.0.0.pre.51 (2021-04-23)](https://github.com/wclr/yalc/blob/master/CHANGELOG.md#100pre51-2021-04-23), `yalc publish` needs the `--sig` option to trigger webpack module actual update.
 
@@ -125,13 +118,17 @@ You can redo the same with `@scaleway/form` if you want to test it.
 
 ## Versioning
 
-We enforce the [conventionnal commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
+We enforce the [conventional commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
 
 Only the `feat`, `fix` and `perf` types will generate a new package on the `main` branch
 
 ## Documentation
 
-Checkout our [documentation website](https://storybook.ui.scaleway.com/).
+Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
+
+## Contributing
+
+📝 You can participate in the development and [start contributing](/CONTRIBUTING.md) to it.
 
 ## Thanks
 

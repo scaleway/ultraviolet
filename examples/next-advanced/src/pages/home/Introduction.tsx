@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Breakpoint, Stack, Text, down } from '@scaleway/ui'
+import { Breakpoint, Stack, Text, down } from '@ultraviolet/ui'
 import Image from 'next/image'
 import swA11y from '../../assets/icons/icon-scaleway-a11y.svg'
 import swCustom from '../../assets/icons/icon-scaleway-custom.svg'
@@ -53,7 +53,7 @@ const Introduction = () => (
       />
       <Card
         title="Developer XP"
-        description="Scaleway UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
+        description="Ultraviolet UI is the main library in the Scaleway frontend environment. It is open source and continually maintained by our developers."
         icon={swDx}
       />
     </HeadingContainer>

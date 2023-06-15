@@ -1,4 +1,4 @@
-import { Alert } from '@scaleway/ui'
+import { Alert } from '@ultraviolet/ui'
 import { FormSpy } from 'react-final-form'
 
 export const SubmitErrorAlert = <FormValues,>({

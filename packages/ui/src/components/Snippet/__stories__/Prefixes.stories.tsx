@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { Snippet } from '../index'
 
 const VALUE = `
-pnpm add @scaleway/ui
+pnpm add @ultraviolet/ui
 pnpm install
 pnpm start
 `

@@ -21,7 +21,7 @@ export default {
     docs: {
       description: {
         component:
-          'DateField is a component used in Form to pick a date. This component is a Wrapper of DateInput https://github.com/scaleway/scaleway-ui/tree/main/src/components/DateInput',
+          'DateField is a component used in Form to pick a date. This component is a Wrapper of DateInput https://github.com/scaleway/ultraviolet/tree/main/src/components/DateInput',
       },
     },
   },

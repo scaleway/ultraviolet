@@ -1,5 +1,5 @@
 import '@emotion/react'
-import type { theme } from '@scaleway/ui'
+import type { theme } from '@ultraviolet/ui'
 
 type CustomTheme = {
   theme: 'light' | 'dark'

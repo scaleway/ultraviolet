@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
-import { theme as lightTheme } from '@scaleway/ui'
 import { renderHook } from '@testing-library/react'
+import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
 import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'

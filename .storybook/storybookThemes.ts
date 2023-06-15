@@ -24,7 +24,7 @@ const generateStorybookTheme = ({
 }: GenerateStorybookThemeProps) =>
   create({
     base,
-    brandTitle: 'Scaleway UI',
+    brandTitle: 'Ultraviolet UI',
 
     brandUrl,
     brandImage,
@@ -63,13 +63,13 @@ const generateStorybookTheme = ({
 export const light = generateStorybookTheme({
   base: Base.LIGHT,
   theme: lightTheme,
-  brandUrl: 'https://github.com/scaleway/scaleway-ui',
+  brandUrl: 'https://github.com/scaleway/ultraviolet',
   brandImage: logoLight,
 })
 
 export const dark = generateStorybookTheme({
   base: Base.DARK,
   theme: darkTheme,
-  brandUrl: 'https://github.com/scaleway/scaleway-ui',
+  brandUrl: 'https://github.com/scaleway/ultraviolet',
   brandImage: logoDark,
 })

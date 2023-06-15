@@ -1,4 +1,4 @@
-import { TagInput } from '@scaleway/ui'
+import { TagInput } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'

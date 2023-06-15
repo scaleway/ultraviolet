@@ -1,4 +1,4 @@
-import { TextInput } from '@scaleway/ui'
+import { TextInput } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, JSX, Ref } from 'react'
 import { forwardRef } from 'react'

@@ -1,4 +1,4 @@
-import { Radio } from '@scaleway/ui'
+import { Radio } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, JSX, ReactNode } from 'react'
 import { useFormField } from '../../hooks'

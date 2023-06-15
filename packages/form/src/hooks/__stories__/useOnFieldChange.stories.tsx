@@ -1,5 +1,5 @@
-import { Stack, Text } from '@scaleway/ui'
 import type { Meta, StoryFn } from '@storybook/react'
+import { Stack, Text } from '@ultraviolet/ui'
 import { useState } from 'react'
 import { Form, useOnFieldChange } from '../..'
 import { TextInputField } from '../../components'

@@ -1,4 +1,4 @@
-import { DateInput } from '@scaleway/ui'
+import { DateInput } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, FocusEvent } from 'react'
 import { useFormField } from '../../hooks'

@@ -2,7 +2,7 @@ const nextConfig = () => {
   const plugins = [
     // eslint-disable-next-line global-require
     require('next-transpile-modules')([
-      '@scaleway/ui',
+      '@ultraviolet/ui',
       'react-syntax-highlighter',
     ]),
   ]
@@ -13,7 +13,7 @@ const nextConfig = () => {
     images: {
       formats: ['image/avif', 'image/webp'],
       loader: 'imgix',
-      path: 'https://ui.scaleway.com',
+      path: 'https://ultraviolet.scaleway.com',
     },
     poweredByHeader: false,
     reactStrictMode: true,

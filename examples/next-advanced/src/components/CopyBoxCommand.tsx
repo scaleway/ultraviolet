@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import { Stack, Tabs } from '@scaleway/ui'
+import { Stack, Tabs } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
 import { Children, isValidElement, useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
