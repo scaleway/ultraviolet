@@ -94,7 +94,6 @@ const StyledTooltip = styled.div<StyledTooltipProps>`
 
 const StyledChildrenContainer = styled.div`
   display: inherit;
-  width: fit-content;
 `
 
 type TooltipProps = {
