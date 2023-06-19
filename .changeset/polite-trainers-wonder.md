@@ -1,6 +1,6 @@
 ---
-'@ultraviolet/themes': minor
-'@ultraviolet/form': minor
+'@ultraviolet/themes': major
+'@ultraviolet/form': major
 ---
 
 - Renaming `@scaleway/themes` => `@ultraviolet/themes`
