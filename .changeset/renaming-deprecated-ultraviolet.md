@@ -6,6 +6,6 @@
 
 ⚠️⚠️⚠️ **THOSE PACKAGES ARE DEPRECATED** ⚠️⚠️⚠️
 
-Please use `@ultraviolet/ui`, `@ultraviolet/form`, and `@ultraviolet/themes` instead.
+We renamed the scope of our packages from `@scaleway` to `@ultraviolet` and made a major update to all of them.
 
-A renaming has been done over those packages and a major update is available for `@ultraviolet/ui`
+Please use `@ultraviolet/ui@1.0.0`, `@ultraviolet/form@1.0.0`, and `@ultraviolet/themes@1.0.0` instead.
