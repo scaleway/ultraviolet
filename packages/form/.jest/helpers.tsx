@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react'
 import makeHelpers from '@scaleway/jest-helpers'
-import { theme as lightTheme } from '@scaleway/ui'
+import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import { Form } from '../src'
 import { mockErrors } from '../src/mocks'

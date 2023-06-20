@@ -1,4 +1,4 @@
-import { NumberInput } from '@scaleway/ui'
+import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'

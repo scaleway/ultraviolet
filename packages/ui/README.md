@@ -1,8 +1,8 @@
-# Scaleway UI
+# Ultraviolet UI
 
 [![npm version](https://badge.fury.io/js/%40scaleway%2Fui.svg)](https://badge.fury.io/js/%40scaleway%2Fui)
 
-Scaleway UI is a set of React components and utilities to build fast application.
+Ultraviolet UI is a set of React components and utilities to build fast application.
 
 > :warning: This library is still WIP. We are actively working on it. Our goal is to have an easy-to-use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
 
@@ -13,13 +13,13 @@ Scaleway UI is a set of React components and utilities to build fast application
 ## Installation
 
 ```sh
-$ pnpm add @scaleway/ui @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 ```
 
 ### Usage
 
 ```js
-import { theme, normalize, Button } from '@scaleway/ui'
+import { theme, normalize, Button } from '@ultraviolet/ui'
 import { Global, css, ThemeProvider } from '@emotion/react'
 
 const App = () => (
@@ -37,11 +37,11 @@ you'll have to define the `@emotion/react` module `Theme` interface in your proj
 
 Example, in a `emotion.d.ts` file:
 
-- Declaration to use the default Scaleway theme
+- Declaration to use the default Ultraviolet Themes
 
 ```ts
 import '@emotion/react'
-import type { SCWUITheme } from '@scaleway/ui'
+import type { SCWUITheme } from '@ultraviolet/ui'
 
 declare module '@emotion/react' {
   export interface Theme extends SCWUITheme {}
@@ -61,4 +61,4 @@ declare module '@emotion/react' {
 
 ## Documentation
 
-Checkout our [documentation website](https://storybook.ui.scaleway.com/).
+Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

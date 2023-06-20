@@ -5,7 +5,7 @@ export const LongMultiline = Template.bind({})
 LongMultiline.args = {
   children: `
 # Install the package and start it
-pnpm add @scaleway/ui
+pnpm add @ultraviolet/ui
 pnpm install
 pnpm start
 
@@ -15,7 +15,7 @@ pnpm build
 # Test
 pnpm test:unit
 # Install the package and start it
-pnpm add @scaleway/ui
+pnpm add @ultraviolet/ui
 pnpm install
 pnpm start
 

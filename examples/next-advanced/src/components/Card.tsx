@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Card as ScwUICard, Text } from '@scaleway/ui'
+import { Card as ScwUICard, Text } from '@ultraviolet/ui'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
 

@@ -1,24 +1,24 @@
-# Scaleway Themes
+# Ultraviolet Themes
 
 [![npm version](https://badge.fury.io/js/%40scaleway%2Fthemes.svg)](https://badge.fury.io/js/%40scaleway%2Fthemes)
 
-Scaleway Themes is a set of themes for the Scaleway UI library.
+Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 
 > **Note**
 > 
-> `@scaleway/ui` is using `@scaleway/theme` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
+> `@ultraviolet/ui` is using `@scaleway/theme` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
 
 ## Installation
 
 ```sh
-$ pnpm add @scaleway/ui @scaleway/themes @emotion/react @emotion/styled
+$ pnpm add @ultraviolet/ui @ultraviolet/themes @emotion/react @emotion/styled
 ```
 
 ### Usage
 
 ```js
-import { normalize, Button } from '@scaleway/ui'
-import { consoleDarkTheme } from '@scaleway/themes' // << Here we import the theme we want to use
+import { normalize, Button } from '@ultraviolet/ui'
+import { consoleDarkTheme } from '@ultraviolet/themes' // << Here we import the theme we want to use
 import { Global, css, ThemeProvider } from '@emotion/react'
 
 const App = () => (
@@ -33,4 +33,4 @@ const App = () => (
 
 ## Documentation
 
-Checkout our [documentation website](https://storybook.ui.scaleway.com/).
+Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).

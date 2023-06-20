@@ -1,4 +1,4 @@
-import { Toggle } from '@scaleway/ui'
+import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'

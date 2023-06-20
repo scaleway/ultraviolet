@@ -1,4 +1,4 @@
-import { SelectableCard } from '@scaleway/ui'
+import { SelectableCard } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type { ComponentProps, JSX } from 'react'
 import { useFormField } from '../../hooks'

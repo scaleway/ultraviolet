@@ -1,5 +1,5 @@
 import type { CSSObject, Theme, css } from '@emotion/react'
-import { SelectInput } from '@scaleway/ui'
+import { SelectInput } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
 import type {
   ComponentProps,

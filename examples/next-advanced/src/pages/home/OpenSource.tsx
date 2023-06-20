@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon, Link, Stack, Text, down } from '@scaleway/ui'
+import { Icon, Link, Stack, Text, down } from '@ultraviolet/ui'
 import swForm from '../../assets/icons/icon-scaleway-form.svg'
 import swLib from '../../assets/icons/icon-scaleway-lib.svg'
 import Card from '../../components/Card'
@@ -34,11 +34,11 @@ const OpenSource = () => (
 
       <StyledStack gap={2} direction="row">
         <StyledCard
-          title="Scaleway Form"
+          title="Ultraviolet Form"
           description={
             <>
               <StyledDescription>
-                Build amazing forms with Scaleway UI and React Final Form 🚀
+                Build amazing forms with Ultraviolet UI and React Final Form 🚀
               </StyledDescription>
               <Stack gap={1} direction="row">
                 <Icon name="github" size={20} />

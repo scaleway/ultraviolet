@@ -10,7 +10,7 @@ on:
 jobs:
   generate-changeset:
     runs-on: ubuntu-latest
-    if: github.actor == 'renovate[bot]' && github.repository == 'scaleway/scaleway-ui'
+    if: github.actor == 'renovate[bot]' && github.repository == 'scaleway/ultraviolet'
     steps:
       - name: Checkout
         uses: actions/checkout@v3

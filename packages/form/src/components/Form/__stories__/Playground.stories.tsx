@@ -1,5 +1,5 @@
-import { Checkbox, Stack } from '@scaleway/ui'
 import type { StoryFn } from '@storybook/react'
+import { Checkbox, Stack } from '@ultraviolet/ui'
 import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 import {

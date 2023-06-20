@@ -1,6 +1,6 @@
 import type { Theme } from '@emotion/react'
 import { Global, css } from '@emotion/react'
-import { normalize } from '@scaleway/ui'
+import { normalize } from '@ultraviolet/ui'
 
 const baseStyles = (theme: Theme) => css`
   ${normalize()}

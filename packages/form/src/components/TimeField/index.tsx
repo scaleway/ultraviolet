@@ -1,4 +1,4 @@
-import { TimeInput } from '@scaleway/ui'
+import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
 import { useFormField } from '../../hooks'

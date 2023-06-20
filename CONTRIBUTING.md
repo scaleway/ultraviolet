@@ -1,11 +1,11 @@
-# Contributing to Scaleway UI
+# Contributing to Ultraviolet UI
 
 We are very happy to welcome you into this project! Your contribution is very appreciated and will help development and stability of the project.
 Contribution is in fact open to anyone, developer or not, in order to guide you during this process here are some guidelines.
 
 ## Table of content
 
-- [Contributing](#contributing-to-scaleway-ui)
+- [Contributing](#contributing-to-ultraviolet)
   - [Code of Conduct](#code-of-conduct)
   - [Project Structure](#project-structure)
   - [Creating an Issue](#creating-an-issue)
@@ -14,13 +14,13 @@ Contribution is in fact open to anyone, developer or not, in order to guide you 
 
 ## Code of Conduct
 
-Scaleway UI has adopted [Contributor Covenant](https://www.contributor-covenant.org), please read [code of conduct file](/CODE_OF_CONDUCT.md)
+Ultraviolet UI has adopted [Contributor Covenant](https://www.contributor-covenant.org), please read [code of conduct file](/CODE_OF_CONDUCT.md)
 to understand what is tolerated and what is not.
 
 ## Project Structure
 
 ```
-scaleway-ui/
+ultraviolet/
   package.json
   ...
   src/
@@ -41,15 +41,15 @@ Helper files contains functions that are used multiple times, they are useful in
 
 ## Creating an Issue
 
-You have an issue with Scaleway UI or you want to propose a new creative feature? First things first: [check that this issue hasn't been already opened or solved](https://github.com/scaleway/scaleway-ui/issues). 🔎
+You have an issue with Ultraviolet UI or you want to propose a new creative feature? First things first: [check that this issue hasn't been already opened or solved](https://github.com/scaleway/ultraviolet/issues). 🔎
 
 **You found a closed issue about a bug, but it's still here?**
 
-Please [open an issue](https://github.com/scaleway/scaleway-ui/issues/new/choose) mentioning closed issue with all details: how to reproduce it, screenshots and videos if you can.
+Please [open an issue](https://github.com/scaleway/ultraviolet/issues/new/choose) mentioning closed issue with all details: how to reproduce it, screenshots and videos if you can.
 
 **You didn't find any corresponding issue?**
 
-You can now [open an issue](https://github.com/scaleway/scaleway-ui/issues/new/choose) and choose most fitting template! Collect and describe as much information as possible.
+You can now [open an issue](https://github.com/scaleway/ultraviolet/issues/new/choose) and choose most fitting template! Collect and describe as much information as possible.
 If you're opening an issue about a bug or a fix please describe how to reproduce, put some screenshots and even videos if you can.
 
 ## Creating a pull request
@@ -62,9 +62,9 @@ In order to publish your changes here is what you need to do:
 2. Clone your fork on your local machine:
 
 ```shell
-git clone https://github.com/<your username>/scaleway-ui.git
-cd scaleway-ui
-git remote add upstream https://github.com/scaleway/scaleway-ui.git
+git clone https://github.com/<your username>/ultraviolet.git
+cd ultraviolet
+git remote add upstream https://github.com/scaleway/ultraviolet.git
 ```
 
 3. Synchronize your local main branch with the upstream one:
@@ -107,7 +107,7 @@ and then:
 git push -u origin HEAD
 ```
 
-8. Come back on our repository and create a [pull request](https://github.com/scaleway/scaleway-ui/compare).
+8. Come back on our repository and create a [pull request](https://github.com/scaleway/ultraviolet/compare).
 
 Congratulation! Now you just need to wait reviews from our core team, your pull request will either be merged, request changes or closed with an explanation.
 
@@ -148,4 +148,4 @@ Must be one of the following:
 
 ## License
 
-By contributing your code to the [scaleway/scaleway-ui](https://github.com/scaleway/scaleway-ui) GitHub repository, you agree to license your contribution under the [Apache License 2.0](/LICENSE).
+By contributing your code to the [scaleway/ultraviolet](https://github.com/scaleway/ultraviolet) GitHub repository, you agree to license your contribution under the [Apache License 2.0](/LICENSE).

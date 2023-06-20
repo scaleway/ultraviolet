@@ -1,4 +1,4 @@
-import { Button } from '@scaleway/ui'
+import { Button } from '@ultraviolet/ui'
 import type { ComponentProps, JSX, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { useFormState } from 'react-final-form'

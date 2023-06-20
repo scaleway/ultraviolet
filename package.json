@@ -14,7 +14,7 @@
     "linux"
   ],
   "scripts": {
-    "build": "pnpm --filter '@scaleway/*' recursive exec -- rollup -c ../../rollup.config.mjs",
+    "build": "pnpm --filter '@ultraviolet/*' recursive exec -- rollup -c ../../rollup.config.mjs",
     "build:profile": "cross-env PROFILE=true pnpm run build",
     "build:storybook": "pnpm run build && STORYBOOK_ENVIRONMENT=production storybook build",
     "build:storybook:stats": "pnpm run build:storybook --webpack-stats-json",
@@ -97,7 +97,7 @@
     "@scaleway/eslint-config-react": "3.15.13",
     "@scaleway/jest-helpers": "3.0.7",
     "@scaleway/tsconfig": "1.1.0",
-    "@scaleway/ui": "workspace:*",
+    "@ultraviolet/ui": "workspace:*",
     "@scaleway/use-i18n": "5.3.1",
     "@size-limit/file": "8.2.4",
     "@size-limit/preset-big-lib": "8.2.4",

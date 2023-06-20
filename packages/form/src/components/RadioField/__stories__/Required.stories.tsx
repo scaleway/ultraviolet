@@ -1,5 +1,5 @@
-import { Stack } from '@scaleway/ui'
 import type { StoryFn } from '@storybook/react'
+import { Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { RadioField } from '..'
 import { Submit } from '../../Submit'
