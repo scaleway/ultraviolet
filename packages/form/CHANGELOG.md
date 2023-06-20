@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.0.0
+
+### Major Changes
+
+- [#2628](https://github.com/scaleway/ultraviolet/pull/2628) [`a084d91e`](https://github.com/scaleway/ultraviolet/commit/a084d91e69c9eb0575a6a9d73b0dafff4fa5129e) Thanks [@matthprost](https://github.com/matthprost)! - - Renaming `@scaleway/themes` => `@ultraviolet/themes`
+  - Renaming `@scaleway/form` => `@ultraviolet/form`
+
+### Patch Changes
+
+- Updated dependencies [[`a084d91e`](https://github.com/scaleway/ultraviolet/commit/a084d91e69c9eb0575a6a9d73b0dafff4fa5129e)]:
+  - @ultraviolet/ui@1.0.0
+
 ## 1.47.0
 
 ### Minor Changes
