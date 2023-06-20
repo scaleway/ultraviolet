@@ -6,7 +6,7 @@ Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 
 > **Note**
 > 
-> `@ultraviolet/ui` is using `@scaleway/theme` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
+> `@ultraviolet/ui` is using `@ultraviolet/theme` under the hood, therefore you don't need to install it if you want to use the default theme (`consoleLightTheme` and `consoleDarkTheme` are the default themes).
 
 ## Installation
 

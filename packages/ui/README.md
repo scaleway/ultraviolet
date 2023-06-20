@@ -4,12 +4,6 @@
 
 Ultraviolet UI is a set of React components and utilities to build fast application.
 
-> :warning: This library is still WIP. We are actively working on it. Our goal is to have an easy-to-use UI system. This includes an exhaustive documentation, improved DX, confidence in testing and a lot of refactoring to have consistency across our components.
-
-> :warning: We are going to break a lot of things towards V1. This library is not yet production ready.
-
-📝 You can still participate in its development and [start contributing](/CONTRIBUTING.md) to it.
-
 ## Installation
 
 ```sh
@@ -62,3 +56,8 @@ declare module '@emotion/react' {
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
+
+
+## Contributing
+
+📝 You can participate in the development and [start contributing](/CONTRIBUTING.md) to it.
