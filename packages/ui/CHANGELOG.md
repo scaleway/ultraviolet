@@ -1,5 +1,20 @@
 # Change Log
 
+## 0.254.0
+
+### Minor Changes
+
+- [#2629](https://github.com/scaleway/ultraviolet/pull/2629) [`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️⚠️⚠️ **THOSE PACKAGES ARE DEPRECATED** ⚠️⚠️⚠️
+
+  We renamed the scope of our packages from `@scaleway` to `@ultraviolet` and made a major update to all of them.
+
+  Please use `@ultraviolet/ui@1.0.0`, `@ultraviolet/form@1.0.0`, and `@ultraviolet/themes@1.0.0` instead.
+
+### Patch Changes
+
+- Updated dependencies [[`01ab2175`](https://github.com/scaleway/ultraviolet/commit/01ab21759aa109765a625a5bc1ad1865dde107f0)]:
+  - @scaleway/themes@1.5.0
+
 ## 0.253.1
 
 ### Patch Changes
