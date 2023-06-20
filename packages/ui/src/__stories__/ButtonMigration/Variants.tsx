@@ -21,62 +21,77 @@ const VARIANTS_TO_SENTIMENTS = {
   info: {
     variant: 'filled',
     sentiment: 'info',
+    size: '',
   },
   'info-bordered': {
     variant: 'outlined',
     sentiment: 'info',
+    size: '',
   },
   link: {
     variant: 'ghost',
     sentiment: 'primary',
+    size: 'xsmall',
   },
   primary: {
     variant: 'filled',
     sentiment: 'primary',
+    size: '',
   },
   'primary-bordered': {
     variant: 'outlined',
     sentiment: 'primary',
+    size: '',
   },
   'primary-soft-bordered': {
     variant: 'outlined',
     sentiment: 'primary',
+    size: '',
   },
   secondary: {
     variant: 'filled',
     sentiment: 'neutral',
+    size: '',
   },
   'secondary-bordered': {
     variant: 'outlined',
     sentiment: 'neutral',
+    size: '',
   },
   success: {
     variant: 'filled',
     sentiment: 'success',
+    size: '',
   },
   'success-bordered': {
     variant: 'outlined',
     sentiment: 'success',
+    size: '',
   },
   'success-soft-bordered': {
     variant: 'outlined',
     sentiment: 'success',
+    size: '',
   },
   transparent: {
     variant: 'ghost',
     sentiment: 'neutral',
+    size: '',
   },
   warning: {
     variant: 'filled',
     sentiment: 'danger',
+    size: '',
   },
   'warning-bordered': {
     variant: 'outlined',
     sentiment: 'danger',
+    size: '',
   },
   'warning-soft-bordered': {
     variant: 'outlined',
     sentiment: 'danger',
+    size: '',
   },
 } as const
 
@@ -89,13 +104,14 @@ export const Variants = () => (
   >
     <Table.Body>
       {Object.keys(VARIANTS_TO_SENTIMENTS).map(variant => {
+        const variantToSentiment =
+          VARIANTS_TO_SENTIMENTS[variant as keyof typeof VARIANTS_TO_SENTIMENTS]
+
         const newVersion = `variant="${
-          VARIANTS_TO_SENTIMENTS[variant as keyof typeof VARIANTS_TO_SENTIMENTS]
-            .variant
-        }" sentiment="${
-          VARIANTS_TO_SENTIMENTS[variant as keyof typeof VARIANTS_TO_SENTIMENTS]
-            .sentiment
-        }"`
+          variantToSentiment.variant
+        }" sentiment="${variantToSentiment.sentiment}" ${
+          variantToSentiment?.size ? `size="${variantToSentiment?.size}"` : ''
+        }`
 
         return (
           <StyledRow key={variant} id={variant}>
