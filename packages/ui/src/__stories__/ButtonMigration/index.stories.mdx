@@ -21,24 +21,28 @@ Welcome to the migration of the new version of button, here we will see how to e
   <Sizes />
 </ThemeWrapper>
 
+> **_NOTE:_**
+> - Inside `EmptyState` the Button size is `large`.
+> - `xsmall` size should only be used for links converted into buttons.
+
 ## Others Old/New props matching
 
-- `progress` &rarr; : Loader (if prop `isLoading` if provided) replaces or use the `icon` spot. If you have no icon you can still use `iconPosition="right"` to put the Loader on the right.
+- `progress` &rarr; Loader (if prop `isLoading` if provided) replaces or use the `icon` spot. If you have no icon you can still use `iconPosition="right"` to put the Loader on the right.
 
 ---
 
-- `as` &rarr; : Button do not support `as` prop and always renders a button expect if you provide an href prop then an anchor will be rendered.
+- `as` &rarr; Button do not support `as` prop and always renders a button expect if you provide an href prop then an anchor will be rendered.
 
 ---
 
-- `action` &rarr; : Button do not support `support` prop. Simply provide an `icon` without `children`.
+- `action` &rarr; Button do not support `action` prop anymore. Simply provide an `icon` without `children` and the size should be `small`.
 
 ---
 
-- `extend` &rarr; : We removed this behavior, we recommand to still use a `icon` + `text (children)`..
+- `extend` &rarr; We removed this behavior, we recommend to still use a `icon` + `text (children)`..
 
 ---
 
-- `iconSize` &rarr; : Button do not support `iconSize` prop, the icon size is define internally depending of variant/size to make it consistent.
+- `iconSize` &rarr; Button do not support `iconSize` prop, the icon size is define internally depending on variant/size to make it consistent.
 
 ---
