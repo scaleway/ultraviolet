@@ -81,9 +81,6 @@ const StyledLinkItem = styled('a', {
 type ItemProps = {
   href?: string | undefined
   disabled?: boolean | undefined
-  /**
-   * @deprecated : wrap Menu.Item with a Tooltip
-   */
   tooltip?: string | undefined
   className?: string | undefined
   children: ReactNode

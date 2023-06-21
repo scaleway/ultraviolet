@@ -46,14 +46,6 @@ const StyledInput = styled.input`
   }
 `
 
-const KEY_CODE = {
-  backspace: 8,
-  down: 40,
-  left: 37,
-  right: 39,
-  up: 38,
-}
-
 type VerificationCodeProps = {
   disabled?: boolean
   error?: boolean
@@ -162,8 +154,8 @@ export const VerificationCode = ({
       const next = inputRefs[nextIndex]
       const vals = [...values]
 
-      switch (event.keyCode) {
-        case KEY_CODE.backspace:
+      switch (event.key) {
+        case 'Backspace':
           event.preventDefault()
           if (values[index]) {
             vals[index] = ''
@@ -176,19 +168,19 @@ export const VerificationCode = ({
             triggerChange(vals)
           }
           break
-        case KEY_CODE.left:
+        case 'ArrowLeft':
           event.preventDefault()
           prev?.current?.focus()
           break
-        case KEY_CODE.right:
+        case 'ArrowRight':
           event.preventDefault()
           next?.current?.focus()
           break
-        case KEY_CODE.up:
+        case 'ArrowUp':
           event.preventDefault()
           first?.current?.focus()
           break
-        case KEY_CODE.down:
+        case 'ArrowDown':
           event.preventDefault()
           last?.current?.focus()
           break
