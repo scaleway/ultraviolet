@@ -130,14 +130,6 @@ export const PieChart = ({
               type: 'patternLines',
             },
           ]}
-          fill={[
-            {
-              id: 'lines',
-              match: {
-                id: 'discount',
-              },
-            },
-          ]}
           margin={margin}
           innerRadius={0.8}
           cornerRadius={0}
