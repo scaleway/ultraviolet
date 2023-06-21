@@ -1,8 +1,8 @@
-import type { ComponentStory } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Button, buttonVariants } from '..'
 import { Stack } from '../..'
 
-export const AsLink: ComponentStory<typeof Button> = () => (
+export const AsLink: StoryFn<typeof Button> = () => (
   <Stack alignItems="center" gap={2} direction="row">
     {buttonVariants.map(variant => (
       <Button

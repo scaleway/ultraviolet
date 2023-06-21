@@ -192,25 +192,17 @@ export const TagInput = ({
     }
   }
 
-  const handleInputKeydown: KeyboardEventHandler<HTMLInputElement> = e => {
-    // 32 = Space | 13 = Enter | 8 = Backspace
-    // https://www.w3.org/TR/uievents-key/#control
-    const key = e.key || e.keyCode
-    const space = [' ', 32]
-    const enter = ['Enter', 13]
-    const tab = ['Tab', 9]
-    const backspace = ['Backspace', 8]
-
-    if (space.includes(key) || enter.includes(key) || tab.includes(key)) {
+  const handleInputKeydown: KeyboardEventHandler<HTMLInputElement> = event => {
+    if (event.key === ' ' || event.key === 'Enter' || event.key === 'Tab') {
       addTag()
-      e.preventDefault()
+      event.preventDefault()
     }
     if (
-      backspace.includes(key) &&
+      event.key === 'Backspace' &&
       inputRef?.current?.selectionStart === 0 &&
       tagInputState.length
     ) {
-      e.preventDefault()
+      event.preventDefault()
       deleteTag(tagInputState[tagInputState.length - 1].index)
     }
   }
