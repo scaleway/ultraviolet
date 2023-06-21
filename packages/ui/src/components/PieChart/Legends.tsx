@@ -2,7 +2,6 @@ import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Tooltip } from '../Tooltip'
 import TooltipContainer from './Tooltip'
-import patternVariants from './patterns'
 import type { Data } from './types'
 
 const bulletFlashAnim = keyframes`
@@ -55,15 +54,6 @@ const Bullet = styled.div<{
   height: 10px;
   margin: 0 ${({ theme }) => theme.space['1']};
   background: ${({ color }) => color};
-
-  ${({ needPattern, color, id }) => {
-    if (!needPattern) return null
-
-    return patternVariants?.[`${id}-dot` as keyof typeof patternVariants]?.(
-      color,
-    )
-  }}
-
   ${({ isFocused }) => animationFlash(isFocused)}
 `
 
