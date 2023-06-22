@@ -30,7 +30,7 @@ const VARIANTS_TO_SENTIMENTS = {
   },
   link: {
     variant: 'ghost',
-    sentiment: 'primary',
+    sentiment: 'info',
     size: 'xsmall',
   },
   primary: {
