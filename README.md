@@ -13,9 +13,9 @@
 Ultraviolet Core contains the core features of the Ultraviolet UI library. 
 It is set of React library that can be used to build fast application.
 
-- [Ultraviolet UI](./packages/ui): The main library that includes a set of components and utilities to build fast application.
-- [Ultraviolet Form](./packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
-- [Ultraviolet Themes](./packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
+- [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui): The main library that includes a set of components and utilities to build fast application.
+- [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
+- [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
 
 ## Installation
 
@@ -27,9 +27,9 @@ $ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 
 ### Documentation
 
-- #### [Ultraviolet UI](./packages/ui)
-- #### [Ultraviolet Form](./packages/form)
-- #### [Ultraviolet Themes](./packages/themes)
+- #### [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui)
+- #### [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form)
+- #### [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes)
 
 ## Development
 
@@ -118,9 +118,10 @@ You can redo the same with `@ultraviolet/form` if you want to test it.
 
 ## Versioning
 
-We enforce the [conventional commits](https://www.conventionalcommits.org) convention in order to infer package bump versions and generate changelog.
+We are using [Changeset](https://github.com/changesets/changesets) to manage our versioning.
 
-Only the `feat`, `fix` and `perf` types will generate a new package on the `main` branch
+Once your modifications are ready to be released, you can run `pnpm run changeset` to create a new changeset. 
+It will ask you to describe your changes and will create a new changeset file in the `changesets` folder.
 
 ## Documentation
 
