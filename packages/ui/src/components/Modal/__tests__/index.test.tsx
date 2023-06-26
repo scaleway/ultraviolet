@@ -2,7 +2,10 @@ import { css } from '@emotion/react'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Modal } from '..'
-import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshotWithPortal,
+} from '../../../../.jest/helpers'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -11,7 +14,17 @@ const customDialogStyles = css`
   background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 `
 
+const mockOnClick = jest.fn()
+
 describe('Modal', () => {
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    jest.restoreAllMocks()
+  })
+
   test(`renders with default Props`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal>
@@ -82,4 +95,43 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     ))
+
+  test(`disclosure function render onClick props is call`, async () => {
+    renderWithTheme(
+      <Modal
+        ariaLabel="modal-test"
+        id="modal-test"
+        disclosure={() => (
+          <button type="button" onClick={mockOnClick}>
+            Open
+          </button>
+        )}
+      >
+        <div> test</div>
+      </Modal>,
+    )
+    const modalButton = screen.getByRole('button')
+    await userEvent.click(modalButton)
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
+
+  test(`disclosure Component render onClick props is call`, async () => {
+    renderWithTheme(
+      <Modal
+        ariaLabel="modal-test"
+        id="modal-test"
+        disclosure={
+          <button type="button" onClick={mockOnClick}>
+            Open
+          </button>
+        }
+      >
+        <div> test</div>
+      </Modal>,
+    )
+    const modalButton = screen.getByRole('button')
+    await userEvent.click(modalButton)
+
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
 })
