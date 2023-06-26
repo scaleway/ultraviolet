@@ -30,14 +30,6 @@
   "module": "dist/src/index.js",
   "jsnext:main": "dist/src/index.js",
   "types": "dist/index.d.ts",
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "react": "18",
-        "react-dom": "18"
-      }
-    }
-  },
   "peerDependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
