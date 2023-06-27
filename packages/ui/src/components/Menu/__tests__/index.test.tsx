@@ -1,10 +1,23 @@
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { Menu, arrowPlacements } from '..'
 import {
+  renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
 
+const mockOnClick = jest.fn()
+
 describe('Menu', () => {
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
+  afterAll(() => {
+    jest.restoreAllMocks()
+  })
+
   test('renders with disclosure not a function', () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Menu
@@ -58,6 +71,46 @@ describe('Menu', () => {
         </Menu.Item>
       </Menu>,
     ))
+
+  test('disclosure function render onClick props is call', async () => {
+    renderWithTheme(
+      <Menu
+        visible
+        id="menu"
+        disclosure={() => (
+          <button type="button" onClick={mockOnClick}>
+            Menu
+          </button>
+        )}
+      >
+        <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
+      </Menu>,
+    )
+
+    const menuButton = screen.getByRole('button')
+    await userEvent.click(menuButton)
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
+
+  test('disclosure Component render onClick props is call', async () => {
+    renderWithTheme(
+      <Menu
+        visible
+        id="menu"
+        disclosure={() => (
+          <button type="button" onClick={mockOnClick}>
+            Menu
+          </button>
+        )}
+      >
+        <Menu.Item href="/link">Menu.Item as Link</Menu.Item>
+      </Menu>,
+    )
+
+    const menuButton = screen.getByRole('button')
+    await userEvent.click(menuButton)
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
 
   describe('placement', () => {
     test.each(arrowPlacements)('renders "%s"', placement =>

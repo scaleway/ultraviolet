@@ -1,7 +1,13 @@
 import type { Theme } from '@emotion/react'
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactElement, ReactNode, Ref } from 'react'
+import type {
+  ButtonHTMLAttributes,
+  MouseEvent,
+  ReactElement,
+  ReactNode,
+  Ref,
+} from 'react'
 import {
   cloneElement,
   forwardRef,
@@ -17,8 +23,12 @@ import Item from './Item'
 export type DisclosureProps = Partial<PopoverStateReturn>
 
 type DisclosureElement =
-  | ((popover: Partial<PopoverStateReturn>) => ReactElement)
-  | (ReactElement & { ref?: Ref<HTMLButtonElement> })
+  | ((
+      popover: Partial<PopoverStateReturn>,
+    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
+  | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
+      ref?: Ref<HTMLButtonElement>
+    })
 
 const StyledPopover = styled(Popover)`
   border-radius: ${({ theme }) => theme.radii.default};
@@ -183,7 +193,11 @@ const FwdMenu = forwardRef(
     })
 
     // if you need dialog inside your component, use function, otherwise component is fine
-    const target = isValidElement(disclosure) ? disclosure : disclosure(popover)
+    const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
+      disclosure,
+    )
+      ? disclosure
+      : disclosure(popover)
     const innerRef = useRef(target as unknown as HTMLButtonElement)
     useImperativeHandle(ref, () => innerRef.current)
 
@@ -191,7 +205,13 @@ const FwdMenu = forwardRef(
       <>
         {disclosure && (
           // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
-          <PopoverDisclosure {...popover} ref={innerRef}>
+          <PopoverDisclosure
+            {...popover}
+            onClick={(event: MouseEvent<HTMLButtonElement>) => {
+              target?.props?.onClick?.(event)
+            }}
+            ref={innerRef}
+          >
             {disclosureProps => cloneElement(target, disclosureProps)}
           </PopoverDisclosure>
         )}
