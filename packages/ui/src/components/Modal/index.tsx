@@ -1,6 +1,12 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { JSX, ReactElement, ReactNode, RefObject } from 'react'
+import type {
+  ButtonHTMLAttributes,
+  JSX,
+  MouseEvent,
+  ReactElement,
+  ReactNode,
+} from 'react'
 import {
   cloneElement,
   isValidElement,
@@ -167,8 +173,10 @@ const dialogAnimatedStyle = ({
 `
 
 type DisclosureParam =
-  | ((dialog?: Partial<DialogStateReturn>) => ReactElement)
-  | ReactElement
+  | ((
+      dialog?: Partial<DialogStateReturn>,
+    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
+  | ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>
 
 type DisclosureProps = {
   disclosure: DisclosureParam
@@ -176,14 +184,23 @@ type DisclosureProps = {
 }
 const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
   // if you need dialog inside your component, use function, otherwise component is fine
-  const target = isValidElement<any>(disclosure)
+  const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
+    disclosure,
+  )
     ? disclosure
     : disclosure(dialog)
-  const innerRef = useRef(target) as unknown as RefObject<HTMLButtonElement>
+  const innerRef = useRef(target)
 
   return (
     // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
-    <DialogDisclosure {...dialog} ref={innerRef}>
+    <DialogDisclosure
+      {...dialog}
+      onClick={(e: MouseEvent<HTMLButtonElement>) => {
+        // This allow to use onClick for speficique case like traking.
+        target?.props?.onClick?.(e)
+      }}
+      ref={innerRef}
+    >
       {disclosureProps => cloneElement(target, disclosureProps)}
     </DialogDisclosure>
   )
