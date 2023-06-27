@@ -207,9 +207,8 @@ const FwdMenu = forwardRef(
           // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
           <PopoverDisclosure
             {...popover}
-            onClick={(e: MouseEvent<HTMLButtonElement>) => {
-              // This allow to use onClick for speficique case like traking.
-              target?.props?.onClick?.(e)
+            onClick={(event: MouseEvent<HTMLButtonElement>) => {
+              target?.props?.onClick?.(event)
             }}
             ref={innerRef}
           >
