@@ -195,9 +195,9 @@ const Disclosure = ({ disclosure, dialog }: DisclosureProps) => {
     // @ts-expect-error reakit types are invalid, no need to pass as something, default is div
     <DialogDisclosure
       {...dialog}
-      onClick={(e: MouseEvent<HTMLButtonElement>) => {
+      onClick={(event: MouseEvent<HTMLButtonElement>) => {
         // This allow to use onClick for speficique case like traking.
-        target?.props?.onClick?.(e)
+        target?.props?.onClick?.(event)
       }}
       ref={innerRef}
     >
