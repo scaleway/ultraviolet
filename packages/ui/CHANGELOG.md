@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+- [#2666](https://github.com/scaleway/ultraviolet/pull/2666) [`0f0f9f96`](https://github.com/scaleway/ultraviolet/commit/0f0f9f96dfc26000ae51efdc9c003b89c752fe86) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - Add the possibility to forward onClick event used inside disclosure for Menu component
+
+- [#2644](https://github.com/scaleway/ultraviolet/pull/2644) [`573e2b1a`](https://github.com/scaleway/ultraviolet/commit/573e2b1a28b33e4efe8bdb2da451ade220556d3c) Thanks [@matthprost](https://github.com/matthprost)! - Remove strikethrough on `PieChart` component
+
+### Patch Changes
+
+- [#2664](https://github.com/scaleway/ultraviolet/pull/2664) [`a1c00639`](https://github.com/scaleway/ultraviolet/commit/a1c00639e2ca1789fe47eb6f2a9ca35936d47605) Thanks [@philibea](https://github.com/philibea)! - Add the possibility to forward onClick event of the component/function used inside disclosure
+
+- [#2663](https://github.com/scaleway/ultraviolet/pull/2663) [`d1e76bd9`](https://github.com/scaleway/ultraviolet/commit/d1e76bd9c9e1930ad5294350e9d21b48ce5d1f44) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Loader: fix active animation
+
+- [#2620](https://github.com/scaleway/ultraviolet/pull/2620) [`31466607`](https://github.com/scaleway/ultraviolet/commit/314666077ae0591992e37b9d230ae36f9b4c8d86) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.13.0`.
+
+- [#2652](https://github.com/scaleway/ultraviolet/pull/2652) [`5ab474ce`](https://github.com/scaleway/ultraviolet/commit/5ab474cec4bc7b94356b163ea253c1e5a1e3cc3a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.14.0`.
+
 ## 1.0.0
 
 ### Major Changes
