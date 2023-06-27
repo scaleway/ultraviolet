@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.0.1
+
+### Patch Changes
+
+- [#2663](https://github.com/scaleway/ultraviolet/pull/2663) [`d1e76bd9`](https://github.com/scaleway/ultraviolet/commit/d1e76bd9c9e1930ad5294350e9d21b48ce5d1f44) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Loader: fix active animation
+
+- [#2640](https://github.com/scaleway/ultraviolet/pull/2640) [`372ed2e8`](https://github.com/scaleway/ultraviolet/commit/372ed2e8dec3fe0c63a05c0131a619f1cddb99ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `final-form-arrays` to `3.1.0`.
+
+- Updated dependencies [[`a1c00639`](https://github.com/scaleway/ultraviolet/commit/a1c00639e2ca1789fe47eb6f2a9ca35936d47605), [`d1e76bd9`](https://github.com/scaleway/ultraviolet/commit/d1e76bd9c9e1930ad5294350e9d21b48ce5d1f44), [`31466607`](https://github.com/scaleway/ultraviolet/commit/314666077ae0591992e37b9d230ae36f9b4c8d86), [`5ab474ce`](https://github.com/scaleway/ultraviolet/commit/5ab474cec4bc7b94356b163ea253c1e5a1e3cc3a), [`0f0f9f96`](https://github.com/scaleway/ultraviolet/commit/0f0f9f96dfc26000ae51efdc9c003b89c752fe86), [`573e2b1a`](https://github.com/scaleway/ultraviolet/commit/573e2b1a28b33e4efe8bdb2da451ade220556d3c)]:
+  - @ultraviolet/ui@1.1.0
+
 ## 1.0.0
 
 ### Major Changes
