@@ -1,1 +1,5 @@
-export { consoleLightTheme, consoleDarkTheme } from './console'
+export {
+  consoleLightTheme,
+  consoleDarkTheme,
+  consoleDarkerTheme,
+} from './console'
