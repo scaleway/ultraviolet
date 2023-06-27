@@ -1364,23 +1364,7 @@ exports[`TagInput delete tag with backspace 1`] = `
 
 exports[`TagInput delete tag with error 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-19e3gmm-TagInputContainer {
+  .cache-19e3gmm-TagInputContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1445,9 +1429,9 @@ exports[`TagInput delete tag with error 1`] = `
   text-overflow: ellipsis;
 }
 
-.cache-gqzzce-Loader {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
+.cache-cmn72i-StyledSvg {
+  -webkit-animation: spin 0.75s linear infinite;
+  animation: spin 0.75s linear infinite;
 }
 
 .cache-11f05l0-Loader {
@@ -1567,7 +1551,7 @@ exports[`TagInput delete tag with error 1`] = `
         aria-valuemin="0"
         aria-valuenow="20"
         aria-valuetext="20%"
-        class="cache-gqzzce-Loader"
+        class="cache-cmn72i-StyledSvg e1y1n78x1"
         role="progressbar"
         style="height: 16px; width: 16px;"
         viewBox="0 0 100 100"

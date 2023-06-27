@@ -1,4 +1,4 @@
-import { css, keyframes, useTheme } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { Color } from '../../theme'
 
@@ -7,9 +7,24 @@ const VIEWBOX_HEIGHT = 100
 const HALF_VIEWBOX_WIDTH = VIEWBOX_WIDTH / 2
 const HALF_VIEWBOX_HEIGHT = VIEWBOX_HEIGHT / 2
 
-const spin = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+const StyledSvg = styled('svg', {
+  shouldForwardProp: prop => !['active'].includes(prop),
+})<{ active: boolean }>`
+  ${({ active }) =>
+    active
+      ? `
+        animation: spin 0.75s linear infinite;
+
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `
+      : ''}
 `
 
 type LoaderProps = {
@@ -57,19 +72,14 @@ export const Loader = ({
   const circleDiameter = Math.PI * 2 * circleRadius
 
   return (
-    <svg
+    <StyledSvg
+      active={active}
       role="progressbar"
       aria-label={label}
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={percentage}
       aria-valuetext={`${percentage}%`}
-      css={
-        active &&
-        css`
-          animation: ${spin} 0.75s linear infinite;
-        `
-      }
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
       style={{
         height: typeof size === 'string' ? size : `${size}px`,
@@ -103,6 +113,6 @@ export const Loader = ({
           {text}
         </Text>
       ) : null}
-    </svg>
+    </StyledSvg>
   )
 }
