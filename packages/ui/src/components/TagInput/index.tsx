@@ -193,7 +193,7 @@ export const TagInput = ({
   }
 
   const handleInputKeydown: KeyboardEventHandler<HTMLInputElement> = event => {
-    if (event.key === ' ' || event.key === 'Enter' || event.key === 'Tab') {
+    if (event.key === ' ' || event.key === 'Enter') {
       addTag()
       event.preventDefault()
     }
@@ -228,7 +228,6 @@ export const TagInput = ({
     <TagInputContainer
       onClick={handleContainerClick}
       variant={variant}
-      onBlur={addTag}
       className={className}
       data-testid={dataTestId}
     >
@@ -254,6 +253,7 @@ export const TagInput = ({
           type="text"
           placeholder={!tagInputState.length ? placeholder : ''}
           value={input}
+          onBlur={addTag}
           onChange={onInputChange}
           onKeyDown={handleInputKeydown}
           onPaste={handlePaste}
