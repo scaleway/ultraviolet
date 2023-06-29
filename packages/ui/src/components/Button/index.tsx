@@ -93,7 +93,7 @@ const coreStyle = ({
   &:hover {
     text-decoration: none;
   }
-  
+
 
   ${
     disabled
@@ -286,6 +286,7 @@ type CommonProps = {
   'aria-current'?: boolean
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
+  tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
 }
 
 // @note: using XOR utility was generating some lint erros
@@ -353,6 +354,7 @@ export const Button = forwardRef<Element, FinalProps>(
       target,
       role,
       tooltip,
+      tabIndex,
     },
     ref,
   ) => {
@@ -400,6 +402,7 @@ export const Button = forwardRef<Element, FinalProps>(
             download={download}
             ref={ref as Ref<HTMLAnchorElement>}
             iconOnly={!!icon && !children}
+            tabIndex={tabIndex}
           >
             {content}
           </Component>
@@ -427,6 +430,7 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-label={ariaLabel}
           aria-current={ariaCurrent}
           iconOnly={!!icon && !children}
+          tabIndex={tabIndex}
         >
           {content}
         </Component>
