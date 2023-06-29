@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.0.2
+
+### Patch Changes
+
+- [#2665](https://github.com/scaleway/ultraviolet/pull/2665) [`aff9a3e9`](https://github.com/scaleway/ultraviolet/commit/aff9a3e9a11a73c3cf5973114de248461c263ca7) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Add validation to SelectInputField
+
+- Updated dependencies [[`aff9a3e9`](https://github.com/scaleway/ultraviolet/commit/aff9a3e9a11a73c3cf5973114de248461c263ca7), [`90b3d792`](https://github.com/scaleway/ultraviolet/commit/90b3d79217e7975885c045376cb6b7af9ded2eed), [`0e75f4e6`](https://github.com/scaleway/ultraviolet/commit/0e75f4e6db0075c3a236e71a969f0832e257840e)]:
+  - @ultraviolet/ui@1.1.1
+
 ## 1.0.1
 
 ### Patch Changes
