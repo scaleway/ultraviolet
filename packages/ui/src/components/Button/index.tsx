@@ -286,7 +286,7 @@ type CommonProps = {
   'aria-current'?: boolean
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
-  tabIndex?: number
+  tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
 }
 
 // @note: using XOR utility was generating some lint erros
