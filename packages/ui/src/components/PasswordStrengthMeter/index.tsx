@@ -76,6 +76,9 @@ const DEFAULT_ESTIMATE = () => ({ score: 0 as Score })
 const DEFAULT_FORBIDDEN_WORDS: PasswordStrengthMeterProps['forbiddenInputs'] =
   []
 
+/**
+ * @deprecated use Meter component instead
+ */
 export const PasswordStrengthMeter = ({
   password = '',
   onChange,
