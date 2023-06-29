@@ -43,7 +43,7 @@ const StyledToggle = styled.div<{
     width: ${({ size }) => SIZES[size].ball}px;
     height: ${({ size }) => SIZES[size].ball}px;
     border-radius: ${({ theme }) => theme.radii.circle};
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    background-color: ${({ theme }) => theme.colors.neutral.background};
     transition: all 300ms;
   }
 
