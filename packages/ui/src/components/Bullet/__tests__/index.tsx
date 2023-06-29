@@ -1,5 +1,6 @@
-import { Bullet, bulletSentiments, bulletSizes } from '..'
+import { Bullet, bulletSizes } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import { SENTIMENTS } from '../../../theme'
 
 describe('Bullet', () => {
   test('renders correctly with a text', () =>
@@ -9,7 +10,7 @@ describe('Bullet', () => {
     shouldMatchEmotionSnapshot(<Bullet icon="moon" />))
 
   describe('sentiment', () => {
-    bulletSentiments.forEach(sentiment => {
+    SENTIMENTS.forEach(sentiment => {
       test(`render ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment} text="1" />))
     })

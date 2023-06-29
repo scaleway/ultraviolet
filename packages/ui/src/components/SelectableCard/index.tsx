@@ -18,6 +18,7 @@ const Container = styled.div`
   border-radius: ${({ theme }) => theme.radii.default};
   transition: border-color 200ms ease, box-shadow 200ms ease;
   cursor: pointer;
+  background: ${({ theme }) => theme.colors.neutral.background};
 
   border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
   color: ${({ theme }) => theme.colors.neutral.text};

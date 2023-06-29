@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
@@ -7,7 +6,7 @@ import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import seedrandom from 'seedrandom'
 import { light, dark } from './storybookThemes'
-import lightTheme, { darkTheme } from '@ultraviolet/ui/src/theme'
+import lightTheme, { darkTheme } from '../packages/ui/src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import isChromatic from 'chromatic/isChromatic'
@@ -17,7 +16,7 @@ if (isChromatic()) seedrandom('manual-seed', { global: true })
 const parameters = {
   darkMode: {
     dark: { ...themes.dark, ...dark },
-    light: { ...themes.normal, ...light },
+    light: { ...themes.normal, ...light, default: true },
   },
   backgrounds: {
     disable: true,
@@ -60,21 +59,6 @@ const parameters = {
   },
 }
 
-const adjustedTheme = (ancestorTheme: Theme, theme: Theme) => ({
-  ...ancestorTheme,
-  ...Object.keys(theme).reduce(
-    (acc, themeItem) => ({
-      ...acc,
-      [themeItem]: {
-        ...((acc[themeItem as keyof typeof theme] as Record<string, unknown>) ??
-          {}),
-        ...(theme[themeItem as keyof typeof theme] as Record<string, unknown>),
-      },
-    }),
-    ancestorTheme,
-  ),
-})
-
 export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
   css`
     ${normalize()}
@@ -91,12 +75,6 @@ const decorators: Preview['decorators'] = [
   StoryComponent => {
     const mode = useDarkMode() ? 'dark' : 'light'
 
-    const generatedTheme = useCallback(
-      (ancestorTheme: Theme) =>
-        adjustedTheme(ancestorTheme, mode === 'light' ? lightTheme : darkTheme),
-      [mode, adjustedTheme, lightTheme, darkTheme],
-    )
-
     return (
       <I18n
         defaultLoad={async ({ locale }) => import(`./locales/${locale}.json`)}
@@ -110,7 +88,7 @@ const decorators: Preview['decorators'] = [
         localeItemStorage="localeI18n"
         supportedLocales={['en', 'fr', 'es']}
       >
-        <ThemeProvider theme={generatedTheme}>
+        <ThemeProvider theme={mode === 'dark' ? darkTheme : lightTheme}>
           <Global styles={[globalStyles(mode)]} />
           <StoryComponent />
         </ThemeProvider>

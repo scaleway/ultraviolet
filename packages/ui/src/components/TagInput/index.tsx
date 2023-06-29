@@ -75,7 +75,7 @@ const TagInputContainer = styled('div', {
 })<TagInputContainersProps>`
   display: flex;
   flex-wrap: wrap;
-  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
+  background-color: ${({ theme: { colors } }) => colors.neutral.background};
   ${({ variant, theme }) =>
     variants[variant] ? variants[variant]({ theme }) : variants.base({ theme })}
 `
@@ -85,7 +85,7 @@ const StyledInput = styled.input`
   color: ${({ theme: { colors } }) => colors.neutral.text};
   border: none;
   outline: none;
-  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
+  background-color: ${({ theme: { colors } }) => colors.neutral.background};
   &::placeholder {
     color: ${({ theme: { colors } }) => colors.neutral.textWeak};
   }

@@ -98,7 +98,7 @@ const StyledText = styled('span', {
 const StyledContainer = styled('div', {
   shouldForwardProp: prop => !['size'].includes(prop),
 })<{ size: ContainerSizesType }>`
-  background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.background};
   display: flex;
   flex-direction: row;
   align-items: center;

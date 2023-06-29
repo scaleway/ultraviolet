@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# WARNING: This script needs Bash 4.0 or higher to work properly
+
 if [ -z "$1" ]; then
     echo "Error: one parameter is missing, you should pass an url that contains JSON tokens as parameter: ./figma-synchronise-tokens.sh [URL]"
     exit 1
@@ -132,7 +134,29 @@ function generateTokens {
         ({}; . + {"\($property.key)": ($property.value | split(".") as $value | if $value[1] != null then ($value[0] | gsub("[$]"; "") as $variableName | if $variableName == "fontSize" then $fontSize[$value[1]] else $lineHeight[$value[1]] end) else $value[0] end)
           }))}) | {"typography": .}')
 
-  FINAL_RESULT=$(echo "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7]')
+  # radii from theme
+  RADII=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" '.[$global].radii |
+    reduce (. | to_entries | .[]) as $radii ({}; . + {"\($radii.key)": ($radii.value.value)}) | {"radii": .}')
+
+  # spaces from theme
+  SPACE=$(echo "${JSON}" | jq --sort-keys --arg global "${GLOBAL}" '.[$global].space |
+    reduce (. | to_entries | .[]) as $space ({}; . + {"\($space.key | sub(","; "."))": ($space.value.value)}) | {"space": .}')
+
+  declare -A matchingArray=(
+       ["paletteLight"]="light"
+       ["paletteDark"]="dark"
+       ["paletteDarker"]="darker"
+     )
+  paletteMatching="${matchingArray[$THEME]}"
+
+  echo "${paletteMatching}"
+
+  # Theme name
+  THEME_NAME="{\"theme\": \"${paletteMatching}\"}"
+
+  echo "${THEME_NAME}"
+
+  FINAL_RESULT=$(echo "${THEME_NAME}" "${SPACE}" "${RADII}" "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7] * .[8] * .[9] * .[10]')
 }
 
 count=0
@@ -148,8 +172,6 @@ do
      ["productDarker"]="darker"
    )
   productMatching="${globals[$count]}"
-
-  echo "${matchingArray[$productMatching]}"
 
    # Generate colors tokens
    (printf "/**

@@ -206,7 +206,7 @@ const StyledInput = styled('input', {
 })<StyledInputProps>`
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   appearance: none;
-  background-color: ${({ theme: { colors } }) => colors.neutral.backgroundWeak};
+  background-color: ${({ theme: { colors } }) => colors.neutral.background};
   background-image: none;
   border: 1px solid ${({ theme: { colors } }) => colors.neutral.borderWeak};
   border-radius: ${({ theme: { radii } }) => radii.default};

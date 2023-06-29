@@ -2,7 +2,7 @@
 
 exports[`Stepper renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .cache-7tdsuk-StyledContainer {
+  .cache-1oo5ecx-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,17 +21,12 @@ exports[`Stepper renders correctly with all selected 1`] = `
   gap: 0 8px;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb4 {
-  height: 32px;
-  width: 32px;
-}
-
-.cache-7tdsuk-StyledContainer .e19ft7rb5 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb1 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -55,36 +50,39 @@ exports[`Stepper renders correctly with all selected 1`] = `
   justify-content: flex-start;
 }
 
-.cache-ja0taa-StyledStep {
+.cache-155lc8i-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #149a7b;
-  background-color: #eafffb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #521094;
+  background: #ece5ff;
+  border: 1px solid #ece5ff;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-19exyza-StyledIcon-sizeStyles-StyledIcon {
+.cache-14kwy0i-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  fill: #149a7b;
+  height: 50%;
+  width: 50%;
+  min-width: 50%;
+  min-height: 50%;
 }
 
-.cache-egoqg5-StyledText-StyledText {
-  color: #4a4f62;
+.cache-ivzkfp-StyledText-StyledText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -96,69 +94,61 @@ exports[`Stepper renders correctly with all selected 1`] = `
   margin-top: 8px;
 }
 
-.cache-5261u9-StyledLine {
+.cache-1cqab5n-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-5261u9-StyledLine::after {
+.cache-1cqab5n-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
   width: 100%;
 }
 
-.cache-epigh9-StyledStep {
+.cache-1kebp2n-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #390171;
-  background-color: #eeeeff;
-}
-
-.cache-197m6sv-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #521094;
+  border: 1px solid #521094;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
 <div
-    class="cache-7tdsuk-StyledContainer e19ft7rb0"
+    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-ja0taa-StyledStep e19ft7rb4"
+        class="cache-155lc8i-StyledContainer e11loam60"
       >
         <svg
-          class="e19ft7rb2 cache-19exyza-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+          class="cache-14kwy0i-StyledIcon-sizeStyles e5nqbfp0"
           viewBox="0 0 24 24"
         >
           <path
@@ -167,7 +157,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -175,16 +165,16 @@ exports[`Stepper renders correctly with all selected 1`] = `
       </span>
     </div>
     <div
-      class="cache-5261u9-StyledLine e19ft7rb1"
+      class="cache-1cqab5n-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-ja0taa-StyledStep e19ft7rb4"
+        class="cache-155lc8i-StyledContainer e11loam60"
       >
         <svg
-          class="e19ft7rb2 cache-19exyza-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+          class="cache-14kwy0i-StyledIcon-sizeStyles e5nqbfp0"
           viewBox="0 0 24 24"
         >
           <path
@@ -193,7 +183,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -201,22 +191,18 @@ exports[`Stepper renders correctly with all selected 1`] = `
       </span>
     </div>
     <div
-      class="cache-5261u9-StyledLine e19ft7rb1"
+      class="cache-1cqab5n-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-epigh9-StyledStep e19ft7rb4"
+        class="cache-1kebp2n-StyledContainer e11loam60"
       >
-        <span
-          class="cache-197m6sv-StyledText e13y3mga0"
-        >
-          3
-        </span>
+        3
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -239,7 +225,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   }
 }
 
-.cache-7tdsuk-StyledContainer {
+.cache-1oo5ecx-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,17 +244,12 @@ exports[`Stepper renders correctly with animation 1`] = `
   gap: 0 8px;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb4 {
-  height: 32px;
-  width: 32px;
-}
-
-.cache-7tdsuk-StyledContainer .e19ft7rb5 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb1 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -292,36 +273,39 @@ exports[`Stepper renders correctly with animation 1`] = `
   justify-content: flex-start;
 }
 
-.cache-ja0taa-StyledStep {
+.cache-155lc8i-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #149a7b;
-  background-color: #eafffb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #521094;
+  background: #ece5ff;
+  border: 1px solid #ece5ff;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-19exyza-StyledIcon-sizeStyles-StyledIcon {
+.cache-14kwy0i-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  fill: #149a7b;
+  height: 50%;
+  width: 50%;
+  min-width: 50%;
+  min-height: 50%;
 }
 
-.cache-egoqg5-StyledText-StyledText {
-  color: #4a4f62;
+.cache-ivzkfp-StyledText-StyledText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -333,114 +317,97 @@ exports[`Stepper renders correctly with animation 1`] = `
   margin-top: 8px;
 }
 
-.cache-5261u9-StyledLine {
+.cache-1cqab5n-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-5261u9-StyledLine::after {
+.cache-1cqab5n-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
   width: 100%;
 }
 
-.cache-epigh9-StyledStep {
+.cache-1kebp2n-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #390171;
-  background-color: #eeeeff;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #521094;
+  border: 1px solid #521094;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-197m6sv-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-n49oip-StyledLine-loadingStyle {
+.cache-b5bmfj-StyledLine-loadingStyle {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-n49oip-StyledLine-loadingStyle::after {
+.cache-b5bmfj-StyledLine-loadingStyle::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
   -webkit-animation: animation-0 1s linear infinite;
   animation: animation-0 1s linear infinite;
 }
 
-.cache-td9xqz-StyledStep {
+.cache-rkqn04-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #b2b6c3;
-  background-color: transparent;
-  border: 1px solid #d4dae7;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #464959;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-1bqee10-StyledText {
-  color: #b2b6c3;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-qzmw7d-StyledText-StyledText {
-  color: #b2b6c3;
+.cache-59q0cf-StyledText-StyledText {
+  color: #6d717c;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -453,16 +420,16 @@ exports[`Stepper renders correctly with animation 1`] = `
 }
 
 <div
-    class="cache-7tdsuk-StyledContainer e19ft7rb0"
+    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-ja0taa-StyledStep e19ft7rb4"
+        class="cache-155lc8i-StyledContainer e11loam60"
       >
         <svg
-          class="e19ft7rb2 cache-19exyza-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+          class="cache-14kwy0i-StyledIcon-sizeStyles e5nqbfp0"
           viewBox="0 0 24 24"
         >
           <path
@@ -471,7 +438,7 @@ exports[`Stepper renders correctly with animation 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -479,22 +446,18 @@ exports[`Stepper renders correctly with animation 1`] = `
       </span>
     </div>
     <div
-      class="cache-5261u9-StyledLine e19ft7rb1"
+      class="cache-1cqab5n-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-epigh9-StyledStep e19ft7rb4"
+        class="cache-1kebp2n-StyledContainer e11loam60"
       >
-        <span
-          class="cache-197m6sv-StyledText e13y3mga0"
-        >
-          2
-        </span>
+        2
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -502,22 +465,18 @@ exports[`Stepper renders correctly with animation 1`] = `
       </span>
     </div>
     <div
-      class="cache-n49oip-StyledLine-loadingStyle e19ft7rb1"
+      class="cache-b5bmfj-StyledLine-loadingStyle e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-td9xqz-StyledStep e19ft7rb4"
+        class="cache-rkqn04-StyledContainer e11loam60"
       >
-        <span
-          class="cache-1bqee10-StyledText e13y3mga0"
-        >
-          3
-        </span>
+        3
       </div>
       <span
-        class="e19ft7rb3 cache-qzmw7d-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-59q0cf-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -530,7 +489,7 @@ exports[`Stepper renders correctly with animation 1`] = `
 
 exports[`Stepper renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-7tdsuk-StyledContainer {
+  .cache-1oo5ecx-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,17 +508,12 @@ exports[`Stepper renders correctly with default props 1`] = `
   gap: 0 8px;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb4 {
-  height: 32px;
-  width: 32px;
-}
-
-.cache-7tdsuk-StyledContainer .e19ft7rb5 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb1 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -583,38 +537,30 @@ exports[`Stepper renders correctly with default props 1`] = `
   justify-content: flex-start;
 }
 
-.cache-epigh9-StyledStep {
+.cache-1kebp2n-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #390171;
-  background-color: #eeeeff;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #521094;
+  border: 1px solid #521094;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-197m6sv-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-egoqg5-StyledText-StyledText {
-  color: #4a4f62;
+.cache-ivzkfp-StyledText-StyledText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -626,60 +572,51 @@ exports[`Stepper renders correctly with default props 1`] = `
   margin-top: 8px;
 }
 
-.cache-1dg8jca-StyledLine {
+.cache-9dsfw3-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-1dg8jca-StyledLine::after {
+.cache-9dsfw3-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
 }
 
-.cache-td9xqz-StyledStep {
+.cache-rkqn04-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #b2b6c3;
-  background-color: transparent;
-  border: 1px solid #d4dae7;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #464959;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-1bqee10-StyledText {
-  color: #b2b6c3;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-qzmw7d-StyledText-StyledText {
-  color: #b2b6c3;
+.cache-59q0cf-StyledText-StyledText {
+  color: #6d717c;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -692,22 +629,18 @@ exports[`Stepper renders correctly with default props 1`] = `
 }
 
 <div
-    class="cache-7tdsuk-StyledContainer e19ft7rb0"
+    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-epigh9-StyledStep e19ft7rb4"
+        class="cache-1kebp2n-StyledContainer e11loam60"
       >
-        <span
-          class="cache-197m6sv-StyledText e13y3mga0"
-        >
-          1
-        </span>
+        1
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -715,22 +648,18 @@ exports[`Stepper renders correctly with default props 1`] = `
       </span>
     </div>
     <div
-      class="cache-1dg8jca-StyledLine e19ft7rb1"
+      class="cache-9dsfw3-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-td9xqz-StyledStep e19ft7rb4"
+        class="cache-rkqn04-StyledContainer e11loam60"
       >
-        <span
-          class="cache-1bqee10-StyledText e13y3mga0"
-        >
-          2
-        </span>
+        2
       </div>
       <span
-        class="e19ft7rb3 cache-qzmw7d-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-59q0cf-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -738,22 +667,18 @@ exports[`Stepper renders correctly with default props 1`] = `
       </span>
     </div>
     <div
-      class="cache-1dg8jca-StyledLine e19ft7rb1"
+      class="cache-9dsfw3-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-td9xqz-StyledStep e19ft7rb4"
+        class="cache-rkqn04-StyledContainer e11loam60"
       >
-        <span
-          class="cache-1bqee10-StyledText e13y3mga0"
-        >
-          3
-        </span>
+        3
       </div>
       <span
-        class="e19ft7rb3 cache-qzmw7d-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-59q0cf-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -766,7 +691,7 @@ exports[`Stepper renders correctly with default props 1`] = `
 
 exports[`Stepper renders correctly with selected prop 1`] = `
 <DocumentFragment>
-  .cache-7tdsuk-StyledContainer {
+  .cache-1oo5ecx-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -785,17 +710,12 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   gap: 0 8px;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb4 {
-  height: 32px;
-  width: 32px;
-}
-
-.cache-7tdsuk-StyledContainer .e19ft7rb5 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
   width: 32px;
   white-space: nowrap;
 }
 
-.cache-7tdsuk-StyledContainer .e19ft7rb1 {
+.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -819,36 +739,39 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   justify-content: flex-start;
 }
 
-.cache-ja0taa-StyledStep {
+.cache-155lc8i-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #149a7b;
-  background-color: #eafffb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #521094;
+  background: #ece5ff;
+  border: 1px solid #ece5ff;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-19exyza-StyledIcon-sizeStyles-StyledIcon {
+.cache-14kwy0i-StyledIcon-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-  fill: #149a7b;
+  height: 50%;
+  width: 50%;
+  min-width: 50%;
+  min-height: 50%;
 }
 
-.cache-egoqg5-StyledText-StyledText {
-  color: #4a4f62;
+.cache-ivzkfp-StyledText-StyledText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -860,112 +783,95 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   margin-top: 8px;
 }
 
-.cache-5261u9-StyledLine {
+.cache-1cqab5n-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-5261u9-StyledLine::after {
+.cache-1cqab5n-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
   width: 100%;
 }
 
-.cache-epigh9-StyledStep {
+.cache-1kebp2n-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #390171;
-  background-color: #eeeeff;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #521094;
+  border: 1px solid #521094;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-197m6sv-StyledText {
-  color: #4a4f62;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1dg8jca-StyledLine {
+.cache-9dsfw3-StyledLine {
   border-radius: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   border-radius: 4px;
-  background-color: #d4dae7;
+  background-color: #e9eaeb;
   position: relative;
 }
 
-.cache-1dg8jca-StyledLine::after {
+.cache-9dsfw3-StyledLine::after {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: #22c8a2;
+  background-color: #521094;
 }
 
-.cache-td9xqz-StyledStep {
+.cache-rkqn04-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #b2b6c3;
-  background-color: transparent;
-  border: 1px solid #d4dae7;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #464959;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
 }
 
-.cache-1bqee10-StyledText {
-  color: #b2b6c3;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 20px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-qzmw7d-StyledText-StyledText {
-  color: #b2b6c3;
+.cache-59q0cf-StyledText-StyledText {
+  color: #6d717c;
   font-size: 14px;
   font-family: Asap;
   font-weight: 400;
@@ -978,16 +884,16 @@ exports[`Stepper renders correctly with selected prop 1`] = `
 }
 
 <div
-    class="cache-7tdsuk-StyledContainer e19ft7rb0"
+    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-ja0taa-StyledStep e19ft7rb4"
+        class="cache-155lc8i-StyledContainer e11loam60"
       >
         <svg
-          class="e19ft7rb2 cache-19exyza-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+          class="cache-14kwy0i-StyledIcon-sizeStyles e5nqbfp0"
           viewBox="0 0 24 24"
         >
           <path
@@ -996,7 +902,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -1004,22 +910,18 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       </span>
     </div>
     <div
-      class="cache-5261u9-StyledLine e19ft7rb1"
+      class="cache-1cqab5n-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-epigh9-StyledStep e19ft7rb4"
+        class="cache-1kebp2n-StyledContainer e11loam60"
       >
-        <span
-          class="cache-197m6sv-StyledText e13y3mga0"
-        >
-          2
-        </span>
+        2
       </div>
       <span
-        class="e19ft7rb3 cache-egoqg5-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-ivzkfp-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -1027,22 +929,18 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       </span>
     </div>
     <div
-      class="cache-1dg8jca-StyledLine e19ft7rb1"
+      class="cache-9dsfw3-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb5"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
     >
       <div
-        class="cache-td9xqz-StyledStep e19ft7rb4"
+        class="cache-rkqn04-StyledContainer e11loam60"
       >
-        <span
-          class="cache-1bqee10-StyledText e13y3mga0"
-        >
-          3
-        </span>
+        3
       </div>
       <span
-        class="e19ft7rb3 cache-qzmw7d-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb2 cache-59q0cf-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3

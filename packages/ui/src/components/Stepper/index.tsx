@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import { Children, Fragment } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { Icon } from '../Icon'
+import { Bullet } from '../Bullet'
 import { Text } from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
@@ -23,38 +23,9 @@ const StyledStepContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 `
-const StyledStep = styled('div', {
-  shouldForwardProp: prop => !['temporal'].includes(prop),
-})<{ temporal: Temporal }>`
-  border-radius: ${({ theme }) => theme.radii.circle};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ temporal, theme }) => {
-    if (temporal === 'previous') return theme.colors.success.text
-    if (temporal === 'current') return theme.colors.primary.text
-
-    return theme.colors.neutral.textWeak
-  }};
-  background-color: ${({ temporal, theme }) => {
-    if (temporal === 'previous') return theme.colors.success.background
-    if (temporal === 'current') return theme.colors.primary.background
-
-    return 'transparent'
-  }};
-
-  border: ${({ temporal, theme }) =>
-    temporal === 'next'
-      ? `1px solid ${theme.colors.neutral.borderWeak}`
-      : null};
-`
 
 const StyledText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['1']};
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.success.text};
 `
 
 const loadingStyle = css`
@@ -65,7 +36,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   border-radius: ${({ theme }) => theme.radii.default};
   flex-grow: 1;
   border-radius: ${({ theme }) => theme.radii.default};
-  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   position: relative;
 
   ::after {
@@ -75,7 +46,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
     top: 0;
     height: 100%;
     border-radius: ${({ theme }) => theme.radii.default};
-    background-color: ${({ theme }) => theme.colors.success.backgroundStrong};
+    background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
     ${({ temporal }) => temporal === 'previous' && `width: 100%;`}
     ${({ temporal, animated }) =>
       temporal === 'current' && animated && loadingStyle}
@@ -88,11 +59,6 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 0 ${({ theme }) => theme.space['1']};
-
-  ${StyledStep} {
-    height: ${({ theme }) => theme.space['4']};
-    width: ${({ theme }) => theme.space['4']};
-  }
 
   ${StyledStepContainer} {
     width: ${({ theme }) => theme.space['4']};
@@ -118,20 +84,12 @@ const StepperNumbers = ({
   CurrentStep,
 }: StepperNumbersProps) => (
   <StyledStepContainer>
-    <StyledStep temporal={temporal}>
-      {temporal !== 'previous' ? (
-        <Text
-          as="span"
-          variant="bodySmall"
-          color="neutral"
-          prominence={temporal === 'next' ? 'weak' : 'default'}
-        >
-          {CurrentStep}
-        </Text>
-      ) : (
-        <StyledIcon name="check" size={20} />
-      )}
-    </StyledStep>
+    <Bullet
+      sentiment={temporal === 'next' ? 'neutral' : 'primary'}
+      text={temporal !== 'previous' ? CurrentStep.toString() : undefined}
+      icon={temporal === 'previous' ? 'check' : undefined}
+      prominence={temporal !== 'current' ? 'default' : 'strong'}
+    />
 
     <StyledText
       as="span"

@@ -16,7 +16,7 @@ const StyledBeforeScroll = styled.span`
   background: linear-gradient(
     -90deg,
     rgba(255, 255, 255, 0),
-    ${({ theme }) => theme.colors.neutral.backgroundWeak}
+    ${({ theme }) => theme.colors.neutral.background}
   );
   cursor: w-resize;
   z-index: auto;
@@ -26,9 +26,7 @@ const StyledScrollableWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 16px;
+  padding: 16px 100px;
 
   > *:not(:last-child) {
     margin-right: 16px;

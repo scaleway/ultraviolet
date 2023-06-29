@@ -42,7 +42,7 @@ export const StyledTabButton = styled.button`
   background: none;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  border-bottom-color: ${({ theme }) => theme.colors.neutral.border};
   outline: none;
 
   font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
@@ -75,9 +75,10 @@ export const StyledTabButton = styled.button`
       color: ${({ theme }) => theme.colors.primary.text};
       border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
       ${StyledBadge} {
-        background-color: ${({ theme }) => theme.colors.primary.background};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrong};
         border-color: ${({ theme }) => theme.colors.primary.background};
-        color: ${({ theme }) => theme.colors.primary.text};
+        color: ${({ theme }) => theme.colors.primary.textStrong};
       }
     }
   }

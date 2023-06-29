@@ -31,7 +31,7 @@ const StyledToggle = styled.div<{
   border-radius: ${({ theme }) => theme.radii.xlarge};
   position: relative;
   transition: all 300ms;
-  background-color: ${({ theme }) => theme.colors.neutral.textWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   width: ${({ size }) => SIZES[size].width}px;
   height: ${({ size }) => SIZES[size].height}px;
 

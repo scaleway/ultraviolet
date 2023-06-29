@@ -9,7 +9,7 @@ import type {
 import { createRef, useId, useState } from 'react'
 
 const StyledInput = styled.input`
-  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  background: ${({ theme }) => theme.colors.neutral.background};
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
       error ? theme.colors.danger.borderWeak : theme.colors.neutral.borderWeak};

@@ -124,7 +124,7 @@ const getSelectStyles = ({
     ...provided,
     backgroundColor: state.isDisabled
       ? theme.colors.neutral.backgroundDisabled
-      : theme.colors.neutral.backgroundWeak,
+      : theme.colors.neutral.background,
     borderColor: error
       ? theme.colors.danger.border
       : theme.colors.neutral.borderWeak,

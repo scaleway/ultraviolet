@@ -2,22 +2,22 @@
 
 exports[`FocusOverlay renders correctly when left is focused 1`] = `
 <DocumentFragment>
-  .cache-bxae8r-StyledDiv {
+  .cache-14lpp9t-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #4f0599;
+  background: #521094;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-bxae8r-StyledDiv etutiin0"
+    class="cache-14lpp9t-StyledDiv etutiin0"
     data-focusposition="left"
     style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
   />
@@ -26,22 +26,22 @@ exports[`FocusOverlay renders correctly when left is focused 1`] = `
 
 exports[`FocusOverlay renders correctly when left is focused and has mouse down 1`] = `
 <DocumentFragment>
-  .cache-bxae8r-StyledDiv {
+  .cache-14lpp9t-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #4f0599;
+  background: #521094;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-bxae8r-StyledDiv etutiin0"
+    class="cache-14lpp9t-StyledDiv etutiin0"
     data-focusposition="left"
     style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
   />
@@ -50,22 +50,22 @@ exports[`FocusOverlay renders correctly when left is focused and has mouse down 
 
 exports[`FocusOverlay renders correctly when right is focused 1`] = `
 <DocumentFragment>
-  .cache-bxae8r-StyledDiv {
+  .cache-14lpp9t-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #4f0599;
+  background: #521094;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-bxae8r-StyledDiv etutiin0"
+    class="cache-14lpp9t-StyledDiv etutiin0"
     data-focusposition="right"
     style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
   />
@@ -74,22 +74,22 @@ exports[`FocusOverlay renders correctly when right is focused 1`] = `
 
 exports[`FocusOverlay renders correctly when right is focused and has mouse down 1`] = `
 <DocumentFragment>
-  .cache-bxae8r-StyledDiv {
+  .cache-14lpp9t-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #4f0599;
+  background: #521094;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-bxae8r-StyledDiv[data-focusposition='right'] {
+.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-bxae8r-StyledDiv etutiin0"
+    class="cache-14lpp9t-StyledDiv etutiin0"
     data-focusposition="right"
     style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
   />
@@ -98,8 +98,8 @@ exports[`FocusOverlay renders correctly when right is focused and has mouse down
 
 exports[`SwitchButton renders correctly 1`] = `
 <DocumentFragment>
-  .cache-f7e9vn-StyledBorderedBox {
-  border: 1px solid #e6e9f0;
+  .cache-tib6m2-StyledBorderedBox {
+  border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 4px;
   display: -webkit-box;
@@ -110,7 +110,7 @@ exports[`SwitchButton renders correctly 1`] = `
   position: relative;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard {
+.cache-1ds7r8w-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -127,8 +127,9 @@ exports[`SwitchButton renders correctly 1`] = `
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
+  background: #ffffff;
+  border: 1px solid #e9eaeb;
+  color: #464959;
   border: none;
   height: 40px;
   padding: 8px 16px;
@@ -145,59 +146,59 @@ exports[`SwitchButton renders correctly 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-error='true'] {
-  border: 1px solid #a6102d;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #ac2740;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-disabled='true'] {
-  border: 1px solid #d4dae7;
-  color: #c4c9d6;
-  background: #f6f6f8;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d9dadd;
+  color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover,
-.cache-qp6zds-Container-StyledSelectableCard:focus-within,
-.cache-qp6zds-Container-StyledSelectableCard:active {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover,
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within,
+.cache-1ds7r8w-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement {
+.cache-1lxev04-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -218,63 +219,63 @@ exports[`SwitchButton renders correctly 1`] = `
   align-items: start;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false'],
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false'],
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
-  color: #c4c9d6;
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true']>label {
   cursor: not-allowed;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
-  fill: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
+  fill: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
-  fill: #f6f6f8;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+  fill: #e9eaeb;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-checked='true'] {
-  color: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement[data-checked='true'] {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-error='true'] {
-  color: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement[data-error='true'] {
+  color: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
-  color: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement input+svg {
+.cache-1lxev04-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-1a1gw3x-RadioInput {
+.cache-153jgd8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -284,7 +285,7 @@ exports[`SwitchButton renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-1a1gw3x-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-153jgd8-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -294,83 +295,83 @@ exports[`SwitchButton renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-1a1gw3x-RadioInput:checked+svg .ehkrmld3 {
+.cache-153jgd8-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1a1gw3x-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-w8xgd7-StyledIcon {
+.cache-w9n3gd-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b2b6c3;
+  fill: #6d717c;
 }
 
-.cache-w8xgd7-StyledIcon .ehkrmld4 {
-  fill: #ffffff;
+.cache-w9n3gd-StyledIcon .ehkrmld4 {
+  fill: #f9f9fa;
 }
 
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
+.cache-v3nsk0-InnerCircleRing {
+  fill: #f9f9fa;
 }
 
 <div
     style="display: inline-flex;"
   >
     <div
-      class="cache-f7e9vn-StyledBorderedBox e4ryteh1"
+      class="cache-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="false"
         data-disabled="false"
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+          class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
           data-checked="false"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
-            class="cache-1a1gw3x-RadioInput ehkrmld1"
+            class="cache-153jgd8-RadioInput ehkrmld1"
             id="test-left"
             name="test"
             type="radio"
             value="left"
           />
           <svg
-            class="cache-w8xgd7-StyledIcon ehkrmld2"
+            class="cache-w9n3gd-StyledIcon ehkrmld2"
             size="24"
             viewBox="0 0 24 24"
           >
@@ -382,7 +383,7 @@ exports[`SwitchButton renders correctly 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                 cx="12"
                 cy="12"
                 r="6"
@@ -403,27 +404,27 @@ exports[`SwitchButton renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="true"
         data-disabled="false"
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+          class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
           data-checked="true"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
             checked=""
-            class="cache-1a1gw3x-RadioInput ehkrmld1"
+            class="cache-153jgd8-RadioInput ehkrmld1"
             id="test-right"
             name="test"
             type="radio"
             value="right"
           />
           <svg
-            class="cache-w8xgd7-StyledIcon ehkrmld2"
+            class="cache-w9n3gd-StyledIcon ehkrmld2"
             size="24"
             viewBox="0 0 24 24"
           >
@@ -435,7 +436,7 @@ exports[`SwitchButton renders correctly 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                 cx="12"
                 cy="12"
                 r="6"
@@ -462,8 +463,8 @@ exports[`SwitchButton renders correctly 1`] = `
 
 exports[`SwitchButton renders correctly with right value 1`] = `
 <DocumentFragment>
-  .cache-f7e9vn-StyledBorderedBox {
-  border: 1px solid #e6e9f0;
+  .cache-tib6m2-StyledBorderedBox {
+  border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 4px;
   display: -webkit-box;
@@ -474,7 +475,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   position: relative;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard {
+.cache-1ds7r8w-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -491,8 +492,9 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
+  background: #ffffff;
+  border: 1px solid #e9eaeb;
+  color: #464959;
   border: none;
   height: 40px;
   padding: 8px 16px;
@@ -509,59 +511,59 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-error='true'] {
-  border: 1px solid #a6102d;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #ac2740;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-disabled='true'] {
-  border: 1px solid #d4dae7;
-  color: #c4c9d6;
-  background: #f6f6f8;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d9dadd;
+  color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover,
-.cache-qp6zds-Container-StyledSelectableCard:focus-within,
-.cache-qp6zds-Container-StyledSelectableCard:active {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover,
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within,
+.cache-1ds7r8w-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement {
+.cache-1lxev04-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -582,63 +584,63 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false'],
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false'],
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
-  color: #c4c9d6;
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true']>label {
   cursor: not-allowed;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
-  fill: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
+  fill: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
-  fill: #f6f6f8;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+  fill: #e9eaeb;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-checked='true'] {
-  color: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement[data-checked='true'] {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-error='true'] {
-  color: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement[data-error='true'] {
+  color: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
-  color: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement input+svg {
+.cache-1lxev04-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-1a1gw3x-RadioInput {
+.cache-153jgd8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -648,7 +650,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   border-width: 0;
 }
 
-.cache-1a1gw3x-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-153jgd8-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -658,83 +660,83 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transform: scale(0);
 }
 
-.cache-1a1gw3x-RadioInput:checked+svg .ehkrmld3 {
+.cache-153jgd8-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1a1gw3x-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-w8xgd7-StyledIcon {
+.cache-w9n3gd-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b2b6c3;
+  fill: #6d717c;
 }
 
-.cache-w8xgd7-StyledIcon .ehkrmld4 {
-  fill: #ffffff;
+.cache-w9n3gd-StyledIcon .ehkrmld4 {
+  fill: #f9f9fa;
 }
 
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
+.cache-v3nsk0-InnerCircleRing {
+  fill: #f9f9fa;
 }
 
 <div
     style="display: inline-flex;"
   >
     <div
-      class="cache-f7e9vn-StyledBorderedBox e4ryteh1"
+      class="cache-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="false"
         data-disabled="false"
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+          class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
           data-checked="false"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
-            class="cache-1a1gw3x-RadioInput ehkrmld1"
+            class="cache-153jgd8-RadioInput ehkrmld1"
             id="test-left"
             name="test"
             type="radio"
             value="left"
           />
           <svg
-            class="cache-w8xgd7-StyledIcon ehkrmld2"
+            class="cache-w9n3gd-StyledIcon ehkrmld2"
             size="24"
             viewBox="0 0 24 24"
           >
@@ -746,7 +748,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                 cx="12"
                 cy="12"
                 r="6"
@@ -767,27 +769,27 @@ exports[`SwitchButton renders correctly with right value 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="true"
         data-disabled="false"
       >
         <div
           aria-disabled="false"
-          class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+          class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
           data-checked="true"
         >
           <input
             aria-disabled="false"
             aria-invalid="false"
             checked=""
-            class="cache-1a1gw3x-RadioInput ehkrmld1"
+            class="cache-153jgd8-RadioInput ehkrmld1"
             id="test-right"
             name="test"
             type="radio"
             value="right"
           />
           <svg
-            class="cache-w8xgd7-StyledIcon ehkrmld2"
+            class="cache-w9n3gd-StyledIcon ehkrmld2"
             size="24"
             viewBox="0 0 24 24"
           >
@@ -799,7 +801,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
                 stroke-width="2"
               />
               <circle
-                class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                 cx="12"
                 cy="12"
                 r="6"
@@ -830,8 +832,8 @@ exports[`SwitchButton renders with tooltip 1`] = `
   display: inherit;
 }
 
-.cache-f7e9vn-StyledBorderedBox {
-  border: 1px solid #e6e9f0;
+.cache-tib6m2-StyledBorderedBox {
+  border: 1px solid #d9dadd;
   border-radius: 4px;
   padding: 4px;
   display: -webkit-box;
@@ -842,7 +844,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   position: relative;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard {
+.cache-1ds7r8w-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -859,8 +861,9 @@ exports[`SwitchButton renders with tooltip 1`] = `
   -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
   transition: border-color 200ms ease,box-shadow 200ms ease;
   cursor: pointer;
-  border: 1px solid #d4dae7;
-  color: #4a4f62;
+  background: #ffffff;
+  border: 1px solid #e9eaeb;
+  color: #464959;
   border: none;
   height: 40px;
   padding: 8px 16px;
@@ -877,59 +880,59 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-error='true'] {
-  border: 1px solid #a6102d;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-error='true'] {
+  border: 1px solid #ac2740;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-disabled='true'] {
-  border: 1px solid #d4dae7;
-  color: #c4c9d6;
-  background: #f6f6f8;
+.cache-1ds7r8w-Container-StyledSelectableCard[data-disabled='true'] {
+  border: 1px solid #d9dadd;
+  color: #b5b7bd;
+  background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #521094;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
-  box-shadow: 0px 4px 16px 4px #EEEEFFCC;
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+  box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover,
-.cache-qp6zds-Container-StyledSelectableCard:focus-within,
-.cache-qp6zds-Container-StyledSelectableCard:active {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover,
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within,
+.cache-1ds7r8w-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-qp6zds-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1ds7r8w-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1ds7r8w-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1ds7r8w-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-qp6zds-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #4f0599;
+.cache-1ds7r8w-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement {
+.cache-1lxev04-RadioContainer-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -950,63 +953,63 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: start;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false'],
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='false']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false'],
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-1lxev04-RadioContainer-StyledElement:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
-  color: #c4c9d6;
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true']>label {
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true']>label {
   cursor: not-allowed;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
-  fill: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 {
+  fill: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
-  fill: #f6f6f8;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+  fill: #e9eaeb;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-checked='true'] {
-  color: #4f0599;
+.cache-1lxev04-RadioContainer-StyledElement[data-checked='true'] {
+  color: #521094;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[data-error='true'] {
-  color: #a6102d;
+.cache-1lxev04-RadioContainer-StyledElement[data-error='true'] {
+  color: #ac2740;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement[aria-disabled='true'] {
-  color: #c4c9d6;
+.cache-1lxev04-RadioContainer-StyledElement[aria-disabled='true'] {
+  color: #b5b7bd;
 }
 
-.cache-1yazv8a-RadioContainer-StyledElement input+svg {
+.cache-1lxev04-RadioContainer-StyledElement input+svg {
   display: none;
 }
 
-.cache-1a1gw3x-RadioInput {
+.cache-153jgd8-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1016,7 +1019,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.cache-1a1gw3x-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-153jgd8-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1026,54 +1029,54 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.cache-1a1gw3x-RadioInput:checked+svg .ehkrmld3 {
+.cache-153jgd8-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-1a1gw3x-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 {
-  background-color: #eeeeff;
-  fill: #4f0599;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 {
+  background-color: #ece5ff;
+  fill: #521094;
 }
 
-.cache-1a1gw3x-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #eeeeff;
+.cache-153jgd8-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #ece5ff;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffe1e7;
-  fill: #a6102d;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #fbe4e9;
+  fill: #ac2740;
 }
 
-.cache-1a1gw3x-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
-  fill: #ffe1e7;
+.cache-153jgd8-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+  fill: #fbe4e9;
 }
 
-.cache-w8xgd7-StyledIcon {
+.cache-w9n3gd-StyledIcon {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b2b6c3;
+  fill: #6d717c;
 }
 
-.cache-w8xgd7-StyledIcon .ehkrmld4 {
-  fill: #ffffff;
+.cache-w9n3gd-StyledIcon .ehkrmld4 {
+  fill: #f9f9fa;
 }
 
-.cache-p50c5x-InnerCircleRing {
-  fill: #ffffff;
+.cache-v3nsk0-InnerCircleRing {
+  fill: #f9f9fa;
 }
 
 <div
@@ -1085,29 +1088,29 @@ exports[`SwitchButton renders with tooltip 1`] = `
       style="display: inline-flex;"
     >
       <div
-        class="cache-f7e9vn-StyledBorderedBox e4ryteh1"
+        class="cache-tib6m2-StyledBorderedBox e4ryteh1"
       >
         <div
-          class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+          class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
           data-checked="false"
           data-disabled="false"
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+            class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
             data-checked="false"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
-              class="cache-1a1gw3x-RadioInput ehkrmld1"
+              class="cache-153jgd8-RadioInput ehkrmld1"
               id="test-left"
               name="test"
               type="radio"
               value="left"
             />
             <svg
-              class="cache-w8xgd7-StyledIcon ehkrmld2"
+              class="cache-w9n3gd-StyledIcon ehkrmld2"
               size="24"
               viewBox="0 0 24 24"
             >
@@ -1119,7 +1122,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
                   stroke-width="2"
                 />
                 <circle
-                  class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                  class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                   cx="12"
                   cy="12"
                   r="6"
@@ -1140,27 +1143,27 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="e4ryteh0 cache-qp6zds-Container-StyledSelectableCard e1s5n3hj1"
+          class="e4ryteh0 cache-1ds7r8w-Container-StyledSelectableCard e1s5n3hj1"
           data-checked="true"
           data-disabled="false"
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj0 cache-1yazv8a-RadioContainer-StyledElement ehkrmld0"
+            class="e1s5n3hj0 cache-1lxev04-RadioContainer-StyledElement ehkrmld0"
             data-checked="true"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
               checked=""
-              class="cache-1a1gw3x-RadioInput ehkrmld1"
+              class="cache-153jgd8-RadioInput ehkrmld1"
               id="test-right"
               name="test"
               type="radio"
               value="right"
             />
             <svg
-              class="cache-w8xgd7-StyledIcon ehkrmld2"
+              class="cache-w9n3gd-StyledIcon ehkrmld2"
               size="24"
               viewBox="0 0 24 24"
             >
@@ -1172,7 +1175,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
                   stroke-width="2"
                 />
                 <circle
-                  class="cache-p50c5x-InnerCircleRing ehkrmld4"
+                  class="cache-v3nsk0-InnerCircleRing ehkrmld4"
                   cx="12"
                   cy="12"
                   r="6"

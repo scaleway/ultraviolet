@@ -28,7 +28,7 @@ const alertStyles = ({
   return css`
     background-color: ${sentimentColor.background};
     color: ${sentimentColor.text};
-    border-left: 4px solid ${sentimentColor.borderWeak};
+    border-left: 4px solid ${sentimentColor.border};
   `
 }
 
