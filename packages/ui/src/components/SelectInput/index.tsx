@@ -663,7 +663,9 @@ const FwdSelectInput = ({
   isSearchable = true,
   menuPortalTarget,
   noTopLabel = false,
+  onBlur,
   onChange,
+  onFocus,
   options,
   placeholder,
   readOnly = false,
@@ -736,7 +738,9 @@ const FwdSelectInput = ({
       isSearchable={isSearchable}
       isClearable={isClearable}
       isMulti={isMulti}
+      onBlur={onBlur}
       onChange={onChange}
+      onFocus={onFocus}
       value={value as SelectOption}
       maxMenuHeight={250}
       inputId={inputId}

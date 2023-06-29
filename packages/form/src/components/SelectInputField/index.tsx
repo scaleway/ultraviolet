@@ -169,6 +169,7 @@ export const SelectInputField = <
   noTopLabel,
   noOptionsMessage,
   customStyle,
+  validate,
   'data-testid': dataTestId,
 }: SelectInputFieldProps<T>) => {
   const { getError } = useErrors()
@@ -251,6 +252,7 @@ export const SelectInputField = <
       parse,
       required,
       value,
+      validate,
     },
   )
 
