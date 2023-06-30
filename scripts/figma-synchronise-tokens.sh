@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/homebrew/bin/bash
 
 # WARNING: This script needs Bash 4.0 or higher to work properly
 
@@ -153,8 +153,6 @@ function generateTokens {
 
   # Theme name
   THEME_NAME="{\"theme\": \"${paletteMatching}\"}"
-
-  echo "${THEME_NAME}"
 
   FINAL_RESULT=$(echo "${THEME_NAME}" "${SPACE}" "${RADII}" "${GENERATED_TOKENS_COLOR}" "${GENERATED_OVERLOADED_COLORS}" "${GENERATED_OTHER_COLORS_ICON}" "${GENERATED_DATA_TOKENS_COLOR}" "${GENERATED_SHADOW_TOKENS}" "${GENERATED_OVERLAY_TOKENS}" "${GENERATED_TYPOGRAPHY}" "${GENERATED_GRADIENT_TOKENS_COLOR}" | jq --slurp --sort-keys '.[0] * .[1] * .[2] * .[3] * .[4] * .[5] * .[6] * .[7] * .[8] * .[9] * .[10]')
 }

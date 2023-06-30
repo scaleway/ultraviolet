@@ -195,7 +195,7 @@ const StyledOutlinedButton = styled('button', {
       : `
         &:hover, &:active
        {
-            background: ${theme.colors[sentiment].backgroundWeakHover};
+            background: ${theme.colors[sentiment].backgroundHover};
             color:
             ${
               theme.colors[sentiment][
@@ -240,7 +240,7 @@ const StyledGhostButton = styled('button', {
       : `
         &:hover, &:active
         {
-            background: ${theme.colors[sentiment].backgroundWeakHover};
+            background: ${theme.colors[sentiment].backgroundHover};
             color:
               ${
                 theme.colors[sentiment][
