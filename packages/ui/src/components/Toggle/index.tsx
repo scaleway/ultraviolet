@@ -72,7 +72,7 @@ const StyledToggle = styled.div<{
   }
 
   &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
 
     &[data-checked='true'] {
       background: ${({ theme }) =>

@@ -84,10 +84,10 @@ export const darkTheme = {
     neutral: {
       background: '#151a2d',
       backgroundDisabled: '#1e2335',
-      backgroundHover: '#1e2335',
-      backgroundStrong: '#303445',
+      backgroundHover: '#303445',
+      backgroundStrong: '#626672',
       backgroundStrongDisabled: '#1e2335',
-      backgroundStrongHover: '#484b5a',
+      backgroundStrongHover: '#858892',
       backgroundStronger: '#eeeef0',
       backgroundStrongerDisabled: '#1e2335',
       backgroundStrongerHover: '#ffffff',

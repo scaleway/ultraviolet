@@ -149,8 +149,6 @@ function generateTokens {
      )
   paletteMatching="${matchingArray[$THEME]}"
 
-  echo "${paletteMatching}"
-
   # Theme name
   THEME_NAME="{\"theme\": \"${paletteMatching}\"}"
 

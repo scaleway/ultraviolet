@@ -127,8 +127,7 @@ const StyledFilledButton = styled('button', {
   background: ${({ theme, sentiment }) =>
     theme.colors[sentiment].backgroundStrong};
   border: none;
-  color: ${({ theme, sentiment }) =>
-    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textStrong']};
+  color: ${({ theme, sentiment }) => theme.colors[sentiment].textStrong};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
