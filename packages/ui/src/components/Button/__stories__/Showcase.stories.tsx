@@ -3,9 +3,12 @@ import { Button, buttonVariants } from '..'
 import { Stack, Table, Text } from '../..'
 import { SENTIMENTS } from '../../../theme'
 
-const COLUMNS = buttonVariants.map(variant => ({
-  label: variant.toUpperCase(),
-}))
+const COLUMNS = [
+  { label: '' },
+  ...buttonVariants.map(variant => ({
+    label: variant.toUpperCase(),
+  })),
+]
 
 export const Showcase: StoryFn<typeof Button> = () => {
   const onClick = () => {}

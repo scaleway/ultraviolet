@@ -134,24 +134,14 @@ const StyledFilledButton = styled('button', {
       ? `
             background: ${theme.colors[sentiment].backgroundStrongDisabled};
             color:
-              ${
-                theme.colors[sentiment][
-                  sentiment === 'neutral'
-                    ? 'textDisabled'
-                    : 'textStrongDisabled'
-                ]
-              };
+              ${theme.colors[sentiment].textStrongDisabled};
         `
       : `
             &:hover, &:active
             {
                 background: ${theme.colors[sentiment].backgroundStrongHover};
                 color:
-                ${
-                  theme.colors[sentiment][
-                    sentiment === 'neutral' ? 'textHover' : 'textStrongHover'
-                  ]
-                };
+                ${theme.colors[sentiment].textStrongHover};
             }
   `}
 `

@@ -34,7 +34,7 @@ const Container = styled(Stack, {
   ${({ theme, bordered }) =>
     bordered
       ? `
-    border: 1px solid ${theme.colors.neutral.borderStrong};
+    border: 1px solid ${theme.colors.neutral.border};
     border-radius: ${theme.radii.default};
     `
       : null};

@@ -3,7 +3,7 @@ import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 
 const InnerCircleRing = styled.circle`
-  fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+  fill: ${({ theme }) => theme.colors.neutral.borderStrong};
 `
 
 const RadioMark = styled.circle``
@@ -22,7 +22,7 @@ const StyledIcon = styled.svg<{ size: number }>`
   min-width: ${({ size }) => size}px;
   min-height: ${({ size }) => size}px;
   border-radius: ${({ theme }) => theme.radii.circle};
-  fill: ${({ theme }) => theme.colors.neutral.textWeak};
+  fill: ${({ theme }) => theme.colors.neutral.borderStrong};
   ${InnerCircleRing} {
     fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
@@ -114,9 +114,9 @@ const RadioContainer = styled.div`
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.neutral.textDisabled};
+      fill: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
       ${InnerCircleRing} {
-        fill: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+        fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
     }
   }
