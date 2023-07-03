@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+- [#2682](https://github.com/scaleway/ultraviolet/pull/2682) [`d5d4c003`](https://github.com/scaleway/ultraviolet/commit/d5d4c00372ed0b69b608073a0ed52276ce5fdfc8) Thanks [@matthprost](https://github.com/matthprost)! - Add props `aria-controls`, `aria-expanded` and `aria-haspopup` to Button component
+
+### Patch Changes
+
+- [#2667](https://github.com/scaleway/ultraviolet/pull/2667) [`6de7c1d5`](https://github.com/scaleway/ultraviolet/commit/6de7c1d563643a72782d3de3b3e2e57626540f2a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.14.1`.
+
 ## 1.1.1
 
 ### Patch Changes
