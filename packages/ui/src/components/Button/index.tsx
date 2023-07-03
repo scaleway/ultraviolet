@@ -438,6 +438,9 @@ export const Button = forwardRef<Element, FinalProps>(
           name={name}
           aria-label={ariaLabel}
           aria-current={ariaCurrent}
+          aria-controls={ariaControls}
+          aria-expanded={ariaExpanded}
+          aria-haspopup={ariaHaspopup}
           iconOnly={!!icon && !children}
           tabIndex={tabIndex}
         >
