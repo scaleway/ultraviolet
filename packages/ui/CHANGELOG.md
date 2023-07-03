@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.0
+
+### Minor Changes
+
+- [#2683](https://github.com/scaleway/ultraviolet/pull/2683) [`d6550d3b`](https://github.com/scaleway/ultraviolet/commit/d6550d3bfe2584dcdde413cdf60b20e8f2b99461) Thanks [@matthprost](https://github.com/matthprost)! - Add props `aria-controls`, `aria-expanded` and `aria-haspopup` to Button component
+
 ## 1.2.0
 
 ### Minor Changes
