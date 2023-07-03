@@ -87,8 +87,8 @@ importers:
         specifier: 5.3.2
         version: 5.3.2(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
-        specifier: 8.2.4
-        version: 8.2.4(size-limit@8.2.6)
+        specifier: 8.2.6
+        version: 8.2.6(size-limit@8.2.6)
       '@size-limit/preset-big-lib':
         specifier: 8.2.6
         version: 8.2.6(esbuild@0.17.19)(size-limit@8.2.6)
@@ -4824,16 +4824,6 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@size-limit/file@8.2.4(size-limit@8.2.6):
-    resolution: {integrity: sha512-xLuF97W7m7lxrRJvqXRlxO/4t7cpXtfxOnjml/t4aRVUCMXLdyvebRr9OM4jjoK8Fmiz8jomCbETUCI3jVhLzA==}
-    engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      size-limit: 8.2.4
-    dependencies:
-      semver: 7.3.8
-      size-limit: 8.2.6
     dev: true
 
   /@size-limit/file@8.2.6(size-limit@8.2.6):
@@ -14657,14 +14647,6 @@ packages:
   /semver@7.0.0:
     resolution: {integrity: sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==}
     hasBin: true
-    dev: true
-
-  /semver@7.3.8:
-    resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
     dev: true
 
   /semver@7.5.0:
