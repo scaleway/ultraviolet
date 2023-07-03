@@ -284,6 +284,9 @@ type CommonProps = {
   isLoading?: boolean
   'aria-label'?: string
   'aria-current'?: boolean
+  'aria-controls'?: string
+  'aria-expanded'?: boolean
+  'aria-haspopup'?: boolean
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
@@ -349,6 +352,9 @@ export const Button = forwardRef<Element, FinalProps>(
       name,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
+      'aria-controls': ariaControls,
+      'aria-expanded': ariaExpanded,
+      'aria-haspopup': ariaHaspopup,
       href,
       download,
       target,
@@ -397,6 +403,9 @@ export const Button = forwardRef<Element, FinalProps>(
             onClick={onClick}
             aria-label={ariaLabel}
             aria-current={ariaCurrent}
+            aria-controls={ariaControls}
+            aria-expanded={ariaExpanded}
+            aria-haspopup={ariaHaspopup}
             href={href}
             target={target}
             download={download}
