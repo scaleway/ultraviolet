@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.3.1
+
+### Patch Changes
+
+- [#2671](https://github.com/scaleway/ultraviolet/pull/2671) [`b43f7b1c`](https://github.com/scaleway/ultraviolet/commit/b43f7b1c4b80c0c9aaceded279710b8366d7827d) Thanks [@philibea](https://github.com/philibea)! - refactor PasswordStrengthMeter into more simple Meter component
+
+- [#2685](https://github.com/scaleway/ultraviolet/pull/2685) [`f97b7d18`](https://github.com/scaleway/ultraviolet/commit/f97b7d188ae98100d1c1f9502385fc93e81759f8) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Pagination: check page prop (currentPage) min and max values
+
 ## 1.3.0
 
 ### Minor Changes
