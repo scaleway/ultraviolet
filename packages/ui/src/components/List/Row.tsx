@@ -216,6 +216,9 @@ export const Row = forwardRef(
             onClick={e => {
               e.stopPropagation()
             }}
+            onKeyDown={e => {
+              e.stopPropagation()
+            }}
           >
             {expandable}
           </ExpandableWrapper>
