@@ -2,6 +2,7 @@ import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { SENTIMENTS, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
+import type { XOR } from '../../types'
 import capitalize from '../../utils/capitalize'
 import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
@@ -98,9 +99,16 @@ const StyledContainer = styled('div')<StyledContainerType>`
   ${sizeStyles}
 `
 
-type ContentProps =
-  | { icon: ComponentProps<typeof Icon>['name']; text?: string }
-  | { icon?: ComponentProps<typeof Icon>['name']; text: string }
+type ContentProps = XOR<
+  [
+    {
+      icon: ComponentProps<typeof Icon>['name']
+    },
+    {
+      text: string
+    },
+  ]
+>
 type BulletProps = {
   className?: string
   size?: BulletSize

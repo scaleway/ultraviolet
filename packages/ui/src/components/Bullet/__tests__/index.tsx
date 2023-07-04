@@ -10,7 +10,7 @@ describe('Bullet', () => {
     shouldMatchEmotionSnapshot(<Bullet icon="moon" />))
 
   describe('sentiment', () => {
-    SENTIMENTS.forEach(sentiment => {
+    ;['disabled', ...SENTIMENTS].forEach(sentiment => {
       test(`render ${sentiment}`, () =>
         shouldMatchEmotionSnapshot(<Bullet sentiment={sentiment} text="1" />))
     })

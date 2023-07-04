@@ -26,10 +26,10 @@ const StyledScrollableWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 16px 100px;
+  padding: ${({ theme }) => theme.space['2']} 100px;
 
   > *:not(:last-child) {
-    margin-right: 16px;
+    margin-right: ${({ theme }) => theme.space['2']};
   }
 `
 

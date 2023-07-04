@@ -86,8 +86,13 @@ const StepperNumbers = ({
   <StyledStepContainer>
     <Bullet
       sentiment={temporal === 'next' ? 'neutral' : 'primary'}
-      text={temporal !== 'previous' ? CurrentStep.toString() : undefined}
-      icon={temporal === 'previous' ? 'check' : undefined}
+      {...(temporal === 'previous'
+        ? {
+            icon: 'check',
+          }
+        : {
+            text: CurrentStep.toString(),
+          })}
       prominence={temporal !== 'current' ? 'default' : 'strong'}
     />
 
