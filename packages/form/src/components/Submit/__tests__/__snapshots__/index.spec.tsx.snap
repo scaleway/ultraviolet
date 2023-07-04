@@ -6,7 +6,7 @@ exports[`Submit form is invalid 1`] = `
   position: relative;
 }
 
-.cache-141yr18 {
+.cache-1vfbo26 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -33,63 +33,63 @@ exports[`Submit form is invalid 1`] = `
   padding-right: 20px;
   padding-top: 14px;
   padding: 8px;
-  border-color: #ac2740;
+  border-color: #b3144d;
 }
 
-.cache-141yr18::-webkit-input-placeholder {
+.cache-1vfbo26::-webkit-input-placeholder {
   color: #6d717c;
   opacity: 0;
 }
 
-.cache-141yr18::-moz-placeholder {
+.cache-1vfbo26::-moz-placeholder {
   color: #6d717c;
   opacity: 0;
 }
 
-.cache-141yr18:-ms-input-placeholder {
+.cache-1vfbo26:-ms-input-placeholder {
   color: #6d717c;
   opacity: 0;
 }
 
-.cache-141yr18::placeholder {
+.cache-1vfbo26::placeholder {
   color: #6d717c;
   opacity: 0;
 }
 
-.cache-141yr18:hover,
-.cache-141yr18:focus {
+.cache-1vfbo26:hover,
+.cache-1vfbo26:focus {
   border-color: #3b1a61;
 }
 
-.cache-141yr18:focus {
+.cache-1vfbo26:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
   border-color: #3b1a61;
 }
 
-.cache-141yr18::-webkit-input-placeholder {
+.cache-1vfbo26::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-141yr18::-moz-placeholder {
+.cache-1vfbo26::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-141yr18:-ms-input-placeholder {
+.cache-1vfbo26:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-141yr18::placeholder {
+.cache-1vfbo26::placeholder {
   opacity: 1;
 }
 
-.cache-141yr18:hover,
-.cache-141yr18:focus {
-  border-color: #8c2034;
+.cache-1vfbo26:hover,
+.cache-1vfbo26:focus {
+  border-color: #92103f;
 }
 
-.cache-141yr18:focus {
+.cache-1vfbo26:focus {
   box-shadow: 0px 0px 0px 3px #E14B6740;
-  border-color: #8c2034;
+  border-color: #92103f;
 }
 
 .cache-2yjbay {
@@ -100,13 +100,13 @@ exports[`Submit form is invalid 1`] = `
   max-height: initial;
 }
 
-.cache-13dm01h {
+.cache-xbtm7g {
   font-size: 12px;
-  color: #ac2740;
+  color: #b3144d;
   padding-top: 2px;
 }
 
-.cache-mwgl5h {
+.cache-1lmokgy {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -147,7 +147,7 @@ exports[`Submit form is invalid 1`] = `
   color: #ffffff;
 }
 
-.cache-mwgl5h:hover {
+.cache-1lmokgy:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -161,7 +161,7 @@ exports[`Submit form is invalid 1`] = `
       >
         <input
           autocomplete="on"
-          class="cache-141yr18 el3h3g92"
+          class="cache-1vfbo26 el3h3g92"
           name="toto"
           type="text"
           value="4"
@@ -171,14 +171,14 @@ exports[`Submit form is invalid 1`] = `
         class="cache-2yjbay e5hc7t70"
       >
         <div
-          class="cache-13dm01h el3h3g94"
+          class="cache-xbtm7g el3h3g94"
         >
           This field should match the regex ^[a-zA-Z]*$
         </div>
       </div>
     </div>
     <button
-      class="cache-mwgl5h e112qvla2"
+      class="cache-1lmokgy e112qvla2"
       disabled=""
       type="submit"
     >
@@ -190,23 +190,7 @@ exports[`Submit form is invalid 1`] = `
 
 exports[`Submit form is submitting 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.cache-mwgl5h {
+  .cache-1lmokgy {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -247,14 +231,14 @@ exports[`Submit form is submitting 1`] = `
   color: #ffffff;
 }
 
-.cache-mwgl5h:hover {
+.cache-1lmokgy:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1dul7yn-css {
-  -webkit-animation: animation-0 0.75s linear infinite;
-  animation: animation-0 0.75s linear infinite;
+.cache-ljs09t {
+  -webkit-animation: spin 0.75s linear infinite;
+  animation: spin 0.75s linear infinite;
 }
 
 .cache-11f05l0-Loader {
@@ -266,7 +250,7 @@ exports[`Submit form is submitting 1`] = `
     novalidate=""
   >
     <button
-      class="cache-mwgl5h e112qvla2"
+      class="cache-1lmokgy e112qvla2"
       disabled=""
       type="submit"
     >
@@ -276,7 +260,7 @@ exports[`Submit form is submitting 1`] = `
         aria-valuemin="0"
         aria-valuenow="20"
         aria-valuetext="20%"
-        class="cache-1dul7yn-css"
+        class="cache-ljs09t e1y1n78x1"
         role="progressbar"
         style="height: 1em; width: 1em;"
         viewBox="0 0 100 100"
@@ -310,7 +294,7 @@ exports[`Submit form is submitting 1`] = `
 
 exports[`Submit renders correctly  1`] = `
 <DocumentFragment>
-  .cache-1s75ngb {
+  .cache-1uvfxmq {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -349,17 +333,17 @@ exports[`Submit renders correctly  1`] = `
   color: #222638;
 }
 
-.cache-1s75ngb:hover {
+.cache-1uvfxmq:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-1s75ngb:active {
+.cache-1uvfxmq:active {
   box-shadow: 0px 0px 0px 3px #45D19F40;
 }
 
-.cache-1s75ngb:hover,
-.cache-1s75ngb:active {
+.cache-1uvfxmq:hover,
+.cache-1uvfxmq:active {
   background: #3ebd8f;
   color: #151a2d;
 }
@@ -368,7 +352,7 @@ exports[`Submit renders correctly  1`] = `
     novalidate=""
   >
     <button
-      class="cache-1s75ngb e112qvla2"
+      class="cache-1uvfxmq e112qvla2"
       type="submit"
     >
       Test
@@ -379,7 +363,7 @@ exports[`Submit renders correctly  1`] = `
 
 exports[`Submit renders correctly with icon and iconPosition  1`] = `
 <DocumentFragment>
-  .cache-6g6p5r {
+  .cache-1i8lti {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -418,17 +402,17 @@ exports[`Submit renders correctly with icon and iconPosition  1`] = `
   color: #222638;
 }
 
-.cache-6g6p5r:hover {
+.cache-1i8lti:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.cache-6g6p5r:active {
+.cache-1i8lti:active {
   box-shadow: 0px 0px 0px 3px #45D19F40;
 }
 
-.cache-6g6p5r:hover,
-.cache-6g6p5r:active {
+.cache-1i8lti:hover,
+.cache-1i8lti:active {
   background: #3ebd8f;
   color: #151a2d;
 }
@@ -446,7 +430,7 @@ exports[`Submit renders correctly with icon and iconPosition  1`] = `
     novalidate=""
   >
     <button
-      class="cache-6g6p5r e112qvla2"
+      class="cache-1i8lti e112qvla2"
       type="submit"
     >
       <svg

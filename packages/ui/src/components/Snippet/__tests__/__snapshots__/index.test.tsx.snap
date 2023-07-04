@@ -2,7 +2,7 @@
 
 exports[`Snippet renders correctly 1`] = `
 <DocumentFragment>
-  .cache-4qtze7-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13,7 +13,7 @@ exports[`Snippet renders correctly 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -70,51 +70,73 @@ exports[`Snippet renders correctly 1`] = `
   padding-right: 64px;
 }
 
-.cache-vodxmz-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #e9eaeb;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -127,7 +149,7 @@ exports[`Snippet renders correctly 1`] = `
 }
 
 <div
-    class="cache-4qtze7-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -142,7 +164,7 @@ exports[`Snippet renders correctly 1`] = `
         </span>
       </pre>
       <div
-        class="cache-vodxmz-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r1:"
@@ -151,7 +173,7 @@ exports[`Snippet renders correctly 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -172,7 +194,7 @@ exports[`Snippet renders correctly 1`] = `
 
 exports[`Snippet renders correctly in multiline  1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,7 +206,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -248,12 +270,12 @@ exports[`Snippet renders correctly in multiline  1`] = `
   padding: 32px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -262,36 +284,58 @@ exports[`Snippet renders correctly in multiline  1`] = `
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -303,9 +347,9 @@ exports[`Snippet renders correctly in multiline  1`] = `
   min-height: 16px;
 }
 
-.cache-1rxmy7w-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #e9eaeb;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -358,7 +402,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -402,7 +446,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r3:"
@@ -411,7 +455,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -426,7 +470,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         </div>
       </div>
       <div
-        class="cache-1rxmy7w-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -455,7 +499,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
 
 exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -467,7 +511,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -546,12 +590,12 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -560,36 +604,58 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -601,9 +667,9 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   min-height: 16px;
 }
 
-.cache-1rxmy7w-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #e9eaeb;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -656,7 +722,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -700,7 +766,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r9:"
@@ -709,7 +775,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -724,7 +790,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         </div>
       </div>
       <div
-        class="cache-1rxmy7w-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -753,7 +819,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 
 exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -765,7 +831,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -845,12 +911,12 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   padding-right: 8px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -859,36 +925,58 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -900,9 +988,9 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   min-height: 16px;
 }
 
-.cache-1rxmy7w-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #e9eaeb;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -955,7 +1043,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -999,7 +1087,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r6:"
@@ -1008,7 +1096,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1023,7 +1111,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         </div>
       </div>
       <div
-        class="cache-1rxmy7w-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1052,7 +1140,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 
 exports[`Snippet renders correctly with copiedText 1`] = `
 <DocumentFragment>
-  .cache-4qtze7-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1063,7 +1151,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1120,51 +1208,73 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   padding-right: 64px;
 }
 
-.cache-vodxmz-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #e9eaeb;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1177,7 +1287,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
 }
 
 <div
-    class="cache-4qtze7-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1192,7 +1302,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
         </span>
       </pre>
       <div
-        class="cache-vodxmz-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":ri:"
@@ -1201,7 +1311,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1222,7 +1332,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
 
 exports[`Snippet renders correctly with copyText 1`] = `
 <DocumentFragment>
-  .cache-4qtze7-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1233,7 +1343,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1290,51 +1400,73 @@ exports[`Snippet renders correctly with copyText 1`] = `
   padding-right: 64px;
 }
 
-.cache-vodxmz-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #e9eaeb;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1347,7 +1479,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
 }
 
 <div
-    class="cache-4qtze7-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1362,7 +1494,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
         </span>
       </pre>
       <div
-        class="cache-vodxmz-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rg:"
@@ -1371,7 +1503,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1392,7 +1524,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
 
 exports[`Snippet renders correctly with hideText 1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1404,7 +1536,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1468,12 +1600,12 @@ exports[`Snippet renders correctly with hideText 1`] = `
   padding: 32px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -1482,36 +1614,58 @@ exports[`Snippet renders correctly with hideText 1`] = `
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1523,9 +1677,9 @@ exports[`Snippet renders correctly with hideText 1`] = `
   min-height: 16px;
 }
 
-.cache-1rxmy7w-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #e9eaeb;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -1578,7 +1732,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1622,7 +1776,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rk:"
@@ -1631,7 +1785,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1646,7 +1800,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         </div>
       </div>
       <div
-        class="cache-1rxmy7w-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1675,7 +1829,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
 
 exports[`Snippet renders correctly with showText 1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1687,7 +1841,7 @@ exports[`Snippet renders correctly with showText 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1751,12 +1905,12 @@ exports[`Snippet renders correctly with showText 1`] = `
   padding: 32px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -1765,36 +1919,58 @@ exports[`Snippet renders correctly with showText 1`] = `
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1806,9 +1982,9 @@ exports[`Snippet renders correctly with showText 1`] = `
   min-height: 16px;
 }
 
-.cache-1rxmy7w-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #e9eaeb;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -1861,7 +2037,7 @@ exports[`Snippet renders correctly with showText 1`] = `
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1905,7 +2081,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rn:"
@@ -1914,7 +2090,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1929,7 +2105,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         </div>
       </div>
       <div
-        class="cache-1rxmy7w-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1958,7 +2134,7 @@ exports[`Snippet renders correctly with showText 1`] = `
 
 exports[`Snippet renders correctly with single line with prefix command 1`] = `
 <DocumentFragment>
-  .cache-4qtze7-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1969,7 +2145,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -2041,51 +2217,73 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-vodxmz-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #e9eaeb;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2098,7 +2296,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
 }
 
 <div
-    class="cache-4qtze7-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -2113,7 +2311,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
         </span>
       </pre>
       <div
-        class="cache-vodxmz-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rc:"
@@ -2122,7 +2320,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -2143,7 +2341,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
 
 exports[`Snippet renders correctly with single line with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-4qtze7-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2154,7 +2352,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -2227,51 +2425,73 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   padding-right: 8px;
 }
 
-.cache-vodxmz-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #e9eaeb;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2284,7 +2504,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
 }
 
 <div
-    class="cache-4qtze7-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -2299,7 +2519,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
         </span>
       </pre>
       <div
-        class="cache-vodxmz-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":re:"
@@ -2308,7 +2528,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -2329,7 +2549,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
 
 exports[`Snippet should click on extend button to display full content on  1`] = `
 <DocumentFragment>
-  .cache-teex2y-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2341,7 +2561,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -2405,12 +2625,12 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   padding: 32px;
 }
 
-.cache-1mdowd7-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #e9eaeb;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -2419,36 +2639,58 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   display: inherit;
 }
 
-.cache-1nr5dkj-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #464959;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nr5dkj-StyledButton:hover {
-  background: #f3f3f4;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nr5dkj-StyledButtonactive,
-.cache-1nr5dkj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2515,7 +2757,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
 }
 
 <div
-    class="cache-teex2y-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -2559,7 +2801,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         </pre>
       </div>
       <div
-        class="cache-1mdowd7-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rq:"
@@ -2568,7 +2810,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         >
           <button
             aria-label="Copy"
-            class="cache-1nr5dkj-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg

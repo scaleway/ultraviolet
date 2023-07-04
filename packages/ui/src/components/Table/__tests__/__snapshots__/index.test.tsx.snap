@@ -784,17 +784,17 @@ exports[`Table Should render correctly with bad sort value 1`] = `
 
 exports[`Table Should render correctly with info 1`] = `
 <DocumentFragment>
-  .cache-gcysjf-StyledTable {
+  .cache-1bohbj1-StyledTable {
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
 }
 
-.cache-gcysjf-StyledTable tbody tr:nth-of-type(even) {
-  background: #e9eaeb;
+.cache-1bohbj1-StyledTable tbody tr:nth-of-type(even) {
+  background: #f9f9fa;
 }
 
-.cache-gcysjf-StyledTable tbody tr {
+.cache-1bohbj1-StyledTable tbody tr {
   border-bottom: 1px solid #e9eaeb;
 }
 
@@ -872,7 +872,7 @@ exports[`Table Should render correctly with info 1`] = `
 }
 
 <table
-    class="cache-gcysjf-StyledTable ert5hkm0"
+    class="cache-1bohbj1-StyledTable ert5hkm0"
   >
     <thead
       class="cache-1bdvrf9-StyledHeader ekxedod0"
@@ -2200,7 +2200,7 @@ exports[`Table Should render correctly with selectable then click on first row t
   gap: 8px;
 }
 
-.cache-40sjd-CheckboxContainer {
+.cache-f7u8fx-CheckboxContainer {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2213,31 +2213,31 @@ exports[`Table Should render correctly with selectable then click on first row t
   gap: 8px;
 }
 
-.cache-40sjd-CheckboxContainer[aria-disabled='false'],
-.cache-40sjd-CheckboxContainer[aria-disabled='false']>label {
+.cache-f7u8fx-CheckboxContainer[aria-disabled='false'],
+.cache-f7u8fx-CheckboxContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-40sjd-CheckboxContainer[aria-disabled='true'] {
+.cache-f7u8fx-CheckboxContainer[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-40sjd-CheckboxContainer[aria-disabled='true']>label {
+.cache-f7u8fx-CheckboxContainer[aria-disabled='true']>label {
   cursor: not-allowed;
 }
 
-.cache-40sjd-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 {
-  fill: #b5b7bd;
+.cache-f7u8fx-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 {
+  fill: #d9dadd;
 }
 
-.cache-40sjd-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #b5b7bd;
+.cache-f7u8fx-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
+  stroke: #d9dadd;
   fill: #f3f3f4;
 }
 
-.cache-40sjd-CheckboxContainer .eqr7bqq6,
-.cache-40sjd-CheckboxContainer .eqr7bqq5 {
+.cache-f7u8fx-CheckboxContainer .eqr7bqq6,
+.cache-f7u8fx-CheckboxContainer .eqr7bqq5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -2247,41 +2247,41 @@ exports[`Table Should render correctly with selectable then click on first row t
   transform: scale(0);
 }
 
-.cache-40sjd-CheckboxContainer .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+.cache-f7u8fx-CheckboxContainer .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-40sjd-CheckboxContainer .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
+.cache-f7u8fx-CheckboxContainer .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-40sjd-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
+.cache-f7u8fx-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
   background-color: #ece5ff;
   fill: #521094;
 }
 
-.cache-40sjd-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
+.cache-f7u8fx-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
   fill: #ece5ff;
 }
 
-.cache-40sjd-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #fbe4e9;
-  fill: #dd3252;
+.cache-f7u8fx-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
+  background-color: #ffe3ed;
+  fill: #e51963;
 }
 
-.cache-40sjd-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #dd3252;
-  fill: #fbe4e9;
+.cache-f7u8fx-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
+  fill: #ffe3ed;
 }
 
-.cache-zcznpu-CheckboxInput {
+.cache-16jg2tj-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -2290,52 +2290,52 @@ exports[`Table Should render correctly with selectable then click on first row t
   border-width: 0;
 }
 
-.cache-zcznpu-CheckboxInput:not(:disabled) {
+.cache-16jg2tj-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-zcznpu-CheckboxInput:disabled {
+.cache-16jg2tj-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-zcznpu-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-16jg2tj-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
   fill: #521094;
 }
 
-.cache-zcznpu-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-16jg2tj-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
 }
 
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #dd3252;
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
+  fill: #e51963;
 }
 
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-zcznpu-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #dd3252;
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
+.cache-16jg2tj-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
 }
 
-.cache-zcznpu-CheckboxInput:focus+.eqr7bqq3 {
+.cache-16jg2tj-CheckboxInput:focus+.eqr7bqq3 {
   background-color: #ece5ff;
   fill: #521094;
 }
 
-.cache-zcznpu-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
+.cache-16jg2tj-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
   fill: #ece5ff;
 }
 
-.cache-zcznpu-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #fbe4e9;
-  fill: #dd3252;
+.cache-16jg2tj-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
+  background-color: #ffe3ed;
+  fill: #e51963;
 }
 
-.cache-zcznpu-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #dd3252;
-  fill: #fbe4e9;
+.cache-16jg2tj-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
+  fill: #ffe3ed;
 }
 
 .cache-1lcemq7-StyledIcon {
@@ -2346,9 +2346,9 @@ exports[`Table Should render correctly with selectable then click on first row t
   min-height: 24px;
 }
 
-.cache-16fu0ub-InnerCheckbox {
+.cache-1at8irr-InnerCheckbox {
   fill: #f9f9fa;
-  stroke: #6d717c;
+  stroke: #b5b7bd;
 }
 
 .cache-147y6no-StyledHeaderCell {
@@ -2395,14 +2395,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select all"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-all-checkbox"
                 name="table-select-all-checkbox"
                 type="checkbox"
@@ -2415,7 +2415,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2506,14 +2506,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2526,7 +2526,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2590,14 +2590,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2610,7 +2610,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2674,14 +2674,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2694,7 +2694,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2758,14 +2758,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2778,7 +2778,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2842,14 +2842,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2862,7 +2862,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -2926,14 +2926,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2946,7 +2946,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -3010,14 +3010,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3030,7 +3030,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -3094,14 +3094,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3114,7 +3114,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -3178,14 +3178,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3198,7 +3198,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -3262,14 +3262,14 @@ exports[`Table Should render correctly with selectable then click on first row t
           >
             <div
               aria-disabled="false"
-              class="cache-40sjd-CheckboxContainer eqr7bqq1"
+              class="cache-f7u8fx-CheckboxContainer eqr7bqq1"
               data-checked="true"
               data-error="false"
             >
               <input
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-zcznpu-CheckboxInput eqr7bqq2"
+                class="cache-16jg2tj-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3282,7 +3282,7 @@ exports[`Table Should render correctly with selectable then click on first row t
               >
                 <g>
                   <rect
-                    class="cache-16fu0ub-InnerCheckbox eqr7bqq7"
+                    class="cache-1at8irr-InnerCheckbox eqr7bqq7"
                     height="14"
                     rx="2px"
                     stroke-width="2"
@@ -3921,17 +3921,17 @@ exports[`Table Should render correctly with sort then click 1`] = `
 
 exports[`Table Should render correctly with stipped 1`] = `
 <DocumentFragment>
-  .cache-gcysjf-StyledTable {
+  .cache-1bohbj1-StyledTable {
   width: 100%;
   box-sizing: content-box;
   border-collapse: collapse;
 }
 
-.cache-gcysjf-StyledTable tbody tr:nth-of-type(even) {
-  background: #e9eaeb;
+.cache-1bohbj1-StyledTable tbody tr:nth-of-type(even) {
+  background: #f9f9fa;
 }
 
-.cache-gcysjf-StyledTable tbody tr {
+.cache-1bohbj1-StyledTable tbody tr {
   border-bottom: 1px solid #e9eaeb;
 }
 
@@ -3984,7 +3984,7 @@ exports[`Table Should render correctly with stipped 1`] = `
 }
 
 <table
-    class="cache-gcysjf-StyledTable ert5hkm0"
+    class="cache-1bohbj1-StyledTable ert5hkm0"
   >
     <thead
       class="cache-1bdvrf9-StyledHeader ekxedod0"
