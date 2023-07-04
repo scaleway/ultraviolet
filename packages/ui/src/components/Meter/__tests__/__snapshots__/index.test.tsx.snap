@@ -45,15 +45,17 @@ exports[`Meter render with  1`] = `
 }
 
 <div
+    aria-labelledby="meter-label"
     aria-live="polite"
     aria-valuemax="5"
     aria-valuemin="0"
     aria-valuenow="0"
-    role="progressbar"
+    role="meter"
     title="MyTitle"
   >
     <p
       class="cache-yrq8ca-StyledText e13y3mga0"
+      id="meter-label"
     >
       MyTitle
       <span
@@ -119,15 +121,17 @@ exports[`Meter render with medium password 1`] = `
 }
 
 <div
+    aria-labelledby="meter-label"
     aria-live="polite"
     aria-valuemax="5"
     aria-valuemin="0"
     aria-valuenow="2"
-    role="progressbar"
+    role="meter"
     title="MyTitle"
   >
     <p
       class="cache-yrq8ca-StyledText e13y3mga0"
+      id="meter-label"
     >
       MyTitle
       <span
@@ -193,15 +197,17 @@ exports[`Meter render with strong value 1`] = `
 }
 
 <div
+    aria-labelledby="meter-label"
     aria-live="polite"
     aria-valuemax="5"
     aria-valuemin="0"
     aria-valuenow="3"
-    role="progressbar"
+    role="meter"
     title="MyTitle"
   >
     <p
       class="cache-yrq8ca-StyledText e13y3mga0"
+      id="meter-label"
     >
       MyTitle
       <span
@@ -267,15 +273,17 @@ exports[`Meter render with very strong value 1`] = `
 }
 
 <div
+    aria-labelledby="meter-label"
     aria-live="polite"
     aria-valuemax="5"
     aria-valuemin="0"
     aria-valuenow="4"
-    role="progressbar"
+    role="meter"
     title="MyTitle"
   >
     <p
       class="cache-yrq8ca-StyledText e13y3mga0"
+      id="meter-label"
     >
       MyTitle
       <span
@@ -341,15 +349,17 @@ exports[`Meter render with weak value 1`] = `
 }
 
 <div
+    aria-labelledby="meter-label"
     aria-live="polite"
     aria-valuemax="5"
     aria-valuemin="0"
     aria-valuenow="1"
-    role="progressbar"
+    role="meter"
     title="MyTitle"
   >
     <p
       class="cache-yrq8ca-StyledText e13y3mga0"
+      id="meter-label"
     >
       MyTitle
       <span

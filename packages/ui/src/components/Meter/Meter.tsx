@@ -70,10 +70,11 @@ export const Meter = ({
       className={className}
       data-testid={dataTestId}
       id={id}
-      role="progressbar"
+      role="meter"
       title={title}
+      aria-labelledby="meter-label"
     >
-      <Text variant="bodySmallStrong" as="p">
+      <Text id="meter-label" variant="bodySmallStrong" as="p">
         {title}
         <StyledStrength
           as="span"
