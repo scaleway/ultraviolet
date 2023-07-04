@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 import type { JSX } from 'react'
 import { Button } from '../Button'
 import { getPageNumbers } from './getPageNumbers'
@@ -25,7 +25,7 @@ type PaginationProps = {
   */
   onChange: (newPage: number) => void
   /**
-    The current page
+    The current page (must be between 1 and pageCount included, otherwhile onChange will be called with a correct value)
   */
   page: number
   /**
@@ -83,6 +83,15 @@ export const Pagination = ({
     },
     [onChange],
   )
+
+  useEffect(() => {
+    if (page < 1) {
+      onChange(1)
+    }
+    if (page > pageCount) {
+      onChange(pageCount)
+    }
+  }, [page, pageCount, onChange])
 
   return (
     <StyledContainer className={className} data-testid={dataTestId}>
