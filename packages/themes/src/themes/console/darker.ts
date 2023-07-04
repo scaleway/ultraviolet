@@ -112,6 +112,7 @@ export const darkerTheme = {
       iconHover: '#e8e9ea',
       iconStrong: '#e8e9ea',
       iconStrongDisabled: '#3b3f4f',
+      iconStrongHover: '#ffffff',
       iconStronger: '#000000',
       iconStrongerDisabled: '#777985',
       iconStrongerHover: '#080a11',

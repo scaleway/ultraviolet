@@ -27,7 +27,7 @@ const BadgeContainer = styled.span`
 
 export const StyledTabButton = styled('button', {
   shouldForwardProp: prop => !['isSelected'].includes(prop),
-})<{ isSelected: boolean }>`
+})<{ isSelected?: boolean }>`
   display: flex;
   flex-direction: row;
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};

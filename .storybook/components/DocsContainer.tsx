@@ -5,9 +5,8 @@ import {
 } from '@storybook/blocks'
 import { useDarkMode } from 'storybook-dark-mode'
 import { light, dark } from '../storybookThemes'
-import { darkTheme } from '../../packages/ui/src'
-import { ThemeProvider, Global } from '@emotion/react'
-import lightTheme from '../../packages/ui/src/theme'
+import lightTheme, { darkTheme } from '../../packages/ui/src/theme'
+import { ThemeProvider } from '@emotion/react'
 
 type ExtraProps = {
   /**
