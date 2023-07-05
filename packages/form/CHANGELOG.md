@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.4.1
+
 ## 1.1.0
 
 ### Minor Changes

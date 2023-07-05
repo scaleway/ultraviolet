@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.1
+
+### Patch Changes
+
+- [#2691](https://github.com/scaleway/ultraviolet/pull/2691) [`48dfbc6d`](https://github.com/scaleway/ultraviolet/commit/48dfbc6dbe4f0155fcac1c119c0c607d2736947c) Thanks [@matthprost](https://github.com/matthprost)! - Fix export of darker theme
+
 ## 1.1.0
 
 ### Minor Changes
