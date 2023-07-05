@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.0
+
+### Minor Changes
+
+- [#2668](https://github.com/scaleway/ultraviolet/pull/2668) [`8b88b5c3`](https://github.com/scaleway/ultraviolet/commit/8b88b5c3576f6c300594ed914f73207473cc4b6b) Thanks [@matthprost](https://github.com/matthprost)! - New themes darker and colors for all components to be more accessibles and pass WCAG AA
+
 ## 1.0.0
 
 ### Major Changes
