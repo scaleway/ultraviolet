@@ -1,5 +1,10 @@
 import styled from '@emotion/styled'
-import type { ForwardedRef, MouseEventHandler, ReactNode } from 'react'
+import type {
+  ForwardedRef,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactNode,
+} from 'react'
 import { forwardRef } from 'react'
 
 const StyledCell = styled.div`
@@ -30,12 +35,19 @@ export const Cell = forwardRef(
       }
     }
 
+    const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = event => {
+      if (preventClick) {
+        event.stopPropagation()
+      }
+    }
+
     return (
       <StyledCell
         ref={ref}
         role="cell"
         className={className}
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
         data-testid={dataTestid}
       >
         {children}
