@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.3.2
+
+### Patch Changes
+
+- [#2686](https://github.com/scaleway/ultraviolet/pull/2686) [`6b0450aa`](https://github.com/scaleway/ultraviolet/commit/6b0450aaf8beea60c1a5ea020c2a1946170dc7cf) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.15.0`.
+
+- [#2688](https://github.com/scaleway/ultraviolet/pull/2688) [`55442270`](https://github.com/scaleway/ultraviolet/commit/554422709d1b18dadb5b6988bc9d8015f9dea345) Thanks [@fabienhebert](https://github.com/fabienhebert)! - List: avoid event propagation outside List.Expandable
+
 ## 1.3.1
 
 ### Patch Changes
