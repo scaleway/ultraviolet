@@ -1,6 +1,11 @@
 import type { StoryFn } from '@storybook/react'
 import { useMemo, useState } from 'react'
 import { List } from '..'
+import { Button } from '../../Button/index'
+import { Modal } from '../../Modal'
+import { Stack } from '../../Stack'
+import { Text } from '../../Text'
+import { TextInput } from '../../TextInput'
 import { data as sourceData } from './resources'
 
 export const Example: StoryFn = () => {
@@ -53,7 +58,28 @@ export const Example: StoryFn = () => {
         <List.Row
           key={planet.id}
           id={planet.id}
-          expandable="Planet description...."
+          expandable={
+            <Stack direction="row" justifyContent="space-between">
+              <div>A planet description</div>
+              <Modal
+                disclosure={
+                  <Button size="small" icon="pencil">
+                    Edit
+                  </Button>
+                }
+              >
+                <Stack gap={3}>
+                  <Text as="h6" variant="headingSmall">
+                    Edit description
+                  </Text>
+                  <TextInput
+                    name="description"
+                    label="Type planet description"
+                  />
+                </Stack>
+              </Modal>
+            </Stack>
+          }
           sentiment={planet.id === 'home-sweet-home' ? 'info' : undefined}
         >
           <List.Cell>{planet.name}</List.Cell>
