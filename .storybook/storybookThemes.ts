@@ -33,8 +33,8 @@ const generateStorybookTheme = ({
     colorSecondary: theme.colors.primary.backgroundStrong,
 
     // UI
-    appBg: theme.colors.neutral.backgroundWeak,
-    appContentBg: theme.colors.neutral.backgroundWeak,
+    appBg: theme.colors.neutral.background,
+    appContentBg: theme.colors.neutral.background,
     appBorderColor: theme.colors.neutral.borderWeak,
 
     // Text colors
@@ -46,16 +46,16 @@ const generateStorybookTheme = ({
     barSelectedColor: theme.colors.primary.textWeak,
     barBg: theme.colors.neutral.backgroundWeak,
 
-    buttonBg: theme.colors.neutral.backgroundStrong,
-    buttonBorder: theme.colors.neutral.borderStrong,
+    buttonBg: theme.colors.neutral.background,
+    buttonBorder: theme.colors.neutral.border,
 
     // BIZARRE
-    booleanBg: theme.colors.neutral.backgroundStrong,
+    booleanBg: theme.colors.neutral.background,
     booleanSelectedBg: theme.colors.primary.background,
 
     // Form colors
-    inputBg: theme.colors.neutral.backgroundStrong,
-    inputBorder: theme.colors.neutral.borderStrong,
+    inputBg: theme.colors.neutral.background,
+    inputBorder: theme.colors.neutral.border,
     inputTextColor: theme.colors.neutral.text,
     inputBorderRadius: 4,
   })

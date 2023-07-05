@@ -48,7 +48,7 @@ const TabsContainer = styled.div`
     left: 0;
     right: 0;
     height: 2px;
-    background: ${({ theme }) => theme.colors.neutral.borderWeak};
+    background: ${({ theme }) => theme.colors.neutral.border};
   }
 
   &::-webkit-scrollbar {

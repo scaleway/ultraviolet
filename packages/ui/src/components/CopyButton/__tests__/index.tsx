@@ -4,7 +4,7 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-import { CopyButton, SIZES } from '../index'
+import { CopyButton } from '../index'
 
 describe('CopyButton', () => {
   beforeAll(() => {
@@ -21,12 +21,9 @@ describe('CopyButton', () => {
 
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test" />))
-
-  Object.keys(SIZES).forEach(size => {
+  ;(['small', 'large'] as const).forEach(size => {
     test(`renders correctly sentiment ${size}`, () =>
-      shouldMatchEmotionSnapshot(
-        <CopyButton value="Test" size={size as keyof typeof SIZES} />,
-      ))
+      shouldMatchEmotionSnapshot(<CopyButton value="Test" size={size} />))
   })
   ;(['primary', 'neutral'] as const).forEach(sentiment => {
     test(`renders correctly sentiment ${sentiment}`, () =>

@@ -68,7 +68,7 @@ const Container = styled('div', {
   justify-content: start;
   max-width: 100%;
   ${({ multiline }) => (multiline ? 'width: 100%;' : '')}
-  background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
 `
 
@@ -84,12 +84,12 @@ const ButtonContainer = styled('div', {
   right: 0;
   padding: ${({ theme, multiline }) =>
     `${theme.space[multiline ? '2' : '1']} ${theme.space['2']} 0 0`};
-  background: ${({ theme }) => theme.colors.neutral.backgroundStrong};
+  background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   border-radius: ${({ theme }) => theme.radii.default};
   border: 2px solid transparent;
   ${({ multiline, theme }) =>
     !multiline
-      ? `box-shadow: -27px 0 19px -11px ${theme.colors.neutral.backgroundStrong}`
+      ? `box-shadow: -27px 0 19px -11px ${theme.colors.neutral.backgroundWeak}`
       : ''};
 `
 
@@ -100,7 +100,7 @@ const ShowMoreContainer = styled('div', {
   box-shadow: ${({ theme, showMore }) =>
     !showMore
       ? `0px -22px 19px -6px
-    ${theme.colors.neutral.backgroundStrong}`
+    ${theme.colors.neutral.backgroundWeak}`
       : 'none'};
 `
 

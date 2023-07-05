@@ -78,11 +78,19 @@ const generateStyles = ({
     neutral: `
       color: ${
         prominence === PROMINENCES.strong
-          ? theme.colors.neutral[text as keyof typeof theme.colors.neutral]
-          : theme.colors.neutral.textWeak
+          ? theme.colors.neutral.textStronger
+          : theme.colors.neutral.text
       };
-      background: ${theme.colors.neutral.backgroundStrong};
-      border: 1px solid ${theme.colors.neutral.borderStrong};
+      background: ${
+        prominence === PROMINENCES.strong
+          ? theme.colors.neutral.backgroundStronger
+          : theme.colors.neutral.backgroundWeak
+      };
+      border: 1px solid ${
+        prominence === PROMINENCES.strong
+          ? theme.colors.neutral.borderStronger
+          : theme.colors.neutral.border
+      };
     `,
   }
 }

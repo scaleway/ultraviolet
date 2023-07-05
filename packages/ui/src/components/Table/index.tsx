@@ -26,7 +26,7 @@ const StyledTable = styled('table', {
   ${
     stripped
       ? `& tbody tr:nth-of-type(even) {
-    background: ${theme.colors.neutral.backgroundStrong};
+    background: ${theme.colors.neutral.backgroundWeak};
   }`
       : ''
   }

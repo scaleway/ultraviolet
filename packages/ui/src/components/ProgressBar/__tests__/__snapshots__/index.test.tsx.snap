@@ -2,23 +2,23 @@
 
 exports[`ProgressBar renders correctly when value < 0 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-1wzmild-StyledFilled {
+.cache-19mmzf5-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #4f0599;
+  background-color: #521094;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 0%;
@@ -28,11 +28,11 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="-250"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-1wzmild-StyledFilled e1b95x8r0"
+      class="cache-19mmzf5-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>
@@ -40,23 +40,23 @@ exports[`ProgressBar renders correctly when value < 0 1`] = `
 
 exports[`ProgressBar renders correctly when value > 100 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-sysp65-StyledFilled {
+.cache-5kkzrq-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #4f0599;
+  background-color: #521094;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 100%;
@@ -66,11 +66,11 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="250"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-sysp65-StyledFilled e1b95x8r0"
+      class="cache-5kkzrq-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>
@@ -78,23 +78,23 @@ exports[`ProgressBar renders correctly when value > 100 1`] = `
 
 exports[`ProgressBar renders info 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-exx6v2-StyledFilled {
+.cache-16tzv7z-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #3f6ed8;
+  background-color: #0078d2;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 40%;
@@ -104,11 +104,11 @@ exports[`ProgressBar renders info 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-exx6v2-StyledFilled e1b95x8r0"
+      class="cache-16tzv7z-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>
@@ -116,23 +116,23 @@ exports[`ProgressBar renders info 1`] = `
 
 exports[`ProgressBar renders primary 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-1qx9yj5-StyledFilled {
+.cache-1ips4qy-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #4f0599;
+  background-color: #521094;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 40%;
@@ -142,11 +142,11 @@ exports[`ProgressBar renders primary 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-1qx9yj5-StyledFilled e1b95x8r0"
+      class="cache-1ips4qy-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>
@@ -164,14 +164,14 @@ exports[`ProgressBar renders progression 1`] = `
   }
 }
 
-.cache-1ak1a74-StyledProgressContainer {
+.cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
 .cache-9xmuru-StyledProgress {
@@ -197,7 +197,7 @@ exports[`ProgressBar renders progression 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="0"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
@@ -209,23 +209,23 @@ exports[`ProgressBar renders progression 1`] = `
 
 exports[`ProgressBar renders success 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-bqgdj4-StyledFilled {
+.cache-95ziuo-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #22c8a2;
+  background-color: #45d19f;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 40%;
@@ -235,11 +235,11 @@ exports[`ProgressBar renders success 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-bqgdj4-StyledFilled e1b95x8r0"
+      class="cache-95ziuo-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>
@@ -247,23 +247,23 @@ exports[`ProgressBar renders success 1`] = `
 
 exports[`ProgressBar renders warning 1`] = `
 <DocumentFragment>
-  .cache-1ak1a74-StyledProgressContainer {
+  .cache-sw414r-StyledProgressContainer {
   overflow: hidden;
   position: relative;
   height: 4px;
   margin-left: 0;
   margin-right: 0;
   border-radius: 4px;
-  background-color: #f6f6f8;
+  background-color: #d9dadd;
 }
 
-.cache-1mrz2jf-StyledFilled {
+.cache-curehl-StyledFilled {
   border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #ff8c69;
+  background-color: #fbc600;
   -webkit-transition: 0.3s width;
   transition: 0.3s width;
   width: 40%;
@@ -273,11 +273,11 @@ exports[`ProgressBar renders warning 1`] = `
     aria-valuemax="100"
     aria-valuemin="0"
     aria-valuenow="40"
-    class="cache-1ak1a74-StyledProgressContainer e1b95x8r2"
+    class="cache-sw414r-StyledProgressContainer e1b95x8r2"
     role="progressbar"
   >
     <div
-      class="cache-1mrz2jf-StyledFilled e1b95x8r0"
+      class="cache-curehl-StyledFilled e1b95x8r0"
     />
   </div>
 </DocumentFragment>

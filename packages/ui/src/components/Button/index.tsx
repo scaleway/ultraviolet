@@ -127,32 +127,21 @@ const StyledFilledButton = styled('button', {
   background: ${({ theme, sentiment }) =>
     theme.colors[sentiment].backgroundStrong};
   border: none;
-  color: ${({ theme, sentiment }) =>
-    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textStrong']};
+  color: ${({ theme, sentiment }) => theme.colors[sentiment].textStrong};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
             background: ${theme.colors[sentiment].backgroundStrongDisabled};
             color:
-              ${
-                theme.colors[sentiment][
-                  sentiment === 'neutral'
-                    ? 'textDisabled'
-                    : 'textStrongDisabled'
-                ]
-              };
+              ${theme.colors[sentiment].textStrongDisabled};
         `
       : `
             &:hover, &:active
             {
                 background: ${theme.colors[sentiment].backgroundStrongHover};
                 color:
-                ${
-                  theme.colors[sentiment][
-                    sentiment === 'neutral' ? 'textHover' : 'textStrongHover'
-                  ]
-                };
+                ${theme.colors[sentiment].textStrongHover};
             }
   `}
 `
@@ -195,7 +184,7 @@ const StyledOutlinedButton = styled('button', {
       : `
         &:hover, &:active
        {
-            background: ${theme.colors[sentiment].backgroundWeakHover};
+            background: ${theme.colors[sentiment].backgroundHover};
             color:
             ${
               theme.colors[sentiment][
@@ -240,7 +229,7 @@ const StyledGhostButton = styled('button', {
       : `
         &:hover, &:active
         {
-            background: ${theme.colors[sentiment].backgroundWeakHover};
+            background: ${theme.colors[sentiment].backgroundHover};
             color:
               ${
                 theme.colors[sentiment][

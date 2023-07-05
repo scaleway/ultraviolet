@@ -31,7 +31,7 @@ const StyledToggle = styled.div<{
   border-radius: ${({ theme }) => theme.radii.xlarge};
   position: relative;
   transition: all 300ms;
-  background-color: ${({ theme }) => theme.colors.neutral.textWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.backgroundStrong};
   width: ${({ size }) => SIZES[size].width}px;
   height: ${({ size }) => SIZES[size].height}px;
 
@@ -43,7 +43,7 @@ const StyledToggle = styled.div<{
     width: ${({ size }) => SIZES[size].ball}px;
     height: ${({ size }) => SIZES[size].ball}px;
     border-radius: ${({ theme }) => theme.radii.circle};
-    background-color: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    background-color: ${({ theme }) => theme.colors.neutral.background};
     transition: all 300ms;
   }
 
@@ -72,7 +72,7 @@ const StyledToggle = styled.div<{
   }
 
   &[data-disabled='true'] {
-    background: ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    background: ${({ theme }) => theme.colors.neutral.backgroundStrongDisabled};
 
     &[data-checked='true'] {
       background: ${({ theme }) =>

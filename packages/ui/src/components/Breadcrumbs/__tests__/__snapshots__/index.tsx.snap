@@ -12,24 +12,24 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.cache-1jj0zdz-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
-  color: #b2b6c3;
+.cache-1jj0zdz-ItemContainer[aria-current='page'] {
+  color: #6d717c;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.cache-1jj0zdz-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-eitll2-StyledLink {
+.cache-4r3arx-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
-  color: #390171;
+  color: #521094;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -63,39 +63,39 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
   text-case: none;
 }
 
-.cache-eitll2-StyledLink .e1afnb7a2 {
+.cache-4r3arx-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-eitll2-StyledLink>* {
+.cache-4r3arx-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-eitll2-StyledLink:hover,
-.cache-eitll2-StyledLink:focus {
+.cache-4r3arx-StyledLink:hover,
+.cache-4r3arx-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #390171;
-  text-decoration-color: #390171;
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
-.cache-eitll2-StyledLink:hover .e1afnb7a2,
-.cache-eitll2-StyledLink:focus .e1afnb7a2 {
+.cache-4r3arx-StyledLink:hover .e1afnb7a2,
+.cache-4r3arx-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-eitll2-StyledLink:hover::after,
-.cache-eitll2-StyledLink:focus::after {
-  background-color: #390171;
+.cache-4r3arx-StyledLink:hover::after,
+.cache-4r3arx-StyledLink:focus::after {
+  background-color: #521094;
 }
 
-.cache-eitll2-StyledLink:active {
+.cache-4r3arx-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -107,10 +107,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1"
         >
           Step 1
@@ -118,10 +118,10 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -130,7 +130,7 @@ exports[`Breadcrumbs renders correctly with default values 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         Step 3
       </li>
@@ -175,24 +175,24 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.cache-1jj0zdz-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
-  color: #b2b6c3;
+.cache-1jj0zdz-ItemContainer[aria-current='page'] {
+  color: #6d717c;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.cache-1jj0zdz-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-eitll2-StyledLink {
+.cache-4r3arx-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
-  color: #390171;
+  color: #521094;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -226,57 +226,57 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
   text-case: none;
 }
 
-.cache-eitll2-StyledLink .e1afnb7a2 {
+.cache-4r3arx-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-eitll2-StyledLink>* {
+.cache-4r3arx-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-eitll2-StyledLink:hover,
-.cache-eitll2-StyledLink:focus {
+.cache-4r3arx-StyledLink:hover,
+.cache-4r3arx-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #390171;
-  text-decoration-color: #390171;
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
-.cache-eitll2-StyledLink:hover .e1afnb7a2,
-.cache-eitll2-StyledLink:focus .e1afnb7a2 {
+.cache-4r3arx-StyledLink:hover .e1afnb7a2,
+.cache-4r3arx-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-eitll2-StyledLink:hover::after,
-.cache-eitll2-StyledLink:focus::after {
-  background-color: #390171;
+.cache-4r3arx-StyledLink:hover::after,
+.cache-4r3arx-StyledLink:focus::after {
+  background-color: #521094;
 }
 
-.cache-eitll2-StyledLink:active {
+.cache-4r3arx-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
-.cache-12l1cwf-ItemContainer {
+.cache-1ju0tfe-ItemContainer {
   display: inline;
   cursor: pointer;
 }
 
-.cache-12l1cwf-ItemContainer[aria-current='page'] {
-  color: #b2b6c3;
+.cache-1ju0tfe-ItemContainer[aria-current='page'] {
+  color: #6d717c;
 }
 
-.cache-12l1cwf-ItemContainer:not(:last-child)::after {
+.cache-1ju0tfe-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-12l1cwf-ItemContainer[aria-disabled="true"] {
+.cache-1ju0tfe-ItemContainer[aria-disabled="true"] {
   pointer-events: none;
 }
 
@@ -288,10 +288,10 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1"
         >
           Step 1
@@ -299,10 +299,10 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -311,7 +311,7 @@ exports[`Breadcrumbs renders correctly with onClick 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-12l1cwf-ItemContainer ej0p0s40"
+        class="cache-1ju0tfe-ItemContainer ej0p0s40"
       >
         Step 3
       </li>
@@ -332,24 +332,24 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   display: flex;
 }
 
-.cache-3z78jo-ItemContainer {
+.cache-1jj0zdz-ItemContainer {
   display: inline;
 }
 
-.cache-3z78jo-ItemContainer[aria-current='page'] {
-  color: #b2b6c3;
+.cache-1jj0zdz-ItemContainer[aria-current='page'] {
+  color: #6d717c;
 }
 
-.cache-3z78jo-ItemContainer:not(:last-child)::after {
+.cache-1jj0zdz-ItemContainer:not(:last-child)::after {
   content: '›';
   margin: 0 8px;
 }
 
-.cache-eitll2-StyledLink {
+.cache-4r3arx-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
-  color: #390171;
+  color: #521094;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -383,39 +383,39 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
   text-case: none;
 }
 
-.cache-eitll2-StyledLink .e1afnb7a2 {
+.cache-4r3arx-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-eitll2-StyledLink>* {
+.cache-4r3arx-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-eitll2-StyledLink:hover,
-.cache-eitll2-StyledLink:focus {
+.cache-4r3arx-StyledLink:hover,
+.cache-4r3arx-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  color: #390171;
-  text-decoration-color: #390171;
+  color: #521094;
+  text-decoration-color: #521094;
 }
 
-.cache-eitll2-StyledLink:hover .e1afnb7a2,
-.cache-eitll2-StyledLink:focus .e1afnb7a2 {
+.cache-4r3arx-StyledLink:hover .e1afnb7a2,
+.cache-4r3arx-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-eitll2-StyledLink:hover::after,
-.cache-eitll2-StyledLink:focus::after {
-  background-color: #390171;
+.cache-4r3arx-StyledLink:hover::after,
+.cache-4r3arx-StyledLink:focus::after {
+  background-color: #521094;
 }
 
-.cache-eitll2-StyledLink:active {
+.cache-4r3arx-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -427,10 +427,10 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
     >
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1"
         >
           Step 1
@@ -439,10 +439,10 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       <li
         aria-current="page"
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         <a
-          class="cache-eitll2-StyledLink e1afnb7a0"
+          class="cache-4r3arx-StyledLink e1afnb7a0"
           href="/step1/step2"
         >
           I'm a very long... long long step
@@ -450,7 +450,7 @@ exports[`Breadcrumbs renders correctly with selected item 1`] = `
       </li>
       <li
         aria-disabled="false"
-        class="cache-3z78jo-ItemContainer ej0p0s40"
+        class="cache-1jj0zdz-ItemContainer ej0p0s40"
       >
         Step 3
       </li>

@@ -6,36 +6,59 @@ exports[`CopyButton renders correctly 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -54,7 +77,7 @@ exports[`CopyButton renders correctly 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-16ljkze-StyledButton e1qa6uyd0"
+      class="cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -76,36 +99,59 @@ exports[`CopyButton renders correctly sentiment large 1`] = `
   display: inherit;
 }
 
-.cache-r06x4m-StyledButton {
-  width: 48px;
+.cache-vohia9-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 48px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 48px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-r06x4m-StyledButton:hover {
-  background: #eeeeff;
+.cache-vohia9-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-r06x4m-StyledButtonactive,
-.cache-r06x4m-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-vohia9-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-vohia9-StyledOutlinedButton:hover,
+.cache-vohia9-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -124,7 +170,7 @@ exports[`CopyButton renders correctly sentiment large 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-r06x4m-StyledButton e1qa6uyd0"
+      class="cache-vohia9-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -146,36 +192,59 @@ exports[`CopyButton renders correctly sentiment neutral 1`] = `
   display: inherit;
 }
 
-.cache-xsw6vc-StyledButton {
-  width: 32px;
+.cache-t9d6gd-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: 1px solid #d4dae7;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #b5b7bd;
+  color: #464959;
 }
 
-.cache-xsw6vc-StyledButton:hover {
-  background: #e6e9f0;
+.cache-t9d6gd-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-xsw6vc-StyledButtonactive,
-.cache-xsw6vc-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-t9d6gd-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-t9d6gd-StyledOutlinedButton:hover,
+.cache-t9d6gd-StyledOutlinedButton:active {
+  background: #d9dadd;
+  color: #222638;
+  border: 1px solid #92959d;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -194,7 +263,7 @@ exports[`CopyButton renders correctly sentiment neutral 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-xsw6vc-StyledButton e1qa6uyd0"
+      class="cache-t9d6gd-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -216,36 +285,59 @@ exports[`CopyButton renders correctly sentiment primary 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -264,7 +356,7 @@ exports[`CopyButton renders correctly sentiment primary 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-16ljkze-StyledButton e1qa6uyd0"
+      class="cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -286,36 +378,59 @@ exports[`CopyButton renders correctly sentiment small 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -334,7 +449,7 @@ exports[`CopyButton renders correctly sentiment small 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-16ljkze-StyledButton e1qa6uyd0"
+      class="cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -356,36 +471,59 @@ exports[`CopyButton renders correctly with custom class name 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -404,7 +542,7 @@ exports[`CopyButton renders correctly with custom class name 1`] = `
   >
     <button
       aria-label="Copy"
-      class="custom-class cache-16ljkze-StyledButton e1qa6uyd0"
+      class="custom-class cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -426,36 +564,59 @@ exports[`CopyButton renders correctly with custom copied text 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -474,7 +635,7 @@ exports[`CopyButton renders correctly with custom copied text 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-16ljkze-StyledButton e1qa6uyd0"
+      class="cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -496,36 +657,59 @@ exports[`CopyButton renders correctly with custom copy text 1`] = `
   display: inherit;
 }
 
-.cache-16ljkze-StyledButton {
-  width: 32px;
+.cache-1nzb78i-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: 1px solid #4f0599;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #521094;
+  color: #521094;
 }
 
-.cache-16ljkze-StyledButton:hover {
-  background: #eeeeff;
+.cache-1nzb78i-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-16ljkze-StyledButtonactive,
-.cache-16ljkze-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-1nzb78i-StyledOutlinedButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1nzb78i-StyledOutlinedButton:hover,
+.cache-1nzb78i-StyledOutlinedButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+  border: 1px solid #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -544,7 +728,7 @@ exports[`CopyButton renders correctly with custom copy text 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-16ljkze-StyledButton e1qa6uyd0"
+      class="cache-1nzb78i-StyledOutlinedButton e112qvla1"
       type="button"
     >
       <svg
@@ -566,36 +750,58 @@ exports[`CopyButton renders correctly with no border 1`] = `
   display: inherit;
 }
 
-.cache-1gy37wj-StyledButton {
-  width: 32px;
+.cache-u0f27u-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4f0599;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #521094;
 }
 
-.cache-1gy37wj-StyledButton:hover {
-  background: #eeeeff;
+.cache-u0f27u-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1gy37wj-StyledButtonactive,
-.cache-1gy37wj-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-u0f27u-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-u0f27u-StyledGhostButton:hover,
+.cache-u0f27u-StyledGhostButton:active {
+  background: #e5dbfd;
+  color: #3b1a61;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -614,7 +820,7 @@ exports[`CopyButton renders correctly with no border 1`] = `
   >
     <button
       aria-label="Copy"
-      class="cache-1gy37wj-StyledButton e1qa6uyd0"
+      class="cache-u0f27u-StyledGhostButton e112qvla0"
       type="button"
     >
       <svg

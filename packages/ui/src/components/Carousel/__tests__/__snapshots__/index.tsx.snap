@@ -22,23 +22,21 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
 }
 
-.cache-1khe6nh-StyledScrollableWrapper {
+.cache-i20cm0-StyledScrollableWrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-bottom: 16px;
+  padding: 16px 100px;
 }
 
-.cache-1khe6nh-StyledScrollableWrapper>*:not(:last-child) {
+.cache-i20cm0-StyledScrollableWrapper>*:not(:last-child) {
   margin-right: 16px;
 }
 
-.cache-3tra8z-StyledBorderWrapper {
+.cache-ycjjoa-StyledBorderWrapper {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #d4dae7;
+  border: 1px solid #e9eaeb;
   height: 261px;
   width: 248px;
   max-width: 240px;
@@ -48,20 +46,20 @@ exports[`Carousel renders correctly with default props 1`] = `
   cursor: grab;
 }
 
-.cache-3tra8z-StyledBorderWrapper:hover,
-.cache-3tra8z-StyledBorderWrapper:active,
-.cache-3tra8z-StyledBorderWrapper:focus {
-  border: 1px solid #390171;
+.cache-ycjjoa-StyledBorderWrapper:hover,
+.cache-ycjjoa-StyledBorderWrapper:active,
+.cache-ycjjoa-StyledBorderWrapper:focus {
+  border: 1px solid #521094;
   -webkit-transition: box-shadow 0.2s ease;
   transition: box-shadow 0.2s ease;
-  box-shadow: 0px 0px 0px 3px #4F059940;
+  box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-3tra8z-StyledBorderWrapper img {
+.cache-ycjjoa-StyledBorderWrapper img {
   border-radius: 4px 4px 0 0;
 }
 
-.cache-w86y5s-StyledAfterScroll {
+.cache-ssn91a-StyledAfterScroll {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -72,7 +70,7 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
   background: linear-gradient(
       -90deg,
-      #ffffff,
+      #f9f9fa,
       rgba(255, 255, 255, 0)
     );
 }
@@ -86,48 +84,48 @@ exports[`Carousel renders correctly with default props 1`] = `
       data-testid="scrollbar-before"
     />
     <div
-      class="cache-1khe6nh-StyledScrollableWrapper e1id70w02"
+      class="cache-i20cm0-StyledScrollableWrapper e1id70w02"
       data-testid="scrollbar-wrapper"
     >
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 1
       </div>
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 2
       </div>
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 3
       </div>
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 4
       </div>
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 5
       </div>
       <div
-        class="cache-3tra8z-StyledBorderWrapper e1id70w00"
+        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 6
       </div>
     </div>
     <span
-      class="cache-w86y5s-StyledAfterScroll e1id70w01"
+      class="cache-ssn91a-StyledAfterScroll e1id70w01"
       data-testid="scrollbar-after"
     />
   </div>

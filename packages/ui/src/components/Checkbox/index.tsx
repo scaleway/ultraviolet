@@ -15,7 +15,7 @@ import { Text } from '../Text'
 
 const InnerCheckbox = styled.rect`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  stroke: ${({ theme }) => theme.colors.neutral.textWeak};
+  stroke: ${({ theme }) => theme.colors.neutral.borderStrong};
 `
 
 const CheckMark = styled.rect``
@@ -131,10 +131,10 @@ const CheckboxContainer = styled.div`
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
     ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.neutral.textDisabled};
+      fill: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.neutral.textDisabled};
+        stroke: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
     }

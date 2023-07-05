@@ -2,7 +2,7 @@
 
 exports[`Snippet renders correctly 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13,7 +13,7 @@ exports[`Snippet renders correctly 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -41,8 +41,8 @@ exports[`Snippet renders correctly 1`] = `
   width: 100%;
 }
 
-.cache-10p8wxu-StyledText-PreText {
-  color: #4a4f62;
+.cache-6zujex-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -70,51 +70,73 @@ exports[`Snippet renders correctly 1`] = `
   padding-right: 64px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -127,13 +149,13 @@ exports[`Snippet renders correctly 1`] = `
 }
 
 <div
-    class="cache-108ghl6-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
     >
       <pre
-        class="e1q0gj908 cache-10p8wxu-StyledText-PreText e13y3mga0"
+        class="e1q0gj908 cache-6zujex-StyledText-PreText e13y3mga0"
       >
         <span
           class="cache-1e05ne7-StyledSpan e1q0gj907"
@@ -142,7 +164,7 @@ exports[`Snippet renders correctly 1`] = `
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r1:"
@@ -151,7 +173,7 @@ exports[`Snippet renders correctly 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -172,7 +194,7 @@ exports[`Snippet renders correctly 1`] = `
 
 exports[`Snippet renders correctly in multiline  1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -184,7 +206,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -220,8 +242,8 @@ exports[`Snippet renders correctly in multiline  1`] = `
   max-height: 120px;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -248,12 +270,12 @@ exports[`Snippet renders correctly in multiline  1`] = `
   padding: 32px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -262,36 +284,58 @@ exports[`Snippet renders correctly in multiline  1`] = `
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -303,9 +347,9 @@ exports[`Snippet renders correctly in multiline  1`] = `
   min-height: 16px;
 }
 
-.cache-1qk694q-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -317,8 +361,8 @@ exports[`Snippet renders correctly in multiline  1`] = `
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -358,7 +402,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -367,7 +411,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         class="cache-1ou0y3f-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
             class="cache-bsg2e2-StyledSpan e1q0gj907"
@@ -402,7 +446,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r3:"
@@ -411,7 +455,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -426,7 +470,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
         </div>
       </div>
       <div
-        class="cache-1qk694q-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -434,7 +478,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Show 
             <svg
@@ -455,7 +499,7 @@ exports[`Snippet renders correctly in multiline  1`] = `
 
 exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -467,7 +511,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -503,8 +547,8 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   max-height: 120px;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -522,17 +566,17 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   counter-reset: section;
 }
 
-.cache-13sh0rb-StyledSpan {
+.cache-1o0l5sl-StyledSpan {
   display: block;
 }
 
-.cache-13sh0rb-StyledSpan:after {
+.cache-1o0l5sl-StyledSpan:after {
   content: '';
   padding: 32px;
 }
 
-.cache-13sh0rb-StyledSpan:before {
-  color: #b2b6c3;
+.cache-1o0l5sl-StyledSpan:before {
+  color: #6d717c;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -546,12 +590,12 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -560,36 +604,58 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -601,9 +667,9 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   min-height: 16px;
 }
 
-.cache-1qk694q-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -615,8 +681,8 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -656,7 +722,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -665,42 +731,42 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         class="cache-1ou0y3f-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="cache-13sh0rb-StyledSpan e1q0gj907"
+            class="cache-1o0l5sl-StyledSpan e1q0gj907"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r9:"
@@ -709,7 +775,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -724,7 +790,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
         </div>
       </div>
       <div
-        class="cache-1qk694q-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -732,7 +798,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Show 
             <svg
@@ -753,7 +819,7 @@ exports[`Snippet renders correctly in multiline with prefix command 1`] = `
 
 exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -765,7 +831,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -801,8 +867,8 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   max-height: 120px;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -820,17 +886,17 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   counter-reset: section;
 }
 
-.cache-5snhyo-StyledSpan {
+.cache-12v4ovf-StyledSpan {
   display: block;
 }
 
-.cache-5snhyo-StyledSpan:after {
+.cache-12v4ovf-StyledSpan:after {
   content: '';
   padding: 32px;
 }
 
-.cache-5snhyo-StyledSpan:before {
-  color: #b2b6c3;
+.cache-12v4ovf-StyledSpan:before {
+  color: #6d717c;
   width: 35px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -845,12 +911,12 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   padding-right: 8px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -859,36 +925,58 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -900,9 +988,9 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   min-height: 16px;
 }
 
-.cache-1qk694q-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -914,8 +1002,8 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -955,7 +1043,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -964,42 +1052,42 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         class="cache-1ou0y3f-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </span>
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </span>
           <span
-            class="cache-5snhyo-StyledSpan e1q0gj907"
+            class="cache-12v4ovf-StyledSpan e1q0gj907"
           >
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </span>
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":r6:"
@@ -1008,7 +1096,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1023,7 +1111,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
         </div>
       </div>
       <div
-        class="cache-1qk694q-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1031,7 +1119,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Show 
             <svg
@@ -1052,7 +1140,7 @@ exports[`Snippet renders correctly in multiline with prefix lines number 1`] = `
 
 exports[`Snippet renders correctly with copiedText 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1063,7 +1151,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1091,8 +1179,8 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   width: 100%;
 }
 
-.cache-10p8wxu-StyledText-PreText {
-  color: #4a4f62;
+.cache-6zujex-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -1120,51 +1208,73 @@ exports[`Snippet renders correctly with copiedText 1`] = `
   padding-right: 64px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1177,13 +1287,13 @@ exports[`Snippet renders correctly with copiedText 1`] = `
 }
 
 <div
-    class="cache-108ghl6-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
     >
       <pre
-        class="e1q0gj908 cache-10p8wxu-StyledText-PreText e13y3mga0"
+        class="e1q0gj908 cache-6zujex-StyledText-PreText e13y3mga0"
       >
         <span
           class="cache-1e05ne7-StyledSpan e1q0gj907"
@@ -1192,7 +1302,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":ri:"
@@ -1201,7 +1311,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1222,7 +1332,7 @@ exports[`Snippet renders correctly with copiedText 1`] = `
 
 exports[`Snippet renders correctly with copyText 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1233,7 +1343,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1261,8 +1371,8 @@ exports[`Snippet renders correctly with copyText 1`] = `
   width: 100%;
 }
 
-.cache-10p8wxu-StyledText-PreText {
-  color: #4a4f62;
+.cache-6zujex-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -1290,51 +1400,73 @@ exports[`Snippet renders correctly with copyText 1`] = `
   padding-right: 64px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1347,13 +1479,13 @@ exports[`Snippet renders correctly with copyText 1`] = `
 }
 
 <div
-    class="cache-108ghl6-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
     >
       <pre
-        class="e1q0gj908 cache-10p8wxu-StyledText-PreText e13y3mga0"
+        class="e1q0gj908 cache-6zujex-StyledText-PreText e13y3mga0"
       >
         <span
           class="cache-1e05ne7-StyledSpan e1q0gj907"
@@ -1362,7 +1494,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rg:"
@@ -1371,7 +1503,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1392,7 +1524,7 @@ exports[`Snippet renders correctly with copyText 1`] = `
 
 exports[`Snippet renders correctly with hideText 1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1404,7 +1536,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1440,8 +1572,8 @@ exports[`Snippet renders correctly with hideText 1`] = `
   max-height: 120px;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -1468,12 +1600,12 @@ exports[`Snippet renders correctly with hideText 1`] = `
   padding: 32px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -1482,36 +1614,58 @@ exports[`Snippet renders correctly with hideText 1`] = `
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1523,9 +1677,9 @@ exports[`Snippet renders correctly with hideText 1`] = `
   min-height: 16px;
 }
 
-.cache-1qk694q-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -1537,8 +1691,8 @@ exports[`Snippet renders correctly with hideText 1`] = `
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -1578,7 +1732,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1587,7 +1741,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         class="cache-1ou0y3f-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
             class="cache-bsg2e2-StyledSpan e1q0gj907"
@@ -1622,7 +1776,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rk:"
@@ -1631,7 +1785,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1646,7 +1800,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
         </div>
       </div>
       <div
-        class="cache-1qk694q-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1654,7 +1808,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Show 
             <svg
@@ -1675,7 +1829,7 @@ exports[`Snippet renders correctly with hideText 1`] = `
 
 exports[`Snippet renders correctly with showText 1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1687,7 +1841,7 @@ exports[`Snippet renders correctly with showText 1`] = `
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1723,8 +1877,8 @@ exports[`Snippet renders correctly with showText 1`] = `
   max-height: 120px;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -1751,12 +1905,12 @@ exports[`Snippet renders correctly with showText 1`] = `
   padding: 32px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -1765,36 +1919,58 @@ exports[`Snippet renders correctly with showText 1`] = `
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -1806,9 +1982,9 @@ exports[`Snippet renders correctly with showText 1`] = `
   min-height: 16px;
 }
 
-.cache-1qk694q-ShowMoreContainer {
+.cache-98uomi-ShowMoreContainer {
   width: 100%;
-  box-shadow: 0px -22px 19px -6px #f6f6f8;
+  box-shadow: 0px -22px 19px -6px #f9f9fa;
 }
 
 .cache-eg7v1i-StyledButton {
@@ -1820,8 +1996,8 @@ exports[`Snippet renders correctly with showText 1`] = `
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -1861,7 +2037,7 @@ exports[`Snippet renders correctly with showText 1`] = `
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -1870,7 +2046,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         class="cache-1ou0y3f-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
             class="cache-bsg2e2-StyledSpan e1q0gj907"
@@ -1905,7 +2081,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rn:"
@@ -1914,7 +2090,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -1929,7 +2105,7 @@ exports[`Snippet renders correctly with showText 1`] = `
         </div>
       </div>
       <div
-        class="cache-1qk694q-ShowMoreContainer e1q0gj903"
+        class="cache-98uomi-ShowMoreContainer e1q0gj903"
       >
         <button
           aria-expanded="false"
@@ -1937,7 +2113,7 @@ exports[`Snippet renders correctly with showText 1`] = `
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Test 
             <svg
@@ -1958,7 +2134,7 @@ exports[`Snippet renders correctly with showText 1`] = `
 
 exports[`Snippet renders correctly with single line with prefix command 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1969,7 +2145,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -1997,8 +2173,8 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   width: 100%;
 }
 
-.cache-10p8wxu-StyledText-PreText {
-  color: #4a4f62;
+.cache-6zujex-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2017,17 +2193,17 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   counter-reset: section;
 }
 
-.cache-1v2261c-StyledSpan {
+.cache-hry8i2-StyledSpan {
   display: block;
 }
 
-.cache-1v2261c-StyledSpan:after {
+.cache-hry8i2-StyledSpan:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-1v2261c-StyledSpan:before {
-  color: #b2b6c3;
+.cache-hry8i2-StyledSpan:before {
+  color: #6d717c;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2041,51 +2217,73 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
   padding-right: 8px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2098,22 +2296,22 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
 }
 
 <div
-    class="cache-108ghl6-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
     >
       <pre
-        class="e1q0gj908 cache-10p8wxu-StyledText-PreText e13y3mga0"
+        class="e1q0gj908 cache-6zujex-StyledText-PreText e13y3mga0"
       >
         <span
-          class="cache-1v2261c-StyledSpan e1q0gj907"
+          class="cache-hry8i2-StyledSpan e1q0gj907"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rc:"
@@ -2122,7 +2320,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -2143,7 +2341,7 @@ exports[`Snippet renders correctly with single line with prefix command 1`] = `
 
 exports[`Snippet renders correctly with single line with prefix lines number 1`] = `
 <DocumentFragment>
-  .cache-108ghl6-Container {
+  .cache-1rjf9yl-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2154,7 +2352,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   -webkit-justify-content: start;
   justify-content: start;
   max-width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -2182,8 +2380,8 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   width: 100%;
 }
 
-.cache-10p8wxu-StyledText-PreText {
-  color: #4a4f62;
+.cache-6zujex-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2202,17 +2400,17 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   counter-reset: section;
 }
 
-.cache-a6s7lw-StyledSpan {
+.cache-kxb5at-StyledSpan {
   display: block;
 }
 
-.cache-a6s7lw-StyledSpan:after {
+.cache-kxb5at-StyledSpan:after {
   content: '';
   padding-right: 64px;
 }
 
-.cache-a6s7lw-StyledSpan:before {
-  color: #b2b6c3;
+.cache-kxb5at-StyledSpan:before {
+  color: #6d717c;
   width: 35px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2227,51 +2425,73 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
   padding-right: 8px;
 }
 
-.cache-o452sh-ButtonContainer {
+.cache-1eagt2o-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 8px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
-  box-shadow: -27px 0 19px -11px #f6f6f8;
+  box-shadow: -27px 0 19px -11px #f9f9fa;
 }
 
 .cache-yb56yg-StyledChildrenContainer {
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2284,22 +2504,22 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
 }
 
 <div
-    class="cache-108ghl6-Container e1q0gj906"
+    class="cache-1rjf9yl-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
     >
       <pre
-        class="e1q0gj908 cache-10p8wxu-StyledText-PreText e13y3mga0"
+        class="e1q0gj908 cache-6zujex-StyledText-PreText e13y3mga0"
       >
         <span
-          class="cache-a6s7lw-StyledSpan e1q0gj907"
+          class="cache-kxb5at-StyledSpan e1q0gj907"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </span>
       </pre>
       <div
-        class="cache-o452sh-ButtonContainer e1q0gj904"
+        class="cache-1eagt2o-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":re:"
@@ -2308,7 +2528,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -2329,7 +2549,7 @@ exports[`Snippet renders correctly with single line with prefix lines number 1`]
 
 exports[`Snippet should click on extend button to display full content on  1`] = `
 <DocumentFragment>
-  .cache-1qdkdz-Container {
+  .cache-358s5-Container {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2341,7 +2561,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   justify-content: start;
   max-width: 100%;
   width: 100%;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
 }
 
@@ -2377,8 +2597,8 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   max-height: initial;
 }
 
-.cache-1r11idl-StyledText-PreText {
-  color: #4a4f62;
+.cache-19osgyv-StyledText-PreText {
+  color: #464959;
   font-size: 14px;
   font-family: JetBrains;
   font-weight: 400;
@@ -2405,12 +2625,12 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   padding: 32px;
 }
 
-.cache-l8v6uo-ButtonContainer {
+.cache-z90995-ButtonContainer {
   position: absolute;
   top: 0;
   right: 0;
   padding: 16px 16px 0 0;
-  background: #f6f6f8;
+  background: #f9f9fa;
   border-radius: 4px;
   border: 2px solid transparent;
 }
@@ -2419,36 +2639,58 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   display: inherit;
 }
 
-.cache-1nnm9m7-StyledButton {
-  width: 32px;
+.cache-er8ccd-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
-  background: transparent;
-  color: #4a4f62;
-  border: none;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
+  box-sizing: border-box;
+  width: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  outline: none;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #464959;
 }
 
-.cache-1nnm9m7-StyledButton:hover {
-  background: #e6e9f0;
+.cache-er8ccd-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-.cache-1nnm9m7-StyledButtonactive,
-.cache-1nnm9m7-StyledButton:focus {
-  box-shadow: 0px 0px 0px 3px #4F059940;
+.cache-er8ccd-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-er8ccd-StyledGhostButton:hover,
+.cache-er8ccd-StyledGhostButton:active {
+  background: #d9dadd;
+  color: #222638;
 }
 
 .cache-kbjega-StyledIcon-sizeStyles {
@@ -2474,8 +2716,8 @@ exports[`Snippet should click on extend button to display full content on  1`] =
   cursor: pointer;
 }
 
-.cache-iqmg74-StyledText-AlignCenterText {
-  color: #4a4f62;
+.cache-1ql92xg-StyledText-AlignCenterText {
+  color: #464959;
   font-size: 14px;
   font-family: Asap;
   font-weight: 500;
@@ -2515,7 +2757,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
 }
 
 <div
-    class="cache-1qdkdz-Container e1q0gj906"
+    class="cache-358s5-Container e1q0gj906"
   >
     <div
       class="cache-cf30m9-Stack-StyledStack e1q0gj905"
@@ -2524,7 +2766,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         class="cache-rk9ngy-StyledExpandable e5hc7t70"
       >
         <pre
-          class="e1q0gj908 cache-1r11idl-StyledText-PreText e13y3mga0"
+          class="e1q0gj908 cache-19osgyv-StyledText-PreText e13y3mga0"
         >
           <span
             class="cache-bsg2e2-StyledSpan e1q0gj907"
@@ -2559,7 +2801,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         </pre>
       </div>
       <div
-        class="cache-l8v6uo-ButtonContainer e1q0gj904"
+        class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
           aria-describedby=":rq:"
@@ -2568,7 +2810,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         >
           <button
             aria-label="Copy"
-            class="cache-1nnm9m7-StyledButton e1qa6uyd0"
+            class="cache-er8ccd-StyledGhostButton e112qvla0"
             type="button"
           >
             <svg
@@ -2591,7 +2833,7 @@ exports[`Snippet should click on extend button to display full content on  1`] =
           type="button"
         >
           <span
-            class="e1q0gj901 cache-iqmg74-StyledText-AlignCenterText e13y3mga0"
+            class="e1q0gj901 cache-1ql92xg-StyledText-AlignCenterText e13y3mga0"
           >
             Hide 
             <svg

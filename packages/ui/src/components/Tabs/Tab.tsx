@@ -25,7 +25,9 @@ const BadgeContainer = styled.span`
   display: flex;
 `
 
-export const StyledTabButton = styled.button`
+export const StyledTabButton = styled('button', {
+  shouldForwardProp: prop => !['isSelected'].includes(prop),
+})<{ isSelected?: boolean }>`
   display: flex;
   flex-direction: row;
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
@@ -42,7 +44,7 @@ export const StyledTabButton = styled.button`
   background: none;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  border-bottom-color: ${({ theme }) => theme.colors.neutral.border};
   outline: none;
 
   font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
@@ -74,10 +76,16 @@ export const StyledTabButton = styled.button`
       outline: none;
       color: ${({ theme }) => theme.colors.primary.text};
       border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
+
       ${StyledBadge} {
-        background-color: ${({ theme }) => theme.colors.primary.background};
-        border-color: ${({ theme }) => theme.colors.primary.background};
-        color: ${({ theme }) => theme.colors.primary.text};
+        ${({ isSelected, theme }) =>
+          !isSelected
+            ? `
+          background-color: ${theme.colors.primary.background};
+          border-color: ${theme.colors.primary.background};
+          color: ${theme.colors.primary.text};
+      `
+            : null}
       }
     }
   }
@@ -158,13 +166,14 @@ export const Tab = forwardRef(
             onKeyDown?.(event)
             if (!event.defaultPrevented && !disabled && value) onChange(value)
           }}
+          isSelected={isSelected}
           {...props}
         >
           {children}
           {typeof counter === 'number' || typeof counter === 'string' ? (
             <StyledBadge
               sentiment={isSelected ? 'primary' : 'neutral'}
-              prominence={isSelected ? 'default' : 'strong'}
+              prominence={isSelected ? 'strong' : 'default'}
               size="medium"
             >
               {counter}

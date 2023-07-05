@@ -1,4 +1,5 @@
 import { darkTheme } from './dark'
+import { darkerTheme } from './darker'
 import { lightTheme } from './light'
 
 const screens = {
@@ -17,4 +18,9 @@ export const consoleLightTheme = {
 export const consoleDarkTheme = {
   screens,
   ...darkTheme,
+}
+
+export const consoleDarkerTheme = {
+  screens,
+  ...darkerTheme,
 }
