@@ -73,7 +73,7 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   display: none;
 }
 
-.cache-7sj1ia-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,115 +115,41 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
   line-height: 24px;
 }
 
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-7sj1ia-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1m0c41a-StyledTabButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #464959;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.cache-1m0c41a-StyledTabButton:hover,
-.cache-1m0c41a-StyledTabButton:active,
-.cache-1m0c41a-StyledTabButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1m0c41a-StyledTabButton:focus-visible {
-  outline: auto;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-selected='true'] {
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-disabled='true'],
-.cache-1m0c41a-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -236,8 +162,8 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -247,8 +173,8 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
       aria-disabled="false"
       aria-label="1"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -258,8 +184,8 @@ exports[`Tabs renders correctly with Tabs and last disabled 1`] = `
       aria-disabled="true"
       aria-label="2"
       aria-selected="true"
-      as="button"
-      class="cache-1m0c41a-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="true"
       disabled=""
       role="tab"
       type="button"
@@ -303,7 +229,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   display: none;
 }
 
-.cache-7sj1ia-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -345,47 +271,47 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   line-height: 24px;
 }
 
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-7sj1ia-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu {
+.cache-kev97a-StyledTabButton-StyledMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -427,54 +353,54 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
   line-height: 24px;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:hover,
-.cache-14imb1b-StyledTabButton-StyledMenu:active,
-.cache-14imb1b-StyledTabButton-StyledMenu:focus {
+.cache-kev97a-StyledTabButton-StyledMenu:hover,
+.cache-kev97a-StyledTabButton-StyledMenu:active,
+.cache-kev97a-StyledTabButton-StyledMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:focus-visible {
+.cache-kev97a-StyledTabButton-StyledMenu:focus-visible {
   outline: auto;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-selected='true'] {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='true'],
-.cache-14imb1b-StyledTabButton-StyledMenu:disabled {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-kev97a-StyledTabButton-StyledMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu .edb1sh91 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -497,8 +423,8 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -508,8 +434,8 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-label="1"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -519,8 +445,8 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-label="2"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -531,7 +457,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="false"
       aria-expanded="true"
       aria-haspopup="dialog"
-      class="cache-14imb1b-StyledTabButton-StyledMenu edb1sh90"
+      class="cache-kev97a-StyledTabButton-StyledMenu edb1sh90"
       role="tab"
       type="button"
     >
@@ -550,7 +476,7 @@ exports[`Tabs renders correctly with Tabs menu selected 1`] = `
       aria-disabled="true"
       aria-expanded="false"
       aria-haspopup="dialog"
-      class="cache-14imb1b-StyledTabButton-StyledMenu edb1sh90"
+      class="cache-kev97a-StyledTabButton-StyledMenu edb1sh90"
       disabled=""
       role="tab"
       type="button"
@@ -801,7 +727,7 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   display: none;
 }
 
-.cache-7sj1ia-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -843,115 +769,41 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
   line-height: 24px;
 }
 
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-7sj1ia-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
-.cache-1m0c41a-StyledTabButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #464959;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.cache-1m0c41a-StyledTabButton:hover,
-.cache-1m0c41a-StyledTabButton:active,
-.cache-1m0c41a-StyledTabButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-1m0c41a-StyledTabButton:focus-visible {
-  outline: auto;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-selected='true'] {
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-1m0c41a-StyledTabButton[aria-disabled='true'],
-.cache-1m0c41a-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -965,8 +817,8 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-disabled="false"
       aria-label="first"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -976,8 +828,8 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-disabled="false"
       aria-label="second"
       aria-selected="true"
-      as="button"
-      class="cache-1m0c41a-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="true"
       role="tab"
       type="button"
     >
@@ -987,8 +839,8 @@ exports[`Tabs renders correctly with Tabs name 1`] = `
       aria-disabled="true"
       aria-label="three"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       disabled=""
       role="tab"
       type="button"
@@ -1032,7 +884,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   display: none;
 }
 
-.cache-1m0c41a-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1074,33 +926,41 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   line-height: 24px;
 }
 
-.cache-1m0c41a-StyledTabButton:hover,
-.cache-1m0c41a-StyledTabButton:active,
-.cache-1m0c41a-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1m0c41a-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-disabled='true'],
-.cache-1m0c41a-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  background-color: #ece8fb;
+  border-color: #ece8fb;
+  color: #521094;
+}
+
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -1149,88 +1009,6 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   color: inherit;
 }
 
-.cache-7sj1ia-StyledTabButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #464959;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-7sj1ia-StyledTabButton:focus-visible {
-  outline: auto;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
-  background-color: #ece8fb;
-  border-color: #ece8fb;
-  color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
 .cache-2xo6ya-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1267,7 +1045,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu {
+.cache-kev97a-StyledTabButton-StyledMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1309,54 +1087,54 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   line-height: 24px;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:hover,
-.cache-14imb1b-StyledTabButton-StyledMenu:active,
-.cache-14imb1b-StyledTabButton-StyledMenu:focus {
+.cache-kev97a-StyledTabButton-StyledMenu:hover,
+.cache-kev97a-StyledTabButton-StyledMenu:active,
+.cache-kev97a-StyledTabButton-StyledMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:focus-visible {
+.cache-kev97a-StyledTabButton-StyledMenu:focus-visible {
   outline: auto;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-selected='true'] {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='true'],
-.cache-14imb1b-StyledTabButton-StyledMenu:disabled {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-kev97a-StyledTabButton-StyledMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu .edb1sh91 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -1372,7 +1150,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   min-height: 1em;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1421,54 +1199,54 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   box-shadow: 0px 0px 24px 6px #D9DADD66;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu:hover,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu:active,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu:focus {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu:hover,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu:active,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu:focus-visible {
   outline: auto;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-disabled='true'],
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu .edb1sh91 {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu .edb1sh91 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .edb1sh91 {
+.cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu[aria-expanded='true'] .edb1sh91 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -1482,8 +1260,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="true"
-      as="button"
-      class="cache-1m0c41a-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="true"
       role="tab"
       type="button"
     >
@@ -1504,8 +1282,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-label="1"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1514,8 +1292,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1524,8 +1302,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1546,8 +1324,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-label="2"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1567,8 +1345,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1593,8 +1371,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1608,8 +1386,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1618,8 +1396,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1628,8 +1406,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1638,8 +1416,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1648,8 +1426,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1658,8 +1436,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1668,8 +1446,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1678,8 +1456,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1688,8 +1466,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1698,8 +1476,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1708,8 +1486,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
     <button
       aria-disabled="false"
       aria-selected="false"
-      as="button"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
       type="button"
     >
@@ -1720,7 +1498,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-expanded="false"
       aria-haspopup="dialog"
-      class="cache-14imb1b-StyledTabButton-StyledMenu edb1sh90"
+      class="cache-kev97a-StyledTabButton-StyledMenu edb1sh90"
       role="tab"
       type="button"
     >
@@ -1739,7 +1517,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
       aria-disabled="false"
       aria-expanded="true"
       aria-haspopup="dialog"
-      class="ewug27g1 cache-23uoq2-StyledTabButton-StyledMenu-StyledTabMenu edb1sh90"
+      class="ewug27g1 cache-19zkunp-StyledTabButton-StyledMenu-StyledTabMenu edb1sh90"
       role="tab"
       style="box-shadow: none;"
       type="button"
@@ -1866,7 +1644,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   background-color: transparent;
 }
 
-.cache-1m0c41a-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1908,33 +1686,41 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   line-height: 24px;
 }
 
-.cache-1m0c41a-StyledTabButton:hover,
-.cache-1m0c41a-StyledTabButton:active,
-.cache-1m0c41a-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-1m0c41a-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-1m0c41a-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-1m0c41a-StyledTabButton[aria-disabled='true'],
-.cache-1m0c41a-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  background-color: #ece8fb;
+  border-color: #ece8fb;
+  color: #521094;
+}
+
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -1983,88 +1769,6 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   color: inherit;
 }
 
-.cache-7sj1ia-StyledTabButton {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  padding: 8px 16px;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  white-space: nowrap;
-  color: #464959;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-  border: none;
-  background: none;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: #d9dadd;
-  outline: none;
-  font-size: 16px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 24px;
-}
-
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.cache-7sj1ia-StyledTabButton:focus-visible {
-  outline: auto;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
-  outline: none;
-  color: #521094;
-  border-bottom-color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
-  background-color: #ece8fb;
-  border-color: #ece8fb;
-  color: #521094;
-}
-
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
-  cursor: not-allowed;
-  -webkit-filter: grayscale(1) opacity(50%);
-  filter: grayscale(1) opacity(50%);
-}
-
 .cache-2xo6ya-StyledBox-StyledBadge {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2101,7 +1805,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   display: flex;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu {
+.cache-kev97a-StyledTabButton-StyledMenu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2143,54 +1847,54 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
   line-height: 24px;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:hover,
-.cache-14imb1b-StyledTabButton-StyledMenu:active,
-.cache-14imb1b-StyledTabButton-StyledMenu:focus {
+.cache-kev97a-StyledTabButton-StyledMenu:hover,
+.cache-kev97a-StyledTabButton-StyledMenu:active,
+.cache-kev97a-StyledTabButton-StyledMenu:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu:focus-visible {
+.cache-kev97a-StyledTabButton-StyledMenu:focus-visible {
   outline: auto;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-selected='true'] {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-disabled='true'],
-.cache-14imb1b-StyledTabButton-StyledMenu:disabled {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-disabled='true'],
+.cache-kev97a-StyledTabButton-StyledMenu:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu .edb1sh91 {
   color: inherit;
   margin-left: 8px;
   -webkit-transition: 300ms -webkit-transform ease-out;
   transition: 300ms transform ease-out;
 }
 
-.cache-14imb1b-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
+.cache-kev97a-StyledTabButton-StyledMenu[aria-expanded='true'] .edb1sh91 {
   -webkit-transform: rotate(-180deg);
   -moz-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -2228,8 +1932,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="true"
-            as="button"
-            class="cache-1m0c41a-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="true"
             role="tab"
             type="button"
           >
@@ -2250,8 +1954,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
             aria-disabled="false"
             aria-label="1"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2260,8 +1964,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2270,8 +1974,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2292,8 +1996,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
             aria-disabled="false"
             aria-label="2"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2313,8 +2017,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2339,8 +2043,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2354,8 +2058,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2364,8 +2068,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2374,8 +2078,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2384,8 +2088,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2394,8 +2098,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2404,8 +2108,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2414,8 +2118,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2424,8 +2128,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2434,8 +2138,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2444,8 +2148,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2454,8 +2158,8 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
           <button
             aria-disabled="false"
             aria-selected="false"
-            as="button"
-            class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+            class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+            data-is-selected="false"
             role="tab"
             type="button"
           >
@@ -2466,7 +2170,7 @@ exports[`Tabs renders correctly with Tabs with prop 1`] = `
             aria-disabled="false"
             aria-expanded="false"
             aria-haspopup="dialog"
-            class="cache-14imb1b-StyledTabButton-StyledMenu edb1sh90"
+            class="cache-kev97a-StyledTabButton-StyledMenu edb1sh90"
             role="tab"
             type="button"
           >
@@ -2534,7 +2238,7 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   display: none;
 }
 
-.cache-7sj1ia-StyledTabButton {
+.cache-1ql9t94-StyledTabButton {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2576,41 +2280,194 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
   line-height: 24px;
 }
 
-.cache-7sj1ia-StyledTabButton:hover,
-.cache-7sj1ia-StyledTabButton:active,
-.cache-7sj1ia-StyledTabButton:focus {
+.cache-1ql9t94-StyledTabButton:hover,
+.cache-1ql9t94-StyledTabButton:active,
+.cache-1ql9t94-StyledTabButton:focus {
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
 }
 
-.cache-7sj1ia-StyledTabButton:focus-visible {
+.cache-1ql9t94-StyledTabButton:focus-visible {
   outline: auto;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-selected='true'] {
+.cache-1ql9t94-StyledTabButton[aria-selected='true'] {
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active {
   outline: none;
   color: #521094;
   border-bottom-color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):hover .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):focus .e1hzf7cr3,
-.cache-7sj1ia-StyledTabButton[aria-disabled='false']:not(:disabled):active .e1hzf7cr3 {
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1ql9t94-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
   background-color: #ece8fb;
   border-color: #ece8fb;
   color: #521094;
 }
 
-.cache-7sj1ia-StyledTabButton[aria-disabled='true'],
-.cache-7sj1ia-StyledTabButton:disabled {
+.cache-1ql9t94-StyledTabButton[aria-disabled='true'],
+.cache-1ql9t94-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #005da3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #464959;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d9dadd;
+  outline: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton>* {
+  pointer-events: none;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:hover,
+.cache-1yaafqm-StyledLink-StyledTabButton:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #005da3;
+  text-decoration-color: #005da3;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:hover .e1afnb7a2,
+.cache-1yaafqm-StyledLink-StyledTabButton:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:hover::after,
+.cache-1yaafqm-StyledLink-StyledTabButton:focus::after {
+  background-color: #005da3;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:active {
+  text-decoration-thickness: 2px;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:hover,
+.cache-1yaafqm-StyledLink-StyledTabButton:active,
+.cache-1yaafqm-StyledLink-StyledTabButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-selected='true'] {
+  color: #521094;
+  border-bottom-color: #521094;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #521094;
+  border-bottom-color: #521094;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  background-color: #ece8fb;
+  border-color: #ece8fb;
+  color: #521094;
+}
+
+.cache-1yaafqm-StyledLink-StyledTabButton[aria-disabled='true'],
+.cache-1yaafqm-StyledLink-StyledTabButton:disabled {
   cursor: not-allowed;
   -webkit-filter: grayscale(1) opacity(50%);
   filter: grayscale(1) opacity(50%);
@@ -2620,34 +2477,30 @@ exports[`Tabs renders correctly with custom Tabs component 1`] = `
     class="cache-ixreip-TabsContainer ewug27g0"
     role="tablist"
   >
-    <button
+    <div
       aria-disabled="false"
       aria-selected="false"
-      as="div"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
     >
       First
-    </button>
-    <button
+    </div>
+    <a
       aria-disabled="false"
       aria-selected="false"
-      as="a"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+      class="cache-1ql9t94-StyledTabButton e1hzf7cr0"
+      data-is-selected="false"
       role="tab"
     >
       Second
-    </button>
-    <button
-      aria-disabled="true"
-      aria-selected="false"
-      as="[object Object]"
-      class="cache-7sj1ia-StyledTabButton e1hzf7cr0"
+    </a>
+    <a
+      class="e1hzf7cr0 cache-1yaafqm-StyledLink-StyledTabButton e1afnb7a0"
       href="#"
-      role="tab"
     >
       Very long tab name
-    </button>
+    </a>
   </div>
 </DocumentFragment>
 `;

@@ -25,9 +25,7 @@ const BadgeContainer = styled.span`
   display: flex;
 `
 
-export const StyledTabButton = styled('button', {
-  shouldForwardProp: prop => !['isSelected'].includes(prop),
-})<{ isSelected?: boolean }>`
+export const StyledTabButton = styled('button')`
   display: flex;
   flex-direction: row;
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
@@ -77,15 +75,12 @@ export const StyledTabButton = styled('button', {
       color: ${({ theme }) => theme.colors.primary.text};
       border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
 
-      ${StyledBadge} {
-        ${({ isSelected, theme }) =>
-          !isSelected
-            ? `
-          background-color: ${theme.colors.primary.background};
-          border-color: ${theme.colors.primary.background};
-          color: ${theme.colors.primary.text};
-      `
-            : null}
+      &[data-is-selected='false'] {
+        ${StyledBadge} {
+          background-color: ${({ theme }) => theme.colors.primary.background};
+          border-color: ${({ theme }) => theme.colors.primary.background};
+          color: ${({ theme }) => theme.colors.primary.text};
+        }
       }
     }
   }
@@ -166,7 +161,7 @@ export const Tab = forwardRef(
             onKeyDown?.(event)
             if (!event.defaultPrevented && !disabled && value) onChange(value)
           }}
-          isSelected={isSelected}
+          data-is-selected={isSelected}
           {...props}
         >
           {children}

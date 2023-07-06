@@ -8,14 +8,14 @@ exports[`Carousel renders correctly with default props 1`] = `
   margin-right: -100px;
 }
 
-.cache-qrxupe-StyledBeforeScroll {
+.cache-odnhu9-StyledBeforeScroll {
   position: absolute;
   width: 100px;
   height: 100%;
   content: '';
   background: linear-gradient(
       -90deg,
-      rgba(255, 255, 255, 0),
+      #ffffffff,
       #ffffff
     );
   cursor: w-resize;
@@ -80,7 +80,7 @@ exports[`Carousel renders correctly with default props 1`] = `
     data-testid="scrollbar"
   >
     <span
-      class="cache-qrxupe-StyledBeforeScroll e1id70w03"
+      class="cache-odnhu9-StyledBeforeScroll e1id70w03"
       data-testid="scrollbar-before"
     />
     <div
