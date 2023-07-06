@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.2
+
+### Patch Changes
+
+- [#2694](https://github.com/scaleway/ultraviolet/pull/2694) [`8b916b8b`](https://github.com/scaleway/ultraviolet/commit/8b916b8b89b3c885661aae0a53573d9f8c0dd23d) Thanks [@matthprost](https://github.com/matthprost)! - Fix Tabs and Carousel colors and updated data charts colors in dark and darker
+
 ## 1.1.1
 
 ### Patch Changes
