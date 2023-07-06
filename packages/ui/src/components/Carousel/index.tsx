@@ -15,7 +15,7 @@ const StyledBeforeScroll = styled.span`
   content: '';
   background: linear-gradient(
     -90deg,
-    rgba(255, 255, 255, 0),
+    ${({ theme }) => theme.colors.neutral.background}ff,
     ${({ theme }) => theme.colors.neutral.background}
   );
   cursor: w-resize;
