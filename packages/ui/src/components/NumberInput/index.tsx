@@ -105,11 +105,11 @@ const StyledContainer = styled('div', {
   align-self: stretch;
   font-weight: 500;
   height: ${({ size }) => containerSizes[size]}px;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
 
   &[data-error='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.danger.borderWeak};
+    border: 1px solid ${({ theme }) => theme.colors.danger.border};
   }
 
   &[aria-disabled='true'] {
@@ -120,12 +120,12 @@ const StyledContainer = styled('div', {
   &:not([aria-disabled='true']) {
     ${StyledCenterBox}:hover,
     ${StyledCenterBox}:focus {
-      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderHover};
     }
 
     ${StyledCenterBox}:focus-within {
       box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeakHover};
+      border: 1px solid ${({ theme }) => theme.colors.primary.borderHover};
     }
   }
 `

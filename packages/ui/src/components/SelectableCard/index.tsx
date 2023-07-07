@@ -20,11 +20,11 @@ const Container = styled.div`
   cursor: pointer;
   background: ${({ theme }) => theme.colors.neutral.background};
 
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   color: ${({ theme }) => theme.colors.neutral.text};
 
   &[data-checked='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+    border: 1px solid ${({ theme }) => theme.colors.primary.border};
   }
 
   &[data-error='true'] {
@@ -32,7 +32,7 @@ const Container = styled.div`
   }
 
   &[data-disabled='true'] {
-    border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeakDisabled};
+    border: 1px solid ${({ theme }) => theme.colors.neutral.borderDisabled};
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
@@ -42,7 +42,7 @@ const Container = styled.div`
   &:focus-within,
   &:active {
     &:not([data-error='true']):not([data-disabled='true']) {
-      border: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+      border: 1px solid ${({ theme }) => theme.colors.primary.border};
       &[data-cheked='false'] {
         box-shadow: ${({ theme }) => theme.shadows.hoverPrimary};
       }

@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   background: ${({ theme }) => theme.colors.neutral.background};
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
-      error ? theme.colors.danger.borderWeak : theme.colors.neutral.borderWeak};
+      error ? theme.colors.danger.borderWeak : theme.colors.neutral.border};
   font-size: 24px;
   color: ${({ 'aria-invalid': error, theme }) =>
     error ? theme.colors.danger.textWeak : theme.colors.neutral.text};
@@ -28,8 +28,8 @@ const StyledInput = styled.input`
   &:focus {
     border-color: ${({ 'aria-invalid': error, theme }) =>
       error
-        ? theme.colors.danger.borderWeakHover
-        : theme.colors.primary.borderWeakHover};
+        ? theme.colors.danger.borderHover
+        : theme.colors.primary.borderHover};
   }
 
   &:focus {
