@@ -33,7 +33,7 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 const StyledSeparator = styled(Separator)`
-  background-color: ${({ theme }) => theme.colors.neutral.borderWeak};
+  background-color: ${({ theme }) => theme.colors.neutral.border};
   height: 100%;
 `
 
@@ -127,7 +127,7 @@ const getSelectStyles = ({
       : theme.colors.neutral.background,
     borderColor: error
       ? theme.colors.danger.border
-      : theme.colors.neutral.borderWeak,
+      : theme.colors.neutral.border,
     borderRadius: '4px',
     borderStyle: 'solid',
     borderWidth: '1px',
@@ -176,7 +176,7 @@ const getSelectStyles = ({
   }),
   indicatorSeparator: (provided, state) => ({
     ...provided,
-    backgroundColor: theme.colors.neutral.borderWeak,
+    backgroundColor: theme.colors.neutral.border,
     display: 'none',
     ...(customStyle(state)?.['indicatorSeparator'] || {}),
   }),
@@ -596,7 +596,6 @@ const ClearIndicator = (
       <Icon
         {...restInnerProps}
         name="close"
-        size={20}
         cursor="pointer"
         color={(checked && 'primary') || (error && 'danger') || 'neutral'}
       />

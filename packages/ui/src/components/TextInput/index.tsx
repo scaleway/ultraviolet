@@ -208,7 +208,7 @@ const StyledInput = styled('input', {
   appearance: none;
   background-color: ${({ theme: { colors } }) => colors.neutral.background};
   background-image: none;
-  border: 1px solid ${({ theme: { colors } }) => colors.neutral.borderWeak};
+  border: 1px solid ${({ theme: { colors } }) => colors.neutral.border};
   border-radius: ${({ theme: { radii } }) => radii.default};
   color: ${({ theme: { colors } }) => colors.neutral.text};
   display: block;

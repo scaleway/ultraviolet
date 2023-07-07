@@ -8,7 +8,7 @@ const ArrowDownIcon = styled(Icon)``
 const ArrowUpIcon = styled(Icon)``
 
 const StyledIconContainer = styled(Stack)`
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
@@ -30,7 +30,7 @@ const StyledHeaderCell = styled.div`
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};
   font-weight: ${({ theme }) => theme.typography.bodySmall.weight};
   font-family: ${({ theme }) => theme.typography.bodySmall.fontFamily};
-  color: ${({ theme }) => theme.colors.neutral.textWeak};
+  color: ${({ theme }) => theme.colors.neutral.text};
   gap: ${({ theme }) => theme.space['1']};
 
   &[role*='button'] {
@@ -39,15 +39,15 @@ const StyledHeaderCell = styled.div`
   }
 
   &[aria-sort] {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
+    color: ${({ theme }) => theme.colors.primary.text};
   }
 
   &[aria-sort='ascending'] ${ArrowUpIcon} {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
+    color: ${({ theme }) => theme.colors.primary.text};
   }
 
   &[aria-sort='descending'] ${ArrowDownIcon} {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
+    color: ${({ theme }) => theme.colors.primary.text};
   }
 `
 

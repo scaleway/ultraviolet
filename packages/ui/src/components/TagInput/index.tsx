@@ -23,14 +23,14 @@ const variants = {
     padding: 8px;
     cursor: text;
     border-radius: ${radii.default};
-    border: 1px solid ${colors.neutral.borderWeak};
+    border: 1px solid ${colors.neutral.border};
     &:focus-within {
-      border: 1px solid ${colors.primary.borderWeak};
+      border: 1px solid ${colors.primary.border};
       box-shadow: ${shadows.focusPrimary};
     }
 
     &:hover {
-      border: 1px solid ${colors.primary.borderWeak};
+      border: 1px solid ${colors.primary.border};
     }
 
     & > * {
