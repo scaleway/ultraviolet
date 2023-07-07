@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.4.5
+
+### Patch Changes
+
+- Updated dependencies [[`8b00f035`](https://github.com/scaleway/ultraviolet/commit/8b00f035dec5a553760d3fd64631ef32b3c20c0b)]:
+  - @ultraviolet/themes@1.1.4
+
 ## 1.4.4
 
 ### Patch Changes
