@@ -44,8 +44,8 @@ const StyledAfterScroll = styled.span`
   z-index: auto;
   background: linear-gradient(
     -90deg,
-    ${({ theme }) => theme.colors.neutral.backgroundWeak},
-    rgba(255, 255, 255, 0)
+    ${({ theme }) => theme.colors.neutral.background},
+    ${({ theme }) => theme.colors.neutral.background}ff
   );
 `
 
