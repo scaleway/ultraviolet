@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.4
+
+### Patch Changes
+
+- [#2700](https://github.com/scaleway/ultraviolet/pull/2700) [`8b00f035`](https://github.com/scaleway/ultraviolet/commit/8b00f035dec5a553760d3fd64631ef32b3c20c0b) Thanks [@matthprost](https://github.com/matthprost)! - Update tokens values
+
 ## 1.1.3
 
 ### Patch Changes
