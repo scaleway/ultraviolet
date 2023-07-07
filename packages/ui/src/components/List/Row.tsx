@@ -10,7 +10,7 @@ import { useListContext } from './ListContext'
 const ExpandableWrapper = styled.div`
   grid-column: 1 / -1;
   grid-column-start: 1;
-  border-top: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
   margin: 0 -${({ theme }) => theme.space['2']};
   padding: ${({ theme }) => theme.space['2']};
   cursor: auto;
@@ -24,7 +24,7 @@ export const StyledRow = styled('div', {
   /* List itself also apply style about common templating between HeaderRow and other Rows */
 
   position: relative;
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
+  border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
   transition: box-shadow 200ms ease, border-color 200ms ease;
   box-shadow: none;
