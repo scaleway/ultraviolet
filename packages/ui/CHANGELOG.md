@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.4.3
+
+### Patch Changes
+
+- [#2696](https://github.com/scaleway/ultraviolet/pull/2696) [`fdb80379`](https://github.com/scaleway/ultraviolet/commit/fdb80379780275ad52480402341646fb49012331) Thanks [@matthprost](https://github.com/matthprost)! - - Fixed border color on all inputs
+  - Fixed carrousel
+- Updated dependencies [[`fdb80379`](https://github.com/scaleway/ultraviolet/commit/fdb80379780275ad52480402341646fb49012331)]:
+  - @ultraviolet/themes@1.1.3
+
 ## 1.4.2
 
 ### Patch Changes
