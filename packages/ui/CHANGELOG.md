@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.4
+
+### Patch Changes
+
+- [#2698](https://github.com/scaleway/ultraviolet/pull/2698) [`37826e9e`](https://github.com/scaleway/ultraviolet/commit/37826e9e8496001b59496ad446699ff72e4a4434) Thanks [@matthprost](https://github.com/matthprost)! - Fix carousel shade color
+
 ## 1.4.3
 
 ### Patch Changes
