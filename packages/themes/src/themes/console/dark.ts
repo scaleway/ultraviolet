@@ -6,7 +6,7 @@
 export const darkTheme = {
   colors: {
     danger: {
-      background: '#570a25',
+      background: '#4e0921',
       backgroundDisabled: '#47081e',
       backgroundHover: '#650b2b',
       backgroundStrong: '#e71964',
@@ -44,7 +44,7 @@ export const darkTheme = {
       textWeakHover: '#ffc0d7',
     },
     info: {
-      background: '#002c4e',
+      background: '#002847',
       backgroundDisabled: '#00243f',
       backgroundHover: '#003359',
       backgroundStrong: '#0085e7',
@@ -176,9 +176,9 @@ export const darkTheme = {
         },
         product: {
           danger: {
-            fill: '#570a25',
+            fill: '#4e0921',
             fillDisabled: '#252a3b',
-            fillStrong: '#570a25',
+            fillStrong: '#4e0921',
             fillStrongDisabled: '#252a3b',
             fillWeak: '#e71964',
             fillWeakDisabled: '#191f33',
@@ -188,13 +188,13 @@ export const darkTheme = {
             fillDisabled: '#252a3b',
             fillStrong: '#ccaefc',
             fillStrongDisabled: '#252a3b',
-            fillWeak: '#251b47',
+            fillWeak: '#2d1c51',
             fillWeakDisabled: '#191f33',
           },
           warning: {
-            fill: '#472c00',
+            fill: '#36220e',
             fillDisabled: '#252a3b',
-            fillStrong: '#3c2600',
+            fillStrong: '#36220e',
             fillStrongDisabled: '#252a3b',
             fillWeak: '#9d6f00',
             fillWeakDisabled: '#191f33',
@@ -204,7 +204,7 @@ export const darkTheme = {
     },
     overlay: '#151A2DA6',
     primary: {
-      background: '#311f57',
+      background: '#2d1c51',
       backgroundDisabled: '#251b47',
       backgroundHover: '#3d206f',
       backgroundStrong: '#a061f4',
@@ -242,7 +242,7 @@ export const darkTheme = {
       textWeakHover: '#bf96f8',
     },
     secondary: {
-      background: '#450e5d',
+      background: '#3e0d54',
       backgroundDisabled: '#370b4b',
       backgroundHover: '#50106b',
       backgroundStrong: '#c53eff',
@@ -280,7 +280,7 @@ export const darkTheme = {
       textWeakHover: '#e2a1ff',
     },
     success: {
-      background: '#103025',
+      background: '#0e2b21',
       backgroundDisabled: '#0d261d',
       backgroundHover: '#12382a',
       backgroundStrong: '#44d09e',
@@ -318,7 +318,7 @@ export const darkTheme = {
       textWeakHover: '#44d09e',
     },
     warning: {
-      background: '#3c2600',
+      background: '#362200',
       backgroundDisabled: '#302000',
       backgroundHover: '#472c00',
       backgroundStrong: '#ebb000',
@@ -331,7 +331,7 @@ export const darkTheme = {
       borderDisabled: '#553600',
       borderHover: '#ebb000',
       borderStrong: '#ebb000',
-      borderStrongDisabled: '#3c2600',
+      borderStrongDisabled: '#362200',
       borderStrongHover: '#ffca07',
       borderWeak: '#d39700',
       borderWeakDisabled: '#472c00',
@@ -341,7 +341,7 @@ export const darkTheme = {
       iconHover: '#d39700',
       iconStrong: '#302000',
       iconStrongDisabled: '#764d01',
-      iconStrongHover: '#3c2600',
+      iconStrongHover: '#362200',
       iconWeak: '#d39700',
       iconWeakDisabled: '#553600',
       iconWeakHover: '#d39700',
