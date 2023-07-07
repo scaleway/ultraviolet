@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.3
+
+### Patch Changes
+
+- [#2696](https://github.com/scaleway/ultraviolet/pull/2696) [`fdb80379`](https://github.com/scaleway/ultraviolet/commit/fdb80379780275ad52480402341646fb49012331) Thanks [@matthprost](https://github.com/matthprost)! - Updated tokens colors for dark, light and darker
+
 ## 1.1.2
 
 ### Patch Changes
