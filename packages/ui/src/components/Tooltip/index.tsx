@@ -1,100 +1,6 @@
-import { css, keyframes } from '@emotion/react'
-import styled from '@emotion/styled'
-import type { KeyboardEventHandler, ReactNode, Ref, RefObject } from 'react'
-import {
-  forwardRef,
-  useCallback,
-  useEffect,
-  useId,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react'
-import { createPortal } from 'react-dom'
-import type { TooltipPlacement } from './helpers'
-import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
-
-const ANIMATION_DURATION = 230 // in ms
-
-function noop() {}
-
-const animation = (positions: PositionsType) => keyframes`
-  0% {
-    opacity: 0;
-    transform: ${positions.tooltipInitialPosition};
-  }
-  100% {
-    opacity: 1;
-    transform: ${positions.tooltipPosition};
-  }
-`
-
-const exitAnimation = (positions: PositionsType) => keyframes`
-  0% {
-    opacity: 1;
-    transform: ${positions.tooltipPosition};
-  }
-  100% {
-    opacity: 0;
-    transform: ${positions.tooltipInitialPosition};
-  }
-`
-
-type PositionsType = {
-  arrowLeft: number
-  arrowTop: number
-  arrowTransform: string
-  placement: string
-  rotate: number
-  tooltipInitialPosition: string
-  tooltipPosition: string
-}
-
-type StyledTooltipProps = {
-  maxWidth: number
-  positions: PositionsType
-  reverseAnimation: boolean
-}
-
-const StyledTooltip = styled.div<StyledTooltipProps>`
-  background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
-  color: ${({ theme }) => theme.colors.neutral.textStronger};
-  border-radius: ${({ theme }) => theme.radii.default};
-  padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
-  text-align: center;
-  position: absolute;
-  max-width: ${({ maxWidth }) => maxWidth}px;
-  font-size: 0.8rem;
-  inset: 0 auto auto 0;
-  top: 0;
-  left: 0;
-  transform: ${({ positions }) => positions.tooltipPosition};
-  animation: ${({ positions, reverseAnimation }) =>
-    css`
-      ${ANIMATION_DURATION}ms ${!reverseAnimation
-        ? animation(positions)
-        : exitAnimation(positions)} forwards
-    `};
-
-  &::after {
-    content: ' ';
-    position: absolute;
-    top: ${({ positions }) => positions.arrowTop}px;
-    left: ${({ positions }) => positions.arrowLeft}px;
-    transform: ${({ positions }) => positions.arrowTransform}
-      rotate(${({ positions }) => positions.rotate}deg);
-    margin-left: -${ARROW_WIDTH}px;
-    border-width: ${ARROW_WIDTH}px;
-    border-style: solid;
-    border-color: ${({ theme }) => theme.colors.neutral.backgroundStronger}
-      transparent transparent transparent;
-    pointer-events: none;
-  }
-`
-
-const StyledChildrenContainer = styled.div`
-  display: inherit;
-`
+import type { ComponentProps, ReactNode, Ref, RefObject } from 'react'
+import { forwardRef } from 'react'
+import { Popup } from '../../internalComponents'
 
 type TooltipProps = {
   /**
@@ -115,7 +21,7 @@ type TooltipProps = {
   /**
    * `auto` placement will change the position of the tooltip if it doesn't fit in the viewport.
    */
-  placement?: TooltipPlacement
+  placement?: ComponentProps<typeof Popup>['placement']
   /**
    * Content of the tooltip, preferably text inside.
    */
@@ -145,193 +51,20 @@ export const Tooltip = forwardRef(
       'data-testid': dataTestId,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
-  ) => {
-    const childrenRef = useRef<HTMLDivElement>(null)
-    useImperativeHandle(innerRef, () => childrenRef.current)
-
-    const tempTooltipRef = useRef<HTMLDivElement>(null)
-    const innerTooltipRef =
-      (tooltipRef as RefObject<HTMLDivElement>) || tempTooltipRef
-
-    const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
-
-    // Debounce timer will be used to prevent the tooltip from flickering when the user moves the mouse out and in the children element.
-    const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
-    const [visibleInDom, setVisibleInDom] = useState(false)
-    const [reverseAnimation, setReverseAnimation] = useState(false)
-    const [positions, setPositions] = useState<PositionsType>({
-      ...DEFAULT_POSITIONS,
-    })
-    const uniqueId = useId()
-    const generatedId = id ?? uniqueId
-    const isControlled = visible !== undefined
-
-    const generatePositions = useCallback(() => {
-      if (childrenRef.current && innerTooltipRef.current) {
-        setPositions(
-          computePositions({
-            childrenRef,
-            placement,
-            tooltipRef: innerTooltipRef,
-          }),
-        )
-      }
-    }, [innerTooltipRef, placement])
-
-    const onScrollDetected = useCallback(() => {
-      // We remove animation on scroll or the animation will restart on every scroll
-      if (innerTooltipRef.current) {
-        innerTooltipRef.current.style.animation = 'none'
-      }
-      generatePositions()
-    }, [generatePositions, innerTooltipRef])
-
-    /**
-     * This function is called when we need to remove tooltip portal from DOM and remove event listener to it.
-     */
-    const unmountTooltip = useCallback(() => {
-      setVisibleInDom(false)
-      setReverseAnimation(false)
-
-      window.removeEventListener('scroll', onScrollDetected, true)
-    }, [onScrollDetected])
-
-    /**
-     * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
-     * end, then remove tooltip from dom.
-     */
-    const onPointerEvent = useCallback(
-      (isVisible: boolean) => () => {
-        // This condition is for when we want to unmount the tooltip
-        // There is debounce in order to avoid tooltip to flicker when we move the mouse from children to tooltip
-        // Timer is used to follow the animation duration
-        if (!isVisible && innerTooltipRef.current && !debounceTimer.current) {
-          debounceTimer.current = setTimeout(() => {
-            setReverseAnimation(true)
-            timer.current = setTimeout(
-              () => unmountTooltip(),
-              ANIMATION_DURATION,
-            )
-          }, 200)
-        } else if (isVisible) {
-          // This condition is for when we want to mount the tooltip
-          // If the timer exists it means the tooltip was about to umount, but we hovered the children again,
-          // so we clear the timer and the tooltip will not be unmounted
-          if (timer.current) {
-            setReverseAnimation(false)
-            clearTimeout(timer.current)
-            timer.current = undefined
-          }
-          // And here is when we currently are in a debounce timer, it means tooltip was hovered during
-          // that period, and so we can clear debounce timer
-          if (debounceTimer.current) {
-            clearTimeout(debounceTimer.current)
-            debounceTimer.current = undefined
-          }
-          setVisibleInDom(true)
-        }
-      },
-      [innerTooltipRef, unmountTooltip],
-    )
-
-    /**
-     * Once tooltip is visible in the dom we can compute positions, then set it visible on screen and add event to
-     * recompute positions on scroll or screen resize.
-     */
-    useEffect(() => {
-      if (visibleInDom) {
-        generatePositions()
-
-        // We want to detect scroll in order to recompute positions of tooltip
-        // Adding true as third parameter to event listener will detect nested scrolls.
-        window.addEventListener('scroll', onScrollDetected, true)
-      }
-
-      return () => {
-        window.removeEventListener('scroll', onScrollDetected, true)
-        if (timer.current) {
-          clearTimeout(timer.current)
-          timer.current = undefined
-        }
-      }
-    }, [generatePositions, onScrollDetected, visibleInDom])
-
-    /**
-     * If tooltip has `visible` prop it means the tooltip is manually controlled through this prop.
-     * In this cas we don't want to display tooltip on hover, but only when `visible` is true.
-     */
-    useEffect(() => {
-      if (isControlled) {
-        onPointerEvent(visible)()
-      }
-    }, [isControlled, onPointerEvent, visible])
-
-    const onKeyDown: KeyboardEventHandler = useCallback(
-      event => {
-        if (event.code === 'Escape') {
-          unmountTooltip()
-        }
-      },
-      [unmountTooltip],
-    )
-
-    /**
-     * Will render children conditionally if children is a function or not.
-     */
-    const renderChildren = useCallback(() => {
-      if (typeof children === 'function') {
-        return children({
-          onBlur: !isControlled ? onPointerEvent(false) : noop,
-          onFocus: !isControlled ? onPointerEvent(true) : noop,
-          onPointerEnter: !isControlled ? onPointerEvent(true) : noop,
-          onPointerLeave: !isControlled ? onPointerEvent(false) : noop,
-          ref: childrenRef,
-        })
-      }
-
-      return (
-        <StyledChildrenContainer
-          aria-describedby={generatedId}
-          onBlur={!isControlled ? onPointerEvent(false) : noop}
-          onFocus={!isControlled ? onPointerEvent(true) : noop}
-          onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
-          onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
-          ref={childrenRef}
-          tabIndex={0}
-          onKeyDown={onKeyDown}
-        >
-          {children}
-        </StyledChildrenContainer>
-      )
-    }, [children, generatedId, isControlled, onKeyDown, onPointerEvent])
-
-    if (!text) {
-      if (typeof children === 'function') return null
-
-      return <>{children}</>
-    }
-
-    return (
-      <>
-        {renderChildren()}
-        {visibleInDom
-          ? createPortal(
-              <StyledTooltip
-                ref={innerTooltipRef}
-                positions={positions}
-                maxWidth={maxWidth}
-                role={role}
-                id={generatedId}
-                className={className}
-                reverseAnimation={reverseAnimation}
-                data-testid={dataTestId}
-              >
-                {text}
-              </StyledTooltip>,
-              document.body,
-            )
-          : null}
-      </>
-    )
-  },
+  ) => (
+    <Popup
+      id={id}
+      ref={tooltipRef}
+      role={role}
+      data-testid={dataTestId}
+      className={className}
+      maxWidth={maxWidth}
+      visible={visible}
+      placement={placement}
+      text={text}
+      innerRef={innerRef}
+    >
+      {children}
+    </Popup>
+  ),
 )
