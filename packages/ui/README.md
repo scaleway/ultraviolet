@@ -13,8 +13,8 @@ $ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 You will also need to import fonts in your project by adding:
 
 ```html
-<link href="https://fonts.cdnfonts.com/css/asap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/jetbrains-mono" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/asap?styles=20325,20323,20320" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604" rel="stylesheet">
 ```
 
 ### Usage
