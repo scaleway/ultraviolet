@@ -1,7 +1,7 @@
 import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
 import { css, ThemeProvider, Global, Theme } from '@emotion/react'
-import normalize from '@ultraviolet/ui/src/utils/normalize'
+import { normalize } from '@ultraviolet/ui'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import seedrandom from 'seedrandom'
