@@ -51,6 +51,7 @@ const parameters = {
         ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
         'Responsive',
         'Components',
+        'Icons',
         'Form',
         ['Introduction', 'Changelog', 'Components'],
       ],
