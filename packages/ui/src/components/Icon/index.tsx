@@ -390,6 +390,10 @@ type IconProps = {
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
 >
 
+/**
+ * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.
+ * The component is same but has been move on another package.
+ */
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {

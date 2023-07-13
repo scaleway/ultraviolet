@@ -1,14 +1,14 @@
 import { ThemeProvider } from '@emotion/react'
 import makeHelpers from '@scaleway/jest-helpers'
 import type { ReactNode } from 'react'
-import { theme } from '@ultraviolet/ui'
+import { theme as defaultTheme } from '@ultraviolet/ui'
 
 type WrapperProps = {
-  theme?: typeof theme
+  theme?: typeof defaultTheme
   children: ReactNode
 }
 
-const Wrapper = ({ theme, children }: WrapperProps) => (
+const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 

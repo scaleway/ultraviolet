@@ -9,6 +9,9 @@ export default {
         component: 'Allow you to display an svg icon',
       },
     },
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated. Please use Icon from @ultraviolet/icons instead. The component is same but has been move on another package.',
   },
   title: 'Components/Other/Icon',
 } as Meta
