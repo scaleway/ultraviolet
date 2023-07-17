@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.1.6
+
+### Patch Changes
+
+- [#2721](https://github.com/scaleway/ultraviolet/pull/2721) [`b3b116a2`](https://github.com/scaleway/ultraviolet/commit/b3b116a205f111180310c6077b072c6d102fec0f) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Use `exports` field with `type: module`
+
+- [#2710](https://github.com/scaleway/ultraviolet/pull/2710) [`1dcb4428`](https://github.com/scaleway/ultraviolet/commit/1dcb4428592eb5a0cd9cfc6ece99a00b8a53235e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.8`.
+  Updated dependency `@babel/runtime` to `7.22.6`.
+  Updated dependency `@babel/eslint-parser` to `7.22.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.7`.
+  Updated dependency `@babel/preset-env` to `7.22.7`.
+- Updated dependencies [[`1dc9fc2f`](https://github.com/scaleway/ultraviolet/commit/1dc9fc2f7c849b9bd9589b46d4a7baada5f915de), [`b3b116a2`](https://github.com/scaleway/ultraviolet/commit/b3b116a205f111180310c6077b072c6d102fec0f), [`1dcb4428`](https://github.com/scaleway/ultraviolet/commit/1dcb4428592eb5a0cd9cfc6ece99a00b8a53235e)]:
+  - @ultraviolet/ui@1.4.6
+
 ## 1.1.5
 
 ### Patch Changes

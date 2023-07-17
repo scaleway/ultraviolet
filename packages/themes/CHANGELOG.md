@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.5
+
+### Patch Changes
+
+- [#2721](https://github.com/scaleway/ultraviolet/pull/2721) [`b3b116a2`](https://github.com/scaleway/ultraviolet/commit/b3b116a205f111180310c6077b072c6d102fec0f) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Use `exports` field with `type: module`
+
 ## 1.1.4
 
 ### Patch Changes
