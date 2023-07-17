@@ -23,8 +23,6 @@ const StyledIcon = styled('svg', {
   & {
     width: ${({ size }) => `${SIZES[size]}px`};
     height: ${({ size }) => `${SIZES[size]}px`};
-    min-width: ${({ size }) => `${SIZES[size]}px`};
-    max-height: ${({ size }) => `${SIZES[size]}px`};
   }
 
   .fill,

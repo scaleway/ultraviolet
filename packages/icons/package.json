@@ -26,10 +26,11 @@
     "linux"
   ],
   "sideEffects": false,
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
-  "jsnext:main": "dist/src/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
   "peerDependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
@@ -39,12 +40,8 @@
   "devDependencies": {
     "@babel/core": "7.22.8",
     "@emotion/babel-plugin": "11.11.0",
-    "@emotion/react": "11.11.1",
-    "@emotion/styled": "11.11.0",
     "@types/react": "18.2.8",
-    "@types/react-dom": "18.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@types/react-dom": "18.2.4"
   },
   "dependencies": {
     "@ultraviolet/ui": "workspace:*"
