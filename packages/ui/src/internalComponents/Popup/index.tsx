@@ -56,7 +56,10 @@ type StyledTooltipProps = {
   reverseAnimation: boolean
 }
 
-const StyledTooltip = styled.div<StyledTooltipProps>`
+const StyledTooltip = styled('div', {
+  shouldForwardProp: prop =>
+    !['maxWidth', 'positions', 'reverseAnimation'].includes(prop),
+})<StyledTooltipProps>`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   color: ${({ theme }) => theme.colors.neutral.textStronger};
   border-radius: ${({ theme }) => theme.radii.default};

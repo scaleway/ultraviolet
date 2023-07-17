@@ -4,15 +4,17 @@ import type { ComponentProps } from 'react'
 import { Tooltip } from '..'
 import {
   renderWithTheme,
-  shouldMatchEmotionSnapshot,
+  shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
 
 describe('Tooltip', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(<Tooltip text="test">Hover me</Tooltip>))
+    shouldMatchEmotionSnapshotWithPortal(
+      <Tooltip text="test">Hover me</Tooltip>,
+    ))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshot(<Tooltip>Hover me</Tooltip>))
+    shouldMatchEmotionSnapshotWithPortal(<Tooltip>Hover me</Tooltip>))
 
   test(`should display tooltip on hover`, async () => {
     renderWithTheme(

@@ -3,16 +3,16 @@ import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import {
   renderWithTheme,
-  shouldMatchEmotionSnapshot,
+  shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../../.jest/helpers'
 import { Popup } from '../../index'
 
 describe('Popup', () => {
   test('should render correctly', () =>
-    shouldMatchEmotionSnapshot(<Popup text="test">Hover me</Popup>))
+    shouldMatchEmotionSnapshotWithPortal(<Popup text="test">Hover me</Popup>))
 
   test('should render correctly without text', () =>
-    shouldMatchEmotionSnapshot(<Popup>Hover me</Popup>))
+    shouldMatchEmotionSnapshotWithPortal(<Popup>Hover me</Popup>))
 
   test(`should display Popup on hover`, async () => {
     renderWithTheme(
