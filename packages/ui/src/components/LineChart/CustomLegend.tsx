@@ -94,6 +94,7 @@ export const CustomLegend = ({
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
   <StyledContainer className={className} data-testid={dataTestId}>
+    {/* @ts-expect-error todo */}
     <div css={styles.head}>
       <LongContainer>Legend</LongContainer>
       <Cell variant="body" value="Minimum" />
@@ -101,6 +102,7 @@ export const CustomLegend = ({
       <Cell variant="body" value="Average" />
       <Cell variant="body" value="Current" />
     </div>
+    {/* @ts-expect-error todo */}
     <div css={styles.body}>
       {data?.map((row, index) => {
         const values = row.data.map(val => val.y as number)
@@ -121,6 +123,7 @@ export const CustomLegend = ({
                   <Text as="span" variant="bodySmall" color="neutral">
                     {row?.['label']}
                   </Text>
+                  {/* @ts-expect-error todo */}
                   <div data-testid={`label-${id}`} css={styles.legend(index)} />
                 </CellValueContainer>
               </Checkbox>

@@ -26,10 +26,12 @@
     "linux"
   ],
   "sideEffects": false,
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
-  "jsnext:main": "dist/src/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/src/index.js"
+  },
   "peerDependencies": {
     "@emotion/react": "11.11.1",
     "@emotion/styled": "11.11.0",
