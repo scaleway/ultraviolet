@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.7
+
+### Patch Changes
+
+- [#2731](https://github.com/scaleway/ultraviolet/pull/2731) [`c43a55e1`](https://github.com/scaleway/ultraviolet/commit/c43a55e17ad5e94193521532e1edca8e13564996) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/use-media` to `2.0.1`.
+
 ## 1.4.6
 
 ### Patch Changes
