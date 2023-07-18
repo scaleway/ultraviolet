@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.5.0
+
+### Minor Changes
+
+- [#2722](https://github.com/scaleway/ultraviolet/pull/2722) [`e9ab303c`](https://github.com/scaleway/ultraviolet/commit/e9ab303cb4dc8b9dd34757895258471e253daec1) Thanks [@matthprost](https://github.com/matthprost)! - Make `Icon` deprecated it should now be imported from `@ultraviolet/icons`
+
+### Patch Changes
+
+- [#2730](https://github.com/scaleway/ultraviolet/pull/2730) [`c4288c1d`](https://github.com/scaleway/ultraviolet/commit/c4288c1d9c0f49e5475e142f8231aa738dbb77f4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@scaleway/random-name` to `4.0.2`.
+
+- [#2734](https://github.com/scaleway/ultraviolet/pull/2734) [`028ca2ba`](https://github.com/scaleway/ultraviolet/commit/028ca2ba8c58301e6f03454dc665b83302db5b55) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.16.0`.
+
+- [#2732](https://github.com/scaleway/ultraviolet/pull/2732) [`93945bbe`](https://github.com/scaleway/ultraviolet/commit/93945bbe366aba0a1cb6ee831d424138dc61c833) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.4`.
+
 ## 1.4.7
 
 ### Patch Changes
