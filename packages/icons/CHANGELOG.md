@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 1.0.1
+
+### Patch Changes
+
+- [#2736](https://github.com/scaleway/ultraviolet/pull/2736) [`dd9a9fa5`](https://github.com/scaleway/ultraviolet/commit/dd9a9fa55ed2d340ae10682ea5c297e00418fec4) Thanks [@matthprost](https://github.com/matthprost)! - Fixed missing export for ProductIcon and CategoryIcon
+
 ## 1.0.0
 
 ### Major Changes
