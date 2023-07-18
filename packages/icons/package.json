@@ -1,0 +1,49 @@
+{
+  "name": "@ultraviolet/icons",
+  "version": "0.0.1",
+  "description": "Ultraviolet Icons",
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/ultraviolet",
+    "directory": "packages/icons"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=8.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.22.8",
+    "@emotion/babel-plugin": "11.11.0",
+    "@types/react": "18.2.8",
+    "@types/react-dom": "18.2.4"
+  },
+  "dependencies": {
+    "@ultraviolet/ui": "workspace:*"
+  }
+}

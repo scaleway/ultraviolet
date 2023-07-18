@@ -1,9 +1,14 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
+import type { theme } from '@ultraviolet/ui'
 import type { SVGProps } from 'react'
 import { forwardRef, useMemo } from 'react'
-import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
+
+type Color = Extract<
+  keyof typeof theme.colors,
+  'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
+>
 
 const ICONS = {
   alert: () => (
@@ -390,10 +395,6 @@ type IconProps = {
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
 >
 
-/**
- * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.
- * The component is same but has been move on another package.
- */
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {
