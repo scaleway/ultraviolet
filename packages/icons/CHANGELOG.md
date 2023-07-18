@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 1.0.2
+
+### Patch Changes
+
+- [#2739](https://github.com/scaleway/ultraviolet/pull/2739) [`10baabd9`](https://github.com/scaleway/ultraviolet/commit/10baabd9187d63d2ab0940f045836382acf376fd) Thanks [@matthprost](https://github.com/matthprost)! - Fix serverless db product icon name
+
 ## 1.0.1
 
 ### Patch Changes
