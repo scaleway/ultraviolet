@@ -2717,7 +2717,7 @@ export const PRODUCT_ICONS = {
       </g>
     </g>
   ),
-  serverlessDb: (
+  serverlessDB: (
     <g className="Serverless-DB">
       <g className="icon" clipPath="url(#a)">
         <g className=".Square">
