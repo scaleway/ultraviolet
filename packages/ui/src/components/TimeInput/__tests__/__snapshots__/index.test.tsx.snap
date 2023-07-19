@@ -20,7 +20,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   white-space: nowrap;
 }
 
-.cache-1vq40xu-control {
+.cache-iuv2ka-control {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -49,7 +49,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
   border-width: 1px;
   box-shadow: none;
   box-sizing: border-box;
-  color: #464959;
+  color: #3f4250;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -57,24 +57,24 @@ exports[`TimeInput renders correctly with base props 1`] = `
   animation: none;
 }
 
-.cache-1vq40xu-control:hover {
+.cache-iuv2ka-control:hover {
   border-color: hsl(0, 0%, 70%);
 }
 
-.cache-1vq40xu-control:focus-within {
+.cache-iuv2ka-control:focus-within {
   border-color: #521094;
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1vq40xu-control:focus-within svg {
+.cache-iuv2ka-control:focus-within svg {
   fill: #521094;
 }
 
-.cache-1vq40xu-control:hover {
+.cache-iuv2ka-control:hover {
   border-color: #3b1a61;
 }
 
-.cache-1vq40xu-control:hover svg {
+.cache-iuv2ka-control:hover svg {
   fill: #521094;
 }
 
@@ -104,12 +104,12 @@ exports[`TimeInput renders correctly with base props 1`] = `
   display: initial;
 }
 
-.cache-1ftn4nm-StyledPlaceholder {
+.cache-1bxh4i1-StyledPlaceholder {
   position: absolute;
   left: 0;
   font-weight: 400;
   pointer-events: none;
-  color: #464959;
+  color: #3f4250;
   white-space: nowrap;
   width: 100%;
   height: 100%;
@@ -128,13 +128,13 @@ exports[`TimeInput renders correctly with base props 1`] = `
   opacity: 1;
 }
 
-.cache-17pj9dd-singleValue {
+.cache-e4v0qe-singleValue {
   grid-area: 1/1/2/3;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #464959;
+  color: #3f4250;
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
@@ -298,7 +298,7 @@ exports[`TimeInput renders correctly with base props 1`] = `
       class="cache-1f43avz-a11yText-A11yText"
     />
     <div
-      class=" cache-1vq40xu-control"
+      class=" cache-iuv2ka-control"
     >
       <div
         class=" cache-blvxib-ValueContainer"
@@ -306,13 +306,13 @@ exports[`TimeInput renders correctly with base props 1`] = `
         <label
           aria-live="assertive"
           as="label"
-          class="cache-1ftn4nm-StyledPlaceholder e11gt5pw2"
+          class="cache-1bxh4i1-StyledPlaceholder e11gt5pw2"
           for="test"
         >
           Select...
         </label>
         <div
-          class=" cache-17pj9dd-singleValue"
+          class=" cache-e4v0qe-singleValue"
         >
           00:00
         </div>
