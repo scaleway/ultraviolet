@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.0
+
+### Minor Changes
+
+- [#2741](https://github.com/scaleway/ultraviolet/pull/2741) [`445726b6`](https://github.com/scaleway/ultraviolet/commit/445726b6839bed8b2144f3cd613fe58817a53a83) Thanks [@matthprost](https://github.com/matthprost)! - Theme colors update
+
 ## 1.1.5
 
 ### Patch Changes
