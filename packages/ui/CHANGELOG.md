@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.6.1
+
+### Patch Changes
+
+- [#2745](https://github.com/scaleway/ultraviolet/pull/2745) [`3e8e8db0`](https://github.com/scaleway/ultraviolet/commit/3e8e8db080220ccd005a2c92026404fa49f37eda) Thanks [@matthprost](https://github.com/matthprost)! - Fix DateInput component
+
 ## 1.6.0
 
 ### Minor Changes

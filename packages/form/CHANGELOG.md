@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+- [#2743](https://github.com/scaleway/ultraviolet/pull/2743) [`283e6010`](https://github.com/scaleway/ultraviolet/commit/283e601084999a9172d23afe57bdd0db0a14a954) Thanks [@matthprost](https://github.com/matthprost)! - Fix submit button color
+
+- Updated dependencies [[`3e8e8db0`](https://github.com/scaleway/ultraviolet/commit/3e8e8db080220ccd005a2c92026404fa49f37eda)]:
+  - @ultraviolet/ui@1.6.1
+
 ## 1.2.0
 
 ### Minor Changes
