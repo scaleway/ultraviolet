@@ -23,7 +23,7 @@ export const Submit = ({
   iconPosition,
   size,
   variant = 'filled',
-  sentiment = 'success',
+  sentiment = 'primary',
   tooltip,
 }: SubmitProps): JSX.Element => {
   const { invalid, submitting, hasValidationErrors, dirtySinceLastSubmit } =
