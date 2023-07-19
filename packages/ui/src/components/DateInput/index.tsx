@@ -188,6 +188,11 @@ export const DateInput = ({
   className,
   'data-testid': dataTestId,
 }: DateInputProps) => {
+  // Linked to: https://github.com/Hacker0x01/react-datepicker/issues/3834
+  const ReactDatePicker =
+    (DatePicker as unknown as { default: typeof DatePicker }).default ??
+    DatePicker
+
   const localeCode =
     (typeof locale === 'string' ? locale : locale?.code) ?? 'en-GB'
 
@@ -199,7 +204,7 @@ export const DateInput = ({
     <>
       <Global styles={style} />
       <StyledWrapper>
-        <DatePicker
+        <ReactDatePicker
           data-testid={dataTestId}
           className={className}
           autoFocus={autoFocus}
