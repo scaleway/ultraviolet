@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
+import { Popup } from '../../internalComponents'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { Tooltip } from '../Tooltip'
 
 type SentimentType = 'neutral' | 'primary'
 
@@ -14,7 +14,7 @@ const SIZES_WIDTH = {
   large: 520,
 }
 
-const StyledTooltip = styled(Tooltip, {
+const StyledPopup = styled(Popup, {
   shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
 })<{
   sentiment: SentimentType
@@ -30,8 +30,10 @@ const StyledTooltip = styled(Tooltip, {
       return `
       background: ${theme.colors.neutral.background};
       box-shadow: ${theme.shadows.popover};
-      &::after {
-        border-color: ${theme.colors.neutral.background} transparent transparent transparent;
+      &[data-has-arrow='true'] {
+        &::after {
+          border-color: ${theme.colors.neutral.background} transparent transparent transparent;
+        }
       }
       `
     }
@@ -39,8 +41,10 @@ const StyledTooltip = styled(Tooltip, {
     return `
       background: ${theme.colors.primary.backgroundStrong};
       box-shadow: ${theme.shadows.popover};
-      &::after {
-        border-color: ${theme.colors.primary.backgroundStrong} transparent transparent transparent;
+      &[data-has-arrow='true'] {
+        &::after {
+          border-color: ${theme.colors.primary.backgroundStrong} transparent transparent transparent;
+        }
       }
       `
   }}
@@ -99,7 +103,7 @@ type PopoverProps = {
   onClose: () => void
   className?: string
   'data-testid'?: string
-} & Pick<ComponentProps<typeof Tooltip>, 'placement'>
+} & Pick<ComponentProps<typeof Popup>, 'placement'>
 
 export const Popover = ({
   visible = false,
@@ -133,7 +137,7 @@ export const Popover = ({
   }, [handleClickOutside])
 
   return (
-    <StyledTooltip
+    <StyledPopup
       visible={visible}
       placement={placement}
       text={
@@ -149,6 +153,6 @@ export const Popover = ({
       ref={ref}
     >
       {children}
-    </StyledTooltip>
+    </StyledPopup>
   )
 }
