@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.1
+
+### Patch Changes
+
+- [#2752](https://github.com/scaleway/ultraviolet/pull/2752) [`f4f9dfc1`](https://github.com/scaleway/ultraviolet/commit/f4f9dfc1473ce60b9a397708a2be737ff737fc4d) Thanks [@matthprost](https://github.com/matthprost)! - Update ProductIcon tokens color for warning sentiment
+
 ## 1.2.0
 
 ### Minor Changes
