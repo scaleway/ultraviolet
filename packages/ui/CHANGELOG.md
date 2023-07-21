@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.7.0
+
+### Minor Changes
+
+- [#2714](https://github.com/scaleway/ultraviolet/pull/2714) [`cd6522ff`](https://github.com/scaleway/ultraviolet/commit/cd6522ff50c1669308a95574d87dc4fc282830ce) Thanks [@matthprost](https://github.com/matthprost)! - Create internal component popup for Tooltip and Popover
+
+### Patch Changes
+
+- Updated dependencies [[`f4f9dfc1`](https://github.com/scaleway/ultraviolet/commit/f4f9dfc1473ce60b9a397708a2be737ff737fc4d)]:
+  - @ultraviolet/themes@1.2.1
+
 ## 1.6.1
 
 ### Patch Changes

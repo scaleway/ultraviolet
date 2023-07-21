@@ -1,5 +1,14 @@
 # @ultraviolet/icons
 
+## 1.1.2
+
+### Patch Changes
+
+- [#2752](https://github.com/scaleway/ultraviolet/pull/2752) [`f4f9dfc1`](https://github.com/scaleway/ultraviolet/commit/f4f9dfc1473ce60b9a397708a2be737ff737fc4d) Thanks [@matthprost](https://github.com/matthprost)! - Update ProductIcon tokens color for warning sentiment
+
+- Updated dependencies [[`cd6522ff`](https://github.com/scaleway/ultraviolet/commit/cd6522ff50c1669308a95574d87dc4fc282830ce)]:
+  - @ultraviolet/ui@1.7.0
+
 ## 1.1.1
 
 ### Patch Changes
