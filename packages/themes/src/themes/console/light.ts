@@ -192,9 +192,9 @@ export const lightTheme = {
             fillWeakDisabled: '#f3f3f4',
           },
           warning: {
-            fill: '#ffeccc',
+            fill: '#7c5400',
             fillDisabled: '#d9dadd',
-            fillStrong: '#ffeccc',
+            fillStrong: '#7c5400',
             fillStrongDisabled: '#d9dadd',
             fillWeak: '#fbc600',
             fillWeakDisabled: '#f3f3f4',
