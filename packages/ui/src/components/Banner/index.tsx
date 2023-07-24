@@ -1,3 +1,5 @@
+import type { Theme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
@@ -5,29 +7,94 @@ import { Button } from '../Button'
 import { Link } from '../Link'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import defaultIllustrationSmall from './assets/default-image-small.svg'
+import defaultIllustration from './assets/default-image.svg'
+import introCompactLeftPattern from './assets/intro-compact-left-pattern.svg'
+import introCompactRightPattern from './assets/intro-compact-right-pattern.svg'
+import introPattern from './assets/intro-pattern.svg'
+import promotionCompactLeftPattern from './assets/promotion-compact-left-pattern.svg'
+import promotionCompactRightPattern from './assets/promotion-compact-right-pattern.svg'
+import promotionPattern from './assets/promotion-pattern.svg'
 
 type Variant = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
+
+const styles = ({
+  theme,
+  variant,
+  size,
+}: {
+  theme: Theme
+  variant: Variant
+  size: Size
+}) => {
+  if (variant === 'intro' && size === 'medium') {
+    return css`
+      background: ${theme.colors.primary.background};
+      background-image: url(${introPattern});
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+    `
+  }
+
+  if (variant === 'promotional' && size === 'medium') {
+    return css`
+      background-image: url(${promotionPattern}),
+        ${theme.colors.other.gradients.background.purple};
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+    `
+  }
+
+  if (size === 'small' && variant === 'intro') {
+    return css`
+      background: ${theme.colors.primary.background};
+      background-image: url(${introCompactLeftPattern}),
+        url(${introCompactRightPattern});
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: contain, contain;
+    `
+  }
+
+  if (size === 'small' && variant === 'promotional') {
+    return css`
+      background-image: url(${promotionCompactLeftPattern}),
+        url(${promotionCompactRightPattern}),
+        ${theme.colors.other.gradients.background.purple};
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: contain, contain;
+    `
+  }
+
+  return css``
+}
 
 const Container = styled('div', {
   shouldForwardProp: prop => !['variant', 'size'].includes(prop),
 })<{ variant: Variant; size: Size }>`
   padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
   border-radius: ${({ theme }) => theme.radii.large};
-  background: ${({ theme, variant }) =>
-    variant === 'intro'
-      ? theme.colors.primary.background
-      : theme.colors.primary.backgroundStrong};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: ${({ theme }) => theme.space['2']};
+  ${({ theme, variant, size }) => styles({ theme, variant, size })};
 
   > svg:first-child,
   > img {
     height: ${({ size }) => (size === 'medium' ? '140px' : '100px')};
     align-self: center;
   }
+`
+
+const ImageStack = styled(Stack, {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: Size }>`
+  width: ${({ size }) => (size === 'medium' ? '140px' : '74px')};
 `
 
 type BannerProps = {
@@ -59,13 +126,18 @@ export const Banner = ({
   image,
   className,
 }: BannerProps) => {
+  const defaultImage =
+    size === 'small' ? defaultIllustrationSmall : defaultIllustration
+
   const [opened, setOpened] = useState(true)
 
   if (!opened) return null
 
   return (
     <Container variant={variant} size={size} className={className}>
-      {image}
+      <ImageStack size={size} justifyContent="center">
+        {image ?? <img src={defaultImage} alt="" />}
+      </ImageStack>
       <Stack
         direction={direction}
         gap={2}
@@ -91,7 +163,7 @@ export const Banner = ({
             {children}
           </Text>
         </Stack>
-        <Stack direction="row" gap={2}>
+        <Stack direction="row" gap={2} alignItems="center">
           {buttonText ? (
             <Button
               size="medium"
@@ -101,7 +173,7 @@ export const Banner = ({
               {buttonText}
             </Button>
           ) : null}
-          {linkText && direction === 'column' ? (
+          {linkText ? (
             <Link
               sentiment="primary"
               size="small"
