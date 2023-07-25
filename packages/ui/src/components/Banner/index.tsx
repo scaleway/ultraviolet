@@ -28,49 +28,53 @@ const styles = ({
   variant: Variant
   size: Size
 }) => {
-  if (variant === 'intro' && size === 'medium') {
-    return css`
-      background: ${theme.colors.primary.background};
-      background-image: url(${introPattern});
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: contain;
-    `
+  if (size === 'small') {
+    if (variant === 'intro') {
+      return css`
+        background: ${theme.colors.primary.background};
+        background-image: url(${introCompactLeftPattern}),
+          url(${introCompactRightPattern});
+        background-position: left, right;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+      `
+    }
+
+    if (variant === 'promotional') {
+      return css`
+        background-image: url(${promotionCompactLeftPattern}),
+          url(${promotionCompactRightPattern}),
+          ${theme.colors.other.gradients.background.purple};
+        background-position: left, right;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+      `
+    }
   }
 
-  if (variant === 'promotional' && size === 'medium') {
-    return css`
-      background-image: url(${promotionPattern}),
-        ${theme.colors.other.gradients.background.purple};
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: contain;
-    `
+  if (size === 'medium') {
+    if (variant === 'intro') {
+      return css`
+        background: ${theme.colors.primary.background};
+        background-image: url(${introPattern});
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+      `
+    }
+
+    if (variant === 'promotional') {
+      return css`
+        background-image: url(${promotionPattern}),
+          ${theme.colors.other.gradients.background.purple};
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+      `
+    }
   }
 
-  if (size === 'small' && variant === 'intro') {
-    return css`
-      background: ${theme.colors.primary.background};
-      background-image: url(${introCompactLeftPattern}),
-        url(${introCompactRightPattern});
-      background-position: left, right;
-      background-repeat: no-repeat, no-repeat;
-      background-size: contain, contain;
-    `
-  }
-
-  if (size === 'small' && variant === 'promotional') {
-    return css`
-      background-image: url(${promotionCompactLeftPattern}),
-        url(${promotionCompactRightPattern}),
-        ${theme.colors.other.gradients.background.purple};
-      background-position: left, right;
-      background-repeat: no-repeat, no-repeat;
-      background-size: contain, contain;
-    `
-  }
-
-  return css``
+  return null
 }
 
 const Container = styled('div', {
