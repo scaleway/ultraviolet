@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode } from 'react'
 import { useState } from 'react'
@@ -93,6 +93,13 @@ const Container = styled('div', {
     height: ${({ size }) => (size === 'medium' ? '140px' : '100px')};
     align-self: center;
   }
+
+  button[name='close'] {
+    background: none;
+    &:hover {
+      background: none;
+    }
+  }
 `
 
 const ImageStack = styled(Stack, {
@@ -130,6 +137,7 @@ export const Banner = ({
   image,
   className,
 }: BannerProps) => {
+  const { theme } = useTheme()
   const defaultImage =
     size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
@@ -153,7 +161,11 @@ export const Banner = ({
           <Text
             as="p"
             variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
-            color="primary"
+            color={
+              variant === 'promotional' && theme !== 'light'
+                ? 'neutral'
+                : 'primary'
+            }
             prominence={variant === 'intro' ? 'default' : 'strong'}
           >
             {title}
@@ -162,7 +174,12 @@ export const Banner = ({
             as="p"
             variant="body"
             color="neutral"
-            prominence={variant === 'intro' ? 'default' : 'stronger'}
+            prominence={
+              variant === 'intro' ||
+              (variant === 'promotional' && theme !== 'light')
+                ? 'default'
+                : 'stronger'
+            }
           >
             {children}
           </Text>
@@ -172,6 +189,7 @@ export const Banner = ({
             <Button
               size="medium"
               sentiment={variant === 'intro' ? 'primary' : 'neutral'}
+              variant="filled"
               onClick={onClickButton}
             >
               {buttonText}
@@ -179,11 +197,13 @@ export const Banner = ({
           ) : null}
           {linkText ? (
             <Link
-              sentiment="primary"
+              sentiment={theme !== 'light' ? 'neutral' : 'primary'}
               size="small"
               target="_blank"
               href={linkHref ?? ''}
-              prominence={variant === 'intro' ? 'default' : 'strong'}
+              prominence={
+                variant === 'intro' || theme !== 'light' ? 'default' : 'strong'
+              }
             >
               {linkText}
             </Link>
@@ -193,8 +213,14 @@ export const Banner = ({
       <Button
         icon="close"
         size="small"
+        name="close"
         variant={variant === 'intro' ? 'ghost' : 'filled'}
-        sentiment={variant === 'intro' ? 'neutral' : 'primary'}
+        sentiment={
+          variant === 'intro' ||
+          (variant === 'promotional' && theme !== 'light')
+            ? 'neutral'
+            : 'primary'
+        }
         onClick={() => {
           setOpened(false)
           onClose?.()
