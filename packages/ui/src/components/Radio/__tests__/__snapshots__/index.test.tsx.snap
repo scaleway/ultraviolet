@@ -2,7 +2,7 @@
 
 exports[`Radio renders correctly 1`] = `
 <DocumentFragment>
-  .cache-1cysob-RadioContainer {
+  .cache-11umsq8-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,47 +15,46 @@ exports[`Radio renders correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='false'],
-.cache-1cysob-RadioContainer[aria-disabled='false']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='false'],
+.cache-11umsq8-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #e5dbfd;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
   fill: #b3144d;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #ffd3e3;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-1cysob-RadioContainer[aria-disabled='true']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 {
-  fill: #d9dadd;
+.cache-11umsq8-RadioContainer[aria-disabled='true']>label,
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld1 {
+  cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
   fill: #f3f3f4;
 }
 
-.cache-po1kkw-RadioInput {
+.cache-r6hifg-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -65,7 +64,7 @@ exports[`Radio renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-po1kkw-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-r6hifg-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -75,72 +74,68 @@ exports[`Radio renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-po1kkw-RadioInput:checked+svg .ehkrmld3 {
+.cache-r6hifg-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-po1kkw-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+.cache-r6hifg-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 {
+  background-color: #5e127e40;
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
   fill: #f1eefc;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffebf2;
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #f91b6c40;
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
   fill: #ffebf2;
 }
 
-.cache-j51tvx-StyledIcon {
+.cache-bw8u3u-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b5b7bd;
+  fill: #d9dadd;
 }
 
-.cache-j51tvx-StyledIcon .ehkrmld4 {
-  fill: #f9f9fa;
-}
-
-.cache-u6wkt9-InnerCircleRing {
-  fill: #b5b7bd;
+.cache-bw8u3u-Ring .ehkrmld4 {
+  fill: #ffffff;
 }
 
 <div
     aria-disabled="false"
-    class="cache-1cysob-RadioContainer ehkrmld0"
+    class="cache-11umsq8-RadioContainer ehkrmld0"
     data-checked="false"
   >
     <input
       aria-disabled="false"
       aria-invalid="false"
-      class="cache-po1kkw-RadioInput ehkrmld1"
+      class="cache-r6hifg-RadioInput ehkrmld1"
       id="radio-choice"
       name="radio"
       type="radio"
       value="choice"
     />
     <svg
-      class="cache-j51tvx-StyledIcon ehkrmld2"
+      class="cache-bw8u3u-Ring ehkrmld2"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -148,20 +143,20 @@ exports[`Radio renders correctly 1`] = `
         <circle
           cx="12"
           cy="12"
-          r="8"
+          r="10"
           stroke-width="2"
         />
         <circle
-          class="cache-u6wkt9-InnerCircleRing ehkrmld4"
+          class="cache-1niv4ql-InnerCircleRing ehkrmld4"
           cx="12"
           cy="12"
-          r="6"
+          r="8"
         />
         <circle
           class="cache-ivayk3-RadioMark ehkrmld3"
           cx="12"
           cy="12"
-          r="4"
+          r="5"
         />
       </g>
     </svg>
@@ -176,7 +171,7 @@ exports[`Radio renders correctly 1`] = `
 
 exports[`Radio renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-1cysob-RadioContainer {
+  .cache-11umsq8-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -189,47 +184,46 @@ exports[`Radio renders correctly when checked 1`] = `
   gap: 8px;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='false'],
-.cache-1cysob-RadioContainer[aria-disabled='false']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='false'],
+.cache-11umsq8-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #e5dbfd;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
   fill: #b3144d;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #ffd3e3;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-1cysob-RadioContainer[aria-disabled='true']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 {
-  fill: #d9dadd;
+.cache-11umsq8-RadioContainer[aria-disabled='true']>label,
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld1 {
+  cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
   fill: #f3f3f4;
 }
 
-.cache-po1kkw-RadioInput {
+.cache-r6hifg-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -239,7 +233,7 @@ exports[`Radio renders correctly when checked 1`] = `
   border-width: 0;
 }
 
-.cache-po1kkw-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-r6hifg-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -249,73 +243,69 @@ exports[`Radio renders correctly when checked 1`] = `
   transform: scale(0);
 }
 
-.cache-po1kkw-RadioInput:checked+svg .ehkrmld3 {
+.cache-r6hifg-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-po1kkw-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+.cache-r6hifg-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 {
+  background-color: #5e127e40;
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
   fill: #f1eefc;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffebf2;
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #f91b6c40;
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
   fill: #ffebf2;
 }
 
-.cache-j51tvx-StyledIcon {
+.cache-bw8u3u-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b5b7bd;
+  fill: #d9dadd;
 }
 
-.cache-j51tvx-StyledIcon .ehkrmld4 {
-  fill: #f9f9fa;
-}
-
-.cache-u6wkt9-InnerCircleRing {
-  fill: #b5b7bd;
+.cache-bw8u3u-Ring .ehkrmld4 {
+  fill: #ffffff;
 }
 
 <div
     aria-disabled="false"
-    class="cache-1cysob-RadioContainer ehkrmld0"
+    class="cache-11umsq8-RadioContainer ehkrmld0"
     data-checked="true"
   >
     <input
       aria-disabled="false"
       aria-invalid="false"
       checked=""
-      class="cache-po1kkw-RadioInput ehkrmld1"
+      class="cache-r6hifg-RadioInput ehkrmld1"
       id="radio-choice"
       name="radio"
       type="radio"
       value="choice"
     />
     <svg
-      class="cache-j51tvx-StyledIcon ehkrmld2"
+      class="cache-bw8u3u-Ring ehkrmld2"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -323,20 +313,20 @@ exports[`Radio renders correctly when checked 1`] = `
         <circle
           cx="12"
           cy="12"
-          r="8"
+          r="10"
           stroke-width="2"
         />
         <circle
-          class="cache-u6wkt9-InnerCircleRing ehkrmld4"
+          class="cache-1niv4ql-InnerCircleRing ehkrmld4"
           cx="12"
           cy="12"
-          r="6"
+          r="8"
         />
         <circle
           class="cache-ivayk3-RadioMark ehkrmld3"
           cx="12"
           cy="12"
-          r="4"
+          r="5"
         />
       </g>
     </svg>
@@ -351,7 +341,7 @@ exports[`Radio renders correctly when checked 1`] = `
 
 exports[`Radio renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-1cysob-RadioContainer {
+  .cache-11umsq8-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -364,47 +354,46 @@ exports[`Radio renders correctly when disabled 1`] = `
   gap: 8px;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='false'],
-.cache-1cysob-RadioContainer[aria-disabled='false']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='false'],
+.cache-11umsq8-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #e5dbfd;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
   fill: #b3144d;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #ffd3e3;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-1cysob-RadioContainer[aria-disabled='true']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 {
-  fill: #d9dadd;
+.cache-11umsq8-RadioContainer[aria-disabled='true']>label,
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld1 {
+  cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
   fill: #f3f3f4;
 }
 
-.cache-po1kkw-RadioInput {
+.cache-r6hifg-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -414,7 +403,7 @@ exports[`Radio renders correctly when disabled 1`] = `
   border-width: 0;
 }
 
-.cache-po1kkw-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-r6hifg-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -424,65 +413,61 @@ exports[`Radio renders correctly when disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-po1kkw-RadioInput:checked+svg .ehkrmld3 {
+.cache-r6hifg-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-po1kkw-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+.cache-r6hifg-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 {
+  background-color: #5e127e40;
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
   fill: #f1eefc;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffebf2;
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #f91b6c40;
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
   fill: #ffebf2;
 }
 
-.cache-j51tvx-StyledIcon {
+.cache-bw8u3u-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b5b7bd;
+  fill: #d9dadd;
 }
 
-.cache-j51tvx-StyledIcon .ehkrmld4 {
-  fill: #f9f9fa;
-}
-
-.cache-u6wkt9-InnerCircleRing {
-  fill: #b5b7bd;
+.cache-bw8u3u-Ring .ehkrmld4 {
+  fill: #ffffff;
 }
 
 <div
     aria-disabled="true"
-    class="cache-1cysob-RadioContainer ehkrmld0"
+    class="cache-11umsq8-RadioContainer ehkrmld0"
     data-checked="false"
   >
     <input
       aria-disabled="true"
       aria-invalid="false"
-      class="cache-po1kkw-RadioInput ehkrmld1"
+      class="cache-r6hifg-RadioInput ehkrmld1"
       disabled=""
       id="radio-choice"
       name="radio"
@@ -490,7 +475,7 @@ exports[`Radio renders correctly when disabled 1`] = `
       value="choice"
     />
     <svg
-      class="cache-j51tvx-StyledIcon ehkrmld2"
+      class="cache-bw8u3u-Ring ehkrmld2"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -498,20 +483,20 @@ exports[`Radio renders correctly when disabled 1`] = `
         <circle
           cx="12"
           cy="12"
-          r="8"
+          r="10"
           stroke-width="2"
         />
         <circle
-          class="cache-u6wkt9-InnerCircleRing ehkrmld4"
+          class="cache-1niv4ql-InnerCircleRing ehkrmld4"
           cx="12"
           cy="12"
-          r="6"
+          r="8"
         />
         <circle
           class="cache-ivayk3-RadioMark ehkrmld3"
           cx="12"
           cy="12"
-          r="4"
+          r="5"
         />
       </g>
     </svg>
@@ -526,7 +511,7 @@ exports[`Radio renders correctly when disabled 1`] = `
 
 exports[`Radio renders correctly when error 1`] = `
 <DocumentFragment>
-  .cache-1cysob-RadioContainer {
+  .cache-11umsq8-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -539,47 +524,46 @@ exports[`Radio renders correctly when error 1`] = `
   gap: 8px;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='false'],
-.cache-1cysob-RadioContainer[aria-disabled='false']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='false'],
+.cache-11umsq8-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #e5dbfd;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
   fill: #b3144d;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #ffd3e3;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-1cysob-RadioContainer[aria-disabled='true']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 {
-  fill: #d9dadd;
+.cache-11umsq8-RadioContainer[aria-disabled='true']>label,
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld1 {
+  cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
   fill: #f3f3f4;
 }
 
-.cache-po1kkw-RadioInput {
+.cache-r6hifg-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -589,7 +573,7 @@ exports[`Radio renders correctly when error 1`] = `
   border-width: 0;
 }
 
-.cache-po1kkw-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-r6hifg-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -599,73 +583,69 @@ exports[`Radio renders correctly when error 1`] = `
   transform: scale(0);
 }
 
-.cache-po1kkw-RadioInput:checked+svg .ehkrmld3 {
+.cache-r6hifg-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-po1kkw-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+.cache-r6hifg-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 {
+  background-color: #5e127e40;
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
   fill: #f1eefc;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffebf2;
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #f91b6c40;
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
   fill: #ffebf2;
 }
 
-.cache-j51tvx-StyledIcon {
+.cache-bw8u3u-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b5b7bd;
+  fill: #d9dadd;
 }
 
-.cache-j51tvx-StyledIcon .ehkrmld4 {
-  fill: #f9f9fa;
-}
-
-.cache-u6wkt9-InnerCircleRing {
-  fill: #b5b7bd;
+.cache-bw8u3u-Ring .ehkrmld4 {
+  fill: #ffffff;
 }
 
 <div
     aria-disabled="false"
-    class="cache-1cysob-RadioContainer ehkrmld0"
+    class="cache-11umsq8-RadioContainer ehkrmld0"
     data-checked="false"
     data-error="Invalid value"
   >
     <input
       aria-disabled="false"
       aria-invalid="true"
-      class="cache-po1kkw-RadioInput ehkrmld1"
+      class="cache-r6hifg-RadioInput ehkrmld1"
       id="radio-choice"
       name="radio"
       type="radio"
       value="choice"
     />
     <svg
-      class="cache-j51tvx-StyledIcon ehkrmld2"
+      class="cache-bw8u3u-Ring ehkrmld2"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -673,20 +653,20 @@ exports[`Radio renders correctly when error 1`] = `
         <circle
           cx="12"
           cy="12"
-          r="8"
+          r="10"
           stroke-width="2"
         />
         <circle
-          class="cache-u6wkt9-InnerCircleRing ehkrmld4"
+          class="cache-1niv4ql-InnerCircleRing ehkrmld4"
           cx="12"
           cy="12"
-          r="6"
+          r="8"
         />
         <circle
           class="cache-ivayk3-RadioMark ehkrmld3"
           cx="12"
           cy="12"
-          r="4"
+          r="5"
         />
       </g>
     </svg>
@@ -701,7 +681,7 @@ exports[`Radio renders correctly when error 1`] = `
 
 exports[`Radio renders without name 1`] = `
 <DocumentFragment>
-  .cache-1cysob-RadioContainer {
+  .cache-11umsq8-RadioContainer {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -714,47 +694,46 @@ exports[`Radio renders without name 1`] = `
   gap: 8px;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='false'],
-.cache-1cysob-RadioContainer[aria-disabled='false']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='false'],
+.cache-11umsq8-RadioContainer[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
-  fill: #f1eefc;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1+.ehkrmld2 .ehkrmld4 {
+  fill: #e5dbfd;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
-  background-color: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 {
   fill: #b3144d;
 }
 
-.cache-1cysob-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
-  fill: #ffebf2;
+.cache-11umsq8-RadioContainer:hover[aria-disabled='false'] .ehkrmld1[aria-invalid='true']+.ehkrmld2 .ehkrmld4 {
+  fill: #ffd3e3;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] {
-  cursor: not-allowed;
-  color: #b5b7bd;
-}
-
-.cache-1cysob-RadioContainer[aria-disabled='true']>label {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 {
-  fill: #d9dadd;
+.cache-11umsq8-RadioContainer[aria-disabled='true']>label,
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld1 {
+  cursor: not-allowed;
 }
 
-.cache-1cysob-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-11umsq8-RadioContainer[aria-disabled='true'] .ehkrmld2 .ehkrmld4 {
   fill: #f3f3f4;
 }
 
-.cache-po1kkw-RadioInput {
+.cache-r6hifg-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -764,7 +743,7 @@ exports[`Radio renders without name 1`] = `
   border-width: 0;
 }
 
-.cache-po1kkw-RadioInput+.ehkrmld2 .ehkrmld3 {
+.cache-r6hifg-RadioInput+.ehkrmld2 .ehkrmld3 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -774,65 +753,61 @@ exports[`Radio renders without name 1`] = `
   transform: scale(0);
 }
 
-.cache-po1kkw-RadioInput:checked+svg .ehkrmld3 {
+.cache-r6hifg-RadioInput:checked+svg .ehkrmld3 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-po1kkw-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
+.cache-r6hifg-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld2 {
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld2 {
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 {
-  background-color: #f1eefc;
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 {
+  background-color: #5e127e40;
   fill: #521094;
 }
 
-.cache-po1kkw-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput:focus+.ehkrmld2 .ehkrmld4 {
   fill: #f1eefc;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
-  background-color: #ffebf2;
-  fill: #b3144d;
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 {
+  background-color: #f91b6c40;
+  fill: #e51963;
 }
 
-.cache-po1kkw-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
+.cache-r6hifg-RadioInput[aria-invalid='true']:focus+.ehkrmld2 .ehkrmld4 {
   fill: #ffebf2;
 }
 
-.cache-j51tvx-StyledIcon {
+.cache-bw8u3u-Ring {
   height: 24px;
   width: 24px;
   min-width: 24px;
   min-height: 24px;
   border-radius: 100%;
-  fill: #b5b7bd;
+  fill: #d9dadd;
 }
 
-.cache-j51tvx-StyledIcon .ehkrmld4 {
-  fill: #f9f9fa;
-}
-
-.cache-u6wkt9-InnerCircleRing {
-  fill: #b5b7bd;
+.cache-bw8u3u-Ring .ehkrmld4 {
+  fill: #ffffff;
 }
 
 <div
     aria-disabled="true"
-    class="cache-1cysob-RadioContainer ehkrmld0"
+    class="cache-11umsq8-RadioContainer ehkrmld0"
     data-checked="false"
   >
     <input
       aria-disabled="true"
       aria-invalid="false"
-      class="cache-po1kkw-RadioInput ehkrmld1"
+      class="cache-r6hifg-RadioInput ehkrmld1"
       disabled=""
       id=":r2:-choice"
       name=":r2:"
@@ -840,7 +815,7 @@ exports[`Radio renders without name 1`] = `
       value="choice"
     />
     <svg
-      class="cache-j51tvx-StyledIcon ehkrmld2"
+      class="cache-bw8u3u-Ring ehkrmld2"
       size="24"
       viewBox="0 0 24 24"
     >
@@ -848,20 +823,20 @@ exports[`Radio renders without name 1`] = `
         <circle
           cx="12"
           cy="12"
-          r="8"
+          r="10"
           stroke-width="2"
         />
         <circle
-          class="cache-u6wkt9-InnerCircleRing ehkrmld4"
+          class="cache-1niv4ql-InnerCircleRing ehkrmld4"
           cx="12"
           cy="12"
-          r="6"
+          r="8"
         />
         <circle
           class="cache-ivayk3-RadioMark ehkrmld3"
           cx="12"
           cy="12"
-          r="4"
+          r="5"
         />
       </g>
     </svg>
