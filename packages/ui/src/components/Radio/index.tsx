@@ -2,29 +2,26 @@ import styled from '@emotion/styled'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 
-const InnerCircleRing = styled.circle`
-  fill: ${({ theme }) => theme.colors.neutral.borderStrong};
-`
-
+const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
 
 const RadioMarkedIcon = () => (
   <g>
-    <circle cx="12" cy="12" r="8" strokeWidth="2" />
-    <InnerCircleRing cx="12" cy="12" r="6" />
-    <RadioMark cx="12" cy="12" r="4" />
+    <circle cx="12" cy="12" r="10" strokeWidth="2" />
+    <InnerCircleRing cx="12" cy="12" r="8" />
+    <RadioMark cx="12" cy="12" r="5" />
   </g>
 )
 
-const StyledIcon = styled.svg<{ size: number }>`
+const Ring = styled.svg<{ size: number }>`
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
   min-width: ${({ size }) => size}px;
   min-height: ${({ size }) => size}px;
   border-radius: ${({ theme }) => theme.radii.circle};
-  fill: ${({ theme }) => theme.colors.neutral.borderStrong};
+  fill: ${({ theme }) => theme.colors.neutral.border};
   ${InnerCircleRing} {
-    fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    fill: ${({ theme }) => theme.colors.neutral.background};
   }
 `
 
@@ -38,7 +35,7 @@ const RadioInput = styled('input', {
   opacity: 0;
   white-space: nowrap;
   border-width: 0;
-  & + ${StyledIcon} {
+  & + ${Ring} {
     ${RadioMark} {
       transform-origin: center;
       transition: 200ms transform ease-in-out;
@@ -52,25 +49,25 @@ const RadioInput = styled('input', {
     }
   }
 
-  &:checked[aria-disabled='false'][aria-invalid='false'] + ${StyledIcon} {
+  &:checked[aria-disabled='false'][aria-invalid='false'] + ${Ring} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
   }
 
-  &[aria-invalid='true']:not([aria-disabled='true']) + ${StyledIcon} {
-    fill: ${({ theme }) => theme.colors.danger.text};
+  &[aria-invalid='true']:not([aria-disabled='true']) + ${Ring} {
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
   }
 
-  &:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.primary.background};
+  &:focus + ${Ring} {
+    background-color: #5e127e40;
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
     ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.primary.background};
     }
   }
 
-  &[aria-invalid='true']:focus + ${StyledIcon} {
-    background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.text};
+  &[aria-invalid='true']:focus + ${Ring} {
+    background-color: #f91b6c40;
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
     ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.danger.background};
     }
@@ -89,32 +86,32 @@ const RadioContainer = styled.div`
   }
 
   :hover[aria-disabled='false'] {
-    ${RadioInput} + ${StyledIcon} {
-      background-color: ${({ theme }) => theme.colors.primary.background};
-      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    ${RadioInput} + ${Ring} {
+      fill: ${({ theme }) => theme.colors.primary.border};
       ${InnerCircleRing} {
-        fill: ${({ theme }) => theme.colors.primary.background};
+        fill: ${({ theme }) => theme.colors.primary.backgroundHover};
       }
     }
 
-    ${RadioInput}[aria-invalid='true'] + ${StyledIcon} {
-      background-color: ${({ theme }) => theme.colors.danger.background};
-      fill: ${({ theme }) => theme.colors.danger.text};
+    ${RadioInput}[aria-invalid='true'] + ${Ring} {
+      fill: ${({ theme }) => theme.colors.danger.border};
       ${InnerCircleRing} {
-        fill: ${({ theme }) => theme.colors.danger.background};
+        fill: ${({ theme }) => theme.colors.danger.backgroundHover};
       }
     }
   }
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
-    & > label {
+
+    & > label,
+    ${RadioInput} {
       cursor: not-allowed;
     }
-    color: ${({ theme }) => theme.colors.neutral.textDisabled};
 
-    ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
+    ${Ring} {
+      fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
+      cursor: not-allowed;
       ${InnerCircleRing} {
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
@@ -202,9 +199,9 @@ export const Radio = forwardRef(
           ref={ref}
           size={size}
         />
-        <StyledIcon size={size} viewBox="0 0 24 24">
+        <Ring size={size} viewBox="0 0 24 24">
           <RadioMarkedIcon />
-        </StyledIcon>
+        </Ring>
         {children ? (
           <label htmlFor={`${computedName}-${value}`}>{children}</label>
         ) : null}
