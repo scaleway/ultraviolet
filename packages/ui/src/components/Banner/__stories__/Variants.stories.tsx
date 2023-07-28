@@ -1,12 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Banner } from '..'
-import image from './Image.png'
 
 export const Variants: StoryFn = () => (
   <>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       variant="intro"
@@ -17,7 +15,6 @@ export const Variants: StoryFn = () => (
     </Banner>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       variant="promotional"

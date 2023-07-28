@@ -1,30 +1,51 @@
 import type { StoryFn } from '@storybook/react'
 import { Banner } from '..'
-import image from './Image.png'
 
 export const Sizes: StoryFn = () => (
   <>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       size="medium"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      credits, advisors and startup experts to develop your business and limit
+      your expenses.
     </Banner>
     <Banner
       title="Apply to Scaleway Startup programs"
-      image={<img src={image} alt="" />}
       buttonText="Apply now"
       linkText="Learn more"
       size="small"
+      direction="row"
     >
       The Scaleway Startup programs offer the perfect combination of cloud
-      credits, infrastructure advisors and startup experts to develop your
-      business and limit your expenses.
+      credits, advisors and startup experts to develop your business and limit
+      your expenses.
+    </Banner>
+    <Banner
+      title="Apply to Scaleway Startup programs"
+      buttonText="Apply now"
+      linkText="Learn more"
+      size="medium"
+      variant="promotional"
+    >
+      The Scaleway Startup programs offer the perfect combination of cloud
+      credits, advisors and startup experts to develop your business and limit
+      your expenses.
+    </Banner>
+    <Banner
+      title="Apply to Scaleway Startup programs"
+      buttonText="Apply now"
+      linkText="Learn more"
+      size="small"
+      variant="promotional"
+      direction="row"
+    >
+      The Scaleway Startup programs offer the perfect combination of cloud
+      credits, advisors and startup experts to develop your business and limit
+      your expenses.
     </Banner>
   </>
 )
