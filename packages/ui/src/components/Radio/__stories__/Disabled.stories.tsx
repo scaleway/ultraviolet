@@ -15,9 +15,8 @@ export const Disabled: StoryFn = () => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-      >
-        Label 1
-      </Radio>
+        label="Label 1"
+      />
       <Radio
         name="disabled-label-2"
         checked={value === 'disabled-label-2'}
@@ -25,9 +24,8 @@ export const Disabled: StoryFn = () => {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.currentTarget.value)
         }
-      >
-        Label 2
-      </Radio>
+        label="Label 2"
+      />
     </>
   )
 }

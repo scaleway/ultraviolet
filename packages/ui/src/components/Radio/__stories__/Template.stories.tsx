@@ -5,7 +5,7 @@ export const Template: StoryFn<typeof Radio> = args => <Radio {...args} />
 
 Template.args = {
   checked: false,
-  children: 'Label 1',
+  label: 'Label 1',
   disabled: false,
   name: 'basic',
   value: 'label-1',

@@ -1,6 +1,10 @@
 import styled from '@emotion/styled'
 import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
+
+const SIZE = 24
 
 const InnerCircleRing = styled.circle``
 const RadioMark = styled.circle``
@@ -13,11 +17,11 @@ const RadioMarkedIcon = () => (
   </g>
 )
 
-const Ring = styled.svg<{ size: number }>`
-  height: ${({ size }) => size}px;
-  width: ${({ size }) => size}px;
-  min-width: ${({ size }) => size}px;
-  min-height: ${({ size }) => size}px;
+const Ring = styled.svg`
+  height: ${SIZE}px;
+  width: ${SIZE}px;
+  min-width: ${SIZE}px;
+  min-height: ${SIZE}px;
   border-radius: ${({ theme }) => theme.radii.circle};
   fill: ${({ theme }) => theme.colors.neutral.border};
   ${InnerCircleRing} {
@@ -25,13 +29,11 @@ const Ring = styled.svg<{ size: number }>`
   }
 `
 
-const RadioInput = styled('input', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: number }>`
+const RadioInput = styled.input`
   cursor: pointer;
   position: absolute;
-  height: ${({ size }) => size}px;
-  width: ${({ size }) => size}px;
+  height: ${SIZE}px;
+  width: ${SIZE}px;
   opacity: 0;
   white-space: nowrap;
   border-width: 0;
@@ -119,11 +121,15 @@ const RadioContainer = styled.div`
   }
 `
 
+const MargedText = styled(Text)`
+  margin-left: ${({ theme }) => theme.space['4']};
+`
+
 type RadioProps = {
   error?: string | ReactNode
   checked?: boolean
-  size?: number
   value: string | number
+  helper?: ReactNode
   className?: string
   'data-testid'?: string
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
@@ -141,11 +147,11 @@ type RadioProps = {
   (
     | {
         'aria-label': string
-        children?: never
+        label?: never
       }
     | {
         'aria-label'?: never
-        children: ReactNode
+        label: ReactNode
       }
   )
 
@@ -160,8 +166,8 @@ export const Radio = forwardRef(
       error,
       name,
       value,
-      size = 24,
-      children,
+      label,
+      helper,
       className,
       autoFocus,
       onKeyDown,
@@ -174,38 +180,44 @@ export const Radio = forwardRef(
     const computedName = name ?? id
 
     return (
-      <RadioContainer
-        aria-disabled={disabled}
-        className={className}
-        data-checked={checked}
-        data-error={error}
-        data-testid={dataTestId}
-      >
-        <RadioInput
-          type="radio"
-          aria-invalid={!!error}
+      <Stack gap={0.5}>
+        <RadioContainer
           aria-disabled={disabled}
-          aria-label={ariaLabel}
-          checked={checked}
-          id={`${computedName}-${value}`}
-          onChange={onChange}
-          onFocus={onFocus}
-          onKeyDown={onKeyDown}
-          onBlur={onBlur}
-          value={value}
-          disabled={disabled}
-          name={computedName}
-          autoFocus={autoFocus}
-          ref={ref}
-          size={size}
-        />
-        <Ring size={size} viewBox="0 0 24 24">
-          <RadioMarkedIcon />
-        </Ring>
-        {children ? (
-          <label htmlFor={`${computedName}-${value}`}>{children}</label>
+          className={className}
+          data-checked={checked}
+          data-error={error}
+          data-testid={dataTestId}
+        >
+          <RadioInput
+            type="radio"
+            aria-invalid={!!error}
+            aria-disabled={disabled}
+            aria-label={ariaLabel}
+            checked={checked}
+            id={`${computedName}-${value}`}
+            onChange={onChange}
+            onFocus={onFocus}
+            onKeyDown={onKeyDown}
+            onBlur={onBlur}
+            value={value}
+            disabled={disabled}
+            name={computedName}
+            autoFocus={autoFocus}
+            ref={ref}
+          />
+          <Ring viewBox="0 0 24 24">
+            <RadioMarkedIcon />
+          </Ring>
+          {label ? (
+            <label htmlFor={`${computedName}-${value}`}>{label}</label>
+          ) : null}
+        </RadioContainer>
+        {helper ? (
+          <MargedText as="p" variant="bodySmall" prominence="weak">
+            {helper}
+          </MargedText>
         ) : null}
-      </RadioContainer>
+      </Stack>
     )
   },
 )

@@ -1,6 +1,6 @@
 import { Radio } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX, ReactNode } from 'react'
+import type { ComponentProps, JSX } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -16,20 +16,17 @@ type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
       | 'onBlur'
       | 'onChange'
       | 'onFocus'
-      | 'size'
       | 'value'
       | 'data-testid'
+      | 'label'
     >
   > & {
-    children?: ReactNode
     className?: string
-    label?: string
     name: string
     required?: boolean
   }
 
 export const RadioField = ({
-  children,
   className,
   'data-testid': dataTestId,
   disabled,
@@ -40,7 +37,6 @@ export const RadioField = ({
   onChange,
   onFocus,
   required,
-  size,
   validate,
   value,
 }: RadioFieldProps): JSX.Element => {
@@ -55,7 +51,7 @@ export const RadioField = ({
 
   const error = getError({
     disabled,
-    label,
+    label: label as string,
     meta: meta as FieldState<unknown>,
     name,
     value: input.value,
@@ -83,10 +79,8 @@ export const RadioField = ({
         onFocus?.(event)
       }}
       required={required}
-      size={size}
       value={input.value}
-    >
-      {children}
-    </Radio>
+      label={label}
+    />
   )
 }
