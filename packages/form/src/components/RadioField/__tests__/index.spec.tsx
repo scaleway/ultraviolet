@@ -15,16 +15,17 @@ describe('RadioField', () => {
 
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RadioField name="test" value="test">
-        Radio field
-      </RadioField>,
+      <RadioField name="test" value="test" label="Radio field" />,
     ))
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <RadioField name="test" value="disabled" disabled>
-        Radio field disabled
-      </RadioField>,
+      <RadioField
+        name="test"
+        value="disabled"
+        disabled
+        label="Radio field disabled"
+      />,
       {
         transform: () => {
           const input = screen.getByRole('radio', { hidden: true })
@@ -40,9 +41,7 @@ describe('RadioField', () => {
         errors={mockErrors}
         initialValues={{ test: 'checked' }}
       >
-        <RadioField name="test" value="checked">
-          Radio field checked
-        </RadioField>
+        <RadioField name="test" value="checked" label="Radio field checked" />
       </Form>,
       {
         transform: () => {
@@ -64,9 +63,8 @@ describe('RadioField', () => {
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
-      >
-        Radio field events
-      </RadioField>,
+        label="Radio field events"
+      />,
       {
         transform: () => {
           const input = screen.getByRole('radio', { hidden: true })
