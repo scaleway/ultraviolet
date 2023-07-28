@@ -2,10 +2,9 @@
 
 exports[`Banner renders correctly with a button 1`] = `
 <DocumentFragment>
-  .cache-icua4i-Container {
+  .cache-1voqd75-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,14 +16,53 @@ exports[`Banner renders correctly with a button 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-icua4i-Container>svg:first-child,
-.cache-icua4i-Container>img {
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-1i393eq-Stack {
@@ -96,7 +134,7 @@ exports[`Banner renders correctly with a button 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,10 +143,10 @@ exports[`Banner renders correctly with a button 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -237,8 +275,16 @@ exports[`Banner renders correctly with a button 1`] = `
 }
 
 <div
-    class="cache-icua4i-Container e1kdwp5x0"
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -259,7 +305,7 @@ exports[`Banner renders correctly with a button 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       >
         <button
           class="cache-1wvru4m-StyledFilledButton e112qvla2"
@@ -271,6 +317,7 @@ exports[`Banner renders correctly with a button 1`] = `
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -288,10 +335,9 @@ exports[`Banner renders correctly with a button 1`] = `
 
 exports[`Banner renders correctly with a link 1`] = `
 <DocumentFragment>
-  .cache-icua4i-Container {
+  .cache-1voqd75-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -303,14 +349,53 @@ exports[`Banner renders correctly with a link 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-icua4i-Container>svg:first-child,
-.cache-icua4i-Container>img {
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-1i393eq-Stack {
@@ -382,7 +467,7 @@ exports[`Banner renders correctly with a link 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,10 +476,10 @@ exports[`Banner renders correctly with a link 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -560,8 +645,16 @@ exports[`Banner renders correctly with a link 1`] = `
 }
 
 <div
-    class="cache-icua4i-Container e1kdwp5x0"
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -582,7 +675,7 @@ exports[`Banner renders correctly with a link 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       >
         <a
           class="cache-iezd3d-StyledLink e1afnb7a0"
@@ -609,6 +702,7 @@ exports[`Banner renders correctly with a link 1`] = `
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -626,10 +720,9 @@ exports[`Banner renders correctly with a link 1`] = `
 
 exports[`Banner renders correctly with an image 1`] = `
 <DocumentFragment>
-  .cache-icua4i-Container {
+  .cache-1voqd75-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -641,14 +734,53 @@ exports[`Banner renders correctly with an image 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-icua4i-Container>svg:first-child,
-.cache-icua4i-Container>img {
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-1i393eq-Stack {
@@ -720,7 +852,7 @@ exports[`Banner renders correctly with an image 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -729,10 +861,10 @@ exports[`Banner renders correctly with an image 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -807,12 +939,16 @@ exports[`Banner renders correctly with an image 1`] = `
 }
 
 <div
-    class="cache-icua4i-Container e1kdwp5x0"
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
   >
-    <img
-      alt=""
-      src="test-file-stub"
-    />
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -833,11 +969,12 @@ exports[`Banner renders correctly with an image 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       />
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -855,10 +992,9 @@ exports[`Banner renders correctly with an image 1`] = `
 
 exports[`Banner renders correctly with default values 1`] = `
 <DocumentFragment>
-  .cache-icua4i-Container {
+  .cache-1voqd75-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -870,14 +1006,53 @@ exports[`Banner renders correctly with default values 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-icua4i-Container>svg:first-child,
-.cache-icua4i-Container>img {
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-1i393eq-Stack {
@@ -949,7 +1124,7 @@ exports[`Banner renders correctly with default values 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -958,10 +1133,10 @@ exports[`Banner renders correctly with default values 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1036,8 +1211,16 @@ exports[`Banner renders correctly with default values 1`] = `
 }
 
 <div
-    class="cache-icua4i-Container e1kdwp5x0"
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -1058,11 +1241,12 @@ exports[`Banner renders correctly with default values 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       />
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -1080,10 +1264,9 @@ exports[`Banner renders correctly with default values 1`] = `
 
 exports[`Banner renders correctly with direction row 1`] = `
 <DocumentFragment>
-  .cache-icua4i-Container {
+  .cache-1voqd75-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1095,14 +1278,53 @@ exports[`Banner renders correctly with direction row 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-icua4i-Container>svg:first-child,
-.cache-icua4i-Container>img {
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-142nvv6-Stack {
@@ -1174,7 +1396,7 @@ exports[`Banner renders correctly with direction row 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1183,10 +1405,10 @@ exports[`Banner renders correctly with direction row 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1261,8 +1483,16 @@ exports[`Banner renders correctly with direction row 1`] = `
 }
 
 <div
-    class="cache-icua4i-Container e1kdwp5x0"
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-142nvv6-Stack ehpbis70"
       style="flex: 1;"
@@ -1283,11 +1513,12 @@ exports[`Banner renders correctly with direction row 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       />
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -1305,10 +1536,9 @@ exports[`Banner renders correctly with direction row 1`] = `
 
 exports[`Banner renders correctly with size small 1`] = `
 <DocumentFragment>
-  .cache-l6kkv4-Container {
+  .cache-mkpxbw-Container-styles {
   padding: 16px;
   border-radius: 8px;
-  background: #f1eefc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1320,14 +1550,53 @@ exports[`Banner renders correctly with size small 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub),url(test-file-stub);
+  -webkit-background-position: left,right;
+  background-position: left,right;
+  background-repeat: no-repeat,no-repeat;
+  -webkit-background-size: contain,contain;
+  background-size: contain,contain;
 }
 
-.cache-l6kkv4-Container>svg:first-child,
-.cache-l6kkv4-Container>img {
+.cache-mkpxbw-Container-styles>svg:first-child,
+.cache-mkpxbw-Container-styles>img {
   height: 100px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-mkpxbw-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-mkpxbw-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-1ppo6xt-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 74px;
 }
 
 .cache-1i393eq-Stack {
@@ -1399,7 +1668,7 @@ exports[`Banner renders correctly with size small 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1408,10 +1677,10 @@ exports[`Banner renders correctly with size small 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1486,8 +1755,16 @@ exports[`Banner renders correctly with size small 1`] = `
 }
 
 <div
-    class="cache-l6kkv4-Container e1kdwp5x0"
+    class="cache-mkpxbw-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-1ppo6xt-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -1508,11 +1785,12 @@ exports[`Banner renders correctly with size small 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       />
     </div>
     <button
       class="cache-xnjxeq-StyledGhostButton e112qvla0"
+      name="close"
       type="button"
     >
       <svg
@@ -1530,10 +1808,9 @@ exports[`Banner renders correctly with size small 1`] = `
 
 exports[`Banner renders correctly with type promotional 1`] = `
 <DocumentFragment>
-  .cache-1wk9t0x-Container {
+  .cache-1iq2gtr-Container-styles {
   padding: 24px;
   border-radius: 8px;
-  background: #521094;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1545,14 +1822,52 @@ exports[`Banner renders correctly with type promotional 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
+  background-image: url(test-file-stub),linear-gradient(180deg, #c43bff 0%, #521094 88.87%);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
 }
 
-.cache-1wk9t0x-Container>svg:first-child,
-.cache-1wk9t0x-Container>img {
+.cache-1iq2gtr-Container-styles>svg:first-child,
+.cache-1iq2gtr-Container-styles>img {
   height: 140px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
+}
+
+.cache-1iq2gtr-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1iq2gtr-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-msgflj-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
 }
 
 .cache-1i393eq-Stack {
@@ -1624,7 +1939,7 @@ exports[`Banner renders correctly with type promotional 1`] = `
   text-decoration: none;
 }
 
-.cache-6874q2-Stack {
+.cache-nf3r0g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1633,10 +1948,10 @@ exports[`Banner renders correctly with type promotional 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -1711,8 +2026,16 @@ exports[`Banner renders correctly with type promotional 1`] = `
 }
 
 <div
-    class="cache-1wk9t0x-Container e1kdwp5x0"
+    class="cache-1iq2gtr-Container-styles e1kdwp5x1"
   >
+    <div
+      class="cache-msgflj-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
     <div
       class="cache-1i393eq-Stack ehpbis70"
       style="flex: 1;"
@@ -1733,11 +2056,12 @@ exports[`Banner renders correctly with type promotional 1`] = `
         </p>
       </div>
       <div
-        class="cache-6874q2-Stack ehpbis70"
+        class="cache-nf3r0g-Stack ehpbis70"
       />
     </div>
     <button
       class="cache-r3pnhk-StyledFilledButton e112qvla2"
+      name="close"
       type="button"
     >
       <svg
