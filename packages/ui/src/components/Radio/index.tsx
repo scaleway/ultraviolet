@@ -59,12 +59,16 @@ const RadioInput = styled.input`
     fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
   }
 
-  &:focus + ${Ring} {
+  &:active + ${Ring} {
     background-color: #5e127e40;
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
     ${InnerCircleRing} {
       fill: ${({ theme }) => theme.colors.primary.background};
     }
+  }
+
+  &:focus-visible + ${Ring} {
+    outline: -webkit-focus-ring-color auto 1px;
   }
 
   &[aria-invalid='true']:focus + ${Ring} {
