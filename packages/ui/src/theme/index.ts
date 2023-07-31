@@ -19,14 +19,21 @@ type RecursivePartial<T> = {
 const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
   deepmerge(consoleLightTheme, extendedTheme) as SCWUITheme
 
-// This type exclude overlay and secondary color
+// This type exclude overlay color
 type Color = Extract<
   keyof typeof consoleLightTheme.colors,
-  'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
+  | 'primary'
+  | 'secondary'
+  | 'neutral'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
 >
 
 const SENTIMENTS = [
   'primary',
+  'secondary',
   'neutral',
   'success',
   'danger',
