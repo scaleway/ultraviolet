@@ -59,7 +59,7 @@ const RadioInput = styled.input`
     fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
   }
 
-  &:active + ${Ring} {
+  &[aria-disabled='false']:active + ${Ring} {
     background-color: #5e127e40;
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
     ${InnerCircleRing} {
@@ -67,7 +67,7 @@ const RadioInput = styled.input`
     }
   }
 
-  &:focus-visible + ${Ring} {
+  &[aria-disabled='false']:focus-visible + ${Ring} {
     outline: -webkit-focus-ring-color auto 1px;
   }
 
@@ -89,6 +89,10 @@ const RadioContainer = styled.div`
   &[aria-disabled='false'],
   &[aria-disabled='false'] > label {
     cursor: pointer;
+  }
+
+  &[aria-disabled='true'][data-checked='false'] {
+    color: ${({ theme }) => theme.colors.neutral.textDisabled};
   }
 
   :hover[aria-disabled='false'] {
