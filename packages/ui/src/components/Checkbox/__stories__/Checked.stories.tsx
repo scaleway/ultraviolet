@@ -6,7 +6,7 @@ export const Checked: StoryFn = () => (
     <Checkbox checked onChange={() => {}}>
       Checked checkbox
     </Checkbox>
-    <Checkbox checked="indeterminate" onChange={() => {}}>
+    <Checkbox checked="indeterminate" helper="Helper" onChange={() => {}}>
       Indeterminate checkbox
     </Checkbox>
   </>
