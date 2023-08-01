@@ -262,7 +262,7 @@ type CheckboxProps = {
         'aria-label': string
       },
       {
-        children: string
+        children: ReactNode
       },
     ]
   >
