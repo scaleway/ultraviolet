@@ -51,16 +51,16 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -72,95 +72,137 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -169,55 +211,57 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -225,9 +269,56 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -237,51 +328,51 @@ exports[`SelectableCard renders correctly with checkbox type 1`] = `
   >
     <div
       aria-disabled="false"
-      class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         id="checkbox"
         name="checkbox"
         type="checkbox"
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+      </div>
     </div>
     Checkbox card
   </div>
@@ -339,16 +430,16 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -360,95 +451,137 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -457,55 +590,57 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -513,9 +648,56 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -525,52 +707,52 @@ exports[`SelectableCard renders correctly with checkbox type and checked prop 1`
   >
     <div
       aria-disabled="false"
-      class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="true"
       data-error="false"
     >
       <input
+        aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         id="radio"
         name="radio"
         type="checkbox"
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+      </div>
     </div>
     Radio card
   </div>
@@ -628,16 +810,16 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -649,95 +831,137 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -746,55 +970,57 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -802,9 +1028,56 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -814,13 +1087,14 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
   >
     <div
       aria-disabled="true"
-      class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         disabled=""
         id="radio"
         name="radio"
@@ -828,38 +1102,37 @@ exports[`SelectableCard renders correctly with checkbox type and disabled prop 1
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+      </div>
     </div>
     Radio card
   </div>
@@ -917,16 +1190,16 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -938,95 +1211,137 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1035,55 +1350,57 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1091,9 +1408,15 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 
 .cache-1318y3w-StyledText-PaddedText {
@@ -1106,7 +1429,7 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0 4px;
+  padding-top: 4px;
 }
 
 <div
@@ -1117,52 +1440,55 @@ exports[`SelectableCard renders correctly with checkbox type and isError prop 1`
   >
     <div
       aria-disabled="false"
-      class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="false"
       data-error="true"
     >
       <input
+        aria-checked="false"
         aria-describedby="radio-hint"
         aria-invalid="true"
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         id="radio"
         name="radio"
         type="checkbox"
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+        <p
+          class="eqr7bqq7 cache-1b47usk-StyledText-ErrorText e13y3mga0"
+        />
+      </div>
     </div>
     <p
       class="eqr7bqq4 cache-1318y3w-StyledText-PaddedText e13y3mga0"
@@ -1227,16 +1553,16 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1248,95 +1574,137 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1345,55 +1713,57 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1401,9 +1771,56 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -1418,51 +1835,51 @@ exports[`SelectableCard renders correctly with checkbox type and tooltip prop 1`
     >
       <div
         aria-disabled="false"
-        class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+        class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
         data-checked="false"
         data-error="false"
       >
         <input
+          aria-checked="false"
           aria-invalid="false"
-          class="cache-aitsb9-CheckboxInput eqr7bqq2"
+          class="cache-rg9483-CheckboxInput eqr7bqq2"
           id="checkbox"
           name="checkbox"
           type="checkbox"
           value="choice"
         />
         <svg
-          class="cache-1lcemq7-StyledIcon eqr7bqq3"
+          class="cache-11whq72-StyledIcon eqr7bqq4"
           size="24"
           viewBox="0 0 24 24"
         >
           <g>
             <rect
-              class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-              height="14"
+              class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+              height="20"
               rx="2px"
               stroke-width="2"
+              width="20"
+              x="2"
+              y="2"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+              fill="white"
+              fill-rule="evenodd"
+              height="14"
               width="14"
-              x="5"
-              y="5"
-            />
-            <rect
-              class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-              height="2"
-              rx="1"
-              width="8"
-              x="8"
-              y="11"
-            />
-            <rect
-              class="cache-1nu9t2r-CheckMark eqr7bqq6"
-              height="8"
-              rx="1"
-              width="8"
-              x="8"
-              y="8"
             />
           </g>
         </svg>
+        <div
+          class="cache-19m27my-Stack ehpbis70"
+        >
+          <div
+            class="cache-1x9cp5u-StyledRow e3f5lzv0"
+          />
+        </div>
       </div>
       Checkbox card
     </div>
@@ -1521,16 +1938,16 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1542,95 +1959,137 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   align-items: start;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement input+svg {
   display: none;
 }
 
-.cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement label {
+.cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement label {
   display: none;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1639,55 +2098,57 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1695,9 +2156,56 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -1707,13 +2215,14 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
   >
     <div
       aria-disabled="true"
-      class="e1s5n3hj3 cache-p5kl4e-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-hf07sj-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         disabled=""
         id="radio"
         name="radio"
@@ -1721,38 +2230,37 @@ exports[`SelectableCard renders correctly with complex children 1`] = `
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+      </div>
     </div>
     <div
       style="background: gray; color: gray;"
@@ -3238,16 +3746,16 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   box-shadow: 0px 4px 16px 4px #F6F3FFCC;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3259,87 +3767,129 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   align-items: start;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false'],
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']>label {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']>label {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq6,
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq5 {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
-  -webkit-transition: 200ms -webkit-transform ease-in-out;
-  transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transition: 100ms -webkit-transform ease-in-out;
+  transition: 100ms transform ease-in-out;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[data-checked='true'] {
   color: #521094;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
+.cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-aitsb9-CheckboxInput {
+.cache-rg9483-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -3348,55 +3898,57 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   border-width: 0;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled) {
+.cache-rg9483-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-aitsb9-CheckboxInput:disabled {
+.cache-rg9483-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-1lcemq7-StyledIcon {
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-11whq72-StyledIcon {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -3404,9 +3956,56 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   min-height: 24px;
 }
 
-.cache-1at8irr-InnerCheckbox {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-11whq72-StyledIcon path {
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-1t9py5o-InnerCheckbox {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-19m27my-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1x9cp5u-StyledRow {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <div
@@ -3416,51 +4015,51 @@ exports[`SelectableCard renders correctly with showTick and type checkbox 1`] = 
   >
     <div
       aria-disabled="false"
-      class="e1s5n3hj3 cache-o1quva-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
+      class="e1s5n3hj3 cache-fbfqbn-CheckboxContainer-StyledCheckbox-StyledElement eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-aitsb9-CheckboxInput eqr7bqq2"
+        class="cache-rg9483-CheckboxInput eqr7bqq2"
         id="checkbox"
         name="checkbox"
         type="checkbox"
         value="choice"
       />
       <svg
-        class="cache-1lcemq7-StyledIcon eqr7bqq3"
+        class="cache-11whq72-StyledIcon eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-1at8irr-InnerCheckbox eqr7bqq7"
-            height="14"
+            class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-1nkq693-CheckMixedMark eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-1nu9t2r-CheckMark eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-19m27my-Stack ehpbis70"
+      >
+        <div
+          class="cache-1x9cp5u-StyledRow e3f5lzv0"
+        />
+      </div>
     </div>
     Checkbox card
   </div>
