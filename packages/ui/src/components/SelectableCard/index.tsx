@@ -5,7 +5,7 @@ import type {
   ForwardedRef,
   ReactNode,
 } from 'react'
-import { forwardRef, useMemo, useRef } from 'react'
+import { forwardRef, useRef } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Radio } from '../Radio'
 import { Tooltip } from '../Tooltip'
@@ -16,7 +16,9 @@ const Container = styled.div`
   align-items: start;
   padding: ${({ theme }) => theme.space['2']};
   border-radius: ${({ theme }) => theme.radii.default};
-  transition: border-color 200ms ease, box-shadow 200ms ease;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease;
   cursor: pointer;
   background: ${({ theme }) => theme.colors.neutral.background};
 
@@ -50,7 +52,7 @@ const Container = styled.div`
   }
 `
 
-const StyledElement = (element: typeof Radio) => styled(element, {
+const StyledElement = styled('div', {
   shouldForwardProp: prop => !['showTick', 'hasLabel'].includes(prop),
 })<{ showTick?: boolean; hasLabel?: boolean }>`
   display: inline-flex;
@@ -77,6 +79,9 @@ const StyledElement = (element: typeof Radio) => styled(element, {
       !showTick && !hasLabel ? `display: none;` : null}
   }
 `
+
+const StyledRadio = StyledElement.withComponent(Radio)
+const StyledCheckbox = StyledElement.withComponent(Checkbox)
 
 type SelectableCardProps = {
   name?: string
@@ -124,12 +129,6 @@ export const SelectableCard = forwardRef(
     }: SelectableCardProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const Element = useMemo(
-      () =>
-        StyledElement((type === 'radio' ? Radio : Checkbox) as typeof Radio),
-      [type],
-    )
-
     const innerRef = useRef<HTMLInputElement>(null)
 
     return (
@@ -147,23 +146,42 @@ export const SelectableCard = forwardRef(
           data-testid={dataTestId}
           ref={ref}
         >
-          <Element
-            name={name}
-            value={value}
-            onChange={onChange}
-            showTick={showTick}
-            checked={checked}
-            disabled={disabled}
-            error={isError}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            hasLabel={!!label}
-            id={id}
-            ref={innerRef}
-            data-error={isError}
-          >
-            {label}
-          </Element>
+          {type === 'radio' ? (
+            <StyledRadio
+              name={name}
+              value={value}
+              onChange={onChange}
+              showTick={showTick}
+              checked={checked}
+              disabled={disabled}
+              error={isError}
+              onFocus={onFocus}
+              onBlur={onBlur}
+              hasLabel={!!label}
+              id={id}
+              ref={innerRef}
+              data-error={isError}
+              label={label}
+            />
+          ) : (
+            <StyledCheckbox
+              name={name}
+              value={value}
+              onChange={onChange}
+              showTick={showTick}
+              checked={checked}
+              disabled={disabled}
+              error={isError}
+              onFocus={onFocus}
+              onBlur={onBlur}
+              hasLabel={!!label}
+              id={id}
+              ref={innerRef}
+              data-error={isError}
+            >
+              {label}
+            </StyledCheckbox>
+          )}
           {typeof children === 'function'
             ? children({ checked, disabled })
             : children}

@@ -33,15 +33,9 @@ export const Playground: StoryFn<typeof Form> = args => {
           I&apos;m disabling the field name to remove validation
         </Checkbox>
         <Stack gap={2} direction="row">
-          <RadioField name="choice" value="1" required>
-            1
-          </RadioField>
-          <RadioField name="choice" value="2" required>
-            2
-          </RadioField>
-          <RadioField name="choice" value="3" required>
-            3
-          </RadioField>
+          <RadioField name="choice" value="1" required label="1" />
+          <RadioField name="choice" value="2" required label="2" />
+          <RadioField name="choice" value="3" required label="3" />
         </Stack>
 
         <Stack gap={2} direction="row">
