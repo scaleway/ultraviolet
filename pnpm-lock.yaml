@@ -425,8 +425,8 @@ importers:
         specifier: 4.20.9
         version: 4.20.9
       final-form-arrays:
-        specifier: 3.1.0
-        version: 3.1.0(final-form@4.20.9)
+        specifier: 3.0.2
+        version: 3.0.2(final-form@4.20.9)
       final-form-focus:
         specifier: 1.1.2
         version: 1.1.2(final-form@4.20.9)
@@ -435,7 +435,7 @@ importers:
         version: 6.5.9(final-form@4.20.9)(react@18.2.0)
       react-final-form-arrays:
         specifier: 3.1.4
-        version: 3.1.4(final-form-arrays@3.1.0)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0)
+        version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0)
       react-select:
         specifier: 5.7.4
         version: 5.7.4(@types/react@18.2.8)(react-dom@18.2.0)(react@18.2.0)
@@ -9238,10 +9238,10 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /final-form-arrays@3.1.0(final-form@4.20.9):
-    resolution: {integrity: sha512-TWBvun+AopgBLw9zfTFHBllnKMVNEwCEyDawphPuBGGqNsuhGzhT7yewHys64KFFwzIs6KEteGLpKOwvTQEscQ==}
+  /final-form-arrays@3.0.2(final-form@4.20.9):
+    resolution: {integrity: sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==}
     peerDependencies:
-      final-form: ^4.20.8
+      final-form: ^4.18.2
     dependencies:
       final-form: 4.20.9
     dev: false
@@ -13195,7 +13195,7 @@ packages:
   /react-fast-compare@3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
 
-  /react-final-form-arrays@3.1.4(final-form-arrays@3.1.0)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0):
+  /react-final-form-arrays@3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0):
     resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
     peerDependencies:
       final-form: ^4.15.0
@@ -13205,7 +13205,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.6
       final-form: 4.20.9
-      final-form-arrays: 3.1.0(final-form@4.20.9)
+      final-form-arrays: 3.0.2(final-form@4.20.9)
       react: 18.2.0
       react-final-form: 6.5.9(final-form@4.20.9)(react@18.2.0)
     dev: false
