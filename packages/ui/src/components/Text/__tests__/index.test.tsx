@@ -21,6 +21,17 @@ describe('Text', () => {
       </div>,
     ))
 
+  test(`renders correctly with placement`, () =>
+    shouldMatchEmotionSnapshot(
+      <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
+        <Text as="div" variant="body" placement="end">
+          This text is quite long. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Text>
+      </div>,
+    ))
+
   test(`renders correctly with dir`, () =>
     shouldMatchEmotionSnapshot(
       <div style={{ marginBottom: 16, marginTop: 8, width: 500 }}>
