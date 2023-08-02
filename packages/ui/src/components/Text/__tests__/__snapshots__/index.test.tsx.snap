@@ -2,7 +2,7 @@
 
 exports[`Text renders correctly with dir 1`] = `
 <DocumentFragment>
-  .cache-ju6rwe-StyledText {
+  .cache-ny0fsg-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -12,7 +12,8 @@ exports[`Text renders correctly with dir 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align:start white-space: nowrap;
+  text-align: start;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -21,7 +22,7 @@ exports[`Text renders correctly with dir 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-ju6rwe-StyledText e13y3mga0"
+      class="cache-ny0fsg-StyledText e13y3mga0"
       dir="rtl"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -32,7 +33,7 @@ exports[`Text renders correctly with dir 1`] = `
 
 exports[`Text renders correctly with htmlFor 1`] = `
 <DocumentFragment>
-  .cache-6b7otr-StyledText {
+  .cache-rc6e0e-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -49,8 +50,35 @@ exports[`Text renders correctly with htmlFor 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-6b7otr-StyledText e13y3mga0"
+      class="cache-rc6e0e-StyledText e13y3mga0"
       for="test"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with placement 1`] = `
+<DocumentFragment>
+  .cache-1cxatcj-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: end;
+}
+
+<div
+    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+  >
+    <div
+      class="cache-1cxatcj-StyledText e13y3mga0"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
@@ -60,7 +88,7 @@ exports[`Text renders correctly with htmlFor 1`] = `
 
 exports[`Text renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .cache-ju6rwe-StyledText {
+  .cache-ny0fsg-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -70,7 +98,8 @@ exports[`Text renders correctly with tooltip 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align:start white-space: nowrap;
+  text-align: start;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -79,7 +108,7 @@ exports[`Text renders correctly with tooltip 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-ju6rwe-StyledText e13y3mga0"
+      class="cache-ny0fsg-StyledText e13y3mga0"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
@@ -89,7 +118,7 @@ exports[`Text renders correctly with tooltip 1`] = `
 
 exports[`Text renders correctly with type="body" 1`] = `
 <DocumentFragment>
-  .cache-6b7otr-StyledText {
+  .cache-rc6e0e-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -103,7 +132,7 @@ exports[`Text renders correctly with type="body" 1`] = `
 }
 
 <div
-    class="cache-6b7otr-StyledText e13y3mga0"
+    class="cache-rc6e0e-StyledText e13y3mga0"
   >
     body
   </div>
@@ -112,7 +141,7 @@ exports[`Text renders correctly with type="body" 1`] = `
 
 exports[`Text renders correctly with type="bodySmall" 1`] = `
 <DocumentFragment>
-  .cache-1dgoxay-StyledText {
+  .cache-19pb5nc-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -126,7 +155,7 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 }
 
 <div
-    class="cache-1dgoxay-StyledText e13y3mga0"
+    class="cache-19pb5nc-StyledText e13y3mga0"
   >
     bodySmall
   </div>
@@ -135,7 +164,7 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 
 exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 <DocumentFragment>
-  .cache-1np7eam-StyledText {
+  .cache-k99fbx-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -149,7 +178,7 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 }
 
 <div
-    class="cache-1np7eam-StyledText e13y3mga0"
+    class="cache-k99fbx-StyledText e13y3mga0"
   >
     bodySmallStrong
   </div>
@@ -158,7 +187,7 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 
 exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 <DocumentFragment>
-  .cache-ejrzhd-StyledText {
+  .cache-bwfoav-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -172,7 +201,7 @@ exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 }
 
 <div
-    class="cache-ejrzhd-StyledText e13y3mga0"
+    class="cache-bwfoav-StyledText e13y3mga0"
   >
     bodySmallStronger
   </div>
@@ -181,7 +210,7 @@ exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 
 exports[`Text renders correctly with type="bodyStrong" 1`] = `
 <DocumentFragment>
-  .cache-zmfkov-StyledText {
+  .cache-1jhb3xm-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -195,7 +224,7 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
 }
 
 <div
-    class="cache-zmfkov-StyledText e13y3mga0"
+    class="cache-1jhb3xm-StyledText e13y3mga0"
   >
     bodyStrong
   </div>
@@ -204,7 +233,7 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
 
 exports[`Text renders correctly with type="bodyStronger" 1`] = `
 <DocumentFragment>
-  .cache-1ai5cpt-StyledText {
+  .cache-1kxpsp1-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -218,7 +247,7 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 }
 
 <div
-    class="cache-1ai5cpt-StyledText e13y3mga0"
+    class="cache-1kxpsp1-StyledText e13y3mga0"
   >
     bodyStronger
   </div>
@@ -227,7 +256,7 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 
 exports[`Text renders correctly with type="caption" 1`] = `
 <DocumentFragment>
-  .cache-14tfgnf-StyledText {
+  .cache-1py36dp-StyledText {
   color: #3f4250;
   font-size: 12px;
   font-family: Asap;
@@ -241,7 +270,7 @@ exports[`Text renders correctly with type="caption" 1`] = `
 }
 
 <div
-    class="cache-14tfgnf-StyledText e13y3mga0"
+    class="cache-1py36dp-StyledText e13y3mga0"
   >
     caption
   </div>
@@ -250,7 +279,7 @@ exports[`Text renders correctly with type="caption" 1`] = `
 
 exports[`Text renders correctly with type="captionSmall" 1`] = `
 <DocumentFragment>
-  .cache-11fe77x-StyledText {
+  .cache-i1rkod-StyledText {
   color: #3f4250;
   font-size: 10px;
   font-family: Asap;
@@ -264,7 +293,7 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 }
 
 <div
-    class="cache-11fe77x-StyledText e13y3mga0"
+    class="cache-i1rkod-StyledText e13y3mga0"
   >
     captionSmall
   </div>
@@ -273,7 +302,7 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 
 exports[`Text renders correctly with type="code" 1`] = `
 <DocumentFragment>
-  .cache-17xjuo9-StyledText {
+  .cache-19vmlqm-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: JetBrains;
@@ -287,7 +316,7 @@ exports[`Text renders correctly with type="code" 1`] = `
 }
 
 <div
-    class="cache-17xjuo9-StyledText e13y3mga0"
+    class="cache-19vmlqm-StyledText e13y3mga0"
   >
     code
   </div>
@@ -296,7 +325,7 @@ exports[`Text renders correctly with type="code" 1`] = `
 
 exports[`Text renders correctly with type="heading" 1`] = `
 <DocumentFragment>
-  .cache-18nz6fz-StyledText {
+  .cache-krkzuh-StyledText {
   color: #3f4250;
   font-size: 25px;
   font-family: Asap;
@@ -310,7 +339,7 @@ exports[`Text renders correctly with type="heading" 1`] = `
 }
 
 <div
-    class="cache-18nz6fz-StyledText e13y3mga0"
+    class="cache-krkzuh-StyledText e13y3mga0"
   >
     heading
   </div>
@@ -319,7 +348,7 @@ exports[`Text renders correctly with type="heading" 1`] = `
 
 exports[`Text renders correctly with type="headingLarge" 1`] = `
 <DocumentFragment>
-  .cache-kr89sv-StyledText {
+  .cache-i0ezw-StyledText {
   color: #3f4250;
   font-size: 35px;
   font-family: Asap;
@@ -333,7 +362,7 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 }
 
 <div
-    class="cache-kr89sv-StyledText e13y3mga0"
+    class="cache-i0ezw-StyledText e13y3mga0"
   >
     headingLarge
   </div>
@@ -342,7 +371,7 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 
 exports[`Text renders correctly with type="headingSmall" 1`] = `
 <DocumentFragment>
-  .cache-bvwuec-StyledText {
+  .cache-4mvqtl-StyledText {
   color: #3f4250;
   font-size: 21px;
   font-family: Asap;
@@ -356,7 +385,7 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 }
 
 <div
-    class="cache-bvwuec-StyledText e13y3mga0"
+    class="cache-4mvqtl-StyledText e13y3mga0"
   >
     headingSmall
   </div>
@@ -365,7 +394,7 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 
 exports[`Text with disabled 1`] = `
 <DocumentFragment>
-  .cache-vzahk8-StyledText {
+  .cache-1390si6-StyledText {
   color: #b5b7bd;
   font-size: 16px;
   font-family: Asap;
@@ -379,7 +408,7 @@ exports[`Text with disabled 1`] = `
 }
 
 <div
-    class="cache-vzahk8-StyledText e13y3mga0"
+    class="cache-1390si6-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -388,7 +417,7 @@ exports[`Text with disabled 1`] = `
 
 exports[`Text with italic 1`] = `
 <DocumentFragment>
-  .cache-1rfupvo-StyledText {
+  .cache-1b4r7p-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -398,11 +427,12 @@ exports[`Text with italic 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align:start font-style: italic;
+  text-align: start;
+  font-style: italic;
 }
 
 <div
-    class="cache-1rfupvo-StyledText e13y3mga0"
+    class="cache-1b4r7p-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -411,7 +441,7 @@ exports[`Text with italic 1`] = `
 
 exports[`Text with multiple nested chidldren renders correctly 1`] = `
 <DocumentFragment>
-  .cache-6b7otr-StyledText {
+  .cache-rc6e0e-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -424,7 +454,7 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
   text-align: start;
 }
 
-.cache-18nz6fz-StyledText {
+.cache-krkzuh-StyledText {
   color: #3f4250;
   font-size: 25px;
   font-family: Asap;
@@ -438,14 +468,14 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
 }
 
 <div
-    class="cache-6b7otr-StyledText e13y3mga0"
+    class="cache-rc6e0e-StyledText e13y3mga0"
   >
     Lorem
     <span>
       Ipsum
     </span>
     <span
-      class="cache-18nz6fz-StyledText e13y3mga0"
+      class="cache-krkzuh-StyledText e13y3mga0"
     >
       <span>
         Dolor
@@ -458,7 +488,7 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
 
 exports[`Text with prominence stronger on non neutral 1`] = `
 <DocumentFragment>
-  .cache-snr0jt-StyledText {
+  .cache-kv5lv0-StyledText {
   color: #b3144d;
   font-size: 16px;
   font-family: Asap;
@@ -472,7 +502,7 @@ exports[`Text with prominence stronger on non neutral 1`] = `
 }
 
 <div
-    class="cache-snr0jt-StyledText e13y3mga0"
+    class="cache-kv5lv0-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -481,7 +511,7 @@ exports[`Text with prominence stronger on non neutral 1`] = `
 
 exports[`Text with underline 1`] = `
 <DocumentFragment>
-  .cache-vr72w8-StyledText {
+  .cache-up9c3e-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -491,11 +521,13 @@ exports[`Text with underline 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  text-align:start text-decoration: underline;
+  text-align: start;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <div
-    class="cache-vr72w8-StyledText e13y3mga0"
+    class="cache-up9c3e-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>

@@ -71,7 +71,7 @@ const generateStyles = ({
     line-height: ${theme.typography[variant].lineHeight};
     text-transform: ${theme.typography[variant].textCase};
     text-decoration: ${theme.typography[variant].textDecoration};
-    text-align: ${placement}
+    text-align: ${placement};
 
     ${
       oneLine
