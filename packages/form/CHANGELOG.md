@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.2.3
+
+### Patch Changes
+
+- [#2771](https://github.com/scaleway/ultraviolet/pull/2771) [`5da6991a`](https://github.com/scaleway/ultraviolet/commit/5da6991abfc1ca0550490529cb34b1f40c440e1c) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Downgrade final-form-arrays to 3.0.2
+
+- [#2755](https://github.com/scaleway/ultraviolet/pull/2755) [`809a7ea3`](https://github.com/scaleway/ultraviolet/commit/809a7ea3bdc0122a11b8e2779b389ed03583361e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.9`.
+  Updated dependency `@babel/eslint-parser` to `7.22.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.9`.
+  Updated dependency `@babel/preset-env` to `7.22.9`.
+- Updated dependencies [[`6e258a6e`](https://github.com/scaleway/ultraviolet/commit/6e258a6e7e9f5c9b74192f89b32646fe823a1b1b), [`809a7ea3`](https://github.com/scaleway/ultraviolet/commit/809a7ea3bdc0122a11b8e2779b389ed03583361e), [`b0d21ffc`](https://github.com/scaleway/ultraviolet/commit/b0d21ffcabd050b423f4d13b3273f9cb0c64e9c7), [`0e8a90e7`](https://github.com/scaleway/ultraviolet/commit/0e8a90e7c12e0442508f4e73cc34202d6d7ec1c9)]:
+  - @ultraviolet/ui@1.8.0
+
 ## 1.2.2
 
 ### Patch Changes
