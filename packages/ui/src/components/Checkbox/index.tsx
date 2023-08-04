@@ -12,6 +12,7 @@ import type { XOR } from '../../types'
 import { Icon } from '../Icon'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
 const InnerCheckbox = styled.rect`
   fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -191,6 +192,7 @@ type CheckboxProps = {
   ['data-visibility']?: string
   required?: boolean
   'data-testid'?: string
+  tooltip?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
@@ -229,6 +231,7 @@ export const Checkbox = forwardRef(
       'aria-label': ariaLabel,
       required,
       'data-testid': dataTestId,
+      tooltip,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -300,7 +303,9 @@ export const Checkbox = forwardRef(
               </CheckboxIconContainer>
             </StyledIcon>
           ) : null}
-          {children ? <label htmlFor={computedName}>{children}</label> : null}
+          <Tooltip text={tooltip}>
+            {children ? <label htmlFor={computedName}>{children}</label> : null}
+          </Tooltip>
           {required ? (
             <sup>
               <Icon name="asterisk" size={10} color="danger" />

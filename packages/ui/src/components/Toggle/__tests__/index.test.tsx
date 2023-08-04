@@ -66,6 +66,28 @@ describe('Toggle', () => {
       />,
     ))
 
+  test('renders correctly with labels on left with tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle
+        name="test"
+        onChange={() => {}}
+        labelPosition="left"
+        label="This is a label"
+        tooltip="Show the tooltip"
+      />,
+    ))
+
+  test('renders correctly with custom labels on right with tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle
+        name="test"
+        onChange={() => {}}
+        labelPosition="right"
+        label="This is a label"
+        tooltip="Show the tooltip"
+      />,
+    ))
+
   test('renders correctly with complex label', () =>
     shouldMatchEmotionSnapshot(
       <Toggle name="test" label={<span>Custom label rendered</span>} />,

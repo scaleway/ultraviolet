@@ -3,6 +3,7 @@ import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
 const SIZE = 24
 
@@ -140,6 +141,7 @@ type RadioProps = {
   helper?: ReactNode
   className?: string
   'data-testid'?: string
+  tooltip?: string
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
@@ -181,6 +183,7 @@ export const Radio = forwardRef(
       onKeyDown,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
+      tooltip,
     }: RadioProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -216,9 +219,11 @@ export const Radio = forwardRef(
           <Ring viewBox="0 0 24 24">
             <RadioMarkedIcon />
           </Ring>
-          {label ? (
-            <label htmlFor={`${computedName}-${value}`}>{label}</label>
-          ) : null}
+          <Tooltip text={tooltip}>
+            {label ? (
+              <label htmlFor={`${computedName}-${value}`}>{label}</label>
+            ) : null}
+          </Tooltip>
         </RadioContainer>
         {helper ? (
           <MargedText as="p" variant="bodySmall" prominence="weak">

@@ -55,4 +55,15 @@ describe('Radio', () => {
         label="Choice"
       />,
     ))
+
+  test('renders correctly with a tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Radio
+        onChange={() => {}}
+        name="radio"
+        value="choice"
+        label="Choice"
+        tooltip="Show the tooltip"
+      />,
+    ))
 })

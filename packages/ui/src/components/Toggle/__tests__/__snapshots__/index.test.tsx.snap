@@ -255,7 +255,7 @@ exports[`Toggle renders correctly label 1`] = `
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rc:"
+        id=":r8:"
         name="test"
         type="checkbox"
       />
@@ -389,7 +389,7 @@ exports[`Toggle renders correctly when checked 1`] = `
         aria-checked="true"
         checked=""
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r2:"
+        id=":r1:"
         name="test"
         type="checkbox"
       />
@@ -522,7 +522,7 @@ exports[`Toggle renders correctly when disabled 1`] = `
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
         disabled=""
-        id=":r4:"
+        id=":r2:"
         name="test"
         type="checkbox"
       />
@@ -663,7 +663,7 @@ exports[`Toggle renders correctly when required with label 1`] = `
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r6:"
+        id=":r3:"
         name="test"
         type="checkbox"
       />
@@ -826,7 +826,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":r8:"
+        id=":r5:"
         name="test"
         type="checkbox"
       />
@@ -1093,12 +1093,155 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":rg:"
+        id=":rc:"
         name="test"
         type="checkbox"
       />
     </div>
     This is a label
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with custom labels on right with tooltip 1`] = `
+<DocumentFragment>
+  .cache-wk469-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-wk469-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-1ow2qsy-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1ow2qsy-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1ow2qsy-StyledToggle:focus-within,
+.cache-1ow2qsy-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
+.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-wk469-StyledLabel e1wstm610"
+  >
+    <div
+      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      data-checked="false"
+      data-disabled="false"
+    >
+      <input
+        aria-checked="false"
+        class="cache-1myp2ct-StyledCheckbox e1wstm611"
+        id=":rg:"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+    <div
+      aria-describedby=":rh:"
+      class="cache-yb56yg-StyledChildrenContainer efkq4700"
+      tabindex="0"
+    >
+      This is a label
+    </div>
   </label>
 </DocumentFragment>
 `;
@@ -1219,6 +1362,149 @@ exports[`Toggle renders correctly with labels on left 1`] = `
     class="cache-wk469-StyledLabel e1wstm610"
   >
     This is a label
+    <div
+      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      data-checked="false"
+      data-disabled="false"
+    >
+      <input
+        aria-checked="false"
+        class="cache-1myp2ct-StyledCheckbox e1wstm611"
+        id=":ra:"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with labels on left with tooltip 1`] = `
+<DocumentFragment>
+  .cache-wk469-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-wk469-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1ow2qsy-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1ow2qsy-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1ow2qsy-StyledToggle:focus-within,
+.cache-1ow2qsy-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
+.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-wk469-StyledLabel e1wstm610"
+  >
+    <div
+      aria-describedby=":rf:"
+      class="cache-yb56yg-StyledChildrenContainer efkq4700"
+      tabindex="0"
+    >
+      This is a label
+    </div>
     <div
       class="cache-1ow2qsy-StyledToggle e1wstm612"
       data-checked="false"
@@ -1359,7 +1645,7 @@ exports[`Toggle renders correctly with non default size 1`] = `
       <input
         aria-checked="false"
         class="cache-1myp2ct-StyledCheckbox e1wstm611"
-        id=":ra:"
+        id=":r7:"
         name="test"
         type="checkbox"
       />

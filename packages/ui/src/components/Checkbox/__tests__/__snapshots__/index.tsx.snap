@@ -372,8 +372,8 @@ exports[`Checkbox renders correctly checked 1`] = `
       aria-invalid="false"
       checked=""
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r4:"
-      name=":r4:"
+      id=":r8:"
+      name=":r8:"
       type="checkbox"
       value=""
     />
@@ -411,7 +411,7 @@ exports[`Checkbox renders correctly checked 1`] = `
       </g>
     </svg>
     <label
-      for=":r4:"
+      for=":r8:"
     >
       Checkbox Label
     </label>
@@ -583,8 +583,8 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       checked=""
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
       disabled=""
-      id=":r6:"
-      name=":r6:"
+      id=":rc:"
+      name=":rc:"
       type="checkbox"
       value=""
     />
@@ -622,7 +622,7 @@ exports[`Checkbox renders correctly checked and disabled 1`] = `
       </g>
     </svg>
     <label
-      for=":r6:"
+      for=":rc:"
     >
       Checkbox Label
     </label>
@@ -793,8 +793,8 @@ exports[`Checkbox renders correctly disabled 1`] = `
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
       disabled=""
-      id=":r2:"
-      name=":r2:"
+      id=":r4:"
+      name=":r4:"
       type="checkbox"
       value=""
     />
@@ -832,7 +832,7 @@ exports[`Checkbox renders correctly disabled 1`] = `
       </g>
     </svg>
     <label
-      for=":r2:"
+      for=":r4:"
     >
       Checkbox Label
     </label>
@@ -1003,8 +1003,8 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
       aria-checked="mixed"
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r5:"
-      name=":r5:"
+      id=":ra:"
+      name=":ra:"
       type="checkbox"
       value=""
     />
@@ -1042,7 +1042,7 @@ exports[`Checkbox renders correctly indeterminate 1`] = `
       </g>
     </svg>
     <label
-      for=":r5:"
+      for=":ra:"
     >
       Checkbox Label
     </label>
@@ -1214,8 +1214,8 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
       disabled=""
-      id=":r7:"
-      name=":r7:"
+      id=":re:"
+      name=":re:"
       type="checkbox"
       value=""
     />
@@ -1253,7 +1253,7 @@ exports[`Checkbox renders correctly indeterminate and disabled 1`] = `
       </g>
     </svg>
     <label
-      for=":r7:"
+      for=":re:"
     >
       Checkbox Label
     </label>
@@ -1424,8 +1424,8 @@ exports[`Checkbox renders correctly invisible 1`] = `
     <input
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r8:"
-      name=":r8:"
+      id=":rg:"
+      name=":rg:"
       type="checkbox"
       value=""
     />
@@ -1463,7 +1463,7 @@ exports[`Checkbox renders correctly invisible 1`] = `
       </g>
     </svg>
     <label
-      for=":r8:"
+      for=":rg:"
     >
       Checkbox Label
     </label>
@@ -1634,8 +1634,8 @@ exports[`Checkbox renders correctly no child 1`] = `
       aria-invalid="false"
       aria-label="check"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r1:"
-      name=":r1:"
+      id=":r2:"
+      name=":r2:"
       type="checkbox"
       value=""
     />
@@ -1847,8 +1847,8 @@ exports[`Checkbox renders correctly required 1`] = `
     <input
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r3:"
-      name=":r3:"
+      id=":r6:"
+      name=":r6:"
       required=""
       type="checkbox"
       value=""
@@ -1887,7 +1887,7 @@ exports[`Checkbox renders correctly required 1`] = `
       </g>
     </svg>
     <label
-      for=":r3:"
+      for=":r6:"
     >
       Checkbox Label
     </label>
@@ -1901,6 +1901,225 @@ exports[`Checkbox renders correctly required 1`] = `
         />
       </svg>
     </sup>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly with a tooltip 1`] = `
+<DocumentFragment>
+  .cache-2ydoct-CheckboxContainer {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cache-2ydoct-CheckboxContainer[aria-disabled='false'],
+.cache-2ydoct-CheckboxContainer[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.cache-2ydoct-CheckboxContainer[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-2ydoct-CheckboxContainer[aria-disabled='true']>label {
+  cursor: not-allowed;
+}
+
+.cache-2ydoct-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 {
+  fill: #d9dadd;
+}
+
+.cache-2ydoct-CheckboxContainer[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
+  stroke: #d9dadd;
+  fill: #f3f3f4;
+}
+
+.cache-2ydoct-CheckboxContainer .eqr7bqq6,
+.cache-2ydoct-CheckboxContainer .eqr7bqq5 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-2ydoct-CheckboxContainer .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-2ydoct-CheckboxContainer .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-2ydoct-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
+  background-color: #f1eefc;
+  fill: #521094;
+}
+
+.cache-2ydoct-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #521094;
+  fill: #f1eefc;
+}
+
+.cache-2ydoct-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
+  background-color: #ffebf2;
+  fill: #e51963;
+}
+
+.cache-2ydoct-CheckboxContainer:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
+  fill: #ffebf2;
+}
+
+.cache-aitsb9-CheckboxInput {
+  position: absolute;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  border-width: 0;
+}
+
+.cache-aitsb9-CheckboxInput:not(:disabled) {
+  cursor: pointer;
+}
+
+.cache-aitsb9-CheckboxInput:disabled {
+  cursor: not-allowed;
+}
+
+.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3,
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+  fill: #521094;
+}
+
+.cache-aitsb9-CheckboxInput:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #521094;
+}
+
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
+  fill: #e51963;
+}
+
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
+.cache-aitsb9-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
+}
+
+.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 {
+  background-color: #f1eefc;
+  fill: #521094;
+}
+
+.cache-aitsb9-CheckboxInput:focus+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #521094;
+  fill: #f1eefc;
+}
+
+.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 {
+  background-color: #ffebf2;
+  fill: #e51963;
+}
+
+.cache-aitsb9-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
+  stroke: #e51963;
+  fill: #ffebf2;
+}
+
+.cache-1lcemq7-StyledIcon {
+  border-radius: 4px;
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.cache-1at8irr-InnerCheckbox {
+  fill: #f9f9fa;
+  stroke: #b5b7bd;
+}
+
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+<div
+    aria-disabled="false"
+    class="cache-2ydoct-CheckboxContainer eqr7bqq1"
+    data-checked="false"
+    data-error="false"
+  >
+    <input
+      aria-invalid="false"
+      class="cache-aitsb9-CheckboxInput eqr7bqq2"
+      id=":r11:"
+      name=":r11:"
+      type="checkbox"
+      value=""
+    />
+    <svg
+      class="cache-1lcemq7-StyledIcon eqr7bqq3"
+      size="24"
+      viewBox="0 0 24 24"
+    >
+      <g>
+        <rect
+          class="cache-1at8irr-InnerCheckbox eqr7bqq7"
+          height="14"
+          rx="2px"
+          stroke-width="2"
+          width="14"
+          x="5"
+          y="5"
+        />
+        <rect
+          class="cache-1nkq693-CheckMixedMark eqr7bqq5"
+          height="2"
+          rx="1"
+          width="8"
+          x="8"
+          y="11"
+        />
+        <rect
+          class="cache-1nu9t2r-CheckMark eqr7bqq6"
+          height="8"
+          rx="1"
+          width="8"
+          x="8"
+          y="8"
+        />
+      </g>
+    </svg>
+    <div
+      aria-describedby=":r12:"
+      class="cache-yb56yg-StyledChildrenContainer efkq4700"
+      tabindex="0"
+    >
+      <label
+        for=":r11:"
+      >
+        Checkbox Label
+      </label>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -2067,8 +2286,8 @@ exports[`Checkbox renders correctly with a value 1`] = `
     <input
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":rd:"
-      name=":rd:"
+      id=":rp:"
+      name=":rp:"
       type="checkbox"
       value="test"
     />
@@ -2106,7 +2325,7 @@ exports[`Checkbox renders correctly with a value 1`] = `
       </g>
     </svg>
     <label
-      for=":rd:"
+      for=":rp:"
     >
       Checkbox Label
     </label>
@@ -2274,11 +2493,11 @@ exports[`Checkbox renders correctly with an error 1`] = `
     data-error="true"
   >
     <input
-      aria-describedby=":r9:-hint"
+      aria-describedby=":ri:-hint"
       aria-invalid="true"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":r9:"
-      name=":r9:"
+      id=":ri:"
+      name=":ri:"
       type="checkbox"
       value=""
     />
@@ -2316,7 +2535,7 @@ exports[`Checkbox renders correctly with an error 1`] = `
       </g>
     </svg>
     <label
-      for=":r9:"
+      for=":ri:"
     >
       Checkbox Label
     </label>
@@ -2505,8 +2724,8 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
       aria-checked="mixed"
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":rg:"
-      name=":rg:"
+      id=":rv:"
+      name=":rv:"
       type="checkbox"
       value=""
     />
@@ -2544,7 +2763,7 @@ exports[`Checkbox renders correctly with indeterminate state 1`] = `
       </g>
     </svg>
     <label
-      for=":rg:"
+      for=":rv:"
     >
       Checkbox Label
     </label>
@@ -2754,13 +2973,13 @@ exports[`Checkbox renders correctly with progress 1`] = `
     <input
       aria-invalid="false"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":rb:"
-      name=":rb:"
+      id=":rl:"
+      name=":rl:"
       type="checkbox"
       value=""
     />
     <label
-      for=":rb:"
+      for=":rl:"
     >
       Checkbox Label
     </label>
@@ -2971,8 +3190,8 @@ exports[`Checkbox renders correctly with progress and no child 1`] = `
       aria-invalid="false"
       aria-label="check"
       class="cache-aitsb9-CheckboxInput eqr7bqq2"
-      id=":rc:"
-      name=":rc:"
+      id=":rn:"
+      name=":rn:"
       type="checkbox"
       value=""
     />
@@ -3142,8 +3361,8 @@ exports[`Checkbox renders correctly with sizes 1`] = `
     <input
       aria-invalid="false"
       class="cache-102bvex-CheckboxInput eqr7bqq2"
-      id=":re:"
-      name=":re:"
+      id=":rr:"
+      name=":rr:"
       type="checkbox"
       value="test"
     />
@@ -3181,7 +3400,7 @@ exports[`Checkbox renders correctly with sizes 1`] = `
       </g>
     </svg>
     <label
-      for=":re:"
+      for=":rr:"
     >
       Checkbox Label
     </label>
@@ -3386,13 +3605,13 @@ exports[`Checkbox renders correctly with sizes 1`] = `
     <input
       aria-invalid="false"
       class="cache-102bvex-CheckboxInput eqr7bqq2"
-      id=":rf:"
-      name=":rf:"
+      id=":rt:"
+      name=":rt:"
       type="checkbox"
       value="test"
     />
     <label
-      for=":rf:"
+      for=":rt:"
     >
       Checkbox Label
     </label>

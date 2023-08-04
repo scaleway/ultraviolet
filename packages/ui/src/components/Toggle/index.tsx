@@ -172,44 +172,38 @@ export const Toggle = forwardRef(
     }, [checked, setState])
 
     return (
-      <Tooltip text={tooltip}>
-        <StyledLabel
-          aria-disabled={disabled}
-          size={size}
-          onClick={evt => evt.stopPropagation()}
-          className={className}
-          data-testid={dataTestId}
-        >
-          {label && labelPosition === 'left' ? (
-            <>
-              {label}
-              {required ? <RequiredIcon /> : null}
-            </>
-          ) : null}
-          <StyledToggle
-            size={size}
-            data-checked={state}
-            data-disabled={disabled}
-          >
-            <StyledCheckbox
-              id={id || uniqueId}
-              checked={state}
-              aria-checked={state}
-              disabled={disabled}
-              name={name}
-              onChange={onLocalChange}
-              type="checkbox"
-              ref={ref}
-            />
-          </StyledToggle>
-          {label && labelPosition === 'right' ? (
-            <>
-              {label}
-              {required ? <RequiredIcon /> : null}
-            </>
-          ) : null}
-        </StyledLabel>
-      </Tooltip>
+      <StyledLabel
+        aria-disabled={disabled}
+        size={size}
+        onClick={evt => evt.stopPropagation()}
+        className={className}
+        data-testid={dataTestId}
+      >
+        {label && labelPosition === 'left' ? (
+          <>
+            <Tooltip text={tooltip}>{label}</Tooltip>
+            {required ? <RequiredIcon /> : null}
+          </>
+        ) : null}
+        <StyledToggle size={size} data-checked={state} data-disabled={disabled}>
+          <StyledCheckbox
+            id={id || uniqueId}
+            checked={state}
+            aria-checked={state}
+            disabled={disabled}
+            name={name}
+            onChange={onLocalChange}
+            type="checkbox"
+            ref={ref}
+          />
+        </StyledToggle>
+        {label && labelPosition === 'right' ? (
+          <>
+            <Tooltip text={tooltip}>{label}</Tooltip>
+            {required ? <RequiredIcon /> : null}
+          </>
+        ) : null}
+      </StyledLabel>
     )
   },
 )

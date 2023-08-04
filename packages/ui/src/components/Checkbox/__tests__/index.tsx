@@ -118,6 +118,13 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
+  test('renders correctly with a tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} tooltip="Show the tooltip">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders with click event', async () => {
     renderWithTheme(
       <Checkbox onChange={() => {}} size={37} value="test">
