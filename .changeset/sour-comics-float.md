@@ -2,4 +2,4 @@
 '@ultraviolet/form': minor
 ---
 
-Add `RadioFormGroup` component
+Add `RadioGroupField` component
