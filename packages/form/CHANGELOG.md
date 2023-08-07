@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.3.0
+
+### Minor Changes
+
+- [#2797](https://github.com/scaleway/ultraviolet/pull/2797) [`8d2a9eaa`](https://github.com/scaleway/ultraviolet/commit/8d2a9eaaae5d2235c3e96008db5c20f5f94ce95f) Thanks [@vincentaudebert](https://github.com/vincentaudebert)! - Submit component forwards property fullwidth to button
+
 ## 1.2.3
 
 ### Patch Changes
