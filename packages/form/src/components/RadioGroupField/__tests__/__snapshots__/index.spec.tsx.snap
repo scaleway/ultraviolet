@@ -1,0 +1,687 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioField should render correctly checked 1`] = `
+<DocumentFragment>
+  .cache-kwbqjp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7o2an9 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-uyols6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-tjeurz {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-14viues {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-14viues[aria-disabled='false'],
+.cache-14viues[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.cache-14viues[aria-disabled='true'][data-checked='false'] {
+  color: #b5b7bd;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+  fill: #521094;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+  fill: #e5dbfd;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+  fill: #b3144d;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+  fill: #ffd3e3;
+}
+
+.cache-14viues[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true']>label,
+.cache-14viues[aria-disabled='true'] .ehkrmld2 {
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true'] .ehkrmld3 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+  fill: #f3f3f4;
+}
+
+.cache-duvqrd {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.cache-duvqrd+.ehkrmld3 .ehkrmld4 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-duvqrd:checked+svg .ehkrmld4 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-duvqrd:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+  fill: #521094;
+}
+
+.cache-duvqrd[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+  fill: #e51963;
+}
+
+.cache-duvqrd[aria-disabled='false']:active+.ehkrmld3 {
+  background-color: #5e127e40;
+  fill: #521094;
+}
+
+.cache-duvqrd[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+  fill: #f1eefc;
+}
+
+.cache-duvqrd[aria-disabled='false']:focus-visible+.ehkrmld3 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.cache-duvqrd[aria-invalid='true']:focus+.ehkrmld3 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.cache-duvqrd[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+  fill: #ffebf2;
+}
+
+.cache-1wocwtm {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.cache-1wocwtm .ehkrmld5 {
+  fill: #ffffff;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-kwbqjp ehpbis70"
+    >
+      <fieldset
+        class="cache-7o2an9 e15shfap1"
+      >
+        <div
+          class="cache-uyols6 ehpbis70"
+        >
+          <p
+            class="cache-tjeurz e13y3mga0"
+          >
+            <legend>
+              Label
+            </legend>
+          </p>
+          <div
+            class="cache-kwbqjp ehpbis70"
+          >
+            <div
+              class="cache-6hw7ss ehpbis70"
+            >
+              <div
+                aria-disabled="false"
+                class="cache-14viues ehkrmld1"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="cache-duvqrd ehkrmld2"
+                  id="radio-value-1-radio-value-1"
+                  name="radio-value-1"
+                  type="radio"
+                  value="radio-value-1"
+                />
+                <svg
+                  class="cache-1wocwtm ehkrmld3"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld5"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld4"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  for="radio-value-1-radio-value-1"
+                >
+                  Radio 1
+                </label>
+              </div>
+            </div>
+            <div
+              class="cache-6hw7ss ehpbis70"
+            >
+              <div
+                aria-disabled="false"
+                class="cache-14viues ehkrmld1"
+                data-checked="true"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="cache-duvqrd ehkrmld2"
+                  id="radio-value-2-radio-value-2"
+                  name="radio-value-2"
+                  type="radio"
+                  value="radio-value-2"
+                />
+                <svg
+                  class="cache-1wocwtm ehkrmld3"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld5"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld4"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  for="radio-value-2-radio-value-2"
+                >
+                  Radio 2
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`RadioField should trigger events correctly 1`] = `
+<DocumentFragment>
+  .cache-kwbqjp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7o2an9 {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-uyols6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-tjeurz {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6hw7ss {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-14viues {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cache-14viues[aria-disabled='false'],
+.cache-14viues[aria-disabled='false']>label {
+  cursor: pointer;
+}
+
+.cache-14viues[aria-disabled='true'][data-checked='false'] {
+  color: #b5b7bd;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+  fill: #521094;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+  fill: #e5dbfd;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+  fill: #b3144d;
+}
+
+.cache-14viues:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+  fill: #ffd3e3;
+}
+
+.cache-14viues[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true']>label,
+.cache-14viues[aria-disabled='true'] .ehkrmld2 {
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true'] .ehkrmld3 {
+  fill: #e9eaeb;
+  cursor: not-allowed;
+}
+
+.cache-14viues[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+  fill: #f3f3f4;
+}
+
+.cache-duvqrd {
+  cursor: pointer;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  opacity: 0;
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.cache-duvqrd+.ehkrmld3 .ehkrmld4 {
+  transform-origin: center;
+  -webkit-transition: 200ms -webkit-transform ease-in-out;
+  transition: 200ms transform ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-duvqrd:checked+svg .ehkrmld4 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.cache-duvqrd:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+  fill: #521094;
+}
+
+.cache-duvqrd[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+  fill: #e51963;
+}
+
+.cache-duvqrd[aria-disabled='false']:active+.ehkrmld3 {
+  background-color: #5e127e40;
+  fill: #521094;
+}
+
+.cache-duvqrd[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+  fill: #f1eefc;
+}
+
+.cache-duvqrd[aria-disabled='false']:focus-visible+.ehkrmld3 {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.cache-duvqrd[aria-invalid='true']:focus+.ehkrmld3 {
+  background-color: #f91b6c40;
+  fill: #e51963;
+}
+
+.cache-duvqrd[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+  fill: #ffebf2;
+}
+
+.cache-1wocwtm {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 100%;
+  fill: #d9dadd;
+}
+
+.cache-1wocwtm .ehkrmld5 {
+  fill: #ffffff;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-kwbqjp ehpbis70"
+    >
+      <fieldset
+        class="cache-7o2an9 e15shfap1"
+      >
+        <div
+          class="cache-uyols6 ehpbis70"
+        >
+          <p
+            class="cache-tjeurz e13y3mga0"
+          >
+            <legend>
+              RadioGroupField events
+            </legend>
+          </p>
+          <div
+            class="cache-kwbqjp ehpbis70"
+          >
+            <div
+              class="cache-6hw7ss ehpbis70"
+            >
+              <div
+                aria-disabled="false"
+                class="cache-14viues ehkrmld1"
+                data-checked="true"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="cache-duvqrd ehkrmld2"
+                  id="test-value-1-test-value-1"
+                  name="test-value-1"
+                  type="radio"
+                  value="test-value-1"
+                />
+                <svg
+                  class="cache-1wocwtm ehkrmld3"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld5"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld4"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  for="test-value-1-test-value-1"
+                >
+                  Radio 1
+                </label>
+              </div>
+            </div>
+            <div
+              class="cache-6hw7ss ehpbis70"
+            >
+              <div
+                aria-disabled="false"
+                class="cache-14viues ehkrmld1"
+                data-checked="false"
+              >
+                <input
+                  aria-disabled="false"
+                  aria-invalid="false"
+                  class="cache-duvqrd ehkrmld2"
+                  id="test-value-2-test-value-2"
+                  name="test-value-2"
+                  type="radio"
+                  value="test-value-2"
+                />
+                <svg
+                  class="cache-1wocwtm ehkrmld3"
+                  viewBox="0 0 24 24"
+                >
+                  <g>
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke-width="2"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld5"
+                      cx="12"
+                      cy="12"
+                      r="8"
+                    />
+                    <circle
+                      class="cache-0 ehkrmld4"
+                      cx="12"
+                      cy="12"
+                      r="5"
+                    />
+                  </g>
+                </svg>
+                <label
+                  for="test-value-2-test-value-2"
+                >
+                  Radio 2
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+</DocumentFragment>
+`;
