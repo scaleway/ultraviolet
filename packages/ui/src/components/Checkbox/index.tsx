@@ -303,9 +303,11 @@ export const Checkbox = forwardRef(
               </CheckboxIconContainer>
             </StyledIcon>
           ) : null}
-          <Tooltip text={tooltip}>
-            {children ? <label htmlFor={computedName}>{children}</label> : null}
-          </Tooltip>
+          {children ? (
+            <Tooltip text={tooltip}>
+              <label htmlFor={computedName}>{children}</label>
+            </Tooltip>
+          ) : null}
           {required ? (
             <sup>
               <Icon name="asterisk" size={10} color="danger" />

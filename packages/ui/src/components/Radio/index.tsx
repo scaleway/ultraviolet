@@ -219,11 +219,11 @@ export const Radio = forwardRef(
           <Ring viewBox="0 0 24 24">
             <RadioMarkedIcon />
           </Ring>
-          <Tooltip text={tooltip}>
-            {label ? (
+          {label ? (
+            <Tooltip text={tooltip}>
               <label htmlFor={`${computedName}-${value}`}>{label}</label>
-            ) : null}
-          </Tooltip>
+            </Tooltip>
+          ) : null}
         </RadioContainer>
         {helper ? (
           <MargedText as="p" variant="bodySmall" prominence="weak">
