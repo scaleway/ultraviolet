@@ -87,12 +87,29 @@ describe('TagList', () => {
       </div>,
     ))
 
+  test('renders correctly with icons', () =>
+    shouldMatchEmotionSnapshot(
+      <div>
+        <TagList
+          popoverTitle="Additional"
+          copiable
+          threshold={4}
+          tags={['scaleway', 'cloud']}
+        />
+      </div>,
+    ))
+
   test('renders correctly when clicking on popover', async () => {
     renderWithTheme(
       <TagList
         popoverTitle="Additional"
         threshold={1}
-        tags={['scaleway', 'cloud']}
+        tags={[
+          { label: 'smooth', icon: 'id' },
+          'code',
+          { label: 'hello', icon: 'lock' },
+          { label: 'world', icon: 'plus' },
+        ]}
       />,
     )
 

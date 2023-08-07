@@ -561,6 +561,124 @@ exports[`TagList renders correctly with custom threshold and extra tags and maxL
 </DocumentFragment>
 `;
 
+exports[`TagList renders correctly with icons 1`] = `
+<DocumentFragment>
+  .cache-a1981g-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1alpvce-StyledTagContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  gap: 8px;
+}
+
+.cache-yb56yg-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1ykqsf4-Container-StyledContainer {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 0 8px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  color: #3f4250;
+  background: #ffffff;
+  border: solid 1px #d9dadd;
+}
+
+.cache-1ykqsf4-Container-StyledContainer:hover,
+.cache-1ykqsf4-Container-StyledContainer:active {
+  cursor: pointer;
+  background: #e9eaeb;
+  border-color: #92959d;
+}
+
+.cache-1ykqsf4-Container-StyledContainer:active {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-t6vuyb-StyledTag {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  max-width: 232px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+<div>
+    <div
+      class="cache-a1981g-StyledContainer eb6op482"
+    >
+      <div
+        class="cache-1alpvce-StyledTagContainer eb6op480"
+      >
+        <div
+          aria-describedby=":r6:"
+          class="cache-yb56yg-StyledChildrenContainer efkq4700"
+          tabindex="0"
+        >
+          <button
+            class="cache-1ykqsf4-Container-StyledContainer el6733p3"
+          >
+            <span
+              aria-disabled="false"
+              class="cache-t6vuyb-StyledTag el6733p1"
+            >
+              scaleway
+            </span>
+          </button>
+        </div>
+        <div
+          aria-describedby=":r7:"
+          class="cache-yb56yg-StyledChildrenContainer efkq4700"
+          tabindex="0"
+        >
+          <button
+            class="cache-1ykqsf4-Container-StyledContainer el6733p3"
+          >
+            <span
+              aria-disabled="false"
+              class="cache-t6vuyb-StyledTag el6733p1"
+            >
+              cloud
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`TagList renders correctly with multiline 1`] = `
 <DocumentFragment>
   .cache-a1981g-StyledContainer {
