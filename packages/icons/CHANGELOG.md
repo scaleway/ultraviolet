@@ -1,11 +1,5 @@
 # @ultraviolet/icons
 
-## 1.2.0
-
-### Minor Changes
-
-- [#2784](https://github.com/scaleway/ultraviolet/pull/2784) [`4fb6e24f`](https://github.com/scaleway/ultraviolet/commit/4fb6e24fd0e5745ef7cf868795665940f52cbefd) Thanks [@chambo-e](https://github.com/chambo-e)! - Add RabbitMQ and DocumentDB icons
-
 ## 1.1.3
 
 ### Patch Changes
