@@ -40,6 +40,10 @@
       "matchUpdateTypes": ["major", "minor", "patch"]
     },
     {
+      "matchPackagePatterns": ["final-form-arrays"],
+      "enabled": false
+    },
+    {
       "labels": ["UPDATE-MAJOR"],
       "stabilityDays": 14,
       "matchUpdateTypes": ["major"]

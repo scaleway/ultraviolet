@@ -1,5 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import type React from 'react'
 import type { ElementType, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
@@ -16,6 +17,7 @@ const PROMINENCES = {
 }
 
 type ProminenceProps = keyof typeof PROMINENCES
+type PlacementProps = React.CSSProperties['textAlign']
 type TextVariant = keyof typeof typography
 export const textVariants = Object.keys(typography) as TextVariant[]
 
@@ -23,6 +25,7 @@ export const textVariants = Object.keys(typography) as TextVariant[]
  * Generate all styles available for text based on prominence and variants
  */
 const generateStyles = ({
+  placement,
   prominence,
   color,
   variant,
@@ -32,6 +35,7 @@ const generateStyles = ({
   italic,
   underline,
 }: {
+  placement?: PlacementProps
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
@@ -62,6 +66,7 @@ const generateStyles = ({
     line-height: ${theme.typography[variant].lineHeight};
     text-transform: ${theme.typography[variant].textCase};
     text-decoration: ${theme.typography[variant].textDecoration};
+    ${placement ? ` text-align: ${placement};` : ''}
 
     ${
       oneLine
@@ -78,6 +83,7 @@ const generateStyles = ({
 type TextProps = {
   className?: string
   children: ReactNode
+  placement?: PlacementProps
   variant: TextVariant
   color?: Color
   prominence?: ProminenceProps
@@ -96,6 +102,7 @@ const StyledText = styled('div', {
   shouldForwardProp: prop =>
     ![
       'as',
+      'placement',
       'variant',
       'color',
       'prominence',
@@ -105,6 +112,7 @@ const StyledText = styled('div', {
       'underline',
     ].includes(prop),
 })<{
+  placement?: PlacementProps
   color: Color
   prominence: ProminenceProps
   variant: TextVariant
@@ -121,6 +129,7 @@ export const Text = ({
   as,
   color = 'neutral',
   oneLine = false,
+  placement,
   prominence = 'default',
   className,
   disabled = false,
@@ -148,6 +157,7 @@ export const Text = ({
       <StyledText
         ref={elementRef}
         as={as}
+        placement={placement}
         prominence={prominence}
         color={color}
         variant={variant}

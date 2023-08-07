@@ -2,7 +2,7 @@
 
 exports[`Text renders correctly with dir 1`] = `
 <DocumentFragment>
-  .cache-l8fwrw-StyledText {
+  .cache-1a550u1-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -21,7 +21,7 @@ exports[`Text renders correctly with dir 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-l8fwrw-StyledText e13y3mga0"
+      class="cache-1a550u1-StyledText e13y3mga0"
       dir="rtl"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -32,7 +32,7 @@ exports[`Text renders correctly with dir 1`] = `
 
 exports[`Text renders correctly with htmlFor 1`] = `
 <DocumentFragment>
-  .cache-13w04ns-StyledText {
+  .cache-1cozjuw-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -48,8 +48,35 @@ exports[`Text renders correctly with htmlFor 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-13w04ns-StyledText e13y3mga0"
+      class="cache-1cozjuw-StyledText e13y3mga0"
       for="test"
+    >
+      This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with placement 1`] = `
+<DocumentFragment>
+  .cache-1dq3yrz-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: end;
+}
+
+<div
+    style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
+  >
+    <div
+      class="cache-1dq3yrz-StyledText e13y3mga0"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
@@ -59,7 +86,7 @@ exports[`Text renders correctly with htmlFor 1`] = `
 
 exports[`Text renders correctly with tooltip 1`] = `
 <DocumentFragment>
-  .cache-l8fwrw-StyledText {
+  .cache-1a550u1-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -78,7 +105,7 @@ exports[`Text renders correctly with tooltip 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 500px;"
   >
     <div
-      class="cache-l8fwrw-StyledText e13y3mga0"
+      class="cache-1a550u1-StyledText e13y3mga0"
     >
       This text is quite long. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
@@ -88,7 +115,7 @@ exports[`Text renders correctly with tooltip 1`] = `
 
 exports[`Text renders correctly with type="body" 1`] = `
 <DocumentFragment>
-  .cache-13w04ns-StyledText {
+  .cache-1cozjuw-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -101,7 +128,7 @@ exports[`Text renders correctly with type="body" 1`] = `
 }
 
 <div
-    class="cache-13w04ns-StyledText e13y3mga0"
+    class="cache-1cozjuw-StyledText e13y3mga0"
   >
     body
   </div>
@@ -110,7 +137,7 @@ exports[`Text renders correctly with type="body" 1`] = `
 
 exports[`Text renders correctly with type="bodySmall" 1`] = `
 <DocumentFragment>
-  .cache-1szck82-StyledText {
+  .cache-3yrr08-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -123,7 +150,7 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 }
 
 <div
-    class="cache-1szck82-StyledText e13y3mga0"
+    class="cache-3yrr08-StyledText e13y3mga0"
   >
     bodySmall
   </div>
@@ -132,7 +159,7 @@ exports[`Text renders correctly with type="bodySmall" 1`] = `
 
 exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 <DocumentFragment>
-  .cache-gfdp62-StyledText {
+  .cache-q12lm2-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -145,7 +172,7 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 }
 
 <div
-    class="cache-gfdp62-StyledText e13y3mga0"
+    class="cache-q12lm2-StyledText e13y3mga0"
   >
     bodySmallStrong
   </div>
@@ -154,7 +181,7 @@ exports[`Text renders correctly with type="bodySmallStrong" 1`] = `
 
 exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 <DocumentFragment>
-  .cache-glfpjp-StyledText {
+  .cache-1tbjykd-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: Asap;
@@ -167,7 +194,7 @@ exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 }
 
 <div
-    class="cache-glfpjp-StyledText e13y3mga0"
+    class="cache-1tbjykd-StyledText e13y3mga0"
   >
     bodySmallStronger
   </div>
@@ -176,7 +203,7 @@ exports[`Text renders correctly with type="bodySmallStronger" 1`] = `
 
 exports[`Text renders correctly with type="bodyStrong" 1`] = `
 <DocumentFragment>
-  .cache-ulq9rt-StyledText {
+  .cache-vjvakd-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -189,7 +216,7 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
 }
 
 <div
-    class="cache-ulq9rt-StyledText e13y3mga0"
+    class="cache-vjvakd-StyledText e13y3mga0"
   >
     bodyStrong
   </div>
@@ -198,7 +225,7 @@ exports[`Text renders correctly with type="bodyStrong" 1`] = `
 
 exports[`Text renders correctly with type="bodyStronger" 1`] = `
 <DocumentFragment>
-  .cache-1n8aews-StyledText {
+  .cache-mtzm4a-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -211,7 +238,7 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 }
 
 <div
-    class="cache-1n8aews-StyledText e13y3mga0"
+    class="cache-mtzm4a-StyledText e13y3mga0"
   >
     bodyStronger
   </div>
@@ -220,7 +247,7 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 
 exports[`Text renders correctly with type="caption" 1`] = `
 <DocumentFragment>
-  .cache-d080u3-StyledText {
+  .cache-1n9bdhb-StyledText {
   color: #3f4250;
   font-size: 12px;
   font-family: Asap;
@@ -233,7 +260,7 @@ exports[`Text renders correctly with type="caption" 1`] = `
 }
 
 <div
-    class="cache-d080u3-StyledText e13y3mga0"
+    class="cache-1n9bdhb-StyledText e13y3mga0"
   >
     caption
   </div>
@@ -242,7 +269,7 @@ exports[`Text renders correctly with type="caption" 1`] = `
 
 exports[`Text renders correctly with type="captionSmall" 1`] = `
 <DocumentFragment>
-  .cache-kjssic-StyledText {
+  .cache-1jwst9u-StyledText {
   color: #3f4250;
   font-size: 10px;
   font-family: Asap;
@@ -255,7 +282,7 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 }
 
 <div
-    class="cache-kjssic-StyledText e13y3mga0"
+    class="cache-1jwst9u-StyledText e13y3mga0"
   >
     captionSmall
   </div>
@@ -264,7 +291,7 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 
 exports[`Text renders correctly with type="code" 1`] = `
 <DocumentFragment>
-  .cache-14u8o4b-StyledText {
+  .cache-dm68rn-StyledText {
   color: #3f4250;
   font-size: 14px;
   font-family: JetBrains;
@@ -277,7 +304,7 @@ exports[`Text renders correctly with type="code" 1`] = `
 }
 
 <div
-    class="cache-14u8o4b-StyledText e13y3mga0"
+    class="cache-dm68rn-StyledText e13y3mga0"
   >
     code
   </div>
@@ -286,7 +313,7 @@ exports[`Text renders correctly with type="code" 1`] = `
 
 exports[`Text renders correctly with type="heading" 1`] = `
 <DocumentFragment>
-  .cache-9nls9r-StyledText {
+  .cache-177neqt-StyledText {
   color: #3f4250;
   font-size: 25px;
   font-family: Asap;
@@ -299,7 +326,7 @@ exports[`Text renders correctly with type="heading" 1`] = `
 }
 
 <div
-    class="cache-9nls9r-StyledText e13y3mga0"
+    class="cache-177neqt-StyledText e13y3mga0"
   >
     heading
   </div>
@@ -308,7 +335,7 @@ exports[`Text renders correctly with type="heading" 1`] = `
 
 exports[`Text renders correctly with type="headingLarge" 1`] = `
 <DocumentFragment>
-  .cache-ov3chr-StyledText {
+  .cache-tet9cc-StyledText {
   color: #3f4250;
   font-size: 35px;
   font-family: Asap;
@@ -321,7 +348,7 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 }
 
 <div
-    class="cache-ov3chr-StyledText e13y3mga0"
+    class="cache-tet9cc-StyledText e13y3mga0"
   >
     headingLarge
   </div>
@@ -330,7 +357,7 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 
 exports[`Text renders correctly with type="headingSmall" 1`] = `
 <DocumentFragment>
-  .cache-wiapn8-StyledText {
+  .cache-xsaqrl-StyledText {
   color: #3f4250;
   font-size: 21px;
   font-family: Asap;
@@ -343,7 +370,7 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 }
 
 <div
-    class="cache-wiapn8-StyledText e13y3mga0"
+    class="cache-xsaqrl-StyledText e13y3mga0"
   >
     headingSmall
   </div>
@@ -352,7 +379,7 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 
 exports[`Text with disabled 1`] = `
 <DocumentFragment>
-  .cache-1xbi9br-StyledText {
+  .cache-14bkb4-StyledText {
   color: #b5b7bd;
   font-size: 16px;
   font-family: Asap;
@@ -365,7 +392,7 @@ exports[`Text with disabled 1`] = `
 }
 
 <div
-    class="cache-1xbi9br-StyledText e13y3mga0"
+    class="cache-14bkb4-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -374,7 +401,7 @@ exports[`Text with disabled 1`] = `
 
 exports[`Text with italic 1`] = `
 <DocumentFragment>
-  .cache-2fgkll-StyledText {
+  .cache-1ej6qvw-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -388,7 +415,7 @@ exports[`Text with italic 1`] = `
 }
 
 <div
-    class="cache-2fgkll-StyledText e13y3mga0"
+    class="cache-1ej6qvw-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -397,7 +424,7 @@ exports[`Text with italic 1`] = `
 
 exports[`Text with multiple nested chidldren renders correctly 1`] = `
 <DocumentFragment>
-  .cache-13w04ns-StyledText {
+  .cache-1cozjuw-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -409,7 +436,7 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-9nls9r-StyledText {
+.cache-177neqt-StyledText {
   color: #3f4250;
   font-size: 25px;
   font-family: Asap;
@@ -422,14 +449,14 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
 }
 
 <div
-    class="cache-13w04ns-StyledText e13y3mga0"
+    class="cache-1cozjuw-StyledText e13y3mga0"
   >
     Lorem
     <span>
       Ipsum
     </span>
     <span
-      class="cache-9nls9r-StyledText e13y3mga0"
+      class="cache-177neqt-StyledText e13y3mga0"
     >
       <span>
         Dolor
@@ -442,7 +469,7 @@ exports[`Text with multiple nested chidldren renders correctly 1`] = `
 
 exports[`Text with prominence stronger on non neutral 1`] = `
 <DocumentFragment>
-  .cache-4qjmng-StyledText {
+  .cache-1yjvdcu-StyledText {
   color: #b3144d;
   font-size: 16px;
   font-family: Asap;
@@ -455,7 +482,7 @@ exports[`Text with prominence stronger on non neutral 1`] = `
 }
 
 <div
-    class="cache-4qjmng-StyledText e13y3mga0"
+    class="cache-1yjvdcu-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
@@ -464,7 +491,7 @@ exports[`Text with prominence stronger on non neutral 1`] = `
 
 exports[`Text with underline 1`] = `
 <DocumentFragment>
-  .cache-ph8oq8-StyledText {
+  .cache-j6vt80-StyledText {
   color: #3f4250;
   font-size: 16px;
   font-family: Asap;
@@ -479,7 +506,7 @@ exports[`Text with underline 1`] = `
 }
 
 <div
-    class="cache-ph8oq8-StyledText e13y3mga0"
+    class="cache-j6vt80-StyledText e13y3mga0"
   >
     Lorem Ipsum
   </div>
