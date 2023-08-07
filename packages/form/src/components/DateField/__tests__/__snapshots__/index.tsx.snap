@@ -242,8 +242,13 @@ exports[`DateField should render correctly 1`] = `
         class="react-datepicker-wrapper"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker__input-container "
         >
+          <span
+            aria-live="polite"
+            class="react-datepicker__aria-live"
+            role="alert"
+          />
           <div
             class=""
             name="test"
@@ -541,8 +546,13 @@ exports[`DateField should render correctly disabled 1`] = `
         class="react-datepicker-wrapper"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker__input-container "
         >
+          <span
+            aria-live="polite"
+            class="react-datepicker__aria-live"
+            role="alert"
+          />
           <div
             class=""
             disabled=""
@@ -837,8 +847,15 @@ exports[`DateField should trigger events 1`] = `
         class="react-datepicker-wrapper"
       >
         <div
-          class="react-datepicker__input-container"
+          class="react-datepicker__input-container "
         >
+          <span
+            aria-live="polite"
+            class="react-datepicker__aria-live"
+            role="alert"
+          >
+            Selected date: Sunday, August 28th, 2022
+          </span>
           <div
             class=""
             name="test"
