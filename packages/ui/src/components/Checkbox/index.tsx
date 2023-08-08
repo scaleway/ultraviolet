@@ -50,6 +50,7 @@ const StyledIcon = styled('svg')<{ size: number }>`
   min-width: ${({ size }) => size}px;
   min-height: ${({ size }) => size}px;
   & path {
+    fill: ${({ theme }) => theme.colors.neutral.background};
     transform: translate(2px, 2px);
     transform: scale(0);
   }
