@@ -1,5 +1,14 @@
 # @ultraviolet/icons
 
+## 1.2.1
+
+### Patch Changes
+
+- [#2800](https://github.com/scaleway/ultraviolet/pull/2800) [`ab4a9d21`](https://github.com/scaleway/ultraviolet/commit/ab4a9d2149ea019f65620bc93fd6421af818922d) Thanks [@chambo-e](https://github.com/chambo-e)! - Correct documentDB icon name
+
+- Updated dependencies [[`32e92118`](https://github.com/scaleway/ultraviolet/commit/32e9211805a87278f002d56fecfc150907b23a3a)]:
+  - @ultraviolet/ui@1.8.1
+
 ## 1.2.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.8.1
+
+### Patch Changes
+
+- [#2796](https://github.com/scaleway/ultraviolet/pull/2796) [`32e92118`](https://github.com/scaleway/ultraviolet/commit/32e9211805a87278f002d56fecfc150907b23a3a) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Support icons in TagList
+
 ## 1.8.0
 
 ### Minor Changes
