@@ -31,10 +31,6 @@ export type FormProps<FormValues = unknown> = {
   mutators?: ReactFinalFormProps<FormValues, Partial<FormValues>>['mutators']
   keepDirtyOnReinitialize?: boolean
   className?: string
-  destroyOnUnregister?: ReactFinalFormProps<
-    FormValues,
-    Partial<FormValues>
-  >['destroyOnUnregister']
 }
 
 export const Form = <FormValues,>({
@@ -49,10 +45,8 @@ export const Form = <FormValues,>({
   mutators,
   keepDirtyOnReinitialize,
   className,
-  destroyOnUnregister,
 }: FormProps<FormValues>): JSX.Element => (
   <ReactFinalForm
-    destroyOnUnregister={destroyOnUnregister}
     initialValues={initialValues}
     validateOnBlur={validateOnBlur}
     validate={validate}
