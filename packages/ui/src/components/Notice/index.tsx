@@ -1,5 +1,5 @@
+import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
-import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 

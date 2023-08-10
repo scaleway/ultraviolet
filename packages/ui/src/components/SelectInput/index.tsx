@@ -1,6 +1,7 @@
 import type { CSSObject, Theme, keyframes } from '@emotion/react'
 import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ComponentProps,
   ForwardRefExoticComponent,
@@ -27,7 +28,6 @@ import Select, { components } from 'react-select'
 import isJSONString from '../../helpers/isJSON'
 import * as animations from '../../utils/animations'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
@@ -692,7 +692,7 @@ const FwdSelectInput = ({
           ({
             ...subProps,
             label,
-          } as SelectOption),
+          }) as SelectOption,
       ),
     [options, children],
   )

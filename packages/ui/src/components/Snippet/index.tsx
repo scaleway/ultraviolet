@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { Children, useState } from 'react'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
