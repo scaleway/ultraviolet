@@ -2,32 +2,32 @@
 
 exports[`ToggleField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1xmgqvs {
+  .cache-ip7dnq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
 
-.cache-1xmgqvs:active .e1wstm612[data-disabled='false']:after {
+.cache-ip7dnq:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1xmgqvs[aria-disabled='true'] {
+.cache-ip7dnq[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-tw0c0p {
+.cache-1d6p8cj {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -49,7 +49,11 @@ exports[`ToggleField should render correctly 1`] = `
   height: 24px;
 }
 
-.cache-tw0c0p:after {
+.cache-1d6p8cj:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1d6p8cj:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -62,21 +66,25 @@ exports[`ToggleField should render correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-tw0c0p:focus-within,
-.cache-tw0c0p:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1d6p8cj:focus-within,
+.cache-1d6p8cj:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-tw0c0p[data-disabled='false']:active:after {
+.cache-1d6p8cj[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-tw0c0p[data-checked='true'] {
+.cache-1d6p8cj[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-tw0c0p[data-checked='true']:after {
+.cache-1d6p8cj[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1d6p8cj[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -84,16 +92,16 @@ exports[`ToggleField should render correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-tw0c0p[data-checked='true']:focus-within,
-.cache-tw0c0p[data-checked='true']:focus {
+.cache-1d6p8cj[data-checked='true']:focus-within,
+.cache-1d6p8cj[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-tw0c0p[data-disabled='true'] {
+.cache-1d6p8cj[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-tw0c0p[data-disabled='true'][data-checked='true'] {
+.cache-1d6p8cj[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -111,15 +119,38 @@ exports[`ToggleField should render correctly 1`] = `
   cursor: not-allowed;
 }
 
+.cache-11u75jq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 <form
     novalidate=""
   >
     <label
       aria-disabled="false"
-      class="cache-1xmgqvs e1wstm610"
+      class="cache-ip7dnq e1wstm610"
     >
       <div
-        class="cache-tw0c0p e1wstm612"
+        class="cache-1d6p8cj e1wstm612"
         data-checked="false"
         data-disabled="false"
       >
@@ -131,6 +162,9 @@ exports[`ToggleField should render correctly 1`] = `
           type="checkbox"
         />
       </div>
+      <div
+        class="cache-11u75jq ehpbis70"
+      />
     </label>
   </form>
 </DocumentFragment>
@@ -138,32 +172,32 @@ exports[`ToggleField should render correctly 1`] = `
 
 exports[`ToggleField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-1xmgqvs {
+  .cache-ip7dnq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
 
-.cache-1xmgqvs:active .e1wstm612[data-disabled='false']:after {
+.cache-ip7dnq:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1xmgqvs[aria-disabled='true'] {
+.cache-ip7dnq[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-tw0c0p {
+.cache-1d6p8cj {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -185,7 +219,11 @@ exports[`ToggleField should render correctly checked 1`] = `
   height: 24px;
 }
 
-.cache-tw0c0p:after {
+.cache-1d6p8cj:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1d6p8cj:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -198,21 +236,25 @@ exports[`ToggleField should render correctly checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-tw0c0p:focus-within,
-.cache-tw0c0p:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1d6p8cj:focus-within,
+.cache-1d6p8cj:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-tw0c0p[data-disabled='false']:active:after {
+.cache-1d6p8cj[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-tw0c0p[data-checked='true'] {
+.cache-1d6p8cj[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-tw0c0p[data-checked='true']:after {
+.cache-1d6p8cj[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1d6p8cj[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -220,16 +262,16 @@ exports[`ToggleField should render correctly checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-tw0c0p[data-checked='true']:focus-within,
-.cache-tw0c0p[data-checked='true']:focus {
+.cache-1d6p8cj[data-checked='true']:focus-within,
+.cache-1d6p8cj[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-tw0c0p[data-disabled='true'] {
+.cache-1d6p8cj[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-tw0c0p[data-disabled='true'][data-checked='true'] {
+.cache-1d6p8cj[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -247,15 +289,38 @@ exports[`ToggleField should render correctly checked 1`] = `
   cursor: not-allowed;
 }
 
+.cache-11u75jq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 <form
     novalidate=""
   >
     <label
       aria-disabled="false"
-      class="cache-1xmgqvs e1wstm610"
+      class="cache-ip7dnq e1wstm610"
     >
       <div
-        class="cache-tw0c0p e1wstm612"
+        class="cache-1d6p8cj e1wstm612"
         data-checked="true"
         data-disabled="false"
       >
@@ -268,6 +333,9 @@ exports[`ToggleField should render correctly checked 1`] = `
           type="checkbox"
         />
       </div>
+      <div
+        class="cache-11u75jq ehpbis70"
+      />
     </label>
   </form>
 </DocumentFragment>
@@ -275,32 +343,32 @@ exports[`ToggleField should render correctly checked 1`] = `
 
 exports[`ToggleField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1xmgqvs {
+  .cache-ip7dnq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
 
-.cache-1xmgqvs:active .e1wstm612[data-disabled='false']:after {
+.cache-ip7dnq:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1xmgqvs[aria-disabled='true'] {
+.cache-ip7dnq[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-tw0c0p {
+.cache-1d6p8cj {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -322,7 +390,11 @@ exports[`ToggleField should render correctly disabled 1`] = `
   height: 24px;
 }
 
-.cache-tw0c0p:after {
+.cache-1d6p8cj:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1d6p8cj:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -335,21 +407,25 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transition: all 300ms;
 }
 
-.cache-tw0c0p:focus-within,
-.cache-tw0c0p:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1d6p8cj:focus-within,
+.cache-1d6p8cj:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-tw0c0p[data-disabled='false']:active:after {
+.cache-1d6p8cj[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-tw0c0p[data-checked='true'] {
+.cache-1d6p8cj[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-tw0c0p[data-checked='true']:after {
+.cache-1d6p8cj[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1d6p8cj[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -357,16 +433,16 @@ exports[`ToggleField should render correctly disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-tw0c0p[data-checked='true']:focus-within,
-.cache-tw0c0p[data-checked='true']:focus {
+.cache-1d6p8cj[data-checked='true']:focus-within,
+.cache-1d6p8cj[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-tw0c0p[data-disabled='true'] {
+.cache-1d6p8cj[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-tw0c0p[data-disabled='true'][data-checked='true'] {
+.cache-1d6p8cj[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -384,15 +460,38 @@ exports[`ToggleField should render correctly disabled 1`] = `
   cursor: not-allowed;
 }
 
+.cache-11u75jq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 <form
     novalidate=""
   >
     <label
       aria-disabled="true"
-      class="cache-1xmgqvs e1wstm610"
+      class="cache-ip7dnq e1wstm610"
     >
       <div
-        class="cache-tw0c0p e1wstm612"
+        class="cache-1d6p8cj e1wstm612"
         data-checked="false"
         data-disabled="true"
       >
@@ -405,6 +504,9 @@ exports[`ToggleField should render correctly disabled 1`] = `
           type="checkbox"
         />
       </div>
+      <div
+        class="cache-11u75jq ehpbis70"
+      />
     </label>
   </form>
 </DocumentFragment>
@@ -412,32 +514,32 @@ exports[`ToggleField should render correctly disabled 1`] = `
 
 exports[`ToggleField should render correctly with label and checked 1`] = `
 <DocumentFragment>
-  .cache-1xmgqvs {
+  .cache-ip7dnq {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
 
-.cache-1xmgqvs:active .e1wstm612[data-disabled='false']:after {
+.cache-ip7dnq:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-1xmgqvs[aria-disabled='true'] {
+.cache-ip7dnq[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-tw0c0p {
+.cache-1d6p8cj {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -459,7 +561,11 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   height: 24px;
 }
 
-.cache-tw0c0p:after {
+.cache-1d6p8cj:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1d6p8cj:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -472,21 +578,25 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-tw0c0p:focus-within,
-.cache-tw0c0p:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1d6p8cj:focus-within,
+.cache-1d6p8cj:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-tw0c0p[data-disabled='false']:active:after {
+.cache-1d6p8cj[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-tw0c0p[data-checked='true'] {
+.cache-1d6p8cj[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-tw0c0p[data-checked='true']:after {
+.cache-1d6p8cj[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1d6p8cj[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -494,16 +604,16 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-tw0c0p[data-checked='true']:focus-within,
-.cache-tw0c0p[data-checked='true']:focus {
+.cache-1d6p8cj[data-checked='true']:focus-within,
+.cache-1d6p8cj[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-tw0c0p[data-disabled='true'] {
+.cache-1d6p8cj[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-tw0c0p[data-disabled='true'][data-checked='true'] {
+.cache-1d6p8cj[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -521,15 +631,52 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
   cursor: not-allowed;
 }
 
+.cache-11u75jq {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-okwmur {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
 <form
     novalidate=""
   >
     <label
       aria-disabled="false"
-      class="cache-1xmgqvs e1wstm610"
+      class="cache-ip7dnq e1wstm610"
     >
       <div
-        class="cache-tw0c0p e1wstm612"
+        class="cache-1d6p8cj e1wstm612"
         data-checked="true"
         data-disabled="false"
       >
@@ -542,7 +689,15 @@ exports[`ToggleField should render correctly with label and checked 1`] = `
           type="checkbox"
         />
       </div>
-      test
+      <div
+        class="cache-11u75jq ehpbis70"
+      >
+        <div
+          class="cache-okwmur e3f5lzv0"
+        >
+          test
+        </div>
+      </div>
     </label>
   </form>
 </DocumentFragment>
