@@ -9,7 +9,7 @@ on:
 
 jobs:
   typecheck:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3.5.3
       - uses: pnpm/action-setup@v2.4.0
@@ -23,7 +23,7 @@ jobs:
       - run: pnpm install
       - run: pnpm tsc --noEmit
   lint:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3.5.3
       - uses: pnpm/action-setup@v2.4.0
@@ -37,7 +37,7 @@ jobs:
       - run: pnpm install
       - run: pnpm run lint
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node: ['18']
@@ -57,7 +57,7 @@ jobs:
       - run: pnpm run test:unit:coverage
       - uses: codecov/codecov-action@v3.1.4
   accessibility:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3.5.3
         with:
@@ -76,7 +76,7 @@ jobs:
     strategy:
       matrix:
         node: ['18']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v3.5.3
@@ -91,7 +91,7 @@ jobs:
     strategy:
       matrix:
         node: ['18']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: [lint, test]
     steps:
       - uses: actions/checkout@v3.5.3
@@ -105,7 +105,7 @@ jobs:
       - run: pnpm install
       - run: pnpm run build:examples
   chromatic-deployment:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       DEPLOYMENT_NAME: 'storybook'
     steps:
