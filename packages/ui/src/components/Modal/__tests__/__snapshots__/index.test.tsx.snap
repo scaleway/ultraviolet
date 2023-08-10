@@ -8,12 +8,13 @@ exports[`Modal renders with customStyle 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .cache-ofvkpe-StyledDialogBackdrop-customDialogBackdropStyles {
+  .cache-erdimt-StyledDialogBackdrop-customDialogBackdropStyles {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -135,7 +136,7 @@ exports[`Modal renders with customStyle 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-ofvkpe-StyledDialogBackdrop-customDialogBackdropStyles ebywm9u2"
+      class="cache-erdimt-StyledDialogBackdrop-customDialogBackdropStyles ebywm9u2"
       data-dialog-ref="id-d9i348"
     >
       <div
@@ -182,12 +183,13 @@ exports[`Modal renders with customStyle 1`] = `
 
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-1jxj6m2-StyledDialogBackdrop {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -307,7 +309,7 @@ exports[`Modal renders with default Props 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
+      class="cache-1jxj6m2-StyledDialogBackdrop ebywm9u2"
       data-dialog-ref="id-d9i348"
       hidden=""
       style="display: none;"
@@ -357,12 +359,13 @@ exports[`Modal renders with disclosure 1`] = `
   >
     Test
   </button>
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-1jxj6m2-StyledDialogBackdrop {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -482,7 +485,7 @@ exports[`Modal renders with disclosure 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
+      class="cache-1jxj6m2-StyledDialogBackdrop ebywm9u2"
       data-dialog-ref="modal-test"
       hidden=""
       style="display: none;"
@@ -538,12 +541,13 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-1jxj6m2-StyledDialogBackdrop {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -663,7 +667,7 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
+      class="cache-1jxj6m2-StyledDialogBackdrop ebywm9u2"
       data-dialog-ref="modal-test"
       style=""
     >
@@ -720,12 +724,13 @@ exports[`Modal renders with opened={true} 1`] = `
     style="position: fixed;"
     tabindex="0"
   />
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-1jxj6m2-StyledDialogBackdrop {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -845,7 +850,7 @@ exports[`Modal renders with opened={true} 1`] = `
     class="__reakit-portal"
   >
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
+      class="cache-1jxj6m2-StyledDialogBackdrop ebywm9u2"
       data-dialog-ref="id-d9i348"
     >
       <div
@@ -892,12 +897,13 @@ exports[`Modal renders with opened={true} 1`] = `
 
 exports[`Modal renders with portal node (modal=false) 1`] = `
 <DocumentFragment>
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-1jxj6m2-StyledDialogBackdrop {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
+  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
@@ -1014,7 +1020,7 @@ exports[`Modal renders with portal node (modal=false) 1`] = `
 }
 
 <div
-    class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
+    class="cache-1jxj6m2-StyledDialogBackdrop ebywm9u2"
     data-dialog-ref="modal-test"
     hidden=""
     style="display: none;"
