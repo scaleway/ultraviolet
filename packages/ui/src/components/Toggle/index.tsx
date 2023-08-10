@@ -2,6 +2,9 @@ import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
+import { Row } from '../Row'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 export const SIZES = {
@@ -35,6 +38,11 @@ const StyledToggle = styled.div<{
   width: ${({ size }) => SIZES[size].width}px;
   height: ${({ size }) => SIZES[size].height}px;
 
+  &:hover {
+    background-color: ${({ theme }) =>
+    theme.colors.neutral.backgroundStrongHover};
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -49,7 +57,7 @@ const StyledToggle = styled.div<{
 
   &:focus-within,
   &:focus {
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    box-shadow: ${({ theme }) => theme.shadows.focusNeutral};
   }
 
   &[data-disabled='false']:active:after {
@@ -59,6 +67,11 @@ const StyledToggle = styled.div<{
   &[data-checked='true'] {
     color: ${({ theme }) => theme.colors.neutral.textStrong};
     background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+    &:hover {
+      background-color: ${({ theme }) =>
+    theme.colors.primary.backgroundStrongHover};
+    }
 
     &:after {
       left: calc(100% - 5px);
@@ -76,7 +89,7 @@ const StyledToggle = styled.div<{
 
     &[data-checked='true'] {
       background: ${({ theme }) =>
-        theme.colors.primary.backgroundStrongDisabled};
+    theme.colors.primary.backgroundStrongDisabled};
     }
   }
 `
@@ -100,7 +113,7 @@ const StyledLabel = styled.label<{
 }>`
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
-  align-items: center;
+  align-items: start;
   width: fit-content;
   cursor: pointer;
 
@@ -132,6 +145,7 @@ type ToggleProps = {
   size?: 'large' | 'small'
   labelPosition?: 'left' | 'right'
   label?: ReactNode
+  helper?: ReactNode
   disabled?: boolean
   className?: string
   required?: boolean
@@ -150,6 +164,7 @@ export const Toggle = forwardRef(
       tooltip,
       labelPosition = 'right',
       label,
+      helper,
       required,
       className,
       'data-testid': dataTestId,
@@ -180,11 +195,20 @@ export const Toggle = forwardRef(
           className={className}
           data-testid={dataTestId}
         >
-          {label && labelPosition === 'left' ? (
-            <>
-              {label}
-              {required ? <RequiredIcon /> : null}
-            </>
+          {labelPosition === 'left' ? (
+            <Stack gap={0.25} alignItems="baseline">
+              {label ? (
+                <Row templateColumns="auto 1fr" gap={1} alignItems="center">
+                  {label}
+                  {required ? <RequiredIcon /> : null}
+                </Row>
+              ) : null}
+              {helper ? (
+                <Text as="p" variant="bodySmall" prominence="weak">
+                  {helper}
+                </Text>
+              ) : null}
+            </Stack>
           ) : null}
           <StyledToggle
             size={size}
@@ -202,11 +226,20 @@ export const Toggle = forwardRef(
               ref={ref}
             />
           </StyledToggle>
-          {label && labelPosition === 'right' ? (
-            <>
-              {label}
-              {required ? <RequiredIcon /> : null}
-            </>
+          {labelPosition === 'right' ? (
+            <Stack gap={0.25} alignItems="baseline">
+              {label ? (
+                <Row templateColumns="auto 1fr" gap={1} alignItems="center">
+                  {label}
+                  {required ? <RequiredIcon /> : null}
+                </Row>
+              ) : null}
+              {helper ? (
+                <Text as="p" variant="bodySmall" prominence="weak">
+                  {helper}
+                </Text>
+              ) : null}
+            </Stack>
           ) : null}
         </StyledLabel>
       </Tooltip>
