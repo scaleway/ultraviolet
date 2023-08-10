@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps, JSX } from 'react'
 import type { Color } from '../../theme'
-import { Icon } from '../Icon'
 
 type Direction = 'horizontal' | 'vertical'
 

@@ -1,6 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import randomName from '@scaleway/random-name'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   FocusEventHandler,
@@ -21,7 +22,6 @@ import {
 } from 'react'
 import { Button } from '../Button'
 import { Expandable } from '../Expandable'
-import { Icon } from '../Icon'
 import { Notice } from '../Notice'
 import { Separator } from '../Separator'
 import { Stack } from '../Stack'
@@ -81,7 +81,9 @@ const StyledRightElement = styled('div', {
     display: flex;
     gap: ${space['1']};
     align-items: center;
-    transition: transform 150ms, color 150ms;
+    transition:
+      transform 150ms,
+      color 150ms;
     color: ${colors.neutral.textWeak};
 
     &:hover,
@@ -204,7 +206,9 @@ const StyledInput = styled('input', {
       'paddingRightFactor',
     ].includes(prop),
 })<StyledInputProps>`
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
   appearance: none;
   background-color: ${({ theme: { colors } }) => colors.neutral.background};
   background-image: none;

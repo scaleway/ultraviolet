@@ -1,6 +1,7 @@
 import type { Theme } from '@emotion/react'
 import { ClassNames, Global, css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
 import {
@@ -8,7 +9,6 @@ import {
   toast as baseToast,
 } from 'react-toastify'
 import style from 'react-toastify/dist/ReactToastify.min.css'
-import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 

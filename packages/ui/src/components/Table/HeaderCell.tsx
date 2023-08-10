@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
-import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'

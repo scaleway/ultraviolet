@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   AnchorHTMLAttributes,
   ForwardedRef,
@@ -11,7 +12,6 @@ import { forwardRef, useEffect, useRef, useState } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
 import type { Color } from '../../theme'
 import capitalize from '../../utils/capitalize'
-import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
 const StyledIcon = styled(Icon)``

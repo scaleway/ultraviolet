@@ -1,4 +1,4 @@
-import { Icon } from '../../Icon'
+import { Icon } from '@ultraviolet/icons'
 import { Text } from '../../Text'
 import { Template } from './Template.stories'
 
