@@ -805,6 +805,43 @@ exports[`Toggle renders correctly when required with label 1`] = `
   cursor: not-allowed;
 }
 
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
 .cache-8ikytl-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
@@ -831,17 +868,25 @@ exports[`Toggle renders correctly when required with label 1`] = `
         type="checkbox"
       />
     </div>
-    test
-    <sup>
-      <svg
-        class="cache-8ikytl-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+    <div
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
       >
-        <path
-          d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
-        />
-      </svg>
-    </sup>
+        test
+        <sup>
+          <svg
+            class="cache-8ikytl-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+            />
+          </svg>
+        </sup>
+      </div>
+    </div>
   </label>
 </DocumentFragment>
 `;
@@ -871,6 +916,43 @@ exports[`Toggle renders correctly when required with label left 1`] = `
 .cache-li06jr-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-8ikytl-sizeStyles {
@@ -976,19 +1058,27 @@ exports[`Toggle renders correctly when required with label left 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-li06jr-StyledLabel e1wstm610"
   >
-    test
-    <sup>
-      <svg
-        class="cache-8ikytl-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
+    <div
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
       >
-        <path
-          d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
-        />
-      </svg>
-    </sup>
+        test
+        <sup>
+          <svg
+            class="cache-8ikytl-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+            />
+          </svg>
+        </sup>
+      </div>
+    </div>
     <div
       class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
