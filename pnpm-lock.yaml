@@ -422,17 +422,17 @@ importers:
         specifier: workspace:*
         version: link:../ui
       final-form:
-        specifier: 4.20.9
-        version: 4.20.9
+        specifier: 4.20.10
+        version: 4.20.10
       final-form-arrays:
         specifier: 3.0.2
-        version: 3.0.2(final-form@4.20.9)
+        version: 3.0.2(final-form@4.20.10)
       react-final-form:
         specifier: 6.5.9
-        version: 6.5.9(final-form@4.20.9)(react@18.2.0)
+        version: 6.5.9(final-form@4.20.10)(react@18.2.0)
       react-final-form-arrays:
         specifier: 3.1.4
-        version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0)
+        version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.10)(react-final-form@6.5.9)(react@18.2.0)
       react-select:
         specifier: 5.7.4
         version: 5.7.4(@types/react@18.2.8)(react-dom@18.2.0)(react@18.2.0)
@@ -5808,7 +5808,7 @@ packages:
   /@types/final-form-focus@1.1.3:
     resolution: {integrity: sha512-SAkFXzH21aiixLFGgeymMBcGjoLG75UmAADClXlZNps9CIC0lRahfcRqSycOSdTK+ZKC/jAMrq1fTDZstw1MRw==}
     dependencies:
-      final-form: 4.20.9
+      final-form: 4.20.10
     dev: true
 
   /@types/find-cache-dir@3.2.1:
@@ -9286,16 +9286,17 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /final-form-arrays@3.0.2(final-form@4.20.9):
+  /final-form-arrays@3.0.2(final-form@4.20.10):
     resolution: {integrity: sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==}
     peerDependencies:
       final-form: ^4.18.2
     dependencies:
-      final-form: 4.20.9
+      final-form: 4.20.10
     dev: false
 
-  /final-form@4.20.9:
-    resolution: {integrity: sha512-shA1X/7v8RmukWMNRHx0l7+Bm41hOivY78IvOiBrPVHjyWFIyqqIEMCz7yTVRc9Ea+EU4WkZ5r4MH6whSo5taw==}
+  /final-form@4.20.10:
+    resolution: {integrity: sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng==}
+    engines: {node: '>=8'}
     dependencies:
       '@babel/runtime': 7.22.10
 
@@ -13347,7 +13348,7 @@ packages:
   /react-fast-compare@3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
 
-  /react-final-form-arrays@3.1.4(final-form-arrays@3.0.2)(final-form@4.20.9)(react-final-form@6.5.9)(react@18.2.0):
+  /react-final-form-arrays@3.1.4(final-form-arrays@3.0.2)(final-form@4.20.10)(react-final-form@6.5.9)(react@18.2.0):
     resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
     peerDependencies:
       final-form: ^4.15.0
@@ -13356,20 +13357,20 @@ packages:
       react-final-form: ^6.2.1
     dependencies:
       '@babel/runtime': 7.22.10
-      final-form: 4.20.9
-      final-form-arrays: 3.0.2(final-form@4.20.9)
+      final-form: 4.20.10
+      final-form-arrays: 3.0.2(final-form@4.20.10)
       react: 18.2.0
-      react-final-form: 6.5.9(final-form@4.20.9)(react@18.2.0)
+      react-final-form: 6.5.9(final-form@4.20.10)(react@18.2.0)
     dev: false
 
-  /react-final-form@6.5.9(final-form@4.20.9)(react@18.2.0):
+  /react-final-form@6.5.9(final-form@4.20.10)(react@18.2.0):
     resolution: {integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==}
     peerDependencies:
       final-form: ^4.20.4
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
       '@babel/runtime': 7.22.10
-      final-form: 4.20.9
+      final-form: 4.20.10
       react: 18.2.0
     dev: false
 
