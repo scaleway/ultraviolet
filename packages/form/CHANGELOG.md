@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.4
+
+### Patch Changes
+
+- [#2815](https://github.com/scaleway/ultraviolet/pull/2815) [`27968abc`](https://github.com/scaleway/ultraviolet/commit/27968abcf263f4473d9899cdfb29d8643cec8a20) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `final-form` to `4.20.10`.
+
+- Updated dependencies [[`0c2713d2`](https://github.com/scaleway/ultraviolet/commit/0c2713d25e801b170af17822ed06a257637a88bb)]:
+  - @ultraviolet/ui@1.8.3
+
 ## 1.3.3
 
 ### Patch Changes
