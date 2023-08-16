@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.8.3
+
+### Patch Changes
+
+- [#2804](https://github.com/scaleway/ultraviolet/pull/2804) [`0c2713d2`](https://github.com/scaleway/ultraviolet/commit/0c2713d25e801b170af17822ed06a257637a88bb) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Enable `secondary` sentiment/color on some components which missed it
+
 ## 1.8.2
 
 ### Patch Changes
