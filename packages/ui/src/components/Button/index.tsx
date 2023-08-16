@@ -44,6 +44,8 @@ const FOCUS_RING_KEY = {
   info: 'focusInfo',
   neutral: 'focusNeutral',
   primary: 'focusPrimary',
+  // @note: no focusSecondary so far, it will be added later, so far focusPrimary sounds fine
+  secondary: 'focusPrimary',
   success: 'focusSuccess',
   warning: 'focusWarning',
 } as const
