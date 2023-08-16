@@ -1,13 +1,19 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { theme } from '@ultraviolet/ui'
+import type { consoleLightTheme as theme } from '@ultraviolet/themes'
 import type { SVGProps } from 'react'
 import { forwardRef, useMemo } from 'react'
 import capitalize from '../../utils/capitalize'
 
 type Color = Extract<
   keyof typeof theme.colors,
-  'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
+  | 'primary'
+  | 'secondary'
+  | 'neutral'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
 >
 
 const ICONS = {

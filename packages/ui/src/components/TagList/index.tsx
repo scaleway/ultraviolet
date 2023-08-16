@@ -36,7 +36,10 @@ type TagListProps = {
    * This property define maximum characters length of all tags until it hide tags into tooltip.
    */
   maxLength?: number
-  tags?: string[]
+  tags?: (
+    | string
+    | { label: string; icon: NonNullable<ComponentProps<typeof Tag>['icon']> }
+  )[]
   /**
    * This property define maximum characters length of all tags until it hide tags into tooltip.
    */
@@ -55,6 +58,9 @@ type TagListProps = {
 
 const DEFAULT_TAGS: TagListProps['tags'] = []
 
+const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) =>
+  typeof tag === 'object' ? tag.label : tag
+
 export const TagList = ({
   maxLength = 600,
   tags = DEFAULT_TAGS,
@@ -70,7 +76,10 @@ export const TagList = ({
   let tmpThreshold = threshold
   if (
     tags.length > 0 &&
-    tags.slice(0, tmpThreshold).reduce((_, tag) => _ + tag).length > maxLength
+    tags
+      .slice(0, tmpThreshold)
+      .reduce<string>((acc, tag) => acc + getTagLabel(tag), '').length >
+      maxLength
   ) {
     // If total tags length in characters is above maxLength,
     // threshold is decremented in order to prevent too many long tags displayed.
@@ -92,16 +101,17 @@ export const TagList = ({
           <Tag
             // useful when two tags are identical `${tag}-${index}`
             // eslint-disable-next-line react/no-array-index-key
-            key={`${tag}-${index}`}
+            key={`${getTagLabel(tag)}-${index}`}
             copiable={copiable}
             copyText={copyText}
             copiedText={copiedText}
+            icon={typeof tag === 'object' ? tag.icon : undefined}
           >
-            {tag}
+            {getTagLabel(tag)}
           </Tag>
         ))}
       </StyledTagContainer>
-      {hasManyTags && (
+      {hasManyTags ? (
         <Popover
           title={popoverTitle}
           visible={isVisible}
@@ -113,12 +123,13 @@ export const TagList = ({
                 <Tag
                   // useful when two tags are identical `${tag}-${index}`
                   // eslint-disable-next-line react/no-array-index-key
-                  key={`${tag}-${index}`}
+                  key={`${getTagLabel(tag)}-${index}`}
                   copiable={copiable}
                   copyText={copyText}
                   copiedText={copiedText}
+                  icon={typeof tag === 'object' ? tag.icon : undefined}
                 >
-                  {tag}
+                  {getTagLabel(tag)}
                 </Tag>
               ))}
             </StyledTagContainer>
@@ -131,7 +142,7 @@ export const TagList = ({
             +{tags.length - tmpThreshold}
           </TagsWrapper>
         </Popover>
-      )}
+      ) : null}
     </StyledContainer>
   )
 }

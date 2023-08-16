@@ -16,7 +16,7 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Variants } from './Variants.stories'
-export { Color } from './Color.stories'
+export { Sentiments } from './Sentiments.stories'
 export { As } from './As.stories'
 export { Prominence } from './Prominence.stories'
 export { Disabled } from './Disabled.stories'

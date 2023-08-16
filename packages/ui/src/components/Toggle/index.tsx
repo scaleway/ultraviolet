@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
-import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
 export const SIZES = {

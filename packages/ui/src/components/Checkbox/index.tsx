@@ -1,5 +1,6 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ChangeEvent,
   ForwardedRef,
@@ -9,7 +10,6 @@ import type {
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
-import { Icon } from '../Icon'
 import { Loader } from '../Loader'
 import { Text } from '../Text'
 

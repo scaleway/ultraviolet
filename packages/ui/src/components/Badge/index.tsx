@@ -1,14 +1,15 @@
 import type { Theme } from '@emotion/react'
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import { Icon } from '@ultraviolet/icons'
+import type { ComponentProps, ReactNode } from 'react'
 import { useMemo } from 'react'
 import type { Color } from '../../theme'
 import { SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import capitalize from '../../utils/capitalize'
-import type { IconName } from '../Icon'
-import { Icon } from '../Icon'
 import { Text } from '../Text'
+
+type IconName = ComponentProps<typeof Icon>['name']
 
 const StyledText = styled(Text)<{ fontSize: number }>`
   text-transform: uppercase;

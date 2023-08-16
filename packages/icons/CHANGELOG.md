@@ -1,5 +1,32 @@
 # @ultraviolet/icons
 
+## 1.2.2
+
+### Patch Changes
+
+- [#2809](https://github.com/scaleway/ultraviolet/pull/2809) [`0e61c78b`](https://github.com/scaleway/ultraviolet/commit/0e61c78b5da5829e1cc09b012319672d456accf1) Thanks [@philibea](https://github.com/philibea)! - Refactoring usage of Icon inside ui with the new ultraviolet/icons. Also remove depencies of ui inside ultraviolet/icons and use only ultraviolet/themes
+
+- [#2801](https://github.com/scaleway/ultraviolet/pull/2801) [`1ecd9502`](https://github.com/scaleway/ultraviolet/commit/1ecd95020595d14207d63a2671ea204575097c88) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.10`.
+  Updated dependency `@babel/runtime` to `7.22.10`.
+  Updated dependency `@babel/eslint-parser` to `7.22.10`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.10`.
+  Updated dependency `@babel/preset-env` to `7.22.10`.
+
+## 1.2.1
+
+### Patch Changes
+
+- [#2800](https://github.com/scaleway/ultraviolet/pull/2800) [`ab4a9d21`](https://github.com/scaleway/ultraviolet/commit/ab4a9d2149ea019f65620bc93fd6421af818922d) Thanks [@chambo-e](https://github.com/chambo-e)! - Correct documentDB icon name
+
+- Updated dependencies [[`32e92118`](https://github.com/scaleway/ultraviolet/commit/32e9211805a87278f002d56fecfc150907b23a3a)]:
+  - @ultraviolet/ui@1.8.1
+
+## 1.2.0
+
+### Minor Changes
+
+- [#2784](https://github.com/scaleway/ultraviolet/pull/2784) [`4fb6e24f`](https://github.com/scaleway/ultraviolet/commit/4fb6e24fd0e5745ef7cf868795665940f52cbefd) Thanks [@chambo-e](https://github.com/chambo-e)! - Add RabbitMQ and DocumentDB icons
+
 ## 1.1.3
 
 ### Patch Changes
