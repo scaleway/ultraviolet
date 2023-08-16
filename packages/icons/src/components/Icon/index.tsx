@@ -7,7 +7,13 @@ import capitalize from '../../utils/capitalize'
 
 type Color = Extract<
   keyof typeof theme.colors,
-  'primary' | 'neutral' | 'success' | 'danger' | 'warning' | 'info'
+  | 'primary'
+  | 'secondary'
+  | 'neutral'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
 >
 
 const ICONS = {
