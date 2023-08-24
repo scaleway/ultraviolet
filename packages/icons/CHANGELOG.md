@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 1.2.3
+
+### Patch Changes
+
+- [#2835](https://github.com/scaleway/ultraviolet/pull/2835) [`85c7e461`](https://github.com/scaleway/ultraviolet/commit/85c7e461d2888197607e577e1089a64f49178725) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add new `console`, `expand-more`, and `equal` icons
+
 ## 1.2.2
 
 ### Patch Changes
