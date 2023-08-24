@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.8.4
+
+### Patch Changes
+
+- [#2777](https://github.com/scaleway/ultraviolet/pull/2777) [`7f0134ea`](https://github.com/scaleway/ultraviolet/commit/7f0134eaef23fb8e9545ce164263ed306941a09a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.15.0`.
+
+- Updated dependencies [[`85c7e461`](https://github.com/scaleway/ultraviolet/commit/85c7e461d2888197607e577e1089a64f49178725)]:
+  - @ultraviolet/icons@1.2.3
+
 ## 1.8.3
 
 ### Patch Changes
