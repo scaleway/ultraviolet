@@ -1,4 +1,5 @@
 export { CheckboxField } from './CheckboxField'
+export { CheckboxGroupField } from './CheckboxGroupField'
 export { DateField } from './DateField'
 export type { FormProps } from './Form'
 export { Form } from './Form'

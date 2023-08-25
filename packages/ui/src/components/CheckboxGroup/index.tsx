@@ -13,7 +13,7 @@ import { Text } from '../Text'
 
 type CheckboxGroupContextType = {
   groupName: string
-  groupValue: string | number
+  groupValues: string[]
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -25,10 +25,10 @@ type CheckboxGroupCheckboxProps = Omit<
   ComponentProps<typeof Checkbox>,
   'onChange' | 'checked' | 'required'
 > & {
-  value: string | number
+  value: string
 }
 
-const CheckboxGroupCheckbox = ({
+export const CheckboxGroupCheckbox = ({
   onFocus,
   onBlur,
   disabled,
@@ -36,7 +36,7 @@ const CheckboxGroupCheckbox = ({
   name,
   value,
   children,
-  //   helper,
+  helper,
   className,
   autoFocus,
   'data-testid': dataTestId,
@@ -49,22 +49,22 @@ const CheckboxGroupCheckbox = ({
     )
   }
 
-  const { groupName, onChange, groupValue } = context
+  const { groupName, onChange, groupValues } = context
 
-  const checkboxName = `${groupName}-${name ?? ''}`
-  const checkboxValue = `${groupName}-${value}`
+  const checkboxName = `${groupName}.${name ?? ''}`
+  const checkboxValue = `${groupName}.${value}`
 
   return (
     <Checkbox
       onChange={onChange}
-      checked={groupValue === checkboxName}
+      checked={groupValues?.includes(checkboxValue)}
       onFocus={onFocus}
       onBlur={onBlur}
       disabled={disabled}
       error={error}
       name={checkboxName}
       value={checkboxValue}
-      //   helper={helper}
+      helper={helper}
       className={className}
       autoFocus={autoFocus}
       data-testid={dataTestId}
@@ -86,7 +86,7 @@ const MargedText = styled(Text)`
 
 type CheckboxGroupProps = {
   label: string
-  value: string | number
+  value?: string[]
   className?: string
   helper?: ReactNode
   error?: ReactNode
@@ -105,16 +105,14 @@ export const CheckboxGroup = ({
   children,
   onChange,
   name,
-  required = false,
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
     () => ({
       groupName: name,
-      groupValue: value,
+      groupValues: value ?? [],
       onChange,
-      required,
     }),
-    [name, value, onChange, required],
+    [name, value, onChange],
   )
 
   return (
