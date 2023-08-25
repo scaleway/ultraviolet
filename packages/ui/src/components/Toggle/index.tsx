@@ -40,7 +40,7 @@ const StyledToggle = styled.div<{
 
   &:hover {
     background-color: ${({ theme }) =>
-    theme.colors.neutral.backgroundStrongHover};
+      theme.colors.neutral.backgroundStrongHover};
   }
 
   &:after {
@@ -70,7 +70,7 @@ const StyledToggle = styled.div<{
 
     &:hover {
       background-color: ${({ theme }) =>
-    theme.colors.primary.backgroundStrongHover};
+        theme.colors.primary.backgroundStrongHover};
     }
 
     &:after {
@@ -89,7 +89,7 @@ const StyledToggle = styled.div<{
 
     &[data-checked='true'] {
       background: ${({ theme }) =>
-    theme.colors.primary.backgroundStrongDisabled};
+        theme.colors.primary.backgroundStrongDisabled};
     }
   }
 `
@@ -110,12 +110,15 @@ const StyledCheckbox = styled.input`
 
 const StyledLabel = styled.label<{
   size: 'small' | 'large'
+  labelPosition: 'left' | 'right'
 }>`
   display: flex;
   gap: ${({ theme }) => theme.space['1']};
   align-items: start;
   width: fit-content;
   cursor: pointer;
+  flex-direction: ${({ labelPosition }) =>
+    labelPosition === 'left' ? 'row' : 'row-reverse'};
 
   &:active ${StyledToggle}[data-disabled='false']:after {
     width: ${({ size }) => SIZES[size].ball * 1.3775}px;
@@ -194,22 +197,21 @@ export const Toggle = forwardRef(
           onClick={evt => evt.stopPropagation()}
           className={className}
           data-testid={dataTestId}
+          labelPosition={labelPosition}
         >
-          {labelPosition === 'left' ? (
-            <Stack gap={0.25} alignItems="baseline">
-              {label ? (
-                <Row templateColumns="auto 1fr" gap={1} alignItems="center">
-                  {label}
-                  {required ? <RequiredIcon /> : null}
-                </Row>
-              ) : null}
-              {helper ? (
-                <Text as="p" variant="bodySmall" prominence="weak">
-                  {helper}
-                </Text>
-              ) : null}
-            </Stack>
-          ) : null}
+          <Stack gap={0.25} alignItems="baseline">
+            {label ? (
+              <Row templateColumns="auto 1fr" gap={1} alignItems="center">
+                {label}
+                {required ? <RequiredIcon /> : null}
+              </Row>
+            ) : null}
+            {helper ? (
+              <Text as="p" variant="bodySmall" prominence="weak">
+                {helper}
+              </Text>
+            ) : null}
+          </Stack>
           <StyledToggle
             size={size}
             data-checked={state}
@@ -226,21 +228,6 @@ export const Toggle = forwardRef(
               ref={ref}
             />
           </StyledToggle>
-          {labelPosition === 'right' ? (
-            <Stack gap={0.25} alignItems="baseline">
-              {label ? (
-                <Row templateColumns="auto 1fr" gap={1} alignItems="center">
-                  {label}
-                  {required ? <RequiredIcon /> : null}
-                </Row>
-              ) : null}
-              {helper ? (
-                <Text as="p" variant="bodySmall" prominence="weak">
-                  {helper}
-                </Text>
-              ) : null}
-            </Stack>
-          ) : null}
         </StyledLabel>
       </Tooltip>
     )
