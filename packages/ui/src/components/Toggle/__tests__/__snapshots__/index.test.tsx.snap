@@ -2,32 +2,58 @@
 
 exports[`Toggle renders correctly 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -49,7 +75,11 @@ exports[`Toggle renders correctly 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -62,21 +92,25 @@ exports[`Toggle renders correctly 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -84,16 +118,16 @@ exports[`Toggle renders correctly 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -113,10 +147,13 @@ exports[`Toggle renders correctly 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    />
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -134,32 +171,72 @@ exports[`Toggle renders correctly 1`] = `
 
 exports[`Toggle renders correctly label 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -181,7 +258,11 @@ exports[`Toggle renders correctly label 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -194,21 +275,25 @@ exports[`Toggle renders correctly label 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -216,16 +301,16 @@ exports[`Toggle renders correctly label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -245,10 +330,19 @@ exports[`Toggle renders correctly label 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        This is a label
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -260,39 +354,64 @@ exports[`Toggle renders correctly label 1`] = `
         type="checkbox"
       />
     </div>
-    This is a label
   </label>
 </DocumentFragment>
 `;
 
 exports[`Toggle renders correctly when checked 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -314,7 +433,11 @@ exports[`Toggle renders correctly when checked 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -327,21 +450,25 @@ exports[`Toggle renders correctly when checked 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -349,16 +476,16 @@ exports[`Toggle renders correctly when checked 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -378,10 +505,13 @@ exports[`Toggle renders correctly when checked 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    />
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="true"
       data-disabled="false"
     >
@@ -400,32 +530,58 @@ exports[`Toggle renders correctly when checked 1`] = `
 
 exports[`Toggle renders correctly when disabled 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -447,7 +603,11 @@ exports[`Toggle renders correctly when disabled 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -460,21 +620,25 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -482,16 +646,16 @@ exports[`Toggle renders correctly when disabled 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -511,10 +675,13 @@ exports[`Toggle renders correctly when disabled 1`] = `
 
 <label
     aria-disabled="true"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    />
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="true"
     >
@@ -533,32 +700,81 @@ exports[`Toggle renders correctly when disabled 1`] = `
 
 exports[`Toggle renders correctly when required with label 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-8ikytl-sizeStyles {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 10px;
+  width: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -580,7 +796,11 @@ exports[`Toggle renders correctly when required with label 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -593,21 +813,25 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -615,16 +839,16 @@ exports[`Toggle renders correctly when required with label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -642,21 +866,31 @@ exports[`Toggle renders correctly when required with label 1`] = `
   cursor: not-allowed;
 }
 
-.cache-8ikytl-sizeStyles {
-  vertical-align: middle;
-  fill: #b3144d;
-  height: 10px;
-  width: 10px;
-  min-width: 10px;
-  min-height: 10px;
-}
-
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        test
+        <sup>
+          <svg
+            class="cache-8ikytl-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+            />
+          </svg>
+        </sup>
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -668,46 +902,75 @@ exports[`Toggle renders correctly when required with label 1`] = `
         type="checkbox"
       />
     </div>
-    test
-    <sup>
-      <svg
-        class="cache-8ikytl-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
-        />
-      </svg>
-    </sup>
   </label>
 </DocumentFragment>
 `;
 
 exports[`Toggle renders correctly when required with label left 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-1gksb9y-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-1gksb9y-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-1gksb9y-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-8ikytl-sizeStyles {
@@ -719,7 +982,7 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   min-height: 10px;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -741,7 +1004,11 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -754,21 +1021,25 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -776,16 +1047,16 @@ exports[`Toggle renders correctly when required with label left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -805,21 +1076,29 @@ exports[`Toggle renders correctly when required with label left 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-1gksb9y-StyledLabel e1wstm610"
   >
-    test
-    <sup>
-      <svg
-        class="cache-8ikytl-sizeStyles e1gt4cfo0"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
-        />
-      </svg>
-    </sup>
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        test
+        <sup>
+          <svg
+            class="cache-8ikytl-sizeStyles e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+            />
+          </svg>
+        </sup>
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -837,32 +1116,72 @@ exports[`Toggle renders correctly when required with label left 1`] = `
 
 exports[`Toggle renders correctly with complex label 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -884,7 +1203,11 @@ exports[`Toggle renders correctly with complex label 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -897,21 +1220,25 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -919,16 +1246,16 @@ exports[`Toggle renders correctly with complex label 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -948,10 +1275,21 @@ exports[`Toggle renders correctly with complex label 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        <span>
+          Custom label rendered
+        </span>
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -963,41 +1301,78 @@ exports[`Toggle renders correctly with complex label 1`] = `
         type="checkbox"
       />
     </div>
-    <span>
-      Custom label rendered
-    </span>
   </label>
 </DocumentFragment>
 `;
 
 exports[`Toggle renders correctly with custom labels on right 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1019,7 +1394,11 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1032,21 +1411,25 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1054,16 +1437,16 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -1083,10 +1466,19 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        This is a label
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -1098,39 +1490,90 @@ exports[`Toggle renders correctly with custom labels on right 1`] = `
         type="checkbox"
       />
     </div>
-    This is a label
   </label>
 </DocumentFragment>
 `;
 
-exports[`Toggle renders correctly with labels on left 1`] = `
+exports[`Toggle renders correctly with helper 1`] = `
 <DocumentFragment>
-  .cache-wk469-StyledLabel {
+  .cache-r95p0q-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-wk469-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 22.04px;
 }
 
-.cache-wk469-StyledLabel[aria-disabled='true'] {
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1ow2qsy-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-5q2bke-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1fqyjci-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1152,7 +1595,11 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   height: 24px;
 }
 
-.cache-1ow2qsy-StyledToggle:after {
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1165,21 +1612,25 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transition: all 300ms;
 }
 
-.cache-1ow2qsy-StyledToggle:focus-within,
-.cache-1ow2qsy-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='false']:active:after {
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
   width: 22.04px;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:after {
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1187,16 +1638,16 @@ exports[`Toggle renders correctly with labels on left 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus-within,
-.cache-1ow2qsy-StyledToggle[data-checked='true']:focus {
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1ow2qsy-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -1216,11 +1667,213 @@ exports[`Toggle renders correctly with labels on left 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-wk469-StyledLabel e1wstm610"
+    class="cache-r95p0q-StyledLabel e1wstm610"
   >
-    This is a label
     <div
-      class="cache-1ow2qsy-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        This is a label
+      </div>
+      <p
+        class="cache-5q2bke-StyledText e13y3mga0"
+      >
+        This is a helper
+      </p>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
+      data-checked="false"
+      data-disabled="false"
+    >
+      <input
+        aria-checked="false"
+        class="cache-1myp2ct-StyledCheckbox e1wstm611"
+        id=":rm:"
+        name="test"
+        type="checkbox"
+      />
+    </div>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Toggle renders correctly with labels on left 1`] = `
+<DocumentFragment>
+  .cache-1gksb9y-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.cache-1gksb9y-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-1gksb9y-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<label
+    aria-disabled="false"
+    class="cache-1gksb9y-StyledLabel e1wstm610"
+  >
+    <div
+      class="cache-13wfq9z-Stack ehpbis70"
+    >
+      <div
+        class="cache-15fwcc4-StyledRow e3f5lzv0"
+      >
+        This is a label
+      </div>
+    </div>
+    <div
+      class="cache-1fqyjci-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
@@ -1238,32 +1891,58 @@ exports[`Toggle renders correctly with labels on left 1`] = `
 
 exports[`Toggle renders correctly with non default size 1`] = `
 <DocumentFragment>
-  .cache-3vtkuj-StyledLabel {
+  .cache-hfh15c-StyledLabel {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
-.cache-3vtkuj-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+.cache-hfh15c-StyledLabel:active .e1wstm612[data-disabled='false']:after {
   width: 16.53px;
 }
 
-.cache-3vtkuj-StyledLabel[aria-disabled='true'] {
+.cache-hfh15c-StyledLabel[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1x0z2c5-StyledToggle {
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-u2ifpt-StyledToggle {
   box-sizing: content-box;
   outline: none;
   overflow: hidden;
@@ -1285,7 +1964,11 @@ exports[`Toggle renders correctly with non default size 1`] = `
   height: 20px;
 }
 
-.cache-1x0z2c5-StyledToggle:after {
+.cache-u2ifpt-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-u2ifpt-StyledToggle:after {
   content: '';
   position: absolute;
   top: 4px;
@@ -1298,21 +1981,25 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transition: all 300ms;
 }
 
-.cache-1x0z2c5-StyledToggle:focus-within,
-.cache-1x0z2c5-StyledToggle:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-u2ifpt-StyledToggle:focus-within,
+.cache-u2ifpt-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
 }
 
-.cache-1x0z2c5-StyledToggle[data-disabled='false']:active:after {
+.cache-u2ifpt-StyledToggle[data-disabled='false']:active:after {
   width: 16.53px;
 }
 
-.cache-1x0z2c5-StyledToggle[data-checked='true'] {
+.cache-u2ifpt-StyledToggle[data-checked='true'] {
   color: #222638;
   background-color: #521094;
 }
 
-.cache-1x0z2c5-StyledToggle[data-checked='true']:after {
+.cache-u2ifpt-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-u2ifpt-StyledToggle[data-checked='true']:after {
   left: calc(100% - 5px);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -1320,16 +2007,16 @@ exports[`Toggle renders correctly with non default size 1`] = `
   transform: translateX(-100%);
 }
 
-.cache-1x0z2c5-StyledToggle[data-checked='true']:focus-within,
-.cache-1x0z2c5-StyledToggle[data-checked='true']:focus {
+.cache-u2ifpt-StyledToggle[data-checked='true']:focus-within,
+.cache-u2ifpt-StyledToggle[data-checked='true']:focus {
   box-shadow: 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-1x0z2c5-StyledToggle[data-disabled='true'] {
+.cache-u2ifpt-StyledToggle[data-disabled='true'] {
   background: #f3f3f4;
 }
 
-.cache-1x0z2c5-StyledToggle[data-disabled='true'][data-checked='true'] {
+.cache-u2ifpt-StyledToggle[data-disabled='true'][data-checked='true'] {
   background: #e5dbfd;
 }
 
@@ -1349,10 +2036,13 @@ exports[`Toggle renders correctly with non default size 1`] = `
 
 <label
     aria-disabled="false"
-    class="cache-3vtkuj-StyledLabel e1wstm610"
+    class="cache-hfh15c-StyledLabel e1wstm610"
   >
     <div
-      class="cache-1x0z2c5-StyledToggle e1wstm612"
+      class="cache-13wfq9z-Stack ehpbis70"
+    />
+    <div
+      class="cache-u2ifpt-StyledToggle e1wstm612"
       data-checked="false"
       data-disabled="false"
     >
