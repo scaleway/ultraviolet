@@ -15,7 +15,6 @@ export { CopyButton } from './CopyButton'
 export { DateInput } from './DateInput'
 export { EmptyState } from './EmptyState'
 export { Expandable } from './Expandable'
-export { Icon } from './Icon'
 export { LineChart } from './LineChart'
 export { Link } from './Link'
 export { List } from './List'
@@ -56,3 +55,10 @@ export { Toggle } from './Toggle'
 export { Tooltip } from './Tooltip'
 export { VerificationCode } from './VerificationCode'
 export { RadioGroup } from './RadioGroup'
+export {
+  /**
+   * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.
+   * The component is the same but has been moved to another package.
+   */
+  Icon,
+} from '@ultraviolet/icons'

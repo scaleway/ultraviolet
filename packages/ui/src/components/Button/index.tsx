@@ -1,5 +1,6 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   AriaRole,
   ButtonHTMLAttributes,
@@ -10,7 +11,6 @@ import type {
 } from 'react'
 import { forwardRef } from 'react'
 import type { SENTIMENTS } from '../../theme'
-import { Icon } from '../Icon'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
 
@@ -44,6 +44,8 @@ const FOCUS_RING_KEY = {
   info: 'focusInfo',
   neutral: 'focusNeutral',
   primary: 'focusPrimary',
+  // @note: no focusSecondary so far, it will be added later, so far focusPrimary sounds fine
+  secondary: 'focusPrimary',
   success: 'focusSuccess',
   warning: 'focusWarning',
 } as const

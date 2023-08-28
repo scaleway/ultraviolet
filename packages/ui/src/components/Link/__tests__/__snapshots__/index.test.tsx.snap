@@ -504,7 +504,7 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.cache-1sfy84i-StyledIcon-sizeStyles-StyledIcon {
+.cache-1axq5yx-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -518,7 +518,7 @@ exports[`Link render correctly with href props 2`] = `
     href="/"
   >
     <svg
-      class="e1afnb7a2 cache-1sfy84i-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+      class="e1afnb7a2 cache-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
     >
       <path
@@ -601,7 +601,7 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-thickness: 2px;
 }
 
-.cache-1sfy84i-StyledIcon-sizeStyles-StyledIcon {
+.cache-1axq5yx-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -616,7 +616,7 @@ exports[`Link render correctly with href props 2`] = `
   >
     Hello
     <svg
-      class="e1afnb7a2 cache-1sfy84i-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+      class="e1afnb7a2 cache-1axq5yx-sizeStyles-StyledIcon e1gt4cfo0"
       viewBox="0 0 16 16"
     >
       <path
@@ -706,7 +706,7 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon {
+.cache-1rr0th9-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
@@ -726,7 +726,7 @@ exports[`Link render correctly with href props 2`] = `
       class="cache-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+        class="e1afnb7a2 cache-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
         viewBox="0 0 24 24"
       >
         <path
@@ -817,7 +817,7 @@ exports[`Link render correctly with href props 2`] = `
   padding-bottom: 4px;
 }
 
-.cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon {
+.cache-1rr0th9-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
@@ -837,7 +837,7 @@ exports[`Link render correctly with href props 2`] = `
       class="cache-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+        class="e1afnb7a2 cache-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
         viewBox="0 0 24 24"
       >
         <path
@@ -1275,7 +1275,7 @@ exports[`Link render correctly with target blank 1`] = `
   padding-bottom: 4px;
 }
 
-.cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon {
+.cache-1rr0th9-sizeStyles-StyledIcon {
   vertical-align: middle;
   fill: currentColor;
   height: 14px;
@@ -1295,7 +1295,7 @@ exports[`Link render correctly with target blank 1`] = `
       class="cache-1tang38-StyledExternalIconContainer e1afnb7a1"
     >
       <svg
-        class="e1afnb7a2 cache-1wiavj7-StyledIcon-sizeStyles-StyledIcon e5nqbfp0"
+        class="e1afnb7a2 cache-1rr0th9-sizeStyles-StyledIcon e1gt4cfo0"
         viewBox="0 0 24 24"
       >
         <path
@@ -1640,6 +1640,91 @@ exports[`Link sentiment render primary 1`] = `
 
 <a
     class="cache-4r3arx-StyledLink e1afnb7a0"
+    href="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link sentiment render secondary 1`] = `
+<DocumentFragment>
+  .cache-1k9ao36-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #ac22e7;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-1k9ao36-StyledLink .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1k9ao36-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1k9ao36-StyledLink:hover,
+.cache-1k9ao36-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #ac22e7;
+  text-decoration-color: #ac22e7;
+}
+
+.cache-1k9ao36-StyledLink:hover .e1afnb7a2,
+.cache-1k9ao36-StyledLink:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1k9ao36-StyledLink:hover::after,
+.cache-1k9ao36-StyledLink:focus::after {
+  background-color: #ac22e7;
+}
+
+.cache-1k9ao36-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-1k9ao36-StyledLink e1afnb7a0"
     href="/"
   >
     Hello

@@ -1,6 +1,4 @@
-import type { Decorator } from 'final-form'
 import arrayMutators from 'final-form-arrays'
-import createDecorator from 'final-form-focus'
 import type { JSX, ReactNode } from 'react'
 import type {
   FormRenderProps,
@@ -9,8 +7,6 @@ import type {
 import { Form as ReactFinalForm } from 'react-final-form'
 import { ErrorProvider } from '../../providers'
 import type { FormErrors } from '../../types'
-
-const focusOnErrors = createDecorator()
 
 export type FormProps<FormValues = unknown> = {
   children?:
@@ -54,9 +50,6 @@ export const Form = <FormValues,>({
     initialValues={initialValues}
     validateOnBlur={validateOnBlur}
     validate={validate}
-    decorators={[
-      focusOnErrors as unknown as Decorator<FormValues, Partial<FormValues>>,
-    ]}
     mutators={{
       ...arrayMutators,
       ...mutators,

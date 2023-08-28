@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ChangeEventHandler,
   FocusEventHandler,
@@ -8,7 +9,6 @@ import type {
 } from 'react'
 import { useId, useMemo, useRef, useState } from 'react'
 import { Button } from '../Button'
-import { Icon } from '../Icon'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'

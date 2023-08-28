@@ -1,10 +1,10 @@
 import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { SENTIMENTS, SENTIMENTS_WITHOUT_NEUTRAL } from '../../theme'
 import type { XOR } from '../../types'
 import capitalize from '../../utils/capitalize'
-import { Icon } from '../Icon'
 import { Tooltip } from '../Tooltip'
 
 export const PROMINENCES = {

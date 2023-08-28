@@ -1,5 +1,5 @@
 export const PRODUCT_ICONS = {
-  documentDatabase: (
+  documentDB: (
     <g className="Managed-Database-Document">
       <g className=".Square">
         <path

@@ -27,7 +27,7 @@ export const textVariants = Object.keys(typography) as TextVariant[]
 const generateStyles = ({
   placement,
   prominence,
-  color,
+  sentiment,
   variant,
   theme,
   oneLine,
@@ -39,25 +39,25 @@ const generateStyles = ({
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
-  color: Color
+  sentiment: Color
   oneLine: boolean
   disabled: boolean
   italic: boolean
   underline: boolean
 }): string => {
-  // stronger is available only for neutral color
+  // stronger is available only for neutral sentiment
   const definedProminence =
-    color !== 'neutral' && prominence === 'stronger'
+    sentiment !== 'neutral' && prominence === 'stronger'
       ? capitalize(PROMINENCES.default)
       : capitalize(PROMINENCES[prominence])
 
-  const themeColor = theme.colors[color]
+  const themeColor = theme.colors[sentiment]
   const text = `text${definedProminence}${
     disabled ? 'Disabled' : ''
   }` as keyof typeof themeColor
 
   return `
-    color: ${theme.colors[color][text]};
+    color: ${theme.colors[sentiment][text]};
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
@@ -85,7 +85,11 @@ type TextProps = {
   children: ReactNode
   placement?: PlacementProps
   variant: TextVariant
+  /**
+   * @deprecated: use `sentiment` property instead
+   */
   color?: Color
+  sentiment?: Color
   prominence?: ProminenceProps
   as: ElementType
   oneLine?: boolean
@@ -104,7 +108,7 @@ const StyledText = styled('div', {
       'as',
       'placement',
       'variant',
-      'color',
+      'sentiment',
       'prominence',
       'oneLine',
       'disabled',
@@ -113,7 +117,7 @@ const StyledText = styled('div', {
     ].includes(prop),
 })<{
   placement?: PlacementProps
-  color: Color
+  sentiment: Color
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean
@@ -127,7 +131,8 @@ export const Text = ({
   variant,
   children,
   as,
-  color = 'neutral',
+  color,
+  sentiment,
   oneLine = false,
   placement,
   prominence = 'default',
@@ -140,6 +145,8 @@ export const Text = ({
   htmlFor,
   'data-testid': dataTestId,
 }: TextProps) => {
+  const computedSentiment = sentiment ?? color ?? 'neutral'
+
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
 
@@ -159,7 +166,7 @@ export const Text = ({
         as={as}
         placement={placement}
         prominence={prominence}
-        color={color}
+        sentiment={computedSentiment}
         variant={variant}
         oneLine={oneLine}
         className={className}

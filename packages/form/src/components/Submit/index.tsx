@@ -13,6 +13,7 @@ type SubmitProps = {
   variant?: ComponentProps<typeof Button>['variant']
   sentiment?: ComponentProps<typeof Button>['sentiment']
   tooltip?: ComponentProps<typeof Button>['tooltip']
+  fullWidth?: ComponentProps<typeof Button>['fullWidth']
 }
 
 export const Submit = ({
@@ -25,6 +26,7 @@ export const Submit = ({
   variant = 'filled',
   sentiment = 'primary',
   tooltip,
+  fullWidth,
 }: SubmitProps): JSX.Element => {
   const { invalid, submitting, hasValidationErrors, dirtySinceLastSubmit } =
     useFormState({
@@ -56,6 +58,7 @@ export const Submit = ({
       variant={variant}
       sentiment={sentiment}
       tooltip={tooltip}
+      fullWidth={fullWidth}
     >
       {children}
     </Button>

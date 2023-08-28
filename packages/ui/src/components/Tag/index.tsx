@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
-import type { MouseEventHandler, ReactNode } from 'react'
+import { Icon } from '@ultraviolet/icons'
+import type { ComponentProps, MouseEventHandler, ReactNode } from 'react'
 import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'
-import type { IconName } from '../Icon'
-import { Icon } from '../Icon'
 import { Loader } from '../Loader'
 import { Tooltip } from '../Tooltip'
+
+type IconName = ComponentProps<typeof Icon>['name']
 
 const COPY_DURATION = 2500
 

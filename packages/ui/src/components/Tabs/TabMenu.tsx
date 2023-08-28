@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import type {
   ButtonHTMLAttributes,
   ComponentProps,
@@ -6,7 +7,6 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
-import { Icon } from '../Icon'
 import { Menu } from '../Menu'
 import { StyledTabButton } from './Tab'
 

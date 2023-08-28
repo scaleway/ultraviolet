@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Icon } from '../Icon'
+import { Icon } from '@ultraviolet/icons'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 

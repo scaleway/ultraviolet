@@ -1,5 +1,40 @@
 # Change Log
 
+## 1.8.4
+
+### Patch Changes
+
+- [#2777](https://github.com/scaleway/ultraviolet/pull/2777) [`7f0134ea`](https://github.com/scaleway/ultraviolet/commit/7f0134eaef23fb8e9545ce164263ed306941a09a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.15.0`.
+
+- Updated dependencies [[`85c7e461`](https://github.com/scaleway/ultraviolet/commit/85c7e461d2888197607e577e1089a64f49178725)]:
+  - @ultraviolet/icons@1.2.3
+
+## 1.8.3
+
+### Patch Changes
+
+- [#2804](https://github.com/scaleway/ultraviolet/pull/2804) [`0c2713d2`](https://github.com/scaleway/ultraviolet/commit/0c2713d25e801b170af17822ed06a257637a88bb) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Enable `secondary` sentiment/color on some components which missed it
+
+## 1.8.2
+
+### Patch Changes
+
+- [#2809](https://github.com/scaleway/ultraviolet/pull/2809) [`0e61c78b`](https://github.com/scaleway/ultraviolet/commit/0e61c78b5da5829e1cc09b012319672d456accf1) Thanks [@philibea](https://github.com/philibea)! - Refactoring usage of Icon inside ui with the new ultraviolet/icons. Also remove depencies of ui inside ultraviolet/icons and use only ultraviolet/themes
+
+- [#2801](https://github.com/scaleway/ultraviolet/pull/2801) [`1ecd9502`](https://github.com/scaleway/ultraviolet/commit/1ecd95020595d14207d63a2671ea204575097c88) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.10`.
+  Updated dependency `@babel/runtime` to `7.22.10`.
+  Updated dependency `@babel/eslint-parser` to `7.22.10`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.10`.
+  Updated dependency `@babel/preset-env` to `7.22.10`.
+- Updated dependencies [[`0e61c78b`](https://github.com/scaleway/ultraviolet/commit/0e61c78b5da5829e1cc09b012319672d456accf1), [`1ecd9502`](https://github.com/scaleway/ultraviolet/commit/1ecd95020595d14207d63a2671ea204575097c88)]:
+  - @ultraviolet/icons@1.2.2
+
+## 1.8.1
+
+### Patch Changes
+
+- [#2796](https://github.com/scaleway/ultraviolet/pull/2796) [`32e92118`](https://github.com/scaleway/ultraviolet/commit/32e9211805a87278f002d56fecfc150907b23a3a) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Support icons in TagList
+
 ## 1.8.0
 
 ### Minor Changes

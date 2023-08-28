@@ -78,4 +78,9 @@ describe('Toggle', () => {
     await userEvent.click(input)
     expect(input.getAttribute('aria-checked')).toBe('true')
   })
+
+  test('renders correctly with helper', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle name="test" label="This is a label" helper="This is a helper" />,
+    ))
 })

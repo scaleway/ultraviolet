@@ -322,7 +322,7 @@ exports[`Button render with a tooltip 1`] = `
 }
 
 <div
-    aria-describedby=":r1f:"
+    aria-describedby=":r1l:"
     class="cache-yb56yg-StyledChildrenContainer efkq4700"
     tabindex="0"
   >
@@ -449,7 +449,7 @@ exports[`Button render with icon 1`] = `
   text-decoration: none;
 }
 
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-1ah7xw8-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -464,7 +464,7 @@ exports[`Button render with icon 1`] = `
     type="button"
   >
     <svg
-      class="cache-kbjega-StyledIcon-sizeStyles e5nqbfp0"
+      class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
       viewBox="0 0 24 24"
     >
       <path
@@ -524,7 +524,7 @@ exports[`Button render with icon on the right 1`] = `
   text-decoration: none;
 }
 
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-1ah7xw8-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -539,7 +539,7 @@ exports[`Button render with icon on the right 1`] = `
     type="button"
   >
     <svg
-      class="cache-kbjega-StyledIcon-sizeStyles e5nqbfp0"
+      class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
       viewBox="0 0 24 24"
     >
       <path
@@ -599,7 +599,7 @@ exports[`Button render with icon only 1`] = `
   text-decoration: none;
 }
 
-.cache-kbjega-StyledIcon-sizeStyles {
+.cache-1ah7xw8-sizeStyles {
   vertical-align: middle;
   fill: currentColor;
   height: 16px;
@@ -614,7 +614,7 @@ exports[`Button render with icon only 1`] = `
     type="button"
   >
     <svg
-      class="cache-kbjega-StyledIcon-sizeStyles e5nqbfp0"
+      class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
       viewBox="0 0 24 24"
     >
       <path
@@ -1354,6 +1354,122 @@ exports[`Button variant-sentiment-disabled combination render filled&primary dis
 </DocumentFragment>
 `;
 
+exports[`Button variant-sentiment-disabled combination render filled&secondary 1`] = `
+<DocumentFragment>
+  .cache-1mn3n4c-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #b824f9;
+  border: none;
+  color: #ffffff;
+  background: #f2d5ff;
+  color: #ffffff;
+}
+
+.cache-1mn3n4c-StyledFilledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-1mn3n4c-StyledFilledButton e112qvla2"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render filled&secondary disabled 1`] = `
+<DocumentFragment>
+  .cache-1mn3n4c-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #b824f9;
+  border: none;
+  color: #ffffff;
+  background: #f2d5ff;
+  color: #ffffff;
+}
+
+.cache-1mn3n4c-StyledFilledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-1mn3n4c-StyledFilledButton e112qvla2"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
 exports[`Button variant-sentiment-disabled combination render filled&success 1`] = `
 <DocumentFragment>
   .cache-k24w0p-StyledFilledButton {
@@ -2034,6 +2150,120 @@ exports[`Button variant-sentiment-disabled combination render ghost&primary disa
 
 <button
     class="cache-1uihm2t-StyledGhostButton e112qvla0"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&secondary 1`] = `
+<DocumentFragment>
+  .cache-8w503t-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #ac22e7;
+  color: #ebbcff;
+}
+
+.cache-8w503t-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-8w503t-StyledGhostButton e112qvla0"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render ghost&secondary disabled 1`] = `
+<DocumentFragment>
+  .cache-8w503t-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #ac22e7;
+  color: #ebbcff;
+}
+
+.cache-8w503t-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-8w503t-StyledGhostButton e112qvla0"
     disabled=""
     type="button"
   >
@@ -2726,6 +2956,122 @@ exports[`Button variant-sentiment-disabled combination render outlined&primary d
 
 <button
     class="cache-1cuf84p-StyledOutlinedButton e112qvla1"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&secondary 1`] = `
+<DocumentFragment>
+  .cache-1b86sxn-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #ac22e7;
+  color: #ac22e7;
+  color: #ebbcff;
+  border: 1px solid #ebbcff;
+}
+
+.cache-1b86sxn-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-1b86sxn-StyledOutlinedButton e112qvla1"
+    disabled=""
+    type="button"
+  >
+    Hello
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button variant-sentiment-disabled combination render outlined&secondary disabled 1`] = `
+<DocumentFragment>
+  .cache-1b86sxn-StyledOutlinedButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: 1px solid #ac22e7;
+  color: #ac22e7;
+  color: #ebbcff;
+  border: 1px solid #ebbcff;
+}
+
+.cache-1b86sxn-StyledOutlinedButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    class="cache-1b86sxn-StyledOutlinedButton e112qvla1"
     disabled=""
     type="button"
   >
