@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react'
 import { RadioGroup } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
@@ -56,4 +57,12 @@ describe('RadioGroup', () => {
         <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
       </RadioGroup>,
     ))
+
+  test('throws if RadioGroup.Radio used without RadioGroup', () => {
+    expect(() =>
+      render(
+        <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />,
+      ),
+    ).toThrow('RadioGroup.Radio can only be used inside a RadioGroup')
+  })
 })

@@ -47,20 +47,18 @@ const RadioGroupRadio = ({
   }
 
   const { groupName, onChange, groupValue } = context
-
   const radioName = `${groupName}-${name ?? ''}`
-  const radioValue = `${groupName}-${value}`
 
   return (
     <Radio
       onChange={onChange}
-      checked={groupValue === radioName}
+      checked={`${groupName}-${groupValue}` === radioName}
       onFocus={onFocus}
       onBlur={onBlur}
       disabled={disabled}
       error={error}
       name={radioName}
-      value={radioValue}
+      value={value}
       label={label}
       helper={helper}
       className={className}
