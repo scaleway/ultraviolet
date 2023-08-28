@@ -179,7 +179,7 @@ const CheckboxContainer = styled.div`
 
   ${CheckboxInput}:checked + ${StyledIcon} path {
     transform-origin: center;
-    transition: 100ms transform ease-in-out;
+    transition: 200ms transform ease-in-out;
     transform: scale(1);
     transform: translate(2px, 2px);
   }
@@ -236,14 +236,14 @@ const StyledActivityContainer = styled.div`
 type CheckboxProps = {
   error?: string | ReactNode
   /**
-   * @deprecated Size prop is deprecated and will be removed in next majour update.
+   * @deprecated Size prop is deprecated and will be removed in next major update.
    */
   size?: number
   /**
-   * @deprecated Progress prop is deprecated and will be removed in next majour update.
+   * @deprecated Progress prop is deprecated and will be removed in next major update.
    */
   progress?: boolean
-  helper?: string | ReactNode
+  helper?: ReactNode
   disabled?: boolean
   checked?: boolean | 'indeterminate'
   className?: string
