@@ -2,88 +2,130 @@
 
 exports[`CheckboxField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -92,55 +134,57 @@ exports[`CheckboxField should render correctly 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -148,9 +192,57 @@ exports[`CheckboxField should render correctly 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <form
@@ -158,51 +250,51 @@ exports[`CheckboxField should render correctly 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="test"
         name="test"
         type="checkbox"
         value=""
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-d2sbm0 ehpbis70"
+      >
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        />
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -210,88 +302,130 @@ exports[`CheckboxField should render correctly 1`] = `
 
 exports[`CheckboxField should render correctly checked without value 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -300,55 +434,57 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -356,9 +492,57 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <form
@@ -366,52 +550,52 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="true"
       data-error="false"
     >
       <input
+        aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="checked"
         name="checked"
         type="checkbox"
         value=""
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-d2sbm0 ehpbis70"
+      >
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        />
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -419,88 +603,130 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
 
 exports[`CheckboxField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -509,55 +735,57 @@ exports[`CheckboxField should render correctly disabled 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -565,9 +793,57 @@ exports[`CheckboxField should render correctly disabled 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <form
@@ -575,13 +851,14 @@ exports[`CheckboxField should render correctly disabled 1`] = `
   >
     <div
       aria-disabled="true"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         disabled=""
         id="test"
         name="test"
@@ -589,38 +866,37 @@ exports[`CheckboxField should render correctly disabled 1`] = `
         value=""
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-d2sbm0 ehpbis70"
+      >
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        />
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -628,88 +904,130 @@ exports[`CheckboxField should render correctly disabled 1`] = `
 
 exports[`CheckboxField should render correctly with a value 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -718,55 +1036,57 @@ exports[`CheckboxField should render correctly with a value 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -774,9 +1094,57 @@ exports[`CheckboxField should render correctly with a value 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <form
@@ -784,100 +1152,100 @@ exports[`CheckboxField should render correctly with a value 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="false"
       data-error="false"
     >
       <input
+        aria-checked="false"
         aria-invalid="false"
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="value"
         name="value"
         type="checkbox"
         value="foo"
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-d2sbm0 ehpbis70"
+      >
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        />
+      </div>
     </div>
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="true"
       data-error="false"
     >
       <input
+        aria-checked="true"
         aria-invalid="false"
         checked=""
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="value"
         name="value"
         type="checkbox"
         value="bar"
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
+      <div
+        class="cache-d2sbm0 ehpbis70"
+      >
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        />
+      </div>
     </div>
   </form>
 </DocumentFragment>
@@ -885,88 +1253,130 @@ exports[`CheckboxField should render correctly with a value 1`] = `
 
 exports[`CheckboxField should render correctly with errors 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -975,55 +1385,57 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1031,9 +1443,57 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 .cache-8ikytl-sizeStyles {
@@ -1045,7 +1505,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   min-height: 10px;
 }
 
-.cache-1jsok07 {
+.cache-jf77y {
   color: #b3144d;
   font-size: 14px;
   font-family: Asap;
@@ -1055,7 +1515,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0 4px;
+  padding-top: 4px;
 }
 
 <form
@@ -1063,14 +1523,15 @@ exports[`CheckboxField should render correctly with errors 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="false"
       data-error="true"
     >
       <input
+        aria-checked="false"
         aria-describedby="test-hint"
         aria-invalid="true"
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="test"
         name="test"
         required=""
@@ -1078,53 +1539,59 @@ exports[`CheckboxField should render correctly with errors 1`] = `
         value=""
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
-      <label
-        for="test"
+      <div
+        class="cache-d2sbm0 ehpbis70"
       >
-        Checkbox field error
-      </label>
-      <sup>
-        <svg
-          class="cache-8ikytl-sizeStyles e1gt4cfo0"
-          viewBox="0 0 24 24"
+        <div
+          class="cache-7efi4w e3f5lzv0"
         >
-          <path
-            d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
-          />
-        </svg>
-      </sup>
+          <label
+            class="cache-0 eqr7bqq3"
+            for="test"
+          >
+            Checkbox field error
+          </label>
+          <sup>
+            <svg
+              class="cache-8ikytl-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+              />
+            </svg>
+          </sup>
+        </div>
+        <p
+          class="eqr7bqq7 cache-jf77y e13y3mga0"
+        >
+          This field is required
+        </p>
+      </div>
     </div>
     <div>
       Focus
@@ -1135,88 +1602,130 @@ exports[`CheckboxField should render correctly with errors 1`] = `
 
 exports[`CheckboxField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-1sz1qdq {
+  .cache-1ublx3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   gap: 8px;
 }
 
-.cache-1sz1qdq[aria-disabled='false'],
-.cache-1sz1qdq[aria-disabled='false']>label {
+.cache-1ublx3[aria-disabled='false']+.eqr7bqq3 {
   cursor: pointer;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] {
+.cache-1ublx3[aria-disabled='true'] {
   cursor: not-allowed;
   color: #b5b7bd;
 }
 
-.cache-1sz1qdq[aria-disabled='true']>label {
+.cache-1ublx3[aria-disabled='true']+.eqr7bqq3 {
   cursor: not-allowed;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 {
-  fill: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 {
+  fill: #e9eaeb;
 }
 
-.cache-1sz1qdq[aria-disabled='true'] .eqr7bqq3 .eqr7bqq7 {
-  stroke: #d9dadd;
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq4 .eqr7bqq6 {
+  stroke: #e9eaeb;
   fill: #f3f3f4;
 }
 
-.cache-1sz1qdq .eqr7bqq6,
-.cache-1sz1qdq .eqr7bqq5 {
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 {
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffbbd3;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #ffbbd3;
+  fill: #ffebf2;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 {
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3[aria-disabled='true'] .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #d8c5fc;
+  fill: #d8c5fc;
+}
+
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 path {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-}
-
-.cache-1sz1qdq .eqr7bqq2:checked+.eqr7bqq3 .eqr7bqq6 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
 }
 
-.cache-1sz1qdq .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq3 .eqr7bqq5 {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 {
-  background-color: #f1eefc;
+.cache-1ublx3 .eqr7bqq2:checked+.eqr7bqq4 .eqr7bqq6 {
   fill: #521094;
-}
-
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2+.eqr7bqq3 .eqr7bqq7 {
   stroke: #521094;
-  fill: #f1eefc;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 {
-  background-color: #ffebf2;
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]:checked+.eqr7bqq4 .eqr7bqq6 {
+  fill: #b3144d;
+  stroke: #b3144d;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq5 {
+  fill: #ffffff;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-checked="mixed"]+.eqr7bqq4 .eqr7bqq6 {
+  fill: #521094;
+  stroke: #521094;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='false'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-1ublx3:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid='true'][aria-checked='false']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 {
   fill: #e51963;
 }
 
-.cache-1sz1qdq:hover[aria-disabled='false'] .eqr7bqq2[aria-invalid="true"]+.eqr7bqq3 .eqr7bqq7 {
+.cache-1ublx3 .eqr7bqq2[aria-invalid="true"]+.eqr7bqq4 .eqr7bqq6 {
   stroke: #e51963;
   fill: #ffebf2;
 }
 
-.cache-59o5to {
+.cache-14lwnfj {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -1225,55 +1734,57 @@ exports[`CheckboxField should trigger events correctly 1`] = `
   border-width: 0;
 }
 
-.cache-59o5to:not(:disabled) {
+.cache-14lwnfj:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-59o5to:disabled {
+.cache-14lwnfj:disabled {
   cursor: not-allowed;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-59o5to:not(:disabled):checked+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-checked='mixed']+.eqr7bqq3 .eqr7bqq7 {
+.cache-14lwnfj:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 {
-  fill: #e51963;
-}
-
-.cache-59o5to:not(:disabled)[aria-invalid='true']+.eqr7bqq3 .eqr7bqq7,
-.cache-59o5to:not(:disabled)[aria-invalid='mixed']+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 {
-  background-color: #f1eefc;
-  fill: #521094;
-}
-
-.cache-59o5to:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #521094;
-  fill: #f1eefc;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 {
-  background-color: #ffebf2;
-  fill: #e51963;
-}
-
-.cache-59o5to[aria-invalid='true']:focus+.eqr7bqq3 .eqr7bqq7 {
-  stroke: #e51963;
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-ttqha5 {
+.cache-14lwnfj:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-14lwnfj:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #b3144d;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 {
+  background-color: #f1eefc;
+  fill: #ffebf2;
+  outline: 2px solid #e5dbfd;
+}
+
+.cache-14lwnfj:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #3b1a61;
+  fill: #e5dbfd;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 {
+  background-color: #ffebf2;
+  fill: #ffebf2;
+  outline: 2px solid #ffd3e3;
+}
+
+.cache-14lwnfj[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+  stroke: #92103f;
+  fill: #ffd3e3;
+}
+
+.cache-55x4xn {
   border-radius: 4px;
   height: 24px;
   width: 24px;
@@ -1281,9 +1792,57 @@ exports[`CheckboxField should trigger events correctly 1`] = `
   min-height: 24px;
 }
 
-.cache-w3iio4 {
-  fill: #f9f9fa;
-  stroke: #b5b7bd;
+.cache-55x4xn path {
+  fill: #ffffff;
+  -webkit-transform: translate(2px, 2px);
+  -moz-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.cache-16eol3o {
+  fill: #ffffff;
+  stroke: #d9dadd;
+}
+
+.cache-d2sbm0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-7efi4w {
+  display: grid;
+  grid-template-columns: 11fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
 }
 
 <form
@@ -1291,56 +1850,58 @@ exports[`CheckboxField should trigger events correctly 1`] = `
   >
     <div
       aria-disabled="false"
-      class="cache-1sz1qdq eqr7bqq1"
+      class="cache-1ublx3 eqr7bqq1"
       data-checked="true"
       data-error="false"
     >
       <input
+        aria-checked="true"
         aria-invalid="false"
-        class="cache-59o5to eqr7bqq2"
+        class="cache-14lwnfj eqr7bqq2"
         id="test"
         name="test"
         type="checkbox"
         value=""
       />
       <svg
-        class="cache-ttqha5 eqr7bqq3"
+        class="cache-55x4xn eqr7bqq4"
         size="24"
         viewBox="0 0 24 24"
       >
         <g>
           <rect
-            class="cache-w3iio4 eqr7bqq7"
-            height="14"
+            class="cache-16eol3o eqr7bqq6"
+            height="20"
             rx="2px"
             stroke-width="2"
+            width="20"
+            x="2"
+            y="2"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+            fill="white"
+            fill-rule="evenodd"
+            height="14"
             width="14"
-            x="5"
-            y="5"
-          />
-          <rect
-            class="cache-0 eqr7bqq5"
-            height="2"
-            rx="1"
-            width="8"
-            x="8"
-            y="11"
-          />
-          <rect
-            class="cache-0 eqr7bqq6"
-            height="8"
-            rx="1"
-            width="8"
-            x="8"
-            y="8"
           />
         </g>
       </svg>
-      <label
-        for="test"
+      <div
+        class="cache-d2sbm0 ehpbis70"
       >
-        Checkbox field events
-      </label>
+        <div
+          class="cache-7efi4w e3f5lzv0"
+        >
+          <label
+            class="cache-0 eqr7bqq3"
+            for="test"
+          >
+            Checkbox field events
+          </label>
+        </div>
+      </div>
     </div>
   </form>
 </DocumentFragment>
