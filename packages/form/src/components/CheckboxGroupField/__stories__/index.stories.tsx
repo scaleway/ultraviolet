@@ -8,6 +8,7 @@ export default {
   decorators: [
     ChildStory => (
       <Form
+        initialValues={{ conditions: 'termsAndConditions' }}
         onRawSubmit={data => {
           console.log('data', data)
         }}
@@ -19,11 +20,11 @@ export default {
   ],
   title: 'Components/Data Entry/CheckboxGroupField',
   args: {
-    name: 'template',
-    label: 'Legend',
-    value: ['value-2'],
+    name: 'conditions',
+    label: 'Conditions',
   },
 } as Meta<typeof CheckboxGroupField>
 
 export { Playground } from './Playground.stories'
 export { Direction } from './Direction.stories'
+export { Required } from './Required.stories'

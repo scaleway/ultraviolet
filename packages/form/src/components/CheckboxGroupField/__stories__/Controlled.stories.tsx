@@ -1,13 +1,13 @@
 import type { StoryFn } from '@storybook/react'
+import { CheckboxGroup } from '@ultraviolet/ui'
 import { useState } from 'react'
-import { CheckboxGroup } from '..'
 
 export const Controlled: StoryFn = () => {
   const [values, onChange] = useState(['controlled-label-1'])
 
   return (
     <CheckboxGroup
-      label="Legend label"
+      label="Label"
       name="controlled"
       value={values}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

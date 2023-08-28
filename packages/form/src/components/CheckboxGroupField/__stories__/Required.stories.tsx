@@ -2,8 +2,9 @@ import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
 import { useFormState } from 'react-final-form'
 import { CheckboxGroupField } from '..'
+import { Submit } from '../..'
 
-export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
+export const RequiredStory: StoryFn<typeof CheckboxGroupField> = args => {
   const { values } = useFormState()
 
   return (
@@ -19,6 +20,7 @@ export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
           Accept to receive newsletter
         </CheckboxGroupField.Checkbox>
       </CheckboxGroupField>
+      <Submit>Submit</Submit>
       <span>
         <b>Form content:</b> {JSON.stringify(values)}
       </span>
@@ -26,19 +28,19 @@ export const DirectionStory: StoryFn<typeof CheckboxGroupField> = args => {
   )
 }
 
-export const Direction: StoryFn<typeof CheckboxGroupField> = args => (
-  <DirectionStory {...args} />
+export const Required: StoryFn<typeof CheckboxGroupField> = args => (
+  <RequiredStory {...args} />
 )
 
-Direction.parameters = {
+Required.parameters = {
   docs: {
     storyDescription:
       'Use the `direction` prop to change the direction of the group.',
   },
 }
 
-Direction.args = {
+Required.args = {
   name: 'conditions',
   label: 'Conditions',
-  direction: 'row',
+  required: true,
 }

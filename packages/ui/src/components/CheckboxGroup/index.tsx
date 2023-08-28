@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -52,7 +53,7 @@ export const CheckboxGroupCheckbox = ({
   const { groupName, onChange, groupValues } = context
 
   const checkboxName = `${groupName}.${name ?? ''}`
-  const checkboxValue = `${groupName}.${value}`
+  const checkboxValue = `${value}`
 
   return (
     <Checkbox
@@ -84,6 +85,10 @@ const MargedText = styled(Text)`
   margin-left: ${({ theme }) => theme.space['4']};
 `
 
+const StyledRequiredIcon = styled(Icon)`
+  vertical-align: super;
+`
+
 type CheckboxGroupProps = {
   label: string
   value?: string[]
@@ -92,6 +97,7 @@ type CheckboxGroupProps = {
   error?: ReactNode
   direction?: 'row' | 'column'
   children: ReactNode
+  required?: boolean
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
@@ -105,6 +111,7 @@ export const CheckboxGroup = ({
   children,
   onChange,
   name,
+  required = false,
 }: CheckboxGroupProps) => {
   const contextValue = useMemo(
     () => ({
@@ -118,10 +125,13 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <FieldSet className={className} disabled>
           <Stack gap={1.5}>
-            <Text as="p" variant="bodyStrong">
-              <legend>{label}</legend>
+            <Text as="legend" variant="bodyStrong">
+              {label}&nbsp;
+              {required ? (
+                <StyledRequiredIcon name="asterisk" color="danger" size={8} />
+              ) : null}
             </Text>
             <Stack gap={direction === 'column' ? 1 : 2} direction={direction}>
               {children}
