@@ -13,7 +13,7 @@ type RadioGroupFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
       ComponentProps<typeof RadioGroup>,
       | 'onChange'
       | 'value'
-      | 'label'
+      | 'legend'
       | 'children'
       | 'required'
       | 'name'
@@ -29,7 +29,7 @@ type RadioGroupFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
 
 export const RadioGroupField = ({
   className,
-  label = '',
+  legend = '',
   name,
   onChange,
   required,
@@ -49,7 +49,7 @@ export const RadioGroupField = ({
   })
 
   const error = getError({
-    label,
+    label: legend,
     meta: meta as FieldState<unknown>,
     name,
     value: input.value,
@@ -65,7 +65,7 @@ export const RadioGroupField = ({
       }}
       required={required}
       value={input.value}
-      label={label}
+      legend={legend}
       error={error ?? customError}
       helper={helper}
       direction={direction}

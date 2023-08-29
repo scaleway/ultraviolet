@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Icon } from '@ultraviolet/icons'
 import {
   type ComponentProps,
   type InputHTMLAttributes,
@@ -79,8 +80,12 @@ const MargedText = styled(Text)`
   margin-left: ${({ theme }) => theme.space['4']};
 `
 
+const StyledRequiredIcon = styled(Icon)`
+  vertical-align: super;
+`
+
 type RadioGroupProps = {
-  label: string
+  legend: string
   value: string | number
   className?: string
   helper?: ReactNode
@@ -91,7 +96,7 @@ type RadioGroupProps = {
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
 export const RadioGroup = ({
-  label,
+  legend,
   value,
   className,
   helper,
@@ -117,8 +122,11 @@ export const RadioGroup = ({
       <Stack gap={1}>
         <FieldSet className={className}>
           <Stack gap={1.5}>
-            <Text as="p" variant="bodyStrong">
-              <legend>{label}</legend>
+            <Text as="legend" variant="bodyStrong">
+              {legend}&nbsp;
+              {required ? (
+                <StyledRequiredIcon name="asterisk" color="danger" size={8} />
+              ) : null}
             </Text>
             <Stack gap={direction === 'column' ? 1 : 2} direction={direction}>
               {children}
