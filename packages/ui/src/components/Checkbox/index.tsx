@@ -123,14 +123,14 @@ const CheckboxContainer = styled.div`
   align-items: start;
   gap: ${({ theme }) => theme.space['1']};
 
-  &[aria-disabled='false'] + ${StyledLabel} {
+  ${StyledLabel} {
     cursor: pointer;
   }
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
 
-    & + ${StyledLabel} {
+    ${StyledLabel} {
       cursor: not-allowed;
     }
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
