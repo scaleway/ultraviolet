@@ -9,7 +9,7 @@ describe('RadioField', () => {
         value="value-1"
         onChange={() => {}}
         name="radio"
-        label="Label"
+        legend="Label"
       >
         <RadioGroupField.Radio name="value-1" value="value-1" label="Radio 1" />
         <RadioGroupField.Radio name="value-2" value="value-2" label="Radio 2" />
@@ -35,7 +35,7 @@ describe('RadioField', () => {
         name="test"
         value="value-2"
         onChange={onChange}
-        label="RadioGroupField events"
+        legend="RadioGroupField events"
       >
         <RadioGroupField.Radio name="value-1" value="value-1" label="Radio 1" />
         <RadioGroupField.Radio name="value-2" value="value-2" label="Radio 2" />

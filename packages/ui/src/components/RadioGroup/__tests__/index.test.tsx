@@ -9,7 +9,7 @@ describe('RadioGroup', () => {
         value="value-1"
         onChange={() => {}}
         name="radio"
-        label="Label"
+        legend="Label"
       >
         <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
         <RadioGroup.Radio name="value-2" value="value-2" label="Radio 2" />
@@ -22,7 +22,7 @@ describe('RadioGroup', () => {
         value="value-1"
         onChange={() => {}}
         name="radio"
-        label="Label"
+        legend="Label"
         direction="row"
       >
         <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
@@ -36,7 +36,7 @@ describe('RadioGroup', () => {
         value="value-1"
         onChange={() => {}}
         name="radio"
-        label="Label"
+        legend="Label"
         helper="Helper content"
       >
         <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />
@@ -50,7 +50,7 @@ describe('RadioGroup', () => {
         value="value-1"
         onChange={() => {}}
         name="radio"
-        label="Label"
+        legend="Label"
         error="Eror content"
       >
         <RadioGroup.Radio name="value-1" value="value-1" label="Radio 1" />

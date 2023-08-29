@@ -4,7 +4,7 @@ export const Helper = Template.bind({})
 
 Helper.args = {
   name: 'helper',
-  label: 'Legend label',
+  legend: 'Legend label',
   helper: 'Helper content',
 }
 

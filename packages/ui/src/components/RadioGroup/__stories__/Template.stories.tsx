@@ -10,5 +10,5 @@ export const Template: StoryFn<typeof RadioGroup> = args => (
 
 Template.args = {
   name: 'template',
-  label: 'Legend label',
+  legend: 'Legend label',
 }

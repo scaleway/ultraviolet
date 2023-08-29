@@ -33,5 +33,5 @@ export const Template: StoryFn<
 
 Template.args = {
   name: 'template',
-  label: 'Legend label',
+  legend: 'Legend label',
 }

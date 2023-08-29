@@ -7,7 +7,7 @@ export const Controlled: StoryFn = () => {
 
   return (
     <RadioGroup
-      label="Legend label"
+      legend="Legend label"
       name="controlled"
       value={value}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

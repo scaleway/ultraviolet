@@ -7,7 +7,7 @@ export const Direction: StoryFn = () => {
 
   return (
     <RadioGroup
-      label="Legend label"
+      legend="Legend label"
       name="direction"
       value={value}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
