@@ -4,8 +4,6 @@ import { Button } from '../../Button'
 
 export const WithLotsOfContent: StoryFn = props => (
   <Modal
-    animated
-    animation="scaleUp"
     disclosure={<Button>Open Modal with lot of content</Button>}
     {...props}
   >

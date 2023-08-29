@@ -5,11 +5,7 @@ import { DefaultDisclosure } from './Template.stories'
 
 export const WithModal: StoryFn<typeof Menu> = () => {
   const NestedModal = () => (
-    <Modal
-      animated
-      animation="scaleUp"
-      disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}
-    >
+    <Modal disclosure={<Menu.Item>MenuItem with Modal</Menu.Item>}>
       <div style={{ padding: 32 }}>
         Content should be present in center of the modal
       </div>
