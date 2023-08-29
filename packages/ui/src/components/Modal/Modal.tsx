@@ -30,16 +30,10 @@ export type ModalProps = {
 }
 
 const StyledContainer = styled.div`
-  display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   position: absolute;
   top: ${({ theme }) => theme.space['2']};
   right: ${({ theme }) => theme.space['2']};
-  left: ${({ theme }) => theme.space['2']};
 `
-// TODO: DRop this
 
 export const Modal = ({
   ariaLabel = 'modal',
