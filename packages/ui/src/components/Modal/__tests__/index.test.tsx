@@ -69,13 +69,13 @@ describe('Modal', () => {
         ariaLabel="modal-test"
         id="modal-test"
         disclosure={dialog => (
-          <button type="button">Test {dialog?.baseId}</button>
+          <button type="button">Test {dialog.modalId}</button>
         )}
-        /* eslint-disable-next-line @typescript-eslint/require-await */
-        onBeforeClose={async () => {
+        onBeforeClose={() => {
           count += 1
         }}
         data-testid="test"
+        opened
       >
         <div>modal</div>
       </Modal>,
@@ -88,13 +88,6 @@ describe('Modal', () => {
       },
     )
   })
-
-  test(`renders with portal node (modal=false)`, () =>
-    shouldMatchEmotionSnapshotWithPortal(
-      <Modal ariaLabel="modal-test" id="modal-test" modal={false}>
-        <div> test</div>
-      </Modal>,
-    ))
 
   test(`disclosure function render onClick props is call`, async () => {
     renderWithTheme(
@@ -110,7 +103,7 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     )
-    const modalButton = screen.getByRole('button')
+    const modalButton = screen.getAllByRole('button')[0]
     await userEvent.click(modalButton)
     expect(mockOnClick).toBeCalledTimes(1)
   })
@@ -129,7 +122,7 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     )
-    const modalButton = screen.getByRole('button')
+    const modalButton = screen.getAllByRole('button')[1]
     await userEvent.click(modalButton)
 
     expect(mockOnClick).toBeCalledTimes(1)

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
+import type React from 'react'
 import { useCallback, useId, useState } from 'react'
 import { Button } from '../Button'
 import { Dialog } from './Dialog'
@@ -27,6 +28,14 @@ export type ModalProps = {
   className?: string
   'data-testid'?: string
   backdropClassName?: string
+  /**
+   * @deprecated You should use backdropClassName instead
+   */
+  customDialogBackdropStyles?: React.JSX.IntrinsicAttributes['css']
+  /**
+   * @deprecated You should use className instead
+   */
+  customDialogStyles?: React.JSX.IntrinsicAttributes['css']
 }
 
 const StyledContainer = styled.div`
@@ -53,6 +62,8 @@ export const Modal = ({
   'data-testid': dataTestId,
   backdropClassName,
   width,
+  customDialogStyles,
+  customDialogBackdropStyles,
 }: ModalProps) => {
   const [visible, setVisible] = useState(opened)
   const controlId = useId()
@@ -77,6 +88,10 @@ export const Modal = ({
   const finalId = id ?? controlId
   const finalSize = size ?? width
 
+  const finalClassName = className ?? customDialogStyles?.toString()
+  const finalBackdropClassName =
+    backdropClassName ?? customDialogBackdropStyles?.toString()
+
   return (
     <>
       {disclosure ? (
@@ -98,8 +113,8 @@ export const Modal = ({
         hideOnEsc={hideOnEsc}
         preventBodyScroll={preventBodyScroll}
         onClose={handleClose}
-        className={className}
-        backdropClassName={backdropClassName}
+        className={finalClassName}
+        backdropClassName={finalBackdropClassName}
         data-testid={dataTestId}
         id={finalId}
       >

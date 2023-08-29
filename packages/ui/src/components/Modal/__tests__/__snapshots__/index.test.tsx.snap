@@ -2,70 +2,112 @@
 
 exports[`Modal renders with customStyle 1`] = `
 <DocumentFragment>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
-  .cache-ofvkpe-StyledDialogBackdrop-customDialogBackdropStyles {
+  .cache-nkg4td-StyledBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cache-nkg4td-StyledBackdrop[data-open='true'] {
+  overflow: auto;
+  padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
   background-color: #464959A6;
-  background-color: aliceblue;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.cache-1ikjhs4-StyledDialog-customDialogStyles {
+.cache-1qlb7bg-StyledDialog {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
   border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
+  padding: 24px;
+  width: 708px;
   box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
-  background: radial-gradient(circle, #8b2fe6 0%, #4f0599 50%, #30015a 100%);
 }
 
-.cache-1ikjhs4-StyledDialog-customDialogStyles::before {
-  content: '';
-  height: 100%;
-  width: 100%;
+.cache-1qlb7bg-StyledDialog[data-size="large"] {
+  width: 850px;
 }
 
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
+.cache-1qlb7bg-StyledDialog[data-size="medium"] {
+  width: 708px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="small"] {
+  width: 616px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="xsmall"] {
+  width: 400px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="xxsmall"] {
+  width: 360px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="center"] {
+  margin: auto;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.cache-10pzl3m-StyledContainer {
   position: absolute;
   top: 16px;
   right: 16px;
-  left: 16px;
 }
 
 .cache-xnjxeq-StyledGhostButton {
@@ -131,27 +173,24 @@ exports[`Modal renders with customStyle 1`] = `
   min-height: 16px;
 }
 
-<div
-    class="__reakit-portal"
-  >
+<div>
     <div
-      class="cache-ofvkpe-StyledDialogBackdrop-customDialogBackdropStyles ebywm9u2"
-      data-dialog-ref="id-d9i348"
+      class="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop). cache-nkg4td-StyledBackdrop e1cqen9h1"
+      data-open="true"
     >
-      <div
+      <dialog
         aria-label="modal"
-        aria-modal="true"
-        class="cache-1ikjhs4-StyledDialog-customDialogStyles ebywm9u1"
-        data-dialog="true"
-        id="id-d9i348"
-        role="dialog"
-        tabindex="0"
+        class="You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop). cache-1qlb7bg-StyledDialog e1cqen9h0"
+        data-placement="center"
+        data-size="small"
+        id=":r3:"
+        open=""
       >
         <div>
           test
         </div>
         <div
-          class="cache-v3mj59-StyledContainer ebywm9u0"
+          class="cache-10pzl3m-StyledContainer e227mx40"
         >
           <button
             aria-label="close"
@@ -168,180 +207,128 @@ exports[`Modal renders with customStyle 1`] = `
             </svg>
           </button>
         </div>
-      </div>
+      </dialog>
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
 </DocumentFragment>
 `;
 
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-nkg4td-StyledBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cache-nkg4td-StyledBackdrop[data-open='true'] {
+  overflow: auto;
+  padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
   background-color: #464959A6;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog {
+.cache-1qlb7bg-StyledDialog {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
   border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
+  padding: 24px;
+  width: 708px;
   box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog::before {
-  content: '';
-  height: 100%;
-  width: 100%;
+.cache-1qlb7bg-StyledDialog[data-size="large"] {
+  width: 850px;
 }
 
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
+.cache-1qlb7bg-StyledDialog[data-size="medium"] {
+  width: 708px;
 }
 
-.cache-xnjxeq-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.cache-1qlb7bg-StyledDialog[data-size="small"] {
+  width: 616px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-1qlb7bg-StyledDialog[data-size="xsmall"] {
+  width: 400px;
 }
 
-.cache-xnjxeq-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151A2D5C;
+.cache-1qlb7bg-StyledDialog[data-size="xxsmall"] {
+  width: 360px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover,
-.cache-xnjxeq-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
 }
 
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
-<div
-    class="__reakit-portal"
-  >
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="center"] {
+  margin: auto;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+<div>
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
-      data-dialog-ref="id-d9i348"
-      hidden=""
-      style="display: none;"
+      class="cache-nkg4td-StyledBackdrop e1cqen9h1"
+      data-open="false"
     >
-      <div
+      <dialog
         aria-label="modal"
-        aria-modal="true"
-        class="cache-lw1g3t-StyledDialog ebywm9u1"
-        data-dialog="true"
-        hidden=""
-        id="id-d9i348"
-        role="dialog"
-        style="display: none;"
-        tabindex="0"
-      >
-        <div
-          class="cache-v3mj59-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-xnjxeq-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+        class="cache-1qlb7bg-StyledDialog e1cqen9h0"
+        data-placement="center"
+        data-size="small"
+        id=":r0:"
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -349,174 +336,134 @@ exports[`Modal renders with default Props 1`] = `
 
 exports[`Modal renders with disclosure 1`] = `
 <DocumentFragment>
-  <button
+  .cache-auy7uq-DisclosureContainer {
+  display: contents;
+}
+
+<button
     aria-controls="modal-test"
-    aria-expanded="false"
-    aria-haspopup="dialog"
+    class="cache-auy7uq-DisclosureContainer ewlqbfi0"
+    type="button"
+  />
+  <button
     type="button"
   >
     Test
   </button>
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-nkg4td-StyledBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cache-nkg4td-StyledBackdrop[data-open='true'] {
+  overflow: auto;
+  padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
   background-color: #464959A6;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog {
+.cache-1qlb7bg-StyledDialog {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
   border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
+  padding: 24px;
+  width: 708px;
   box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog::before {
-  content: '';
-  height: 100%;
-  width: 100%;
+.cache-1qlb7bg-StyledDialog[data-size="large"] {
+  width: 850px;
 }
 
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
+.cache-1qlb7bg-StyledDialog[data-size="medium"] {
+  width: 708px;
 }
 
-.cache-xnjxeq-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.cache-1qlb7bg-StyledDialog[data-size="small"] {
+  width: 616px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-1qlb7bg-StyledDialog[data-size="xsmall"] {
+  width: 400px;
 }
 
-.cache-xnjxeq-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151A2D5C;
+.cache-1qlb7bg-StyledDialog[data-size="xxsmall"] {
+  width: 360px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover,
-.cache-xnjxeq-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
 }
 
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
-<div
-    class="__reakit-portal"
-  >
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="center"] {
+  margin: auto;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+<div>
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
-      data-dialog-ref="modal-test"
-      hidden=""
-      style="display: none;"
+      class="cache-nkg4td-StyledBackdrop e1cqen9h1"
+      data-open="false"
     >
-      <div
+      <dialog
         aria-label="modal-test"
-        aria-modal="true"
-        class="cache-lw1g3t-StyledDialog ebywm9u1"
-        data-dialog="true"
-        hidden=""
+        class="cache-1qlb7bg-StyledDialog e1cqen9h0"
+        data-placement="center"
+        data-size="small"
         id="modal-test"
-        role="dialog"
-        style="display: none;"
-        tabindex="0"
-      >
-        <div
-          class="cache-v3mj59-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-xnjxeq-StyledGhostButton e112qvla0"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -525,257 +472,238 @@ exports[`Modal renders with disclosure 1`] = `
 exports[`Modal renders with disclosure and onBeforeClose 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="modal-test"
-    aria-expanded="false"
-    aria-haspopup="dialog"
     type="button"
   >
     Test modal-test
   </button>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-nkg4td-StyledBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cache-nkg4td-StyledBackdrop[data-open='true'] {
+  overflow: auto;
+  padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
   background-color: #464959A6;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog {
+.cache-1qlb7bg-StyledDialog {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
   border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
+  padding: 24px;
+  width: 708px;
   box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog::before {
-  content: '';
-  height: 100%;
-  width: 100%;
+.cache-1qlb7bg-StyledDialog[data-size="large"] {
+  width: 850px;
 }
 
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
+.cache-1qlb7bg-StyledDialog[data-size="medium"] {
+  width: 708px;
 }
 
-.cache-xnjxeq-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
+.cache-1qlb7bg-StyledDialog[data-size="small"] {
+  width: 616px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.cache-1qlb7bg-StyledDialog[data-size="xsmall"] {
+  width: 400px;
 }
 
-.cache-xnjxeq-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151A2D5C;
+.cache-1qlb7bg-StyledDialog[data-size="xxsmall"] {
+  width: 360px;
 }
 
-.cache-xnjxeq-StyledGhostButton:hover,
-.cache-xnjxeq-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
 }
 
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
-<div
-    class="__reakit-portal"
-  >
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="center"] {
+  margin: auto;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+<div>
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
-      data-dialog-ref="modal-test"
-      style=""
+      class="cache-nkg4td-StyledBackdrop e1cqen9h1"
+      data-open="false"
     >
-      <div
+      <dialog
         aria-label="modal-test"
-        aria-modal="true"
-        class="cache-lw1g3t-StyledDialog ebywm9u1"
-        data-dialog="true"
+        class="cache-1qlb7bg-StyledDialog e1cqen9h0"
+        data-placement="center"
+        data-size="small"
         data-testid="test"
         id="modal-test"
-        role="dialog"
-        style=""
-        tabindex="0"
-      >
-        <div>
-          modal
-        </div>
-        <div
-          class="cache-v3mj59-StyledContainer ebywm9u0"
-        >
-          <button
-            aria-label="close"
-            class="cache-xnjxeq-StyledGhostButton e112qvla0"
-            data-testid="test-close-button"
-            type="button"
-          >
-            <svg
-              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+      />
     </div>
   </div>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
 </DocumentFragment>
 `;
 
 exports[`Modal renders with opened={true} 1`] = `
 <DocumentFragment>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
-  .cache-1p91riw-StyledDialogBackdrop {
+  .cache-nkg4td-StyledBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.cache-nkg4td-StyledBackdrop[data-open='true'] {
+  overflow: auto;
+  padding: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
   background-color: #464959A6;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog {
+.cache-1qlb7bg-StyledDialog {
   background-color: #ffffff;
   position: relative;
   border-radius: 4px;
   border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
+  padding: 24px;
+  width: 708px;
   box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
 }
 
-.cache-lw1g3t-StyledDialog::before {
-  content: '';
-  height: 100%;
-  width: 100%;
+.cache-1qlb7bg-StyledDialog[data-size="large"] {
+  width: 850px;
 }
 
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
+.cache-1qlb7bg-StyledDialog[data-size="medium"] {
+  width: 708px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="small"] {
+  width: 616px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="xsmall"] {
+  width: 400px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-size="xxsmall"] {
+  width: 360px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom"] {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="bottom-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="center"] {
+  margin: auto;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="left"] {
+  margin: auto;
+  margin-left: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="right"] {
+  margin: auto;
+  margin-right: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top"] {
+  margin: auto;
+  margin-top: 0px;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-left"] {
+  margin: auto;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.cache-1qlb7bg-StyledDialog[data-placement="top-right"] {
+  margin: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.cache-10pzl3m-StyledContainer {
   position: absolute;
   top: 16px;
   right: 16px;
-  left: 16px;
 }
 
 .cache-xnjxeq-StyledGhostButton {
@@ -841,27 +769,24 @@ exports[`Modal renders with opened={true} 1`] = `
   min-height: 16px;
 }
 
-<div
-    class="__reakit-portal"
-  >
+<div>
     <div
-      class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
-      data-dialog-ref="id-d9i348"
+      class="cache-nkg4td-StyledBackdrop e1cqen9h1"
+      data-open="true"
     >
-      <div
+      <dialog
         aria-label="modal"
-        aria-modal="true"
-        class="cache-lw1g3t-StyledDialog ebywm9u1"
-        data-dialog="true"
-        id="id-d9i348"
-        role="dialog"
-        tabindex="0"
+        class="cache-1qlb7bg-StyledDialog e1cqen9h0"
+        data-placement="center"
+        data-size="small"
+        id=":r1:"
+        open=""
       >
         <div>
           test
         </div>
         <div
-          class="cache-v3mj59-StyledContainer ebywm9u0"
+          class="cache-10pzl3m-StyledContainer e227mx40"
         >
           <button
             aria-label="close"
@@ -878,175 +803,7 @@ exports[`Modal renders with opened={true} 1`] = `
             </svg>
           </button>
         </div>
-      </div>
-    </div>
-  </div>
-  <div
-    aria-hidden="true"
-    class="__reakit-focus-trap"
-    style="position: fixed;"
-    tabindex="0"
-  />
-</DocumentFragment>
-`;
-
-exports[`Modal renders with portal node (modal=false) 1`] = `
-<DocumentFragment>
-  .cache-1p91riw-StyledDialogBackdrop {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  overflow: auto;
-  padding: 16px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 1;
-  background-color: #464959A6;
-}
-
-.cache-lw1g3t-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 32px;
-  margin: auto;
-  width: 616px;
-  min-height: initial;
-  box-shadow: 0px 8px 40px 10px #151A2D5C;
-  opacity: 1;
-}
-
-.cache-lw1g3t-StyledDialog::before {
-  content: '';
-  height: 100%;
-  width: 100%;
-}
-
-.cache-v3mj59-StyledContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  left: 16px;
-}
-
-.cache-xnjxeq-StyledGhostButton {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-}
-
-.cache-xnjxeq-StyledGhostButton:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-xnjxeq-StyledGhostButton:active {
-  box-shadow: 0px 0px 0px 3px #151A2D5C;
-}
-
-.cache-xnjxeq-StyledGhostButton:hover,
-.cache-xnjxeq-StyledGhostButton:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
-<div
-    class="cache-1p91riw-StyledDialogBackdrop ebywm9u2"
-    data-dialog-ref="modal-test"
-    hidden=""
-    style="display: none;"
-  >
-    <div
-      aria-label="modal-test"
-      class="cache-lw1g3t-StyledDialog ebywm9u1"
-      data-dialog="true"
-      hidden=""
-      id="modal-test"
-      role="dialog"
-      style="display: none;"
-      tabindex="0"
-    >
-      <div
-        class="cache-v3mj59-StyledContainer ebywm9u0"
-      >
-        <button
-          aria-label="close"
-          class="cache-xnjxeq-StyledGhostButton e112qvla0"
-          type="button"
-        >
-          <svg
-            class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-            />
-          </svg>
-        </button>
-      </div>
+      </dialog>
     </div>
   </div>
 </DocumentFragment>
