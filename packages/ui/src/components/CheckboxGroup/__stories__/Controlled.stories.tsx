@@ -7,7 +7,7 @@ export const Controlled: StoryFn = () => {
 
   return (
     <CheckboxGroup
-      label="Legend label"
+      legend="Legend label"
       name="controlled"
       value={values}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

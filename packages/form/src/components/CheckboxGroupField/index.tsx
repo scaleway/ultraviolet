@@ -20,18 +20,21 @@ type CheckboxGroupFieldProps<
       | 'direction'
       | 'children'
       | 'value'
+      | 'error'
+      | 'legend'
     >
   > &
-  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'label' | 'name'>>
+  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend' | 'name'>>
 
 export const CheckboxGroupField = ({
-  label,
+  legend,
   value,
   className,
   helper,
   direction,
   children,
   onChange,
+  error: customError,
   name,
   required = false,
 }: CheckboxGroupFieldProps) => {
@@ -45,7 +48,7 @@ export const CheckboxGroupField = ({
   })
 
   const error = getError({
-    label,
+    label: legend,
     meta,
     value: fields.value,
     name,
@@ -53,7 +56,7 @@ export const CheckboxGroupField = ({
 
   return (
     <CheckboxGroup
-      label={label}
+      legend={legend}
       name={fields.name}
       value={fields.value}
       onChange={event => {
@@ -65,7 +68,7 @@ export const CheckboxGroupField = ({
 
         onChange?.(event)
       }}
-      error={error}
+      error={error ?? customError}
       className={className}
       direction={direction}
       helper={helper}

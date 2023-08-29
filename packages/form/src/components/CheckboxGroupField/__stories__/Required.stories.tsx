@@ -41,6 +41,6 @@ Required.parameters = {
 
 Required.args = {
   name: 'conditions',
-  label: 'Conditions',
+  legend: 'Conditions',
   required: true,
 }

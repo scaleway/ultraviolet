@@ -39,6 +39,6 @@ Direction.parameters = {
 
 Direction.args = {
   name: 'conditions',
-  label: 'Conditions',
+  legend: 'Conditions',
   direction: 'row',
 }

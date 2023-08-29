@@ -3,7 +3,7 @@ import { CheckboxGroup } from '..'
 
 export const Direction: StoryFn = () => (
   <CheckboxGroup
-    label="Legend label"
+    legend="Legend label"
     name="direction"
     value={['label-1']}
     onChange={() => {}}

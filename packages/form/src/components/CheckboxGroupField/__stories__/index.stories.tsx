@@ -21,7 +21,7 @@ export default {
   title: 'Components/Data Entry/CheckboxGroupField',
   args: {
     name: 'conditions',
-    label: 'Conditions',
+    legend: 'Conditions',
   },
 } as Meta<typeof CheckboxGroupField>
 

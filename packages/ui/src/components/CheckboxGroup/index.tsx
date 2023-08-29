@@ -90,7 +90,7 @@ const StyledRequiredIcon = styled(Icon)`
 `
 
 type CheckboxGroupProps = {
-  label: string
+  legend: string
   value?: string[]
   className?: string
   helper?: ReactNode
@@ -102,7 +102,7 @@ type CheckboxGroupProps = {
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
 export const CheckboxGroup = ({
-  label,
+  legend,
   value,
   className,
   helper,
@@ -125,10 +125,10 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className} disabled>
+        <FieldSet className={className}>
           <Stack gap={1.5}>
             <Text as="legend" variant="bodyStrong">
-              {label}&nbsp;
+              {legend}&nbsp;
               {required ? (
                 <StyledRequiredIcon name="asterisk" color="danger" size={8} />
               ) : null}
@@ -147,7 +147,7 @@ export const CheckboxGroup = ({
           <MargedText
             as="p"
             variant="bodySmall"
-            color="danger"
+            sentiment="danger"
             prominence="weak"
           >
             {error}

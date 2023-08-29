@@ -13,7 +13,7 @@ export default {
   title: 'Components/Data Entry/CheckboxGroup',
   args: {
     name: 'template',
-    label: 'Legend',
+    legend: 'Legend',
     value: ['value-1'],
   },
 } as Meta<typeof CheckboxGroup>
