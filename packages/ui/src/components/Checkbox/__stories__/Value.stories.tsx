@@ -3,13 +3,13 @@ import { Checkbox } from '..'
 
 export const Value: StoryFn = () => (
   <>
-    <Checkbox value="false" helper="Helper" onChange={() => {}}>
+    <Checkbox value="false" onChange={() => {}}>
       Checkbox value false
     </Checkbox>
-    <Checkbox value="true" helper="Helper" onChange={() => {}}>
+    <Checkbox value="true" onChange={() => {}}>
       Checkbox value true
     </Checkbox>
-    <Checkbox value={1234} helper="Helper" onChange={() => {}}>
+    <Checkbox value={1234} onChange={() => {}}>
       Checkbox value 1234
     </Checkbox>
   </>
