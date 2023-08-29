@@ -6,11 +6,17 @@ export const Disabled: StoryFn = () => (
     <Checkbox disabled onChange={() => {}}>
       Checkbox disabled
     </Checkbox>
-    <Checkbox checked="indeterminate" disabled onChange={() => {}}>
-      Checkbox indeterminate and disabled
+    <Checkbox disabled error onChange={() => {}}>
+      Checkbox disabled and in error
     </Checkbox>
     <Checkbox checked disabled onChange={() => {}}>
       Checkbox checked and disabled
+    </Checkbox>
+    <Checkbox checked disabled error onChange={() => {}}>
+      Checkbox checked, disabled and in error
+    </Checkbox>
+    <Checkbox checked="indeterminate" disabled onChange={() => {}}>
+      Checkbox indeterminate and disabled
     </Checkbox>
   </>
 )
