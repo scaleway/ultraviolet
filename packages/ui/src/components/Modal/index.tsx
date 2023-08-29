@@ -211,7 +211,6 @@ const MemoDisclosure = memo(Disclosure)
 const StyledDialogBackdrop = styled(DialogBackdrop)`
   display: flex;
   position: fixed;
-  z-index: 9999;
   overflow: auto;
   padding: 16px;
   top: 0;
