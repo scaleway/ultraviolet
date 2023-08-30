@@ -1,4 +1,11 @@
-import { afterAll, beforeAll, describe, expect, jest, test } from '@jest/globals'
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
 import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import { TimeField } from '..'
 import {
@@ -8,7 +15,9 @@ import {
 } from '../../../../.jest/helpers'
 
 describe('TimeField', () => {
-  beforeAll(mockRandom)
+  beforeAll(() => {
+    mockRandom()
+  })
 
   afterAll(restoreRandom)
 
