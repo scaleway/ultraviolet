@@ -133,7 +133,7 @@ describe('A11y', () => {
               componentName as keyof typeof components
             ] as () => JSX.Element
             const { container } = renderWithTheme(<ComponentToRender />)
-            // eslint-disable-next-line no-await-in-loop
+            // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-assignment
             const results = await axe(container)
 
             expect(results).toHaveNoViolations()

@@ -41,6 +41,12 @@
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:testing-library/react"]
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
     }
   ]
 }
