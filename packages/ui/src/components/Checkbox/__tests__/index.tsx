@@ -45,6 +45,12 @@ describe('Checkbox', () => {
         Checkbox Label
       </Checkbox>,
     ))
+  test('renders correctly checked with helper', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} checked helper="helper">
+        Checkbox Label
+      </Checkbox>,
+    ))
 
   test('renders correctly indeterminate', () =>
     shouldMatchEmotionSnapshot(

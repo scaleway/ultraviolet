@@ -11,14 +11,18 @@ import type {
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
 import { Loader } from '../Loader'
+import { Row } from '../Row'
+import { Stack } from '../Stack'
 import { Text } from '../Text'
 
+const ErrorText = styled(Text)`
+  padding-top: ${({ theme }) => `${theme.space['0.5']}`};
+`
 const InnerCheckbox = styled.rect`
-  fill: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-  stroke: ${({ theme }) => theme.colors.neutral.borderStrong};
+  fill: ${({ theme }) => theme.colors.neutral.background};
+  stroke: ${({ theme }) => theme.colors.neutral.border};
 `
 
-const CheckMark = styled.rect``
 const CheckMixedMark = styled.rect``
 
 const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
@@ -27,10 +31,10 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   return (
     <g>
       <InnerCheckbox
-        x="5"
-        y="5"
-        width="14"
-        height="14"
+        x="2"
+        y="2"
+        width="20"
+        height="20"
         rx={theme.radii.small}
         strokeWidth="2"
       />
@@ -39,17 +43,19 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   )
 }
 
-const PaddedText = styled(Text)`
-  padding: ${({ theme }) => `0 ${theme.space['0.5']}`};
-`
-
 const StyledIcon = styled('svg')<{ size: number }>`
   border-radius: ${({ theme }) => theme.radii.default};
   height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
   min-width: ${({ size }) => size}px;
   min-height: ${({ size }) => size}px;
+  & path {
+    fill: ${({ theme }) => theme.colors.neutral.background};
+    transform: translate(2px, 2px);
+    transform: scale(0);
+  }
 `
+const StyledLabel = styled('label')``
 
 const CheckboxInput = styled('input', {
   shouldForwardProp: prop => !['size'].includes(prop),
@@ -82,31 +88,31 @@ const CheckboxInput = styled('input', {
       + ${StyledIcon},
       &[aria-invalid='mixed']
       + ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.danger.background};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+        stroke: ${({ theme }) => theme.colors.danger.border};
       }
     }
   }
 
   &:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
-    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
-
+    fill: ${({ theme }) => theme.colors.danger.background};
+    outline: 2px solid ${({ theme }) => theme.colors.primary.backgroundHover};
     ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
-      fill: ${({ theme }) => theme.colors.primary.background};
+      stroke: ${({ theme }) => theme.colors.primary.borderHover};
+      fill: ${({ theme }) => theme.colors.primary.backgroundHover};
     }
   }
 
   &[aria-invalid='true']:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
-    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
-
+    fill: ${({ theme }) => theme.colors.danger.background};
+    outline: 2px solid ${({ theme }) => theme.colors.danger.backgroundHover};
     ${InnerCheckbox} {
-      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
-      fill: ${({ theme }) => theme.colors.danger.background};
+      stroke: ${({ theme }) => theme.colors.danger.borderHover};
+      fill: ${({ theme }) => theme.colors.danger.backgroundHover};
     }
   }
 `
@@ -114,65 +120,111 @@ const CheckboxInput = styled('input', {
 const CheckboxContainer = styled.div`
   position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: start;
   gap: ${({ theme }) => theme.space['1']};
 
-  &[aria-disabled='false'],
-  &[aria-disabled='false'] > label {
+  ${StyledLabel} {
     cursor: pointer;
   }
 
   &[aria-disabled='true'] {
     cursor: not-allowed;
 
-    & > label {
+    ${StyledLabel} {
       cursor: not-allowed;
     }
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
-
     ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
+      fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
+        stroke: ${({ theme }) => theme.colors.neutral.borderDisabled};
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
     }
+
+    ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.danger.borderDisabled};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.borderDisabled};
+        fill: ${({ theme }) => theme.colors.danger.borderDisabled};
+      }
+    }
+    ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.danger.background};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.borderDisabled};
+        fill: ${({ theme }) => theme.colors.danger.background};
+      }
+    }
+    ${CheckboxInput}:checked + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderDisabled};
+        fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+      }
+    }
+    ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} {
+      fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+
+      ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderDisabled};
+        fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+      }
+    }
   }
 
-  ${CheckMark}, ${CheckMixedMark} {
+  ${CheckboxInput}:checked + ${StyledIcon} path {
     transform-origin: center;
     transition: 200ms transform ease-in-out;
-    transform: scale(0);
+    transform: scale(1);
+    transform: translate(2px, 2px);
   }
 
-  ${CheckboxInput}:checked + ${StyledIcon} ${CheckMark} {
-    transform: scale(1);
+  ${CheckboxInput}:checked + ${StyledIcon}  ${InnerCheckbox} {
+    fill: ${({ theme }) => theme.colors.primary.border};
+    stroke: ${({ theme }) => theme.colors.primary.border};
+  }
+  ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon}  ${InnerCheckbox} {
+    fill: ${({ theme }) => theme.colors.danger.border};
+    stroke: ${({ theme }) => theme.colors.danger.border};
   }
 
-  ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} ${CheckMixedMark} {
-    transform: scale(1);
+  ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} {
+    ${CheckMixedMark} {
+      fill: ${({ theme }) => theme.colors.neutral.iconStronger};
+    }
+    ${InnerCheckbox} {
+      fill: ${({ theme }) => theme.colors.primary.border};
+      stroke: ${({ theme }) => theme.colors.primary.border};
+    }
   }
 
   &:hover[aria-disabled='false'] {
-    ${CheckboxInput} + ${StyledIcon} {
-      background-color: ${({ theme }) => theme.colors.primary.background};
-      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
-
-      ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
-        fill: ${({ theme }) => theme.colors.primary.background};
+    ${CheckboxInput}[aria-invalid='false'] {
+      &[aria-checked='false'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderHover};
+        fill: ${({ theme }) => theme.colors.primary.backgroundHover};
       }
     }
 
-    ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
-      background-color: ${({ theme }) => theme.colors.danger.background};
-      fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
-
-      ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
-        fill: ${({ theme }) => theme.colors.danger.background};
+    ${CheckboxInput}[aria-invalid='true'] {
+      &[aria-checked='false'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.borderHover};
+        fill: ${({ theme }) => theme.colors.danger.backgroundHover};
       }
+    }
+  }
+
+  ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+
+    ${InnerCheckbox} {
+      stroke: ${({ theme }) => theme.colors.danger.backgroundStrong};
+      fill: ${({ theme }) => theme.colors.danger.background};
     }
   }
 `
@@ -183,8 +235,15 @@ const StyledActivityContainer = styled.div`
 
 type CheckboxProps = {
   error?: string | ReactNode
+  /**
+   * @deprecated Size prop is deprecated and will be removed in next major update.
+   */
   size?: number
+  /**
+   * @deprecated Progress prop is deprecated and will be removed in next major update.
+   */
   progress?: boolean
+  helper?: ReactNode
   disabled?: boolean
   checked?: boolean | 'indeterminate'
   className?: string
@@ -218,6 +277,7 @@ export const Checkbox = forwardRef(
       onBlur,
       error,
       name,
+      helper,
       value,
       size = 24,
       children,
@@ -258,61 +318,84 @@ export const Checkbox = forwardRef(
     }, [])
 
     return (
-      <>
-        <CheckboxContainer
-          className={className}
-          aria-disabled={disabled}
-          data-visibility={dataVisibility}
-          data-checked={state}
-          data-error={!!error}
-          data-testid={dataTestId}
-        >
-          {progress ? (
-            <StyledActivityContainer>
-              <Loader active size={size} />
-            </StyledActivityContainer>
-          ) : null}
-          <CheckboxInput
-            id={computedName}
-            type="checkbox"
-            aria-invalid={!!error}
-            aria-describedby={error ? `${computedName}-hint` : undefined}
-            aria-checked={state === 'indeterminate' ? 'mixed' : undefined}
-            aria-label={ariaLabel}
-            checked={state === 'indeterminate' ? false : state}
-            size={size}
-            onChange={onLocalChange}
-            onKeyDown={onKeyDown}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            disabled={disabled}
-            value={value}
-            name={computedName}
-            autoFocus={autoFocus}
-            ref={ref}
-            required={required}
-          />
-          {!progress ? (
-            <StyledIcon size={size} viewBox="0 0 24 24">
-              <CheckboxIconContainer>
-                <CheckMixedMark x="8" y="11" rx="1" width="8" height="2" />
-                <CheckMark x="8" y="8" rx="1" width="8" height="8" />
-              </CheckboxIconContainer>
-            </StyledIcon>
-          ) : null}
-          {children ? <label htmlFor={computedName}>{children}</label> : null}
-          {required ? (
-            <sup>
-              <Icon name="asterisk" size={10} color="danger" />
-            </sup>
-          ) : null}
-        </CheckboxContainer>
-        {error ? (
-          <PaddedText variant="bodySmall" as="p" color="danger">
-            {error}
-          </PaddedText>
+      <CheckboxContainer
+        className={className}
+        aria-disabled={disabled}
+        data-visibility={dataVisibility}
+        data-checked={state}
+        data-error={!!error}
+        data-testid={dataTestId}
+      >
+        {progress ? (
+          <StyledActivityContainer>
+            <Loader active size={size} />
+          </StyledActivityContainer>
         ) : null}
-      </>
+        <CheckboxInput
+          id={computedName}
+          type="checkbox"
+          aria-invalid={!!error}
+          aria-describedby={error ? `${computedName}-hint` : undefined}
+          aria-checked={state === 'indeterminate' ? 'mixed' : state}
+          aria-label={ariaLabel}
+          checked={state === 'indeterminate' ? false : state}
+          size={size}
+          onChange={onLocalChange}
+          onKeyDown={onKeyDown}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          disabled={disabled}
+          value={value}
+          name={computedName}
+          autoFocus={autoFocus}
+          ref={ref}
+          required={required}
+        />
+
+        {!progress ? (
+          <StyledIcon size={size} viewBox="0 0 24 24">
+            <CheckboxIconContainer>
+              {state !== 'indeterminate' ? (
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  width={14}
+                  height={14}
+                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                  fill="white"
+                />
+              ) : (
+                <CheckMixedMark x="6" y="11" rx="1" width="12" height="2" />
+              )}
+            </CheckboxIconContainer>
+          </StyledIcon>
+        ) : null}
+
+        <Stack gap={0.25}>
+          <Row templateColumns="11fr 1fr" alignItems="center">
+            {children ? (
+              <StyledLabel htmlFor={computedName}>{children}</StyledLabel>
+            ) : null}
+            {required ? (
+              <sup>
+                <Icon name="asterisk" size={10} color="danger" />
+              </sup>
+            ) : null}
+          </Row>
+
+          {helper ? (
+            <Text variant="bodySmall" as="p" prominence="weak" color="neutral">
+              {helper}
+            </Text>
+          ) : null}
+
+          {error ? (
+            <ErrorText variant="bodySmall" as="p" color="danger">
+              {error}
+            </ErrorText>
+          ) : null}
+        </Stack>
+      </CheckboxContainer>
     )
   },
 )
