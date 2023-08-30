@@ -12,17 +12,16 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   height: 0;
   width: 0;
   overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.overlay};
 
   &[data-open='true'] {
-    overflow: auto;
     padding: ${({ theme }) => theme.space['2']};
+    overflow: auto;
     display: flex;
-    background-color: ${({ theme }) => theme.colors.overlay};
     bottom: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: 1;
   }
 `
 
@@ -72,6 +71,8 @@ export const Dialog = ({
   preventBodyScroll,
   hideOnEsc,
   backdropClassName,
+  dialogCss,
+  backdropCss,
 }: DialogProps) => {
   const containerRef = useRef(document.createElement('div'))
   const onCloseRef = useRef(onClose)
@@ -131,8 +132,11 @@ export const Dialog = ({
       data-open={open}
       onClick={hideOnClickOutside ? onClose : undefined}
       className={backdropClassName}
+      css={backdropCss}
+      data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
     >
       <StyledDialog
+        css={dialogCss}
         onKeyUp={stopKeyUp}
         className={className}
         id={id}

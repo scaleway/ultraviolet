@@ -44,4 +44,6 @@ export type DialogProps = {
   onClose: () => void
   'data-testid'?: string
   children: ReactNode
+  backdropCss: React.JSX.IntrinsicAttributes['css']
+  dialogCss: React.JSX.IntrinsicAttributes['css']
 }

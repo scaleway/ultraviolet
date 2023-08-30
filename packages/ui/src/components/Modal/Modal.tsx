@@ -88,10 +88,6 @@ export const Modal = ({
   const finalId = id ?? controlId
   const finalSize = size ?? width
 
-  const finalClassName = className ?? customDialogStyles?.toString()
-  const finalBackdropClassName =
-    backdropClassName ?? customDialogBackdropStyles?.toString()
-
   return (
     <>
       {disclosure ? (
@@ -113,10 +109,12 @@ export const Modal = ({
         hideOnEsc={hideOnEsc}
         preventBodyScroll={preventBodyScroll}
         onClose={handleClose}
-        className={finalClassName}
-        backdropClassName={finalBackdropClassName}
+        className={className}
+        backdropClassName={backdropClassName}
         data-testid={dataTestId}
         id={finalId}
+        dialogCss={customDialogStyles}
+        backdropCss={customDialogBackdropStyles}
       >
         <>
           {visible &&
