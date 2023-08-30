@@ -1,23 +1,10 @@
-import type { StoryFn } from '@storybook/react'
-import { CheckboxGroup } from '..'
+import { Template } from './Template.stories'
 
-export const Direction: StoryFn = () => (
-  <CheckboxGroup
-    legend="Legend label"
-    name="direction"
-    value={['label-1']}
-    onChange={() => {}}
-    direction="row"
-  >
-    <CheckboxGroup.Checkbox name="label-1" value="label-1">
-      Label 1
-    </CheckboxGroup.Checkbox>
+export const Direction = Template.bind({})
 
-    <CheckboxGroup.Checkbox name="label-2" value="label-2">
-      Label 2
-    </CheckboxGroup.Checkbox>
-  </CheckboxGroup>
-)
+Direction.args = {
+  direction: 'row',
+}
 
 Direction.parameters = {
   docs: {

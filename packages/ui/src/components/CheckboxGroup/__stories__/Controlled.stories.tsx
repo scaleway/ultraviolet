@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { CheckboxGroup } from '..'
 
 export const Controlled: StoryFn = () => {
-  const [values, onChange] = useState(['label-1'])
+  const [values, onChange] = useState(['termsAndConditions'])
 
   return (
     <CheckboxGroup
-      legend="Legend label"
-      name="controlled"
+      legend="Conditions:"
+      name="conditions"
       value={values}
       onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         const data = [...values]
@@ -20,11 +20,14 @@ export const Controlled: StoryFn = () => {
         onChange(data)
       }}
     >
-      <CheckboxGroup.Checkbox name="label-1" value="label-1">
-        label 1
+      <CheckboxGroup.Checkbox
+        name="termsAndConditions"
+        value="termsAndConditions"
+      >
+        Accept terms and conditions
       </CheckboxGroup.Checkbox>
-      <CheckboxGroup.Checkbox name="label-2" value="label-2">
-        Label 2
+      <CheckboxGroup.Checkbox name="newsletter" value="newsletter">
+        Accept to receive newsletter
       </CheckboxGroup.Checkbox>
       {JSON.stringify(values, null, 4)}
     </CheckboxGroup>

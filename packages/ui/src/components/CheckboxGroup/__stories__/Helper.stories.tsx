@@ -3,9 +3,7 @@ import { Template } from './Template.stories'
 export const Helper = Template.bind({})
 
 Helper.args = {
-  name: 'helper',
-  legend: 'Legend label',
-  helper: 'Helper content',
+  helper: 'You can either accept or decline the conditions.',
 }
 
 Helper.parameters = {

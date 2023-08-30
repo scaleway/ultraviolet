@@ -12,8 +12,8 @@ export default {
   ],
   title: 'Components/Data Entry/CheckboxGroup',
   args: {
-    name: 'template',
-    legend: 'Legend',
+    name: 'conditions',
+    legend: 'Conditions:',
     value: ['value-1'],
   },
 } as Meta<typeof CheckboxGroup>
@@ -22,4 +22,4 @@ export { Playground } from './Playground.stories'
 export { Controlled } from './Controlled.stories'
 export { Direction } from './Direction.stories'
 export { Helper } from './Helper.stories'
-export { Error } from './Errors.stories'
+export { Error } from './Error.stories'

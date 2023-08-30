@@ -27,4 +27,6 @@ export default {
 
 export { Playground } from './Playground.stories'
 export { Direction } from './Direction.stories'
+export { Helper } from './Helper.stories'
+export { Error } from './Error.stories'
 export { Required } from './Required.stories'
