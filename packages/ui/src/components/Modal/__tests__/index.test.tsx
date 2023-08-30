@@ -33,9 +33,26 @@ describe('Modal', () => {
       </Modal>,
     ))
 
+  test(`renders with default Props and function children`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal>{() => <div>test</div>}</Modal>,
+    ))
+
+  test(`renders with default Props and function children opened`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal opened>{() => <div>test</div>}</Modal>,
+    ))
+
   test(`renders with opened={true}`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal opened>
+        <div>test</div>
+      </Modal>,
+    ))
+
+  test(`renders with opened={true} and no close icon`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal opened isClosable={false}>
         <div>test</div>
       </Modal>,
     ))
@@ -50,6 +67,13 @@ describe('Modal', () => {
   test(`renders opened custom size`, () =>
     shouldMatchEmotionSnapshotWithPortal(
       <Modal opened size="medium">
+        <div>test</div>
+      </Modal>,
+    ))
+
+  test(`renders opened custom size and width (size take predecence)`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal opened size="medium" width="large">
         <div>test</div>
       </Modal>,
     ))

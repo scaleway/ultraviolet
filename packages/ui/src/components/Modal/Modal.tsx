@@ -57,11 +57,11 @@ export const Modal = ({
   opened = false,
   placement = 'center',
   preventBodyScroll = true,
-  size = 'small',
+  size,
   className,
   'data-testid': dataTestId,
   backdropClassName,
-  width,
+  width = 'small',
   customDialogStyles,
   customDialogBackdropStyles,
 }: ModalProps) => {
