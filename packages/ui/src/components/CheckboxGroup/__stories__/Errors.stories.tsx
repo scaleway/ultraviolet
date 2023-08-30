@@ -6,7 +6,6 @@ Error.args = {
   name: 'error',
   legend: 'Legend label',
   error: 'Error content',
-  helper: 'Helper content',
 }
 
 Error.parameters = {

@@ -81,10 +81,6 @@ const FieldSet = styled.fieldset`
   margin: 0;
 `
 
-const MargedText = styled(Text)`
-  margin-left: ${({ theme }) => theme.space['4']};
-`
-
 const StyledRequiredIcon = styled(Icon)`
   vertical-align: super;
 `
@@ -139,19 +135,14 @@ export const CheckboxGroup = ({
           </Stack>
         </FieldSet>
         {helper ? (
-          <MargedText as="p" variant="bodySmall" prominence="weak">
+          <Text as="p" variant="bodySmall" prominence="weak">
             {helper}
-          </MargedText>
+          </Text>
         ) : null}
         {error ? (
-          <MargedText
-            as="p"
-            variant="bodySmall"
-            sentiment="danger"
-            prominence="weak"
-          >
+          <Text as="p" variant="bodySmall" sentiment="danger" prominence="weak">
             {error}
-          </MargedText>
+          </Text>
         ) : null}
       </Stack>
     </CheckboxGroupContext.Provider>
