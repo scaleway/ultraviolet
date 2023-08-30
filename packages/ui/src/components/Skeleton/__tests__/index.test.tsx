@@ -1,3 +1,4 @@
+import { describe, test } from '@jest/globals'
 import { Skeleton, skeletonTypes } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 

@@ -1,3 +1,4 @@
+import { describe, it } from '@jest/globals'
 import { ProductIcon } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 import { PRODUCT_ICONS } from '../Icons'

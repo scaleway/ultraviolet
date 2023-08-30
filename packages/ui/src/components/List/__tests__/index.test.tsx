@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@emotion/react'
+import { describe, expect, jest, test } from '@jest/globals'
 import { userEvent } from '@storybook/testing-library'
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
@@ -52,7 +53,7 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 
 describe('List', () => {
   test('Should throw an error', () => {
-    const consoleErrMock = jest.spyOn(console, 'error').mockImplementation()
+    const consoleErrMock = jest.spyOn(console, 'error').mockImplementation(() => {})
     expect(() => {
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -202,10 +203,10 @@ describe('List', () => {
           expect(firstRowCheckbox).toBeInTheDocument()
           expect(allCheckbox).toBeInTheDocument()
           if (!firstRowCheckbox) {
-            fail('First checkbox is not defined')
+            throw new Error('First checkbox is not defined')
           }
           if (!allCheckbox) {
-            fail('Select all checkbox is not defined')
+            throw new Error('Select all checkbox is not defined')
           }
           userEvent.click(firstRowCheckbox)
           expect(firstRowCheckbox).toBeChecked()

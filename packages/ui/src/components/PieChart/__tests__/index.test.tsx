@@ -1,3 +1,4 @@
+import { beforeAll, describe, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { PieChart } from '..'
@@ -15,7 +16,7 @@ import {
 describe('PieChart', () => {
   beforeAll(() => {
     // Have to mock ResizeObserver as Nivo doesn't add automatically ResizeObserver polyfill anymore (v0.79.0)
-    global.ResizeObserver = jest.fn().mockImplementation(() => ({
+    global.ResizeObserver = jest.fn<any>().mockImplementation(() => ({
       disconnect: jest.fn(),
       observe: jest.fn(),
       unobserve: jest.fn(),

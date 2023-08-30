@@ -1,3 +1,4 @@
+import { describe, test } from '@jest/globals'
 import { Banner } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import image from '../__stories__/Image.png'
