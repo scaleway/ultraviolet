@@ -52,6 +52,7 @@ export { TextInput } from './TextInput'
 export { TimeInput } from './TimeInput'
 export { ToastContainer, toast } from './Toaster'
 export { Toggle } from './Toggle'
+export { ToggleGroup } from './ToggleGroup'
 export { Tooltip } from './Tooltip'
 export { VerificationCode } from './VerificationCode'
 export {
