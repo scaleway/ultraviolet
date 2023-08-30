@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import type React from 'react'
 
 export type ModalSize = 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
 

@@ -80,12 +80,16 @@ export const Dialog = ({
   // Portal to put the modal in
   useEffect(() => {
     const element = containerRef.current
-    document.body.appendChild(element)
+    if (open) {
+      document.body.appendChild(element)
+    }
 
     return () => {
-      document.body.removeChild(element)
+      if (document.body.contains(element)) {
+        document.body.removeChild(element)
+      }
     }
-  }, [])
+  }, [open])
 
   // Save the reassignment of eventHandler in the useEffect below
   useEffect(() => {

@@ -90,16 +90,14 @@ export const Modal = ({
 
   return (
     <>
-      {disclosure ? (
-        <Disclosure
-          id={finalId}
-          handleOpen={handleOpen}
-          disclosure={disclosure}
-          handleClose={handleClose}
-          visible={visible}
-          toggle={handleToggle}
-        />
-      ) : null}
+      <Disclosure
+        id={finalId}
+        handleOpen={handleOpen}
+        disclosure={disclosure}
+        handleClose={handleClose}
+        visible={visible}
+        toggle={handleToggle}
+      />
       <Dialog
         open={visible}
         placement={placement}
@@ -117,16 +115,15 @@ export const Modal = ({
         backdropCss={customDialogBackdropStyles}
       >
         <>
-          {visible &&
-            (typeof children === 'function'
-              ? children({
-                  visible,
-                  onClose: handleClose,
-                  onOpen: handleOpen,
-                  toggle: handleToggle,
-                  modalId: finalId,
-                })
-              : children)}
+          {typeof children === 'function'
+            ? children({
+                visible,
+                onClose: handleClose,
+                onOpen: handleOpen,
+                toggle: handleToggle,
+                modalId: finalId,
+              })
+            : children}
           <StyledContainer>
             {isClosable ? (
               <Button

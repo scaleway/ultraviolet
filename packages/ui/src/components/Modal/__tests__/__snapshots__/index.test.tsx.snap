@@ -182,7 +182,7 @@ exports[`Modal renders opened custom size 1`] = `
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
-        id=":r9:"
+        id=":ra:"
         open=""
       >
         <div>
@@ -394,7 +394,7 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
-        id=":rb:"
+        id=":rc:"
         open=""
       >
         <div>
@@ -606,7 +606,7 @@ exports[`Modal renders opened custom width 1`] = `
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
-        id=":r7:"
+        id=":r8:"
         open=""
       >
         <div>
@@ -818,7 +818,7 @@ exports[`Modal renders with custom classNames 1`] = `
         class="1vjuh1t-customDialogStyles cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
-        id=":rf:"
+        id=":rg:"
         open=""
       >
         <div>
@@ -1032,7 +1032,7 @@ exports[`Modal renders with customStyle 1`] = `
         class="cache-550m4a-StyledDialog-customDialogStyles e1cqen9h0"
         data-placement="center"
         data-size="small"
-        id=":rd:"
+        id=":re:"
         open=""
       >
         <div>
@@ -1064,243 +1064,13 @@ exports[`Modal renders with customStyle 1`] = `
 
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
-  .cache-10og164-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959A6;
-}
-
-.cache-10og164-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-ycaaob-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151A2D5C;
-}
-
-.cache-ycaaob-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-<div>
-    <div
-      class="cache-10og164-StyledBackdrop e1cqen9h1"
-      data-open="false"
-    >
-      <dialog
-        aria-label="modal"
-        class="cache-ycaaob-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":r0:"
-      />
-    </div>
-  </div>
+  <button>
+    Test
+  </button>
 </DocumentFragment>
 `;
 
-exports[`Modal renders with default Props and function children 1`] = `
-<DocumentFragment>
-  .cache-10og164-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959A6;
-}
-
-.cache-10og164-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-ycaaob-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151A2D5C;
-}
-
-.cache-ycaaob-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-<div>
-    <div
-      class="cache-10og164-StyledBackdrop e1cqen9h1"
-      data-open="false"
-    >
-      <dialog
-        aria-label="modal"
-        class="cache-ycaaob-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id=":r1:"
-      />
-    </div>
-  </div>
-</DocumentFragment>
-`;
+exports[`Modal renders with default Props and function children 1`] = `<DocumentFragment />`;
 
 exports[`Modal renders with default Props and function children opened 1`] = `
 <DocumentFragment>
@@ -1484,7 +1254,7 @@ exports[`Modal renders with default Props and function children opened 1`] = `
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
-        id=":r2:"
+        id=":r3:"
         open=""
       >
         <div>
@@ -1516,135 +1286,11 @@ exports[`Modal renders with default Props and function children opened 1`] = `
 
 exports[`Modal renders with disclosure 1`] = `
 <DocumentFragment>
-  .cache-auy7uq-DisclosureContainer {
-  display: contents;
-}
-
-<button
-    aria-controls="modal-test"
-    class="cache-auy7uq-DisclosureContainer ewlqbfi0"
-    type="button"
-  />
   <button
     type="button"
   >
     Test
   </button>
-  .cache-10og164-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959A6;
-}
-
-.cache-10og164-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-ycaaob-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151A2D5C;
-}
-
-.cache-ycaaob-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-<div>
-    <div
-      class="cache-10og164-StyledBackdrop e1cqen9h1"
-      data-open="false"
-    >
-      <dialog
-        aria-label="modal-test"
-        class="cache-ycaaob-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        id="modal-test"
-      />
-    </div>
-  </div>
 </DocumentFragment>
 `;
 
@@ -1655,123 +1301,6 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
   >
     Test modal-test
   </button>
-  .cache-10og164-StyledBackdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  background-color: #464959A6;
-}
-
-.cache-10og164-StyledBackdrop[data-open='true'] {
-  padding: 16px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.cache-ycaaob-StyledDialog {
-  background-color: #ffffff;
-  position: relative;
-  border-radius: 4px;
-  border: 0;
-  padding: 24px;
-  width: 708px;
-  box-shadow: 0px 8px 40px 10px #151A2D5C;
-}
-
-.cache-ycaaob-StyledDialog[data-size="large"] {
-  width: 850px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="medium"] {
-  width: 708px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="small"] {
-  width: 616px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xsmall"] {
-  width: 400px;
-}
-
-.cache-ycaaob-StyledDialog[data-size="xxsmall"] {
-  width: 360px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom"] {
-  margin: auto;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="bottom-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="center"] {
-  margin: auto;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="left"] {
-  margin: auto;
-  margin-left: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="right"] {
-  margin: auto;
-  margin-right: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top"] {
-  margin: auto;
-  margin-top: 0px;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-left"] {
-  margin: auto;
-  margin-left: 0;
-  margin-top: 0;
-}
-
-.cache-ycaaob-StyledDialog[data-placement="top-right"] {
-  margin: auto;
-  margin-right: 0;
-  margin-top: 0;
-}
-
-<div>
-    <div
-      class="cache-10og164-StyledBackdrop e1cqen9h1"
-      data-open="false"
-      data-testid="test-backdrop"
-    >
-      <dialog
-        aria-label="modal-test"
-        class="cache-ycaaob-StyledDialog e1cqen9h0"
-        data-placement="center"
-        data-size="small"
-        data-testid="test"
-        id="modal-test"
-      />
-    </div>
-  </div>
 </DocumentFragment>
 `;
 
@@ -2177,7 +1706,7 @@ exports[`Modal renders with opened={true} 1`] = `
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
-        id=":r4:"
+        id=":r5:"
         open=""
       >
         <div>
@@ -2326,7 +1855,7 @@ exports[`Modal renders with opened={true} and no close icon 1`] = `
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
-        id=":r6:"
+        id=":r7:"
         open=""
       >
         <div>
@@ -2340,3 +1869,5 @@ exports[`Modal renders with opened={true} and no close icon 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Modal renders without disclosure 1`] = `<DocumentFragment />`;

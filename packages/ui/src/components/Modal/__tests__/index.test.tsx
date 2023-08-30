@@ -28,7 +28,14 @@ describe('Modal', () => {
 
   test(`renders with default Props`, () =>
     shouldMatchEmotionSnapshotWithPortal(
-      <Modal>
+      <Modal disclosure={<button type="button">Test</button>}>
+        <div>test</div>
+      </Modal>,
+    ))
+
+  test(`renders without disclosure`, () =>
+    shouldMatchEmotionSnapshotWithPortal(
+      <Modal disclosure={undefined}>
         <div>test</div>
       </Modal>,
     ))
@@ -181,7 +188,7 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     )
-    const modalButton = screen.getAllByRole('button')[0]
+    const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
     expect(mockOnClick).toBeCalledTimes(1)
   })
@@ -206,7 +213,7 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     )
-    const modalButton = screen.getAllByRole('button')[0]
+    const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
     expect(mockOnClick).toBeCalledTimes(1)
   })
@@ -225,7 +232,7 @@ describe('Modal', () => {
         <div> test</div>
       </Modal>,
     )
-    const modalButton = screen.getAllByRole('button')[1]
+    const modalButton = screen.getByRole('button')
     await userEvent.click(modalButton)
 
     expect(mockOnClick).toBeCalledTimes(1)
