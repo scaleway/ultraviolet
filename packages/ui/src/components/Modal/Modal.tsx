@@ -72,11 +72,14 @@ export const Modal = ({
     setVisible(true)
   }, [])
 
-  const handleClose = useCallback(async () => {
+  const handleClose = useCallback(() => {
     if (onClose) {
       onClose()
     } else {
-      await onBeforeClose?.()
+      const promise = onBeforeClose?.()
+      if (promise && 'catch' in promise) {
+        promise.catch(undefined)
+      }
       setVisible(false)
     }
   }, [onBeforeClose, onClose])

@@ -16,7 +16,7 @@ export type ModalPlacement =
 
 export type ModalState = {
   onOpen: () => void
-  onClose: () => Promise<void> | void
+  onClose: () => void
   toggle: () => void
   visible: boolean
   modalId: string
