@@ -67,17 +67,17 @@ const StyledTooltip = styled('div', {
   text-align: center;
   position: absolute;
   max-width: ${({ maxWidth }) => maxWidth}px;
+  word-break: break-all;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
   transform: ${({ positions }) => positions.tooltipPosition};
-  animation: ${({ positions, reverseAnimation }) =>
-    css`
-      ${ANIMATION_DURATION}ms ${!reverseAnimation
-        ? animation(positions)
-        : exitAnimation(positions)} forwards
-    `};
+  animation: ${({ positions, reverseAnimation }) => css`
+    ${ANIMATION_DURATION}ms ${!reverseAnimation
+      ? animation(positions)
+      : exitAnimation(positions)} forwards
+  `};
 
   &[data-has-arrow='true'] {
     &::after {
@@ -99,6 +99,10 @@ const StyledTooltip = styled('div', {
 
 const StyledChildrenContainer = styled.div`
   display: inherit;
+
+  &[data-container-full-width='true'] {
+    width: 100%;
+  }
 `
 
 type TooltipProps = {
@@ -127,6 +131,10 @@ type TooltipProps = {
   text?: ReactNode
   className?: string
   /**
+   * It will add `width: 100%` to the tooltip container.
+   */
+  containerFullWidth?: boolean
+  /**
    * It will force display tooltip. This can be useful if you need to always display the tooltip without hover needed.
    */
   visible?: boolean
@@ -144,6 +152,7 @@ export const Popup = forwardRef(
       placement = 'auto',
       id,
       className,
+      containerFullWidth,
       maxWidth = 232,
       visible,
       innerRef,
@@ -306,11 +315,19 @@ export const Popup = forwardRef(
           ref={childrenRef}
           tabIndex={0}
           onKeyDown={onKeyDown}
+          data-container-full-width={containerFullWidth}
         >
           {children}
         </StyledChildrenContainer>
       )
-    }, [children, generatedId, isControlled, onKeyDown, onPointerEvent])
+    }, [
+      children,
+      containerFullWidth,
+      generatedId,
+      isControlled,
+      onKeyDown,
+      onPointerEvent,
+    ])
 
     if (!text) {
       if (typeof children === 'function') return null

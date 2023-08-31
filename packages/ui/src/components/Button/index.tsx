@@ -380,7 +380,7 @@ export const Button = forwardRef<Element, FinalProps>(
       const Component = VARIANTS_COMPONENTS[variant].link
 
       return (
-        <Tooltip text={tooltip}>
+        <Tooltip text={tooltip} containerFullWidth={fullWidth}>
           <Component
             role={role}
             className={className}
@@ -413,7 +413,7 @@ export const Button = forwardRef<Element, FinalProps>(
     const Component = VARIANTS_COMPONENTS[variant].button
 
     return (
-      <Tooltip text={tooltip}>
+      <Tooltip text={tooltip} containerFullWidth={fullWidth}>
         <Component
           role={role}
           className={className}

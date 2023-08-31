@@ -14,6 +14,7 @@ type TooltipProps = Pick<
   | 'innerRef'
   | 'role'
   | 'data-testid'
+  | 'containerFullWidth'
 >
 
 export const Tooltip = forwardRef(
@@ -24,6 +25,7 @@ export const Tooltip = forwardRef(
       placement = 'auto',
       id,
       className,
+      containerFullWidth,
       maxWidth = 232,
       visible,
       innerRef,
@@ -38,6 +40,7 @@ export const Tooltip = forwardRef(
       role={role}
       data-testid={dataTestId}
       className={className}
+      containerFullWidth={containerFullWidth}
       maxWidth={maxWidth}
       visible={visible}
       placement={placement}
