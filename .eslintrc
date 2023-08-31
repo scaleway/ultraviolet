@@ -26,9 +26,6 @@
       "parserOptions": {
         "project": ["tsconfig.json"]
       },
-      "env": {
-        "jest": true
-      },
       "rules": {
         "no-console": "off",
         "no-alert": "off",
@@ -44,6 +41,12 @@
         "**/?(*.)+(spec|test).[jt]s?(x)"
       ],
       "extends": ["plugin:testing-library/react"]
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
     }
   ]
 }

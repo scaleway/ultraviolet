@@ -1,6 +1,8 @@
+import { describe, test } from '@jest/globals'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import type { Color} from '../../../theme';
 import { SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
@@ -12,7 +14,7 @@ describe('Link', () => {
       '%s',
       (_, sentiment) =>
         shouldMatchEmotionSnapshot(
-          <Link href="/" sentiment={sentiment}>
+          <Link href="/" sentiment={sentiment as Color}>
             Hello
           </Link>,
         ),

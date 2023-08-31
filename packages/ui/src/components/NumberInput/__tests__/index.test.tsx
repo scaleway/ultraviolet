@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals'
 import { fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInput } from '..'

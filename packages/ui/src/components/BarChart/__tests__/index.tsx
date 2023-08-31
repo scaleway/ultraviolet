@@ -1,3 +1,4 @@
+import { beforeAll, describe, jest, test } from '@jest/globals'
 import * as nivo from '@nivo/core'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'

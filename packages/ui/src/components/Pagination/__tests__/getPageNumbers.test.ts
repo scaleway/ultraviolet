@@ -1,3 +1,4 @@
+import { describe, expect, it } from '@jest/globals'
 import { getPageNumbers } from '../getPageNumbers'
 
 describe('getPageNumbers', () => {
