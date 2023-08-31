@@ -134,7 +134,7 @@ const MargedText = styled(Text)`
 `
 
 type RadioProps = {
-  error?: string | ReactNode
+  error?: ReactNode
   checked?: boolean
   value: string | number
   helper?: ReactNode
