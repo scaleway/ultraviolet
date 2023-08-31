@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 1.3.0
+
+### Minor Changes
+
+- [#2848](https://github.com/scaleway/ultraviolet/pull/2848) [`c2f452f7`](https://github.com/scaleway/ultraviolet/commit/c2f452f71223f537d4266f4af1ac2b5d35e5cd5b) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Icon: add new social network icons
+
 ## 1.2.3
 
 ### Patch Changes
