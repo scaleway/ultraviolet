@@ -1,14 +1,15 @@
 import type { StoryFn } from '@storybook/react'
-import { MODAL_WIDTH, Modal } from '..'
+import { Modal } from '..'
 import { Button } from '../../Button'
+import { MODAL_WIDTH } from '../constants'
 
-export const Width: StoryFn = props => (
+export const Size: StoryFn = props => (
   <>
     {Object.keys(MODAL_WIDTH).map(width => (
       <div style={{ display: 'inline-block', padding: 16 }} key={width}>
         <Modal
           {...props}
-          width={width as keyof typeof MODAL_WIDTH}
+          size={width as keyof typeof MODAL_WIDTH}
           disclosure={<Button>{width}</Button>}
         >
           <div style={{ padding: 32 }}>Content of the {width} modal</div>
@@ -18,7 +19,7 @@ export const Width: StoryFn = props => (
   </>
 )
 
-Width.parameters = {
+Size.parameters = {
   docs: {
     storyDescription: 'Here is a list of all the width values we support',
   },

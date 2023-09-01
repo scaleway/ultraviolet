@@ -1,3 +1,4 @@
+import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
 import type { ReactNode } from 'react'
 import { Form as ReactFinalForm } from 'react-final-form'
@@ -7,7 +8,7 @@ import { mockErrors } from '../../../mocks'
 
 const HookWrapper = ({ children }: { children: ReactNode }) => (
   <ReactFinalForm
-    onSubmit={jest.fn()}
+    onSubmit={jest.fn<any>()}
     render={() => <ErrorProvider errors={mockErrors}>{children}</ErrorProvider>}
   />
 )
@@ -16,7 +17,7 @@ describe('ErrorProvider', () => {
   test('renders correctly ', () =>
     shouldMatchEmotionSnapshot(
       <ReactFinalForm
-        onSubmit={jest.fn()}
+        onSubmit={jest.fn<any>()}
         render={() => <ErrorProvider errors={mockErrors}>Test</ErrorProvider>}
       />,
     ))

@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals'
 import { minLengthValidator } from '../minLength'
 
 const fakeString = (size: number) => 'a'.repeat(size)

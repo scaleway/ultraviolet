@@ -55,6 +55,7 @@ export { Toggle } from './Toggle'
 export { ToggleGroup } from './ToggleGroup'
 export { Tooltip } from './Tooltip'
 export { VerificationCode } from './VerificationCode'
+export { RadioGroup } from './RadioGroup'
 export {
   /**
    * @deprecated This component is deprecated. Please use `Icon` from `@ultraviolet/icons` instead.

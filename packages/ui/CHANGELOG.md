@@ -1,5 +1,37 @@
 # Change Log
 
+## 1.10.0
+
+### Minor Changes
+
+- [#2847](https://github.com/scaleway/ultraviolet/pull/2847) [`e2a73d27`](https://github.com/scaleway/ultraviolet/commit/e2a73d27215236ff0eab2f8b5d54e26aea675aca) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - feat: drop reakit usage in our modals
+
+### Patch Changes
+
+- [#2845](https://github.com/scaleway/ultraviolet/pull/2845) [`f3081bf6`](https://github.com/scaleway/ultraviolet/commit/f3081bf63131c294206a8f6c9ef56ccf2bae6c1e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.11`.
+  Updated dependency `@babel/runtime` to `7.22.11`.
+  Updated dependency `@babel/eslint-parser` to `7.22.11`.
+  Updated dependency `@babel/preset-typescript` to `7.22.11`.
+- Updated dependencies [[`f3081bf6`](https://github.com/scaleway/ultraviolet/commit/f3081bf63131c294206a8f6c9ef56ccf2bae6c1e)]:
+  - @ultraviolet/icons@1.3.1
+
+## 1.9.0
+
+### Minor Changes
+
+- [#2781](https://github.com/scaleway/ultraviolet/pull/2781) [`83ee8745`](https://github.com/scaleway/ultraviolet/commit/83ee87456efaef76d805129f12f5fbeefd14b633) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add `RadioGroup` component
+
+- [#2807](https://github.com/scaleway/ultraviolet/pull/2807) [`d604182e`](https://github.com/scaleway/ultraviolet/commit/d604182e740a8752c739210f57a4c183f1138320) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - update styling of Toggle component
+
+- [#2782](https://github.com/scaleway/ultraviolet/pull/2782) [`2cd42db8`](https://github.com/scaleway/ultraviolet/commit/2cd42db80b93c4ed2cbb504991a2926d6c19d358) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - update the checkbox style
+
+### Patch Changes
+
+- [#2808](https://github.com/scaleway/ultraviolet/pull/2808) [`0719ade2`](https://github.com/scaleway/ultraviolet/commit/0719ade2d91b09851eb3a6f94807b3732c878e96) Thanks [@ModuloM](https://github.com/ModuloM)! - Add z-index to the Modal backdrop to be above other components DS-526
+
+- Updated dependencies [[`c2f452f7`](https://github.com/scaleway/ultraviolet/commit/c2f452f71223f537d4266f4af1ac2b5d35e5cd5b)]:
+  - @ultraviolet/icons@1.3.0
+
 ## 1.8.4
 
 ### Patch Changes

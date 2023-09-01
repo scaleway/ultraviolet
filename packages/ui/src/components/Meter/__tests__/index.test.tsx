@@ -1,3 +1,4 @@
+import { describe, test } from '@jest/globals'
 import { Meter } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { colors } from '../../../theme'

@@ -1,3 +1,4 @@
+import { describe, it } from '@jest/globals'
 import { ProgressBar, progressBarSentiments } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 

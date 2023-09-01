@@ -1,3 +1,4 @@
+import { describe, expect, jest, test } from '@jest/globals'
 import type { KeyboardEvent } from 'react'
 import isJSONString from '../isJSON'
 import onKeyOnlyNumbers from '../keycode'
@@ -17,8 +18,8 @@ describe('isJSONString', () => {
     ${'is String'}            | ${'hello'}       | ${false}
   `(
     'returns $expected when $test',
-    ({ value, expected }: { value: string; expected: boolean }) => {
-      expect(isJSONString(value)).toBe(expected)
+    current => {
+      expect(isJSONString(current['value'] as string)).toBe(current['expected'])
     },
   )
 })
@@ -44,8 +45,8 @@ describe('recursivelyGetChildrenString', () => {
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
   `(
     'returns "$expected" when $test',
-    ({ value, expected }: { value: string; expected: boolean }) => {
-      expect(recursivelyGetChildrenString(value)).toBe(expected)
+    current => {
+      expect(recursivelyGetChildrenString(current['value'] as string)).toBe(current['expected'])
     },
   )
 })
@@ -86,8 +87,8 @@ describe('parseIntOr', () => {
     ${'is String'}                      | ${'hello'}             | ${fallback}
   `(
     'returns $expected when $test',
-    ({ value, expected }: { value: string; expected: boolean }) => {
-      expect(parseIntOr(value, fallback)).toBe(expected)
+    current => {
+      expect(parseIntOr(current['value'] as string, fallback)).toBe(current['expected'])
     },
   )
 })

@@ -1,3 +1,4 @@
+import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import { Tabs } from '..'
 import {

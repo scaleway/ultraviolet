@@ -1,3 +1,12 @@
+import {
+  afterEach,
+  beforeAll,
+  beforeEach,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
 import type { Meta } from '@storybook/react'
 import { composeStories } from '@storybook/react'
 import { cleanup } from '@testing-library/react'
@@ -124,7 +133,7 @@ describe('A11y', () => {
               componentName as keyof typeof components
             ] as () => JSX.Element
             const { container } = renderWithTheme(<ComponentToRender />)
-            // eslint-disable-next-line no-await-in-loop
+            // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-assignment
             const results = await axe(container)
 
             expect(results).toHaveNoViolations()

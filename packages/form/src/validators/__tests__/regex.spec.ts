@@ -1,3 +1,4 @@
+import { describe, expect, test } from '@jest/globals'
 import { regexValidator } from '../regex'
 
 const alpha = /^[a-zA-Z]*$/

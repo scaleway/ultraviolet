@@ -1,3 +1,11 @@
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
 import { act, screen } from '@testing-library/react'
 import { RadioField } from '..'
 import {
@@ -10,7 +18,9 @@ import { mockErrors } from '../../../mocks'
 import { Form } from '../../Form'
 
 describe('RadioField', () => {
-  beforeAll(mockRandom)
+  beforeAll(() => {
+    mockRandom()
+  })
   afterAll(restoreRandom)
 
   test('should render correctly', () =>

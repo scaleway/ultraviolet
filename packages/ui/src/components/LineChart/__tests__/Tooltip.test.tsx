@@ -1,3 +1,4 @@
+import { describe, test } from '@jest/globals'
 import type { Point } from '@nivo/line'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import { LineChartTooltip } from '../Tooltip'

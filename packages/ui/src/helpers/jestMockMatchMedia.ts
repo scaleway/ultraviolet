@@ -1,3 +1,5 @@
+import { jest } from '@jest/globals'
+
 export type MockMatchMedia = {
   media: string
   matches?: boolean
@@ -22,5 +24,5 @@ function getMockImplementation({ media, matches = false }: MockMatchMedia) {
 
 export default ({ media, matches = false }: MockMatchMedia): void => {
   const mockedImplementation = getMockImplementation({ matches, media })
-  window.matchMedia = jest.fn().mockImplementation(mockedImplementation)
+  window.matchMedia = jest.fn<any>().mockImplementation(mockedImplementation)
 }

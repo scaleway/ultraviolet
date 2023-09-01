@@ -1,3 +1,4 @@
+import { describe, it } from '@jest/globals'
 import { CategoryIcon } from '..'
 import { shouldMatchEmotionSnapshotWithPortal } from '../../../../.jest/helpers'
 import { CATEGORY_ICONS } from '../Icons'

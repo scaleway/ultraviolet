@@ -1,3 +1,4 @@
+import { jest } from '@jest/globals'
 import { ThemeProvider } from '@emotion/react'
 import makeHelpers from '@scaleway/jest-helpers'
 import { theme as lightTheme } from '@ultraviolet/ui'

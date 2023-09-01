@@ -1,3 +1,4 @@
+import { describe, jest, test } from '@jest/globals'
 import * as nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
