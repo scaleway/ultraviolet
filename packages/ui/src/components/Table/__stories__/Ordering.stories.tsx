@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react'
 import { Table } from '..'
 import { data as sourceData } from './resources'
 
-export const Ordering: StoryFn = () => {
+export const Ordering: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{
     columnId: 'name' | 'releaseYear'
     order: 'asc' | 'desc'
@@ -26,6 +26,7 @@ export const Ordering: StoryFn = () => {
 
   return (
     <Table
+      {...args}
       columns={[
         {
           label: 'Movie name',

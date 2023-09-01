@@ -8,9 +8,9 @@ const DivWithBackground = styled.div`
   color: ${({ theme }) => theme.colors.primary.text};
 `
 
-export const AlignItems: StoryFn = () => (
+export const AlignItems: StoryFn = args => (
   <Stack gap={2}>
-    <Row templateColumns="repeat(3, 1fr)">
+    <Row {...args} templateColumns="repeat(3, 1fr)">
       <DivWithBackground style={{ height: '100px' }}>
         100px height & default align
       </DivWithBackground>
@@ -20,7 +20,7 @@ export const AlignItems: StoryFn = () => (
       <DivWithBackground>auto height & default align</DivWithBackground>
     </Row>
     <Separator />
-    <Row templateColumns="repeat(3, 1fr)" alignItems="center">
+    <Row {...args} templateColumns="repeat(3, 1fr)" alignItems="center">
       <DivWithBackground style={{ height: '100px' }}>
         100px height & align center
       </DivWithBackground>

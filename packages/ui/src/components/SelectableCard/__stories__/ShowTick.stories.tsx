@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const ShowTick: StoryFn = () => {
+export const ShowTick: StoryFn = args => {
   const [value, onChange] = useState('label-5')
   const [value2, onChange2] = useState({ 'label-1': true, 'label-2': true })
 
@@ -11,6 +11,7 @@ export const ShowTick: StoryFn = () => {
     <>
       <Stack direction="row" gap={2}>
         <SelectableCard
+          {...args}
           name="label-5"
           checked={value === 'label-5'}
           value="label-5"
@@ -20,6 +21,7 @@ export const ShowTick: StoryFn = () => {
           label="Radio Left"
         />
         <SelectableCard
+          {...args}
           name="label-6"
           checked={value === 'label-6'}
           value="label-6"
@@ -31,6 +33,7 @@ export const ShowTick: StoryFn = () => {
       </Stack>
       <Stack direction="row" gap={2}>
         <SelectableCard
+          {...args}
           name="label-1"
           checked={value2['label-1']}
           value="label-1"
@@ -42,6 +45,7 @@ export const ShowTick: StoryFn = () => {
           label="Checkbox 1"
         />
         <SelectableCard
+          {...args}
           name="label-2"
           checked={value2['label-2']}
           value="label-2"

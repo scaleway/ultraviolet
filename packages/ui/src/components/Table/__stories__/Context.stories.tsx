@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { Table } from '..'
 import { columns, data } from './resources'
 
-export const Context: StoryFn = () => {
+export const Context: StoryFn = args => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
     const { selectedRowIds } = Table.useTableContext()
 
@@ -20,7 +20,7 @@ export const Context: StoryFn = () => {
   }
 
   return (
-    <Table columns={columns} selectable>
+    <Table {...args} columns={columns} selectable>
       <Table.Body>
         {data.map(movie => (
           <Table.Row key={movie.id} id={movie.id}>

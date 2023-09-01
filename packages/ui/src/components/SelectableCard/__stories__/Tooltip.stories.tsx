@@ -3,12 +3,13 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Tooltip: StoryFn = () => {
+export const Tooltip: StoryFn = args => {
   const [value, onChange] = useState('label-14')
 
   return (
     <>
       <SelectableCard
+        {...args}
         name="label-14"
         checked={value === 'label-14'}
         value="label-14"
@@ -18,6 +19,7 @@ export const Tooltip: StoryFn = () => {
         label="Radio Left"
       />
       <SelectableCard
+        {...args}
         name="label-15"
         checked={value === 'label-15'}
         value="label-15"

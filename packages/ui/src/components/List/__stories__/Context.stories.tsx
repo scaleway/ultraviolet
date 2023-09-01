@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { List } from '..'
 import { columns, data } from './resources'
 
-export const Context: StoryFn = () => {
+export const Context: StoryFn = args => {
   const SubComponent = ({ srcData }: { srcData: typeof data }) => {
     const { selectedRowIds } = List.useListContext()
 
@@ -21,7 +21,7 @@ export const Context: StoryFn = () => {
   }
 
   return (
-    <List columns={columns} selectable>
+    <List {...args} columns={columns} selectable>
       {data.map(planet => (
         <List.Row
           key={planet.id}

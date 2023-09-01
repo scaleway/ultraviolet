@@ -2,10 +2,10 @@ import type { StoryFn } from '@storybook/react'
 import { Button, buttonSizes } from '..'
 import { Stack } from '../..'
 
-export const Size: StoryFn<typeof Button> = () => (
+export const Size: StoryFn<typeof Button> = args => (
   <Stack alignItems="center" gap={2} direction="row">
     {buttonSizes.map(size => (
-      <Button key={size} icon="pencil" onClick={() => {}} size={size}>
+      <Button {...args} key={size} icon="pencil" onClick={() => {}} size={size}>
         {size}
       </Button>
     ))}

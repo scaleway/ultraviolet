@@ -10,7 +10,7 @@ const COLUMNS = [
   })),
 ]
 
-export const Showcase: StoryFn<typeof Button> = () => {
+export const Showcase: StoryFn<typeof Button> = args => {
   const onClick = () => {}
 
   return (
@@ -27,6 +27,7 @@ export const Showcase: StoryFn<typeof Button> = () => {
               <Table.Cell key={variant}>
                 <Stack direction="row" gap={2}>
                   <Button
+                    {...args}
                     onClick={onClick}
                     variant={variant}
                     sentiment={sentiment}

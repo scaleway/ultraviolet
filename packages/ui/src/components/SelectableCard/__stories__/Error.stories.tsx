@@ -3,12 +3,13 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Error: StoryFn = () => {
+export const Error: StoryFn = args => {
   const [value, onChange] = useState('label-12')
 
   return (
     <>
       <SelectableCard
+        {...args}
         name="label-12"
         checked={value === 'label-12'}
         value="label-12"
@@ -19,6 +20,7 @@ export const Error: StoryFn = () => {
         label="Radio Left"
       />
       <SelectableCard
+        {...args}
         name="label-13"
         checked={value === 'label-13'}
         value="label-13"

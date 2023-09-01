@@ -8,7 +8,7 @@ import { Text } from '../../Text'
 import { TextInput } from '../../TextInput'
 import { data as sourceData } from './resources'
 
-export const Example: StoryFn = () => {
+export const Example: StoryFn = args => {
   const [currentOrder, setCurrentOrder] = useState<{
     columnId: 'name' | 'perihelion'
     order: 'asc' | 'desc'
@@ -31,6 +31,7 @@ export const Example: StoryFn = () => {
 
   return (
     <List
+      {...args}
       selectable
       columns={[
         {

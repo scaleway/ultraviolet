@@ -1,21 +1,21 @@
 import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const Disabled: StoryFn = () => (
+export const Disabled: StoryFn = args => (
   <>
-    <Checkbox disabled onChange={() => {}}>
+    <Checkbox {...args} disabled onChange={() => {}}>
       Checkbox disabled
     </Checkbox>
-    <Checkbox disabled error onChange={() => {}}>
+    <Checkbox {...args} disabled error onChange={() => {}}>
       Checkbox disabled and in error
     </Checkbox>
-    <Checkbox checked disabled onChange={() => {}}>
+    <Checkbox {...args} checked disabled onChange={() => {}}>
       Checkbox checked and disabled
     </Checkbox>
-    <Checkbox checked disabled error onChange={() => {}}>
+    <Checkbox {...args} checked disabled error onChange={() => {}}>
       Checkbox checked, disabled and in error
     </Checkbox>
-    <Checkbox checked="indeterminate" disabled onChange={() => {}}>
+    <Checkbox {...args} checked="indeterminate" disabled onChange={() => {}}>
       Checkbox indeterminate and disabled
     </Checkbox>
   </>

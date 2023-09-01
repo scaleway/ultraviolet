@@ -1,8 +1,10 @@
+import type { StoryFn } from '@storybook/react'
 import { List } from '..'
 import { data } from './resources'
 
-export const ColumnInfo = () => (
+export const ColumnInfo: StoryFn = args => (
   <List
+    {...args}
     columns={[
       {
         label: 'Solar system Planet',

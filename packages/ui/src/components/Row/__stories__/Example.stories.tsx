@@ -2,10 +2,10 @@ import type { StoryFn } from '@storybook/react'
 import { Row } from '..'
 import { Card, Separator, Stack, Status, Text } from '../..'
 
-export const Example: StoryFn = () => (
+export const Example: StoryFn = args => (
   <Card header="Overview">
     <Stack gap={2}>
-      <Row templateColumns="repeat(4, 1fr)" gap={2}>
+      <Row {...args} templateColumns="repeat(4, 1fr)" gap={2}>
         <Stack>
           <Text as="span" variant="bodyStrong">
             Status
@@ -43,7 +43,7 @@ export const Example: StoryFn = () => (
         </Stack>
       </Row>
       <Separator />
-      <Row templateColumns="repeat(2, 1fr)" gap={2}>
+      <Row {...args} templateColumns="repeat(2, 1fr)" gap={2}>
         <Stack>
           <Stack direction="row" gap={2}>
             <Text as="span" variant="bodyStrong">
@@ -66,7 +66,7 @@ export const Example: StoryFn = () => (
         </Stack>
       </Row>
       <Separator />
-      <Row templateColumns="repeat(3, 1fr)" gap={2}>
+      <Row {...args} templateColumns="repeat(3, 1fr)" gap={2}>
         <div>
           <Text as="div" variant="bodyStrong">
             IPV6

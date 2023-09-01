@@ -1,7 +1,10 @@
-import type { StoryFn } from '@storybook/react'
-import { ProgressBar } from '..'
+import { Template } from './Template.stories'
 
-export const Progress: StoryFn = () => <ProgressBar progress />
+export const Progress = Template.bind({})
+
+Progress.args = {
+  progress: true,
+}
 
 Progress.parameters = {
   docs: {

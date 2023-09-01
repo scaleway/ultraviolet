@@ -5,7 +5,7 @@ import { Stack } from '../../Stack'
 import { Text } from '../../Text'
 import { Card } from '../index'
 
-export const AdvancedHeader: StoryFn = () => {
+export const AdvancedHeader: StoryFn = args => {
   const CustomHeader = (
     <Stack gap={1}>
       <Stack gap={1} direction="row" alignItems="center">
@@ -20,7 +20,11 @@ export const AdvancedHeader: StoryFn = () => {
     </Stack>
   )
 
-  return <Card header={CustomHeader}>This is the content of a Card</Card>
+  return (
+    <Card {...args} header={CustomHeader}>
+      This is the content of a Card
+    </Card>
+  )
 }
 
 AdvancedHeader.parameters = {

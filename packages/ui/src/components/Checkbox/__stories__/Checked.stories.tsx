@@ -1,12 +1,17 @@
 import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const Checked: StoryFn = () => (
+export const Checked: StoryFn = args => (
   <>
-    <Checkbox checked onChange={() => {}}>
+    <Checkbox {...args} checked onChange={() => {}}>
       Checked checkbox
     </Checkbox>
-    <Checkbox checked="indeterminate" helper="Helper" onChange={() => {}}>
+    <Checkbox
+      {...args}
+      checked="indeterminate"
+      helper="Helper"
+      onChange={() => {}}
+    >
       Indeterminate checkbox
     </Checkbox>
   </>

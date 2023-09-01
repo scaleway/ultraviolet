@@ -2,12 +2,13 @@ import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Radio } from '..'
 
-export const Error: StoryFn = () => {
+export const Error: StoryFn = args => {
   const [value, onChange] = useState('error-label-1')
 
   return (
     <>
       <Radio
+        {...args}
         name="error-label-1"
         error="invalid"
         checked={value === 'error-label-1'}
@@ -18,6 +19,7 @@ export const Error: StoryFn = () => {
         label="Label 1"
       />
       <Radio
+        {...args}
         name="error-label-2"
         checked={value === 'error-label-2'}
         value="error-label-2"

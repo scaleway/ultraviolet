@@ -1,8 +1,9 @@
 import type { StoryFn } from '@storybook/react'
 import { Radio } from '..'
 
-export const Helper: StoryFn = () => (
+export const Helper: StoryFn = args => (
   <Radio
+    {...args}
     name="helper-label-1"
     helper="Helper content"
     value="helper-label-1"

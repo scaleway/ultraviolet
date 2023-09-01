@@ -3,12 +3,13 @@ import { useState } from 'react'
 import { SelectableCard } from '..'
 import { Stack } from '../../Stack'
 
-export const Disabled: StoryFn = () => {
+export const Disabled: StoryFn = args => {
   const [value, onChange] = useState('label-8')
 
   return (
     <>
       <SelectableCard
+        {...args}
         name="label-7"
         checked={value === 'label-7'}
         value="label-7"
@@ -17,6 +18,7 @@ export const Disabled: StoryFn = () => {
         label="Radio Left"
       />
       <SelectableCard
+        {...args}
         name="label-8"
         checked={value === 'label-8'}
         value="label-8"
