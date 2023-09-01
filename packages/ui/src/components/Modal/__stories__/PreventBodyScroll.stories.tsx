@@ -1,19 +1,29 @@
 import type { StoryFn } from '@storybook/react'
 import { Modal } from '..'
 import { Button } from '../../Button'
+import { Stack } from '../../Stack'
 
 export const PreventBodyScroll: StoryFn = props => (
-  <Modal
-    {...props}
-    disclosure={<Button>preventBodyScroll</Button>}
-    preventBodyScroll
-  >
-    <div style={{ padding: 32 }}>
-      Try to scroll on body ( outside of the Modal ) preventBodyScroll is
-      available only when modal props is enabled
-      https://reakit.io/docs/dialog/#props
-    </div>
-  </Modal>
+  <Stack gap={2} direction="row">
+    <Modal
+      {...props}
+      disclosure={<Button>Scroll prevented</Button>}
+      preventBodyScroll
+    >
+      <div style={{ padding: 32 }}>
+        Try to scroll on body ( outside of the Modal )
+      </div>
+    </Modal>
+    <Modal
+      {...props}
+      disclosure={<Button>Scroll not prevented</Button>}
+      preventBodyScroll={false}
+    >
+      <div style={{ padding: 32 }}>
+        Try to scroll on body ( outside of the Modal )
+      </div>
+    </Modal>
+  </Stack>
 )
 
 PreventBodyScroll.parameters = {
