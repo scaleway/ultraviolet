@@ -1,5 +1,20 @@
 # Change Log
 
+## 1.10.0
+
+### Minor Changes
+
+- [#2847](https://github.com/scaleway/ultraviolet/pull/2847) [`e2a73d27`](https://github.com/scaleway/ultraviolet/commit/e2a73d27215236ff0eab2f8b5d54e26aea675aca) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - feat: drop reakit usage in our modals
+
+### Patch Changes
+
+- [#2845](https://github.com/scaleway/ultraviolet/pull/2845) [`f3081bf6`](https://github.com/scaleway/ultraviolet/commit/f3081bf63131c294206a8f6c9ef56ccf2bae6c1e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.11`.
+  Updated dependency `@babel/runtime` to `7.22.11`.
+  Updated dependency `@babel/eslint-parser` to `7.22.11`.
+  Updated dependency `@babel/preset-typescript` to `7.22.11`.
+- Updated dependencies [[`f3081bf6`](https://github.com/scaleway/ultraviolet/commit/f3081bf63131c294206a8f6c9ef56ccf2bae6c1e)]:
+  - @ultraviolet/icons@1.3.1
+
 ## 1.9.0
 
 ### Minor Changes
