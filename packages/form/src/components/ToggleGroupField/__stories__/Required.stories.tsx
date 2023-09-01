@@ -36,7 +36,7 @@ export const Required: StoryFn<typeof ToggleGroupField> = args => (
 Required.parameters = {
   docs: {
     storyDescription:
-      'Use the `direction` prop to change the direction of the group.',
+      'Use the `required` prop to change make the whole group a required field.',
   },
 }
 
