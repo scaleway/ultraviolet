@@ -4,6 +4,10 @@ import { Button } from '../../Button'
 
 export const FunctionChildren: StoryFn = props => (
   <Modal {...props} disclosure={<Button>modal</Button>}>
-    {({ baseId }: { baseId: string }) => <p>Content {baseId} </p>}
+    {({ onClose }) => (
+      <Button onClick={onClose}>
+        A custom button that can close the modal
+      </Button>
+    )}
   </Modal>
 )

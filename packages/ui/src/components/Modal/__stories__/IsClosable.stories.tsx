@@ -4,12 +4,12 @@ import { Button } from '../../Button'
 
 export const IsClosable: StoryFn = props => (
   <Modal {...props} disclosure={<Button>isClosable</Button>} isClosable={false}>
-    {({ hide }: { hide: () => void }) => (
+    {({ toggle }) => (
       <>
         <p>You don&apos;t have a close Icon</p>
         <Button
           onClick={() => {
-            hide()
+            toggle()
           }}
         >
           Close
