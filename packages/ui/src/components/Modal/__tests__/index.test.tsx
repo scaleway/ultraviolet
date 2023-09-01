@@ -239,7 +239,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnEsc is true`, async () => {
-    const mockOnClose = jest.fn()
+    const mockOnClose = jest.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -263,7 +263,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnEsc is false`, async () => {
-    const mockOnClose = jest.fn()
+    const mockOnClose = jest.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -282,7 +282,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnClickOutside is true`, async () => {
-    const mockOnClose = jest.fn()
+    const mockOnClose = jest.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
@@ -303,7 +303,7 @@ describe('Modal', () => {
   })
 
   test(`test hideOnClickOutside is false`, async () => {
-    const mockOnClose = jest.fn()
+    const mockOnClose = jest.fn(() => {})
     renderWithTheme(
       <Modal
         ariaLabel="modal-test"
