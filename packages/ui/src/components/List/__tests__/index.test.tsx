@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { describe, expect, jest, test } from '@jest/globals'
-import { userEvent } from '@storybook/testing-library'
 import { fireEvent, render, screen, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { List } from '..'
@@ -53,7 +53,9 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 
 describe('List', () => {
   test('Should throw an error', () => {
-    const consoleErrMock = jest.spyOn(console, 'error').mockImplementation(() => {})
+    const consoleErrMock = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {})
     expect(() => {
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -195,7 +197,7 @@ describe('List', () => {
         ))}
       </List>,
       {
-        transform: () => {
+        transform: async () => {
           const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
           const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
@@ -208,14 +210,14 @@ describe('List', () => {
           if (!allCheckbox) {
             throw new Error('Select all checkbox is not defined')
           }
-          userEvent.click(firstRowCheckbox)
+          await userEvent.click(firstRowCheckbox)
           expect(firstRowCheckbox).toBeChecked()
-          userEvent.click(firstRowCheckbox)
+          await userEvent.click(firstRowCheckbox)
           expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          userEvent.click(allCheckbox)
+          await userEvent.click(firstRowCheckbox)
+          await userEvent.click(allCheckbox)
           expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(allCheckbox)
+          await userEvent.click(allCheckbox)
           expect(firstRowCheckbox).toBeChecked()
         },
       },
@@ -280,7 +282,7 @@ describe('List', () => {
         )}
       </LocalControlValue>,
       {
-        transform: () => {
+        transform: async () => {
           const listHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
             'button',
             {
@@ -291,14 +293,14 @@ describe('List', () => {
 
           expect(listHeaderCells).toHaveLength(columns.length)
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          userEvent.click(listHeaderCells[0])
+          await userEvent.click(listHeaderCells[0])
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe('ascending')
           fireEvent.keyDown(listHeaderCells[0], { key: 'Enter' })
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(
             'descending',
           )
           fireEvent.keyDown(listHeaderCells[0], { key: 'Space' })
-          userEvent.click(listHeaderCells[1])
+          await userEvent.click(listHeaderCells[1])
           expect(listHeaderCells[0].getAttribute('aria-sort')).toBe(null)
           expect(listHeaderCells[1].getAttribute('aria-sort')).toBe('ascending')
         },
@@ -380,9 +382,9 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: () => {
-          userEvent.click(screen.getAllByRole('button')[0])
-          userEvent.click(screen.getAllByRole('button')[0])
+        transform: async () => {
+          await userEvent.click(screen.getAllByRole('button')[0])
+          await userEvent.click(screen.getAllByRole('button')[0])
         },
       },
     ))
@@ -401,9 +403,9 @@ describe('List', () => {
         ))}
       </List>,
       {
-        transform: () => {
+        transform: async () => {
           const cell = screen.getByText(data[0].columnE)
-          userEvent.click(cell)
+          await userEvent.click(cell)
         },
       },
     ))
@@ -424,12 +426,12 @@ describe('List', () => {
         )}
       </List>,
       {
-        transform: () => {
+        transform: async () => {
           const buttons = screen.getAllByRole('button')
-          userEvent.click(buttons[0])
-          userEvent.click(buttons[0])
-          userEvent.click(buttons[0])
-          userEvent.click(buttons[1])
+          await userEvent.click(buttons[0])
+          await userEvent.click(buttons[0])
+          await userEvent.click(buttons[0])
+          await userEvent.click(buttons[1])
         },
       },
     ))

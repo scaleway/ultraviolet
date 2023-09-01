@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import { describe, expect, jest, test } from '@jest/globals'
-import { userEvent } from '@storybook/testing-library'
 import { fireEvent, render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import type { ComponentProps, Dispatch, ReactNode, SetStateAction } from 'react'
 import { useState } from 'react'
 import { Table } from '..'
@@ -54,7 +54,9 @@ const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
 
 describe('Table', () => {
   test('Should throw an error', () => {
-    const consoleErrMock = jest.spyOn(console, 'error').mockImplementation(() =>{})
+    const consoleErrMock = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {})
     expect(() => {
       renderWithTheme(
         data.map(({ id, columnA, columnB, columnC, columnD, columnE }) => (
@@ -125,7 +127,7 @@ describe('Table', () => {
         </Table.Body>
       </Table>,
       {
-        transform: () => {
+        transform: async () => {
           const checkboxes = screen.getAllByRole<HTMLInputElement>('checkbox')
 
           const firstRowCheckbox = checkboxes.find(({ value }) => value === '1')
@@ -138,14 +140,14 @@ describe('Table', () => {
           if (!allCheckbox) {
             throw new Error('Select all checkbox is not defined')
           }
-          userEvent.click(firstRowCheckbox)
+          await userEvent.click(firstRowCheckbox)
           expect(firstRowCheckbox).toBeChecked()
-          userEvent.click(firstRowCheckbox)
+          await userEvent.click(firstRowCheckbox)
           expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(firstRowCheckbox)
-          userEvent.click(allCheckbox)
+          await userEvent.click(firstRowCheckbox)
+          await userEvent.click(allCheckbox)
           expect(firstRowCheckbox).not.toBeChecked()
-          userEvent.click(allCheckbox)
+          await userEvent.click(allCheckbox)
           expect(firstRowCheckbox).toBeChecked()
         },
       },
@@ -214,7 +216,7 @@ describe('Table', () => {
         )}
       </LocalControlValue>,
       {
-        transform: () => {
+        transform: async () => {
           const tableHeaderCells = screen.queryAllByRole<HTMLTableCellElement>(
             'button',
             {
@@ -223,7 +225,7 @@ describe('Table', () => {
           )
           expect(tableHeaderCells).toHaveLength(columns.length)
           expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
-          userEvent.click(tableHeaderCells[0])
+          await userEvent.click(tableHeaderCells[0])
           expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(
             'ascending',
           )
@@ -232,7 +234,7 @@ describe('Table', () => {
             'descending',
           )
           fireEvent.keyDown(tableHeaderCells[0], { key: 'Space' })
-          userEvent.click(tableHeaderCells[1])
+          await userEvent.click(tableHeaderCells[1])
           expect(tableHeaderCells[0].getAttribute('aria-sort')).toBe(null)
           expect(tableHeaderCells[1].getAttribute('aria-sort')).toBe(
             'ascending',
