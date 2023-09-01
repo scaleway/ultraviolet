@@ -14,14 +14,10 @@ export const Disclosure = ({
 
   useEffect(() => {
     const element = disclosureRef.current
-    const handleClick = () => {
-      handleOpen()
-    }
-
-    element?.addEventListener('click', handleClick)
+    element?.addEventListener('click', handleOpen)
 
     return () => {
-      element?.removeEventListener('click', handleClick)
+      element?.removeEventListener('click', handleOpen)
     }
   }, [handleOpen, disclosureRef])
 
