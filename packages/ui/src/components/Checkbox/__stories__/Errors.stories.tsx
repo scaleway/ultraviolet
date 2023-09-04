@@ -6,6 +6,7 @@ Errors.storyName = 'Error'
 
 Errors.args = {
   error: 'An error message',
+  helper: 'Helper',
 }
 Errors.parameters = {
   docs: {

@@ -1,0 +1,1683 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleGroup renders correctly 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-103llo5-FieldSet {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-zfnlb8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vjvakd-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1tbrwzr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    class="cache-7hpczr-Stack ehpbis70"
+  >
+    <fieldset
+      class="cache-103llo5-FieldSet e1qvneex1"
+    >
+      <div
+        class="cache-zfnlb8-Stack ehpbis70"
+      >
+        <legend
+          class="cache-vjvakd-StyledText e13y3mga0"
+        >
+          Label 
+        </legend>
+        <div
+          class="cache-1tbrwzr-Stack ehpbis70"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 1
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":r1:"
+                name="Toggle.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+            </div>
+          </label>
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 2
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":r3:"
+                name="Toggle.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToggleGroup renders correctly with direction row 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-103llo5-FieldSet {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-zfnlb8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vjvakd-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-6874q2-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    class="cache-7hpczr-Stack ehpbis70"
+  >
+    <fieldset
+      class="cache-103llo5-FieldSet e1qvneex1"
+    >
+      <div
+        class="cache-zfnlb8-Stack ehpbis70"
+      >
+        <legend
+          class="cache-vjvakd-StyledText e13y3mga0"
+        >
+          Label 
+        </legend>
+        <div
+          class="cache-6874q2-Stack ehpbis70"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 1
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":r6:"
+                name="Toggle.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+            </div>
+          </label>
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 2
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":r8:"
+                name="Toggle.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToggleGroup renders correctly with error content 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-103llo5-FieldSet {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-zfnlb8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vjvakd-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1tbrwzr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-1x94vqj-StyledText {
+  color: #b3144d;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-7hpczr-Stack ehpbis70"
+  >
+    <fieldset
+      class="cache-103llo5-FieldSet e1qvneex1"
+    >
+      <div
+        class="cache-zfnlb8-Stack ehpbis70"
+      >
+        <legend
+          class="cache-vjvakd-StyledText e13y3mga0"
+        >
+          Label 
+        </legend>
+        <div
+          class="cache-1tbrwzr-Stack ehpbis70"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 1
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rh:"
+                name="Toggle.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+            </div>
+          </label>
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 2
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rj:"
+                name="Toggle.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <p
+      class="cache-1x94vqj-StyledText e13y3mga0"
+    >
+      Eror content
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToggleGroup renders correctly with helper content 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-103llo5-FieldSet {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-zfnlb8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vjvakd-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1tbrwzr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+.cache-5q2bke-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-7hpczr-Stack ehpbis70"
+  >
+    <fieldset
+      class="cache-103llo5-FieldSet e1qvneex1"
+    >
+      <div
+        class="cache-zfnlb8-Stack ehpbis70"
+      >
+        <legend
+          class="cache-vjvakd-StyledText e13y3mga0"
+        >
+          Label 
+        </legend>
+        <div
+          class="cache-1tbrwzr-Stack ehpbis70"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 1
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rb:"
+                name="Toggle.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+            </div>
+          </label>
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 2
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rd:"
+                name="Toggle.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+    <p
+      class="cache-5q2bke-StyledText e13y3mga0"
+    >
+      Helper content
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToggleGroup renders correctly with required prop 1`] = `
+<DocumentFragment>
+  .cache-7hpczr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-103llo5-FieldSet {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cache-zfnlb8-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vjvakd-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1f47cnh-sizeStyles-StyledRequiredIcon {
+  vertical-align: middle;
+  fill: #b3144d;
+  height: 8px;
+  width: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  vertical-align: super;
+}
+
+.cache-1tbrwzr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-r95p0q-StyledLabel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.cache-r95p0q-StyledLabel:active .e1wstm612[data-disabled='false']:after {
+  width: 22.04px;
+}
+
+.cache-r95p0q-StyledLabel[aria-disabled='true'] {
+  cursor: not-allowed;
+  color: #b5b7bd;
+}
+
+.cache-13wfq9z-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15fwcc4-StyledRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+.cache-1fqyjci-StyledToggle {
+  box-sizing: content-box;
+  outline: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  position: relative;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background-color: #e9eaeb;
+  width: 48px;
+  height: 24px;
+}
+
+.cache-1fqyjci-StyledToggle:hover {
+  background-color: #d9dadd;
+}
+
+.cache-1fqyjci-StyledToggle:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.cache-1fqyjci-StyledToggle:focus-within,
+.cache-1fqyjci-StyledToggle:focus {
+  box-shadow: 0px 0px 0px 3px #151A2D5C;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='false']:active:after {
+  width: 22.04px;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true'] {
+  color: #222638;
+  background-color: #521094;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:hover {
+  background-color: #3b1a61;
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus-within,
+.cache-1fqyjci-StyledToggle[data-checked='true']:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'] {
+  background: #f3f3f4;
+}
+
+.cache-1fqyjci-StyledToggle[data-disabled='true'][data-checked='true'] {
+  background: #e5dbfd;
+}
+
+.cache-1myp2ct-StyledCheckbox {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.cache-1myp2ct-StyledCheckbox[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+    class="cache-7hpczr-Stack ehpbis70"
+  >
+    <fieldset
+      class="cache-103llo5-FieldSet e1qvneex1"
+    >
+      <div
+        class="cache-zfnlb8-Stack ehpbis70"
+      >
+        <legend
+          class="cache-vjvakd-StyledText e13y3mga0"
+        >
+          Label 
+          <svg
+            class="e1qvneex0 cache-1f47cnh-sizeStyles-StyledRequiredIcon e1gt4cfo0"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10,2H14L13.21,9.91L19.66,5.27L21.66,8.73L14.42,12L21.66,15.27L19.66,18.73L13.21,14.09L14,22H10L10.79,14.09L4.34,18.73L2.34,15.27L9.58,12L2.34,8.73L4.34,5.27L10.79,9.91L10,2Z"
+            />
+          </svg>
+        </legend>
+        <div
+          class="cache-1tbrwzr-Stack ehpbis70"
+        >
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 1
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rn:"
+                name="Toggle.value-1"
+                type="checkbox"
+                value="value-1"
+              />
+            </div>
+          </label>
+          <label
+            aria-disabled="false"
+            class="cache-r95p0q-StyledLabel e1wstm610"
+          >
+            <div
+              class="cache-13wfq9z-Stack ehpbis70"
+            >
+              <div
+                class="cache-15fwcc4-StyledRow e3f5lzv0"
+              >
+                Toggle 2
+              </div>
+            </div>
+            <div
+              class="cache-1fqyjci-StyledToggle e1wstm612"
+              data-checked="false"
+              data-disabled="false"
+            >
+              <input
+                aria-checked="false"
+                class="cache-1myp2ct-StyledCheckbox e1wstm611"
+                id=":rp:"
+                name="Toggle.value-2"
+                type="checkbox"
+                value="value-2"
+              />
+            </div>
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</DocumentFragment>
+`;
