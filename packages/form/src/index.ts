@@ -10,6 +10,7 @@ export {
 } from 'react-final-form'
 export {
   CheckboxField,
+  CheckboxGroupField,
   DateField,
   Form,
   RadioField,
