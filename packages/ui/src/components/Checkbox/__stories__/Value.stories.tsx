@@ -1,15 +1,15 @@
 import type { StoryFn } from '@storybook/react'
 import { Checkbox } from '..'
 
-export const Value: StoryFn = () => (
+export const Value: StoryFn = args => (
   <>
-    <Checkbox value="false" onChange={() => {}}>
+    <Checkbox {...args} value="false" onChange={() => {}}>
       Checkbox value false
     </Checkbox>
-    <Checkbox value="true" onChange={() => {}}>
+    <Checkbox {...args} value="true" onChange={() => {}}>
       Checkbox value true
     </Checkbox>
-    <Checkbox value={1234} onChange={() => {}}>
+    <Checkbox {...args} value={1234} onChange={() => {}}>
       Checkbox value 1234
     </Checkbox>
   </>

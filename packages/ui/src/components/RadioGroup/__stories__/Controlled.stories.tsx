@@ -2,11 +2,12 @@ import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { RadioGroup } from '..'
 
-export const Controlled: StoryFn = () => {
+export const Controlled: StoryFn = args => {
   const [value, onChange] = useState('label-1')
 
   return (
     <RadioGroup
+      {...args}
       legend="Legend label"
       name="controlled"
       value={value}

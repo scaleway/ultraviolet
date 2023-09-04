@@ -4,7 +4,7 @@ import { Expandable } from '..'
 import { Button } from '../../Button'
 import { Stack } from '../../Stack'
 
-export const MinHeight: StoryFn<typeof Expandable> = () => {
+export const MinHeight: StoryFn<typeof Expandable> = args => {
   const [toggled, onToggle] = useState(false)
   const toggle = () => onToggle(state => !state)
 
@@ -13,7 +13,7 @@ export const MinHeight: StoryFn<typeof Expandable> = () => {
       <Button icon={toggled ? 'minus' : 'plus'} onClick={toggle}>
         Click me to {toggled ? 'hide' : 'show'} content
       </Button>
-      <Expandable opened={toggled} minHeight={35}>
+      <Expandable {...args} opened={toggled} minHeight={35}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

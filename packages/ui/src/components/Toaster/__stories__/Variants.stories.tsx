@@ -1,10 +1,10 @@
-import type { Decorator } from '@storybook/react'
+import type { Decorator, StoryFn } from '@storybook/react'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
-export const Variants = () => (
+export const Variants: StoryFn<typeof ToastContainer> = args => (
   <>
-    <ToastContainer />
+    <ToastContainer {...args} />
     <Button
       sentiment="success"
       onClick={() => toast.success('This is success')}

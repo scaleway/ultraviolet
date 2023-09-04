@@ -1,3 +1,4 @@
+import type { StoryFn } from '@storybook/react'
 import { useEffect, useState } from 'react'
 import zxcvbn from 'zxcvbn'
 import { Meter } from '..'
@@ -12,7 +13,7 @@ const strength = [
   { color: colors.success.text, text: 'veryStrong' },
 ]
 
-export const Playground = () => {
+export const Playground: StoryFn<typeof Meter> = args => {
   const [value, setValue] = useState<number>(0)
   const [password, setPassword] = useState<string>('')
 
@@ -30,7 +31,12 @@ export const Playground = () => {
         value={password}
         onChange={setPassword}
       />
-      <Meter value={value} title="Password Strength" strength={strength} />
+      <Meter
+        {...args}
+        value={value}
+        title="Password Strength"
+        strength={strength}
+      />
     </div>
   )
 }

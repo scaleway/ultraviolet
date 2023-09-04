@@ -1,9 +1,10 @@
 import type { StoryFn } from '@storybook/react'
 import { Banner } from '..'
 
-export const Variants: StoryFn = () => (
+export const Variants: StoryFn = args => (
   <>
     <Banner
+      {...args}
       title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"
@@ -14,6 +15,7 @@ export const Variants: StoryFn = () => (
       business and limit your expenses.
     </Banner>
     <Banner
+      {...args}
       title="Apply to Scaleway Startup programs"
       buttonText="Apply now"
       linkText="Learn more"

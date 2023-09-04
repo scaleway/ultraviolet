@@ -9,7 +9,7 @@ import type { SelectOption } from '../../SelectInput'
 import { SelectInput } from '../../SelectInput'
 import { Stack } from '../../Stack'
 
-export const Children: StoryFn = () => {
+export const Children: StoryFn = args => {
   const [value, onChange] = useState('label-9')
   const [selectInputValue, selectInputOnChange] = useState<SelectOption>({
     label: 'Option 1',
@@ -25,6 +25,7 @@ export const Children: StoryFn = () => {
   return (
     <>
       <SelectableCard
+        {...args}
         name="label-9"
         checked={value === 'label-9'}
         value="label-9"
@@ -47,6 +48,7 @@ export const Children: StoryFn = () => {
         )}
       </SelectableCard>
       <SelectableCard
+        {...args}
         name="label-10"
         checked={value === 'label-10'}
         value="label-10"
@@ -73,6 +75,7 @@ export const Children: StoryFn = () => {
         </>
       </SelectableCard>
       <SelectableCard
+        {...args}
         name="label-11"
         checked={value === 'label-11'}
         value="label-11"

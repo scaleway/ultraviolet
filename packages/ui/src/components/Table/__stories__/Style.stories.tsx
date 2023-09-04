@@ -10,7 +10,7 @@ const combos = [
   { stripped: true, bordered: true },
 ]
 
-export const Style: StoryFn = () => (
+export const Style: StoryFn = args => (
   <Stack gap={2}>
     {combos.map((combo, index) => (
       // eslint-disable-next-line react/no-array-index-key
@@ -20,6 +20,7 @@ export const Style: StoryFn = () => (
           {combo.bordered ? '✅' : '❌'} Bordered
         </Text>
         <Table
+          {...args}
           columns={columns}
           bordered={combo.bordered}
           stripped={combo.stripped}

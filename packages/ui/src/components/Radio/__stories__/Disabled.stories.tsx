@@ -2,12 +2,13 @@ import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { Radio } from '..'
 
-export const Disabled: StoryFn = () => {
+export const Disabled: StoryFn = args => {
   const [value, onChange] = useState('disabled-label-2')
 
   return (
     <>
       <Radio
+        {...args}
         name="disabled-label-1"
         disabled
         checked={value === 'disabled-label-1'}
@@ -18,6 +19,7 @@ export const Disabled: StoryFn = () => {
         label="Label 1"
       />
       <Radio
+        {...args}
         name="disabled-label-2"
         checked={value === 'disabled-label-2'}
         value="disabled-label-2"

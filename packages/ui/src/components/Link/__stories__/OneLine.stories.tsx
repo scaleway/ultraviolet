@@ -10,17 +10,17 @@ const Container = styled.div`
   padding: ${({ theme }) => theme.space['1']};
 `
 
-export const OneLine: StoryFn<typeof Link> = () => (
+export const OneLine: StoryFn<typeof Link> = args => (
   <>
     <strong>Without ellipsis</strong>
     <Container>
-      <Link href="https://scaleway.com">
+      <Link {...args} href="https://scaleway.com">
         This link is quite long and is displayed on two lines.
       </Link>
     </Container>
     <strong>With ellipsis (a tooltip is displayed on hover)</strong>
     <Container>
-      <Link href="https://scaleway.com" oneLine>
+      <Link {...args} href="https://scaleway.com" oneLine>
         This link is quite long and is cut in order to avoid two lines.
       </Link>
     </Container>

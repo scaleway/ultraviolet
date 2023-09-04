@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { NumberInput } from '..'
 import { Button, Stack } from '../..'
 
-export const Controlled: StoryFn<typeof NumberInput> = () => {
+export const Controlled: StoryFn<typeof NumberInput> = args => {
   const min = 10
   const max = 100
   const [value, setState] = useState<number | undefined>(20)
@@ -15,6 +15,7 @@ export const Controlled: StoryFn<typeof NumberInput> = () => {
       <Button onClick={() => setState(max)}>Set to max ({max})</Button>
 
       <NumberInput
+        {...args}
         minValue={min}
         maxValue={max}
         value={value}

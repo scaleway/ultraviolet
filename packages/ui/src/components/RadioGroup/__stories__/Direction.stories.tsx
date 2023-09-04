@@ -1,24 +1,9 @@
-import type { StoryFn } from '@storybook/react'
-import { useState } from 'react'
-import { RadioGroup } from '..'
+import { Template } from './Template.stories'
 
-export const Direction: StoryFn = () => {
-  const [value, onChange] = useState('label-1')
+export const Direction = Template.bind({})
 
-  return (
-    <RadioGroup
-      legend="Legend label"
-      name="direction"
-      value={value}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-        onChange(e.currentTarget.value)
-      }
-      direction="row"
-    >
-      <RadioGroup.Radio name="label-1" value="label-1" label="Label 1" />
-      <RadioGroup.Radio name="label-2" value="label-2" label="Label 2" />
-    </RadioGroup>
-  )
+Direction.args = {
+  direction: 'row',
 }
 
 Direction.parameters = {

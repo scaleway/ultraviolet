@@ -3,10 +3,16 @@ import type { ComponentProps } from 'react'
 import { SENTIMENTS } from '../../../theme'
 import { Text } from '../index'
 
-export const Sentiments: StoryFn<ComponentProps<typeof Text>> = () => (
+export const Sentiments: StoryFn<ComponentProps<typeof Text>> = args => (
   <div>
     {SENTIMENTS.map(sentiment => (
-      <Text key={sentiment} as="div" variant="body" sentiment={sentiment}>
+      <Text
+        {...args}
+        key={sentiment}
+        as="div"
+        variant="body"
+        sentiment={sentiment}
+      >
         This text uses {sentiment} sentiment.
       </Text>
     ))}

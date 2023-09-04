@@ -2,12 +2,12 @@ import type { StoryFn } from '@storybook/react'
 import { Button } from '..'
 import { Stack } from '../..'
 
-export const IconPosition: StoryFn<typeof Button> = () => (
+export const IconPosition: StoryFn<typeof Button> = args => (
   <Stack alignItems="center" gap={2} direction="row">
-    <Button icon="pencil" onClick={() => {}} iconPosition="left">
+    <Button icon="pencil" onClick={() => {}} iconPosition="left" {...args}>
       Left
     </Button>
-    <Button icon="pencil" onClick={() => {}} iconPosition="right">
+    <Button icon="pencil" onClick={() => {}} iconPosition="right" {...args}>
       Right
     </Button>
   </Stack>

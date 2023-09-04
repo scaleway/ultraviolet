@@ -1,7 +1,10 @@
-import type { StoryFn } from '@storybook/react'
-import { Loader } from '../index'
+import { Template } from './Template'
 
-export const Active: StoryFn = () => <Loader active />
+export const Active = Template.bind({})
+
+Active.args = {
+  active: true,
+}
 
 Active.parameters = {
   docs: {

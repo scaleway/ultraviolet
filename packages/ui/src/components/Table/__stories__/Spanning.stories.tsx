@@ -15,8 +15,9 @@ const StyledStoryByCell = styled(Table.Cell)`
   background: ${({ theme }) => theme.colors.info.background};
 `
 
-export const Spanning: StoryFn = () => (
+export const Spanning: StoryFn = args => (
   <Table
+    {...args}
     columns={[
       ...columns,
       {

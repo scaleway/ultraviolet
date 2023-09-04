@@ -5,7 +5,7 @@ import { DateInput } from '..'
 import type { SelectOption } from '../../SelectInput'
 import { SelectInput } from '../../SelectInput'
 
-export const I18n: StoryFn<ComponentProps<typeof DateInput>> = () => {
+export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
   const { locales, currentLocale, switchLocale, dateFnsLocale } = useI18n()
 
   if (!dateFnsLocale) {
@@ -32,7 +32,7 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = () => {
           </SelectInput.Option>
         ))}
       </SelectInput>
-      <DateInput onChange={() => {}} label={currentLocale} />
+      <DateInput {...args} onChange={() => {}} label={currentLocale} />
     </div>
   )
 }
