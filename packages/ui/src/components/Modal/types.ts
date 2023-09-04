@@ -20,6 +20,10 @@ export type ModalState = {
   toggle: () => void
   visible: boolean
   modalId: string
+  /**
+   * @deprecated use onClose
+   */
+  hide: () => void
 }
 
 export type DisclosureProps = {
