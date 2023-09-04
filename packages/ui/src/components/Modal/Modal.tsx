@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 import type React from 'react'
-import { useCallback, useId, useState } from 'react'
+import { useCallback, useEffect, useId, useState } from 'react'
 import { Button } from '../Button'
 import { Dialog } from './Dialog'
 import { Disclosure } from './Disclosure'
@@ -90,6 +90,10 @@ export const Modal = ({
 
   const finalId = id ?? controlId
   const finalSize = size ?? width
+
+  useEffect(() => {
+    setVisible(opened)
+  }, [opened])
 
   return (
     <>
