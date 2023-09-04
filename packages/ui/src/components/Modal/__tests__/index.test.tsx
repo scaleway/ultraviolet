@@ -1,5 +1,12 @@
 import { css } from '@emotion/react'
-import { afterAll, beforeEach, describe, expect, jest, test } from '@jest/globals'
+import {
+  afterAll,
+  beforeEach,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Modal } from '..'
@@ -215,6 +222,27 @@ describe('Modal', () => {
       </Modal>,
     )
     const modalButton = screen.getByRole('button')
+    await userEvent.click(modalButton)
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
+
+  test(`disclosure function render onClick props is call with hide`, async () => {
+    renderWithTheme(
+      <Modal ariaLabel="modal-test" id="modal-test" opened>
+        {({ hide }) => (
+          <button
+            type="button"
+            onClick={() => {
+              mockOnClick()
+              hide()
+            }}
+          >
+            Close
+          </button>
+        )}
+      </Modal>,
+    )
+    const modalButton = screen.getByRole('button', { name: 'Close' })
     await userEvent.click(modalButton)
     expect(mockOnClick).toBeCalledTimes(1)
   })
