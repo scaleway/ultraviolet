@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.5.0
+
+### Minor Changes
+
+- [#2836](https://github.com/scaleway/ultraviolet/pull/2836) [`0cd0ed2d`](https://github.com/scaleway/ultraviolet/commit/0cd0ed2d299c9153792747e1c76e062c3e968d0a) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Add `CheckboxGroupField` component
+
+- [#2850](https://github.com/scaleway/ultraviolet/pull/2850) [`f4b56dfa`](https://github.com/scaleway/ultraviolet/commit/f4b56dfa5ed79c17e217a97acdbddede77e358ae) Thanks [@matthprost](https://github.com/matthprost)! - Add `ToggleGroupField` component
+
+### Patch Changes
+
+- Updated dependencies [[`0cd0ed2d`](https://github.com/scaleway/ultraviolet/commit/0cd0ed2d299c9153792747e1c76e062c3e968d0a), [`e74d99fb`](https://github.com/scaleway/ultraviolet/commit/e74d99fbf715fc89c5aef8f7c2269355ebd5c15d), [`f4b56dfa`](https://github.com/scaleway/ultraviolet/commit/f4b56dfa5ed79c17e217a97acdbddede77e358ae)]:
+  - @ultraviolet/ui@1.11.0
+
 ## 1.4.2
 
 ### Patch Changes
