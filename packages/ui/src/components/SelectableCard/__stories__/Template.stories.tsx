@@ -7,4 +7,5 @@ export const Template: StoryFn<typeof SelectableCard> = ({ ...props }) => (
 
 Template.args = {
   label: 'Selectable Radio',
+  children: 'test',
 }

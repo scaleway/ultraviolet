@@ -1,6 +1,12 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ChangeEvent, ChangeEventHandler, ReactNode, Ref } from 'react'
+import type {
+  ChangeEvent,
+  ChangeEventHandler,
+  InputHTMLAttributes,
+  ReactNode,
+  Ref,
+} from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -153,7 +159,7 @@ type ToggleProps = {
   className?: string
   required?: boolean
   'data-testid'?: string
-}
+} & Pick<InputHTMLAttributes<HTMLInputElement>, 'value'>
 
 export const Toggle = forwardRef(
   (
@@ -171,6 +177,7 @@ export const Toggle = forwardRef(
       required,
       className,
       'data-testid': dataTestId,
+      value,
     }: ToggleProps,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -226,6 +233,7 @@ export const Toggle = forwardRef(
               onChange={onLocalChange}
               type="checkbox"
               ref={ref}
+              value={value}
             />
           </StyledToggle>
         </StyledLabel>
