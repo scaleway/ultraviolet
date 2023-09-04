@@ -118,7 +118,7 @@ export const ToggleGroup = ({
                 <StyledRequiredIcon name="asterisk" color="danger" size={8} />
               ) : null}
             </Text>
-            <Stack gap={direction === 'column' ? 1 : 2} direction={direction}>
+            <Stack gap={2} direction={direction}>
               {children}
             </Stack>
           </Stack>
