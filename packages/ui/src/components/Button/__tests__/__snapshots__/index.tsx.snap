@@ -263,8 +263,12 @@ exports[`Button render small 1`] = `
 
 exports[`Button render with a tooltip 1`] = `
 <DocumentFragment>
-  .cache-yb56yg-StyledChildrenContainer {
+  .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
 }
 
 .cache-729c39-StyledFilledButton {
@@ -323,7 +327,8 @@ exports[`Button render with a tooltip 1`] = `
 
 <div
     aria-describedby=":r1l:"
-    class="cache-yb56yg-StyledChildrenContainer efkq4700"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    data-container-full-width="false"
     tabindex="0"
   >
     <button
