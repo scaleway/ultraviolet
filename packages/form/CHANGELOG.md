@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.4.2
+
+### Patch Changes
+
+- [#2624](https://github.com/scaleway/ultraviolet/pull/2624) [`42821443`](https://github.com/scaleway/ultraviolet/commit/428214438c44a966eb21fbe819e75dd48624e390) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.14`.
+  Updated dependency `@types/react-dom` to `18.2.6`.
+
+- [#2859](https://github.com/scaleway/ultraviolet/pull/2859) [`c13f5e42`](https://github.com/scaleway/ultraviolet/commit/c13f5e42154f09581e34abe6055547a5b0677ef2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/final-form-focus` to `1.1.4`.
+
+- Updated dependencies [[`42821443`](https://github.com/scaleway/ultraviolet/commit/428214438c44a966eb21fbe819e75dd48624e390), [`74eee8fe`](https://github.com/scaleway/ultraviolet/commit/74eee8fed20baf1361cff2c0b0a4f2d8992ea451), [`c6a0cdfd`](https://github.com/scaleway/ultraviolet/commit/c6a0cdfd82d3f0a88cda4f66700ef841162352f5)]:
+  - @ultraviolet/ui@1.10.1
+
 ## 1.4.1
 
 ### Patch Changes

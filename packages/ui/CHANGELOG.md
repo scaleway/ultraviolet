@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.10.1
+
+### Patch Changes
+
+- [#2624](https://github.com/scaleway/ultraviolet/pull/2624) [`42821443`](https://github.com/scaleway/ultraviolet/commit/428214438c44a966eb21fbe819e75dd48624e390) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.14`.
+  Updated dependency `@types/react-dom` to `18.2.6`.
+
+- [#2869](https://github.com/scaleway/ultraviolet/pull/2869) [`74eee8fe`](https://github.com/scaleway/ultraviolet/commit/74eee8fed20baf1361cff2c0b0a4f2d8992ea451) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix: reintroduce hide function on modal children
+
+- [#2852](https://github.com/scaleway/ultraviolet/pull/2852) [`c6a0cdfd`](https://github.com/scaleway/ultraviolet/commit/c6a0cdfd82d3f0a88cda4f66700ef841162352f5) Thanks [@matthprost](https://github.com/matthprost)! - - Fixed tooltip with too long text inside, the text now break if longer than the width of the tooltip.
+  - Fixed Button component with `fullWidth` and `tooltip` props not working together and not applying the correct width.
+
 ## 1.10.0
 
 ### Minor Changes
