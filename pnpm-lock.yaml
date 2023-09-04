@@ -267,8 +267,8 @@ importers:
         specifier: 3.28.1
         version: 3.28.1
       rollup-plugin-dts:
-        specifier: 6.0.0
-        version: 6.0.0(rollup@3.28.1)(typescript@5.1.6)
+        specifier: 6.0.1
+        version: 6.0.1(rollup@3.28.1)(typescript@5.1.6)
       rollup-plugin-postcss:
         specifier: 4.0.2
         version: 4.0.2(postcss@8.4.29)(ts-node@10.9.1)
@@ -14085,11 +14085,11 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup-plugin-dts@6.0.0(rollup@3.28.1)(typescript@5.1.6):
-    resolution: {integrity: sha512-A996xSZDAqnx/KfFttzC8mDEuyMjsRpiLCrlGc8effhK8KhE3AG0g1woQiITgFc5HSE8HWU7ccR9CiQ3vXgUlQ==}
-    engines: {node: '>=v18.17.1'}
+  /rollup-plugin-dts@6.0.1(rollup@3.28.1)(typescript@5.1.6):
+    resolution: {integrity: sha512-XJbCldVrp4TLc2Hg4DfrRiJgzJ73uhZB0sPSDizgdlrhSJ1bsIkkRMkwRKNQYgkbfMz4CHLdbnFKVivHE0vsPA==}
+    engines: {node: '>=16'}
     peerDependencies:
-      rollup: ^3.25.0
+      rollup: ^3.25
       typescript: ^4.5 || ^5.0
     dependencies:
       magic-string: 0.30.3
