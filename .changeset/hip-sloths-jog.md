@@ -9,4 +9,4 @@
 
 ---
 
-- New ProductIcon `sns`
+- New ProductIcon `sns`, `video` and `rocket`
