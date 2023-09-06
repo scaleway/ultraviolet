@@ -1,12 +1,9 @@
-import { isValidElement, cloneElement, ReactNode } from 'react'
+import { cloneElement, isValidElement, ReactNode } from 'react'
 import {
   DocsContainer as BaseContainer,
   DocsContainerProps as BaseContainerProps,
 } from '@storybook/blocks'
-import { useDarkMode } from 'storybook-dark-mode'
-import { light, dark } from '../storybookThemes'
-import lightTheme, { darkTheme } from '../../packages/ui/src/theme'
-import { ThemeProvider } from '@emotion/react'
+import { light } from '../storybookThemes'
 
 type ExtraProps = {
   /**
@@ -35,28 +32,19 @@ type DocsContainerProps = BaseContainerProps & {
   context: { attachedCSFFile: { meta: { parameters?: ExtraProps } } }
 } & { children: ReactNode }
 
-const DocsContainer = ({ children, context }: DocsContainerProps) => {
-  const isDarkTheme = useDarkMode()
-
-  return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <BaseContainer theme={isDarkTheme ? dark : light} context={context}>
-        {isValidElement<ExtraProps>(children)
-          ? cloneElement(children, {
-              deprecated: context.attachedCSFFile.meta.parameters?.deprecated,
-              deprecatedReason:
-                context.attachedCSFFile.meta.parameters?.deprecatedReason,
-              migrationLink:
-                context.attachedCSFFile.meta.parameters?.migrationLink,
-              hideArgsTable:
-                context.attachedCSFFile.meta.parameters?.hideArgsTable,
-              experimental:
-                context.attachedCSFFile.meta.parameters?.experimental,
-            })
-          : children}
-      </BaseContainer>
-    </ThemeProvider>
-  )
-}
+const DocsContainer = ({ children, context }: DocsContainerProps) => (
+  <BaseContainer theme={light} context={context}>
+    {isValidElement<ExtraProps>(children)
+      ? cloneElement(children, {
+          deprecated: context.attachedCSFFile.meta.parameters?.deprecated,
+          deprecatedReason:
+            context.attachedCSFFile.meta.parameters?.deprecatedReason,
+          migrationLink: context.attachedCSFFile.meta.parameters?.migrationLink,
+          hideArgsTable: context.attachedCSFFile.meta.parameters?.hideArgsTable,
+          experimental: context.attachedCSFFile.meta.parameters?.experimental,
+        })
+      : children}
+  </BaseContainer>
+)
 
 export default DocsContainer

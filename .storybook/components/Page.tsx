@@ -1,16 +1,18 @@
 import {
-  Title,
-  Subtitle,
+  ArgsTable,
   Description,
   Primary,
-  ArgsTable,
-  Stories,
   PRIMARY_STORY,
+  Stories,
+  Subtitle,
+  Title,
 } from '@storybook/blocks'
-import { Badge, Button, Text, Stack, Link } from '../../packages/ui/src'
+import { Badge, Button, Link, Stack, Text } from '@ultraviolet/ui'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 import { useMemo } from 'react'
+import lightTheme from '../../packages/ui/src/theme'
+import { ThemeProvider } from '@emotion/react'
 
 const StyledHeaderContainer = styled.div`
   display: flex;
@@ -57,59 +59,61 @@ const Page = ({
 
   return (
     <>
-      <StyledHeaderContainer>
-        <StyledTitle data-state={state}>
-          <Title />
-        </StyledTitle>
-        {deprecated ? (
-          <Badge sentiment="danger" size="large" icon="alert">
-            Deprecated
-          </Badge>
-        ) : null}
-        {experimental ? (
-          <Badge sentiment="warning" size="large">
-            <Stack direction="row" alignItems="center" gap={1}>
-              <svg viewBox="0 0 100 100" role="img" width="18px">
-                <path
-                  d="M90.72 82.34c4.4 7 1.29 12.66-7 12.66H16.25C8 95 4.88 89.31 9.28 82.34l29.47-46.46V12.5H35A3.75 3.75 0 0135 5h30a3.75 3.75 0 010 7.5h-3.75v23.38zM45.08 39.86L29.14 65h41.72L54.92 39.86l-1.17-1.81V12.5h-7.5v25.55z"
-                  fill="currentColor"
-                />
-              </svg>{' '}
-              Experimental
-            </Stack>
-          </Badge>
-        ) : null}
-      </StyledHeaderContainer>
-      {deprecated ? (
-        <FlexDiv>
-          <Text as="h3" variant="bodyStronger" color="danger">
-            {deprecatedReason
-              ? deprecatedReason
-              : 'This component is deprecated please do not use it any more.'}
-          </Text>
-          {migrationLink ? (
-            <p>
-              <Button onClick={linkTo(migrationLink)} variant="ghost">
-                How to migrate?
-              </Button>
-            </p>
+      <ThemeProvider theme={lightTheme}>
+        <StyledHeaderContainer>
+          <StyledTitle data-state={state}>
+            <Title />
+          </StyledTitle>
+          {deprecated ? (
+            <Badge sentiment="danger" size="large" icon="alert">
+              Deprecated
+            </Badge>
           ) : null}
-        </FlexDiv>
-      ) : (
-        <Subtitle />
-      )}
-      {experimental ? (
-        <Text as="h3" variant="bodyStronger" color="warning">
-          This component is at an unstable stage and is subject to change in
-          future releases.&nbsp;
-          <Link
-            href="/?path=/docs/state-components-state--page"
-            iconPosition="right"
-          >
-            Learn more about component states
-          </Link>
-        </Text>
-      ) : null}
+          {experimental ? (
+            <Badge sentiment="warning" size="large">
+              <Stack direction="row" alignItems="center" gap={1}>
+                <svg viewBox="0 0 100 100" role="img" width="18px">
+                  <path
+                    d="M90.72 82.34c4.4 7 1.29 12.66-7 12.66H16.25C8 95 4.88 89.31 9.28 82.34l29.47-46.46V12.5H35A3.75 3.75 0 0135 5h30a3.75 3.75 0 010 7.5h-3.75v23.38zM45.08 39.86L29.14 65h41.72L54.92 39.86l-1.17-1.81V12.5h-7.5v25.55z"
+                    fill="currentColor"
+                  />
+                </svg>{' '}
+                Experimental
+              </Stack>
+            </Badge>
+          ) : null}
+        </StyledHeaderContainer>
+        {deprecated ? (
+          <FlexDiv>
+            <Text as="h3" variant="bodyStronger" color="danger">
+              {deprecatedReason
+                ? deprecatedReason
+                : 'This component is deprecated please do not use it any more.'}
+            </Text>
+            {migrationLink ? (
+              <p>
+                <Button onClick={linkTo(migrationLink)} variant="ghost">
+                  How to migrate?
+                </Button>
+              </p>
+            ) : null}
+          </FlexDiv>
+        ) : (
+          <Subtitle />
+        )}
+        {experimental ? (
+          <Text as="h3" variant="bodyStronger" color="warning">
+            This component is at an unstable stage and is subject to change in
+            future releases.&nbsp;
+            <Link
+              href="/?path=/docs/state-components-state--page"
+              iconPosition="right"
+            >
+              Learn more about component states
+            </Link>
+          </Text>
+        ) : null}
+      </ThemeProvider>
       <Description />
       <Primary />
       {!hideArgsTable ? <ArgsTable story={PRIMARY_STORY} /> : null}

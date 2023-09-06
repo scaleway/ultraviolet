@@ -1,11 +1,10 @@
 import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
-import { css, ThemeProvider, Global, Theme } from '@emotion/react'
+import { css, Global, Theme, ThemeProvider } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
-import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
 import seedrandom from 'seedrandom'
-import { light, dark } from './storybookThemes'
+import { dark, light } from './storybookThemes'
 import lightTheme, { darkTheme } from '../packages/ui/src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
@@ -28,10 +27,9 @@ const parameters = {
       disable: true,
     },
   },
-  viewMode: 'docs',
-  previewTabs: {
-    canvas: { hidden: false },
-  },
+
+  previewTabs: { 'storybook/docs/panel': { index: -1 } },
+
   viewport: {
     viewports: {},
   },
@@ -64,50 +62,71 @@ const parameters = {
   },
 }
 
-export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
-  css`
-    ${normalize()}
-    body {
-      color: ${theme.colors.neutral.text};
-    }
+export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) => css`
+  ${normalize()}
+  body {
+    color: ${theme.colors.neutral.text};
+  }
 
-    :root {
-      color-scheme: ${mode};
-    }
+  :root {
+    color-scheme: ${mode};
+  }
 
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapRegularWoff2}) format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapMediumWoff2}) format('woff2');
-      font-weight: 500;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapBoldWoff2}) format('woff2');
-      font-weight: 600;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'JetBrains';
-      font-style: normal;
-      src: url(${JetBrains}) format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
-  `
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapRegularWoff2}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapMediumWoff2}) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapBoldWoff2}) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'JetBrains';
+    font-style: normal;
+    src: url(${JetBrains}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+`
 
-const decorators: Preview['decorators'] = [
-  StoryComponent => {
-    const mode = useDarkMode() ? 'dark' : 'light'
+export const globalTypes: Preview['globalTypes'] = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'light',
+    toolbar: {
+      // The icon for the toolbar item
+      icon: 'circlehollow',
+      // Array of options
+      items: [
+        { value: 'light', icon: 'circlehollow', title: 'light' },
+        { value: 'dark', icon: 'circle', title: 'dark' },
+      ],
+      // Property that specifies if the name of the item will be displayed
+      showName: true,
+    },
+  },
+}
+
+export const decorators: Preview['decorators'] = [
+  (StoryComponent, context) => {
+    const theme = context.parameters['theme'] || context.globals['theme']
+    const storyTheme = theme === 'dark' ? darkTheme : lightTheme
+
+    console.log(theme)
 
     return (
       <I18n
@@ -122,8 +141,8 @@ const decorators: Preview['decorators'] = [
         localeItemStorage="localeI18n"
         supportedLocales={['en', 'fr', 'es']}
       >
-        <ThemeProvider theme={mode === 'dark' ? darkTheme : lightTheme}>
-          <Global styles={[globalStyles(mode)]} />
+        <ThemeProvider theme={storyTheme}>
+          <Global styles={[globalStyles(theme)]} />
           <StoryComponent />
         </ThemeProvider>
       </I18n>
@@ -134,4 +153,5 @@ const decorators: Preview['decorators'] = [
 export default {
   parameters,
   decorators,
+  globalTypes,
 } satisfies Preview

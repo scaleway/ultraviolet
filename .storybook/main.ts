@@ -10,7 +10,6 @@ export default {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    'storybook-dark-mode',
   ],
   framework: {
     name: '@storybook/react-webpack5',
