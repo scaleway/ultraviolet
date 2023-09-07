@@ -12,11 +12,16 @@
   "rangeStrategy": "pin",
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ],
   "packageRules": [
-    {
-      "paths": ["examples/**"],
-      "enabled": true
-    },
     {
       "matchDepTypes": ["engines", "peerDependencies"],
       "versionStrategy": "widen"
