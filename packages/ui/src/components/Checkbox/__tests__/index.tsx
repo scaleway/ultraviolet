@@ -39,6 +39,13 @@ describe('Checkbox', () => {
       </Checkbox>,
     ))
 
+  test('renders correctly with tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Checkbox onChange={() => {}} tooltip="test">
+        Checkbox Label
+      </Checkbox>,
+    ))
+
   test('renders correctly checked', () =>
     shouldMatchEmotionSnapshot(
       <Checkbox onChange={() => {}} checked>
