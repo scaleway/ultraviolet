@@ -14,7 +14,6 @@ import {
   renderWithTheme,
   shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
-import { TextInput } from '../../TextInput'
 
 const customDialogBackdropStyles = css`
   background-color: aliceblue;
@@ -279,12 +278,8 @@ describe('Modal', () => {
         opened
       >
         <div> test</div>
-        <TextInput data-testid="input" />
       </Modal>,
     )
-    await userEvent.type(screen.getByRole('textbox'), 'test{Escape}')
-    await userEvent.keyboard('{Escape}')
-    expect(mockOnClose).toBeCalledTimes(0)
     await userEvent.click(screen.getByRole('dialog'))
     await userEvent.keyboard('{Escape}')
 

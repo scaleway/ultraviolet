@@ -1,5 +1,10 @@
 import styled from '@emotion/styled'
-import type { KeyboardEventHandler, MouseEventHandler } from 'react'
+import type {
+  FocusEventHandler,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  ReactEventHandler,
+} from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
@@ -75,6 +80,7 @@ export const Dialog = ({
   backdropCss,
 }: DialogProps) => {
   const containerRef = useRef(document.createElement('div'))
+  const dialogRef = useRef(document.createElement('dialog'))
   const onCloseRef = useRef(onClose)
 
   // Portal to put the modal in
@@ -82,6 +88,7 @@ export const Dialog = ({
     const element = containerRef.current
     if (open) {
       document.body.appendChild(element)
+      dialogRef.current.focus()
     }
 
     return () => {
@@ -100,15 +107,25 @@ export const Dialog = ({
   useEffect(() => {
     const handleEscPress = (event: KeyboardEvent) => {
       if (event.key === 'Escape' && hideOnEsc) {
+        event.preventDefault()
+        event.stopPropagation()
         onCloseRef.current()
       }
     }
     if (open) {
-      document.addEventListener('keyup', handleEscPress)
+      document.body.addEventListener('keyup', handleEscPress, { capture: true })
+      document.body.addEventListener('keydown', handleEscPress, {
+        capture: true,
+      })
     }
 
     return () => {
-      document.removeEventListener('keyup', handleEscPress)
+      document.body.removeEventListener('keyup', handleEscPress, {
+        capture: true,
+      })
+      document.body.removeEventListener('keydown', handleEscPress, {
+        capture: true,
+      })
     }
   }, [open, onCloseRef, hideOnEsc])
 
@@ -121,6 +138,11 @@ export const Dialog = ({
     }
   }, [preventBodyScroll, open])
 
+  // Stop focus to prevent unexpected body loose focus
+  const stopFocus: FocusEventHandler = useCallback(event => {
+    event.stopPropagation()
+  }, [])
+
   // Stop click to prevent unexpected dialog close
   const stopClick: MouseEventHandler = useCallback(event => {
     event.stopPropagation()
@@ -131,6 +153,49 @@ export const Dialog = ({
     event.stopPropagation()
   }, [])
 
+  // Enable focus trap inside the modal
+  const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
+    event.stopPropagation()
+    if (event.key === 'Escape') {
+      event.preventDefault()
+
+      return
+    }
+    const isTabPressed = event.key === 'Tab'
+
+    if (!isTabPressed) {
+      return
+    }
+
+    const focusableEls = dialogRef.current.querySelectorAll(
+      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+    )
+
+    // Handle case when no interactive element are within the modal (including close icon)
+    if (focusableEls.length === 0) {
+      event.preventDefault()
+    }
+
+    const firstFocusableEl = focusableEls[0] as HTMLElement
+    const lastFocusableEl = focusableEls[focusableEls.length - 1] as HTMLElement
+
+    if (event.shiftKey) {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus()
+        event.preventDefault()
+      }
+    } else if (document.activeElement === lastFocusableEl) {
+      firstFocusableEl.focus()
+      event.preventDefault()
+    }
+  }, [])
+
+  // Prevent default behaviour on Escape
+  const stopCancel: ReactEventHandler = event => {
+    event.preventDefault()
+    event.stopPropagation()
+  }
+
   return createPortal(
     <StyledBackdrop
       data-open={open}
@@ -138,10 +203,12 @@ export const Dialog = ({
       className={backdropClassName}
       css={backdropCss}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
+      onFocus={stopFocus}
     >
       <StyledDialog
         css={dialogCss}
         onKeyUp={stopKeyUp}
+        onKeyDown={handleFocusTrap}
         className={className}
         id={id}
         data-testid={dataTestId}
@@ -150,7 +217,10 @@ export const Dialog = ({
         data-size={size}
         open={open}
         onClick={stopClick}
+        onCancel={stopCancel}
+        onClose={stopCancel}
         aria-modal
+        ref={dialogRef}
       >
         {open ? children : null}
       </StyledDialog>
