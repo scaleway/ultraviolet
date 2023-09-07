@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.11.1
+
+### Patch Changes
+
+- [#2889](https://github.com/scaleway/ultraviolet/pull/2889) [`d6bb06a2`](https://github.com/scaleway/ultraviolet/commit/d6bb06a275b8ca753b8d0c2c20ed0cc1a075100f) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(modal): handle events and focus
+
+- [#2885](https://github.com/scaleway/ultraviolet/pull/2885) [`ed31d075`](https://github.com/scaleway/ultraviolet/commit/ed31d075759ea99a53193cf21cadab60b03b634d) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - feat: add more accessibility to our modal
+
+- [#2881](https://github.com/scaleway/ultraviolet/pull/2881) [`84c45a68`](https://github.com/scaleway/ultraviolet/commit/84c45a6827863c5144233d92b3d9a4f83d26a5ac) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.15`.
+  Updated dependency `@babel/runtime` to `7.22.15`.
+  Updated dependency `@babel/eslint-parser` to `7.22.15`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.22.15`.
+  Updated dependency `@babel/preset-env` to `7.22.15`.
+  Updated dependency `@babel/preset-react` to `7.22.15`.
+  Updated dependency `@babel/preset-typescript` to `7.22.15`.
+- Updated dependencies [[`ac9aa7a7`](https://github.com/scaleway/ultraviolet/commit/ac9aa7a7b96d51bce1e3f721d43ce3df3cdfab17), [`84c45a68`](https://github.com/scaleway/ultraviolet/commit/84c45a6827863c5144233d92b3d9a4f83d26a5ac)]:
+  - @ultraviolet/icons@2.0.0
+
 ## 1.11.0
 
 ### Minor Changes
