@@ -80,7 +80,7 @@ export const Dialog = ({
   backdropCss,
 }: DialogProps) => {
   const containerRef = useRef(document.createElement('div'))
-  const dialogRef = useRef(document.createElement('dialog'))
+  const dialogRef = useRef<HTMLDialogElement>(null)
   const onCloseRef = useRef(onClose)
 
   // Portal to put the modal in
@@ -88,7 +88,7 @@ export const Dialog = ({
     const element = containerRef.current
     if (open) {
       document.body.appendChild(element)
-      dialogRef.current.focus()
+      dialogRef.current?.focus()
     }
 
     return () => {
@@ -167,9 +167,10 @@ export const Dialog = ({
       return
     }
 
-    const focusableEls = dialogRef.current.querySelectorAll(
-      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
-    )
+    const focusableEls =
+      dialogRef.current?.querySelectorAll(
+        'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+      ) ?? []
 
     // Handle case when no interactive element are within the modal (including close icon)
     if (focusableEls.length === 0) {
