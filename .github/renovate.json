@@ -14,10 +14,6 @@
   "semanticCommitScope": "deps",
   "packageRules": [
     {
-      "paths": ["examples/**"],
-      "enabled": true
-    },
-    {
       "matchDepTypes": ["engines", "peerDependencies"],
       "versionStrategy": "widen"
     },
