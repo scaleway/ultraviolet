@@ -12,6 +12,15 @@
   "rangeStrategy": "pin",
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ],
   "packageRules": [
     {
       "matchDepTypes": ["engines", "peerDependencies"],
