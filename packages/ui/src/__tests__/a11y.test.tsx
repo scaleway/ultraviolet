@@ -130,7 +130,7 @@ describe('A11y', () => {
         for (const componentName of Object.keys(components)) {
           if (componentName !== 'default') {
             const ComponentToRender = components[
-              componentName as keyof typeof components
+              componentName
             ] as () => JSX.Element
             const { container } = renderWithTheme(<ComponentToRender />)
             // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-assignment
