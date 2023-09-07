@@ -26,7 +26,6 @@ type ActionBarProps = {
    */
   rank?: number
   role?: string
-  'aria-modal'?: 'true' | 'false'
   className?: string
   'data-testid'?: string
 }
@@ -35,7 +34,6 @@ export const ActionBar = ({
   children,
   role = 'dialog',
   rank = 0,
-  'aria-modal': ariaModal = 'true',
   className,
   'data-testid': dataTestId,
 }: ActionBarProps) =>
@@ -43,7 +41,6 @@ export const ActionBar = ({
     <StyledDiv
       rank={rank}
       role={role}
-      aria-modal={ariaModal}
       className={className}
       data-testid={dataTestId}
     >

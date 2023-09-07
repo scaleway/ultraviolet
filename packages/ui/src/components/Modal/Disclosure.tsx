@@ -36,6 +36,8 @@ export const Disclosure = ({
     return cloneElement(disclosure, {
       ...disclosure.props,
       ref: disclosureRef,
+      'aria-controls': id,
+      'aria-haspopup': 'dialog',
     } as unknown as PropsWithRef<typeof disclosure>)
   }
 

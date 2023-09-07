@@ -179,6 +179,7 @@ exports[`Modal renders opened custom size 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
@@ -391,6 +392,7 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
@@ -603,6 +605,7 @@ exports[`Modal renders opened custom width 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="medium"
@@ -815,6 +818,7 @@ exports[`Modal renders with custom classNames 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="1vjuh1t-customDialogStyles cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
@@ -1029,6 +1033,7 @@ exports[`Modal renders with customStyle 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-550m4a-StyledDialog-customDialogStyles e1cqen9h0"
         data-placement="center"
         data-size="small"
@@ -1065,6 +1070,8 @@ exports[`Modal renders with customStyle 1`] = `
 exports[`Modal renders with default Props 1`] = `
 <DocumentFragment>
   <button
+    aria-controls=":r0:"
+    aria-haspopup="dialog"
     type="button"
   >
     Test
@@ -1253,6 +1260,7 @@ exports[`Modal renders with default Props and function children opened 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
@@ -1289,6 +1297,8 @@ exports[`Modal renders with default Props and function children opened 1`] = `
 exports[`Modal renders with disclosure 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="modal-test"
+    aria-haspopup="dialog"
     type="button"
   >
     Test
@@ -1491,6 +1501,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
     >
       <dialog
         aria-label="modal-test"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
@@ -1705,6 +1716,7 @@ exports[`Modal renders with opened={true} 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"
@@ -1854,6 +1866,7 @@ exports[`Modal renders with opened={true} and no close icon 1`] = `
     >
       <dialog
         aria-label="modal"
+        aria-modal="true"
         class="cache-ycaaob-StyledDialog e1cqen9h0"
         data-placement="center"
         data-size="small"

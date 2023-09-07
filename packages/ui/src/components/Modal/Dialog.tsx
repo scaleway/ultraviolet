@@ -150,6 +150,7 @@ export const Dialog = ({
         data-size={size}
         open={open}
         onClick={stopClick}
+        aria-modal
       >
         {open ? children : null}
       </StyledDialog>
