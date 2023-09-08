@@ -88,7 +88,6 @@ export const Dialog = ({
     const element = containerRef.current
     if (open) {
       document.body.appendChild(element)
-      dialogRef.current?.focus()
     }
 
     return () => {
@@ -113,6 +112,7 @@ export const Dialog = ({
       }
     }
     if (open) {
+      dialogRef.current?.focus()
       document.body.addEventListener('keyup', handleEscPress, { capture: true })
       document.body.addEventListener('keydown', handleEscPress, {
         capture: true,
@@ -181,11 +181,17 @@ export const Dialog = ({
     const lastFocusableEl = focusableEls[focusableEls.length - 1] as HTMLElement
 
     if (event.shiftKey) {
-      if (document.activeElement === firstFocusableEl) {
+      if (
+        document.activeElement === firstFocusableEl ||
+        document.activeElement === dialogRef.current
+      ) {
         lastFocusableEl.focus()
         event.preventDefault()
       }
-    } else if (document.activeElement === lastFocusableEl) {
+    } else if (
+      document.activeElement === lastFocusableEl ||
+      document.activeElement === dialogRef.current
+    ) {
       firstFocusableEl.focus()
       event.preventDefault()
     }
@@ -222,6 +228,7 @@ export const Dialog = ({
         onClose={stopCancel}
         aria-modal
         ref={dialogRef}
+        tabIndex={0}
       >
         {open ? children : null}
       </StyledDialog>
