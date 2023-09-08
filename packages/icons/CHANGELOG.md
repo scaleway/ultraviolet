@@ -1,5 +1,12 @@
 # @ultraviolet/icons
 
+## 2.0.1
+
+### Patch Changes
+
+- [#2877](https://github.com/scaleway/ultraviolet/pull/2877) [`6e017a8c`](https://github.com/scaleway/ultraviolet/commit/6e017a8c10fc4081ed9d71086033b1f263001ee2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.21`.
+  Updated dependency `@types/react-dom` to `18.2.7`.
+
 ## 2.0.0
 
 ### Major Changes

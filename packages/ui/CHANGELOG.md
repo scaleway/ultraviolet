@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.11.2
+
+### Patch Changes
+
+- [#2877](https://github.com/scaleway/ultraviolet/pull/2877) [`6e017a8c`](https://github.com/scaleway/ultraviolet/commit/6e017a8c10fc4081ed9d71086033b1f263001ee2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.21`.
+  Updated dependency `@types/react-dom` to `18.2.7`.
+
+- [#2894](https://github.com/scaleway/ultraviolet/pull/2894) [`4531dd6c`](https://github.com/scaleway/ultraviolet/commit/4531dd6c40a09667567842abd2fe397a84173cc7) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix(modal): focus cant be restored on shire and cause errors
+
+- Updated dependencies [[`6e017a8c`](https://github.com/scaleway/ultraviolet/commit/6e017a8c10fc4081ed9d71086033b1f263001ee2)]:
+  - @ultraviolet/icons@2.0.1
+
 ## 1.11.1
 
 ### Patch Changes
