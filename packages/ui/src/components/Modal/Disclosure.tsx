@@ -21,12 +21,6 @@ export const Disclosure = ({
     }
   }, [handleOpen, disclosureRef])
 
-  useEffect(() => {
-    if (!visible) {
-      disclosureRef.current?.focus()
-    }
-  }, [visible, disclosureRef])
-
   if (typeof disclosure === 'function') {
     return disclosure({
       visible,
