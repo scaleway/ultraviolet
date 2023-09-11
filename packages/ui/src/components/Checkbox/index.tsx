@@ -80,7 +80,7 @@ const CheckboxInput = styled('input', {
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.primary.backgroundStrong};
+        stroke: ${({ theme }) => theme.colors.primary.borderStrong};
       }
     }
 
@@ -138,17 +138,17 @@ const CheckboxContainer = styled.div`
       fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.neutral.borderDisabled};
+        stroke: ${({ theme }) => theme.colors.neutral.borderStrongDisabled};
         fill: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
       }
     }
 
     ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.danger.borderDisabled};
+      fill: ${({ theme }) => theme.colors.danger.backgroundStrongDisabled};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.danger.borderDisabled};
-        fill: ${({ theme }) => theme.colors.danger.borderDisabled};
+        stroke: ${({ theme }) => theme.colors.danger.borderStrongDisabled};
+        fill: ${({ theme }) => theme.colors.danger.backgroundStrongDisabled};
       }
     }
     ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
@@ -160,7 +160,7 @@ const CheckboxContainer = styled.div`
       }
     }
     ${CheckboxInput}:checked + ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
 
       ${InnerCheckbox} {
         stroke: ${({ theme }) => theme.colors.primary.borderDisabled};
@@ -168,11 +168,11 @@ const CheckboxContainer = styled.div`
       }
     }
     ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} {
-      fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
 
       ${InnerCheckbox} {
-        stroke: ${({ theme }) => theme.colors.primary.borderDisabled};
-        fill: ${({ theme }) => theme.colors.primary.borderDisabled};
+        stroke: ${({ theme }) => theme.colors.primary.borderStrongDisabled};
+        fill: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
       }
     }
   }
@@ -185,12 +185,12 @@ const CheckboxContainer = styled.div`
   }
 
   ${CheckboxInput}:checked + ${StyledIcon}  ${InnerCheckbox} {
-    fill: ${({ theme }) => theme.colors.primary.border};
-    stroke: ${({ theme }) => theme.colors.primary.border};
+    fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    stroke: ${({ theme }) => theme.colors.primary.borderStrong};
   }
   ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon}  ${InnerCheckbox} {
-    fill: ${({ theme }) => theme.colors.danger.border};
-    stroke: ${({ theme }) => theme.colors.danger.border};
+    fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
+    stroke: ${({ theme }) => theme.colors.danger.borderStrong};
   }
 
   ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} {
@@ -198,8 +198,8 @@ const CheckboxContainer = styled.div`
       fill: ${({ theme }) => theme.colors.neutral.iconStronger};
     }
     ${InnerCheckbox} {
-      fill: ${({ theme }) => theme.colors.primary.border};
-      stroke: ${({ theme }) => theme.colors.primary.border};
+      fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
+      stroke: ${({ theme }) => theme.colors.primary.borderStrong};
     }
   }
 
@@ -209,12 +209,27 @@ const CheckboxContainer = styled.div`
         stroke: ${({ theme }) => theme.colors.primary.borderHover};
         fill: ${({ theme }) => theme.colors.primary.backgroundHover};
       }
+
+      &[aria-checked='true'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderStrongHover};
+        fill: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
+      }
+
+      &[aria-checked='mixed'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.primary.borderStrongHover};
+        fill: ${({ theme }) => theme.colors.primary.backgroundStrongHover};
+      }
     }
 
     ${CheckboxInput}[aria-invalid='true'] {
       &[aria-checked='false'] + ${StyledIcon} ${InnerCheckbox} {
         stroke: ${({ theme }) => theme.colors.danger.borderHover};
         fill: ${({ theme }) => theme.colors.danger.backgroundHover};
+      }
+
+      &[aria-checked='true'] + ${StyledIcon} ${InnerCheckbox} {
+        stroke: ${({ theme }) => theme.colors.danger.borderStrongHover};
+        fill: ${({ theme }) => theme.colors.danger.backgroundStrongHover};
       }
     }
   }
