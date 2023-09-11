@@ -14,6 +14,7 @@ import { Loader } from '../Loader'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
 const ErrorText = styled(Text)`
   padding-top: ${({ theme }) => `${theme.space['0.5']}`};
@@ -49,6 +50,7 @@ const StyledIcon = styled('svg')<{ size: number }>`
   width: ${({ size }) => size}px;
   min-width: ${({ size }) => size}px;
   min-height: ${({ size }) => size}px;
+
   & path {
     fill: ${({ theme }) => theme.colors.neutral.background};
     transform: translate(2px, 2px);
@@ -100,6 +102,7 @@ const CheckboxInput = styled('input', {
     background-color: ${({ theme }) => theme.colors.primary.background};
     fill: ${({ theme }) => theme.colors.danger.background};
     outline: 2px solid ${({ theme }) => theme.colors.primary.backgroundHover};
+
     ${InnerCheckbox} {
       stroke: ${({ theme }) => theme.colors.primary.borderHover};
       fill: ${({ theme }) => theme.colors.primary.backgroundHover};
@@ -110,6 +113,7 @@ const CheckboxInput = styled('input', {
     background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.background};
     outline: 2px solid ${({ theme }) => theme.colors.danger.backgroundHover};
+
     ${InnerCheckbox} {
       stroke: ${({ theme }) => theme.colors.danger.borderHover};
       fill: ${({ theme }) => theme.colors.danger.backgroundHover};
@@ -133,7 +137,9 @@ const CheckboxContainer = styled.div`
     ${StyledLabel} {
       cursor: not-allowed;
     }
+
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
+
     ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.neutral.borderDisabled};
 
@@ -151,6 +157,7 @@ const CheckboxContainer = styled.div`
         fill: ${({ theme }) => theme.colors.danger.backgroundStrongDisabled};
       }
     }
+
     ${CheckboxInput}[aria-invalid="true"] + ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.danger.background};
 
@@ -159,6 +166,7 @@ const CheckboxContainer = styled.div`
         fill: ${({ theme }) => theme.colors.danger.background};
       }
     }
+
     ${CheckboxInput}:checked + ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
 
@@ -167,6 +175,7 @@ const CheckboxContainer = styled.div`
         fill: ${({ theme }) => theme.colors.primary.borderDisabled};
       }
     }
+
     ${CheckboxInput}[aria-checked="mixed"] + ${StyledIcon} {
       fill: ${({ theme }) => theme.colors.primary.backgroundStrongDisabled};
 
@@ -184,11 +193,12 @@ const CheckboxContainer = styled.div`
     transform: translate(2px, 2px);
   }
 
-  ${CheckboxInput}:checked + ${StyledIcon}  ${InnerCheckbox} {
+  ${CheckboxInput}:checked + ${StyledIcon} ${InnerCheckbox} {
     fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
     stroke: ${({ theme }) => theme.colors.primary.borderStrong};
   }
-  ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon}  ${InnerCheckbox} {
+
+  ${CheckboxInput}[aria-invalid="true"]:checked + ${StyledIcon} ${InnerCheckbox} {
     fill: ${({ theme }) => theme.colors.danger.backgroundStrong};
     stroke: ${({ theme }) => theme.colors.danger.borderStrong};
   }
@@ -197,6 +207,7 @@ const CheckboxContainer = styled.div`
     ${CheckMixedMark} {
       fill: ${({ theme }) => theme.colors.neutral.iconStronger};
     }
+
     ${InnerCheckbox} {
       fill: ${({ theme }) => theme.colors.primary.backgroundStrong};
       stroke: ${({ theme }) => theme.colors.primary.borderStrong};
@@ -265,6 +276,7 @@ type CheckboxProps = {
   ['data-visibility']?: string
   required?: boolean
   'data-testid'?: string
+  tooltip?: string
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   'onFocus' | 'onBlur' | 'name' | 'value' | 'autoFocus' | 'id' | 'onChange'
@@ -304,6 +316,7 @@ export const Checkbox = forwardRef(
       'aria-label': ariaLabel,
       required,
       'data-testid': dataTestId,
+      tooltip,
     }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
@@ -333,84 +346,91 @@ export const Checkbox = forwardRef(
     }, [])
 
     return (
-      <CheckboxContainer
-        className={className}
-        aria-disabled={disabled}
-        data-visibility={dataVisibility}
-        data-checked={state}
-        data-error={!!error}
-        data-testid={dataTestId}
-      >
-        {progress ? (
-          <StyledActivityContainer>
-            <Loader active size={size} />
-          </StyledActivityContainer>
-        ) : null}
-        <CheckboxInput
-          id={computedName}
-          type="checkbox"
-          aria-invalid={!!error}
-          aria-describedby={error ? `${computedName}-hint` : undefined}
-          aria-checked={state === 'indeterminate' ? 'mixed' : state}
-          aria-label={ariaLabel}
-          checked={state === 'indeterminate' ? false : state}
-          size={size}
-          onChange={onLocalChange}
-          onKeyDown={onKeyDown}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          disabled={disabled}
-          value={value}
-          name={computedName}
-          autoFocus={autoFocus}
-          ref={ref}
-          required={required}
-        />
+      <Tooltip text={tooltip}>
+        <CheckboxContainer
+          className={className}
+          aria-disabled={disabled}
+          data-visibility={dataVisibility}
+          data-checked={state}
+          data-error={!!error}
+          data-testid={dataTestId}
+        >
+          {progress ? (
+            <StyledActivityContainer>
+              <Loader active size={size} />
+            </StyledActivityContainer>
+          ) : null}
+          <CheckboxInput
+            id={computedName}
+            type="checkbox"
+            aria-invalid={!!error}
+            aria-describedby={error ? `${computedName}-hint` : undefined}
+            aria-checked={state === 'indeterminate' ? 'mixed' : state}
+            aria-label={ariaLabel}
+            checked={state === 'indeterminate' ? false : state}
+            size={size}
+            onChange={onLocalChange}
+            onKeyDown={onKeyDown}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            disabled={disabled}
+            value={value}
+            name={computedName}
+            autoFocus={autoFocus}
+            ref={ref}
+            required={required}
+          />
 
-        {!progress ? (
-          <StyledIcon size={size} viewBox="0 0 24 24">
-            <CheckboxIconContainer>
-              {state !== 'indeterminate' ? (
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  width={14}
-                  height={14}
-                  d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
-                  fill="white"
-                />
-              ) : (
-                <CheckMixedMark x="6" y="11" rx="1" width="12" height="2" />
-              )}
-            </CheckboxIconContainer>
-          </StyledIcon>
-        ) : null}
-
-        <Stack gap={0.25}>
-          <Row templateColumns="11fr 1fr" alignItems="center">
-            {children ? (
-              <StyledLabel htmlFor={computedName}>{children}</StyledLabel>
-            ) : null}
-            {required ? (
-              <sup>
-                <Icon name="asterisk" size={10} color="danger" />
-              </sup>
-            ) : null}
-          </Row>
-
-          {helper ? (
-            <Text variant="bodySmall" as="p" prominence="weak" color="neutral">
-              {helper}
-            </Text>
+          {!progress ? (
+            <StyledIcon size={size} viewBox="0 0 24 24">
+              <CheckboxIconContainer>
+                {state !== 'indeterminate' ? (
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    width={14}
+                    height={14}
+                    d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
+                    fill="white"
+                  />
+                ) : (
+                  <CheckMixedMark x="6" y="11" rx="1" width="12" height="2" />
+                )}
+              </CheckboxIconContainer>
+            </StyledIcon>
           ) : null}
 
-          {error ? (
-            <ErrorText variant="bodySmall" as="p" color="danger">
-              {error}
-            </ErrorText>
-          ) : null}
-        </Stack>
-      </CheckboxContainer>
+          <Stack gap={0.25}>
+            <Row templateColumns="11fr 1fr" alignItems="center">
+              {children ? (
+                <StyledLabel htmlFor={computedName}>{children}</StyledLabel>
+              ) : null}
+              {required ? (
+                <sup>
+                  <Icon name="asterisk" size={10} color="danger" />
+                </sup>
+              ) : null}
+            </Row>
+
+            {helper ? (
+              <Text
+                variant="bodySmall"
+                as="p"
+                prominence="weak"
+                color="neutral"
+              >
+                {helper}
+              </Text>
+            ) : null}
+
+            {error ? (
+              <ErrorText variant="bodySmall" as="p" color="danger">
+                {error}
+              </ErrorText>
+            ) : null}
+          </Stack>
+        </CheckboxContainer>
+      </Tooltip>
     )
   },
 )

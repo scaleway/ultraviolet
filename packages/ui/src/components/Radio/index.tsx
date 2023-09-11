@@ -3,6 +3,7 @@ import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId } from 'react'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
+import { Tooltip } from '../Tooltip'
 
 const SIZE = 24
 
@@ -140,6 +141,7 @@ type RadioProps = {
   helper?: ReactNode
   className?: string
   'data-testid'?: string
+  tooltip?: string
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange'>> &
   Pick<
     InputHTMLAttributes<HTMLInputElement>,
@@ -179,6 +181,7 @@ export const Radio = forwardRef(
       className,
       autoFocus,
       onKeyDown,
+      tooltip,
       'aria-label': ariaLabel,
       'data-testid': dataTestId,
     }: RadioProps,
@@ -188,44 +191,46 @@ export const Radio = forwardRef(
     const computedName = name ?? id
 
     return (
-      <Stack gap={0.5}>
-        <RadioContainer
-          aria-disabled={disabled}
-          className={className}
-          data-checked={checked}
-          data-error={error}
-          data-testid={dataTestId}
-        >
-          <RadioInput
-            type="radio"
-            aria-invalid={!!error}
+      <Tooltip text={tooltip}>
+        <Stack gap={0.5}>
+          <RadioContainer
             aria-disabled={disabled}
-            aria-label={ariaLabel}
-            checked={checked}
-            id={`${computedName}-${value}`}
-            onChange={onChange}
-            onFocus={onFocus}
-            onKeyDown={onKeyDown}
-            onBlur={onBlur}
-            value={value}
-            disabled={disabled}
-            name={computedName}
-            autoFocus={autoFocus}
-            ref={ref}
-          />
-          <Ring viewBox="0 0 24 24">
-            <RadioMarkedIcon />
-          </Ring>
-          {label ? (
-            <label htmlFor={`${computedName}-${value}`}>{label}</label>
+            className={className}
+            data-checked={checked}
+            data-error={error}
+            data-testid={dataTestId}
+          >
+            <RadioInput
+              type="radio"
+              aria-invalid={!!error}
+              aria-disabled={disabled}
+              aria-label={ariaLabel}
+              checked={checked}
+              id={`${computedName}-${value}`}
+              onChange={onChange}
+              onFocus={onFocus}
+              onKeyDown={onKeyDown}
+              onBlur={onBlur}
+              value={value}
+              disabled={disabled}
+              name={computedName}
+              autoFocus={autoFocus}
+              ref={ref}
+            />
+            <Ring viewBox="0 0 24 24">
+              <RadioMarkedIcon />
+            </Ring>
+            {label ? (
+              <label htmlFor={`${computedName}-${value}`}>{label}</label>
+            ) : null}
+          </RadioContainer>
+          {helper ? (
+            <MargedText as="p" variant="bodySmall" prominence="weak">
+              {helper}
+            </MargedText>
           ) : null}
-        </RadioContainer>
-        {helper ? (
-          <MargedText as="p" variant="bodySmall" prominence="weak">
-            {helper}
-          </MargedText>
-        ) : null}
-      </Stack>
+        </Stack>
+      </Tooltip>
     )
   },
 )

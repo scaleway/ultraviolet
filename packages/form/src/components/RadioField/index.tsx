@@ -19,6 +19,7 @@ type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
       | 'value'
       | 'data-testid'
       | 'label'
+      | 'tooltip'
     >
   > & {
     className?: string
@@ -39,6 +40,7 @@ export const RadioField = ({
   required,
   validate,
   value,
+  tooltip,
 }: RadioFieldProps): JSX.Element => {
   const { getError } = useErrors()
 
@@ -81,6 +83,7 @@ export const RadioField = ({
       required={required}
       value={input.value}
       label={label}
+      tooltip={tooltip}
     />
   )
 }

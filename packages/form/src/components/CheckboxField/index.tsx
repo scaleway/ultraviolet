@@ -21,6 +21,7 @@ type CheckboxFieldProps<T = CheckboxValue, K = string> = BaseFieldProps<T, K> &
       | 'value'
       | 'data-testid'
       | 'helper'
+      | 'tooltip'
     >
   > & {
     name: string
@@ -47,6 +48,7 @@ export const CheckboxField = forwardRef(
       onFocus,
       value,
       helper,
+      tooltip,
       'data-testid': dataTestId,
     }: CheckboxFieldProps,
     ref: Ref<HTMLInputElement>,
@@ -94,6 +96,7 @@ export const CheckboxField = forwardRef(
         value={input.value}
         required={required}
         data-testid={dataTestId}
+        tooltip={tooltip}
       >
         {children}
       </Checkbox>

@@ -47,6 +47,16 @@ describe('Toggle', () => {
       <Toggle name="test" onChange={() => {}} label="This is a label" />,
     ))
 
+  test('renders correctly with tooltip', () =>
+    shouldMatchEmotionSnapshot(
+      <Toggle
+        name="test"
+        onChange={() => {}}
+        label="This is a label"
+        tooltip="test"
+      />,
+    ))
+
   test('renders correctly with labels on left', () =>
     shouldMatchEmotionSnapshot(
       <Toggle
