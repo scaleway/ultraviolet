@@ -1,5 +1,4 @@
 import {
-  afterEach,
   beforeAll,
   beforeEach,
   describe,
@@ -9,7 +8,6 @@ import {
 } from '@jest/globals'
 import type { Meta } from '@storybook/react'
 import { composeStories } from '@storybook/react'
-import { cleanup } from '@testing-library/react'
 import fs from 'fs'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import * as path from 'path'
@@ -98,10 +96,6 @@ describe('A11y', () => {
     console.log = jest.fn()
     console.warn = jest.fn()
     console.error = jest.fn()
-  })
-
-  afterEach(() => {
-    cleanup()
   })
 
   const moduleArray: Promise<{
