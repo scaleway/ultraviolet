@@ -131,10 +131,14 @@ export const Dialog = ({
 
   // Handle body scroll
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow
+
     if (open && preventBodyScroll) {
-      document.body.style.overflowY = 'hidden'
-    } else {
-      document.body.style.overflowY = 'auto'
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow
     }
   }, [preventBodyScroll, open])
 
