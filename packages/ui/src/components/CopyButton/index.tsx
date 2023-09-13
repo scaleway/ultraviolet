@@ -14,6 +14,9 @@ type CopyButtonProps = {
   'data-testid'?: string
 }
 
+/**
+ * CopyButton is a button that copies a given value to the clipboard.
+ */
 export const CopyButton = ({
   size = 'small',
   value,

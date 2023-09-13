@@ -53,6 +53,8 @@ const DEFAULT_CHARTPROPS = {}
 const DEFAULT_MARGIN = { bottom: 10, left: 10, right: 10, top: 10 }
 
 /**
+ * PieChart component is a wrapper around the Nivo Pie component to display a pie chart.
+ * See https://nivo.rocks/pie/ for more information.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const PieChart = ({

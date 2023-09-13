@@ -29,6 +29,9 @@ type ToggleGroupToggleProps = Omit<
   value: string
 }
 
+/**
+ * ToggleGroup is a component that allows you to group a set of Toggle components together under the same legend.
+ */
 export const ToggleGroupToggle = ({
   disabled,
   name,

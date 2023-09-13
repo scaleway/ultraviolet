@@ -90,6 +90,9 @@ const AvatarContainer = styled.div<{ size: number }>`
   width: ${({ size }) => size}px;
 `
 
+/**
+ * Avatar component is used to display a user's profile picture or initials.
+ */
 export const Avatar = ({
   image,
   size = 32,

@@ -4,11 +4,6 @@ import { Row } from '..'
 export default {
   component: Row,
   parameters: {
-    docs: {
-      description: {
-        component: 'A templated row rendered using grid',
-      },
-    },
     experimental: true,
   },
   title: 'Components/Layout/Row',

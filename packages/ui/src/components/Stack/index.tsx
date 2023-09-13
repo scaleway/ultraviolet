@@ -15,6 +15,10 @@ type StackProps = {
   'data-testid'?: string
 }
 
+/**
+ * A Stack is a widget that organize children in a vertical or horizontal layout based on css Flex,
+ * it accepts few props to deal with spacing and align.
+ */
 export const Stack = styled('div', {
   shouldForwardProp: prop =>
     !['gap', 'direction', 'alignItems', 'justifyContent', 'wrap'].includes(

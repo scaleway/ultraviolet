@@ -53,6 +53,10 @@ const StyledIcon = styled('svg', {
   }
 `
 
+/**
+ * ProductIcon component is used to render a set of icons that are linked to a product or service.
+ * Those icons are made of multiple colors that changes automatically based on the current theme.
+ */
 export const ProductIcon = ({
   name,
   variant = 'primary',

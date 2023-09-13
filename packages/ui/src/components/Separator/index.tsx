@@ -51,6 +51,9 @@ type SeparatorProps = {
   'data-testid'?: string
 }
 
+/**
+ * Separator component used to separate content with a horizontal or vertical line.
+ */
 export const Separator = ({
   direction = 'horizontal',
   thickness = 1,

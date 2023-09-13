@@ -3,14 +3,6 @@ import { Text } from '..'
 
 export default {
   component: Text,
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'Text allows you to style your texts using some existing standards.',
-      },
-    },
-  },
   title: 'Components/Typography/Text',
 } as Meta
 

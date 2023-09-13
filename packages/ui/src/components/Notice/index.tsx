@@ -9,6 +9,9 @@ type NoticeProps = {
   'data-testid'?: string
 }
 
+/**
+ * A Notice is used to display a short message to the user.
+ */
 export const Notice = ({
   children,
   className,

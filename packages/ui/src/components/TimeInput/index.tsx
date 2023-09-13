@@ -206,6 +206,8 @@ type TimeInputType = ((props: TimeInputProps) => JSX.Element) & {
 }
 
 /**
+ * A time input component that allows users to select a time from a dropdown. The component is built on top of the
+ * `SelectInput` component.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const TimeInput: TimeInputType = ({

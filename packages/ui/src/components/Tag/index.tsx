@@ -129,6 +129,10 @@ const TagInner = ({
   </>
 )
 
+/**
+ * Tag component is used to display a short text description of an item. It can be used to display a category
+ * or any other metadata.
+ */
 export const Tag = ({
   children,
   isLoading,

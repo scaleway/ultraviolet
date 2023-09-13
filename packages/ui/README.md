@@ -1,6 +1,6 @@
 # Ultraviolet UI
 
-[![npm version](https://badge.fury.io/js/%40scaleway%2Fui.svg)](https://badge.fury.io/js/%40scaleway%2Fui)
+[![npm version](https://badge.fury.io/js/%40ultraviolet%2Fui.svg)](https://badge.fury.io/js/%40ultraviolet%2Fui)
 
 Ultraviolet UI is a set of React components and utilities to build fast application.
 

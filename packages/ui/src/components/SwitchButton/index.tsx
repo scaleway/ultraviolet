@@ -69,6 +69,9 @@ type SwitchButtonProps = {
   'data-testid'?: string
 }
 
+/**
+ * SwitchButton is a component that allows the user to select between two options.
+ */
 export const SwitchButton = ({
   value,
   onChange,

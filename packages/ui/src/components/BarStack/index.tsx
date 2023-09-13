@@ -52,8 +52,8 @@ const StyledBar = styled.div`
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-shadow: -1px 0
-      ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
+  text-shadow:
+    -1px 0 ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
     0 1px ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
     1px 0 ${({ theme }) => theme.colors.neutral.backgroundStronger}B3,
     0 -1px ${({ theme }) => theme.colors.neutral.backgroundStronger}B3;
@@ -101,7 +101,11 @@ const StyledContainer = styled.div`
         ${({ theme }) => theme.colors.neutral.backgroundStrong}33 25%,
         ${({ theme }) => theme.colors.primary.backgroundStrong}12 25%
       );
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-position:
+      10px 0,
+      10px 0,
+      0 0,
+      0 0;
     background-size: 10px 10px;
     background-repeat: repeat;
   }
@@ -140,7 +144,11 @@ const StyledContainer = styled.div`
         ${({ theme }) => theme.colors.neutral.backgroundWeak}33 25%,
         ${({ theme }) => theme.colors.secondary.backgroundStrong} 25%
       );
-    background-position: 10px 0, 10px 0, 0 0, 0 0;
+    background-position:
+      10px 0,
+      10px 0,
+      0 0,
+      0 0;
     background-size: 10px 10px;
     background-repeat: repeat;
   }
@@ -158,6 +166,9 @@ const StyledContainer = styled.div`
   }
 `
 
+/**
+ * BarStack is a graphic component that is used to show data in one dimension.
+ */
 export const BarStack = ({
   data,
   total,

@@ -45,7 +45,8 @@ type PaginationProps = {
 }
 
 /**
- * Display multiple buttons to allow navigation between a paginated resource
+ * Pagination is a component to navigate between pages, it is composed of 2 buttons to go to the previous and next page,
+ * and a list of buttons to go to a specific page.
  */
 export const Pagination = ({
   disabled = false,

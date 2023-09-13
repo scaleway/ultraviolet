@@ -761,6 +761,10 @@ type OptionComponent = (
   props: Partial<OptionProps<SelectOption> & SelectOption>,
 ) => JSX.Element
 
+/**
+ * SelectInput component is a wrapper around [react-select](https://react-select.com) component.
+ * It provides a styled select input with a label and an error message.
+ */
 export const SelectInput = forwardRef(
   (props: SelectInputProps, ref: ForwardedRef<StateManagedSelect>) => (
     <FwdSelectInput innerRef={ref} {...props} />

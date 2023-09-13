@@ -161,6 +161,9 @@ type ToggleProps = {
   'data-testid'?: string
 } & Pick<InputHTMLAttributes<HTMLInputElement>, 'value'>
 
+/**
+ * Toggle component is used to toggle between two states (on/off, true/false, etc.).
+ */
 export const Toggle = forwardRef(
   (
     {

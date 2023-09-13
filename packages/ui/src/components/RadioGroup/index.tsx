@@ -91,6 +91,9 @@ type RadioGroupProps = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
+/**
+ * RadioGroup is a component that allows users to select one option from a list of options using radio.
+ */
 export const RadioGroup = ({
   legend,
   value,

@@ -115,6 +115,7 @@ type TagInputProps = {
 }
 
 /**
+ * TagInput is a component that allows users to input tags.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const TagInput = ({

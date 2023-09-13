@@ -128,6 +128,14 @@ type ToastContainerProps = {
   'data-testid'?: string
 }
 
+/**
+ * Display short information about an event that happen in the interface in a floating alert.
+ * Toaster is based on **react-tostify**, you can find a complete documentation
+ * [here](https://fkhadra.github.io/react-toastify/introduction/).
+ *
+ * Toaster is separated in two parts, first the `ToastContainer` which is where the div of the toast will be rendered,
+ * and second the `toast()` function which is used to display the toast.
+ */
 export const ToastContainer = ({
   newestOnTop,
   limit,

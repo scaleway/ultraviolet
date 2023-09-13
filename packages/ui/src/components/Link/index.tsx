@@ -152,6 +152,9 @@ const StyledLink = styled('a', {
   }
 `
 
+/**
+ * Link is a component used to navigate between pages or to external websites.
+ */
 export const Link = forwardRef(
   (
     {

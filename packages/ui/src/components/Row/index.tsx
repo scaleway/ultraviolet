@@ -35,6 +35,10 @@ type RowProps = {
   justifyContent?: CSSProperties['justifyContent']
 }
 
+/**
+ * Row component is a wrapper for grid layout.
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
 export const Row = ({
   className,
   'data-testid': dataTestId,

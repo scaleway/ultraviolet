@@ -1,6 +1,6 @@
 # Ultraviolet Icons
 
-[![npm version](https://badge.fury.io/js/%40scaleway%2Ficons.svg)](https://badge.fury.io/js/%40scaleway%2Ficons)
+[![npm version](https://badge.fury.io/js/%40ultraviolet%2Ficons.svg)](https://badge.fury.io/js/%40ultraviolet%2Ficons)
 
 Ultraviolet Icons is a set of SVG icons and components related to icons.
 

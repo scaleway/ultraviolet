@@ -3,14 +3,6 @@ import { SelectableCard } from '..'
 
 export default {
   component: SelectableCard,
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'SelectableCard is a simple card input component with complex children.',
-      },
-    },
-  },
   title: 'Components/Data Entry/SelectableCard',
 } as Meta<typeof SelectableCard>
 
