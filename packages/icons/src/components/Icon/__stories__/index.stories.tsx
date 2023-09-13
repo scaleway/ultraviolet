@@ -1,12 +1,13 @@
 import type { Meta } from '@storybook/react'
 import { Icon } from '..'
+import Documentation from './Documentation.md'
 
 export default {
   component: Icon,
   parameters: {
     docs: {
       description: {
-        component: 'Allow you to display an svg icon',
+        component: Documentation,
       },
     },
   },
