@@ -10,6 +10,8 @@ const themesMatches = [
   { inputTheme: 'productLight', palette: 'paletteLight', outputTheme: 'light' },
 ]
 
+const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/gi
+
 const header = `
 /**
  * Provides all tokens of a specific theme edited by design team.
@@ -48,6 +50,8 @@ function evalValue(value, variables) {
       return acc
     }, {})
   }
+
+  let returnedValue = value
   if (value.includes('$')) {
     const temp = value.replaceAll(/\$[a-zA-Z0-9\\.]+/g, match => {
       const keyParts = match.slice(1).split('.')
@@ -63,19 +67,19 @@ function evalValue(value, variables) {
     })
 
     // eslint-disable-next-line no-eval
-    return temp.includes('*') ? eval(temp) : temp
+    returnedValue = temp.includes('*') ? eval(temp) : temp
   }
 
-  return value
+  return typeof returnedValue === 'string'
+    ? returnedValue.replaceAll(hexColorRegex, match => match.toLowerCase())
+    : returnedValue
 }
 
 function getValues(data, { typeFilter, variables }) {
   if ('type' in data) {
-    if (data.type === typeFilter && 'value' in data) {
-      return evalValue(data.value, variables)
-    }
-
-    return null
+    return data.type === typeFilter && 'value' in data
+      ? evalValue(data.value, variables)
+      : null
   }
   if (typeof data === 'object') {
     const res = Object.keys(data).reduce((values, key) => {
@@ -83,7 +87,7 @@ function getValues(data, { typeFilter, variables }) {
 
       if (newValue !== null) {
         // eslint-disable-next-line no-param-reassign
-        values[key.replace(/,/g, '.')] = newValue
+        values[key.replaceAll(/,/g, '.')] = newValue
       }
 
       return values
@@ -188,7 +192,9 @@ function getValues(data, { typeFilter, variables }) {
           ...colors.neutral,
           ...paletteNeutral,
         },
-        overlay: inputPalette.other.overlay.value,
+        overlay: getValues(inputPalette.other.overlay, {
+          typeFilter: 'color',
+        }),
       },
       radii,
       shadows: formatShadows(shadows),
