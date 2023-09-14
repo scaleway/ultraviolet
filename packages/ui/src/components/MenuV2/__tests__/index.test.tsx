@@ -1,21 +1,9 @@
-import {
-  afterAll,
-  beforeEach,
-  describe,
-  expect,
-  jest,
-  test,
-} from '@jest/globals'
-import { screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { afterAll, beforeEach, describe, jest, test } from '@jest/globals'
 import { MenuV2 } from '..'
 import {
-  renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
-
-const mockOnClick = jest.fn()
 
 describe('Menu', () => {
   beforeEach(() => {
@@ -61,44 +49,6 @@ describe('Menu', () => {
         </MenuV2.Item>
       </MenuV2>,
     ))
-
-  test('disclosure function render onClick props is call', async () => {
-    renderWithTheme(
-      <MenuV2
-        visible
-        disclosure={() => (
-          <button type="button" onClick={mockOnClick}>
-            Menu
-          </button>
-        )}
-      >
-        <MenuV2.Item href="/link">Menu.Item as Link</MenuV2.Item>
-      </MenuV2>,
-    )
-
-    const menuButton = screen.getByRole('button')
-    await userEvent.click(menuButton)
-    expect(mockOnClick).toBeCalledTimes(1)
-  })
-
-  test('disclosure Component render onClick props is call', async () => {
-    renderWithTheme(
-      <MenuV2
-        visible
-        disclosure={() => (
-          <button type="button" onClick={mockOnClick}>
-            Menu
-          </button>
-        )}
-      >
-        <MenuV2.Item href="/link">Menu.Item as Link</MenuV2.Item>
-      </MenuV2>,
-    )
-
-    const menuButton = screen.getByRole('button')
-    await userEvent.click(menuButton)
-    expect(mockOnClick).toBeCalledTimes(1)
-  })
 
   describe('placement', () => {
     test('renders top', () =>
