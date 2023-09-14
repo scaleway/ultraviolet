@@ -2,7 +2,7 @@
 
 exports[`Stack should render correctly with alignCenter 1`] = `
 <DocumentFragment>
-  .cache-1i7e9sg-Stack {
+  .cache-1l6mcrb-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,7 +26,7 @@ exports[`Stack should render correctly with alignCenter 1`] = `
 }
 
 <div
-    class="cache-1i7e9sg-Stack ehpbis70"
+    class="cache-1l6mcrb-Stack ehpbis70"
   >
     <div>
       first child
@@ -40,7 +40,7 @@ exports[`Stack should render correctly with alignCenter 1`] = `
 
 exports[`Stack should render correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-11tw670-Stack {
+  .cache-1guc91g-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +64,7 @@ exports[`Stack should render correctly with default props 1`] = `
 }
 
 <div
-    class="cache-11tw670-Stack ehpbis70"
+    class="cache-1guc91g-Stack ehpbis70"
   >
     <div>
       first child
@@ -79,9 +79,51 @@ exports[`Stack should render correctly with default props 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Stack should render correctly with flex 1 1`] = `
+<DocumentFragment>
+  .cache-10fpg8v-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+    class="cache-10fpg8v-Stack ehpbis70"
+    flex="1"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Stack should render correctly with row direction 1`] = `
 <DocumentFragment>
-  .cache-1jx9yod-Stack {
+  .cache-1tfad1c-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,7 +147,7 @@ exports[`Stack should render correctly with row direction 1`] = `
 }
 
 <div
-    class="cache-1jx9yod-Stack ehpbis70"
+    class="cache-1tfad1c-Stack ehpbis70"
   >
     <div>
       first child
@@ -120,9 +162,49 @@ exports[`Stack should render correctly with row direction 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Stack should render correctly with width 100% 1`] = `
+<DocumentFragment>
+  .cache-1sg8g9d-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+<div
+    class="cache-1sg8g9d-Stack ehpbis70"
+    width="100%"
+  >
+    <div>
+      first child
+    </div>
+    <div>
+      second child
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Stack should render correctly with wrap as boolean 1`] = `
 <DocumentFragment>
-  .cache-1hg4n6q-Stack {
+  .cache-1w45fx4-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,7 +228,7 @@ exports[`Stack should render correctly with wrap as boolean 1`] = `
 }
 
 <div
-    class="cache-1hg4n6q-Stack ehpbis70"
+    class="cache-1w45fx4-Stack ehpbis70"
   >
     <div>
       first child
@@ -160,7 +242,7 @@ exports[`Stack should render correctly with wrap as boolean 1`] = `
 
 exports[`Stack should render correctly with wrap as string 1`] = `
 <DocumentFragment>
-  .cache-tao90g-Stack {
+  .cache-1b660pb-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,7 +266,7 @@ exports[`Stack should render correctly with wrap as string 1`] = `
 }
 
 <div
-    class="cache-tao90g-Stack ehpbis70"
+    class="cache-1b660pb-Stack ehpbis70"
   >
     <div>
       first child

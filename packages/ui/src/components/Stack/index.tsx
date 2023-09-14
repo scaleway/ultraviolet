@@ -8,6 +8,8 @@ type StackProps = {
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
   wrap?: boolean | CSSProperties['flexWrap']
+  width?: CSSProperties['width']
+  flex?: CSSProperties['flex']
   className?: string
   children: ReactNode
   'data-testid'?: string
@@ -28,11 +30,15 @@ export const Stack = styled('div', {
     alignItems = 'normal',
     justifyContent = 'normal',
     wrap = 'nowrap',
+    width,
+    flex,
   }) => `
     gap: ${theme.space[gap as keyof SCWUITheme['space']]};
     flex-direction: ${direction};
     align-items: ${alignItems};
     justify-content: ${justifyContent};
     flex-wrap: ${typeof wrap === 'boolean' ? 'wrap' : wrap};
+    ${flex ? `flex: ${flex};` : ''}
+    ${width ? `width: ${width};` : ''}
   `}
 `

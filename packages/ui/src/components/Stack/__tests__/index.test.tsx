@@ -44,4 +44,20 @@ describe('Stack', () => {
         <div>second child</div>
       </Stack>,
     ))
+
+  test(`should render correctly with width 100%`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack width="100%">
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
+
+  test(`should render correctly with flex 1`, () =>
+    shouldMatchEmotionSnapshot(
+      <Stack flex="1">
+        <div>first child</div>
+        <div>second child</div>
+      </Stack>,
+    ))
 })
