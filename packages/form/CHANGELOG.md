@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.6.0
+
+### Minor Changes
+
+- [#2890](https://github.com/scaleway/ultraviolet/pull/2890) [`cc6440d5`](https://github.com/scaleway/ultraviolet/commit/cc6440d5b87d0ab9368ac313b9093a785f11a724) Thanks [@matthprost](https://github.com/matthprost)! - Added `tooltip` prop on CheckboxField, ToggleField and RadioField components
+
+### Patch Changes
+
+- [#2887](https://github.com/scaleway/ultraviolet/pull/2887) [`09fae97b`](https://github.com/scaleway/ultraviolet/commit/09fae97b2899c6111f6577829297953e06600f08) Thanks [@matthprost](https://github.com/matthprost)! - Fix tokens usages on checkbox since last update
+
+- Updated dependencies [[`d79efd14`](https://github.com/scaleway/ultraviolet/commit/d79efd1424a478e284482cb6883ed46eb378b804), [`cc6440d5`](https://github.com/scaleway/ultraviolet/commit/cc6440d5b87d0ab9368ac313b9093a785f11a724), [`09fae97b`](https://github.com/scaleway/ultraviolet/commit/09fae97b2899c6111f6577829297953e06600f08)]:
+  - @ultraviolet/ui@1.12.0
+
 ## 1.5.2
 
 ### Patch Changes
