@@ -1,19 +1,11 @@
-import { describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import type { ReactNode } from 'react'
 import { TagList } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
-
-jest.mock('reakit/Tooltip', () => ({
-  Tooltip: ({ children }: { children: ReactNode }) => children,
-  TooltipArrow: () => null,
-  TooltipReference: ({ children }: { children: ReactNode }) => children,
-  useTooltipState: () => ({}),
-}))
 
 describe('TagList', () => {
   test('renders correctly', () =>
