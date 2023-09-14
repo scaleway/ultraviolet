@@ -5,44 +5,21 @@ import {Meta} from '@storybook/blocks'
 
 # Migrate Menu to MenuV2
 
-Welcome to the migration of Menu into MenuV2, here we will see how to easily migrate to NewComponent component.
+## `placement` prop
 
-## One of the main changes is...
+The `placement` prop has been updated and now uses the values from the internal `Popup` component. That means `top` and `bottom` are still valid, but the following values are no longer working:
 
-A description of it...
+- `bottom-end`
+- `bottom-start`
+- `top-end`
+- `top-start`
 
-Example:
+And the following values are now valid:
 
-```tsx
-import { Menu } from '@ultraviolet/ui'
+- `left`
+- `right`
 
-const MyComponent = () => (
-  <Menu>
-      My text
-  </Menu />
-)
-```
+## Removed props
 
-Becomes:
+- `id`: Removed
 
-```tsx
-import { MenuV2 } from '@ultraviolet/ui'
-
-const MyComponent = () => (
-  <MenuV2>
-      My text
-  </MenuV2 />
-)
-```
-
-## Old and new props matching
-
-- `children` &rarr; `children`: No changes
-
----
-
-- `as` &rarr; `as`*: Become required
-
----
-
-etc...
