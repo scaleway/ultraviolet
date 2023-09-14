@@ -142,6 +142,7 @@ type TooltipProps = {
   role?: string
   'data-testid'?: string
   hasArrow?: boolean
+  onClose?: () => void
 }
 
 export const Popup = forwardRef(
@@ -159,6 +160,7 @@ export const Popup = forwardRef(
       role = 'tooltip',
       'data-testid': dataTestId,
       hasArrow = true,
+      onClose,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -224,10 +226,10 @@ export const Popup = forwardRef(
         if (!isVisible && innerTooltipRef.current && !debounceTimer.current) {
           debounceTimer.current = setTimeout(() => {
             setReverseAnimation(true)
-            timer.current = setTimeout(
-              () => unmountTooltip(),
-              ANIMATION_DURATION,
-            )
+            timer.current = setTimeout(() => {
+              unmountTooltip()
+              onClose?.()
+            }, ANIMATION_DURATION)
           }, 200)
         } else if (isVisible) {
           // This condition is for when we want to mount the tooltip
@@ -247,7 +249,7 @@ export const Popup = forwardRef(
           setVisibleInDom(true)
         }
       },
-      [innerTooltipRef, unmountTooltip],
+      [innerTooltipRef, onClose, unmountTooltip],
     )
 
     /**
@@ -291,6 +293,40 @@ export const Popup = forwardRef(
       [unmountTooltip],
     )
 
+    // Handle hide on esc press
+    useEffect(() => {
+      const handleEscPress = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          event.preventDefault()
+          event.stopPropagation()
+          debounceTimer.current = setTimeout(() => {
+            setReverseAnimation(true)
+            timer.current = setTimeout(() => {
+              unmountTooltip()
+              onClose?.()
+            }, ANIMATION_DURATION)
+          }, 200)
+        }
+      }
+      if (visibleInDom) {
+        document.body.addEventListener('keyup', handleEscPress, {
+          capture: true,
+        })
+        document.body.addEventListener('keydown', handleEscPress, {
+          capture: true,
+        })
+      }
+
+      return () => {
+        document.body.removeEventListener('keyup', handleEscPress, {
+          capture: true,
+        })
+        document.body.addEventListener('keydown', handleEscPress, {
+          capture: true,
+        })
+      }
+    }, [onClose, unmountTooltip, visibleInDom])
+
     /**
      * Will render children conditionally if children is a function or not.
      */
@@ -308,6 +344,7 @@ export const Popup = forwardRef(
       return (
         <StyledChildrenContainer
           aria-describedby={generatedId}
+          aria-controls={generatedId}
           onBlur={!isControlled ? onPointerEvent(false) : noop}
           onFocus={!isControlled ? onPointerEvent(true) : noop}
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}

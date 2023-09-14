@@ -263,6 +263,7 @@ export const buttonVariants = Object.keys(
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
+  autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
   variant?: ButtonVariant
   role?: AriaRole
   size?: ButtonSize
@@ -352,6 +353,7 @@ export const Button = forwardRef<Element, FinalProps>(
       role,
       tooltip,
       tabIndex,
+      autoFocus,
     },
     ref,
   ) => {
@@ -403,6 +405,7 @@ export const Button = forwardRef<Element, FinalProps>(
             ref={ref as Ref<HTMLAnchorElement>}
             iconOnly={!!icon && !children}
             tabIndex={tabIndex}
+            autoFocus={autoFocus}
           >
             {content}
           </Component>
@@ -434,6 +437,7 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-haspopup={ariaHaspopup}
           iconOnly={!!icon && !children}
           tabIndex={tabIndex}
+          autoFocus={autoFocus}
         >
           {content}
         </Component>
