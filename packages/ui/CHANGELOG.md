@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.13.0
+
+### Minor Changes
+
+- [#2906](https://github.com/scaleway/ultraviolet/pull/2906) [`1bcf066a`](https://github.com/scaleway/ultraviolet/commit/1bcf066aec194bd338c7d616f3398d18c0a23539) Thanks [@matthprost](https://github.com/matthprost)! - Added new props into `Stack` component: `width` and `flex`
+
 ## 1.12.0
 
 ### Minor Changes
