@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 2.0.2
+
+### Patch Changes
+
+- [#2901](https://github.com/scaleway/ultraviolet/pull/2901) [`e2a8e447`](https://github.com/scaleway/ultraviolet/commit/e2a8e447566716fdeaf4b45dcc527e4d19cf4841) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.17`.
+
 ## 2.0.1
 
 ### Patch Changes
