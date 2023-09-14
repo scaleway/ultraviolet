@@ -142,6 +142,7 @@ type TooltipProps = {
   role?: string
   'data-testid'?: string
   hasArrow?: boolean
+  tabIndex?: number
 }
 
 export const Popup = forwardRef(
@@ -159,6 +160,7 @@ export const Popup = forwardRef(
       role = 'tooltip',
       'data-testid': dataTestId,
       hasArrow = true,
+      tabIndex,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -350,6 +352,7 @@ export const Popup = forwardRef(
                 reverseAnimation={reverseAnimation}
                 data-testid={dataTestId}
                 data-has-arrow={hasArrow}
+                tabIndex={tabIndex}
               >
                 {text}
               </StyledTooltip>,

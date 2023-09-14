@@ -1,8 +1,8 @@
 import type { Meta } from '@storybook/react'
-import { Menu } from '..'
+import { MenuV2 } from '..'
 
 export default {
-  component: Menu,
+  component: MenuV2,
   decorators: [
     StoryComponent => (
       <div style={{ marginBottom: '1em', marginLeft: '2em' }}>
@@ -11,10 +11,6 @@ export default {
     ),
   ],
   parameters: {
-    deprecated: true,
-    deprecatedReason:
-      'This component is deprecated please do not use it any more.',
-    migrationLink: 'migrations-menu-to-menuv2',
     docs: {
       description: {
         component:
@@ -22,11 +18,11 @@ export default {
       },
     },
   },
-  title: 'Components/Overlay/Menu',
+  title: 'Components/Overlay/MenuV2',
   subcomponents: {
-    'Menu.Item': Menu.Item,
+    'MenuV2.Item': MenuV2.Item,
   },
-} as Meta<typeof Menu>
+} as Meta<typeof MenuV2>
 
 export { Playground } from './Playground.stories'
 export { Sentiments } from './Sentiments.stories'

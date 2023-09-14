@@ -1,0 +1,48 @@
+import {Meta} from '@storybook/blocks'
+
+<Meta title="Migrations/Menu to MenuV2"/>
+
+
+# Migrate Menu to MenuV2
+
+Welcome to the migration of Menu into MenuV2, here we will see how to easily migrate to NewComponent component.
+
+## One of the main changes is...
+
+A description of it...
+
+Example:
+
+```tsx
+import { Menu } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <Menu>
+      My text
+  </Menu />
+)
+```
+
+Becomes:
+
+```tsx
+import { MenuV2 } from '@ultraviolet/ui'
+
+const MyComponent = () => (
+  <MenuV2>
+      My text
+  </MenuV2 />
+)
+```
+
+## Old and new props matching
+
+- `children` &rarr; `children`: No changes
+
+---
+
+- `as` &rarr; `as`*: Become required
+
+---
+
+etc...
