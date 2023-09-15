@@ -19,8 +19,12 @@ import { Popup } from '../../internalComponents'
 import { Stack } from '../Stack'
 import Item from './Item'
 
+export type DisclosureProps = { visible: boolean }
+
 type DisclosureElement =
-  | (() => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
+  | ((
+      disclosure: DisclosureProps,
+    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
   | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
       ref?: Ref<HTMLButtonElement>
     })
@@ -101,7 +105,7 @@ const FwdMenu = forwardRef(
       disclosure,
     )
       ? disclosure
-      : disclosure()
+      : disclosure({ visible: isVisible })
     const innerRef = useRef(target as unknown as HTMLButtonElement)
     useImperativeHandle(ref, () => innerRef.current)
 
