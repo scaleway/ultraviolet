@@ -105,7 +105,7 @@ const StyledChildrenContainer = styled.div`
   }
 `
 
-type TooltipProps = {
+type PopupProps = {
   /**
    * Id is automatically generated if not set. It is used for associating tooltip wrapper with tooltip portal.
    */
@@ -142,7 +142,6 @@ type TooltipProps = {
   role?: string
   'data-testid'?: string
   hasArrow?: boolean
-  tabIndex?: number
   onClose?: () => void
 }
 
@@ -161,9 +160,8 @@ export const Popup = forwardRef(
       role = 'tooltip',
       'data-testid': dataTestId,
       hasArrow = true,
-      tabIndex,
       onClose,
-    }: TooltipProps,
+    }: PopupProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
@@ -390,7 +388,6 @@ export const Popup = forwardRef(
                 reverseAnimation={reverseAnimation}
                 data-testid={dataTestId}
                 data-has-arrow={hasArrow}
-                tabIndex={tabIndex}
               >
                 {text}
               </StyledTooltip>,

@@ -97,6 +97,7 @@ const FwdMenu = forwardRef(
   ) => {
     const [isVisible, setIsVisible] = useState(visible)
     const popupRef = useRef<HTMLDivElement>(null)
+    const disclosureRef = useRef<HTMLDivElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
 
@@ -112,21 +113,30 @@ const FwdMenu = forwardRef(
     const toggleVisible = () => {
       setIsVisible(!isVisible)
 
+      // Focus the first item when the menu is opened
       if (!isVisible) {
-        // We have to wait for the popup to be inserted in the DOM
         requestIdleCallback(() => {
-          // @ts-expect-error to fix
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-          popupRef.current?.firstChild?.firstChild?.focus()
+          // We have to wait for the popup to be inserted in the DOM
+          if (popupRef.current?.firstChild?.firstChild instanceof HTMLElement) {
+            popupRef.current.firstChild.firstChild.focus()
+          }
         })
       }
+    }
+
+    const onClose = () => {
+      setIsVisible(false)
+
+      // Focus the disclosure when the menu is closed
+      disclosureRef.current?.focus()
     }
 
     const finalDisclosure = cloneElement(target, {
       onClick: toggleVisible,
       'aria-haspopup': 'dialog',
       'aria-expanded': isVisible,
-      'aria-controls': finalId,
+      // @ts-expect-error not sure how to fix this
+      ref: disclosureRef,
     })
 
     return (
@@ -140,7 +150,7 @@ const FwdMenu = forwardRef(
         role="dialog"
         id={finalId}
         ref={popupRef}
-        tabIndex={-1}
+        onClose={onClose}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {typeof children === 'function' ? children({}) : children}
