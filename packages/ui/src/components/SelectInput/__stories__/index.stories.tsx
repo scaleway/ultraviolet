@@ -10,14 +10,6 @@ export default {
       </div>
     ),
   ],
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'SelectInput is a component used to select a value between different options.',
-      },
-    },
-  },
   title: 'Components/Data Entry/SelectInput',
 } as Meta<typeof SelectInput>
 

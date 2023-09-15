@@ -119,6 +119,9 @@ type BulletProps = {
   prominence?: ProminenceType
 } & ContentProps
 
+/**
+ * Bullet component is used to display a small icon or text with a colored background in a circle.
+ */
 export const Bullet = ({
   className,
   sentiment = 'neutral',

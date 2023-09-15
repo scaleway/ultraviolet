@@ -100,6 +100,9 @@ const BaseList = forwardRef(
   },
 )
 
+/**
+ * List is a component that displays a list of items based on the columns you provide and the data you pass.
+ */
 export const List = Object.assign(BaseList, {
   Row,
   Cell,

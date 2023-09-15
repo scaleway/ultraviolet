@@ -37,6 +37,8 @@ const DEFAULT_AXISFORMATTER = {}
 const DEFAULT_KEYS = ['value']
 
 /**
+ * BarChart component is used to display data in a bar chart format. It uses the Nivo library under the hood.
+ * See https://nivo.rocks/bar/ for more information.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const BarChart = ({

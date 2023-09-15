@@ -357,6 +357,10 @@ const UnitLabel = styled(Text)`
   line-height: 18px;
 `
 
+/**
+ * TextInput component allows users to input text, with options for customization and validation.
+ * It supports various input types and should be appropriately sized with clear labeling.
+ */
 export const TextInput = forwardRef<
   HTMLInputElement | HTMLTextAreaElement | null,
   TextInputProps

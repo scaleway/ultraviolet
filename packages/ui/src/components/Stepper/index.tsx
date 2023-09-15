@@ -114,6 +114,9 @@ type StepperProps = {
   'data-testid'?: string
 }
 
+/**
+ * Stepper component to show the progress of a process in a linear way.
+ */
 export const Stepper = ({
   children,
   selected = 0,

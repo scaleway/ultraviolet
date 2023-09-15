@@ -3,13 +3,6 @@ import { List } from '..'
 
 export default {
   component: List,
-  parameters: {
-    docs: {
-      description: {
-        component: 'Display a list of your data.',
-      },
-    },
-  },
   title: 'Components/Data Display/List',
   subcomponents: {
     'List.Row': List.Row,

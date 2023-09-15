@@ -11,13 +11,6 @@ export default {
       </Stack>
     ),
   ],
-  parameters: {
-    docs: {
-      description: {
-        component: 'A simple button to copy a value to the clipboard.',
-      },
-    },
-  },
   title: 'Components/Action/CopyButton',
 } as Meta<typeof CopyButton>
 

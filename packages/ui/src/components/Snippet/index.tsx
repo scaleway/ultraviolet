@@ -178,6 +178,10 @@ type SnippetProps = {
   'data-testid'?: string
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
+/**
+ * Snippet component is used to display code snippets with the ability to copy the code.
+ * It also has the ability to show/hide the code snippet if it has more than 4 lines.
+ */
 export const Snippet = ({
   children,
   copyText,

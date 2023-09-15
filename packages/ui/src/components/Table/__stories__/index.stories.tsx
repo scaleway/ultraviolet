@@ -3,13 +3,6 @@ import { Table } from '..'
 
 export default {
   component: Table,
-  parameters: {
-    docs: {
-      description: {
-        component: 'Table represents tabular data.',
-      },
-    },
-  },
   title: 'Components/Data Display/Table',
   subcomponents: { Row: Table.Row, Cell: Table.Cell },
 } as Meta

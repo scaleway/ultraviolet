@@ -117,6 +117,9 @@ export const BaseTable = forwardRef<HTMLTableElement, TableProps>(
   ),
 )
 
+/**
+ * Table is a component that displays data in a tabular format.
+ */
 export const Table = Object.assign(BaseTable, {
   Body,
   Row,

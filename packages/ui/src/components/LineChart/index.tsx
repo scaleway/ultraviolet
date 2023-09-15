@@ -42,6 +42,8 @@ const DEFAULT_YSCALE: LineChartProps['yScale'] = { type: 'linear' }
 const DEFAULT_CHARTPROPS = {}
 
 /**
+ * LineChart component is a wrapper around Nivo's ResponsiveLine component used to display data in a line chart.
+ * See https://nivo.rocks/line/ for more information.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const LineChart = ({

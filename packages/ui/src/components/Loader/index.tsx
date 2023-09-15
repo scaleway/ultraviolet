@@ -55,6 +55,9 @@ const Text = styled('text', {
   text-anchor: middle;
 `
 
+/**
+ * Loader is a circular progress indicator that can be used to indicate that an action is being performed.
+ */
 export const Loader = ({
   percentage = 20,
   text,

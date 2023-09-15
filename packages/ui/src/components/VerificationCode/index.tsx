@@ -22,7 +22,9 @@ const StyledInput = styled.input`
   width: 56px;
   height: 64px;
   outline-style: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover,
   &:focus {
@@ -77,6 +79,9 @@ type VerificationCodeProps = {
 
 const DEFAULT_ON_FUNCTION = () => {}
 
+/**
+ * Verification code allows you to enter a code in multiple fields (4 by default).
+ */
 export const VerificationCode = ({
   disabled = false,
   className,

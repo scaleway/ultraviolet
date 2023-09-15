@@ -97,6 +97,9 @@ type CheckboxGroupProps = {
 } & Required<Pick<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'name'>> &
   Pick<InputHTMLAttributes<HTMLInputElement>, 'required'>
 
+/**
+ * CheckboxGroup is a component that groups a set of checkboxes together with a legend and helper/error text.
+ */
 export const CheckboxGroup = ({
   legend,
   value,

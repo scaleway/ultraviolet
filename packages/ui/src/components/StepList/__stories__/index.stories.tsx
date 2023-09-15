@@ -8,11 +8,6 @@ import { Text } from '../../Text'
 export default {
   component: StepList,
   parameters: {
-    docs: {
-      description: {
-        component: 'Make a list with sub components in it.',
-      },
-    },
     experimental: true,
   },
   title: 'Components/Data Display/StepList',

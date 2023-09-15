@@ -3,14 +3,6 @@ import { Radio } from '..'
 
 export default {
   component: Radio,
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'A radio button that only work as [controlled component](https://reactjs.org/docs/forms.html).',
-      },
-    },
-  },
   title: 'Components/Data Entry/Radio',
 } as Meta<typeof Radio>
 

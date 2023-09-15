@@ -66,6 +66,9 @@ type TabsProps = {
 
 const SHADOW_THRESHOLD = 10
 
+/**
+ * Tabs component is used to display a set of tabs with a single tab selected at a time.
+ */
 export const Tabs = ({
   children = null,
   onChange,

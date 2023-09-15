@@ -86,7 +86,7 @@ type TextProps = {
   placement?: PlacementProps
   variant: TextVariant
   /**
-   * @deprecated: use `sentiment` property instead
+   * @deprecated use `sentiment` property instead
    */
   color?: Color
   sentiment?: Color
@@ -127,6 +127,9 @@ const StyledText = styled('div', {
   htmlFor?: string
 }>(generateStyles)
 
+/**
+ * Text component is used to display text with different variants and sentiments.
+ */
 export const Text = ({
   variant,
   children,

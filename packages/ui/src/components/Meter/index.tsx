@@ -47,6 +47,9 @@ type PasswordStrengthMeterProps = {
   id?: string
 }
 
+/**
+ * Show strength of a password based on different criteria.
+ */
 export const Meter = ({
   strength,
   title,

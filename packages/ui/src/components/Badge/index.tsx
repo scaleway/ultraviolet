@@ -37,8 +37,6 @@ export const PROMINENCES = {
 
 /**
  * Generate all styles available for badge based on prominence and sentiments
- * @param prominence
- * @param theme
  */
 const generateStyles = ({
   prominence,
@@ -128,6 +126,9 @@ type BadgeProps = {
   'data-testid'?: string
 }
 
+/**
+ * Badge component is used to display a status or a label in a small container.
+ */
 export const Badge = ({
   sentiment = 'neutral',
   size = 'medium',

@@ -1,6 +1,6 @@
 # Ultraviolet Themes
 
-[![npm version](https://badge.fury.io/js/%40scaleway%2Fthemes.svg)](https://badge.fury.io/js/%40scaleway%2Fthemes)
+[![npm version](https://badge.fury.io/js/%40ultraviolet%2Fthemes.svg)](https://badge.fury.io/js/%40ultraviolet%2Fthemes)
 
 Ultraviolet Themes is a set of themes for the Ultraviolet UI library.
 

@@ -3,13 +3,6 @@ import { Modal } from '..'
 
 export default {
   component: Modal,
-  parameters: {
-    docs: {
-      description: {
-        component: `Accessible custom Dialog inside a portal`,
-      },
-    },
-  },
   title: 'Components/Overlay/Modal',
 } as Meta<typeof Modal>
 

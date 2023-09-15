@@ -17,6 +17,10 @@ type TooltipProps = Pick<
   | 'containerFullWidth'
 >
 
+/**
+ * Tooltip component is used to display additional information on hover or focus.
+ * It is used to explain the purpose of the element it is attached to.
+ */
 export const Tooltip = forwardRef(
   (
     {

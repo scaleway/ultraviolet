@@ -3,13 +3,6 @@ import { Button } from '..'
 
 export default {
   component: Button,
-  parameters: {
-    docs: {
-      description: {
-        component: 'A button is a component used to define a call to action.',
-      },
-    },
-  },
   title: 'Components/Action/Button',
 } as Meta<typeof Button>
 

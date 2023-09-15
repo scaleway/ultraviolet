@@ -3,14 +3,6 @@ import { RadioGroup } from '..'
 
 export default {
   component: RadioGroup,
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'A group of radios button that only work as [controlled component](https://reactjs.org/docs/forms.html).',
-      },
-    },
-  },
   title: 'Components/Data Entry/RadioGroup',
 } as Meta<typeof RadioGroup>
 

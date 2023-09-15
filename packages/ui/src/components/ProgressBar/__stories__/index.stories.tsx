@@ -3,13 +3,6 @@ import { ProgressBar } from '..'
 
 export default {
   component: ProgressBar,
-  parameters: {
-    docs: {
-      description: {
-        component: 'An horizontal progress bar.',
-      },
-    },
-  },
   title: 'Components/Feedback/ProgressBar',
 } as Meta<typeof ProgressBar>
 
