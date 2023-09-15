@@ -94,7 +94,7 @@ const generateStyles = ({
   }
 }
 
-const StyledBox = styled('div', {
+const StyledSpan = styled('span', {
   shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
 })<{ size: number; sentiment: string }>`
   display: inline-flex;
@@ -160,10 +160,9 @@ export const Badge = ({
   const sizeValue = SIZES[size]
 
   return (
-    <StyledBox
+    <StyledSpan
       role="status"
       aria-label={ariaLabel}
-      as="span"
       sentiment={
         disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
@@ -182,6 +181,6 @@ export const Badge = ({
       >
         {children}
       </StyledText>
-    </StyledBox>
+    </StyledSpan>
   )
 }
