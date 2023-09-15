@@ -162,11 +162,14 @@ exports[`Menu placement renders bottom 1`] = `
 }
 
 <div
-    aria-describedby=":rb:"
+    aria-controls="menu-:rh:"
+    aria-describedby="menu-:rh:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:rh:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -186,11 +189,14 @@ exports[`Menu placement renders left 1`] = `
 }
 
 <div
-    aria-describedby=":rd:"
+    aria-controls="menu-:rk:"
+    aria-describedby="menu-:rk:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:rk:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -210,11 +216,14 @@ exports[`Menu placement renders right 1`] = `
 }
 
 <div
-    aria-describedby=":rf:"
+    aria-controls="menu-:rn:"
+    aria-describedby="menu-:rn:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:rn:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -234,11 +243,14 @@ exports[`Menu placement renders top 1`] = `
 }
 
 <div
-    aria-describedby=":r9:"
+    aria-controls="menu-:re:"
+    aria-describedby="menu-:re:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:re:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -258,11 +270,14 @@ exports[`Menu renders with Menu.Item 1`] = `
 }
 
 <div
-    aria-describedby=":r2:"
+    aria-controls="menu-:r4:"
+    aria-describedby="menu-:r4:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:r4:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -407,7 +422,7 @@ exports[`Menu renders with Menu.Item 1`] = `
 <div
     class="e1jn11gg1 cache-1fxjbck-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
     data-has-arrow="true"
-    id=":r2:"
+    id="menu-:r4:"
     role="dialog"
     tabindex="-1"
   >
@@ -438,11 +453,14 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 }
 
 <div
-    aria-describedby=":r6:"
+    aria-controls="menu-:ra:"
+    aria-describedby="menu-:ra:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:ra:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -578,7 +596,7 @@ exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
 <div
     class="e1jn11gg1 cache-1fxjbck-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
     data-has-arrow="true"
-    id=":r6:"
+    id="menu-:ra:"
     role="dialog"
     tabindex="-1"
   >
@@ -618,11 +636,14 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
 }
 
 <div
-    aria-describedby=":r4:"
+    aria-controls="menu-:r7:"
+    aria-describedby="menu-:r7:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:r7:"
+      aria-expanded="true"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu
@@ -772,7 +793,7 @@ exports[`Menu renders with Menu.ItemLink 1`] = `
 <div
     class="e1jn11gg1 cache-1fxjbck-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
     data-has-arrow="true"
-    id=":r4:"
+    id="menu-:r7:"
     role="dialog"
     tabindex="-1"
   >
@@ -803,11 +824,14 @@ exports[`Menu renders with disclosure not a function 1`] = `
 }
 
 <div
-    aria-describedby=":r0:"
+    aria-controls="menu-:r0:"
+    aria-describedby="menu-:r0:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:r0:"
+      aria-expanded="false"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu is visible
@@ -827,11 +851,14 @@ exports[`Menu renders with visible=false 1`] = `
 }
 
 <div
-    aria-describedby=":r1:"
+    aria-controls="menu-:r2:"
+    aria-describedby="menu-:r2:"
     class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
-    tabindex="0"
   >
     <button
+      aria-controls="menu-:r2:"
+      aria-expanded="false"
+      aria-haspopup="dialog"
       type="button"
     >
       Menu is visible
