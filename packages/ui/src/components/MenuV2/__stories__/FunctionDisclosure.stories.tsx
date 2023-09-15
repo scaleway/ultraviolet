@@ -5,9 +5,7 @@ import { Button } from '../../Button'
 
 export const FunctionDisclosure: StoryFn<typeof MenuV2> = () => {
   const CustomDisclosure = ({ visible }: DisclosureProps) => (
-    <Button>
-      {visible === true ? 'MenuV2 (is opened)' : 'MenuV2 (is closed)'}
-    </Button>
+    <Button>{visible ? 'MenuV2 (is opened)' : 'MenuV2 (is closed)'}</Button>
   )
 
   return (
