@@ -71,6 +71,9 @@ type EmptyStateProps = {
   'data-testid'?: string
 }
 
+/**
+ * EmptyState component is used to display a message when there is no data to show.
+ */
 export const EmptyState = ({
   image,
   title,

@@ -60,6 +60,9 @@ type StatusProps = {
   'data-testid'?: string
 }
 
+/**
+ * Status component used to display a colored circle with a tooltip for additional information.
+ */
 export const Status = ({
   animated = false,
   className,

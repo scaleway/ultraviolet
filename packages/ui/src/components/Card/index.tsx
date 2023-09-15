@@ -39,6 +39,9 @@ const BorderedBox = styled.div`
   }
 `
 
+/**
+ * Card component is a simple component to display content in a box with a border.
+ */
 export const Card = forwardRef(
   (
     {

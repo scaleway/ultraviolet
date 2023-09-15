@@ -3,13 +3,6 @@ import { Toggle } from '..'
 
 export default {
   component: Toggle,
-  parameters: {
-    docs: {
-      description: {
-        component: 'Toggle button used to give an on / off state into a form.',
-      },
-    },
-  },
   title: 'Components/Data Entry/Toggle',
 } as Meta<typeof Toggle>
 

@@ -295,6 +295,9 @@ type CheckboxProps = {
     ]
   >
 
+/**
+ * Checkbox is an input component used to select or deselect an option.
+ */
 export const Checkbox = forwardRef(
   (
     {

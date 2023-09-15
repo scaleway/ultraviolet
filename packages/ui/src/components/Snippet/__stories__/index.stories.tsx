@@ -11,14 +11,6 @@ export default {
       </Stack>
     ),
   ],
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'A component to display a snippet of code with a copy button.',
-      },
-    },
-  },
   title: 'Components/Data Display/Snippet',
 } as Meta<typeof Snippet>
 

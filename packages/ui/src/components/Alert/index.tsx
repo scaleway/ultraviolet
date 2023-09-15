@@ -87,6 +87,9 @@ type AlertProps = {
   disabled?: boolean
 }
 
+/**
+ * Alert component is used to display a short, important message in a way that attracts the user's attention without interrupting the user's task.
+ */
 export const Alert = ({
   children,
   title,

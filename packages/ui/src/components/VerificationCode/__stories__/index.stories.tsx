@@ -4,13 +4,6 @@ import { VerificationCode } from '..'
 export default {
   component: VerificationCode,
   title: 'Components/Data Entry/VerificationCode',
-  parameters: {
-    docs: {
-      description: {
-        component: 'A component to enter some text or numbers one by one.',
-      },
-    },
-  },
 } as Meta<typeof VerificationCode>
 
 export { Playground } from './Playground.stories'

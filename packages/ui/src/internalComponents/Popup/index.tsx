@@ -143,6 +143,7 @@ type TooltipProps = {
   'data-testid'?: string
   hasArrow?: boolean
   tabIndex?: number
+  onClose?: () => void
 }
 
 export const Popup = forwardRef(
@@ -161,6 +162,7 @@ export const Popup = forwardRef(
       'data-testid': dataTestId,
       hasArrow = true,
       tabIndex,
+      onClose,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -215,6 +217,20 @@ export const Popup = forwardRef(
     }, [onScrollDetected])
 
     /**
+     * This function is called when we need to hide tooltip. A timeout is set to allow animation end, then remove
+     * tooltip from dom.
+     */
+    const hideTooltip = useCallback(() => {
+      debounceTimer.current = setTimeout(() => {
+        setReverseAnimation(true)
+        timer.current = setTimeout(() => {
+          unmountTooltip()
+          onClose?.()
+        }, ANIMATION_DURATION)
+      }, 200)
+    }, [onClose, unmountTooltip])
+
+    /**
      * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
      * end, then remove tooltip from dom.
      */
@@ -224,13 +240,7 @@ export const Popup = forwardRef(
         // There is debounce in order to avoid tooltip to flicker when we move the mouse from children to tooltip
         // Timer is used to follow the animation duration
         if (!isVisible && innerTooltipRef.current && !debounceTimer.current) {
-          debounceTimer.current = setTimeout(() => {
-            setReverseAnimation(true)
-            timer.current = setTimeout(
-              () => unmountTooltip(),
-              ANIMATION_DURATION,
-            )
-          }, 200)
+          hideTooltip()
         } else if (isVisible) {
           // This condition is for when we want to mount the tooltip
           // If the timer exists it means the tooltip was about to umount, but we hovered the children again,
@@ -249,7 +259,7 @@ export const Popup = forwardRef(
           setVisibleInDom(true)
         }
       },
-      [innerTooltipRef, unmountTooltip],
+      [hideTooltip, innerTooltipRef],
     )
 
     /**
@@ -293,6 +303,34 @@ export const Popup = forwardRef(
       [unmountTooltip],
     )
 
+    // Handle hide on esc press
+    useEffect(() => {
+      const handleEscPress = (event: KeyboardEvent) => {
+        if (event.key === 'Escape') {
+          event.preventDefault()
+          event.stopPropagation()
+          hideTooltip()
+        }
+      }
+      if (visibleInDom) {
+        document.body.addEventListener('keyup', handleEscPress, {
+          capture: true,
+        })
+        document.body.addEventListener('keydown', handleEscPress, {
+          capture: true,
+        })
+      }
+
+      return () => {
+        document.body.removeEventListener('keyup', handleEscPress, {
+          capture: true,
+        })
+        document.body.addEventListener('keydown', handleEscPress, {
+          capture: true,
+        })
+      }
+    }, [hideTooltip, onClose, unmountTooltip, visibleInDom])
+
     /**
      * Will render children conditionally if children is a function or not.
      */
@@ -310,6 +348,7 @@ export const Popup = forwardRef(
       return (
         <StyledChildrenContainer
           aria-describedby={generatedId}
+          aria-controls={generatedId}
           onBlur={!isControlled ? onPointerEvent(false) : noop}
           onFocus={!isControlled ? onPointerEvent(true) : noop}
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}

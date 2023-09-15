@@ -24,7 +24,8 @@ type ExpandableProps = {
 export const StyledExpandable = styled('div', {
   shouldForwardProp: prop => !['opened', 'minHeight'].includes(prop),
 })<{ opened?: boolean; minHeight: number }>`
-  transition: max-height ${ANIMATION_DURATION}ms ease-out,
+  transition:
+    max-height ${ANIMATION_DURATION}ms ease-out,
     opacity ${ANIMATION_DURATION}ms ease-out;
   overflow: ${({ opened }) => (opened ? 'visible' : 'hidden')};
   height: auto;
@@ -32,6 +33,11 @@ export const StyledExpandable = styled('div', {
     opened ? 'initial' : `${minHeight}px`};
 `
 
+/**
+ * The Expandable component is a dynamic React component that allows for the expansion of its children content
+ * based on its height. The component comes with a sleek and smooth animation, providing a visually pleasing
+ * user experience.
+ */
 export const Expandable = ({
   children,
   opened,

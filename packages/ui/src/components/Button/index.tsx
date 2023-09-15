@@ -263,6 +263,7 @@ export const buttonVariants = Object.keys(
 
 type CommonProps = {
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type']
+  autoFocus?: ButtonHTMLAttributes<HTMLButtonElement>['autoFocus']
   variant?: ButtonVariant
   role?: AriaRole
   size?: ButtonSize
@@ -324,6 +325,10 @@ type FinalProps = CommonProps &
       }
   )
 
+/**
+ * Button component is used to trigger an action or event, such as submitting a form, opening a dialog,
+ * canceling an action, or performing a delete operation.
+ */
 export const Button = forwardRef<Element, FinalProps>(
   (
     {
@@ -352,6 +357,7 @@ export const Button = forwardRef<Element, FinalProps>(
       role,
       tooltip,
       tabIndex,
+      autoFocus,
     },
     ref,
   ) => {
@@ -403,6 +409,7 @@ export const Button = forwardRef<Element, FinalProps>(
             ref={ref as Ref<HTMLAnchorElement>}
             iconOnly={!!icon && !children}
             tabIndex={tabIndex}
+            autoFocus={autoFocus}
           >
             {content}
           </Component>
@@ -434,6 +441,7 @@ export const Button = forwardRef<Element, FinalProps>(
           aria-haspopup={ariaHaspopup}
           iconOnly={!!icon && !children}
           tabIndex={tabIndex}
+          autoFocus={autoFocus}
         >
           {content}
         </Component>

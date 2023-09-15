@@ -10,13 +10,6 @@ export default {
       </div>
     ),
   ],
-  parameters: {
-    docs: {
-      description: {
-        component: 'A date input based on `react-datepicker.`',
-      },
-    },
-  },
   title: 'Components/Data Entry/DateInput',
 } as Meta
 

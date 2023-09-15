@@ -123,6 +123,9 @@ type BannerProps = {
   className?: string
 }
 
+/**
+ * Banner component is used to display an informative message to the user with style.
+ */
 export const Banner = ({
   variant = 'intro',
   size = 'medium',

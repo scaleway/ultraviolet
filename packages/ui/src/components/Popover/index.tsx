@@ -105,6 +105,10 @@ type PopoverProps = {
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Popup>, 'placement'>
 
+/**
+ * Popover component is used to display additional information or actions on top of the main content of the page.
+ * It is usually triggered by clicking on a button. It includes a title, a close button and a content area.
+ */
 export const Popover = ({
   visible = false,
   children,

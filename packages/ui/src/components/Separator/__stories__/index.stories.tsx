@@ -3,13 +3,6 @@ import { Separator } from '..'
 
 export default {
   component: Separator,
-  parameters: {
-    docs: {
-      description: {
-        component: 'A horizontal or vertical separator.',
-      },
-    },
-  },
   title: 'Components/Layout/Separator',
 } as Meta
 

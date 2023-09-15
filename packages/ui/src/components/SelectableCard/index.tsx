@@ -107,6 +107,10 @@ type SelectableCardProps = {
   'data-testid'?: string
 }
 
+/**
+ * SelectableCard is a component that can be used to create a radio or checkbox card.
+ * It can be used to create a list of selectable items or a single selectable item.
+ */
 export const SelectableCard = forwardRef(
   (
     {

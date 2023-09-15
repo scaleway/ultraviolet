@@ -446,6 +446,9 @@ type IconProps = {
   'className' | 'stroke' | 'cursor' | 'strokeWidth'
 >
 
+/**
+ * Icon component is our set of system icons in the design system. All of them are SVGs.
+ */
 export const Icon = forwardRef<SVGSVGElement, IconProps>(
   (
     {

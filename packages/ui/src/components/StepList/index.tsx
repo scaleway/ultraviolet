@@ -83,6 +83,7 @@ type StepListProps = {
 }
 
 /**
+ * StepList component is used to display a list of steps.
  * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const StepList = ({

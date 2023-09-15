@@ -61,6 +61,9 @@ const DEFAULT_TAGS: TagListProps['tags'] = []
 const getTagLabel = (tag: NonNullable<TagListProps['tags']>[number]) =>
   typeof tag === 'object' ? tag.label : tag
 
+/**
+ * This component is used to display a list of tags with a threshold and a popover when there are too many tags.
+ */
 export const TagList = ({
   maxLength = 600,
   tags = DEFAULT_TAGS,

@@ -3,14 +3,6 @@ import { TextInput } from '..'
 
 export default {
   component: TextInput,
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'TextInput component allows users to input text, with options for customization and validation. It supports various input types and should be appropriately sized with clear labeling.',
-      },
-    },
-  },
   title: 'Components/Data Entry/TextInput',
 } as Meta<typeof TextInput>
 

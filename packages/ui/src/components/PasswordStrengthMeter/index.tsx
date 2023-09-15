@@ -77,6 +77,7 @@ const DEFAULT_FORBIDDEN_WORDS: PasswordStrengthMeterProps['forbiddenInputs'] =
   []
 
 /**
+ * PasswordStrengthMeter is a component that displays a password strength meter.
  * @deprecated use Meter component instead
  */
 export const PasswordStrengthMeter = ({

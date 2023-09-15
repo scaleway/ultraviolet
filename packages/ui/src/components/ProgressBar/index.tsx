@@ -70,6 +70,9 @@ type ProgressBarProps = {
   'data-testid'?: string
 }
 
+/**
+ * Progress bar component to display progress of a task. Can be used to display progress of a form or a loading state.
+ */
 export const ProgressBar = ({
   progress = false,
   value = 0,

@@ -66,6 +66,11 @@ type SkeletonProps = {
   className?: string
 }
 
+/**
+ * Skeleton component is used to indicate that the data is loading.
+ * It is used to provide a better user experience by showing a temporary placeholder reflecting the dimensions of the
+ * content that will eventually be loaded on the screen.
+ */
 export const Skeleton = ({
   variant = 'blocks',
   length,

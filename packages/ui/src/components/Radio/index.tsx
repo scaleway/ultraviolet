@@ -165,6 +165,9 @@ type RadioProps = {
       }
   )
 
+/**
+ * Radio component is used to select a single option from a list of options. It is a type of input component.
+ */
 export const Radio = forwardRef(
   (
     {

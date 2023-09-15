@@ -16,6 +16,7 @@ It is set of React library that can be used to build fast application.
 - [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui): The main library that includes a set of components and utilities to build fast application.
 - [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
 - [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
+- [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons): A library that provides a set of icons to use with Ultraviolet UI.
 
 ## Installation
 
@@ -30,6 +31,7 @@ $ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 - #### [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui)
 - #### [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form)
 - #### [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes)
+- #### [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons)
 
 ## Development
 
@@ -41,7 +43,7 @@ $ pnpm install
 
 ### Storybook
 
-Our storybook includes both `@ultraviolet/ui` and `@ultraviolet/form`.
+Our storybook includes `@ultraviolet/ui`, `@ultraviolet/form` and `@ultraviolet/icons`.
 
 In order to start storybook without errors you will need to build the project once 
 (this is because `@ultraviolet/form` uses `@ultraviolet/ui` build to run).

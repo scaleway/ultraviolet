@@ -3,13 +3,6 @@ import { Status } from '..'
 
 export default {
   component: Status,
-  parameters: {
-    docs: {
-      description: {
-        component: 'Colorful circle that can be used to indicated state.',
-      },
-    },
-  },
   title: 'Components/Feedback/Status',
 } as Meta
 

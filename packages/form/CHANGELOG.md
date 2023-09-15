@@ -1,5 +1,25 @@
 # Change Log
 
+## 1.7.1
+
+### Patch Changes
+
+- [#2901](https://github.com/scaleway/ultraviolet/pull/2901) [`e2a8e447`](https://github.com/scaleway/ultraviolet/commit/e2a8e447566716fdeaf4b45dcc527e4d19cf4841) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.17`.
+
+- Updated dependencies [[`e2a8e447`](https://github.com/scaleway/ultraviolet/commit/e2a8e447566716fdeaf4b45dcc527e4d19cf4841)]:
+  - @ultraviolet/ui@1.13.1
+
+## 1.7.0
+
+### Minor Changes
+
+- [#2906](https://github.com/scaleway/ultraviolet/pull/2906) [`1bcf066a`](https://github.com/scaleway/ultraviolet/commit/1bcf066aec194bd338c7d616f3398d18c0a23539) Thanks [@matthprost](https://github.com/matthprost)! - Added new props into `Stack` component: `width` and `flex`
+
+### Patch Changes
+
+- Updated dependencies [[`1bcf066a`](https://github.com/scaleway/ultraviolet/commit/1bcf066aec194bd338c7d616f3398d18c0a23539)]:
+  - @ultraviolet/ui@1.13.0
+
 ## 1.6.0
 
 ### Minor Changes

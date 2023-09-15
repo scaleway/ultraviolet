@@ -1,6 +1,6 @@
 # Ultraviolet Form
 
-[![npm version](https://badge.fury.io/js/%40scaleway%2Fform.svg)](https://badge.fury.io/js/%40scaleway%2Fform)
+[![npm version](https://badge.fury.io/js/%40ultraviolet%2Fform.svg)](https://badge.fury.io/js/%40ultraviolet%2Fform)
 
 Ultraviolet Form is an extension of Ultraviolet UI including everything to build forms using React.
 It is using [React Final Form](https://final-form.org/react) under the hood.

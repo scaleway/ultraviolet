@@ -147,6 +147,8 @@ describe('Tooltip', () => {
     expect(tooltipPortal).toBeVisible()
 
     await userEvent.keyboard('{Escape}')
-    expect(tooltipPortal).not.toBeVisible()
+    await waitFor(() => {
+      expect(tooltipPortal).not.toBeVisible()
+    })
   })
 })

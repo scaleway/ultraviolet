@@ -87,6 +87,9 @@ type CarouselProps = {
   'data-testid'?: string
 }
 
+/**
+ * Carousel component allows you to scroll horizontally through a list of items.
+ */
 export const Carousel = ({
   children,
   className,

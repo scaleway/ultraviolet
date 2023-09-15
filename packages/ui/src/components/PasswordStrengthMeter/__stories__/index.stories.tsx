@@ -6,11 +6,6 @@ export default {
   parameters: {
     deprecated: true,
     deprecatedReason: 'This component is deprecated, please use Meter instead.',
-    docs: {
-      description: {
-        component: 'Show strength of a password based on different criteria.',
-      },
-    },
   },
   title: 'Components/Feedback/PasswordStrengthMeter',
 } as Meta<typeof PasswordStrengthMeter>

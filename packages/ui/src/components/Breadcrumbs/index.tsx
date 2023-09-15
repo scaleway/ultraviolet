@@ -98,6 +98,9 @@ type BreadcrumbsType = ((props: BreadcrumbsProps) => JSX.Element) & {
   Item: typeof Item
 }
 
+/**
+ * Breadcrumbs component is used to display a navigation path with links to the parent pages.
+ */
 export const Breadcrumbs: BreadcrumbsType = ({
   children,
   selected: selectedProp,

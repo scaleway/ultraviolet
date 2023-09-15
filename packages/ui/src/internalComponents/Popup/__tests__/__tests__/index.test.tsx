@@ -145,6 +145,8 @@ describe('Popup', () => {
     expect(PopupPortal).toBeVisible()
 
     await userEvent.keyboard('{Escape}')
-    expect(PopupPortal).not.toBeVisible()
+    await waitFor(() => {
+      expect(PopupPortal).not.toBeVisible()
+    })
   })
 })

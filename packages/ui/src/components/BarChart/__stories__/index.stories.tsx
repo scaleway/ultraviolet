@@ -3,14 +3,6 @@ import { BarChart } from '..'
 
 export default {
   component: BarChart,
-  parameters: {
-    experimental: true,
-    docs: {
-      description: {
-        component: 'BarChart is a chart component that renders bars.',
-      },
-    },
-  },
   title: 'Components/Data Display/Chart/BarChart',
 } as Meta<typeof BarChart>
 

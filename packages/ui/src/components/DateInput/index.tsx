@@ -170,6 +170,10 @@ type DateInputProps = Pick<
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
   value instanceof Date ? value.toISOString() : value
 
+/**
+ * DateInput is a wrapper around react-datepicker that provides a consistent look and feel with the rest of the Ultraviolet UI.
+ * See https://reactdatepicker.com/ for more information.
+ */
 export const DateInput = ({
   autoFocus = false,
   disabled = false,

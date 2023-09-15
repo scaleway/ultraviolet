@@ -25,6 +25,10 @@ const PasswordCheckContainer = styled.div`
   gap: ${({ theme }) => theme.space['1']};
 `
 
+/**
+ * PasswordCheck is a component that display a list of password rules with a check or a cross depending on the validity
+ * of the rule.
+ */
 export const PasswordCheck = ({
   rules,
   className,
