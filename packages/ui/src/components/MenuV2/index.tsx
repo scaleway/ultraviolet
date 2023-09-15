@@ -19,13 +19,8 @@ import { Popup } from '../../internalComponents'
 import { Stack } from '../Stack'
 import Item from './Item'
 
-type PopoverStateReturn = any
-export type DisclosureProps = Partial<PopoverStateReturn>
-
 type DisclosureElement =
-  | ((
-      popover: Partial<PopoverStateReturn>,
-    ) => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
+  | (() => ReactElement<ButtonHTMLAttributes<HTMLButtonElement>>)
   | (ReactElement<ButtonHTMLAttributes<HTMLButtonElement>> & {
       ref?: Ref<HTMLButtonElement>
     })
@@ -47,7 +42,7 @@ type MenuProps = {
   id?: string
   ariaLabel?: string
   placement?: ComponentProps<typeof Popup>['placement']
-  children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
+  children?: (() => ReactNode) | ReactNode
   className?: string
   disclosure: DisclosureElement
   hasArrow?: boolean
@@ -106,7 +101,7 @@ const FwdMenu = forwardRef(
       disclosure,
     )
       ? disclosure
-      : disclosure({})
+      : disclosure()
     const innerRef = useRef(target as unknown as HTMLButtonElement)
     useImperativeHandle(ref, () => innerRef.current)
 
@@ -153,7 +148,7 @@ const FwdMenu = forwardRef(
         onClose={onClose}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
-            {typeof children === 'function' ? children({}) : children}
+            {typeof children === 'function' ? children() : children}
           </MenuList>
         }
       >
