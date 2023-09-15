@@ -315,7 +315,6 @@ export const Popup = forwardRef(
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
-          tabIndex={0}
           onKeyDown={onKeyDown}
           data-container-full-width={containerFullWidth}
         >

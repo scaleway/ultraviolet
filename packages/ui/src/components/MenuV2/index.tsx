@@ -10,8 +10,7 @@ import {
   cloneElement,
   forwardRef,
   isValidElement,
-  useCallback,
-  useEffect,
+  useId,
   useImperativeHandle,
   useRef,
   useState,
@@ -45,6 +44,7 @@ const StyledPopup = styled(Popup)`
 `
 
 type MenuProps = {
+  id?: string
   ariaLabel?: string
   placement?: ComponentProps<typeof Popup>['placement']
   children?: ((props: PopoverStateReturn) => ReactNode) | ReactNode
@@ -83,6 +83,7 @@ const MenuList = styled(Stack)`
 const FwdMenu = forwardRef(
   (
     {
+      id,
       ariaLabel = 'Menu',
       children,
       disclosure,
@@ -96,6 +97,8 @@ const FwdMenu = forwardRef(
   ) => {
     const [isVisible, setIsVisible] = useState(visible)
     const popupRef = useRef<HTMLDivElement>(null)
+    const tempId = useId()
+    const finalId = `menu-${id ?? tempId}`
 
     // if you need dialog inside your component, use function, otherwise component is fine
     const target = isValidElement<ButtonHTMLAttributes<HTMLButtonElement>>(
@@ -106,25 +109,25 @@ const FwdMenu = forwardRef(
     const innerRef = useRef(target as unknown as HTMLButtonElement)
     useImperativeHandle(ref, () => innerRef.current)
 
-    const toggleVisible = () => setIsVisible(!isVisible)
-    const finalDisclosure = cloneElement(target, { onClick: toggleVisible })
+    const toggleVisible = () => {
+      setIsVisible(!isVisible)
 
-    const handleClickOutside = useCallback((event: Event) => {
-      if (
-        popupRef.current &&
-        !popupRef.current.contains(event.target as Node)
-      ) {
-        setIsVisible(false)
+      if (!isVisible) {
+        // We have to wait for the popup to be inserted in the DOM
+        requestIdleCallback(() => {
+          // @ts-expect-error to fix
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+          popupRef.current?.firstChild?.firstChild?.focus()
+        })
       }
-    }, [])
+    }
 
-    useEffect(() => {
-      document.addEventListener('click', handleClickOutside, true)
-
-      return () => {
-        document.removeEventListener('click', handleClickOutside, true)
-      }
-    }, [handleClickOutside])
+    const finalDisclosure = cloneElement(target, {
+      onClick: toggleVisible,
+      'aria-haspopup': 'dialog',
+      'aria-expanded': isVisible,
+      'aria-controls': finalId,
+    })
 
     return (
       <StyledPopup
@@ -135,8 +138,9 @@ const FwdMenu = forwardRef(
         hasArrow={hasArrow}
         data-has-arrow={hasArrow}
         role="dialog"
-        tabIndex={-1}
+        id={finalId}
         ref={popupRef}
+        tabIndex={-1}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {typeof children === 'function' ? children({}) : children}
