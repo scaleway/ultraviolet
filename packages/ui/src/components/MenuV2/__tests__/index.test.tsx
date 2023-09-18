@@ -64,6 +64,12 @@ describe('Menu', () => {
       </MenuV2>,
     )
 
+    globalThis.requestIdleCallback = jest
+      .fn<(callback: () => void) => void>()
+      .mockImplementation(callback =>
+        callback(),
+      ) as unknown as typeof requestIdleCallback
+
     const menuButton = screen.getByRole('button')
     // Open and close
     await userEvent.click(menuButton)
