@@ -143,6 +143,7 @@ type PopupProps = {
   'data-testid'?: string
   hasArrow?: boolean
   onClose?: () => void
+  tabIndex?: number
 }
 
 export const Popup = forwardRef(
@@ -161,6 +162,7 @@ export const Popup = forwardRef(
       'data-testid': dataTestId,
       hasArrow = true,
       onClose,
+      tabIndex = 0,
     }: PopupProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -352,7 +354,7 @@ export const Popup = forwardRef(
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
-          tabIndex={0}
+          tabIndex={tabIndex}
           onKeyDown={onKeyDown}
           data-container-full-width={containerFullWidth}
         >
@@ -366,6 +368,7 @@ export const Popup = forwardRef(
       isControlled,
       onKeyDown,
       onPointerEvent,
+      tabIndex,
     ])
 
     if (!text) {

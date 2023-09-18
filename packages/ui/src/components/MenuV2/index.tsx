@@ -150,6 +150,7 @@ const FwdMenu = forwardRef(
         id={finalId}
         ref={popupRef}
         onClose={onClose}
+        tabIndex={-1}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {children}
