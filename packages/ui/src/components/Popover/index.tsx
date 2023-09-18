@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, ReactNode } from 'react'
-import { useCallback, useEffect, useRef } from 'react'
+import type { ComponentProps, KeyboardEventHandler, ReactNode } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Popup } from '../../internalComponents'
 import { Button } from '../Button'
 import { Stack } from '../Stack'
@@ -60,38 +60,47 @@ const ContentWrapper = ({
   onClose,
   children,
   sentiment,
-}: ContentWrapperProps) => (
-  <Stack gap={1}>
-    <Stack direction="row" justifyContent="space-between">
-      <Text
-        variant="bodyStrong"
-        as="h3"
-        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-      >
-        {title}
-      </Text>
-      <Button
-        variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
-        sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
-        onClick={onClose}
-        size="small"
-        icon="close"
-        aria-label="close"
-      />
+}: ContentWrapperProps) => {
+  const buttonRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    buttonRef.current?.focus()
+  }, [])
+
+  return (
+    <Stack gap={1}>
+      <Stack direction="row" justifyContent="space-between">
+        <Text
+          variant="bodyStrong"
+          as="h3"
+          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+        >
+          {title}
+        </Text>
+        <Button
+          variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
+          sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
+          onClick={onClose}
+          size="small"
+          icon="close"
+          aria-label="close"
+          ref={buttonRef}
+        />
+      </Stack>
+      {typeof children === 'string' ? (
+        <Text
+          variant="bodySmall"
+          as="p"
+          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+        >
+          {children}
+        </Text>
+      ) : (
+        children
+      )}
     </Stack>
-    {typeof children === 'string' ? (
-      <Text
-        variant="bodySmall"
-        as="p"
-        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-      >
-        {children}
-      </Text>
-    ) : (
-      children
-    )}
-  </Stack>
-)
+  )
+}
 
 type PopoverProps = {
   children: ReactNode
@@ -100,7 +109,7 @@ type PopoverProps = {
   sentiment?: SentimentType
   visible?: boolean
   size?: keyof typeof SIZES_WIDTH
-  onClose: () => void
+  onClose?: () => void
   className?: string
   'data-testid'?: string
 } & Pick<ComponentProps<typeof Popup>, 'placement'>
@@ -122,11 +131,18 @@ export const Popover = ({
   'data-testid': dataTestId,
 }: PopoverProps) => {
   const ref = useRef<HTMLDivElement>(null)
+  const innerRef = useRef<HTMLDivElement>(null)
+  const [localVisible, setLocalVisible] = useState(visible)
+
+  // We change local value if visible prop changes
+  useEffect(() => {
+    setLocalVisible(visible)
+  }, [visible])
 
   const handleClickOutside = useCallback(
     (event: Event) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        onClose()
+        onClose?.()
       }
     },
     [onClose],
@@ -140,12 +156,32 @@ export const Popover = ({
     }
   }, [handleClickOutside])
 
+  // When space key is pressed we show the popover
+  const onKeyDownSpace: KeyboardEventHandler = useCallback(event => {
+    if (event.code === 'Space') {
+      event.preventDefault()
+      event.stopPropagation()
+      setLocalVisible(true)
+    }
+  }, [])
+
+  // When we close we hide the popover and focus the disclosure element
+  const localOnClose = useCallback(() => {
+    setLocalVisible(false)
+    onClose?.()
+    innerRef.current?.focus()
+  }, [onClose])
+
   return (
     <StyledPopup
-      visible={visible}
+      visible={localVisible}
       placement={placement}
       text={
-        <ContentWrapper title={title} onClose={onClose} sentiment={sentiment}>
+        <ContentWrapper
+          title={title}
+          onClose={localOnClose}
+          sentiment={sentiment}
+        >
           {content}
         </ContentWrapper>
       }
@@ -155,6 +191,9 @@ export const Popover = ({
       size={size}
       role="dialog"
       ref={ref}
+      innerRef={innerRef}
+      onClose={localOnClose}
+      onKeyDown={onKeyDownSpace}
     >
       {children}
     </StyledPopup>
