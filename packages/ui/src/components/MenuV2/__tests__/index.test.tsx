@@ -1,6 +1,9 @@
 import { afterAll, beforeEach, describe, jest, test } from '@jest/globals'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { MenuV2 } from '..'
 import {
+  renderWithTheme,
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotWithPortal,
 } from '../../../../.jest/helpers'
@@ -49,6 +52,23 @@ describe('Menu', () => {
         </MenuV2.Item>
       </MenuV2>,
     ))
+
+  test('disclosure Component render with function disclosure', async () => {
+    renderWithTheme(
+      <MenuV2
+        visible
+        id="menu"
+        disclosure={() => <button type="button">Menu</button>}
+      >
+        <MenuV2.Item href="/link">Menu.Item as Link</MenuV2.Item>
+      </MenuV2>,
+    )
+
+    const menuButton = screen.getByRole('button')
+    // Open and close
+    await userEvent.click(menuButton)
+    await userEvent.click(menuButton)
+  })
 
   describe('placement', () => {
     test('renders top', () =>
