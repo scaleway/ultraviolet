@@ -1,3 +1,4 @@
+import styled from '@emotion/styled'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { Popup } from '../../internalComponents'
@@ -16,6 +17,10 @@ type TooltipProps = Pick<
   | 'data-testid'
   | 'containerFullWidth'
 >
+
+const StyledPopup = styled(Popup)`
+  pointer-events: none;
+`
 
 /**
  * Tooltip component is used to display additional information on hover or focus.
@@ -38,7 +43,7 @@ export const Tooltip = forwardRef(
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
-    <Popup
+    <StyledPopup
       id={id}
       ref={tooltipRef}
       role={role}
@@ -52,6 +57,6 @@ export const Tooltip = forwardRef(
       innerRef={innerRef}
     >
       {children}
-    </Popup>
+    </StyledPopup>
   ),
 )
