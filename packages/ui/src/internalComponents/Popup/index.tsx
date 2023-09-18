@@ -67,7 +67,7 @@ const StyledTooltip = styled('div', {
   text-align: center;
   position: absolute;
   max-width: ${({ maxWidth }) => maxWidth}px;
-  word-break: break-all;
+  overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
   top: 0;
