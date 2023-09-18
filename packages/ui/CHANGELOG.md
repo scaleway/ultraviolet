@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.14.0
+
+### Minor Changes
+
+- [#2920](https://github.com/scaleway/ultraviolet/pull/2920) [`51f5b001`](https://github.com/scaleway/ultraviolet/commit/51f5b001ac438659a528e0f297aad4b7f89a8a6a) Thanks [@matthprost](https://github.com/matthprost)! - Tooltip and Popover will now close when ESC keys is pressed
+
+### Patch Changes
+
+- [#2915](https://github.com/scaleway/ultraviolet/pull/2915) [`3c382cc2`](https://github.com/scaleway/ultraviolet/commit/3c382cc29278ab59e9cc03708c19ff8824a99e2f) Thanks [@matthprost](https://github.com/matthprost)! - Fixed tooltip to break word automatically and correctly when content is too long
+
+- [#2919](https://github.com/scaleway/ultraviolet/pull/2919) [`2fe8656f`](https://github.com/scaleway/ultraviolet/commit/2fe8656ff7f33c95a4db38fc9d97dc470e4e20f8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.17.0`.
+
+- [#2922](https://github.com/scaleway/ultraviolet/pull/2922) [`5d275d9a`](https://github.com/scaleway/ultraviolet/commit/5d275d9afcafcc824a21405036aa86bc85dc16c8) Thanks [@matthprost](https://github.com/matthprost)! - Fixed `<Badge />` to be a span instead of a div
+
 ## 1.13.1
 
 ### Patch Changes
