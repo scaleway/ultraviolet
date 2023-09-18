@@ -46,7 +46,7 @@ type MenuProps = {
   id?: string
   ariaLabel?: string
   placement?: ComponentProps<typeof Popup>['placement']
-  children?: (() => ReactNode) | ReactNode
+  children?: ReactNode
   className?: string
   disclosure: DisclosureElement
   hasArrow?: boolean
@@ -96,7 +96,7 @@ const FwdMenu = forwardRef(
   ) => {
     const [isVisible, setIsVisible] = useState(visible)
     const popupRef = useRef<HTMLDivElement>(null)
-    const disclosureRef = useRef<HTMLDivElement>(null)
+    const disclosureRef = useRef<HTMLButtonElement>(null)
     const tempId = useId()
     const finalId = `menu-${id ?? tempId}`
 
@@ -152,7 +152,7 @@ const FwdMenu = forwardRef(
         onClose={onClose}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
-            {typeof children === 'function' ? children() : children}
+            {children}
           </MenuList>
         }
       >
