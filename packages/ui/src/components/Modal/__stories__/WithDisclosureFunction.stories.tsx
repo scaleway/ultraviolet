@@ -6,7 +6,7 @@ export const WithDisclosureFunction: StoryFn = props => (
   <Modal
     {...props}
     disclosure={disclosureProps => (
-      <Button onClick={disclosureProps.toggle}>
+      <Button>
         Modal is visible : {disclosureProps?.visible ? 'yes' : 'no'}
       </Button>
     )}

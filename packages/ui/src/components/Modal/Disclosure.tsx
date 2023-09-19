@@ -1,5 +1,11 @@
 import type { PropsWithRef } from 'react'
-import { cloneElement, createRef, isValidElement, useEffect } from 'react'
+import {
+  cloneElement,
+  createRef,
+  isValidElement,
+  useEffect,
+  useMemo,
+} from 'react'
 import type { DisclosureProps } from './types'
 
 export const Disclosure = ({
@@ -21,25 +27,28 @@ export const Disclosure = ({
     }
   }, [handleOpen, disclosureRef])
 
-  if (typeof disclosure === 'function') {
-    return disclosure({
-      visible,
-      onClose: handleClose,
-      toggle,
-      onOpen: handleOpen,
-      modalId: id,
-      hide: handleClose,
-    })
+  const finalDisclosure = useMemo(() => {
+    if (typeof disclosure === 'function') {
+      return disclosure({
+        visible,
+        onClose: handleClose,
+        toggle,
+        onOpen: handleOpen,
+        modalId: id,
+        hide: handleClose,
+      })
+    }
+
+    return disclosure
+  }, [disclosure, handleOpen, handleClose, id, toggle, visible])
+
+  if (!isValidElement(finalDisclosure)) {
+    return null
   }
 
-  if (isValidElement(disclosure)) {
-    return cloneElement(disclosure, {
-      ...disclosure.props,
-      ref: disclosureRef,
-      'aria-controls': id,
-      'aria-haspopup': 'dialog',
-    } as unknown as PropsWithRef<typeof disclosure>)
-  }
-
-  return null
+  return cloneElement(finalDisclosure, {
+    ref: disclosureRef,
+    'aria-controls': id,
+    'aria-haspopup': 'dialog',
+  } as unknown as PropsWithRef<typeof disclosure>)
 }

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
 import { useCallback, useEffect, useId, useState } from 'react'
 import { Button } from '../Button'
@@ -13,7 +13,7 @@ export type ModalProps = {
   hideOnClickOutside?: boolean
   preventBodyScroll?: boolean
   ariaLabel?: string
-  disclosure?: ReactNode | ((state: ModalState) => ReactNode)
+  disclosure?: ReactElement | ((state: ModalState) => ReactElement)
   isClosable?: boolean
   onClose?: () => void
   onBeforeClose?: () => Promise<void> | void
