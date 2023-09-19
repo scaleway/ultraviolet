@@ -1,6 +1,12 @@
 import { css, keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { KeyboardEventHandler, ReactNode, Ref, RefObject } from 'react'
+import type {
+  HTMLAttributes,
+  KeyboardEventHandler,
+  ReactNode,
+  Ref,
+  RefObject,
+} from 'react'
 import {
   forwardRef,
   useCallback,
@@ -144,6 +150,8 @@ type PopupProps = {
   hasArrow?: boolean
   onClose?: () => void
   tabIndex?: number
+  onKeyDown?: KeyboardEventHandler
+  'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
 }
 
 export const Popup = forwardRef(
@@ -163,6 +171,8 @@ export const Popup = forwardRef(
       hasArrow = true,
       onClose,
       tabIndex = 0,
+      onKeyDown,
+      'aria-haspopup': ariaHasPopup,
     }: PopupProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -294,7 +304,7 @@ export const Popup = forwardRef(
       }
     }, [isControlled, onPointerEvent, visible])
 
-    const onKeyDown: KeyboardEventHandler = useCallback(
+    const onLocalKeyDown: KeyboardEventHandler = useCallback(
       event => {
         if (event.code === 'Escape') {
           unmountTooltip()
@@ -355,18 +365,24 @@ export const Popup = forwardRef(
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
           tabIndex={tabIndex}
-          onKeyDown={onKeyDown}
+          onKeyDown={event => {
+            onKeyDown?.(event)
+            onLocalKeyDown(event)
+          }}
           data-container-full-width={containerFullWidth}
+          aria-haspopup={ariaHasPopup}
         >
           {children}
         </StyledChildrenContainer>
       )
     }, [
+      ariaHasPopup,
       children,
       containerFullWidth,
       generatedId,
       isControlled,
       onKeyDown,
+      onLocalKeyDown,
       onPointerEvent,
       tabIndex,
     ])

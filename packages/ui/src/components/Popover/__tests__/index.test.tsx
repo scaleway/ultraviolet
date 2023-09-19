@@ -1,5 +1,5 @@
 import { describe, expect, jest, test } from '@jest/globals'
-import { screen } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { Popover } from '..'
@@ -135,5 +135,35 @@ describe('Tooltip', () => {
     await userEvent.click(outsideElement)
 
     expect(onClose).toHaveBeenCalledTimes(1)
+  })
+
+  test(`should open on space key and close on space key - a11y`, async () => {
+    const onClose = jest.fn(() => {})
+
+    renderWithTheme(
+      <div style={{ height: '500px', width: '500px' }}>
+        <Popover
+          title="Test"
+          content="Test"
+          data-testid="popover"
+          onClose={onClose}
+        >
+          Children
+        </Popover>
+      </div>,
+    )
+
+    await userEvent.keyboard('{Tab}')
+    await userEvent.keyboard('{ }')
+
+    const popover = screen.getByTestId('popover')
+    expect(popover).toBeVisible()
+
+    await userEvent.keyboard('{ }')
+
+    expect(onClose).toHaveBeenCalledTimes(1)
+    await waitFor(() => {
+      expect(popover).not.toBeVisible()
+    })
   })
 })
