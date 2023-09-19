@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.15.1
+
+### Patch Changes
+
+- [#2936](https://github.com/scaleway/ultraviolet/pull/2936) [`455bd804`](https://github.com/scaleway/ultraviolet/commit/455bd8040a666eb4a31d0b58e0b3a3a6288e584f) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Fix modal with disclosure function
+
 ## 1.15.0
 
 ### Minor Changes
