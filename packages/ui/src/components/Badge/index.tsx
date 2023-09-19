@@ -11,12 +11,6 @@ import { Text } from '../Text'
 
 type IconName = ComponentProps<typeof Icon>['name']
 
-const StyledText = styled(Text)<{ fontSize: number }>`
-  text-transform: uppercase;
-  font-size: ${({ fontSize }) => fontSize}px;
-  color: inherit;
-`
-
 // TODO: remove when typography has been created
 const TEXT_SIZES = {
   large: 14,
@@ -94,9 +88,10 @@ const generateStyles = ({
   }
 }
 
-const StyledSpan = styled('span', {
-  shouldForwardProp: prop => !['sentiment', 'size'].includes(prop),
-})<{ size: number; sentiment: string }>`
+const StyledSpan = styled(Text, {
+  shouldForwardProp: prop =>
+    !['sentimentStyles', 'size', 'fontSize'].includes(prop),
+})<{ size: number; sentimentStyles: string; fontSize: number }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +104,10 @@ const StyledSpan = styled('span', {
     size === SIZES.small ? theme.space['0.5'] : theme.space['1']};
   width: fit-content;
   height: ${({ size }) => size}px;
-  ${({ sentiment }) => sentiment}
+  text-transform: uppercase;
+  font-size: ${({ fontSize }) => fontSize}px;
+  color: inherit;
+  ${({ sentimentStyles }) => sentimentStyles}
 `
 
 type BadgeProps = {
@@ -161,26 +159,22 @@ export const Badge = ({
 
   return (
     <StyledSpan
-      role="status"
       aria-label={ariaLabel}
-      sentiment={
+      sentimentStyles={
         disabled ? generatedStyles['disabled'] : generatedStyles[sentiment]
       }
       size={sizeValue}
+      variant="bodyStrong"
+      as="span"
+      fontSize={TEXT_SIZES[size]}
+      prominence={disabled ? 'weak' : 'default'}
       className={className}
       data-testid={dataTestId}
     >
       {icon && sizeValue !== SIZES.small ? (
         <Icon name={icon} size={16} />
       ) : null}
-      <StyledText
-        variant="bodyStrong"
-        as="p"
-        fontSize={TEXT_SIZES[size]}
-        prominence={disabled ? 'weak' : 'default'}
-      >
-        {children}
-      </StyledText>
+      {children}
     </StyledSpan>
   )
 }
