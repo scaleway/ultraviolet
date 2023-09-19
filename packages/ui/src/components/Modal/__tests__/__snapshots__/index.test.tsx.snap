@@ -1315,6 +1315,8 @@ exports[`Modal renders with disclosure 1`] = `
 exports[`Modal renders with disclosure and onBeforeClose 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="modal-test"
+    aria-haspopup="dialog"
     type="button"
   >
     Test modal-test
@@ -1325,6 +1327,8 @@ exports[`Modal renders with disclosure and onBeforeClose 1`] = `
 exports[`Modal renders with disclosure and onClose 1`] = `
 <DocumentFragment>
   <button
+    aria-controls="modal-test"
+    aria-haspopup="dialog"
     type="button"
   >
     Test modal-test

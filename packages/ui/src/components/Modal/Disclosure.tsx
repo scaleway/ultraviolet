@@ -1,5 +1,5 @@
 import type { PropsWithRef } from 'react'
-import { cloneElement, createRef, isValidElement, useEffect } from 'react'
+import { cloneElement, createRef, useEffect } from 'react'
 import type { DisclosureProps } from './types'
 
 export const Disclosure = ({
@@ -22,7 +22,7 @@ export const Disclosure = ({
   }, [handleOpen, disclosureRef])
 
   if (typeof disclosure === 'function') {
-    return disclosure({
+    const element = disclosure({
       visible,
       onClose: handleClose,
       toggle,
@@ -30,16 +30,21 @@ export const Disclosure = ({
       modalId: id,
       hide: handleClose,
     })
-  }
 
-  if (isValidElement(disclosure)) {
-    return cloneElement(disclosure, {
-      ...disclosure.props,
+    return cloneElement(element, {
       ref: disclosureRef,
       'aria-controls': id,
       'aria-haspopup': 'dialog',
     } as unknown as PropsWithRef<typeof disclosure>)
   }
 
-  return null
+  if (!disclosure) {
+    return null
+  }
+
+  return cloneElement(disclosure, {
+    ref: disclosureRef,
+    'aria-controls': id,
+    'aria-haspopup': 'dialog',
+  } as unknown as PropsWithRef<typeof disclosure>)
 }
