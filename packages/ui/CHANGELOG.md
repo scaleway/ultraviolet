@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.15.0
+
+### Minor Changes
+
+- [#2930](https://github.com/scaleway/ultraviolet/pull/2930) [`94e6f54e`](https://github.com/scaleway/ultraviolet/commit/94e6f54e30ef8bbaab64afc99fd6c412a696ef15) Thanks [@matthprost](https://github.com/matthprost)! - Improve accessibility of Popover component
+
+### Patch Changes
+
+- [#2933](https://github.com/scaleway/ultraviolet/pull/2933) [`7ff34db5`](https://github.com/scaleway/ultraviolet/commit/7ff34db5df7ff2c2703bd65cb459c5b9fb549d7e) Thanks [@matthprost](https://github.com/matthprost)! - Fix Tooltip to remove pointer events on tooltip itself
+
 ## 1.14.0
 
 ### Minor Changes
