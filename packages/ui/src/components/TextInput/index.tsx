@@ -169,7 +169,7 @@ const StyledError = styled.div`
 `
 
 const StyledNotice = styled(Notice)`
-  margin-top: ${({ theme }) => theme.space['1']};
+  margin-top: ${({ theme }) => theme.space['0.5']};
 `
 
 type StyledInputProps = {

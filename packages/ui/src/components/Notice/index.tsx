@@ -1,6 +1,6 @@
+import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ReactNode } from 'react'
-import { Stack } from '../Stack'
 import { Text } from '../Text'
 
 type NoticeProps = {
@@ -8,6 +8,12 @@ type NoticeProps = {
   className?: string
   'data-testid'?: string
 }
+
+const StyledSpan = styled(Text)`
+  display: flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.space['1']};
+`
 
 /**
  * A Notice is used to display a short message to the user.
@@ -17,25 +23,20 @@ export const Notice = ({
   className,
   'data-testid': dataTestId,
 }: NoticeProps) => (
-  <Stack
-    direction="row"
-    alignItems="center"
-    gap={1}
+  <StyledSpan
+    as="span"
+    variant="caption"
+    sentiment="neutral"
+    prominence="weak"
     data-testid={dataTestId}
     className={className}
   >
     <Icon
       name="information-outline"
-      size={20}
+      size={16}
       color="neutral"
       prominence="weak"
     />
-    {typeof children === 'string' ? (
-      <Text as="p" variant="caption" color="neutral" prominence="weak">
-        {children}
-      </Text>
-    ) : (
-      children
-    )}
-  </Stack>
+    {children}
+  </StyledSpan>
 )
