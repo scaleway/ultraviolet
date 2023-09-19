@@ -49,7 +49,7 @@ const parameters = {
         'Customization',
         ['Understand Tokens'],
         ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
-        'Responsive',
+        'Tools',
         'Components',
         'Icons',
         'Form',
@@ -64,46 +64,45 @@ const parameters = {
   },
 }
 
-export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) =>
-  css`
-    ${normalize()}
-    body {
-      color: ${theme.colors.neutral.text};
-    }
+export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) => css`
+  ${normalize()}
+  body {
+    color: ${theme.colors.neutral.text};
+  }
 
-    :root {
-      color-scheme: ${mode};
-    }
+  :root {
+    color-scheme: ${mode};
+  }
 
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapRegularWoff2}) format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapMediumWoff2}) format('woff2');
-      font-weight: 500;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Asap';
-      font-style: normal;
-      src: url(${AsapBoldWoff2}) format('woff2');
-      font-weight: 600;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'JetBrains';
-      font-style: normal;
-      src: url(${JetBrains}) format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
-  `
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapRegularWoff2}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapMediumWoff2}) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Asap';
+    font-style: normal;
+    src: url(${AsapBoldWoff2}) format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'JetBrains';
+    font-style: normal;
+    src: url(${JetBrains}) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+`
 
 const decorators: Preview['decorators'] = [
   StoryComponent => {
