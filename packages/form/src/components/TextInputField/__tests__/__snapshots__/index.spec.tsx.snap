@@ -590,40 +590,7 @@ exports[`TextInputField should render correctly notice 1`] = `
   padding-top: 2px;
 }
 
-.cache-159nqe {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  margin-top: 8px;
-}
-
-.cache-k1vg20-sizeStyles {
-  vertical-align: middle;
-  fill: #727683;
-  height: 20px;
-  width: 20px;
-  min-width: 20px;
-  min-height: 20px;
-}
-
-.cache-g106tl {
+.cache-1oazdw8 {
   color: #727683;
   font-size: 12px;
   font-family: Asap;
@@ -633,6 +600,25 @@ exports[`TextInputField should render correctly notice 1`] = `
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cache-1eowv3p-sizeStyles {
+  vertical-align: middle;
+  fill: #727683;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <form
@@ -657,23 +643,19 @@ exports[`TextInputField should render correctly notice 1`] = `
           class="cache-xbtm7g el3h3g94"
         />
       </div>
-      <div
-        class="el3h3g93 cache-159nqe ehpbis70"
+      <span
+        class="el3h3g93 e19pqvs30 cache-1oazdw8 e13y3mga0"
       >
         <svg
-          class="cache-k1vg20-sizeStyles e1gt4cfo0"
+          class="cache-1eowv3p-sizeStyles e1gt4cfo0"
           viewBox="0 0 24 24"
         >
           <path
             d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
           />
         </svg>
-        <p
-          class="cache-g106tl e13y3mga0"
-        >
-          notice
-        </p>
-      </div>
+        notice
+      </span>
     </div>
   </form>
 </DocumentFragment>
