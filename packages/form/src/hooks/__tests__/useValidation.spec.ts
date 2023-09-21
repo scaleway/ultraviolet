@@ -7,7 +7,7 @@ const fakeValidator = (success?: boolean) =>
   ({
     error: 'REQUIRED',
     validate: () => success,
-  } as ValidatorObject<boolean>)
+  }) as ValidatorObject<boolean>
 
 describe('useValidation', () => {
   test('should render correctly', () => {

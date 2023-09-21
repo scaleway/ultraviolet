@@ -2,7 +2,7 @@ import { describe, test } from '@jest/globals'
 import type { ProminenceProps } from '..'
 import { Link, PROMINENCES } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
-import type { Color} from '../../../theme';
+import type { Color } from '../../../theme'
 import { SENTIMENTS } from '../../../theme'
 
 describe('Link', () => {
