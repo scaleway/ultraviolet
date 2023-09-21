@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import type React from 'react'
 
 export type ModalSize = 'large' | 'medium' | 'small' | 'xsmall' | 'xxsmall'
@@ -27,7 +27,7 @@ export type ModalState = {
 }
 
 export type DisclosureProps = {
-  disclosure?: ReactNode | ((state: ModalState) => ReactNode)
+  disclosure?: ReactElement | ((state: ModalState) => ReactElement)
   handleOpen: ModalState['onOpen']
   handleClose: ModalState['onClose']
   visible: ModalState['visible']
