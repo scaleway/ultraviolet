@@ -84,8 +84,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 5.4.4
-        version: 5.4.4(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.4.5
+        version: 5.4.5(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 8.2.6
         version: 8.2.6(size-limit@8.2.6)
@@ -4355,8 +4355,8 @@ packages:
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
     dev: true
 
-  /@scaleway/use-i18n@5.4.4(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qng7TeSY1kshxQUnNFCCAajgjxxE8nmReB7nuNTXmGM0D5RpW3N5UE9KG0AU4fxzBh8Z2Ei+i/oYcMnFWgl6bQ==}
+  /@scaleway/use-i18n@5.4.5(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-HGFKVXVlnxVzakTbiB5F79Vh9o0Wi1qMhht/sU9R6Fv9tmI+wWgmaUrZiwPYiddOVmz20wKz7Q3xXQH8XSy9OA==}
     engines: {node: '>=14.x'}
     peerDependencies:
       date-fns: 2.x
@@ -4368,7 +4368,7 @@ packages:
       date-fns: 2.30.0
       filesize: 10.0.12
       international-types: 0.8.0
-      intl-messageformat: 10.5.2
+      intl-messageformat: 10.5.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -10464,8 +10464,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /intl-messageformat@10.5.2:
-    resolution: {integrity: sha512-X4rlUNbgCc8/RdMhmvUEEZ38yNDn5S4r0u8n8yQH2OOdhsR46SmOuQsCKG35nRXmL5u2nxPsNN6qNhHoMm6FMQ==}
+  /intl-messageformat@10.5.3:
+    resolution: {integrity: sha512-TzKn1uhJBMyuKTO4zUX47SU+d66fu1W9tVzIiZrQ6hBqQQeYscBMIzKL/qEXnFbJrH9uU5VV3+T5fWib4SIcKA==}
     dependencies:
       '@formatjs/ecma402-abstract': 1.17.2
       '@formatjs/fast-memoize': 2.2.0
