@@ -1,4 +1,4 @@
-const fs = require('fs')
+import fs from 'fs'
 
 const themesMatches = [
   {
@@ -11,6 +11,9 @@ const themesMatches = [
 ]
 
 const hexColorRegex = /#(?:(?:[\da-f]{3}){1,2}(?:[\da-f]{2}){0,1})/gi
+
+export const TOKENS_URL =
+  'https://raw.githubusercontent.com/scaleway/design-tokens/main/tokens.json'
 
 const header = `
 /**
@@ -99,110 +102,113 @@ function getValues(data, { typeFilter, variables }) {
   return null
 }
 
+export const generatePalette = (figmaTokensJson, themeMatch) => {
+  const inputTheme = figmaTokensJson[themeMatch.inputTheme]
+  const inputPalette = figmaTokensJson[themeMatch.palette]
+
+  // Variable : unit
+  const unit = inputTheme.unit.value
+
+  // Variable : palette shades
+  const paletteShades = getValues(inputPalette.shades, {
+    typeFilter: 'color',
+    variables: {},
+  })
+
+  // Variable : palette other
+  const paletteOther = getValues(inputPalette.other, {
+    typeFilter: 'color',
+    variables: {},
+  })
+
+  // Variable : palette shadows
+  const paletteShadows = getValues(inputPalette.shadows, {
+    typeFilter: 'color',
+    variables: {},
+  })
+
+  // Variable : palette neutral
+  const paletteNeutral = getValues(inputPalette.neutral, {
+    typeFilter: 'color',
+    variables: {
+      shades: paletteShades,
+    },
+  })
+
+  // Variable : theme fontSize
+  const fontSize = getValues(inputTheme.fontSize, {
+    typeFilter: 'fontSizes',
+    variables: {},
+  })
+
+  // Variable : theme fontSize
+  const lineHeight = getValues(inputTheme.lineHeight, {
+    typeFilter: 'lineHeights',
+    variables: { unit },
+  })
+
+  // Variable : theme color
+  const colors = getValues(inputTheme, {
+    typeFilter: 'color',
+    variables: { shades: paletteShades, other: paletteOther },
+  })
+
+  // Variable : theme shadows
+  const shadows = getValues(inputTheme, {
+    typeFilter: 'boxShadow',
+    variables: {
+      shades: paletteShades,
+      other: paletteOther,
+      shadows: paletteShadows,
+      ...colors,
+    },
+  })
+
+  // Variable : theme typography
+  const typography = getValues(inputTheme, {
+    typeFilter: 'typography',
+    variables: { lineHeight, unit, fontSize },
+  })
+
+  // Variable : theme radii
+  const radii = getValues(inputTheme.radii, {
+    typeFilter: 'borderRadius',
+    variables: {},
+  })
+
+  // Variable : theme space
+  const space = getValues(inputTheme.space, {
+    typeFilter: 'spacing',
+    variables: {},
+  })
+
+  const output = alphaOrder({
+    colors: {
+      ...colors,
+      neutral: {
+        ...colors.neutral,
+        ...paletteNeutral,
+      },
+      overlay: getValues(inputPalette.other.overlay, {
+        typeFilter: 'color',
+      }),
+    },
+    radii,
+    shadows: formatShadows(shadows),
+    space,
+    theme: themeMatch.outputTheme,
+    typography,
+  })
+
+  return output
+}
 ;(async () => {
-  const url = process.argv[2]
-  const figmaTokensResponse = await fetch(url)
+  const figmaTokensResponse = await fetch(TOKENS_URL)
   const figmaTokensJson = await figmaTokensResponse.json()
 
   // For each theme
   themesMatches.map(async themeMatch => {
-    const inputTheme = figmaTokensJson[themeMatch.inputTheme]
-    const inputPalette = figmaTokensJson[themeMatch.palette]
-
-    // Variable : unit
-    const unit = inputTheme.unit.value
-
-    // Variable : palette shades
-    const paletteShades = getValues(inputPalette.shades, {
-      typeFilter: 'color',
-      variables: {},
-    })
-
-    // Variable : palette other
-    const paletteOther = getValues(inputPalette.other, {
-      typeFilter: 'color',
-      variables: {},
-    })
-
-    // Variable : palette shadows
-    const paletteShadows = getValues(inputPalette.shadows, {
-      typeFilter: 'color',
-      variables: {},
-    })
-
-    // Variable : palette neutral
-    const paletteNeutral = getValues(inputPalette.neutral, {
-      typeFilter: 'color',
-      variables: {
-        shades: paletteShades,
-      },
-    })
-
-    // Variable : theme fontSize
-    const fontSize = getValues(inputTheme.fontSize, {
-      typeFilter: 'fontSizes',
-      variables: {},
-    })
-
-    // Variable : theme fontSize
-    const lineHeight = getValues(inputTheme.lineHeight, {
-      typeFilter: 'lineHeights',
-      variables: { unit },
-    })
-
-    // Variable : theme color
-    const colors = getValues(inputTheme, {
-      typeFilter: 'color',
-      variables: { shades: paletteShades, other: paletteOther },
-    })
-
-    // Variable : theme shadows
-    const shadows = getValues(inputTheme, {
-      typeFilter: 'boxShadow',
-      variables: {
-        shades: paletteShades,
-        other: paletteOther,
-        shadows: paletteShadows,
-        ...colors,
-      },
-    })
-
-    // Variable : theme typography
-    const typography = getValues(inputTheme, {
-      typeFilter: 'typography',
-      variables: { lineHeight, unit, fontSize },
-    })
-
-    // Variable : theme radii
-    const radii = getValues(inputTheme.radii, {
-      typeFilter: 'borderRadius',
-      variables: {},
-    })
-
-    // Variable : theme space
-    const space = getValues(inputTheme.space, {
-      typeFilter: 'spacing',
-      variables: {},
-    })
-
-    const output = alphaOrder({
-      colors: {
-        ...colors,
-        neutral: {
-          ...colors.neutral,
-          ...paletteNeutral,
-        },
-        overlay: getValues(inputPalette.other.overlay, {
-          typeFilter: 'color',
-        }),
-      },
-      radii,
-      shadows: formatShadows(shadows),
-      space,
-      theme: themeMatch.outputTheme,
-      typography,
-    })
-
+    const output = generatePalette(figmaTokensJson, themeMatch)
     const filePath = `packages/themes/src/themes/console/${themeMatch.outputTheme}.ts`
     await fs.writeFile(
       filePath,
