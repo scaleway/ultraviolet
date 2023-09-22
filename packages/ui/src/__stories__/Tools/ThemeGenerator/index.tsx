@@ -15,7 +15,7 @@ import consoleLightTheme from '../../../theme'
 import { FormContent } from './FormContent'
 import { ThemeResult } from './ThemeResult'
 import { INITIAL_VALUES, SHADES_KEYS, SHADES_KEYS_MATCHING } from './contants'
-import { shadeHexColor } from './shadeHexColor'
+import { generateShadeContrast } from './helpers'
 
 type JsonTokenType = {
   paletteLight: {
@@ -27,15 +27,6 @@ type JsonTokenType = {
     }
   }
 }
-
-const generateShadeContrast = (
-  shadeKey: string,
-  value: string,
-  index: number,
-) =>
-  Number(shadeKey) < 900
-    ? shadeHexColor(value, (1 / 15) * (index + 1))
-    : shadeHexColor(value, -(1 / 15) * (index + 1))
 
 export const ThemeGenerator = () => {
   const [step, setStep] = useState(0)
