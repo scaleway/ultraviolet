@@ -1,0 +1,865 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Menu.Item render with borderless props 1`] = `
+<DocumentFragment>
+  .cache-1dn316x-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  min-width: 110px;
+  color: #3f4250;
+  background: none;
+}
+
+.cache-1dn316x-StyledItem svg {
+  fill: #3f4250;
+}
+
+.cache-1dn316x-StyledItem:hover,
+.cache-1dn316x-StyledItem:focus {
+  color: #222638;
+}
+
+.cache-1dn316x-StyledItem:hover svg,
+.cache-1dn316x-StyledItem:focus svg {
+  fill: #222638;
+}
+
+<button
+    class="cache-1dn316x-StyledItem ei26g5y1"
+    role="menuitem"
+    type="button"
+  >
+    Borderless Props
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Menu Menu.Item render with default props 1`] = `
+<DocumentFragment>
+  .cache-1g2q9ft-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #3f4250;
+  background: none;
+}
+
+.cache-1g2q9ft-StyledItem svg {
+  fill: #3f4250;
+}
+
+.cache-1g2q9ft-StyledItem:hover,
+.cache-1g2q9ft-StyledItem:focus {
+  color: #222638;
+}
+
+.cache-1g2q9ft-StyledItem:hover svg,
+.cache-1g2q9ft-StyledItem:focus svg {
+  fill: #222638;
+}
+
+<button
+    class="cache-1g2q9ft-StyledItem ei26g5y1"
+    role="menuitem"
+    type="button"
+  >
+    Default Props
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Menu Menu.Item render with disabled props 1`] = `
+<DocumentFragment>
+  .cache-mgnrz8-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  background: none;
+}
+
+.cache-mgnrz8-StyledItem svg {
+  fill: #b5b7bd;
+}
+
+<button
+    class="cache-mgnrz8-StyledItem ei26g5y1"
+    disabled=""
+    role="menuitem"
+    type="button"
+  >
+    Disabled Props
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Menu Menu.Item render with sentiment danger 1`] = `
+<DocumentFragment>
+  .cache-1goa4p3-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #b3144d;
+  background: none;
+}
+
+.cache-1goa4p3-StyledItem svg {
+  fill: #b3144d;
+}
+
+.cache-1goa4p3-StyledItem:hover,
+.cache-1goa4p3-StyledItem:focus {
+  color: #92103f;
+}
+
+.cache-1goa4p3-StyledItem:hover svg,
+.cache-1goa4p3-StyledItem:focus svg {
+  fill: #92103f;
+}
+
+<button
+    class="cache-1goa4p3-StyledItem ei26g5y1"
+    role="menuitem"
+    type="button"
+  >
+    Danger
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Menu placement renders bottom 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:rk:"
+    aria-describedby="menu-:rk:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu placement renders left 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:rn:"
+    aria-describedby="menu-:rn:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu placement renders right 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:rq:"
+    aria-describedby="menu-:rq:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu placement renders top 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:rh:"
+    aria-describedby="menu-:rh:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu renders with Menu.Item 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:r4:"
+    aria-describedby="menu-:r4:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 24px 6px #d9dadd66;
+  padding: 0;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-7sm35h-Stack-MenuList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  color: #3f4250;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cache-7sm35h-Stack-MenuList:after,
+.cache-7sm35h-Stack-MenuList:before {
+  border: solid transparent;
+  border-width: 9px;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cache-7sm35h-Stack-MenuList:after {
+  border-color: transparent;
+}
+
+.cache-7sm35h-Stack-MenuList:before {
+  border-color: transparent;
+}
+
+.cache-1g2q9ft-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #3f4250;
+  background: none;
+}
+
+.cache-1g2q9ft-StyledItem svg {
+  fill: #3f4250;
+}
+
+.cache-1g2q9ft-StyledItem:hover,
+.cache-1g2q9ft-StyledItem:focus {
+  color: #222638;
+}
+
+.cache-1g2q9ft-StyledItem:hover svg,
+.cache-1g2q9ft-StyledItem:focus svg {
+  fill: #222638;
+}
+
+<div
+    class="e1jn11gg1 cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
+    data-has-arrow="true"
+    id="menu-:r4:"
+    role="dialog"
+  >
+    <div
+      class="cache-7sm35h-Stack-MenuList e1jn11gg0"
+      role="menu"
+    >
+      <button
+        class="cache-1g2q9ft-StyledItem ei26g5y1"
+        role="menuitem"
+        type="button"
+      >
+        Menu.Item
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu renders with Menu.ItemLink & Menu.Item disabled 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:ra:"
+    aria-describedby="menu-:ra:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 24px 6px #d9dadd66;
+  padding: 0;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-7sm35h-Stack-MenuList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  color: #3f4250;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cache-7sm35h-Stack-MenuList:after,
+.cache-7sm35h-Stack-MenuList:before {
+  border: solid transparent;
+  border-width: 9px;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cache-7sm35h-Stack-MenuList:after {
+  border-color: transparent;
+}
+
+.cache-7sm35h-Stack-MenuList:before {
+  border-color: transparent;
+}
+
+.cache-mgnrz8-StyledItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: 1px solid #d9dadd;
+  cursor: pointer;
+  min-width: 110px;
+  color: #b5b7bd;
+  cursor: not-allowed;
+  background: none;
+}
+
+.cache-mgnrz8-StyledItem svg {
+  fill: #b5b7bd;
+}
+
+<div
+    class="e1jn11gg1 cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
+    data-has-arrow="true"
+    id="menu-:ra:"
+    role="dialog"
+  >
+    <div
+      class="cache-7sm35h-Stack-MenuList e1jn11gg0"
+      role="menu"
+    >
+      <button
+        class="cache-mgnrz8-StyledItem ei26g5y1"
+        disabled=""
+        role="menuitem"
+        type="button"
+      >
+        Menu.Item disabled
+      </button>
+      <button
+        class="cache-mgnrz8-StyledItem ei26g5y1"
+        disabled=""
+        role="menuitem"
+        type="button"
+      >
+        Menu.Item Link disabled
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu renders with Menu.ItemLink 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:r7:"
+    aria-describedby="menu-:r7:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 24px 6px #d9dadd66;
+  padding: 0;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-7sm35h-Stack-MenuList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  color: #3f4250;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cache-7sm35h-Stack-MenuList:after,
+.cache-7sm35h-Stack-MenuList:before {
+  border: solid transparent;
+  border-width: 9px;
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cache-7sm35h-Stack-MenuList:after {
+  border-color: transparent;
+}
+
+.cache-7sm35h-Stack-MenuList:before {
+  border-color: transparent;
+}
+
+.cache-s7n5ht-StyledLinkItem {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: inherit;
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  min-width: 110px;
+  color: #3f4250;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-s7n5ht-StyledLinkItem svg {
+  fill: #3f4250;
+}
+
+.cache-s7n5ht-StyledLinkItem:hover,
+.cache-s7n5ht-StyledLinkItem:focus {
+  color: #222638;
+}
+
+.cache-s7n5ht-StyledLinkItem:hover svg,
+.cache-s7n5ht-StyledLinkItem:focus svg {
+  fill: #222638;
+}
+
+.cache-s7n5ht-StyledLinkItem:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="e1jn11gg1 cache-ykgn1r-StyledTooltip-StyledTooltip-StyledPopup efkq4701"
+    data-has-arrow="true"
+    id="menu-:r7:"
+    role="dialog"
+  >
+    <div
+      class="cache-7sm35h-Stack-MenuList e1jn11gg0"
+      role="menu"
+    >
+      <a
+        class="cache-s7n5ht-StyledLinkItem ei26g5y0"
+        href="/link"
+        role="menuitem"
+      >
+        Menu.Item as Link
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu renders with disclosure not a function 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:r0:"
+    aria-describedby="menu-:r0:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu is visible
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Menu renders with visible=false 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:r2:"
+    aria-describedby="menu-:r2:"
+    class="cache-1hzk1lh-StyledChildrenContainer efkq4700"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu is visible
+    </button>
+  </div>
+</DocumentFragment>
+`;

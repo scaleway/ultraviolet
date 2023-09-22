@@ -111,7 +111,7 @@ const StyledChildrenContainer = styled.div`
   }
 `
 
-type TooltipProps = {
+type PopupProps = {
   /**
    * Id is automatically generated if not set. It is used for associating tooltip wrapper with tooltip portal.
    */
@@ -149,6 +149,7 @@ type TooltipProps = {
   'data-testid'?: string
   hasArrow?: boolean
   onClose?: () => void
+  tabIndex?: number
   onKeyDown?: KeyboardEventHandler
   'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
 }
@@ -169,9 +170,10 @@ export const Popup = forwardRef(
       'data-testid': dataTestId,
       hasArrow = true,
       onClose,
+      tabIndex = 0,
       onKeyDown,
       'aria-haspopup': ariaHasPopup,
-    }: TooltipProps,
+    }: PopupProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
@@ -362,7 +364,7 @@ export const Popup = forwardRef(
           onPointerEnter={!isControlled ? onPointerEvent(true) : noop}
           onPointerLeave={!isControlled ? onPointerEvent(false) : noop}
           ref={childrenRef}
-          tabIndex={0}
+          tabIndex={tabIndex}
           onKeyDown={event => {
             onKeyDown?.(event)
             onLocalKeyDown(event)
@@ -382,6 +384,7 @@ export const Popup = forwardRef(
       onKeyDown,
       onLocalKeyDown,
       onPointerEvent,
+      tabIndex,
     ])
 
     if (!text) {

@@ -10,6 +10,12 @@ export default {
       </div>
     ),
   ],
+  parameters: {
+    deprecated: true,
+    deprecatedReason:
+      'This component is deprecated please do not use it any more.',
+    migrationLink: 'migrations-menu-to-menuv2',
+  },
   title: 'Components/Overlay/Menu',
   subcomponents: {
     'Menu.Item': Menu.Item,

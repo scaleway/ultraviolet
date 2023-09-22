@@ -4,11 +4,11 @@ import { DefaultDisclosure } from './Template.stories'
 
 export const Sentiments: StoryFn<typeof Menu> = () => (
   <Menu disclosure={DefaultDisclosure}>
-    <Menu.Item>default disabled</Menu.Item>
-    <Menu.Item sentiment="danger">Danger disabled</Menu.Item>
-    <Menu.Item disabled>default</Menu.Item>
+    <Menu.Item>Default</Menu.Item>
+    <Menu.Item disabled>Default Disabled</Menu.Item>
+    <Menu.Item sentiment="danger">Danger</Menu.Item>
     <Menu.Item disabled sentiment="danger">
-      Danger
+      Danger Disabled
     </Menu.Item>
     <Menu.Item href="/?/?path=/docs/components-navigation-menu">Link</Menu.Item>
     <Menu.Item
