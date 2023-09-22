@@ -1,12 +1,12 @@
-import type { Story } from '@storybook/react'
+import type { StoryFn } from '@storybook/react'
 import { Stack, Text } from '@ultraviolet/ui'
 import { ProductIcon } from '..'
 
-export const Sizes: Story = props => (
+export const Sizes: StoryFn<typeof ProductIcon> = props => (
   <Stack gap={1}>
     {(['small', 'medium', 'large', 'xlarge'] as const).map(size => (
       <Stack direction="row" gap={1} alignItems="center">
-        <ProductIcon name="console" size={size} {...props} />
+        <ProductIcon {...props} name="console" size={size} />
         <Text as="span" variant="bodyStrong">
           {size}
         </Text>

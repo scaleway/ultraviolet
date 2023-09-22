@@ -104,8 +104,8 @@ describe('A11y', () => {
   }>[] = []
 
   beforeAll(async () => {
-    for (const file of foundFiles) {
-      // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-argument
+    for await (const file of foundFiles) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       moduleArray.push(await import(file))
     }
   })
@@ -114,20 +114,20 @@ describe('A11y', () => {
     describe(`${file.split('/')[2]}`, () =>
       test(file.split('/')[4].split('.')[0], async () => {
         const module = {
-          // @ts-expect-error grab the first named export and pretend that module
-          // is a default export
+          // @ts-expect-error grab the first named export and pretend that module is a default export
           // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           default: (await moduleArray[index])[0],
         }
         const components = composeStories(module)
 
-        for (const componentName of Object.keys(components)) {
+        for await (const componentName of Object.keys(components)) {
           if (componentName !== 'default') {
             const ComponentToRender = components[
               componentName
             ] as () => JSX.Element
             const { container } = renderWithTheme(<ComponentToRender />)
-            // eslint-disable-next-line no-await-in-loop, @typescript-eslint/no-unsafe-assignment
+
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             const results = await axe(container)
 
             expect(results).toHaveNoViolations()

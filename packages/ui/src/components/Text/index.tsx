@@ -156,7 +156,7 @@ export const Text = ({
   const finalStringChildren = recursivelyGetChildrenString(children)
 
   useEffect(() => {
-    if (oneLine && elementRef && elementRef.current) {
+    if (oneLine && elementRef?.current) {
       const { offsetWidth, scrollWidth } = elementRef.current
       setIsTruncated(offsetWidth < scrollWidth)
     }

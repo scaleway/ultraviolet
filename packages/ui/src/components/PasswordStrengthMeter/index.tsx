@@ -116,7 +116,7 @@ export const PasswordStrengthMeter = ({
     handleChange(score)
     getScore(password)
       .then(s => setScore(s))
-      .catch(null)
+      .catch(() => null)
 
     const toValue = ((score + 1) / strength.length) * 100
     setWidth(`${toValue}%`)
