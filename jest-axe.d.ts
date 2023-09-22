@@ -3,11 +3,17 @@
 // because we use `@jest/globals`
 
 declare module 'jest-axe' {
-  import type { AxeResults, ImpactValue, Result, RunOptions, Spec } from 'axe-core';
+  import type {
+    AxeResults,
+    ImpactValue,
+    Result,
+    RunOptions,
+    Spec,
+  } from 'axe-core'
 
   export type JestAxeConfigureOptions = {
-    globalOptions?: Spec | undefined;
-    impactLevels?: ImpactValue[];
+    globalOptions?: Spec | undefined
+    impactLevels?: ImpactValue[]
   } & RunOptions
 
   /**
@@ -16,7 +22,7 @@ declare module 'jest-axe' {
    * @remarks You can still pass additional options to this new instance;
    *          they will be merged with the defaults.
    */
-  export const axe: JestAxe;
+  export const axe: JestAxe
 
   /**
    * Runs aXe on HTML.
@@ -25,7 +31,10 @@ declare module 'jest-axe' {
    * @param options   Options to run aXe.
    * @returns Promise for the results of running aXe.
    */
-  export type JestAxe = (html: Element | string, options?: RunOptions) => Promise<AxeResults>;
+  export type JestAxe = (
+    html: Element | string,
+    options?: RunOptions,
+  ) => Promise<AxeResults>
 
   /**
    * Creates a new aXe verifier function.
@@ -33,7 +42,7 @@ declare module 'jest-axe' {
    * @param options   Options to run aXe.
    * @returns New aXe verifier function.
    */
-  export function configureAxe(options?: JestAxeConfigureOptions): JestAxe;
+  export function configureAxe(options?: JestAxeConfigureOptions): JestAxe
 
   /**
    * Results from asserting whether aXe verification passed.
@@ -42,17 +51,17 @@ declare module 'jest-axe' {
     /**
      * Actual checked aXe verification results.
      */
-    actual: Result[];
+    actual: Result[]
 
     /**
      * @returns Message from the Jest assertion.
      */
-    message(): string;
+    message(): string
 
     /**
      * Whether the assertion passed.
      */
-    pass: boolean;
+    pass: boolean
   }
 
   /**
@@ -61,9 +70,11 @@ declare module 'jest-axe' {
    * @param results   aXe verification result, if not running via expect().
    * @returns Jest expectations for the aXe result.
    */
-  export type IToHaveNoViolations = (results?: Partial<AxeResults>) => AssertionsResult;
+  export type IToHaveNoViolations = (
+    results?: Partial<AxeResults>,
+  ) => AssertionsResult
 
   export const toHaveNoViolations: {
-    toHaveNoViolations: IToHaveNoViolations;
-  };
+    toHaveNoViolations: IToHaveNoViolations
+  }
 }

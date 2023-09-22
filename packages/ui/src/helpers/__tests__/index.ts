@@ -16,12 +16,9 @@ describe('isJSONString', () => {
     ${'no argument passed'}   | ${undefined}     | ${false}
     ${'is Array'}             | ${[1, 2, 3]}     | ${false}
     ${'is String'}            | ${'hello'}       | ${false}
-  `(
-    'returns $expected when $test',
-    current => {
-      expect(isJSONString(current['value'] as string)).toBe(current['expected'])
-    },
-  )
+  `('returns $expected when $test', current => {
+    expect(isJSONString(current['value'] as string)).toBe(current['expected'])
+  })
 })
 
 describe('recursivelyGetChildrenString', () => {
@@ -43,12 +40,11 @@ describe('recursivelyGetChildrenString', () => {
     ${'is complex children with a nested string children'}    | ${complexChildrenWithStringNestedChildren}    | ${'hello'}
     ${'is complex children with a nested array children'}     | ${complexChildrenWithArrayNestedChildren}     | ${''}
     ${'is complex children without a nested string children'} | ${complexChildrenWithoutStringNestedChildren} | ${''}
-  `(
-    'returns "$expected" when $test',
-    current => {
-      expect(recursivelyGetChildrenString(current['value'] as string)).toBe(current['expected'])
-    },
-  )
+  `('returns "$expected" when $test', current => {
+    expect(recursivelyGetChildrenString(current['value'] as string)).toBe(
+      current['expected'],
+    )
+  })
 })
 
 describe('onKeyOnlyNumbers', () => {
@@ -85,10 +81,9 @@ describe('parseIntOr', () => {
     ${'is Array of string'}             | ${['a', 'b', 'c']}     | ${fallback}
     ${'is Array w/ first index Number'} | ${[1, 'b', 'c']}       | ${1}
     ${'is String'}                      | ${'hello'}             | ${fallback}
-  `(
-    'returns $expected when $test',
-    current => {
-      expect(parseIntOr(current['value'] as string, fallback)).toBe(current['expected'])
-    },
-  )
+  `('returns $expected when $test', current => {
+    expect(parseIntOr(current['value'] as string, fallback)).toBe(
+      current['expected'],
+    )
+  })
 })

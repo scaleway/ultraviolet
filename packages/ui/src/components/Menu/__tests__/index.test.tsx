@@ -1,4 +1,11 @@
-import { afterAll, beforeEach, describe, expect, jest, test } from '@jest/globals'
+import {
+  afterAll,
+  beforeEach,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Menu, arrowPlacements } from '..'

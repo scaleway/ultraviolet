@@ -24,13 +24,12 @@ const styles = {
       margin-right: 8px;
     }
   `,
-  legend: (index: number) => (theme: Theme) =>
-    css`
-      margin-left: 16px;
-      width: 32px;
-      height: 2px;
-      background-color: ${getLegendColor(theme)[index]};
-    `,
+  legend: (index: number) => (theme: Theme) => css`
+    margin-left: 16px;
+    width: 32px;
+    height: 2px;
+    background-color: ${getLegendColor(theme)[index]};
+  `,
   row: css`
     display: flex;
     padding: 4px 0;
