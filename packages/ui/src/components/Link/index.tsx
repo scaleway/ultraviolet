@@ -185,7 +185,7 @@ export const Link = forwardRef(
     const finalStringChildren = recursivelyGetChildrenString(children)
 
     useEffect(() => {
-      if (oneLine && usedRef && usedRef.current) {
+      if (oneLine && usedRef?.current) {
         const { offsetWidth, scrollWidth } = usedRef.current
         setIsTruncated(offsetWidth < scrollWidth)
       }

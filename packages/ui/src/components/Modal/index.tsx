@@ -82,7 +82,7 @@ export const Modal = ({
     } else {
       const promise = onBeforeClose?.()
       if (promise && 'catch' in promise) {
-        promise.catch(undefined)
+        promise.catch(() => null)
       }
       setVisible(false)
     }

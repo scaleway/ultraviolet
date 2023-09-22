@@ -26,7 +26,9 @@ export const StyledRow = styled('div', {
   position: relative;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
-  transition: box-shadow 200ms ease, border-color 200ms ease;
+  transition:
+    box-shadow 200ms ease,
+    border-color 200ms ease;
   box-shadow: none;
   background-color: ${({ theme }) => theme.colors.neutral.background};
   font-size: ${({ theme }) => theme.typography.bodySmall.fontSize};

@@ -3,6 +3,7 @@
   "env": {
     "browser": true
   },
+  "extends": ["plugin:prettier/recommended"],
   "overrides": [
     {
       "files": ["*.js", "*.mjs"],

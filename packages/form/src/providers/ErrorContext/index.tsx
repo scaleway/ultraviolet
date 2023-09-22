@@ -85,7 +85,7 @@ export const ErrorProvider = ({
       ({
         errors,
         getError,
-      } as ErrorContextValue),
+      }) as ErrorContextValue,
     [errors, getError],
   )
 
