@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.8.0
+
+### Minor Changes
+
+- [#2938](https://github.com/scaleway/ultraviolet/pull/2938) [`920388a8`](https://github.com/scaleway/ultraviolet/commit/920388a8bf97732067209e44017ff3e6c2ed0fb9) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of Notice component to be a span with smaller icon so it fits better in TextInput
+
+### Patch Changes
+
+- [#2927](https://github.com/scaleway/ultraviolet/pull/2927) [`d393f2a8`](https://github.com/scaleway/ultraviolet/commit/d393f2a834a45123ee306e4ca76abcf19ae417c4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.19`.
+
+- Updated dependencies [[`372d9034`](https://github.com/scaleway/ultraviolet/commit/372d9034eeb08b85be52718ed35d95180e162067), [`881c505b`](https://github.com/scaleway/ultraviolet/commit/881c505bc364b84f262411c418245d41add3b41b), [`920388a8`](https://github.com/scaleway/ultraviolet/commit/920388a8bf97732067209e44017ff3e6c2ed0fb9), [`d393f2a8`](https://github.com/scaleway/ultraviolet/commit/d393f2a834a45123ee306e4ca76abcf19ae417c4), [`563f4941`](https://github.com/scaleway/ultraviolet/commit/563f49412bede7f0afcef7dca6c3f04fdf1fa830), [`4ffd63a7`](https://github.com/scaleway/ultraviolet/commit/4ffd63a7bc5312b7aa17ec716095e2afe8eab113)]:
+  - @ultraviolet/ui@1.16.0
+
 ## 1.7.4
 
 ### Patch Changes
