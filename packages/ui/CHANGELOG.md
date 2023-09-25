@@ -1,5 +1,26 @@
 # Change Log
 
+## 1.16.0
+
+### Minor Changes
+
+- [#2918](https://github.com/scaleway/ultraviolet/pull/2918) [`372d9034`](https://github.com/scaleway/ultraviolet/commit/372d9034eeb08b85be52718ed35d95180e162067) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Add `MenuV2` and deprecate `Menu`
+
+- [#2938](https://github.com/scaleway/ultraviolet/pull/2938) [`920388a8`](https://github.com/scaleway/ultraviolet/commit/920388a8bf97732067209e44017ff3e6c2ed0fb9) Thanks [@matthprost](https://github.com/matthprost)! - Refactoring of Notice component to be a span with smaller icon so it fits better in TextInput
+
+### Patch Changes
+
+- [#2939](https://github.com/scaleway/ultraviolet/pull/2939) [`881c505b`](https://github.com/scaleway/ultraviolet/commit/881c505bc364b84f262411c418245d41add3b41b) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Remove prop-types dependency
+
+- [#2927](https://github.com/scaleway/ultraviolet/pull/2927) [`d393f2a8`](https://github.com/scaleway/ultraviolet/commit/d393f2a834a45123ee306e4ca76abcf19ae417c4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.19`.
+
+- [#2942](https://github.com/scaleway/ultraviolet/pull/2942) [`563f4941`](https://github.com/scaleway/ultraviolet/commit/563f49412bede7f0afcef7dca6c3f04fdf1fa830) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.18.0`.
+
+- [#2935](https://github.com/scaleway/ultraviolet/pull/2935) [`4ffd63a7`](https://github.com/scaleway/ultraviolet/commit/4ffd63a7bc5312b7aa17ec716095e2afe8eab113) Thanks [@matthprost](https://github.com/matthprost)! - Correct and simplify bagde tags in the DOM
+
+- Updated dependencies [[`d393f2a8`](https://github.com/scaleway/ultraviolet/commit/d393f2a834a45123ee306e4ca76abcf19ae417c4)]:
+  - @ultraviolet/icons@2.0.3
+
 ## 1.15.1
 
 ### Patch Changes
