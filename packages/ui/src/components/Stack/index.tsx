@@ -1,9 +1,9 @@
 import styled from '@emotion/styled'
 import type { CSSProperties, ReactNode } from 'react'
-import type { SCWUITheme } from '../../theme'
+import type { UltravioletUITheme } from '../../theme'
 
 type StackProps = {
-  gap?: keyof SCWUITheme['space'] | number
+  gap?: keyof UltravioletUITheme['space'] | number
   direction?: 'row' | 'column'
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
@@ -37,7 +37,7 @@ export const Stack = styled('div', {
     width,
     flex,
   }) => `
-    gap: ${theme.space[gap as keyof SCWUITheme['space']]};
+    gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};
     flex-direction: ${direction};
     align-items: ${alignItems};
     justify-content: ${justifyContent};
