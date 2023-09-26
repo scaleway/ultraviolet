@@ -49,7 +49,7 @@ const parameters = {
         'Customization',
         ['Understand Tokens'],
         ['Dark mode', 'Colors', 'Typography', 'Shadows', 'Spaces and Radii'],
-        'Responsive',
+        'Tools',
         'Components',
         'Icons',
         'Form',

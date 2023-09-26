@@ -282,6 +282,9 @@ type CommonProps = {
   onClick?: MouseEventHandler<HTMLElement>
   tooltip?: string
   tabIndex?: ButtonHTMLAttributes<HTMLButtonElement>['tabIndex']
+  onMouseDown?: MouseEventHandler<HTMLElement>
+  onMouseUp?: MouseEventHandler<HTMLElement>
+  onMouseOut?: MouseEventHandler<HTMLElement>
 }
 
 // @note: using XOR utility was generating some lint erros
@@ -345,6 +348,9 @@ export const Button = forwardRef<Element, FinalProps>(
       isLoading = false,
       children,
       onClick,
+      onMouseDown,
+      onMouseUp,
+      onMouseOut,
       name,
       'aria-label': ariaLabel,
       'aria-current': ariaCurrent,
@@ -410,6 +416,9 @@ export const Button = forwardRef<Element, FinalProps>(
             iconOnly={!!icon && !children}
             tabIndex={tabIndex}
             autoFocus={autoFocus}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onMouseOut={onMouseOut}
           >
             {content}
           </Component>
@@ -442,6 +451,9 @@ export const Button = forwardRef<Element, FinalProps>(
           iconOnly={!!icon && !children}
           tabIndex={tabIndex}
           autoFocus={autoFocus}
+          onMouseDown={onMouseDown}
+          onMouseUp={onMouseUp}
+          onMouseOut={onMouseOut}
         >
           {content}
         </Component>

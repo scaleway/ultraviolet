@@ -20,13 +20,13 @@ You will also need to import fonts in your project by adding:
 ### Usage
 
 ```js
-import { theme, normalize, Button } from '@ultraviolet/ui'
-import { Global, css, ThemeProvider } from '@emotion/react'
+import { Global, ThemeProvider, css } from '@emotion/react'
+import { Button, normalize, theme } from '@ultraviolet/ui'
 
 const App = () => (
   <ThemeProvider theme={theme}>
     <Global styles={css`${normalize()}`} />
-    <Button variant="primary" onClick={() => console.log('clicked')}>
+    <Button onClick={() => console.log('clicked')}>
       Click Me
     </Button>
   </ThemeProvider>
