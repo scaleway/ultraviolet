@@ -40,7 +40,7 @@ const BarChartToolTip = ({
       <BarColorSquare color={color} />
     </div>
     <div>
-      <Text variant="bodyStronger" as="p" color="primary">
+      <Text variant="bodyStronger" as="p" sentiment="primary">
         {formattedValue}
       </Text>
       <Text variant="bodySmall" as="p">

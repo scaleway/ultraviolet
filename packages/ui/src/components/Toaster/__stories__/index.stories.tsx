@@ -7,4 +7,4 @@ export default {
 } as Meta<typeof ToastContainer>
 
 export { Playground } from './Playground.stories'
-export { Variants } from './Variants.stories'
+export { Sentiments } from './Sentiments.stories'

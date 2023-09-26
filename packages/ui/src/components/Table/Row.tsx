@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 import { Checkbox } from '../Checkbox'
 import { Tooltip } from '../Tooltip'
 import { Cell } from './Cell'
-import { SELECT_CHECKBOX_SIZE } from './HeaderRow'
 import { useTableContext } from './TableContext'
 
 const StyledCheckboxContainer = styled.div`
@@ -74,7 +73,6 @@ export const Row = ({
                   }
                 }}
                 disabled={selectDisabled !== undefined}
-                size={SELECT_CHECKBOX_SIZE}
               />
             </Tooltip>
           </StyledCheckboxContainer>

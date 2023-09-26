@@ -164,7 +164,7 @@ export const Banner = ({
           <Text
             as="p"
             variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
-            color={
+            sentiment={
               variant === 'promotional' && theme !== 'light'
                 ? 'neutral'
                 : 'primary'
@@ -176,7 +176,7 @@ export const Banner = ({
           <Text
             as="p"
             variant="body"
-            color="neutral"
+            sentiment="neutral"
             prominence={
               variant === 'intro' ||
               (variant === 'promotional' && theme !== 'light')

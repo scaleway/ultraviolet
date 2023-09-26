@@ -128,7 +128,7 @@ export const Alert = ({
           />
           <TextStack gap={0.5} direction="row">
             {title ? (
-              <Text variant="bodyStronger" as="span" color={sentiment}>
+              <Text variant="bodyStronger" as="span" sentiment={sentiment}>
                 {title}
               </Text>
             ) : null}
