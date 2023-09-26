@@ -111,7 +111,7 @@ export const ThemeGenerator = () => {
         <Stack gap={2}>
           <Stack>
             <Text variant="headingLarge" as="h1">
-              ✨Theme generator
+              ✨ Theme generator
             </Text>
             <Text as="p" variant="body">
               There is around <b>175 token colors</b> in Ultraviolet theme. It
