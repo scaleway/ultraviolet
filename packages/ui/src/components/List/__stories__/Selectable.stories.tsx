@@ -44,7 +44,7 @@ Selectable.args = {
             justifyContent="space-between"
             gap={2}
           >
-            <Text variant="bodyStrong" as="p" color="primary">
+            <Text variant="bodyStrong" as="p" sentiment="primary">
               {selectedItems.length} item(s) selected
             </Text>
             <Button

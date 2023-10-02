@@ -436,7 +436,12 @@ export const NumberInput = ({
           </Tooltip>
         </StyledContainer>
         {typeof error === 'string' ? (
-          <Text as="span" variant="bodySmall" color="danger" prominence="weak">
+          <Text
+            as="span"
+            variant="bodySmall"
+            sentiment="danger"
+            prominence="weak"
+          >
             {error}
           </Text>
         ) : null}

@@ -89,13 +89,13 @@ const CloseButton = ({ closeToast }: CloseButtonProps) => (
 
 type ContentProps = {
   children?: ReactNode
-  variant: 'danger' | 'info' | 'success'
+  sentiment: 'danger' | 'info' | 'success'
 }
 
-const Content = ({ variant, children }: ContentProps) => (
+const Content = ({ sentiment, children }: ContentProps) => (
   <Stack gap={2} direction="row">
-    <Icon name={TOAST_ICONS[variant]} size={24} />
-    <Text variant="body" as="span" color={variant}>
+    <Icon name={TOAST_ICONS[sentiment]} size={24} />
+    <Text variant="body" as="span" sentiment={sentiment}>
       {children}
     </Text>
   </Stack>
@@ -103,11 +103,14 @@ const Content = ({ variant, children }: ContentProps) => (
 
 export const toast = {
   error: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.error(<Content variant="danger">{children}</Content>, options),
+    baseToast.error(<Content sentiment="danger">{children}</Content>, options),
   info: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.info(<Content variant="info">{children}</Content>, options),
+    baseToast.info(<Content sentiment="info">{children}</Content>, options),
   success: (children: ReactNode, options?: ToastOptions): number | string =>
-    baseToast.success(<Content variant="success">{children}</Content>, options),
+    baseToast.success(
+      <Content sentiment="success">{children}</Content>,
+      options,
+    ),
 }
 
 type ToastContainerProps = {

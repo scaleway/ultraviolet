@@ -6,7 +6,7 @@ export const HideOnEsc: StoryFn = props => (
   <Modal
     {...props}
     disclosure={<Button>hideOnEsc</Button>}
-    width="medium"
+    size="medium"
     hideOnEsc={false}
   >
     <div style={{ padding: 32 }}>try to ESCAPE</div>
