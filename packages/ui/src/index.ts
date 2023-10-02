@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-restricted-syntax
 export * from './components'
 export { darkTheme, default as theme, extendTheme } from './theme'
-export type { SCWUITheme } from './theme'
+export type { SCWUITheme, UltravioletUITheme } from './theme'
 export {
   bounce,
   Breakpoint,

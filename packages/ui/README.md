@@ -42,10 +42,10 @@ Example, in a `emotion.d.ts` file:
 
 ```ts
 import '@emotion/react'
-import type { SCWUITheme } from '@ultraviolet/ui'
+import type { UltravioletUITheme } from '@ultraviolet/ui'
 
 declare module '@emotion/react' {
-  export interface Theme extends SCWUITheme {}
+  export interface Theme extends UltravioletUITheme {}
 }
 ```
 
