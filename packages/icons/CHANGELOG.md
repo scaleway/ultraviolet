@@ -1,5 +1,18 @@
 # @ultraviolet/icons
 
+## 2.1.0
+
+### Minor Changes
+
+- [#2967](https://github.com/scaleway/ultraviolet/pull/2967) [`6cc71378`](https://github.com/scaleway/ultraviolet/commit/6cc713786357754e5a3b75ffcc8af13141dad4ab) Thanks [@matthprost](https://github.com/matthprost)! - Type `SCWUITheme` is now deprecated and should be replaced by `UltravioletUITheme`
+
+### Patch Changes
+
+- [#2951](https://github.com/scaleway/ultraviolet/pull/2951) [`80ff1ef9`](https://github.com/scaleway/ultraviolet/commit/80ff1ef9bc3179c0ddc68458bb235194a93eb511) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.22`.
+
+- [#2948](https://github.com/scaleway/ultraviolet/pull/2948) [`24415945`](https://github.com/scaleway/ultraviolet/commit/24415945a1c15c33912a5d9c12b394b9b00ef21a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.22.20`.
+  Updated dependency `@babel/preset-env` to `7.22.20`.
+
 ## 2.0.3
 
 ### Patch Changes
