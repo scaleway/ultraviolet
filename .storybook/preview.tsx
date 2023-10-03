@@ -52,6 +52,7 @@ const parameters = {
         'Tools',
         'Components',
         'Icons',
+        'Advanced',
         'Form',
         ['Introduction', 'Changelog', 'Components'],
       ],
