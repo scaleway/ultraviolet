@@ -2,7 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { ProductIcon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
 import { ContentCard } from '..'
-import Illustration from './assets/illustration.png'
+import Illustration from '../assets/illustration.png'
 
 export const Template: StoryFn<ComponentProps<typeof ContentCard>> = args => (
   <ContentCard {...args} />

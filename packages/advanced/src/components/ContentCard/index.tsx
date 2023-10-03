@@ -23,7 +23,7 @@ const Image = styled('img', {
 `
 
 type ContentCardProps = {
-  direction: 'row' | 'column'
+  direction?: 'row' | 'column'
   /**
    * The image to display at the top of the card (if direction is column) or to the left of the card (if direction is row).
    * By default, the image will be cropped to fit the card.
@@ -35,7 +35,7 @@ type ContentCardProps = {
    */
   icon?: ReactNode
   subtitle?: string
-  title?: string
+  title: string
   description?: string
   children?: ReactNode
 }
@@ -66,20 +66,16 @@ export const ContentCard = ({
       <SubContainer gap={2}>
         {icon || null}
         <Stack gap={0.5}>
-          {subtitle || title ? (
-            <Stack>
-              {subtitle ? (
-                <Text as="small" variant="caption" prominence="weak">
-                  {subtitle}
-                </Text>
-              ) : null}
-              {title ? (
-                <Text as="h3" variant="bodyStrong">
-                  {title}
-                </Text>
-              ) : null}
-            </Stack>
-          ) : null}
+          <Stack>
+            {subtitle ? (
+              <Text as="small" variant="caption" prominence="weak">
+                {subtitle}
+              </Text>
+            ) : null}
+            <Text as="h3" variant="bodyStrong">
+              {title}
+            </Text>
+          </Stack>
           {description ? (
             <Text as="p" variant="bodySmall">
               {description}
