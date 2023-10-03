@@ -1,0 +1,5618 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EstimateCost - NumberInput Item render basic props 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 0 0 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0;
+  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
+  transition: bottom 0.3s,box-shadow 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.emotion-6 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+  border: 0;
+}
+
+.emotion-6:first-of-type,
+.emotion-6:last-child {
+  border: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15 {
+  text-align: initial;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17 {
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+}
+
+.emotion-19 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-19:first-of-type,
+.emotion-19:last-child {
+  border: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-29 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-29>* {
+  margin-top: 0;
+}
+
+.emotion-29>*+* {
+  margin-top: 16px;
+}
+
+.emotion-31 {
+  background-color: #ffffff;
+}
+
+.emotion-32>h3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #3f4250;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 8px;
+}
+
+.emotion-36 {
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-37 {
+  width: 193px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
+}
+
+.emotion-40 input {
+  border-radius: 4px 0 0 4px;
+}
+
+.emotion-40 input:hover,
+.emotion-40 input:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+}
+
+.emotion-40 input[type='number']::-webkit-inner-spin-button,
+.emotion-40 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-40 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-42 {
+  position: relative;
+}
+
+.emotion-44 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  color: #3f4250;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding: 8px;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::-moz-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:-ms-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:hover,
+.emotion-44:focus {
+  border-color: #3b1a61;
+}
+
+.emotion-44:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border-color: #3b1a61;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-44:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::placeholder {
+  opacity: 1;
+}
+
+.emotion-46 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+.emotion-48 {
+  font-size: 12px;
+  color: #b3144d;
+  padding-top: 2px;
+}
+
+.emotion-52 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  width: 300px;
+  height: 40px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-54 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-56 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 40px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d9dadd;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 40px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-56:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-56:focus-within {
+  border-color: #521094;
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-56:focus-within svg {
+  fill: #521094;
+}
+
+.emotion-56:hover {
+  border-color: #3b1a61;
+}
+
+.emotion-56:hover svg {
+  fill: #521094;
+}
+
+.emotion-57 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.emotion-57 label {
+  display: none;
+}
+
+.emotion-58 {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #3f4250;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.emotion-60 {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3f4250;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.emotion-61 {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.emotion-61:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.emotion-62 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-63 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d9dadd;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.emotion-64:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-74 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+}
+
+.emotion-75 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-82 {
+  text-align: right;
+}
+
+.emotion-84 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-86 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-88 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 32px;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-88[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-88[aria-disabled='true'] {
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:hover,
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus {
+  border: 1px solid #3b1a61;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus-within {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border: 1px solid #3b1a61;
+}
+
+.emotion-91 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #521094;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-91:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-91:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-91:hover,
+.emotion-91:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+}
+
+.emotion-93 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.emotion-95 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-97 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-97::-webkit-outer-spin-button,
+.emotion-97::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-97::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-97:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::placeholder {
+  color: #727683;
+}
+
+.emotion-97[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-99 {
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.emotion-106 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-108 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-110 {
+  margin: 0;
+}
+
+.emotion-112 {
+  width: 538px;
+}
+
+.emotion-113 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 4px 4px;
+  min-width: 195px;
+  height: 56px;
+  background-color: #f1eefc;
+}
+
+.emotion-115 {
+  color: #521094;
+  font-size: 25px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="summary-overlay"
+      >
+        <ul
+          class="emotion-4 emotion-5"
+        >
+          <li
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7"
+              width="inherit"
+            >
+              <div
+                class="emotion-7"
+              >
+                <div
+                  class="emotion-9 emotion-1"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <p
+                      class="emotion-13 emotion-14"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <div
+                    class="emotion-17"
+                  >
+                    <div
+                      class="emotion-18"
+                    >
+                      1
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="emotion-19"
+          >
+            <div
+              class="emotion-20 emotion-1"
+            >
+              <svg
+                class="emotion-22 emotion-23"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                />
+              </svg>
+              summary.cost.label
+            </div>
+            <div
+              class="emotion-17"
+            >
+              <div
+                class="emotion-25"
+              >
+                <span
+                  class="emotion-7"
+                >
+                  €0.00/units.hours.label
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="emotion-13 emotion-14"
+      >
+        estimate.cost.description
+      </span>
+      <div>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-29 emotion-30"
+          data-testid="summary"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <th
+                class="emotion-32"
+              >
+                <h3>
+                  <svg
+                    class="emotion-33 emotion-34 emotion-23"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    />
+                  </svg>
+                  summary.cost.label
+                </h3>
+              </th>
+              <th
+                class="emotion-36"
+              >
+                <div
+                  class="emotion-37"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <div
+                      class="emotion-40 emotion-41"
+                    >
+                      <div
+                        class="emotion-42 emotion-43"
+                      >
+                        <input
+                          autocomplete="on"
+                          class="emotion-44 emotion-45"
+                          name="iteration-value"
+                          placeholder="0"
+                          style="height: 40px;"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-49"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-50 emotion-50 emotion-52 emotion-53"
+                      data-testid="select-input-iteration-unit"
+                    >
+                      <span
+                        class="emotion-54"
+                        id="react-select-2-live-region"
+                      />
+                      <span
+                        aria-atomic="false"
+                        aria-live="polite"
+                        aria-relevant="additions text"
+                        class="emotion-54"
+                      />
+                      <div
+                        class=" emotion-56"
+                      >
+                        <div
+                          class=" emotion-57"
+                        >
+                          <label
+                            aria-live="assertive"
+                            as="label"
+                            class="emotion-58 emotion-59"
+                            for=":r3:"
+                          >
+                            Select...
+                          </label>
+                          <div
+                            class=" emotion-60"
+                          >
+                            units.hours.label
+                          </div>
+                          <div
+                            class="emotion-61"
+                            data-value=""
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              class=""
+                              id=":r3:"
+                              role="combobox"
+                              spellcheck="false"
+                              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                              tabindex="0"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class=" emotion-62"
+                        >
+                          <span
+                            class=" emotion-63"
+                          />
+                          <div
+                            aria-hidden="true"
+                            class=" emotion-64"
+                          >
+                            <div
+                              class="emotion-20 emotion-1"
+                            >
+                              <svg
+                                class="emotion-67 emotion-23"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        name="iteration-unit"
+                        type="hidden"
+                        value="hours"
+                      />
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-72"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="emotion-7"
+            >
+              <td
+                class="emotion-74"
+                width="537px"
+              >
+                <div
+                  class="emotion-75"
+                >
+                  <div
+                    class="emotion-9 emotion-1"
+                  >
+                    <div
+                      class="emotion-11 emotion-1"
+                    >
+                      <p
+                        class="emotion-13 emotion-14"
+                      >
+                        NumberInput
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-82 emotion-16"
+                  >
+                    <div
+                      class="emotion-84 emotion-1"
+                    >
+                      <div
+                        class="emotion-86 emotion-1"
+                      >
+                        <div
+                          aria-disabled="false"
+                          class="emotion-88 emotion-89"
+                          data-error="false"
+                        >
+                          <button
+                            aria-label="Minus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H5V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                          <div
+                            aria-live="assertive"
+                            class="emotion-95 emotion-96"
+                            role="status"
+                          >
+                            <input
+                              aria-label="Number Input"
+                              class="emotion-97 emotion-98"
+                              id=":r6:"
+                              name="numberinput"
+                              style="width: 16px;"
+                              type="number"
+                              value="1"
+                            />
+                            <span
+                              class="emotion-99 emotion-100"
+                            />
+                          </div>
+                          <button
+                            aria-label="Plus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="emotion-106"
+              >
+                <p
+                  class="emotion-107 emotion-108 emotion-14"
+                >
+                  €0.00
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-110"
+          width="100%"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td
+                aria-label="control"
+                class="emotion-112"
+              />
+              <td
+                class="emotion-113"
+              >
+                <h3
+                  class="emotion-114 emotion-115 emotion-14"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    €0.00
+                  </span>
+                </h3>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EstimateCost - NumberInput Item render basic with overlay 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 0 0 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0;
+  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
+  transition: bottom 0.3s,box-shadow 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.emotion-6 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+  border: 0;
+}
+
+.emotion-6:first-of-type,
+.emotion-6:last-child {
+  border: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15 {
+  text-align: initial;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17 {
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+}
+
+.emotion-19 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-19:first-of-type,
+.emotion-19:last-child {
+  border: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-29 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-29>* {
+  margin-top: 0;
+}
+
+.emotion-29>*+* {
+  margin-top: 16px;
+}
+
+.emotion-31 {
+  background-color: #ffffff;
+}
+
+.emotion-32>h3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #3f4250;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 8px;
+}
+
+.emotion-36 {
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-37 {
+  width: 193px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
+}
+
+.emotion-40 input {
+  border-radius: 4px 0 0 4px;
+}
+
+.emotion-40 input:hover,
+.emotion-40 input:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+}
+
+.emotion-40 input[type='number']::-webkit-inner-spin-button,
+.emotion-40 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-40 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-42 {
+  position: relative;
+}
+
+.emotion-44 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  color: #3f4250;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding: 8px;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::-moz-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:-ms-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:hover,
+.emotion-44:focus {
+  border-color: #3b1a61;
+}
+
+.emotion-44:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border-color: #3b1a61;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-44:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::placeholder {
+  opacity: 1;
+}
+
+.emotion-46 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+.emotion-48 {
+  font-size: 12px;
+  color: #b3144d;
+  padding-top: 2px;
+}
+
+.emotion-52 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  width: 300px;
+  height: 40px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-54 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-56 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 40px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d9dadd;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 40px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-56:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-56:focus-within {
+  border-color: #521094;
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-56:focus-within svg {
+  fill: #521094;
+}
+
+.emotion-56:hover {
+  border-color: #3b1a61;
+}
+
+.emotion-56:hover svg {
+  fill: #521094;
+}
+
+.emotion-57 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.emotion-57 label {
+  display: none;
+}
+
+.emotion-58 {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #3f4250;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.emotion-60 {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3f4250;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.emotion-61 {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.emotion-61:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.emotion-62 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-63 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d9dadd;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.emotion-64:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-74 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+}
+
+.emotion-75 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-82 {
+  text-align: right;
+}
+
+.emotion-84 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-86 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-88 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 32px;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-88[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-88[aria-disabled='true'] {
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:hover,
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus {
+  border: 1px solid #3b1a61;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus-within {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border: 1px solid #3b1a61;
+}
+
+.emotion-91 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #521094;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-91:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-91:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-91:hover,
+.emotion-91:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+}
+
+.emotion-93 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.emotion-95 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-97 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-97::-webkit-outer-spin-button,
+.emotion-97::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-97::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-97:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::placeholder {
+  color: #727683;
+}
+
+.emotion-97[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-99 {
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.emotion-106 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-108 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-110 {
+  margin: 0;
+}
+
+.emotion-112 {
+  width: 538px;
+}
+
+.emotion-113 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 4px 4px;
+  min-width: 195px;
+  height: 56px;
+  background-color: #f1eefc;
+}
+
+.emotion-115 {
+  color: #521094;
+  font-size: 25px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="summary-overlay"
+      >
+        <ul
+          class="emotion-4 emotion-5"
+        >
+          <li
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7"
+              width="inherit"
+            >
+              <div
+                class="emotion-7"
+              >
+                <div
+                  class="emotion-9 emotion-1"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <p
+                      class="emotion-13 emotion-14"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <div
+                    class="emotion-17"
+                  >
+                    <div
+                      class="emotion-18"
+                    >
+                      1
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="emotion-19"
+          >
+            <div
+              class="emotion-20 emotion-1"
+            >
+              <svg
+                class="emotion-22 emotion-23"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                />
+              </svg>
+              summary.cost.label
+            </div>
+            <div
+              class="emotion-17"
+            >
+              <div
+                class="emotion-25"
+              >
+                <span
+                  class="emotion-7"
+                >
+                  €0.00/units.hours.label
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="emotion-13 emotion-14"
+      >
+        estimate.cost.description
+      </span>
+      <div>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-29 emotion-30"
+          data-testid="summary"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <th
+                class="emotion-32"
+              >
+                <h3>
+                  <svg
+                    class="emotion-33 emotion-34 emotion-23"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    />
+                  </svg>
+                  summary.cost.label
+                </h3>
+              </th>
+              <th
+                class="emotion-36"
+              >
+                <div
+                  class="emotion-37"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <div
+                      class="emotion-40 emotion-41"
+                    >
+                      <div
+                        class="emotion-42 emotion-43"
+                      >
+                        <input
+                          autocomplete="on"
+                          class="emotion-44 emotion-45"
+                          name="iteration-value"
+                          placeholder="0"
+                          style="height: 40px;"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-49"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-50 emotion-50 emotion-52 emotion-53"
+                      data-testid="select-input-iteration-unit"
+                    >
+                      <span
+                        class="emotion-54"
+                        id="react-select-3-live-region"
+                      />
+                      <span
+                        aria-atomic="false"
+                        aria-live="polite"
+                        aria-relevant="additions text"
+                        class="emotion-54"
+                      />
+                      <div
+                        class=" emotion-56"
+                      >
+                        <div
+                          class=" emotion-57"
+                        >
+                          <label
+                            aria-live="assertive"
+                            as="label"
+                            class="emotion-58 emotion-59"
+                            for=":rg:"
+                          >
+                            Select...
+                          </label>
+                          <div
+                            class=" emotion-60"
+                          >
+                            units.hours.label
+                          </div>
+                          <div
+                            class="emotion-61"
+                            data-value=""
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              class=""
+                              id=":rg:"
+                              role="combobox"
+                              spellcheck="false"
+                              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                              tabindex="0"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class=" emotion-62"
+                        >
+                          <span
+                            class=" emotion-63"
+                          />
+                          <div
+                            aria-hidden="true"
+                            class=" emotion-64"
+                          >
+                            <div
+                              class="emotion-20 emotion-1"
+                            >
+                              <svg
+                                class="emotion-67 emotion-23"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        name="iteration-unit"
+                        type="hidden"
+                        value="hours"
+                      />
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-72"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="emotion-7"
+            >
+              <td
+                class="emotion-74"
+                width="537px"
+              >
+                <div
+                  class="emotion-75"
+                >
+                  <div
+                    class="emotion-9 emotion-1"
+                  >
+                    <div
+                      class="emotion-11 emotion-1"
+                    >
+                      <p
+                        class="emotion-13 emotion-14"
+                      >
+                        NumberInput
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-82 emotion-16"
+                  >
+                    <div
+                      class="emotion-84 emotion-1"
+                    >
+                      <div
+                        class="emotion-86 emotion-1"
+                      >
+                        <div
+                          aria-disabled="false"
+                          class="emotion-88 emotion-89"
+                          data-error="false"
+                        >
+                          <button
+                            aria-label="Minus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H5V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                          <div
+                            aria-live="assertive"
+                            class="emotion-95 emotion-96"
+                            role="status"
+                          >
+                            <input
+                              aria-label="Number Input"
+                              class="emotion-97 emotion-98"
+                              id=":rj:"
+                              name="numberinput"
+                              style="width: 16px;"
+                              type="number"
+                              value="1"
+                            />
+                            <span
+                              class="emotion-99 emotion-100"
+                            />
+                          </div>
+                          <button
+                            aria-label="Plus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="emotion-106"
+              >
+                <p
+                  class="emotion-107 emotion-108 emotion-14"
+                >
+                  €0.00
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-110"
+          width="100%"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td
+                aria-label="control"
+                class="emotion-112"
+              />
+              <td
+                class="emotion-113"
+              >
+                <h3
+                  class="emotion-114 emotion-115 emotion-14"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    €0.00
+                  </span>
+                </h3>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EstimateCost - NumberInput Item render with getAmountValue 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 0 0 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0;
+  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
+  transition: bottom 0.3s,box-shadow 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.emotion-6 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+  border: 0;
+}
+
+.emotion-6:first-of-type,
+.emotion-6:last-child {
+  border: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15 {
+  text-align: initial;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17 {
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+}
+
+.emotion-19 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-19:first-of-type,
+.emotion-19:last-child {
+  border: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-29 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-29>* {
+  margin-top: 0;
+}
+
+.emotion-29>*+* {
+  margin-top: 16px;
+}
+
+.emotion-31 {
+  background-color: #ffffff;
+}
+
+.emotion-32>h3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #3f4250;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 8px;
+}
+
+.emotion-36 {
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-37 {
+  width: 193px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
+}
+
+.emotion-40 input {
+  border-radius: 4px 0 0 4px;
+}
+
+.emotion-40 input:hover,
+.emotion-40 input:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+}
+
+.emotion-40 input[type='number']::-webkit-inner-spin-button,
+.emotion-40 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-40 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-42 {
+  position: relative;
+}
+
+.emotion-44 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  color: #3f4250;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding: 8px;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::-moz-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:-ms-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:hover,
+.emotion-44:focus {
+  border-color: #3b1a61;
+}
+
+.emotion-44:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border-color: #3b1a61;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-44:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::placeholder {
+  opacity: 1;
+}
+
+.emotion-46 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+.emotion-48 {
+  font-size: 12px;
+  color: #b3144d;
+  padding-top: 2px;
+}
+
+.emotion-52 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  width: 300px;
+  height: 40px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-54 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-56 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 40px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d9dadd;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 40px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-56:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-56:focus-within {
+  border-color: #521094;
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-56:focus-within svg {
+  fill: #521094;
+}
+
+.emotion-56:hover {
+  border-color: #3b1a61;
+}
+
+.emotion-56:hover svg {
+  fill: #521094;
+}
+
+.emotion-57 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.emotion-57 label {
+  display: none;
+}
+
+.emotion-58 {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #3f4250;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.emotion-60 {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3f4250;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.emotion-61 {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.emotion-61:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.emotion-62 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-63 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d9dadd;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.emotion-64:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-74 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+}
+
+.emotion-75 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-82 {
+  text-align: right;
+}
+
+.emotion-84 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-86 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-88 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 32px;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-88[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-88[aria-disabled='true'] {
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:hover,
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus {
+  border: 1px solid #3b1a61;
+}
+
+.emotion-88:not([aria-disabled='true']) .emotion-96:focus-within {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border: 1px solid #3b1a61;
+}
+
+.emotion-91 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #521094;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-91:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-91:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-91:hover,
+.emotion-91:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+}
+
+.emotion-93 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.emotion-95 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-97 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-97::-webkit-outer-spin-button,
+.emotion-97::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-97::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-97:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-97::placeholder {
+  color: #727683;
+}
+
+.emotion-97[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-99 {
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.emotion-106 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-108 {
+  color: #727683;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-110 {
+  margin: 0;
+}
+
+.emotion-112 {
+  width: 538px;
+}
+
+.emotion-113 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 4px 4px;
+  min-width: 195px;
+  height: 56px;
+  background-color: #f1eefc;
+}
+
+.emotion-115 {
+  color: #521094;
+  font-size: 25px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="summary-overlay"
+      >
+        <ul
+          class="emotion-4 emotion-5"
+        >
+          <li
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7"
+              width="inherit"
+            >
+              <div
+                class="emotion-7"
+              >
+                <div
+                  class="emotion-9 emotion-1"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <p
+                      class="emotion-13 emotion-14"
+                    >
+                      NumberInput
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <div
+                    class="emotion-17"
+                  >
+                    <div
+                      class="emotion-18"
+                    >
+                      1
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="emotion-19"
+          >
+            <div
+              class="emotion-20 emotion-1"
+            >
+              <svg
+                class="emotion-22 emotion-23"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                />
+              </svg>
+              summary.cost.label
+            </div>
+            <div
+              class="emotion-17"
+            >
+              <div
+                class="emotion-25"
+              >
+                <span
+                  class="emotion-7"
+                >
+                  €0.00/units.hours.label
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="emotion-13 emotion-14"
+      >
+        estimate.cost.description
+      </span>
+      <div>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-29 emotion-30"
+          data-testid="summary"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <th
+                class="emotion-32"
+              >
+                <h3>
+                  <svg
+                    class="emotion-33 emotion-34 emotion-23"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    />
+                  </svg>
+                  summary.cost.label
+                </h3>
+              </th>
+              <th
+                class="emotion-36"
+              >
+                <div
+                  class="emotion-37"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <div
+                      class="emotion-40 emotion-41"
+                    >
+                      <div
+                        class="emotion-42 emotion-43"
+                      >
+                        <input
+                          autocomplete="on"
+                          class="emotion-44 emotion-45"
+                          name="iteration-value"
+                          placeholder="0"
+                          style="height: 40px;"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-49"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-50 emotion-50 emotion-52 emotion-53"
+                      data-testid="select-input-iteration-unit"
+                    >
+                      <span
+                        class="emotion-54"
+                        id="react-select-5-live-region"
+                      />
+                      <span
+                        aria-atomic="false"
+                        aria-live="polite"
+                        aria-relevant="additions text"
+                        class="emotion-54"
+                      />
+                      <div
+                        class=" emotion-56"
+                      >
+                        <div
+                          class=" emotion-57"
+                        >
+                          <label
+                            aria-live="assertive"
+                            as="label"
+                            class="emotion-58 emotion-59"
+                            for=":r1c:"
+                          >
+                            Select...
+                          </label>
+                          <div
+                            class=" emotion-60"
+                          >
+                            units.hours.label
+                          </div>
+                          <div
+                            class="emotion-61"
+                            data-value=""
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              class=""
+                              id=":r1c:"
+                              role="combobox"
+                              spellcheck="false"
+                              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                              tabindex="0"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class=" emotion-62"
+                        >
+                          <span
+                            class=" emotion-63"
+                          />
+                          <div
+                            aria-hidden="true"
+                            class=" emotion-64"
+                          >
+                            <div
+                              class="emotion-20 emotion-1"
+                            >
+                              <svg
+                                class="emotion-67 emotion-23"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        name="iteration-unit"
+                        type="hidden"
+                        value="hours"
+                      />
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-72"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="emotion-7"
+            >
+              <td
+                class="emotion-74"
+                width="537px"
+              >
+                <div
+                  class="emotion-75"
+                >
+                  <div
+                    class="emotion-9 emotion-1"
+                  >
+                    <div
+                      class="emotion-11 emotion-1"
+                    >
+                      <p
+                        class="emotion-13 emotion-14"
+                      >
+                        NumberInput
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-82 emotion-16"
+                  >
+                    <div
+                      class="emotion-84 emotion-1"
+                    >
+                      <div
+                        class="emotion-86 emotion-1"
+                      >
+                        <div
+                          aria-disabled="false"
+                          class="emotion-88 emotion-89"
+                          data-error="false"
+                        >
+                          <button
+                            aria-label="Minus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H5V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                          <div
+                            aria-live="assertive"
+                            class="emotion-95 emotion-96"
+                            role="status"
+                          >
+                            <input
+                              aria-label="Number Input"
+                              class="emotion-97 emotion-98"
+                              id=":r1f:"
+                              name="numberinput"
+                              style="width: 16px;"
+                              type="number"
+                              value="1"
+                            />
+                            <span
+                              class="emotion-99 emotion-100"
+                            />
+                          </div>
+                          <button
+                            aria-label="Plus"
+                            class="emotion-90 emotion-91 emotion-92"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-93 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="emotion-106"
+              >
+                <p
+                  class="emotion-107 emotion-108 emotion-14"
+                >
+                  €0.00
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-110"
+          width="100%"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td
+                aria-label="control"
+                class="emotion-112"
+              />
+              <td
+                class="emotion-113"
+              >
+                <h3
+                  class="emotion-114 emotion-115 emotion-14"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    €0.00
+                  </span>
+                </h3>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EstimateCost - NumberInput Item render with values 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-2 {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+  height: 120px;
+  background-color: #ffffff;
+  margin: 0 0 0 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  box-shadow: 0;
+  -webkit-transition: bottom 0.3s,box-shadow 0.3s;
+  transition: bottom 0.3s,box-shadow 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 24px 0;
+}
+
+.emotion-6 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+  border: 0;
+}
+
+.emotion-6:first-of-type,
+.emotion-6:last-child {
+  border: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-13 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-15 {
+  text-align: initial;
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17 {
+  height: 48px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+}
+
+.emotion-19 {
+  min-width: 200px;
+  padding: 0 24px;
+  border-left: 1px solid #d9dadd;
+}
+
+.emotion-19:first-of-type,
+.emotion-19:last-child {
+  border: 0;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 500px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+  color: #222638;
+  margin-right: 4px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  color: #222638;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.emotion-29 {
+  width: 100%;
+  border: 1px solid #d9dadd;
+  border-radius: 4px 4px 0 4px;
+}
+
+.emotion-29>* {
+  margin-top: 0;
+}
+
+.emotion-29>*+* {
+  margin-top: 16px;
+}
+
+.emotion-31 {
+  background-color: #ffffff;
+}
+
+.emotion-32>h3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #3f4250;
+  font-weight: 500;
+  padding: 16px;
+}
+
+.emotion-34 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 8px;
+}
+
+.emotion-36 {
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-37 {
+  width: 193px;
+  padding: 16px;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  text-align: left;
+  float: right;
+}
+
+.emotion-40 input {
+  border-radius: 4px 0 0 4px;
+}
+
+.emotion-40 input:hover,
+.emotion-40 input:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+}
+
+.emotion-40 input[type='number']::-webkit-inner-spin-button,
+.emotion-40 input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-40 input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.emotion-42 {
+  position: relative;
+}
+
+.emotion-44 {
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  color: #3f4250;
+  display: block;
+  max-width: 100%;
+  outline: none;
+  position: relative;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  padding-left: 8px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding: 8px;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::-moz-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:-ms-input-placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44::placeholder {
+  color: #727683;
+  opacity: 0;
+}
+
+.emotion-44:hover,
+.emotion-44:focus {
+  border-color: #3b1a61;
+}
+
+.emotion-44:focus {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border-color: #3b1a61;
+}
+
+.emotion-44::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::-moz-placeholder {
+  opacity: 1;
+}
+
+.emotion-44:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.emotion-44::placeholder {
+  opacity: 1;
+}
+
+.emotion-46 {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+}
+
+.emotion-48 {
+  font-size: 12px;
+  color: #b3144d;
+  padding-top: 2px;
+}
+
+.emotion-52 {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 40px;
+  width: 300px;
+  height: 40px;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-52:hover,
+.emotion-52:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #521094;
+  box-shadow: none;
+}
+
+.emotion-54 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-56 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 40px;
+  outline: 0!important;
+  position: relative;
+  -webkit-transition: border-color 200ms ease,box-shadow 200ms ease;
+  transition: border-color 200ms ease,box-shadow 200ms ease;
+  background-color: #ffffff;
+  border-color: #d9dadd;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #3f4250;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: 40px;
+  -webkit-animation: none;
+  animation: none;
+}
+
+.emotion-56:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.emotion-56:focus-within {
+  border-color: #521094;
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-56:focus-within svg {
+  fill: #521094;
+}
+
+.emotion-56:hover {
+  border-color: #3b1a61;
+}
+
+.emotion-56:hover svg {
+  fill: #521094;
+}
+
+.emotion-57 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+}
+
+.emotion-57 label {
+  display: none;
+}
+
+.emotion-58 {
+  position: absolute;
+  left: 0;
+  font-weight: 400;
+  pointer-events: none;
+  color: #3f4250;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  opacity: 0;
+  -webkit-transform: translate(0, -8px) scale(0.8);
+  -moz-transform: translate(0, -8px) scale(0.8);
+  -ms-transform: translate(0, -8px) scale(0.8);
+  transform: translate(0, -8px) scale(0.8);
+  transform-origin: left;
+  padding-left: 8px;
+  left: 0;
+  top: 2px;
+  opacity: 1;
+}
+
+.emotion-60 {
+  grid-area: 1/1/2/3;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3f4250;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.emotion-61 {
+  visibility: visible;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  margin: 2px;
+  padding-bottom: 2px;
+  padding-top: 0;
+  color: hsl(0, 0%, 20%);
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-left: 0px;
+  caret-color: transparent;
+}
+
+.emotion-61:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.emotion-62 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  max-height: 48px;
+}
+
+.emotion-63 {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  width: 1px;
+  background-color: #d9dadd;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: hsl(0, 0%, 80%);
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.emotion-64:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.emotion-74 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+}
+
+.emotion-75 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 56px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-83 {
+  color: #521094;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-style: italic;
+  margin-left: 8px;
+}
+
+.emotion-85 {
+  text-align: right;
+}
+
+.emotion-87 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-89 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-91 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  font-weight: 500;
+  height: 32px;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.emotion-91[data-error='true'] {
+  border: 1px solid #b3144d;
+}
+
+.emotion-91[aria-disabled='true'] {
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.emotion-91:not([aria-disabled='true']) .emotion-99:hover,
+.emotion-91:not([aria-disabled='true']) .emotion-99:focus {
+  border: 1px solid #3b1a61;
+}
+
+.emotion-91:not([aria-disabled='true']) .emotion-99:focus-within {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+  border: 1px solid #3b1a61;
+}
+
+.emotion-94 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #521094;
+  margin: 0 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.emotion-94:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-94:active {
+  box-shadow: 0px 0px 0px 3px #5e127e40;
+}
+
+.emotion-94:hover,
+.emotion-94:active {
+  background: #e5dbfd;
+  color: #3b1a61;
+}
+
+.emotion-96 {
+  vertical-align: middle;
+  fill: #521094;
+  height: 22px;
+  width: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.emotion-98 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 24px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  max-width: 100%;
+}
+
+.emotion-100 {
+  color: #3f4250;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  position: relative;
+  margin-right: 4px;
+  max-width: 100%;
+  font-weight: 500;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.emotion-100::-webkit-outer-spin-button,
+.emotion-100::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.emotion-100::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.emotion-100::-moz-placeholder {
+  color: #727683;
+}
+
+.emotion-100:-ms-input-placeholder {
+  color: #727683;
+}
+
+.emotion-100::placeholder {
+  color: #727683;
+}
+
+.emotion-100[disabled] {
+  color: #b5b7bd;
+  cursor: not-allowed;
+}
+
+.emotion-102 {
+  color: #3f4250;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 8px;
+}
+
+.emotion-109 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-left: 1px solid #d9dadd;
+  background-color: #f9f9fa;
+}
+
+.emotion-111 {
+  color: #521094;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-114 {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.emotion-116 {
+  margin: 0;
+}
+
+.emotion-118 {
+  width: 538px;
+}
+
+.emotion-119 {
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  max-width: 537px;
+  border-color: #d9dadd;
+  border-style: solid;
+  border-width: 0 1px 1px 1px;
+  border-radius: 0 0 4px 4px;
+  min-width: 195px;
+  height: 56px;
+  background-color: #f1eefc;
+}
+
+.emotion-121 {
+  color: #521094;
+  font-size: 25px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+<div
+    data-testid="testing"
+  >
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+        data-testid="summary-overlay"
+      >
+        <ul
+          class="emotion-4 emotion-5"
+        >
+          <li
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7"
+              width="inherit"
+            >
+              <div
+                class="emotion-7"
+              >
+                <div
+                  class="emotion-9 emotion-1"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <p
+                      class="emotion-13 emotion-14"
+                    >
+                      Chocolates
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="emotion-15 emotion-16"
+                >
+                  <div
+                    class="emotion-17"
+                  >
+                    <div
+                      class="emotion-18"
+                    >
+                      50
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="emotion-19"
+          >
+            <div
+              class="emotion-20 emotion-1"
+            >
+              <svg
+                class="emotion-22 emotion-23"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                />
+              </svg>
+              summary.cost.label
+            </div>
+            <div
+              class="emotion-17"
+            >
+              <div
+                class="emotion-25"
+              >
+                <span
+                  class="emotion-7"
+                >
+                  €50.00/units.hours.label
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="emotion-13 emotion-14"
+      >
+        estimate.cost.description
+      </span>
+      <div>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-29 emotion-30"
+          data-testid="summary"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <thead>
+            <tr>
+              <th
+                class="emotion-32"
+              >
+                <h3>
+                  <svg
+                    class="emotion-33 emotion-34 emotion-23"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7,2H17A2,2 0 0,1 19,4V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V4A2,2 0 0,1 7,2M7,4V8H17V4H7M7,10V12H9V10H7M11,10V12H13V10H11M15,10V12H17V10H15M7,14V16H9V14H7M11,14V16H13V14H11M15,14V16H17V14H15M7,18V20H9V18H7M11,18V20H13V18H11M15,18V20H17V18H15Z"
+                    />
+                  </svg>
+                  summary.cost.label
+                </h3>
+              </th>
+              <th
+                class="emotion-36"
+              >
+                <div
+                  class="emotion-37"
+                >
+                  <div
+                    class="emotion-11 emotion-1"
+                  >
+                    <div
+                      class="emotion-40 emotion-41"
+                    >
+                      <div
+                        class="emotion-42 emotion-43"
+                      >
+                        <input
+                          autocomplete="on"
+                          class="emotion-44 emotion-45"
+                          name="iteration-value"
+                          placeholder="0"
+                          style="height: 40px;"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-49"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="emotion-50 emotion-50 emotion-52 emotion-53"
+                      data-testid="select-input-iteration-unit"
+                    >
+                      <span
+                        class="emotion-54"
+                        id="react-select-4-live-region"
+                      />
+                      <span
+                        aria-atomic="false"
+                        aria-live="polite"
+                        aria-relevant="additions text"
+                        class="emotion-54"
+                      />
+                      <div
+                        class=" emotion-56"
+                      >
+                        <div
+                          class=" emotion-57"
+                        >
+                          <label
+                            aria-live="assertive"
+                            as="label"
+                            class="emotion-58 emotion-59"
+                            for=":rt:"
+                          >
+                            Select...
+                          </label>
+                          <div
+                            class=" emotion-60"
+                          >
+                            units.hours.label
+                          </div>
+                          <div
+                            class="emotion-61"
+                            data-value=""
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              class=""
+                              id=":rt:"
+                              role="combobox"
+                              spellcheck="false"
+                              style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                              tabindex="0"
+                              type="text"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class=" emotion-62"
+                        >
+                          <span
+                            class=" emotion-63"
+                          />
+                          <div
+                            aria-hidden="true"
+                            class=" emotion-64"
+                          >
+                            <div
+                              class="emotion-20 emotion-1"
+                            >
+                              <svg
+                                class="emotion-67 emotion-23"
+                                viewBox="0 0 16 16"
+                              >
+                                <path
+                                  d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input
+                        name="iteration-unit"
+                        type="hidden"
+                        value="hours"
+                      />
+                      <div
+                        class="emotion-46 emotion-47"
+                      >
+                        <div
+                          class="emotion-48 emotion-72"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="emotion-7"
+            >
+              <td
+                class="emotion-74"
+                width="537px"
+              >
+                <div
+                  class="emotion-75"
+                >
+                  <div
+                    class="emotion-9 emotion-1"
+                  >
+                    <div
+                      class="emotion-11 emotion-1"
+                    >
+                      <p
+                        class="emotion-13 emotion-14"
+                      >
+                        Chocolates
+                      </p>
+                      <p
+                        class="emotion-82 emotion-83 emotion-14"
+                      >
+                        Chocolate is never free :(
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="emotion-85 emotion-16"
+                  >
+                    <div
+                      class="emotion-87 emotion-1"
+                    >
+                      <div
+                        class="emotion-89 emotion-1"
+                      >
+                        <div
+                          aria-disabled="false"
+                          class="emotion-91 emotion-92"
+                          data-error="false"
+                        >
+                          <button
+                            aria-label="Minus"
+                            class="emotion-93 emotion-94 emotion-95"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-96 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H5V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                          <div
+                            aria-live="assertive"
+                            class="emotion-98 emotion-99"
+                            role="status"
+                          >
+                            <input
+                              aria-label="Number Input"
+                              class="emotion-100 emotion-101"
+                              id=":r11:"
+                              name="numberinput"
+                              style="width: 32px;"
+                              type="number"
+                              value="50"
+                            />
+                            <span
+                              class="emotion-102 emotion-103"
+                            />
+                          </div>
+                          <button
+                            aria-label="Plus"
+                            class="emotion-93 emotion-94 emotion-95"
+                            type="button"
+                          >
+                            <div>
+                              <svg
+                                class="emotion-96 emotion-23"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td
+                class="emotion-109"
+              >
+                <p
+                  class="emotion-110 emotion-111 emotion-14"
+                >
+                  €50.00
+                </p>
+                <p
+                  class="emotion-113 emotion-114 emotion-14"
+                >
+                  €1.00/chocolate/units.hours.label
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          class="emotion-116"
+          width="100%"
+        >
+          <colgroup>
+            <col />
+            <col
+              class="emotion-31"
+            />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td
+                aria-label="control"
+                class="emotion-118"
+              />
+              <td
+                class="emotion-119"
+              >
+                <h3
+                  class="emotion-120 emotion-121 emotion-14"
+                >
+                  <span
+                    class="emotion-7"
+                  >
+                    €50.00
+                  </span>
+                </h3>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
