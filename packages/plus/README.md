@@ -1,4 +1,4 @@
-# Ultraviolet Advanced
+# Ultraviolet Plus
 
 [![npm version](https://badge.fury.io/js/%40ultraviolet%2Ficons.svg)](https://badge.fury.io/js/%40ultraviolet%2Ficons)
 
@@ -7,7 +7,7 @@ Ultraviolet Advanced is a set of complex components that are built on top of Ult
 ## Installation
 
 ```sh
-$ pnpm add @ultraviolet/advanced
+$ pnpm add @ultraviolet/plus
 ```
 
 ## Documentation

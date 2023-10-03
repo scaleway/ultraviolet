@@ -1,5 +1,5 @@
 ---
-'@ultraviolet/advanced': minor
+'@ultraviolet/plus': minor
 ---
 
 New component ContentCard
