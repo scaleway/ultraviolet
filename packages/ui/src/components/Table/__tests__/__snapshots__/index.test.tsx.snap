@@ -2343,7 +2343,7 @@ exports[`Table Should render correctly with selectable then click on first row t
   fill: #ffebf2;
 }
 
-.cache-rg9483-CheckboxInput {
+.cache-1xbtwks-CheckboxInput {
   position: absolute;
   white-space: nowrap;
   height: 24px;
@@ -2352,52 +2352,52 @@ exports[`Table Should render correctly with selectable then click on first row t
   border-width: 0;
 }
 
-.cache-rg9483-CheckboxInput:not(:disabled) {
+.cache-1xbtwks-CheckboxInput:not(:disabled) {
   cursor: pointer;
 }
 
-.cache-rg9483-CheckboxInput:disabled {
+.cache-1xbtwks-CheckboxInput:disabled {
   cursor: not-allowed;
 }
 
-.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
+.cache-1xbtwks-CheckboxInput:not(:disabled):checked+.eqr7bqq4,
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 {
   fill: #521094;
 }
 
-.cache-rg9483-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.cache-1xbtwks-CheckboxInput:not(:disabled):checked+.eqr7bqq4 .eqr7bqq6,
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-checked='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #521094;
 }
 
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4,
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 {
   fill: #ffebf2;
 }
 
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
-.cache-rg9483-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-invalid='true']+.eqr7bqq4 .eqr7bqq6,
+.cache-1xbtwks-CheckboxInput:not(:disabled)[aria-invalid='mixed']+.eqr7bqq4 .eqr7bqq6 {
   stroke: #b3144d;
 }
 
-.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 {
+.cache-1xbtwks-CheckboxInput:focus+.eqr7bqq4 {
   background-color: #f1eefc;
   fill: #ffebf2;
-  outline: 2px solid #e5dbfd;
+  outline: 1px solid 0px 0px 0px 3px #5e127e40;
 }
 
-.cache-rg9483-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
+.cache-1xbtwks-CheckboxInput:focus+.eqr7bqq4 .eqr7bqq6 {
   stroke: #3b1a61;
   fill: #e5dbfd;
 }
 
-.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
+.cache-1xbtwks-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 {
   background-color: #ffebf2;
   fill: #ffebf2;
-  outline: 2px solid #ffd3e3;
+  outline: 1px solid 0px 0px 0px 3px #f91b6c40;
 }
 
-.cache-rg9483-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
+.cache-1xbtwks-CheckboxInput[aria-invalid='true']:focus+.eqr7bqq4 .eqr7bqq6 {
   stroke: #92103f;
   fill: #ffd3e3;
 }
@@ -2515,7 +2515,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select all"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-all-checkbox"
                 name="table-select-all-checkbox"
                 type="checkbox"
@@ -2523,26 +2523,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -2626,7 +2629,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2634,26 +2637,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -2710,7 +2716,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2718,26 +2724,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -2794,7 +2803,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2802,26 +2811,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -2878,7 +2890,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2886,26 +2898,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -2962,7 +2977,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -2970,26 +2985,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -3046,7 +3064,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3054,26 +3072,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -3130,7 +3151,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3138,26 +3159,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -3214,7 +3238,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3222,26 +3246,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -3298,7 +3325,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3306,26 +3333,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>
@@ -3382,7 +3412,7 @@ exports[`Table Should render correctly with selectable then click on first row t
                 aria-checked="true"
                 aria-invalid="false"
                 aria-label="select"
-                class="cache-rg9483-CheckboxInput eqr7bqq2"
+                class="cache-1xbtwks-CheckboxInput eqr7bqq2"
                 id="table-select-checkbox"
                 name="table-select-checkbox"
                 type="checkbox"
@@ -3390,26 +3420,29 @@ exports[`Table Should render correctly with selectable then click on first row t
               />
               <svg
                 class="cache-1acemqq-StyledIcon eqr7bqq4"
+                fill="none"
                 size="24"
                 viewBox="0 0 24 24"
               >
                 <g>
                   <rect
                     class="cache-1t9py5o-InnerCheckbox eqr7bqq6"
-                    height="20"
+                    height="16"
                     rx="2px"
                     stroke-width="2"
-                    width="20"
-                    x="2"
-                    y="2"
+                    width="16"
+                    x="4"
+                    y="4"
                   />
                   <path
                     clip-rule="evenodd"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                     fill-rule="evenodd"
-                    height="14"
-                    width="14"
+                    height="9"
+                    width="12"
+                    x="5"
+                    y="4"
                   />
                 </g>
               </svg>

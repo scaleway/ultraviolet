@@ -32,10 +32,10 @@ const CheckboxIconContainer = ({ children }: { children: ReactNode }) => {
   return (
     <g>
       <InnerCheckbox
-        x="2"
-        y="2"
-        width="20"
-        height="20"
+        x="4"
+        y="4"
+        width="16"
+        height="16"
         rx={theme.radii.small}
         strokeWidth="2"
       />
@@ -101,7 +101,7 @@ const CheckboxInput = styled('input', {
   &:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.primary.background};
     fill: ${({ theme }) => theme.colors.danger.background};
-    outline: 2px solid ${({ theme }) => theme.colors.primary.backgroundHover};
+    outline: 1px solid ${({ theme }) => theme.shadows.focusPrimary};
 
     ${InnerCheckbox} {
       stroke: ${({ theme }) => theme.colors.primary.borderHover};
@@ -112,7 +112,7 @@ const CheckboxInput = styled('input', {
   &[aria-invalid='true']:focus + ${StyledIcon} {
     background-color: ${({ theme }) => theme.colors.danger.background};
     fill: ${({ theme }) => theme.colors.danger.background};
-    outline: 2px solid ${({ theme }) => theme.colors.danger.backgroundHover};
+    outline: 1px solid ${({ theme }) => theme.shadows.focusDanger};
 
     ${InnerCheckbox} {
       stroke: ${({ theme }) => theme.colors.danger.borderHover};
@@ -385,14 +385,16 @@ export const Checkbox = forwardRef(
           />
 
           {!progress ? (
-            <StyledIcon size={size} viewBox="0 0 24 24">
+            <StyledIcon size={size} viewBox="0 0 24 24" fill="none">
               <CheckboxIconContainer>
                 {state !== 'indeterminate' ? (
                   <path
                     fillRule="evenodd"
                     clipRule="evenodd"
-                    width={14}
-                    height={14}
+                    width={12}
+                    height={9}
+                    x="5"
+                    y="4"
                     d="M15.6678 5.26709C16.0849 5.6463 16.113 6.28907 15.7307 6.70276L9.29172 13.6705C9.10291 13.8748 8.83818 13.9937 8.55884 13.9998C8.2795 14.0058 8.0098 13.8984 7.81223 13.7024L4.30004 10.2185C3.89999 9.82169 3.89999 9.17831 4.30004 8.78149C4.70009 8.38467 5.34869 8.38467 5.74874 8.78149L8.50441 11.5149L14.2205 5.32951C14.6028 4.91583 15.2508 4.88788 15.6678 5.26709Z"
                     fill="white"
                   />
