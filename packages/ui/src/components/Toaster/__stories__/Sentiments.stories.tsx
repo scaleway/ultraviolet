@@ -2,7 +2,7 @@ import type { Decorator, StoryFn } from '@storybook/react'
 import { ToastContainer, toast } from '..'
 import { Button } from '../../index'
 
-export const Variants: StoryFn<typeof ToastContainer> = args => (
+export const Sentiments: StoryFn<typeof ToastContainer> = args => (
   <>
     <ToastContainer {...args} />
     <Button
@@ -20,16 +20,16 @@ export const Variants: StoryFn<typeof ToastContainer> = args => (
   </>
 )
 
-Variants.parameters = {
+Sentiments.parameters = {
   docs: {
     description: {
       story:
-        'Variants defines different colors of you component. You can define it using `variant` property.',
+        'Sentiments defines different colors of you component. Using `toast.success()`, `toast.info()` or `toast.error()` will automatically set the correct sentiment',
     },
   },
 }
 
-Variants.decorators = [
+Sentiments.decorators = [
   StoryComponent => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
       <StoryComponent />

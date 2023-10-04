@@ -420,14 +420,14 @@ export const Checkbox = forwardRef(
                 variant="bodySmall"
                 as="p"
                 prominence="weak"
-                color="neutral"
+                sentiment="neutral"
               >
                 {helper}
               </Text>
             ) : null}
 
             {error ? (
-              <ErrorText variant="bodySmall" as="p" color="danger">
+              <ErrorText variant="bodySmall" as="p" sentiment="danger">
                 {error}
               </ErrorText>
             ) : null}

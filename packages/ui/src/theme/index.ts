@@ -3,7 +3,11 @@ import deepmerge from 'deepmerge'
 
 export type ScreenSize = keyof typeof consoleLightTheme.screens
 
+/**
+ * @deprecated use UltravioletUITheme instead
+ */
 type SCWUITheme = typeof consoleLightTheme
+type UltravioletUITheme = typeof consoleLightTheme
 
 const { colors, shadows, typography, space, radii, screens } = consoleLightTheme
 
@@ -13,11 +17,11 @@ type RecursivePartial<T> = {
 
 /**
  * Will extend theme with new theme properties
- * @param {SCWUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
- * @param {RecursivePartial<SCWUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
+ * @param {UltravioletUITheme} baseTheme the theme you want to extend from, by default it is set to light theme
+ * @param {RecursivePartial<UltravioletUITheme>} extendedTheme the properties of a new theme you want to apply from baseTheme
  */
-const extendTheme = (extendedTheme: RecursivePartial<SCWUITheme>) =>
-  deepmerge(consoleLightTheme, extendedTheme) as SCWUITheme
+const extendTheme = (extendedTheme: RecursivePartial<UltravioletUITheme>) =>
+  deepmerge(consoleLightTheme, extendedTheme) as UltravioletUITheme
 
 // This type exclude overlay color
 type Color = Extract<
@@ -45,7 +49,7 @@ const SENTIMENTS_WITHOUT_NEUTRAL = SENTIMENTS.filter(
   sentiment => sentiment !== 'neutral',
 )
 
-export type { SCWUITheme, Color }
+export type { SCWUITheme, UltravioletUITheme, Color }
 
 export {
   colors,

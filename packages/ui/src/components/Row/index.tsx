@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import type { CSSProperties, ReactNode } from 'react'
-import type { SCWUITheme } from '../../theme'
+import type { UltravioletUITheme } from '../../theme'
 
 type StyledRowProps = Pick<
   RowProps,
@@ -19,7 +19,11 @@ export const StyledRow = styled('div', {
     justifyContent = 'normal',
   }) => `
     grid-template-columns: ${templateColumns};
-    ${gap ? `gap: ${theme.space[gap as keyof SCWUITheme['space']]};` : ''}
+    ${
+      gap
+        ? `gap: ${theme.space[gap as keyof UltravioletUITheme['space']]};`
+        : ''
+    }
     align-items: ${alignItems};
     justify-content: ${justifyContent};
   `}
@@ -30,7 +34,7 @@ type RowProps = {
   'data-testid'?: string
   children: ReactNode
   templateColumns: string
-  gap?: keyof SCWUITheme['space'] | number
+  gap?: keyof UltravioletUITheme['space'] | number
   alignItems?: CSSProperties['alignItems']
   justifyContent?: CSSProperties['justifyContent']
 }

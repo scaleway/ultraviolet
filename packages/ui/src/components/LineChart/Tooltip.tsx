@@ -27,13 +27,18 @@ export const LineChartTooltip = ({ point }: LineChartTooltipProps) => (
     <div>
       <Text
         variant="bodyStronger"
-        color="neutral"
+        sentiment="neutral"
         prominence="stronger"
         as="div"
       >
         {point.data.yFormatted}
       </Text>
-      <Text variant="bodySmall" color="neutral" prominence="stronger" as="div">
+      <Text
+        variant="bodySmall"
+        sentiment="neutral"
+        prominence="stronger"
+        as="div"
+      >
         {point.data.xFormatted}
       </Text>
     </div>

@@ -119,7 +119,7 @@ export const CustomLegend = ({
                 }
               >
                 <CellValueContainer>
-                  <Text as="span" variant="bodySmall" color="neutral">
+                  <Text as="span" variant="bodySmall" sentiment="neutral">
                     {row?.['label']}
                   </Text>
                   {/* @ts-expect-error todo */}

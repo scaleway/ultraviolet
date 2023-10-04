@@ -11,7 +11,7 @@ export const IsActive: StoryFn = args => {
   return (
     <Card {...args} header="Active Card" isActive={active}>
       <Stack gap={6} direction="row" justifyContent="space-between">
-        <Text as="p" variant="body" color={active ? 'primary' : 'neutral'}>
+        <Text as="p" variant="body" sentiment={active ? 'primary' : 'neutral'}>
           This card is currently highlighted through isActive prop. In this
           example we use it to show the content is being edited.
         </Text>

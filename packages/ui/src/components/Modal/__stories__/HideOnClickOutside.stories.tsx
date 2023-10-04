@@ -6,7 +6,7 @@ export const HideOnClickOutside: StoryFn = props => (
   <Modal
     {...props}
     disclosure={<Button>hideOnClickOutside</Button>}
-    width="small"
+    size="small"
     hideOnClickOutside={false}
   >
     <div style={{ padding: 32 }}>Try to click outside of the Modal</div>
