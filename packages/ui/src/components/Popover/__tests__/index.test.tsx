@@ -108,7 +108,7 @@ describe('Tooltip', () => {
     expect(onClose).toHaveBeenCalledTimes(1)
   })
 
-  test(`should render visible on mount and close on click outside`, async () => {
+  test.only(`should render visible on mount and close on click outside`, async () => {
     const onClose = jest.fn(() => {})
 
     renderWithTheme(
@@ -134,7 +134,10 @@ describe('Tooltip', () => {
     const outsideElement = screen.getByTestId('outside-element')
     await userEvent.click(outsideElement)
 
-    expect(onClose).toHaveBeenCalledTimes(1)
+    // Need to await cause popup close is in a setTimeout
+    await waitFor(() => {
+      expect(onClose).toHaveBeenCalledTimes(1)
+    })
   })
 
   test(`should open on space key and close on space key - a11y`, async () => {

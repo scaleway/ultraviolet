@@ -139,23 +139,6 @@ export const Popover = ({
     setLocalVisible(visible)
   }, [visible])
 
-  const handleClickOutside = useCallback(
-    (event: Event) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        onClose?.()
-      }
-    },
-    [onClose],
-  )
-
-  useEffect(() => {
-    document.addEventListener('click', handleClickOutside, true)
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside, true)
-    }
-  }, [handleClickOutside])
-
   // When space key is pressed we show the popover
   const onKeyDownSpace: KeyboardEventHandler = useCallback(event => {
     if (event.code === 'Space') {
@@ -174,6 +157,8 @@ export const Popover = ({
 
   return (
     <StyledPopup
+      hideOnClickOutside
+      needDebounce={false}
       visible={localVisible}
       placement={placement}
       text={
