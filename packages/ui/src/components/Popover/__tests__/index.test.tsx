@@ -108,7 +108,7 @@ describe('Tooltip', () => {
     expect(onClose).toHaveBeenCalledTimes(1)
   })
 
-  test.only(`should render visible on mount and close on click outside`, async () => {
+  test(`should render visible on mount and close on click outside`, async () => {
     const onClose = jest.fn(() => {})
 
     renderWithTheme(
