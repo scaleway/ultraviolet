@@ -14,6 +14,7 @@ Ultraviolet Core contains the core features of the Ultraviolet UI library.
 It is set of React library that can be used to build fast application.
 
 - [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui): The main library that includes a set of components and utilities to build fast application.
+- [Ultraviolet Plus](https://github.com/scaleway/ultraviolet/tree/main/packages/plus): An extension of UI with more complex components.
 - [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form): A library to build forms with Ultraviolet UI components, it is using React Final Form under the hood.
 - [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes): A set of themes for the Ultraviolet UI library (default theme is included in `@ultraviolet/ui`).
 - [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons): A library that provides a set of icons to use with Ultraviolet UI.
@@ -29,6 +30,7 @@ $ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 ### Documentation
 
 - #### [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui)
+- #### [Ultraviolet Plus](https://github.com/scaleway/ultraviolet/tree/main/packages/plus)
 - #### [Ultraviolet Form](https://github.com/scaleway/ultraviolet/tree/main/packages/form)
 - #### [Ultraviolet Themes](https://github.com/scaleway/ultraviolet/tree/main/packages/themes)
 - #### [Ultraviolet Icons](https://github.com/scaleway/ultraviolet/tree/main/packages/icons)

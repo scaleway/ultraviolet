@@ -1,8 +1,8 @@
 # Ultraviolet Plus
 
-[![npm version](https://badge.fury.io/js/%40ultraviolet%2Ficons.svg)](https://badge.fury.io/js/%40ultraviolet%2Ficons)
+[![npm version](https://badge.fury.io/js/%40ultraviolet%2Fplus.svg)](https://badge.fury.io/js/%40ultraviolet%2Fplus)
 
-Ultraviolet Advanced is a set of complex components that are built on top of Ultraviolet UI.
+Ultraviolet Plus is a set of complex components that are built on top of Ultraviolet UI.
 
 ## Installation
 
