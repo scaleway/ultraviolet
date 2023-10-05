@@ -28,7 +28,7 @@ export const WithModal: StoryFn<typeof Menu> = () => {
 
 WithModal.parameters = {
   docs: {
-    storyDescription: 'This show how to use a modal on MenuItem.',
+    description: { story: 'This show how to use a modal on MenuItem.' },
   },
 }
 

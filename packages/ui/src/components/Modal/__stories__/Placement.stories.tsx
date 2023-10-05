@@ -21,6 +21,8 @@ export const Placement: StoryFn = props => (
 
 Placement.parameters = {
   docs: {
-    storyDescription: 'Here is a list of all the placement values we support',
+    description: {
+      story: 'Here is a list of all the placement values we support',
+    },
   },
 }

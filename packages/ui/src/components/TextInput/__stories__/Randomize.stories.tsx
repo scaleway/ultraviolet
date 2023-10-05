@@ -9,6 +9,6 @@ Randomize.args = {
 
 Randomize.parameters = {
   docs: {
-    storyDescription: 'Set `random` prop adds a randomize button.',
+    description: { story: 'Set `random` prop adds a randomize button.' },
   },
 }

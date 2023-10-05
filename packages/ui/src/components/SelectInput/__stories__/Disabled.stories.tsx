@@ -13,6 +13,6 @@ Disabled.args = {
 }
 Disabled.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `disabled` on SelectInput.',
+    description: { story: 'This shows how to use `disabled` on SelectInput.' },
   },
 }

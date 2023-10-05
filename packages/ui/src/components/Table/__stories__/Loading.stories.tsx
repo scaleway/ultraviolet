@@ -9,7 +9,9 @@ Loading.args = {
 
 Loading.parameters = {
   docs: {
-    storyDescription:
-      'By adding the prop `loading` on the `Table`, 5 loading rows will be displayed instead of the provided children prop.',
+    description: {
+      story:
+        'By adding the prop `loading` on the `Table`, 5 loading rows will be displayed instead of the provided children prop.',
+    },
   },
 }

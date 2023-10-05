@@ -16,6 +16,6 @@ Multi.args = {
 }
 Multi.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isMulti`on SelectInput.',
+    description: { story: 'This shows how to use `isMulti`on SelectInput.' },
   },
 }

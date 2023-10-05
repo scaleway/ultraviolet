@@ -30,8 +30,9 @@ export const Variants: StoryFn = args => (
 
 Variants.parameters = {
   docs: {
-    storyDescription:
-      'We have two different variant of Banner: intro and promotional.',
+    description: {
+      story: 'We have two different variant of Banner: intro and promotional.',
+    },
   },
 }
 

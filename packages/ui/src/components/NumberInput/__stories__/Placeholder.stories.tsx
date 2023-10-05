@@ -8,7 +8,9 @@ Placeholder.args = {
 
 Placeholder.parameters = {
   docs: {
-    storyDescription:
-      'You can change the placeholder inside the input by passing a string to the `placeholder` prop.',
+    description: {
+      story:
+        'You can change the placeholder inside the input by passing a string to the `placeholder` prop.',
+    },
   },
 }

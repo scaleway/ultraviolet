@@ -10,7 +10,8 @@ Errors.args = {
 }
 Errors.parameters = {
   docs: {
-    storyDescription:
-      'Set validation with error message using `error` property.',
+    description: {
+      story: 'Set validation with error message using `error` property.',
+    },
   },
 }

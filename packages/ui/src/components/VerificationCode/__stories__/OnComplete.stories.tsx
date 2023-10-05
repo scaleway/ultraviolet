@@ -11,7 +11,9 @@ export const OnComplete: StoryFn<typeof VerificationCode> = args => {
 
 OnComplete.parameters = {
   docs: {
-    storyDescription:
-      'You can use `onComplete` prop to react on a completed code typing',
+    description: {
+      story:
+        'You can use `onComplete` prop to react on a completed code typing',
+    },
   },
 }

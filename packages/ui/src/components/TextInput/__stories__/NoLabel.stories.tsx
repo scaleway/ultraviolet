@@ -10,7 +10,9 @@ NoLabel.args = {
 
 NoLabel.parameters = {
   docs: {
-    storyDescription:
-      'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
+    description: {
+      story:
+        'You can hide the label and but it in `aria-label` attribute of the input by passing `noTopLabel` to the component',
+    },
   },
 }

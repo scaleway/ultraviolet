@@ -12,7 +12,9 @@ export const TrailColor: StoryFn = props => (
 
 TrailColor.parameters = {
   docs: {
-    storyDescription:
-      'You can set the trail color (background) of the component by using the `trailColor` prop. You can use theme color or a custom one.',
+    description: {
+      story:
+        'You can set the trail color (background) of the component by using the `trailColor` prop. You can use theme color or a custom one.',
+    },
   },
 }

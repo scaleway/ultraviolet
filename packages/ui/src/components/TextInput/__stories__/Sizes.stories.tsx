@@ -17,7 +17,7 @@ export const Sizes: StoryFn = props => (
 
 Sizes.parameters = {
   docs: {
-    storyDescription: 'Set size using `size` property.',
+    description: { story: 'Set size using `size` property.' },
   },
 }
 

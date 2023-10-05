@@ -14,7 +14,8 @@ MultiDisabled.args = {
 }
 MultiDisabled.parameters = {
   docs: {
-    storyDescription:
-      'This shows how to use `disabled` on `isMulti` SelectInput.',
+    description: {
+      story: 'This shows how to use `disabled` on `isMulti` SelectInput.',
+    },
   },
 }

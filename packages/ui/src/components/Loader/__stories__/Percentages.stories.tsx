@@ -11,7 +11,9 @@ export const Percentages: StoryFn = props => (
 
 Percentages.parameters = {
   docs: {
-    storyDescription:
-      'You can set the percentage of completion with the `percentage` prop.',
+    description: {
+      story:
+        'You can set the percentage of completion with the `percentage` prop.',
+    },
   },
 }

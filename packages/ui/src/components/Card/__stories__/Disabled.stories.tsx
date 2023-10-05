@@ -19,6 +19,8 @@ export const Disabled: StoryFn = args => (
 
 Disabled.parameters = {
   docs: {
-    storyDescription: 'You can disable a Card by passing the `disabled` prop.',
+    description: {
+      story: 'You can disable a Card by passing the `disabled` prop.',
+    },
   },
 }

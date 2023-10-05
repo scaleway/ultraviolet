@@ -21,6 +21,8 @@ export const IsClosable: StoryFn = props => (
 
 IsClosable.parameters = {
   docs: {
-    storyDescription: 'To hide close button at the top, specify `isClosable`',
+    description: {
+      story: 'To hide close button at the top, specify `isClosable`',
+    },
   },
 }

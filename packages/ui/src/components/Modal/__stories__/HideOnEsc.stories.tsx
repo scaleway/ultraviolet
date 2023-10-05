@@ -14,7 +14,9 @@ export const HideOnEsc: StoryFn = props => (
 )
 HideOnEsc.parameters = {
   docs: {
-    storyDescription:
-      'To hide or keep modal on ESC key, specify `hideOnEsc`Here is a list of all the HideOnEsc values we support',
+    description: {
+      story:
+        'To hide or keep modal on ESC key, specify `hideOnEsc`Here is a list of all the HideOnEsc values we support',
+    },
   },
 }

@@ -11,7 +11,8 @@ export const Sizes: StoryFn = props => (
 
 Sizes.parameters = {
   docs: {
-    storyDescription:
-      'You can set the size of the component with the `size` prop.',
+    description: {
+      story: 'You can set the size of the component with the `size` prop.',
+    },
   },
 }

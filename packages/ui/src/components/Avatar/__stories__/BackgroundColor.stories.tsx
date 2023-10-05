@@ -9,7 +9,9 @@ BackgroundColor.args = {
 
 BackgroundColor.parameters = {
   docs: {
-    storyDescription:
-      'You can set the background color when using text by setting `textBgColor` prop',
+    description: {
+      story:
+        'You can set the background color when using text by setting `textBgColor` prop',
+    },
   },
 }

@@ -30,6 +30,6 @@ export const Controlled: StoryFn<typeof SelectInput> = ({ ...props }) => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription: 'This shows how to use Controlled SelectInput.',
+    description: { story: 'This shows how to use Controlled SelectInput.' },
   },
 }

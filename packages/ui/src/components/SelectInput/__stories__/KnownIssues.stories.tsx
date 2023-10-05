@@ -4,7 +4,8 @@ export const KnownIssues = Template.bind({})
 
 KnownIssues.parameters = {
   docs: {
-    storyDescription: `#### SelectInput doesn’t keep focus on selected option
+    description: {
+      story: `#### SelectInput doesn’t keep focus on selected option
 
 SelectInput is based on the \`react-select\` library. To keep the focus on the selected option you need to use \`options\` prop with a memoized value or a memoized \`children\`
 
@@ -12,5 +13,6 @@ SelectInput is based on the \`react-select\` library. To keep the focus on the s
 
 Use @ts-expect-error if needed.
 `,
+    },
   },
 }

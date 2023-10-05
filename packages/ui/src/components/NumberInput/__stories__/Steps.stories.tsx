@@ -10,7 +10,9 @@ Steps.args = {
 
 Steps.parameters = {
   docs: {
-    storyDescription:
-      'You can change step size of your `NumberInput` component. If you set it to 10 for example, your `NumberInput` will increase & decrease by steps of 10.',
+    description: {
+      story:
+        'You can change step size of your `NumberInput` component. If you set it to 10 for example, your `NumberInput` will increase & decrease by steps of 10.',
+    },
   },
 }

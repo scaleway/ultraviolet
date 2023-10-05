@@ -10,7 +10,9 @@ Title.args = {
 
 Title.parameters = {
   docs: {
-    storyDescription:
-      'Using `title` prop you can add a custom title to the notification.',
+    description: {
+      story:
+        'Using `title` prop you can add a custom title to the notification.',
+    },
   },
 }

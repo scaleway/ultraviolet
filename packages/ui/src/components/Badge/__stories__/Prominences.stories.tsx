@@ -24,8 +24,10 @@ export const Prominences: StoryFn = props => (
 
 Prominences.parameters = {
   docs: {
-    storyDescription:
-      'Prominence is defined by property `prominence`, this parameter will change color degree of badge.',
+    description: {
+      story:
+        'Prominence is defined by property `prominence`, this parameter will change color degree of badge.',
+    },
   },
 }
 

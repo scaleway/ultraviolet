@@ -38,7 +38,8 @@ export const Context: StoryFn = args => {
 
 Context.parameters = {
   docs: {
-    storyDescription: `You can use \`Table.useTableContext\` to get this hydrated properties about the table:
+    description: {
+      story: `You can use \`Table.useTableContext\` to get this hydrated properties about the table:
 
 - selectedRowIds : [Object] Selected rows (key is row id, value is a boolean, true mean the related row is selected)
 - selectRow : [Function] select a row by providing its id
@@ -49,5 +50,6 @@ Context.parameters = {
   - \`false\` means no row is selected
   - \`true\` means all rows are selected
   - \`indeterminate\` means rows are partially selected`,
+    },
   },
 }

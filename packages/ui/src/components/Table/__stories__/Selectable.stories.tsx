@@ -58,7 +58,9 @@ Selectable.args = {
 
 Selectable.parameters = {
   docs: {
-    storyDescription:
-      "By adding the prop `selectable` on the `Table` a new column will be automatically added to allow user to select a row, each row is identified by its prop `id`.\n\nYou can use the utility `Table.SelectBar` to quickly get selectedItems providing the `data` and the data's property key used to provite the `id` of each `Table.Row`.\n\nFor other usages about selected items, check our `Context` example.\n\nProviding the prop `selectDisabled` prevents the row to be selected (it can be a boolean or a string to give user a disable reason shown as a tooltip).",
+    description: {
+      story:
+        "By adding the prop `selectable` on the `Table` a new column will be automatically added to allow user to select a row, each row is identified by its prop `id`.\n\nYou can use the utility `Table.SelectBar` to quickly get selectedItems providing the `data` and the data's property key used to provite the `id` of each `Table.Row`.\n\nFor other usages about selected items, check our `Context` example.\n\nProviding the prop `selectDisabled` prevents the row to be selected (it can be a boolean or a string to give user a disable reason shown as a tooltip).",
+    },
   },
 }

@@ -10,7 +10,8 @@ ReadOnly.args = {
 
 ReadOnly.parameters = {
   docs: {
-    storyDescription:
-      'Mark `TextInput` as read only using `readOnly` property.',
+    description: {
+      story: 'Mark `TextInput` as read only using `readOnly` property.',
+    },
   },
 }

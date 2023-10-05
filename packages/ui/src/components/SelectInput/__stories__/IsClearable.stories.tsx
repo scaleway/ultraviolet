@@ -13,6 +13,8 @@ IsClearable.args = {
 }
 IsClearable.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isClearable` on SelectInput.',
+    description: {
+      story: 'This shows how to use `isClearable` on SelectInput.',
+    },
   },
 }

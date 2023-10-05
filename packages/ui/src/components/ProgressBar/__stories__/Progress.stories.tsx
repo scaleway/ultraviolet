@@ -8,7 +8,8 @@ Progress.args = {
 
 Progress.parameters = {
   docs: {
-    storyDescription:
-      'Progress is used to show a loading state of the component.',
+    description: {
+      story: 'Progress is used to show a loading state of the component.',
+    },
   },
 }

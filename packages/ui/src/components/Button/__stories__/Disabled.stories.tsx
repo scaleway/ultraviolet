@@ -9,7 +9,9 @@ Disabled.args = {
 
 Disabled.parameters = {
   docs: {
-    storyDescription:
-      'You can use the prop `disable` to disable a Button. Please note that `isLoading` prop also disable the button.',
+    description: {
+      story:
+        'You can use the prop `disable` to disable a Button. Please note that `isLoading` prop also disable the button.',
+    },
   },
 }

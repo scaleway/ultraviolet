@@ -11,8 +11,10 @@ export const Icon: StoryFn = props => (
 
 Icon.parameters = {
   docs: {
-    storyDescription:
-      'Set `icon` using icon property. Sentiment and size props affect icon.',
+    description: {
+      story:
+        'Set `icon` using icon property. Sentiment and size props affect icon.',
+    },
   },
 }
 

@@ -8,7 +8,9 @@ Active.args = {
 
 Active.parameters = {
   docs: {
-    storyDescription:
-      'You can set the `active` prop to indicate to set the indicator active.',
+    description: {
+      story:
+        'You can set the `active` prop to indicate to set the indicator active.',
+    },
   },
 }

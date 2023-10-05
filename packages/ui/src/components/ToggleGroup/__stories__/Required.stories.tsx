@@ -8,7 +8,8 @@ Required.args = {
 
 Required.parameters = {
   docs: {
-    storyDescription:
-      'Use the `Required` prop to change the Required of the group.',
+    description: {
+      story: 'Use the `Required` prop to change the Required of the group.',
+    },
   },
 }

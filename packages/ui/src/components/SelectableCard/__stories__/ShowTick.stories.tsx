@@ -63,8 +63,10 @@ export const ShowTick: StoryFn = args => {
 
 ShowTick.parameters = {
   docs: {
-    storyDescription:
-      'Depending on your need you may want to display radio or checkbox tick. It can easily be done by using prop `showTick`.',
+    description: {
+      story:
+        'Depending on your need you may want to display radio or checkbox tick. It can easily be done by using prop `showTick`.',
+    },
   },
 }
 ShowTick.decorators = [

@@ -9,6 +9,8 @@ FullWidth.args = {
 
 FullWidth.parameters = {
   docs: {
-    storyDescription: '`fullWidth` prop makes you button have a `100%` width.',
+    description: {
+      story: '`fullWidth` prop makes you button have a `100%` width.',
+    },
   },
 }

@@ -14,6 +14,6 @@ LoadingDemo.args = {
 }
 LoadingDemo.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isLoading` on SelectInput',
+    description: { story: 'This shows how to use `isLoading` on SelectInput' },
   },
 }

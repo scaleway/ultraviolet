@@ -34,8 +34,9 @@ export const Required: StoryFn<typeof CheckboxGroupField> = args => (
 
 Required.parameters = {
   docs: {
-    storyDescription:
-      'Use the `direction` prop to change the direction of the group.',
+    description: {
+      story: 'Use the `direction` prop to change the direction of the group.',
+    },
   },
 }
 

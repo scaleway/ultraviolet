@@ -7,7 +7,9 @@ InitialValue.args = {
 
 InitialValue.parameters = {
   docs: {
-    storyDescription:
-      'use `initialValue` prop to set the initial value of a VerificationCode component',
+    description: {
+      story:
+        'use `initialValue` prop to set the initial value of a VerificationCode component',
+    },
   },
 }

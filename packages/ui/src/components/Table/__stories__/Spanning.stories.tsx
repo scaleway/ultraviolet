@@ -49,7 +49,9 @@ export const Spanning: StoryFn = args => (
 
 Spanning.parameters = {
   docs: {
-    storyDescription:
-      'You can use the html table `colSpan` and `rowSpan` property on a Cell.',
+    description: {
+      story:
+        'You can use the html table `colSpan` and `rowSpan` property on a Cell.',
+    },
   },
 }

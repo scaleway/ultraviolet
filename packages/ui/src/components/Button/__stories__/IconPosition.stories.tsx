@@ -15,7 +15,8 @@ export const IconPosition: StoryFn<typeof Button> = args => (
 
 IconPosition.parameters = {
   docs: {
-    storyDescription:
-      'You can change the icon/loader using the prop `iconPosition`.',
+    description: {
+      story: 'You can change the icon/loader using the prop `iconPosition`.',
+    },
   },
 }

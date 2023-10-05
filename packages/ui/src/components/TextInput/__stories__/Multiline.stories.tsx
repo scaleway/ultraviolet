@@ -9,6 +9,6 @@ Multiline.args = {
 
 Multiline.parameters = {
   docs: {
-    storyDescription: 'Enable multiline mode using `multiline` property.',
+    description: { story: 'Enable multiline mode using `multiline` property.' },
   },
 }

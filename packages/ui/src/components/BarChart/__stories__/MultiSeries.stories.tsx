@@ -21,7 +21,9 @@ export const MultiSeries: StoryFn<typeof BarChart> = props => (
 
 MultiSeries.parameters = {
   docs: {
-    storyDescription:
-      'You can specify multiple `keys` to render multiple series at once.',
+    description: {
+      story:
+        'You can specify multiple `keys` to render multiple series at once.',
+    },
   },
 }

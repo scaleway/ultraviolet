@@ -8,7 +8,9 @@ Header.args = {
 
 Header.parameters = {
   docs: {
-    storyDescription:
-      'You can pass a `string` to the `header` prop to display a simple header.',
+    description: {
+      story:
+        'You can pass a `string` to the `header` prop to display a simple header.',
+    },
   },
 }

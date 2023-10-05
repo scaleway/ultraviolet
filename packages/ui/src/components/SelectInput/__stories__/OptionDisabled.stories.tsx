@@ -13,6 +13,8 @@ OptionDisabled.args = {
 }
 OptionDisabled.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `disabled` on SelectInput.Option.',
+    description: {
+      story: 'This shows how to use `disabled` on SelectInput.Option.',
+    },
   },
 }

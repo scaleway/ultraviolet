@@ -38,7 +38,9 @@ Sentiments.args = {
 
 Sentiments.parameters = {
   docs: {
-    storyDescription:
-      'You can provide the prop `sentiment` of a `Row`. Default value is `neutral`. `Row` prop `disabled` overide sentiment.',
+    description: {
+      story:
+        'You can provide the prop `sentiment` of a `Row`. Default value is `neutral`. `Row` prop `disabled` overide sentiment.',
+    },
   },
 }

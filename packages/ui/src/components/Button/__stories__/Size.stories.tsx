@@ -14,6 +14,8 @@ export const Size: StoryFn<typeof Button> = args => (
 
 Size.parameters = {
   docs: {
-    storyDescription: 'You can change the button size using the prop `size`.',
+    description: {
+      story: 'You can change the button size using the prop `size`.',
+    },
   },
 }

@@ -10,7 +10,9 @@ ToggleablePassword.args = {
 
 ToggleablePassword.parameters = {
   docs: {
-    storyDescription:
-      'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
+    description: {
+      story:
+        'Set type to `toggleable-password` adds a eye toggle to display typed password **This behaviour is dangerous, use it only when the user fills a new password.**',
+    },
   },
 }

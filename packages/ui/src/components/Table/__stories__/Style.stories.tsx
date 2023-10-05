@@ -43,7 +43,9 @@ export const Style: StoryFn = args => (
 
 Style.parameters = {
   docs: {
-    storyDescription:
-      'You can customize the Table with two props `stripped` and `bordered`.',
+    description: {
+      story:
+        'You can customize the Table with two props `stripped` and `bordered`.',
+    },
   },
 }

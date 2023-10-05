@@ -15,7 +15,9 @@ export const HideOnClickOutside: StoryFn = props => (
 
 HideOnClickOutside.parameters = {
   docs: {
-    storyDescription:
-      'To close or keep modal on click outside, specify `hideOnClickOutside`',
+    description: {
+      story:
+        'To close or keep modal on click outside, specify `hideOnClickOutside`',
+    },
   },
 }

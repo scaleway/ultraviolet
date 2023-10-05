@@ -12,6 +12,8 @@ NoLabel.args = {
 }
 NoLabel.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `noTopLabel` in SelectInput.',
+    description: {
+      story: 'This shows how to use `noTopLabel` in SelectInput.',
+    },
   },
 }
