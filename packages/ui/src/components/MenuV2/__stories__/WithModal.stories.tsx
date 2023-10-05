@@ -13,7 +13,7 @@ export const WithModal: StoryFn<typeof MenuV2> = () => {
       <div style={{ padding: 32 }}>
         Content should be present in center of the modal
       </div>
-      <TextInput name="test" />
+      <TextInput name="test" label="Test input events" />
     </Modal>
   )
 
