@@ -36,12 +36,7 @@ exports[`Alert renders correctly with all directions renders correctly direction
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,6 +57,9 @@ exports[`Alert renders correctly with all directions renders correctly direction
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -87,6 +85,29 @@ exports[`Alert renders correctly with all directions renders correctly direction
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -130,31 +151,35 @@ exports[`Alert renders correctly with all directions renders correctly direction
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
+            <div
+              class="cache-16otux ehpbis70"
+            >
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+            </div>
             <div
               class="cache-77g8v1 ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
-              >
-                test
-              </h3>
+              Sample Alert
             </div>
           </div>
-          Sample Alert
         </div>
       </div>
     </div>
@@ -198,12 +223,7 @@ exports[`Alert renders correctly with all directions renders correctly direction
   flex-wrap: nowrap;
 }
 
-.cache-nad4zi-Image {
-  object-fit: cover;
-  border-radius: 4px 0 0 4px;
-}
-
-.cache-100qm8i {
+.cache-10x4y1s {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -224,6 +244,9 @@ exports[`Alert renders correctly with all directions renders correctly direction
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-akpqax-SubContainer {
@@ -249,6 +272,29 @@ exports[`Alert renders correctly with all directions renders correctly direction
   flex-wrap: nowrap;
   padding: 24px 0 24px 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -315,31 +361,35 @@ exports[`Alert renders correctly with all directions renders correctly direction
     <div
       class="cache-gy0d8m ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-nad4zi-Image e2ipnt0"
-        width="220"
-      />
       <div
-        class="cache-100qm8i ehpbis70"
+        class="cache-10x4y1s ehpbis70"
+        flex="1"
       >
         <div
           class="cache-akpqax-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
+            <div
+              class="cache-16otux ehpbis70"
+            >
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+            </div>
             <div
               class="cache-77g8v1 ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
-              >
-                test
-              </h3>
+              Sample Alert
             </div>
           </div>
-          Sample Alert
         </div>
       </div>
     </div>
@@ -383,12 +433,7 @@ exports[`Alert renders correctly with children 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -409,6 +454,9 @@ exports[`Alert renders correctly with children 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -434,6 +482,29 @@ exports[`Alert renders correctly with children 1`] = `
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -477,31 +548,35 @@ exports[`Alert renders correctly with children 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
+            <div
+              class="cache-16otux ehpbis70"
+            >
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+            </div>
             <div
               class="cache-77g8v1 ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
-              >
-                test
-              </h3>
+              This is the children of the component
             </div>
           </div>
-          This is the children of the component
         </div>
       </div>
     </div>
@@ -545,12 +620,7 @@ exports[`Alert renders correctly with empty string title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -571,6 +641,9 @@ exports[`Alert renders correctly with empty string title 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -596,6 +669,29 @@ exports[`Alert renders correctly with empty string title 1`] = `
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -639,27 +735,30 @@ exports[`Alert renders correctly with empty string title 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
-              />
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                />
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
       </div>
@@ -710,12 +809,7 @@ exports[`Alert renders correctly with href 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -736,6 +830,9 @@ exports[`Alert renders correctly with href 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1yvgzh5-SubContainer {
@@ -760,6 +857,29 @@ exports[`Alert renders correctly with href 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -853,29 +973,32 @@ exports[`Alert renders correctly with href 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-1yvgzh5-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                test
-              </h3>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
         <div
@@ -943,12 +1066,7 @@ exports[`Alert renders correctly with href and direction row 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-nad4zi-Image {
-  object-fit: cover;
-  border-radius: 4px 0 0 4px;
-}
-
-.cache-100qm8i {
+.cache-10x4y1s {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -969,6 +1087,9 @@ exports[`Alert renders correctly with href and direction row 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1hwcjqy-SubContainer {
@@ -993,6 +1114,29 @@ exports[`Alert renders correctly with href and direction row 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding: 24px 0 24px 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -1053,7 +1197,7 @@ exports[`Alert renders correctly with href and direction row 1`] = `
   text-decoration: none;
 }
 
-.cache-z74yrd-StyledIconStack {
+.cache-1rcrmuo-StyledIconStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1066,10 +1210,10 @@ exports[`Alert renders correctly with href and direction row 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: end;
+  justify-content: end;
   -webkit-box-flex-wrap: nowrap;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
@@ -1109,33 +1253,36 @@ exports[`Alert renders correctly with href and direction row 1`] = `
     <div
       class="cache-gy0d8m ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-nad4zi-Image e2ipnt0"
-        width="220"
-      />
       <div
-        class="cache-100qm8i ehpbis70"
+        class="cache-10x4y1s ehpbis70"
+        flex="1"
       >
         <div
           class="cache-1hwcjqy-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                test
-              </h3>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
         <div
-          class="cache-z74yrd-StyledIconStack e2ipnt2"
+          class="cache-1rcrmuo-StyledIconStack e2ipnt2"
           flex="1"
         >
           <div
@@ -1199,12 +1346,7 @@ exports[`Alert renders correctly with href and target 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1225,6 +1367,9 @@ exports[`Alert renders correctly with href and target 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-1yvgzh5-SubContainer {
@@ -1249,6 +1394,29 @@ exports[`Alert renders correctly with href and target 1`] = `
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -1343,29 +1511,32 @@ exports[`Alert renders correctly with href and target 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-1yvgzh5-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                test
-              </h3>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
         <div
@@ -1432,7 +1603,7 @@ exports[`Alert renders correctly with image, title, description, subtitle and ic
   border-radius: 4px 4px 0 0;
 }
 
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1453,6 +1624,9 @@ exports[`Alert renders correctly with image, title, description, subtitle and ic
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -1478,6 +1652,29 @@ exports[`Alert renders correctly with image, title, description, subtitle and ic
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -1552,34 +1749,42 @@ exports[`Alert renders correctly with image, title, description, subtitle and ic
         src="test-file-stub"
       />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           test-file-stub
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <small
-                class="cache-g106tl e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                sub title test
-              </small>
-              <h3
-                class="cache-tjeurz e13y3mga0"
+                <small
+                  class="cache-g106tl e13y3mga0"
+                >
+                  sub title test
+                </small>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+              <p
+                class="cache-10vknku e13y3mga0"
               >
-                test
-              </h3>
+                this is a description
+              </p>
             </div>
-            <p
-              class="cache-10vknku e13y3mga0"
-            >
-              this is a description
-            </p>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
       </div>
@@ -1630,12 +1835,7 @@ exports[`Alert renders correctly with onClick 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1656,6 +1856,9 @@ exports[`Alert renders correctly with onClick 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -1681,6 +1884,29 @@ exports[`Alert renders correctly with onClick 1`] = `
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -1725,29 +1951,32 @@ exports[`Alert renders correctly with onClick 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                test
-              </h3>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
       </div>
@@ -1792,12 +2021,7 @@ exports[`Alert renders correctly with required title 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-8a6yjm-Image {
-  object-fit: cover;
-  border-radius: 4px 4px 0 0;
-}
-
-.cache-1t7ypwa {
+.cache-180uk1e {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1818,6 +2042,9 @@ exports[`Alert renders correctly with required title 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .cache-t6i97a-SubContainer {
@@ -1843,6 +2070,29 @@ exports[`Alert renders correctly with required title 1`] = `
   flex-wrap: nowrap;
   padding: 24px 24px 0 24px;
   padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .cache-16otux {
@@ -1886,29 +2136,32 @@ exports[`Alert renders correctly with required title 1`] = `
     <div
       class="cache-77g8v1 ehpbis70"
     >
-      <img
-        alt=""
-        class="cache-8a6yjm-Image e2ipnt0"
-        height="120"
-      />
       <div
-        class="cache-1t7ypwa ehpbis70"
+        class="cache-180uk1e ehpbis70"
+        flex="1"
       >
         <div
           class="cache-t6i97a-SubContainer e2ipnt1"
         >
           <div
-            class="cache-16otux ehpbis70"
+            class="cache-1t7ypwa ehpbis70"
           >
             <div
-              class="cache-77g8v1 ehpbis70"
+              class="cache-16otux ehpbis70"
             >
-              <h3
-                class="cache-tjeurz e13y3mga0"
+              <div
+                class="cache-77g8v1 ehpbis70"
               >
-                test
-              </h3>
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
             </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
           </div>
         </div>
       </div>

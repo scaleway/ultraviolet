@@ -4,8 +4,13 @@ import type { ComponentProps } from 'react'
 import { ContentCard } from '..'
 import Illustration from '../assets/illustration.png'
 
-export const Template: StoryFn<ComponentProps<typeof ContentCard>> = args => (
-  <ContentCard {...args} />
+export const Template: StoryFn<ComponentProps<typeof ContentCard>> = ({
+  direction,
+  ...props
+}) => (
+  <div style={{ width: direction === 'column' ? '315px' : undefined }}>
+    <ContentCard {...props} direction={direction} />
+  </div>
 )
 
 Template.args = {

@@ -7,6 +7,7 @@ import { Donut } from './Donut'
 import { Line } from './Line'
 import { List } from './List'
 import { Slider } from './Slider'
+import { Square } from './Square'
 
 const shineAnimation = keyframes`
   from {
@@ -19,10 +20,12 @@ const shineAnimation = keyframes`
 
 const StyledContainer = styled.div`
   position: relative;
-  display: block;
   width: 100%;
   overflow: hidden;
   cursor: progress;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 `
 
 const StyledDiv = styled.div`
@@ -55,6 +58,7 @@ const variants = {
   line: Line,
   list: List,
   slider: Slider,
+  square: Square,
 } as const
 
 type SkeletonVariant = keyof typeof variants

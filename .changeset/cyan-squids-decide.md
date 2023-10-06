@@ -2,4 +2,4 @@
 '@ultraviolet/plus': minor
 ---
 
-New component ContentCard
+New library and introduction of new component `<ContentCard />`

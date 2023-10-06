@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
+import { Skeleton } from './Skeleton'
 
 const activeStyle = (theme: Theme) => css`
   &:hover {
@@ -92,6 +93,7 @@ type ContentCardProps = {
   href?: HTMLAnchorElement['href']
   target?: HTMLAnchorElement['target']
   onClick?: MouseEventHandler<HTMLElement>
+  loading?: boolean
 }
 
 /**
@@ -110,6 +112,7 @@ export const ContentCard = ({
   href,
   target,
   onClick,
+  loading,
 }: ContentCardProps) => {
   const Container = useMemo(() => {
     if (href) {
@@ -130,50 +133,58 @@ export const ContentCard = ({
       href={href}
       role={onClick ? 'button' : undefined}
     >
-      <Stack direction={direction}>
-        <Image
-          alt=""
-          src={image}
-          height={direction === 'column' ? 120 : undefined}
-          width={direction === 'row' ? 220 : undefined}
-          direction={direction}
-        />
-        <Stack gap={2} direction={direction}>
-          <SubContainer gap={2} direction={direction} href={href}>
-            {icon || null}
-            <Stack gap={0.5}>
-              <Stack>
-                {subtitle ? (
-                  <Text as="small" variant="caption" prominence="weak">
-                    {subtitle}
-                  </Text>
-                ) : null}
-                <Text as="h3" variant="bodyStrong">
-                  {title}
-                </Text>
-              </Stack>
-              {description ? (
-                <Text as="p" variant="bodySmall">
-                  {description}
-                </Text>
-              ) : null}
-            </Stack>
-            {children}
-          </SubContainer>
-          {href ? (
-            <StyledIconStack
-              flex={1}
-              alignItems={direction === 'column' ? 'flex-end' : 'center'}
-              justifyContent="center"
+      {loading ? (
+        <Skeleton direction={direction} />
+      ) : (
+        <Stack direction={direction}>
+          {image ? (
+            <Image
+              alt=""
+              src={image}
+              height={direction === 'column' ? 120 : undefined}
+              width={direction === 'row' ? 220 : undefined}
               direction={direction}
-            >
-              <IconContainer>
-                <Icon name="open-in-new" color="neutral" />
-              </IconContainer>
-            </StyledIconStack>
+            />
           ) : null}
+          <Stack gap={2} direction={direction} flex={1}>
+            <SubContainer gap={2} direction={direction} href={href}>
+              {icon ?? null}
+              <Stack gap={2}>
+                <Stack gap={0.5}>
+                  <Stack>
+                    {subtitle ? (
+                      <Text as="small" variant="caption" prominence="weak">
+                        {subtitle}
+                      </Text>
+                    ) : null}
+                    <Text as="h3" variant="bodyStrong">
+                      {title}
+                    </Text>
+                  </Stack>
+                  {description ? (
+                    <Text as="p" variant="bodySmall">
+                      {description}
+                    </Text>
+                  ) : null}
+                </Stack>
+                <Stack>{children}</Stack>
+              </Stack>
+            </SubContainer>
+            {href ? (
+              <StyledIconStack
+                flex={1}
+                alignItems={direction === 'column' ? 'flex-end' : 'center'}
+                justifyContent={direction === 'column' ? 'center' : 'end'}
+                direction={direction}
+              >
+                <IconContainer>
+                  <Icon name="open-in-new" color="neutral" />
+                </IconContainer>
+              </StyledIconStack>
+            ) : null}
+          </Stack>
         </Stack>
-      </Stack>
+      )}
     </Container>
   )
 }
