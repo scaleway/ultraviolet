@@ -32,12 +32,7 @@ describe('DateField', () => {
     const onChange = jest.fn()
 
     return shouldMatchEmotionSnapshotFormWrapper(
-      <DateField
-        name="test"
-        onBlur={onBlur}
-        onChange={onChange}
-        initialValue={new Date('2022-09-01')}
-      />,
+      <DateField name="test" onBlur={onBlur} onChange={onChange} />,
       {
         transform: () => {
           const select = screen.getByRole('textbox')
@@ -51,6 +46,11 @@ describe('DateField', () => {
           //   select.blur()
           // })
           // expect(onBlur).toBeCalledTimes(1)
+        },
+      },
+      {
+        initialValues: {
+          test: new Date('2022-09-01'),
         },
       },
     )
