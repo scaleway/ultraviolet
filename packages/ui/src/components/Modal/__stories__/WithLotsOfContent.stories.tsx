@@ -26,6 +26,8 @@ export const WithLotsOfContent: StoryFn = props => (
 )
 WithLotsOfContent.parameters = {
   docs: {
-    storyDescription: 'Having a lot of content automatically adds a scroll',
+    description: {
+      story: 'Having a lot of content automatically adds a scroll',
+    },
   },
 }

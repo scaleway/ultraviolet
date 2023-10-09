@@ -36,7 +36,9 @@ export const Controlled: StoryFn = () => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription:
-      'CheckboxGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    description: {
+      story:
+        'CheckboxGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    },
   },
 }

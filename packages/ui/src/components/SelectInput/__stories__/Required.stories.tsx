@@ -12,6 +12,6 @@ Required.args = {
 }
 Required.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `required` on SelectInput',
+    description: { story: 'This shows how to use `required` on SelectInput' },
   },
 }

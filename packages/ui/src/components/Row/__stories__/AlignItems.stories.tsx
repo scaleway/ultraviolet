@@ -34,7 +34,8 @@ export const AlignItems: StoryFn = args => (
 
 AlignItems.parameters = {
   docs: {
-    storyDescription:
-      'You can use the prop `alignItems` to align each row elements',
+    description: {
+      story: 'You can use the prop `alignItems` to align each row elements',
+    },
   },
 }

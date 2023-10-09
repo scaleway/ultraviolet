@@ -12,6 +12,8 @@ Searchable.args = {
 }
 Searchable.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `isSearchable` on SelectInput.',
+    description: {
+      story: 'This shows how to use `isSearchable` on SelectInput.',
+    },
   },
 }

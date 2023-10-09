@@ -9,6 +9,6 @@ Valid.args = {
 
 Valid.parameters = {
   docs: {
-    storyDescription: 'Add a check mark using `valid` property.',
+    description: { story: 'Add a check mark using `valid` property.' },
   },
 }

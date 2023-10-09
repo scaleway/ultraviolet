@@ -22,6 +22,8 @@ CustomOptions.args = {
 }
 CustomOptions.parameters = {
   docs: {
-    storyDescription: 'This shows how to customize options in a SelectInput.',
+    description: {
+      story: 'This shows how to customize options in a SelectInput.',
+    },
   },
 }

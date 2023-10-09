@@ -9,6 +9,6 @@ Tooltip.args = {
 
 Tooltip.parameters = {
   docs: {
-    storyDescription: 'Add a `tooltip` using tooltip property',
+    description: { story: 'Add a `tooltip` using tooltip property' },
   },
 }

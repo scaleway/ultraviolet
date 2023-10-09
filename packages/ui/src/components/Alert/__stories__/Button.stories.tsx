@@ -12,7 +12,9 @@ Button.args = {
 
 Button.parameters = {
   docs: {
-    storyDescription:
-      'Using `Button` prop you can add a custom Button and use `onClickButton` prop to handle the click event.',
+    description: {
+      story:
+        'Using `Button` prop you can add a custom Button and use `onClickButton` prop to handle the click event.',
+    },
   },
 }

@@ -9,6 +9,8 @@ Disabled.args = {
 
 Disabled.parameters = {
   docs: {
-    storyDescription: 'Mark `TextInput` as disabled using `disabled` property.',
+    description: {
+      story: 'Mark `TextInput` as disabled using `disabled` property.',
+    },
   },
 }

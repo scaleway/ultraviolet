@@ -4,8 +4,9 @@ export const MinMax = Template.bind({})
 
 MinMax.parameters = {
   docs: {
-    storyDescription:
-      'With `minDate` and `maxDate` you can define limits of the input',
+    description: {
+      story: 'With `minDate` and `maxDate` you can define limits of the input',
+    },
   },
 }
 

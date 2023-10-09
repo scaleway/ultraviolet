@@ -12,7 +12,9 @@ export const To: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => (
 
 To.parameters = {
   docs: {
-    storyDescription:
-      'You can make `Breadcrumbs.Item` content be render as `a` tag with `to` prop. For relative url the `linkComponent` from your theme configuration is used.',
+    description: {
+      story:
+        'You can make `Breadcrumbs.Item` content be render as `a` tag with `to` prop. For relative url the `linkComponent` from your theme configuration is used.',
+    },
   },
 }

@@ -8,6 +8,6 @@ Error.args = {
 
 Error.parameters = {
   docs: {
-    storyDescription: 'Use the `error` prop to set an error content.',
+    description: { story: 'Use the `error` prop to set an error content.' },
   },
 }

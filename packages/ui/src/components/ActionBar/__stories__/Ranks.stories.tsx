@@ -8,7 +8,9 @@ Ranks.args = {
 
 Ranks.parameters = {
   docs: {
-    storyDescription:
-      'You can choose the order of multiple `ActionBar` by using the `rank` prop.',
+    description: {
+      story:
+        'You can choose the order of multiple `ActionBar` by using the `rank` prop.',
+    },
   },
 }

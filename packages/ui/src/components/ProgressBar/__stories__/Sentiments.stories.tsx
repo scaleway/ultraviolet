@@ -24,6 +24,6 @@ Sentiments.decorators = [
 
 Sentiments.parameters = {
   docs: {
-    storyDescription: 'Set sentiment using `sentiment` prop.',
+    description: { story: 'Set sentiment using `sentiment` prop.' },
   },
 }

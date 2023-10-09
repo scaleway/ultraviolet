@@ -11,8 +11,10 @@ export const UnknownOrUndefined = (args: ComponentProps<typeof Icon>) => [
 
 UnknownOrUndefined.parameters = {
   docs: {
-    storyDescription:
-      'If name is `undefined` or not found warning is sent and default circle icon is displayed.',
+    description: {
+      story:
+        'If name is `undefined` or not found warning is sent and default circle icon is displayed.',
+    },
   },
 }
 

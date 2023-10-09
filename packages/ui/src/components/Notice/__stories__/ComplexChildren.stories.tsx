@@ -16,6 +16,6 @@ export const ComplexChildren = (args: ComponentProps<typeof Notice>) => (
 
 ComplexChildren.parameters = {
   docs: {
-    storyDescription: 'You can also pass complex children',
+    description: { story: 'You can also pass complex children' },
   },
 }

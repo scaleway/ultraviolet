@@ -10,7 +10,9 @@ DisabledTooltip.args = {
 
 DisabledTooltip.parameters = {
   docs: {
-    storyDescription:
-      'You can add a tooltip on left and rights button by using `disabledTooltip` prop. Try to hover on the "-" and "+".',
+    description: {
+      story:
+        'You can add a tooltip on left and rights button by using `disabledTooltip` prop. Try to hover on the "-" and "+".',
+    },
   },
 }

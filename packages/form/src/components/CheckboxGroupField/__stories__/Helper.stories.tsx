@@ -10,6 +10,6 @@ Helper.args = {
 
 Helper.parameters = {
   docs: {
-    storyDescription: 'Use the `helper` prop to set an helper content.',
+    description: { story: 'Use the `helper` prop to set an helper content.' },
   },
 }

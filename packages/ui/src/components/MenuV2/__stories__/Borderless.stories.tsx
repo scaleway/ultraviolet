@@ -26,7 +26,9 @@ export const Borderless: StoryFn<typeof MenuV2> = () => (
 
 Borderless.parameters = {
   docs: {
-    storyDescription: 'Property `borderless` removes border of the menu item.',
+    description: {
+      story: 'Property `borderless` removes border of the menu item.',
+    },
   },
 }
 

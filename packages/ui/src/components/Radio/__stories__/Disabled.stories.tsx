@@ -34,6 +34,6 @@ export const Disabled: StoryFn = args => {
 
 Disabled.parameters = {
   docs: {
-    storyDescription: 'Set activation using `disabled` property.',
+    description: { story: 'Set activation using `disabled` property.' },
   },
 }

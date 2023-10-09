@@ -7,6 +7,6 @@ Type.args = {
 
 Type.parameters = {
   docs: {
-    storyDescription: 'use `type` prop to allow letter',
+    description: { story: 'use `type` prop to allow letter' },
   },
 }

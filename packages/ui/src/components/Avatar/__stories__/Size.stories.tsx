@@ -10,7 +10,9 @@ Size.args = {
 
 Size.parameters = {
   docs: {
-    storyDescription:
-      'You can change the default Size by using the `Size` prop. It work as `src` on a img tag.',
+    description: {
+      story:
+        'You can change the default Size by using the `Size` prop. It work as `src` on a img tag.',
+    },
   },
 }

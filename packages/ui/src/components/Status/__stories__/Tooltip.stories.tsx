@@ -3,7 +3,7 @@ import { Template } from './Template.stories'
 export const Tooltip = Template.bind({})
 Tooltip.parameters = {
   docs: {
-    storyDescription: 'Add a `tooltip` using tooltip property',
+    description: { story: 'Add a `tooltip` using tooltip property' },
   },
 }
 Tooltip.args = {

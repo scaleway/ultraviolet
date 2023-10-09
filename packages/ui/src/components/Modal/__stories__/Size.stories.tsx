@@ -21,6 +21,6 @@ export const Size: StoryFn = props => (
 
 Size.parameters = {
   docs: {
-    storyDescription: 'Here is a list of all the width values we support',
+    description: { story: 'Here is a list of all the width values we support' },
   },
 }

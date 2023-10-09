@@ -8,7 +8,9 @@ Gap.args = {
 
 Gap.parameters = {
   docs: {
-    storyDescription:
-      'You can use the prop `gap` to separate each element/column. `gap` is a theme space unit.',
+    description: {
+      story:
+        'You can use the prop `gap` to separate each element/column. `gap` is a theme space unit.',
+    },
   },
 }

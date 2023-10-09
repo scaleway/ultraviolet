@@ -18,7 +18,9 @@ Cap.decorators = [
 
 Cap.parameters = {
   docs: {
-    storyDescription:
-      'Value will be capped out above 0 and below 100, so you&apos;re safe to pass an even greater/lower value',
+    description: {
+      story:
+        'Value will be capped out above 0 and below 100, so you&apos;re safe to pass an even greater/lower value',
+    },
   },
 }

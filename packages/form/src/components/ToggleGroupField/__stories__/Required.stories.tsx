@@ -35,8 +35,10 @@ export const Required: StoryFn<typeof ToggleGroupField> = args => (
 
 Required.parameters = {
   docs: {
-    storyDescription:
-      'Use the `required` prop to change make the whole group a required field.',
+    description: {
+      story:
+        'Use the `required` prop to change make the whole group a required field.',
+    },
   },
 }
 

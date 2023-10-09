@@ -4,8 +4,9 @@ export const WithAnimation = Template.bind({})
 
 WithAnimation.parameters = {
   docs: {
-    storyDescription:
-      'Stepper Component with animation by passing `animated={true}` ',
+    description: {
+      story: 'Stepper Component with animation by passing `animated={true}` ',
+    },
   },
 }
 

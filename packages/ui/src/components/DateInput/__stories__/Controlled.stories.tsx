@@ -20,7 +20,9 @@ export const Controlled: StoryFn<ComponentProps<typeof DateInput>> = args => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription:
-      'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components). By passing `value` and `onChange` prop you can control it.',
+    description: {
+      story:
+        'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html#controlled-components). By passing `value` and `onChange` prop you can control it.',
+    },
   },
 }

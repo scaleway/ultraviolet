@@ -17,6 +17,6 @@ export const Value: StoryFn = args => (
 
 Value.parameters = {
   docs: {
-    storyDescription: 'Set value using `value` property.',
+    description: { story: 'Set value using `value` property.' },
   },
 }

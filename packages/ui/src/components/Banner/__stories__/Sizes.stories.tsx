@@ -56,7 +56,9 @@ export const Sizes: StoryFn = args => (
 
 Sizes.parameters = {
   docs: {
-    storyDescription: 'You can define size of a Banner using `size` property.',
+    description: {
+      story: 'You can define size of a Banner using `size` property.',
+    },
   },
 }
 

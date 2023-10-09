@@ -8,7 +8,9 @@ export const Uncontrolled: StoryFn<
 
 Uncontrolled.parameters = {
   docs: {
-    storyDescription:
-      'DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).',
+    description: {
+      story:
+        'DateInput can be used as an [uncontrolled component](https://reactjs.org/docs/uncontrolled-components.html).',
+    },
   },
 }

@@ -11,7 +11,8 @@ export const StrokeWidth: StoryFn = props => (
 
 StrokeWidth.parameters = {
   docs: {
-    storyDescription:
-      'You can also set the stroke width with the `strokeWidth` prop.',
+    description: {
+      story: 'You can also set the stroke width with the `strokeWidth` prop.',
+    },
   },
 }

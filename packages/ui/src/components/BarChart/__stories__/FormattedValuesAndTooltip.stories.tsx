@@ -21,7 +21,9 @@ export const FormattedValuesAndTooltip: StoryFn<typeof BarChart> = props => (
 
 FormattedValuesAndTooltip.parameters = {
   docs: {
-    storyDescription:
-      'Use `axisFormatters` and `tooltipFunction` to customize the axis and tooltip.',
+    description: {
+      story:
+        'Use `axisFormatters` and `tooltipFunction` to customize the axis and tooltip.',
+    },
   },
 }

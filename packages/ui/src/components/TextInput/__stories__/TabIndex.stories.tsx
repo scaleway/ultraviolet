@@ -9,6 +9,8 @@ TabIndex.args = {
 
 TabIndex.parameters = {
   docs: {
-    storyDescription: 'Can disable tabulation on field with `tabIndex="-1"`',
+    description: {
+      story: 'Can disable tabulation on field with `tabIndex="-1"`',
+    },
   },
 }

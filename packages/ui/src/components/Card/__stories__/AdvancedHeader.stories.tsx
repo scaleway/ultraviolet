@@ -29,7 +29,9 @@ export const AdvancedHeader: StoryFn = args => {
 
 AdvancedHeader.parameters = {
   docs: {
-    storyDescription:
-      'Header can be a `string` but also a component if you need more complex header. Keep in mind that when you\'re using a custom component you need to use `<Text variant="heading" as="h2">` to be consistent with non-custom Card headers.',
+    description: {
+      story:
+        'Header can be a `string` but also a component if you need more complex header. Keep in mind that when you\'re using a custom component you need to use `<Text variant="heading" as="h2">` to be consistent with non-custom Card headers.',
+    },
   },
 }

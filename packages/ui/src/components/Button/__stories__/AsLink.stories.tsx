@@ -23,7 +23,9 @@ export const AsLink: StoryFn<typeof Button> = args => (
 
 AsLink.parameters = {
   docs: {
-    storyDescription:
-      'Provide an `href` to turn the button as an anchor element. Adding `href` also allow to add `download` and `target` properties. `name` prop is not allowed in a anchor element.',
+    description: {
+      story:
+        'Provide an `href` to turn the button as an anchor element. Adding `href` also allow to add `download` and `target` properties. `name` prop is not allowed in a anchor element.',
+    },
   },
 }

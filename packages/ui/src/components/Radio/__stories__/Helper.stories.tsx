@@ -14,6 +14,6 @@ export const Helper: StoryFn = args => (
 
 Helper.parameters = {
   docs: {
-    storyDescription: 'Add an helper text using `helper` property.',
+    description: { story: 'Add an helper text using `helper` property.' },
   },
 }

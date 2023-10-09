@@ -16,8 +16,10 @@ export const Localized = (props: ComponentProps<typeof DateInput>) =>
 
 Localized.parameters = {
   docs: {
-    storyDescription:
-      'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
+    description: {
+      story:
+        'You can import locale from `date-fns/locale` package and pass it as `locale` prop to localize the input.',
+    },
   },
 }
 

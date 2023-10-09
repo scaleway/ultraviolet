@@ -12,7 +12,8 @@ export const Colors: StoryFn = props => (
 
 Colors.parameters = {
   docs: {
-    storyDescription:
-      'You can set the color of the component with the `color` prop.',
+    description: {
+      story: 'You can set the color of the component with the `color` prop.',
+    },
   },
 }

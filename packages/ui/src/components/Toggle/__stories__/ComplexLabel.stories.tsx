@@ -25,7 +25,9 @@ ComplexLabel.args = {
 
 ComplexLabel.parameters = {
   docs: {
-    storyDescription:
-      'Toggle can accept a more complex label than just a text, it allows your to customize even more the look of the toggle.',
+    description: {
+      story:
+        'Toggle can accept a more complex label than just a text, it allows your to customize even more the look of the toggle.',
+    },
   },
 }

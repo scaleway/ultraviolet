@@ -18,7 +18,9 @@ Text.decorators = [
 
 Text.parameters = {
   docs: {
-    storyDescription:
-      'Instead of having an image you can put a text and it will take the best acronym to displayYou can change the default Text by using the `Text` prop. It work as `src` on a img tag.',
+    description: {
+      story:
+        'Instead of having an image you can put a text and it will take the best acronym to displayYou can change the default Text by using the `Text` prop. It work as `src` on a img tag.',
+    },
   },
 }
