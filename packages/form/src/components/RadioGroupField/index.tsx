@@ -32,7 +32,6 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
   name,
   onChange,
   required,
-  value,
   rules,
   children,
   label = '',
@@ -55,7 +54,7 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
             onChange?.(event)
           }}
           required={required}
-          value={value ?? ''}
+          value={field.value}
           legend={legend}
           error={getError({ label }, error) ?? customError}
           helper={helper}

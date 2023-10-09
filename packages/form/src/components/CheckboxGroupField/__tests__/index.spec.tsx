@@ -25,6 +25,11 @@ describe('CheckboxField', () => {
           expect(secondInput).toBeChecked()
         },
       },
+      {
+        initialValues: {
+          Checkbox: [],
+        },
+      },
     ))
 
   test('should trigger events correctly with required prop', () => {
@@ -54,6 +59,11 @@ describe('CheckboxField', () => {
           act(() => input.click())
           expect(onChange).toBeCalledTimes(2)
           expect(input).not.toBeChecked()
+        },
+      },
+      {
+        initialValues: {
+          test: [],
         },
       },
     )

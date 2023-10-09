@@ -4,4 +4,5 @@ export const Checked = Template.bind({})
 
 Checked.args = {
   name: 'default',
+  value: true,
 }
