@@ -40,8 +40,6 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
   size,
   step,
   text,
-  // validate,
-  // value,
   rules,
   className,
 }: NumberInputValueFieldProps<TFieldValues>) => (
@@ -55,7 +53,8 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
     }}
     render={({ field }) => (
       <NumberInput
-        {...field}
+        name={field.name}
+        value={field.value}
         disabled={disabled}
         onBlur={(event: FocusEvent<HTMLInputElement>) => {
           field.onBlur()
@@ -63,7 +62,7 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
         }}
         onChange={event => {
           field.onChange(event)
-          onChange?.(event as number)
+          onChange?.(event)
         }}
         onFocus={onFocus}
         maxValue={maxValue}

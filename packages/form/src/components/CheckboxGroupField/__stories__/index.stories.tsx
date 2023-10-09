@@ -8,7 +8,7 @@ export default {
   decorators: [
     ChildStory => (
       <Form
-        initialValues={{ conditions: 'termsAndConditions' }}
+        initialValues={{ conditions: ['termsAndConditions'] }}
         onRawSubmit={data => {
           console.log('data', data)
         }}

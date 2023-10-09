@@ -32,6 +32,7 @@ export const TimeField = <TFieldValues extends FieldValues>({
   readOnly,
   onBlur,
   onFocus,
+  onChange,
   isLoading,
   isClearable,
   inputId,
@@ -43,6 +44,7 @@ export const TimeField = <TFieldValues extends FieldValues>({
   isSearchable,
   rules,
   options,
+  'data-testid': dataTestId,
 }: TimeFieldProps<TFieldValues>) => (
   <Controller
     name={name}
@@ -52,14 +54,14 @@ export const TimeField = <TFieldValues extends FieldValues>({
     }}
     render={({ field, fieldState: { error } }) => (
       <TimeInput
-        {...field}
+        name={field.name}
         placeholder={placeholder}
         schedule={schedule}
         required={required}
         value={parseTime(field.value)}
         onChange={(val, action) => {
           if (!val) return
-          field.onChange?.(val, action)
+          onChange?.(val, action)
           const [hours, minutes] = (
             val as { value: string; label: string }
           ).value.split(':')
@@ -87,6 +89,7 @@ export const TimeField = <TFieldValues extends FieldValues>({
         inputId={inputId}
         id={id}
         options={options}
+        data-testid={dataTestId}
       />
     )}
   />

@@ -54,7 +54,7 @@ describe('TimeField', () => {
           fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
           const option =
             // eslint-disable-next-line testing-library/no-node-access
-            screen.getByTestId('option--01:00').firstChild as HTMLElement
+            screen.getByTestId('option-test-01:00').firstChild as HTMLElement
           act(() => option.click())
           expect(onChange).toBeCalledTimes(1)
           act(() => select.blur())

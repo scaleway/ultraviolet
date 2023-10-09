@@ -283,12 +283,10 @@ exports[`TimeField should render correctly 1`] = `
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class=" cache-1gb28ew-container-StyledContainer e11gt5pw4"
-      data-testid="select-input-"
+      data-testid="select-input-test"
     >
       <span
         class="cache-1f43avz-a11yText-A11yText"
@@ -371,6 +369,11 @@ exports[`TimeField should render correctly 1`] = `
           </div>
         </div>
       </div>
+      <input
+        name="test"
+        type="hidden"
+        value=""
+      />
       <div
         class="cache-1lt3r2p e5hc7t70"
       >
@@ -666,12 +669,10 @@ exports[`TimeField should render correctly checked without value 1`] = `
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class=" cache-1gb28ew-container-StyledContainer e11gt5pw4"
-      data-testid="select-input-"
+      data-testid="select-input-test"
     >
       <span
         class="cache-1f43avz-a11yText-A11yText"
@@ -754,6 +755,11 @@ exports[`TimeField should render correctly checked without value 1`] = `
           </div>
         </div>
       </div>
+      <input
+        name="test"
+        type="hidden"
+        value=""
+      />
       <div
         class="cache-1lt3r2p e5hc7t70"
       >
@@ -1036,12 +1042,10 @@ exports[`TimeField should render correctly disabled 1`] = `
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class=" cache-iwdjsb-container-StyledContainer e11gt5pw4"
-      data-testid="select-input-"
+      data-testid="select-input-test"
     >
       <span
         class="cache-1f43avz-a11yText-A11yText"
@@ -1421,12 +1425,10 @@ exports[`TimeField should trigger events 1`] = `
   padding-top: 2px;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class=" cache-1gb28ew-container-StyledContainer e11gt5pw4"
-      data-testid="select-input-"
+      data-testid="select-input-test"
     >
       <span
         class="cache-1f43avz-a11yText-A11yText"
@@ -1511,6 +1513,11 @@ exports[`TimeField should trigger events 1`] = `
           </div>
         </div>
       </div>
+      <input
+        name="test"
+        type="hidden"
+        value="1:00:00"
+      />
       <div
         class="cache-1lt3r2p e5hc7t70"
       >
