@@ -54,15 +54,11 @@ describe('TextInputField', () => {
           await waitFor(() => {
             expect(
               screen.getByText(
-                typeof mockErrors.MIN_LENGTH === 'function'
-                  ? mockErrors.MIN_LENGTH({
-                      allValues: {},
-                      label: 'test',
-                      minLength: 13,
-                      name: 'test',
-                      value: 'test',
-                    })
-                  : mockErrors.MIN_LENGTH,
+                mockErrors.minLength({
+                  label: 'test',
+                  minLength: 13,
+                  value: 'test',
+                }),
               ),
             ).toBeVisible()
           })

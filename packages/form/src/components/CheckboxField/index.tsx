@@ -70,7 +70,6 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
           error={getError({ label: label ?? '' }, error)}
           ref={field.ref}
           className={className}
-          value={field.value}
           required={required}
           data-testid={dataTestId}
           helper={helper}

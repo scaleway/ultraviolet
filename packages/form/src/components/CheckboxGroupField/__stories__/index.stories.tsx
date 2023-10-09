@@ -9,7 +9,9 @@ export default {
   decorators: [
     ChildStory => (
       <Form
-        onRawSubmit={() => {}}
+        onRawSubmit={data => {
+          console.log('data', data)
+        }}
         errors={mockErrors}
         initialValues={{ conditions: ['termsAndConditions'] }}
       >
