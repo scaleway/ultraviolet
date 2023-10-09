@@ -42,8 +42,6 @@ export const Playground: StoryFn<typeof Form> = () => {
 
   const disableName = methods.watch('disableName')
 
-  console.log({ disableName })
-
   return (
     <Form<FormValues>
       errors={mockErrors}

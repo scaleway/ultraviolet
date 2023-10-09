@@ -25,7 +25,6 @@ type CheckboxGroupFieldProps<TFieldValues extends FieldValues> =
 
 export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   legend,
-  value,
   className,
   helper,
   direction,
@@ -45,13 +44,13 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
         <CheckboxGroup
           legend={legend}
           name={name}
-          value={value}
+          value={field.value}
           onChange={event => {
             const fieldValue = field.value as string[]
             if (fieldValue?.includes(event.currentTarget.value)) {
               field.onChange(
                 fieldValue?.filter(
-                  currentValue => currentValue === event.currentTarget.value,
+                  currentValue => currentValue !== event.currentTarget.value,
                 ),
               )
             } else {
