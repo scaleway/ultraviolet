@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@emotion/react'
 import makeHelpers from '@scaleway/jest-helpers'
 import type { ReactNode } from 'react'
-import { consoleLightTheme as defaultTheme } from '@ultraviolet/themes'
+import { theme as defaultTheme } from '@ultraviolet/ui'
 
 type WrapperProps = {
   theme?: typeof defaultTheme

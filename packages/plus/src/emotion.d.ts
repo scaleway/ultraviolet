@@ -1,6 +1,5 @@
-import type { consoleLightTheme } from '@ultraviolet/themes'
+import type { UltravioletUITheme } from '@ultraviolet/ui'
 
-type UltravioletUITheme = typeof consoleLightTheme
 declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface Theme extends UltravioletUITheme {}
