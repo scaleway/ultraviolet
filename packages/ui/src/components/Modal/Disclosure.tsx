@@ -36,6 +36,8 @@ export const Disclosure = ({
         onOpen: handleOpen,
         modalId: id,
         hide: handleClose,
+        close: handleClose,
+        show: handleOpen,
       })
     }
 

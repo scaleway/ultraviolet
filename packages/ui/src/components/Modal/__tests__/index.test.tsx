@@ -246,6 +246,27 @@ describe('Modal', () => {
     expect(mockOnClick).toBeCalledTimes(1)
   })
 
+  test(`disclosure function render onClick props is call with close`, async () => {
+    renderWithTheme(
+      <Modal ariaLabel="modal-test" id="modal-test" opened>
+        {({ close }) => (
+          <button
+            type="button"
+            onClick={() => {
+              mockOnClick()
+              close()
+            }}
+          >
+            Close
+          </button>
+        )}
+      </Modal>,
+    )
+    const modalButton = screen.getByRole('button', { name: 'Close' })
+    await userEvent.click(modalButton)
+    expect(mockOnClick).toBeCalledTimes(1)
+  })
+
   test(`disclosure Component render onClick props is call`, async () => {
     renderWithTheme(
       <Modal
