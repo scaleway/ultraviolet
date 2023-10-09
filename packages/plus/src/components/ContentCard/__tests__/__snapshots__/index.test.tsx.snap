@@ -176,10 +176,425 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
             </div>
             <div
               class="cache-77g8v1 ehpbis70"
-            >
-              Sample Alert
-            </div>
+            />
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ContentCard renders correctly with all directions renders correctly direction column and image 1`] = `
+<DocumentFragment>
+  .cache-3dbbha-Card {
+  display: block;
+  text-align: left;
+  padding: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.cache-77g8v1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-8a6yjm-Image {
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.cache-180uk1e {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-t6i97a-SubContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 24px 24px 0 24px;
+  padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-16otux {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-tjeurz {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-3dbbha-Card e2ipnt4"
+  >
+    <div
+      class="cache-77g8v1 ehpbis70"
+    >
+      <img
+        alt=""
+        class="cache-8a6yjm-Image e2ipnt0"
+        height="120"
+        src="test-file-stub"
+      />
+      <div
+        class="cache-180uk1e ehpbis70"
+        flex="1"
+      >
+        <div
+          class="cache-t6i97a-SubContainer e2ipnt1"
+        >
+          <div
+            class="cache-1t7ypwa ehpbis70"
+          >
+            <div
+              class="cache-16otux ehpbis70"
+            >
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+            </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ContentCard renders correctly with all directions renders correctly direction column and loading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.cache-3dbbha-Card {
+  display: block;
+  text-align: left;
+  padding: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.cache-77g8v1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1k6bubi-SkeletonImage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+  height: 120px;
+}
+
+.cache-1lyaq9u {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: #e9eaeb;
+}
+
+.cache-171fx8 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      #f9f9fa00,
+      #f9f9fa4D,
+      #f9f9fa66,
+      #f9f9fa4D,
+      #f9f9fa00
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-171fx8 {
+    -webkit-animation: unset;
+    animation: unset;
+  }
+}
+
+.cache-1wijx9u-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 24px;
+}
+
+.cache-158ltsb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+}
+
+.cache-1ccwz2y {
+  height: 12px;
+  width: 120px;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: #e9eaeb;
+}
+
+<div
+    class="cache-3dbbha-Card e2ipnt4"
+  >
+    <div
+      class="cache-77g8v1 ehpbis70"
+    >
+      <div
+        class="e1wwr9dc1 cache-1k6bubi-SkeletonImage e183x2r81"
+      >
+        <div
+          class="cache-1lyaq9u e1uz28830"
+        />
+        <div
+          class="cache-171fx8 e183x2r80"
+        />
+      </div>
+      <div
+        class="cache-1wijx9u-StyledStack e1wwr9dc0"
+      >
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
         </div>
       </div>
     </div>
@@ -386,10 +801,449 @@ exports[`ContentCard renders correctly with all directions renders correctly dir
             </div>
             <div
               class="cache-77g8v1 ehpbis70"
-            >
-              Sample Alert
-            </div>
+            />
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ContentCard renders correctly with all directions renders correctly direction row and image 1`] = `
+<DocumentFragment>
+  .cache-3dbbha-Card {
+  display: block;
+  text-align: left;
+  padding: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.cache-gy0d8m {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-nad4zi-Image {
+  object-fit: cover;
+  border-radius: 4px 0 0 4px;
+}
+
+.cache-10x4y1s {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cache-akpqax-SubContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 24px 0 24px 24px;
+  padding: 24px;
+}
+
+.cache-1t7ypwa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-16otux {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-77g8v1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-tjeurz {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-3dbbha-Card e2ipnt4"
+  >
+    <div
+      class="cache-gy0d8m ehpbis70"
+    >
+      <img
+        alt=""
+        class="cache-nad4zi-Image e2ipnt0"
+        src="test-file-stub"
+        width="220"
+      />
+      <div
+        class="cache-10x4y1s ehpbis70"
+        flex="1"
+      >
+        <div
+          class="cache-akpqax-SubContainer e2ipnt1"
+        >
+          <div
+            class="cache-1t7ypwa ehpbis70"
+          >
+            <div
+              class="cache-16otux ehpbis70"
+            >
+              <div
+                class="cache-77g8v1 ehpbis70"
+              >
+                <h3
+                  class="cache-tjeurz e13y3mga0"
+                >
+                  test
+                </h3>
+              </div>
+            </div>
+            <div
+              class="cache-77g8v1 ehpbis70"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ContentCard renders correctly with all directions renders correctly direction row and loading 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from {
+    left: -25%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.cache-3dbbha-Card {
+  display: block;
+  text-align: left;
+  padding: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.cache-gy0d8m {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1elqy4z-SkeletonImage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  width: 220px;
+  height: unset;
+}
+
+.cache-1lyaq9u {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: #e9eaeb;
+}
+
+.cache-171fx8 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  opacity: 0.8;
+  background: linear-gradient(
+      90deg,
+      #f9f9fa00,
+      #f9f9fa4D,
+      #f9f9fa66,
+      #f9f9fa4D,
+      #f9f9fa00
+    );
+  -webkit-animation: animation-0 1s linear infinite;
+  animation: animation-0 1s linear infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cache-171fx8 {
+    -webkit-animation: unset;
+    animation: unset;
+  }
+}
+
+.cache-1wijx9u-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 24px;
+}
+
+.cache-158ltsb {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: progress;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: column;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+}
+
+.cache-1ccwz2y {
+  height: 12px;
+  width: 120px;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: #e9eaeb;
+}
+
+<div
+    class="cache-3dbbha-Card e2ipnt4"
+  >
+    <div
+      class="cache-gy0d8m ehpbis70"
+    >
+      <div
+        class="e1wwr9dc1 cache-1elqy4z-SkeletonImage e183x2r81"
+      >
+        <div
+          class="cache-1lyaq9u e1uz28830"
+        />
+        <div
+          class="cache-171fx8 e183x2r80"
+        />
+      </div>
+      <div
+        class="cache-1wijx9u-StyledStack e1wwr9dc0"
+      >
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
+        </div>
+        <div
+          class="cache-158ltsb e183x2r81"
+        >
+          <div
+            class="cache-1ccwz2y e1denkbe0"
+          />
+          <div
+            class="cache-171fx8 e183x2r80"
+          />
         </div>
       </div>
     </div>

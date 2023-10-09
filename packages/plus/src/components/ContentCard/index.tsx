@@ -1,9 +1,9 @@
 import type { Theme } from '@emotion/react'
-import { css, useTheme } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
-import { useMemo } from 'react'
+import { forwardRef, useMemo } from 'react'
 import { Skeleton } from './Skeleton'
 
 const activeStyle = (theme: Theme) => css`
@@ -101,94 +101,99 @@ type ContentCardProps = {
  * It can take different directions to display the image and the content. You can also add more content
  * by passing children.
  */
-export const ContentCard = ({
-  image,
-  direction = 'column',
-  icon,
-  subtitle,
-  title,
-  description,
-  children,
-  href,
-  target,
-  onClick,
-  loading,
-}: ContentCardProps) => {
-  const theme = useTheme()
+export const ContentCard = forwardRef<
+  HTMLAnchorElement & HTMLButtonElement & HTMLDivElement,
+  ContentCardProps
+>(
+  (
+    {
+      image,
+      direction = 'column',
+      icon,
+      subtitle,
+      title,
+      description,
+      children,
+      href,
+      target,
+      onClick,
+      loading,
+    },
+    ref,
+  ) => {
+    const Container = useMemo(() => {
+      if (href) {
+        return Card.withComponent('a')
+      }
 
-  console.log(theme)
+      if (onClick) {
+        return Card.withComponent('button')
+      }
 
-  const Container = useMemo(() => {
-    if (href) {
-      return Card.withComponent('a')
-    }
+      return Card
+    }, [href, onClick])
 
-    if (onClick) {
-      return Card.withComponent('button')
-    }
-
-    return Card
-  }, [href, onClick])
-
-  return (
-    <Container
-      target={target}
-      onClick={onClick}
-      href={href}
-      role={onClick ? 'button' : undefined}
-    >
-      {loading ? (
-        <Skeleton direction={direction} />
-      ) : (
-        <Stack direction={direction}>
-          {image ? (
-            <Image
-              alt=""
-              src={image}
-              height={direction === 'column' ? 120 : undefined}
-              width={direction === 'row' ? 220 : undefined}
-              direction={direction}
-            />
-          ) : null}
-          <Stack gap={2} direction={direction} flex={1}>
-            <SubContainer gap={2} direction={direction} href={href}>
-              {icon ?? null}
-              <Stack gap={2}>
-                <Stack gap={0.5}>
-                  <Stack>
-                    {subtitle ? (
-                      <Text as="small" variant="caption" prominence="weak">
-                        {subtitle}
+    return (
+      <Container
+        target={target}
+        onClick={onClick}
+        href={href}
+        role={onClick ? 'button' : undefined}
+        ref={ref}
+      >
+        {loading ? (
+          <Skeleton direction={direction} />
+        ) : (
+          <Stack direction={direction}>
+            {image ? (
+              <Image
+                alt=""
+                src={image}
+                height={direction === 'column' ? 120 : undefined}
+                width={direction === 'row' ? 220 : undefined}
+                direction={direction}
+              />
+            ) : null}
+            <Stack gap={2} direction={direction} flex={1}>
+              <SubContainer gap={2} direction={direction} href={href}>
+                {icon ?? null}
+                <Stack gap={2}>
+                  <Stack gap={0.5}>
+                    <Stack>
+                      {subtitle ? (
+                        <Text as="small" variant="caption" prominence="weak">
+                          {subtitle}
+                        </Text>
+                      ) : null}
+                      <Text as="h3" variant="bodyStrong">
+                        {title}
+                      </Text>
+                    </Stack>
+                    {description ? (
+                      <Text as="p" variant="bodySmall">
+                        {description}
                       </Text>
                     ) : null}
-                    <Text as="h3" variant="bodyStrong">
-                      {title}
-                    </Text>
                   </Stack>
-                  {description ? (
-                    <Text as="p" variant="bodySmall">
-                      {description}
-                    </Text>
-                  ) : null}
+                  <Stack>{children}</Stack>
                 </Stack>
-                <Stack>{children}</Stack>
-              </Stack>
-            </SubContainer>
-            {href ? (
-              <StyledIconStack
-                flex={1}
-                alignItems={direction === 'column' ? 'flex-end' : 'center'}
-                justifyContent={direction === 'column' ? 'center' : 'end'}
-                direction={direction}
-              >
-                <IconContainer>
-                  <Icon name="open-in-new" color="neutral" />
-                </IconContainer>
-              </StyledIconStack>
-            ) : null}
+              </SubContainer>
+              {href ? (
+                <StyledIconStack
+                  flex={1}
+                  alignItems={direction === 'column' ? 'flex-end' : 'center'}
+                  justifyContent={direction === 'column' ? 'center' : 'end'}
+                  direction={direction}
+                >
+                  <IconContainer>
+                    <Icon name="open-in-new" color="neutral" />
+                  </IconContainer>
+                </StyledIconStack>
+              ) : null}
+            </Stack>
           </Stack>
-        </Stack>
-      )}
-    </Container>
-  )
-}
+        )}
+      </Container>
+    )
+  },
+)

@@ -50,9 +50,23 @@ describe('ContentCard', () => {
     ;(['row', 'column'] as const).forEach(direction => {
       test(`renders correctly direction ${direction}`, () =>
         shouldMatchEmotionSnapshot(
-          <ContentCard title="test" direction={direction}>
-            Sample Alert
-          </ContentCard>,
+          <ContentCard title="test" direction={direction} />,
+        ))
+    })
+    ;(['row', 'column'] as const).forEach(direction => {
+      test(`renders correctly direction ${direction} and loading`, () =>
+        shouldMatchEmotionSnapshot(
+          <ContentCard title="test" direction={direction} loading />,
+        ))
+    })
+    ;(['row', 'column'] as const).forEach(direction => {
+      test(`renders correctly direction ${direction} and image`, () =>
+        shouldMatchEmotionSnapshot(
+          <ContentCard
+            title="test"
+            direction={direction}
+            image={illustration}
+          />,
         ))
     })
   })
