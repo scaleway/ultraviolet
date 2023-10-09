@@ -1,0 +1,33 @@
+{
+  "name": "@ultraviolet/illustrations",
+  "version": "0.0.1",
+  "description": "Ultraviolet Illustrations",
+  "homepage": "https://github.com/scaleway/ultraviolet#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scaleway/ultraviolet",
+    "directory": "packages/illustrations"
+  },
+  "keywords": [
+    "illustrations",
+    "ui"
+  ],
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "pnpm": ">=8.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "default": "./dist/index.js"
+  }
+}
