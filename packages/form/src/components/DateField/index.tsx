@@ -48,18 +48,14 @@ export const DateField = <TFieldValues extends FieldValues>({
   required,
   name,
   label = '',
-  // validate,
   format,
   locale,
   maxDate,
   minDate,
-  // initialValue,
   disabled,
-  // value: inputVal,
   onChange,
   onBlur,
   onFocus,
-  // formatOnBlur,
   rules,
   autoFocus = false,
   excludeDates,
@@ -74,6 +70,7 @@ export const DateField = <TFieldValues extends FieldValues>({
       rules={{
         ...rules,
         validate: {
+          ...rules?.validate,
           minDate: minDateValidator(minDate),
           maxDate: maxDateValidator(maxDate),
         },
@@ -81,8 +78,9 @@ export const DateField = <TFieldValues extends FieldValues>({
       }}
       render={({ field, fieldState: { error } }) => (
         <DateInput
-          {...field}
+          name={field.name}
           label={label}
+          value={field.value}
           format={
             format ||
             (value => (value ? parseDate(value).toLocaleDateString() : ''))
