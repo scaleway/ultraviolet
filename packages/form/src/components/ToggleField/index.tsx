@@ -17,11 +17,13 @@ type ToggleFieldProps<TFieldValues extends FieldValues> = Omit<
     | 'tooltip'
     | 'labelPosition'
     | 'className'
+    | 'data-testid'
   > & {
     name: string
     required?: boolean
     parse?: (value: boolean) => any
     format?: (value: any) => boolean
+    value?: boolean
   }
 
 export const ToggleField = <TFieldValues extends FieldValues>({
@@ -37,6 +39,8 @@ export const ToggleField = <TFieldValues extends FieldValues>({
   labelPosition,
   parse,
   format,
+  value,
+  'data-testid': dataTestId,
 }: ToggleFieldProps<TFieldValues>) => (
   <Controller<TFieldValues>
     name={name}
@@ -44,6 +48,7 @@ export const ToggleField = <TFieldValues extends FieldValues>({
       required,
       ...rules,
     }}
+    defaultValue={value as any}
     render={({ field }) => {
       const transformedValue = () => {
         if (format) {
@@ -55,7 +60,8 @@ export const ToggleField = <TFieldValues extends FieldValues>({
 
       return (
         <Toggle
-          {...field}
+          name={field.name}
+          ref={field.ref}
           checked={transformedValue()}
           tooltip={tooltip}
           onChange={event => {
@@ -72,6 +78,7 @@ export const ToggleField = <TFieldValues extends FieldValues>({
           labelPosition={labelPosition}
           className={className}
           required={required}
+          data-testid={dataTestId}
         />
       )
     }}

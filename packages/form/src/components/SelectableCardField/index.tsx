@@ -74,6 +74,7 @@ export const SelectableCardField = <TFieldValues extends FieldValues>({
         tooltip={tooltip}
         label={label}
         value={value ?? ''}
+        name={field.name}
       >
         {children}
       </SelectableCard>
