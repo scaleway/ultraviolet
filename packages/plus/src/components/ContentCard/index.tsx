@@ -1,5 +1,5 @@
 import type { Theme } from '@emotion/react'
-import { css } from '@emotion/react'
+import { css, useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
@@ -114,6 +114,10 @@ export const ContentCard = ({
   onClick,
   loading,
 }: ContentCardProps) => {
+  const theme = useTheme()
+
+  console.log(theme)
+
   const Container = useMemo(() => {
     if (href) {
       return Card.withComponent('a')

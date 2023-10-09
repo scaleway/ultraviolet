@@ -3,7 +3,7 @@ import { ContentCard } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 import illustration from '../assets/illustration.png'
 
-describe('Alert', () => {
+describe('ContentCard', () => {
   test('renders correctly with required title', () =>
     shouldMatchEmotionSnapshot(<ContentCard title="test" />))
 
