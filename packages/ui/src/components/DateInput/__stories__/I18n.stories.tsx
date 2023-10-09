@@ -39,7 +39,9 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
 
 I18n.parameters = {
   docs: {
-    storyDescription:
-      'If you use our `useI18n` hook you can easily handle localization change on the input by getting `currentLocale` returned by the hook.',
+    description: {
+      story:
+        'If you use our `useI18n` hook you can easily handle localization change on the input by getting `currentLocale` returned by the hook.',
+    },
   },
 }

@@ -12,6 +12,6 @@ Uncontrolled.args = {
 }
 Uncontrolled.parameters = {
   docs: {
-    storyDescription: 'This shows how to use Uncontrolled SelectInput.',
+    description: { story: 'This shows how to use Uncontrolled SelectInput.' },
   },
 }

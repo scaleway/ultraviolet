@@ -9,7 +9,9 @@ Notice.args = {
 
 Notice.parameters = {
   docs: {
-    storyDescription:
-      'Display an information under `TextInput` using `notice` property.',
+    description: {
+      story:
+        'Display an information under `TextInput` using `notice` property.',
+    },
   },
 }

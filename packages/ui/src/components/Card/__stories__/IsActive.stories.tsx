@@ -45,7 +45,8 @@ export const IsActive: StoryFn = args => {
 
 IsActive.parameters = {
   docs: {
-    storyDescription:
-      'You can highlight a Card by passing the `isActive` prop.',
+    description: {
+      story: 'You can highlight a Card by passing the `isActive` prop.',
+    },
   },
 }

@@ -28,7 +28,9 @@ export const PreventBodyScroll: StoryFn = props => (
 
 PreventBodyScroll.parameters = {
   docs: {
-    storyDescription:
-      'To prevent body scroll outside of the modal, use `preventBodyScroll`',
+    description: {
+      story:
+        'To prevent body scroll outside of the modal, use `preventBodyScroll`',
+    },
   },
 }

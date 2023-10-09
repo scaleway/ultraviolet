@@ -9,6 +9,6 @@ Required.args = {
 
 Required.parameters = {
   docs: {
-    storyDescription: 'Add a required mark using `required` property.',
+    description: { story: 'Add a required mark using `required` property.' },
   },
 }

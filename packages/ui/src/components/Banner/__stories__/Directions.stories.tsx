@@ -30,8 +30,10 @@ export const Directions: StoryFn = args => (
 
 Directions.parameters = {
   docs: {
-    storyDescription:
-      'You can define the direction of the Banner using the `direction` property.',
+    description: {
+      story:
+        'You can define the direction of the Banner using the `direction` property.',
+    },
   },
 }
 

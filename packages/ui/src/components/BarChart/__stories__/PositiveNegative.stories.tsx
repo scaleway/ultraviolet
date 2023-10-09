@@ -44,6 +44,6 @@ export const PositiveNegative: StoryFn<typeof BarChart> = props => {
 
 PositiveNegative.parameters = {
   docs: {
-    storyDescription: 'Use `chartProps` to customize the chart.',
+    description: { story: 'Use `chartProps` to customize the chart.' },
   },
 }

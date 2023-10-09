@@ -17,8 +17,10 @@ export const FunctionDisclosure: StoryFn<typeof MenuV2> = () => {
 
 FunctionDisclosure.parameters = {
   docs: {
-    storyDescription:
-      'You can specify a function as disclosure and get popover props as argument',
+    description: {
+      story:
+        'You can specify a function as disclosure and get popover props as argument',
+    },
   },
 }
 

@@ -12,6 +12,6 @@ Time.args = {
 }
 Time.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `time` on SelectInput',
+    description: { story: 'This shows how to use `time` on SelectInput' },
   },
 }

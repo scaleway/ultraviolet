@@ -9,6 +9,8 @@ TextColor.args = {
 
 TextColor.parameters = {
   docs: {
-    storyDescription: 'You can set the text color by setting `textColor` prop',
+    description: {
+      story: 'You can set the text color by setting `textColor` prop',
+    },
   },
 }

@@ -24,10 +24,12 @@ export const Sentiments: StoryFn<typeof MenuV2> = () => (
 
 Sentiments.parameters = {
   docs: {
-    storyDescription: `A set of sentiment you can add on MenuV2Item (neutral, danger). You can use either props on MenuItem :
+    description: {
+      story: `A set of sentiment you can add on MenuV2Item (neutral, danger). You can use either props on MenuItem :
 - \`onClick\` to define menu actions.
 - \`to\` to define as a \`React Router Link\`.
 - \`href\` to define as a native link \`a\`.`,
+    },
   },
 }
 

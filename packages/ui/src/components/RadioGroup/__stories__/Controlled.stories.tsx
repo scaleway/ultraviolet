@@ -23,7 +23,9 @@ export const Controlled: StoryFn = args => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription:
-      'RadioGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    description: {
+      story:
+        'RadioGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    },
   },
 }

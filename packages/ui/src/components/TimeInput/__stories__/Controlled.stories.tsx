@@ -27,7 +27,9 @@ export const Controlled: StoryFn = ({ value: defaultValue = DEFAULT_VAL }) => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription:
-      'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
+    description: {
+      story:
+        'Most of the time, you need a [controlled component](https://reactjs.org/docs/forms.html).',
+    },
   },
 }

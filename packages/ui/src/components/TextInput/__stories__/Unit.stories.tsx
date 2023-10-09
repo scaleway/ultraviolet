@@ -10,6 +10,6 @@ Unit.args = {
 
 Unit.parameters = {
   docs: {
-    storyDescription: 'Specify a unit using `unit` prop.',
+    description: { story: 'Specify a unit using `unit` prop.' },
   },
 }

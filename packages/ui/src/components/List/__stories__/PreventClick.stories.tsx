@@ -22,7 +22,9 @@ PreventClick.args = {
 
 PreventClick.parameters = {
   docs: {
-    storyDescription:
-      'By adding the prop `preventClick` on the `Cell`, you can limit any event propagation to go outside the cell. It can be used for prevent button to interfere with row expand onClick.',
+    description: {
+      story:
+        'By adding the prop `preventClick` on the `Cell`, you can limit any event propagation to go outside the cell. It can be used for prevent button to interfere with row expand onClick.',
+    },
   },
 }

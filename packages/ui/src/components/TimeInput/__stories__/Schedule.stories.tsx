@@ -17,8 +17,10 @@ export const Schedule: StoryFn = props => (
 
 Schedule.parameters = {
   docs: {
-    storyDescription:
-      'You can adjust the time between options with the `schedule` props. `hours`, `half` and `quarter` are available. By default, the `hours` option is selected.',
+    description: {
+      story:
+        'You can adjust the time between options with the `schedule` props. `hours`, `half` and `quarter` are available. By default, the `hours` option is selected.',
+    },
   },
 }
 

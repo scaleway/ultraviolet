@@ -27,7 +27,9 @@ Sentiments.decorators = [
 
 Sentiments.parameters = {
   docs: {
-    storyDescription:
-      'Using `sentiment` prop you can change the sentiment of the component. Each sentiment has a default icon set.',
+    description: {
+      story:
+        'Using `sentiment` prop you can change the sentiment of the component. Each sentiment has a default icon set.',
+    },
   },
 }

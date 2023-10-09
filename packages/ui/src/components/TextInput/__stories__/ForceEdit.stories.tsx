@@ -9,7 +9,9 @@ ForceEdit.args = {
 
 ForceEdit.parameters = {
   docs: {
-    storyDescription:
-      'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
+    description: {
+      story:
+        'It is possible to force edit mode (label at the top) using `edit` property. The principal use-case is to be compatible with browser autocomplete.',
+    },
   },
 }

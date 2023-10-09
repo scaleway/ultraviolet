@@ -19,7 +19,9 @@ export const Checked: StoryFn = args => (
 
 Checked.parameters = {
   docs: {
-    storyDescription:
-      'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
+    description: {
+      story:
+        'Checkbox can have two state `checked` or `indeterminate` defined by prop `checked`.',
+    },
   },
 }

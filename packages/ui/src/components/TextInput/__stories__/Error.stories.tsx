@@ -9,6 +9,6 @@ Error.args = {
 
 Error.parameters = {
   docs: {
-    storyDescription: 'Fill `TextInput` error using `error` property.',
+    description: { story: 'Fill `TextInput` error using `error` property.' },
   },
 }

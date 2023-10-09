@@ -16,7 +16,9 @@ export const Text: StoryFn = props => (
 
 Text.parameters = {
   docs: {
-    storyDescription:
-      'You can pass a text which will be inlined in the center of the circle with the `text` prop.',
+    description: {
+      story:
+        'You can pass a text which will be inlined in the center of the circle with the `text` prop.',
+    },
   },
 }

@@ -63,7 +63,9 @@ export const Ordering: StoryFn = args => {
 
 Ordering.parameters = {
   docs: {
-    storyDescription:
-      'You can indicate that a column is ordered by providing `isOrdered`, `orderDirection`. `onOrder` callback provides the opposite of current order as param for an easier sorting (DESC if currently ASC, otherwhile ASC)',
+    description: {
+      story:
+        'You can indicate that a column is ordered by providing `isOrdered`, `orderDirection`. `onOrder` callback provides the opposite of current order as param for an easier sorting (DESC if currently ASC, otherwhile ASC)',
+    },
   },
 }

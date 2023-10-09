@@ -34,7 +34,8 @@ export const Error: StoryFn = args => {
 
 Error.parameters = {
   docs: {
-    storyDescription:
-      'Set validation with error message using `error` property.',
+    description: {
+      story: 'Set validation with error message using `error` property.',
+    },
   },
 }

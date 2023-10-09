@@ -35,8 +35,9 @@ export const Error: StoryFn = args => {
 
 Error.parameters = {
   docs: {
-    storyDescription:
-      'Use `isError` prop to display SelectableCard with a error style.',
+    description: {
+      story: 'Use `isError` prop to display SelectableCard with a error style.',
+    },
   },
 }
 

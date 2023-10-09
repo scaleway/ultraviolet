@@ -59,8 +59,10 @@ export const Type: StoryFn = args => {
 
 Type.parameters = {
   docs: {
-    storyDescription:
-      'Two types exists for this component, it can either be a checkbox or a radio.',
+    description: {
+      story:
+        'Two types exists for this component, it can either be a checkbox or a radio.',
+    },
   },
 }
 Type.decorators = [

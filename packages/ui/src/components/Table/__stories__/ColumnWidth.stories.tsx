@@ -29,7 +29,9 @@ ColumnWidth.args = {
 
 ColumnWidth.parameters = {
   docs: {
-    storyDescription:
-      'Since Table is based on native HTML Table, column width will behave the same, however you can specify `width`, `minWidth` and/or `maxWidth` to a column, value are based on css value.',
+    description: {
+      story:
+        'Since Table is based on native HTML Table, column width will behave the same, however you can specify `width`, `minWidth` and/or `maxWidth` to a column, value are based on css value.',
+    },
   },
 }

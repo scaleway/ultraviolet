@@ -4,8 +4,9 @@ export const Error = Template.bind({})
 
 Error.parameters = {
   docs: {
-    storyDescription:
-      'Use `error` prop to style the input when the field is invalid.',
+    description: {
+      story: 'Use `error` prop to style the input when the field is invalid.',
+    },
   },
 }
 

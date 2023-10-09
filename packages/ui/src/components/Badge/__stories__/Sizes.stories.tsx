@@ -18,7 +18,9 @@ export const Sizes: StoryFn = props => (
 
 Sizes.parameters = {
   docs: {
-    storyDescription: 'You can define size of a badge using `size` property.',
+    description: {
+      story: 'You can define size of a badge using `size` property.',
+    },
   },
 }
 

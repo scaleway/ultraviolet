@@ -13,6 +13,6 @@ TimeError.args = {
 }
 TimeError.parameters = {
   docs: {
-    storyDescription: 'This shows how to use `time-error` on SelectInput',
+    description: { story: 'This shows how to use `time-error` on SelectInput' },
   },
 }

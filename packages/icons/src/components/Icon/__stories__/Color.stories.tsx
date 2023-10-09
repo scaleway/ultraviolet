@@ -10,7 +10,7 @@ export const Color = (args: ComponentProps<typeof Icon>) =>
 
 Color.parameters = {
   docs: {
-    storyDescription: 'Set size using `size` property.',
+    description: { story: 'Set size using `size` property.' },
   },
 }
 

@@ -18,7 +18,9 @@ ExpandableAutocollapse.args = {
 
 ExpandableAutocollapse.parameters = {
   docs: {
-    storyDescription:
-      'By adding the prop `autoCollapse` on the `List`, expanding a row will collapse other rows current expanded.',
+    description: {
+      story:
+        'By adding the prop `autoCollapse` on the `List`, expanding a row will collapse other rows current expanded.',
+    },
   },
 }

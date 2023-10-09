@@ -7,7 +7,9 @@ Error.args = {
 
 Error.parameters = {
   docs: {
-    storyDescription:
-      'You can use `error` prop to indicate an error with the current value',
+    description: {
+      story:
+        'You can use `error` prop to indicate an error with the current value',
+    },
   },
 }

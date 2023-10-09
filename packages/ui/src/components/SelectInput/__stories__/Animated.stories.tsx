@@ -46,7 +46,8 @@ export const Animated: StoryFn<typeof SelectInput> = ({ ...props }) => {
 
 Animated.parameters = {
   docs: {
-    storyDescription: `THis shows how to use \`animationOnChange\`, \`animation\` and \`animationDuration\` on SelectInput.
+    description: {
+      story: `This shows how to use \`animationOnChange\`, \`animation\` and \`animationDuration\` on SelectInput.
 The animation will be played when the value changes. Animation start when you select new value but also if you change the value of SelectInput with an external way (check example with button).
 
 #### Available animations
@@ -54,6 +55,7 @@ The animation will be played when the value changes. Animation start when you se
 ${Object.keys(animations)
   .map(animation => `\`${animation}\``)
   .join(' ')}`,
+    },
   },
 }
 

@@ -5,8 +5,10 @@ export const Image = Template.bind({})
 
 Image.parameters = {
   docs: {
-    storyDescription:
-      'You can change the default image by using the `image` prop. It work as `src` on a img tag.',
+    description: {
+      story:
+        'You can change the default image by using the `image` prop. It work as `src` on a img tag.',
+    },
   },
 }
 

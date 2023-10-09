@@ -18,7 +18,9 @@ Lock.decorators = [
 
 Lock.parameters = {
   docs: {
-    storyDescription:
-      'You can set the component to be locked by using `lock` prop when `text` is specified.',
+    description: {
+      story:
+        'You can set the component to be locked by using `lock` prop when `text` is specified.',
+    },
   },
 }

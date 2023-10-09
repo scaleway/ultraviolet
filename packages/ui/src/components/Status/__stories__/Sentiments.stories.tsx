@@ -12,7 +12,7 @@ export const Sentiments: StoryFn<typeof Menu> = props => (
 
 Sentiments.parameters = {
   docs: {
-    storyDescription: 'Set `sentiment` using sentiment property.',
+    description: { story: 'Set `sentiment` using sentiment property.' },
   },
 }
 

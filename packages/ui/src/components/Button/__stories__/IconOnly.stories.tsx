@@ -11,6 +11,6 @@ IconOnly.args = {
 
 IconOnly.parameters = {
   docs: {
-    storyDescription: '`children` element is not required',
+    description: { story: '`children` element is not required' },
   },
 }

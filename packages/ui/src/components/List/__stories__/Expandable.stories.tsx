@@ -25,7 +25,9 @@ Expandable.args = {
 
 Expandable.parameters = {
   docs: {
-    storyDescription:
-      'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `disabled` on the row will prevent the expanding on click.',
+    description: {
+      story:
+        'The Row supports the prop `expandable` which expect a ReactNode. This content will be visible if user click on the row.\n\nProviding `disabled` on the row will prevent the expanding on click.',
+    },
   },
 }

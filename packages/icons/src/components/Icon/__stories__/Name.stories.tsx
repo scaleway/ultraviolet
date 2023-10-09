@@ -13,7 +13,7 @@ export const Name = (args: ComponentProps<typeof Icon>) =>
 
 Name.parameters = {
   docs: {
-    storyDescription: 'Set desired icon using `name` property.',
+    description: { story: 'Set desired icon using `name` property.' },
   },
 }
 

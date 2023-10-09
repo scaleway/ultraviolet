@@ -23,7 +23,9 @@ export const OnClick: StoryFn<ComponentProps<typeof Breadcrumbs>> = props => {
 
 OnClick.parameters = {
   docs: {
-    storyDescription:
-      'You can make `Breadcrumbs.Item` clickable with `onClick` handler which pass `(event, stepClicked)` params. You can also disabled the onClick handler by using `disabled` prop',
+    description: {
+      story:
+        'You can make `Breadcrumbs.Item` clickable with `onClick` handler which pass `(event, stepClicked)` params. You can also disabled the onClick handler by using `disabled` prop',
+    },
   },
 }

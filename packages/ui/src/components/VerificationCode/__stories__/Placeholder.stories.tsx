@@ -7,7 +7,9 @@ Placeholder.args = {
 
 Placeholder.parameters = {
   docs: {
-    storyDescription:
-      'use `placeholder` prop to set the placeholder of a VerificationCode component',
+    description: {
+      story:
+        'use `placeholder` prop to set the placeholder of a VerificationCode component',
+    },
   },
 }

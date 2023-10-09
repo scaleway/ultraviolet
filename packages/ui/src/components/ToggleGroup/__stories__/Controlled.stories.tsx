@@ -38,7 +38,9 @@ export const Controlled: StoryFn = args => {
 
 Controlled.parameters = {
   docs: {
-    storyDescription:
-      'ToggleGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    description: {
+      story:
+        'ToggleGroup only work as a controlled component. You need to pass `onChange` callback to control it.',
+    },
   },
 }

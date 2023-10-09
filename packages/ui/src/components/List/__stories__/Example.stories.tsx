@@ -94,7 +94,9 @@ export const Example: StoryFn = args => {
 
 Example.parameters = {
   docs: {
-    storyDescription:
-      'This example is a demo of the List with the following features : `selectable rows`, `expandable row`, `sortable data`',
+    description: {
+      story:
+        'This example is a demo of the List with the following features : `selectable rows`, `expandable row`, `sortable data`',
+    },
   },
 }

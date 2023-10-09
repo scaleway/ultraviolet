@@ -98,8 +98,10 @@ export const Children: StoryFn = args => {
 }
 Children.parameters = {
   docs: {
-    storyDescription:
-      'If your children is more than just a text you can use given function with parameters `checked` and `disabled` to customize you child style according to SelectableCard state.',
+    description: {
+      story:
+        'If your children is more than just a text you can use given function with parameters `checked` and `disabled` to customize you child style according to SelectableCard state.',
+    },
   },
 }
 Children.decorators = [

@@ -10,7 +10,8 @@ DisableResize.args = {
 
 DisableResize.parameters = {
   docs: {
-    storyDescription:
-      'Disable resize in multiline mode using `resizable` prop.',
+    description: {
+      story: 'Disable resize in multiline mode using `resizable` prop.',
+    },
   },
 }
