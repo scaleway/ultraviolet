@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
-import { forwardRef, useMemo } from 'react'
+import { createRef, forwardRef, useEffect, useMemo, useState } from 'react'
 import { Skeleton } from './Skeleton'
 
 const activeStyle = (theme: Theme) => css`
@@ -27,6 +27,7 @@ const Card = styled.div<{
   background: ${({ theme }) => theme.colors.neutral.background};
   ${({ onClick, href, theme }) =>
     onClick || href ? activeStyle(theme) : null};
+  overflow-wrap: break-word;
 `
 
 const IconContainer = styled.div`
@@ -57,11 +58,16 @@ const SubContainer = styled(Stack, {
       ? `${theme.space['3']} ${theme.space['3']} 0 ${theme.space['3']}`
       : `${theme.space['3']} 0 ${theme.space['3']} ${theme.space['3']}`};
   padding: ${({ theme, href }) => (!href ? `${theme.space['3']}` : null)};
+  height: fit-content;
 `
 
 const Image = styled('img', {
-  shouldForwardProp: prop => prop !== 'direction',
-})<{ direction: ContentCardProps['direction'] }>`
+  shouldForwardProp: prop =>
+    !['direction', 'subContainerHeight'].includes(prop),
+})<{
+  direction: ContentCardProps['direction']
+  subContainerHeight?: number
+}>`
   object-fit: cover;
   border-radius: ${({ theme, direction }) =>
     `${
@@ -69,6 +75,8 @@ const Image = styled('img', {
         ? `${theme.radii.default} ${theme.radii.default} 0 0`
         : `${theme.radii.default} 0 0 ${theme.radii.default}`
     }`};
+  ${({ direction, subContainerHeight }) =>
+    direction === 'row' ? `max-height: ${subContainerHeight}px` : null}
 `
 
 type ContentCardProps = {
@@ -123,6 +131,10 @@ export const ContentCard = forwardRef<
     },
     ref,
   ) => {
+    const subContainerRef = createRef<HTMLDivElement>()
+    const [subContainerHeight, setSubContainerHeight] = useState(
+      subContainerRef?.current?.offsetHeight,
+    )
     const Container = useMemo(() => {
       if (href) {
         return Card.withComponent('a')
@@ -134,6 +146,11 @@ export const ContentCard = forwardRef<
 
       return Card
     }, [href, onClick])
+
+    useEffect(
+      () => setSubContainerHeight(subContainerRef?.current?.offsetHeight),
+      [subContainerRef],
+    )
 
     return (
       <Container
@@ -155,10 +172,16 @@ export const ContentCard = forwardRef<
                 height={direction === 'column' ? 120 : undefined}
                 width={direction === 'row' ? 220 : undefined}
                 direction={direction}
+                subContainerHeight={subContainerHeight}
               />
             ) : null}
             <Stack gap={2} direction={direction} flex={1}>
-              <SubContainer gap={2} direction={direction} href={href}>
+              <SubContainer
+                gap={2}
+                direction={direction}
+                href={href}
+                ref={subContainerRef}
+              >
                 {icon ?? null}
                 <Stack gap={2}>
                   <Stack gap={0.5}>
@@ -178,7 +201,7 @@ export const ContentCard = forwardRef<
                       </Text>
                     ) : null}
                   </Stack>
-                  <Stack>{children}</Stack>
+                  {children ? <Stack>{children}</Stack> : null}
                 </Stack>
               </SubContainer>
               {href ? (

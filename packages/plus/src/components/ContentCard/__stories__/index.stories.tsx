@@ -3,7 +3,7 @@ import { ContentCard } from '..'
 
 export default {
   component: ContentCard,
-  title: 'Plus/ContentCard',
+  title: 'Plus/Compositions/ContentCard',
 } as Meta
 
 export { Playground } from './Playground.stories'
