@@ -21,6 +21,7 @@ import type { PopupPlacement } from './helpers'
 import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
 
 const ANIMATION_DURATION = 230 // in ms
+const DEBOUNCE_DURATION = 200
 
 function noop() {}
 
@@ -152,6 +153,8 @@ type PopupProps = {
   tabIndex?: number
   onKeyDown?: KeyboardEventHandler
   'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
+  hideOnClickOutside?: boolean
+  needDebounce?: boolean
 }
 
 export const Popup = forwardRef(
@@ -173,6 +176,8 @@ export const Popup = forwardRef(
       tabIndex = 0,
       onKeyDown,
       'aria-haspopup': ariaHasPopup,
+      hideOnClickOutside = false,
+      needDebounce = true,
     }: PopupProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => {
@@ -231,14 +236,17 @@ export const Popup = forwardRef(
      * tooltip from dom.
      */
     const hideTooltip = useCallback(() => {
-      debounceTimer.current = setTimeout(() => {
-        setReverseAnimation(true)
-        timer.current = setTimeout(() => {
-          unmountTooltip()
-          onClose?.()
-        }, ANIMATION_DURATION)
-      }, 200)
-    }, [onClose, unmountTooltip])
+      debounceTimer.current = setTimeout(
+        () => {
+          setReverseAnimation(true)
+          timer.current = setTimeout(() => {
+            unmountTooltip()
+            onClose?.()
+          }, ANIMATION_DURATION)
+        },
+        needDebounce ? DEBOUNCE_DURATION : 0,
+      )
+    }, [needDebounce, onClose, unmountTooltip])
 
     /**
      * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
@@ -313,7 +321,7 @@ export const Popup = forwardRef(
       [unmountTooltip],
     )
 
-    // Handle hide on esc press
+    // Handle hide on esc press and hide on click outside
     useEffect(() => {
       const handleEscPress = (event: KeyboardEvent) => {
         if (event.key === 'Escape') {
@@ -322,24 +330,40 @@ export const Popup = forwardRef(
           hideTooltip()
         }
       }
+      const handleClickOutside = (event: MouseEvent) => {
+        const tooltipCurrent = innerTooltipRef.current
+        const childrenCurrent = childrenRef.current
+
+        if (tooltipCurrent && hideOnClickOutside) {
+          if (
+            event.target &&
+            event.target !== tooltipCurrent &&
+            event.target !== childrenCurrent &&
+            !childrenCurrent?.contains(event.target as Node) &&
+            !tooltipCurrent.contains(event.target as Node)
+          ) {
+            event.preventDefault()
+            event.stopPropagation()
+            hideTooltip()
+          }
+        }
+      }
       if (visibleInDom) {
-        document.body.addEventListener('keyup', handleEscPress, {
-          capture: true,
-        })
-        document.body.addEventListener('keydown', handleEscPress, {
-          capture: true,
-        })
+        document.body.addEventListener('keyup', handleEscPress)
+        document.body.addEventListener('click', handleClickOutside)
       }
 
       return () => {
-        document.body.removeEventListener('keyup', handleEscPress, {
-          capture: true,
-        })
-        document.body.addEventListener('keydown', handleEscPress, {
-          capture: true,
-        })
+        document.body.removeEventListener('keyup', handleEscPress)
+        document.body.removeEventListener('click', handleClickOutside)
       }
-    }, [hideTooltip, onClose, unmountTooltip, visibleInDom])
+    }, [
+      hideTooltip,
+      visibleInDom,
+      innerTooltipRef,
+      childrenRef,
+      hideOnClickOutside,
+    ])
 
     /**
      * Will render children conditionally if children is a function or not.

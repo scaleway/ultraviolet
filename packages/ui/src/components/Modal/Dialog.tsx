@@ -102,32 +102,12 @@ export const Dialog = ({
     onCloseRef.current = onClose
   }, [onClose])
 
-  // Handle hide on esc press
+  // On open focus the modal
   useEffect(() => {
-    const handleEscPress = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && hideOnEsc) {
-        event.preventDefault()
-        event.stopPropagation()
-        onCloseRef.current()
-      }
-    }
     if (open) {
       dialogRef.current?.focus()
-      document.body.addEventListener('keyup', handleEscPress, { capture: true })
-      document.body.addEventListener('keydown', handleEscPress, {
-        capture: true,
-      })
     }
-
-    return () => {
-      document.body.removeEventListener('keyup', handleEscPress, {
-        capture: true,
-      })
-      document.body.removeEventListener('keydown', handleEscPress, {
-        capture: true,
-      })
-    }
-  }, [open, onCloseRef, hideOnEsc])
+  }, [open])
 
   // Handle body scroll
   useEffect(() => {
@@ -152,10 +132,30 @@ export const Dialog = ({
     event.stopPropagation()
   }, [])
 
-  // Stop key up : used when having inputs in modals
-  const stopKeyUp: KeyboardEventHandler = useCallback(event => {
-    event.stopPropagation()
-  }, [])
+  // handle key up : used when having inputs in modals - useful for hideOnEsc
+  const handleKeyUp: KeyboardEventHandler = useCallback(
+    event => {
+      event.stopPropagation()
+      if (event.key === 'Escape' && hideOnEsc) {
+        event.preventDefault()
+        onCloseRef.current()
+      }
+    },
+    [hideOnEsc],
+  )
+
+  const handleClose: MouseEventHandler = useCallback(
+    event => {
+      event.stopPropagation()
+      if (hideOnClickOutside) {
+        onCloseRef.current()
+      } else {
+        // Because overlay is not focusable we can't handle hideOnEsc properly
+        dialogRef.current?.focus()
+      }
+    },
+    [hideOnClickOutside],
+  )
 
   // Enable focus trap inside the modal
   const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
@@ -210,7 +210,7 @@ export const Dialog = ({
   return createPortal(
     <StyledBackdrop
       data-open={open}
-      onClick={hideOnClickOutside ? onClose : undefined}
+      onClick={handleClose}
       className={backdropClassName}
       css={backdropCss}
       data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
@@ -218,7 +218,7 @@ export const Dialog = ({
     >
       <StyledDialog
         css={dialogCss}
-        onKeyUp={stopKeyUp}
+        onKeyUp={handleKeyUp}
         onKeyDown={handleFocusTrap}
         className={className}
         id={id}

@@ -140,6 +140,8 @@ const FwdMenu = forwardRef(
 
     return (
       <StyledPopup
+        needDebounce={false}
+        hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
         visible={isVisible}
