@@ -94,6 +94,7 @@ type ContentCardProps = {
   target?: HTMLAnchorElement['target']
   onClick?: MouseEventHandler<HTMLElement>
   loading?: boolean
+  className?: string
 }
 
 /**
@@ -118,6 +119,7 @@ export const ContentCard = forwardRef<
       target,
       onClick,
       loading,
+      className,
     },
     ref,
   ) => {
@@ -140,6 +142,7 @@ export const ContentCard = forwardRef<
         href={href}
         role={onClick ? 'button' : undefined}
         ref={ref}
+        className={className}
       >
         {loading ? (
           <Skeleton direction={direction} />
