@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 2.3.0
+
+### Minor Changes
+
+- [#3006](https://github.com/scaleway/ultraviolet/pull/3006) [`9010643b`](https://github.com/scaleway/ultraviolet/commit/9010643bd4f2c6b99df03717192829f5108c33fb) Thanks [@matthprost](https://github.com/matthprost)! - New ProductIcon `ipfsNaming`
+
 ## 2.2.0
 
 ### Minor Changes
