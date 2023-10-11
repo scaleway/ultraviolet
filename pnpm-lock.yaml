@@ -84,8 +84,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 5.4.5
-        version: 5.4.5(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.4.6
+        version: 5.4.6(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 9.0.0
         version: 9.0.0(size-limit@9.0.0)
@@ -2373,7 +2373,7 @@ packages:
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@swc/core@1.3.82)(@types/node@18.18.3)(typescript@5.2.2)
+      ts-node: 10.9.1(@swc/core@1.3.82)(@types/node@20.5.1)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@swc/core'
@@ -4370,8 +4370,8 @@ packages:
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
     dev: true
 
-  /@scaleway/use-i18n@5.4.5(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-HGFKVXVlnxVzakTbiB5F79Vh9o0Wi1qMhht/sU9R6Fv9tmI+wWgmaUrZiwPYiddOVmz20wKz7Q3xXQH8XSy9OA==}
+  /@scaleway/use-i18n@5.4.6(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5pyyda3IyRzCeV26umNuq2wtTo6A0eSFi4vknF3+oJqUBHzXhZvdfNQTx4ureCh+2CqDnBg4sHTJPUhuzOREYw==}
     engines: {node: '>=14.x'}
     peerDependencies:
       date-fns: 2.x
@@ -4381,7 +4381,7 @@ packages:
       '@formatjs/ecma402-abstract': 1.17.2
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 2.30.0
-      filesize: 10.0.12
+      filesize: 10.1.0
       international-types: 0.8.0
       intl-messageformat: 10.5.3
       react: 18.2.0
@@ -8017,7 +8017,7 @@ packages:
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.3(typescript@5.2.2)
-      ts-node: 10.9.1(@swc/core@1.3.82)(@types/node@18.18.3)(typescript@5.2.2)
+      ts-node: 10.9.1(@swc/core@1.3.82)(@types/node@20.5.1)(typescript@5.2.2)
       typescript: 5.2.2
     dev: true
 
@@ -9720,8 +9720,8 @@ packages:
       minimatch: 5.1.6
     dev: true
 
-  /filesize@10.0.12:
-    resolution: {integrity: sha512-6RS9gDchbn+qWmtV2uSjo5vmKizgfCQeb5jKmqx8HyzA3MoLqqyQxN+QcjkGBJt7FjJ9qFce67Auyya5rRRbpw==}
+  /filesize@10.1.0:
+    resolution: {integrity: sha512-GTLKYyBSDz3nPhlLVPjPWZCnhkd9TrrRArNcy8Z+J2cqScB7h2McAzR6NBX6nYOoWafql0roY8hrocxnZBv9CQ==}
     engines: {node: '>= 10.4.0'}
     dev: true
 
@@ -15409,6 +15409,39 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
       '@types/node': 18.18.3
+      acorn: 8.10.0
+      acorn-walk: 8.2.0
+      arg: 4.1.3
+      create-require: 1.1.1
+      diff: 4.0.2
+      make-error: 1.3.6
+      typescript: 5.2.2
+      v8-compile-cache-lib: 3.0.1
+      yn: 3.1.1
+    dev: true
+
+  /ts-node@10.9.1(@swc/core@1.3.82)(@types/node@20.5.1)(typescript@5.2.2):
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+    dependencies:
+      '@cspotcode/source-map-support': 0.8.1
+      '@swc/core': 1.3.82
+      '@tsconfig/node10': 1.0.9
+      '@tsconfig/node12': 1.0.11
+      '@tsconfig/node14': 1.0.3
+      '@tsconfig/node16': 1.0.4
+      '@types/node': 20.5.1
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
