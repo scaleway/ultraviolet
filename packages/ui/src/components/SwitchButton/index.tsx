@@ -43,7 +43,7 @@ const StyledSelectableCard = styled(SelectableCard)`
 
   &:not([data-checked='true']) label {
     &:hover {
-      color: ${({ theme }) => theme.colors.primary.textWeak};
+      color: ${({ theme }) => theme.colors.primary.text};
     }
   }
 `

@@ -95,7 +95,7 @@ export const Loader = ({
         r={circleRadius}
         fill="none"
         strokeWidth={strokeWidth}
-        stroke={theme.colors[trailColor as Color]?.borderWeak || trailColor}
+        stroke={theme.colors[trailColor as Color]?.border || trailColor}
       />
       <circle
         css={css`

@@ -59,7 +59,7 @@ const StyledElement = styled('div', {
   align-items: start;
 
   &[data-checked='true'] {
-    color: ${({ theme }) => theme.colors.primary.textWeak};
+    color: ${({ theme }) => theme.colors.primary.text};
   }
 
   &[data-error='true'] {
