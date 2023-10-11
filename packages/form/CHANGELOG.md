@@ -1,5 +1,25 @@
 # Change Log
 
+## 1.8.2
+
+### Patch Changes
+
+- [#2977](https://github.com/scaleway/ultraviolet/pull/2977) [`5e857dc7`](https://github.com/scaleway/ultraviolet/commit/5e857dc70a89b7317df183e44c89dbae38dd7637) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.23`.
+  Updated dependency `@types/react-dom` to `18.2.8`.
+
+- [#2981](https://github.com/scaleway/ultraviolet/pull/2981) [`8afda3ae`](https://github.com/scaleway/ultraviolet/commit/8afda3ae9c4cf52862703592d6bda7516c2e5e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.6`.
+
+- [#3000](https://github.com/scaleway/ultraviolet/pull/3000) [`a79bf17a`](https://github.com/scaleway/ultraviolet/commit/a79bf17a09da901e7735e354a6d386721103098c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.25`.
+  Updated dependency `@types/react-dom` to `18.2.10`.
+
+- [#2991](https://github.com/scaleway/ultraviolet/pull/2991) [`cede2a7e`](https://github.com/scaleway/ultraviolet/commit/cede2a7eea4b61a342efccff63a6b3bdc84b8148) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.7`.
+
+- [#2980](https://github.com/scaleway/ultraviolet/pull/2980) [`0ea3aadf`](https://github.com/scaleway/ultraviolet/commit/0ea3aadf0e9f3176026f6e0c649b076a58eb66d2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.0`.
+  Updated dependency `@babel/runtime` to `7.23.1`.
+  Updated dependency `@babel/preset-typescript` to `7.23.0`.
+- Updated dependencies [[`d21064ed`](https://github.com/scaleway/ultraviolet/commit/d21064ed415f85b8f3c2f1b452b386359279d2f5), [`86e7cf78`](https://github.com/scaleway/ultraviolet/commit/86e7cf78edf39e6e73e6c58f1ade7d53d05096d7), [`5e857dc7`](https://github.com/scaleway/ultraviolet/commit/5e857dc70a89b7317df183e44c89dbae38dd7637), [`8afda3ae`](https://github.com/scaleway/ultraviolet/commit/8afda3ae9c4cf52862703592d6bda7516c2e5e4d), [`a79bf17a`](https://github.com/scaleway/ultraviolet/commit/a79bf17a09da901e7735e354a6d386721103098c), [`1463f3e1`](https://github.com/scaleway/ultraviolet/commit/1463f3e18b3971cfbdac1bcda762952fc5b31bc1), [`cede2a7e`](https://github.com/scaleway/ultraviolet/commit/cede2a7eea4b61a342efccff63a6b3bdc84b8148), [`0ea3aadf`](https://github.com/scaleway/ultraviolet/commit/0ea3aadf0e9f3176026f6e0c649b076a58eb66d2), [`90504ba8`](https://github.com/scaleway/ultraviolet/commit/90504ba8232e979dd57fb8c06df2464f32600f10)]:
+  - @ultraviolet/ui@1.18.0
+
 ## 1.8.1
 
 ### Patch Changes
