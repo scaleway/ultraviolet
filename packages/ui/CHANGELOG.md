@@ -1,5 +1,36 @@
 # Change Log
 
+## 1.18.0
+
+### Minor Changes
+
+- [#2982](https://github.com/scaleway/ultraviolet/pull/2982) [`d21064ed`](https://github.com/scaleway/ultraviolet/commit/d21064ed415f85b8f3c2f1b452b386359279d2f5) Thanks [@matthprost](https://github.com/matthprost)! - Added new variant `square` to `<Skeleton />` component. This variant can be used to create specific shaped for your components.
+
+- [#2988](https://github.com/scaleway/ultraviolet/pull/2988) [`86e7cf78`](https://github.com/scaleway/ultraviolet/commit/86e7cf78edf39e6e73e6c58f1ade7d53d05096d7) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - fix: event workflow with popup and modals
+
+### Patch Changes
+
+- [#2977](https://github.com/scaleway/ultraviolet/pull/2977) [`5e857dc7`](https://github.com/scaleway/ultraviolet/commit/5e857dc70a89b7317df183e44c89dbae38dd7637) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.23`.
+  Updated dependency `@types/react-dom` to `18.2.8`.
+
+- [#2981](https://github.com/scaleway/ultraviolet/pull/2981) [`8afda3ae`](https://github.com/scaleway/ultraviolet/commit/8afda3ae9c4cf52862703592d6bda7516c2e5e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.6`.
+
+- [#3000](https://github.com/scaleway/ultraviolet/pull/3000) [`a79bf17a`](https://github.com/scaleway/ultraviolet/commit/a79bf17a09da901e7735e354a6d386721103098c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.25`.
+  Updated dependency `@types/react-dom` to `18.2.10`.
+
+- [#2976](https://github.com/scaleway/ultraviolet/pull/2976) [`1463f3e1`](https://github.com/scaleway/ultraviolet/commit/1463f3e18b3971cfbdac1bcda762952fc5b31bc1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.15.1`.
+
+- [#2991](https://github.com/scaleway/ultraviolet/pull/2991) [`cede2a7e`](https://github.com/scaleway/ultraviolet/commit/cede2a7eea4b61a342efccff63a6b3bdc84b8148) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.7.7`.
+
+- [#2980](https://github.com/scaleway/ultraviolet/pull/2980) [`0ea3aadf`](https://github.com/scaleway/ultraviolet/commit/0ea3aadf0e9f3176026f6e0c649b076a58eb66d2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.0`.
+  Updated dependency `@babel/runtime` to `7.23.1`.
+  Updated dependency `@babel/preset-typescript` to `7.23.0`.
+
+- [#2989](https://github.com/scaleway/ultraviolet/pull/2989) [`90504ba8`](https://github.com/scaleway/ultraviolet/commit/90504ba8232e979dd57fb8c06df2464f32600f10) Thanks [@matthprost](https://github.com/matthprost)! - Fix checkbox size
+
+- Updated dependencies [[`d21064ed`](https://github.com/scaleway/ultraviolet/commit/d21064ed415f85b8f3c2f1b452b386359279d2f5), [`5e857dc7`](https://github.com/scaleway/ultraviolet/commit/5e857dc70a89b7317df183e44c89dbae38dd7637), [`a79bf17a`](https://github.com/scaleway/ultraviolet/commit/a79bf17a09da901e7735e354a6d386721103098c), [`0ea3aadf`](https://github.com/scaleway/ultraviolet/commit/0ea3aadf0e9f3176026f6e0c649b076a58eb66d2)]:
+  - @ultraviolet/icons@2.2.0
+
 ## 1.17.0
 
 ### Minor Changes

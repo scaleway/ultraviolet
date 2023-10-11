@@ -1,5 +1,23 @@
 # @ultraviolet/icons
 
+## 2.2.0
+
+### Minor Changes
+
+- [#2982](https://github.com/scaleway/ultraviolet/pull/2982) [`d21064ed`](https://github.com/scaleway/ultraviolet/commit/d21064ed415f85b8f3c2f1b452b386359279d2f5) Thanks [@matthprost](https://github.com/matthprost)! - Added new prop `maxWidth` to `<ProductIcon />` component to avoid icon to shrink
+
+### Patch Changes
+
+- [#2977](https://github.com/scaleway/ultraviolet/pull/2977) [`5e857dc7`](https://github.com/scaleway/ultraviolet/commit/5e857dc70a89b7317df183e44c89dbae38dd7637) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.23`.
+  Updated dependency `@types/react-dom` to `18.2.8`.
+
+- [#3000](https://github.com/scaleway/ultraviolet/pull/3000) [`a79bf17a`](https://github.com/scaleway/ultraviolet/commit/a79bf17a09da901e7735e354a6d386721103098c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.25`.
+  Updated dependency `@types/react-dom` to `18.2.10`.
+
+- [#2980](https://github.com/scaleway/ultraviolet/pull/2980) [`0ea3aadf`](https://github.com/scaleway/ultraviolet/commit/0ea3aadf0e9f3176026f6e0c649b076a58eb66d2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.0`.
+  Updated dependency `@babel/runtime` to `7.23.1`.
+  Updated dependency `@babel/preset-typescript` to `7.23.0`.
+
 ## 2.1.0
 
 ### Minor Changes
