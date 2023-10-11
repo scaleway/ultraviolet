@@ -6,6 +6,7 @@ import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import { Button } from '../Button'
 import { Separator } from '../Separator'
+import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { TextInput } from '../TextInput'
 
@@ -85,39 +86,72 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day--selected {
-      color: ${({ theme }) => theme.colors.primary.text};
-      background-color: ${({ theme }) => theme.colors.primary.background};
-      border-radius: ${({ theme }) => theme.radii.circle};
-    }
-    ${PREFIX}__day--keyboard-selected {
-      color: ${({ theme }) => theme.colors.primary.text};
-      background-color: ${({ theme }) => theme.colors.primary.background};
-      border-radius: ${({ theme }) => theme.radii.circle};
+      color: ${({ theme }) => theme.colors.primary.textStrong};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+      &[aria-disabled='true'],
+      &:disabled {
+        color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrongDisabled};
+      }
     }
 
-    ${PREFIX}__day: hover {
+    ${PREFIX}__day--in-range {
       color: ${({ theme }) => theme.colors.primary.text};
-      border-radius: ${({ theme }) => theme.radii.circle};
       background-color: ${({ theme }) => theme.colors.primary.background};
+
+      &[aria-disabled='true'],
+      &:disabled {
+        color: ${({ theme }) => theme.colors.primary.textDisabled};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundDisabled};
+      }
+    }
+
+    ${PREFIX}__day--range-start {
+      color: ${({ theme }) => theme.colors.primary.textStrong};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+      &[aria-disabled='true'],
+      &:disabled {
+        color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrongDisabled};
+      }
+    }
+
+    ${PREFIX}__day--range-end {
+      color: ${({ theme }) => theme.colors.primary.textStrong};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+
+      &[aria-disabled='true'],
+      &:disabled {
+        color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundStrongDisabled};
+      }
+    }
+
+    ${PREFIX}__day--keyboard-selected {
+      color: ${({ theme }) => theme.colors.primary.textStrong};
+      background-color: ${({ theme }) => theme.colors.primary.backgroundStrong};
+    }
+
+    ${PREFIX}__day:hover {
+      color: ${({ theme }) => theme.colors.neutral.textHover};
+      background-color: ${({ theme }) => theme.colors.neutral.backgroundHover};
     }
 
     ${PREFIX}__day--disabled {
-      color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
     }
 
-    ${PREFIX}__day--disabled: hover {
-      color: ${({ theme }) => theme.colors.primary.textStrongDisabled};
+    ${PREFIX}__day--disabled:hover {
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
       background-color: transparent;
     }
   }
-`
-
-const StyledSpan = styled.span`
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  display: flex;
-  gap: ${({ theme }) => theme.space['1']};
 `
 
 const StyledIconContainer = styled.div`
@@ -128,14 +162,6 @@ const StyledIconContainer = styled.div`
   right: 0;
   top: 0;
   height: 48px;
-`
-
-const TopHeaderDiv = styled.div`
-  margin-bottom: 8px;
-  margin-left: 8px;
-  display: inline-block;
-  background-color: ${({ theme }) =>
-    theme.colors.neutral.backgroundWeakElevated};
 `
 
 const StyledText = styled(Text)`
@@ -150,11 +176,14 @@ type DateInputProps = Pick<
   | 'locale'
   | 'maxDate'
   | 'minDate'
+  | 'startDate'
+  | 'endDate'
   | 'name'
   | 'onBlur'
   | 'onChange'
   | 'onFocus'
   | 'required'
+  | 'excludeDates'
 > & {
   error?: string
   format?: (value?: Date | string) => string | undefined
@@ -163,6 +192,7 @@ type DateInputProps = Pick<
    */
   label?: string
   value?: Date | string
+  selectRange?: boolean
   className?: string
   'data-testid'?: string
 }
@@ -183,12 +213,16 @@ export const DateInput = ({
   locale,
   maxDate,
   minDate,
+  startDate,
+  endDate,
   name,
   onBlur,
   onChange,
   onFocus,
   required = false,
+  excludeDates,
   value,
+  selectRange,
   className,
   'data-testid': dataTestId,
 }: DateInputProps) => {
@@ -204,6 +238,17 @@ export const DateInput = ({
     registerLocale(localeCode, locale)
   }
 
+  const valueStart = `${
+    startDate !== undefined && startDate !== null ? format(startDate) : ''
+  }`
+  const valueEnd = `${
+    endDate !== undefined && endDate !== null ? format(endDate) : ''
+  }`
+
+  const valueFormat = selectRange
+    ? `${valueStart} - ${valueEnd}`
+    : format(value)
+
   return (
     <>
       <Global styles={style} />
@@ -218,14 +263,16 @@ export const DateInput = ({
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
-          selected={value ? new Date(value) : undefined}
+          selected={value && !selectRange ? new Date(value) : undefined}
+          selectsRange={selectRange}
+          excludeDates={excludeDates}
           customInput={
             <div>
               <TextInput
                 error={error ? `${error}` : undefined}
                 id={`date-input${name ? `-${name}` : ''}`}
                 label={label}
-                value={format(value) || ''}
+                value={valueFormat || ''}
                 disabled={disabled}
               />
               <StyledIconContainer>
@@ -245,6 +292,8 @@ export const DateInput = ({
           calendarClassName="calendar"
           minDate={minDate}
           maxDate={maxDate}
+          startDate={startDate}
+          endDate={endDate}
           renderCustomHeader={({
             date,
             decreaseMonth,
@@ -252,32 +301,35 @@ export const DateInput = ({
             prevMonthButtonDisabled,
             nextMonthButtonDisabled,
           }) => (
-            <>
-              <TopHeaderDiv>
-                <StyledText variant="body" as="p">
-                  {new Date(date).toLocaleString(localeCode, {
-                    month: 'long',
-                    year: 'numeric',
-                  })}
-                </StyledText>
-              </TopHeaderDiv>
-              <StyledSpan>
-                <Button
-                  size="small"
-                  icon="arrow-left"
-                  sentiment="neutral"
-                  onClick={decreaseMonth}
-                  disabled={prevMonthButtonDisabled}
-                />
-                <Button
-                  size="small"
-                  icon="arrow-right"
-                  sentiment="neutral"
-                  onClick={increaseMonth}
-                  disabled={nextMonthButtonDisabled}
-                />
-              </StyledSpan>
-            </>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-around"
+              gap={4}
+            >
+              <Button
+                size="small"
+                icon="arrow-left"
+                sentiment="neutral"
+                variant="ghost"
+                onClick={decreaseMonth}
+                disabled={prevMonthButtonDisabled}
+              />
+              <StyledText variant="bodyStrong" as="p">
+                {new Date(date).toLocaleString(localeCode, {
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </StyledText>
+              <Button
+                size="small"
+                icon="arrow-right"
+                sentiment="neutral"
+                variant="ghost"
+                onClick={increaseMonth}
+                disabled={nextMonthButtonDisabled}
+              />
+            </Stack>
           )}
         />
       </StyledWrapper>

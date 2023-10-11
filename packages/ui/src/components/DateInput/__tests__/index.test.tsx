@@ -97,4 +97,15 @@ describe('DateInput', () => {
         },
       },
     ))
+
+  test('render correctly with a range of date', () =>
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        selectRange
+        startDate={new Date('December 12, 1995 03:24:00')}
+        endDate={new Date('December 25, 1995 03:24:00')}
+        onChange={() => {}}
+      />,
+    ))
 })
