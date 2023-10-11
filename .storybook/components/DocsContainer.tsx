@@ -32,11 +32,14 @@ type ExtraProps = {
 }
 
 type DocsContainerProps = BaseContainerProps & {
-  context: { attachedCSFFile: { meta: { parameters?: ExtraProps } } }
+  context: {
+    attachedCSFFile: { meta: { parameters?: ExtraProps; title: string } }
+  }
 } & { children: ReactNode }
 
 const DocsContainer = ({ children, context }: DocsContainerProps) => {
   const isDarkTheme = useDarkMode()
+  const isPlusLibrary = context.attachedCSFFile.meta.title.includes('Plus/')
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
@@ -50,8 +53,9 @@ const DocsContainer = ({ children, context }: DocsContainerProps) => {
                 context.attachedCSFFile.meta.parameters?.migrationLink,
               hideArgsTable:
                 context.attachedCSFFile.meta.parameters?.hideArgsTable,
-              experimental:
-                context.attachedCSFFile.meta.parameters?.experimental,
+              experimental: isPlusLibrary
+                ? true
+                : context.attachedCSFFile.meta.parameters?.experimental,
             })
           : children}
       </BaseContainer>
