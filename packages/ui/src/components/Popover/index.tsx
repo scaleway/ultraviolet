@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, KeyboardEventHandler, ReactNode } from 'react'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Popup } from '../../internalComponents'
 import { Button } from '../Button'
+import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
