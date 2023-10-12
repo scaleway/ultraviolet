@@ -3094,22 +3094,25 @@ export const PRODUCT_ICONS = {
       </g>
       <g className="File">
         <g className="icon">
-          <g className="fill">
+          <g>
             <path
               fill="#521094"
               fillRule="evenodd"
               d="M21 14a1 1 0 0 0-1 1v33a1 1 0 0 0 1 1h15a1 1 0 1 1 0 2H21a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h17.5a1 1 0 0 1 .791.389l8.5 11A1 1 0 0 1 48 24v8.5a1 1 0 1 1-2 0v-8.159L38.009 14H21Z"
               clipRule="evenodd"
+              className="fill"
             />
             <path
               fill="#521094"
               d="M47 25h-1v23a1 1 0 0 1-1 1H30a1 1 0 1 0 0 2h15a3 3 0 0 0 3-3V25h-1Z"
+              className="fill"
             />
             <path
               fill="#521094"
               fillRule="evenodd"
               d="M37.5 22v-8.5h2V22a1 1 0 0 0 1 1H47v2h-6.5a3 3 0 0 1-3-3Z"
               clipRule="evenodd"
+              className="fill"
             />
           </g>
           <path
@@ -3134,17 +3137,23 @@ export const PRODUCT_ICONS = {
       </g>
       <g className="Icon">
         <path
-          stroke="#A060F6"
-          strokeWidth="2"
-          d="M23 44h26a5 5 0 0 0 5-5V24a5 5 0 0 0-5-5H37.937a1.515 1.515 0 0 1-1.356-.838l-.158-.316C35.499 15.998 34.065 14 32 14h-9a5 5 0 0 0-5 5v20a5 5 0 0 0 5 5Z"
+          fill="#A060F6"
+          fillRule="evenodd"
+          d="M23 15a4 4 0 0 0-4 4v20a4 4 0 0 0 4 4h26a4 4 0 0 0 4-4V24a4 4 0 0 0-4-4H37.937a2.515 2.515 0 0 1-2.25-1.39l-.159-.317c-.44-.88-.972-1.734-1.595-2.355C33.317 15.323 32.681 15 32 15h-9Zm-6 4a6 6 0 0 1 6-6h9c1.384 0 2.498.676 3.346 1.522.841.84 1.488 1.91 1.971 2.876l.159.317a.515.515 0 0 0 .46.285H49a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H23a6 6 0 0 1-6-6V19Z"
           className="fillStrong"
+          clipRule="evenodd"
         />
         <path
           fill="#F1EEFC"
-          stroke="#521094"
-          strokeWidth="2"
           d="M17 48h26a5 5 0 0 0 5-5V28a5 5 0 0 0-5-5H31.936a1.515 1.515 0 0 1-1.355-.838l-.158-.316C29.499 19.998 28.065 18 26 18h-9a5 5 0 0 0-5 5v20a5 5 0 0 0 5 5Z"
+          className="fillWeak"
+        />
+        <path
+          fill="#521094"
+          fillRule="evenodd"
+          d="M17 19a4 4 0 0 0-4 4v20a4 4 0 0 0 4 4h26a4 4 0 0 0 4-4V28a4 4 0 0 0-4-4H31.936a2.515 2.515 0 0 1-2.25-1.39l-.158-.317c-.44-.88-.972-1.734-1.595-2.355C27.317 19.323 26.681 19 26 19h-9Zm-6 4a6 6 0 0 1 6-6h9c1.384 0 2.498.676 3.346 1.522.841.84 1.488 1.91 1.971 2.876l.159.317a.515.515 0 0 0 .46.285H43a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H17a6 6 0 0 1-6-6V23Z"
           className="fill"
+          clipRule="evenodd"
         />
         <path
           fill="#A060F6"
