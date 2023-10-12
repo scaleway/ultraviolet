@@ -195,7 +195,7 @@ export const ContentCard = forwardRef<
                           {subtitle}
                         </Text>
                       ) : null}
-                      <Text as="h3" variant="bodyStrong">
+                      <Text as="h3" variant="bodyStronger">
                         {title}
                       </Text>
                     </Stack>
