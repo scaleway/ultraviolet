@@ -134,6 +134,8 @@ export const Modal = ({
                 toggle: handleToggle,
                 modalId: finalId,
                 hide: handleClose,
+                close: handleClose,
+                show: handleOpen,
               })
             : children}
           <StyledContainer>

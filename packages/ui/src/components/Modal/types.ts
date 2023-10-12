@@ -27,7 +27,7 @@ export type ModalState = {
   visible: boolean
   modalId: string
   /**
-   * @deprecated use onClose
+   * @deprecated use close
    */
   hide: () => void
   close: () => void
