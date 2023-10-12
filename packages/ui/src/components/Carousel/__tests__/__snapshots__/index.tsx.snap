@@ -22,41 +22,37 @@ exports[`Carousel renders correctly with default props 1`] = `
   z-index: auto;
 }
 
-.cache-i20cm0-StyledScrollableWrapper {
+.cache-1v1i1kq-StyledScrollableWrapper {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 16px 100px;
+  gap: 16px;
 }
 
-.cache-i20cm0-StyledScrollableWrapper>*:not(:last-child) {
-  margin-right: 16px;
-}
-
-.cache-ycjjoa-StyledBorderWrapper {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #e9eaeb;
-  height: 261px;
-  width: 248px;
+.cache-11t1kmz-StyledBorderWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 240px;
   max-width: 240px;
   overflow-wrap: break-word;
   white-space: normal;
+  height: auto;
   cursor: -webkit-grab;
   cursor: grab;
-}
-
-.cache-ycjjoa-StyledBorderWrapper:hover,
-.cache-ycjjoa-StyledBorderWrapper:active,
-.cache-ycjjoa-StyledBorderWrapper:focus {
-  border: 1px solid #521094;
-  -webkit-transition: box-shadow 0.2s ease;
-  transition: box-shadow 0.2s ease;
-  box-shadow: 0px 0px 0px 3px #5e127e40;
-}
-
-.cache-ycjjoa-StyledBorderWrapper img {
-  border-radius: 4px 4px 0 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .cache-1r4agil-StyledAfterScroll {
@@ -84,41 +80,41 @@ exports[`Carousel renders correctly with default props 1`] = `
       data-testid="scrollbar-before"
     />
     <div
-      class="cache-i20cm0-StyledScrollableWrapper e1id70w02"
+      class="cache-1v1i1kq-StyledScrollableWrapper e1id70w02"
       data-testid="scrollbar-wrapper"
     >
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 1
       </div>
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 2
       </div>
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 3
       </div>
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 4
       </div>
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 5
       </div>
       <div
-        class="cache-ycjjoa-StyledBorderWrapper e1id70w00"
+        class="cache-11t1kmz-StyledBorderWrapper e1id70w00"
         draggable="true"
       >
         Item 6

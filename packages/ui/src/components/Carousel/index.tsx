@@ -26,11 +26,9 @@ const StyledScrollableWrapper = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  display: flex;
   padding: ${({ theme }) => theme.space['2']} 100px;
-
-  > *:not(:last-child) {
-    margin-right: ${({ theme }) => theme.space['2']};
-  }
+  gap: ${({ theme }) => theme.space['2']};
 `
 
 const StyledAfterScroll = styled.span`
@@ -49,36 +47,31 @@ const StyledAfterScroll = styled.span`
   );
 `
 
-const StyledBorderWrapper = styled.div`
-  display: inline-block;
-  border-radius: ${({ theme }) => theme.radii.default};
-  border: 1px solid ${({ theme }) => theme.colors.neutral.borderWeak};
-  height: 261px;
-  width: 248px;
-  max-width: 240px;
+const StyledBorderWrapper = styled('div', {
+  shouldForwardProp: prop => !['width'].includes(prop),
+})<{ width: string }>`
+  display: flex;
+  align-items: stretch;
+  width: ${({ width }) => width};
+  max-width: ${({ width }) => width};
   overflow-wrap: break-word;
   white-space: normal;
+  height: auto;
   cursor: grab;
-
-  &:hover,
-  &:active,
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.colors.primary.border};
-    transition: box-shadow 0.2s ease;
-    box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-  }
-
-  img {
-    border-radius: ${({ theme }) => theme.radii.default}
-      ${({ theme }) => theme.radii.default} 0 0;
-  }
+  flex-shrink: 0;
 `
 
 type CarouselItemProps = {
   children: ReactNode
+  width?: string
 }
-export const CarouselItem = ({ children }: CarouselItemProps): JSX.Element => (
-  <StyledBorderWrapper draggable="true">{children}</StyledBorderWrapper>
+export const CarouselItem = ({
+  children,
+  width = '240px',
+}: CarouselItemProps): JSX.Element => (
+  <StyledBorderWrapper width={width} draggable="true">
+    {children}
+  </StyledBorderWrapper>
 )
 
 type CarouselProps = {
