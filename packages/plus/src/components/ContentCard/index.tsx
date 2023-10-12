@@ -128,7 +128,7 @@ export const ContentCard = forwardRef<
       description,
       children,
       href,
-      target,
+      target = '_blank',
       onClick,
       loading,
       className,
