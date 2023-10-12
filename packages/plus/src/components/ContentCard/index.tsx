@@ -79,6 +79,10 @@ const Image = styled('img', {
     direction === 'row' ? `max-height: ${subContainerHeight}px` : null}
 `
 
+const FullHeightStack = styled(Stack)`
+  height: 100%;
+`
+
 type ContentCardProps = {
   direction?: 'row' | 'column'
   /**
@@ -164,7 +168,7 @@ export const ContentCard = forwardRef<
         {loading ? (
           <Skeleton direction={direction} />
         ) : (
-          <Stack direction={direction}>
+          <FullHeightStack direction={direction}>
             {image ? (
               <Image
                 alt=""
@@ -217,7 +221,7 @@ export const ContentCard = forwardRef<
                 </StyledIconStack>
               ) : null}
             </Stack>
-          </Stack>
+          </FullHeightStack>
         )}
       </Container>
     )
