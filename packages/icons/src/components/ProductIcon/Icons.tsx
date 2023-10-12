@@ -3083,4 +3083,75 @@ export const PRODUCT_ICONS = {
       </g>
     </g>
   ),
+  file: (
+    <g className="File">
+      <g className=".Square">
+        <path
+          fill="#F1EEFC"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48V16Z"
+          className="fillWeak"
+        />
+      </g>
+      <g className="File">
+        <g className="icon">
+          <g className="fill">
+            <path
+              fill="#521094"
+              fillRule="evenodd"
+              d="M21 14a1 1 0 0 0-1 1v33a1 1 0 0 0 1 1h15a1 1 0 1 1 0 2H21a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3h17.5a1 1 0 0 1 .791.389l8.5 11A1 1 0 0 1 48 24v8.5a1 1 0 1 1-2 0v-8.159L38.009 14H21Z"
+              clipRule="evenodd"
+            />
+            <path
+              fill="#521094"
+              d="M47 25h-1v23a1 1 0 0 1-1 1H30a1 1 0 1 0 0 2h15a3 3 0 0 0 3-3V25h-1Z"
+            />
+            <path
+              fill="#521094"
+              fillRule="evenodd"
+              d="M37.5 22v-8.5h2V22a1 1 0 0 0 1 1H47v2h-6.5a3 3 0 0 1-3-3Z"
+              clipRule="evenodd"
+            />
+          </g>
+          <path
+            fill="#A060F6"
+            fillRule="evenodd"
+            d="M24.5 21a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2h-10Zm0 13a1 1 0 1 0 0 2H38a1 1 0 1 0 0-2H24.5Zm-1 8a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1Zm1-14.5a1 1 0 1 0 0 2H42a1 1 0 1 0 0-2H24.5Z"
+            className="fillStrong"
+            clipRule="evenodd"
+          />
+        </g>
+      </g>
+    </g>
+  ),
+  folder: (
+    <g className="Folder" clipPath="url(#a)">
+      <g className=".Square">
+        <path
+          fill="#F1EEFC"
+          d="M0 16C0 7.163 7.163 0 16 0h32c8.837 0 16 7.163 16 16v32c0 8.837-7.163 16-16 16H16C7.163 64 0 56.837 0 48V16Z"
+          className="fillWeak"
+        />
+      </g>
+      <g className="Icon">
+        <path
+          stroke="#A060F6"
+          strokeWidth="2"
+          d="M23 44h26a5 5 0 0 0 5-5V24a5 5 0 0 0-5-5H37.937a1.515 1.515 0 0 1-1.356-.838l-.158-.316C35.499 15.998 34.065 14 32 14h-9a5 5 0 0 0-5 5v20a5 5 0 0 0 5 5Z"
+          className="fillStrong"
+        />
+        <path
+          fill="#F1EEFC"
+          stroke="#521094"
+          strokeWidth="2"
+          d="M17 48h26a5 5 0 0 0 5-5V28a5 5 0 0 0-5-5H31.936a1.515 1.515 0 0 1-1.355-.838l-.158-.316C29.499 19.998 28.065 18 26 18h-9a5 5 0 0 0-5 5v20a5 5 0 0 0 5 5Z"
+          className="fill"
+        />
+        <path
+          fill="#A060F6"
+          d="M18 23a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z"
+          className="fillStrong"
+        />
+      </g>
+    </g>
+  ),
 } as const
