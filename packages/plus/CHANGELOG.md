@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.1.2
+
+### Patch Changes
+
+- [#3015](https://github.com/scaleway/ultraviolet/pull/3015) [`2545037c`](https://github.com/scaleway/ultraviolet/commit/2545037c55fce56a7ff7e3fcc1f21576d37f8ca8) Thanks [@matthprost](https://github.com/matthprost)! - `<ContentCard />` component to take full height
+
 ## 0.1.1
 
 ### Patch Changes
