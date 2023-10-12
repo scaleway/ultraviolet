@@ -158,7 +158,7 @@ type PopupProps = {
 }
 
 /**
- * @experimental
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
  */
 export const Popup = forwardRef(
   (
