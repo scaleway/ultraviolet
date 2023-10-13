@@ -15,7 +15,7 @@ import {
   useRef,
   useState,
 } from 'react'
-import { Popup } from '../../internalComponents'
+import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import Item from './Item'
 
