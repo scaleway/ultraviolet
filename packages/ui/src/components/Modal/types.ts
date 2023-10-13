@@ -15,21 +15,29 @@ export type ModalPlacement =
   | 'left'
 
 export type ModalState = {
+  /**
+   * @deprecated use show
+   */
   onOpen: () => void
+  /**
+   * @deprecated use close
+   */
   onClose: () => void
   toggle: () => void
   visible: boolean
   modalId: string
   /**
-   * @deprecated use onClose
+   * @deprecated use close
    */
   hide: () => void
+  close: () => void
+  show: () => void
 }
 
 export type DisclosureProps = {
   disclosure?: ReactElement | ((state: ModalState) => ReactElement)
-  handleOpen: ModalState['onOpen']
-  handleClose: ModalState['onClose']
+  handleOpen: ModalState['show']
+  handleClose: ModalState['close']
   visible: ModalState['visible']
   toggle: ModalState['toggle']
   id: string
