@@ -97,6 +97,18 @@ const StyledWrapper = styled.div`
       }
     }
 
+    ${PREFIX}__day--in-selecting-range {
+      color: ${({ theme }) => theme.colors.primary.text};
+      background-color: ${({ theme }) => theme.colors.primary.background};
+
+      &[aria-disabled='true'],
+      &:disabled {
+        color: ${({ theme }) => theme.colors.primary.textDisabled};
+        background-color: ${({ theme }) =>
+          theme.colors.primary.backgroundDisabled};
+      }
+    }
+
     ${PREFIX}__day--in-range {
       color: ${({ theme }) => theme.colors.primary.text};
       background-color: ${({ theme }) => theme.colors.primary.background};
@@ -239,15 +251,15 @@ export const DateInput = ({
   }
 
   const valueStart = `${
-    startDate !== undefined && startDate !== null ? format(startDate) : ''
+    startDate !== undefined && startDate !== null
+      ? `${format(startDate)} -`
+      : ''
   }`
   const valueEnd = `${
     endDate !== undefined && endDate !== null ? format(endDate) : ''
   }`
 
-  const valueFormat = selectRange
-    ? `${valueStart} - ${valueEnd}`
-    : format(value)
+  const valueFormat = selectRange ? `${valueStart} ${valueEnd}` : format(value)
 
   return (
     <>
@@ -304,8 +316,8 @@ export const DateInput = ({
             <Stack
               direction="row"
               alignItems="center"
-              justifyContent="space-around"
-              gap={4}
+              justifyContent="space-evenly"
+              gap={3}
             >
               <Button
                 size="small"

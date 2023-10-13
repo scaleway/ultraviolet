@@ -4,8 +4,9 @@ export const Exclude = Template.bind({})
 
 Exclude.parameters = {
   docs: {
-    storyDescription:
-      'With `excludeDates` you can define a array of dates to exclude',
+    description: {
+      story: 'With `excludeDates` you can define a array of dates to exclude',
+    },
   },
 }
 

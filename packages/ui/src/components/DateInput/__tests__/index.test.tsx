@@ -108,4 +108,19 @@ describe('DateInput', () => {
         onChange={() => {}}
       />,
     ))
+
+  test('render correctly with a array of dates to exclude', () =>
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        value={new Date('December 13, 1995 03:24:00')}
+        excludeDates={[
+          new Date('December 1, 1995 03:24:00'),
+          new Date('December 14, 1995 03:24:00'),
+          new Date('December 22, 1995 03:24:00'),
+          new Date('December 28, 1995 03:24:00'),
+        ]}
+        onChange={() => {}}
+      />,
+    ))
 })
