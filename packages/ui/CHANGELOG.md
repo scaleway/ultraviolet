@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.19.0
+
+### Minor Changes
+
+- [#3008](https://github.com/scaleway/ultraviolet/pull/3008) [`e9b4ade5`](https://github.com/scaleway/ultraviolet/commit/e9b4ade5cbcba41248b273daf87fc63b6a3e1d4a) Thanks [@DorianMaliszewski](https://github.com/DorianMaliszewski)! - feat(modal): replace function names by good ones
+
+- [#3018](https://github.com/scaleway/ultraviolet/pull/3018) [`37998cf7`](https://github.com/scaleway/ultraviolet/commit/37998cf74de0ce658ee107443b4ecd327434700a) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - Moving Popup as an experimental component
+
+- [#3019](https://github.com/scaleway/ultraviolet/pull/3019) [`a789422d`](https://github.com/scaleway/ultraviolet/commit/a789422dcc5103d9b3e3ea3865c9430d0f690e17) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Carousel />`:
+  - Remove border and other styles applied on `<Carousel.Item />` when hovering it.
+  - Add new prop `width` to `<Carousel.Item />` to set the width of the item. Default is `240px`.
+  - Use flexbox for structure instead of block elements.
+
+### Patch Changes
+
+- Updated dependencies [[`3814970a`](https://github.com/scaleway/ultraviolet/commit/3814970abeab4fcf3b4b5176733a93f3f7ed39fd), [`baef7307`](https://github.com/scaleway/ultraviolet/commit/baef73076888d2ddcc7092e0adffbc1642b42a83)]:
+  - @ultraviolet/icons@2.4.0
+
 ## 1.18.1
 
 ### Patch Changes

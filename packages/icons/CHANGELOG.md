@@ -1,5 +1,15 @@
 # @ultraviolet/icons
 
+## 2.4.0
+
+### Minor Changes
+
+- [#3013](https://github.com/scaleway/ultraviolet/pull/3013) [`baef7307`](https://github.com/scaleway/ultraviolet/commit/baef73076888d2ddcc7092e0adffbc1642b42a83) Thanks [@matthprost](https://github.com/matthprost)! - New ProductIcon `file` and `folder`
+
+### Patch Changes
+
+- [#3023](https://github.com/scaleway/ultraviolet/pull/3023) [`3814970a`](https://github.com/scaleway/ultraviolet/commit/3814970abeab4fcf3b4b5176733a93f3f7ed39fd) Thanks [@matthprost](https://github.com/matthprost)! - Fix component `<ProductIcon />` on color applied
+
 ## 2.3.0
 
 ### Minor Changes
