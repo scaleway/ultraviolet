@@ -157,6 +157,9 @@ type PopupProps = {
   needDebounce?: boolean
 }
 
+/**
+ * @experimental This component is experimental and may be subject to breaking changes in the future.
+ */
 export const Popup = forwardRef(
   (
     {

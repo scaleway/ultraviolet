@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
-import { Popup } from '../../internalComponents'
+import { Popup } from '../Popup'
 
 type TooltipProps = Pick<
   ComponentProps<typeof Popup>,

@@ -27,7 +27,9 @@ const StyledIcon = styled('svg', {
     height: ${({ size }) => `${SIZES[size]}px`};
   }
 
-  path[fill].fill {
+  path[fill].fill,
+  g[fill].fill > *,
+  g.fill > * {
     fill: ${({ theme, variant, disabled }) =>
       `${
         theme.colors.other.icon.product[variant][
@@ -36,7 +38,9 @@ const StyledIcon = styled('svg', {
       }`};
   }
 
-  path[fill].fillStrong {
+  path[fill].fillStrong,
+  g[fill].fillStrong > *,
+  g.fillStrong > * {
     fill: ${({ theme, variant, disabled }) =>
       `${
         theme.colors.other.icon.product[variant][
@@ -45,7 +49,9 @@ const StyledIcon = styled('svg', {
       }`};
   }
 
-  path[fill].fillWeak {
+  path[fill].fillWeak,
+  g[fill].fillWeak > *,
+  g.fillWeak > * {
     fill: ${({ theme, variant, disabled }) =>
       `${
         theme.colors.other.icon.product[variant][
