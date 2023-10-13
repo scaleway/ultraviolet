@@ -178,7 +178,6 @@ const StyledIconContainer = styled.div`
 
 const StyledText = styled(Text)`
   text-transform: capitalize;
-  margin-right: ${({ theme }) => theme.space['1']};
 `
 
 type DateInputProps = Pick<
@@ -316,7 +315,7 @@ export const DateInput = ({
             <Stack
               direction="row"
               alignItems="center"
-              justifyContent="space-evenly"
+              justifyContent="space-between"
               gap={3}
             >
               <Button
