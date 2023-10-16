@@ -5,7 +5,7 @@ codecov:
 coverage:
   precision: 2
   round: down
-  range: "70...100"
+  range: '70...100'
   status:
     project:
       default:
@@ -20,11 +20,12 @@ parsers:
       macro: no
 
 comment:
-  layout: "reach,diff,flags,files,footer"
+  layout: 'reach,diff,flags,files,footer'
   behavior: default
   require_changes: no
 
 ignore:
-  - "packages/themes"
-  - "packages/ui/src/theme/index.ts"
-  - "examples"
+  - 'packages/themes'
+  - 'packages/ui/src/theme/index.ts'
+  - 'packages/illustrations'
+  - 'examples'
