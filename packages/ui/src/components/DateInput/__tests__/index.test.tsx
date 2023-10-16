@@ -102,7 +102,7 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput
         label="Date"
-        selectRange
+        selectsRange
         startDate={new Date('December 12, 1995 03:24:00')}
         endDate={new Date('December 25, 1995 03:24:00')}
         onChange={() => {}}

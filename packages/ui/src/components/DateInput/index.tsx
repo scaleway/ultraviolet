@@ -181,7 +181,7 @@ const StyledText = styled(Text)`
 `
 
 type DateInputProps = Pick<
-  ReactDatePickerProps<string>,
+  ReactDatePickerProps<string, boolean>,
   | 'autoFocus'
   | 'disabled'
   | 'locale'
@@ -195,6 +195,7 @@ type DateInputProps = Pick<
   | 'onFocus'
   | 'required'
   | 'excludeDates'
+  | 'selectsRange'
 > & {
   error?: string
   format?: (value?: Date | string) => string | undefined
@@ -203,7 +204,6 @@ type DateInputProps = Pick<
    */
   label?: string
   value?: Date | string
-  selectRange?: boolean
   className?: string
   'data-testid'?: string
 }
@@ -233,7 +233,7 @@ export const DateInput = ({
   required = false,
   excludeDates,
   value,
-  selectRange,
+  selectsRange,
   className,
   'data-testid': dataTestId,
 }: DateInputProps) => {
@@ -258,7 +258,7 @@ export const DateInput = ({
     endDate !== undefined && endDate !== null ? format(endDate) : ''
   }`
 
-  const valueFormat = selectRange ? `${valueStart} ${valueEnd}` : format(value)
+  const valueFormat = selectsRange ? `${valueStart} ${valueEnd}` : format(value)
 
   return (
     <>
@@ -274,8 +274,8 @@ export const DateInput = ({
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
-          selected={value && !selectRange ? new Date(value) : undefined}
-          selectsRange={selectRange}
+          selected={value && !selectsRange ? new Date(value) : undefined}
+          selectsRange={selectsRange}
           excludeDates={excludeDates}
           customInput={
             <div>

@@ -14,11 +14,10 @@ export const Range: StoryFn = args => {
   return (
     <DateInput
       label="Date"
-      // @ts-expect-error: The type of onChange depend to the type of WithRange. "https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react-datepicker/index.d.ts#L124"
       onChange={onChange}
       startDate={startDate}
       endDate={endDate}
-      selectRange
+      selectsRange
       {...args}
     />
   )
