@@ -103,8 +103,8 @@ describe('DateInput', () => {
       <DateInput
         label="Date"
         selectsRange
-        startDate={new Date('December 12, 1995 02:24:00')}
-        endDate={new Date('December 25, 1995 02:24:00')}
+        startDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        endDate={new Date('1995-12-25T03:24:00.000+00:00')}
         onChange={() => {}}
       />,
     ))
@@ -113,12 +113,11 @@ describe('DateInput', () => {
     shouldMatchEmotionSnapshot(
       <DateInput
         label="Date"
-        value={new Date('December 13, 1995 02:24:00')}
+        value={new Date('1995-12-11T03:24:00.000+00:00')}
         excludeDates={[
-          new Date('December 1, 1995 02:24:00'),
-          new Date('December 14, 1995 02:24:00'),
-          new Date('December 22, 1995 02:24:00'),
-          new Date('December 28, 1995 02:24:00'),
+          new Date('1995-12-12T03:24:00.000+00:00'),
+          new Date('1995-12-13T03:24:00.000+00:00'),
+          new Date('1995-12-14T03:24:00.000+00:00'),
         ]}
         onChange={() => {}}
       />,
