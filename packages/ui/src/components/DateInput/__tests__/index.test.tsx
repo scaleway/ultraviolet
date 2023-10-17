@@ -104,7 +104,7 @@ describe('DateInput', () => {
         label="Date"
         selectsRange
         startDate={new Date('December 12, 1995 02:24:00')}
-        endDate={new Date('December 25, 1995 03:24:00')}
+        endDate={new Date('December 25, 1995 02:24:00')}
         onChange={() => {}}
       />,
     ))
@@ -115,10 +115,10 @@ describe('DateInput', () => {
         label="Date"
         value={new Date('December 13, 1995 02:24:00')}
         excludeDates={[
-          new Date('December 1, 1995 03:24:00'),
-          new Date('December 14, 1995 03:24:00'),
-          new Date('December 22, 1995 03:24:00'),
-          new Date('December 28, 1995 03:24:00'),
+          new Date('December 1, 1995 02:24:00'),
+          new Date('December 14, 1995 02:24:00'),
+          new Date('December 22, 1995 02:24:00'),
+          new Date('December 28, 1995 02:24:00'),
         ]}
         onChange={() => {}}
       />,
