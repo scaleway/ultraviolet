@@ -49,12 +49,20 @@
       "matchUpdateTypes": ["major", "minor", "patch"]
     },
     {
+      "automerge": true,
+      "matchPackagePatterns": ["^@uiw/"],
+      "groupName": "Code Editor",
+      "groupSlug": "uiw-code-editor-react",
+      "stabilityDays": 5,
+      "matchUpdateTypes": [ "minor", "patch"]
+    },
+    {
       "automerge": false,
       "matchPackagePatterns": ["^@uiw/"],
       "groupName": "Code Editor",
       "groupSlug": "uiw-code-editor-react",
       "stabilityDays": 5,
-      "matchUpdateTypes": ["major", "minor", "patch"]
+      "matchUpdateTypes": ["major"]
     },
     {
       "matchPackagePatterns": ["final-form-arrays"],
