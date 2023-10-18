@@ -203,7 +203,7 @@ type DateInputProps = Pick<
    * Label of the field
    */
   label?: string
-  value?: Date | string
+  value?: Date | string | [Date | null, Date | null]
   className?: string
   'data-testid'?: string
 }
@@ -258,7 +258,9 @@ export const DateInput = ({
     endDate !== undefined && endDate !== null ? format(endDate) : ''
   }`
 
-  const valueFormat = selectsRange ? `${valueStart} ${valueEnd}` : format(value)
+  const valueFormat = selectsRange
+    ? `${valueStart} ${valueEnd}`
+    : format(value as Date)
 
   return (
     <>
@@ -274,7 +276,9 @@ export const DateInput = ({
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
-          selected={value && !selectsRange ? new Date(value) : undefined}
+          selected={
+            value && !selectsRange ? new Date(value as Date) : undefined
+          }
           selectsRange={selectsRange}
           excludeDates={excludeDates}
           customInput={
