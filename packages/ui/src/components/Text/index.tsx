@@ -39,7 +39,7 @@ const generateStyles = ({
   prominence: ProminenceProps
   theme: Theme
   variant: TextVariant
-  sentiment: Color
+  sentiment?: Color
   oneLine: boolean
   disabled: boolean
   italic: boolean
@@ -51,13 +51,14 @@ const generateStyles = ({
       ? capitalize(PROMINENCES.default)
       : capitalize(PROMINENCES[prominence])
 
-  const themeColor = theme.colors[sentiment]
+  const themeColor = sentiment ? theme.colors[sentiment] : undefined
   const text = `text${definedProminence}${
     disabled ? 'Disabled' : ''
   }` as keyof typeof themeColor
+  const textColor = sentiment ? theme.colors[sentiment][text] : undefined
 
   return `
-    color: ${theme.colors[sentiment][text]};
+    ${sentiment ? `color: ${textColor};` : ''}
 
     font-size: ${theme.typography[variant].fontSize};
     font-family: ${theme.typography[variant].fontFamily};
@@ -117,7 +118,7 @@ const StyledText = styled('div', {
     ].includes(prop),
 })<{
   placement?: PlacementProps
-  sentiment: Color
+  sentiment?: Color
   prominence: ProminenceProps
   variant: TextVariant
   oneLine: boolean
@@ -148,7 +149,7 @@ export const Text = ({
   htmlFor,
   'data-testid': dataTestId,
 }: TextProps) => {
-  const computedSentiment = sentiment ?? color ?? 'neutral'
+  const computedSentiment = sentiment ?? color
 
   const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
