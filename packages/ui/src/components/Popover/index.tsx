@@ -139,9 +139,6 @@ export const Popover = forwardRef(
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
   ) => {
-    const tempRef = useRef<HTMLDivElement>(null)
-    const localRef = ref || tempRef
-
     const innerRef = useRef<HTMLDivElement>(null)
     const [localVisible, setLocalVisible] = useState(visible)
 
@@ -186,7 +183,7 @@ export const Popover = forwardRef(
         data-testid={dataTestId}
         size={size}
         role="dialog"
-        ref={localRef}
+        ref={ref}
         innerRef={innerRef}
         onClose={localOnClose}
         onKeyDown={onKeyDownSpace}

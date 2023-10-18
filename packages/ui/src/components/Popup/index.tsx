@@ -187,8 +187,8 @@ export const Popup = forwardRef(
     const childrenRef = useRef<HTMLDivElement>(null)
     useImperativeHandle(innerRef, () => childrenRef.current)
 
-    const tempTooltipRef = useRef<HTMLDivElement>(null)
-    const innerTooltipRef = (ref as RefObject<HTMLDivElement>) ?? tempTooltipRef
+    const innerTooltipRef = useRef<HTMLDivElement>(null)
+    useImperativeHandle(ref, () => innerTooltipRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
 
