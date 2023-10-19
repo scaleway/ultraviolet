@@ -1,5 +1,16 @@
 # @ultraviolet/icons
 
+## 2.4.1
+
+### Patch Changes
+
+- [#3031](https://github.com/scaleway/ultraviolet/pull/3031) [`25617eca`](https://github.com/scaleway/ultraviolet/commit/25617ecaabd2eee8c93a2b18e5091b05ff1df669) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.28`.
+  Updated dependency `@types/react-dom` to `18.2.13`.
+
+- [#3026](https://github.com/scaleway/ultraviolet/pull/3026) [`49a72ac9`](https://github.com/scaleway/ultraviolet/commit/49a72ac9c0ea61ee552e5b74251c8eeb8239126d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.2`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.2`.
+  Updated dependency `@babel/preset-env` to `7.23.2`.
+
 ## 2.4.0
 
 ### Minor Changes

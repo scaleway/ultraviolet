@@ -1,5 +1,26 @@
 # @ultraviolet/plus
 
+## 0.2.0
+
+### Minor Changes
+
+- [#3037](https://github.com/scaleway/ultraviolet/pull/3037) [`be20d1a1`](https://github.com/scaleway/ultraviolet/commit/be20d1a125b139c94acd0e341aad5354bdfba2b1) Thanks [@philibea](https://github.com/philibea)! - New component `<CodeEditor />`
+
+### Patch Changes
+
+- [#3031](https://github.com/scaleway/ultraviolet/pull/3031) [`25617eca`](https://github.com/scaleway/ultraviolet/commit/25617ecaabd2eee8c93a2b18e5091b05ff1df669) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.28`.
+  Updated dependency `@types/react-dom` to `18.2.13`.
+
+- [#3038](https://github.com/scaleway/ultraviolet/pull/3038) [`aadd4845`](https://github.com/scaleway/ultraviolet/commit/aadd4845680c771211fb124f82e7f412015b13a0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `intl-messageformat` to `10.5.4`.
+
+- [#3036](https://github.com/scaleway/ultraviolet/pull/3036) [`018c1e13`](https://github.com/scaleway/ultraviolet/commit/018c1e13e5412223d254b1124fc7adeda3c06a34) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `international-types` to `0.8.1`.
+
+- [#3026](https://github.com/scaleway/ultraviolet/pull/3026) [`49a72ac9`](https://github.com/scaleway/ultraviolet/commit/49a72ac9c0ea61ee552e5b74251c8eeb8239126d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.2`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.2`.
+  Updated dependency `@babel/preset-env` to `7.23.2`.
+- Updated dependencies [[`7364c97f`](https://github.com/scaleway/ultraviolet/commit/7364c97fb31435817ccf7e9bc78cd3ec9b2e6703), [`dcb99f39`](https://github.com/scaleway/ultraviolet/commit/dcb99f39b00cbf50f9763d37b71d4b3b0fdbf248), [`b232bff4`](https://github.com/scaleway/ultraviolet/commit/b232bff46ba7248283a8ab8f38429269c058ca09), [`3b01b130`](https://github.com/scaleway/ultraviolet/commit/3b01b1308db15430074fe47a9f1b694a25ed171b), [`1c89ebde`](https://github.com/scaleway/ultraviolet/commit/1c89ebde6e57de5dfa574df098c0f7fc45f6cd0a), [`25617eca`](https://github.com/scaleway/ultraviolet/commit/25617ecaabd2eee8c93a2b18e5091b05ff1df669), [`1e4705d5`](https://github.com/scaleway/ultraviolet/commit/1e4705d5f36bae7474c941beee8fd60c06842671), [`49a72ac9`](https://github.com/scaleway/ultraviolet/commit/49a72ac9c0ea61ee552e5b74251c8eeb8239126d)]:
+  - @ultraviolet/ui@1.20.0
+
 ## 0.1.3
 
 ### Patch Changes
