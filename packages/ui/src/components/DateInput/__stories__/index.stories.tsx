@@ -14,6 +14,8 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
+export { Exclude } from './Exclude.stories'
+export { Range } from './Range.stories'
 export { Uncontrolled } from './Uncontrolled.stories'
 export { Controlled } from './Controlled.stories'
 export { Error } from './Error.stories'

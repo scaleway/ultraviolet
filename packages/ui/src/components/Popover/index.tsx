@@ -1,6 +1,11 @@
 import styled from '@emotion/styled'
-import type { ComponentProps, KeyboardEventHandler, ReactNode } from 'react'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import type {
+  ComponentProps,
+  KeyboardEventHandler,
+  ReactNode,
+  Ref,
+} from 'react'
+import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
@@ -118,69 +123,73 @@ type PopoverProps = {
  * Popover component is used to display additional information or actions on top of the main content of the page.
  * It is usually triggered by clicking on a button. It includes a title, a close button and a content area.
  */
-export const Popover = ({
-  visible = false,
-  children,
-  placement,
-  content,
-  title,
-  sentiment = 'neutral',
-  size = 'medium',
-  onClose,
-  className,
-  'data-testid': dataTestId,
-}: PopoverProps) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const innerRef = useRef<HTMLDivElement>(null)
-  const [localVisible, setLocalVisible] = useState(visible)
+export const Popover = forwardRef(
+  (
+    {
+      visible = false,
+      children,
+      placement,
+      content,
+      title,
+      sentiment = 'neutral',
+      size = 'medium',
+      onClose,
+      className,
+      'data-testid': dataTestId,
+    }: PopoverProps,
+    ref: Ref<HTMLDivElement>,
+  ) => {
+    const innerRef = useRef<HTMLDivElement>(null)
+    const [localVisible, setLocalVisible] = useState(visible)
 
-  // We change local value if visible prop changes
-  useEffect(() => {
-    setLocalVisible(visible)
-  }, [visible])
+    // We change local value if visible prop changes
+    useEffect(() => {
+      setLocalVisible(visible)
+    }, [visible])
 
-  // When space key is pressed we show the popover
-  const onKeyDownSpace: KeyboardEventHandler = useCallback(event => {
-    if (event.code === 'Space') {
-      event.preventDefault()
-      event.stopPropagation()
-      setLocalVisible(true)
-    }
-  }, [])
-
-  // When we close we hide the popover and focus the disclosure element
-  const localOnClose = useCallback(() => {
-    setLocalVisible(false)
-    onClose?.()
-    innerRef.current?.focus()
-  }, [onClose])
-
-  return (
-    <StyledPopup
-      hideOnClickOutside
-      needDebounce={false}
-      visible={localVisible}
-      placement={placement}
-      text={
-        <ContentWrapper
-          title={title}
-          onClose={localOnClose}
-          sentiment={sentiment}
-        >
-          {content}
-        </ContentWrapper>
+    // When space key is pressed we show the popover
+    const onKeyDownSpace: KeyboardEventHandler = useCallback(event => {
+      if (event.code === 'Space') {
+        event.preventDefault()
+        event.stopPropagation()
+        setLocalVisible(true)
       }
-      className={className}
-      sentiment={sentiment}
-      data-testid={dataTestId}
-      size={size}
-      role="dialog"
-      ref={ref}
-      innerRef={innerRef}
-      onClose={localOnClose}
-      onKeyDown={onKeyDownSpace}
-    >
-      {children}
-    </StyledPopup>
-  )
-}
+    }, [])
+
+    // When we close we hide the popover and focus the disclosure element
+    const localOnClose = useCallback(() => {
+      setLocalVisible(false)
+      onClose?.()
+      innerRef.current?.focus()
+    }, [onClose])
+
+    return (
+      <StyledPopup
+        hideOnClickOutside
+        needDebounce={false}
+        visible={localVisible}
+        placement={placement}
+        text={
+          <ContentWrapper
+            title={title}
+            onClose={localOnClose}
+            sentiment={sentiment}
+          >
+            {content}
+          </ContentWrapper>
+        }
+        className={className}
+        sentiment={sentiment}
+        data-testid={dataTestId}
+        size={size}
+        role="dialog"
+        ref={ref}
+        innerRef={innerRef}
+        onClose={localOnClose}
+        onKeyDown={onKeyDownSpace}
+      >
+        {children}
+      </StyledPopup>
+    )
+  },
+)

@@ -160,7 +160,7 @@ export const Banner = ({
         alignItems={direction === 'column' ? 'start' : 'center'}
         style={{ flex: 1 }}
       >
-        <Stack gap={0.5} style={{ flex: 1 }}>
+        <Stack gap={0.5} style={{ flex: 1 }} justifyContent="center">
           <Text
             as="p"
             variant={size === 'medium' ? 'headingSmall' : 'bodyStronger'}
