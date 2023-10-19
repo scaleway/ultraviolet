@@ -182,14 +182,13 @@ export const Popup = forwardRef(
       hideOnClickOutside = false,
       needDebounce = true,
     }: PopupProps,
-    tooltipRef: Ref<HTMLDivElement>,
+    ref: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
     useImperativeHandle(innerRef, () => childrenRef.current)
 
-    const tempTooltipRef = useRef<HTMLDivElement>(null)
-    const innerTooltipRef =
-      (tooltipRef as RefObject<HTMLDivElement>) || tempTooltipRef
+    const innerTooltipRef = useRef<HTMLDivElement>(null)
+    useImperativeHandle(ref, () => innerTooltipRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
 
@@ -353,12 +352,12 @@ export const Popup = forwardRef(
       }
       if (visibleInDom) {
         document.body.addEventListener('keyup', handleEscPress)
-        document.body.addEventListener('click', handleClickOutside)
+        document.body.addEventListener('mousedown', handleClickOutside)
       }
 
       return () => {
         document.body.removeEventListener('keyup', handleEscPress)
-        document.body.removeEventListener('click', handleClickOutside)
+        document.body.removeEventListener('mousedown', handleClickOutside)
       }
     }, [
       hideTooltip,
