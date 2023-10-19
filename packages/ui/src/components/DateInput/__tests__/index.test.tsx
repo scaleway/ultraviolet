@@ -97,4 +97,29 @@ describe('DateInput', () => {
         },
       },
     ))
+
+  test('render correctly with a range of date', () =>
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        selectsRange
+        startDate={new Date('1995-12-11T03:24:00.000+00:00')}
+        endDate={new Date('1995-12-25T03:24:00.000+00:00')}
+        onChange={() => {}}
+      />,
+    ))
+
+  test('render correctly with a array of dates to exclude', () =>
+    shouldMatchEmotionSnapshot(
+      <DateInput
+        label="Date"
+        value={new Date('1995-12-11T03:24:00.000+00:00')}
+        excludeDates={[
+          new Date('1995-12-12T03:24:00.000+00:00'),
+          new Date('1995-12-13T03:24:00.000+00:00'),
+          new Date('1995-12-14T03:24:00.000+00:00'),
+        ]}
+        onChange={() => {}}
+      />,
+    ))
 })

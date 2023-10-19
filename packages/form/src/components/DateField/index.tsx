@@ -5,7 +5,9 @@ import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type DateFieldProps = BaseFieldProps<Date> &
+type DateExtends = Date | [Date | null, Date | null]
+
+type DateFieldProps = BaseFieldProps<DateExtends> &
   Omit<
     ComponentProps<typeof DateInput>,
     | 'maxDate'
@@ -54,11 +56,13 @@ export const DateField = ({
   onFocus,
   formatOnBlur,
   autoFocus = false,
+  excludeDates,
+  selectsRange,
   'data-testid': dataTestId,
 }: DateFieldProps) => {
   const { getError } = useErrors()
 
-  const { input, meta } = useFormField<Date>(name, {
+  const { input, meta } = useFormField<DateExtends>(name, {
     disabled,
     formatOnBlur,
     initialValue,
@@ -87,19 +91,21 @@ export const DateField = ({
       }
       locale={locale}
       required={required}
-      value={input.value}
-      onChange={(val: Date | null) => {
-        if (val) {
+      value={input.value as Date}
+      onChange={(val: DateExtends | null) => {
+        if (val && val instanceof Date) {
           onChange?.(val)
           const newDate = parseDate(val)
-          if (isEmpty(input.value)) {
+          if (isEmpty(input.value as Date)) {
             input.onChange(newDate)
 
             return
           }
-          const currentDate = parseDate(input.value)
+          const currentDate = parseDate(input.value as Date)
           newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
           input.onChange(newDate)
+        } else if (Array.isArray(val)) {
+          input.onChange(val)
         }
       }}
       onBlur={(e: FocusEvent<HTMLElement>) => {
@@ -112,11 +118,23 @@ export const DateField = ({
       }}
       maxDate={maxDate}
       minDate={minDate}
+      startDate={
+        selectsRange
+          ? (input.value as [Date | null, Date | null])[0]
+          : undefined
+      }
+      endDate={
+        selectsRange
+          ? (input.value as [Date | null, Date | null])[1]
+          : undefined
+      }
       error={error}
       disabled={disabled}
       autoFocus={autoFocus}
       name={input.name}
       data-testid={dataTestId}
+      excludeDates={excludeDates}
+      selectsRange={selectsRange}
     />
   )
 }
