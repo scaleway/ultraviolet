@@ -81,7 +81,9 @@ const TagInputContainer = styled('div', {
 `
 
 const StyledInput = styled.input`
-  font-size: 16px;
+  display: flex;
+  flex: 1;
+  font-size: ${({ theme }) => theme.typography.body.fontSize};
   color: ${({ theme: { colors } }) => colors.neutral.text};
   border: none;
   outline: none;
