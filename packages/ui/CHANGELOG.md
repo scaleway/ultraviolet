@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.20.1
+
+### Patch Changes
+
+- [#3047](https://github.com/scaleway/ultraviolet/pull/3047) [`3927d9ad`](https://github.com/scaleway/ultraviolet/commit/3927d9ada21b57c6e9ec78ef356f528d82275996) Thanks [@matthprost](https://github.com/matthprost)! - Fix Popup to re-compute position when screen resize or when `maxWidth` changes
+
 ## 1.20.0
 
 ### Minor Changes
