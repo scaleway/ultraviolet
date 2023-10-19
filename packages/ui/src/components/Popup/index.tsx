@@ -215,7 +215,10 @@ export const Popup = forwardRef(
       }
     }, [innerTooltipRef, placement])
 
-    const onScrollDetected = useCallback(() => {
+    /**
+     * This function is called when we need to recompute positions of tooltip due to window scroll or resize.
+     */
+    const onWindowChangeDetected = useCallback(() => {
       // We remove animation on scroll or the animation will restart on every scroll
       if (innerTooltipRef.current) {
         innerTooltipRef.current.style.animation = 'none'
@@ -230,8 +233,8 @@ export const Popup = forwardRef(
       setVisibleInDom(false)
       setReverseAnimation(false)
 
-      window.removeEventListener('scroll', onScrollDetected, true)
-    }, [onScrollDetected])
+      window.removeEventListener('scroll', onWindowChangeDetected, true)
+    }, [onWindowChangeDetected])
 
     /**
      * This function is called when we need to hide tooltip. A timeout is set to allow animation end, then remove
@@ -290,19 +293,21 @@ export const Popup = forwardRef(
       if (visibleInDom) {
         generatePositions()
 
-        // We want to detect scroll in order to recompute positions of tooltip
+        // We want to detect scroll and resize in order to recompute positions of tooltip
         // Adding true as third parameter to event listener will detect nested scrolls.
-        window.addEventListener('scroll', onScrollDetected, true)
+        window.addEventListener('scroll', onWindowChangeDetected, true)
+        window.addEventListener('resize', onWindowChangeDetected, true)
       }
 
       return () => {
-        window.removeEventListener('scroll', onScrollDetected, true)
+        window.removeEventListener('scroll', onWindowChangeDetected, true)
+        window.removeEventListener('resize', onWindowChangeDetected, true)
         if (timer.current) {
           clearTimeout(timer.current)
           timer.current = undefined
         }
       }
-    }, [generatePositions, onScrollDetected, visibleInDom])
+    }, [generatePositions, onWindowChangeDetected, visibleInDom, maxWidth])
 
     /**
      * If tooltip has `visible` prop it means the tooltip is manually controlled through this prop.
