@@ -1,5 +1,3 @@
-import original from './instance-original.webp'
+import instanceOriginal from './instance-original.webp'
 
-export default {
-  original,
-}
+export { instanceOriginal }

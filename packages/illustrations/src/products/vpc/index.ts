@@ -1,5 +1,3 @@
-import original from './vpc-original.webp'
+import vpcOriginal from './vpc-original.webp'
 
-export default {
-  original,
-}
+export { vpcOriginal }

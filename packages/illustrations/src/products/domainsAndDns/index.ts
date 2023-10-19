@@ -1,5 +1,3 @@
-import original from './domains-and-dns-original.webp'
+import domainsAndDnsOriginal from './domains-and-dns-original.webp'
 
-export default {
-  original,
-}
+export { domainsAndDnsOriginal }

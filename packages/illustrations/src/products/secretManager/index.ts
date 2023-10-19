@@ -1,5 +1,3 @@
-import original from './secret-manager-original.webp'
+import secretManagerOriginal from './secret-manager-original.webp'
 
-export default {
-  original,
-}
+export { secretManagerOriginal }

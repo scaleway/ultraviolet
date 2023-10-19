@@ -1,5 +1,3 @@
-import original from './container-registry-original.webp'
+import containerRegistryOriginal from './container-registry-original.webp'
 
-export default {
-  original,
-}
+export { containerRegistryOriginal }

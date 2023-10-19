@@ -1,5 +1,3 @@
-import original from './elastic-metal-original.webp'
+import elasticMetalOriginal from './elastic-metal-original.webp'
 
-export default {
-  original,
-}
+export { elasticMetalOriginal }

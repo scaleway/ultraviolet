@@ -1,5 +1,3 @@
-import original from './managed-database-original.webp'
+import managedDatabaseOriginal from './managed-database-original.webp'
 
-export default {
-  original,
-}
+export { managedDatabaseOriginal }

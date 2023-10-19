@@ -1,5 +1,3 @@
-import original from './cockpit-original.webp'
+import cockpitOriginal from './cockpit-original.webp'
 
-export default {
-  original,
-}
+export { cockpitOriginal }

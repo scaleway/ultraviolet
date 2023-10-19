@@ -1,5 +1,3 @@
-import original from './k8s-kapsule-original.webp'
+import k8sKapsuleOriginal from './k8s-kapsule-original.webp'
 
-export default {
-  original,
-}
+export { k8sKapsuleOriginal }

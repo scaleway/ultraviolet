@@ -1,5 +1,3 @@
-import original from './dedibox-original.webp'
+import dediboxOriginal from './dedibox-original.webp'
 
-export default {
-  original,
-}
+export { dediboxOriginal }

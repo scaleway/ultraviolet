@@ -1,5 +1,3 @@
-import original from './object-storage-original.webp'
+import objectStorageOriginal from './object-storage-original.webp'
 
-export default {
-  original,
-}
+export { objectStorageOriginal }

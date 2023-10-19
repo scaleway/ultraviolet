@@ -1,5 +1,3 @@
-import original from './k8s-kosmos-original.webp'
+import k8sKosmosOriginal from './k8s-kosmos-original.webp'
 
-export default {
-  original,
-}
+export { k8sKosmosOriginal }

@@ -1,5 +1,3 @@
-import original from './containers-original.webp'
+import containersOriginal from './containers-original.webp'
 
-export default {
-  original,
-}
+export { containersOriginal }

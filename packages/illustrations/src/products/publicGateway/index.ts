@@ -1,5 +1,3 @@
-import original from './public-gateway-original.webp'
+import publicGatewayOriginal from './public-gateway-original.webp'
 
-export default {
-  original,
-}
+export { publicGatewayOriginal }

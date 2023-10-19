@@ -1,5 +1,3 @@
-import original from './apple-silicon-original.webp'
+import appleSiliconOriginal from './apple-silicon-original.webp'
 
-export default {
-  original,
-}
+export { appleSiliconOriginal }

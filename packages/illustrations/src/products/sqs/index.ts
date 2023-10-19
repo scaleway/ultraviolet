@@ -1,5 +1,3 @@
-import original from './sqs-original.webp'
+import sqsOriginal from './sqs-original.webp'
 
-export default {
-  original,
-}
+export { sqsOriginal }

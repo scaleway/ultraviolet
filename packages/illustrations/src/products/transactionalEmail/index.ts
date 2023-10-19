@@ -1,5 +1,3 @@
-import original from './transactional-email-original.webp'
+import transactionalEmailOriginal from './transactional-email-original.webp'
 
-export default {
-  original,
-}
+export { transactionalEmailOriginal }

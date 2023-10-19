@@ -1,5 +1,3 @@
-import original from './nats-original.webp'
+import natsOriginal from './nats-original.webp'
 
-export default {
-  original,
-}
+export { natsOriginal }

@@ -1,5 +1,3 @@
-import original from './sns-original.webp'
+import snsOriginal from './sns-original.webp'
 
-export default {
-  original,
-}
+export { snsOriginal }

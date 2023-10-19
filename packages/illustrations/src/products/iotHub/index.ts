@@ -1,5 +1,3 @@
-import original from './iot-hub-original.webp'
+import iotHubOriginal from './iot-hub-original.webp'
 
-export default {
-  original,
-}
+export { iotHubOriginal }

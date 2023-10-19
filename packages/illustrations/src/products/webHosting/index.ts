@@ -1,5 +1,3 @@
-import original from './web-hosting-original.webp'
+import webHostingOriginal from './web-hosting-original.webp'
 
-export default {
-  original,
-}
+export { webHostingOriginal }

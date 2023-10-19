@@ -1,5 +1,3 @@
-import original from './functions-original.webp'
+import functionsOriginal from './functions-original.webp'
 
-export default {
-  original,
-}
+export { functionsOriginal }

@@ -1,5 +1,3 @@
-import original from './ipfs-pinning-original.webp'
+import ipfsPinningOriginal from './ipfs-pinning-original.webp'
 
-export default {
-  original,
-}
+export { ipfsPinningOriginal }
