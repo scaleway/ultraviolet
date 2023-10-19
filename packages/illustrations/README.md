@@ -13,11 +13,11 @@ $ pnpm add @ultraviolet/illustrations
 ### Usage
 
 ```js
-import illustrations from '@ultraviolet/illustrations'
+import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
 
 const App = () => (
   <img
-    src={illustrations.products.instance.original}
+    src={instanceOriginal}
     alt="illustration instance"
   />
 )

@@ -5,8 +5,11 @@
   },
   "include": [
     "src",
-    "../../global.d.ts",
-    "src/emotion.d.ts"
+    "../../global.d.ts"
   ],
-  "exclude": ["node_modules", "coverage", "dist"]
+  "exclude": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
 }
