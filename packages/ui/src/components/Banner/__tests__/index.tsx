@@ -48,4 +48,11 @@ describe('Banner', () => {
         Description
       </Banner>,
     ))
+
+  test('renders correctly with closable to false', () =>
+    shouldMatchEmotionSnapshot(
+      <Banner title="Title" direction="row" closable={false}>
+        Description
+      </Banner>,
+    ))
 })

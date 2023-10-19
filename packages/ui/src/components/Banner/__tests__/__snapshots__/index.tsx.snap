@@ -990,6 +990,201 @@ exports[`Banner renders correctly with an image 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Banner renders correctly with closable to false 1`] = `
+<DocumentFragment>
+  .cache-1voqd75-Container-styles {
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-hmn6z8-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.cache-wbv6k9-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1yytme-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1crc7d-StyledText {
+  color: #521094;
+  font-size: 21px;
+  font-family: Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1cozjuw-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1hgmfcr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
+  >
+    <div
+      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      class="cache-wbv6k9-Stack ehpbis70"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1yytme-Stack ehpbis70"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-1crc7d-StyledText e13y3mga0"
+        >
+          Title
+        </p>
+        <p
+          class="cache-1cozjuw-StyledText e13y3mga0"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-1hgmfcr-Stack ehpbis70"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Banner renders correctly with default values 1`] = `
 <DocumentFragment>
   .cache-1voqd75-Container-styles {
