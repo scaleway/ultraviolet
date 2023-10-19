@@ -1,5 +1,23 @@
 # Change Log
 
+## 1.8.5
+
+### Patch Changes
+
+- [#3043](https://github.com/scaleway/ultraviolet/pull/3043) [`b232bff4`](https://github.com/scaleway/ultraviolet/commit/b232bff46ba7248283a8ab8f38429269c058ca09) Thanks [@matthprost](https://github.com/matthprost)! - Fix Popover component text to be correct color
+
+- [#3031](https://github.com/scaleway/ultraviolet/pull/3031) [`25617eca`](https://github.com/scaleway/ultraviolet/commit/25617ecaabd2eee8c93a2b18e5091b05ff1df669) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.28`.
+  Updated dependency `@types/react-dom` to `18.2.13`.
+
+- [#3021](https://github.com/scaleway/ultraviolet/pull/3021) [`e161e40f`](https://github.com/scaleway/ultraviolet/commit/e161e40f888463c4ee14a353b12c19ab99d388c3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/preset-typescript` to `7.23.2`.
+  Updated dependency `@babel/runtime` to `7.23.2`.
+
+- [#3026](https://github.com/scaleway/ultraviolet/pull/3026) [`49a72ac9`](https://github.com/scaleway/ultraviolet/commit/49a72ac9c0ea61ee552e5b74251c8eeb8239126d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.2`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.2`.
+  Updated dependency `@babel/preset-env` to `7.23.2`.
+- Updated dependencies [[`7364c97f`](https://github.com/scaleway/ultraviolet/commit/7364c97fb31435817ccf7e9bc78cd3ec9b2e6703), [`dcb99f39`](https://github.com/scaleway/ultraviolet/commit/dcb99f39b00cbf50f9763d37b71d4b3b0fdbf248), [`b232bff4`](https://github.com/scaleway/ultraviolet/commit/b232bff46ba7248283a8ab8f38429269c058ca09), [`3b01b130`](https://github.com/scaleway/ultraviolet/commit/3b01b1308db15430074fe47a9f1b694a25ed171b), [`1c89ebde`](https://github.com/scaleway/ultraviolet/commit/1c89ebde6e57de5dfa574df098c0f7fc45f6cd0a), [`25617eca`](https://github.com/scaleway/ultraviolet/commit/25617ecaabd2eee8c93a2b18e5091b05ff1df669), [`1e4705d5`](https://github.com/scaleway/ultraviolet/commit/1e4705d5f36bae7474c941beee8fd60c06842671), [`49a72ac9`](https://github.com/scaleway/ultraviolet/commit/49a72ac9c0ea61ee552e5b74251c8eeb8239126d)]:
+  - @ultraviolet/ui@1.20.0
+
 ## 1.8.4
 
 ### Patch Changes
