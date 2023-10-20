@@ -295,7 +295,7 @@ export const lightTheme = {
     focusDanger: '0px 0px 0px 3px #f91b6c40',
     focusInfo: '0px 0px 0px 3px #71c2ff40',
     focusNeutral: '0px 0px 0px 3px #151a2d5c',
-    focusPrimary: '0px 0px 0px 3px #5e127e40',
+    focusPrimary: '0px 0px 0px 3px #8c40ef40',
     focusSuccess: '0px 0px 0px 3px #45d19f40',
     focusWarning: '0px 0px 0px 3px #fbc60040',
     hoverDanger: '0px 4px 16px 4px #ffe3edcc',

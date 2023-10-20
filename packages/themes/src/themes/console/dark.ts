@@ -156,11 +156,11 @@ export const darkTheme = {
           },
           primary: {
             fill: '#a061f4',
-            fillDisabled: '#252a3b',
+            fillDisabled: '#484b5a',
             fillStrong: '#ccaefc',
-            fillStrongDisabled: '#252a3b',
+            fillStrongDisabled: '#484b5a',
             fillWeak: '#2d1c51',
-            fillWeakDisabled: '#191f33',
+            fillWeakDisabled: '#252a3b',
           },
           warning: {
             fill: '#36220e',
@@ -295,7 +295,7 @@ export const darkTheme = {
     focusDanger: '0px 0px 0px 3px #e7196440',
     focusInfo: '0px 0px 0px 3px #004b8340',
     focusNeutral: '0px 0px 0px 3px #0c0f1a8c',
-    focusPrimary: '0px 0px 0px 3px #401d6e40',
+    focusPrimary: '0px 0px 0px 3px #a061f440',
     focusSuccess: '0px 0px 0px 3px #1b533f40',
     focusWarning: '0px 0px 0px 3px #4b3b0040',
     hoverDanger: '0px 4px 16px 4px #570a25cc',

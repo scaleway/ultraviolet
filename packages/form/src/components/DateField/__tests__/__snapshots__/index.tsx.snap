@@ -2,37 +2,37 @@
 
 exports[`DateField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-1nlpqh {
+  .cache-nntkqq {
   width: 100%;
 }
 
-.cache-1nlpqh div.react-datepicker-wrapper {
+.cache-nntkqq div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__input-container {
+.cache-nntkqq div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__triangle {
+.cache-nntkqq div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1nlpqh div.react-datepicker__month-container {
+.cache-nntkqq div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1nlpqh .react-datepicker-popper {
+.cache-nntkqq .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1nlpqh .calendar {
+.cache-nntkqq .calendar {
   font-family: 'Asap';
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__header {
+.cache-nntkqq .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -42,19 +42,19 @@ exports[`DateField should render correctly 1`] = `
   position: inherit;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__triangle {
+.cache-nntkqq .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__month {
+.cache-nntkqq .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-names {
+.cache-nntkqq .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-name {
+.cache-nntkqq .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #3f4250;
   font-weight: 500;
@@ -65,7 +65,7 @@ exports[`DateField should render correctly 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day {
+.cache-nntkqq .calendar .react-datepicker__day {
   color: #727683;
   font-size: 16px;
   width: 1.7rem;
@@ -74,77 +74,30 @@ exports[`DateField should render correctly 1`] = `
   margin-right: 3px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected {
-  color: #ffffff;
-  background-color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day--selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--selected:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
+.cache-nntkqq .calendar .react-datepicker__day--keyboard-selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range {
-  color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day:hover {
+  color: #641cb3;
+  border-radius: 100%;
   background-color: #f1eefc;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range {
-  color: #521094;
-  background-color: #f1eefc;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-start {
+.cache-nntkqq .calendar .react-datepicker__day--disabled {
   color: #ffffff;
-  background-color: #521094;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-start:disabled {
+.cache-nntkqq .calendar .react-datepicker__day--disabled:hover {
   color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-end:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--keyboard-selected {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day:hover {
-  color: #222638;
-  background-color: #e9eaeb;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled {
-  color: #b5b7bd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled:hover {
-  color: #b5b7bd;
   background-color: transparent;
 }
 
@@ -152,7 +105,7 @@ exports[`DateField should render correctly 1`] = `
   position: relative;
 }
 
-.cache-8cjzic {
+.cache-1ehejze {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -181,49 +134,49 @@ exports[`DateField should render correctly 1`] = `
   padding: 8px;
 }
 
-.cache-8cjzic::-webkit-input-placeholder {
+.cache-1ehejze::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic::-moz-placeholder {
+.cache-1ehejze::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic:-ms-input-placeholder {
+.cache-1ehejze:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic::placeholder {
+.cache-1ehejze::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic:hover,
-.cache-8cjzic:focus {
+.cache-1ehejze:hover,
+.cache-1ehejze:focus {
   border-color: #792dd4;
 }
 
-.cache-8cjzic:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1ehejze:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-8cjzic::-webkit-input-placeholder {
+.cache-1ehejze::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic::-moz-placeholder {
+.cache-1ehejze::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic:-ms-input-placeholder {
+.cache-1ehejze:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic::placeholder {
+.cache-1ehejze::placeholder {
   opacity: 1;
 }
 
@@ -283,7 +236,7 @@ exports[`DateField should render correctly 1`] = `
     novalidate=""
   >
     <div
-      class="cache-1nlpqh e1bm75lk2"
+      class="cache-nntkqq e1bm75lk4"
     >
       <div
         class="react-datepicker-wrapper"
@@ -302,7 +255,7 @@ exports[`DateField should render correctly 1`] = `
               >
                 <input
                   autocomplete="on"
-                  class="cache-8cjzic el3h3g92"
+                  class="cache-1ehejze el3h3g92"
                   id="date-input-test"
                   type="text"
                   value=""
@@ -317,11 +270,11 @@ exports[`DateField should render correctly 1`] = `
               </div>
             </div>
             <div
-              class="cache-1y7q7le e1bm75lk1"
+              class="cache-1y7q7le e1bm75lk2"
             >
               <hr
                 aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
+                class="e1bm75lk5 cache-xqpu2t e1d1zom90"
                 role="separator"
               />
               <svg
@@ -343,37 +296,37 @@ exports[`DateField should render correctly 1`] = `
 
 exports[`DateField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-1nlpqh {
+  .cache-nntkqq {
   width: 100%;
 }
 
-.cache-1nlpqh div.react-datepicker-wrapper {
+.cache-nntkqq div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__input-container {
+.cache-nntkqq div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__triangle {
+.cache-nntkqq div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1nlpqh div.react-datepicker__month-container {
+.cache-nntkqq div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1nlpqh .react-datepicker-popper {
+.cache-nntkqq .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1nlpqh .calendar {
+.cache-nntkqq .calendar {
   font-family: 'Asap';
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__header {
+.cache-nntkqq .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -383,19 +336,19 @@ exports[`DateField should render correctly disabled 1`] = `
   position: inherit;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__triangle {
+.cache-nntkqq .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__month {
+.cache-nntkqq .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-names {
+.cache-nntkqq .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-name {
+.cache-nntkqq .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #3f4250;
   font-weight: 500;
@@ -406,7 +359,7 @@ exports[`DateField should render correctly disabled 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day {
+.cache-nntkqq .calendar .react-datepicker__day {
   color: #727683;
   font-size: 16px;
   width: 1.7rem;
@@ -415,77 +368,30 @@ exports[`DateField should render correctly disabled 1`] = `
   margin-right: 3px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected {
-  color: #ffffff;
-  background-color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day--selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--selected:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
+.cache-nntkqq .calendar .react-datepicker__day--keyboard-selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range {
-  color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day:hover {
+  color: #641cb3;
+  border-radius: 100%;
   background-color: #f1eefc;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range {
-  color: #521094;
-  background-color: #f1eefc;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-start {
+.cache-nntkqq .calendar .react-datepicker__day--disabled {
   color: #ffffff;
-  background-color: #521094;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-start:disabled {
+.cache-nntkqq .calendar .react-datepicker__day--disabled:hover {
   color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-end:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--keyboard-selected {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day:hover {
-  color: #222638;
-  background-color: #e9eaeb;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled {
-  color: #b5b7bd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled:hover {
-  color: #b5b7bd;
   background-color: transparent;
 }
 
@@ -493,7 +399,7 @@ exports[`DateField should render correctly disabled 1`] = `
   position: relative;
 }
 
-.cache-clwgcf {
+.cache-m8eos7 {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -527,49 +433,49 @@ exports[`DateField should render correctly disabled 1`] = `
   padding: 8px;
 }
 
-.cache-clwgcf::-webkit-input-placeholder {
+.cache-m8eos7::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-clwgcf::-moz-placeholder {
+.cache-m8eos7::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-clwgcf:-ms-input-placeholder {
+.cache-m8eos7:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-clwgcf::placeholder {
+.cache-m8eos7::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-clwgcf:hover,
-.cache-clwgcf:focus {
+.cache-m8eos7:hover,
+.cache-m8eos7:focus {
   border-color: #792dd4;
 }
 
-.cache-clwgcf:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-m8eos7:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-clwgcf::-webkit-input-placeholder {
+.cache-m8eos7::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-clwgcf::-moz-placeholder {
+.cache-m8eos7::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-clwgcf:-ms-input-placeholder {
+.cache-m8eos7:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-clwgcf::placeholder {
+.cache-m8eos7::placeholder {
   opacity: 1;
 }
 
@@ -629,7 +535,7 @@ exports[`DateField should render correctly disabled 1`] = `
     novalidate=""
   >
     <div
-      class="cache-1nlpqh e1bm75lk2"
+      class="cache-nntkqq e1bm75lk4"
     >
       <div
         class="react-datepicker-wrapper"
@@ -649,7 +555,7 @@ exports[`DateField should render correctly disabled 1`] = `
               >
                 <input
                   autocomplete="on"
-                  class="cache-clwgcf el3h3g92"
+                  class="cache-m8eos7 el3h3g92"
                   disabled=""
                   id="date-input-test"
                   type="text"
@@ -665,11 +571,11 @@ exports[`DateField should render correctly disabled 1`] = `
               </div>
             </div>
             <div
-              class="cache-1y7q7le e1bm75lk1"
+              class="cache-1y7q7le e1bm75lk2"
             >
               <hr
                 aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
+                class="e1bm75lk5 cache-xqpu2t e1d1zom90"
                 role="separator"
               />
               <svg
@@ -691,37 +597,37 @@ exports[`DateField should render correctly disabled 1`] = `
 
 exports[`DateField should trigger events 1`] = `
 <DocumentFragment>
-  .cache-1nlpqh {
+  .cache-nntkqq {
   width: 100%;
 }
 
-.cache-1nlpqh div.react-datepicker-wrapper {
+.cache-nntkqq div.react-datepicker-wrapper {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__input-container {
+.cache-nntkqq div.react-datepicker__input-container {
   display: block;
 }
 
-.cache-1nlpqh div.react-datepicker__triangle {
+.cache-nntkqq div.react-datepicker__triangle {
   display: none;
 }
 
-.cache-1nlpqh div.react-datepicker__month-container {
+.cache-nntkqq div.react-datepicker__month-container {
   padding: 16px;
 }
 
-.cache-1nlpqh .react-datepicker-popper {
+.cache-nntkqq .react-datepicker-popper {
   z-index: 1000;
 }
 
-.cache-1nlpqh .calendar {
+.cache-nntkqq .calendar {
   font-family: 'Asap';
   border-color: #e9eaeb;
   background-color: #ffffff;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__header {
+.cache-nntkqq .calendar .react-datepicker__header {
   color: #3f4250;
   background-color: #ffffff;
   border-bottom: none;
@@ -731,19 +637,19 @@ exports[`DateField should trigger events 1`] = `
   position: inherit;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__triangle {
+.cache-nntkqq .calendar .react-datepicker__triangle {
   border-bottom-color: #f9f9fa;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__month {
+.cache-nntkqq .calendar .react-datepicker__month {
   margin: 0;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-names {
+.cache-nntkqq .calendar .react-datepicker__day-names {
   margin-top: 8px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day-name {
+.cache-nntkqq .calendar .react-datepicker__day-name {
   font-family: 'Asap';
   color: #3f4250;
   font-weight: 500;
@@ -754,7 +660,7 @@ exports[`DateField should trigger events 1`] = `
   text-transform: capitalize;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day {
+.cache-nntkqq .calendar .react-datepicker__day {
   color: #727683;
   font-size: 16px;
   width: 1.7rem;
@@ -763,77 +669,30 @@ exports[`DateField should trigger events 1`] = `
   margin-right: 3px;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected {
-  color: #ffffff;
-  background-color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day--selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--selected[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--selected:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
+.cache-nntkqq .calendar .react-datepicker__day--keyboard-selected {
+  color: #641cb3;
+  background-color: #f1eefc;
+  border-radius: 100%;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range {
-  color: #521094;
+.cache-nntkqq .calendar .react-datepicker__day:hover {
+  color: #641cb3;
+  border-radius: 100%;
   background-color: #f1eefc;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-selecting-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range {
-  color: #521094;
-  background-color: #f1eefc;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--in-range[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--in-range:disabled {
-  color: #d8c5fc;
-  background-color: #f6f5fd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-start {
+.cache-nntkqq .calendar .react-datepicker__day--disabled {
   color: #ffffff;
-  background-color: #521094;
 }
 
-.cache-1nlpqh .calendar .react-datepicker__day--range-start[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-start:disabled {
+.cache-nntkqq .calendar .react-datepicker__day--disabled:hover {
   color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--range-end[aria-disabled='true'],
-.cache-1nlpqh .calendar .react-datepicker__day--range-end:disabled {
-  color: #ffffff;
-  background-color: #e5dbfd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--keyboard-selected {
-  color: #ffffff;
-  background-color: #521094;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day:hover {
-  color: #222638;
-  background-color: #e9eaeb;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled {
-  color: #b5b7bd;
-}
-
-.cache-1nlpqh .calendar .react-datepicker__day--disabled:hover {
-  color: #b5b7bd;
   background-color: transparent;
 }
 
@@ -841,7 +700,7 @@ exports[`DateField should trigger events 1`] = `
   position: relative;
 }
 
-.cache-8cjzic {
+.cache-1ehejze {
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
   -webkit-appearance: none;
@@ -870,49 +729,49 @@ exports[`DateField should trigger events 1`] = `
   padding: 8px;
 }
 
-.cache-8cjzic::-webkit-input-placeholder {
+.cache-1ehejze::-webkit-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic::-moz-placeholder {
+.cache-1ehejze::-moz-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic:-ms-input-placeholder {
+.cache-1ehejze:-ms-input-placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic::placeholder {
+.cache-1ehejze::placeholder {
   color: #727683;
   opacity: 0;
 }
 
-.cache-8cjzic:hover,
-.cache-8cjzic:focus {
+.cache-1ehejze:hover,
+.cache-1ehejze:focus {
   border-color: #792dd4;
 }
 
-.cache-8cjzic:focus {
-  box-shadow: 0px 0px 0px 3px #5e127e40;
+.cache-1ehejze:focus {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
   border-color: #792dd4;
 }
 
-.cache-8cjzic::-webkit-input-placeholder {
+.cache-1ehejze::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic::-moz-placeholder {
+.cache-1ehejze::-moz-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic:-ms-input-placeholder {
+.cache-1ehejze:-ms-input-placeholder {
   opacity: 1;
 }
 
-.cache-8cjzic::placeholder {
+.cache-1ehejze::placeholder {
   opacity: 1;
 }
 
@@ -972,7 +831,7 @@ exports[`DateField should trigger events 1`] = `
     novalidate=""
   >
     <div
-      class="cache-1nlpqh e1bm75lk2"
+      class="cache-nntkqq e1bm75lk4"
     >
       <div
         class="react-datepicker-wrapper"
@@ -991,7 +850,7 @@ exports[`DateField should trigger events 1`] = `
               >
                 <input
                   autocomplete="on"
-                  class="cache-8cjzic el3h3g92"
+                  class="cache-1ehejze el3h3g92"
                   id="date-input-test"
                   type="text"
                   value="8/28/2022"
@@ -1006,11 +865,11 @@ exports[`DateField should trigger events 1`] = `
               </div>
             </div>
             <div
-              class="cache-1y7q7le e1bm75lk1"
+              class="cache-1y7q7le e1bm75lk2"
             >
               <hr
                 aria-orientation="vertical"
-                class="e1bm75lk3 cache-xqpu2t e1d1zom90"
+                class="e1bm75lk5 cache-xqpu2t e1d1zom90"
                 role="separator"
               />
               <svg
