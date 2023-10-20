@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.20.2
+
+### Patch Changes
+
+- [#3050](https://github.com/scaleway/ultraviolet/pull/3050) [`cc8bce1d`](https://github.com/scaleway/ultraviolet/commit/cc8bce1d0fc7f326d19d6f55173f2cf386079d23) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ **Hotfix**: fixing the type error on `<DateField />` component not to required props `startDate`, `endDate`, `excludeDate` and `selectsRange`
+
 ## 1.20.1
 
 ### Patch Changes
