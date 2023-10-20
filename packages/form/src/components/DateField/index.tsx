@@ -20,6 +20,8 @@ type DateFieldProps = BaseFieldProps<DateExtends> &
     | 'onFocus'
     | 'onBlur'
     | 'autoFocus'
+    | 'startDate'
+    | 'endDate'
   > & {
     name: string
     maxDate?: Date
