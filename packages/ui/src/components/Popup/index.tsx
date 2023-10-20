@@ -155,6 +155,7 @@ type PopupProps = {
   'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
   hideOnClickOutside?: boolean
   needDebounce?: boolean
+  portalTarget?: HTMLElement
 }
 
 /**
@@ -181,6 +182,7 @@ export const Popup = forwardRef(
       'aria-haspopup': ariaHasPopup,
       hideOnClickOutside = false,
       needDebounce = true,
+      portalTarget = document.body,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -442,7 +444,7 @@ export const Popup = forwardRef(
               >
                 {text}
               </StyledTooltip>,
-              document.body,
+              childrenRef?.current ?? portalTarget,
             )
           : null}
       </>

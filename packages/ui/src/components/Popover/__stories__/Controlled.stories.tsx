@@ -11,16 +11,25 @@ export const Controlled: StoryFn<typeof Popover> = () => {
   }, [])
 
   return (
-    <Popover
-      visible={opened}
-      title="Popover Title"
-      content="This is a simple text content inside the popover. You can customize it by passing text into content property."
-      onClose={onCloseCallBack}
+    <div
+      style={{
+        height: '600px',
+        display: 'flex',
+        justifyContent: 'center',
+        width: '900px',
+      }}
     >
-      <Button onClick={() => setOpened(true)} sentiment="neutral">
-        Open Popover
-      </Button>
-    </Popover>
+      <Popover
+        visible={opened}
+        title="Popover Title"
+        content="This is a simple text content inside the popover. You can customize it by passing text into content property."
+        onClose={onCloseCallBack}
+      >
+        <Button onClick={() => setOpened(true)} sentiment="neutral">
+          Open Popover
+        </Button>
+      </Popover>
+    </div>
   )
 }
 
