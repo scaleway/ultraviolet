@@ -187,15 +187,11 @@ type DateInputProps = Pick<
   | 'locale'
   | 'maxDate'
   | 'minDate'
-  | 'startDate'
-  | 'endDate'
   | 'name'
   | 'onBlur'
   | 'onChange'
   | 'onFocus'
   | 'required'
-  | 'excludeDates'
-  | 'selectsRange'
 > & {
   error?: string
   format?: (value?: Date | string) => string | undefined
@@ -206,6 +202,10 @@ type DateInputProps = Pick<
   value?: Date | string | [Date | null, Date | null]
   className?: string
   'data-testid'?: string
+  selectsRange?: boolean
+  startDate?: Date | null
+  endDate?: Date | null
+  excludeDates?: Date[]
 }
 
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
