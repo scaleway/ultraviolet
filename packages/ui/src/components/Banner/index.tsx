@@ -123,6 +123,7 @@ type BannerProps = {
   image?: ReactNode
   closable?: boolean
   className?: string
+  ['data-testid']?: string
 }
 
 /**
@@ -142,6 +143,7 @@ export const Banner = ({
   image,
   className,
   closable = true,
+  'data-testid': dataTestId,
 }: BannerProps) => {
   const { theme } = useTheme()
   const defaultImage =
@@ -152,7 +154,12 @@ export const Banner = ({
   if (!opened) return null
 
   return (
-    <Container variant={variant} size={size} className={className}>
+    <Container
+      variant={variant}
+      size={size}
+      className={className}
+      data-testid={dataTestId}
+    >
       <ImageStack size={size} justifyContent="center">
         {image ?? <img src={defaultImage} alt="" />}
       </ImageStack>
