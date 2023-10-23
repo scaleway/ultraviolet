@@ -88,4 +88,51 @@ export const deprecatedDarkerTokens = {
       textWeakHover: '#d89d00',
     },
   },
+  typography: {
+    body: {
+      fontFamily: 'Inter, Asap',
+    },
+    bodySmall: {
+      fontFamily: 'Inter, Asap',
+    },
+    bodySmallStrong: {
+      fontFamily: 'Inter, Asap',
+    },
+    bodySmallStronger: {
+      fontFamily: 'Inter, Asap',
+    },
+    bodyStrong: {
+      fontFamily: 'Inter, Asap',
+    },
+    bodyStronger: {
+      fontFamily: 'Inter, Asap',
+    },
+    caption: {
+      fontFamily: 'Inter, Asap',
+    },
+    captionSmall: {
+      fontFamily: 'Inter, Asap',
+    },
+    captionSmallStrong: {
+      fontFamily: 'Inter, Asap',
+    },
+    captionSmallStronger: {
+      fontFamily: 'Inter, Asap',
+    },
+    captionStrong: {
+      fontFamily: 'Inter, Asap',
+    },
+    captionStronger: {
+      fontFamily: 'Inter, Asap',
+    },
+    heading: {
+      fontFamily: 'Inter, Asap',
+    },
+    headingLarge: {
+      fontFamily: 'Inter, Asap',
+    },
+    headingSmall: {
+      fontFamily: 'Inter, Asap',
+    },
+  },
 }

@@ -10,10 +10,10 @@ import lightTheme, { darkTheme } from '../packages/ui/src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
 import isChromatic from 'chromatic/isChromatic'
-import AsapRegularWoff2 from './assets/fonts/asap/Asap-Regular.woff2'
-import AsapMediumWoff2 from './assets/fonts/asap/Asap-Medium.woff2'
-import AsapBoldWoff2 from './assets/fonts/asap/Asap-Bold.woff2'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
+import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
+import InterMediumWoff2 from './assets/fonts/inter/Inter-Medium.woff2'
+import InterRegularWoff2 from './assets/fonts/inter/Inter-Regular.woff2'
 
 if (isChromatic()) seedrandom('manual-seed', { global: true })
 
@@ -76,23 +76,23 @@ export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) => css`
   }
 
   @font-face {
-    font-family: 'Asap';
+    font-family: 'Inter';
     font-style: normal;
-    src: url(${AsapRegularWoff2}) format('woff2');
+    src: url(${InterRegularWoff2}) format('woff2');
     font-weight: 400;
     font-display: swap;
   }
   @font-face {
-    font-family: 'Asap';
+    font-family: 'Inter';
     font-style: normal;
-    src: url(${AsapMediumWoff2}) format('woff2');
+    src: url(${InterMediumWoff2}) format('woff2');
     font-weight: 500;
     font-display: swap;
   }
   @font-face {
-    font-family: 'Asap';
+    font-family: 'Inter';
     font-style: normal;
-    src: url(${AsapBoldWoff2}) format('woff2');
+    src: url(${InterSemiBoldWoff2}) format('woff2');
     font-weight: 600;
     font-display: swap;
   }
