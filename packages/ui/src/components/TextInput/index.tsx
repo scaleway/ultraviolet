@@ -405,6 +405,8 @@ export const TextInput = forwardRef<
       value,
       wrap,
       inputProps,
+      min,
+      max,
     },
     ref,
   ): JSX.Element => {
@@ -595,6 +597,8 @@ export const TextInput = forwardRef<
             type={getType()}
             value={value}
             wrap={wrap}
+            min={min}
+            max={max}
             {...inputProps}
           />
           {hasLabel && (
