@@ -1,5 +1,19 @@
 # @ultraviolet/plus
 
+## 0.3.0
+
+### Minor Changes
+
+- [#3071](https://github.com/scaleway/ultraviolet/pull/3071) [`5d7da681`](https://github.com/scaleway/ultraviolet/commit/5d7da681ea352a80b821fcf1be9d029e8c23869c) Thanks [@matthprost](https://github.com/matthprost)! - New font `Inter` added into the theme. The font will fall back on `Asap` until next major. In the meaning time you can start importing and using `Inter`.
+
+### Patch Changes
+
+- [#3062](https://github.com/scaleway/ultraviolet/pull/3062) [`7d00e109`](https://github.com/scaleway/ultraviolet/commit/7d00e1095709ce2f4374a355b58a6edfea0fbac6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.31`.
+  Updated dependency `@types/react-dom` to `18.2.14`.
+- Updated dependencies [[`064d44f3`](https://github.com/scaleway/ultraviolet/commit/064d44f39f73d825a3300001b12afe26188c3fa8), [`74c4bc83`](https://github.com/scaleway/ultraviolet/commit/74c4bc8357ec4eaed1894305ce10e170b9df9f56), [`7d00e109`](https://github.com/scaleway/ultraviolet/commit/7d00e1095709ce2f4374a355b58a6edfea0fbac6), [`4e73b96d`](https://github.com/scaleway/ultraviolet/commit/4e73b96d747604b9631ba5d7a53e80e1627c75be), [`5d7da681`](https://github.com/scaleway/ultraviolet/commit/5d7da681ea352a80b821fcf1be9d029e8c23869c)]:
+  - @ultraviolet/themes@1.3.0
+  - @ultraviolet/ui@1.21.0
+
 ## 0.2.2
 
 ### Patch Changes
