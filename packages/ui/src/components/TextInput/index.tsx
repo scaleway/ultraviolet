@@ -154,7 +154,7 @@ const StyledLabel = styled('label', {
   ${({ error, theme: { colors } }) =>
     error &&
     css`
-      color: ${colors.danger.textWeak};
+      color: ${colors.danger.text};
     `}
 `
 
@@ -164,7 +164,7 @@ const StyledRelativeDiv = styled.div`
 
 const StyledError = styled.div`
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.danger.textWeak};
+  color: ${({ theme }) => theme.colors.danger.text};
   padding-top: ${({ theme }) => theme.space['0.25']};
 `
 
@@ -233,12 +233,12 @@ const StyledInput = styled('input', {
 
   &:hover,
   &:focus {
-    border-color: ${({ theme: { colors } }) => colors.primary.borderWeakHover};
+    border-color: ${({ theme: { colors } }) => colors.primary.borderHover};
   }
 
   &:focus {
     box-shadow: ${({ theme: { shadows } }) => shadows.focusPrimary};
-    border-color: ${({ theme: { colors } }) => colors.primary.borderWeakHover};
+    border-color: ${({ theme: { colors } }) => colors.primary.borderHover};
   }
 
   ${({ isPlaceholderVisible }) =>
@@ -268,7 +268,7 @@ const StyledInput = styled('input', {
 
   ${({ error, theme: { colors, shadows } }) =>
     error &&
-    `border-color: ${colors.danger.borderWeak};
+    `border-color: ${colors.danger.border};
 
     &:hover,
     &:focus {
@@ -277,7 +277,7 @@ const StyledInput = styled('input', {
 
     &:focus {
       box-shadow: ${shadows.focusDanger};
-      border-color: ${colors.danger.borderWeakHover};
+      border-color: ${colors.danger.borderHover};
     }`}
 
     ${({ multiline, resizable, fillAvailable }) =>

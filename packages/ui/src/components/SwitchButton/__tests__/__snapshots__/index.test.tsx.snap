@@ -2,22 +2,22 @@
 
 exports[`FocusOverlay renders correctly when left is focused 1`] = `
 <DocumentFragment>
-  .cache-14lpp9t-StyledDiv {
+  .cache-vkpuwe-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #521094;
+  background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
+.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-14lpp9t-StyledDiv etutiin0"
+    class="cache-vkpuwe-StyledDiv etutiin0"
     data-focusposition="left"
     style="transform: translate3d(0px, 0, 0) scale3d(1, 1, 1); width: 400px;"
   />
@@ -26,22 +26,22 @@ exports[`FocusOverlay renders correctly when left is focused 1`] = `
 
 exports[`FocusOverlay renders correctly when left is focused and has mouse down 1`] = `
 <DocumentFragment>
-  .cache-14lpp9t-StyledDiv {
+  .cache-vkpuwe-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #521094;
+  background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
+.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-14lpp9t-StyledDiv etutiin0"
+    class="cache-vkpuwe-StyledDiv etutiin0"
     data-focusposition="left"
     style="transform: translate3d(0px, 0, 0) scale3d(1.015, 1, 1); width: 400px;"
   />
@@ -50,22 +50,22 @@ exports[`FocusOverlay renders correctly when left is focused and has mouse down 
 
 exports[`FocusOverlay renders correctly when right is focused 1`] = `
 <DocumentFragment>
-  .cache-14lpp9t-StyledDiv {
+  .cache-vkpuwe-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #521094;
+  background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
+.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-14lpp9t-StyledDiv etutiin0"
+    class="cache-vkpuwe-StyledDiv etutiin0"
     data-focusposition="right"
     style="transform: translate3d(408px, 0, 0) scale3d(1, 1, 1); width: 200px;"
   />
@@ -74,22 +74,22 @@ exports[`FocusOverlay renders correctly when right is focused 1`] = `
 
 exports[`FocusOverlay renders correctly when right is focused and has mouse down 1`] = `
 <DocumentFragment>
-  .cache-14lpp9t-StyledDiv {
+  .cache-vkpuwe-StyledDiv {
   position: absolute;
   height: calc(100% - 8px);
   border-radius: 4px;
-  background: #521094;
+  background: #8c40ef;
   transform-origin: left center;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.cache-14lpp9t-StyledDiv[data-focusposition='right'] {
+.cache-vkpuwe-StyledDiv[data-focusposition='right'] {
   transform-origin: right center;
 }
 
 <div
-    class="cache-14lpp9t-StyledDiv etutiin0"
+    class="cache-vkpuwe-StyledDiv etutiin0"
     data-focusposition="right"
     style="transform: translate3d(408px, 0, 0) scale3d(1.03, 1, 1); width: 200px;"
   />
@@ -110,7 +110,7 @@ exports[`SwitchButton renders correctly 1`] = `
   position: relative;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard {
+.cache-1kca9ar-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -146,56 +146,56 @@ exports[`SwitchButton renders correctly 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-error='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-disabled='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover,
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within,
-.cache-8wcpgm-Container-StyledSelectableCard:active {
+.cache-1kca9ar-Container-StyledSelectableCard:hover,
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within,
+.cache-1kca9ar-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #641cb3;
 }
 
 .cache-ymc80m-Stack {
@@ -221,7 +221,7 @@ exports[`SwitchButton renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -242,66 +242,66 @@ exports[`SwitchButton renders correctly 1`] = `
   align-items: start;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
-  fill: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
   fill: #e5dbfd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
   fill: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
   fill: #ffd3e3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
   fill: #f3f3f4;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
-  color: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
+  color: #641cb3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement input+svg {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement input+svg {
   display: none;
 }
 
-.cache-xnnie7-RadioInput {
+.cache-uvol5-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -311,7 +311,7 @@ exports[`SwitchButton renders correctly 1`] = `
   border-width: 0;
 }
 
-.cache-xnnie7-RadioInput+.ehkrmld3 .ehkrmld4 {
+.cache-uvol5-RadioInput+.ehkrmld3 .ehkrmld4 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -321,40 +321,40 @@ exports[`SwitchButton renders correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-xnnie7-RadioInput:checked+svg .ehkrmld4 {
+.cache-uvol5-RadioInput:checked+svg .ehkrmld4 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-xnnie7-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
-  fill: #521094;
+.cache-uvol5-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
   background-color: #5e127e40;
-  fill: #521094;
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
   fill: #f1eefc;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
   fill: #ffebf2;
 }
 
@@ -378,7 +378,7 @@ exports[`SwitchButton renders correctly 1`] = `
       class="cache-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="false"
         data-disabled="false"
       >
@@ -387,13 +387,13 @@ exports[`SwitchButton renders correctly 1`] = `
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+            class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
             data-checked="false"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
-              class="cache-xnnie7-RadioInput ehkrmld2"
+              class="cache-uvol5-RadioInput ehkrmld2"
               id="test-left"
               name="test"
               type="radio"
@@ -433,7 +433,7 @@ exports[`SwitchButton renders correctly 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="true"
         data-disabled="false"
       >
@@ -442,14 +442,14 @@ exports[`SwitchButton renders correctly 1`] = `
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+            class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
             data-checked="true"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
               checked=""
-              class="cache-xnnie7-RadioInput ehkrmld2"
+              class="cache-uvol5-RadioInput ehkrmld2"
               id="test-right"
               name="test"
               type="radio"
@@ -507,7 +507,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   position: relative;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard {
+.cache-1kca9ar-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -543,56 +543,56 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-error='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-disabled='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover,
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within,
-.cache-8wcpgm-Container-StyledSelectableCard:active {
+.cache-1kca9ar-Container-StyledSelectableCard:hover,
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within,
+.cache-1kca9ar-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #641cb3;
 }
 
 .cache-ymc80m-Stack {
@@ -618,7 +618,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -639,66 +639,66 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   align-items: start;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
-  fill: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
   fill: #e5dbfd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
   fill: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
   fill: #ffd3e3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
   fill: #f3f3f4;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
-  color: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
+  color: #641cb3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement input+svg {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement input+svg {
   display: none;
 }
 
-.cache-xnnie7-RadioInput {
+.cache-uvol5-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -708,7 +708,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   border-width: 0;
 }
 
-.cache-xnnie7-RadioInput+.ehkrmld3 .ehkrmld4 {
+.cache-uvol5-RadioInput+.ehkrmld3 .ehkrmld4 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -718,40 +718,40 @@ exports[`SwitchButton renders correctly with right value 1`] = `
   transform: scale(0);
 }
 
-.cache-xnnie7-RadioInput:checked+svg .ehkrmld4 {
+.cache-uvol5-RadioInput:checked+svg .ehkrmld4 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-xnnie7-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
-  fill: #521094;
+.cache-uvol5-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
   background-color: #5e127e40;
-  fill: #521094;
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
   fill: #f1eefc;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
   fill: #ffebf2;
 }
 
@@ -775,7 +775,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
       class="cache-tib6m2-StyledBorderedBox e4ryteh1"
     >
       <div
-        class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="false"
         data-disabled="false"
       >
@@ -784,13 +784,13 @@ exports[`SwitchButton renders correctly with right value 1`] = `
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+            class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
             data-checked="false"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
-              class="cache-xnnie7-RadioInput ehkrmld2"
+              class="cache-uvol5-RadioInput ehkrmld2"
               id="test-left"
               name="test"
               type="radio"
@@ -830,7 +830,7 @@ exports[`SwitchButton renders correctly with right value 1`] = `
         </div>
       </div>
       <div
-        class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+        class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
         data-checked="true"
         data-disabled="false"
       >
@@ -839,14 +839,14 @@ exports[`SwitchButton renders correctly with right value 1`] = `
         >
           <div
             aria-disabled="false"
-            class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+            class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
             data-checked="true"
           >
             <input
               aria-disabled="false"
               aria-invalid="false"
               checked=""
-              class="cache-xnnie7-RadioInput ehkrmld2"
+              class="cache-uvol5-RadioInput ehkrmld2"
               id="test-right"
               name="test"
               type="radio"
@@ -912,7 +912,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   position: relative;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard {
+.cache-1kca9ar-Container-StyledSelectableCard {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -948,56 +948,56 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transition: all 200ms ease-in-out;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-error='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-error='true'] {
   border: 1px solid #b3144d;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-disabled='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-disabled='true'] {
   border: 1px solid #e9eaeb;
   color: #b5b7bd;
   background: #f3f3f4;
   cursor: not-allowed;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
-  border: 1px solid #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true']) {
+  border: 1px solid #8c40ef;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'],
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true']):not([data-disabled='true'])[data-cheked='false'] {
   box-shadow: 0px 4px 16px 4px #f6f3ffcc;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover,
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within,
-.cache-8wcpgm-Container-StyledSelectableCard:active {
+.cache-1kca9ar-Container-StyledSelectableCard:hover,
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within,
+.cache-1kca9ar-Container-StyledSelectableCard:active {
   box-shadow: none;
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
-.cache-8wcpgm-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
+.cache-1kca9ar-Container-StyledSelectableCard:hover:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:focus-within:not([data-error='true'][data-disabled='true']),
+.cache-1kca9ar-Container-StyledSelectableCard:active:not([data-error='true'][data-disabled='true']) {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] {
   border: none;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard[data-checked='true'] label {
+.cache-1kca9ar-Container-StyledSelectableCard[data-checked='true'] label {
   color: #ffffff;
 }
 
-.cache-8wcpgm-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
-  color: #521094;
+.cache-1kca9ar-Container-StyledSelectableCard:not([data-checked='true']) label:hover {
+  color: #641cb3;
 }
 
 .cache-ymc80m-Stack {
@@ -1023,7 +1023,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1044,66 +1044,66 @@ exports[`SwitchButton renders with tooltip 1`] = `
   align-items: start;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false'],
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
-  fill: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
   fill: #e5dbfd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
   fill: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
   fill: #ffd3e3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true']>label,
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld2 {
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
   fill: #f3f3f4;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
-  color: #521094;
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-checked='true'] {
+  color: #641cb3;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[data-error='true'] {
   color: #b3144d;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement[aria-disabled='true'] {
   color: #b5b7bd;
 }
 
-.cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement input+svg {
+.cache-951vtx-RadioContainer-StyledRadio-StyledElement input+svg {
   display: none;
 }
 
-.cache-xnnie7-RadioInput {
+.cache-uvol5-RadioInput {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -1113,7 +1113,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
   border-width: 0;
 }
 
-.cache-xnnie7-RadioInput+.ehkrmld3 .ehkrmld4 {
+.cache-uvol5-RadioInput+.ehkrmld3 .ehkrmld4 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -1123,40 +1123,40 @@ exports[`SwitchButton renders with tooltip 1`] = `
   transform: scale(0);
 }
 
-.cache-xnnie7-RadioInput:checked+svg .ehkrmld4 {
+.cache-uvol5-RadioInput:checked+svg .ehkrmld4 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-xnnie7-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
-  fill: #521094;
+.cache-uvol5-RadioInput:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 {
   background-color: #5e127e40;
-  fill: #521094;
+  fill: #8c40ef;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
   fill: #f1eefc;
 }
 
-.cache-xnnie7-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-disabled='false']:focus-visible+.ehkrmld3 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-xnnie7-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-uvol5-RadioInput[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
   fill: #ffebf2;
 }
 
@@ -1186,7 +1186,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
         class="cache-tib6m2-StyledBorderedBox e4ryteh1"
       >
         <div
-          class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+          class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
           data-checked="false"
           data-disabled="false"
         >
@@ -1195,13 +1195,13 @@ exports[`SwitchButton renders with tooltip 1`] = `
           >
             <div
               aria-disabled="false"
-              class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+              class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
               data-checked="false"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
-                class="cache-xnnie7-RadioInput ehkrmld2"
+                class="cache-uvol5-RadioInput ehkrmld2"
                 id="test-left"
                 name="test"
                 type="radio"
@@ -1241,7 +1241,7 @@ exports[`SwitchButton renders with tooltip 1`] = `
           </div>
         </div>
         <div
-          class="e4ryteh0 cache-8wcpgm-Container-StyledSelectableCard e1s5n3hj1"
+          class="e4ryteh0 cache-1kca9ar-Container-StyledSelectableCard e1s5n3hj1"
           data-checked="true"
           data-disabled="false"
         >
@@ -1250,14 +1250,14 @@ exports[`SwitchButton renders with tooltip 1`] = `
           >
             <div
               aria-disabled="false"
-              class="e1s5n3hj2 cache-1h6t9b9-RadioContainer-StyledRadio-StyledElement ehkrmld1"
+              class="e1s5n3hj2 cache-951vtx-RadioContainer-StyledRadio-StyledElement ehkrmld1"
               data-checked="true"
             >
               <input
                 aria-disabled="false"
                 aria-invalid="false"
                 checked=""
-                class="cache-xnnie7-RadioInput ehkrmld2"
+                class="cache-uvol5-RadioInput ehkrmld2"
                 id="test-right"
                 name="test"
                 type="radio"

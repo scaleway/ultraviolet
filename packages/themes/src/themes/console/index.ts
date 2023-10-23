@@ -1,5 +1,9 @@
+import deepmerge from 'deepmerge'
 import { darkTheme } from './dark'
 import { darkerTheme } from './darker'
+import { deprecatedDarkTokens } from './deprecated/dark'
+import { deprecatedDarkerTokens } from './deprecated/darker'
+import { deprecatedLightTokens } from './deprecated/light'
 import { lightTheme } from './light'
 
 const screens = {
@@ -12,15 +16,18 @@ const screens = {
 
 export const consoleLightTheme = {
   screens,
-  ...lightTheme,
+  ...(deepmerge(lightTheme, deprecatedLightTokens) as typeof lightTheme &
+    typeof deprecatedLightTokens),
 }
 
 export const consoleDarkTheme = {
   screens,
-  ...darkTheme,
+  ...(deepmerge(darkTheme, deprecatedDarkTokens) as typeof darkTheme &
+    typeof deprecatedDarkTokens),
 }
 
 export const consoleDarkerTheme = {
   screens,
-  ...darkerTheme,
+  ...(deepmerge(darkerTheme, deprecatedDarkerTokens) as typeof darkerTheme &
+    typeof deprecatedDarkerTokens),
 }

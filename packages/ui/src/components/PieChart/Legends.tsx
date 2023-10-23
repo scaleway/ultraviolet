@@ -40,7 +40,7 @@ const ListItem = styled.li<{ isFocused: boolean }>`
   margin-top: ${({ theme }) => theme.space['1']};
   width: 100%;
   color: ${({ isFocused, theme }) =>
-    isFocused ? theme.colors.primary.textWeak : theme.colors.neutral.text};
+    isFocused ? theme.colors.primary.text : theme.colors.neutral.text};
 `
 
 const Bullet = styled.div<{
@@ -87,7 +87,7 @@ const Line = styled.span`
 `
 
 const ProgressiveLine = styled.span<{ isFocused: boolean }>`
-  border-bottom: 1px solid ${({ theme }) => theme.colors.primary.borderWeak};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.primary.border};
   position: absolute;
   left: 0;
   top: 0;

@@ -64,7 +64,7 @@ export const StyledTabButton = styled('button')`
 
   &[aria-selected='true'] {
     color: ${({ theme }) => theme.colors.primary.text};
-    border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
+    border-bottom-color: ${({ theme }) => theme.colors.primary.border};
   }
 
   &[aria-disabled='false']:not(:disabled) {
@@ -73,7 +73,7 @@ export const StyledTabButton = styled('button')`
     &:active {
       outline: none;
       color: ${({ theme }) => theme.colors.primary.text};
-      border-bottom-color: ${({ theme }) => theme.colors.primary.borderWeak};
+      border-bottom-color: ${({ theme }) => theme.colors.primary.border};
 
       &[data-is-selected='false'] {
         ${StyledBadge} {

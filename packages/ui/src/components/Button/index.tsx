@@ -160,25 +160,18 @@ const StyledOutlinedButton = styled('button', {
   border: 1px solid
     ${({ theme, sentiment }) =>
       theme.colors[sentiment][
-        sentiment === 'neutral' ? 'borderStrong' : 'borderWeak'
+        sentiment === 'neutral' ? 'borderStrong' : 'border'
       ]};
-  color: ${({ theme, sentiment }) =>
-    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textWeak']};
+  color: ${({ theme, sentiment }) => theme.colors[sentiment].text};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${
-            theme.colors[sentiment][
-              sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
-            ]
-          };
+          ${theme.colors[sentiment].textDisabled};
         border: 1px solid ${
           theme.colors[sentiment][
-            sentiment === 'neutral'
-              ? 'borderStrongDisabled'
-              : 'borderWeakDisabled'
+            sentiment === 'neutral' ? 'borderStrongDisabled' : 'borderDisabled'
           ]
         };
 
@@ -188,16 +181,10 @@ const StyledOutlinedButton = styled('button', {
        {
             background: ${theme.colors[sentiment].backgroundHover};
             color:
-            ${
-              theme.colors[sentiment][
-                sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
-              ]
-            };
+            ${theme.colors[sentiment].textHover};
             border: 1px solid ${
               theme.colors[sentiment][
-                sentiment === 'neutral'
-                  ? 'borderStrongHover'
-                  : 'borderWeakHover'
+                sentiment === 'neutral' ? 'borderStrongHover' : 'borderHover'
               ]
             };
 
@@ -215,29 +202,20 @@ const StyledGhostButton = styled('button', {
 
   background: none;
   border: none;
-  color: ${({ theme, sentiment }) =>
-    theme.colors[sentiment][sentiment === 'neutral' ? 'text' : 'textWeak']};
+  color: ${({ theme, sentiment }) => theme.colors[sentiment].text};
 
   ${({ theme, sentiment, disabled }) =>
     disabled
       ? `
         color:
-          ${
-            theme.colors[sentiment][
-              sentiment === 'neutral' ? 'textDisabled' : 'textWeakDisabled'
-            ]
-          };
+          ${theme.colors[sentiment].textDisabled};
       `
       : `
         &:hover, &:active
         {
             background: ${theme.colors[sentiment].backgroundHover};
             color:
-              ${
-                theme.colors[sentiment][
-                  sentiment === 'neutral' ? 'textHover' : 'textWeakHover'
-                ]
-              };
+              ${theme.colors[sentiment].textHover};
         }
 `}
 `

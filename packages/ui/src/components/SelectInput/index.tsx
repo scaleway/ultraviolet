@@ -64,7 +64,7 @@ const getPlaceholderColor = ({
   theme,
 }: SelectStyleGetterProps) => {
   if (state.isDisabled) return theme.colors.neutral.textDisabled
-  if (error) return theme.colors.danger.textWeak
+  if (error) return theme.colors.danger.text
 
   return theme.colors.neutral.textWeak
 }
