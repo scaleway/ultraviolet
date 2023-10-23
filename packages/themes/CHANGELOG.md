@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.3.0
+
+### Minor Changes
+
+- [#2995](https://github.com/scaleway/ultraviolet/pull/2995) [`064d44f3`](https://github.com/scaleway/ultraviolet/commit/064d44f39f73d825a3300001b12afe26188c3fa8) Thanks [@matthprost](https://github.com/matthprost)! - New theme tokens weak have been deprecated on all sentiments except neutral
+
+- [#3071](https://github.com/scaleway/ultraviolet/pull/3071) [`5d7da681`](https://github.com/scaleway/ultraviolet/commit/5d7da681ea352a80b821fcf1be9d029e8c23869c) Thanks [@matthprost](https://github.com/matthprost)! - New font `Inter` added into the theme. The font will fall back on `Asap` until next major. In the meaning time you can start importing and using `Inter`.
+
 ## 1.2.1
 
 ### Patch Changes
