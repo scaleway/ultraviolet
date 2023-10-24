@@ -114,12 +114,12 @@ const FwdMenu = forwardRef(
 
       // Focus the first item when the menu is opened
       if (!isVisible) {
-        requestIdleCallback(() => {
+        setTimeout(() => {
           // We have to wait for the popup to be inserted in the DOM
           if (popupRef.current?.firstChild?.firstChild instanceof HTMLElement) {
             popupRef.current.firstChild.firstChild.focus()
           }
-        })
+        }, 1)
       }
     }
 
