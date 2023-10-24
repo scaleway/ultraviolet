@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.3.1
+
+### Patch Changes
+
+- [#3072](https://github.com/scaleway/ultraviolet/pull/3072) [`45652fea`](https://github.com/scaleway/ultraviolet/commit/45652fea602ac763e741b954ba152fff94e17889) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCard />` component color usage on title and description
+
+- Updated dependencies [[`9d985b8f`](https://github.com/scaleway/ultraviolet/commit/9d985b8fd02dd283d6e1d5d6d4a5333a25212cf5), [`2e60a083`](https://github.com/scaleway/ultraviolet/commit/2e60a08383351c63789bb6692dc202d36abc8af9)]:
+  - @ultraviolet/ui@1.21.1
+
 ## 0.3.0
 
 ### Minor Changes
