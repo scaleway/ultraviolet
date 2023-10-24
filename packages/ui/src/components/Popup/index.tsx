@@ -341,7 +341,7 @@ export const Popup = forwardRef(
         const tooltipCurrent = innerTooltipRef.current
         const childrenCurrent = childrenRef.current
 
-        if (tooltipCurrent && hideOnClickOutside) {
+        if (tooltipCurrent && hideOnClickOutside && !event.defaultPrevented) {
           if (
             event.target &&
             event.target !== tooltipCurrent &&
@@ -357,12 +357,12 @@ export const Popup = forwardRef(
       }
       if (visibleInDom) {
         document.body.addEventListener('keyup', handleEscPress)
-        document.body.addEventListener('mousedown', handleClickOutside)
+        document.body.addEventListener('click', handleClickOutside)
       }
 
       return () => {
         document.body.removeEventListener('keyup', handleEscPress)
-        document.body.removeEventListener('mousedown', handleClickOutside)
+        document.body.removeEventListener('click', handleClickOutside)
       }
     }, [
       hideTooltip,
@@ -424,6 +424,13 @@ export const Popup = forwardRef(
       return <>{children}</>
     }
 
+    /**
+     * This event handle allow us to not bubble the event to document.body like this react-select works fine
+     */
+    const stopClickPropagation: React.MouseEventHandler = event => {
+      event.nativeEvent.stopImmediatePropagation()
+    }
+
     return (
       <>
         {renderChildren()}
@@ -439,6 +446,7 @@ export const Popup = forwardRef(
                 reverseAnimation={reverseAnimation}
                 data-testid={dataTestId}
                 data-has-arrow={hasArrow}
+                onClick={stopClickPropagation}
               >
                 {text}
               </StyledTooltip>,
