@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.21.1
+
+### Patch Changes
+
+- [#3075](https://github.com/scaleway/ultraviolet/pull/3075) [`9d985b8f`](https://github.com/scaleway/ultraviolet/commit/9d985b8fd02dd283d6e1d5d6d4a5333a25212cf5) Thanks [@QuiiBz](https://github.com/QuiiBz)! - Fix MenuV2 focus when opening it by replace `requestIdleCallback` by `setTimeout`
+
+- [#3076](https://github.com/scaleway/ultraviolet/pull/3076) [`2e60a083`](https://github.com/scaleway/ultraviolet/commit/2e60a08383351c63789bb6692dc202d36abc8af9) Thanks [@matthprost](https://github.com/matthprost)! - ⚠️ HOTFIX: MenuV2 not correctly working when having a modal with inputs inside of it due to on click event handler
+
 ## 1.21.0
 
 ### Minor Changes
