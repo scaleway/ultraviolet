@@ -1,6 +1,6 @@
 import I18n from '@scaleway/use-i18n'
 import { Preview } from '@storybook/react'
-import { css, ThemeProvider, Global, Theme } from '@emotion/react'
+import { css, ThemeProvider, Global } from '@emotion/react'
 import { normalize } from '@ultraviolet/ui'
 import { useDarkMode } from 'storybook-dark-mode'
 import { themes } from '@storybook/theming'
@@ -65,11 +65,8 @@ const parameters = {
   },
 }
 
-export const globalStyles = (mode: 'light' | 'dark') => (theme: Theme) => css`
+export const globalStyles = (mode: 'light' | 'dark') => () => css`
   ${normalize()}
-  body {
-    color: ${theme.colors.neutral.text};
-  }
 
   :root {
     color-scheme: ${mode};

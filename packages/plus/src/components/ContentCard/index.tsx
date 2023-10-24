@@ -21,6 +21,7 @@ const Card = styled.div<{
   display: block;
   text-align: left;
   padding: 0;
+  color: ${({ theme }) => theme.colors.neutral.text};
   text-decoration: none;
   border: 1px solid ${({ theme }) => theme.colors.neutral.border};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -191,16 +192,21 @@ export const ContentCard = forwardRef<
                   <Stack gap={0.5}>
                     <Stack>
                       {subtitle ? (
-                        <Text as="small" variant="caption" prominence="weak">
+                        <Text
+                          as="small"
+                          variant="caption"
+                          prominence="weak"
+                          sentiment="neutral"
+                        >
                           {subtitle}
                         </Text>
                       ) : null}
-                      <Text as="h3" variant="bodyStronger">
+                      <Text as="h3" variant="bodyStronger" sentiment="neutral">
                         {title}
                       </Text>
                     </Stack>
                     {description ? (
-                      <Text as="p" variant="bodySmall">
+                      <Text as="p" variant="bodySmall" sentiment="neutral">
                         {description}
                       </Text>
                     ) : null}
