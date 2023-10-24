@@ -357,12 +357,12 @@ export const Popup = forwardRef(
       }
       if (visibleInDom) {
         document.body.addEventListener('keyup', handleEscPress)
-        document.body.addEventListener('mousedown', handleClickOutside)
+        document.body.addEventListener('click', handleClickOutside)
       }
 
       return () => {
         document.body.removeEventListener('keyup', handleEscPress)
-        document.body.removeEventListener('mousedown', handleClickOutside)
+        document.body.removeEventListener('click', handleClickOutside)
       }
     }, [
       hideTooltip,
