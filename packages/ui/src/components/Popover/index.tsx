@@ -55,6 +55,11 @@ const StyledPopup = styled(Popup, {
   }}
 `
 
+// This is to avoid having text inherit color from popup (which is white on white background)
+const StyledStack = styled(Stack)`
+  color: ${({ theme }) => theme.colors.neutral.text};
+`
+
 type ContentWrapperProps = Pick<
   PopoverProps,
   'title' | 'onClose' | 'sentiment' | 'children'
@@ -73,7 +78,7 @@ const ContentWrapper = ({
   }, [])
 
   return (
-    <Stack gap={1}>
+    <StyledStack gap={1}>
       <Stack direction="row" justifyContent="space-between">
         <Text
           variant="bodyStrong"
@@ -105,7 +110,7 @@ const ContentWrapper = ({
       ) : (
         children
       )}
-    </Stack>
+    </StyledStack>
   )
 }
 
