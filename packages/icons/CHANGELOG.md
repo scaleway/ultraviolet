@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 2.5.0
+
+### Minor Changes
+
+- [#3079](https://github.com/scaleway/ultraviolet/pull/3079) [`e04315b0`](https://github.com/scaleway/ultraviolet/commit/e04315b000d414ca16c615805a059e3eb9487969) Thanks [@fabienhebert](https://github.com/fabienhebert)! - Icons: add database icon
+
 ## 2.4.2
 
 ### Patch Changes
