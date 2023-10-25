@@ -990,6 +990,201 @@ exports[`Banner renders correctly with an image 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Banner renders correctly with closable to false 1`] = `
+<DocumentFragment>
+  .cache-1voqd75-Container-styles {
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-hmn6z8-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.cache-wbv6k9-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1yytme-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15hxg7v-StyledText {
+  color: #641cb3;
+  font-size: 21px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-qnqg38-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1hgmfcr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
+  >
+    <div
+      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      class="cache-wbv6k9-Stack ehpbis70"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1yytme-Stack ehpbis70"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-15hxg7v-StyledText e13y3mga0"
+        >
+          Title
+        </p>
+        <p
+          class="cache-qnqg38-StyledText e13y3mga0"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-1hgmfcr-Stack ehpbis70"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Banner renders correctly with default values 1`] = `
 <DocumentFragment>
   .cache-1voqd75-Container-styles {
@@ -1534,7 +1729,550 @@ exports[`Banner renders correctly with direction row 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with size small 1`] = `
+exports[`Banner sizes and variants renders correctly with size medium and variant intro 1`] = `
+<DocumentFragment>
+  .cache-1voqd75-Container-styles {
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f1eefc;
+  background-image: url(test-file-stub);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.cache-1voqd75-Container-styles>svg:first-child,
+.cache-1voqd75-Container-styles>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1voqd75-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1voqd75-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-hmn6z8-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.cache-19d60zd-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1yytme-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-15hxg7v-StyledText {
+  color: #641cb3;
+  font-size: 21px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-qnqg38-StyledText {
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1hgmfcr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-1voqd75-Container-styles e1kdwp5x1"
+  >
+    <div
+      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      class="cache-19d60zd-Stack ehpbis70"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1yytme-Stack ehpbis70"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-15hxg7v-StyledText e13y3mga0"
+        >
+          Title
+        </p>
+        <p
+          class="cache-qnqg38-StyledText e13y3mga0"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-1hgmfcr-Stack ehpbis70"
+      />
+    </div>
+    <button
+      class="cache-1xcp86l-StyledGhostButton e112qvla0"
+      name="close"
+      type="button"
+    >
+      <svg
+        class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner sizes and variants renders correctly with size medium and variant promotional 1`] = `
+<DocumentFragment>
+  .cache-1iq2gtr-Container-styles {
+  padding: 24px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  gap: 16px;
+  background-image: url(test-file-stub),linear-gradient(180deg, #c43bff 0%, #521094 88.87%);
+  -webkit-background-position: right;
+  background-position: right;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.cache-1iq2gtr-Container-styles>svg:first-child,
+.cache-1iq2gtr-Container-styles>img {
+  height: 140px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.cache-1iq2gtr-Container-styles button[name='close'] {
+  background: none;
+}
+
+.cache-1iq2gtr-Container-styles button[name='close']:hover {
+  background: none;
+}
+
+.cache-hmn6z8-Stack-ImageStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 140px;
+}
+
+.cache-19d60zd-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1yytme-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-nls6su-StyledText {
+  color: #ffffff;
+  font-size: 21px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-19ma3ne-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1hgmfcr-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-13hzq4w-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-13hzq4w-StyledFilledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-13hzq4w-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-13hzq4w-StyledFilledButton:hover,
+.cache-13hzq4w-StyledFilledButton:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<div
+    class="cache-1iq2gtr-Container-styles e1kdwp5x1"
+  >
+    <div
+      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
+    >
+      <img
+        alt=""
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      class="cache-19d60zd-Stack ehpbis70"
+      style="flex: 1;"
+    >
+      <div
+        class="cache-1yytme-Stack ehpbis70"
+        style="flex: 1;"
+      >
+        <p
+          class="cache-nls6su-StyledText e13y3mga0"
+        >
+          Title
+        </p>
+        <p
+          class="cache-19ma3ne-StyledText e13y3mga0"
+        >
+          Description
+        </p>
+      </div>
+      <div
+        class="cache-1hgmfcr-Stack ehpbis70"
+      />
+    </div>
+    <button
+      class="cache-13hzq4w-StyledFilledButton e112qvla2"
+      name="close"
+      type="button"
+    >
+      <svg
+        class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+        />
+      </svg>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Banner sizes and variants renders correctly with size small and variant intro 1`] = `
 <DocumentFragment>
   .cache-mkpxbw-Container-styles {
   padding: 16px;
@@ -1806,10 +2544,10 @@ exports[`Banner renders correctly with size small 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Banner renders correctly with type promotional 1`] = `
+exports[`Banner sizes and variants renders correctly with size small and variant promotional 1`] = `
 <DocumentFragment>
-  .cache-1iq2gtr-Container-styles {
-  padding: 24px;
+  .cache-4l24hn-Container-styles {
+  padding: 16px;
   border-radius: 8px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1822,31 +2560,31 @@ exports[`Banner renders correctly with type promotional 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 16px;
-  background-image: url(test-file-stub),linear-gradient(180deg, #c43bff 0%, #521094 88.87%);
-  -webkit-background-position: right;
-  background-position: right;
-  background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
+  background-image: url(test-file-stub),url(test-file-stub),linear-gradient(180deg, #c43bff 0%, #521094 88.87%);
+  -webkit-background-position: left,right;
+  background-position: left,right;
+  background-repeat: no-repeat,no-repeat;
+  -webkit-background-size: contain,contain;
+  background-size: contain,contain;
 }
 
-.cache-1iq2gtr-Container-styles>svg:first-child,
-.cache-1iq2gtr-Container-styles>img {
-  height: 140px;
+.cache-4l24hn-Container-styles>svg:first-child,
+.cache-4l24hn-Container-styles>img {
+  height: 100px;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.cache-1iq2gtr-Container-styles button[name='close'] {
+.cache-4l24hn-Container-styles button[name='close'] {
   background: none;
 }
 
-.cache-1iq2gtr-Container-styles button[name='close']:hover {
+.cache-4l24hn-Container-styles button[name='close']:hover {
   background: none;
 }
 
-.cache-hmn6z8-Stack-ImageStack {
+.cache-37jj6f-Stack-ImageStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1867,7 +2605,7 @@ exports[`Banner renders correctly with type promotional 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 140px;
+  width: 74px;
 }
 
 .cache-19d60zd-Stack {
@@ -1915,13 +2653,13 @@ exports[`Banner renders correctly with type promotional 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-nls6su-StyledText {
+.cache-1wdc4om-StyledText {
   color: #ffffff;
-  font-size: 21px;
+  font-size: 16px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2026,10 +2764,10 @@ exports[`Banner renders correctly with type promotional 1`] = `
 }
 
 <div
-    class="cache-1iq2gtr-Container-styles e1kdwp5x1"
+    class="cache-4l24hn-Container-styles e1kdwp5x1"
   >
     <div
-      class="cache-hmn6z8-Stack-ImageStack e1kdwp5x0"
+      class="cache-37jj6f-Stack-ImageStack e1kdwp5x0"
     >
       <img
         alt=""
@@ -2045,7 +2783,7 @@ exports[`Banner renders correctly with type promotional 1`] = `
         style="flex: 1;"
       >
         <p
-          class="cache-nls6su-StyledText e13y3mga0"
+          class="cache-1wdc4om-StyledText e13y3mga0"
         >
           Title
         </p>

@@ -78,7 +78,7 @@ const styles = ({
 }
 
 const Container = styled('div', {
-  shouldForwardProp: prop => !['variant', 'size'].includes(prop),
+  shouldForwardProp: prop => !['variant', 'size', 'padding'].includes(prop),
 })<{ variant: Variant; size: Size }>`
   padding: ${({ theme, size }) => theme.space[size === 'small' ? '2' : '3']};
   border-radius: ${({ theme }) => theme.radii.large};
@@ -96,6 +96,7 @@ const Container = styled('div', {
 
   button[name='close'] {
     background: none;
+
     &:hover {
       background: none;
     }
@@ -120,7 +121,9 @@ type BannerProps = {
   linkText?: string
   linkHref?: string
   image?: ReactNode
+  closable?: boolean
   className?: string
+  ['data-testid']?: string
 }
 
 /**
@@ -139,6 +142,8 @@ export const Banner = ({
   linkHref,
   image,
   className,
+  closable = true,
+  'data-testid': dataTestId,
 }: BannerProps) => {
   const { theme } = useTheme()
   const defaultImage =
@@ -149,7 +154,12 @@ export const Banner = ({
   if (!opened) return null
 
   return (
-    <Container variant={variant} size={size} className={className}>
+    <Container
+      variant={variant}
+      size={size}
+      className={className}
+      data-testid={dataTestId}
+    >
       <ImageStack size={size} justifyContent="center">
         {image ?? <img src={defaultImage} alt="" />}
       </ImageStack>
@@ -213,22 +223,24 @@ export const Banner = ({
           ) : null}
         </Stack>
       </Stack>
-      <Button
-        icon="close"
-        size="small"
-        name="close"
-        variant={variant === 'intro' ? 'ghost' : 'filled'}
-        sentiment={
-          variant === 'intro' ||
-          (variant === 'promotional' && theme !== 'light')
-            ? 'neutral'
-            : 'primary'
-        }
-        onClick={() => {
-          setOpened(false)
-          onClose?.()
-        }}
-      />
+      {closable ? (
+        <Button
+          icon="close"
+          size="small"
+          name="close"
+          variant={variant === 'intro' ? 'ghost' : 'filled'}
+          sentiment={
+            variant === 'intro' ||
+            (variant === 'promotional' && theme !== 'light')
+              ? 'neutral'
+              : 'primary'
+          }
+          onClick={() => {
+            setOpened(false)
+            onClose?.()
+          }}
+        />
+      ) : null}
     </Container>
   )
 }
