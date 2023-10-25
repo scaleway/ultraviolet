@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.22.0
+
+### Minor Changes
+
+- [#3049](https://github.com/scaleway/ultraviolet/pull/3049) [`625692c3`](https://github.com/scaleway/ultraviolet/commit/625692c3327b84df4cf378cad5501105eef676ce) Thanks [@matthprost](https://github.com/matthprost)! - Add new prop `closable` to `<Banner />` component that will hide close button when set to false
+
+### Patch Changes
+
+- [#3046](https://github.com/scaleway/ultraviolet/pull/3046) [`88ec8f4c`](https://github.com/scaleway/ultraviolet/commit/88ec8f4ca3692245e49278d66e26fe9b6dcd1030) Thanks [@matthprost](https://github.com/matthprost)! - Fix TagInput placeholder to take full width
+
+- [#3080](https://github.com/scaleway/ultraviolet/pull/3080) [`fdc513b5`](https://github.com/scaleway/ultraviolet/commit/fdc513b557b1807cedf5f8554b81cc39d23f44d3) Thanks [@philibea](https://github.com/philibea)! - Add children function on MenuV2 with toggle props
+
+- [#3081](https://github.com/scaleway/ultraviolet/pull/3081) [`70e36110`](https://github.com/scaleway/ultraviolet/commit/70e361106a80a4f4a1b59052306168893bd36d1b) Thanks [@matthprost](https://github.com/matthprost)! - Fix popover color inherited from parent
+
+- Updated dependencies [[`e04315b0`](https://github.com/scaleway/ultraviolet/commit/e04315b000d414ca16c615805a059e3eb9487969)]:
+  - @ultraviolet/icons@2.5.0
+
 ## 1.21.1
 
 ### Patch Changes
