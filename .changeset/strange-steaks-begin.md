@@ -2,4 +2,4 @@
 '@ultraviolet/illustrations': minor
 ---
 
-Add new illustration iam
+Add new illustrations `blockStorage`, `documentDB`, `ipfsNaming`, `serverlessDB`, `serverlessJob`
