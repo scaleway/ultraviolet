@@ -42,11 +42,15 @@ const StyledPopup = styled(Popup)`
   }
 `
 
+type ChildMenuProps = {
+  toggle: () => void
+}
+
 type MenuProps = {
   id?: string
   ariaLabel?: string
   placement?: ComponentProps<typeof Popup>['placement']
-  children?: ReactNode
+  children?: ReactNode | (({ toggle }: ChildMenuProps) => ReactNode)
   className?: string
   disclosure: DisclosureElement
   hasArrow?: boolean
@@ -155,7 +159,9 @@ const FwdMenu = forwardRef(
         tabIndex={-1}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
-            {children}
+            {typeof children === 'function'
+              ? children({ toggle: toggleVisible })
+              : children}
           </MenuList>
         }
       >

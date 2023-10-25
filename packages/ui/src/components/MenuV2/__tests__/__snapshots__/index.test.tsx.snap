@@ -162,33 +162,6 @@ exports[`Menu placement renders bottom 1`] = `
 }
 
 <div
-    aria-controls="menu-:rk:"
-    aria-describedby="menu-:rk:"
-    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="-1"
-  >
-    <button
-      aria-expanded="true"
-      aria-haspopup="dialog"
-      type="button"
-    >
-      Menu
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Menu placement renders left 1`] = `
-<DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
-  display: inherit;
-}
-
-.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
-  width: 100%;
-}
-
-<div
     aria-controls="menu-:rn:"
     aria-describedby="menu-:rn:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
@@ -205,7 +178,7 @@ exports[`Menu placement renders left 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Menu placement renders right 1`] = `
+exports[`Menu placement renders left 1`] = `
 <DocumentFragment>
   .cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
@@ -232,6 +205,33 @@ exports[`Menu placement renders right 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Menu placement renders right 1`] = `
+<DocumentFragment>
+  .cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+<div
+    aria-controls="menu-:rt:"
+    aria-describedby="menu-:rt:"
+    class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
+    tabindex="-1"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="dialog"
+      type="button"
+    >
+      Menu
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Menu placement renders top 1`] = `
 <DocumentFragment>
   .cache-1hzk1lh-StyledChildrenContainer {
@@ -243,8 +243,8 @@ exports[`Menu placement renders top 1`] = `
 }
 
 <div
-    aria-controls="menu-:rh:"
-    aria-describedby="menu-:rh:"
+    aria-controls="menu-:rk:"
+    aria-describedby="menu-:rk:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
     tabindex="-1"
   >

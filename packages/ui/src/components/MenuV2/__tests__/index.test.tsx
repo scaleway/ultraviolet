@@ -1,5 +1,12 @@
-import { afterAll, beforeEach, describe, jest, test } from '@jest/globals'
-import { screen } from '@testing-library/react'
+import {
+  afterAll,
+  beforeEach,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
+import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MenuV2 } from '..'
 import {
@@ -55,25 +62,41 @@ describe('Menu', () => {
 
   test('disclosure Component render with function disclosure', async () => {
     renderWithTheme(
-      <MenuV2
-        visible
-        id="menu"
-        disclosure={() => <button type="button">Menu</button>}
-      >
+      <MenuV2 id="menu" disclosure={() => <button type="button">Menu</button>}>
         <MenuV2.Item href="/link">Menu.Item as Link</MenuV2.Item>
       </MenuV2>,
     )
-
-    globalThis.requestIdleCallback = jest
-      .fn<(callback: () => void) => void>()
-      .mockImplementation(callback =>
-        callback(),
-      ) as unknown as typeof requestIdleCallback
 
     const menuButton = screen.getByRole('button')
     // Open and close
     await userEvent.click(menuButton)
     await userEvent.click(menuButton)
+  })
+
+  test('disclosure Component render with function children', async () => {
+    renderWithTheme(
+      <MenuV2 id="menu" disclosure={() => <button type="button">Menu</button>}>
+        {({ toggle }) => (
+          <MenuV2.Item onClick={toggle}>
+            Menu.Item as Button with toggle
+          </MenuV2.Item>
+        )}
+      </MenuV2>,
+    )
+    const menuButton = screen.getByRole<HTMLButtonElement>('button')
+    // Open Menu
+    await userEvent.click(menuButton)
+
+    const menuLink = screen.getByRole<HTMLLinkElement>('menuitem')
+    await userEvent.click(menuLink)
+
+    await waitFor(() => {
+      expect(menuLink).not.toBeVisible()
+    })
+
+    await waitFor(() => {
+      expect(menuButton.getAttribute('aria-expanded')).toBe('false')
+    })
   })
 
   describe('placement', () => {
