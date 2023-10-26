@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.1.0
+
+### Minor Changes
+
+- [#3083](https://github.com/scaleway/ultraviolet/pull/3083) [`1c9f2f9b`](https://github.com/scaleway/ultraviolet/commit/1c9f2f9b02a73b1f9491976a395661f6b9758c72) Thanks [@matthprost](https://github.com/matthprost)! - Add new illustrations `blockStorage`, `documentDB`, `ipfsNaming`, `serverlessDB`, `serverlessJob`
+
 ## 1.0.0
 
 ### Major Changes
