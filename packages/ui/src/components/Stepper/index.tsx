@@ -8,6 +8,15 @@ import { Text } from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
 
+const SIZES = {
+  small: {
+    height: 2,
+  },
+  medium: {
+    height: 4,
+  },
+} as const
+
 const loadingAnimation = keyframes`
   from {
     width: 0;
@@ -53,20 +62,33 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
   }
 `
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.div<{
+  size: 'small' | 'medium'
+  labelPosition: 'column' | 'row'
+}>`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 0 ${({ theme }) => theme.space['1']};
+  gap: ${({ theme, labelPosition, size }) =>
+    size === 'medium' && labelPosition === 'column'
+      ? theme.space['0']
+      : theme.space['1']};
 
   ${StyledStepContainer} {
-    width: ${({ theme }) => theme.space['4']};
+    display: flex;
+    flex-direction: ${({ labelPosition }) =>
+      labelPosition === 'column' ? 'column' : 'row'};
+    align-items: ${({ labelPosition }) =>
+      labelPosition === 'column' ? 'center' : 'baseline'};
+    gap: ${({ theme, labelPosition }) =>
+      labelPosition === 'column' ? theme.space['0.5'] : theme.space['1']};
     white-space: nowrap;
   }
 
   ${StyledLine} {
-    height: ${({ theme }) => theme.space['0.5']};
+    height: ${({ size }) => SIZES[size].height}px;
     margin-top: ${({ theme }) => theme.space['2']};
     margin-bottom: ${({ theme }) => theme.space['2']};
   }
@@ -76,12 +98,14 @@ type StepperNumbersProps = {
   temporal: Temporal
   children: ReactNode
   CurrentStep: number
+  size?: 'small' | 'medium'
 }
 
 const StepperNumbers = ({
   temporal,
   children,
   CurrentStep,
+  size = 'medium',
 }: StepperNumbersProps) => (
   <StyledStepContainer>
     <Bullet
@@ -94,11 +118,12 @@ const StepperNumbers = ({
             text: CurrentStep.toString(),
           })}
       prominence={temporal !== 'current' ? 'default' : 'strong'}
+      size={size}
     />
 
     <StyledText
       as="span"
-      variant="bodySmall"
+      variant={size === 'medium' ? 'body' : 'bodySmall'}
       prominence={temporal === 'next' ? 'weak' : 'default'}
     >
       {children}
@@ -111,6 +136,8 @@ type StepperProps = {
   selected?: number
   children: ReactNode[]
   className?: string
+  labelPosition?: 'column' | 'row'
+  size?: 'small' | 'medium'
   'data-testid'?: string
 }
 
@@ -122,12 +149,19 @@ export const Stepper = ({
   selected = 0,
   animated = false,
   className,
+  labelPosition = 'column',
+  size = 'medium',
   'data-testid': dataTestId,
 }: StepperProps) => {
   const lastStep = Children.count(children) - 1
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
+    <StyledContainer
+      className={className}
+      data-testid={dataTestId}
+      labelPosition={labelPosition}
+      size={size}
+    >
       {flattenChildren(children).map((child, index) => {
         const getTemporal = () => {
           if (selected > index) return 'previous'
@@ -142,7 +176,11 @@ export const Stepper = ({
         return (
           // eslint-disable-next-line react/no-array-index-key
           <Fragment key={`creation-progress-${index}`}>
-            <StepperNumbers CurrentStep={index + 1} temporal={temporal}>
+            <StepperNumbers
+              CurrentStep={index + 1}
+              temporal={temporal}
+              size={size}
+            >
               {child}
             </StepperNumbers>
             {isNotLast ? (
