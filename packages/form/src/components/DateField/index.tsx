@@ -88,7 +88,7 @@ export const DateField = <TFieldValues extends FieldValues>({
           locale={locale}
           required={required}
           onChange={(val: DateExtends | null) => {
-            if (val) {
+            if (val && val instanceof Date) {
               onChange?.(val)
               const newDate = parseDate(val)
               if (isEmpty(field.value as Date)) {
@@ -111,21 +111,20 @@ export const DateField = <TFieldValues extends FieldValues>({
           error={getError({ minDate, maxDate, label }, error)}
           disabled={disabled}
           autoFocus={autoFocus}
-      excludeDates={excludeDates}
-      data-testid={dataTestId}
+          excludeDates={excludeDates}
+          data-testid={dataTestId}
           startDate={
-        selectsRange
-          ? (input.value as [Date | null, Date | null])[0]
-          : undefined
-      }
-      endDate={
-        selectsRange
-          ? (input.value as [Date | null, Date | null])[1]
-          : undefined
-      }
+            selectsRange
+              ? (field.value as [Date | null, Date | null])[0]
+              : undefined
+          }
+          endDate={
+            selectsRange
+              ? (field.value as [Date | null, Date | null])[1]
+              : undefined
+          }
         />
       )}
->>>>>>> 3bfea1c6 (refactor(form): migrate to react hook form)
     />
   )
 }
