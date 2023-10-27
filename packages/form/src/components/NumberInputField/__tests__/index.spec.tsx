@@ -1,5 +1,5 @@
 import { describe, expect, jest, test } from '@jest/globals'
-import { act, screen, waitFor } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInputField } from '../..'
 import {
@@ -12,12 +12,18 @@ import { Form } from '../../Form'
 describe('NumberInputField', () => {
   test('should render correctly', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <NumberInputField name="test" value={0} />,
+      <NumberInputField name="test" />,
+      undefined,
+      {
+        initialValues: {
+          test: 0,
+        },
+      },
     ))
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <NumberInputField name="test" value={10} disabled />,
+      <NumberInputField name="test" disabled />,
       {
         transform: () => {
           const input = screen.getByLabelText('Number Input')
@@ -30,6 +36,11 @@ describe('NumberInputField', () => {
           expect(inputPlus).toBeDisabled()
         },
       },
+      {
+        initialValues: {
+          test: 10,
+        },
+      },
     ))
 
   test('should trigger events correctly', () => {
@@ -37,7 +48,7 @@ describe('NumberInputField', () => {
     const onChange = jest.fn(() => {})
     const onBlur = jest.fn(() => {})
 
-    return shouldMatchEmotionSnapshotFormWrapper(
+    return shouldMatchEmotionSnapshot(
       <Form
         onRawSubmit={() => {}}
         errors={mockErrors}
@@ -92,30 +103,24 @@ describe('NumberInputField', () => {
       </Form>,
       {
         transform: async () => {
-          const input =
-            screen.getByLabelText<HTMLTextAreaElement>('Number Input')
-          // eslint-disable-next-line testing-library/no-node-access
-          if (input.parentElement) await userEvent.click(input.parentElement)
+          const input = screen.getByRole<HTMLInputElement>('spinbutton')
 
           // trigger onMinCrossed
           await userEvent.clear(input)
+          expect(input.value).toBe('')
           await userEvent.type(input, '1')
-          await waitFor(() => expect(input.value).toBe('1'))
-          act(() => {
-            input.blur()
-          })
-          await waitFor(() => expect(input.value).toBe('5'))
+          expect(input.value).toBe('1')
+          await userEvent.click(document.body)
+          expect(input.value).toBe('5')
           expect(onMinCrossed).toBeCalledTimes(1)
 
           // trigger onMaxCrossed
           await userEvent.clear(input)
           await userEvent.type(input, '100')
-          await waitFor(() => expect(input.value).toBe('100'))
-          act(() => {
-            input.blur()
-          })
-          await waitFor(() => expect(input.value).toBe('20'))
-          expect(onMinCrossed).toBeCalledTimes(1)
+          expect(input.value).toBe('100')
+          await userEvent.click(document.body)
+          expect(input.value).toBe('20')
+          expect(onMaxCrossed).toBeCalledTimes(1)
         },
       },
     )
