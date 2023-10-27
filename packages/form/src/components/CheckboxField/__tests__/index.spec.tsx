@@ -39,6 +39,20 @@ describe('CheckboxField', () => {
       },
     ))
 
+  test('should render correctly not checked without value', () =>
+    shouldMatchEmotionSnapshotFormWrapper(
+      <CheckboxField name="checked" />,
+      {
+        transform: async () => {
+          const input = screen.getByRole('checkbox', { hidden: true })
+          await waitFor(() => expect(input).not.toBeChecked())
+        },
+      },
+      {
+        initialValues: {},
+      },
+    ))
+
   test('should render correctly with a value', () =>
     shouldMatchEmotionSnapshotFormWrapper(
       <>
@@ -93,6 +107,25 @@ describe('CheckboxField', () => {
       },
     )
   })
+
+  test('should check two boxes', () =>
+    shouldMatchEmotionSnapshotFormWrapper(
+      <>
+        <CheckboxField name="value" value="foo" />
+        <CheckboxField name="value" value="bar" />
+      </>,
+      {
+        transform: () => {
+          const inputs = screen.getAllByRole('checkbox', { hidden: true })
+          act(() => inputs[0].click())
+          expect(inputs[0]).toBeChecked()
+          expect(inputs[1]).not.toBeChecked()
+          act(() => inputs[1].click())
+          expect(inputs[0]).toBeChecked()
+          expect(inputs[1]).toBeChecked()
+        },
+      },
+    ))
 
   test('should render correctly with errors', () =>
     shouldMatchEmotionSnapshot(
