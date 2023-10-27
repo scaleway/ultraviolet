@@ -8,13 +8,9 @@ import { Text } from '../Text'
 
 type Temporal = 'previous' | 'next' | 'current'
 
-const SIZES = {
-  small: {
-    height: 2,
-  },
-  medium: {
-    height: 4,
-  },
+const LINE_HEIGHT_SIZES = {
+  small: 2,
+  medium: 4,
 } as const
 
 const loadingAnimation = keyframes`
@@ -88,7 +84,7 @@ const StyledContainer = styled.div<{
   }
 
   ${StyledLine} {
-    height: ${({ size }) => SIZES[size].height}px;
+    height: ${({ size }) => LINE_HEIGHT_SIZES[size]}px;
     margin-top: ${({ theme }) => theme.space['2']};
     margin-bottom: ${({ theme }) => theme.space['2']};
   }
