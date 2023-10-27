@@ -1,5 +1,5 @@
 import { describe, expect, jest, test } from '@jest/globals'
-import { act, screen, waitFor } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { CheckboxField, Form } from '../..'
 import {
@@ -27,9 +27,9 @@ describe('CheckboxField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <CheckboxField name="checked" />,
       {
-        transform: async () => {
+        transform: () => {
           const input = screen.getByRole('checkbox', { hidden: true })
-          await waitFor(() => expect(input).toBeChecked())
+          expect(input).toBeChecked()
         },
       },
       {
@@ -43,9 +43,9 @@ describe('CheckboxField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <CheckboxField name="checked" />,
       {
-        transform: async () => {
+        transform: () => {
           const input = screen.getByRole('checkbox', { hidden: true })
-          await waitFor(() => expect(input).not.toBeChecked())
+          expect(input).not.toBeChecked()
         },
       },
       {
