@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3.8.2
         with:
-          node-version: 18
+          node-version: 20
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
@@ -30,7 +30,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3.8.2
         with:
-          node-version: 18
+          node-version: 20
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        node: ['18']
+        node: ['18', '20']
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
@@ -66,7 +66,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3.8.2
         with:
-          node-version: 18
+          node-version: 20
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
@@ -75,7 +75,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node: ['18']
+        node: ['18', '20']
     runs-on: ubuntu-22.04
     needs: [lint, test]
     steps:
@@ -90,7 +90,7 @@ jobs:
   build-examples: # This will build all projects in the examples folder, it assures that all examples are working
     strategy:
       matrix:
-        node: ['18']
+        node: ['20']
     runs-on: ubuntu-22.04
     needs: [lint, test]
     steps:
