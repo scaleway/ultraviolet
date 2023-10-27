@@ -383,7 +383,6 @@ export const NumberInput = ({
             role="status"
           >
             <StyledInput
-              aria-invalid={!!error}
               disabled={disabled}
               name={name}
               onBlur={handleOnBlur}
