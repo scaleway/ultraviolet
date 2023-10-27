@@ -12,5 +12,5 @@ export const mockErrors: FormErrors = {
   pattern: () => `This field should match the regex`,
   required: () => 'This field is required',
   max: ({ max }) => `This field is too high (maximum is : ${max})`,
-  min: () => 'This field is too low',
+  min: ({ min }) => `This field is too low (minimum is: ${min})`,
 }

@@ -253,12 +253,8 @@ export const NumberInput = ({
     )
   }
 
-  const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
-    if (onFocus) onFocus(event)
-  }
-
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    if (currentValue) {
+    if (currentValue !== undefined) {
       const boundedValue = bounded(
         currentValue,
         minValue ?? currentValue,
@@ -387,11 +383,12 @@ export const NumberInput = ({
             role="status"
           >
             <StyledInput
+              aria-invalid={!!error}
               disabled={disabled}
               name={name}
               onBlur={handleOnBlur}
               onChange={handleChange}
-              onFocus={handleOnFocus}
+              onFocus={onFocus}
               onKeyDown={onKeyDown}
               ref={inputRef}
               style={{
