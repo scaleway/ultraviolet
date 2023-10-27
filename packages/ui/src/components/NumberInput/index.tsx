@@ -148,7 +148,7 @@ type NumberInputProps = {
    */
   text?: string
   defaultValue?: number
-  value?: number
+  value?: number | null
   disabledTooltip?: string
   className?: string
   'data-testid'?: string
@@ -209,7 +209,8 @@ export const NumberInput = ({
     return defaultValue
   })
 
-  const currentValue = value !== undefined ? value : inputValue
+  const currentValue =
+    value !== undefined && value !== null ? value : inputValue
 
   const setValue = (
     newValue: number | undefined,
@@ -218,28 +219,22 @@ export const NumberInput = ({
      */
     hasMinMaxVerification = true,
   ) => {
-    if (value === undefined) {
-      if (hasMinMaxVerification) {
-        if (newValue !== undefined && newValue < minValue) {
-          setInputValue(minValue)
-
-          return
-        }
-
-        if (
-          newValue !== undefined &&
-          maxValue !== undefined &&
-          newValue > maxValue
-        ) {
-          setInputValue(maxValue)
-
-          return
-        }
+    let nextValue = newValue
+    if (value === undefined && hasMinMaxVerification) {
+      if (newValue !== undefined && newValue < minValue) {
+        nextValue = minValue
       }
 
-      setInputValue(newValue)
+      if (
+        newValue !== undefined &&
+        maxValue !== undefined &&
+        newValue > maxValue
+      ) {
+        nextValue = maxValue
+      }
     }
-    onChange?.(newValue)
+    setInputValue(nextValue)
+    onChange?.(nextValue)
   }
 
   const offsetFn = (direction: number) => () => {
@@ -258,12 +253,8 @@ export const NumberInput = ({
     )
   }
 
-  const handleOnFocus: FocusEventHandler<HTMLInputElement> = event => {
-    if (onFocus) onFocus(event)
-  }
-
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    if (currentValue) {
+    if (currentValue !== undefined) {
       const boundedValue = bounded(
         currentValue,
         minValue ?? currentValue,
@@ -392,11 +383,12 @@ export const NumberInput = ({
             role="status"
           >
             <StyledInput
+              aria-invalid={!!error}
               disabled={disabled}
               name={name}
               onBlur={handleOnBlur}
               onChange={handleChange}
-              onFocus={handleOnFocus}
+              onFocus={onFocus}
               onKeyDown={onKeyDown}
               ref={inputRef}
               style={{
