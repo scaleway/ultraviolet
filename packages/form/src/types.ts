@@ -43,4 +43,5 @@ export type BaseFieldProps<TFieldValues extends FieldValues = FieldValues> = {
   rules?: UseControllerProps<TFieldValues>['rules']
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
+  value?: PathValue<TFieldValues, Path<TFieldValues>>
 }

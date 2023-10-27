@@ -16,7 +16,6 @@ type CheckboxFieldProps<TFieldValues extends FieldValues> =
         | 'onFocus'
         | 'progress'
         | 'size'
-        | 'value'
         | 'data-testid'
         | 'helper'
         | 'tooltip'
@@ -44,18 +43,22 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
   helper,
   tooltip,
   'data-testid': dataTestId,
+  value,
 }: CheckboxFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
 
   return (
     <Controller
       name={name}
+      disabled={disabled}
       rules={{ required, ...rules }}
       render={({ field, fieldState: { error } }) => (
         <Checkbox
           name={field.name}
           onChange={event => {
-            field.onChange(event)
+            field.onChange(
+              value ? [...(field.value ?? []), value] : event.target.checked,
+            )
             onChange?.(event)
           }}
           onBlur={event => {
@@ -65,8 +68,12 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
           onFocus={onFocus}
           size={size}
           progress={progress}
-          disabled={disabled}
-          checked={!!field.value}
+          disabled={field.disabled}
+          checked={
+            Array.isArray(field.value)
+              ? (field.value as (typeof value)[]).includes(value)
+              : !!field.value
+          }
           error={getError({ label: label ?? '' }, error)}
           ref={field.ref}
           className={className}
@@ -74,6 +81,7 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
           data-testid={dataTestId}
           helper={helper}
           tooltip={tooltip}
+          value={value}
         >
           {children}
         </Checkbox>
