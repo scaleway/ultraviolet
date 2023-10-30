@@ -29,6 +29,34 @@ describe('Popup', () => {
     expect(PopupPortal).toBeVisible()
   })
 
+  test(`should display Popup on hover with no animation`, async () => {
+    renderWithTheme(
+      <Popup id="test" text="test success!" disableAnimation>
+        <p data-testid="children">Hover me</p>
+      </Popup>,
+    )
+
+    const input = screen.getByTestId('children')
+    await userEvent.hover(input)
+
+    const PopupPortal = screen.getByText('test success!')
+    expect(PopupPortal).toBeVisible()
+  })
+
+  test(`should display Popup on hover with maxHeight`, async () => {
+    renderWithTheme(
+      <Popup id="test" text="test success!" maxHeight="200px">
+        <p data-testid="children">Hover me</p>
+      </Popup>,
+    )
+
+    const input = screen.getByTestId('children')
+    await userEvent.hover(input)
+
+    const PopupPortal = screen.getByText('test success!')
+    expect(PopupPortal).toBeVisible()
+  })
+
   test(`should display Popup on hover with function children`, async () => {
     renderWithTheme(
       <Popup id="test" text="test success!">

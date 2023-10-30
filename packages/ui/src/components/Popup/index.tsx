@@ -20,8 +20,8 @@ import { createPortal } from 'react-dom'
 import type { PopupPlacement } from './helpers'
 import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
 
-const ANIMATION_DURATION = 230 // in ms
-const DEBOUNCE_DURATION = 200
+const DEFAULT_ANIMATION_DURATION = 230 // in ms
+const DEFAULT_DEBOUNCE_DURATION = 200
 
 function noop() {}
 
@@ -58,14 +58,22 @@ type PositionsType = {
 }
 
 type StyledTooltipProps = {
-  maxWidth: number
+  maxWidth: number | string
   positions: PositionsType
   reverseAnimation: boolean
+  maxHeight?: number | string
+  animationDuration?: number
 }
 
 const StyledTooltip = styled('div', {
   shouldForwardProp: prop =>
-    !['maxWidth', 'positions', 'reverseAnimation'].includes(prop),
+    ![
+      'maxWidth',
+      'positions',
+      'reverseAnimation',
+      'maxHeight',
+      'animationDuration',
+    ].includes(prop),
 })<StyledTooltipProps>`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   color: ${({ theme }) => theme.colors.neutral.textStronger};
@@ -73,18 +81,30 @@ const StyledTooltip = styled('div', {
   padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
   text-align: center;
   position: absolute;
-  max-width: ${({ maxWidth }) => maxWidth}px;
+  max-width: ${({ maxWidth }) =>
+    typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth};
+  max-height: ${({ maxHeight }) =>
+    typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight};
+  overflow: ${({ maxHeight }) => (maxHeight ? 'auto' : undefined)};
   overflow-wrap: break-word;
   font-size: 0.8rem;
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
   transform: ${({ positions }) => positions.tooltipPosition};
-  animation: ${({ positions, reverseAnimation }) => css`
-    ${ANIMATION_DURATION}ms ${!reverseAnimation
-      ? animation(positions)
-      : exitAnimation(positions)} forwards
-  `};
+  animation: ${({
+    positions,
+    reverseAnimation,
+    maxHeight,
+    animationDuration,
+  }) =>
+    maxHeight || animationDuration === 0 || animationDuration === undefined
+      ? undefined
+      : css`
+          ${animationDuration}ms ${!reverseAnimation
+            ? animation(positions)
+            : exitAnimation(positions)} forwards
+        `};
 
   &[data-has-arrow='true'] {
     &::after {
@@ -127,7 +147,7 @@ type PopupProps = {
         onPointerLeave: () => void
         ref: RefObject<HTMLDivElement>
       }) => ReactNode)
-  maxWidth?: number
+  maxWidth?: number | string
   /**
    * `auto` placement will change the position of the tooltip if it doesn't fit in the viewport.
    */
@@ -155,6 +175,14 @@ type PopupProps = {
   'aria-haspopup'?: HTMLAttributes<HTMLDivElement>['aria-haspopup']
   hideOnClickOutside?: boolean
   needDebounce?: boolean
+  /**
+   * If you set a max height keep in mind that the animation is disabled, or it will not work properly on some browsers.
+   */
+  maxHeight?: string | number
+  /**
+   * Will remove the animation on the popup if set to false.
+   */
+  disableAnimation?: boolean
 }
 
 /**
@@ -170,6 +198,7 @@ export const Popup = forwardRef(
       className,
       containerFullWidth,
       maxWidth = 232,
+      maxHeight,
       visible,
       innerRef,
       role = 'tooltip',
@@ -181,6 +210,7 @@ export const Popup = forwardRef(
       'aria-haspopup': ariaHasPopup,
       hideOnClickOutside = false,
       needDebounce = true,
+      disableAnimation = false,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -191,6 +221,10 @@ export const Popup = forwardRef(
     useImperativeHandle(ref, () => innerTooltipRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
+
+    // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
+    const animationDuration =
+      disableAnimation || maxHeight ? 0 : DEFAULT_ANIMATION_DURATION
 
     // Debounce timer will be used to prevent the tooltip from flickering when the user moves the mouse out and in the children element.
     const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
@@ -247,11 +281,17 @@ export const Popup = forwardRef(
           timer.current = setTimeout(() => {
             unmountTooltip()
             onClose?.()
-          }, ANIMATION_DURATION)
+          }, animationDuration)
         },
-        needDebounce ? DEBOUNCE_DURATION : 0,
+        needDebounce && !disableAnimation ? DEFAULT_DEBOUNCE_DURATION : 0,
       )
-    }, [needDebounce, onClose, unmountTooltip])
+    }, [
+      animationDuration,
+      disableAnimation,
+      needDebounce,
+      onClose,
+      unmountTooltip,
+    ])
 
     /**
      * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
@@ -440,6 +480,7 @@ export const Popup = forwardRef(
                 ref={innerTooltipRef}
                 positions={positions}
                 maxWidth={maxWidth}
+                maxHeight={maxHeight}
                 role={role}
                 id={generatedId}
                 className={className}
@@ -447,6 +488,7 @@ export const Popup = forwardRef(
                 data-testid={dataTestId}
                 data-has-arrow={hasArrow}
                 onClick={stopClickPropagation}
+                animationDuration={animationDuration}
               >
                 {text}
               </StyledTooltip>,
