@@ -1,12 +1,72 @@
+import styled from '@emotion/styled'
 import { describe, expect, jest, test } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
+import { useCallback, useState } from 'react'
 import { Popover } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
+import { Button } from '../../Button'
+import { Modal } from '../../Modal'
+import { SelectInput } from '../../SelectInput'
+import { TextInput } from '../../TextInput'
+
+const StyledPopover = styled(Popover)`
+  height: 600px;
+`
+
+const AdvancedPopover = () => {
+  const [opened, setOpened] = useState(false)
+  const onClose = useCallback(() => {
+    setOpened(false)
+  }, [])
+
+  return (
+    <StyledPopover
+      visible={opened}
+      title="Popover Title"
+      onClose={onClose}
+      data-testid="popover"
+      content={
+        <>
+          <Modal
+            disclosure={() => (
+              <Button sentiment="neutral" data-testid="button-modal">
+                Open Modal
+              </Button>
+            )}
+            data-testid="modal"
+          >
+            <div>
+              <div>Modal</div>
+              <SelectInput name="select">
+                <SelectInput.Option value="1">test 1</SelectInput.Option>
+                <SelectInput.Option value="2">test 2</SelectInput.Option>
+              </SelectInput>
+              <TextInput data-testid="modal-text-input" />
+            </div>
+          </Modal>
+          <SelectInput name="select" data-testid="popover-select">
+            <SelectInput.Option value="1">test 1</SelectInput.Option>
+            <SelectInput.Option value="2">test 2</SelectInput.Option>
+          </SelectInput>
+          <TextInput data-testid="popover-text-input" />
+        </>
+      }
+    >
+      <Button
+        onClick={() => setOpened(true)}
+        sentiment="neutral"
+        data-testid="button-popover"
+      >
+        Open Popover
+      </Button>
+    </StyledPopover>
+  )
+}
 
 describe('Tooltip', () => {
   test('should render correctly with required props', () =>
@@ -167,6 +227,86 @@ describe('Tooltip', () => {
     expect(onClose).toHaveBeenCalledTimes(1)
     await waitFor(() => {
       expect(popover).not.toBeVisible()
+    })
+  })
+
+  // This test is made to check advanced use cases of popover with inputs inside and a modal that contains the same inputs
+  // The goal is to check if at any time the popover or the modal close unexpectedly when interacting with the inputs
+  describe(`advanced test`, () => {
+    test(`should open popover click on select, choose an option and fill text input without closing popover`, async () => {
+      renderWithTheme(<AdvancedPopover />)
+      const buttonControlsPopover = screen.getByTestId('button-popover')
+
+      await userEvent.click(buttonControlsPopover)
+      const popover = screen.getByTestId('popover')
+
+      expect(popover).toBeVisible()
+
+      const popoverSelect = screen.getByRole('combobox')
+      const popoverTextInput = screen.getByTestId('popover-text-input')
+
+      await userEvent.click(popoverSelect)
+      const popoverSelectOption = screen.getByTestId('option-select-test 1')
+      await userEvent.click(popoverSelectOption)
+      expect(popover).toBeVisible()
+
+      await userEvent.click(popoverTextInput)
+      expect(popover).toBeVisible()
+
+      await userEvent.type(popoverTextInput, 'test')
+      expect(popover).toBeVisible()
+
+      // closes popover
+      await userEvent.keyboard('{Escape}')
+      await waitFor(() => {
+        expect(popover).not.toBeVisible()
+      })
+    })
+
+    test(`should open popover then modal within popover, click on select, choose an option and fill text input without closing modal and popover`, async () => {
+      renderWithTheme(<AdvancedPopover />)
+      const buttonControlsPopover = screen.getByTestId('button-popover')
+
+      await userEvent.click(buttonControlsPopover)
+      const popover = screen.getByTestId('popover')
+
+      const buttonControlsModal = screen.getByTestId('button-modal')
+      await userEvent.click(buttonControlsModal)
+      const modal = screen.getByTestId('modal')
+      expect(modal).toBeVisible()
+
+      const modalSelect = screen.getAllByRole('combobox')[1]
+      const modalTextInput = screen.getByTestId('modal-text-input')
+
+      await userEvent.click(modalSelect)
+      expect(modal).toBeVisible()
+      expect(popover).toBeVisible()
+
+      const modalSelectOption = screen.getByTestId('option-select-test 1')
+      await userEvent.click(modalSelectOption)
+      expect(modal).toBeVisible()
+      expect(popover).toBeVisible()
+
+      await userEvent.click(modalTextInput)
+      expect(modal).toBeVisible()
+      expect(popover).toBeVisible()
+
+      await userEvent.type(modalTextInput, 'test')
+      expect(modal).toBeVisible()
+      expect(popover).toBeVisible()
+
+      // closes modal
+      await userEvent.keyboard('{Escape}')
+      await waitFor(() => {
+        expect(modal).not.toBeVisible()
+      })
+      expect(popover).toBeVisible()
+
+      // closes popover
+      await userEvent.keyboard('{Escape}')
+      await waitFor(() => {
+        expect(popover).not.toBeVisible()
+      })
     })
   })
 })
