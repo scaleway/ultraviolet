@@ -56,6 +56,8 @@ type MenuProps = {
   hasArrow?: boolean
   visible?: boolean
   'data-testid'?: string
+  maxHeight?: string
+  maxWidth?: string
 }
 
 const MenuList = styled(Stack)`
@@ -95,6 +97,8 @@ const FwdMenu = forwardRef(
       visible = false,
       className,
       'data-testid': dataTestId,
+      maxHeight,
+      maxWidth,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -157,6 +161,8 @@ const FwdMenu = forwardRef(
         ref={popupRef}
         onClose={onClose}
         tabIndex={-1}
+        maxHeight={maxHeight}
+        maxWidth={maxWidth}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {typeof children === 'function'
