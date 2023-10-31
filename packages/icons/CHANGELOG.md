@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 2.5.1
+
+### Patch Changes
+
+- [#3095](https://github.com/scaleway/ultraviolet/pull/3095) [`747fb898`](https://github.com/scaleway/ultraviolet/commit/747fb8981cffbd3eea341c4220d45b6b44a35f92) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.33`.
+
 ## 2.5.0
 
 ### Minor Changes
