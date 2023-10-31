@@ -57,7 +57,10 @@
   },
   "size-limit": [
     {
-      "path": ["packages/*/dist/**/*.js", "!packages/illustrations"],
+      "path": [
+        "packages/*/dist/**/*.js",
+        "!packages/illustrations"
+      ],
       "limit": "230 kB",
       "webpack": false,
       "brotli": true,
