@@ -33,6 +33,11 @@ const StyledText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['1']};
 `
 
+const StyledBullet = styled(Bullet)<{ size: 'small' | 'medium' }>`
+  margin-top: ${({ theme, size }) =>
+    size === 'small' ? theme.space['0.5'] : 0};
+`
+
 const loadingStyle = css`
   animation: ${loadingAnimation} 1s linear infinite;
 `
@@ -60,7 +65,7 @@ const StyledLine = styled.div<{ temporal: Temporal; animated: boolean }>`
 
 const StyledContainer = styled.div<{
   size: 'small' | 'medium'
-  labelPosition: 'column' | 'row'
+  labelPosition: 'bottom' | 'right'
 }>`
   display: flex;
   flex-direction: row;
@@ -68,18 +73,18 @@ const StyledContainer = styled.div<{
   align-items: flex-start;
   gap: 0 ${({ theme }) => theme.space['1']};
   gap: ${({ theme, labelPosition, size }) =>
-    size === 'medium' && labelPosition === 'column'
+    size === 'medium' && labelPosition === 'bottom'
       ? theme.space['0']
       : theme.space['1']};
 
   ${StyledStepContainer} {
     display: flex;
     flex-direction: ${({ labelPosition }) =>
-      labelPosition === 'column' ? 'column' : 'row'};
+      labelPosition === 'bottom' ? 'column' : 'row'};
     align-items: ${({ labelPosition }) =>
-      labelPosition === 'column' ? 'center' : 'baseline'};
+      labelPosition === 'bottom' ? 'center' : 'baseline'};
     gap: ${({ theme, labelPosition }) =>
-      labelPosition === 'column' ? theme.space['0.5'] : theme.space['1']};
+      labelPosition === 'bottom' ? theme.space['0.5'] : theme.space['1']};
     white-space: nowrap;
   }
 
@@ -104,7 +109,7 @@ const StepperNumbers = ({
   size = 'medium',
 }: StepperNumbersProps) => (
   <StyledStepContainer>
-    <Bullet
+    <StyledBullet
       sentiment={temporal === 'next' ? 'neutral' : 'primary'}
       {...(temporal === 'previous'
         ? {
@@ -132,7 +137,7 @@ type StepperProps = {
   selected?: number
   children: ReactNode[]
   className?: string
-  labelPosition?: 'column' | 'row'
+  labelPosition?: 'bottom' | 'right'
   size?: 'small' | 'medium'
   'data-testid'?: string
 }
@@ -145,7 +150,7 @@ export const Stepper = ({
   selected = 0,
   animated = false,
   className,
-  labelPosition = 'column',
+  labelPosition = 'bottom',
   size = 'medium',
   'data-testid': dataTestId,
 }: StepperProps) => {

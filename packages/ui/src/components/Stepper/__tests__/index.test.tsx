@@ -41,7 +41,7 @@ describe('Stepper', () => {
 
   test('renders correctly with step number in row', () =>
     shouldMatchEmotionSnapshot(
-      <Stepper labelPosition="row">
+      <Stepper labelPosition="right">
         <span>Step 1</span>
         <span>Step 2</span>
         <span>Step 3</span>
