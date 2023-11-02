@@ -38,4 +38,22 @@ describe('Stepper', () => {
         <span>Step 3</span>
       </Stepper>,
     ))
+
+  test('renders correctly with step number in row', () =>
+    shouldMatchEmotionSnapshot(
+      <Stepper labelPosition="right">
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
+      </Stepper>,
+    ))
+
+  test('renders correctly with small size', () =>
+    shouldMatchEmotionSnapshot(
+      <Stepper size="small">
+        <span>Step 1</span>
+        <span>Step 2</span>
+        <span>Step 3</span>
+      </Stepper>,
+    ))
 })

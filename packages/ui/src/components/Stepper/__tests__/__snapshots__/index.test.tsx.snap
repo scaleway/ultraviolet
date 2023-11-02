@@ -2,7 +2,7 @@
 
 exports[`Stepper renders correctly with all selected 1`] = `
 <DocumentFragment>
-  .cache-1oo5ecx-StyledContainer {
+  .cache-i28g32-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,14 +19,26 @@ exports[`Stepper renders correctly with all selected 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0 8px;
+  gap: 0;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
-  width: 32px;
+.cache-i28g32-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
   white-space: nowrap;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
+.cache-i28g32-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -50,7 +62,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   justify-content: flex-start;
 }
 
-.cache-j41hqp-StyledContainer {
+.cache-tp2if-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -70,6 +82,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 .cache-qx391f-sizeStyles {
@@ -81,12 +94,12 @@ exports[`Stepper renders correctly with all selected 1`] = `
   min-height: 50%;
 }
 
-.cache-2seue4-StyledText-StyledText {
-  font-size: 14px;
+.cache-16ebxbi-StyledText-StyledText {
+  font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -115,7 +128,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
   width: 100%;
 }
 
-.cache-6c5m3o-StyledContainer {
+.cache-sdib28-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -135,16 +148,17 @@ exports[`Stepper renders correctly with all selected 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 <div
-    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
+    class="cache-i28g32-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-j41hqp-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
       >
         <svg
           class="cache-qx391f-sizeStyles e1gt4cfo0"
@@ -156,7 +170,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -167,10 +181,10 @@ exports[`Stepper renders correctly with all selected 1`] = `
       class="cache-fkq8r-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-j41hqp-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
       >
         <svg
           class="cache-qx391f-sizeStyles e1gt4cfo0"
@@ -182,7 +196,7 @@ exports[`Stepper renders correctly with all selected 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -193,15 +207,15 @@ exports[`Stepper renders correctly with all selected 1`] = `
       class="cache-fkq8r-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-6c5m3o-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
       >
         3
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -224,7 +238,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   }
 }
 
-.cache-1oo5ecx-StyledContainer {
+.cache-i28g32-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,14 +255,26 @@ exports[`Stepper renders correctly with animation 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0 8px;
+  gap: 0;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
-  width: 32px;
+.cache-i28g32-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
   white-space: nowrap;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
+.cache-i28g32-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -272,7 +298,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   justify-content: flex-start;
 }
 
-.cache-j41hqp-StyledContainer {
+.cache-tp2if-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -292,6 +318,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 .cache-qx391f-sizeStyles {
@@ -303,12 +330,12 @@ exports[`Stepper renders correctly with animation 1`] = `
   min-height: 50%;
 }
 
-.cache-2seue4-StyledText-StyledText {
-  font-size: 14px;
+.cache-16ebxbi-StyledText-StyledText {
+  font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -337,7 +364,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   width: 100%;
 }
 
-.cache-6c5m3o-StyledContainer {
+.cache-sdib28-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -357,6 +384,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 .cache-12p7rjs-StyledLine-loadingStyle {
@@ -382,7 +410,7 @@ exports[`Stepper renders correctly with animation 1`] = `
   animation: animation-0 1s linear infinite;
 }
 
-.cache-1k74lo7-StyledContainer {
+.cache-7y11y9-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -402,16 +430,17 @@ exports[`Stepper renders correctly with animation 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 <div
-    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
+    class="cache-i28g32-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-j41hqp-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
       >
         <svg
           class="cache-qx391f-sizeStyles e1gt4cfo0"
@@ -423,7 +452,7 @@ exports[`Stepper renders correctly with animation 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -434,15 +463,15 @@ exports[`Stepper renders correctly with animation 1`] = `
       class="cache-fkq8r-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-6c5m3o-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
       >
         2
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -453,15 +482,15 @@ exports[`Stepper renders correctly with animation 1`] = `
       class="cache-12p7rjs-StyledLine-loadingStyle e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
       >
         3
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -474,7 +503,7 @@ exports[`Stepper renders correctly with animation 1`] = `
 
 exports[`Stepper renders correctly with default props 1`] = `
 <DocumentFragment>
-  .cache-1oo5ecx-StyledContainer {
+  .cache-i28g32-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -491,14 +520,26 @@ exports[`Stepper renders correctly with default props 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0 8px;
+  gap: 0;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
-  width: 32px;
+.cache-i28g32-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
   white-space: nowrap;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
+.cache-i28g32-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -522,7 +563,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   justify-content: flex-start;
 }
 
-.cache-6c5m3o-StyledContainer {
+.cache-sdib28-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -542,14 +583,15 @@ exports[`Stepper renders correctly with default props 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
-.cache-2seue4-StyledText-StyledText {
-  font-size: 14px;
+.cache-16ebxbi-StyledText-StyledText {
+  font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -577,7 +619,7 @@ exports[`Stepper renders correctly with default props 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-1k74lo7-StyledContainer {
+.cache-7y11y9-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -597,21 +639,22 @@ exports[`Stepper renders correctly with default props 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 <div
-    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
+    class="cache-i28g32-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-6c5m3o-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
       >
         1
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -622,15 +665,15 @@ exports[`Stepper renders correctly with default props 1`] = `
       class="cache-n9n5oq-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
       >
         2
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -641,15 +684,15 @@ exports[`Stepper renders correctly with default props 1`] = `
       class="cache-n9n5oq-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
       >
         3
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
@@ -662,7 +705,7 @@ exports[`Stepper renders correctly with default props 1`] = `
 
 exports[`Stepper renders correctly with selected prop 1`] = `
 <DocumentFragment>
-  .cache-1oo5ecx-StyledContainer {
+  .cache-i28g32-StyledContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -679,14 +722,26 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   -ms-flex-align: flex-start;
   align-items: flex-start;
   gap: 0 8px;
+  gap: 0;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb3 {
-  width: 32px;
+.cache-i28g32-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
   white-space: nowrap;
 }
 
-.cache-1oo5ecx-StyledContainer .e19ft7rb1 {
+.cache-i28g32-StyledContainer .e19ft7rb1 {
   height: 4px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -710,7 +765,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   justify-content: flex-start;
 }
 
-.cache-j41hqp-StyledContainer {
+.cache-tp2if-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -730,6 +785,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 .cache-qx391f-sizeStyles {
@@ -741,12 +797,12 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   min-height: 50%;
 }
 
-.cache-2seue4-StyledText-StyledText {
-  font-size: 14px;
+.cache-16ebxbi-StyledText-StyledText {
+  font-size: 16px;
   font-family: Inter,Asap;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 24px;
   text-transform: none;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -775,7 +831,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   width: 100%;
 }
 
-.cache-6c5m3o-StyledContainer {
+.cache-sdib28-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -795,6 +851,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 .cache-n9n5oq-StyledLine {
@@ -818,7 +875,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   background-color: #8c40ef;
 }
 
-.cache-1k74lo7-StyledContainer {
+.cache-7y11y9-StyledContainer-StyledBullet {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -838,16 +895,17 @@ exports[`Stepper renders correctly with selected prop 1`] = `
   width: 32px;
   height: 32px;
   font-size: 16px;
+  margin-top: 0;
 }
 
 <div
-    class="cache-1oo5ecx-StyledContainer e19ft7rb0"
+    class="cache-i28g32-StyledContainer e19ft7rb0"
   >
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-j41hqp-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-tp2if-StyledContainer-StyledBullet e11loam60"
       >
         <svg
           class="cache-qx391f-sizeStyles e1gt4cfo0"
@@ -859,7 +917,7 @@ exports[`Stepper renders correctly with selected prop 1`] = `
         </svg>
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 1
@@ -870,15 +928,15 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       class="cache-fkq8r-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-6c5m3o-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
       >
         2
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 2
@@ -889,15 +947,419 @@ exports[`Stepper renders correctly with selected prop 1`] = `
       class="cache-n9n5oq-StyledLine e19ft7rb1"
     />
     <div
-      class="cache-64yl8v-StyledStepContainer e19ft7rb3"
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
     >
       <div
-        class="cache-1k74lo7-StyledContainer e11loam60"
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
       >
         3
       </div>
       <span
-        class="e19ft7rb2 cache-2seue4-StyledText-StyledText e13y3mga0"
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 3
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with small size 1`] = `
+<DocumentFragment>
+  .cache-7czxf9-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0 8px;
+  gap: 8px;
+}
+
+.cache-7czxf9-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.cache-7czxf9-StyledContainer .e19ft7rb1 {
+  height: 2px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-64yl8v-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.cache-vvq8bc-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.cache-2seue4-StyledText-StyledText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.cache-n9n5oq-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+}
+
+.cache-n9n5oq-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-pqu96v-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+<div
+    class="cache-7czxf9-StyledContainer e19ft7rb0"
+  >
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-vvq8bc-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 1
+        </span>
+      </span>
+    </div>
+    <div
+      class="cache-n9n5oq-StyledLine e19ft7rb1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-pqu96v-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 2
+        </span>
+      </span>
+    </div>
+    <div
+      class="cache-n9n5oq-StyledLine e19ft7rb1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-pqu96v-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="e19ft7rb3 cache-2seue4-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 3
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Stepper renders correctly with step number in row 1`] = `
+<DocumentFragment>
+  .cache-14umgav-StyledContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0 8px;
+  gap: 8px;
+}
+
+.cache-14umgav-StyledContainer .e19ft7rb4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.cache-14umgav-StyledContainer .e19ft7rb1 {
+  height: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.cache-64yl8v-StyledStepContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.cache-sdib28-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #8c40ef;
+  border: 1px solid #8c40ef;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.cache-16ebxbi-StyledText-StyledText {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.cache-n9n5oq-StyledLine {
+  border-radius: 4px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: #e9eaeb;
+  position: relative;
+}
+
+.cache-n9n5oq-StyledLine::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #8c40ef;
+}
+
+.cache-7y11y9-StyledContainer-StyledBullet {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3f4250;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+<div
+    class="cache-14umgav-StyledContainer e19ft7rb0"
+  >
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-sdib28-StyledContainer-StyledBullet e11loam60"
+      >
+        1
+      </div>
+      <span
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 1
+        </span>
+      </span>
+    </div>
+    <div
+      class="cache-n9n5oq-StyledLine e19ft7rb1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+      >
+        2
+      </div>
+      <span
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
+      >
+        <span>
+          Step 2
+        </span>
+      </span>
+    </div>
+    <div
+      class="cache-n9n5oq-StyledLine e19ft7rb1"
+    />
+    <div
+      class="cache-64yl8v-StyledStepContainer e19ft7rb4"
+    >
+      <div
+        class="e19ft7rb2 cache-7y11y9-StyledContainer-StyledBullet e11loam60"
+      >
+        3
+      </div>
+      <span
+        class="e19ft7rb3 cache-16ebxbi-StyledText-StyledText e13y3mga0"
       >
         <span>
           Step 3
