@@ -124,6 +124,8 @@ type PopoverProps = {
   onClose?: () => void
   className?: string
   'data-testid'?: string
+  maxWidth?: string
+  maxHeight?: string
 } & Pick<ComponentProps<typeof Popup>, 'placement'>
 
 /**
@@ -142,6 +144,8 @@ export const Popover = forwardRef(
       size = 'medium',
       onClose,
       className,
+      maxWidth,
+      maxHeight,
       'data-testid': dataTestId,
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
@@ -194,6 +198,8 @@ export const Popover = forwardRef(
         innerRef={innerRef}
         onClose={localOnClose}
         onKeyDown={onKeyDownSpace}
+        maxWidth={maxWidth}
+        maxHeight={maxHeight}
       >
         {children}
       </StyledPopup>
