@@ -1,6 +1,6 @@
 import type { Units } from './types'
 
-export const HOURS_IN_MONTH = 730
+export const APPROXIMATE_HOURS_IN_MONTH = 730
 
 // As we base ou calculation on hours we need to multiply them by a multiplier
 // 1 month = 730 hours
@@ -9,7 +9,7 @@ export const multiplier: Record<Units, number> = {
   minutes: 1 / 60,
   hours: 1,
   days: 24,
-  months: HOURS_IN_MONTH,
+  months: APPROXIMATE_HOURS_IN_MONTH,
 } as const
 
 // This is used to tell how many decimals depending on time unit
