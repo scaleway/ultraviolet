@@ -1,4 +1,4 @@
-import products from './products'
+import * as products from './products'
 
 export default {
   products,
