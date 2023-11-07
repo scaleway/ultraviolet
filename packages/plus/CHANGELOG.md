@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.4.0
+
+### Minor Changes
+
+- [#3096](https://github.com/scaleway/ultraviolet/pull/3096) [`4535f192`](https://github.com/scaleway/ultraviolet/commit/4535f19264aa3331be6fcc8669318a939c5a0b58) Thanks [@fabienhebert](https://github.com/fabienhebert)! - new component `ContentCardGroup`
+
+### Patch Changes
+
+- Updated dependencies [[`eaf89db1`](https://github.com/scaleway/ultraviolet/commit/eaf89db14a8446af6409ed9a02d14ef26f93ca4b)]:
+  - @ultraviolet/ui@1.24.0
+
 ## 0.3.3
 
 ### Patch Changes
