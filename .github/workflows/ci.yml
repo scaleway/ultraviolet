@@ -38,6 +38,7 @@ jobs:
       - run: pnpm run lint
   test:
     runs-on: ubuntu-22.04
+    needs: [lint, typecheck]
     strategy:
       matrix:
         node: ['18', '20']
@@ -77,7 +78,7 @@ jobs:
       matrix:
         node: ['18', '20']
     runs-on: ubuntu-22.04
-    needs: [lint, test]
+    needs: [lint, typecheck]
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: pnpm/action-setup@v2.4.0
