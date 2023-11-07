@@ -50,7 +50,7 @@ const SubListElement = ({
     <StyledButton
       sentiment="neutral"
       onClick={setIsExpanded}
-      icon={isExpanded ? 'arrow-down' : 'arrow-up'}
+      icon={isExpanded ? 'arrow-up' : 'arrow-down'}
     >
       {productName}
     </StyledButton>
@@ -142,7 +142,7 @@ export const List = () => {
                 newExpandedStates[category] = !expandedStates[category]
                 setExpandedStates(newExpandedStates)
               }}
-              icon={expandedStates[category] ? 'arrow-down' : 'arrow-up'}
+              icon={expandedStates[category] ? 'arrow-up' : 'arrow-down'}
             >
               {category}
             </StyledButton>
