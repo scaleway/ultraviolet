@@ -1,5 +1,7 @@
+import * as apiGateway from './apiGateway'
 import * as appleSilicon from './appleSilicon'
 import * as blockStorage from './blockStorage'
+import * as cli from './cli'
 import * as cockpit from './cockpit'
 import * as containerRegistry from './containerRegistry'
 import * as containers from './containers'
@@ -26,13 +28,19 @@ import * as serverlessDB from './serverlessDB'
 import * as serverlessJob from './serverlessJob'
 import * as sns from './sns'
 import * as sqs from './sqs'
+import * as terraform from './terraform'
 import * as transactionalEmail from './transactionalEmail'
 import * as vpc from './vpc'
 import * as webHosting from './webHosting'
+import * as webPlatform from './webPlatform'
 
 export {
+  apiGateway,
   appleSilicon,
   blockStorage,
+  cli,
+  terraform,
+  webPlatform,
   cockpit,
   containerRegistry,
   containers,

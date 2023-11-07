@@ -489,7 +489,14 @@ importers:
         specifier: 18.2.14
         version: 18.2.14
 
-  packages/illustrations: {}
+  packages/illustrations:
+    devDependencies:
+      '@ultraviolet/themes':
+        specifier: workspace:^
+        version: link:../themes
+      '@ultraviolet/ui':
+        specifier: workspace:^
+        version: link:../ui
 
   packages/plus:
     dependencies:
