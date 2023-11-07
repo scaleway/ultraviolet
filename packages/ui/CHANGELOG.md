@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.24.0
+
+### Minor Changes
+
+- [#3085](https://github.com/scaleway/ultraviolet/pull/3085) [`eaf89db1`](https://github.com/scaleway/ultraviolet/commit/eaf89db14a8446af6409ed9a02d14ef26f93ca4b) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - update component stepper with prop size and labelposition
+
 ## 1.23.0
 
 ### Minor Changes
