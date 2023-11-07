@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: 20
           cache: 'pnpm'
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: 20
           cache: 'pnpm'
@@ -47,7 +47,7 @@ jobs:
           fetch-depth: '0'
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
@@ -64,7 +64,7 @@ jobs:
           fetch-depth: '0'
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: 20
           cache: 'pnpm'
@@ -82,7 +82,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: ${{ matrix.node }}
       - run: pnpm install
@@ -97,7 +97,7 @@ jobs:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: pnpm/action-setup@v2.4.0
       - name: Use Node.js
-        uses: actions/setup-node@v3.8.2
+        uses: actions/setup-node@v4.0.0
         with:
           node-version: ${{ matrix.node }}
       - run: pnpm install
