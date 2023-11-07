@@ -73,6 +73,13 @@
         "react": "18",
         "react-dom": "18"
       }
+    },
+    "packageExtensions": {
+      "jest": {
+        "dependencies": {
+          "ts-node": "10.9.1"
+        }
+      }
     }
   },
   "devDependencies": {
