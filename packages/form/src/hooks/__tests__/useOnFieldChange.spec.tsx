@@ -3,8 +3,11 @@ import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
 import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
+import type { FieldValues } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
+import type { CallbackFn } from '../useOnFieldChange'
 import { useOnFieldChange } from '../useOnFieldChange'
 
 type FormValues = {
@@ -27,19 +30,25 @@ const updated = {
   check: false,
 }
 
-const Wrapper = ({ children, initialValues }: Wrapers) => (
-  <ThemeProvider theme={lightTheme}>
-    <Form<FormValues>
-      initialValues={initialValues}
-      errors={mockErrors}
-      onRawSubmit={() => {}}
-    >
-      {children}
-      <CheckboxField name="check" />
-      <TextInputField name="textInputName" type="text" />
-    </Form>
-  </ThemeProvider>
-)
+const Wrapper = ({ children, initialValues }: Wrapers) => {
+  const methods = useForm({
+    values: initialValues,
+  })
+
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Form<FormValues>
+        methods={methods}
+        errors={mockErrors}
+        onRawSubmit={() => {}}
+      >
+        {children}
+        <CheckboxField name="check" />
+        <TextInputField name="textInputName" type="text" />
+      </Form>
+    </ThemeProvider>
+  )
+}
 
 describe('useOnFieldChange', () => {
   test('should render correctly', () => {
@@ -71,7 +80,7 @@ describe('useOnFieldChange', () => {
   })
 
   test('should render when condition change', () => {
-    const callback = jest.fn()
+    const callback = jest.fn<CallbackFn<FieldValues, FormValues>>()
 
     let initialValues = initial
 
