@@ -87,6 +87,15 @@ export const deprecatedLightTokens = {
       textWeakDisabled: '#ffdd5f',
       textWeakHover: '#664300',
     },
+    other: {
+      gradients: {
+        background: {
+          gold: 'linear-gradient(180deg, #fbc600 0%, #521094 88.87%)',
+          purple: 'linear-gradient(180deg, #c43bff 0%, #521094 88.87%)',
+          strong: 'linear-gradient(180deg, #521094 0%, #151a2d 100%)',
+        },
+      },
+    },
   },
   typography: {
     body: {

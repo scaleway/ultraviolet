@@ -131,16 +131,18 @@ export const darkerTheme = {
       },
       gradients: {
         background: {
-          accent: 'linear-gradient(180deg, #ff602e 0%, #521094 89.12%)',
-          aqua: 'linear-gradient(199.45deg, #03d5e0 14.03%, #4f0599 88.52%)',
-          blue: 'linear-gradient(180deg, #0083e6 0%, #521094 88.87%)',
-          emerald: 'linear-gradient(180deg, #03cfda 0%, #521094 88.87%)',
-          fuschia: 'linear-gradient(180deg, #f91b6c 0%, #521094 89.12%)',
-          gold: 'linear-gradient(180deg, #fbc600 0%, #521094 88.87%)',
-          magenta: 'linear-gradient(180deg, #f91b6c 0%, #521094 89.12%)',
-          primary: 'linear-gradient(180deg, #792dd4 0%, #521094 89.12%);',
-          purple: 'linear-gradient(180deg, #c43bff 0%, #521094 88.87%)',
-          strong: 'linear-gradient(180deg, #521094 0%, #151a2d 100%);',
+          accent:
+            'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          aqua: 'linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          blue: 'linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          emerald:
+            'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          fuschia:
+            'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          magenta:
+            'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          primary:
+            'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
         },
       },
       icon: {
@@ -475,7 +477,7 @@ export const darkerTheme = {
       weight: '400',
     },
     heading: {
-      fontFamily: 'Inter',
+      fontFamily: 'Space Grotesk',
       fontSize: '25px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -486,7 +488,7 @@ export const darkerTheme = {
       weight: '400',
     },
     headingLarge: {
-      fontFamily: 'Inter',
+      fontFamily: 'Space Grotesk',
       fontSize: '35px',
       fontWeight: 'Regular',
       letterSpacing: '0',
@@ -497,7 +499,7 @@ export const darkerTheme = {
       weight: '400',
     },
     headingSmall: {
-      fontFamily: 'Inter',
+      fontFamily: 'Space Grotesk',
       fontSize: '21px',
       fontWeight: 'Medium',
       letterSpacing: '0',
