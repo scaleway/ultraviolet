@@ -4,7 +4,7 @@ import {
   Submit,
   TextInputField,
   useFieldArray,
-  useForm,
+  useFormContext,
   useFormState,
   // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../../form/src'
@@ -21,13 +21,13 @@ const StyledRow = styled(Row)`
   width: 100%;
 `
 
-type KeyValue = { key: string; value: string; required?: boolean }
-
 export const FormContent = () => {
   const [confirmResetForm, setConfirmResetForm] = useState(false)
-  const { fields, remove } = useFieldArray<KeyValue>('sentiments')
+  const { fields, remove } = useFieldArray<typeof INITIAL_VALUES>({
+    name: 'sentiments',
+  })
   const { errors } = useFormState()
-  const { reset } = useForm()
+  const { reset } = useFormContext<typeof INITIAL_VALUES>()
 
   return (
     <Stack gap={6}>
@@ -76,22 +76,23 @@ export const FormContent = () => {
         </Stack>
       </Stack>
 
-      {fields.map((fieldName, index) => {
-        const isRequiredSentiment = fields.value[index].required
-        const countRequiredSentiments = fields.value.filter(
+      {fields.map((field, index) => {
+        const isRequiredSentiment = field.required
+        const countRequiredSentiments = fields.filter(
           ({ required }) => required,
         ).length
+        console.log({ errors })
 
         return (
-          <Stack gap={1} direction="row" key={fieldName}>
+          <Stack gap={1} direction="row" key={field.id}>
             <Stack gap={1} flex={1}>
               <CapitalizeText
                 variant="bodyStrong"
                 as="label"
-                htmlFor={`${fieldName}.key`}
+                htmlFor={`sentiments.${index}.key`}
               >
                 {isRequiredSentiment
-                  ? `${fields.value[index].key} sentiment name`
+                  ? `${field.key} sentiment name`
                   : `Additional sentiment ${
                       index - countRequiredSentiments + 1
                     } name`}
@@ -105,8 +106,8 @@ export const FormContent = () => {
               >
                 <Stack flex={1}>
                   <TextInputField
-                    name={`${fieldName}.key`}
-                    id={`${fieldName}.key`}
+                    name={`sentiments.${index}.key`}
+                    id={`sentiments.${index}.key`}
                     placeholder="neutral"
                     noTopLabel
                     disabled={isRequiredSentiment}
@@ -119,10 +120,10 @@ export const FormContent = () => {
               <CapitalizeText
                 variant="bodyStrong"
                 as="label"
-                htmlFor={`${fieldName}.value`}
+                htmlFor={`sentiments.${index}.value`}
               >
                 {isRequiredSentiment
-                  ? `${fields.value[index].key} sentiment value`
+                  ? `${field.key} sentiment value`
                   : `Additional sentiment ${
                       index - countRequiredSentiments + 1
                     } value`}
@@ -130,23 +131,27 @@ export const FormContent = () => {
               <Stack gap={1} alignItems="center" direction="row">
                 <StyledRow templateColumns="9fr 1fr" gap={1}>
                   <TextInputField
-                    name={`${fieldName}.value`}
-                    id={`${fieldName}.value`}
+                    name={`sentiments.${index}.value`}
+                    id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
                     noTopLabel
-                    regex={[hexadecimalColorRegex]}
+                    rules={{
+                      pattern: hexadecimalColorRegex,
+                    }}
                     valid={
-                      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-                      !errors?.['sentiments']?.[index]
+                      // @ts-expect-error get field array error
+                      !errors['sentiments']?.[index]
                     }
-                    required
                   />
                   <TextInputField
-                    name={`${fieldName}.value`}
-                    id={`${fieldName}.value`}
+                    name={`sentiments.${index}.value`}
+                    id={`sentiments.${index}.value`}
                     placeholder="#FFFFFF"
                     noTopLabel
                     type="color"
+                    rules={{
+                      pattern: hexadecimalColorRegex,
+                    }}
                   />
                 </StyledRow>
                 {!isRequiredSentiment ? (
