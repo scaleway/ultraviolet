@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import type { DeepPartial, FieldPath, FieldValues } from 'react-hook-form'
 import { useFormContext } from 'react-hook-form'
 
-type CallbackFn<TFieldValues extends FieldValues, T> = (
+export type CallbackFn<TFieldValues extends FieldValues, T> = (
   value: T,
   values: DeepPartial<TFieldValues>,
 ) => void | Promise<void>
@@ -27,7 +27,7 @@ export const useOnFieldChange = <
     const subscription = watch(value => {
       if (previousValues.current !== value[fieldName] && enabled) {
         previousValues.current = value[fieldName]
-        void callback(value[fieldName], value)
+        callback(value[fieldName], value)?.catch(() => null)
       }
     })
 
