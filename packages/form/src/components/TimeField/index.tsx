@@ -20,7 +20,6 @@ type TimeFieldProps<TFieldValues extends FieldValues> =
   BaseFieldProps<TFieldValues> &
     ComponentProps<typeof TimeInput> & {
       name: string
-      initialValue?: Date
     }
 
 export const TimeField = <TFieldValues extends FieldValues>({

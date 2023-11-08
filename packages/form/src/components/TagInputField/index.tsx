@@ -28,12 +28,10 @@ export const TagInputField = <TFieldValues extends FieldValues>({
   placeholder,
   required,
   rules,
-  tags,
   variant,
 }: TagInputFieldProps<TFieldValues>) => (
   <Controller
     name={name}
-    defaultValue={tags as any}
     rules={{
       required,
       ...rules,

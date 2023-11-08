@@ -1,7 +1,7 @@
 import type { StoryFn } from '@storybook/react'
 import { Stack } from '@ultraviolet/ui'
-import type { FormErrors } from '../../../types'
 import { SelectableCardField } from '..'
+import type { FormErrors } from '../../../types'
 import { Form } from '../../Form'
 
 export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => (
