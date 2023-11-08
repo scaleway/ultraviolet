@@ -11,6 +11,7 @@ import type { FieldValues } from 'react-hook-form'
 import { Controller } from 'react-hook-form'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
 // Here we duplicate SelectInput types as they are using interfaces which are not portable
@@ -129,6 +130,8 @@ export type SelectInputFieldProps<
     multiple?: boolean
     parse?: (value: unknown, name?: string) => unknown
     format?: (value: unknown, name: string) => unknown
+    maxLength?: number
+    minLength?: number
     name: string
   }
 
@@ -150,10 +153,10 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
   isClearable,
   isLoading,
   isSearchable,
-  // label = '',
-  // maxLength,
+  label = '',
+  maxLength,
   menuPortalTarget,
-  // minLength,
+  minLength,
   multiple,
   name,
   onBlur,
@@ -235,11 +238,15 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
     [formatProp, multiple, name, options],
   )
 
+  const { getError } = useErrors()
+
   return (
     <Controller
       name={name}
       rules={{
         required,
+        minLength: minLength || required ? 1 : undefined,
+        maxLength,
         ...rules,
       }}
       render={({ field, fieldState: { error } }) => (
@@ -250,7 +257,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
           animationOnChange={animationOnChange}
           className={className}
           disabled={disabled}
-          error={error?.message}
+          error={getError({ label, minLength, maxLength }, error)}
           id={id}
           inputId={inputId}
           isClearable={isClearable}
