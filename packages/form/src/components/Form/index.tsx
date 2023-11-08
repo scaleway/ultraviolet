@@ -123,7 +123,14 @@ export const Form = <TFormValues extends FieldValues>({
     <FormProvider {...methods}>
       <FormSubmitContext.Provider value={formSubmitContextValue}>
         <ErrorProvider errors={{ ...defaultErrors, ...errors }}>
-          <form onSubmit={handleSubmit} name={name}>
+          <form
+            onSubmit={async e => {
+              e.preventDefault()
+              e.stopPropagation()
+              await handleSubmit(e)
+            }}
+            name={name}
+          >
             {typeof children === 'function'
               ? children({
                   values: methods.watch(),

@@ -5,7 +5,10 @@ import type {
   FieldValues,
   Validate,
 } from 'react-hook-form'
-import { useFieldArray as useFieldArrayHookForm } from 'react-hook-form'
+import {
+  useFieldArray as useFieldArrayHookForm,
+  useWatch,
+} from 'react-hook-form'
 
 type Options<TFieldValues extends FieldValues> = {
   validate?: Validate<FieldArray<TFieldValues>[], TFieldValues>
@@ -28,10 +31,12 @@ export const useFieldArrayDeprecated = <
       rules: { validate: options?.validate },
     })
 
+  const value = useWatch({ name })
+
   return {
     fields: {
       push: append,
-      value: fields as T[],
+      value: value as T[],
       remove,
       update,
       map: (callback: (name: string, index: number) => ReactNode) =>
