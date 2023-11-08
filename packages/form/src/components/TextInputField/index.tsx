@@ -121,6 +121,8 @@ export const TextInputField = <TFieldValues extends FieldValues>({
         validate,
         minLength,
         maxLength,
+        max,
+        min,
         ...rules,
       }}
       defaultValue={defaultValue}
