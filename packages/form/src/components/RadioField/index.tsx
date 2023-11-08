@@ -23,7 +23,6 @@ type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
       | 'tooltip'
     >
   > & {
-    label?: string
     className?: string
     name: string
     required?: boolean
@@ -60,7 +59,10 @@ export const RadioField = <TFieldValues extends FieldValues>({
           className={className}
           data-testid={dataTestId}
           disabled={disabled}
-          error={getError({ label }, error)}
+          error={getError(
+            { label: typeof label === 'string' ? label : '' },
+            error,
+          )}
           id={id}
           onChange={event => {
             field.onChange(value)
