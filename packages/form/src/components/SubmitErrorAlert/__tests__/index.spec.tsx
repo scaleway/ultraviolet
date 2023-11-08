@@ -8,12 +8,12 @@ import {
 } from '@jest/globals'
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { FORM_ERROR } from 'final-form'
 import { Form, Submit, SubmitErrorAlert } from '../..'
 import {
   shouldMatchEmotionSnapshot,
   shouldMatchEmotionSnapshotFormWrapper,
 } from '../../../../.jest/helpers'
+import { FORM_ERROR } from '../../../constants'
 import { mockErrors } from '../../../mocks'
 
 describe('SubmitErrorAlert', () => {
