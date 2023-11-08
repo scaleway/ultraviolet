@@ -9,6 +9,7 @@ type UseFormStateParams = {
  * @deprecated
  */
 export const useFormStateDeprecated = <TFieldValues extends FieldValues>(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _params?: UseFormStateParams,
 ) => {
   const { formState, watch } = useFormContext<TFieldValues>()
