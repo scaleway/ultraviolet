@@ -33,7 +33,7 @@ export default [
   {
     external,
     preserveSymlinks: true,
-    input: ['src/products/*/index.ts'],
+    input: ['src/index.ts'],
     output: {
       dir: 'dist',
       format: 'es',
@@ -92,7 +92,7 @@ export default [
     ].filter(Boolean),
   },
   {
-    input: ['./src/products/*/index.ts'],
+    input: ['./src/index.ts'],
     output: [{ dir: 'dist', format: 'es' }],
     plugins: [
       multiInput.default(),

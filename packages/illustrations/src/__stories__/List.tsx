@@ -22,6 +22,8 @@ const StyledButton = styled(Button)`
 const StyledImage = styled.img`
   border-radius: ${({ theme }) => theme.radii.large} 0 0
     ${({ theme }) => theme.radii.large};
+  background: ${({ theme }) =>
+    theme.theme === 'light' ? theme.colors.neutral.backgroundStronger : null};
 `
 
 const MargedStack = styled(Stack)`

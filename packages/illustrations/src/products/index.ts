@@ -21,7 +21,7 @@ import * as loadBalancers from './loadBalancers'
 import * as managedDatabase from './managedDatabase'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
-import * as publicGatewat from './publicGateway'
+import * as publicGateway from './publicGateway'
 import * as redis from './redis'
 import * as secretManager from './secretManager'
 import * as serverlessDB from './serverlessDB'
@@ -60,7 +60,7 @@ export {
   managedDatabase,
   nats,
   objectStorage,
-  publicGatewat,
+  publicGateway,
   redis,
   secretManager,
   serverlessDB,
