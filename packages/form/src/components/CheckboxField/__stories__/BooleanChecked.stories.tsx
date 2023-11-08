@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import type { FormErrors } from '../../../types'
 import { CheckboxField } from '..'
+import type { FormErrors } from '../../../types'
 import { Form } from '../../Form'
 
 export const BooleanChecked: StoryFn<{ errors: FormErrors }> = ({ errors }) => (
