@@ -1,6 +1,6 @@
 import type { StoryFn } from '@storybook/react'
-import type { FormErrors } from '../../../types'
 import { RadioField } from '..'
+import type { FormErrors } from '../../../types'
 import { Form } from '../../Form'
 
 export const Checked: StoryFn<{ errors: FormErrors }> = ({ errors }) => (
