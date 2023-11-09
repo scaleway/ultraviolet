@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.2.0
+
+### Minor Changes
+
+- [#3112](https://github.com/scaleway/ultraviolet/pull/3112) [`80afe7ed`](https://github.com/scaleway/ultraviolet/commit/80afe7ed5faef3ab9d0d4f02d8a6e7286741f2af) Thanks [@matthprost](https://github.com/matthprost)! - Many new illustrations and rebranding
+
 ## 1.1.1
 
 ### Patch Changes
