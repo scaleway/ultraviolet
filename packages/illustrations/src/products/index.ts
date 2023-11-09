@@ -1,65 +1,73 @@
-import { appleSiliconOriginal } from './appleSilicon'
-import { blockStorageOriginal } from './blockStorage'
-import { cockpitOriginal } from './cockpit'
-import { containerRegistryOriginal } from './containerRegistry'
-import { containersOriginal } from './containers'
-import { dediboxOriginal } from './dedibox'
-import { documentDBOriginal } from './documentDB'
-import { domainsAndDnsOriginal } from './domainsAndDns'
-import { elasticMetalOriginal } from './elasticMetal'
-import { functionsOriginal } from './functions'
-import { iamOriginal } from './iam'
-import { instanceOriginal } from './instance'
-import { iotHubOriginal } from './iotHub'
-import { ipfsNamingOriginal } from './ipfsNaming'
-import { ipfsPinningOriginal } from './ipfsPinning'
-import { k8sKapsuleOriginal } from './k8sKapsule'
-import { k8sKosmosOriginal } from './k8sKosmos'
-import { loadBalancersOriginal } from './loadBalancers'
-import { managedDatabaseOriginal } from './managedDatabase'
-import { natsOriginal } from './nats'
-import { objectStorageOriginal } from './objectStorage'
-import { publicGatewayOriginal } from './publicGateway'
-import { redisOriginal } from './redis'
-import { secretManagerOriginal } from './secretManager'
-import { serverlessDBOriginal } from './serverlessDB'
-import { serverlessJobOriginal } from './serverlessJob'
-import { snsOriginal } from './sns'
-import { sqsOriginal } from './sqs'
-import { transactionalEmailOriginal } from './transactionalEmail'
-import { vpcOriginal } from './vpc'
-import { webHostingOriginal } from './webHosting'
+import * as apiGateway from './apiGateway'
+import * as appleSilicon from './appleSilicon'
+import * as blockStorage from './blockStorage'
+import * as cli from './cli'
+import * as cockpit from './cockpit'
+import * as containerRegistry from './containerRegistry'
+import * as containers from './containers'
+import * as dedibox from './dedibox'
+import * as documentDB from './documentDB'
+import * as domainsAndDns from './domainsAndDns'
+import * as elasticMetal from './elasticMetal'
+import * as functions from './functions'
+import * as iam from './iam'
+import * as instance from './instance'
+import * as iotHub from './iotHub'
+import * as ipfsNaming from './ipfsNaming'
+import * as ipfsPinning from './ipfsPinning'
+import * as k8sKapsule from './k8sKapsule'
+import * as k8sKosmos from './k8sKosmos'
+import * as loadBalancers from './loadBalancers'
+import * as managedDatabase from './managedDatabase'
+import * as nats from './nats'
+import * as objectStorage from './objectStorage'
+import * as publicGateway from './publicGateway'
+import * as redis from './redis'
+import * as secretManager from './secretManager'
+import * as serverlessDB from './serverlessDB'
+import * as serverlessJob from './serverlessJob'
+import * as sns from './sns'
+import * as sqs from './sqs'
+import * as terraform from './terraform'
+import * as transactionalEmail from './transactionalEmail'
+import * as vpc from './vpc'
+import * as webHosting from './webHosting'
+import * as webPlatform from './webPlatform'
 
-export default {
-  appleSiliconOriginal,
-  cockpitOriginal,
-  containerRegistryOriginal,
-  containersOriginal,
-  dediboxOriginal,
-  domainsAndDnsOriginal,
-  elasticMetalOriginal,
-  functionsOriginal,
-  instanceOriginal,
-  iotHubOriginal,
-  ipfsPinningOriginal,
-  k8sKapsuleOriginal,
-  k8sKosmosOriginal,
-  loadBalancersOriginal,
-  managedDatabaseOriginal,
-  natsOriginal,
-  objectStorageOriginal,
-  publicGatewayOriginal,
-  redisOriginal,
-  secretManagerOriginal,
-  snsOriginal,
-  sqsOriginal,
-  transactionalEmailOriginal,
-  vpcOriginal,
-  webHostingOriginal,
-  blockStorageOriginal,
-  documentDBOriginal,
-  ipfsNamingOriginal,
-  iamOriginal,
-  serverlessDBOriginal,
-  serverlessJobOriginal,
+export {
+  apiGateway,
+  appleSilicon,
+  blockStorage,
+  cli,
+  terraform,
+  webPlatform,
+  cockpit,
+  containerRegistry,
+  containers,
+  dedibox,
+  documentDB,
+  domainsAndDns,
+  elasticMetal,
+  functions,
+  iam,
+  instance,
+  iotHub,
+  ipfsNaming,
+  ipfsPinning,
+  k8sKapsule,
+  k8sKosmos,
+  loadBalancers,
+  managedDatabase,
+  nats,
+  objectStorage,
+  publicGateway,
+  redis,
+  secretManager,
+  serverlessDB,
+  serverlessJob,
+  sns,
+  sqs,
+  transactionalEmail,
+  vpc,
+  webHosting,
 }

@@ -1,3 +1,11 @@
-import documentDBOriginal from './documentDB.webp'
+import documentDBContent from './documentDB-content.webp'
+import documentDBKeyvisual from './documentDB-keyvisual.webp'
+import documentDBOriginal from './documentDB-original.webp'
+import documentDBWire from './documentDB-wire.webp'
 
-export { documentDBOriginal }
+export {
+  documentDBOriginal,
+  documentDBContent,
+  documentDBWire,
+  documentDBKeyvisual,
+}
