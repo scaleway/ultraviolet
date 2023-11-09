@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.4.0
+
+### Minor Changes
+
+- [#3118](https://github.com/scaleway/ultraviolet/pull/3118) [`499d65f6`](https://github.com/scaleway/ultraviolet/commit/499d65f6c0510bd37c34f8cc24476a601cfaa6f3) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - Tokens update on primary dark
+
 ## 1.3.0
 
 ### Minor Changes

@@ -1,5 +1,15 @@
 # @ultraviolet/plus
 
+## 0.4.1
+
+### Patch Changes
+
+- [#3108](https://github.com/scaleway/ultraviolet/pull/3108) [`a6a3eb0f`](https://github.com/scaleway/ultraviolet/commit/a6a3eb0fe587dea72def3ad465de0929c3d1ab70) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.34`.
+
+- Updated dependencies [[`499d65f6`](https://github.com/scaleway/ultraviolet/commit/499d65f6c0510bd37c34f8cc24476a601cfaa6f3), [`a6a3eb0f`](https://github.com/scaleway/ultraviolet/commit/a6a3eb0fe587dea72def3ad465de0929c3d1ab70)]:
+  - @ultraviolet/themes@1.4.0
+  - @ultraviolet/ui@1.24.1
+
 ## 0.4.0
 
 ### Minor Changes

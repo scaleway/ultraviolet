@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.1.1
+
+### Patch Changes
+
+- [#3119](https://github.com/scaleway/ultraviolet/pull/3119) [`b1ba0cc8`](https://github.com/scaleway/ultraviolet/commit/b1ba0cc8e8e0262428b7518a5cb1db79beb6deae) Thanks [@matthprost](https://github.com/matthprost)! - Fix rollup file size limit
+
 ## 1.1.0
 
 ### Minor Changes
