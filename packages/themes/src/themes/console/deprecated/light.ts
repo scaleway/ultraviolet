@@ -135,13 +135,13 @@ export const deprecatedLightTokens = {
       fontFamily: 'Inter, Asap',
     },
     heading: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
     headingLarge: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
     headingSmall: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
   },
 }
