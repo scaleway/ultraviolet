@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-next.0
+
+### Major Changes
+
+- Migrate to react-hook-form
+
 ## 1.9.4
 
 ### Patch Changes
