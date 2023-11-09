@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.4.2
+
+### Patch Changes
+
+- [#3117](https://github.com/scaleway/ultraviolet/pull/3117) [`812a5447`](https://github.com/scaleway/ultraviolet/commit/812a54479cfa0843eb55f4ce25d009d84dc8c79f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@formatjs/ecma402-abstract` to `1.17.3`.
+  Updated dependency `intl-messageformat` to `10.5.5`.
+
+- [#3121](https://github.com/scaleway/ultraviolet/pull/3121) [`b515aa4d`](https://github.com/scaleway/ultraviolet/commit/b515aa4dfbbee08daa519f2e0aef8bc1eaa35eda) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCard />` to have title and subtitle vertically centered aligned
+
 ## 0.4.1
 
 ### Patch Changes
