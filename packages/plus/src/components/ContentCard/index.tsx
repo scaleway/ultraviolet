@@ -188,7 +188,7 @@ export const ContentCard = forwardRef<
                 ref={subContainerRef}
               >
                 {icon ?? null}
-                <Stack gap={2}>
+                <Stack gap={2} justifyContent="center">
                   <Stack gap={0.5}>
                     <Stack>
                       {subtitle ? (
