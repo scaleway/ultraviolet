@@ -79,7 +79,7 @@ export default [
         preferBuiltins: true,
       }),
       url({
-        limit: 63488,
+        limit: 1048576,
       }),
       svgr({ memo: true }),
       PROFILE &&
@@ -97,7 +97,7 @@ export default [
     plugins: [
       multiInput.default(),
       url({
-        limit: 63488,
+        limit: 1048576,
       }),
       dts({
         compilerOptions: {
