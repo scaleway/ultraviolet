@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.9.6
+
+### Patch Changes
+
+- [#3125](https://github.com/scaleway/ultraviolet/pull/3125) [`3e7de2b2`](https://github.com/scaleway/ultraviolet/commit/3e7de2b2dd33577afd087af89379a3e214242721) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.37`.
+  Updated dependency `@types/react-dom` to `18.2.15`.
+- Updated dependencies [[`3e7de2b2`](https://github.com/scaleway/ultraviolet/commit/3e7de2b2dd33577afd087af89379a3e214242721)]:
+  - @ultraviolet/ui@1.24.2
+
 ## 1.9.5
 
 ### Patch Changes
