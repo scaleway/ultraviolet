@@ -185,31 +185,35 @@ export const Banner = ({
             {children}
           </Text>
         </Stack>
-        <Stack direction="row" gap={2} alignItems="center">
-          {buttonText ? (
-            <Button
-              size="medium"
-              sentiment={variant === 'intro' ? 'primary' : 'neutral'}
-              variant="filled"
-              onClick={onClickButton}
-            >
-              {buttonText}
-            </Button>
-          ) : null}
-          {linkText ? (
-            <Link
-              sentiment={theme !== 'light' ? 'neutral' : 'primary'}
-              size="small"
-              target="_blank"
-              href={linkHref ?? ''}
-              prominence={
-                variant === 'intro' || theme !== 'light' ? 'default' : 'strong'
-              }
-            >
-              {linkText}
-            </Link>
-          ) : null}
-        </Stack>
+        {buttonText || linkText ? (
+          <Stack direction="row" gap={2} alignItems="center">
+            {buttonText ? (
+              <Button
+                size="medium"
+                sentiment={variant === 'intro' ? 'primary' : 'neutral'}
+                variant="filled"
+                onClick={onClickButton}
+              >
+                {buttonText}
+              </Button>
+            ) : null}
+            {linkText ? (
+              <Link
+                sentiment={theme !== 'light' ? 'neutral' : 'primary'}
+                size="small"
+                target="_blank"
+                href={linkHref ?? ''}
+                prominence={
+                  variant === 'intro' || theme !== 'light'
+                    ? 'default'
+                    : 'strong'
+                }
+              >
+                {linkText}
+              </Link>
+            ) : null}
+          </Stack>
+        ) : null}
       </Stack>
       {closable ? (
         <Button
