@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.4.5
+
+### Patch Changes
+
+- [#3129](https://github.com/scaleway/ultraviolet/pull/3129) [`ea93383b`](https://github.com/scaleway/ultraviolet/commit/ea93383b467ba08a66ef4c5989ad02d983e299b1) Thanks [@matthprost](https://github.com/matthprost)! - Fix package json export index location
+
 ## 0.4.4
 
 ### Patch Changes
