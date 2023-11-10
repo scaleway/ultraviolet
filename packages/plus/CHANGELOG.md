@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.4.4
+
+### Patch Changes
+
+- [#3127](https://github.com/scaleway/ultraviolet/pull/3127) [`5025d38d`](https://github.com/scaleway/ultraviolet/commit/5025d38dc49dacc3a37c93fcb0f910c0a543fce1) Thanks [@matthprost](https://github.com/matthprost)! - Remove useless packages
+
 ## 0.4.3
 
 ### Patch Changes
