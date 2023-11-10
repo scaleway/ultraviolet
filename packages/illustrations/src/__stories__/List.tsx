@@ -75,7 +75,7 @@ const SubListElement = ({
               <Text as="h3" variant="bodyStrong">
                 {productImg}.webp
               </Text>
-              <StyledSnippet>{`import { ${productImg} } from @ultraviolet/illustrations/${productName}`}</StyledSnippet>
+              <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
             </Stack>
           </Card>
         ))}
