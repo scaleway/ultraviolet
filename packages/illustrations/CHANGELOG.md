@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.2.1
+
+### Patch Changes
+
+- [#3132](https://github.com/scaleway/ultraviolet/pull/3132) [`dd3beb4c`](https://github.com/scaleway/ultraviolet/commit/dd3beb4c2e637dc3c4880b26473de62d6b209a38) Thanks [@matthprost](https://github.com/matthprost)! - Fix package json config and story
+
 ## 1.2.0
 
 ### Minor Changes
