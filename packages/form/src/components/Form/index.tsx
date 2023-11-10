@@ -3,7 +3,6 @@ import React, { useMemo } from 'react'
 import type {
   DefaultValues,
   FieldErrors,
-  FieldPath,
   FieldValues,
   UseFormHandleSubmit,
   UseFormReturn,
@@ -62,9 +61,6 @@ export type FormProps<TFormValues extends FieldValues = FieldValues> = {
   children?: ((props: FormStateReturn<TFormValues>) => ReactNode) | ReactNode
   errors: FormErrors
   name?: string
-  validate?: (
-    values: TFormValues,
-  ) => Partial<Record<FieldPath<TFormValues>, string>>
   onRawSubmit: (
     data: TFormValues,
     formState: {
