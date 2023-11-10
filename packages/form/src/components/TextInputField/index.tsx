@@ -1,6 +1,6 @@
 import { TextInput } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX, Ref } from 'react'
+import type { ComponentProps, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
@@ -113,7 +113,7 @@ export const TextInputField = forwardRef(
       value,
     }: TextInputFieldProps,
     ref: Ref<HTMLInputElement>,
-  ): JSX.Element => {
+  ) => {
     const { getError } = useErrors()
 
     const { input, meta } = useFormField(name, {

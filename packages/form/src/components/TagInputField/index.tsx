@@ -1,5 +1,5 @@
 import { TagInput } from '@ultraviolet/ui'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import type { BaseFieldProps } from '../../types'
 
@@ -38,7 +38,7 @@ export const TagInputField = ({
   tags,
   validate,
   variant,
-}: TagInputFieldProps): JSX.Element => {
+}: TagInputFieldProps) => {
   const { input } = useFormField<TagInputProp>(name, {
     disabled,
     required,

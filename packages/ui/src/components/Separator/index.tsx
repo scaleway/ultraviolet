@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import type { Color } from '../../theme'
 
 type Direction = 'horizontal' | 'vertical'
@@ -61,7 +61,7 @@ export const Separator = ({
   icon,
   className,
   'data-testid': dataTestId,
-}: SeparatorProps): JSX.Element =>
+}: SeparatorProps) =>
   icon ? (
     <StyledIconWrapper
       role="separator"

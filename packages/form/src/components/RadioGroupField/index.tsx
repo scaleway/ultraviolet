@@ -1,6 +1,6 @@
 import { RadioGroup } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -39,7 +39,7 @@ export const RadioGroupField = ({
   error: customError,
   helper,
   direction,
-}: RadioGroupFieldProps): JSX.Element => {
+}: RadioGroupFieldProps) => {
   const { getError } = useErrors()
 
   const { input, meta } = useFormField(name, {

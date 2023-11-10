@@ -1,6 +1,6 @@
 import { Checkbox } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX, ReactNode, Ref } from 'react'
+import type { ComponentProps, ReactNode, Ref } from 'react'
 import { forwardRef } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
@@ -52,7 +52,7 @@ export const CheckboxField = forwardRef(
       'data-testid': dataTestId,
     }: CheckboxFieldProps,
     ref: Ref<HTMLInputElement>,
-  ): JSX.Element => {
+  ) => {
     const { getError } = useErrors()
 
     const { input, meta } = useFormField(name, {
