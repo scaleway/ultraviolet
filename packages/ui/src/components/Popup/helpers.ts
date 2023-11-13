@@ -3,7 +3,7 @@ import type { RefObject } from 'react'
 export type PopupPlacement = 'top' | 'right' | 'bottom' | 'left' | 'auto'
 export const ARROW_WIDTH = 8 // in px
 const SPACE = 4 // in px
-const TOTAL_USED_SPACE = ARROW_WIDTH + SPACE // in px
+const TOTAL_USED_SPACE = 0 // in px
 export const DEFAULT_POSITIONS = {
   arrowLeft: -999,
   arrowTop: -999,
@@ -17,6 +17,8 @@ export const DEFAULT_POSITIONS = {
 type ComputePlacementTypes = {
   childrenStructuredRef: DOMRect
   tooltipStructuredRef: DOMRect
+  popupPortalTarget: HTMLElement
+  offsetParentRect: DOMRect
 }
 
 /**
@@ -25,24 +27,46 @@ type ComputePlacementTypes = {
 const computePlacement = ({
   childrenStructuredRef,
   tooltipStructuredRef,
+  offsetParentRect,
+  popupPortalTarget,
 }: ComputePlacementTypes) => {
   const {
-    top: childrenX,
-    left: childrenY,
+    top: childrenTop,
+    left: childrenLeft,
     right: childrenRight,
   } = childrenStructuredRef
 
+  const {
+    top: parentTop,
+    left: parentLeft,
+    right: parentRight,
+  } = offsetParentRect
+
+  const overloadedChildrenLeft =
+    popupPortalTarget === document.body
+      ? childrenLeft
+      : childrenLeft - parentLeft
+  const overloadedChildrenTop =
+    popupPortalTarget === document.body ? childrenTop : childrenTop - parentTop
+  const overloadedChildrenRight =
+    popupPortalTarget === document.body
+      ? childrenRight
+      : childrenRight - parentRight
+
   const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
 
-  if (childrenX - tooltipHeight - TOTAL_USED_SPACE < 0) {
+  if (overloadedChildrenTop - tooltipHeight - TOTAL_USED_SPACE < 0) {
     return 'bottom'
   }
 
-  if (childrenY - tooltipWidth - TOTAL_USED_SPACE < 0) {
+  if (overloadedChildrenLeft - tooltipWidth - TOTAL_USED_SPACE < 0) {
     return 'right'
   }
 
-  if (childrenRight + tooltipWidth + TOTAL_USED_SPACE > window.innerWidth) {
+  if (
+    overloadedChildrenRight + tooltipWidth + TOTAL_USED_SPACE >
+    window.innerWidth
+  ) {
     return 'left'
   }
 
@@ -53,6 +77,7 @@ type ComputePositionsTypes = {
   placement: PopupPlacement
   childrenRef: RefObject<HTMLDivElement>
   tooltipRef: RefObject<HTMLDivElement>
+  popupPortalTarget: HTMLElement
 }
 
 /**
@@ -62,10 +87,17 @@ export const computePositions = ({
   placement,
   childrenRef,
   tooltipRef,
+  popupPortalTarget,
 }: ComputePositionsTypes) => {
   const childrenStructuredRef = (
     childrenRef.current as HTMLDivElement
   ).getBoundingClientRect()
+  const offsetParentRect =
+    childrenRef?.current?.offsetParent?.getBoundingClientRect() ?? {
+      top: 0,
+      left: 0,
+      right: 0,
+    }
   const tooltipStructuredRef = (
     tooltipRef.current as HTMLDivElement
   ).getBoundingClientRect()
@@ -75,6 +107,8 @@ export const computePositions = ({
       ? computePlacement({
           childrenStructuredRef,
           tooltipStructuredRef,
+          offsetParentRect: offsetParentRect as DOMRect,
+          popupPortalTarget,
         })
       : placement
 
@@ -86,16 +120,40 @@ export const computePositions = ({
     height: childrenHeight,
   } = childrenStructuredRef
 
+  const {
+    top: parentTop,
+    left: parentLeft,
+    right: parentRight,
+  } = offsetParentRect as DOMRect
+
   const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
 
   // It will get how much scroll is done on the page to compute the position of the tooltip
-  const scrollTopValue = document.documentElement.scrollTop
+  const scrollTopValue =
+    popupPortalTarget === document.body ? document.documentElement.scrollTop : 0
+
+  // We need to compute the position of the tooltip based on the parent element in the case the popup is not in the body
+  const overloadedChildrenLeft =
+    popupPortalTarget === document.body
+      ? childrenLeft
+      : childrenLeft - parentLeft
+  const overloadedChildrenTop =
+    popupPortalTarget === document.body ? childrenTop : childrenTop - parentTop
+  const overloadedChildrenRight =
+    popupPortalTarget === document.body
+      ? childrenRight
+      : childrenRight + childrenWidth + ARROW_WIDTH + SPACE - parentRight / 2
 
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
-      const positionX = childrenLeft + childrenWidth / 2 - tooltipWidth / 2
+      const positionX =
+        overloadedChildrenLeft + childrenWidth / 2 - tooltipWidth / 2
       const positionY =
-        childrenTop + scrollTopValue + childrenHeight + ARROW_WIDTH + SPACE
+        overloadedChildrenTop +
+        scrollTopValue +
+        childrenHeight +
+        ARROW_WIDTH +
+        SPACE
 
       return {
         arrowLeft: tooltipWidth / 2,
@@ -110,9 +168,13 @@ export const computePositions = ({
       }
     }
     case 'left': {
-      const positionX = childrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2
+      const positionX =
+        overloadedChildrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2
       const positionY =
-        childrenTop + scrollTopValue - tooltipHeight / 2 + childrenHeight / 2
+        overloadedChildrenTop +
+        scrollTopValue -
+        tooltipHeight / 2 +
+        childrenHeight / 2
 
       return {
         arrowLeft: tooltipWidth + ARROW_WIDTH + 5,
@@ -127,9 +189,12 @@ export const computePositions = ({
       }
     }
     case 'right': {
-      const positionX = childrenRight + ARROW_WIDTH + SPACE * 2
+      const positionX = overloadedChildrenRight + ARROW_WIDTH + SPACE * 2
       const positionY =
-        childrenTop + scrollTopValue - tooltipHeight / 2 + childrenHeight / 2
+        overloadedChildrenTop +
+        scrollTopValue -
+        tooltipHeight / 2 +
+        childrenHeight / 2
 
       return {
         arrowLeft: -ARROW_WIDTH - 5,
@@ -145,9 +210,14 @@ export const computePositions = ({
     }
     default: {
       // top placement is default value
-      const positionX = childrenLeft + childrenWidth / 2 - tooltipWidth / 2
+      const positionX =
+        overloadedChildrenLeft + childrenWidth / 2 - tooltipWidth / 2
       const positionY =
-        childrenTop + scrollTopValue - tooltipHeight - ARROW_WIDTH - SPACE
+        overloadedChildrenTop +
+        scrollTopValue -
+        tooltipHeight -
+        ARROW_WIDTH -
+        SPACE
 
       return {
         arrowLeft: tooltipWidth / 2,

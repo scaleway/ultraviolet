@@ -3,6 +3,7 @@ import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
+import { Playground } from './Playground.stories'
 
 export const Sentiments: StoryFn<typeof Popover> = () => {
   const [primaryOpened, setPrimaryOpened] = useState(false)
@@ -51,3 +52,5 @@ Sentiments.parameters = {
     },
   },
 }
+
+Sentiments.decorators = Playground.decorators

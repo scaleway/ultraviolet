@@ -58,6 +58,11 @@ type MenuProps = {
   'data-testid'?: string
   maxHeight?: string
   maxWidth?: string
+  /**
+   * By default, the portal target is children container or document.body if children is a function. You can override this
+   * behavior by setting a portalTarget prop.
+   */
+  portalTarget?: HTMLElement
 }
 
 const MenuList = styled(Stack)`
@@ -99,6 +104,7 @@ const FwdMenu = forwardRef(
       'data-testid': dataTestId,
       maxHeight,
       maxWidth,
+      portalTarget,
     }: MenuProps,
     ref: Ref<HTMLButtonElement | null>,
   ) => {
@@ -117,29 +123,8 @@ const FwdMenu = forwardRef(
     const innerRef = useRef(target as unknown as HTMLButtonElement)
     useImperativeHandle(ref, () => innerRef.current)
 
-    const toggleVisible = () => {
-      setIsVisible(!isVisible)
-
-      // Focus the first item when the menu is opened
-      if (!isVisible) {
-        setTimeout(() => {
-          // We have to wait for the popup to be inserted in the DOM
-          if (popupRef.current?.firstChild?.firstChild instanceof HTMLElement) {
-            popupRef.current.firstChild.firstChild.focus()
-          }
-        }, 1)
-      }
-    }
-
-    const onClose = () => {
-      setIsVisible(false)
-
-      // Focus the disclosure when the menu is closed
-      disclosureRef.current?.focus()
-    }
-
     const finalDisclosure = cloneElement(target, {
-      onClick: toggleVisible,
+      onClick: () => setIsVisible(!isVisible),
       'aria-haspopup': 'dialog',
       'aria-expanded': isVisible,
       // @ts-expect-error not sure how to fix this
@@ -159,17 +144,18 @@ const FwdMenu = forwardRef(
         role="dialog"
         id={finalId}
         ref={popupRef}
-        onClose={onClose}
+        onClose={() => setIsVisible(false)}
         tabIndex={-1}
         maxHeight={maxHeight}
         maxWidth={maxWidth}
         text={
           <MenuList data-testid={dataTestId} className={className} role="menu">
             {typeof children === 'function'
-              ? children({ toggle: toggleVisible })
+              ? children({ toggle: () => setIsVisible(!isVisible) })
               : children}
           </MenuList>
         }
+        portalTarget={portalTarget}
       >
         {finalDisclosure}
       </StyledPopup>

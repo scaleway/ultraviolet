@@ -16,6 +16,7 @@ type TooltipProps = Pick<
   | 'role'
   | 'data-testid'
   | 'containerFullWidth'
+  | 'portalTarget'
 >
 
 const StyledPopup = styled(Popup)`
@@ -40,6 +41,7 @@ export const Tooltip = forwardRef(
       innerRef,
       role = 'tooltip',
       'data-testid': dataTestId,
+      portalTarget,
     }: TooltipProps,
     tooltipRef: Ref<HTMLDivElement>,
   ) => (
@@ -55,6 +57,7 @@ export const Tooltip = forwardRef(
       placement={placement}
       text={text}
       innerRef={innerRef}
+      portalTarget={portalTarget}
     >
       {children}
     </StyledPopup>

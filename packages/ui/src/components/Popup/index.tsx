@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import type {
   HTMLAttributes,
   KeyboardEventHandler,
+  MouseEventHandler,
   ReactNode,
   Ref,
   RefObject,
@@ -183,6 +184,11 @@ type PopupProps = {
    * Will remove the animation on the popup if set to false.
    */
   disableAnimation?: boolean
+  /**
+   * By default, the portal target is children container or document.body if children is a function. You can override this
+   * behavior by setting a portalTarget prop.
+   */
+  portalTarget?: HTMLElement
 }
 
 /**
@@ -211,6 +217,7 @@ export const Popup = forwardRef(
       hideOnClickOutside = false,
       needDebounce = true,
       disableAnimation = false,
+      portalTarget,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -221,6 +228,8 @@ export const Popup = forwardRef(
     useImperativeHandle(ref, () => innerTooltipRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
+    const popupPortalTarget =
+      portalTarget ?? childrenRef.current ?? document.body
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -244,10 +253,11 @@ export const Popup = forwardRef(
             childrenRef,
             placement,
             tooltipRef: innerTooltipRef,
+            popupPortalTarget,
           }),
         )
       }
-    }, [innerTooltipRef, placement])
+    }, [placement, popupPortalTarget])
 
     /**
      * This function is called when we need to recompute positions of tooltip due to window scroll or resize.
@@ -257,6 +267,7 @@ export const Popup = forwardRef(
       if (innerTooltipRef.current) {
         innerTooltipRef.current.style.animation = 'none'
       }
+
       generatePositions()
     }, [generatePositions, innerTooltipRef])
 
@@ -333,10 +344,12 @@ export const Popup = forwardRef(
       if (visibleInDom) {
         generatePositions()
 
-        // We want to detect scroll and resize in order to recompute positions of tooltip
-        // Adding true as third parameter to event listener will detect nested scrolls.
-        window.addEventListener('scroll', onWindowChangeDetected, true)
-        window.addEventListener('resize', onWindowChangeDetected, true)
+        if (popupPortalTarget === document.body) {
+          // We want to detect scroll and resize in order to recompute positions of tooltip
+          // Adding true as third parameter to event listener will detect nested scrolls.
+          window.addEventListener('scroll', onWindowChangeDetected, true)
+          window.addEventListener('resize', onWindowChangeDetected, true)
+        }
       }
 
       return () => {
@@ -347,7 +360,13 @@ export const Popup = forwardRef(
           timer.current = undefined
         }
       }
-    }, [generatePositions, onWindowChangeDetected, visibleInDom, maxWidth])
+    }, [
+      generatePositions,
+      onWindowChangeDetected,
+      visibleInDom,
+      maxWidth,
+      popupPortalTarget,
+    ])
 
     /**
      * If tooltip has `visible` prop it means the tooltip is manually controlled through this prop.
@@ -358,15 +377,6 @@ export const Popup = forwardRef(
         onPointerEvent(visible)()
       }
     }, [isControlled, onPointerEvent, visible])
-
-    const onLocalKeyDown: KeyboardEventHandler = useCallback(
-      event => {
-        if (event.code === 'Escape') {
-          unmountTooltip()
-        }
-      },
-      [unmountTooltip],
-    )
 
     // Handle hide on esc press and hide on click outside
     useEffect(() => {
@@ -438,7 +448,6 @@ export const Popup = forwardRef(
           tabIndex={tabIndex}
           onKeyDown={event => {
             onKeyDown?.(event)
-            onLocalKeyDown(event)
           }}
           data-container-full-width={containerFullWidth}
           aria-haspopup={ariaHasPopup}
@@ -453,7 +462,6 @@ export const Popup = forwardRef(
       generatedId,
       isControlled,
       onKeyDown,
-      onLocalKeyDown,
       onPointerEvent,
       tabIndex,
     ])
@@ -467,7 +475,7 @@ export const Popup = forwardRef(
     /**
      * This event handle allow us to not bubble the event to document.body like this react-select works fine
      */
-    const stopClickPropagation: React.MouseEventHandler = event => {
+    const stopClickPropagation: MouseEventHandler = event => {
       event.nativeEvent.stopImmediatePropagation()
     }
 
@@ -492,7 +500,7 @@ export const Popup = forwardRef(
               >
                 {text}
               </StyledTooltip>,
-              document.body,
+              popupPortalTarget,
             )
           : null}
       </>

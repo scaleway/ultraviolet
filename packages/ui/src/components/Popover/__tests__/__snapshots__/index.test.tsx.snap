@@ -2,103 +2,1055 @@
 
 exports[`Tooltip should render correctly with component in content prop 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 <div
     aria-controls=":r5:"
     aria-describedby=":r5:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     Children
+    <div
+      class="ejpxv5a1 cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r5:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p>
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with placement should renders tooltip with placement bottom 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 12px, 0);
+    -moz-transform: translate3d(0px, 12px, 0);
+    -ms-transform: translate3d(0px, 12px, 0);
+    transform: translate3d(0px, 12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-1gpsh6b-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, 12px, 0);
+  -moz-transform: translate3d(0px, 12px, 0);
+  -ms-transform: translate3d(0px, 12px, 0);
+  transform: translate3d(0px, 12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-1gpsh6b-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -13px;
+  left: 0px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-1gpsh6b-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":rk:"
     aria-describedby=":rk:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-1gpsh6b-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":rk:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with placement should renders tooltip with placement left 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-16px, 0px, 0);
+    -moz-transform: translate3d(-16px, 0px, 0);
+    -ms-transform: translate3d(-16px, 0px, 0);
+    transform: translate3d(-16px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(-16px, 0px, 0);
+    -moz-transform: translate3d(-16px, 0px, 0);
+    -ms-transform: translate3d(-16px, 0px, 0);
+    transform: translate3d(-16px, 0px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-imbh4p-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(-16px, 0px, 0);
+  -moz-transform: translate3d(-16px, 0px, 0);
+  -ms-transform: translate3d(-16px, 0px, 0);
+  transform: translate3d(-16px, 0px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-imbh4p-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  left: 13px;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -moz-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-imbh4p-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":rc:"
     aria-describedby=":rc:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-imbh4p-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":rc:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with placement should renders tooltip with placement right 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(28px, 0px, 0);
+    -moz-transform: translate3d(28px, 0px, 0);
+    -ms-transform: translate3d(28px, 0px, 0);
+    transform: translate3d(28px, 0px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(28px, 0px, 0);
+    -moz-transform: translate3d(28px, 0px, 0);
+    -ms-transform: translate3d(28px, 0px, 0);
+    transform: translate3d(28px, 0px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-u5i209-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(28px, 0px, 0);
+  -moz-transform: translate3d(28px, 0px, 0);
+  -ms-transform: translate3d(28px, 0px, 0);
+  transform: translate3d(28px, 0px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-u5i209-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: 0px;
+  left: -13px;
+  -webkit-transform: translate(50%, -50%) rotate(90deg);
+  -moz-transform: translate(50%, -50%) rotate(90deg);
+  -ms-transform: translate(50%, -50%) rotate(90deg);
+  transform: translate(50%, -50%) rotate(90deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-u5i209-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":rg:"
     aria-describedby=":rg:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-u5i209-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":rg:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with placement should renders tooltip with placement top 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -106,17 +1058,236 @@ exports[`Tooltip should render correctly with placement should renders tooltip w
   width: 100%;
 }
 
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     aria-controls=":r8:"
     aria-describedby=":r8:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r8:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -135,7 +1306,7 @@ exports[`Tooltip should render correctly with required props 1`] = `
     aria-controls=":r0:"
     aria-describedby=":r0:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     Children
   </div>
@@ -144,128 +1315,1475 @@ exports[`Tooltip should render correctly with required props 1`] = `
 
 exports[`Tooltip should render correctly with required props and visible 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":r1:"
     aria-describedby=":r1:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     Children
+    <div
+      class="ejpxv5a1 cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r1:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with sentiment should renders tooltip with placement neutral 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":ro:"
     aria-describedby=":ro:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":ro:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with sentiment should renders tooltip with placement primary 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-4zdq3b-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #8c40ef;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-4zdq3b-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-4zdq3b-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #8c40ef transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-fw9qdq-StyledText {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-13hzq4w-StyledFilledButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #8c40ef;
+  border: none;
+  color: #ffffff;
+}
+
+.cache-13hzq4w-StyledFilledButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-13hzq4w-StyledFilledButton:active {
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-13hzq4w-StyledFilledButton:hover,
+.cache-13hzq4w-StyledFilledButton:active {
+  background: #792dd4;
+  color: #f9f9fa;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-fzpogg-StyledText {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":rs:"
     aria-describedby=":rs:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-4zdq3b-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":rs:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-fw9qdq-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-13hzq4w-StyledFilledButton e112qvla2"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-fzpogg-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with sizes should renders tooltip with placement large 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-di3rp7-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 520px;
+  max-width: 520px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-di3rp7-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-di3rp7-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":r18:"
     aria-describedby=":r18:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-di3rp7-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r18:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with sizes should renders tooltip with placement medium 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
 .cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
   width: 100%;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 420px;
+  max-width: 420px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
     aria-controls=":r14:"
     aria-describedby=":r14:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-mekpa5-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r14:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`Tooltip should render correctly with sizes should renders tooltip with placement small 1`] = `
 <DocumentFragment>
-  .cache-1hzk1lh-StyledChildrenContainer {
+  @keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, -12px, 0);
+    -moz-transform: translate3d(0px, -12px, 0);
+    -ms-transform: translate3d(0px, -12px, 0);
+    transform: translate3d(0px, -12px, 0);
+  }
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
   display: inherit;
 }
 
@@ -273,17 +2791,236 @@ exports[`Tooltip should render correctly with sizes should renders tooltip with 
   width: 100%;
 }
 
+.cache-12o16sz-StyledTooltip-StyledTooltip-StyledPopup {
+  background: #151a2d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-align: center;
+  position: absolute;
+  max-width: 232px;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0px, -12px, 0);
+  -moz-transform: translate3d(0px, -12px, 0);
+  -ms-transform: translate3d(0px, -12px, 0);
+  transform: translate3d(0px, -12px, 0);
+  -webkit-animation: 230ms animation-0 forwards;
+  animation: 230ms animation-0 forwards;
+  padding: 16px;
+  width: 320px;
+  max-width: 320px;
+  text-align: initial;
+  background: #ffffff;
+  box-shadow: 0px 4px 32px 8px #151a2d5c;
+}
+
+.cache-12o16sz-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  content: ' ';
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #151a2d transparent transparent transparent;
+  pointer-events: none;
+}
+
+.cache-12o16sz-StyledTooltip-StyledTooltip-StyledPopup[data-has-arrow='true']::after {
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.cache-ag4zk-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  color: #3f4250;
+}
+
+.cache-141zsra-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-10nkb7g-StyledText {
+  color: #222638;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-yx71r4-StyledText {
+  color: #222638;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <div
     aria-controls=":r10:"
     aria-describedby=":r10:"
     class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
-    tabindex="0"
+    tabindex="-1"
   >
     <p
       data-testid="children"
     >
       Children
     </p>
+    <div
+      class="ejpxv5a1 cache-12o16sz-StyledTooltip-StyledTooltip-StyledPopup e4h1g861"
+      data-has-arrow="true"
+      id=":r10:"
+      role="dialog"
+    >
+      <div
+        class="cache-ag4zk-Stack-StyledStack ejpxv5a0"
+      >
+        <div
+          class="cache-141zsra-Stack ehpbis70"
+        >
+          <h3
+            class="cache-10nkb7g-StyledText e13y3mga0"
+          >
+            Test
+          </h3>
+          <button
+            aria-label="close"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p
+          class="cache-yx71r4-StyledText e13y3mga0"
+        >
+          Test
+        </p>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
