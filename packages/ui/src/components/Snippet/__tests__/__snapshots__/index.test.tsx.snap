@@ -1858,6 +1858,315 @@ exports[`Snippet renders correctly with hideText 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Snippet renders correctly with initiallyExpanded 1`] = `
+<DocumentFragment>
+  .cache-358s5-Container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: start;
+  justify-content: start;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9fa;
+  border-radius: 4px;
+}
+
+.cache-jdits0-Stack-StyledStack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.cache-rk9ngy-StyledExpandable {
+  -webkit-transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  transition: max-height 300ms ease-out,opacity 300ms ease-out;
+  overflow: visible;
+  height: auto;
+  max-height: initial;
+}
+
+.cache-pfeypm-StyledText-PreText {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 16px;
+  padding-right: 72px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: auto;
+  counter-reset: section;
+}
+
+.cache-bsg2e2-StyledSpan {
+  display: block;
+}
+
+.cache-bsg2e2-StyledSpan:after {
+  content: '';
+  padding: 32px;
+}
+
+.cache-z90995-ButtonContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px 16px 0 0;
+  background: #f9f9fa;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer {
+  display: inherit;
+}
+
+.cache-1hzk1lh-StyledChildrenContainer[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-1xcp86l-StyledGhostButton {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1xcp86l-StyledGhostButton:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1xcp86l-StyledGhostButton:hover,
+.cache-1xcp86l-StyledGhostButton:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1ucxira-ShowMoreContainer {
+  width: 100%;
+  box-shadow: none;
+}
+
+.cache-eg7v1i-StyledButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.cache-19pgd1x-StyledText-AlignCenterText {
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cache-1tm5i1b-sizeStyles-AnimatedArrowIcon {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+<div
+    class="cache-358s5-Container e1q0gj906"
+  >
+    <div
+      class="cache-jdits0-Stack-StyledStack e1q0gj905"
+    >
+      <div
+        class="cache-rk9ngy-StyledExpandable e5hc7t70"
+      >
+        <pre
+          class="e1q0gj908 cache-pfeypm-StyledText-PreText e13y3mga0"
+        >
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+          <span
+            class="cache-bsg2e2-StyledSpan e1q0gj907"
+          >
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </span>
+        </pre>
+      </div>
+      <div
+        class="cache-z90995-ButtonContainer e1q0gj904"
+      >
+        <div
+          aria-controls=":rq:"
+          aria-describedby=":rq:"
+          class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
+          data-container-full-width="false"
+          tabindex="0"
+        >
+          <button
+            aria-label="Copy"
+            class="cache-1xcp86l-StyledGhostButton e112qvla0"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="cache-1ucxira-ShowMoreContainer e1q0gj903"
+      >
+        <button
+          aria-expanded="true"
+          class="cache-eg7v1i-StyledButton e1q0gj902"
+          type="button"
+        >
+          <span
+            class="e1q0gj901 cache-19pgd1x-StyledText-AlignCenterText e13y3mga0"
+          >
+            Hide 
+            <svg
+              class="e1q0gj900 cache-1tm5i1b-sizeStyles-AnimatedArrowIcon e1gt4cfo0"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 11c-.28 0-.55-.11-.74-.3L3.3 6.77a1.04 1.04 0 0 1 0-1.47 1.06 1.06 0 0 1 1.49 0L8 8.48l3.2-3.17a1.06 1.06 0 0 1 1.72.33 1.04 1.04 0 0 1-.23 1.14L8.74 10.7c-.2.2-.46.31-.74.31"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Snippet renders correctly with showText 1`] = `
 <DocumentFragment>
   .cache-358s5-Container {
@@ -2851,8 +3160,8 @@ exports[`Snippet should click on extend button to display full content on  1`] =
         class="cache-z90995-ButtonContainer e1q0gj904"
       >
         <div
-          aria-controls=":rq:"
-          aria-describedby=":rq:"
+          aria-controls=":rt:"
+          aria-describedby=":rt:"
           class="cache-1hzk1lh-StyledChildrenContainer e4h1g860"
           data-container-full-width="false"
           tabindex="0"
