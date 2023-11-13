@@ -10,6 +10,8 @@ import type {
 } from 'react'
 import { forwardRef, useMemo } from 'react'
 import { Badge } from '../Badge'
+import { Stack } from '../Stack'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 import { useTabsContext } from './TabsContext'
 
@@ -17,6 +19,8 @@ const StyledBadge = styled(Badge)`
   padding: 0 ${({ theme }) => theme.space['1']};
   margin-left: ${({ theme }) => theme.space['1']};
 `
+
+const StyledText = styled(Text)``
 
 const StyledTooltip = styled(Tooltip)``
 
@@ -31,7 +35,7 @@ export const StyledTabButton = styled('button')`
   padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
   cursor: pointer;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   white-space: nowrap;
   color: ${({ theme }) => theme.colors.neutral.text};
   text-decoration: none;
@@ -65,6 +69,10 @@ export const StyledTabButton = styled('button')`
   &[aria-selected='true'] {
     color: ${({ theme }) => theme.colors.primary.text};
     border-bottom-color: ${({ theme }) => theme.colors.primary.border};
+
+    ${StyledText} {
+      color: ${({ theme }) => theme.colors.primary.text};
+    }
   }
 
   &[aria-disabled='false']:not(:disabled) {
@@ -81,6 +89,9 @@ export const StyledTabButton = styled('button')`
           border-color: ${({ theme }) => theme.colors.primary.background};
           color: ${({ theme }) => theme.colors.primary.text};
         }
+        ${StyledText} {
+          color: ${({ theme }) => theme.colors.primary.text};
+        }
       }
     }
   }
@@ -91,6 +102,7 @@ export const StyledTabButton = styled('button')`
     filter: grayscale(1) opacity(50%);
   }
 `
+
 type TabProps<T extends ElementType = 'button'> = {
   as?: T
   badge?: ReactNode
@@ -98,10 +110,11 @@ type TabProps<T extends ElementType = 'button'> = {
   className?: string
   counter?: number | string
   disabled?: boolean
-  value?: string | number
   onClick?: MouseEventHandler<HTMLElement>
   onKeyDown?: KeyboardEventHandler<HTMLElement>
+  subtitle?: string
   tooltip?: string
+  value?: string | number
 } & Omit<
   ComponentProps<T>,
   | 'as'
@@ -124,10 +137,11 @@ export const Tab = forwardRef(
       className,
       counter,
       disabled = false,
-      value,
       onClick,
       onKeyDown,
+      subtitle,
       tooltip,
+      value,
       ...props
     }: TabProps<T>,
     ref: ForwardedRef<HTMLElement>,
@@ -164,17 +178,33 @@ export const Tab = forwardRef(
           data-is-selected={isSelected}
           {...props}
         >
-          {children}
-          {typeof counter === 'number' || typeof counter === 'string' ? (
-            <StyledBadge
-              sentiment={isSelected ? 'primary' : 'neutral'}
-              prominence={isSelected ? 'strong' : 'default'}
-              size="medium"
-            >
-              {counter}
-            </StyledBadge>
-          ) : null}
-          {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
+          <Stack direction="column" gap={1}>
+            <Stack direction="row">
+              {children}
+              {typeof counter === 'number' || typeof counter === 'string' ? (
+                <StyledBadge
+                  sentiment={isSelected ? 'primary' : 'neutral'}
+                  prominence={isSelected ? 'strong' : 'default'}
+                  size="medium"
+                >
+                  {counter}
+                </StyledBadge>
+              ) : null}
+              {badge ? <BadgeContainer>{badge}</BadgeContainer> : null}
+            </Stack>
+            {subtitle ? (
+              <Stack direction="row">
+                <StyledText
+                  as="span"
+                  variant="bodySmall"
+                  sentiment="neutral"
+                  prominence="strong"
+                >
+                  {subtitle}
+                </StyledText>
+              </Stack>
+            ) : null}
+          </Stack>
         </StyledTabButton>
       </StyledTooltip>
     )

@@ -32,7 +32,15 @@ type TabMenuProps = {
 
 export const TabMenu = forwardRef(
   (
-    { children, disclosure, visible, id, disabled, ...props }: TabMenuProps,
+    {
+      children,
+      disclosure,
+      visible,
+      id,
+      disabled,
+      className,
+      ...props
+    }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
     <Menu
@@ -45,6 +53,7 @@ export const TabMenu = forwardRef(
           aria-disabled={disabled ?? 'false'}
           disabled={disabled}
           aria-haspopup="menu"
+          className={className}
           {...props}
         >
           {disclosure}

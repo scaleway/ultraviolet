@@ -2,12 +2,13 @@ import { Tabs } from '..'
 import { Badge } from '../../Badge'
 import { Template } from './Template.stories'
 
-export const WithBadge = Template.bind({})
+export const WithSubtitle = Template.bind({})
 
-WithBadge.args = {
+WithSubtitle.args = {
   children: [
     <Tabs.Tab
       value={1}
+      subtitle="Subtitle"
       badge={
         <Badge sentiment="warning" size="small">
           Beta
@@ -19,6 +20,7 @@ WithBadge.args = {
     <Tabs.Tab
       value={2}
       counter={1}
+      subtitle="Subtitle"
       badge={
         <Badge sentiment="warning" size="small">
           Beta
@@ -30,6 +32,7 @@ WithBadge.args = {
     <Tabs.Tab
       value={3}
       counter={10}
+      subtitle="Subtitle"
       badge={
         <Badge sentiment="warning" size="small">
           Beta
@@ -41,7 +44,7 @@ WithBadge.args = {
     <Tabs.Tab
       value={4}
       disabled
-      subtitle="Subtitle 2"
+      subtitle="Subtitle Beta"
       badge={
         <Badge sentiment="warning" size="small">
           Beta
@@ -54,6 +57,7 @@ WithBadge.args = {
       value={5}
       disabled
       counter={1}
+      subtitle="Subtitle short"
       badge={
         <Badge sentiment="warning" size="small">
           Beta
@@ -66,11 +70,14 @@ WithBadge.args = {
       value={6}
       disabled
       counter={10}
-      badge={
-        <Badge sentiment="warning" size="small">
-          Beta
-        </Badge>
-      }
+      subtitle="Subtitle with a long long long long long long text"
+    >
+      Text
+    </Tabs.Tab>,
+    <Tabs.Tab
+      value={6}
+      counter={10}
+      subtitle="Subtitle with a long long long long long long text"
     >
       Text
     </Tabs.Tab>,
