@@ -57,7 +57,7 @@ export const Tooltip = forwardRef(
       placement={placement}
       text={text}
       innerRef={innerRef}
-      portalTarget={portalTarget}
+      portalTarget={portalTarget ?? document.body}
     >
       {children}
     </StyledPopup>

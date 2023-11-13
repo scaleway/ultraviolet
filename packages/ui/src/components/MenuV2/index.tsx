@@ -15,6 +15,7 @@ import {
   useRef,
   useState,
 } from 'react'
+import { Z_INDEX } from '../../constants/zIndex'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
 import Item from './Item'
@@ -30,6 +31,7 @@ type DisclosureElement =
     })
 
 const StyledPopup = styled(Popup)`
+  z-index: ${Z_INDEX.menu};
   background-color: ${({ theme }) => theme.colors.neutral.background};
   box-shadow: ${({ theme }) => theme.shadows.menu};
   padding: 0;

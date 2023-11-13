@@ -5,7 +5,7 @@ export const Playground = Template.bind({})
 
 Playground.decorators = [
   Story => (
-    <div style={{ height: '80px' }}>
+    <div>
       <div style={{ display: 'inline-flex' }}>
         <Story />
       </div>

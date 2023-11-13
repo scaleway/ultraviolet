@@ -7,6 +7,7 @@ import type {
 } from 'react'
 import { useCallback, useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
+import { Z_INDEX } from '../../constants/zIndex'
 import { MODAL_PLACEMENT, MODAL_WIDTH } from './constants'
 import type { DialogProps, ModalPlacement, ModalSize } from './types'
 
@@ -36,6 +37,7 @@ type StyledDialogProps = {
 }
 
 const StyledDialog = styled.dialog<StyledDialogProps>`
+  z-index: ${Z_INDEX.modal};
   background-color: ${({ theme }) =>
     theme.colors.neutral.backgroundWeakElevated};
   position: relative;

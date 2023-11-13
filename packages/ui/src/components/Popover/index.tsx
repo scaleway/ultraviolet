@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
+import { Z_INDEX } from '../../constants/zIndex'
 import { Button } from '../Button'
 import { Popup } from '../Popup'
 import { Stack } from '../Stack'
@@ -20,6 +21,7 @@ const StyledPopup = styled(Popup, {
   sentiment: SentimentType
   size: keyof typeof SIZES_WIDTH
 }>`
+  z-index: ${Z_INDEX.popover};
   padding: ${({ theme }) => theme.space['2']};
   width: ${({ size }) => SIZES_WIDTH[size]}px;
   max-width: ${({ size }) => SIZES_WIDTH[size]}px;

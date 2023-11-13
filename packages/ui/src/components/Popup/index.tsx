@@ -423,6 +423,49 @@ export const Popup = forwardRef(
     ])
 
     /**
+     * This event will occur only for dialog and will trap focus inside the dialog.
+     */
+    const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
+      event.stopPropagation()
+      const isTabPressed = event.key === 'Tab'
+
+      if (!isTabPressed) {
+        return
+      }
+
+      const focusableEls =
+        innerTooltipRef.current?.querySelectorAll(
+          'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+        ) ?? []
+
+      // Handle case when no interactive element are within the modal (including close icon)
+      if (focusableEls.length === 0) {
+        event.preventDefault()
+      }
+
+      const firstFocusableEl = focusableEls[0] as HTMLElement
+      const lastFocusableEl = focusableEls[
+        focusableEls.length - 1
+      ] as HTMLElement
+
+      if (event.shiftKey) {
+        if (
+          document.activeElement === firstFocusableEl ||
+          document.activeElement === innerTooltipRef.current
+        ) {
+          lastFocusableEl.focus()
+          event.preventDefault()
+        }
+      } else if (
+        document.activeElement === lastFocusableEl ||
+        document.activeElement === innerTooltipRef.current
+      ) {
+        firstFocusableEl.focus()
+        event.preventDefault()
+      }
+    }, [])
+
+    /**
      * Will render children conditionally if children is a function or not.
      */
     const renderChildren = useCallback(() => {
@@ -497,6 +540,7 @@ export const Popup = forwardRef(
                 data-has-arrow={hasArrow}
                 onClick={stopClickPropagation}
                 animationDuration={animationDuration}
+                onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
               >
                 {text}
               </StyledTooltip>,
