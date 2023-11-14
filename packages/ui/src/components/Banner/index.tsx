@@ -9,12 +9,6 @@ import { Stack } from '../Stack'
 import { Text } from '../Text'
 import defaultIllustrationSmall from './assets/default-image-small.svg'
 import defaultIllustration from './assets/default-image.svg'
-import introCompactLeftPattern from './assets/intro-compact-left-pattern.svg'
-import introCompactRightPattern from './assets/intro-compact-right-pattern.svg'
-import introPattern from './assets/intro-pattern.svg'
-import promotionCompactLeftPattern from './assets/promotion-compact-left-pattern.svg'
-import promotionCompactRightPattern from './assets/promotion-compact-right-pattern.svg'
-import promotionPattern from './assets/promotion-pattern.svg'
 
 type Variant = 'intro' | 'promotional'
 type Size = 'small' | 'medium'
@@ -32,8 +26,6 @@ const styles = ({
     if (variant === 'intro') {
       return css`
         background: ${theme.colors.primary.background};
-        background-image: url(${introCompactLeftPattern}),
-          url(${introCompactRightPattern});
         background-position: left, right;
         background-repeat: no-repeat, no-repeat;
         background-size: contain, contain;
@@ -42,10 +34,8 @@ const styles = ({
 
     if (variant === 'promotional') {
       return css`
-        background-image: url(${promotionCompactLeftPattern}),
-          url(${promotionCompactRightPattern}),
-          ${theme.colors.other.gradients.background.purple};
         background-position: left, right;
+        background-image: ${theme.colors.other.gradients.background.aqua};
         background-repeat: no-repeat, no-repeat;
         background-size: contain, contain;
       `
@@ -56,7 +46,6 @@ const styles = ({
     if (variant === 'intro') {
       return css`
         background: ${theme.colors.primary.background};
-        background-image: url(${introPattern});
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
@@ -65,8 +54,7 @@ const styles = ({
 
     if (variant === 'promotional') {
       return css`
-        background-image: url(${promotionPattern}),
-          ${theme.colors.other.gradients.background.purple};
+        background-image: ${theme.colors.other.gradients.background.aqua};
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
@@ -197,31 +185,35 @@ export const Banner = ({
             {children}
           </Text>
         </Stack>
-        <Stack direction="row" gap={2} alignItems="center">
-          {buttonText ? (
-            <Button
-              size="medium"
-              sentiment={variant === 'intro' ? 'primary' : 'neutral'}
-              variant="filled"
-              onClick={onClickButton}
-            >
-              {buttonText}
-            </Button>
-          ) : null}
-          {linkText ? (
-            <Link
-              sentiment={theme !== 'light' ? 'neutral' : 'primary'}
-              size="small"
-              target="_blank"
-              href={linkHref ?? ''}
-              prominence={
-                variant === 'intro' || theme !== 'light' ? 'default' : 'strong'
-              }
-            >
-              {linkText}
-            </Link>
-          ) : null}
-        </Stack>
+        {buttonText || linkText ? (
+          <Stack direction="row" gap={2} alignItems="center">
+            {buttonText ? (
+              <Button
+                size="medium"
+                sentiment={variant === 'intro' ? 'primary' : 'neutral'}
+                variant="filled"
+                onClick={onClickButton}
+              >
+                {buttonText}
+              </Button>
+            ) : null}
+            {linkText ? (
+              <Link
+                sentiment={theme !== 'light' ? 'neutral' : 'primary'}
+                size="small"
+                target="_blank"
+                href={linkHref ?? ''}
+                prominence={
+                  variant === 'intro' || theme !== 'light'
+                    ? 'default'
+                    : 'strong'
+                }
+              >
+                {linkText}
+              </Link>
+            ) : null}
+          </Stack>
+        ) : null}
       </Stack>
       {closable ? (
         <Button

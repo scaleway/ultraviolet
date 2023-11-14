@@ -87,6 +87,15 @@ export const deprecatedDarkerTokens = {
       textWeakDisabled: '#553600',
       textWeakHover: '#d89d00',
     },
+    other: {
+      gradients: {
+        background: {
+          gold: 'linear-gradient(180deg, #fbc600 0%, #521094 88.87%)',
+          purple: 'linear-gradient(180deg, #c43bff 0%, #521094 88.87%)',
+          strong: 'linear-gradient(180deg, #521094 0%, #151a2d 100%)',
+        },
+      },
+    },
   },
   typography: {
     body: {
@@ -126,13 +135,13 @@ export const deprecatedDarkerTokens = {
       fontFamily: 'Inter, Asap',
     },
     heading: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
     headingLarge: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
     headingSmall: {
-      fontFamily: 'Inter, Asap',
+      fontFamily: 'Space Grotesk, Inter, Asap',
     },
   },
 }
