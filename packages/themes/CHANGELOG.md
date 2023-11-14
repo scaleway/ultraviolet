@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.5.0
+
+### Minor Changes
+
+- [#3120](https://github.com/scaleway/ultraviolet/pull/3120) [`753555d5`](https://github.com/scaleway/ultraviolet/commit/753555d543976046b324d63e53b6567f4e8c0d5a) Thanks [@matthprost](https://github.com/matthprost)! - New gradient and rebranding of Banner
+
 ## 1.4.0
 
 ### Minor Changes
