@@ -102,6 +102,14 @@ export const Form = <TFormValues extends FieldValues>({
       restart: () => methods.reset(initialValues),
       change: methods.setValue,
     })
+
+    if (result === null) {
+      methods.setError('root.submit', {
+        type: 'custom',
+      })
+
+      return
+    }
     if (result && typeof result !== 'boolean' && typeof result !== 'number') {
       methods.setError('root.submit', {
         type: 'custom',

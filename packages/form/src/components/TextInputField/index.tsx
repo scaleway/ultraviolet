@@ -54,6 +54,8 @@ type TextInputFieldProps<TFieldValues extends FieldValues> =
 
       format?: (value: unknown) => PathValue<TFieldValues, Path<TFieldValues>>
       parse?: (value: string) => PathValue<TFieldValues, Path<TFieldValues>>
+
+      customError?: string
     }
 
 export const TextInputField = forwardRef(
@@ -100,6 +102,7 @@ export const TextInputField = forwardRef(
       maxLength,
       validate,
       defaultValue,
+      customError,
     }: TextInputFieldProps<TFieldValues>,
     ref: Ref<HTMLInputElement>,
   ) => {
@@ -151,18 +154,21 @@ export const TextInputField = forwardRef(
               className={className}
               cols={cols}
               disabled={disabled}
-              error={getError(
-                {
-                  regex: regexes,
-                  minLength,
-                  maxLength,
-                  label,
-                  min,
-                  max,
-                  value: field.value,
-                },
-                error,
-              )}
+              error={
+                customError ??
+                getError(
+                  {
+                    regex: regexes,
+                    minLength,
+                    maxLength,
+                    label,
+                    min,
+                    max,
+                    value: field.value,
+                  },
+                  error,
+                )
+              }
               fillAvailable={fillAvailable}
               generated={generated}
               id={id}
