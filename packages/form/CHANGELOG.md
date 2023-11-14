@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.9.7
+
+### Patch Changes
+
+- [#3134](https://github.com/scaleway/ultraviolet/pull/3134) [`eac7052c`](https://github.com/scaleway/ultraviolet/commit/eac7052cb89933f7397dbd62b86bcf16550ee084) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/final-form-focus` to `1.1.7`.
+
+- Updated dependencies [[`753555d5`](https://github.com/scaleway/ultraviolet/commit/753555d543976046b324d63e53b6567f4e8c0d5a), [`ce626d2f`](https://github.com/scaleway/ultraviolet/commit/ce626d2f0fc4c486068ce6998cb565bddc806fa4)]:
+  - @ultraviolet/ui@1.25.0
+
 ## 1.9.6
 
 ### Patch Changes

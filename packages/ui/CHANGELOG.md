@@ -1,5 +1,19 @@
 # Change Log
 
+## 1.25.0
+
+### Minor Changes
+
+- [#3120](https://github.com/scaleway/ultraviolet/pull/3120) [`753555d5`](https://github.com/scaleway/ultraviolet/commit/753555d543976046b324d63e53b6567f4e8c0d5a) Thanks [@matthprost](https://github.com/matthprost)! - New gradient and rebranding of Banner
+
+### Patch Changes
+
+- [#3140](https://github.com/scaleway/ultraviolet/pull/3140) [`ce626d2f`](https://github.com/scaleway/ultraviolet/commit/ce626d2f0fc4c486068ce6998cb565bddc806fa4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.19.3`.
+
+- Updated dependencies [[`753555d5`](https://github.com/scaleway/ultraviolet/commit/753555d543976046b324d63e53b6567f4e8c0d5a)]:
+  - @ultraviolet/themes@1.5.0
+  - @ultraviolet/icons@2.5.4
+
 ## 1.24.2
 
 ### Patch Changes
