@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.0-next.1
+
+### Patch Changes
+
+- [`c9e125b5`](https://github.com/scaleway/ultraviolet/commit/c9e125b5943f68bb3d56ecd6cdd30922b211027f) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Fix no error from submit
+
+- Updated dependencies []:
+  - @ultraviolet/ui@1.24.1-next.0
+
 ## 2.0.0-next.0
 
 ### Major Changes
