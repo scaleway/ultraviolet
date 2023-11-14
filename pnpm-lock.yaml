@@ -86,8 +86,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 5.4.7
-        version: 5.4.7(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 5.4.8
+        version: 5.4.8(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 9.0.0
         version: 9.0.0(size-limit@9.0.0)
@@ -141,7 +141,7 @@ importers:
         version: 7.5.3(@babel/core@7.23.2)(@swc/core@1.3.82)(esbuild@0.18.20)(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
       '@storybook/testing-react':
         specifier: 2.0.0
-        version: 2.0.0(@storybook/client-logger@7.5.2)(@storybook/preview-api@7.5.2)(@storybook/react@7.5.3)(@storybook/types@7.5.2)(react@18.2.0)
+        version: 2.0.0(@storybook/client-logger@7.5.3)(@storybook/preview-api@7.5.3)(@storybook/react@7.5.3)(@storybook/types@7.5.3)(react@18.2.0)
       '@storybook/theming':
         specifier: 7.5.3
         version: 7.5.3(react-dom@18.2.0)(react@18.2.0)
@@ -3156,10 +3156,10 @@ packages:
   /@floating-ui/utils@0.1.1:
     resolution: {integrity: sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==}
 
-  /@formatjs/ecma402-abstract@1.17.2:
-    resolution: {integrity: sha512-k2mTh0m+IV1HRdU0xXM617tSQTi53tVR2muvYOsBeYcUgEAyxV1FOC7Qj279th3fBVQ+Dj6muvNJZcHSPNdbKg==}
+  /@formatjs/ecma402-abstract@1.17.4:
+    resolution: {integrity: sha512-mLxTq+UrMoOoafVxG5HdmrfPpjv0uINQw1d0ADKfQMqhDaR4SDXdw3olXkOP05DGSAsVvSxzfKEuVKcLB15b9A==}
     dependencies:
-      '@formatjs/intl-localematcher': 0.4.2
+      '@formatjs/intl-localematcher': 0.5.1
       tslib: 2.6.2
     dev: true
 
@@ -3169,23 +3169,23 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@formatjs/icu-messageformat-parser@2.7.0:
-    resolution: {integrity: sha512-7uqC4C2RqOaBQtcjqXsSpGRYVn+ckjhNga5T/otFh6MgxRrCJQqvjfbrGLpX1Lcbxdm5WH3Z2WZqt1+Tm/cn/Q==}
+  /@formatjs/icu-messageformat-parser@2.7.2:
+    resolution: {integrity: sha512-dJ/My3RigHf76xDtk9EAf5zW0EvFMp6uoUIcAQfSNx5kScgEPVbKROWLi3v1kRZX/2eBof6eAJsyfgNOggIOJA==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.2
-      '@formatjs/icu-skeleton-parser': 1.6.2
+      '@formatjs/ecma402-abstract': 1.17.4
+      '@formatjs/icu-skeleton-parser': 1.6.4
       tslib: 2.6.2
     dev: true
 
-  /@formatjs/icu-skeleton-parser@1.6.2:
-    resolution: {integrity: sha512-VtB9Slo4ZL6QgtDFJ8Injvscf0xiDd4bIV93SOJTBjUF4xe2nAWOoSjLEtqIG+hlIs1sNrVKAaFo3nuTI4r5ZA==}
+  /@formatjs/icu-skeleton-parser@1.6.4:
+    resolution: {integrity: sha512-DiCSD/8mwP3UICjAXzLXvJ3UM7wpViG47YoplGqlpl9jauDbLD3MByAY4Vs0IWPNrO+/pWSyowEWfcFLM7oZUw==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.2
+      '@formatjs/ecma402-abstract': 1.17.4
       tslib: 2.6.2
     dev: true
 
-  /@formatjs/intl-localematcher@0.4.2:
-    resolution: {integrity: sha512-BGdtJFmaNJy5An/Zan4OId/yR9Ih1OojFjcduX/xOvq798OgWSyDtd6Qd5jqJXwJs1ipe4Fxu9+cshic5Ox2tA==}
+  /@formatjs/intl-localematcher@0.5.1:
+    resolution: {integrity: sha512-An6EtxT0txJI8dQwOmLqs4lC3/+Dl9YuTGDWdxxtAT/9sx0r9DupnC3/k6F87Tb5gqXdR/ACdB7bmR+Zo2eu+g==}
     dependencies:
       tslib: 2.6.2
     dev: true
@@ -4957,20 +4957,20 @@ packages:
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
     dev: true
 
-  /@scaleway/use-i18n@5.4.7(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-FGlPTwbVvpHDlDWlIITw0itoExvJ2w04PW4OuNEtAjbiQLgy6/X9b/ZRzFyoSM75zBWXiRd/m5PqPJpat186WA==}
+  /@scaleway/use-i18n@5.4.8(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-wtHGlcAA1h3YhvEPY65J0VfevdU9KOypNzVK1Nbty0Lf2A9sjDMD75pvYDjVCCC4atGjWcwfqLrMKWrYFNuWcg==}
     engines: {node: '>=14.x'}
     peerDependencies:
       date-fns: 2.x
       react: 18.x || 18
       react-dom: 18.x || 18
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.2
+      '@formatjs/ecma402-abstract': 1.17.4
       '@formatjs/fast-memoize': 2.2.0
       date-fns: 2.30.0
       filesize: 10.1.0
       international-types: 0.8.1
-      intl-messageformat: 10.5.4
+      intl-messageformat: 10.5.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -5572,17 +5572,6 @@ packages:
       - webpack-cli
     dev: true
 
-  /@storybook/channels@7.5.2:
-    resolution: {integrity: sha512-3SgqWq9NS0XX1QxK3riuaOLrReHWwVhI63u6q1ryDD3SttpmAezZETibOAtzDuk2FKgsyHTmAlmcGQf4ZxhOJA==}
-    dependencies:
-      '@storybook/client-logger': 7.5.2
-      '@storybook/core-events': 7.5.2
-      '@storybook/global': 5.0.0
-      qs: 6.11.2
-      telejson: 7.2.0
-      tiny-invariant: 1.3.1
-    dev: true
-
   /@storybook/channels@7.5.3:
     resolution: {integrity: sha512-dhWuV2o2lmxH0RKuzND8jxYzvSQTSmpE13P0IT/k8+I1up/rSNYOBQJT6SalakcNWXFAMXguo/8E7ApmnKKcEw==}
     dependencies:
@@ -5651,12 +5640,6 @@ packages:
     dependencies:
       '@storybook/client-logger': 7.5.3
       '@storybook/preview-api': 7.5.3
-    dev: true
-
-  /@storybook/client-logger@7.5.2:
-    resolution: {integrity: sha512-7YgLItlmiYDzWYexTaRNuHhtFarh9krsI+8l7Yjn9ryoHSTJUcTWx+yPJm1II+PQR8v/x5UgsxzultjgEurfRQ==}
-    dependencies:
-      '@storybook/global': 5.0.0
     dev: true
 
   /@storybook/client-logger@7.5.3:
@@ -5745,12 +5728,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: true
-
-  /@storybook/core-events@7.5.2:
-    resolution: {integrity: sha512-DV8bFEFVKDEvaH87KYPXDE0YEV+Y9yjFv2xxmC9pF8l+MWCtVW72RBLhB+gU5NM1bkHrRDNb0lOJfVGKlhxOog==}
-    dependencies:
-      ts-dedent: 2.2.0
     dev: true
 
   /@storybook/core-events@7.5.3:
@@ -5982,25 +5959,6 @@ packages:
       - webpack-plugin-serve
     dev: true
 
-  /@storybook/preview-api@7.5.2:
-    resolution: {integrity: sha512-rpmHR/09UBSnorDBTcE7JgHUQjZLO146NCI+vbI7Pqfb4QX/8lhwkFr4cuHRAR16mv6DAJbDVoPETO0Z/CH9aw==}
-    dependencies:
-      '@storybook/channels': 7.5.2
-      '@storybook/client-logger': 7.5.2
-      '@storybook/core-events': 7.5.2
-      '@storybook/csf': 0.1.1
-      '@storybook/global': 5.0.0
-      '@storybook/types': 7.5.2
-      '@types/qs': 6.9.8
-      dequal: 2.0.3
-      lodash: 4.17.21
-      memoizerific: 1.11.3
-      qs: 6.11.2
-      synchronous-promise: 2.0.17
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    dev: true
-
   /@storybook/preview-api@7.5.3:
     resolution: {integrity: sha512-LNmEf7oBRnZ1wG3bQ+P+TO29+NN5pSDJiAA6FabZBrtIVm+psc2lxBCDQvFYyAFzQSlt60toGKNW8+RfFNdR5Q==}
     dependencies:
@@ -6167,7 +6125,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/testing-react@2.0.0(@storybook/client-logger@7.5.2)(@storybook/preview-api@7.5.2)(@storybook/react@7.5.3)(@storybook/types@7.5.2)(react@18.2.0):
+  /@storybook/testing-react@2.0.0(@storybook/client-logger@7.5.3)(@storybook/preview-api@7.5.3)(@storybook/react@7.5.3)(@storybook/types@7.5.3)(react@18.2.0):
     resolution: {integrity: sha512-xpjULCHN368+3+vC56tZ232EwgmG8F+1hOa17zqLFlADWNbFr/19ko0raMIdXiik9Fn6JAErJNKH7OhO0ni8qA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -6177,11 +6135,11 @@ packages:
       '@storybook/types': ^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
     dependencies:
-      '@storybook/client-logger': 7.5.2
+      '@storybook/client-logger': 7.5.3
       '@storybook/csf': 0.1.1
-      '@storybook/preview-api': 7.5.2
+      '@storybook/preview-api': 7.5.3
       '@storybook/react': 7.5.3(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
-      '@storybook/types': 7.5.2
+      '@storybook/types': 7.5.3
       react: 18.2.0
     dev: true
 
@@ -6197,15 +6155,6 @@ packages:
       memoizerific: 1.11.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-    dev: true
-
-  /@storybook/types@7.5.2:
-    resolution: {integrity: sha512-RDKHo6WUES+4nt7uZMfankjxdpYX2EI2GpJ2n2RPcnhzmb/ub1huNTjbzDEYMqY24SppljZeIN57m3Ar6L6f9A==}
-    dependencies:
-      '@storybook/channels': 7.5.2
-      '@types/babel__core': 7.20.1
-      '@types/express': 4.17.17
-      file-system-cache: 2.3.0
     dev: true
 
   /@storybook/types@7.5.3:
@@ -11455,12 +11404,12 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /intl-messageformat@10.5.4:
-    resolution: {integrity: sha512-z+hrFdiJ/heRYlzegrdFYqU1m/KOMOVMqNilIArj+PbsuU8TNE7v4TWdQgSoxlxbT4AcZH3Op3/Fu15QTp+W1w==}
+  /intl-messageformat@10.5.7:
+    resolution: {integrity: sha512-ubr/60TUVpGX4JzL74p6tF3+0kut+mdxRElPEYcRG98yf02449ZbDygR+hleQHAClbgFQdLRk5W19WhlqryKBQ==}
     dependencies:
-      '@formatjs/ecma402-abstract': 1.17.2
+      '@formatjs/ecma402-abstract': 1.17.4
       '@formatjs/fast-memoize': 2.2.0
-      '@formatjs/icu-messageformat-parser': 2.7.0
+      '@formatjs/icu-messageformat-parser': 2.7.2
       tslib: 2.6.2
     dev: true
 
