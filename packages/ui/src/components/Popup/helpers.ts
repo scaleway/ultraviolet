@@ -10,23 +10,23 @@ export const DEFAULT_POSITIONS = {
   arrowTransform: 'translate(-50%, -50)',
   placement: 'top',
   rotate: 135,
-  tooltipInitialPosition: 'translate3d(-999px, -999px, 0)',
-  tooltipPosition: 'translate3d(-999px, -999px, 0)',
+  popupInitialPosition: 'translate3d(-999px, -999px, 0)',
+  popupPosition: 'translate3d(-999px, -999px, 0)',
 }
 
 type ComputePlacementTypes = {
   childrenStructuredRef: DOMRect
-  tooltipStructuredRef: DOMRect
+  popupStructuredRef: DOMRect
   popupPortalTarget: HTMLElement
   offsetParentRect: DOMRect
 }
 
 /**
- * This function will find the best placement in a window for tooltip based on children position and tooltip size
+ * This function will find the best placement in a window for popup based on children position and popup size
  */
 const computePlacement = ({
   childrenStructuredRef,
-  tooltipStructuredRef,
+  popupStructuredRef,
   offsetParentRect,
   popupPortalTarget,
 }: ComputePlacementTypes) => {
@@ -53,18 +53,18 @@ const computePlacement = ({
       ? childrenRight
       : childrenRight - parentRight
 
-  const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
+  const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
-  if (overloadedChildrenTop - tooltipHeight - TOTAL_USED_SPACE < 0) {
+  if (overloadedChildrenTop - popupHeight - TOTAL_USED_SPACE < 0) {
     return 'bottom'
   }
 
-  if (overloadedChildrenLeft - tooltipWidth - TOTAL_USED_SPACE < 0) {
+  if (overloadedChildrenLeft - popupWidth - TOTAL_USED_SPACE < 0) {
     return 'right'
   }
 
   if (
-    overloadedChildrenRight + tooltipWidth + TOTAL_USED_SPACE >
+    overloadedChildrenRight + popupWidth + TOTAL_USED_SPACE >
     window.innerWidth
   ) {
     return 'left'
@@ -76,17 +76,17 @@ const computePlacement = ({
 type ComputePositionsTypes = {
   placement: PopupPlacement
   childrenRef: RefObject<HTMLDivElement>
-  tooltipRef: RefObject<HTMLDivElement>
+  popupRef: RefObject<HTMLDivElement>
   popupPortalTarget: HTMLElement
 }
 
 /**
- * This function will compute the positions of tooltip and arrow based on children position and tooltip size
+ * This function will compute the positions of popup and arrow based on children position and popup size
  */
 export const computePositions = ({
   placement,
   childrenRef,
-  tooltipRef,
+  popupRef,
   popupPortalTarget,
 }: ComputePositionsTypes) => {
   const childrenStructuredRef = (
@@ -98,15 +98,15 @@ export const computePositions = ({
       left: 0,
       right: 0,
     }
-  const tooltipStructuredRef = (
-    tooltipRef.current as HTMLDivElement
+  const popupStructuredRef = (
+    popupRef.current as HTMLDivElement
   ).getBoundingClientRect()
 
   const placementBasedOnWindowSize =
     placement === 'auto'
       ? computePlacement({
           childrenStructuredRef,
-          tooltipStructuredRef,
+          popupStructuredRef,
           offsetParentRect: offsetParentRect as DOMRect,
           popupPortalTarget,
         })
@@ -126,13 +126,13 @@ export const computePositions = ({
     right: parentRight,
   } = offsetParentRect as DOMRect
 
-  const { width: tooltipWidth, height: tooltipHeight } = tooltipStructuredRef
+  const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
-  // It will get how much scroll is done on the page to compute the position of the tooltip
+  // It will get how much scroll is done on the page to compute the position of the popup
   const scrollTopValue =
     popupPortalTarget === document.body ? document.documentElement.scrollTop : 0
 
-  // We need to compute the position of the tooltip based on the parent element in the case the popup is not in the body
+  // We need to compute the position of the popup based on the parent element in the case the popup is not in the body
   const overloadedChildrenLeft =
     popupPortalTarget === document.body
       ? childrenLeft
@@ -147,7 +147,7 @@ export const computePositions = ({
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
       const positionX =
-        overloadedChildrenLeft + childrenWidth / 2 - tooltipWidth / 2
+        overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue +
@@ -156,36 +156,36 @@ export const computePositions = ({
         SPACE
 
       return {
-        arrowLeft: tooltipWidth / 2,
+        arrowLeft: popupWidth / 2,
         arrowTop: -ARROW_WIDTH - 5,
         arrowTransform: '',
         placement: 'bottom',
         rotate: 180,
-        tooltipInitialPosition: `translate3d(${positionX}px, ${
+        popupInitialPosition: `translate3d(${positionX}px, ${
           positionY - TOTAL_USED_SPACE
         }px, 0)`,
-        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
     }
     case 'left': {
       const positionX =
-        overloadedChildrenLeft - tooltipWidth - ARROW_WIDTH - SPACE * 2
+        overloadedChildrenLeft - popupWidth - ARROW_WIDTH - SPACE * 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
-        tooltipHeight / 2 +
+        popupHeight / 2 +
         childrenHeight / 2
 
       return {
-        arrowLeft: tooltipWidth + ARROW_WIDTH + 5,
-        arrowTop: tooltipHeight / 2,
+        arrowLeft: popupWidth + ARROW_WIDTH + 5,
+        arrowTop: popupHeight / 2,
         arrowTransform: 'translate(-50%, -50%)',
         placement: 'left',
         rotate: -90,
-        tooltipInitialPosition: `translate3d(${
+        popupInitialPosition: `translate3d(${
           positionX + TOTAL_USED_SPACE
         }px, ${positionY}px, 0)`,
-        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
     }
     case 'right': {
@@ -193,42 +193,42 @@ export const computePositions = ({
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
-        tooltipHeight / 2 +
+        popupHeight / 2 +
         childrenHeight / 2
 
       return {
         arrowLeft: -ARROW_WIDTH - 5,
-        arrowTop: tooltipHeight / 2,
+        arrowTop: popupHeight / 2,
         arrowTransform: 'translate(50%, -50%)',
         placement: 'right',
         rotate: 90,
-        tooltipInitialPosition: `translate3d(${
+        popupInitialPosition: `translate3d(${
           positionX - TOTAL_USED_SPACE
         }px, ${positionY}px, 0)`,
-        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
     }
     default: {
       // top placement is default value
       const positionX =
-        overloadedChildrenLeft + childrenWidth / 2 - tooltipWidth / 2
+        overloadedChildrenLeft + childrenWidth / 2 - popupWidth / 2
       const positionY =
         overloadedChildrenTop +
         scrollTopValue -
-        tooltipHeight -
+        popupHeight -
         ARROW_WIDTH -
         SPACE
 
       return {
-        arrowLeft: tooltipWidth / 2,
-        arrowTop: tooltipHeight - 1,
+        arrowLeft: popupWidth / 2,
+        arrowTop: popupHeight - 1,
         arrowTransform: '',
         placement: 'top',
         rotate: 0,
-        tooltipInitialPosition: `translate3d(${positionX}px, ${
+        popupInitialPosition: `translate3d(${positionX}px, ${
           positionY + TOTAL_USED_SPACE
         }px, 0)`,
-        tooltipPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
+        popupPosition: `translate3d(${positionX}px, ${positionY}px, 0)`,
       }
     }
   }
