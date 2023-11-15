@@ -41,7 +41,6 @@ WithBadge.args = {
     <Tabs.Tab
       value={4}
       disabled
-      subtitle="Subtitle 2"
       badge={
         <Badge sentiment="warning" size="small">
           Beta

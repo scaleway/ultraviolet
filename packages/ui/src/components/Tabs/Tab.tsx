@@ -178,8 +178,8 @@ export const Tab = forwardRef(
           data-is-selected={isSelected}
           {...props}
         >
-          <Stack direction="column" gap={1}>
-            <Stack direction="row">
+          <Stack direction="column" gap={0.5}>
+            <Stack direction="row" alignItems="center">
               {children}
               {typeof counter === 'number' || typeof counter === 'string' ? (
                 <StyledBadge
@@ -198,7 +198,7 @@ export const Tab = forwardRef(
                   as="span"
                   variant="bodySmall"
                   sentiment="neutral"
-                  prominence="strong"
+                  prominence="weak"
                 >
                   {subtitle}
                 </StyledText>

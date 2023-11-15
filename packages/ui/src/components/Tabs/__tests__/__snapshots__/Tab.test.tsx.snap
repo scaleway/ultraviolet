@@ -94,12 +94,12 @@ exports[`Tab renders correctly 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-gw33n2-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -117,7 +117,7 @@ exports[`Tab renders correctly 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1tfad1c-Stack {
+.cache-1l6mcrb-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,10 +126,10 @@ exports[`Tab renders correctly 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -149,10 +149,10 @@ exports[`Tab renders correctly 1`] = `
     type="button"
   >
     <div
-      class="cache-gw33n2-Stack ehpbis70"
+      class="cache-ymc80m-Stack ehpbis70"
     >
       <div
-        class="cache-1tfad1c-Stack ehpbis70"
+        class="cache-1l6mcrb-Stack ehpbis70"
       />
     </div>
   </button>
@@ -253,12 +253,12 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-gw33n2-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -276,7 +276,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1tfad1c-Stack {
+.cache-1l6mcrb-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,10 +285,10 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -346,8 +346,31 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
   display: flex;
 }
 
-.cache-1bg0et1-StyledText-StyledText {
-  color: #222638;
+.cache-1tfad1c-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-ixnjme-StyledText-StyledText {
+  color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -367,10 +390,10 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
     type="button"
   >
     <div
-      class="cache-gw33n2-Stack ehpbis70"
+      class="cache-ymc80m-Stack ehpbis70"
     >
       <div
-        class="cache-1tfad1c-Stack ehpbis70"
+        class="cache-1l6mcrb-Stack ehpbis70"
       >
         <span
           class="e1hzf7cr4 ej33bna0 cache-vwnmew-StyledText-StyledSpan-StyledBadge e13y3mga0"
@@ -387,7 +410,7 @@ exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
         class="cache-1tfad1c-Stack ehpbis70"
       >
         <span
-          class="e1hzf7cr3 cache-1bg0et1-StyledText-StyledText e13y3mga0"
+          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
         >
           subtitle
         </span>
@@ -491,12 +514,12 @@ exports[`Tab renders correctly with subtitle 1`] = `
   filter: grayscale(1) opacity(50%);
 }
 
-.cache-gw33n2-Stack {
+.cache-ymc80m-Stack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -504,6 +527,29 @@ exports[`Tab renders correctly with subtitle 1`] = `
   -webkit-box-align: normal;
   -ms-flex-align: normal;
   align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l6mcrb-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: normal;
   -ms-flex-pack: normal;
   -webkit-justify-content: normal;
@@ -537,8 +583,8 @@ exports[`Tab renders correctly with subtitle 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-1bg0et1-StyledText-StyledText {
-  color: #222638;
+.cache-ixnjme-StyledText-StyledText {
+  color: #727683;
   font-size: 14px;
   font-family: Inter,Asap;
   font-weight: 400;
@@ -558,16 +604,16 @@ exports[`Tab renders correctly with subtitle 1`] = `
     type="button"
   >
     <div
-      class="cache-gw33n2-Stack ehpbis70"
+      class="cache-ymc80m-Stack ehpbis70"
     >
       <div
-        class="cache-1tfad1c-Stack ehpbis70"
+        class="cache-1l6mcrb-Stack ehpbis70"
       />
       <div
         class="cache-1tfad1c-Stack ehpbis70"
       >
         <span
-          class="e1hzf7cr3 cache-1bg0et1-StyledText-StyledText e13y3mga0"
+          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
         >
           test
         </span>
