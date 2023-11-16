@@ -164,6 +164,9 @@ describe('Tabs', () => {
         <Tabs.Tab value={3} disabled>
           Disabled
         </Tabs.Tab>
+        <Tabs.Tab value={4} subtitle="subtitle" disabled>
+          Disabled with Subtitle
+        </Tabs.Tab>
         <Tabs.Menu disclosure="More" visible>
           <Tabs.MenuItem value={1}>Item</Tabs.MenuItem>
           <Tabs.MenuItem>Item no value</Tabs.MenuItem>

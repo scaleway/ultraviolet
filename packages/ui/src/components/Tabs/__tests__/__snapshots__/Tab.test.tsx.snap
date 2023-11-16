@@ -1,0 +1,624 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab renders correctly 1`] = `
+<DocumentFragment>
+  .cache-1a7bljo-StyledTabButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  white-space: nowrap;
+  color: #3f4250;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d9dadd;
+  outline: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.cache-1a7bljo-StyledTabButton:hover,
+.cache-1a7bljo-StyledTabButton:active,
+.cache-1a7bljo-StyledTabButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1a7bljo-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+  background-color: #f1eefc;
+  border-color: #f1eefc;
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
+.cache-1a7bljo-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l6mcrb-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<button
+    aria-disabled="false"
+    aria-selected="false"
+    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
+    data-is-selected="false"
+    role="tab"
+    type="button"
+  >
+    <div
+      class="cache-ymc80m-Stack ehpbis70"
+    >
+      <div
+        class="cache-1l6mcrb-Stack ehpbis70"
+      />
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly with counter, badge and subtitle 1`] = `
+<DocumentFragment>
+  .cache-1a7bljo-StyledTabButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  white-space: nowrap;
+  color: #3f4250;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d9dadd;
+  outline: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.cache-1a7bljo-StyledTabButton:hover,
+.cache-1a7bljo-StyledTabButton:active,
+.cache-1a7bljo-StyledTabButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1a7bljo-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+  background-color: #f1eefc;
+  border-color: #f1eefc;
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
+.cache-1a7bljo-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l6mcrb-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-vwnmew-StyledText-StyledSpan-StyledBadge {
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 16px;
+  padding: 0 16px;
+  gap: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: inherit;
+  color: #3f4250;
+  background: #f9f9fa;
+  border: 1px solid #d9dadd;
+  padding: 0 8px;
+  margin-left: 8px;
+}
+
+.cache-1hjfwlj-BadgeContainer {
+  margin-left: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cache-1tfad1c-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-ixnjme-StyledText-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-selected="false"
+    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
+    data-is-selected="false"
+    role="tab"
+    type="button"
+  >
+    <div
+      class="cache-ymc80m-Stack ehpbis70"
+    >
+      <div
+        class="cache-1l6mcrb-Stack ehpbis70"
+      >
+        <span
+          class="e1hzf7cr4 ej33bna0 cache-vwnmew-StyledText-StyledSpan-StyledBadge e13y3mga0"
+        >
+          1
+        </span>
+        <span
+          class="cache-1hjfwlj-BadgeContainer e1hzf7cr1"
+        >
+          badge
+        </span>
+      </div>
+      <div
+        class="cache-1tfad1c-Stack ehpbis70"
+      >
+        <span
+          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
+        >
+          subtitle
+        </span>
+      </div>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Tab renders correctly with subtitle 1`] = `
+<DocumentFragment>
+  .cache-1a7bljo-StyledTabButton {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  white-space: nowrap;
+  color: #3f4250;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border: none;
+  background: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #d9dadd;
+  outline: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.cache-1a7bljo-StyledTabButton:hover,
+.cache-1a7bljo-StyledTabButton:active,
+.cache-1a7bljo-StyledTabButton:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.cache-1a7bljo-StyledTabButton:focus-visible {
+  outline: auto;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] {
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-selected='true'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active {
+  outline: none;
+  color: #641cb3;
+  border-bottom-color: #8c40ef;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr4,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr4 {
+  background-color: #f1eefc;
+  border-color: #f1eefc;
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):hover[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):focus[data-is-selected='false'] .e1hzf7cr3,
+.cache-1a7bljo-StyledTabButton[aria-disabled='false']:not(:disabled):active[data-is-selected='false'] .e1hzf7cr3 {
+  color: #641cb3;
+}
+
+.cache-1a7bljo-StyledTabButton[aria-disabled='true'],
+.cache-1a7bljo-StyledTabButton:disabled {
+  cursor: not-allowed;
+  -webkit-filter: grayscale(1) opacity(50%);
+  filter: grayscale(1) opacity(50%);
+}
+
+.cache-ymc80m-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l6mcrb-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1tfad1c-Stack {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-ixnjme-StyledText-StyledText {
+  color: #727683;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<button
+    aria-disabled="false"
+    aria-selected="false"
+    class="cache-1a7bljo-StyledTabButton e1hzf7cr0"
+    data-is-selected="false"
+    role="tab"
+    type="button"
+  >
+    <div
+      class="cache-ymc80m-Stack ehpbis70"
+    >
+      <div
+        class="cache-1l6mcrb-Stack ehpbis70"
+      />
+      <div
+        class="cache-1tfad1c-Stack ehpbis70"
+      >
+        <span
+          class="e1hzf7cr3 cache-ixnjme-StyledText-StyledText e13y3mga0"
+        >
+          test
+        </span>
+      </div>
+    </div>
+  </button>
+</DocumentFragment>
+`;
