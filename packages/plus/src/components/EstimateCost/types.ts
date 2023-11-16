@@ -129,13 +129,3 @@ export type EstimateProduct = BareEstimateProduct & {
   longFractionDigits: boolean
   discount: number
 }
-
-type Regions = 'fr-par' | 'nl-ams' | 'pl-waw' | 'global'
-export type Region = Regions
-
-type ZonesFr = 'fr-par-1' | 'fr-par-2' | 'fr-par-3'
-type ZonesNl = 'nl-ams-1' | 'nl-ams-2' | 'nl-ams-3'
-type ZonesPl = 'pl-waw-1' | 'pl-waw-2' | 'pl-waw-3'
-export type Zone = ZonesFr | ZonesNl | ZonesPl
-
-export type DC = 'dc2' | 'dc3' | 'dc5' | 'ams1'

@@ -1,11 +1,12 @@
 import { EstimateCost } from '..'
 import { Template } from './Template'
+import frFlag from './assets/fr.svg'
 
 export const Design = Template.bind({})
 
 Design.args = {
   children: [
-    <EstimateCost.Region region="fr-par" />,
+    <EstimateCost.Region label="PAR" image={frFlag} />,
     <EstimateCost.Item label="Server" price={0.01} noBorder />,
     <EstimateCost.Item label="CPU" tabulation={3} noPrice noBorder>
       <EstimateCost.Regular>4 Cores</EstimateCost.Regular>

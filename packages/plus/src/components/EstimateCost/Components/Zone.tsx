@@ -1,12 +1,6 @@
 import styled from '@emotion/styled'
 import { useEstimateCost } from '../EstimateCostProvider'
-import { getFlag, getLabel } from '../locations'
-import type {
-  BareEstimateProduct,
-  EstimateProduct,
-  Iteration,
-  Zone as ZoneType,
-} from '../types'
+import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
 
@@ -16,7 +10,6 @@ const StyledImage = styled.img`
 `
 
 type RegionProps = {
-  zone: ZoneType
   shouldBeHidden?: boolean
   priceText?: string
   animated?: boolean
@@ -28,10 +21,13 @@ type RegionProps = {
   }
   iteration?: Iteration
   discount?: number
+  label: string
+  image: string
 }
 
 export const Zone = ({
-  zone,
+  label,
+  image,
   shouldBeHidden = false,
   priceText,
   animated = false,
@@ -42,8 +38,6 @@ export const Zone = ({
   discount,
 }: RegionProps) => {
   const { locales } = useEstimateCost()
-  const zoneLabel = getLabel({ location: zone })
-  const image = getFlag({ location: zone })
 
   return (
     <Item
@@ -58,8 +52,8 @@ export const Zone = ({
       discount={discount}
     >
       <Strong>
-        <StyledImage alt={zoneLabel} src={image} />
-        {zoneLabel}
+        <StyledImage alt={label} src={image} />
+        {label}
       </Strong>
     </Item>
   )
