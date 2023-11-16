@@ -2,6 +2,7 @@ import { afterAll, beforeAll, describe, jest, test } from '@jest/globals'
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 import { EstimateCost } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import frFlag from './assets/fr.svg'
 
 describe('EstimateCost - Zone', () => {
   beforeAll(() => {
@@ -16,14 +17,14 @@ describe('EstimateCost - Zone', () => {
   test('render zone component', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost defaultTimeUnit="hours">
-        <EstimateCost.Zone zone="fr-par-1" />
+        <EstimateCost.Zone label="fr-par-1" image={frFlag} />
       </EstimateCost>,
     ))
 
   test('render region component, with animation', () =>
     shouldMatchEmotionSnapshot(
       <EstimateCost defaultTimeUnit="hours">
-        <EstimateCost.Zone zone="nl-ams-1" animated />
+        <EstimateCost.Zone label="nl-ams-1" image={frFlag} animated />
       </EstimateCost>,
     ))
 })
