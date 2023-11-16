@@ -14,6 +14,7 @@ import {
   useEffect,
   useId,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react'
@@ -64,7 +65,7 @@ const StyledPopup = styled('div', {
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
-  ${({ isDialog }) => (isDialog ? 'z-index: 1;' : null)}
+  z-index: 1;
   transform: ${({ positions }) => positions.popupPosition};
   animation: ${({
     positions,
@@ -201,10 +202,22 @@ export const Popup = forwardRef(
     useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
-    const popupPortalTarget =
-      role === 'dialog'
-        ? portalTarget ?? childrenRef.current ?? document.body
-        : document.body
+    const popupPortalTarget = useMemo(() => {
+      if (role === 'dialog') {
+        if (portalTarget) return portalTarget
+        if (childrenRef.current) return childrenRef.current
+        if (typeof window !== 'undefined') return document.body
+
+        return null
+      }
+
+      // We check if window exists for SSR
+      if (typeof window !== 'undefined') {
+        return document.body
+      }
+
+      return null
+    }, [portalTarget, role])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -228,7 +241,7 @@ export const Popup = forwardRef(
             childrenRef,
             placement,
             popupRef: innerPopupRef,
-            popupPortalTarget,
+            popupPortalTarget: popupPortalTarget as HTMLElement,
           }),
         )
       }
@@ -521,7 +534,7 @@ export const Popup = forwardRef(
               >
                 {text}
               </StyledPopup>,
-              popupPortalTarget,
+              popupPortalTarget as HTMLElement,
             )
           : null}
       </>

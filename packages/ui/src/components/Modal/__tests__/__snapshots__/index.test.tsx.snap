@@ -2,7 +2,7 @@
 
 exports[`Modal renders opened custom size 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,9 +10,10 @@ exports[`Modal renders opened custom size 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -174,7 +175,7 @@ exports[`Modal renders opened custom size 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -216,7 +217,7 @@ exports[`Modal renders opened custom size 1`] = `
 
 exports[`Modal renders opened custom size and width (size take predecence) 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -224,9 +225,10 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -388,7 +390,7 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -430,7 +432,7 @@ exports[`Modal renders opened custom size and width (size take predecence) 1`] =
 
 exports[`Modal renders opened custom width 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -438,9 +440,10 @@ exports[`Modal renders opened custom width 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -602,7 +605,7 @@ exports[`Modal renders opened custom width 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -644,7 +647,7 @@ exports[`Modal renders opened custom width 1`] = `
 
 exports[`Modal renders with custom classNames 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -652,9 +655,10 @@ exports[`Modal renders with custom classNames 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -816,7 +820,7 @@ exports[`Modal renders with custom classNames 1`] = `
 
 <div>
     <div
-      class="eibmy6-customDialogBackdropStyles cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="eibmy6-customDialogBackdropStyles cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -858,7 +862,7 @@ exports[`Modal renders with custom classNames 1`] = `
 
 exports[`Modal renders with customStyle 1`] = `
 <DocumentFragment>
-  .cache-knfhk0-StyledBackdrop-customDialogBackdropStyles {
+  .cache-w86j7w-StyledBackdrop-customDialogBackdropStyles {
   position: fixed;
   top: 0;
   right: 0;
@@ -866,10 +870,11 @@ exports[`Modal renders with customStyle 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
   background-color: aliceblue;
 }
 
-.cache-knfhk0-StyledBackdrop-customDialogBackdropStyles[data-open='true'] {
+.cache-w86j7w-StyledBackdrop-customDialogBackdropStyles[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1032,7 +1037,7 @@ exports[`Modal renders with customStyle 1`] = `
 
 <div>
     <div
-      class="cache-knfhk0-StyledBackdrop-customDialogBackdropStyles e1cqen9h1"
+      class="cache-w86j7w-StyledBackdrop-customDialogBackdropStyles e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -1088,7 +1093,7 @@ exports[`Modal renders with default Props and function children 1`] = `<Document
 
 exports[`Modal renders with default Props and function children opened 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -1096,9 +1101,10 @@ exports[`Modal renders with default Props and function children opened 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1260,7 +1266,7 @@ exports[`Modal renders with default Props and function children opened 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -1333,7 +1339,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   >
     Test modal-test
   </button>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -1341,9 +1347,10 @@ exports[`Modal renders with disclosure and onClose 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1505,7 +1512,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
       data-testid="test-backdrop"
     >
@@ -1550,7 +1557,7 @@ exports[`Modal renders with disclosure and onClose 1`] = `
 
 exports[`Modal renders with opened={true} 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -1558,9 +1565,10 @@ exports[`Modal renders with opened={true} 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1722,7 +1730,7 @@ exports[`Modal renders with opened={true} 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
@@ -1764,7 +1772,7 @@ exports[`Modal renders with opened={true} 1`] = `
 
 exports[`Modal renders with opened={true} and no close icon 1`] = `
 <DocumentFragment>
-  .cache-861ua4-StyledBackdrop {
+  .cache-1i6y80v-StyledBackdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -1772,9 +1780,10 @@ exports[`Modal renders with opened={true} and no close icon 1`] = `
   width: 0;
   overflow: hidden;
   background-color: #464959a6;
+  z-index: 1;
 }
 
-.cache-861ua4-StyledBackdrop[data-open='true'] {
+.cache-1i6y80v-StyledBackdrop[data-open='true'] {
   padding: 16px;
   overflow: auto;
   display: -webkit-box;
@@ -1873,7 +1882,7 @@ exports[`Modal renders with opened={true} and no close icon 1`] = `
 
 <div>
     <div
-      class="cache-861ua4-StyledBackdrop e1cqen9h1"
+      class="cache-1i6y80v-StyledBackdrop e1cqen9h1"
       data-open="true"
     >
       <dialog
