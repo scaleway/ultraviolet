@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { useState } from 'react'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import { Popover } from '../Popover'
 import { Tag } from '../Tag'
 
@@ -75,7 +75,7 @@ export const TagList = ({
   copiedText,
   className,
   'data-testid': dataTestId,
-}: TagListProps): JSX.Element | null => {
+}: TagListProps) => {
   let tmpThreshold = threshold
   if (
     tags.length > 0 &&

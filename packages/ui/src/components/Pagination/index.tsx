@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 import { useCallback, useEffect, useMemo } from 'react'
-import type { JSX } from 'react'
 import { Button } from '../Button'
 import { getPageNumbers } from './getPageNumbers'
 
@@ -56,7 +55,7 @@ export const Pagination = ({
   pageTabCount = 5,
   className,
   'data-testid': dataTestId,
-}: PaginationProps): JSX.Element => {
+}: PaginationProps) => {
   const goToFirstPage = useCallback(() => {
     onChange(1)
   }, [onChange])

@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 import type {
   ChangeEvent,
   ClipboardEventHandler,
-  JSX,
   KeyboardEventHandler,
 } from 'react'
 import { useEffect, useRef, useState } from 'react'
@@ -132,7 +131,7 @@ export const TagInput = ({
   variant = 'base',
   className,
   'data-testid': dataTestId,
-}: TagInputProps): JSX.Element => {
+}: TagInputProps) => {
   const [tagInputState, setTagInput] = useState(
     convertTagArrayToTagStateArray(tags ?? []),
   )

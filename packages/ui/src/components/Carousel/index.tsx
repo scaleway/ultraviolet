@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { JSX, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
 
 const StyledWrapper = styled.div`
@@ -68,7 +68,7 @@ type CarouselItemProps = {
 export const CarouselItem = ({
   children,
   width = '240px',
-}: CarouselItemProps): JSX.Element => (
+}: CarouselItemProps) => (
   <StyledBorderWrapper width={width} draggable="true">
     {children}
   </StyledBorderWrapper>
@@ -87,7 +87,7 @@ export const Carousel = ({
   children,
   className,
   'data-testid': dataTestId = 'scrollbar',
-}: CarouselProps): JSX.Element => {
+}: CarouselProps) => {
   const scrollRef = useRef<HTMLDivElement>(null)
   let intervalLeft: ReturnType<typeof setInterval>
   let intervalRight: ReturnType<typeof setInterval>
