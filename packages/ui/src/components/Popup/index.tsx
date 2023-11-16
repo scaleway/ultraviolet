@@ -1,8 +1,9 @@
-import { css, keyframes } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type {
   HTMLAttributes,
   KeyboardEventHandler,
+  MouseEventHandler,
   ReactNode,
   Ref,
   RefObject,
@@ -13,59 +14,31 @@ import {
   useEffect,
   useId,
   useImperativeHandle,
+  useMemo,
   useRef,
   useState,
 } from 'react'
 import { createPortal } from 'react-dom'
+import type { PositionsType } from './animations'
+import { animation, exitAnimation } from './animations'
 import type { PopupPlacement } from './helpers'
 import { ARROW_WIDTH, DEFAULT_POSITIONS, computePositions } from './helpers'
 
 const DEFAULT_ANIMATION_DURATION = 230 // in ms
-const DEFAULT_DEBOUNCE_DURATION = 200
+const DEFAULT_DEBOUNCE_DURATION = 200 // in ms
 
 function noop() {}
 
-const animation = (positions: PositionsType) => keyframes`
-  0% {
-    opacity: 0;
-    transform: ${positions.tooltipInitialPosition};
-  }
-  100% {
-    opacity: 1;
-    transform: ${positions.tooltipPosition};
-  }
-`
-
-const exitAnimation = (positions: PositionsType) => keyframes`
-  0% {
-    opacity: 1;
-    transform: ${positions.tooltipPosition};
-  }
-  100% {
-    opacity: 0;
-    transform: ${positions.tooltipInitialPosition};
-  }
-`
-
-type PositionsType = {
-  arrowLeft: number
-  arrowTop: number
-  arrowTransform: string
-  placement: string
-  rotate: number
-  tooltipInitialPosition: string
-  tooltipPosition: string
-}
-
-type StyledTooltipProps = {
+type StyledPopupProps = {
   maxWidth: number | string
   positions: PositionsType
   reverseAnimation: boolean
   maxHeight?: number | string
   animationDuration?: number
+  isDialog: boolean
 }
 
-const StyledTooltip = styled('div', {
+const StyledPopup = styled('div', {
   shouldForwardProp: prop =>
     ![
       'maxWidth',
@@ -73,8 +46,9 @@ const StyledTooltip = styled('div', {
       'reverseAnimation',
       'maxHeight',
       'animationDuration',
+      'isDialog',
     ].includes(prop),
-})<StyledTooltipProps>`
+})<StyledPopupProps>`
   background: ${({ theme }) => theme.colors.neutral.backgroundStronger};
   color: ${({ theme }) => theme.colors.neutral.textStronger};
   border-radius: ${({ theme }) => theme.radii.default};
@@ -91,7 +65,8 @@ const StyledTooltip = styled('div', {
   inset: 0 auto auto 0;
   top: 0;
   left: 0;
-  transform: ${({ positions }) => positions.tooltipPosition};
+  z-index: 1;
+  transform: ${({ positions }) => positions.popupPosition};
   animation: ${({
     positions,
     reverseAnimation,
@@ -134,7 +109,7 @@ const StyledChildrenContainer = styled.div`
 
 type PopupProps = {
   /**
-   * Id is automatically generated if not set. It is used for associating tooltip wrapper with tooltip portal.
+   * Id is automatically generated if not set. It is used for associating popup wrapper with popup portal.
    */
   id?: string
   children:
@@ -149,20 +124,20 @@ type PopupProps = {
       }) => ReactNode)
   maxWidth?: number | string
   /**
-   * `auto` placement will change the position of the tooltip if it doesn't fit in the viewport.
+   * `auto` placement will change the position of the popup if it doesn't fit in the viewport.
    */
   placement?: PopupPlacement
   /**
-   * Content of the tooltip, preferably text inside.
+   * Content of the popup, preferably text inside.
    */
   text?: ReactNode
   className?: string
   /**
-   * It will add `width: 100%` to the tooltip container.
+   * It will add `width: 100%` to the popup container.
    */
   containerFullWidth?: boolean
   /**
-   * It will force display tooltip. This can be useful if you need to always display the tooltip without hover needed.
+   * It will force display popup. This can be useful if you need to always display the popup without hover needed.
    */
   visible?: boolean
   innerRef?: Ref<HTMLDivElement | null>
@@ -183,6 +158,11 @@ type PopupProps = {
    * Will remove the animation on the popup if set to false.
    */
   disableAnimation?: boolean
+  /**
+   * By default, the portal target is children container or document.body if children is a function. You can override this
+   * behavior by setting a portalTarget prop.
+   */
+  portalTarget?: HTMLElement
 }
 
 /**
@@ -201,7 +181,7 @@ export const Popup = forwardRef(
       maxHeight,
       visible,
       innerRef,
-      role = 'tooltip',
+      role = 'popup',
       'data-testid': dataTestId,
       hasArrow = true,
       onClose,
@@ -211,22 +191,40 @@ export const Popup = forwardRef(
       hideOnClickOutside = false,
       needDebounce = true,
       disableAnimation = false,
+      portalTarget,
     }: PopupProps,
     ref: Ref<HTMLDivElement>,
   ) => {
     const childrenRef = useRef<HTMLDivElement>(null)
     useImperativeHandle(innerRef, () => childrenRef.current)
 
-    const innerTooltipRef = useRef<HTMLDivElement>(null)
-    useImperativeHandle(ref, () => innerTooltipRef.current as HTMLDivElement)
+    const innerPopupRef = useRef<HTMLDivElement>(null)
+    useImperativeHandle(ref, () => innerPopupRef.current as HTMLDivElement)
 
     const timer = useRef<ReturnType<typeof setTimeout> | undefined>()
+    const popupPortalTarget = useMemo(() => {
+      if (role === 'dialog') {
+        if (portalTarget) return portalTarget
+        if (childrenRef.current) return childrenRef.current
+        if (typeof window !== 'undefined') return document.body
+
+        return null
+      }
+
+      // We check if window exists for SSR
+      if (typeof window !== 'undefined') {
+        return document.body
+      }
+
+      return null
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [portalTarget, role, childrenRef.current])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
       disableAnimation || maxHeight ? 0 : DEFAULT_ANIMATION_DURATION
 
-    // Debounce timer will be used to prevent the tooltip from flickering when the user moves the mouse out and in the children element.
+    // Debounce timer will be used to prevent the popup from flickering when the user moves the mouse out and in the children element.
     const debounceTimer = useRef<ReturnType<typeof setTimeout> | undefined>()
     const [visibleInDom, setVisibleInDom] = useState(false)
     const [reverseAnimation, setReverseAnimation] = useState(false)
@@ -237,33 +235,35 @@ export const Popup = forwardRef(
     const generatedId = id ?? uniqueId
     const isControlled = visible !== undefined
 
-    const generatePositions = useCallback(() => {
-      if (childrenRef.current && innerTooltipRef.current) {
+    const generatePopupPositions = useCallback(() => {
+      if (childrenRef.current && innerPopupRef.current) {
         setPositions(
           computePositions({
             childrenRef,
             placement,
-            tooltipRef: innerTooltipRef,
+            popupRef: innerPopupRef,
+            popupPortalTarget: popupPortalTarget as HTMLElement,
           }),
         )
       }
-    }, [innerTooltipRef, placement])
+    }, [placement, popupPortalTarget])
 
     /**
-     * This function is called when we need to recompute positions of tooltip due to window scroll or resize.
+     * This function is called when we need to recompute positions of popup due to window scroll or resize.
      */
     const onWindowChangeDetected = useCallback(() => {
       // We remove animation on scroll or the animation will restart on every scroll
-      if (innerTooltipRef.current) {
-        innerTooltipRef.current.style.animation = 'none'
+      if (innerPopupRef.current) {
+        innerPopupRef.current.style.animation = 'none'
       }
-      generatePositions()
-    }, [generatePositions, innerTooltipRef])
+
+      generatePopupPositions()
+    }, [generatePopupPositions, innerPopupRef])
 
     /**
-     * This function is called when we need to remove tooltip portal from DOM and remove event listener to it.
+     * This function is called when we need to remove popup portal from DOM and remove event listener to it.
      */
-    const unmountTooltip = useCallback(() => {
+    const unmountPopupFromDom = useCallback(() => {
       setVisibleInDom(false)
       setReverseAnimation(false)
 
@@ -271,15 +271,15 @@ export const Popup = forwardRef(
     }, [onWindowChangeDetected])
 
     /**
-     * This function is called when we need to hide tooltip. A timeout is set to allow animation end, then remove
-     * tooltip from dom.
+     * This function is called when we need to hide popup. A timeout is set to allow animation end, then remove
+     * popup from dom.
      */
-    const hideTooltip = useCallback(() => {
+    const closePopup = useCallback(() => {
       debounceTimer.current = setTimeout(
         () => {
           setReverseAnimation(true)
           timer.current = setTimeout(() => {
-            unmountTooltip()
+            unmountPopupFromDom()
             onClose?.()
           }, animationDuration)
         },
@@ -290,30 +290,30 @@ export const Popup = forwardRef(
       disableAnimation,
       needDebounce,
       onClose,
-      unmountTooltip,
+      unmountPopupFromDom,
     ])
 
     /**
-     * When mouse hover or stop hovering children this function display or hide tooltip. A timeout is set to allow animation
-     * end, then remove tooltip from dom.
+     * When mouse hover or stop hovering children this function display or hide popup. A timeout is set to allow animation
+     * end, then remove popup from dom.
      */
     const onPointerEvent = useCallback(
       (isVisible: boolean) => () => {
-        // This condition is for when we want to unmount the tooltip
-        // There is debounce in order to avoid tooltip to flicker when we move the mouse from children to tooltip
+        // This condition is for when we want to unmount the popup
+        // There is debounce in order to avoid popup to flicker when we move the mouse from children to popup
         // Timer is used to follow the animation duration
-        if (!isVisible && innerTooltipRef.current && !debounceTimer.current) {
-          hideTooltip()
+        if (!isVisible && innerPopupRef.current && !debounceTimer.current) {
+          closePopup()
         } else if (isVisible) {
-          // This condition is for when we want to mount the tooltip
-          // If the timer exists it means the tooltip was about to umount, but we hovered the children again,
-          // so we clear the timer and the tooltip will not be unmounted
+          // This condition is for when we want to mount the popup
+          // If the timer exists it means the popup was about to umount, but we hovered the children again,
+          // so we clear the timer and the popup will not be unmounted
           if (timer.current) {
             setReverseAnimation(false)
             clearTimeout(timer.current)
             timer.current = undefined
           }
-          // And here is when we currently are in a debounce timer, it means tooltip was hovered during
+          // And here is when we currently are in a debounce timer, it means popup was hovered during
           // that period, and so we can clear debounce timer
           if (debounceTimer.current) {
             clearTimeout(debounceTimer.current)
@@ -322,21 +322,23 @@ export const Popup = forwardRef(
           setVisibleInDom(true)
         }
       },
-      [hideTooltip, innerTooltipRef],
+      [closePopup, innerPopupRef],
     )
 
     /**
-     * Once tooltip is visible in the dom we can compute positions, then set it visible on screen and add event to
+     * Once popup is visible in the dom we can compute positions, then set it visible on screen and add event to
      * recompute positions on scroll or screen resize.
      */
     useEffect(() => {
       if (visibleInDom) {
-        generatePositions()
+        generatePopupPositions()
 
-        // We want to detect scroll and resize in order to recompute positions of tooltip
-        // Adding true as third parameter to event listener will detect nested scrolls.
-        window.addEventListener('scroll', onWindowChangeDetected, true)
-        window.addEventListener('resize', onWindowChangeDetected, true)
+        if (popupPortalTarget === document.body) {
+          // We want to detect scroll and resize in order to recompute positions of popup
+          // Adding true as third parameter to event listener will detect nested scrolls.
+          window.addEventListener('scroll', onWindowChangeDetected, true)
+          window.addEventListener('resize', onWindowChangeDetected, true)
+        }
       }
 
       return () => {
@@ -347,11 +349,17 @@ export const Popup = forwardRef(
           timer.current = undefined
         }
       }
-    }, [generatePositions, onWindowChangeDetected, visibleInDom, maxWidth])
+    }, [
+      generatePopupPositions,
+      onWindowChangeDetected,
+      visibleInDom,
+      maxWidth,
+      popupPortalTarget,
+    ])
 
     /**
-     * If tooltip has `visible` prop it means the tooltip is manually controlled through this prop.
-     * In this cas we don't want to display tooltip on hover, but only when `visible` is true.
+     * If popup has `visible` prop it means the popup is manually controlled through this prop.
+     * In this cas we don't want to display popup on hover, but only when `visible` is true.
      */
     useEffect(() => {
       if (isControlled) {
@@ -359,39 +367,31 @@ export const Popup = forwardRef(
       }
     }, [isControlled, onPointerEvent, visible])
 
-    const onLocalKeyDown: KeyboardEventHandler = useCallback(
-      event => {
-        if (event.code === 'Escape') {
-          unmountTooltip()
-        }
-      },
-      [unmountTooltip],
-    )
-
     // Handle hide on esc press and hide on click outside
     useEffect(() => {
       const handleEscPress = (event: KeyboardEvent) => {
         if (event.key === 'Escape') {
           event.preventDefault()
           event.stopPropagation()
-          hideTooltip()
+          closePopup()
         }
       }
+
       const handleClickOutside = (event: MouseEvent) => {
-        const tooltipCurrent = innerTooltipRef.current
+        const popupCurrent = innerPopupRef.current
         const childrenCurrent = childrenRef.current
 
-        if (tooltipCurrent && hideOnClickOutside && !event.defaultPrevented) {
+        if (popupCurrent && hideOnClickOutside && !event.defaultPrevented) {
           if (
             event.target &&
-            event.target !== tooltipCurrent &&
+            event.target !== popupCurrent &&
             event.target !== childrenCurrent &&
             !childrenCurrent?.contains(event.target as Node) &&
-            !tooltipCurrent.contains(event.target as Node)
+            !popupCurrent.contains(event.target as Node)
           ) {
             event.preventDefault()
             event.stopPropagation()
-            hideTooltip()
+            closePopup()
           }
         }
       }
@@ -405,12 +405,54 @@ export const Popup = forwardRef(
         document.body.removeEventListener('click', handleClickOutside)
       }
     }, [
-      hideTooltip,
+      closePopup,
       visibleInDom,
-      innerTooltipRef,
+      innerPopupRef,
       childrenRef,
       hideOnClickOutside,
     ])
+
+    /**
+     * This event will occur only for dialog and will trap focus inside the dialog.
+     */
+    const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
+      const isTabPressed = event.key === 'Tab'
+      if (!isTabPressed) {
+        return
+      }
+      event.stopPropagation()
+
+      const focusableEls =
+        innerPopupRef.current?.querySelectorAll(
+          'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])',
+        ) ?? []
+
+      // Handle case when no interactive element are within the modal (including close icon)
+      if (focusableEls.length === 0) {
+        event.preventDefault()
+      }
+
+      const firstFocusableEl = focusableEls[0] as HTMLElement
+      const lastFocusableEl = focusableEls[
+        focusableEls.length - 1
+      ] as HTMLElement
+
+      if (event.shiftKey) {
+        if (
+          document.activeElement === firstFocusableEl ||
+          document.activeElement === innerPopupRef.current
+        ) {
+          lastFocusableEl.focus()
+          event.preventDefault()
+        }
+      } else if (
+        document.activeElement === lastFocusableEl ||
+        document.activeElement === innerPopupRef.current
+      ) {
+        firstFocusableEl.focus()
+        event.preventDefault()
+      }
+    }, [])
 
     /**
      * Will render children conditionally if children is a function or not.
@@ -438,7 +480,6 @@ export const Popup = forwardRef(
           tabIndex={tabIndex}
           onKeyDown={event => {
             onKeyDown?.(event)
-            onLocalKeyDown(event)
           }}
           data-container-full-width={containerFullWidth}
           aria-haspopup={ariaHasPopup}
@@ -453,7 +494,6 @@ export const Popup = forwardRef(
       generatedId,
       isControlled,
       onKeyDown,
-      onLocalKeyDown,
       onPointerEvent,
       tabIndex,
     ])
@@ -467,7 +507,7 @@ export const Popup = forwardRef(
     /**
      * This event handle allow us to not bubble the event to document.body like this react-select works fine
      */
-    const stopClickPropagation: React.MouseEventHandler = event => {
+    const stopClickPropagation: MouseEventHandler = event => {
       event.nativeEvent.stopImmediatePropagation()
     }
 
@@ -476,8 +516,8 @@ export const Popup = forwardRef(
         {renderChildren()}
         {visibleInDom
           ? createPortal(
-              <StyledTooltip
-                ref={innerTooltipRef}
+              <StyledPopup
+                ref={innerPopupRef}
                 positions={positions}
                 maxWidth={maxWidth}
                 maxHeight={maxHeight}
@@ -489,10 +529,12 @@ export const Popup = forwardRef(
                 data-has-arrow={hasArrow}
                 onClick={stopClickPropagation}
                 animationDuration={animationDuration}
+                onKeyDown={role === 'dialog' ? handleFocusTrap : undefined}
+                isDialog={role === 'dialog'}
               >
                 {text}
-              </StyledTooltip>,
-              document.body,
+              </StyledPopup>,
+              popupPortalTarget as HTMLElement,
             )
           : null}
       </>

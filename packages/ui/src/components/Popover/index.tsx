@@ -1,10 +1,5 @@
 import styled from '@emotion/styled'
-import type {
-  ComponentProps,
-  KeyboardEventHandler,
-  ReactNode,
-  Ref,
-} from 'react'
+import type { ComponentProps, ReactNode, Ref } from 'react'
 import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 import { Button } from '../Button'
 import { Popup } from '../Popup'
@@ -70,49 +65,40 @@ const ContentWrapper = ({
   onClose,
   children,
   sentiment,
-}: ContentWrapperProps) => {
-  const buttonRef = useRef<HTMLButtonElement>(null)
-
-  useEffect(() => {
-    buttonRef.current?.focus()
-  }, [])
-
-  return (
-    <StyledStack gap={1}>
-      <Stack direction="row" justifyContent="space-between">
-        <Text
-          variant="bodyStrong"
-          as="h3"
-          sentiment="neutral"
-          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-        >
-          {title}
-        </Text>
-        <Button
-          variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
-          sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
-          onClick={onClose}
-          size="small"
-          icon="close"
-          aria-label="close"
-          ref={buttonRef}
-        />
-      </Stack>
-      {typeof children === 'string' ? (
-        <Text
-          variant="bodySmall"
-          as="p"
-          sentiment="neutral"
-          prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
-        >
-          {children}
-        </Text>
-      ) : (
-        children
-      )}
-    </StyledStack>
-  )
-}
+}: ContentWrapperProps) => (
+  <StyledStack gap={1}>
+    <Stack direction="row" justifyContent="space-between">
+      <Text
+        variant="bodyStrong"
+        as="h3"
+        sentiment="neutral"
+        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+      >
+        {title}
+      </Text>
+      <Button
+        variant={sentiment === 'neutral' ? 'ghost' : 'filled'}
+        sentiment={sentiment === 'neutral' ? 'neutral' : 'primary'}
+        onClick={onClose}
+        size="small"
+        icon="close"
+        aria-label="close"
+      />
+    </Stack>
+    {typeof children === 'string' ? (
+      <Text
+        variant="bodySmall"
+        as="p"
+        sentiment="neutral"
+        prominence={sentiment === 'neutral' ? 'strong' : 'stronger'}
+      >
+        {children}
+      </Text>
+    ) : (
+      children
+    )}
+  </StyledStack>
+)
 
 type PopoverProps = {
   children: ReactNode
@@ -126,6 +112,11 @@ type PopoverProps = {
   'data-testid'?: string
   maxWidth?: string
   maxHeight?: string
+  /**
+   * By default, the portal target is children container or document.body if children is a function. You can override this
+   * behavior by setting a portalTarget prop.
+   */
+  portalTarget?: HTMLElement
 } & Pick<ComponentProps<typeof Popup>, 'placement'>
 
 /**
@@ -147,6 +138,7 @@ export const Popover = forwardRef(
       maxWidth,
       maxHeight,
       'data-testid': dataTestId,
+      portalTarget,
     }: PopoverProps,
     ref: Ref<HTMLDivElement>,
   ) => {
@@ -158,20 +150,9 @@ export const Popover = forwardRef(
       setLocalVisible(visible)
     }, [visible])
 
-    // When space key is pressed we show the popover
-    const onKeyDownSpace: KeyboardEventHandler = useCallback(event => {
-      if (event.code === 'Space') {
-        event.preventDefault()
-        event.stopPropagation()
-        setLocalVisible(true)
-      }
-    }, [])
-
-    // When we close we hide the popover and focus the disclosure element
     const localOnClose = useCallback(() => {
       setLocalVisible(false)
       onClose?.()
-      innerRef.current?.focus()
     }, [onClose])
 
     return (
@@ -195,11 +176,12 @@ export const Popover = forwardRef(
         size={size}
         role="dialog"
         ref={ref}
+        tabIndex={-1}
         innerRef={innerRef}
         onClose={localOnClose}
-        onKeyDown={onKeyDownSpace}
         maxWidth={maxWidth}
         maxHeight={maxHeight}
+        portalTarget={portalTarget}
       >
         {children}
       </StyledPopup>

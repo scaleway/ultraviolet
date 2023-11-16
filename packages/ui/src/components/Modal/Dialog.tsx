@@ -18,6 +18,7 @@ const StyledBackdrop = styled.div<{ 'data-open': boolean }>`
   width: 0;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.overlay};
+  z-index: 1;
 
   &[data-open='true'] {
     padding: ${({ theme }) => theme.space['2']};
@@ -207,36 +208,38 @@ export const Dialog = ({
     event.stopPropagation()
   }
 
-  return createPortal(
-    <StyledBackdrop
-      data-open={open}
-      onClick={handleClose}
-      className={backdropClassName}
-      css={backdropCss}
-      data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
-      onFocus={stopFocus}
-    >
-      <StyledDialog
-        css={dialogCss}
-        onKeyUp={handleKeyUp}
-        onKeyDown={handleFocusTrap}
-        className={className}
-        id={id}
-        data-testid={dataTestId}
-        aria-label={ariaLabel}
-        data-placement={placement}
-        data-size={size}
-        open={open}
-        onClick={stopClick}
-        onCancel={stopCancel}
-        onClose={stopCancel}
-        aria-modal
-        ref={dialogRef}
-        tabIndex={0}
-      >
-        {open ? children : null}
-      </StyledDialog>
-    </StyledBackdrop>,
-    containerRef.current,
-  )
+  return open
+    ? createPortal(
+        <StyledBackdrop
+          data-open={open}
+          onClick={handleClose}
+          className={backdropClassName}
+          css={backdropCss}
+          data-testid={dataTestId ? `${dataTestId}-backdrop` : undefined}
+          onFocus={stopFocus}
+        >
+          <StyledDialog
+            css={dialogCss}
+            onKeyUp={handleKeyUp}
+            onKeyDown={handleFocusTrap}
+            className={className}
+            id={id}
+            data-testid={dataTestId}
+            aria-label={ariaLabel}
+            data-placement={placement}
+            data-size={size}
+            open={open}
+            onClick={stopClick}
+            onCancel={stopCancel}
+            onClose={stopCancel}
+            aria-modal
+            ref={dialogRef}
+            tabIndex={0}
+          >
+            {open ? children : null}
+          </StyledDialog>
+        </StyledBackdrop>,
+        containerRef.current,
+      )
+    : null
 }

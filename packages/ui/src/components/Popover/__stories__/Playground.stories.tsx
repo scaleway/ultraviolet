@@ -4,10 +4,10 @@ export const Playground = Template.bind({})
 
 Playground.decorators = [
   StoryComponent => (
-    <div
-      style={{ display: 'flex', justifyContent: 'center', marginTop: '84px' }}
-    >
-      <StoryComponent />
+    <div style={{ height: '200px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <StoryComponent />
+      </div>
     </div>
   ),
 ]
