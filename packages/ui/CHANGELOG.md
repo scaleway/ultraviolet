@@ -1,5 +1,31 @@
 # Change Log
 
+## 1.26.0
+
+### Minor Changes
+
+- [#3142](https://github.com/scaleway/ultraviolet/pull/3142) [`b6e59335`](https://github.com/scaleway/ultraviolet/commit/b6e5933584b59d2f73d3880a7b02e89f0c94b116) Thanks [@matthprost](https://github.com/matthprost)! - New prop `initiallyExpanded` on `<Snippet />` component.
+
+- [#3141](https://github.com/scaleway/ultraviolet/pull/3141) [`58b643bc`](https://github.com/scaleway/ultraviolet/commit/58b643bcbba996e7817c01703c0cf332a0d91d01) Thanks [@matthprost](https://github.com/matthprost)! - - Improved Popup (and so Popover, MenuV2 and Tooltip) to be attached to children instead of `document.body`
+
+  - Added new prop `portalTarget` on Popup component to allow attaching to a specific element
+
+- [#3131](https://github.com/scaleway/ultraviolet/pull/3131) [`4e76930d`](https://github.com/scaleway/ultraviolet/commit/4e76930d54833e033ef21357f0b444e82b3d08bb) Thanks [@matthprost](https://github.com/matthprost)! - Refactor global `JSX.Element` by importing it from `React`
+
+### Patch Changes
+
+- [#3147](https://github.com/scaleway/ultraviolet/pull/3147) [`73fd455d`](https://github.com/scaleway/ultraviolet/commit/73fd455d685f8104f6e48943bd2edc412c8f4774) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.3`.
+  Updated dependency `@babel/eslint-parser` to `7.23.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.3`.
+  Updated dependency `@babel/preset-env` to `7.23.3`.
+  Updated dependency `@babel/preset-react` to `7.23.3`.
+  Updated dependency `@babel/preset-typescript` to `7.23.3`.
+
+- [#3143](https://github.com/scaleway/ultraviolet/pull/3143) [`e2e06f2f`](https://github.com/scaleway/ultraviolet/commit/e2e06f2f885cc24ce6bd4221596fd81c50176a84) Thanks [@philibea](https://github.com/philibea)! - update Tabs component to add subtitle props
+
+- Updated dependencies [[`73fd455d`](https://github.com/scaleway/ultraviolet/commit/73fd455d685f8104f6e48943bd2edc412c8f4774)]:
+  - @ultraviolet/icons@2.5.5
+
 ## 1.25.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @ultraviolet/illustrations
 
+## 1.2.2
+
+### Patch Changes
+
+- [#3155](https://github.com/scaleway/ultraviolet/pull/3155) [`31287606`](https://github.com/scaleway/ultraviolet/commit/31287606a5f8a081abd9d2e4735a1ed1a5db2555) Thanks [@matthprost](https://github.com/matthprost)! - Change orientation of scaleway logo
+
 ## 1.2.1
 
 ### Patch Changes

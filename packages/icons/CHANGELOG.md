@@ -1,5 +1,16 @@
 # @ultraviolet/icons
 
+## 2.5.5
+
+### Patch Changes
+
+- [#3147](https://github.com/scaleway/ultraviolet/pull/3147) [`73fd455d`](https://github.com/scaleway/ultraviolet/commit/73fd455d685f8104f6e48943bd2edc412c8f4774) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.3`.
+  Updated dependency `@babel/eslint-parser` to `7.23.3`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.3`.
+  Updated dependency `@babel/preset-env` to `7.23.3`.
+  Updated dependency `@babel/preset-react` to `7.23.3`.
+  Updated dependency `@babel/preset-typescript` to `7.23.3`.
+
 ## 2.5.4
 
 ### Patch Changes
