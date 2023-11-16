@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import type { JSX } from 'react'
 import { Text } from '../Text'
 
 const StyledStrength = styled(Text, {
@@ -57,7 +56,7 @@ export const Meter = ({
   className,
   'data-testid': dataTestId,
   id,
-}: PasswordStrengthMeterProps): JSX.Element => {
+}: PasswordStrengthMeterProps) => {
   const toValue = ((value + 1) / strength.length) * 100
   const width = `${toValue}%`
 

@@ -1,6 +1,14 @@
 import styled from '@emotion/styled'
-import type { HTMLAttributes, ReactNode } from 'react'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react'
+import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
 import { StyledTabButton, Tab } from './Tab'
 import { TabMenu } from './TabMenu'
 import { TabMenuItem } from './TabMenuItem'
@@ -15,13 +23,20 @@ const MenuContainer = styled.div`
     line-height: ${({ theme }) => theme.typography.bodySmall.lineHeight};
     font-weight: inherit;
     padding: ${({ theme }) => `${theme.space['1']} ${theme.space['2']}`};
-    border-bottom-width: 1px;
+    border-bottom-width: 1.5px;
     width: 100%;
     cursor: pointer;
     min-width: 110px;
     background-color: transparent;
+    &[aria-disabled='true'],
+    &:disabled {
+      cursor: not-allowed;
+      filter: grayscale(1) opacity(50%);
+    }
   }
 `
+
+// Migration to MenuV2 will not work as expected here.
 const StyledTabMenu = styled(TabMenu)`
   position: sticky;
   right: 0;
@@ -79,7 +94,7 @@ export const Tabs = ({
   ...props
 }: TabsProps) => {
   const tabsRef = useRef<HTMLDivElement>({} as HTMLDivElement)
-  const moreStaticRef = useRef<HTMLButtonElement>({} as HTMLButtonElement)
+  const moreStaticRef = useRef<HTMLButtonElement>(null)
   const [displayMore, setDisplayMore] = useState(false)
   const value = useMemo(
     () => ({
@@ -104,16 +119,18 @@ export const Tabs = ({
     }
   }, [selected])
 
-  // Change the moreButton style automatically based on the scroll
+  // Change the moreButton style automatically based on the scroll to show that a scroll effect is possible.
   useEffect(() => {
     const element = tabsRef.current
     const moreElement = moreStaticRef.current
     const handler = () => {
-      moreElement.style.boxShadow =
-        element.scrollLeft + SHADOW_THRESHOLD >
-        element.scrollWidth - element.clientWidth
-          ? 'none'
-          : ''
+      if (moreElement?.style) {
+        moreElement.style.boxShadow =
+          element.scrollLeft + SHADOW_THRESHOLD >
+          element.scrollWidth - element.clientWidth
+            ? 'none'
+            : ''
+      }
     }
     if (displayMore) {
       element.addEventListener('scroll', handler)
@@ -123,6 +140,18 @@ export const Tabs = ({
       if (displayMore) element.removeEventListener('scroll', handler)
     }
   }, [displayMore])
+
+  // mapping of tab children to avoid using subtitle props
+  const menuItemChildren = Children.map(children, child => {
+    if (isValidElement<typeof Tab>(child)) {
+      return cloneElement(child as ReactElement, {
+        ...child.props,
+        subtitle: null,
+      })
+    }
+
+    return null
+  })
 
   return (
     <TabsContext.Provider value={value}>
@@ -136,7 +165,7 @@ export const Tabs = ({
         {children}
         {displayMore ? (
           <StyledTabMenu ref={moreStaticRef} disclosure={moreDisclosure}>
-            <MenuContainer>{children}</MenuContainer>
+            <MenuContainer>{menuItemChildren}</MenuContainer>
           </StyledTabMenu>
         ) : null}
       </TabsContainer>

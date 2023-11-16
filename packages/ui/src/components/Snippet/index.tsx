@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { ComponentProps } from 'react'
-import { Children, useState } from 'react'
+import { Children, useReducer } from 'react'
 import { CopyButton } from '../CopyButton'
 import { Expandable } from '../Expandable'
 import { Stack } from '../Stack'
@@ -176,6 +176,7 @@ type SnippetProps = {
   showText?: string
   hideText?: string
   'data-testid'?: string
+  initiallyExpanded?: boolean
 } & Pick<ComponentProps<typeof CopyButton>, 'copyText' | 'copiedText'>
 
 /**
@@ -191,8 +192,12 @@ export const Snippet = ({
   prefix,
   className,
   'data-testid': dataTestId,
+  initiallyExpanded,
 }: SnippetProps) => {
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useReducer(
+    value => !value,
+    initiallyExpanded ?? false,
+  )
 
   const lines = children.split(LINES_BREAK_REGEX).filter(Boolean)
   const numberOfLines = lines.length
@@ -230,7 +235,7 @@ export const Snippet = ({
           <ShowMoreContainer showMore={showMore}>
             <StyledButton
               type="button"
-              onClick={() => setShowMore(!showMore)}
+              onClick={setShowMore}
               aria-expanded={showMore}
             >
               <AlignCenterText as="span" variant="bodySmallStrong">

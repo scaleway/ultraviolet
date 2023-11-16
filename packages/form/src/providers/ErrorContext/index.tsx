@@ -1,5 +1,5 @@
 import type { AnyObject } from 'final-form'
-import type { JSX, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { createContext, useCallback, useContext, useMemo } from 'react'
 import { useFormState } from 'react-final-form'
 import type { FormErrorFunctionParams, FormErrors } from '../../types'
@@ -19,10 +19,7 @@ type ErrorProviderProps = {
   errors: FormErrors
 }
 
-export const ErrorProvider = ({
-  children,
-  errors,
-}: ErrorProviderProps): JSX.Element => {
+export const ErrorProvider = ({ children, errors }: ErrorProviderProps) => {
   const { values } = useFormState()
 
   const getFirstError = useCallback(

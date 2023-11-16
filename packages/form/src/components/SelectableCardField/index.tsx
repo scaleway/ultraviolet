@@ -1,6 +1,6 @@
 import { SelectableCard } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -53,7 +53,7 @@ export const SelectableCardField = ({
   id,
   label,
   'data-testid': dataTestId,
-}: SelectableCardFieldProps): JSX.Element => {
+}: SelectableCardFieldProps) => {
   const { getError } = useErrors()
 
   const { input, meta } = useFormField(name, {

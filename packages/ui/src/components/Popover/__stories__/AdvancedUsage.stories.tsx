@@ -8,7 +8,7 @@ import { TextInput } from '../../TextInput'
 import { Popover } from '../index'
 
 const StyledPopover = styled(Popover)`
-  height: 600px;
+  height: 400px;
 `
 
 export const AdvancedUsage: StoryFn<typeof Popover> = () => {
@@ -62,8 +62,10 @@ AdvancedUsage.parameters = {
 
 AdvancedUsage.decorators = [
   StoryComponent => (
-    <div style={{ display: 'inline-flex' }}>
-      <StoryComponent />
+    <div style={{ height: '500px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <StoryComponent />
+      </div>
     </div>
   ),
 ]

@@ -1,5 +1,5 @@
 import { Button } from '@ultraviolet/ui'
-import type { ComponentProps, JSX, ReactNode } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 import { useEffect, useState } from 'react'
 import { useFormState } from 'react-final-form'
 
@@ -29,7 +29,7 @@ export const Submit = ({
   tooltip,
   fullWidth,
   onClick,
-}: SubmitProps): JSX.Element => {
+}: SubmitProps) => {
   const { invalid, submitting, hasValidationErrors, dirtySinceLastSubmit } =
     useFormState({
       subscription: {

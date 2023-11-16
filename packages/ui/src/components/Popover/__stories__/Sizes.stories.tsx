@@ -3,6 +3,7 @@ import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
+import { Playground } from './Playground.stories'
 
 export const Sizes: StoryFn<typeof Popover> = () => {
   const [openedSmall, setOpenedSmall] = useState(false)
@@ -64,3 +65,5 @@ Sizes.parameters = {
     },
   },
 }
+
+Sizes.decorators = Playground.decorators

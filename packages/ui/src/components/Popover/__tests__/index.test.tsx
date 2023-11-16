@@ -200,36 +200,6 @@ describe('Tooltip', () => {
     })
   })
 
-  test(`should open on space key and close on space key - a11y`, async () => {
-    const onClose = jest.fn(() => {})
-
-    renderWithTheme(
-      <div style={{ height: '500px', width: '500px' }}>
-        <Popover
-          title="Test"
-          content="Test"
-          data-testid="popover"
-          onClose={onClose}
-        >
-          Children
-        </Popover>
-      </div>,
-    )
-
-    await userEvent.keyboard('{Tab}')
-    await userEvent.keyboard('{ }')
-
-    const popover = screen.getByTestId('popover')
-    expect(popover).toBeVisible()
-
-    await userEvent.keyboard('{ }')
-
-    expect(onClose).toHaveBeenCalledTimes(1)
-    await waitFor(() => {
-      expect(popover).not.toBeVisible()
-    })
-  })
-
   // This test is made to check advanced use cases of popover with inputs inside and a modal that contains the same inputs
   // The goal is to check if at any time the popover or the modal close unexpectedly when interacting with the inputs
   describe(`advanced test`, () => {

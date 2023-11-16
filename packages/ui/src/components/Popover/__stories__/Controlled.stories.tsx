@@ -2,6 +2,7 @@ import type { StoryFn } from '@storybook/react'
 import { useCallback, useState } from 'react'
 import { Button } from '../../Button'
 import { Popover } from '../index'
+import { Playground } from './Playground.stories'
 
 export const Controlled: StoryFn<typeof Popover> = () => {
   const [opened, setOpened] = useState(false)
@@ -32,10 +33,4 @@ Controlled.parameters = {
   },
 }
 
-Controlled.decorators = [
-  StoryComponent => (
-    <div style={{ display: 'inline-flex' }}>
-      <StoryComponent />
-    </div>
-  ),
-]
+Controlled.decorators = Playground.decorators

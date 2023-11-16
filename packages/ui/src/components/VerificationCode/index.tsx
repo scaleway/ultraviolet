@@ -3,7 +3,6 @@ import type {
   ChangeEvent,
   ClipboardEventHandler,
   FocusEventHandler,
-  JSX,
   KeyboardEventHandler,
 } from 'react'
 import { createRef, useId, useState } from 'react'
@@ -97,7 +96,7 @@ export const VerificationCode = ({
   type = 'number',
   'data-testid': dataTestId,
   'aria-label': ariaLabel = 'Verification code',
-}: VerificationCodeProps): JSX.Element => {
+}: VerificationCodeProps) => {
   const uniqueId = useId()
   const valuesArray = Object.assign(
     new Array(fields).fill(''),

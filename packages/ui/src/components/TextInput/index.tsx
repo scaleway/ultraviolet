@@ -6,7 +6,6 @@ import type {
   ChangeEvent,
   FocusEventHandler,
   InputHTMLAttributes,
-  JSX,
   KeyboardEventHandler,
   LabelHTMLAttributes,
   TextareaHTMLAttributes,
@@ -409,7 +408,7 @@ export const TextInput = forwardRef<
       max,
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const controlRef = useRef<HTMLInputElement>(null)
 
     const [visited, setVisited] = useState(false)

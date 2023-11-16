@@ -1,5 +1,5 @@
 import arrayMutators from 'final-form-arrays'
-import type { JSX, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import type {
   FormRenderProps,
   FormProps as ReactFinalFormProps,
@@ -45,7 +45,7 @@ export const Form = <FormValues,>({
   mutators,
   keepDirtyOnReinitialize,
   className,
-}: FormProps<FormValues>): JSX.Element => (
+}: FormProps<FormValues>) => (
   <ReactFinalForm
     initialValues={initialValues}
     validateOnBlur={validateOnBlur}

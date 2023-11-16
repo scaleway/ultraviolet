@@ -177,4 +177,32 @@ describe('Popup', () => {
       expect(PopupPortal).not.toBeVisible()
     })
   })
+
+  test(`should verify trap focus`, async () => {
+    renderWithTheme(
+      <Popup text="test success!" maxWidth={100}>
+        <button type="button" data-testid="1">
+          Focus me
+        </button>
+        <button type="button" data-testid="2">
+          Focus me too
+        </button>
+      </Popup>,
+    )
+
+    await userEvent.keyboard('{Tab}')
+
+    const PopupPortal = screen.getByText('test success!')
+    expect(PopupPortal).toBeVisible()
+
+    await userEvent.keyboard('{Tab}')
+    await userEvent.keyboard('{Tab}')
+    const secondButton = screen.getByTestId('2')
+    expect(secondButton).toHaveFocus()
+
+    await userEvent.keyboard('{Escape}')
+    await waitFor(() => {
+      expect(PopupPortal).not.toBeVisible()
+    })
+  })
 })
