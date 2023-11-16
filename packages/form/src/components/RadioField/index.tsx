@@ -1,6 +1,6 @@
 import { Radio } from '@ultraviolet/ui'
 import type { FieldState } from 'final-form'
-import type { ComponentProps, JSX } from 'react'
+import type { ComponentProps } from 'react'
 import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -41,7 +41,7 @@ export const RadioField = ({
   validate,
   value,
   tooltip,
-}: RadioFieldProps): JSX.Element => {
+}: RadioFieldProps) => {
   const { getError } = useErrors()
 
   const { input, meta } = useFormField(name, {

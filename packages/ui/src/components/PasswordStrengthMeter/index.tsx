@@ -1,6 +1,5 @@
 import { useTheme } from '@emotion/react'
 import styled from '@emotion/styled'
-import type { JSX } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { Text } from '../Text'
 
@@ -89,7 +88,7 @@ export const PasswordStrengthMeter = ({
   forbiddenInputs = DEFAULT_FORBIDDEN_WORDS,
   className,
   'data-testid': dataTestId,
-}: PasswordStrengthMeterProps): JSX.Element => {
+}: PasswordStrengthMeterProps) => {
   const [score, setScore] = useState<number>(0)
   const theme = useTheme()
   const [backgroundColor, setBackgroundColor] = useState<string>(

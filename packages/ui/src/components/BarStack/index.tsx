@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import type { JSX, MouseEventHandler, ReactNode } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { Tooltip } from '../Tooltip'
 
@@ -174,7 +174,7 @@ export const BarStack = ({
   total,
   className,
   'data-testid': dataTestId,
-}: BarStackProps): JSX.Element => {
+}: BarStackProps) => {
   const computedTotal = useMemo(
     () => total ?? data.reduce((acc, { value }) => acc + value, 0),
     [total, data],
