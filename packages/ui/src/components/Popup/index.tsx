@@ -217,7 +217,8 @@ export const Popup = forwardRef(
       }
 
       return null
-    }, [portalTarget, role])
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [portalTarget, role, childrenRef.current])
 
     // There are some issue when mixing animation and maxHeight on some browsers, so we disable animation if maxHeight is set.
     const animationDuration =
@@ -415,12 +416,11 @@ export const Popup = forwardRef(
      * This event will occur only for dialog and will trap focus inside the dialog.
      */
     const handleFocusTrap: KeyboardEventHandler = useCallback(event => {
-      event.stopPropagation()
       const isTabPressed = event.key === 'Tab'
-
       if (!isTabPressed) {
         return
       }
+      event.stopPropagation()
 
       const focusableEls =
         innerPopupRef.current?.querySelectorAll(
