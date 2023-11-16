@@ -62,6 +62,11 @@ describe('Snippet', () => {
       <Snippet showText="Test">{TEST_VALUE_MULTILINE}</Snippet>,
     ))
 
+  test('renders correctly with initiallyExpanded', () =>
+    shouldMatchEmotionSnapshot(
+      <Snippet initiallyExpanded>{TEST_VALUE_MULTILINE}</Snippet>,
+    ))
+
   it('should click on extend button to display full content on ', () =>
     shouldMatchEmotionSnapshot(<Snippet>{TEST_VALUE_MULTILINE}</Snippet>, {
       transform: async () => {
