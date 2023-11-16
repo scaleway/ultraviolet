@@ -299,6 +299,7 @@ exports[`TimeField should render correctly 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -322,6 +323,7 @@ exports[`TimeField should render correctly 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"
@@ -680,6 +682,7 @@ exports[`TimeField should render correctly checked without value 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -703,6 +706,7 @@ exports[`TimeField should render correctly checked without value 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"
@@ -1048,6 +1052,7 @@ exports[`TimeField should render correctly disabled 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         aria-disabled="true"
@@ -1072,6 +1077,7 @@ exports[`TimeField should render correctly disabled 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"
@@ -1431,6 +1437,7 @@ exports[`TimeField should trigger events 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -1456,6 +1463,7 @@ exports[`TimeField should trigger events 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"

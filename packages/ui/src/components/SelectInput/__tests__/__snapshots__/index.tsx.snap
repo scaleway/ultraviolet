@@ -294,6 +294,7 @@ exports[`SelectInput renders correctly animated 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j8aczf-control"
@@ -320,6 +321,7 @@ exports[`SelectInput renders correctly animated 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-15-placeholder"
             aria-expanded="false"
@@ -647,6 +649,7 @@ exports[`SelectInput renders correctly controlled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -673,6 +676,7 @@ exports[`SelectInput renders correctly controlled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-5-placeholder"
             aria-expanded="false"
@@ -1076,14 +1080,23 @@ exports[`SelectInput renders correctly default values with click 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
       >
-        option Option A focused, 1 of 2. 2 results available. Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        2 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -1111,11 +1124,11 @@ exports[`SelectInput renders correctly default values with click 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant="react-select-14-option-0"
             aria-autocomplete="list"
             aria-describedby="react-select-14-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-14-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -1157,18 +1170,22 @@ exports[`SelectInput renders correctly default values with click 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-14-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-14-listbox"
+        role="listbox"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-19r2qbi-option"
             id="react-select-14-option-0"
+            role="option"
             tabindex="-1"
           >
             Option A
@@ -1179,8 +1196,10 @@ exports[`SelectInput renders correctly default values with click 1`] = `
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-1kauswa-option"
             id="react-select-14-option-1"
+            role="option"
             tabindex="-1"
           >
             Option B
@@ -1458,6 +1477,7 @@ exports[`SelectInput renders correctly disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       aria-disabled="true"
@@ -1485,6 +1505,7 @@ exports[`SelectInput renders correctly disabled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-6-placeholder"
             aria-expanded="false"
@@ -1794,6 +1815,7 @@ exports[`SelectInput renders correctly disabled with click 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       aria-disabled="true"
@@ -1821,6 +1843,7 @@ exports[`SelectInput renders correctly disabled with click 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-13-placeholder"
             aria-expanded="false"
@@ -2143,6 +2166,7 @@ exports[`SelectInput renders correctly multi 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -2169,6 +2193,7 @@ exports[`SelectInput renders correctly multi 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-16-placeholder"
             aria-expanded="false"
@@ -2552,6 +2577,7 @@ exports[`SelectInput renders correctly multi disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       aria-disabled="true"
@@ -2596,6 +2622,7 @@ exports[`SelectInput renders correctly multi disabled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="true"
@@ -2937,6 +2964,7 @@ exports[`SelectInput renders correctly required 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -2963,6 +2991,7 @@ exports[`SelectInput renders correctly required 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-7-placeholder"
             aria-expanded="false"
@@ -3315,6 +3344,7 @@ exports[`SelectInput renders correctly timed 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -3341,6 +3371,7 @@ exports[`SelectInput renders correctly timed 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-8-placeholder"
             aria-expanded="false"
@@ -3686,6 +3717,7 @@ exports[`SelectInput renders correctly timed with error 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-gulnn2-control"
@@ -3712,6 +3744,7 @@ exports[`SelectInput renders correctly timed with error 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-9-placeholder"
             aria-expanded="false"
@@ -4120,14 +4153,23 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
       >
-        option Option A focused, 1 of 2. 2 results available. Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        2 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -4155,11 +4197,11 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant="react-select-2-option-0"
             aria-autocomplete="list"
             aria-describedby="react-select-2-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-2-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -4201,18 +4243,22 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-2-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-2-listbox"
+        role="listbox"
       >
         <div
           data-testid="option-uncontrolled-a"
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-19r2qbi-option"
             id="react-select-2-option-0"
+            role="option"
             tabindex="-1"
           >
             Option A
@@ -4223,8 +4269,10 @@ exports[`SelectInput renders correctly uncontrolled 1`] = `
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-1kauswa-option"
             id="react-select-2-option-1"
+            role="option"
             tabindex="-1"
           >
             Option B
@@ -4592,14 +4640,23 @@ exports[`SelectInput renders correctly with click 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
       >
-        option Option A focused, 1 of 2. 2 results available. Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        2 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -4627,11 +4684,11 @@ exports[`SelectInput renders correctly with click 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant="react-select-10-option-0"
             aria-autocomplete="list"
             aria-describedby="react-select-10-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-10-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -4673,18 +4730,22 @@ exports[`SelectInput renders correctly with click 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-10-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-10-listbox"
+        role="listbox"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-19r2qbi-option"
             id="react-select-10-option-0"
+            role="option"
             tabindex="-1"
           >
             Option A
@@ -4695,8 +4756,10 @@ exports[`SelectInput renders correctly with click 1`] = `
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-1kauswa-option"
             id="react-select-10-option-1"
+            role="option"
             tabindex="-1"
           >
             Option B
@@ -5090,14 +5153,23 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
       >
-        option Option A focused, 1 of 3. 3 results available. Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        3 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -5125,11 +5197,11 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant="react-select-11-option-0"
             aria-autocomplete="list"
             aria-describedby="react-select-11-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-11-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -5171,18 +5243,22 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-11-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-11-listbox"
+        role="listbox"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-19r2qbi-option"
             id="react-select-11-option-0"
+            role="option"
             tabindex="-1"
           >
             Option A
@@ -5193,8 +5269,10 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-1kauswa-option"
             id="react-select-11-option-1"
+            role="option"
             tabindex="-1"
           >
             Option B
@@ -5205,8 +5283,10 @@ exports[`SelectInput renders correctly with click and option disabled 1`] = `
         >
           <div
             aria-disabled="true"
+            aria-selected="false"
             class=" cache-19u1dvw-option"
             id="react-select-11-option-2"
+            role="option"
             tabindex="-1"
           >
             Option C
@@ -5600,14 +5680,23 @@ exports[`SelectInput renders correctly with click and options 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
       >
-        option Option A focused, 1 of 3. 3 results available. Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        3 results available.
+      </span>
+      <span
+        id="aria-guidance"
+      >
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -5635,11 +5724,11 @@ exports[`SelectInput renders correctly with click and options 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant="react-select-12-option-0"
             aria-autocomplete="list"
             aria-describedby="react-select-12-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-12-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -5681,18 +5770,22 @@ exports[`SelectInput renders correctly with click and options 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-12-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-12-listbox"
+        role="listbox"
       >
         <div
           data-testid="option-test-a"
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-19r2qbi-option"
             id="react-select-12-option-0"
+            role="option"
             tabindex="-1"
           >
             Option A
@@ -5703,8 +5796,10 @@ exports[`SelectInput renders correctly with click and options 1`] = `
         >
           <div
             aria-disabled="false"
+            aria-selected="false"
             class=" cache-1kauswa-option"
             id="react-select-12-option-1"
+            role="option"
             tabindex="-1"
           >
             Option B
@@ -5715,8 +5810,10 @@ exports[`SelectInput renders correctly with click and options 1`] = `
         >
           <div
             aria-disabled="true"
+            aria-selected="false"
             class=" cache-19u1dvw-option"
             id="react-select-12-option-2"
+            role="option"
             tabindex="-1"
           >
             Option C
@@ -6008,6 +6105,7 @@ exports[`SelectInput renders correctly with custom styles 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -6034,6 +6132,7 @@ exports[`SelectInput renders correctly with custom styles 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-4-placeholder"
             aria-expanded="false"
@@ -6392,14 +6491,21 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     >
       <span
         id="aria-selection"
       />
       <span
-        id="aria-context"
+        id="aria-focused"
+      />
+      <span
+        id="aria-results"
+      />
+      <span
+        id="aria-guidance"
       >
-          Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
+        Use Up and Down to choose options, press Enter to select the currently focused option, press Escape to exit the menu, press Tab to select the option and exit the menu.
       </span>
     </span>
     <div
@@ -6427,11 +6533,11 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-3-placeholder"
             aria-expanded="true"
             aria-haspopup="true"
-            aria-owns="react-select-3-listbox"
             autocapitalize="none"
             autocomplete="off"
             autocorrect="off"
@@ -6473,10 +6579,12 @@ exports[`SelectInput renders correctly with emptyState 1`] = `
     </div>
     <div
       class=" cache-1xqg3ns-menu"
-      id="react-select-3-listbox"
     >
       <div
+        aria-multiselectable="false"
         class=" cache-i19tea-MenuList"
+        id="react-select-3-listbox"
+        role="listbox"
       >
         <div
           class=" cache-1wlit7h-NoOptionsMessage"
@@ -6769,6 +6877,7 @@ exports[`SelectInput should render correctly custom isLoading 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -6795,6 +6904,7 @@ exports[`SelectInput should render correctly custom isLoading 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-25-placeholder"
             aria-expanded="false"
@@ -7125,6 +7235,7 @@ exports[`SelectInput should render correctly description and inlineDescription 1
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -7151,6 +7262,7 @@ exports[`SelectInput should render correctly description and inlineDescription 1
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-26-placeholder"
             aria-expanded="false"
@@ -7563,6 +7675,7 @@ exports[`SelectInput should render correctly isLoading 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -7589,6 +7702,7 @@ exports[`SelectInput should render correctly isLoading 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-22-placeholder"
             aria-expanded="false"
@@ -7954,6 +8068,7 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -7979,6 +8094,7 @@ exports[`SelectInput should render correctly multi isClearable 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="true"
@@ -8321,6 +8437,7 @@ exports[`SelectInput should render correctly multi isClearable disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       aria-disabled="true"
@@ -8347,6 +8464,7 @@ exports[`SelectInput should render correctly multi isClearable disabled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="true"
@@ -8684,6 +8802,7 @@ exports[`SelectInput should render correctly multi isSearchable 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -8709,6 +8828,7 @@ exports[`SelectInput should render correctly multi isSearchable 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="true"
@@ -9037,6 +9157,7 @@ exports[`SelectInput should render correctly multi isSearchable disabled 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       aria-disabled="true"
@@ -9063,6 +9184,7 @@ exports[`SelectInput should render correctly multi isSearchable disabled 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-expanded="false"
             aria-haspopup="true"
@@ -9385,6 +9507,7 @@ exports[`SelectInput should render correctly with portal 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -9411,6 +9534,7 @@ exports[`SelectInput should render correctly with portal 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-23-placeholder"
             aria-expanded="false"
@@ -9741,6 +9865,7 @@ exports[`SelectInput should render correctly without children 1`] = `
       aria-live="polite"
       aria-relevant="additions text"
       class="cache-1f43avz-a11yText-A11yText"
+      role="log"
     />
     <div
       class=" cache-j55ftc-control"
@@ -9767,6 +9892,7 @@ exports[`SelectInput should render correctly without children 1`] = `
           data-value=""
         >
           <input
+            aria-activedescendant=""
             aria-autocomplete="list"
             aria-describedby="react-select-24-placeholder"
             aria-expanded="false"

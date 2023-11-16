@@ -286,6 +286,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -311,6 +312,7 @@ exports[`SelectInputField should display right value on grouped options 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"
@@ -641,6 +643,7 @@ exports[`SelectInputField should render correctly 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -667,6 +670,7 @@ exports[`SelectInputField should render correctly 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-describedby="react-select-2-placeholder"
               aria-expanded="false"
@@ -984,6 +988,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         aria-disabled="true"
@@ -1011,6 +1016,7 @@ exports[`SelectInputField should render correctly disabled 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-describedby="react-select-3-placeholder"
               aria-expanded="false"
@@ -1337,6 +1343,7 @@ exports[`SelectInputField should render correctly multiple 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -1363,6 +1370,7 @@ exports[`SelectInputField should render correctly multiple 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-describedby="react-select-4-placeholder"
               aria-expanded="false"
@@ -1696,6 +1704,7 @@ exports[`SelectInputField should render correctly with a disabled option 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -1722,6 +1731,7 @@ exports[`SelectInputField should render correctly with a disabled option 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-describedby="react-select-5-placeholder"
               aria-expanded="false"
@@ -2068,6 +2078,7 @@ exports[`SelectInputField should trigger events 1`] = `
         aria-live="polite"
         aria-relevant="additions text"
         class="cache-1f43avz-a11yText-A11yText"
+        role="log"
       />
       <div
         class=" cache-j55ftc-control"
@@ -2093,6 +2104,7 @@ exports[`SelectInputField should trigger events 1`] = `
             data-value=""
           >
             <input
+              aria-activedescendant=""
               aria-autocomplete="list"
               aria-expanded="false"
               aria-haspopup="true"
