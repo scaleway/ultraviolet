@@ -1,4 +1,5 @@
 export { FORM_ERROR } from './constants'
+export type { FormProps } from './components'
 export {
   CheckboxField,
   CheckboxGroupField,
@@ -27,7 +28,25 @@ export {
   useOnFieldChange,
 } from './hooks'
 
-// eslint-disable-next-line no-restricted-syntax
-export * from 'react-hook-form'
-// eslint-disable-next-line no-restricted-syntax
-export type * from 'react-hook-form'
+export {
+  useForm,
+  useFieldArray,
+  useWatch,
+  useController,
+  useFormState,
+  useFormContext,
+} from 'react-hook-form'
+
+export type {
+  UseFieldArrayMove,
+  DeepPartial,
+  UseFormSetValue,
+  UseFormReturn,
+  ControllerRenderProps,
+  PathValue,
+  FieldValues,
+  FieldPath,
+  FieldErrors,
+  Path,
+  UseFieldArrayRemove,
+} from 'react-hook-form'
