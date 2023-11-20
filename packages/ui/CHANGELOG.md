@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.26.1
+
+### Patch Changes
+
+- [#3172](https://github.com/scaleway/ultraviolet/pull/3172) [`931d1c7c`](https://github.com/scaleway/ultraviolet/commit/931d1c7c360ff84350e8d6fb7ffba5d2b9ce9963) Thanks [@matthprost](https://github.com/matthprost)! - Fix popup to attach correctly when parent is a table or sub component of the table
+
+- [#3153](https://github.com/scaleway/ultraviolet/pull/3153) [`b14a53d9`](https://github.com/scaleway/ultraviolet/commit/b14a53d98c6ec5a777e282b7cc9b8b82afca4d1f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-select` to `5.8.0`.
+
 ## 1.26.0
 
 ### Minor Changes
