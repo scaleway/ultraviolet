@@ -13,6 +13,10 @@ type CardProps = {
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
 }
 
+const StyledStack = styled(Stack)`
+  min-width: 0;
+`
+
 const IconWrapper = styled.div`
   display: inline-flex;
   background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
@@ -22,7 +26,6 @@ const IconWrapper = styled.div`
 
 const StyledWrapper = styled.a`
   display: block;
-  width: 100%;
   padding: ${({ theme }) => theme.space['3']};
   text-decoration: none;
 
@@ -55,7 +58,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
         alignItems="center"
         justifyContent="space-between"
       >
-        <Stack gap="0.5">
+        <StyledStack gap="0.5">
           <div>
             {subtitle ? (
               <Text
@@ -78,7 +81,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
             </Text>
           ) : null}
           {children}
-        </Stack>
+        </StyledStack>
         <IconWrapper>
           <Icon name="open-in-new" color="neutral" />
         </IconWrapper>
