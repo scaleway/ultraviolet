@@ -73,6 +73,36 @@ const computePlacement = ({
   return 'top'
 }
 
+/**
+ * This function will check if the offset parent is usable for popup positioning
+ * If not it will loop and search for a compatible parent until document.body is reached
+ */
+const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
+  const offsetParent = element?.current?.offsetParent
+
+  // We need to check if offsetParent is a table cell or a table because they are not suitable for positioning
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
+  if (offsetParent && !['TH', 'TD', 'TABLE'].includes(offsetParent.tagName)) {
+    return offsetParent
+  }
+
+  let currentElement = element?.current
+
+  while (currentElement && currentElement.tagName !== 'BODY') {
+    const { position } = window.getComputedStyle(currentElement)
+
+    // Check if the current element is a potential offset parent
+    if (position !== 'static') {
+      return currentElement
+    }
+
+    currentElement = currentElement.parentElement as HTMLDivElement
+  }
+
+  // If no suitable offset parent is found, return the body element
+  return document.body
+}
+
 type ComputePositionsTypes = {
   placement: PopupPlacement
   childrenRef: RefObject<HTMLDivElement>
@@ -89,15 +119,15 @@ export const computePositions = ({
   popupRef,
   popupPortalTarget,
 }: ComputePositionsTypes) => {
-  const childrenStructuredRef = (
+  const childrenRect = (
     childrenRef.current as HTMLDivElement
   ).getBoundingClientRect()
-  const offsetParentRect =
-    childrenRef?.current?.offsetParent?.getBoundingClientRect() ?? {
-      top: 0,
-      left: 0,
-      right: 0,
-    }
+  const offsetParent = findOffsetParent(childrenRef)
+  const offsetParentRect = offsetParent?.getBoundingClientRect() ?? {
+    top: 0,
+    left: 0,
+    right: 0,
+  }
   const popupStructuredRef = (
     popupRef.current as HTMLDivElement
   ).getBoundingClientRect()
@@ -105,9 +135,9 @@ export const computePositions = ({
   const placementBasedOnWindowSize =
     placement === 'auto'
       ? computePlacement({
-          childrenStructuredRef,
+          childrenStructuredRef: childrenRect,
           popupStructuredRef,
-          offsetParentRect: offsetParentRect as DOMRect,
+          offsetParentRect,
           popupPortalTarget,
         })
       : placement
@@ -118,31 +148,35 @@ export const computePositions = ({
     right: childrenRight,
     width: childrenWidth,
     height: childrenHeight,
-  } = childrenStructuredRef
+  } = childrenRect
 
   const {
     top: parentTop,
     left: parentLeft,
     right: parentRight,
-  } = offsetParentRect as DOMRect
+  } = offsetParentRect
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
+  // offSetParent is the closest positioned ancestor. If the element is not positioned, the nearest table cell or root element is used.
+  const isPopupPortalTargetBody =
+    popupPortalTarget === document.body || offsetParent === document.body
+
   // It will get how much scroll is done on the page to compute the position of the popup
-  const scrollTopValue =
-    popupPortalTarget === document.body ? document.documentElement.scrollTop : 0
+  const scrollTopValue = isPopupPortalTargetBody
+    ? document.documentElement.scrollTop
+    : 0
 
   // We need to compute the position of the popup based on the parent element in the case the popup is not in the body
-  const overloadedChildrenLeft =
-    popupPortalTarget === document.body
-      ? childrenLeft
-      : childrenLeft - parentLeft
-  const overloadedChildrenTop =
-    popupPortalTarget === document.body ? childrenTop : childrenTop - parentTop
-  const overloadedChildrenRight =
-    popupPortalTarget === document.body
-      ? childrenRight
-      : childrenRight + childrenWidth + ARROW_WIDTH + SPACE - parentRight / 2
+  const overloadedChildrenLeft = isPopupPortalTargetBody
+    ? childrenLeft
+    : childrenLeft - parentLeft
+  const overloadedChildrenTop = isPopupPortalTargetBody
+    ? childrenTop
+    : childrenTop - parentTop
+  const overloadedChildrenRight = isPopupPortalTargetBody
+    ? childrenRight
+    : childrenRight + childrenWidth + ARROW_WIDTH + SPACE - parentRight / 2
 
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
