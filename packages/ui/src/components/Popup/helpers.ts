@@ -80,6 +80,8 @@ const computePlacement = ({
 const findOffsetParent = (element: RefObject<HTMLDivElement>) => {
   const offsetParent = element?.current?.offsetParent
 
+  // We need to check if offsetParent is a table cell or a table because they are not suitable for positioning
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent
   if (offsetParent && !['TH', 'TD', 'TABLE'].includes(offsetParent.tagName)) {
     return offsetParent
   }
