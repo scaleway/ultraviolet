@@ -66,3 +66,4 @@ export {
   Icon,
 } from '@ultraviolet/icons'
 export { MenuV2 } from './MenuV2'
+export { GlobalAlert } from './GlobalAlert'
