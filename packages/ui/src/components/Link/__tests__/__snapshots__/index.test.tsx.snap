@@ -2,7 +2,7 @@
 
 exports[`Link prominence render prominence default 1`] = `
 <DocumentFragment>
-  .cache-ihv4h0-StyledLink {
+  .cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -40,17 +40,17 @@ exports[`Link prominence render prominence default 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -59,25 +59,32 @@ exports[`Link prominence render prominence default 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-ihv4h0-StyledLink e1afnb7a0"
+    class="cache-1ptg5vw-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     prominence="default"
   >
@@ -88,7 +95,7 @@ exports[`Link prominence render prominence default 1`] = `
 
 exports[`Link prominence render prominence strong 1`] = `
 <DocumentFragment>
-  .cache-14syxuu-StyledLink {
+  .cache-1lpfl92-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -126,17 +133,17 @@ exports[`Link prominence render prominence strong 1`] = `
   text-case: none;
 }
 
-.cache-14syxuu-StyledLink .e1afnb7a2 {
+.cache-1lpfl92-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-14syxuu-StyledLink>* {
+.cache-1lpfl92-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-14syxuu-StyledLink:hover,
-.cache-14syxuu-StyledLink:focus {
+.cache-1lpfl92-StyledLink:hover,
+.cache-1lpfl92-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -145,25 +152,32 @@ exports[`Link prominence render prominence strong 1`] = `
   text-decoration-color: #ffffff;
 }
 
-.cache-14syxuu-StyledLink:hover .e1afnb7a2,
-.cache-14syxuu-StyledLink:focus .e1afnb7a2 {
+.cache-1lpfl92-StyledLink:hover .e1afnb7a2,
+.cache-1lpfl92-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-14syxuu-StyledLink:hover::after,
-.cache-14syxuu-StyledLink:focus::after {
+.cache-1lpfl92-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1lpfl92-StyledLink:hover::after,
+.cache-1lpfl92-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-14syxuu-StyledLink:active {
+.cache-1lpfl92-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-14syxuu-StyledLink e1afnb7a0"
+    class="cache-1lpfl92-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     prominence="strong"
   >
@@ -172,9 +186,102 @@ exports[`Link prominence render prominence strong 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Link prominence render prominence stronger 1`] = `
+<DocumentFragment>
+  .cache-1awn4d9-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #3f4250;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-1awn4d9-StyledLink .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1awn4d9-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1awn4d9-StyledLink:hover,
+.cache-1awn4d9-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #3f4250;
+  text-decoration-color: #3f4250;
+}
+
+.cache-1awn4d9-StyledLink:hover .e1afnb7a2,
+.cache-1awn4d9-StyledLink:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1awn4d9-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1awn4d9-StyledLink:hover::after,
+.cache-1awn4d9-StyledLink:focus::after {
+  background-color: #005da3;
+}
+
+.cache-1awn4d9-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-1awn4d9-StyledLink e1afnb7a0"
+    data-variant="standalone"
+    href="/"
+    prominence="stronger"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
 exports[`Link prominence render prominence weak 1`] = `
 <DocumentFragment>
-  .cache-ihv4h0-StyledLink {
+  .cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -212,17 +319,17 @@ exports[`Link prominence render prominence weak 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -231,25 +338,32 @@ exports[`Link prominence render prominence weak 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-ihv4h0-StyledLink e1afnb7a0"
+    class="cache-1ptg5vw-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     prominence="weak"
   >
@@ -260,7 +374,7 @@ exports[`Link prominence render prominence weak 1`] = `
 
 exports[`Link render correctly with bad sentiment 1`] = `
 <DocumentFragment>
-  .cache-2sbsfl-StyledLink {
+  .cache-lk8t2n-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -298,17 +412,17 @@ exports[`Link render correctly with bad sentiment 1`] = `
   text-case: none;
 }
 
-.cache-2sbsfl-StyledLink .e1afnb7a2 {
+.cache-lk8t2n-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-2sbsfl-StyledLink>* {
+.cache-lk8t2n-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-2sbsfl-StyledLink:hover,
-.cache-2sbsfl-StyledLink:focus {
+.cache-lk8t2n-StyledLink:hover,
+.cache-lk8t2n-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -317,25 +431,32 @@ exports[`Link render correctly with bad sentiment 1`] = `
   text-decoration-color: #3f4250;
 }
 
-.cache-2sbsfl-StyledLink:hover .e1afnb7a2,
-.cache-2sbsfl-StyledLink:focus .e1afnb7a2 {
+.cache-lk8t2n-StyledLink:hover .e1afnb7a2,
+.cache-lk8t2n-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-2sbsfl-StyledLink:hover::after,
-.cache-2sbsfl-StyledLink:focus::after {
+.cache-lk8t2n-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-lk8t2n-StyledLink:hover::after,
+.cache-lk8t2n-StyledLink:focus::after {
   background-color: #3f4250;
 }
 
-.cache-2sbsfl-StyledLink:active {
+.cache-lk8t2n-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-2sbsfl-StyledLink e1afnb7a0"
+    class="cache-lk8t2n-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -345,7 +466,7 @@ exports[`Link render correctly with bad sentiment 1`] = `
 
 exports[`Link render correctly with href props 1`] = `
 <DocumentFragment>
-  .cache-1tigebz-StyledLink {
+  .cache-1rk3jb4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -383,17 +504,17 @@ exports[`Link render correctly with href props 1`] = `
   text-case: none;
 }
 
-.cache-1tigebz-StyledLink .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1tigebz-StyledLink>* {
+.cache-1rk3jb4-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1tigebz-StyledLink:hover,
-.cache-1tigebz-StyledLink:focus {
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -402,25 +523,32 @@ exports[`Link render correctly with href props 1`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:hover .e1afnb7a2,
-.cache-1tigebz-StyledLink:focus .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1tigebz-StyledLink:hover::after,
-.cache-1tigebz-StyledLink:focus::after {
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:active {
+.cache-1rk3jb4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1tigebz-StyledLink e1afnb7a0"
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -430,7 +558,7 @@ exports[`Link render correctly with href props 1`] = `
 
 exports[`Link render correctly with href props 2`] = `
 <DocumentFragment>
-  .cache-100n8vz-StyledLink {
+  .cache-o4vvox-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -468,17 +596,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-100n8vz-StyledLink .e1afnb7a2 {
+.cache-o4vvox-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-100n8vz-StyledLink>* {
+.cache-o4vvox-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-100n8vz-StyledLink:hover,
-.cache-100n8vz-StyledLink:focus {
+.cache-o4vvox-StyledLink:hover,
+.cache-o4vvox-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -487,20 +615,26 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-100n8vz-StyledLink:hover .e1afnb7a2,
-.cache-100n8vz-StyledLink:focus .e1afnb7a2 {
+.cache-o4vvox-StyledLink:hover .e1afnb7a2,
+.cache-o4vvox-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(4px, 0);
   -moz-transform: translate(4px, 0);
   -ms-transform: translate(4px, 0);
   transform: translate(4px, 0);
 }
 
-.cache-100n8vz-StyledLink:hover::after,
-.cache-100n8vz-StyledLink:focus::after {
+.cache-o4vvox-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-o4vvox-StyledLink:hover::after,
+.cache-o4vvox-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-100n8vz-StyledLink:active {
+.cache-o4vvox-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -514,7 +648,8 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-100n8vz-StyledLink e1afnb7a0"
+    class="cache-o4vvox-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     <svg
@@ -527,7 +662,7 @@ exports[`Link render correctly with href props 2`] = `
     </svg>
     Hello
   </a>
-  .cache-1tigebz-StyledLink {
+  .cache-1rk3jb4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -565,17 +700,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-1tigebz-StyledLink .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1tigebz-StyledLink>* {
+.cache-1rk3jb4-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1tigebz-StyledLink:hover,
-.cache-1tigebz-StyledLink:focus {
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -584,20 +719,26 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:hover .e1afnb7a2,
-.cache-1tigebz-StyledLink:focus .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1tigebz-StyledLink:hover::after,
-.cache-1tigebz-StyledLink:focus::after {
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:active {
+.cache-1rk3jb4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -611,7 +752,8 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-1tigebz-StyledLink e1afnb7a0"
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -624,7 +766,7 @@ exports[`Link render correctly with href props 2`] = `
       />
     </svg>
   </a>
-  .cache-1tigebz-StyledLink {
+  .cache-1rk3jb4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -662,17 +804,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-1tigebz-StyledLink .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1tigebz-StyledLink>* {
+.cache-1rk3jb4-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1tigebz-StyledLink:hover,
-.cache-1tigebz-StyledLink:focus {
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -681,20 +823,26 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:hover .e1afnb7a2,
-.cache-1tigebz-StyledLink:focus .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1tigebz-StyledLink:hover::after,
-.cache-1tigebz-StyledLink:focus::after {
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:active {
+.cache-1rk3jb4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -716,7 +864,8 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-1tigebz-StyledLink e1afnb7a0"
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -735,7 +884,7 @@ exports[`Link render correctly with href props 2`] = `
       </svg>
     </span>
   </a>
-  .cache-100n8vz-StyledLink {
+  .cache-o4vvox-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -773,17 +922,17 @@ exports[`Link render correctly with href props 2`] = `
   text-case: none;
 }
 
-.cache-100n8vz-StyledLink .e1afnb7a2 {
+.cache-o4vvox-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-100n8vz-StyledLink>* {
+.cache-o4vvox-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-100n8vz-StyledLink:hover,
-.cache-100n8vz-StyledLink:focus {
+.cache-o4vvox-StyledLink:hover,
+.cache-o4vvox-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -792,20 +941,26 @@ exports[`Link render correctly with href props 2`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-100n8vz-StyledLink:hover .e1afnb7a2,
-.cache-100n8vz-StyledLink:focus .e1afnb7a2 {
+.cache-o4vvox-StyledLink:hover .e1afnb7a2,
+.cache-o4vvox-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(4px, 0);
   -moz-transform: translate(4px, 0);
   -ms-transform: translate(4px, 0);
   transform: translate(4px, 0);
 }
 
-.cache-100n8vz-StyledLink:hover::after,
-.cache-100n8vz-StyledLink:focus::after {
+.cache-o4vvox-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-o4vvox-StyledLink:hover::after,
+.cache-o4vvox-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-100n8vz-StyledLink:active {
+.cache-o4vvox-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -827,7 +982,8 @@ exports[`Link render correctly with href props 2`] = `
 }
 
 <a
-    class="cache-100n8vz-StyledLink e1afnb7a0"
+    class="cache-o4vvox-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -851,7 +1007,7 @@ exports[`Link render correctly with href props 2`] = `
 
 exports[`Link render correctly with no sentiment 1`] = `
 <DocumentFragment>
-  .cache-ihv4h0-StyledLink {
+  .cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -889,17 +1045,17 @@ exports[`Link render correctly with no sentiment 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -908,25 +1064,32 @@ exports[`Link render correctly with no sentiment 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-ihv4h0-StyledLink e1afnb7a0"
+    class="cache-1ptg5vw-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -936,7 +1099,7 @@ exports[`Link render correctly with no sentiment 1`] = `
 
 exports[`Link render correctly with oneLine 1`] = `
 <DocumentFragment>
-  .cache-1qrexgi-StyledLink {
+  .cache-13rkwgk-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -975,17 +1138,17 @@ exports[`Link render correctly with oneLine 1`] = `
   text-case: none;
 }
 
-.cache-1qrexgi-StyledLink .e1afnb7a2 {
+.cache-13rkwgk-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1qrexgi-StyledLink>* {
+.cache-13rkwgk-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1qrexgi-StyledLink:hover,
-.cache-1qrexgi-StyledLink:focus {
+.cache-13rkwgk-StyledLink:hover,
+.cache-13rkwgk-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -994,20 +1157,26 @@ exports[`Link render correctly with oneLine 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-1qrexgi-StyledLink:hover .e1afnb7a2,
-.cache-1qrexgi-StyledLink:focus .e1afnb7a2 {
+.cache-13rkwgk-StyledLink:hover .e1afnb7a2,
+.cache-13rkwgk-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1qrexgi-StyledLink:hover::after,
-.cache-1qrexgi-StyledLink:focus::after {
+.cache-13rkwgk-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-13rkwgk-StyledLink:hover::after,
+.cache-13rkwgk-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-1qrexgi-StyledLink:active {
+.cache-13rkwgk-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -1015,7 +1184,8 @@ exports[`Link render correctly with oneLine 1`] = `
     style="margin-bottom: 16px; margin-top: 8px; width: 200px;"
   >
     <a
-      class="cache-1qrexgi-StyledLink e1afnb7a0"
+      class="cache-13rkwgk-StyledLink e1afnb7a0"
+      data-variant="standalone"
       href="/"
     >
       Hello this is a very long text that should be truncated
@@ -1026,7 +1196,7 @@ exports[`Link render correctly with oneLine 1`] = `
 
 exports[`Link render correctly with sizes 1`] = `
 <DocumentFragment>
-  .cache-ihv4h0-StyledLink {
+  .cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1064,17 +1234,17 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1083,31 +1253,38 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-ihv4h0-StyledLink e1afnb7a0"
+    class="cache-1ptg5vw-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
   </a>
   ,
-  .cache-1ys335w-StyledLink {
+  .cache-1f4u5jc-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1145,17 +1322,17 @@ exports[`Link render correctly with sizes 1`] = `
   text-case: none;
 }
 
-.cache-1ys335w-StyledLink .e1afnb7a2 {
+.cache-1f4u5jc-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1ys335w-StyledLink>* {
+.cache-1f4u5jc-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1ys335w-StyledLink:hover,
-.cache-1ys335w-StyledLink:focus {
+.cache-1f4u5jc-StyledLink:hover,
+.cache-1f4u5jc-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1164,25 +1341,32 @@ exports[`Link render correctly with sizes 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-1ys335w-StyledLink:hover .e1afnb7a2,
-.cache-1ys335w-StyledLink:focus .e1afnb7a2 {
+.cache-1f4u5jc-StyledLink:hover .e1afnb7a2,
+.cache-1f4u5jc-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1ys335w-StyledLink:hover::after,
-.cache-1ys335w-StyledLink:focus::after {
+.cache-1f4u5jc-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1f4u5jc-StyledLink:hover::after,
+.cache-1f4u5jc-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-1ys335w-StyledLink:active {
+.cache-1f4u5jc-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1ys335w-StyledLink e1afnb7a0"
+    class="cache-1f4u5jc-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1193,7 +1377,7 @@ exports[`Link render correctly with sizes 1`] = `
 
 exports[`Link render correctly with target blank 1`] = `
 <DocumentFragment>
-  .cache-1tigebz-StyledLink {
+  .cache-1rk3jb4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1231,17 +1415,17 @@ exports[`Link render correctly with target blank 1`] = `
   text-case: none;
 }
 
-.cache-1tigebz-StyledLink .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1tigebz-StyledLink>* {
+.cache-1rk3jb4-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1tigebz-StyledLink:hover,
-.cache-1tigebz-StyledLink:focus {
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1250,20 +1434,26 @@ exports[`Link render correctly with target blank 1`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:hover .e1afnb7a2,
-.cache-1tigebz-StyledLink:focus .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1tigebz-StyledLink:hover::after,
-.cache-1tigebz-StyledLink:focus::after {
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:active {
+.cache-1rk3jb4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -1285,7 +1475,8 @@ exports[`Link render correctly with target blank 1`] = `
 }
 
 <a
-    class="cache-1tigebz-StyledLink e1afnb7a0"
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
     rel="noopener noreferrer"
     target="_blank"
@@ -1307,9 +1498,188 @@ exports[`Link render correctly with target blank 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Link render correctly with variants props 1`] = `
+<DocumentFragment>
+  .cache-1rk3jb4-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #641cb3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1rk3jb4-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #641cb3;
+  text-decoration-color: #641cb3;
+}
+
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
+  background-color: #641cb3;
+}
+
+.cache-1rk3jb4-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="inline"
+    href="/"
+  >
+    Hello
+  </a>
+  .cache-1rk3jb4-StyledLink {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #641cb3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: text-decoration-color 250ms ease-out;
+  transition: text-decoration-color 250ms ease-out;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+}
+
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+}
+
+.cache-1rk3jb4-StyledLink>* {
+  pointer-events: none;
+}
+
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
+  outline: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: #641cb3;
+  text-decoration-color: #641cb3;
+}
+
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
+  -webkit-transform: translate(-4px, 0);
+  -moz-transform: translate(-4px, 0);
+  -ms-transform: translate(-4px, 0);
+  transform: translate(-4px, 0);
+}
+
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
+  background-color: #641cb3;
+}
+
+.cache-1rk3jb4-StyledLink:active {
+  text-decoration-thickness: 2px;
+}
+
+<a
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
+    href="/"
+  >
+    Hello
+  </a>
+</DocumentFragment>
+`;
+
 exports[`Link sentiment render danger 1`] = `
 <DocumentFragment>
-  .cache-9ez2b5-StyledLink {
+  .cache-1ny05v1-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1347,17 +1717,17 @@ exports[`Link sentiment render danger 1`] = `
   text-case: none;
 }
 
-.cache-9ez2b5-StyledLink .e1afnb7a2 {
+.cache-1ny05v1-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-9ez2b5-StyledLink>* {
+.cache-1ny05v1-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-9ez2b5-StyledLink:hover,
-.cache-9ez2b5-StyledLink:focus {
+.cache-1ny05v1-StyledLink:hover,
+.cache-1ny05v1-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1366,25 +1736,32 @@ exports[`Link sentiment render danger 1`] = `
   text-decoration-color: #b3144d;
 }
 
-.cache-9ez2b5-StyledLink:hover .e1afnb7a2,
-.cache-9ez2b5-StyledLink:focus .e1afnb7a2 {
+.cache-1ny05v1-StyledLink:hover .e1afnb7a2,
+.cache-1ny05v1-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-9ez2b5-StyledLink:hover::after,
-.cache-9ez2b5-StyledLink:focus::after {
+.cache-1ny05v1-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ny05v1-StyledLink:hover::after,
+.cache-1ny05v1-StyledLink:focus::after {
   background-color: #b3144d;
 }
 
-.cache-9ez2b5-StyledLink:active {
+.cache-1ny05v1-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-9ez2b5-StyledLink e1afnb7a0"
+    class="cache-1ny05v1-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1394,7 +1771,7 @@ exports[`Link sentiment render danger 1`] = `
 
 exports[`Link sentiment render info 1`] = `
 <DocumentFragment>
-  .cache-ihv4h0-StyledLink {
+  .cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1432,17 +1809,17 @@ exports[`Link sentiment render info 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1451,25 +1828,32 @@ exports[`Link sentiment render info 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-ihv4h0-StyledLink e1afnb7a0"
+    class="cache-1ptg5vw-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1479,7 +1863,7 @@ exports[`Link sentiment render info 1`] = `
 
 exports[`Link sentiment render neutral 1`] = `
 <DocumentFragment>
-  .cache-2sbsfl-StyledLink {
+  .cache-lk8t2n-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1517,17 +1901,17 @@ exports[`Link sentiment render neutral 1`] = `
   text-case: none;
 }
 
-.cache-2sbsfl-StyledLink .e1afnb7a2 {
+.cache-lk8t2n-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-2sbsfl-StyledLink>* {
+.cache-lk8t2n-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-2sbsfl-StyledLink:hover,
-.cache-2sbsfl-StyledLink:focus {
+.cache-lk8t2n-StyledLink:hover,
+.cache-lk8t2n-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1536,25 +1920,32 @@ exports[`Link sentiment render neutral 1`] = `
   text-decoration-color: #3f4250;
 }
 
-.cache-2sbsfl-StyledLink:hover .e1afnb7a2,
-.cache-2sbsfl-StyledLink:focus .e1afnb7a2 {
+.cache-lk8t2n-StyledLink:hover .e1afnb7a2,
+.cache-lk8t2n-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-2sbsfl-StyledLink:hover::after,
-.cache-2sbsfl-StyledLink:focus::after {
+.cache-lk8t2n-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-lk8t2n-StyledLink:hover::after,
+.cache-lk8t2n-StyledLink:focus::after {
   background-color: #3f4250;
 }
 
-.cache-2sbsfl-StyledLink:active {
+.cache-lk8t2n-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-2sbsfl-StyledLink e1afnb7a0"
+    class="cache-lk8t2n-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1564,7 +1955,7 @@ exports[`Link sentiment render neutral 1`] = `
 
 exports[`Link sentiment render primary 1`] = `
 <DocumentFragment>
-  .cache-1tigebz-StyledLink {
+  .cache-1rk3jb4-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1602,17 +1993,17 @@ exports[`Link sentiment render primary 1`] = `
   text-case: none;
 }
 
-.cache-1tigebz-StyledLink .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1tigebz-StyledLink>* {
+.cache-1rk3jb4-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1tigebz-StyledLink:hover,
-.cache-1tigebz-StyledLink:focus {
+.cache-1rk3jb4-StyledLink:hover,
+.cache-1rk3jb4-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1621,25 +2012,32 @@ exports[`Link sentiment render primary 1`] = `
   text-decoration-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:hover .e1afnb7a2,
-.cache-1tigebz-StyledLink:focus .e1afnb7a2 {
+.cache-1rk3jb4-StyledLink:hover .e1afnb7a2,
+.cache-1rk3jb4-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1tigebz-StyledLink:hover::after,
-.cache-1tigebz-StyledLink:focus::after {
+.cache-1rk3jb4-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1rk3jb4-StyledLink:hover::after,
+.cache-1rk3jb4-StyledLink:focus::after {
   background-color: #641cb3;
 }
 
-.cache-1tigebz-StyledLink:active {
+.cache-1rk3jb4-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1tigebz-StyledLink e1afnb7a0"
+    class="cache-1rk3jb4-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1649,7 +2047,7 @@ exports[`Link sentiment render primary 1`] = `
 
 exports[`Link sentiment render secondary 1`] = `
 <DocumentFragment>
-  .cache-1ip9cnb-StyledLink {
+  .cache-11lp9by-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1687,17 +2085,17 @@ exports[`Link sentiment render secondary 1`] = `
   text-case: none;
 }
 
-.cache-1ip9cnb-StyledLink .e1afnb7a2 {
+.cache-11lp9by-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1ip9cnb-StyledLink>* {
+.cache-11lp9by-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1ip9cnb-StyledLink:hover,
-.cache-1ip9cnb-StyledLink:focus {
+.cache-11lp9by-StyledLink:hover,
+.cache-11lp9by-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1706,25 +2104,32 @@ exports[`Link sentiment render secondary 1`] = `
   text-decoration-color: #ac22e7;
 }
 
-.cache-1ip9cnb-StyledLink:hover .e1afnb7a2,
-.cache-1ip9cnb-StyledLink:focus .e1afnb7a2 {
+.cache-11lp9by-StyledLink:hover .e1afnb7a2,
+.cache-11lp9by-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1ip9cnb-StyledLink:hover::after,
-.cache-1ip9cnb-StyledLink:focus::after {
+.cache-11lp9by-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-11lp9by-StyledLink:hover::after,
+.cache-11lp9by-StyledLink:focus::after {
   background-color: #ac22e7;
 }
 
-.cache-1ip9cnb-StyledLink:active {
+.cache-11lp9by-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1ip9cnb-StyledLink e1afnb7a0"
+    class="cache-11lp9by-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1734,7 +2139,7 @@ exports[`Link sentiment render secondary 1`] = `
 
 exports[`Link sentiment render success 1`] = `
 <DocumentFragment>
-  .cache-1fi3om-StyledLink {
+  .cache-j4v288-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1772,17 +2177,17 @@ exports[`Link sentiment render success 1`] = `
   text-case: none;
 }
 
-.cache-1fi3om-StyledLink .e1afnb7a2 {
+.cache-j4v288-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-1fi3om-StyledLink>* {
+.cache-j4v288-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-1fi3om-StyledLink:hover,
-.cache-1fi3om-StyledLink:focus {
+.cache-j4v288-StyledLink:hover,
+.cache-j4v288-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1791,25 +2196,32 @@ exports[`Link sentiment render success 1`] = `
   text-decoration-color: #22674e;
 }
 
-.cache-1fi3om-StyledLink:hover .e1afnb7a2,
-.cache-1fi3om-StyledLink:focus .e1afnb7a2 {
+.cache-j4v288-StyledLink:hover .e1afnb7a2,
+.cache-j4v288-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-1fi3om-StyledLink:hover::after,
-.cache-1fi3om-StyledLink:focus::after {
+.cache-j4v288-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-j4v288-StyledLink:hover::after,
+.cache-j4v288-StyledLink:focus::after {
   background-color: #22674e;
 }
 
-.cache-1fi3om-StyledLink:active {
+.cache-j4v288-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-1fi3om-StyledLink e1afnb7a0"
+    class="cache-j4v288-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello
@@ -1819,7 +2231,7 @@ exports[`Link sentiment render success 1`] = `
 
 exports[`Link sentiment render warning 1`] = `
 <DocumentFragment>
-  .cache-338xm8-StyledLink {
+  .cache-d6r5dr-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -1857,17 +2269,17 @@ exports[`Link sentiment render warning 1`] = `
   text-case: none;
 }
 
-.cache-338xm8-StyledLink .e1afnb7a2 {
+.cache-d6r5dr-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-338xm8-StyledLink>* {
+.cache-d6r5dr-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-338xm8-StyledLink:hover,
-.cache-338xm8-StyledLink:focus {
+.cache-d6r5dr-StyledLink:hover,
+.cache-d6r5dr-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -1876,25 +2288,32 @@ exports[`Link sentiment render warning 1`] = `
   text-decoration-color: #7c5400;
 }
 
-.cache-338xm8-StyledLink:hover .e1afnb7a2,
-.cache-338xm8-StyledLink:focus .e1afnb7a2 {
+.cache-d6r5dr-StyledLink:hover .e1afnb7a2,
+.cache-d6r5dr-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-338xm8-StyledLink:hover::after,
-.cache-338xm8-StyledLink:focus::after {
+.cache-d6r5dr-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-d6r5dr-StyledLink:hover::after,
+.cache-d6r5dr-StyledLink:focus::after {
   background-color: #7c5400;
 }
 
-.cache-338xm8-StyledLink:active {
+.cache-d6r5dr-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
 <a
-    class="cache-338xm8-StyledLink e1afnb7a0"
+    class="cache-d6r5dr-StyledLink e1afnb7a0"
+    data-variant="standalone"
     href="/"
   >
     Hello

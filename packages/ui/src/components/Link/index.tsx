@@ -20,6 +20,7 @@ export const PROMINENCES = {
   default: '',
   weak: 'weak',
   strong: 'strong',
+  stronger: 'stronger',
 }
 
 export type ProminenceProps = keyof typeof PROMINENCES
@@ -42,6 +43,7 @@ type LinkProps = {
   'aria-label'?: string
   oneLine?: boolean
   'data-testid'?: string
+  variant?: 'inline' | 'standalone'
 }
 
 const ICON_SIZE = 16
@@ -141,6 +143,11 @@ const StyledLink = styled('a', {
     }}
   }
 
+  &[data-variant='inline'] {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
   &:hover::after,
   &:focus::after {
     background-color: ${({ theme, sentiment }) =>
@@ -172,6 +179,7 @@ export const Link = forwardRef(
       'aria-label': ariaLabel,
       oneLine = false,
       'data-testid': dataTestId,
+      variant = 'standalone',
     }: LinkProps,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
@@ -208,6 +216,7 @@ export const Link = forwardRef(
           aria-label={ariaLabel}
           oneLine={oneLine}
           data-testid={dataTestId}
+          data-variant={variant}
         >
           {!isBlank && iconPosition === 'left' ? (
             <StyledIcon name="arrow-left" size={ICON_SIZE} />

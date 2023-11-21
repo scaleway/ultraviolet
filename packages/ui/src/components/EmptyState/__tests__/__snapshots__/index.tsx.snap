@@ -639,7 +639,7 @@ exports[`EmptySpace should work with learn more 1`] = `
   flex-wrap: nowrap;
 }
 
-.cache-ihv4h0-StyledLink {
+.cache-1ptg5vw-StyledLink {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -677,17 +677,17 @@ exports[`EmptySpace should work with learn more 1`] = `
   text-case: none;
 }
 
-.cache-ihv4h0-StyledLink .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink .e1afnb7a2 {
   -webkit-transition: -webkit-transform 250ms ease-out;
   transition: transform 250ms ease-out;
 }
 
-.cache-ihv4h0-StyledLink>* {
+.cache-1ptg5vw-StyledLink>* {
   pointer-events: none;
 }
 
-.cache-ihv4h0-StyledLink:hover,
-.cache-ihv4h0-StyledLink:focus {
+.cache-1ptg5vw-StyledLink:hover,
+.cache-1ptg5vw-StyledLink:focus {
   outline: none;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -696,20 +696,26 @@ exports[`EmptySpace should work with learn more 1`] = `
   text-decoration-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:hover .e1afnb7a2,
-.cache-ihv4h0-StyledLink:focus .e1afnb7a2 {
+.cache-1ptg5vw-StyledLink:hover .e1afnb7a2,
+.cache-1ptg5vw-StyledLink:focus .e1afnb7a2 {
   -webkit-transform: translate(-4px, 0);
   -moz-transform: translate(-4px, 0);
   -ms-transform: translate(-4px, 0);
   transform: translate(-4px, 0);
 }
 
-.cache-ihv4h0-StyledLink:hover::after,
-.cache-ihv4h0-StyledLink:focus::after {
+.cache-1ptg5vw-StyledLink[data-variant='inline'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.cache-1ptg5vw-StyledLink:hover::after,
+.cache-1ptg5vw-StyledLink:focus::after {
   background-color: #005da3;
 }
 
-.cache-ihv4h0-StyledLink:active {
+.cache-1ptg5vw-StyledLink:active {
   text-decoration-thickness: 2px;
 }
 
@@ -748,7 +754,8 @@ exports[`EmptySpace should work with learn more 1`] = `
           class="cache-4lkpn5-Stack ehpbis70"
         />
         <a
-          class="cache-ihv4h0-StyledLink e1afnb7a0"
+          class="cache-1ptg5vw-StyledLink e1afnb7a0"
+          data-variant="standalone"
           href="https://scaleway.com"
         >
           Learn more
