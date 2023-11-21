@@ -1,6 +1,7 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
+import type { FocusEvent } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
@@ -182,18 +183,17 @@ const StyledText = styled(Text)`
 
 type DateInputProps = Pick<
   ReactDatePickerProps<string, boolean>,
-  | 'autoFocus'
-  | 'disabled'
-  | 'locale'
-  | 'maxDate'
-  | 'minDate'
-  | 'name'
-  | 'onBlur'
-  | 'onChange'
-  | 'onFocus'
-  | 'required'
+  'locale' | 'onChange'
 > & {
+  autoFocus?: boolean
+  disabled?: boolean
+  maxDate?: Date | null
+  minDate?: Date | null
+  name?: string
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
+  onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   error?: string
+  required?: boolean
   format?: (value?: Date | string) => string | undefined
   /**
    * Label of the field
