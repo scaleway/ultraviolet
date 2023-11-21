@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.4.9
+
+### Patch Changes
+
+- [#3173](https://github.com/scaleway/ultraviolet/pull/3173) [`9839e1f8`](https://github.com/scaleway/ultraviolet/commit/9839e1f89ddfaded0ee07765cee998998bbe1ce1) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ContentCardGroup />` to fit inside a `<Row />`
+
 ## 0.4.8
 
 ### Patch Changes
