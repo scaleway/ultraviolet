@@ -16,7 +16,6 @@ export {
   TimeField,
   ToggleField,
   RadioGroupField,
-  FormSpy,
 } from './components'
 export type { BaseFieldProps, FormErrors } from './types'
 export { useErrors, ErrorProvider } from './providers/ErrorContext'
