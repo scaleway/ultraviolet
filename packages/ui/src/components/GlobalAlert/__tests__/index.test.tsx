@@ -1,0 +1,70 @@
+import { describe, expect, test } from '@jest/globals'
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { GlobalAlert } from '..'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../../.jest/helpers'
+
+describe('GlobalAlert', () => {
+  test('renders correctly with default values', () =>
+    shouldMatchEmotionSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
+
+  test('renders correctly with children as component', () =>
+    shouldMatchEmotionSnapshot(
+      <GlobalAlert>
+        <p>Sample GlobalAlert</p>
+      </GlobalAlert>,
+    ))
+
+  test('renders correctly with buttonText and onClickButton', () =>
+    shouldMatchEmotionSnapshot(
+      <GlobalAlert buttonText="Button" onClickButton={() => 'ok'}>
+        Sample GlobalAlert
+      </GlobalAlert>,
+    ))
+
+  test('renders correctly with closable and onClose', () =>
+    shouldMatchEmotionSnapshot(
+      <GlobalAlert closable onClose={() => 'ok'}>
+        Sample GlobalAlert
+      </GlobalAlert>,
+    ))
+
+  describe(`renders correctly with all variants`, () => {
+    ;(['info', 'danger', 'promotional'] as const).forEach(variant => {
+      test(`renders correctly variant ${variant}`, () =>
+        shouldMatchEmotionSnapshot(
+          <GlobalAlert variant={variant}>Sample GlobalAlert</GlobalAlert>,
+        ))
+    })
+  })
+
+  test(`should render GlobalAlert and then close it`, async () => {
+    renderWithTheme(
+      <GlobalAlert onClose={() => 'ok'} data-testid="GlobalAlert">
+        Sample GlobalAlert
+      </GlobalAlert>,
+    )
+
+    const Alert = screen.getByTestId('GlobalAlert')
+    expect(Alert).toBeVisible()
+
+    const closeButton = screen.getByRole('button')
+    await userEvent.click(closeButton)
+
+    await waitFor(() => {
+      expect(Alert).not.toBeVisible()
+    })
+  })
+
+  test('renders correctly with link', () =>
+    shouldMatchEmotionSnapshot(
+      <GlobalAlert buttonText="button">
+        This is a{' '}
+        <GlobalAlert.Link href="scaleway.com">Global Alert</GlobalAlert.Link>{' '}
+        link
+      </GlobalAlert>,
+    ))
+})
