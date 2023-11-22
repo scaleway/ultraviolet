@@ -5,6 +5,7 @@ import useClipboard from 'react-use-clipboard'
 import type { Color } from '../../theme'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
+import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 type IconName = ComponentProps<typeof Icon>['name']
@@ -63,14 +64,8 @@ const StyledContainer = styled('span', {
   }}
 `
 
-const StyledTag = styled.span`
-  font-size: 12px;
-  font-weight: 500;
-  color: inherit;
+const StyledText = styled(Text)`
   max-width: 232px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 `
 
 type TagProps = {
@@ -110,7 +105,9 @@ const TagInner = ({
 }: TagInnerProps) => (
   <>
     {icon ? <Icon name={icon} size={16} /> : null}
-    <StyledTag aria-disabled={disabled}>{children}</StyledTag>
+    <StyledText as="span" variant="caption" oneLine aria-disabled={disabled}>
+      {children}
+    </StyledText>
 
     {/* @check: Size issue here, Clickable icon ? */}
     {onClose && !isLoading ? (
