@@ -1,10 +1,9 @@
 import type { Meta } from '@storybook/react'
 import { Tabs } from '..'
-import { Tab } from '../Tab'
 
 export default {
   component: Tabs,
-  subcomponents: { Tab },
+  subcomponents: { 'Tabs.Tab': Tabs.Tab },
   title: 'Components/Navigation/Tabs',
 } as Meta<typeof Tabs>
 

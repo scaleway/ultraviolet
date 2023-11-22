@@ -4,7 +4,7 @@ import { ContentCardGroup } from '..'
 export default {
   component: ContentCardGroup,
   title: 'Plus/Compositions/ContentCardGroup',
-  subcomponents: { Card: ContentCardGroup.Card },
+  subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
 } as Meta
 
 export { Playground } from './Playground.stories'

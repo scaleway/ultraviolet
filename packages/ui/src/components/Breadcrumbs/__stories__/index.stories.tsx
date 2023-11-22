@@ -3,7 +3,7 @@ import { Breadcrumbs, Item } from '..'
 
 export default {
   component: Breadcrumbs,
-  subcomponents: { Item },
+  subcomponents: { 'Breadcrumbs.Item': Item },
   title: 'Components/Navigation/Breadcrumbs',
 } as Meta
 
