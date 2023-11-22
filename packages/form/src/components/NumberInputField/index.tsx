@@ -18,7 +18,6 @@ type NumberInputValueFieldProps<TFieldValues extends FieldValues> =
         | 'size'
         | 'step'
         | 'text'
-        | 'value'
         | 'onChange'
         | 'className'
       >

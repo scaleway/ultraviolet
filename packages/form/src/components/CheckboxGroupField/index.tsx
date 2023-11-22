@@ -16,12 +16,11 @@ type CheckboxGroupFieldProps<TFieldValues extends FieldValues> =
         | 'required'
         | 'direction'
         | 'children'
-        | 'value'
         | 'error'
         | 'legend'
       >
     > &
-    Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend' | 'name'>>
+    Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
 
 export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   legend,

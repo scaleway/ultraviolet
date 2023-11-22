@@ -15,12 +15,10 @@ type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
       | 'onBlur'
       | 'onChange'
       | 'onFocus'
-      | 'value'
       | 'showTick'
       | 'type'
       | 'id'
       | 'children'
-      | 'name'
       | 'tooltip'
       | 'label'
     >

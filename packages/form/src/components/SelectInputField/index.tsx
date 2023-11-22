@@ -126,13 +126,11 @@ export type SelectInputFieldProps<
       | 'customStyle'
     >
   > & {
-    label?: string
     multiple?: boolean
     parse?: (value: unknown, name?: string) => unknown
     format?: (value: unknown, name: string) => unknown
     maxLength?: number
     minLength?: number
-    name: string
   }
 
 const identity = (x: unknown) => x
