@@ -19,8 +19,6 @@ type ToggleFieldProps<TFieldValues extends FieldValues> = Omit<
     | 'className'
     | 'data-testid'
   > & {
-    name: string
-    required?: boolean
     parse?: (value: boolean) => any
     format?: (value: any) => boolean
   }

@@ -17,15 +17,12 @@ type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
       | 'onBlur'
       | 'onChange'
       | 'onFocus'
-      | 'value'
       | 'data-testid'
-      | 'label'
       | 'tooltip'
+      | 'label'
     >
   > & {
     className?: string
-    name: string
-    required?: boolean
   }
 
 export const RadioField = <TFieldValues extends FieldValues>({
