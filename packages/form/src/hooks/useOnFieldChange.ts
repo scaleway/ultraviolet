@@ -1,9 +1,17 @@
 import { useEffect, useRef } from 'react'
-import type { DeepPartial, FieldPath, FieldValues } from 'react-hook-form'
+import type {
+  DeepPartial,
+  FieldPath,
+  FieldPathValue,
+  FieldValues,
+} from 'react-hook-form'
 import { useFormContext } from 'react-hook-form'
 
-export type CallbackFn<TFieldValues extends FieldValues, T> = (
-  value: T,
+export type CallbackFn<
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
+> = (
+  value: FieldPathValue<TFieldValues, TFieldName>,
   values: DeepPartial<TFieldValues>,
 ) => void | Promise<void>
 
@@ -11,11 +19,11 @@ export type CallbackFn<TFieldValues extends FieldValues, T> = (
  * @deprecated
  */
 export const useOnFieldChange = <
-  T,
-  TFieldValues extends FieldValues = FieldValues,
+  TFieldValues extends FieldValues,
+  TFieldName extends FieldPath<TFieldValues>,
 >(
-  fieldName: FieldPath<TFieldValues>,
-  callback: CallbackFn<TFieldValues, T>,
+  fieldName: TFieldName,
+  callback: CallbackFn<TFieldValues, TFieldName>,
   enabled = true,
 ): void => {
   const { watch, getValues } = useFormContext<TFieldValues>()
