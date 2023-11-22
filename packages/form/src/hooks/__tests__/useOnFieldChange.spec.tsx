@@ -60,7 +60,11 @@ describe('useOnFieldChange', () => {
     let initialValues = initial
 
     const { result, rerender } = renderHook(
-      () => useOnFieldChange<FormValues>('textInputName', callback),
+      () =>
+        useOnFieldChange<FormValues, 'textInputName'>(
+          'textInputName',
+          callback,
+        ),
       {
         wrapper: ({ children }) => (
           <Wrapper initialValues={initialValues}>{children}</Wrapper>
@@ -80,13 +84,14 @@ describe('useOnFieldChange', () => {
   })
 
   test('should render when condition change', () => {
-    const callback = jest.fn<CallbackFn<FieldValues, FormValues>>()
+    const callback =
+      jest.fn<CallbackFn<FieldValues, FormValues['textInputName']>>()
 
     let initialValues = initial
 
     const { result, rerender } = renderHook(
       ({ enabled }) => {
-        useOnFieldChange<FormValues>(
+        useOnFieldChange<FormValues, 'textInputName'>(
           'textInputName',
           callback,
           // enabled will depends of rerender({ condition: '' })
