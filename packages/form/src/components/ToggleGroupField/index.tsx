@@ -12,10 +12,8 @@ type ToggleGroupFieldProps<TFieldValues extends FieldValues> =
         | 'className'
         | 'helper'
         | 'onChange'
-        | 'required'
         | 'direction'
         | 'children'
-        | 'value'
         | 'error'
         | 'legend'
       >
