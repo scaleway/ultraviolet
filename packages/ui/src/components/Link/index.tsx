@@ -133,12 +133,14 @@ const StyledLink = styled('a', {
     ${({ theme, sentiment, prominence }) => {
       const definedProminence = capitalize(PROMINENCES[prominence ?? 'default'])
       const themeColor = theme.colors[sentiment]
-      const text = `text${definedProminence}` as keyof typeof themeColor
+      const text = `text${definedProminence}Hover` as keyof typeof themeColor
 
       return `
-        color: ${theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text};
+        color: ${
+          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
+        };
         text-decoration-color: ${
-          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.text
+          theme.colors[sentiment]?.[text] ?? theme.colors.neutral.textHover
         };`
     }}
   }
