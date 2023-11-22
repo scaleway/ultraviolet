@@ -26,7 +26,6 @@ type DateFieldProps<TFieldValues extends FieldValues> =
       | 'stardDate'
       | 'endDate'
     > & {
-      name: string
       maxDate?: Date
       minDate?: Date
       disabled?: boolean

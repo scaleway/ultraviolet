@@ -21,10 +21,8 @@ type CheckboxFieldProps<TFieldValues extends FieldValues> =
         | 'tooltip'
       >
     > & {
-      label?: string
       className?: string
       children?: ReactNode
-      required?: boolean
     }
 
 export const CheckboxField = <TFieldValues extends FieldValues>({

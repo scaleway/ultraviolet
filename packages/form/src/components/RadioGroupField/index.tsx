@@ -10,20 +10,10 @@ type RadioGroupFieldProps<TFieldValues extends FieldValues> =
     Partial<
       Pick<
         ComponentProps<typeof RadioGroup>,
-        | 'onChange'
-        | 'value'
-        | 'legend'
-        | 'children'
-        | 'required'
-        | 'name'
-        | 'error'
-        | 'helper'
-        | 'direction'
+        'onChange' | 'legend' | 'children' | 'error' | 'helper' | 'direction'
       >
     > & {
       className?: string
-      name: string
-      required?: boolean
     }
 
 export const RadioGroupField = <TFieldValues extends FieldValues>({
