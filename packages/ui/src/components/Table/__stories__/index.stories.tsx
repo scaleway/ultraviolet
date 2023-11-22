@@ -4,7 +4,7 @@ import { Table } from '..'
 export default {
   component: Table,
   title: 'Components/Data Display/Table',
-  subcomponents: { Row: Table.Row, Cell: Table.Cell },
+  subcomponents: { 'Table.Row': Table.Row, 'Table.Cell': Table.Cell },
 } as Meta
 
 export { Playground } from './Playground.stories'
