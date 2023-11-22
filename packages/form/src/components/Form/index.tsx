@@ -72,10 +72,12 @@ export type FormProps<TFormValues extends FieldValues = FieldValues> = {
   ) => Promise<OnRawSubmitReturn> | OnRawSubmitReturn
 } & XOR<
   [
-    /**
-     * @deprecated
-     */
-    { initialValues?: DefaultValues<TFormValues> },
+    {
+      /**
+       * @deprecated
+       */
+      initialValues?: DefaultValues<TFormValues>
+    },
     { methods: UseFormReturn<TFormValues> },
   ]
 >
