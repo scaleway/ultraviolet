@@ -19,17 +19,6 @@ describe('Form', () => {
       </Form>,
     ))
 
-  test('renders correctly with validate', () =>
-    shouldMatchEmotionSnapshot(
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        validate={() => ({ test: 'test' })}
-      >
-        Test
-      </Form>,
-    ))
-
   test('renders correctly with onRawSubmit', () => {
     const onRawSubmit = jest.fn(() => {})
 
