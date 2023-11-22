@@ -22,7 +22,7 @@ Variants.parameters = {
   docs: {
     description: {
       story:
-        'Using `sentiment` prop you can change the sentiment of the component. Each sentiment has a default icon set.',
+        'Using `variant` prop you can change the variant of the component. Each variant has a default icon set.',
     },
   },
 }
