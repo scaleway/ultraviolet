@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.26.2
+
+### Patch Changes
+
+- [#3185](https://github.com/scaleway/ultraviolet/pull/3185) [`623fa42f`](https://github.com/scaleway/ultraviolet/commit/623fa42f7100f5a23cd65c1dc2b7dd127a22ae6c) Thanks [@matthprost](https://github.com/matthprost)! - Fix popup to add parent scroll on positioning
+
+- [#3170](https://github.com/scaleway/ultraviolet/pull/3170) [`5fbf7727`](https://github.com/scaleway/ultraviolet/commit/5fbf772799c09fe34f0acbd7d7247fdde71a4f73) Thanks [@matthprost](https://github.com/matthprost)! - Remove carrousel top and bottom padding
+
 ## 1.26.1
 
 ### Patch Changes

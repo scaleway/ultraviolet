@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.10.2
+
+### Patch Changes
+
+- [#3179](https://github.com/scaleway/ultraviolet/pull/3179) [`51afba32`](https://github.com/scaleway/ultraviolet/commit/51afba32a1f6890ba7b1c8be68fc1e2406250c4b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/plugin-transform-runtime` to `7.23.4`.
+  Updated dependency `@babel/runtime` to `7.23.4`.
+- Updated dependencies [[`623fa42f`](https://github.com/scaleway/ultraviolet/commit/623fa42f7100f5a23cd65c1dc2b7dd127a22ae6c), [`5fbf7727`](https://github.com/scaleway/ultraviolet/commit/5fbf772799c09fe34f0acbd7d7247fdde71a4f73)]:
+  - @ultraviolet/ui@1.26.2
+
 ## 1.10.1
 
 ### Patch Changes
