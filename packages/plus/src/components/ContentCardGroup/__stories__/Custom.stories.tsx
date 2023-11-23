@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/react'
-import { Stack, Status, Text } from '@ultraviolet/ui'
+import { Row, Status, Text } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { ContentCardGroup } from '..'
 
@@ -11,23 +11,40 @@ export const Custom: StoryFn<ComponentProps<typeof ContentCardGroup>> = ({
       subtitle="Sept 22, 2023 - 11h01"
       href="http://scaleway.com/example"
     >
-      <Stack direction="row" gap={1} alignItems="center">
+      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
         <Status sentiment="success" />
-        <Text as="h3" variant="bodyStrong" sentiment="neutral">
-          [PAR] Servers are ups
+        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+          [PAR] Servers are ups, Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
+          nibh.
         </Text>
-      </Stack>
+      </Row>
     </ContentCardGroup.Card>
     <ContentCardGroup.Card
       subtitle="Sept 22, 2023 - 11h00"
       href="http://scaleway.com/example"
     >
-      <Stack direction="row" gap={1} alignItems="center">
+      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
         <Status sentiment="danger" />
-        <Text as="h3" variant="bodyStrong" sentiment="neutral">
-          [PAR] Servers downs
+        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+          [PAR] Servers are down, Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
+          nibh.
         </Text>
-      </Stack>
+      </Row>
+    </ContentCardGroup.Card>
+    <ContentCardGroup.Card
+      subtitle="Sept 22, 2023 - 11h00"
+      href="http://scaleway.com/example"
+    >
+      <Row templateColumns="repeat(2, auto)" gap={1} alignItems="center">
+        <Status sentiment="warning" />
+        <Text as="h3" variant="bodyStrong" sentiment="neutral" oneLine>
+          [PAR] Servers are flacky, Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat
+          nibh.
+        </Text>
+      </Row>
     </ContentCardGroup.Card>
   </ContentCardGroup>
 )

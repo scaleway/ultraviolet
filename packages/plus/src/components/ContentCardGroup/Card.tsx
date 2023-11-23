@@ -25,9 +25,9 @@ const IconWrapper = styled.div`
 `
 
 const StyledWrapper = styled.a`
-  display: block;
   padding: ${({ theme }) => theme.space['3']};
   text-decoration: none;
+  height: 100%;
 
   &:not(:first-child) {
     border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
@@ -46,13 +46,17 @@ const StyledWrapper = styled.a`
   }
 `
 
+const FullHeightStack = styled(Stack)`
+  height: 100%;
+`
+
 export const Card = forwardRef<HTMLAnchorElement, CardProps>(
   (
     { title, subtitle, description, children, href, target = '_blank' },
     ref,
   ) => (
     <StyledWrapper href={href} target={target} ref={ref}>
-      <Stack
+      <FullHeightStack
         direction="row"
         gap={2}
         alignItems="center"
@@ -85,7 +89,7 @@ export const Card = forwardRef<HTMLAnchorElement, CardProps>(
         <IconWrapper>
           <Icon name="open-in-new" color="neutral" />
         </IconWrapper>
-      </Stack>
+      </FullHeightStack>
     </StyledWrapper>
   ),
 )
