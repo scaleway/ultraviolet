@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon, Stack } from '@ultraviolet/ui'
 import type { ReactNode } from 'react'
-import { Children, cloneElement, useMemo } from 'react'
+import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
@@ -35,7 +35,7 @@ const List = styled.ul`
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding: ${({ theme }) => theme.space['3']} 0;
 `
 
 const SideItem = styled.li`
@@ -43,6 +43,11 @@ const SideItem = styled.li`
   padding: 12px 0;
   min-width: 158px;
 `
+
+type ExtraProps = {
+  isFirstElement?: boolean
+  isLastElement?: boolean
+}
 
 type OverlayComponentProps = {
   children: ReactNode
@@ -111,11 +116,12 @@ export const OverlayComponent = ({
             </SideItem>
           ) : null}
           {Children.map(list, (child, index) =>
-            /* @ts-expect-error I'm too dumb to understand this sorcery */
-            cloneElement(child, {
-              isFirstElement: index === 0,
-              isLastElement: index === list.length - 1,
-            }),
+            isValidElement<ExtraProps>(child)
+              ? cloneElement(child, {
+                  isFirstElement: index === 0,
+                  isLastElement: index === list.length - 1,
+                })
+              : null,
           )}
           <OverlayRow>
             <Stack direction="row" alignItems="center" gap={1}>

@@ -1,4 +1,3 @@
-import deepMerge from 'deepmerge'
 import type { ReactNode } from 'react'
 import { createContext, useCallback, useContext, useMemo } from 'react'
 import EstimateCostLocales from './locales/en'
@@ -35,9 +34,11 @@ export const EstimateCostProvider = ({
   currency,
   numberLocales,
 }: EstimateCostProviderProps) => {
-  const newLocales = locales
-    ? deepMerge(EstimateCostLocales, locales)
-    : EstimateCostLocales
+  const newLocales = useMemo(
+    () =>
+      locales ? { ...EstimateCostLocales, ...locales } : EstimateCostLocales,
+    [locales],
+  )
 
   const formatNumber = useCallback(
     (number: number, options: FormatNumberOption) => {

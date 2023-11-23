@@ -5,6 +5,7 @@ import type { ComponentProps, ReactNode } from 'react'
 import {
   Children,
   cloneElement,
+  isValidElement,
   useCallback,
   useEffect,
   useId,
@@ -88,6 +89,13 @@ const StyledTooltip = styled(Tooltip)`
 const StyledPriceCell = styled(StyledCell)`
   ${({ theme }) => PriceCell(theme)}
 `
+
+type ExtraProps = {
+  itemCallback: (amount: number, isVariant: boolean) => void
+  amount: number
+  maxAmount: number
+  unit: string
+}
 
 type ItemProps = {
   amount?: number
@@ -423,13 +431,14 @@ export const Item = ({
           <StyledResourceName isOverlay={isOverlay} animated={animated}>
             {isDefined
               ? Children.map(flattenChildren(children), child =>
-                  /* @ts-expect-error I'm too dumb to understand this sorcery */
-                  cloneElement(child, {
-                    itemCallback,
-                    amount,
-                    maxAmount,
-                    unit,
-                  }),
+                  isValidElement<ExtraProps>(child)
+                    ? cloneElement(child, {
+                        itemCallback,
+                        amount,
+                        maxAmount,
+                        unit,
+                      })
+                    : null,
                 )
               : textNotDefined || locales['estimate.cost.notDefined']}
           </StyledResourceName>
