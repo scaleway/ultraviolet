@@ -184,6 +184,7 @@ export const Tag = ({
       sentiment={disabled ? 'disabled' : sentiment}
       className={className}
       data-testid={dataTestId}
+      aria-disabled={disabled}
     >
       <TagInner
         isLoading={isLoading}
