@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
     z-index: 1000;
   }
   .calendar {
-    font-family: 'Asap';
+    font-family: ${({ theme }) => theme.typography.body.fontFamily};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
     background-color: ${({ theme }) =>
       theme.colors.neutral.backgroundWeakElevated};
@@ -67,11 +67,13 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day-name {
-      font-family: 'Asap';
+      font-family: ${({ theme }) =>
+        theme.typography.bodySmallStrong.fontFamily};
       color: ${({ theme }) => theme.colors.neutral.text};
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
+      font-weight: ${({ theme }) => theme.typography.bodySmallStrong.weight};
+      font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
+      line-height: ${({ theme }) =>
+        theme.typography.bodySmallStrong.lineHeight};
       text-align: center;
       margin: 3px;
       text-transform: capitalize;
@@ -79,7 +81,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day {
       color: ${({ theme }) => theme.colors.neutral.textWeak};
-      font-size: 16px;
+      font-size: ${({ theme }) => theme.typography.body.fontSize};
       width: 1.7rem;
       height: 1.7rem;
       margin-left: 3px;
