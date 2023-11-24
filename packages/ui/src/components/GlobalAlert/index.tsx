@@ -63,7 +63,7 @@ export const GlobalAlert = ({
   'data-testid': dataTestId,
 }: GlobalAlertProps) => {
   const { theme } = useTheme()
-  const [opened, setOpened] = useReducer(value => !value, true)
+  const [opened, toggleOpened] = useReducer(value => !value, true)
 
   if (!opened) return null
 
@@ -108,7 +108,7 @@ export const GlobalAlert = ({
           icon="close"
           sentiment="primary"
           onClick={() => {
-            setOpened()
+            toggleOpened()
             onClose?.()
           }}
         />

@@ -62,9 +62,9 @@ describe('GlobalAlert', () => {
   test('renders correctly with link', () =>
     shouldMatchEmotionSnapshot(
       <GlobalAlert buttonText="button">
-        This is a{' '}
-        <GlobalAlert.Link href="scaleway.com">Global Alert</GlobalAlert.Link>{' '}
-        link
+        This is a&nbsp;
+        <GlobalAlert.Link href="scaleway.com">Global Alert</GlobalAlert.Link>
+        &nbsp; link
       </GlobalAlert>,
     ))
 })
