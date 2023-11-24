@@ -33,6 +33,16 @@ const StyledWrapper = styled.a`
     border-top: 1px solid ${({ theme }) => theme.colors.neutral.border};
   }
 
+  &:first-child {
+    border-radius: ${({ theme }) => theme.radii.default}
+      ${({ theme }) => theme.radii.default} 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 ${({ theme }) => theme.radii.default}
+      ${({ theme }) => theme.radii.default};
+  }
+
   & ${IconWrapper} {
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
   }
