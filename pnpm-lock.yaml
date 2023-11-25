@@ -89,8 +89,8 @@ importers:
         specifier: 5.4.9
         version: 5.4.9(date-fns@2.30.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
-        specifier: 9.0.0
-        version: 9.0.0(size-limit@9.0.0)
+        specifier: 10.0.3
+        version: 10.0.3(size-limit@9.0.0)
       '@size-limit/preset-big-lib':
         specifier: 9.0.0
         version: 9.0.0(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0)
@@ -5114,6 +5114,15 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@size-limit/file@10.0.3(size-limit@9.0.0):
+    resolution: {integrity: sha512-q+AlmVwSU7Adw3TwSwxr8ITZfVt16Lb1Uq7JTD0Ng2+ZnLDu9wY1cVE15yG4l2hN5pOQfdHZ1p9kb6unYmYT3w==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      size-limit: 10.0.3
+    dependencies:
+      size-limit: 9.0.0
     dev: true
 
   /@size-limit/file@9.0.0(size-limit@9.0.0):
