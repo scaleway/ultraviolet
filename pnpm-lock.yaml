@@ -92,8 +92,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0(size-limit@9.0.0)
       '@size-limit/preset-big-lib':
-        specifier: 9.0.0
-        version: 9.0.0(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0)
+        specifier: 10.0.3
+        version: 10.0.3(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0)
       '@storybook/addon-a11y':
         specifier: 7.5.3
         version: 7.5.3(@types/react-dom@18.2.15)(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
@@ -5116,6 +5116,15 @@ packages:
       - supports-color
     dev: true
 
+  /@size-limit/file@10.0.3(size-limit@9.0.0):
+    resolution: {integrity: sha512-q+AlmVwSU7Adw3TwSwxr8ITZfVt16Lb1Uq7JTD0Ng2+ZnLDu9wY1cVE15yG4l2hN5pOQfdHZ1p9kb6unYmYT3w==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      size-limit: 10.0.3
+    dependencies:
+      size-limit: 9.0.0
+    dev: true
+
   /@size-limit/file@9.0.0(size-limit@9.0.0):
     resolution: {integrity: sha512-oM2UaH2FRq4q22k+R+P6xCpzET10T94LFdSjb9svVu/vOD7NaB9LGcG6se8TW1BExXiyXO4GEhLsBt3uMKM3qA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -5126,14 +5135,14 @@ packages:
       size-limit: 9.0.0
     dev: true
 
-  /@size-limit/preset-big-lib@9.0.0(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0):
-    resolution: {integrity: sha512-wc+VNLXjn0z11s1IWevo8+utP7uZGPVDNNe5cNyMFYHv7/pwJtgsd8w2onEkbK1h8x1oJfWlcqFNKAnvD1Bylw==}
+  /@size-limit/preset-big-lib@10.0.3(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0):
+    resolution: {integrity: sha512-7TVVMFy2W1Y39fVXx372PvLA7BeMyRQG9fSMKWi46PcVALQySqsi3JVcT6kottlK4HUDcxsamfjyAzk+FM5Y1Q==}
     peerDependencies:
-      size-limit: 9.0.0
+      size-limit: 10.0.3
     dependencies:
-      '@size-limit/file': 9.0.0(size-limit@9.0.0)
-      '@size-limit/time': 9.0.0(size-limit@9.0.0)
-      '@size-limit/webpack': 9.0.0(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0)
+      '@size-limit/file': 10.0.3(size-limit@9.0.0)
+      '@size-limit/time': 10.0.3(size-limit@9.0.0)
+      '@size-limit/webpack': 10.0.3(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0)
       size-limit: 9.0.0
     transitivePeerDependencies:
       - '@swc/core'
@@ -5146,11 +5155,11 @@ packages:
       - webpack-cli
     dev: true
 
-  /@size-limit/time@9.0.0(size-limit@9.0.0):
-    resolution: {integrity: sha512-//Yba5fRkYqpBZ6MFtjDTSjCpQonDMqkwofpe0G1hMd/5l/3PZXVLDCAU2BW3nQFqTkpeyytFG6Y3jxUqSddiw==}
+  /@size-limit/time@10.0.3(size-limit@9.0.0):
+    resolution: {integrity: sha512-VF6aUQQiH1VDS6IWJStrTm5vi3bSO9MsF/UHR5lV4b/QkZizq5TBQMgqXMCnAn/rDr2JFW7WLc9RYjlO68x/Rg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 9.0.0
+      size-limit: 10.0.3
     dependencies:
       estimo: 2.3.6
       size-limit: 9.0.0
@@ -5161,13 +5170,13 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@size-limit/webpack@9.0.0(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0):
-    resolution: {integrity: sha512-0YwdvmBj9rS4bXE/PY9vSdc5lCiQXmT0794EsG7yvlDMWyrWa/dsgcRok/w0MoZstfuLaS6lv03VI5UJRFU/lg==}
+  /@size-limit/webpack@10.0.3(@swc/core@1.3.82)(esbuild@0.18.20)(size-limit@9.0.0):
+    resolution: {integrity: sha512-g6AN6V5mQVlBYzNs1PoLeFHp+CJRDreLLOL/x7lTsCB0DAw6SDZ7U9dvblllT37xAzaF5TFZjvWREwGs3SqaZw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      size-limit: 9.0.0
+      size-limit: 10.0.3
     dependencies:
-      nanoid: 3.3.6
+      nanoid: 5.0.3
       size-limit: 9.0.0
       webpack: 5.89.0(@swc/core@1.3.82)(esbuild@0.18.20)
     transitivePeerDependencies:
@@ -13269,6 +13278,12 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid@5.0.3:
+    resolution: {integrity: sha512-I7X2b22cxA4LIHXPSqbBCEQSL+1wv8TuoefejsX4HFWyC6jc5JG7CEaxOltiKjc1M+YCS2YkrZZcj4+dytw9GA==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    dev: true
 
   /nanospinner@1.1.0:
     resolution: {integrity: sha512-yFvNYMig4AthKYfHFl1sLj7B2nkHL4lzdig4osvl9/LdGbXwrdFRoqBS98gsEsOakr0yH+r5NZ/1Y9gdVB8trA==}
