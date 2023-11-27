@@ -32,9 +32,21 @@ const StyledInput = styled('input', {
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
       error ? theme.colors.danger.border : theme.colors.neutral.border};
-  font-size: 24px;
   color: ${({ 'aria-invalid': error, theme }) =>
     error ? theme.colors.danger.text : theme.colors.neutral.text};
+  ${({ inputSize, theme }) => {
+    if (inputSize === 'small') {
+      return `
+           font-size: ${theme.typography.caption.fontSize};
+           font-weight: ${theme.typography.caption.weight};
+        `
+    }
+
+    return `
+           font-size: ${theme.typography.body.fontSize};
+           font-weight: ${theme.typography.body.weight};
+         `
+  }}
   text-align: center;
   border-radius: ${({ theme }) => theme.radii.default};
   margin-right: ${({ theme }) => theme.space['1']};
@@ -63,16 +75,23 @@ const StyledInput = styled('input', {
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
+    color: ${({ disabled, theme }) =>
+      disabled
+        ? theme.colors.neutral.textWeakDisabled
+        : theme.colors.neutral.textWeak};
   }
 
   ${({ disabled, theme: { colors } }) =>
     disabled &&
     `cursor: default;
-    pointer-events: none;
     background-color: ${colors.neutral.backgroundDisabled};
     border-color: ${colors.neutral.borderDisabled};
-    color: ${colors.neutral.textDisabled};`}
+    color: ${colors.neutral.textDisabled};
+
+    &:hover {
+      border: ${colors.neutral.borderDisabled}
+    }
+    `}
 `
 
 type VerificationCodeProps = {
