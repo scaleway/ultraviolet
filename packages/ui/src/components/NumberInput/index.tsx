@@ -254,7 +254,7 @@ export const NumberInput = ({
   }
 
   const handleOnBlur: FocusEventHandler<HTMLInputElement> = event => {
-    if (currentValue !== undefined) {
+    if (currentValue) {
       const boundedValue = bounded(
         currentValue,
         minValue ?? currentValue,
@@ -327,11 +327,11 @@ export const NumberInput = ({
   }, [currentValue, disabled, maxValue, step])
 
   const inputWidth = useMemo(() => {
-    if (placeholder && (currentValue === undefined || currentValue === null)) {
+    if (placeholder && currentValue === undefined) {
       return placeholder.length * 12
     }
 
-    if (currentValue !== undefined && currentValue !== null) {
+    if (currentValue !== undefined) {
       return currentValue.toString().length * 16
     }
 
@@ -394,9 +394,7 @@ export const NumberInput = ({
                 width: inputWidth,
               }}
               value={
-                currentValue !== undefined && currentValue !== null
-                  ? currentValue.toString()
-                  : undefined
+                currentValue !== undefined ? currentValue.toString() : undefined
               } // A dom element can only have string attributes.
               type="number"
               id={id || uniqueId}
