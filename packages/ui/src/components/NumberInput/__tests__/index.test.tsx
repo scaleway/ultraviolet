@@ -311,4 +311,30 @@ describe('NumberInput', () => {
         },
       },
     ))
+
+  it('should set value at minValue when value is lesser than minValue', async () => {
+    renderWithTheme(<NumberInput minValue={10} value={null} />)
+    const buttonContainer = screen.getByLabelText('Number Input')
+    const input = screen.getByRole<HTMLInputElement>('spinbutton')
+
+    await userEvent.click(buttonContainer)
+    await userEvent.clear(input)
+    await userEvent.type(input, '5')
+
+    input.blur()
+    await waitFor(() => expect(input.value).toBe('10'))
+  })
+
+  it('should set value at maxValue when value is greater than maxValue', async () => {
+    renderWithTheme(<NumberInput maxValue={10} value={null} />)
+    const buttonContainer = screen.getByLabelText('Number Input')
+    const input = screen.getByRole<HTMLInputElement>('spinbutton')
+
+    await userEvent.click(buttonContainer)
+    await userEvent.clear(input)
+    await userEvent.type(input, '15')
+
+    input.blur()
+    await waitFor(() => expect(input.value).toBe('10'))
+  })
 })
