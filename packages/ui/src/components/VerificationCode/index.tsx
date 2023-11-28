@@ -23,6 +23,8 @@ const SIZE_WIDTH = {
   small: 24,
 } as const
 
+export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
+
 const StyledInput = styled('input', {
   shouldForwardProp: prop => !['inputSize'].includes(prop),
 })<{
