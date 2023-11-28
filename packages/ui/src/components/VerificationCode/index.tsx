@@ -7,19 +7,53 @@ import type {
 } from 'react'
 import { createRef, useId, useState } from 'react'
 
-const StyledInput = styled.input`
+type Size = 'small' | 'medium' | 'large' | 'xlarge'
+
+const SIZE_HEIGHT = {
+  xlarge: 64,
+  large: 48,
+  medium: 40,
+  small: 32,
+} as const
+
+const SIZE_WIDTH = {
+  xlarge: 56,
+  large: 40,
+  medium: 32,
+  small: 24,
+} as const
+
+export const verificationCodeSizes = Object.keys(SIZE_HEIGHT) as Size[]
+
+const StyledInput = styled('input', {
+  shouldForwardProp: prop => !['inputSize'].includes(prop),
+})<{
+  inputSize: Size
+}>`
   background: ${({ theme }) => theme.colors.neutral.background};
   border: solid 1px
     ${({ 'aria-invalid': error, theme }) =>
       error ? theme.colors.danger.border : theme.colors.neutral.border};
-  font-size: 24px;
   color: ${({ 'aria-invalid': error, theme }) =>
     error ? theme.colors.danger.text : theme.colors.neutral.text};
+  ${({ inputSize, theme }) => {
+    if (inputSize === 'small') {
+      return `
+           font-size: ${theme.typography.caption.fontSize};
+           font-weight: ${theme.typography.caption.weight};
+        `
+    }
+
+    return `
+           font-size: ${theme.typography.body.fontSize};
+           font-weight: ${theme.typography.body.weight};
+         `
+  }}
   text-align: center;
   border-radius: ${({ theme }) => theme.radii.default};
   margin-right: ${({ theme }) => theme.space['1']};
-  width: 56px;
-  height: 64px;
+  width: ${({ inputSize }) => SIZE_WIDTH[inputSize]}px;
+  height: ${({ inputSize }) => SIZE_HEIGHT[inputSize]}px;
   outline-style: none;
   transition:
     border-color 0.2s ease,
@@ -43,8 +77,23 @@ const StyledInput = styled.input`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.neutral.textWeak};
+    color: ${({ disabled, theme }) =>
+      disabled
+        ? theme.colors.neutral.textWeakDisabled
+        : theme.colors.neutral.textWeak};
   }
+
+  ${({ disabled, theme: { colors } }) =>
+    disabled &&
+    `cursor: default;
+    background-color: ${colors.neutral.backgroundDisabled};
+    border-color: ${colors.neutral.borderDisabled};
+    color: ${colors.neutral.textDisabled};
+
+    &:hover {
+      border: ${colors.neutral.borderDisabled}
+    }
+    `}
 `
 
 type VerificationCodeProps = {
@@ -58,6 +107,7 @@ type VerificationCodeProps = {
   initialValue?: string
   inputId?: string
   inputStyle?: string
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
   /**
    * Triggered when a field change
    */
@@ -89,6 +139,7 @@ export const VerificationCode = ({
   initialValue = '',
   inputId,
   inputStyle = '',
+  size = 'large',
   onChange = DEFAULT_ON_FUNCTION,
   onComplete = DEFAULT_ON_FUNCTION,
   placeholder = '',
@@ -237,6 +288,7 @@ export const VerificationCode = ({
         <StyledInput
           css={[inputStyle]}
           aria-invalid={error}
+          inputSize={size}
           type={type === 'number' ? 'tel' : type}
           pattern={type === 'number' ? '[0-9]*' : undefined}
           // eslint-disable-next-line react/no-array-index-key

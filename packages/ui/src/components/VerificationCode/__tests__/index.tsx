@@ -122,4 +122,10 @@ describe('VerificationCode', () => {
     shouldMatchEmotionSnapshot(
       <VerificationCode error type="number" fields={4} initialValue="1" />,
     ))
+
+  test('render correctly with small size', () =>
+    shouldMatchEmotionSnapshot(<VerificationCode size="small" />))
+
+  test('should render correctly disabled true', () =>
+    shouldMatchEmotionSnapshot(<VerificationCode disabled />))
 })

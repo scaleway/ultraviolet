@@ -7,6 +7,8 @@ export default {
 } as Meta<typeof VerificationCode>
 
 export { Playground } from './Playground.stories'
+export { Size } from './Size.stories'
+export { Disabled } from './Disabled.stories'
 export { Fields } from './Fields.stories'
 export { InitialValue } from './InitialValue.stories'
 export { Placeholder } from './Placeholder.stories'
