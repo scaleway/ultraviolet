@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextAreaField should render correctly 1`] = `
+<DocumentFragment>
+  .cache-1civgmb {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1qrwkk1 {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-bjn8wh {
+  position: relative;
+}
+
+.cache-m7sh0y {
+  width: 100%;
+  resize: vertical;
+  background: #ffffff;
+  border: 1px solid #d9dadd;
+  color: #3f4250;
+  border-radius: 4px;
+  padding: 12px 8px 12px 16px;
+  padding-right: calc(24px + 0px + 0px);
+}
+
+.cache-m7sh0y::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-m7sh0y::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-m7sh0y:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-m7sh0y::placeholder {
+  color: #727683;
+}
+
+.cache-m7sh0y:hover {
+  border-color: #8c40ef;
+}
+
+.cache-m7sh0y:focus {
+  outline: none;
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-59idzs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 16px;
+  right: 8px;
+}
+
+.cache-v1t1t2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min-content;
+  gap: 8px;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+}
+
+<form
+    novalidate=""
+  >
+    <div
+      class="cache-1civgmb ehpbis70"
+    >
+      <div
+        class="cache-9bqyx6 ehpbis70"
+      >
+        <div
+          class="cache-1l08jzy ehpbis70"
+        >
+          <label
+            class="cache-1qrwkk1 e13y3mga0"
+            for=":r0:"
+          >
+            Test
+          </label>
+        </div>
+      </div>
+      <div>
+        <div
+          class="cache-bjn8wh enu776d2"
+        >
+          <textarea
+            class="cache-m7sh0y enu776d0"
+            id=":r0:"
+            name="test"
+            rows="3"
+          />
+          <div
+            class="cache-59idzs enu776d1"
+          />
+        </div>
+        <div
+          class="cache-v1t1t2 e3f5lzv0"
+        >
+          <div />
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
