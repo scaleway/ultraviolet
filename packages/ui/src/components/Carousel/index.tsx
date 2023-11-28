@@ -27,7 +27,7 @@ const StyledScrollableWrapper = styled.div`
   overflow-y: hidden;
   white-space: nowrap;
   display: flex;
-  padding: ${({ theme }) => theme.space['2']} 100px;
+  padding: 0 100px;
   gap: ${({ theme }) => theme.space['2']};
 `
 

@@ -1,6 +1,7 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
+import type { FocusEvent } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
@@ -37,7 +38,7 @@ const StyledWrapper = styled.div`
     z-index: 1000;
   }
   .calendar {
-    font-family: 'Asap';
+    font-family: ${({ theme }) => theme.typography.body.fontFamily};
     border-color: ${({ theme }) => theme.colors.neutral.borderWeak};
     background-color: ${({ theme }) =>
       theme.colors.neutral.backgroundWeakElevated};
@@ -66,11 +67,13 @@ const StyledWrapper = styled.div`
     }
 
     ${PREFIX}__day-name {
-      font-family: 'Asap';
+      font-family: ${({ theme }) =>
+        theme.typography.bodySmallStrong.fontFamily};
       color: ${({ theme }) => theme.colors.neutral.text};
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
+      font-weight: ${({ theme }) => theme.typography.bodySmallStrong.weight};
+      font-size: ${({ theme }) => theme.typography.bodySmallStrong.fontSize};
+      line-height: ${({ theme }) =>
+        theme.typography.bodySmallStrong.lineHeight};
       text-align: center;
       margin: 3px;
       text-transform: capitalize;
@@ -78,7 +81,7 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day {
       color: ${({ theme }) => theme.colors.neutral.textWeak};
-      font-size: 16px;
+      font-size: ${({ theme }) => theme.typography.body.fontSize};
       width: 1.7rem;
       height: 1.7rem;
       margin-left: 3px;
@@ -182,18 +185,17 @@ const StyledText = styled(Text)`
 
 type DateInputProps = Pick<
   ReactDatePickerProps<string, boolean>,
-  | 'autoFocus'
-  | 'disabled'
-  | 'locale'
-  | 'maxDate'
-  | 'minDate'
-  | 'name'
-  | 'onBlur'
-  | 'onChange'
-  | 'onFocus'
-  | 'required'
+  'locale' | 'onChange'
 > & {
+  autoFocus?: boolean
+  disabled?: boolean
+  maxDate?: Date | null
+  minDate?: Date | null
+  name?: string
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
+  onFocus?: (event: FocusEvent<HTMLInputElement>) => void
   error?: string
+  required?: boolean
   format?: (value?: Date | string) => string | undefined
   /**
    * Label of the field

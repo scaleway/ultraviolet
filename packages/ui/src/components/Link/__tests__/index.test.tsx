@@ -68,6 +68,18 @@ describe('Link', () => {
       </>,
     ))
 
+  test(`render correctly with variants props`, () =>
+    shouldMatchEmotionSnapshot(
+      <>
+        <Link sentiment="primary" href="/" variant="inline">
+          Hello
+        </Link>
+        <Link sentiment="primary" href="/" variant="standalone">
+          Hello
+        </Link>
+      </>,
+    ))
+
   test(`render correctly with bad sentiment`, () =>
     shouldMatchEmotionSnapshot(
       // @ts-expect-error Use a wrong sentiment

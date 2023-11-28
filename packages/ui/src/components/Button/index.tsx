@@ -17,7 +17,7 @@ import { Tooltip } from '../Tooltip'
 type SENTIMENT = (typeof SENTIMENTS)[number]
 
 // SIZE
-const SIZE_HEIGHT = {
+export const SIZE_HEIGHT = {
   large: 48,
   medium: 40,
   small: 32,

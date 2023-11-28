@@ -19,6 +19,7 @@ type ComputePlacementTypes = {
   popupStructuredRef: DOMRect
   popupPortalTarget: HTMLElement
   offsetParentRect: DOMRect
+  offsetParent: Element
 }
 
 /**
@@ -28,6 +29,7 @@ const computePlacement = ({
   childrenStructuredRef,
   popupStructuredRef,
   offsetParentRect,
+  offsetParent,
   popupPortalTarget,
 }: ComputePlacementTypes) => {
   const {
@@ -42,16 +44,18 @@ const computePlacement = ({
     right: parentRight,
   } = offsetParentRect
 
-  const overloadedChildrenLeft =
-    popupPortalTarget === document.body
-      ? childrenLeft
-      : childrenLeft - parentLeft
-  const overloadedChildrenTop =
-    popupPortalTarget === document.body ? childrenTop : childrenTop - parentTop
-  const overloadedChildrenRight =
-    popupPortalTarget === document.body
-      ? childrenRight
-      : childrenRight - parentRight
+  const isPopupPortalTargetBody =
+    popupPortalTarget === document.body || offsetParent === document.body
+
+  const overloadedChildrenLeft = isPopupPortalTargetBody
+    ? childrenLeft
+    : childrenLeft - parentLeft
+  const overloadedChildrenTop = isPopupPortalTargetBody
+    ? childrenTop
+    : childrenTop - parentTop
+  const overloadedChildrenRight = isPopupPortalTargetBody
+    ? childrenRight
+    : childrenRight - parentRight
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
@@ -139,6 +143,7 @@ export const computePositions = ({
           popupStructuredRef,
           offsetParentRect,
           popupPortalTarget,
+          offsetParent,
         })
       : placement
 
@@ -165,7 +170,7 @@ export const computePositions = ({
   // It will get how much scroll is done on the page to compute the position of the popup
   const scrollTopValue = isPopupPortalTargetBody
     ? document.documentElement.scrollTop
-    : 0
+    : offsetParent.scrollTop
 
   // We need to compute the position of the popup based on the parent element in the case the popup is not in the body
   const overloadedChildrenLeft = isPopupPortalTargetBody

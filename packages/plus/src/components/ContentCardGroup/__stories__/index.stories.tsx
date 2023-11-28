@@ -4,7 +4,7 @@ import { ContentCardGroup } from '..'
 export default {
   component: ContentCardGroup,
   title: 'Plus/Compositions/ContentCardGroup',
-  subcomponents: { Card: ContentCardGroup.Card },
+  subcomponents: { 'ContentCardGroup.Card': ContentCardGroup.Card },
 } as Meta
 
 export { Playground } from './Playground.stories'
@@ -13,3 +13,4 @@ export { Subtitle } from './Subtitle.stories'
 export { Description } from './Description.stories'
 export { Custom } from './Custom.stories'
 export { WithRow } from './WithRow.stories'
+export { WithLargeHeight } from './WithLargeHeight.stories'
