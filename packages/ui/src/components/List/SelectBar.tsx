@@ -42,7 +42,7 @@ export function SelectBar<T>({
   }
 
   return (
-    <StyledActionBar className={className}>
+    <StyledActionBar className={className} data-ultraviolet>
       <FlexDiv>
         {children({
           selectedItems,

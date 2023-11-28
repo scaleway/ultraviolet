@@ -435,6 +435,7 @@ const ValueContainer = ({
     setValue={setValue}
     theme={theme}
     className={className}
+    data-ultraviolet
     innerProps={innerProps}
     selectProps={selectProps}
     isMulti={isMulti}
@@ -501,6 +502,7 @@ const Input = ({
     setValue={setValue}
     theme={theme}
     className={className}
+    data-ultraviolet
     isHidden={isHidden}
     selectProps={
       { ...selectProps, placeholder } as InputProps<SelectOption>['selectProps']
@@ -722,6 +724,7 @@ const FwdSelectInput = ({
       }
       placeholder={placeholder}
       className={className}
+      data-ultraviolet
       isDisabled={disabled || readOnly}
       isOptionDisabled={option => !!option.disabled}
       styles={getSelectStyles({

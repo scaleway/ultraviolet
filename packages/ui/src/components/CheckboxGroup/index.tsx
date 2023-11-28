@@ -67,6 +67,7 @@ export const CheckboxGroupCheckbox = ({
       value={checkboxValue}
       helper={helper}
       className={className}
+      data-ultraviolet
       autoFocus={autoFocus}
       data-testid={dataTestId}
     >
@@ -124,7 +125,7 @@ export const CheckboxGroup = ({
   return (
     <CheckboxGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <FieldSet className={className} data-ultraviolet>
           <Stack gap={1.5}>
             <Text as="legend" variant="bodyStrong">
               {legend}&nbsp;

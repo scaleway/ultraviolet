@@ -49,6 +49,7 @@ export const ActionBar = ({
       rank={rank}
       role={role}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       {children}

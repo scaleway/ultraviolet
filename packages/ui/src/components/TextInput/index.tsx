@@ -559,7 +559,7 @@ export const TextInput = forwardRef<
       (showSeparator ? 0.5 : 0)
 
     return (
-      <div className={className}>
+      <div className={className} data-ultraviolet>
         <StyledRelativeDiv>
           <StyledInput
             aria-controls={ariaControls}

@@ -199,6 +199,7 @@ export const Radio = forwardRef(
           <RadioContainer
             aria-disabled={disabled}
             className={className}
+            data-ultraviolet
             data-checked={checked}
             data-error={error}
             data-testid={dataTestId}

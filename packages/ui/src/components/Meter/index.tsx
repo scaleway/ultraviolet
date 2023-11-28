@@ -70,6 +70,7 @@ export const Meter = ({
       aria-valuemin={0}
       aria-valuenow={value}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
       id={id}
       role="meter"

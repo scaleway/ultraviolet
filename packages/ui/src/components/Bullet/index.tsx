@@ -138,6 +138,7 @@ export const Bullet = ({
       sentiment={sentiment}
       size={size}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
       prominence={prominence}
     >

@@ -70,7 +70,7 @@ export const Status = ({
   'data-testid': dataTestId,
 }: StatusProps) => (
   <Tooltip text={tooltip}>
-    <Container className={className} data-testid={dataTestId}>
+    <Container className={className} data-ultraviolet data-testid={dataTestId}>
       {animated ? <StyledAnimatedCircle sentiment={sentiment} /> : null}
       <StyledCircle sentiment={sentiment} />
     </Container>

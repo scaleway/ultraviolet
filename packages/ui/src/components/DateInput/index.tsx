@@ -269,6 +269,7 @@ export const DateInput = ({
         <ReactDatePicker
           data-testid={dataTestId}
           className={className}
+          data-ultraviolet
           autoFocus={autoFocus}
           fixedHeight
           name={name}

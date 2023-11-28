@@ -68,6 +68,7 @@ export const Separator = ({
       aria-orientation={direction}
       direction={direction}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <StyledHr
@@ -92,6 +93,7 @@ export const Separator = ({
       thickness={thickness}
       color={color}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     />
   )

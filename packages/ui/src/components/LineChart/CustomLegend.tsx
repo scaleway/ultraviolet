@@ -92,7 +92,11 @@ export const CustomLegend = ({
   className,
   'data-testid': dataTestId,
 }: CustomLegendProps) => (
-  <StyledContainer className={className} data-testid={dataTestId}>
+  <StyledContainer
+    className={className}
+    data-ultraviolet
+    data-testid={dataTestId}
+  >
     {/* @ts-expect-error todo */}
     <div css={styles.head}>
       <LongContainer>Legend</LongContainer>

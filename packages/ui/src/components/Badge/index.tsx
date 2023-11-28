@@ -169,6 +169,7 @@ export const Badge = ({
       fontSize={TEXT_SIZES[size]}
       prominence={disabled ? 'weak' : 'default'}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       {icon && sizeValue !== SIZES.small ? (

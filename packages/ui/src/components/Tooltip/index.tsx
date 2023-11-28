@@ -51,6 +51,7 @@ export const Tooltip = forwardRef(
       role={role}
       data-testid={dataTestId}
       className={className}
+      data-ultraviolet
       containerFullWidth={containerFullWidth}
       maxWidth={maxWidth}
       visible={visible}

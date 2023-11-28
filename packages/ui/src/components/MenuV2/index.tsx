@@ -137,6 +137,7 @@ const FwdMenu = forwardRef(
         hideOnClickOutside
         aria-label={ariaLabel}
         className={className}
+        data-ultraviolet
         visible={isVisible}
         placement={placement}
         hasArrow={hasArrow}
@@ -149,7 +150,12 @@ const FwdMenu = forwardRef(
         maxHeight={maxHeight}
         maxWidth={maxWidth}
         text={
-          <MenuList data-testid={dataTestId} className={className} role="menu">
+          <MenuList
+            data-testid={dataTestId}
+            className={className}
+            data-ultraviolet
+            role="menu"
+          >
             {typeof children === 'function'
               ? children({ toggle: () => setIsVisible(!isVisible) })
               : children}

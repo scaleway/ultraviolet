@@ -98,7 +98,11 @@ export const TagList = ({
   }
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
+    <StyledContainer
+      className={className}
+      data-ultraviolet
+      data-testid={dataTestId}
+    >
       <StyledTagContainer multiline={multiline}>
         {tags.slice(0, visibleTagsCount).map((tag, index) => (
           <Tag

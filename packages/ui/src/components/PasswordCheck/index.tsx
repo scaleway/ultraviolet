@@ -34,7 +34,11 @@ export const PasswordCheck = ({
   className,
   'data-testid': dataTestId,
 }: PasswordCheckProps) => (
-  <PasswordCheckContainer className={className} data-testid={dataTestId}>
+  <PasswordCheckContainer
+    className={className}
+    data-ultraviolet
+    data-testid={dataTestId}
+  >
     {rules.map(rule => (
       <Stack direction="row" gap={1} alignItems="center" key={rule.name}>
         <Icon

@@ -57,7 +57,7 @@ const Item = ({
   disabled = false,
   className,
 }: ItemProps) => (
-  <Step disabled={disabled} className={className}>
+  <Step disabled={disabled} className={className} data-ultraviolet>
     {bulletIcon ? (
       <Bullet
         icon={bulletIcon}
@@ -91,7 +91,7 @@ export const StepList = ({
   className,
   'data-testid': dataTestId,
 }: StepListProps) => (
-  <Steps className={className} data-testid={dataTestId}>
+  <Steps className={className} data-ultraviolet data-testid={dataTestId}>
     {children}
   </Steps>
 )

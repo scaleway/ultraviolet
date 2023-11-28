@@ -159,6 +159,7 @@ export const Row = forwardRef(
     return (
       <StyledRow
         className={className}
+        data-ultraviolet
         ref={ref}
         role={!disabled && expandable ? 'button row' : 'row'}
         onClick={!disabled && expandable ? toggleRowExpand : undefined}

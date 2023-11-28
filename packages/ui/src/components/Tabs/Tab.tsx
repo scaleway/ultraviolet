@@ -159,6 +159,7 @@ export const Tab = forwardRef(
           role="tab"
           ref={ref as unknown as Ref<HTMLButtonElement>}
           className={className}
+          data-ultraviolet
           as={computedAs}
           aria-label={value ? `${value}` : undefined}
           aria-selected={isSelected}

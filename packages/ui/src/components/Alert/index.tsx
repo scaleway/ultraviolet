@@ -112,6 +112,7 @@ export const Alert = ({
       direction="row"
       sentiment={sentiment}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <WrapStack

@@ -374,6 +374,7 @@ export const Button = forwardRef<Element, FinalProps>(
           <Component
             role={role}
             className={className}
+            data-ultraviolet
             data-testid={dataTestId}
             disabled={false}
             fullWidth={fullWidth}
@@ -411,6 +412,7 @@ export const Button = forwardRef<Element, FinalProps>(
         <Component
           role={role}
           className={className}
+          data-ultraviolet
           data-testid={dataTestId}
           disabled={computeIsDisabled}
           fullWidth={fullWidth}

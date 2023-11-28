@@ -231,6 +231,7 @@ export const TagInput = ({
       onClick={handleContainerClick}
       variant={variant}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       {tagInputState.map(tag => (

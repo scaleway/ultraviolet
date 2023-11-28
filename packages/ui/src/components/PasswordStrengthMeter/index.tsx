@@ -127,6 +127,7 @@ export const PasswordStrengthMeter = ({
       role="alert"
       aria-live="polite"
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <StyledTitle variant="bodySmallStrong" as="p">

@@ -181,7 +181,11 @@ export const BarStack = ({
   )
 
   return (
-    <StyledContainer data-testid={dataTestId} className={className}>
+    <StyledContainer
+      data-testid={dataTestId}
+      className={className}
+      data-ultraviolet
+    >
       {data.map(
         ({
           id,

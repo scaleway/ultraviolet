@@ -223,6 +223,7 @@ export const Dialog = ({
             onKeyUp={handleKeyUp}
             onKeyDown={handleFocusTrap}
             className={className}
+            data-ultraviolet
             id={id}
             data-testid={dataTestId}
             aria-label={ariaLabel}

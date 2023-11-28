@@ -61,6 +61,7 @@ export const ToggleGroupToggle = ({
       value={ToggleValue}
       helper={helper}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
       label={label}
     />
@@ -113,7 +114,7 @@ export const ToggleGroup = ({
   return (
     <ToggleGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <FieldSet className={className} data-ultraviolet>
           <Stack gap={1.5}>
             <Text as="legend" variant="bodyStrong">
               {legend}&nbsp;

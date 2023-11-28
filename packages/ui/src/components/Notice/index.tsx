@@ -30,6 +30,7 @@ export const Notice = ({
     prominence="weak"
     data-testid={dataTestId}
     className={className}
+    data-ultraviolet
   >
     <Icon
       name="information-outline"

@@ -111,7 +111,12 @@ export const Breadcrumbs: BreadcrumbsType = ({
     selectedProp !== undefined ? selectedProp : Children.count(children) - 1
 
   return (
-    <nav aria-label="breadcrumb" className={className} data-testid={dataTestId}>
+    <nav
+      aria-label="breadcrumb"
+      className={className}
+      data-ultraviolet
+      data-testid={dataTestId}
+    >
       <StyledOl>
         {Children.map(children, (child, index: number) => {
           if (!isValidElement<ItemProps>(child)) {

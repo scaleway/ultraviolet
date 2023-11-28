@@ -35,7 +35,11 @@ const BarChartToolTip = ({
   className,
   'data-testid': dataTestId,
 }: BarChartToolTipProps) => (
-  <BarToolTipContainer className={className} data-testid={dataTestId}>
+  <BarToolTipContainer
+    className={className}
+    data-ultraviolet
+    data-testid={dataTestId}
+  >
     <div>
       <BarColorSquare color={color} />
     </div>

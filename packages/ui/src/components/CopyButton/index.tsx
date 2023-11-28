@@ -39,6 +39,7 @@ export const CopyButton = ({
       sentiment={sentiment}
       variant={noBorder ? 'ghost' : 'outlined'}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
       aria-label="Copy"
       icon={isCopied ? 'check' : 'copy-content'}

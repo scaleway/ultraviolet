@@ -49,7 +49,7 @@ export const Row = ({
   }, [id, registerSelectableRow, selectDisabled])
 
   return (
-    <tr className={className} data-testid={dataTestid}>
+    <tr className={className} data-ultraviolet data-testid={dataTestid}>
       {selectable ? (
         <Cell>
           <StyledCheckboxContainer

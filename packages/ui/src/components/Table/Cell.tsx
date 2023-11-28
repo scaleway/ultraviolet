@@ -14,7 +14,12 @@ type CellProps = {
 }
 
 export const Cell = ({ children, className, colSpan, rowSpan }: CellProps) => (
-  <StyledCell className={className} colSpan={colSpan} rowSpan={rowSpan}>
+  <StyledCell
+    className={className}
+    data-ultraviolet
+    colSpan={colSpan}
+    rowSpan={rowSpan}
+  >
     {children}
   </StyledCell>
 )

@@ -144,6 +144,7 @@ export const SelectableCard = forwardRef(
             }
           }}
           className={className}
+          data-ultraviolet
           data-checked={checked}
           data-disabled={disabled}
           data-error={isError}

@@ -174,6 +174,7 @@ export const Text = ({
         variant={variant}
         oneLine={oneLine}
         className={className}
+        data-ultraviolet
         disabled={disabled}
         italic={italic}
         underline={underline}

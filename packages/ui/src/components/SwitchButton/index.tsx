@@ -112,6 +112,7 @@ export const SwitchButton = ({
       <div
         style={{ display: 'inline-flex' }}
         className={className}
+        data-ultraviolet
         data-testid={dataTestId}
       >
         <StyledBorderedBox

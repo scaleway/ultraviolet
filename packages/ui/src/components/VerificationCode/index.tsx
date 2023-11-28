@@ -232,7 +232,7 @@ export const VerificationCode = ({
     }
 
   return (
-    <div className={className} data-testid={dataTestId}>
+    <div className={className} data-ultraviolet data-testid={dataTestId}>
       {values.map((value: string, index: number) => (
         <StyledInput
           css={[inputStyle]}

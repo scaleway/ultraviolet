@@ -220,6 +220,7 @@ const FwdMenu = forwardRef(
             {...popover}
             aria-label={ariaLabel}
             className={className}
+            data-ultraviolet
           >
             {
               /* Required to avoid loading menu content if not visible */
@@ -227,6 +228,7 @@ const FwdMenu = forwardRef(
                 <MenuList
                   data-testid={dataTestId}
                   className={className}
+                  data-ultraviolet
                   hasArrow={hasArrow}
                   placement={popover.placement as ArrowPlacement}
                   role="menu"

@@ -104,7 +104,12 @@ export const Avatar = ({
   className,
   'data-testid': dataTestId,
 }: AvatarProps) => (
-  <AvatarContainer size={size} className={className} data-testid={dataTestId}>
+  <AvatarContainer
+    size={size}
+    className={className}
+    data-ultraviolet
+    data-testid={dataTestId}
+  >
     {text || (!text && !image) ? (
       <StyledTextAvatar
         lock={lock}

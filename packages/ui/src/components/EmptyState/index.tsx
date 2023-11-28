@@ -91,6 +91,7 @@ export const EmptyState = ({
     size={size}
     bordered={bordered}
     className={className}
+    data-ultraviolet
     data-testid={dataTestId}
   >
     <StyledStack gap={3} justifyContent="center" alignItems="center">

@@ -360,6 +360,7 @@ export const NumberInput = ({
           data-error={!!error}
           size={size}
           className={className}
+          data-ultraviolet
           data-testid={dataTestId}
         >
           <Tooltip text={isMinusDisabled && disabledTooltip}>

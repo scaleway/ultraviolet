@@ -146,6 +146,7 @@ export const Banner = ({
       variant={variant}
       size={size}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <ImageStack size={size} justifyContent="center">

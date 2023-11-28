@@ -123,7 +123,11 @@ export const Carousel = ({
   const [deltaX, setDeltaX] = useState(0)
 
   return (
-    <StyledWrapper className={className} data-testid={dataTestId}>
+    <StyledWrapper
+      className={className}
+      data-ultraviolet
+      data-testid={dataTestId}
+    >
       <StyledBeforeScroll
         data-testid={`${dataTestId}-before`}
         onMouseOver={handleScrollRight}
@@ -153,6 +157,7 @@ export const Carousel = ({
           e.stopPropagation()
         }}
         className={className}
+        data-ultraviolet
         data-testid={`${dataTestId}-wrapper`}
       >
         {children}

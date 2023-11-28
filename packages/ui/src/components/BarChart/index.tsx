@@ -87,7 +87,12 @@ export const BarChart = ({
   )
 
   return (
-    <div style={{ height }} className={className} data-testid={dataTestId}>
+    <div
+      style={{ height }}
+      className={className}
+      data-ultraviolet
+      data-testid={dataTestId}
+    >
       <ResponsiveBar
         colors={getLegendColor(theme)}
         data={data}

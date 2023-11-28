@@ -99,6 +99,7 @@ export const HeaderCell = ({
   return (
     <StyledHeaderCell
       className={className}
+      data-ultraviolet
       onClick={handleOrder}
       onKeyDown={
         handleOrder

@@ -159,6 +159,7 @@ export const Tabs = ({
         ref={tabsRef}
         role="tablist"
         className={className}
+        data-ultraviolet
         data-testid={dataTestId}
         {...props}
       >

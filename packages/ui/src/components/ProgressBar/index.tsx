@@ -86,6 +86,7 @@ export const ProgressBar = ({
     aria-valuemin={0}
     aria-valuemax={100}
     className={className}
+    data-ultraviolet
     data-testid={dataTestId}
   >
     {progress ? (

@@ -97,6 +97,7 @@ export const Expandable = ({
       data-testid={dataTestId}
       ref={ref}
       className={className}
+      data-ultraviolet
       opened={opened}
       minHeight={minHeight}
     >

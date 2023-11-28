@@ -202,6 +202,7 @@ export const Link = forwardRef(
           prominence={prominence}
           rel={computedRel}
           className={className}
+          data-ultraviolet
           size={size}
           onClick={onClick}
           iconPosition={iconPosition}

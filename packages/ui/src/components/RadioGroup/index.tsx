@@ -63,6 +63,7 @@ const RadioGroupRadio = ({
       label={label}
       helper={helper}
       className={className}
+      data-ultraviolet
       autoFocus={autoFocus}
       onKeyDown={onKeyDown}
       data-testid={dataTestId}
@@ -119,7 +120,7 @@ export const RadioGroup = ({
   return (
     <RadioGroupContext.Provider value={contextValue}>
       <Stack gap={1}>
-        <FieldSet className={className}>
+        <FieldSet className={className} data-ultraviolet>
           <Stack gap={1.5}>
             <Text as="legend" variant="bodyStrong">
               {legend}&nbsp;

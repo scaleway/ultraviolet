@@ -46,6 +46,7 @@ export const Cell = forwardRef(
         ref={ref}
         role="cell"
         className={className}
+        data-ultraviolet
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         data-testid={dataTestid}

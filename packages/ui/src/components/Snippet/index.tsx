@@ -208,6 +208,7 @@ export const Snippet = ({
     <Container
       multiline={multiline}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <StyledStack>

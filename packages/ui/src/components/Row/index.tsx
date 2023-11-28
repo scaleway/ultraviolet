@@ -54,6 +54,7 @@ export const Row = ({
 }: RowProps) => (
   <StyledRow
     className={className}
+    data-ultraviolet
     data-testid={dataTestId}
     gap={gap}
     templateColumns={templateColumns}

@@ -83,6 +83,7 @@ export const HeaderCell = ({
     <StyledHeaderCell
       aria-sort={order}
       className={className}
+      data-ultraviolet
       onClick={handleOrder}
       onKeyDown={
         handleOrder

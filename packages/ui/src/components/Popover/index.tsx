@@ -171,6 +171,7 @@ export const Popover = forwardRef(
           </ContentWrapper>
         }
         className={className}
+        data-ultraviolet
         sentiment={sentiment}
         data-testid={dataTestId}
         size={size}

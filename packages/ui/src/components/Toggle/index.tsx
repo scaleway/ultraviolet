@@ -206,6 +206,7 @@ export const Toggle = forwardRef(
           size={size}
           onClick={evt => evt.stopPropagation()}
           className={className}
+          data-ultraviolet
           data-testid={dataTestId}
           labelPosition={labelPosition}
         >

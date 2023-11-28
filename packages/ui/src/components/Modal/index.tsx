@@ -119,6 +119,7 @@ export const Modal = ({
         preventBodyScroll={preventBodyScroll}
         onClose={handleClose}
         className={className}
+        data-ultraviolet
         backdropClassName={backdropClassName}
         data-testid={dataTestId}
         id={finalId}

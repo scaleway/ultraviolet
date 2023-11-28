@@ -121,6 +121,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
             disabled={disabled}
             sentiment={sentiment}
             className={className}
+            data-ultraviolet
             data-testid={dataTestId}
           >
             {children}
@@ -140,6 +141,7 @@ const Item = forwardRef<HTMLElement, ItemProps>(
           borderless={borderless}
           sentiment={sentiment}
           className={className}
+          data-ultraviolet
           data-testid={dataTestId}
         >
           {children}

@@ -161,6 +161,7 @@ export const Tag = ({
           copiable
           onClick={setCopied}
           className={className}
+          data-ultraviolet
           data-testid={dataTestId}
         >
           <TagInner
@@ -180,6 +181,7 @@ export const Tag = ({
     <StyledContainer
       sentiment={disabled ? 'disabled' : sentiment}
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
     >
       <TagInner

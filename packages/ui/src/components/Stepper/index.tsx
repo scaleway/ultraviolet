@@ -159,6 +159,7 @@ export const Stepper = ({
   return (
     <StyledContainer
       className={className}
+      data-ultraviolet
       data-testid={dataTestId}
       labelPosition={labelPosition}
       size={size}

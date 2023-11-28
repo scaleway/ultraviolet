@@ -94,7 +94,11 @@ export const Pagination = ({
   }, [page, pageCount, onChange])
 
   return (
-    <StyledContainer className={className} data-testid={dataTestId}>
+    <StyledContainer
+      className={className}
+      data-ultraviolet
+      data-testid={dataTestId}
+    >
       <PageSwitchContainer>
         <Button
           aria-label="First"

@@ -58,6 +58,7 @@ export const Card = forwardRef(
       <StyledStack
         gap={1}
         className={className}
+        data-ultraviolet
         data-testid={dataTestId}
         data-disabled={disabled}
         ref={ref}
@@ -78,6 +79,7 @@ export const Card = forwardRef(
         data-is-active={isActive}
         data-disabled={disabled}
         className={className}
+        data-ultraviolet
         data-testid={dataTestId}
         ref={ref}
       >

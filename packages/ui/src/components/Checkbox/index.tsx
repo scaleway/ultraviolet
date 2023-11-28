@@ -352,6 +352,7 @@ export const Checkbox = forwardRef(
       <Tooltip text={tooltip}>
         <CheckboxContainer
           className={className}
+          data-ultraviolet
           aria-disabled={disabled}
           data-visibility={dataVisibility}
           data-checked={state}
