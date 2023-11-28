@@ -1,5 +1,18 @@
 # @ultraviolet/plus
 
+## 0.5.0
+
+### Minor Changes
+
+- [#2984](https://github.com/scaleway/ultraviolet/pull/2984) [`e54a941a`](https://github.com/scaleway/ultraviolet/commit/e54a941a9f1843e10f9a438a08e426559bd55c5c) Thanks [@matthprost](https://github.com/matthprost)! - Add new component `<EstimateCost />`
+
+### Patch Changes
+
+- [#3188](https://github.com/scaleway/ultraviolet/pull/3188) [`437e367c`](https://github.com/scaleway/ultraviolet/commit/437e367c0a8d36af82a57d689796570522fc5829) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<ContentCardGroup />` height depending on the content
+  - Change title from `bodyStronger` to `bodyStrong` on `<ContentCard />`
+- Updated dependencies [[`5b88fc85`](https://github.com/scaleway/ultraviolet/commit/5b88fc856e94740ff024b527f375f25ab5c340ca), [`65ce94d5`](https://github.com/scaleway/ultraviolet/commit/65ce94d54fc63792b5c40a7ea558b4779cee96d8), [`a23bf3f8`](https://github.com/scaleway/ultraviolet/commit/a23bf3f842b2a4774e7fdd251df24352df296cf2), [`69134027`](https://github.com/scaleway/ultraviolet/commit/691340270327e319841da361ad4521b71e72555c)]:
+  - @ultraviolet/ui@1.27.0
+
 ## 0.4.10
 
 ### Patch Changes

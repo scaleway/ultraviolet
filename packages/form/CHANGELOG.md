@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.10.3
+
+### Patch Changes
+
+- [#3183](https://github.com/scaleway/ultraviolet/pull/3183) [`5b88fc85`](https://github.com/scaleway/ultraviolet/commit/5b88fc856e94740ff024b527f375f25ab5c340ca) Thanks [@matthprost](https://github.com/matthprost)! - Add a tooltip on `<Tag />` component when text is too long
+
+- [#3187](https://github.com/scaleway/ultraviolet/pull/3187) [`65ce94d5`](https://github.com/scaleway/ultraviolet/commit/65ce94d54fc63792b5c40a7ea558b4779cee96d8) Thanks [@matthprost](https://github.com/matthprost)! - Component `<DateInput />` to use font tokens from theme
+
+- Updated dependencies [[`5b88fc85`](https://github.com/scaleway/ultraviolet/commit/5b88fc856e94740ff024b527f375f25ab5c340ca), [`65ce94d5`](https://github.com/scaleway/ultraviolet/commit/65ce94d54fc63792b5c40a7ea558b4779cee96d8), [`a23bf3f8`](https://github.com/scaleway/ultraviolet/commit/a23bf3f842b2a4774e7fdd251df24352df296cf2), [`69134027`](https://github.com/scaleway/ultraviolet/commit/691340270327e319841da361ad4521b71e72555c)]:
+  - @ultraviolet/ui@1.27.0
+
 ## 1.10.2
 
 ### Patch Changes
