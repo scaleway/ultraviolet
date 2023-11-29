@@ -8,7 +8,7 @@ type WrapperProps = {
   children: ReactNode
 }
 
-const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
+export const Wrapper = ({ theme = defaultTheme, children }: WrapperProps) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 )
 
