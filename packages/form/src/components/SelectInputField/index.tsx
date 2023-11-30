@@ -249,7 +249,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
       }}
       render={({ field, fieldState: { error } }) => (
         <SelectInput
-          {...field}
+          name={field.name}
           animation={animation}
           animationDuration={animationDuration}
           animationOnChange={animationOnChange}
@@ -278,7 +278,6 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
           readOnly={readOnly}
           noTopLabel={noTopLabel}
           required={required}
-          // value={value}
           value={format(field.value)}
           noOptionsMessage={noOptionsMessage}
         >

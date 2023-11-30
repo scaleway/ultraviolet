@@ -4,7 +4,16 @@ import { useFormContext } from 'react-hook-form'
 import { FormSubmitContext } from '../components/Form'
 
 /**
- * @deprecated
+ * @deprecated Use [useFormContext](https://www.react-hook-form.com/api/useformcontext/)
+ *
+ * @example
+ * ```tsx
+ * const Input = () {
+ *   const { setValue } = useFormContext()
+ *
+ *   setValue('username', 'John Wick')
+ * }
+ * ```
  */
 export const useFormDeprecated = <TFieldValues extends FieldValues>() => {
   const { setValue, resetField, getFieldState, reset } =
