@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.0-next.4
+
+### Patch Changes
+
+- Add some migration docs
+
+- Updated dependencies [[`5fbf7727`](https://github.com/scaleway/ultraviolet/commit/5fbf772799c09fe34f0acbd7d7247fdde71a4f73)]:
+  - @ultraviolet/ui@1.26.2-next.0
+
 ## 2.0.0-next.3
 
 ### Patch Changes
