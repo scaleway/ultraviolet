@@ -149,117 +149,6 @@ exports[`ToggleField should render correctly with default tags 1`] = `
   margin: 6px;
 }
 
-.cache-1j7jvp7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 4px;
-  padding: 0 8px;
-  gap: 8px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 24px;
-  color: #3f4250;
-  background: #ffffff;
-  border: solid 1px #d9dadd;
-}
-
-.cache-13ui0sz {
-  font-size: 12px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 16px;
-  text-transform: none;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 232px;
-}
-
-.cache-1i4ofie {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 32px;
-  padding: 0 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 32px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  outline-offset: 2px;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: Inter,Asap;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-  paragraph-spacing: 0;
-  text-case: none;
-  background: none;
-  border: none;
-  color: #3f4250;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 2px;
-}
-
-.cache-1i4ofie:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.cache-1i4ofie:active {
-  box-shadow: 0px 0px 0px 3px #151a2d5c;
-}
-
-.cache-1i4ofie:hover,
-.cache-1i4ofie:active {
-  background: #e9eaeb;
-  color: #222638;
-}
-
-.cache-1ah7xw8-sizeStyles {
-  vertical-align: middle;
-  fill: currentColor;
-  height: 16px;
-  width: 16px;
-  min-width: 16px;
-  min-height: 16px;
-}
-
 .cache-xmhmf {
   display: -webkit-box;
   display: -webkit-flex;
@@ -295,59 +184,11 @@ exports[`ToggleField should render correctly with default tags 1`] = `
     <div
       class="cache-1bthscd ea7vc6o1"
     >
-      <span
-        class="cache-1j7jvp7 el6733p2"
-      >
-        <span
-          class="el6733p1 cache-13ui0sz e13y3mga0"
-        >
-          tags-1
-        </span>
-        <button
-          aria-label="Close tag"
-          class="el6733p0 cache-1i4ofie e112qvla0"
-          data-testid="close-tag"
-          type="button"
-        >
-          <svg
-            class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-            />
-          </svg>
-        </button>
-      </span>
-      <span
-        class="cache-1j7jvp7 el6733p2"
-      >
-        <span
-          class="el6733p1 cache-13ui0sz e13y3mga0"
-        >
-          tags-2
-        </span>
-        <button
-          aria-label="Close tag"
-          class="el6733p0 cache-1i4ofie e112qvla0"
-          data-testid="close-tag"
-          type="button"
-        >
-          <svg
-            class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
-            />
-          </svg>
-        </button>
-      </span>
       <input
         aria-label="test-tags"
         class="cache-xmhmf ea7vc6o0"
         name="test-tags"
-        placeholder=""
+        placeholder="placeholder"
         type="text"
         value=""
       />
