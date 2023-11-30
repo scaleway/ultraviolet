@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.5.1
+
+### Patch Changes
+
+- [#3202](https://github.com/scaleway/ultraviolet/pull/3202) [`af367959`](https://github.com/scaleway/ultraviolet/commit/af367959b47bda6ac4e448fef545d2f5ce25e6f1) Thanks [@matthprost](https://github.com/matthprost)! - Add missing export of EstimateCost
+
+- Updated dependencies [[`2dd78d39`](https://github.com/scaleway/ultraviolet/commit/2dd78d394a2dea12011c3cf13b463308f0fc7e0b)]:
+  - @ultraviolet/ui@1.27.1
+
 ## 0.5.0
 
 ### Minor Changes
