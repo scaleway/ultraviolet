@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.27.1
+
+### Patch Changes
+
+- [#3198](https://github.com/scaleway/ultraviolet/pull/3198) [`2dd78d39`](https://github.com/scaleway/ultraviolet/commit/2dd78d394a2dea12011c3cf13b463308f0fc7e0b) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Handle null value in NumberInput
+
 ## 1.27.0
 
 ### Minor Changes
