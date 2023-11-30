@@ -16,7 +16,7 @@ type Options<TFieldValues extends FieldValues> = {
 }
 
 /**
- * @deprecated
+ * @deprecated Use [useFieldArray](https://www.react-hook-form.com/api/usefieldarray/)
  */
 export const useFieldArrayDeprecated = <
   T,
