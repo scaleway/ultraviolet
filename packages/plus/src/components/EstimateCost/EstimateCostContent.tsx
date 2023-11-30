@@ -6,9 +6,10 @@ import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
 import { Item } from './Components/Item'
 import { LineThrough } from './Components/LineThrough'
-import { useEstimateCost } from './EstimateCostProvider'
 import { OverlayComponent } from './OverlayComponent'
-import { OverlayContextProvider } from './OverlayContext'
+import { useEstimateCost } from './Providers/EstimateCostProvider'
+import { OverlayProvider } from './Providers/OverlayProvider'
+import { useProductManager } from './Providers/ProductManagerProvider'
 import {
   BadgeBeta,
   Cell,
@@ -25,13 +26,7 @@ import {
 import { maximumFractionDigits, maximumFractionDigitsLong } from './constants'
 import { calculatePrice } from './helper'
 import EstimateCostLocales from './locales/en'
-import type {
-  BareEstimateProduct,
-  EstimateCostProps,
-  EstimateProduct,
-  Iteration,
-  Units,
-} from './types'
+import type { EstimateCostProps, Iteration, Units } from './types'
 
 const FeesText = styled(Text)`
   margin-top: ${({ theme }) => theme.space['3']};
@@ -84,8 +79,8 @@ export const EstimateCostContent = ({
   locales = EstimateCostLocales,
 }: EstimateCostProps) => {
   const { formatNumber } = useEstimateCost()
+  const { products } = useProductManager()
   const [ref, inView] = useInView()
-  const [products, setProducts] = useState<EstimateProduct[]>([]) // product is used to store each items with their price and amount
   const [totalPrice, setTotalPrice] = useState({
     overlayHourly: 0,
     maxOverlayHourly: 0,
@@ -102,27 +97,6 @@ export const EstimateCostContent = ({
   const [isLongFractionDigits, setIsLongFractionDigits] = useState(false)
   const providerValue = useMemo(() => ({ isOverlay: false }), [])
   const list = flattenChildren(children)
-
-  const productsCallback = useMemo(
-    () => ({
-      add: (newProduct: EstimateProduct) => {
-        setProducts(total => {
-          if (total.find(product => product.id === newProduct.id)) {
-            return total.map(product =>
-              product.id === newProduct.id ? newProduct : product,
-            )
-          }
-
-          return [...total, newProduct]
-        })
-      },
-
-      remove: ({ id }: BareEstimateProduct) => {
-        setProducts(total => total.filter(product => product.id !== id))
-      },
-    }),
-    [setProducts],
-  )
 
   useEffect(() => {
     // this variable check if there is a maxAmount in each product
@@ -239,7 +213,7 @@ export const EstimateCostContent = ({
         description
       )}
       {alert ? <Alert sentiment={alertVariant}>{alert}</Alert> : null}
-      <OverlayContextProvider value={providerValue}>
+      <OverlayProvider value={providerValue}>
         <div>
           {children ? (
             <StyledTable
@@ -284,7 +258,6 @@ export const EstimateCostContent = ({
                   /* @ts-expect-error I'm too dumb to understand this sorcery */
                   cloneElement(child, {
                     isLastElement: index === list.length - 1,
-                    productsCallback,
                     iteration,
                     discount:
                       discount &&
@@ -420,10 +393,7 @@ export const EstimateCostContent = ({
                     noIteration
                     isLastElement
                     price={commitmentFees || monthlyFees}
-                    productsCallback={{
-                      add: () => {},
-                      remove: () => {},
-                    }}
+                    doNotStore
                   >
                     {commitmentFees
                       ? commitmentFeesContent
@@ -434,7 +404,7 @@ export const EstimateCostContent = ({
             </>
           ) : null}
         </div>
-      </OverlayContextProvider>
+      </OverlayProvider>
     </Stack>
   )
 }

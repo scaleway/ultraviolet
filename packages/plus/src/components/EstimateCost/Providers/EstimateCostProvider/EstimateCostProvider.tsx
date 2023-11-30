@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { createContext, useCallback, useContext, useMemo } from 'react'
-import EstimateCostLocales from './locales/en'
+import EstimateCostLocales from '../../locales/en'
 
 const EstimateCostContext = createContext<{
   locales: typeof EstimateCostLocales

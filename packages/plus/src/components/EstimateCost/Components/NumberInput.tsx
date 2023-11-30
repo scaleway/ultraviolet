@@ -1,6 +1,6 @@
 import { NumberInput as UVNumberInput } from '@ultraviolet/ui'
 import { useEffect } from 'react'
-import { useOverlay } from '../OverlayContext'
+import { useOverlay } from '../Providers/OverlayProvider/OverlayProvider'
 import { ItemResourceName } from '../componentStyle'
 import { Regular } from './Regular'
 

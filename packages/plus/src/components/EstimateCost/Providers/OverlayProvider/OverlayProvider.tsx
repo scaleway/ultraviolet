@@ -4,14 +4,11 @@ import { createContext, useContext } from 'react'
 const OverlayContext = createContext({ isOverlay: false })
 export const useOverlay = () => useContext(OverlayContext)
 
-type OverlayContextProviderProps = {
+type OverlayProviderProps = {
   children: ReactNode
   value: { isOverlay: boolean }
 }
 
-export const OverlayContextProvider = ({
-  children,
-  value,
-}: OverlayContextProviderProps) => (
+export const OverlayProvider = ({ children, value }: OverlayProviderProps) => (
   <OverlayContext.Provider value={value}>{children}</OverlayContext.Provider>
 )

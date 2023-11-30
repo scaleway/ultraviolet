@@ -5,8 +5,8 @@ import { Children, cloneElement, isValidElement, useMemo } from 'react'
 import flattenChildren from 'react-flatten-children'
 import { LineThrough } from './Components/LineThrough'
 import { Strong } from './Components/Strong'
-import { useEstimateCost } from './EstimateCostProvider'
-import { OverlayContextProvider } from './OverlayContext'
+import { useEstimateCost } from './Providers/EstimateCostProvider'
+import { OverlayProvider } from './Providers/OverlayProvider'
 import { ItemResourceName, OverlayRow, StyledBadge } from './componentStyle'
 import { maximumFractionDigits, multiplier } from './constants'
 import type { Units } from './types'
@@ -105,7 +105,7 @@ export const OverlayComponent = ({
   }[unit]
 
   return (
-    <OverlayContextProvider value={value}>
+    <OverlayProvider value={value}>
       <OverlayContainer inView={inView} data-testid="summary-overlay">
         <List>
           {OverlayLeft ? (
@@ -162,6 +162,6 @@ export const OverlayComponent = ({
           ) : null}
         </List>
       </OverlayContainer>
-    </OverlayContextProvider>
+    </OverlayProvider>
   )
 }

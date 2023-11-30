@@ -11,8 +11,9 @@ import { Strong } from './Components/Strong'
 import { Unit } from './Components/Unit'
 import { Zone } from './Components/Zone'
 import { EstimateCostContent } from './EstimateCostContent'
-import { EstimateCostProvider } from './EstimateCostProvider'
-import { useOverlay } from './OverlayContext'
+import { EstimateCostProvider } from './Providers/EstimateCostProvider'
+import { useOverlay } from './Providers/OverlayProvider'
+import { ProductManagerProvider } from './Providers/ProductManagerProvider'
 import EstimateCostLocales from './locales/en'
 import type { EstimateCostProps, Units } from './types'
 
@@ -53,31 +54,33 @@ const EstimateCost = ({
     currency={currency}
     numberLocales={numberLocales}
   >
-    <EstimateCostContent
-      description={description}
-      alert={alert}
-      alertVariant={alertVariant}
-      defaultTimeUnit={defaultTimeUnit}
-      timeUnits={timeUnits}
-      hideOverlay={hideOverlay}
-      disableOverlayLeft={disableOverlayLeft}
-      disableOverlayRight={disableOverlayRight}
-      hideTimeUnit={hideTimeUnit}
-      hideTotal={hideTotal}
-      discount={discount}
-      OverlayRight={OverlayRight}
-      OverlayLeft={OverlayLeft}
-      isBeta={isBeta}
-      commitmentFees={commitmentFees}
-      commitmentFeesContent={commitmentFeesContent}
-      monthlyFees={monthlyFees}
-      monthlyFeesLabel={monthlyFeesLabel}
-      monthlyFeesContent={monthlyFeesContent}
-      overlayUnit={overlayUnit}
-      locales={locales}
-    >
-      {children}
-    </EstimateCostContent>
+    <ProductManagerProvider>
+      <EstimateCostContent
+        description={description}
+        alert={alert}
+        alertVariant={alertVariant}
+        defaultTimeUnit={defaultTimeUnit}
+        timeUnits={timeUnits}
+        hideOverlay={hideOverlay}
+        disableOverlayLeft={disableOverlayLeft}
+        disableOverlayRight={disableOverlayRight}
+        hideTimeUnit={hideTimeUnit}
+        hideTotal={hideTotal}
+        discount={discount}
+        OverlayRight={OverlayRight}
+        OverlayLeft={OverlayLeft}
+        isBeta={isBeta}
+        commitmentFees={commitmentFees}
+        commitmentFeesContent={commitmentFeesContent}
+        monthlyFees={monthlyFees}
+        monthlyFeesLabel={monthlyFeesLabel}
+        monthlyFeesContent={monthlyFeesContent}
+        overlayUnit={overlayUnit}
+        locales={locales}
+      >
+        {children}
+      </EstimateCostContent>
+    </ProductManagerProvider>
   </EstimateCostProvider>
 )
 

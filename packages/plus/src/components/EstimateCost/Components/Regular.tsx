@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { useOverlay } from '../OverlayContext'
+import { useOverlay } from '../Providers/OverlayProvider/OverlayProvider'
 
 type RegularProps = {
   variant?: 'normal' | 'small' | 'big' | 'capitalized'

@@ -13,8 +13,9 @@ import {
   useState,
 } from 'react'
 import flattenChildren from 'react-flatten-children'
-import { useEstimateCost } from '../EstimateCostProvider'
-import { useOverlay } from '../OverlayContext'
+import { useEstimateCost } from '../Providers/EstimateCostProvider'
+import { useOverlay } from '../Providers/OverlayProvider/OverlayProvider'
+import { useProductManager } from '../Providers/ProductManagerProvider'
 import {
   OverlayRow,
   PriceCell,
@@ -29,12 +30,7 @@ import {
   multiplier,
 } from '../constants'
 import { calculatePrice } from '../helper'
-import type {
-  BareEstimateProduct,
-  EstimateProduct,
-  Iteration,
-  Units,
-} from '../types'
+import type { Iteration, Units } from '../types'
 
 const TIME_RELATED_UNIT: Units[] = [
   'seconds',
@@ -178,10 +174,6 @@ type ItemProps = {
    */
   price?: number
   priceText?: ReactNode
-  productsCallback?: {
-    add: (product: EstimateProduct) => void
-    remove: (product: BareEstimateProduct) => void
-  }
   /**
    * Hide item from overlay if screen width is small
    */
@@ -218,6 +210,7 @@ type ItemProps = {
     // Allow a string for unit but keep autocomplete for the above values
     // eslint-disable-next-line @typescript-eslint/ban-types
     | (string & {})
+  doNotStore?: boolean
 }
 
 const StyleNoPriceItem = styled(Text)`
@@ -248,7 +241,6 @@ export const Item = ({
   isFirstElement = false,
   isLastElement = false,
   isPrimaryBackground = false,
-  productsCallback,
   iteration: receivedIteration, // Object from parent that contains time period (hours, days, months)
   shouldBeHidden = false, // Hide element from overlay if screen width is small
   hideFromOverlay = false, // Hide element from overlay in any case
@@ -258,8 +250,10 @@ export const Item = ({
   labelTextVariant, // To change left cell typography variant
   labelTextProminence, // To change left cell typography prominence
   notice, // To display a gray text below the label
+  doNotStore, // Do not store item in virtual store
 }: ItemProps) => {
   const { locales, formatNumber } = useEstimateCost()
+  const { addProduct, removeProduct } = useProductManager()
 
   let iteration: Iteration | undefined
 
@@ -310,14 +304,11 @@ export const Item = ({
   const id = useId()
 
   // We remove Item from object list when Iem component unmount to avoid duplicates
-  useEffect(
-    () => () => productsCallback?.remove({ id }),
-    [id, productsCallback],
-  )
+  useEffect(() => () => removeProduct({ id }), [id, removeProduct])
 
   useEffect(() => {
-    if (!isOverlay) {
-      productsCallback?.add({
+    if (!isOverlay && !doNotStore) {
+      addProduct({
         id,
         amount,
         price,
@@ -334,13 +325,14 @@ export const Item = ({
     discount,
     amount,
     id,
-    productsCallback,
+    addProduct,
     maxAmount,
     noIteration,
     isVariant,
     amountFree,
     isOverlay,
     longFractionDigits,
+    doNotStore,
   ])
 
   const computedItemPrice = useMemo(
@@ -482,7 +474,7 @@ export const Item = ({
                     })}`
                   : null}
               </StyleNoPriceItem>
-              {(amount - amountFree > 1 && computedItemPrice > 0) ||
+              {(amount - amountFree !== 1 && computedItemPrice > 0) || // if amount strictly = 1 no need to repeat unit price
               (maxAmount > 0 && computedMaxItemPrice > 0) ? (
                 <TextAlignRight as="p" variant="body">
                   {formatNumber(

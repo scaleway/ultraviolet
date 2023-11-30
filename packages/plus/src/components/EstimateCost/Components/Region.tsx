@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
-import { useEstimateCost } from '../EstimateCostProvider'
-import type { BareEstimateProduct, EstimateProduct, Iteration } from '../types'
+import { useEstimateCost } from '../Providers/EstimateCostProvider'
+import type { Iteration } from '../types'
 import { Item } from './Item'
 import { Strong } from './Strong'
 
@@ -16,10 +16,6 @@ type RegionProps = {
   animated?: boolean
   isFirstElement?: boolean
   isLastElement?: boolean
-  productsCallback?: {
-    add: (product: EstimateProduct) => void
-    remove: (product: BareEstimateProduct) => void
-  }
   iteration?: Iteration
   discount?: number
   label: string
@@ -34,7 +30,6 @@ export const Region = ({
   animated = false,
   isFirstElement,
   isLastElement,
-  productsCallback,
   iteration,
   discount,
 }: RegionProps) => {
@@ -48,7 +43,6 @@ export const Region = ({
       animated={animated}
       isFirstElement={isFirstElement}
       isLastElement={isLastElement}
-      productsCallback={productsCallback}
       iteration={iteration}
       discount={discount}
     >

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { TextInput } from '@ultraviolet/ui'
 import { useEffect, useState } from 'react'
-import { useOverlay } from '../OverlayContext'
+import { useOverlay } from '../Providers/OverlayProvider/OverlayProvider'
 import { ItemResourceName } from '../componentStyle'
 import { Regular } from './Regular'
 
