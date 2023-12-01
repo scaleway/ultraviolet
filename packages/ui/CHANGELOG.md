@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.27.2
+
+### Patch Changes
+
+- [#3200](https://github.com/scaleway/ultraviolet/pull/3200) [`7f397e1c`](https://github.com/scaleway/ultraviolet/commit/7f397e1ca87a895f8b575d9748e632e5dd523e3b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Text />` component with prop `oneLine` when on modals
+
 ## 1.27.1
 
 ### Patch Changes
