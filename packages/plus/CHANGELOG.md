@@ -1,5 +1,11 @@
 # @ultraviolet/plus
 
+## 0.5.3
+
+### Patch Changes
+
+- [#3207](https://github.com/scaleway/ultraviolet/pull/3207) [`1a4f472d`](https://github.com/scaleway/ultraviolet/commit/1a4f472dab9030e52e1fc0c485167768082226ec) Thanks [@matthprost](https://github.com/matthprost)! - Added missing props in EstimateCost
+
 ## 0.5.2
 
 ### Patch Changes
