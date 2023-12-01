@@ -59,7 +59,8 @@
     {
       "path": [
         "packages/*/dist/**/*.js",
-        "!packages/illustrations"
+        "!packages/illustrations",
+        "!packages/plus"
       ],
       "limit": "230 kB",
       "webpack": false,
