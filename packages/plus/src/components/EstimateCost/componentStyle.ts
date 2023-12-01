@@ -81,7 +81,7 @@ export const TotalPriceCell = styled(Cell)`
   border-style: solid;
   border-width: 0 1px 1px 1px;
   border-radius: 0 0 4px 4px;
-  min-width: 195px;
+  min-width: 202px;
   height: 56px;
   background-color: ${({ theme }) => theme.colors.primary.background};
 `
@@ -107,7 +107,7 @@ export const EmptyCell = styled.td`
 `
 
 export const TimeCell = styled.div`
-  max-width: 220px;
+  max-width: 200px;
   padding: 16px;
   align-items: start;
   text-align: left;

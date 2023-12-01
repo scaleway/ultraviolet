@@ -387,7 +387,7 @@ export const Item = ({
     >
       <Cell
         width={!isOverlay ? MAX_CELL_WIDTH : 'inherit'}
-        hasBorder={!isLastElement && !noBorder}
+        hasBorder={!isLastElement && !noBorder && !isOverlay}
         tabulation={tabulation}
       >
         <LeftSide>
@@ -482,7 +482,7 @@ export const Item = ({
                     })}`
                   : null}
               </StyleNoPriceItem>
-              {(amount - amountFree > 1 && computedItemPrice > 0) ||
+              {(amount - amountFree !== 1 && computedItemPrice > 0) ||
               (maxAmount > 0 && computedMaxItemPrice > 0) ? (
                 <TextAlignRight as="p" variant="body">
                   {formatNumber(

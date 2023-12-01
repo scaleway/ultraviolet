@@ -30,4 +30,4 @@ export const maximumFractionDigitsLong: Record<Units, number> = {
   months: 2,
 } as const
 
-export const MAX_CELL_WIDTH = '537px'
+export const MAX_CELL_WIDTH = '530px'

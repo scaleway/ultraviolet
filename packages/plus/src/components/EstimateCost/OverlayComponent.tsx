@@ -19,7 +19,7 @@ const OverlayContainer = styled.div<{ inView?: boolean }>`
   bottom: ${({ inView }) => (inView ? -120 : 0)}px;
   height: 120px;
   background-color: ${({ theme }) => theme.colors.neutral.background};
-  margin: 0 0 0 200px;
+  margin: 0 0 0 260px;
   display: flex;
   justify-content: center;
   box-shadow: ${({ inView, theme }) =>
