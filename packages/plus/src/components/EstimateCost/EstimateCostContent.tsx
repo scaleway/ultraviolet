@@ -62,6 +62,7 @@ const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 export const EstimateCostContent = ({
   description,
   alert,
+  alertTitle,
   alertVariant = 'warning',
   defaultTimeUnit = 'hours',
   timeUnits = DEFAULT_UNIT_LIST,
@@ -238,7 +239,11 @@ export const EstimateCostContent = ({
       ) : (
         description
       )}
-      {alert ? <Alert sentiment={alertVariant}>{alert}</Alert> : null}
+      {alert ? (
+        <Alert sentiment={alertVariant} title={alertTitle}>
+          {alert}
+        </Alert>
+      ) : null}
       <OverlayContextProvider value={providerValue}>
         <div>
           {children ? (
