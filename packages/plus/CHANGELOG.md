@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.5.2
+
+### Patch Changes
+
+- [#3204](https://github.com/scaleway/ultraviolet/pull/3204) [`2b07d908`](https://github.com/scaleway/ultraviolet/commit/2b07d90850606239859cb757dd1275b40a1da11e) Thanks [@matthprost](https://github.com/matthprost)! - Fix estimate cost style and export default locales
+
+- Updated dependencies [[`7f397e1c`](https://github.com/scaleway/ultraviolet/commit/7f397e1ca87a895f8b575d9748e632e5dd523e3b)]:
+  - @ultraviolet/ui@1.27.2
+
 ## 0.5.1
 
 ### Patch Changes
