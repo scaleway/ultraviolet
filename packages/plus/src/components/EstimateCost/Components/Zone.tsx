@@ -23,6 +23,8 @@ type RegionProps = {
   discount?: number
   label: string
   image: string
+  noBorder?: boolean
+  noPrice?: boolean
 }
 
 export const Zone = ({
@@ -36,6 +38,8 @@ export const Zone = ({
   productsCallback,
   iteration,
   discount,
+  noBorder,
+  noPrice,
 }: RegionProps) => {
   const { locales } = useEstimateCost()
 
@@ -50,6 +54,8 @@ export const Zone = ({
       productsCallback={productsCallback}
       iteration={iteration}
       discount={discount}
+      noBorder={noBorder}
+      noPrice={noPrice}
     >
       <Strong>
         <StyledImage alt={label} src={image} />
