@@ -1,7 +1,7 @@
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -45,45 +45,46 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
   label,
 }: NumberInputValueFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules: {
+      max: maxValue,
+      min: minValue,
+      required,
+      ...rules,
+    },
+  })
 
   return (
-    <Controller
-      name={name}
-      rules={{
-        required,
-        max: maxValue,
-        min: minValue,
-        ...rules,
+    <NumberInput
+      name={field.name}
+      value={field.value}
+      disabled={disabled}
+      onBlur={(event: FocusEvent<HTMLInputElement>) => {
+        field.onBlur()
+        onBlur?.(event)
       }}
-      render={({ field, fieldState: { error } }) => (
-        <NumberInput
-          name={field.name}
-          value={field.value}
-          disabled={disabled}
-          onBlur={(event: FocusEvent<HTMLInputElement>) => {
-            field.onBlur()
-            onBlur?.(event)
-          }}
-          onChange={event => {
-            // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
-            field.onChange(event ?? null)
-            onChange?.(event)
-          }}
-          onFocus={onFocus}
-          maxValue={maxValue}
-          minValue={minValue}
-          onMinCrossed={onMinCrossed}
-          onMaxCrossed={onMaxCrossed}
-          size={size}
-          step={step}
-          text={text}
-          className={className}
-          label={label}
-          error={getError(
-            { label: label ?? '', max: maxValue, min: minValue },
-            error,
-          )}
-        />
+      onChange={event => {
+        // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
+        field.onChange(event ?? null)
+        onChange?.(event)
+      }}
+      onFocus={onFocus}
+      maxValue={maxValue}
+      minValue={minValue}
+      onMinCrossed={onMinCrossed}
+      onMaxCrossed={onMaxCrossed}
+      size={size}
+      step={step}
+      text={text}
+      className={className}
+      label={label}
+      error={getError(
+        { label: label ?? '', max: maxValue, min: minValue },
+        error,
       )}
     />
   )

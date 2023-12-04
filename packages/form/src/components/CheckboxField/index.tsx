@@ -1,7 +1,7 @@
 import { Checkbox } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -44,46 +44,50 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
   value,
 }: CheckboxFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    disabled,
+    rules: {
+      required,
+      ...rules,
+    },
+  })
 
   return (
-    <Controller
-      name={name}
-      disabled={disabled}
-      rules={{ required, ...rules }}
-      render={({ field, fieldState: { error } }) => (
-        <Checkbox
-          name={field.name}
-          onChange={event => {
-            field.onChange(
-              value ? [...(field.value ?? []), value] : event.target.checked,
-            )
-            onChange?.(event)
-          }}
-          onBlur={event => {
-            field.onBlur()
-            onBlur?.(event)
-          }}
-          onFocus={onFocus}
-          size={size}
-          progress={progress}
-          disabled={field.disabled}
-          checked={
-            Array.isArray(field.value)
-              ? (field.value as (typeof value)[]).includes(value)
-              : !!field.value
-          }
-          error={getError({ label: label ?? '' }, error)}
-          ref={field.ref}
-          className={className}
-          required={required}
-          data-testid={dataTestId}
-          helper={helper}
-          tooltip={tooltip}
-          value={value}
-        >
-          {children}
-        </Checkbox>
-      )}
-    />
+    <Checkbox
+      name={field.name}
+      onChange={event => {
+        field.onChange(
+          value ? [...(field.value ?? []), value] : event.target.checked,
+        )
+        onChange?.(event)
+      }}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
+      onFocus={onFocus}
+      size={size}
+      progress={progress}
+      disabled={field.disabled}
+      checked={
+        Array.isArray(field.value)
+          ? (field.value as (typeof value)[]).includes(value)
+          : !!field.value
+      }
+      error={getError({ label: label ?? '' }, error)}
+      ref={field.ref}
+      className={className}
+      required={required}
+      data-testid={dataTestId}
+      helper={helper}
+      tooltip={tooltip}
+      value={value}
+    >
+      {children}
+    </Checkbox>
   )
 }

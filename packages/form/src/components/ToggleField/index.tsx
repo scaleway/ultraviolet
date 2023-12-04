@@ -1,7 +1,7 @@
 import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
 type ToggleFieldProps<TFieldValues extends FieldValues> = Omit<
@@ -37,46 +37,44 @@ export const ToggleField = <TFieldValues extends FieldValues>({
   parse,
   format,
   'data-testid': dataTestId,
-}: ToggleFieldProps<TFieldValues>) => (
-  <Controller<TFieldValues>
-    name={name}
-    rules={{
+}: ToggleFieldProps<TFieldValues>) => {
+  const { field } = useController<TFieldValues>({
+    name,
+    rules: {
       required,
       ...rules,
-    }}
-    // defaultValue={value as any}
-    render={({ field }) => {
-      const transformedValue = () => {
-        if (format) {
-          return format(field.value)
+    },
+  })
+
+  const transformedValue = () => {
+    if (format) {
+      return format(field.value)
+    }
+
+    return field.value as boolean
+  }
+
+  return (
+    <Toggle
+      name={field.name}
+      ref={field.ref}
+      checked={transformedValue()}
+      tooltip={tooltip}
+      onChange={event => {
+        if (parse) {
+          field.onChange(parse(event.target.checked))
+        } else {
+          field.onChange(event)
         }
-
-        return field.value as boolean
-      }
-
-      return (
-        <Toggle
-          name={field.name}
-          ref={field.ref}
-          checked={transformedValue()}
-          tooltip={tooltip}
-          onChange={event => {
-            if (parse) {
-              field.onChange(parse(event.target.checked))
-            } else {
-              field.onChange(event)
-            }
-            onChange?.(event)
-          }}
-          label={label}
-          size={size}
-          disabled={disabled}
-          labelPosition={labelPosition}
-          className={className}
-          required={required}
-          data-testid={dataTestId}
-        />
-      )
-    }}
-  />
-)
+        onChange?.(event)
+      }}
+      label={label}
+      size={size}
+      disabled={disabled}
+      labelPosition={labelPosition}
+      className={className}
+      required={required}
+      data-testid={dataTestId}
+    />
+  )
+}
