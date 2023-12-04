@@ -1,7 +1,7 @@
 import { Radio } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -41,41 +41,39 @@ export const RadioField = <TFieldValues extends FieldValues>({
   tooltip,
 }: RadioFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules: {
+      required,
+      ...rules,
+    },
+  })
 
   return (
-    <Controller
-      name={name}
-      rules={{
-        required,
-        ...rules,
+    <Radio
+      name={field.name}
+      checked={field.value === value}
+      className={className}
+      data-testid={dataTestId}
+      disabled={disabled}
+      error={getError({ label: typeof label === 'string' ? label : '' }, error)}
+      id={id}
+      onChange={event => {
+        field.onChange(value)
+        onChange?.(event)
       }}
-      render={({ field, fieldState: { error } }) => (
-        <Radio
-          name={field.name}
-          checked={field.value === value}
-          className={className}
-          data-testid={dataTestId}
-          disabled={disabled}
-          error={getError(
-            { label: typeof label === 'string' ? label : '' },
-            error,
-          )}
-          id={id}
-          onChange={event => {
-            field.onChange(value)
-            onChange?.(event)
-          }}
-          onBlur={event => {
-            field.onBlur()
-            onBlur?.(event)
-          }}
-          onFocus={onFocus}
-          required={required}
-          value={value ?? ''}
-          label={label}
-          tooltip={tooltip}
-        />
-      )}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
+      onFocus={onFocus}
+      required={required}
+      value={value ?? ''}
+      label={label}
+      tooltip={tooltip}
     />
   )
 }

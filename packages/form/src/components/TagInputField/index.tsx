@@ -1,7 +1,7 @@
 import { TagInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
 export type TagInputFieldProps<TFieldValues extends FieldValues = FieldValues> =
@@ -29,27 +29,28 @@ export const TagInputField = <TFieldValues extends FieldValues>({
   required,
   rules,
   variant,
-}: TagInputFieldProps<TFieldValues>) => (
-  <Controller
-    name={name}
-    rules={{
+}: TagInputFieldProps<TFieldValues>) => {
+  const { field } = useController<TFieldValues>({
+    name,
+    rules: {
       required,
       ...rules,
-    }}
-    render={({ field }) => (
-      <TagInput
-        name={field.name}
-        className={className}
-        disabled={disabled}
-        id={id}
-        onChange={event => {
-          field.onChange(event)
-          onChange?.(event)
-        }}
-        placeholder={placeholder}
-        variant={variant}
-        tags={field.value}
-      />
-    )}
-  />
-)
+    },
+  })
+
+  return (
+    <TagInput
+      name={field.name}
+      className={className}
+      disabled={disabled}
+      id={id}
+      onChange={event => {
+        field.onChange(event)
+        onChange?.(event)
+      }}
+      placeholder={placeholder}
+      variant={variant}
+      tags={field.value}
+    />
+  )
+}
