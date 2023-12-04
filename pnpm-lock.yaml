@@ -278,8 +278,8 @@ importers:
         specifier: 4.0.2
         version: 4.0.2(postcss@8.4.31)
       rollup-plugin-visualizer:
-        specifier: 5.9.2
-        version: 5.9.2(rollup@4.5.1)
+        specifier: 5.9.3
+        version: 5.9.3(rollup@4.5.1)
       seedrandom:
         specifier: 3.0.5
         version: 3.0.5
@@ -15309,12 +15309,12 @@ packages:
       - ts-node
     dev: true
 
-  /rollup-plugin-visualizer@5.9.2(rollup@4.5.1):
-    resolution: {integrity: sha512-waHktD5mlWrYFrhOLbti4YgQCn1uR24nYsNuXxg7LkPH8KdTXVWR9DNY1WU0QqokyMixVXJS4J04HNrVTMP01A==}
+  /rollup-plugin-visualizer@5.9.3(rollup@4.5.1):
+    resolution: {integrity: sha512-ieGM5UAbMVqThX67GCuFHu/GkaSXIUZwFKJsSzE+7+k9fibU/6gbUz7SL+9BBzNtv5bIFHj7kEu0TWcqEnT/sQ==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
-      rollup: 2.x || 3.x
+      rollup: 2.x || 3.x || 4.x
     peerDependenciesMeta:
       rollup:
         optional: true
