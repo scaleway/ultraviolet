@@ -8,7 +8,7 @@ import type {
 } from 'react'
 import { Children, useCallback, useMemo } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
 import { useErrors } from '../../providers'
@@ -237,54 +237,55 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
   )
 
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules: {
+      required,
+      minLength: minLength || required ? 1 : undefined,
+      maxLength,
+      ...rules,
+    },
+  })
 
   return (
-    <Controller
-      name={name}
-      rules={{
-        required,
-        minLength: minLength || required ? 1 : undefined,
-        maxLength,
-        ...rules,
+    <SelectInput
+      name={field.name}
+      animation={animation}
+      animationDuration={animationDuration}
+      animationOnChange={animationOnChange}
+      className={className}
+      disabled={disabled}
+      error={getError({ label, minLength, maxLength }, error)}
+      id={id}
+      inputId={inputId}
+      isClearable={isClearable}
+      isLoading={isLoading}
+      isMulti={multiple}
+      customStyle={customStyle}
+      isSearchable={isSearchable}
+      menuPortalTarget={menuPortalTarget}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
       }}
-      render={({ field, fieldState: { error } }) => (
-        <SelectInput
-          name={field.name}
-          animation={animation}
-          animationDuration={animationDuration}
-          animationOnChange={animationOnChange}
-          className={className}
-          disabled={disabled}
-          error={getError({ label, minLength, maxLength }, error)}
-          id={id}
-          inputId={inputId}
-          isClearable={isClearable}
-          isLoading={isLoading}
-          isMulti={multiple}
-          customStyle={customStyle}
-          isSearchable={isSearchable}
-          menuPortalTarget={menuPortalTarget}
-          onBlur={event => {
-            field.onBlur()
-            onBlur?.(event)
-          }}
-          onChange={(event, action) => {
-            field.onChange(parse(event))
-            onChange?.(event, action)
-          }}
-          onFocus={onFocus}
-          options={options}
-          placeholder={placeholder}
-          readOnly={readOnly}
-          noTopLabel={noTopLabel}
-          required={required}
-          value={format(field.value)}
-          noOptionsMessage={noOptionsMessage}
-        >
-          {children}
-        </SelectInput>
-      )}
-    />
+      onChange={(event, action) => {
+        field.onChange(parse(event))
+        onChange?.(event, action)
+      }}
+      onFocus={onFocus}
+      options={options}
+      placeholder={placeholder}
+      readOnly={readOnly}
+      noTopLabel={noTopLabel}
+      required={required}
+      value={format(field.value)}
+      noOptionsMessage={noOptionsMessage}
+    >
+      {children}
+    </SelectInput>
   )
 }
 

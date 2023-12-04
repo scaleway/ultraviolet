@@ -1,7 +1,7 @@
 import { DateInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 import { maxDateValidator } from '../../validators/maxDate'
@@ -62,68 +62,69 @@ export const DateField = <TFieldValues extends FieldValues>({
   'data-testid': dataTestId,
 }: DateFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules: {
+      ...rules,
+      validate: {
+        ...rules?.validate,
+        minDate: minDateValidator(minDate),
+        maxDate: maxDateValidator(maxDate),
+      },
+      required,
+    },
+  })
 
   return (
-    <Controller
-      name={name}
-      rules={{
-        ...rules,
-        validate: {
-          ...rules?.validate,
-          minDate: minDateValidator(minDate),
-          maxDate: maxDateValidator(maxDate),
-        },
-        required,
-      }}
-      render={({ field, fieldState: { error } }) => (
-        <DateInput
-          name={field.name}
-          label={label}
-          value={field.value}
-          format={
-            format ||
-            (value => (value ? parseDate(value).toLocaleDateString() : ''))
-          }
-          locale={locale}
-          required={required}
-          onChange={(val: DateExtends | null) => {
-            if (val && val instanceof Date) {
-              onChange?.(val)
-              const newDate = parseDate(val)
-              if (isEmpty(field.value as Date)) {
-                field.onChange(newDate)
+    <DateInput
+      name={field.name}
+      label={label}
+      value={field.value}
+      format={
+        format ||
+        (value => (value ? parseDate(value).toLocaleDateString() : ''))
+      }
+      locale={locale}
+      required={required}
+      onChange={(val: DateExtends | null) => {
+        if (val && val instanceof Date) {
+          onChange?.(val)
+          const newDate = parseDate(val)
+          if (isEmpty(field.value as Date)) {
+            field.onChange(newDate)
 
-                return
-              }
-              const currentDate = parseDate(field.value as Date)
-              newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
-              field.onChange(newDate)
-            }
-          }}
-          onBlur={(e: FocusEvent<HTMLElement>) => {
-            field.onBlur()
-            onBlur?.(e)
-          }}
-          onFocus={onFocus}
-          maxDate={maxDate}
-          minDate={minDate}
-          error={getError({ minDate, maxDate, label }, error)}
-          disabled={disabled}
-          autoFocus={autoFocus}
-          excludeDates={excludeDates}
-          data-testid={dataTestId}
-          startDate={
-            selectsRange
-              ? (field.value as [Date | null, Date | null])[0]
-              : undefined
+            return
           }
-          endDate={
-            selectsRange
-              ? (field.value as [Date | null, Date | null])[1]
-              : undefined
-          }
-        />
-      )}
+          const currentDate = parseDate(field.value as Date)
+          newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
+          field.onChange(newDate)
+        }
+      }}
+      onBlur={(e: FocusEvent<HTMLElement>) => {
+        field.onBlur()
+        onBlur?.(e)
+      }}
+      onFocus={onFocus}
+      maxDate={maxDate}
+      minDate={minDate}
+      error={getError({ minDate, maxDate, label }, error)}
+      disabled={disabled}
+      autoFocus={autoFocus}
+      excludeDates={excludeDates}
+      data-testid={dataTestId}
+      startDate={
+        selectsRange
+          ? (field.value as [Date | null, Date | null])[0]
+          : undefined
+      }
+      endDate={
+        selectsRange
+          ? (field.value as [Date | null, Date | null])[1]
+          : undefined
+      }
     />
   )
 }
