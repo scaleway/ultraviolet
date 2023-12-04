@@ -1,7 +1,7 @@
 import { RadioGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -30,30 +30,31 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
   direction,
 }: RadioGroupFieldProps<TFieldValues>): JSX.Element => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules,
+  })
 
   return (
-    <Controller
-      name={name}
-      rules={rules}
-      render={({ field, fieldState: { error } }) => (
-        <RadioGroup
-          className={className}
-          name={field.name}
-          onChange={event => {
-            field.onChange(event)
-            onChange?.(event)
-          }}
-          required={required}
-          value={field.value}
-          legend={legend}
-          error={getError({ label }, error) ?? customError}
-          helper={helper}
-          direction={direction}
-        >
-          {children}
-        </RadioGroup>
-      )}
-    />
+    <RadioGroup
+      className={className}
+      name={field.name}
+      onChange={event => {
+        field.onChange(event)
+        onChange?.(event)
+      }}
+      required={required}
+      value={field.value}
+      legend={legend}
+      error={getError({ label }, error) ?? customError}
+      helper={helper}
+      direction={direction}
+    >
+      {children}
+    </RadioGroup>
   )
 }
 

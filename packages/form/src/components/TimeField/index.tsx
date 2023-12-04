@@ -1,7 +1,7 @@
 import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
 const parseTime = (date?: Date | string): { label: string; value: string } => {
@@ -44,52 +44,56 @@ export const TimeField = <TFieldValues extends FieldValues>({
   rules,
   options,
   'data-testid': dataTestId,
-}: TimeFieldProps<TFieldValues>) => (
-  <Controller
-    name={name}
-    rules={{
+}: TimeFieldProps<TFieldValues>) => {
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    rules: {
       required,
       ...rules,
-    }}
-    render={({ field, fieldState: { error } }) => (
-      <TimeInput
-        name={field.name}
-        placeholder={placeholder}
-        schedule={schedule}
-        required={required}
-        value={parseTime(field.value)}
-        onChange={(val, action) => {
-          if (!val) return
-          onChange?.(val, action)
-          const [hours, minutes] = (
-            val as { value: string; label: string }
-          ).value.split(':')
-          const date = field.value ? new Date(field.value) : new Date()
-          date.setHours(Number(hours), Number(minutes), 0)
-          field.onChange(date)
-        }}
-        onBlur={event => {
-          field.onBlur()
-          onBlur?.(event)
-        }}
-        onFocus={event => {
-          onFocus?.(event)
-        }}
-        error={error?.message}
-        disabled={disabled}
-        readOnly={readOnly}
-        animation={animation}
-        animationDuration={animationDuration}
-        animationOnChange={animationOnChange}
-        className={className}
-        isLoading={isLoading}
-        isClearable={isClearable}
-        isSearchable={isSearchable}
-        inputId={inputId}
-        id={id}
-        options={options}
-        data-testid={dataTestId}
-      />
-    )}
-  />
-)
+    },
+  })
+
+  return (
+    <TimeInput
+      name={field.name}
+      placeholder={placeholder}
+      schedule={schedule}
+      required={required}
+      value={parseTime(field.value)}
+      onChange={(val, action) => {
+        if (!val) return
+        onChange?.(val, action)
+        const [hours, minutes] = (
+          val as { value: string; label: string }
+        ).value.split(':')
+        const date = field.value ? new Date(field.value) : new Date()
+        date.setHours(Number(hours), Number(minutes), 0)
+        field.onChange(date)
+      }}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
+      onFocus={event => {
+        onFocus?.(event)
+      }}
+      error={error?.message}
+      disabled={disabled}
+      readOnly={readOnly}
+      animation={animation}
+      animationDuration={animationDuration}
+      animationOnChange={animationOnChange}
+      className={className}
+      isLoading={isLoading}
+      isClearable={isClearable}
+      isSearchable={isSearchable}
+      inputId={inputId}
+      id={id}
+      options={options}
+      data-testid={dataTestId}
+    />
+  )
+}

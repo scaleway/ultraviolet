@@ -2,7 +2,7 @@ import { TextInput } from '@ultraviolet/ui'
 import { forwardRef } from 'react'
 import type { ComponentProps, Ref } from 'react'
 import type { FieldValues, Path, PathValue } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -105,107 +105,106 @@ export const TextInputField = forwardRef(
     ref: Ref<HTMLInputElement>,
   ) => {
     const { getError } = useErrors()
+    const {
+      field,
+      fieldState: { error },
+    } = useController<TFieldValues>({
+      name,
+      defaultValue,
+      rules: {
+        required,
+        pattern:
+          regexes &&
+          new RegExp(
+            regexes
+              .map(regex => {
+                const newRegex = Array.isArray(regex)
+                  ? regex.map(reg => reg.source).join('|')
+                  : regex.source
+
+                return `(?=${newRegex})`
+              })
+              .join(''),
+          ),
+        validate,
+        minLength,
+        maxLength,
+        max,
+        min,
+        ...rules,
+      },
+    })
+
+    const transformedValue = () => {
+      if (format) {
+        return format(field.value) as string
+      }
+
+      return field.value as string
+    }
 
     return (
-      <Controller<TFieldValues>
-        name={name}
-        rules={{
-          required,
-          pattern:
-            regexes &&
-            new RegExp(
-              regexes
-                .map(regex => {
-                  const newRegex = Array.isArray(regex)
-                    ? regex.map(reg => reg.source).join('|')
-                    : regex.source
-
-                  return `(?=${newRegex})`
-                })
-                .join(''),
-            ),
-          validate,
-          minLength,
-          maxLength,
-          max,
-          min,
-          ...rules,
-        }}
-        defaultValue={defaultValue}
-        render={({ field, fieldState: { error } }) => {
-          const transformedValue = () => {
-            if (format) {
-              return format(field.value) as string
-            }
-
-            return field.value as string
-          }
-
-          return (
-            <TextInput
-              name={field.name}
-              autoCapitalize={autoCapitalize}
-              autoComplete={autoComplete}
-              autoCorrect={autoCorrect}
-              autoFocus={autoFocus}
-              autoSave={autoSave}
-              className={className}
-              cols={cols}
-              disabled={disabled}
-              error={
-                customError ??
-                getError(
-                  {
-                    regex: regexes,
-                    minLength,
-                    maxLength,
-                    label,
-                    min,
-                    max,
-                    value: field.value,
-                  },
-                  error,
-                )
-              }
-              fillAvailable={fillAvailable}
-              generated={generated}
-              id={id}
-              label={label}
-              multiline={multiline}
-              notice={notice}
-              required={required}
-              onBlur={event => {
-                field.onBlur()
-                onBlur?.(event)
-              }}
-              onChange={event => {
-                if (parse) {
-                  field.onChange(parse(event))
-                } else {
-                  field.onChange(event)
-                }
-                onChange?.(event)
-              }}
-              onFocus={event => {
-                onFocus?.(event)
-              }}
-              onKeyUp={onKeyUp}
-              onKeyDown={onKeyDown}
-              placeholder={placeholder}
-              random={random}
-              readOnly={readOnly}
-              resizable={resizable}
-              rows={rows}
-              type={type}
-              noTopLabel={noTopLabel}
-              unit={unit}
-              valid={valid}
-              size={size}
-              value={transformedValue()}
-              ref={ref}
-            />
+      <TextInput
+        name={field.name}
+        autoCapitalize={autoCapitalize}
+        autoComplete={autoComplete}
+        autoCorrect={autoCorrect}
+        autoFocus={autoFocus}
+        autoSave={autoSave}
+        className={className}
+        cols={cols}
+        disabled={disabled}
+        error={
+          customError ??
+          getError(
+            {
+              regex: regexes,
+              minLength,
+              maxLength,
+              label,
+              min,
+              max,
+              value: field.value,
+            },
+            error,
           )
+        }
+        fillAvailable={fillAvailable}
+        generated={generated}
+        id={id}
+        label={label}
+        multiline={multiline}
+        notice={notice}
+        required={required}
+        onBlur={event => {
+          field.onBlur()
+          onBlur?.(event)
         }}
+        onChange={event => {
+          if (parse) {
+            field.onChange(parse(event))
+          } else {
+            field.onChange(event)
+          }
+          onChange?.(event)
+        }}
+        onFocus={event => {
+          onFocus?.(event)
+        }}
+        onKeyUp={onKeyUp}
+        onKeyDown={onKeyDown}
+        placeholder={placeholder}
+        random={random}
+        readOnly={readOnly}
+        resizable={resizable}
+        rows={rows}
+        type={type}
+        noTopLabel={noTopLabel}
+        unit={unit}
+        valid={valid}
+        size={size}
+        value={transformedValue()}
+        ref={ref}
       />
     )
   },

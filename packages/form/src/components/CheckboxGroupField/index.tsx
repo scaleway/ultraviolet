@@ -1,7 +1,7 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import type { FieldValues } from 'react-hook-form'
-import { Controller } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -35,39 +35,40 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   required = false,
 }: CheckboxGroupFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+  })
 
   return (
-    <Controller
+    <CheckboxGroup
+      legend={legend}
       name={name}
-      render={({ field, fieldState: { error } }) => (
-        <CheckboxGroup
-          legend={legend}
-          name={name}
-          value={field.value}
-          onChange={event => {
-            const fieldValue = field.value as string[]
-            if (fieldValue?.includes(event.currentTarget.value)) {
-              field.onChange(
-                fieldValue?.filter(
-                  currentValue => currentValue !== event.currentTarget.value,
-                ),
-              )
-            } else {
-              field.onChange([...field.value, event.currentTarget.value])
-            }
+      value={field.value}
+      onChange={event => {
+        const fieldValue = field.value as string[]
+        if (fieldValue?.includes(event.currentTarget.value)) {
+          field.onChange(
+            fieldValue?.filter(
+              currentValue => currentValue !== event.currentTarget.value,
+            ),
+          )
+        } else {
+          field.onChange([...field.value, event.currentTarget.value])
+        }
 
-            onChange?.(event)
-          }}
-          error={getError({ label }, error) ?? customError}
-          className={className}
-          direction={direction}
-          helper={helper}
-          required={required}
-        >
-          {children}
-        </CheckboxGroup>
-      )}
-    />
+        onChange?.(event)
+      }}
+      error={getError({ label }, error) ?? customError}
+      className={className}
+      direction={direction}
+      helper={helper}
+      required={required}
+    >
+      {children}
+    </CheckboxGroup>
   )
 }
 
