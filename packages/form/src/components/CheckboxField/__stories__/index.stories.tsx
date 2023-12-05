@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { CheckboxField, Form } from '../..'
 import { mockErrors } from '../../../mocks'
 
@@ -7,7 +8,19 @@ export default {
   decorators: [
     ChildStory => (
       <Form onRawSubmit={() => {}} errors={mockErrors}>
-        {ChildStory()}
+        {values => (
+          <Stack gap={2}>
+            {ChildStory()}
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form values:
+              </Text>
+              <Snippet prefix="lines">
+                {JSON.stringify(values.values, null, 1)}
+              </Snippet>
+            </Stack>
+          </Stack>
+        )}
       </Form>
     ),
   ],
