@@ -81,7 +81,12 @@ const StyledElement = styled('div', {
 `
 
 const StyledRadio = StyledElement.withComponent(Radio)
-const StyledCheckbox = StyledElement.withComponent(Checkbox)
+const OverloadedCheckbox = StyledElement.withComponent(Checkbox)
+const StyledCheckbox = styled(OverloadedCheckbox)`
+  label {
+    width: 100%;
+  }
+`
 
 type SelectableCardProps = {
   name?: string

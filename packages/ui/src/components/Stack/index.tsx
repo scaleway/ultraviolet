@@ -21,9 +21,14 @@ type StackProps = {
  */
 export const Stack = styled('div', {
   shouldForwardProp: prop =>
-    !['gap', 'direction', 'alignItems', 'justifyContent', 'wrap'].includes(
-      prop,
-    ),
+    ![
+      'gap',
+      'direction',
+      'alignItems',
+      'justifyContent',
+      'wrap',
+      'width',
+    ].includes(prop),
 })<StackProps>`
   display: flex;
 
