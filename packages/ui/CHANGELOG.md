@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.27.3
+
+### Patch Changes
+
+- [#3221](https://github.com/scaleway/ultraviolet/pull/3221) [`997398d0`](https://github.com/scaleway/ultraviolet/commit/997398d0161da31e676973f4cb4519c7b35b2abd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />` to trigger on change when state changes
+
+- Updated dependencies [[`99eda1d1`](https://github.com/scaleway/ultraviolet/commit/99eda1d14c3feababd1c7898e3dc55f17446ed6e)]:
+  - @ultraviolet/icons@2.6.0
+
 ## 1.27.2
 
 ### Patch Changes

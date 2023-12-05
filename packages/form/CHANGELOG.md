@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.10.6
+
+### Patch Changes
+
+- [#3221](https://github.com/scaleway/ultraviolet/pull/3221) [`997398d0`](https://github.com/scaleway/ultraviolet/commit/997398d0161da31e676973f4cb4519c7b35b2abd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CheckboxField />` to trigger on change when state changes
+
+- Updated dependencies [[`997398d0`](https://github.com/scaleway/ultraviolet/commit/997398d0161da31e676973f4cb4519c7b35b2abd)]:
+  - @ultraviolet/ui@1.27.3
+
 ## 1.10.5
 
 ### Patch Changes
