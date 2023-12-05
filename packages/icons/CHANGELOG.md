@@ -1,5 +1,11 @@
 # @ultraviolet/icons
 
+## 2.6.0
+
+### Minor Changes
+
+- [#3219](https://github.com/scaleway/ultraviolet/pull/3219) [`99eda1d1`](https://github.com/scaleway/ultraviolet/commit/99eda1d14c3feababd1c7898e3dc55f17446ed6e) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - New ProductIcon `apiKey`
+
 ## 2.5.5
 
 ### Patch Changes
