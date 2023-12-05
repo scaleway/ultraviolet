@@ -3164,7 +3164,7 @@ export const PRODUCT_ICONS = {
     </g>
   ),
   apiKey: (
-    <g className="API-Key" clipPath="url(#a)">
+    <g className="API-Key">
       <g className=".Square">
         <path
           fill="#F1EEFC"
