@@ -5,7 +5,6 @@ import type {
   ChangeEvent,
   ForwardedRef,
   InputHTMLAttributes,
-  KeyboardEvent,
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
@@ -341,13 +340,6 @@ export const Checkbox = forwardRef(
       [onChange, progress, setState],
     )
 
-    const onKeyDown = useCallback((event: KeyboardEvent<HTMLInputElement>) => {
-      if (event.key.charCodeAt(0) === 32) {
-        event.preventDefault()
-        setState(current => !current)
-      }
-    }, [])
-
     return (
       <Tooltip text={tooltip}>
         <CheckboxContainer
@@ -373,7 +365,6 @@ export const Checkbox = forwardRef(
             checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
-            onKeyDown={onKeyDown}
             onFocus={onFocus}
             onBlur={onBlur}
             disabled={disabled}
