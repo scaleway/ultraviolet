@@ -111,20 +111,22 @@ export const TextInputField = <TFieldValues extends FieldValues>({
     defaultValue,
     rules: {
       required,
-      pattern:
-        regexes &&
-        new RegExp(
-          regexes
-            .map(regex => {
-              const newRegex = Array.isArray(regex)
-                ? regex.map(reg => reg.source).join('|')
-                : regex.source
-
-              return `(?=${newRegex})`
-            })
-            .join(''),
-        ),
-      validate,
+      validate: {
+        ...(regexes
+          ? {
+              pattern: value =>
+                regexes.every(
+                  regex =>
+                    value === undefined ||
+                    value === '' ||
+                    (Array.isArray(regex)
+                      ? regex.some(regexOr => regexOr.test(value))
+                      : regex.test(value)),
+                ),
+            }
+          : {}),
+        ...validate,
+      },
       minLength,
       maxLength,
       max,
