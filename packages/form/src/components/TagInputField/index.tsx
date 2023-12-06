@@ -1,6 +1,6 @@
 import { TagInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
@@ -9,13 +9,7 @@ export type TagInputFieldProps<TFieldValues extends FieldValues = FieldValues> =
     Partial<
       Pick<
         ComponentProps<typeof TagInput>,
-        | 'tags'
-        | 'variant'
-        | 'onChange'
-        | 'placeholder'
-        | 'disabled'
-        | 'className'
-        | 'id'
+        'tags' | 'variant' | 'placeholder' | 'disabled' | 'className' | 'id'
       >
     >
 
@@ -46,7 +40,7 @@ export const TagInputField = <TFieldValues extends FieldValues>({
       id={id}
       onChange={event => {
         field.onChange(event)
-        onChange?.(event)
+        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       placeholder={placeholder}
       variant={variant}
