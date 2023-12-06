@@ -96,7 +96,7 @@ type SelectInputOption = { value: string; label: string }
 
 export type SelectInputFieldProps<
   TFieldValues extends FieldValues = FieldValues,
-> = BaseFieldProps<TFieldValues> &
+> = Omit<BaseFieldProps<TFieldValues>, 'onChange'> &
   Partial<
     Pick<
       SelectInputProps,

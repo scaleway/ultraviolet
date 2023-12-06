@@ -1,6 +1,6 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -12,7 +12,6 @@ type CheckboxGroupFieldProps<TFieldValues extends FieldValues> =
         ComponentProps<typeof CheckboxGroup>,
         | 'className'
         | 'helper'
-        | 'onChange'
         | 'required'
         | 'direction'
         | 'children'
@@ -59,7 +58,12 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
           field.onChange([...field.value, event.currentTarget.value])
         }
 
-        onChange?.(event)
+        onChange?.(
+          event.currentTarget.value as PathValue<
+            TFieldValues,
+            Path<TFieldValues>
+          >,
+        )
       }}
       error={getError({ label }, error) ?? customError}
       className={className}

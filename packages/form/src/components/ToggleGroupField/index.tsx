@@ -1,6 +1,7 @@
 import { ToggleGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { type FieldValues, useController } from 'react-hook-form'
+import { useController } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -9,13 +10,7 @@ type ToggleGroupFieldProps<TFieldValues extends FieldValues> =
     Partial<
       Pick<
         ComponentProps<typeof ToggleGroup>,
-        | 'className'
-        | 'helper'
-        | 'onChange'
-        | 'direction'
-        | 'children'
-        | 'error'
-        | 'legend'
+        'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
       >
     > &
     Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend' | 'name'>>
@@ -52,16 +47,16 @@ export const ToggleGroupField = <TFieldValues extends FieldValues>({
       value={value}
       onChange={event => {
         if (value.includes(event.currentTarget.value)) {
-          field.onChange(
-            value.filter(
-              currentValue => currentValue !== event.currentTarget.value,
-            ),
+          const newValue = value.filter(
+            currentValue => currentValue !== event.currentTarget.value,
           )
+          field.onChange(newValue)
+          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         } else {
-          field.onChange([...value, event.currentTarget.value])
+          const newValue = [...value, event.currentTarget.value]
+          field.onChange(newValue)
+          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
-
-        onChange?.(event)
       }}
       error={customError ?? getError({ label: label ?? '' }, error)}
       className={className}
