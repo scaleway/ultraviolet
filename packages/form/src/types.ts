@@ -39,6 +39,9 @@ export type FormErrors = {
 export type BaseFieldProps<TFieldValues extends FieldValues = FieldValues> = {
   name: FieldPath<TFieldValues>
   required?: boolean
+  /**
+   * @deprecated use rules props instead
+   */
   validate?: Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
   rules?: UseControllerProps<TFieldValues>['rules']
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
