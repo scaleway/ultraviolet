@@ -1,6 +1,6 @@
 import { DateInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -31,7 +31,6 @@ type DateFieldProps<TFieldValues extends FieldValues> =
       disabled?: boolean
       required?: boolean
       locale?: string
-      onChange?: (value: Date | null) => void
       onBlur?: (event: FocusEvent<HTMLElement>) => void
       onFocus?: (value: FocusEvent<HTMLElement>) => void
       autoFocus?: boolean
@@ -91,7 +90,7 @@ export const DateField = <TFieldValues extends FieldValues>({
       required={required}
       onChange={(val: DateExtends | null) => {
         if (val && val instanceof Date) {
-          onChange?.(val)
+          onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           const newDate = parseDate(val)
           if (isEmpty(field.value as Date)) {
             field.onChange(newDate)

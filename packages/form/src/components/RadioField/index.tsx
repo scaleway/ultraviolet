@@ -15,7 +15,6 @@ type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
       | 'disabled'
       | 'id'
       | 'onBlur'
-      | 'onChange'
       | 'onFocus'
       | 'data-testid'
       | 'tooltip'
@@ -61,9 +60,9 @@ export const RadioField = <TFieldValues extends FieldValues>({
       disabled={disabled}
       error={getError({ label: typeof label === 'string' ? label : '' }, error)}
       id={id}
-      onChange={event => {
+      onChange={() => {
         field.onChange(value)
-        onChange?.(event)
+        onChange?.(value)
       }}
       onBlur={event => {
         field.onBlur()

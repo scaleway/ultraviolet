@@ -44,4 +44,5 @@ export type BaseFieldProps<TFieldValues extends FieldValues = FieldValues> = {
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
+  onChange?: (value?: PathValue<TFieldValues, Path<TFieldValues>>) => void
 }

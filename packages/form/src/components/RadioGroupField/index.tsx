@@ -1,6 +1,6 @@
 import { RadioGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -10,7 +10,7 @@ type RadioGroupFieldProps<TFieldValues extends FieldValues> =
     Partial<
       Pick<
         ComponentProps<typeof RadioGroup>,
-        'onChange' | 'legend' | 'children' | 'error' | 'helper' | 'direction'
+        'legend' | 'children' | 'error' | 'helper' | 'direction'
       >
     > & {
       className?: string
@@ -44,7 +44,9 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
       name={field.name}
       onChange={event => {
         field.onChange(event)
-        onChange?.(event)
+        onChange?.(
+          event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
+        )
       }}
       required={required}
       value={field.value}
