@@ -17,9 +17,14 @@ export type TextAreaFieldProps = Pick<
     name: string
   }
 
+/**
+ * This component offers a form field based on Ultraviolet UI TextArea component
+ */
 export const TextAreaField = ({
   autoFocus,
   clearable,
+  className,
+  tabIndex,
   'data-testid': dataTestId,
   disabled,
   helper,
@@ -61,6 +66,7 @@ export const TextAreaField = ({
   return (
     <TextArea
       autoFocus={autoFocus}
+      className={className}
       clearable={clearable}
       data-testid={dataTestId}
       disabled={disabled}
@@ -85,6 +91,7 @@ export const TextAreaField = ({
       required={required}
       rows={rows}
       success={success}
+      tabIndex={tabIndex}
       tooltip={tooltip}
       value={input.value}
     />

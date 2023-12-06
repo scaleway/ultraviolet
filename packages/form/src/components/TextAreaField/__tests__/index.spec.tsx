@@ -17,8 +17,7 @@ describe('TextAreaField', () => {
     ))
 
   test('should render correctly generated', async () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const onSubmit = jest.fn<any>()
+    const onSubmit = jest.fn<(values: { test: string }) => void>()
 
     renderWithTheme(
       <Form onRawSubmit={onSubmit} errors={mockErrors}>

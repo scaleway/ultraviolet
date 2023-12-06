@@ -12,6 +12,7 @@ const STATE_ICON_SIZE = 16
 
 const StyledTextAreaWrapper = styled.div`
   position: relative;
+  display: flex;
 `
 
 const StyledTextAreaAbsoluteStack = styled(Stack)`
@@ -69,6 +70,7 @@ const StyledTextArea = styled('textarea', {
             &::placeholder {
               color: ${theme.colors.neutral.textWeakDisabled};
             }
+            cursor: not-allowed;
         `
     }
     if (readOnly) {
@@ -94,9 +96,11 @@ const StyledTextArea = styled('textarea', {
 
 type TextAreaProps = {
   id?: string
+  className?: string
+  tabIndex?: number
   autoFocus?: boolean
   label: string
-  value: string
+  value?: string
   onChange: (newValue: string) => void
   placeholder?: string
   /**
@@ -136,12 +140,14 @@ type TextAreaProps = {
 }
 
 /**
- * Descriptionnnnnn
+ * This component offers an extended textarea HTML
  */
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
     {
       id,
+      className,
+      tabIndex,
       value,
       onChange,
       placeholder,
@@ -175,7 +181,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const computedHelper = !success && !error ? helper : undefined
 
     return (
-      <Stack gap={1}>
+      <Stack gap={1} className={className}>
         <Stack direction="row" gap="1" alignItems="center">
           <Stack direction="row" gap="0.5" alignItems="start">
             <Text
@@ -190,59 +196,62 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           </Stack>
           {labelDescription ?? null}
         </Stack>
-        <div>
-          <Tooltip text={tooltip}>
-            <StyledTextAreaWrapper>
-              <StyledTextArea
-                id={id ?? localId}
-                autoFocus={autoFocus}
-                disabled={disabled}
-                rows={rows}
-                ref={ref}
-                value={value}
-                onChange={event => {
-                  onChange(event.currentTarget.value)
-                }}
-                isSuccess={!!computedSuccess}
-                isError={!!computedError}
-                isClearable={!!clearable}
-                minLength={minLength}
-                maxLength={maxLength}
-                placeholder={placeholder}
-                data-testid={dataTestId}
-                name={name}
-                onFocus={onFocus}
-                onBlur={onBlur}
-                readOnly={computedReadOnly}
-              />
-              <StyledTextAreaAbsoluteStack
-                direction="row"
-                alignItems="center"
-                gap="1"
-              >
-                {clearable ? (
-                  <Button
-                    aria-label="clear value"
-                    variant="ghost"
-                    size="xsmall"
-                    icon="close"
-                    onClick={() => {
-                      onChange('')
-                    }}
-                  />
-                ) : null}
-                {success ? (
-                  <Icon
-                    name="checkbox-circle-outline"
-                    color="success"
-                    size={STATE_ICON_SIZE}
-                  />
-                ) : null}
-                {error ? <Icon name="alert" color="danger" /> : null}
-              </StyledTextAreaAbsoluteStack>
-            </StyledTextAreaWrapper>
-          </Tooltip>
+        <Tooltip text={tooltip}>
+          <StyledTextAreaWrapper>
+            <StyledTextArea
+              aria-invalid={!!computedError}
+              id={id ?? localId}
+              tabIndex={tabIndex}
+              autoFocus={autoFocus}
+              disabled={disabled}
+              rows={rows}
+              ref={ref}
+              value={value}
+              onChange={event => {
+                onChange(event.currentTarget.value)
+              }}
+              isSuccess={!!computedSuccess}
+              isError={!!computedError}
+              isClearable={!!clearable}
+              minLength={minLength}
+              maxLength={maxLength}
+              placeholder={placeholder}
+              data-testid={dataTestId}
+              name={name}
+              onFocus={onFocus}
+              onBlur={onBlur}
+              readOnly={computedReadOnly}
+            />
+            <StyledTextAreaAbsoluteStack
+              direction="row"
+              alignItems="center"
+              gap="1"
+            >
+              {clearable ? (
+                <Button
+                  aria-label="clear value"
+                  variant="ghost"
+                  size="xsmall"
+                  icon="close"
+                  onClick={() => {
+                    onChange('')
+                  }}
+                  sentiment="neutral"
+                />
+              ) : null}
+              {success ? (
+                <Icon
+                  name="checkbox-circle-outline"
+                  color="success"
+                  size={STATE_ICON_SIZE}
+                />
+              ) : null}
+              {error ? <Icon name="alert" color="danger" /> : null}
+            </StyledTextAreaAbsoluteStack>
+          </StyledTextAreaWrapper>
+        </Tooltip>
 
+        {computedSuccess || computedError || computedHelper || maxLength ? (
           <Row templateColumns="minmax(0, 1fr) min-content" gap="1">
             <div>
               {computedSuccess ? (
@@ -277,11 +286,11 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
                 prominence="weak"
                 variant="caption"
               >
-                {value.length}/{maxLength}
+                {value?.length ?? 0}/{maxLength}
               </Text>
             ) : null}
           </Row>
-        </div>
+        ) : null}
       </Stack>
     )
   },

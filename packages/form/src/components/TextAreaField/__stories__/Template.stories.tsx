@@ -6,7 +6,7 @@ import { Submit, TextInputField } from '../..'
 export const Template: StoryFn<TextAreaFieldProps> = args => (
   <div>
     <TextAreaField {...args} />
-    <TextInputField name="osef" required regex={[/[a-z]+/]} />
+    <TextInputField name="example" required regex={[/[a-z]+/]} />
     <Submit>Submit</Submit>
   </div>
 )

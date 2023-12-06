@@ -18,13 +18,6 @@ export default {
       </Form>
     ),
   ],
-  parameters: {
-    docs: {
-      description: {
-        component: 'A tags field',
-      },
-    },
-  },
   title: 'Form/Components/Fields/TextAreaField',
 } as Meta
 

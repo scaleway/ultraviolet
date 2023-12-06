@@ -83,8 +83,12 @@ exports[`TextAreaField should render correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-bjn8wh {
+.cache-8k1832 {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cache-m7sh0y {
@@ -150,20 +154,6 @@ exports[`TextAreaField should render correctly 1`] = `
   right: 8px;
 }
 
-.cache-v1t1t2 {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) min-content;
-  gap: 8px;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-}
-
 <form
     novalidate=""
   >
@@ -184,25 +174,19 @@ exports[`TextAreaField should render correctly 1`] = `
           </label>
         </div>
       </div>
-      <div>
+      <div
+        class="cache-8k1832 enu776d2"
+      >
+        <textarea
+          aria-invalid="false"
+          class="cache-m7sh0y enu776d0"
+          id=":r0:"
+          name="test"
+          rows="3"
+        />
         <div
-          class="cache-bjn8wh enu776d2"
-        >
-          <textarea
-            class="cache-m7sh0y enu776d0"
-            id=":r0:"
-            name="test"
-            rows="3"
-          />
-          <div
-            class="cache-59idzs enu776d1"
-          />
-        </div>
-        <div
-          class="cache-v1t1t2 e3f5lzv0"
-        >
-          <div />
-        </div>
+          class="cache-59idzs enu776d1"
+        />
       </div>
     </div>
   </form>
