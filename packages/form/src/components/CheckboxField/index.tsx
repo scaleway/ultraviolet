@@ -1,6 +1,6 @@
 import { Checkbox } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -12,7 +12,6 @@ type CheckboxFieldProps<TFieldValues extends FieldValues> =
         ComponentProps<typeof Checkbox>,
         | 'disabled'
         | 'onBlur'
-        | 'onChange'
         | 'onFocus'
         | 'progress'
         | 'size'
@@ -63,7 +62,9 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
         field.onChange(
           value ? [...(field.value ?? []), value] : event.target.checked,
         )
-        onChange?.(event)
+        onChange?.(
+          event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
+        )
       }}
       onBlur={event => {
         field.onBlur()

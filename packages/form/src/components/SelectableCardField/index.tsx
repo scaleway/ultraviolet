@@ -6,7 +6,7 @@ import type { BaseFieldProps } from '../../types'
 
 type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
   BaseFieldProps<TFieldValues>,
-  'label'
+  'label' | 'onChange'
 > &
   Partial<
     Pick<

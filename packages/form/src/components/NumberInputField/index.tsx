@@ -1,6 +1,6 @@
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
@@ -18,7 +18,6 @@ type NumberInputValueFieldProps<TFieldValues extends FieldValues> =
         | 'size'
         | 'step'
         | 'text'
-        | 'onChange'
         | 'className'
       >
     > & {
@@ -70,7 +69,7 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
       onChange={event => {
         // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
         field.onChange(event ?? null)
-        onChange?.(event)
+        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       onFocus={onFocus}
       maxValue={maxValue}
