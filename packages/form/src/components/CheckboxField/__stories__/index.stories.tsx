@@ -1,14 +1,17 @@
 import type { Meta } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { useForm } from 'react-hook-form'
 import { CheckboxField, Form } from '../..'
 import { mockErrors } from '../../../mocks'
 
 export default {
   component: CheckboxField,
   decorators: [
-    ChildStory => (
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
-        {values => (
+    ChildStory => {
+      const methods = useForm()
+
+      return (
+        <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             {ChildStory()}
             <Stack gap={1}>
@@ -16,7 +19,7 @@ export default {
                 Form input values:
               </Text>
               <Snippet prefix="lines">
-                {JSON.stringify(values.values, null, 1)}
+                {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
@@ -28,9 +31,9 @@ export default {
               </Snippet>
             </Stack>
           </Stack>
-        )}
-      </Form>
-    ),
+        </Form>
+      )
+    },
   ],
   parameters: {
     docs: {

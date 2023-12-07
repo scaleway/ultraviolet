@@ -10,7 +10,7 @@ export default {
     ChildStory => (
       <Form
         onRawSubmit={() => {}}
-        initialValues={{ tags: ['tag1', 'tag2'] }}
+        initialValues={{ defaultTagInput: ['tag1', 'tag2'] }}
         errors={mockErrors}
       >
         {values => (

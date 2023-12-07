@@ -100,6 +100,8 @@ export const DateField = <TFieldValues extends FieldValues>({
           const currentDate = parseDate(field.value as Date)
           newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
           field.onChange(newDate)
+        } else if (Array.isArray(val)) {
+          field.onChange(val)
         }
       }}
       onBlur={(e: FocusEvent<HTMLElement>) => {
@@ -113,14 +115,15 @@ export const DateField = <TFieldValues extends FieldValues>({
       disabled={disabled}
       autoFocus={autoFocus}
       excludeDates={excludeDates}
+      selectsRange={selectsRange}
       data-testid={dataTestId}
       startDate={
-        selectsRange
+        selectsRange && Array.isArray(field.value)
           ? (field.value as [Date | null, Date | null])[0]
           : undefined
       }
       endDate={
-        selectsRange
+        selectsRange && Array.isArray(field.value)
           ? (field.value as [Date | null, Date | null])[1]
           : undefined
       }
