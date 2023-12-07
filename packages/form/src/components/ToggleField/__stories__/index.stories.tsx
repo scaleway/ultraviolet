@@ -7,7 +7,13 @@ export default {
   component: ToggleField,
   decorators: [
     ChildStory => (
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+        initialValues={{
+          checked: true,
+        }}
+      >
         {values => (
           <Stack gap={2}>
             {ChildStory()}

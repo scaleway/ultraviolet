@@ -7,7 +7,11 @@ export default {
   component: RadioField,
   decorators: [
     ChildStory => (
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+        initialValues={{ required: false }}
+      >
         {values => (
           <Stack gap={2}>
             {ChildStory()}
