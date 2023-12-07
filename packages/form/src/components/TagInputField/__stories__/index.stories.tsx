@@ -7,7 +7,11 @@ export default {
   component: TagInputField,
   decorators: [
     ChildStory => (
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+        initialValues={{ defaultTagInput: ['tag1', 'tag2'] }}
+      >
         {ChildStory()}
       </Form>
     ),

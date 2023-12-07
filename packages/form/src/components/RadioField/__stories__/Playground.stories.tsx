@@ -4,4 +4,5 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   name: 'default',
+  value: 'default',
 }

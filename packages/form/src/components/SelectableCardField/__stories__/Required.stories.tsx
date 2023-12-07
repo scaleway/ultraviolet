@@ -16,4 +16,5 @@ Required.args = {
   children: 'Radio',
   name: 'required',
   required: true,
+  value: 'required',
 }

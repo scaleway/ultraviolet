@@ -6,7 +6,11 @@ export default {
   component: RadioField,
   decorators: [
     ChildStory => (
-      <Form onRawSubmit={() => {}} errors={mockErrors}>
+      <Form
+        onRawSubmit={() => {}}
+        errors={mockErrors}
+        initialValues={{ required: false }}
+      >
         {ChildStory()}
       </Form>
     ),
