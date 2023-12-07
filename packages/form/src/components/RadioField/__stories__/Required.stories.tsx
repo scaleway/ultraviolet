@@ -15,4 +15,5 @@ Required.args = {
   name: 'required',
   required: true,
   label: 'Option 1',
+  value: 'required',
 }
