@@ -126,7 +126,7 @@ importers:
         version: 7.5.3
       '@storybook/csf':
         specifier: canary
-        version: 0.1.1--canary.f0d3083.0
+        version: 0.1.2--canary.71.cad875c.0
       '@storybook/mdx2-csf':
         specifier: 1.1.0
         version: 1.1.0
@@ -423,18 +423,9 @@ importers:
       '@ultraviolet/ui':
         specifier: workspace:*
         version: link:../ui
-      final-form:
-        specifier: 4.20.10
-        version: 4.20.10
-      final-form-arrays:
-        specifier: 3.0.2
-        version: 3.0.2(final-form@4.20.10)
-      react-final-form:
-        specifier: 6.5.9
-        version: 6.5.9(final-form@4.20.10)(react@18.2.0)
-      react-final-form-arrays:
-        specifier: 3.1.4
-        version: 3.1.4(final-form-arrays@3.0.2)(final-form@4.20.10)(react-final-form@6.5.9)(react@18.2.0)
+      react-hook-form:
+        specifier: ^7.47.0
+        version: 7.47.0(react@18.2.0)
       react-select:
         specifier: 5.8.0
         version: 5.8.0(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
@@ -5952,8 +5943,8 @@ packages:
       type-fest: 2.19.0
     dev: true
 
-  /@storybook/csf@0.1.1--canary.f0d3083.0:
-    resolution: {integrity: sha512-3A9IhpgYi9k3Kk4shRV0Fhhp/et7pbPlztaja8wVcdu++9fCFXav+633dyoas3ZsVYZcO3+A19gL21V0or8XzQ==}
+  /@storybook/csf@0.1.2--canary.71.cad875c.0:
+    resolution: {integrity: sha512-lo0d6N4hmguYQFO/Iu8LtvJcx8+VtwjbbOolNui6DX5/K5CQWYd4F22NbozzLBvYYBSiY7Y9op0G+FWGsmvlXA==}
     dependencies:
       type-fest: 2.19.0
     dev: true
@@ -10594,19 +10585,12 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /final-form-arrays@3.0.2(final-form@4.20.10):
-    resolution: {integrity: sha512-TfO8aZNz3RrsZCDx8GHMQcyztDNpGxSSi9w4wpSNKlmv2PfFWVVM8P7Yj5tj4n0OWax+x5YwTLhT5BnqSlCi+w==}
-    peerDependencies:
-      final-form: ^4.18.2
-    dependencies:
-      final-form: 4.20.10
-    dev: false
-
   /final-form@4.20.10:
     resolution: {integrity: sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng==}
     engines: {node: '>=8'}
     dependencies:
       '@babel/runtime': 7.23.4
+    dev: true
 
   /finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
@@ -14641,34 +14625,17 @@ packages:
   /react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
 
-  /react-final-form-arrays@3.1.4(final-form-arrays@3.0.2)(final-form@4.20.10)(react-final-form@6.5.9)(react@18.2.0):
-    resolution: {integrity: sha512-siVFAolUAe29rMR6u8VwepoysUcUdh6MLV2OWnCtKpsPRUdT9VUgECjAPaVMAH2GROZNiVB9On1H9MMrm9gdpg==}
-    peerDependencies:
-      final-form: ^4.15.0
-      final-form-arrays: '>=1.0.4'
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
-      react-final-form: ^6.2.1
-    dependencies:
-      '@babel/runtime': 7.23.4
-      final-form: 4.20.10
-      final-form-arrays: 3.0.2(final-form@4.20.10)
-      react: 18.2.0
-      react-final-form: 6.5.9(final-form@4.20.10)(react@18.2.0)
-    dev: false
-
-  /react-final-form@6.5.9(final-form@4.20.10)(react@18.2.0):
-    resolution: {integrity: sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA==}
-    peerDependencies:
-      final-form: ^4.20.4
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || 18
-    dependencies:
-      '@babel/runtime': 7.23.4
-      final-form: 4.20.10
-      react: 18.2.0
-    dev: false
-
   /react-flatten-children@1.1.2:
     resolution: {integrity: sha512-9pnG/uw2Wa0n97s+yBZg/WgfMPE8RC4qNcr6iYbyb19sacCk3gRJCmCzAhTuANSWesFsK9v/yTKW42pkenaAfw==}
+    dev: false
+
+  /react-hook-form@7.47.0(react@18.2.0):
+    resolution: {integrity: sha512-F/TroLjTICipmHeFlMrLtNLceO2xr1jU3CyiNla5zdwsGUGu2UOxxR4UyJgLlhMwLW/Wzp4cpJ7CPfgJIeKdSg==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || 18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-inspector@6.0.2(react@18.2.0):
