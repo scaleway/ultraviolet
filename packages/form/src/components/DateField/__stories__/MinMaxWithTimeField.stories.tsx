@@ -25,6 +25,6 @@ export const MinMaxDateWithTimeField: StoryFn<
 
 MinMaxDateWithTimeField.args = {
   maxDate: new Date(),
-  name: 'date and input',
+  name: 'date',
   required: true,
 }

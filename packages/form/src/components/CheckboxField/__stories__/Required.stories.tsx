@@ -14,4 +14,5 @@ export const Required: StoryFn<ComponentProps<typeof CheckboxField>> = args => (
 Required.args = {
   name: 'required',
   required: true,
+  children: 'Checkbox required',
 }
