@@ -84,6 +84,7 @@ const RadioInput = styled.input`
 const RadioContainer = styled.div`
   position: relative;
   display: flex;
+  flex: 1;
   align-items: flex-start;
   gap: ${({ theme }) => theme.space['1']};
 
@@ -128,6 +129,10 @@ const RadioContainer = styled.div`
       }
     }
   }
+`
+
+const StyledLabel = styled.label`
+  flex: 1;
 `
 
 const MargedText = styled(Text)`
@@ -195,7 +200,7 @@ export const Radio = forwardRef(
 
     return (
       <Tooltip text={tooltip}>
-        <Stack gap={0.5}>
+        <Stack gap={0.5} width="100%">
           <RadioContainer
             aria-disabled={disabled}
             className={className}
@@ -224,7 +229,9 @@ export const Radio = forwardRef(
               <RadioMarkedIcon />
             </Ring>
             {label ? (
-              <label htmlFor={`${computedName}-${value}`}>{label}</label>
+              <StyledLabel htmlFor={`${computedName}-${value}`}>
+                {label}
+              </StyledLabel>
             ) : null}
           </RadioContainer>
           {helper ? (
