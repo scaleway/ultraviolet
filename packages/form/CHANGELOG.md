@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0-next.6
+
+### Minor Changes
+
+- Refactor regex
+
 ## 2.0.0-next.4
 
 ### Patch Changes
