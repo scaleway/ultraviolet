@@ -2,7 +2,7 @@
 
 exports[`RadioField should render correctly 1`] = `
 <DocumentFragment>
-  .cache-16otux {
+  .cache-ebwodr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,14 +23,18 @@ exports[`RadioField should render correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
-.cache-1i69udh {
+.cache-15it19w {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -38,50 +42,50 @@ exports[`RadioField should render correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1i69udh[aria-disabled='false'],
-.cache-1i69udh[aria-disabled='false']>label {
+.cache-15it19w[aria-disabled='false'],
+.cache-15it19w[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1i69udh[aria-disabled='true'][data-checked='false'] {
+.cache-15it19w[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.cache-1i69udh[aria-disabled='true'] {
+.cache-15it19w[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true']>label,
-.cache-1i69udh[aria-disabled='true'] .ehkrmld2 {
+.cache-15it19w[aria-disabled='true']>label,
+.cache-15it19w[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.cache-18dasel {
+.cache-1dt4s2g {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -91,7 +95,7 @@ exports[`RadioField should render correctly 1`] = `
   border-width: 0;
 }
 
-.cache-18dasel+.ehkrmld3 .ehkrmld4 {
+.cache-1dt4s2g+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -101,44 +105,44 @@ exports[`RadioField should render correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-18dasel:checked+svg .ehkrmld4 {
+.cache-1dt4s2g:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18dasel:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+.cache-1dt4s2g:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.cache-18dasel[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.cache-1wocwtm {
+.cache-1ijwlua {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -147,30 +151,36 @@ exports[`RadioField should render correctly 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1wocwtm .ehkrmld5 {
+.cache-1ijwlua .ehkrmld6 {
   fill: #ffffff;
+}
+
+.cache-82a6rk {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <form>
     <div
-      class="cache-16otux ehpbis70"
+      class="cache-ebwodr ehpbis70"
     >
       <div
         aria-disabled="false"
-        class="cache-1i69udh ehkrmld1"
+        class="cache-15it19w ehkrmld2"
         data-checked="false"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
-          class="cache-18dasel ehkrmld2"
+          class="cache-1dt4s2g ehkrmld3"
           id="test-test"
           name="test"
           type="radio"
           value="test"
         />
         <svg
-          class="cache-1wocwtm ehkrmld3"
+          class="cache-1ijwlua ehkrmld4"
           viewBox="0 0 24 24"
         >
           <g>
@@ -181,13 +191,13 @@ exports[`RadioField should render correctly 1`] = `
               stroke-width="2"
             />
             <circle
-              class="cache-0 ehkrmld5"
+              class="cache-0 ehkrmld6"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="cache-0 ehkrmld4"
+              class="cache-0 ehkrmld5"
               cx="12"
               cy="12"
               r="5"
@@ -195,6 +205,7 @@ exports[`RadioField should render correctly 1`] = `
           </g>
         </svg>
         <label
+          class="cache-82a6rk ehkrmld1"
           for="test-test"
         >
           Radio field
@@ -207,7 +218,7 @@ exports[`RadioField should render correctly 1`] = `
 
 exports[`RadioField should render correctly checked 1`] = `
 <DocumentFragment>
-  .cache-16otux {
+  .cache-ebwodr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -228,14 +239,18 @@ exports[`RadioField should render correctly checked 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
-.cache-1i69udh {
+.cache-15it19w {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -243,50 +258,50 @@ exports[`RadioField should render correctly checked 1`] = `
   gap: 8px;
 }
 
-.cache-1i69udh[aria-disabled='false'],
-.cache-1i69udh[aria-disabled='false']>label {
+.cache-15it19w[aria-disabled='false'],
+.cache-15it19w[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1i69udh[aria-disabled='true'][data-checked='false'] {
+.cache-15it19w[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.cache-1i69udh[aria-disabled='true'] {
+.cache-15it19w[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true']>label,
-.cache-1i69udh[aria-disabled='true'] .ehkrmld2 {
+.cache-15it19w[aria-disabled='true']>label,
+.cache-15it19w[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.cache-18dasel {
+.cache-1dt4s2g {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -296,7 +311,7 @@ exports[`RadioField should render correctly checked 1`] = `
   border-width: 0;
 }
 
-.cache-18dasel+.ehkrmld3 .ehkrmld4 {
+.cache-1dt4s2g+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -306,44 +321,44 @@ exports[`RadioField should render correctly checked 1`] = `
   transform: scale(0);
 }
 
-.cache-18dasel:checked+svg .ehkrmld4 {
+.cache-1dt4s2g:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18dasel:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+.cache-1dt4s2g:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.cache-18dasel[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.cache-1wocwtm {
+.cache-1ijwlua {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -352,31 +367,37 @@ exports[`RadioField should render correctly checked 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1wocwtm .ehkrmld5 {
+.cache-1ijwlua .ehkrmld6 {
   fill: #ffffff;
+}
+
+.cache-82a6rk {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <form>
     <div
-      class="cache-16otux ehpbis70"
+      class="cache-ebwodr ehpbis70"
     >
       <div
         aria-disabled="false"
-        class="cache-1i69udh ehkrmld1"
+        class="cache-15it19w ehkrmld2"
         data-checked="true"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
           checked=""
-          class="cache-18dasel ehkrmld2"
+          class="cache-1dt4s2g ehkrmld3"
           id="test-checked"
           name="test"
           type="radio"
           value="checked"
         />
         <svg
-          class="cache-1wocwtm ehkrmld3"
+          class="cache-1ijwlua ehkrmld4"
           viewBox="0 0 24 24"
         >
           <g>
@@ -387,13 +408,13 @@ exports[`RadioField should render correctly checked 1`] = `
               stroke-width="2"
             />
             <circle
-              class="cache-0 ehkrmld5"
+              class="cache-0 ehkrmld6"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="cache-0 ehkrmld4"
+              class="cache-0 ehkrmld5"
               cx="12"
               cy="12"
               r="5"
@@ -401,6 +422,7 @@ exports[`RadioField should render correctly checked 1`] = `
           </g>
         </svg>
         <label
+          class="cache-82a6rk ehkrmld1"
           for="test-checked"
         >
           Radio field checked
@@ -413,7 +435,7 @@ exports[`RadioField should render correctly checked 1`] = `
 
 exports[`RadioField should render correctly disabled 1`] = `
 <DocumentFragment>
-  .cache-16otux {
+  .cache-ebwodr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -434,14 +456,18 @@ exports[`RadioField should render correctly disabled 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
-.cache-1i69udh {
+.cache-15it19w {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -449,50 +475,50 @@ exports[`RadioField should render correctly disabled 1`] = `
   gap: 8px;
 }
 
-.cache-1i69udh[aria-disabled='false'],
-.cache-1i69udh[aria-disabled='false']>label {
+.cache-15it19w[aria-disabled='false'],
+.cache-15it19w[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1i69udh[aria-disabled='true'][data-checked='false'] {
+.cache-15it19w[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.cache-1i69udh[aria-disabled='true'] {
+.cache-15it19w[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true']>label,
-.cache-1i69udh[aria-disabled='true'] .ehkrmld2 {
+.cache-15it19w[aria-disabled='true']>label,
+.cache-15it19w[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.cache-18dasel {
+.cache-1dt4s2g {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -502,7 +528,7 @@ exports[`RadioField should render correctly disabled 1`] = `
   border-width: 0;
 }
 
-.cache-18dasel+.ehkrmld3 .ehkrmld4 {
+.cache-1dt4s2g+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -512,44 +538,44 @@ exports[`RadioField should render correctly disabled 1`] = `
   transform: scale(0);
 }
 
-.cache-18dasel:checked+svg .ehkrmld4 {
+.cache-1dt4s2g:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18dasel:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+.cache-1dt4s2g:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.cache-18dasel[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.cache-1wocwtm {
+.cache-1ijwlua {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -558,23 +584,29 @@ exports[`RadioField should render correctly disabled 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1wocwtm .ehkrmld5 {
+.cache-1ijwlua .ehkrmld6 {
   fill: #ffffff;
+}
+
+.cache-82a6rk {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <form>
     <div
-      class="cache-16otux ehpbis70"
+      class="cache-ebwodr ehpbis70"
     >
       <div
         aria-disabled="true"
-        class="cache-1i69udh ehkrmld1"
+        class="cache-15it19w ehkrmld2"
         data-checked="false"
       >
         <input
           aria-disabled="true"
           aria-invalid="false"
-          class="cache-18dasel ehkrmld2"
+          class="cache-1dt4s2g ehkrmld3"
           disabled=""
           id="test-disabled"
           name="test"
@@ -582,7 +614,7 @@ exports[`RadioField should render correctly disabled 1`] = `
           value="disabled"
         />
         <svg
-          class="cache-1wocwtm ehkrmld3"
+          class="cache-1ijwlua ehkrmld4"
           viewBox="0 0 24 24"
         >
           <g>
@@ -593,13 +625,13 @@ exports[`RadioField should render correctly disabled 1`] = `
               stroke-width="2"
             />
             <circle
-              class="cache-0 ehkrmld5"
+              class="cache-0 ehkrmld6"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="cache-0 ehkrmld4"
+              class="cache-0 ehkrmld5"
               cx="12"
               cy="12"
               r="5"
@@ -607,6 +639,7 @@ exports[`RadioField should render correctly disabled 1`] = `
           </g>
         </svg>
         <label
+          class="cache-82a6rk ehkrmld1"
           for="test-disabled"
         >
           Radio field disabled
@@ -619,7 +652,7 @@ exports[`RadioField should render correctly disabled 1`] = `
 
 exports[`RadioField should trigger events correctly 1`] = `
 <DocumentFragment>
-  .cache-16otux {
+  .cache-ebwodr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -640,14 +673,18 @@ exports[`RadioField should trigger events correctly 1`] = `
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
-.cache-1i69udh {
+.cache-15it19w {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
@@ -655,50 +692,50 @@ exports[`RadioField should trigger events correctly 1`] = `
   gap: 8px;
 }
 
-.cache-1i69udh[aria-disabled='false'],
-.cache-1i69udh[aria-disabled='false']>label {
+.cache-15it19w[aria-disabled='false'],
+.cache-15it19w[aria-disabled='false']>label {
   cursor: pointer;
 }
 
-.cache-1i69udh[aria-disabled='true'][data-checked='false'] {
+.cache-15it19w[aria-disabled='true'][data-checked='false'] {
   color: #b5b7bd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3+.ehkrmld4 .ehkrmld6 {
   fill: #e5dbfd;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 {
   fill: #b3144d;
 }
 
-.cache-1i69udh:hover[aria-disabled='false'] .ehkrmld2[aria-invalid='true']+.ehkrmld3 .ehkrmld5 {
+.cache-15it19w:hover[aria-disabled='false'] .ehkrmld3[aria-invalid='true']+.ehkrmld4 .ehkrmld6 {
   fill: #ffd3e3;
 }
 
-.cache-1i69udh[aria-disabled='true'] {
+.cache-15it19w[aria-disabled='true'] {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true']>label,
-.cache-1i69udh[aria-disabled='true'] .ehkrmld2 {
+.cache-15it19w[aria-disabled='true']>label,
+.cache-15it19w[aria-disabled='true'] .ehkrmld3 {
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 {
   fill: #e9eaeb;
   cursor: not-allowed;
 }
 
-.cache-1i69udh[aria-disabled='true'] .ehkrmld3 .ehkrmld5 {
+.cache-15it19w[aria-disabled='true'] .ehkrmld4 .ehkrmld6 {
   fill: #f3f3f4;
 }
 
-.cache-18dasel {
+.cache-1dt4s2g {
   cursor: pointer;
   position: absolute;
   height: 24px;
@@ -708,7 +745,7 @@ exports[`RadioField should trigger events correctly 1`] = `
   border-width: 0;
 }
 
-.cache-18dasel+.ehkrmld3 .ehkrmld4 {
+.cache-1dt4s2g+.ehkrmld4 .ehkrmld5 {
   transform-origin: center;
   -webkit-transition: 200ms -webkit-transform ease-in-out;
   transition: 200ms transform ease-in-out;
@@ -718,44 +755,44 @@ exports[`RadioField should trigger events correctly 1`] = `
   transform: scale(0);
 }
 
-.cache-18dasel:checked+svg .ehkrmld4 {
+.cache-1dt4s2g:checked+svg .ehkrmld5 {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-.cache-18dasel:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld3 {
+.cache-1dt4s2g:checked[aria-disabled='false'][aria-invalid='false']+.ehkrmld4 {
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:not([aria-disabled='true'])+.ehkrmld4 {
   fill: #e51963;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 {
   background-color: #5e127e40;
   fill: #8c40ef;
 }
 
-.cache-18dasel[aria-disabled='false']:active+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-disabled='false']:active+.ehkrmld4 .ehkrmld6 {
   fill: #f1eefc;
 }
 
-.cache-18dasel[aria-disabled='false']:focus-visible+.ehkrmld3 {
+.cache-1dt4s2g[aria-disabled='false']:focus-visible+.ehkrmld4 {
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 {
   background-color: #f91b6c40;
   fill: #e51963;
 }
 
-.cache-18dasel[aria-invalid='true']:focus+.ehkrmld3 .ehkrmld5 {
+.cache-1dt4s2g[aria-invalid='true']:focus+.ehkrmld4 .ehkrmld6 {
   fill: #ffebf2;
 }
 
-.cache-1wocwtm {
+.cache-1ijwlua {
   height: 24px;
   width: 24px;
   min-width: 24px;
@@ -764,30 +801,36 @@ exports[`RadioField should trigger events correctly 1`] = `
   fill: #d9dadd;
 }
 
-.cache-1wocwtm .ehkrmld5 {
+.cache-1ijwlua .ehkrmld6 {
   fill: #ffffff;
+}
+
+.cache-82a6rk {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <form>
     <div
-      class="cache-16otux ehpbis70"
+      class="cache-ebwodr ehpbis70"
     >
       <div
         aria-disabled="false"
-        class="cache-1i69udh ehkrmld1"
+        class="cache-15it19w ehkrmld2"
         data-checked="true"
       >
         <input
           aria-disabled="false"
           aria-invalid="false"
-          class="cache-18dasel ehkrmld2"
+          class="cache-1dt4s2g ehkrmld3"
           id="test-events"
           name="test"
           type="radio"
           value="events"
         />
         <svg
-          class="cache-1wocwtm ehkrmld3"
+          class="cache-1ijwlua ehkrmld4"
           viewBox="0 0 24 24"
         >
           <g>
@@ -798,13 +841,13 @@ exports[`RadioField should trigger events correctly 1`] = `
               stroke-width="2"
             />
             <circle
-              class="cache-0 ehkrmld5"
+              class="cache-0 ehkrmld6"
               cx="12"
               cy="12"
               r="8"
             />
             <circle
-              class="cache-0 ehkrmld4"
+              class="cache-0 ehkrmld5"
               cx="12"
               cy="12"
               r="5"
@@ -812,6 +855,7 @@ exports[`RadioField should trigger events correctly 1`] = `
           </g>
         </svg>
         <label
+          class="cache-82a6rk ehkrmld1"
           for="test-events"
         >
           Radio field events
