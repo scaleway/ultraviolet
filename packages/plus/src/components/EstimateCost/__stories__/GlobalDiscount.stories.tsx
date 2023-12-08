@@ -13,7 +13,7 @@ GlobalDiscount.args = {
     </EstimateCost.Item>,
   ],
   isBeta: true,
-  discount: 0.5,
+  discount: 0,
 }
 
 GlobalDiscount.parameters = {

@@ -358,7 +358,7 @@ export const EstimateCostContent = ({
                         }
                         sentiment="warning"
                       >
-                        {`${discount * 100}
+                        {`${discount > 0 ? discount * 100 : ''}
                           ${
                             locales[
                               `estimate.cost.beta.${
