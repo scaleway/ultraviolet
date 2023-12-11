@@ -36,13 +36,10 @@ const computePlacement = ({
     top: childrenTop,
     left: childrenLeft,
     right: childrenRight,
+    width: childrenWidth,
   } = childrenStructuredRef
 
-  const {
-    top: parentTop,
-    left: parentLeft,
-    right: parentRight,
-  } = offsetParentRect
+  const { top: parentTop, left: parentLeft } = offsetParentRect
 
   const isPopupPortalTargetBody =
     popupPortalTarget === document.body || offsetParent === document.body
@@ -55,7 +52,7 @@ const computePlacement = ({
     : childrenTop - parentTop
   const overloadedChildrenRight = isPopupPortalTargetBody
     ? childrenRight
-    : childrenRight - parentRight
+    : childrenLeft - parentLeft + childrenWidth
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
@@ -155,11 +152,7 @@ export const computePositions = ({
     height: childrenHeight,
   } = childrenRect
 
-  const {
-    top: parentTop,
-    left: parentLeft,
-    right: parentRight,
-  } = offsetParentRect
+  const { top: parentTop, left: parentLeft } = offsetParentRect
 
   const { width: popupWidth, height: popupHeight } = popupStructuredRef
 
@@ -181,7 +174,7 @@ export const computePositions = ({
     : childrenTop - parentTop
   const overloadedChildrenRight = isPopupPortalTargetBody
     ? childrenRight
-    : childrenRight + childrenWidth + ARROW_WIDTH + SPACE - parentRight / 2
+    : childrenLeft - parentLeft + childrenWidth
 
   switch (placementBasedOnWindowSize) {
     case 'bottom': {
