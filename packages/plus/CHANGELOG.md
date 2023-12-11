@@ -1,5 +1,21 @@
 # @ultraviolet/plus
 
+## 0.5.5
+
+### Patch Changes
+
+- [#3210](https://github.com/scaleway/ultraviolet/pull/3210) [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.43`.
+  Updated dependency `@types/react-dom` to `18.2.17`.
+
+- [#3227](https://github.com/scaleway/ultraviolet/pull/3227) [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.5`.
+  Updated dependency `@babel/runtime` to `7.23.5`.
+  Updated dependency `@babel/preset-env` to `7.23.5`.
+
+- [#3229](https://github.com/scaleway/ultraviolet/pull/3229) [`51ee42a`](https://github.com/scaleway/ultraviolet/commit/51ee42a2796994e6aa072c8da8e2c5f32217a7c9) Thanks [@matthprost](https://github.com/matthprost)! - Fix EstimateCost when the discount is set to 0
+
+- Updated dependencies [[`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2), [`4903820`](https://github.com/scaleway/ultraviolet/commit/49038205d25db2efc9dca152179407d6554b42ee), [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3), [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d), [`eea834d`](https://github.com/scaleway/ultraviolet/commit/eea834d585874b915d06798358ae8cef784c99e5), [`4900764`](https://github.com/scaleway/ultraviolet/commit/4900764288eaa13c16b5637e58cd0b2f5de4cce5)]:
+  - @ultraviolet/ui@1.28.0
+
 ## 0.5.4
 
 ### Patch Changes

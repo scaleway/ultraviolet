@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.11.0
+
+### Minor Changes
+
+- [#3220](https://github.com/scaleway/ultraviolet/pull/3220) [`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` label to take full width
+
+### Patch Changes
+
+- [#3210](https://github.com/scaleway/ultraviolet/pull/3210) [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.43`.
+  Updated dependency `@types/react-dom` to `18.2.17`.
+
+- [#3227](https://github.com/scaleway/ultraviolet/pull/3227) [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.5`.
+  Updated dependency `@babel/runtime` to `7.23.5`.
+  Updated dependency `@babel/preset-env` to `7.23.5`.
+- Updated dependencies [[`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2), [`4903820`](https://github.com/scaleway/ultraviolet/commit/49038205d25db2efc9dca152179407d6554b42ee), [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3), [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d), [`eea834d`](https://github.com/scaleway/ultraviolet/commit/eea834d585874b915d06798358ae8cef784c99e5), [`4900764`](https://github.com/scaleway/ultraviolet/commit/4900764288eaa13c16b5637e58cd0b2f5de4cce5)]:
+  - @ultraviolet/ui@1.28.0
+
 ## 1.10.6
 
 ### Patch Changes
