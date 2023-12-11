@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { ToggleGroupField } from '..'
 import { Form } from '../..'
 import { mockErrors } from '../../../mocks'
@@ -9,12 +10,30 @@ export default {
     ChildStory => (
       <Form
         initialValues={{ options: ['weekly-save'] }}
-        onRawSubmit={data => {
-          console.log('data', data)
-        }}
+        onRawSubmit={() => {}}
         errors={mockErrors}
       >
-        {ChildStory()}
+        {values => (
+          <Stack gap={2}>
+            {ChildStory()}
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form input values:
+              </Text>
+              <Snippet prefix="lines" initiallyExpanded>
+                {JSON.stringify(values.values, null, 1)}
+              </Snippet>
+            </Stack>
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form values:
+              </Text>
+              <Snippet prefix="lines">
+                {JSON.stringify(values, null, 1)}
+              </Snippet>
+            </Stack>
+          </Stack>
+        )}
       </Form>
     ),
   ],
@@ -26,7 +45,4 @@ export default {
 } as Meta<typeof ToggleGroupField>
 
 export { Playground } from './Playground.stories'
-export { Direction } from './Direction.stories'
-export { Error } from './Error.stories'
-export { Helper } from './Helper.stories'
 export { Required } from './Required.stories'

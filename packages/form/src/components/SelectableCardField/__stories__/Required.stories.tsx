@@ -8,12 +8,13 @@ export const Required: StoryFn<
   ComponentProps<typeof SelectableCardField>
 > = args => (
   <Stack gap={1}>
-    <SelectableCardField {...args} />
+    <SelectableCardField {...args} value="option 1" label="Radio 1" />
+    <SelectableCardField {...args} value="option 2" label="Radio 2" />
     <Submit>Submit</Submit>
   </Stack>
 )
 Required.args = {
-  children: 'Radio',
   name: 'required',
+  showTick: true,
   required: true,
 }

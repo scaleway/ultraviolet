@@ -7,5 +7,5 @@ export const Template: StoryFn<ComponentProps<typeof ToggleField>> = args => (
 )
 
 Template.args = {
-  name: 'template',
+  name: 'value',
 }

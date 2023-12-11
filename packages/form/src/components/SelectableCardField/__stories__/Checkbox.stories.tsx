@@ -9,14 +9,14 @@ export const Checkbox: StoryFn<
   <Row templateColumns="repeat(2, 2fr)" gap={1}>
     <SelectableCardField
       {...args}
-      name="option 1"
+      name="option1"
       showTick
       label="Option 1"
       type="checkbox"
     />
     <SelectableCardField
       {...args}
-      name="option 2"
+      name="option2"
       showTick
       label="Option 2"
       type="checkbox"
