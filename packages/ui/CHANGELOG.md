@@ -1,5 +1,29 @@
 # Change Log
 
+## 1.28.0
+
+### Minor Changes
+
+- [#3220](https://github.com/scaleway/ultraviolet/pull/3220) [`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` label to take full width
+
+- [#3218](https://github.com/scaleway/ultraviolet/pull/3218) [`4903820`](https://github.com/scaleway/ultraviolet/commit/49038205d25db2efc9dca152179407d6554b42ee) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Tabs />` component to use new `<MenuV2 />`
+
+- [#3233](https://github.com/scaleway/ultraviolet/pull/3233) [`4900764`](https://github.com/scaleway/ultraviolet/commit/4900764288eaa13c16b5637e58cd0b2f5de4cce5) Thanks [@matthprost](https://github.com/matthprost)! - Add sizes `xsmall` and `medium` to `<CopyButton />` component
+
+### Patch Changes
+
+- [#3210](https://github.com/scaleway/ultraviolet/pull/3210) [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.43`.
+  Updated dependency `@types/react-dom` to `18.2.17`.
+
+- [#3227](https://github.com/scaleway/ultraviolet/pull/3227) [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.5`.
+  Updated dependency `@babel/runtime` to `7.23.5`.
+  Updated dependency `@babel/preset-env` to `7.23.5`.
+
+- [#3228](https://github.com/scaleway/ultraviolet/pull/3228) [`eea834d`](https://github.com/scaleway/ultraviolet/commit/eea834d585874b915d06798358ae8cef784c99e5) Thanks [@matthprost](https://github.com/matthprost)! - Fix right position on popup
+
+- Updated dependencies [[`de30e18`](https://github.com/scaleway/ultraviolet/commit/de30e18584897ff02f43473d1dd41ee1a9d40d44), [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3), [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d)]:
+  - @ultraviolet/icons@2.7.0
+
 ## 1.27.3
 
 ### Patch Changes
