@@ -22,7 +22,7 @@ describe('CopyButton', () => {
 
   test('renders correctly', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test" />))
-  ;(['small', 'large'] as const).forEach(size => {
+  ;(['xsmall', 'small', 'medium', 'large'] as const).forEach(size => {
     test(`renders correctly sentiment ${size}`, () =>
       shouldMatchEmotionSnapshot(<CopyButton value="Test" size={size} />))
   })
@@ -35,6 +35,9 @@ describe('CopyButton', () => {
 
   test('renders correctly with no border', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test" noBorder />))
+
+  test('renders correctly with bordered', () =>
+    shouldMatchEmotionSnapshot(<CopyButton value="Test" bordered />))
 
   test('renders correctly with custom copy text', () =>
     shouldMatchEmotionSnapshot(<CopyButton value="Test" copyText="Copy me" />))
