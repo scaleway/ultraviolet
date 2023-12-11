@@ -7,7 +7,7 @@ import type {
   Ref,
 } from 'react'
 import { forwardRef } from 'react'
-import { Menu } from '../Menu'
+import { MenuV2 } from '../MenuV2'
 import { StyledTabButton } from './Tab'
 
 const ArrowIcon = styled(Icon)``
@@ -23,11 +23,20 @@ const StyledMenu = styled(StyledTabButton)`
   }
 `
 
+// This will wrap and give the positioning to the popup div that is added onto the disclosure
+const StyledPositioningWrapper = styled.div`
+  display: flex;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  right: 0;
+`
+
 type TabMenuProps = {
   children: ReactNode
   disclosure: ReactNode
-  visible?: ComponentProps<typeof Menu>['visible']
-  id?: ComponentProps<typeof Menu>['id']
+  visible?: ComponentProps<typeof MenuV2>['visible']
+  id?: ComponentProps<typeof MenuV2>['id']
 } & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'aria-disabled'>
 
 export const TabMenu = forwardRef(
@@ -43,25 +52,28 @@ export const TabMenu = forwardRef(
     }: TabMenuProps,
     ref: Ref<HTMLButtonElement>,
   ) => (
-    <Menu
-      visible={visible}
-      id={id}
-      ref={ref}
-      disclosure={
-        <StyledMenu
-          role="tab"
-          aria-disabled={disabled ?? 'false'}
-          disabled={disabled}
-          aria-haspopup="menu"
-          className={className}
-          {...props}
-        >
-          {disclosure}
-          <ArrowIcon name="arrow-down" />
-        </StyledMenu>
-      }
-    >
-      {children}
-    </Menu>
+    <StyledPositioningWrapper>
+      <MenuV2
+        visible={visible}
+        id={id}
+        ref={ref}
+        portalTarget={document.body} // We need to attach it to the body to avoid overflow issues
+        disclosure={
+          <StyledMenu
+            role="tab"
+            aria-disabled={disabled ?? 'false'}
+            disabled={disabled}
+            aria-haspopup="menu"
+            className={className}
+            {...props}
+          >
+            {disclosure}
+            <ArrowIcon name="arrow-down" />
+          </StyledMenu>
+        }
+      >
+        {children}
+      </MenuV2>
+    </StyledPositioningWrapper>
   ),
 )
