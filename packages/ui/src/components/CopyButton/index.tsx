@@ -4,7 +4,7 @@ import { Button } from '../Button'
 const COPY_DURATION = 2500
 
 type CopyButtonProps = {
-  size?: 'small' | 'large'
+  size?: 'xsmall' | 'small' | 'medium' | 'large'
   value: string
   copyText?: string
   copiedText?: string
