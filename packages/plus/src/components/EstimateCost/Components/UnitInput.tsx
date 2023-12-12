@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { SelectInput, Stack, TextInput } from '@ultraviolet/ui'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, FocusEvent } from 'react'
 
 type SelectOption = Exclude<
   NonNullable<ComponentProps<typeof SelectInput>['value']>,
@@ -48,7 +48,6 @@ const CustomSelectInput = styled(SelectInput)<{
 }>`
   ${({ width }) => width && `width: ${width}px;`}
   ${({ height }) => height && `height: ${height}px;`}
-
   &:hover,
   &:focus {
     text-decoration: none;
@@ -131,8 +130,21 @@ export const UnitInput = ({
       value={value}
       placeholder={placeholder}
       onChange={input => {
-        const numericValue = input ? parseInt(input, 10) : minValue
+        const numericValue = parseInt(input, 10)
         onChange(numericValue)
+      }}
+      onBlur={(event: FocusEvent<HTMLInputElement>) => {
+        const numericValue = parseInt(event.target.value, 10)
+        if (Number.isNaN(numericValue)) {
+          onChange(minValue)
+        }
+
+        if (numericValue < minValue) {
+          onChange(minValue)
+        }
+        if (numericValue > maxValue) {
+          onChange(maxValue)
+        }
       }}
       className={className}
       disabled={disabled}
