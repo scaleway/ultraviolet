@@ -181,7 +181,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const computedHelper = !success && !error ? helper : undefined
 
     return (
-      <Stack gap={1} className={className}>
+      <Stack gap="0.5" className={className}>
         <Stack direction="row" gap="1" alignItems="center">
           <Stack direction="row" gap="0.5" alignItems="start">
             <Text
