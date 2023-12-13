@@ -17,7 +17,7 @@ const StyledTextAreaWrapper = styled.div`
 
 const StyledTextAreaAbsoluteStack = styled(Stack)`
   position: absolute;
-  top: ${({ theme }) => theme.space['2']};
+  top: ${({ theme }) => theme.space['1.5']};
   right: ${({ theme }) => theme.space['1']};
 `
 
