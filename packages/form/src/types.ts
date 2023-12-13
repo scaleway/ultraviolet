@@ -36,8 +36,11 @@ export type FormErrors = {
     | 'maxDate']: RequiredErrors[key]
 }
 
-export type BaseFieldProps<TFieldValues extends FieldValues = FieldValues> = {
-  name: FieldPath<TFieldValues>
+export type BaseFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+> = {
+  name: TName
   required?: boolean
   /**
    * @deprecated use rules props instead
@@ -47,5 +50,6 @@ export type BaseFieldProps<TFieldValues extends FieldValues = FieldValues> = {
   defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
   label?: string
   value?: PathValue<TFieldValues, Path<TFieldValues>>
-  onChange?: (value?: PathValue<TFieldValues, Path<TFieldValues>>) => void
+  onChange?: (value?: PathValue<TFieldValues, TName>) => void
+  shouldUnregister?: UseControllerProps<TFieldValues, TName>['shouldUnregister']
 }

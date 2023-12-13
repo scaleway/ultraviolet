@@ -74,7 +74,7 @@ export type FormProps<TFormValues extends FieldValues = FieldValues> = {
   [
     {
       /**
-       * @deprecated
+       * @deprecated Use `methods` instead
        */
       initialValues?: DefaultValues<TFormValues>
     },

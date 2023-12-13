@@ -44,12 +44,14 @@ export const TimeField = <TFieldValues extends FieldValues>({
   rules,
   options,
   'data-testid': dataTestId,
+  shouldUnregister = false,
 }: TimeFieldProps<TFieldValues>) => {
   const {
     field,
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       ...rules,

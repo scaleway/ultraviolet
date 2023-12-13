@@ -37,9 +37,11 @@ export const ToggleField = <TFieldValues extends FieldValues>({
   parse,
   format,
   'data-testid': dataTestId,
+  shouldUnregister = false,
 }: ToggleFieldProps<TFieldValues>) => {
   const { field } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       ...rules,

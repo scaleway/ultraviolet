@@ -38,6 +38,7 @@ export const RadioField = <TFieldValues extends FieldValues>({
   value,
   rules,
   tooltip,
+  shouldUnregister = false,
 }: RadioFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -45,6 +46,7 @@ export const RadioField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       ...rules,

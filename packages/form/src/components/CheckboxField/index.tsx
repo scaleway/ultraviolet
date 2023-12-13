@@ -41,6 +41,7 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
   tooltip,
   'data-testid': dataTestId,
   value,
+  shouldUnregister = false,
 }: CheckboxFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -49,6 +50,7 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
   } = useController<TFieldValues>({
     name,
     disabled,
+    shouldUnregister,
     rules: {
       required,
       ...rules,

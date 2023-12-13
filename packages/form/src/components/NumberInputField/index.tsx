@@ -42,6 +42,7 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
   rules,
   className,
   label,
+  shouldUnregister = false,
 }: NumberInputValueFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -49,6 +50,7 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       max: maxValue,
       min: minValue,

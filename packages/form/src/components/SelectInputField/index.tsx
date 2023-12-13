@@ -169,6 +169,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
   noTopLabel,
   noOptionsMessage,
   customStyle,
+  shouldUnregister = false,
 }: SelectInputFieldProps<TFieldValues>) => {
   const options = useMemo(
     () =>
@@ -242,6 +243,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       minLength: minLength || required ? 1 : undefined,
