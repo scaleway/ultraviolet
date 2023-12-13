@@ -26,6 +26,7 @@ export const ToggleGroupField = <TFieldValues extends FieldValues>({
   error: customError,
   name,
   required = false,
+  shouldUnregister = false,
 }: ToggleGroupFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -33,6 +34,7 @@ export const ToggleGroupField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       validate: required ? value => value.length > 0 : undefined,
     },

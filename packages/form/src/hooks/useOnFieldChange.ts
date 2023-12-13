@@ -15,9 +15,6 @@ export type CallbackFn<
   values: DeepPartial<TFieldValues>,
 ) => void | Promise<void>
 
-/**
- * @deprecated
- */
 export const useOnFieldChange = <
   TFieldValues extends FieldValues,
   TFieldName extends FieldPath<TFieldValues>,

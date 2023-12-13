@@ -23,11 +23,13 @@ export const TagInputField = <TFieldValues extends FieldValues>({
   required,
   rules,
   variant,
+  shouldUnregister = false,
 }: TagInputFieldProps<TFieldValues>) => {
   const { field } = useController<TFieldValues>({
     name,
     rules: {
       required,
+      shouldUnregister,
       ...rules,
     },
   })
