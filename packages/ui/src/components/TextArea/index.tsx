@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
 import type { DOMAttributes, ReactNode } from 'react'
-import { forwardRef, useId } from 'react'
+import { forwardRef, useId, useMemo } from 'react'
 import { Button, SIZE_HEIGHT as ButtonSizeHeight } from '../Button'
 import { Row } from '../Row'
 import { Stack } from '../Stack'
@@ -22,13 +22,12 @@ const StyledTextAreaAbsoluteStack = styled(Stack)`
 `
 
 type StyledTextAreaProps = {
-  isSuccess: boolean
-  isError: boolean
+  hasSentimentIcon: boolean
   isClearable: boolean
 }
 const StyledTextArea = styled('textarea', {
   shouldForwardProp: prop =>
-    !['isSuccess', 'isError', 'isClearable'].includes(prop),
+    !['hasSentimentIcon', 'isClearable'].includes(prop),
 })<StyledTextAreaProps>`
   width: 100%;
   resize: vertical;
@@ -41,57 +40,45 @@ const StyledTextArea = styled('textarea', {
   border-radius: ${({ theme }) => theme.radii.default};
   padding: ${({ theme }) =>
     `${theme.space['1.5']} ${theme.space['1']} ${theme.space['1.5']} ${theme.space['2']}`};
-  padding-right: ${({ theme, isClearable, isError, isSuccess }) =>
+  padding-right: ${({ theme, isClearable, hasSentimentIcon }) =>
     /* including 1 optional if both element is visible + 1 because content is absolute 1space unit from right */
-    `calc(${theme.space[isClearable && (isSuccess || isError) ? '4' : '3']} + ${
+    `calc(${theme.space[isClearable && hasSentimentIcon ? '4' : '3']} + ${
       isClearable ? `${ButtonSizeHeight.xsmall}px` : '0px'
-    } + ${isSuccess || isError ? `${STATE_ICON_SIZE}px` : '0px'})`};
+    } + ${hasSentimentIcon ? `${STATE_ICON_SIZE}px` : '0px'})`};
 
-  ${({ theme, disabled }) =>
-    !disabled
-      ? `
-  &:hover {
-    border-color: ${theme.colors.primary.border};
+  &[data-success='true'] {
+    border-color: ${({ theme }) => theme.colors.success.border};
   }
-  &:focus {
-    outline: none;
-    border-color: ${theme.colors.primary.border};
-    box-shadow: ${theme.shadows.focusPrimary};
+
+  &[data-error='true'] {
+    border-color: ${({ theme }) => theme.colors.danger.border};
   }
-  `
-      : ''}
 
-  ${({ theme, isSuccess, isError, readOnly, disabled }) => {
-    if (disabled) {
-      return `
-            background : ${theme.colors.neutral.backgroundDisabled};
-            border-color : ${theme.colors.neutral.borderDisabled};
-            color : ${theme.colors.neutral.textDisabled};
-            &::placeholder {
-              color: ${theme.colors.neutral.textWeakDisabled};
-            }
-            cursor: not-allowed;
-        `
+  &[data-readOnly='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    border-color: ${({ theme }) => theme.colors.neutral.border};
+  }
+
+  &[data-disabled='true'] {
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.neutral.textWeakDisabled};
     }
-    if (readOnly) {
-      return `
-            background : ${theme.colors.neutral.backgroundWeak};
-            border-color : ${theme.colors.neutral.borderWeak};
-        `
-    }
-    if (isSuccess) {
-      return `
-            border-color : ${theme.colors.success.border};
-        `
-    }
-    if (isError) {
-      return `
-            border-color : ${theme.colors.danger.border};
-        `
+  }
+
+  &:not([data-disabled='true']):hover {
+    &:hover {
+      border-color: ${({ theme }) => theme.colors.primary.border};
     }
 
-    return ''
-  }}
+    &:focus {
+      outline: none;
+      border-color: ${({ theme }) => theme.colors.primary.border};
+      box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
+    }
+  }
 `
 
 type TextAreaProps = {
@@ -174,11 +161,20 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ) => {
     const localId = useId()
 
-    // Avoid conflicts between properties
-    const computedReadOnly = !disabled && readOnly
-    const computedSuccess = !disabled && !readOnly ? success : undefined
-    const computedError = !disabled && !readOnly && !success ? error : undefined
-    const computedHelper = !success && !error ? helper : undefined
+    const sentiment = useMemo(() => {
+      if (error) {
+        return 'danger'
+      }
+
+      if (success) {
+        return 'success'
+      }
+
+      return 'neutral'
+    }, [error, success])
+    const notice = success || error || helper
+
+    const computedClearable = clearable && !!value
 
     return (
       <Stack gap="0.5" className={className}>
@@ -199,7 +195,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         <Tooltip text={tooltip}>
           <StyledTextAreaWrapper>
             <StyledTextArea
-              aria-invalid={!!computedError}
+              aria-invalid={!!error}
               id={id ?? localId}
               tabIndex={tabIndex}
               autoFocus={autoFocus}
@@ -210,9 +206,12 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               onChange={event => {
                 onChange(event.currentTarget.value)
               }}
-              isSuccess={!!computedSuccess}
-              isError={!!computedError}
-              isClearable={!!clearable}
+              hasSentimentIcon={!!success || !!error}
+              data-disabled={disabled}
+              data-readOnly={readOnly}
+              data-success={!!success}
+              data-error={!!error}
+              isClearable={!!computedClearable}
               minLength={minLength}
               maxLength={maxLength}
               placeholder={placeholder}
@@ -220,14 +219,13 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               name={name}
               onFocus={onFocus}
               onBlur={onBlur}
-              readOnly={computedReadOnly}
             />
             <StyledTextAreaAbsoluteStack
               direction="row"
               alignItems="center"
               gap="1"
             >
-              {clearable ? (
+              {computedClearable ? (
                 <Button
                   aria-label="clear value"
                   variant="ghost"
@@ -251,32 +249,22 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           </StyledTextAreaWrapper>
         </Tooltip>
 
-        {computedSuccess || computedError || computedHelper || maxLength ? (
+        {notice || maxLength ? (
           <Row templateColumns="minmax(0, 1fr) min-content" gap="1">
             <div>
-              {computedSuccess ? (
-                <Text as="p" variant="caption" sentiment="success">
-                  {computedSuccess}
-                </Text>
-              ) : null}
-              {computedError ? (
-                <Text as="p" variant="caption" sentiment="danger">
-                  {computedError}
-                </Text>
-              ) : null}
-              {computedHelper && typeof computedHelper === 'string' ? (
+              {error || success || typeof helper === 'string' ? (
                 <Text
                   as="p"
                   variant="caption"
-                  sentiment="neutral"
-                  prominence="weak"
+                  sentiment={sentiment}
+                  prominence={!error && !success ? 'weak' : 'default'}
                   disabled={disabled}
                 >
-                  {computedHelper}
+                  {error || success || helper}
                 </Text>
               ) : null}
-              {computedHelper && typeof computedHelper !== 'string'
-                ? computedHelper
+              {!error && !success && typeof helper !== 'string' && helper
+                ? helper
                 : null}
             </div>
             {maxLength ? (

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextArea should render correctly when input  has a error sentiment 1`] = `
+exports[`TextInput should render correctly when input  has a error sentiment 1`] = `
 <DocumentFragment>
   .cache-ymc80m-Stack {
   display: -webkit-box;
@@ -83,86 +83,94 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
-  position: relative;
+.cache-64cfwu-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-1gib1rw-StyledTextArea {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 16px);
 }
 
-.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea[data-success='true'] {
+.cache-64cfwu-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1gib1rw-StyledTextArea[data-error='true'] {
+.cache-64cfwu-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+.cache-64cfwu-StyledInputWrapper[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-64cfwu-StyledInputWrapper:not([data-disabled='true']):hover {
   border-color: #8c40ef;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.cache-pgps27-Stack-StateStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -183,32 +191,16 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  padding: 0 16px;
 }
 
-.cache-1cpaqth-sizeStyles {
+.cache-1vzt1iy-sizeStyles {
   vertical-align: middle;
   fill: #b3144d;
-  height: 1em;
-  width: 1em;
-  min-width: 1em;
-  min-height: 1em;
-}
-
-.cache-1fmk7r4-StyledRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) min-content;
-  gap: 8px;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .cache-fkb4e-StyledText {
@@ -241,25 +233,24 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
       </div>
     </div>
     <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
+      class="cache-64cfwu-StyledInputWrapper e7tir8v0"
+      data-disabled="false"
+      data-error="true"
+      data-readonly="false"
+      data-success="false"
     >
-      <textarea
+      <input
         aria-invalid="true"
-        class="cache-1gib1rw-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="true"
-        data-readonly="false"
-        data-success="false"
+        class="cache-137prd4-StyledInput e7tir8v1"
         id=":rk:"
-        rows="3"
-      >
-        test
-      </textarea>
+        type="text"
+        value="test"
+      />
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        class="cache-pgps27-Stack-StateStack e7tir8v4"
       >
         <svg
-          class="cache-1cpaqth-sizeStyles e1gt4cfo0"
+          class="cache-1vzt1iy-sizeStyles e1gt4cfo0"
           viewBox="0 0 24 24"
         >
           <path
@@ -268,22 +259,16 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
         </svg>
       </div>
     </div>
-    <div
-      class="cache-1fmk7r4-StyledRow e3f5lzv0"
+    <p
+      class="cache-fkb4e-StyledText e13y3mga0"
     >
-      <div>
-        <p
-          class="cache-fkb4e-StyledText e13y3mga0"
-        >
-          success
-        </p>
-      </div>
-    </div>
+      success
+    </p>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input has a success sentiment 1`] = `
+exports[`TextInput should render correctly when input has a success sentiment 1`] = `
 <DocumentFragment>
   .cache-ymc80m-Stack {
   display: -webkit-box;
@@ -366,86 +351,94 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
-  position: relative;
+.cache-64cfwu-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-1gib1rw-StyledTextArea {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 16px);
 }
 
-.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea::placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-1gib1rw-StyledTextArea[data-success='true'] {
+.cache-64cfwu-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1gib1rw-StyledTextArea[data-error='true'] {
+.cache-64cfwu-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+.cache-64cfwu-StyledInputWrapper[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-64cfwu-StyledInputWrapper:not([data-disabled='true']):hover {
   border-color: #8c40ef;
 }
 
-.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
+.cache-pgps27-Stack-StateStack {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -466,9 +459,7 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  padding: 0 16px;
 }
 
 .cache-1gu5rzu-sizeStyles {
@@ -478,20 +469,6 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   width: 16px;
   min-width: 16px;
   min-height: 16px;
-}
-
-.cache-1fmk7r4-StyledRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) min-content;
-  gap: 8px;
-  -webkit-align-items: normal;
-  -webkit-box-align: normal;
-  -ms-flex-align: normal;
-  align-items: normal;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
 }
 
 .cache-urxuf6-StyledText {
@@ -524,22 +501,21 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
       </div>
     </div>
     <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
+      class="cache-64cfwu-StyledInputWrapper e7tir8v0"
+      data-disabled="false"
+      data-error="false"
+      data-readonly="false"
+      data-success="true"
     >
-      <textarea
+      <input
         aria-invalid="false"
-        class="cache-1gib1rw-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="true"
+        class="cache-137prd4-StyledInput e7tir8v1"
         id=":rg:"
-        rows="3"
-      >
-        test
-      </textarea>
+        type="text"
+        value="test"
+      />
       <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        class="cache-pgps27-Stack-StateStack e7tir8v4"
       >
         <svg
           class="cache-1gu5rzu-sizeStyles e1gt4cfo0"
@@ -551,22 +527,16 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
         </svg>
       </div>
     </div>
-    <div
-      class="cache-1fmk7r4-StyledRow e3f5lzv0"
+    <p
+      class="cache-urxuf6-StyledText e13y3mga0"
     >
-      <div>
-        <p
-          class="cache-urxuf6-StyledText e13y3mga0"
-        >
-          success
-        </p>
-      </div>
-    </div>
+      success
+    </p>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input is disabled 1`] = `
+exports[`TextInput should render correctly when input is disabled 1`] = `
 <DocumentFragment>
   .cache-ymc80m-Stack {
   display: -webkit-box;
@@ -649,109 +619,91 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
-  position: relative;
+.cache-64cfwu-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-9412ib-StyledTextArea {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.cache-64cfwu-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.cache-64cfwu-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.cache-64cfwu-StyledInputWrapper[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-64cfwu-StyledInputWrapper:not([data-disabled='true']):hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
 <div
@@ -772,30 +724,26 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
       </div>
     </div>
     <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
+      class="cache-64cfwu-StyledInputWrapper e7tir8v0"
+      data-disabled="true"
+      data-error="false"
+      data-readonly="false"
+      data-success="false"
     >
-      <textarea
+      <input
         aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="true"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
+        class="cache-137prd4-StyledInput e7tir8v1"
         disabled=""
         id=":ra:"
-        rows="3"
-      >
-        test
-      </textarea>
-      <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        type="text"
+        value="test"
       />
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly when input is readOnly 1`] = `
+exports[`TextInput should render correctly when input is readOnly 1`] = `
 <DocumentFragment>
   .cache-ymc80m-Stack {
   display: -webkit-box;
@@ -878,109 +826,91 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
-  position: relative;
+.cache-64cfwu-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-9412ib-StyledTextArea {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.cache-64cfwu-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.cache-64cfwu-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.cache-64cfwu-StyledInputWrapper[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-64cfwu-StyledInputWrapper:not([data-disabled='true']):hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
 <div
@@ -1001,29 +931,26 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
       </div>
     </div>
     <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
+      class="cache-64cfwu-StyledInputWrapper e7tir8v0"
+      data-disabled="false"
+      data-error="false"
+      data-readonly="true"
+      data-success="false"
     >
-      <textarea
+      <input
         aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="true"
-        data-success="false"
+        class="cache-137prd4-StyledInput e7tir8v1"
         id=":rd:"
-        rows="3"
-      >
-        test
-      </textarea>
-      <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        readonly=""
+        type="text"
+        value="test"
       />
     </div>
   </div>
 </DocumentFragment>
 `;
 
-exports[`TextArea should render correctly with basic props 1`] = `
+exports[`TextInput should render correctly with basic props 1`] = `
 <DocumentFragment>
   .cache-ymc80m-Stack {
   display: -webkit-box;
@@ -1106,109 +1033,91 @@ exports[`TextArea should render correctly with basic props 1`] = `
   text-decoration: none;
 }
 
-.cache-1ljps3t-StyledTextAreaWrapper {
-  position: relative;
+.cache-64cfwu-StyledInputWrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-9412ib-StyledTextArea {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea::placeholder {
+.cache-64cfwu-StyledInputWrapper>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-9412ib-StyledTextArea[data-success='true'] {
+.cache-64cfwu-StyledInputWrapper[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-9412ib-StyledTextArea[data-error='true'] {
+.cache-64cfwu-StyledInputWrapper[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+.cache-64cfwu-StyledInputWrapper[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true'] {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+.cache-64cfwu-StyledInputWrapper[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-64cfwu-StyledInputWrapper:not([data-disabled='true']):hover {
   border-color: #8c40ef;
 }
 
-.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+.cache-137prd4-StyledInput {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
 <div
@@ -1229,22 +1138,18 @@ exports[`TextArea should render correctly with basic props 1`] = `
       </div>
     </div>
     <div
-      class="cache-1ljps3t-StyledTextAreaWrapper enu776d2"
+      class="cache-64cfwu-StyledInputWrapper e7tir8v0"
+      data-disabled="false"
+      data-error="false"
+      data-readonly="false"
+      data-success="false"
     >
-      <textarea
+      <input
         aria-invalid="false"
-        class="cache-9412ib-StyledTextArea enu776d0"
-        data-disabled="false"
-        data-error="false"
-        data-readonly="false"
-        data-success="false"
+        class="cache-137prd4-StyledInput e7tir8v1"
         id=":r0:"
-        rows="3"
-      >
-        test
-      </textarea>
-      <div
-        class="cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack enu776d1"
+        type="text"
+        value="test"
       />
     </div>
   </div>
