@@ -1,62 +1,67 @@
 import { TextInput } from '@ultraviolet/ui'
 import type { ComponentProps, Ref } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type TextInputFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof TextInput>,
-        | 'autoCapitalize'
-        | 'autoComplete'
-        | 'autoCorrect'
-        | 'autoFocus'
-        | 'autoSave'
-        | 'cols'
-        | 'disabled'
-        | 'fillAvailable'
-        | 'generated'
-        | 'id'
-        | 'multiline'
-        | 'notice'
-        | 'onBlur'
-        | 'onFocus'
-        | 'onKeyDown'
-        | 'onKeyUp'
-        | 'placeholder'
-        | 'random'
-        | 'readOnly'
-        | 'resizable'
-        | 'rows'
-        | 'type'
-        | 'noTopLabel'
-        | 'unit'
-        | 'valid'
-        | 'size'
-        | 'maxLength'
-        | 'minLength'
-        | 'min'
-        | 'max'
-      >
-    > & {
-      className?: string
-      /**
-       * @deprecated Use rules instead
-       */
-      regex?: (RegExp | RegExp[])[]
+type TextInputFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof TextInput>,
+      | 'autoCapitalize'
+      | 'autoComplete'
+      | 'autoCorrect'
+      | 'autoFocus'
+      | 'autoSave'
+      | 'cols'
+      | 'disabled'
+      | 'fillAvailable'
+      | 'generated'
+      | 'id'
+      | 'multiline'
+      | 'notice'
+      | 'onBlur'
+      | 'onFocus'
+      | 'onKeyDown'
+      | 'onKeyUp'
+      | 'placeholder'
+      | 'random'
+      | 'readOnly'
+      | 'resizable'
+      | 'rows'
+      | 'type'
+      | 'noTopLabel'
+      | 'unit'
+      | 'valid'
+      | 'size'
+      | 'maxLength'
+      | 'minLength'
+      | 'min'
+      | 'max'
+    >
+  > & {
+    className?: string
+    /**
+     * @deprecated Use rules instead
+     */
+    regex?: (RegExp | RegExp[])[]
 
-      format?: (value: unknown) => PathValue<TFieldValues, Path<TFieldValues>>
-      parse?: (value: string) => PathValue<TFieldValues, Path<TFieldValues>>
+    format?: (value: unknown) => PathValue<TFieldValues, Path<TFieldValues>>
+    parse?: (value: string) => PathValue<TFieldValues, Path<TFieldValues>>
 
-      customError?: string
-      formatOnBlur?: boolean
-      innerRef?: Ref<HTMLInputElement>
-    }
+    customError?: string
+    formatOnBlur?: boolean
+    innerRef?: Ref<HTMLInputElement>
+  }
 
-export const TextInputField = <TFieldValues extends FieldValues>({
+export const TextInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   autoCapitalize,
   autoComplete,
   autoCorrect,
@@ -101,7 +106,8 @@ export const TextInputField = <TFieldValues extends FieldValues>({
   defaultValue,
   customError,
   innerRef,
-}: TextInputFieldProps<TFieldValues>) => {
+  shouldUnregister = false,
+}: TextInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,
@@ -109,6 +115,7 @@ export const TextInputField = <TFieldValues extends FieldValues>({
   } = useController<TFieldValues>({
     name,
     defaultValue,
+    shouldUnregister,
     rules: {
       required,
       validate: {

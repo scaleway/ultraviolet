@@ -42,12 +42,14 @@ export const SelectableCardField = <TFieldValues extends FieldValues>({
   id,
   label,
   rules,
+  shouldUnregister = false,
 }: SelectableCardFieldProps<TFieldValues>) => {
   const {
     field,
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       required,
       ...rules,

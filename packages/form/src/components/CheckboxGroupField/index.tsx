@@ -32,6 +32,7 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   error: customError,
   name,
   required = false,
+  shouldUnregister = false,
 }: CheckboxGroupFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -39,6 +40,7 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
   })
 
   return (

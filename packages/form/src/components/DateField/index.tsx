@@ -59,6 +59,7 @@ export const DateField = <TFieldValues extends FieldValues>({
   excludeDates,
   selectsRange,
   'data-testid': dataTestId,
+  shouldUnregister = false,
 }: DateFieldProps<TFieldValues>) => {
   const { getError } = useErrors()
   const {
@@ -66,6 +67,7 @@ export const DateField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules: {
       ...rules,
       validate: {

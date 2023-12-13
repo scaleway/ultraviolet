@@ -28,6 +28,7 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
   error: customError,
   helper,
   direction,
+  shouldUnregister = false,
 }: RadioGroupFieldProps<TFieldValues>): JSX.Element => {
   const { getError } = useErrors()
   const {
@@ -35,6 +36,7 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
     fieldState: { error },
   } = useController<TFieldValues>({
     name,
+    shouldUnregister,
     rules,
   })
 
