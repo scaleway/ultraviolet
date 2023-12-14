@@ -74,7 +74,21 @@ export type FormProps<TFormValues extends FieldValues = FieldValues> = {
   [
     {
       /**
-       * @deprecated Use `methods` instead
+       * @deprecated Use the `methods` prop with [useForm](https://www.react-hook-form.com/api/useform/) instead.
+       *
+       * @example
+       * ```tsx
+       *  const methods = useForm({
+       *    defaultValues,
+       *    mode: 'onChange'
+       *  })
+       *
+       *  return (
+       *    <Form methods={methods} onRawSubmit={handleSubmit} errors={formErrors}>
+       *      // ...
+       *    </Form>
+       *  )
+       * ```
        */
       initialValues?: DefaultValues<TFormValues>
     },

@@ -17,9 +17,10 @@ type Options<TFieldValues extends FieldValues> = {
 
 /**
  * @deprecated Use [useForm](https://www.react-hook-form.com/api/useform/), [useFormContext](https://www.react-hook-form.com/api/useformcontext/) or [useWatch](https://www.react-hook-form.com/api/usewatch/) to get values. Use [useFormState](https://www.react-hook-form.com/api/useformstate/) to get fields states.
+ *
  * @example
  * ```tsx
- * const Input = () {
+ *  const Input = () {
  *   const username = useWatch({
  *    name: 'username'
  *   })
@@ -29,7 +30,6 @@ type Options<TFieldValues extends FieldValues> = {
  *   console.log(errors.username)
  * }
  * ```
-
  */
 export const useFieldDeprecated = <
   T,
