@@ -12,6 +12,7 @@ export const Regex: StoryFn<ComponentProps<typeof TextInputField>> = args => (
 )
 
 Regex.args = {
-  name: 'Regex',
+  name: 'value',
   regex: [/^[a-zA-Z]*$/],
+  notice: 'Current regex: /^[a-zA-Z]*$/',
 }

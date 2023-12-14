@@ -7,5 +7,5 @@ export const Template: StoryFn<ComponentProps<typeof TimeField>> = args => (
 )
 
 Template.args = {
-  name: 'template',
+  name: 'time',
 }

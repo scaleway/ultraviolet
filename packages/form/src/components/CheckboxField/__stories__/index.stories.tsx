@@ -13,10 +13,18 @@ export default {
             {ChildStory()}
             <Stack gap={1}>
               <Text variant="bodyStrong" as="p">
-                Form values:
+                Form input values:
               </Text>
               <Snippet prefix="lines">
                 {JSON.stringify(values.values, null, 1)}
+              </Snippet>
+            </Stack>
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form values:
+              </Text>
+              <Snippet prefix="lines">
+                {JSON.stringify(values, null, 1)}
               </Snippet>
             </Stack>
           </Stack>
@@ -35,11 +43,4 @@ export default {
 } as Meta
 
 export { Playground } from './Playground.stories'
-
-export { Checked } from './Checked.stories'
-
-export { BooleanChecked } from './BooleanChecked.stories'
-
-export { Disabled } from './Disabled.stories'
-
 export { Required } from './Required.stories'

@@ -2,9 +2,10 @@ import type { StoryFn } from '@storybook/react'
 import type { SelectInputFieldProps } from '..'
 import { SelectInputField } from '..'
 
-export const Groups: StoryFn<SelectInputFieldProps> = () => (
+export const Multiple: StoryFn<SelectInputFieldProps> = () => (
   <SelectInputField
     name="options"
+    multiple
     options={[
       {
         label: 'option1',
