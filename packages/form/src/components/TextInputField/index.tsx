@@ -45,9 +45,6 @@ type TextInputFieldProps<
     >
   > & {
     className?: string
-    /**
-     * @deprecated Use rules instead
-     */
     regex?: (RegExp | RegExp[])[]
 
     format?: (value: unknown) => PathValue<TFieldValues, Path<TFieldValues>>

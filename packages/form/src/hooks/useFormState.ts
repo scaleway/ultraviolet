@@ -7,6 +7,7 @@ type UseFormStateParams = {
 
 /**
  * @deprecated Use [useForm](https://www.react-hook-form.com/api/useform/), [useFormContext](https://www.react-hook-form.com/api/useformcontext/) or [useWatch](https://www.react-hook-form.com/api/usewatch/) to get values. Use [useFormState](https://www.react-hook-form.com/api/useformstate/) to get form states.
+ *
  * @example
  * ```tsx
  * const Input = () {
