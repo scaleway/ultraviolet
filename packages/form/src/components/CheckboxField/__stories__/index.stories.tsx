@@ -9,6 +9,19 @@ export default {
   decorators: [
     ChildStory => {
       const methods = useForm()
+      const {
+        errors,
+        isDirty,
+        isSubmitting,
+        touchedFields,
+        submitCount,
+        dirtyFields,
+        isValid,
+        isLoading,
+        isSubmitted,
+        isValidating,
+        isSubmitSuccessful,
+      } = methods.formState
 
       return (
         <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
@@ -27,7 +40,23 @@ export default {
                 Form values:
               </Text>
               <Snippet prefix="lines">
-                {JSON.stringify(values, null, 1)}
+                {JSON.stringify(
+                  {
+                    errors,
+                    isDirty,
+                    isSubmitting,
+                    touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
+                  },
+                  null,
+                  1,
+                )}
               </Snippet>
             </Stack>
           </Stack>

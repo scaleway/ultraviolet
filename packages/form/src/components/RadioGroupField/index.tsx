@@ -37,7 +37,10 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
   } = useController<TFieldValues>({
     name,
     shouldUnregister,
-    rules,
+    rules: {
+      required,
+      ...rules,
+    },
   })
 
   return (
