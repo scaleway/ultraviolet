@@ -137,6 +137,7 @@ export const SwitchButton = ({
             onFocus={onFocus}
             data-checked={localValue === leftButton.value}
             label={leftButton.label}
+            data-testid={dataTestId ? `${dataTestId}-left` : undefined}
           />
           <StyledSelectableCard
             ref={rightButtonRef}
@@ -148,6 +149,7 @@ export const SwitchButton = ({
             onFocus={onFocus}
             data-checked={localValue === rightButton.value}
             label={rightButton.label}
+            data-testid={dataTestId ? `${dataTestId}-right` : undefined}
           />
         </StyledBorderedBox>
       </div>
