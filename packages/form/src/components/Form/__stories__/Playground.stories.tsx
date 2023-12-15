@@ -41,6 +41,19 @@ export const Playground: StoryFn<typeof Form> = () => {
   })
 
   const disableName = methods.watch('disableName')
+  const {
+    errors,
+    isDirty,
+    isSubmitting,
+    touchedFields,
+    submitCount,
+    dirtyFields,
+    isValid,
+    isLoading,
+    isSubmitted,
+    isValidating,
+    isSubmitSuccessful,
+  } = methods.formState
 
   return (
     <Form<FormValues>
@@ -136,7 +149,23 @@ export const Playground: StoryFn<typeof Form> = () => {
             Form values:
           </Text>
           <Snippet prefix="lines">
-            {JSON.stringify(methods.formState, null, 1)}
+            {JSON.stringify(
+              {
+                errors,
+                isDirty,
+                isSubmitting,
+                touchedFields,
+                submitCount,
+                dirtyFields,
+                isValid,
+                isLoading,
+                isSubmitted,
+                isValidating,
+                isSubmitSuccessful,
+              },
+              null,
+              1,
+            )}
           </Snippet>
         </Stack>
       </Stack>
