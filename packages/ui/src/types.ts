@@ -6,5 +6,5 @@ type SingleXOR<T, U> = T | U extends object
 export type XOR<T extends unknown[]> = T extends [infer Only]
   ? Only
   : T extends [infer A, infer B, ...infer Rest]
-  ? XOR<[SingleXOR<A, B>, ...Rest]>
-  : never
+    ? XOR<[SingleXOR<A, B>, ...Rest]>
+    : never

@@ -13,8 +13,14 @@ $ pnpm add @ultraviolet/ui @emotion/react @emotion/styled
 You will also need to import fonts in your project by adding:
 
 ```html
-<link href="https://fonts.cdnfonts.com/css/inter?styles=29139,29137,29140" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604" rel="stylesheet">
+<link
+  href="https://fonts.cdnfonts.com/css/inter?styles=29139,29137,29140"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604"
+  rel="stylesheet"
+/>
 ```
 
 ### Usage
@@ -25,10 +31,12 @@ import { Button, normalize, theme } from '@ultraviolet/ui'
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Global styles={css`${normalize()}`} />
-    <Button onClick={() => console.log('clicked')}>
-      Click Me
-    </Button>
+    <Global
+      styles={css`
+        ${normalize()}
+      `}
+    />
+    <Button onClick={() => console.log('clicked')}>Click Me</Button>
   </ThemeProvider>
 )
 ```
@@ -63,7 +71,6 @@ declare module '@emotion/react' {
 ## Documentation
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
-
 
 ## Contributing
 

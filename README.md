@@ -10,7 +10,7 @@
 
 # Ultraviolet Core
 
-Ultraviolet Core contains the core features of the Ultraviolet UI library. 
+Ultraviolet Core contains the core features of the Ultraviolet UI library.
 It is set of React library that can be used to build fast application.
 
 - [Ultraviolet UI](https://github.com/scaleway/ultraviolet/tree/main/packages/ui): The main library that includes a set of components and utilities to build fast application.
@@ -47,7 +47,7 @@ $ pnpm install
 
 Our storybook includes `@ultraviolet/ui`, `@ultraviolet/form` and `@ultraviolet/icons`.
 
-In order to start storybook without errors you will need to build the project once 
+In order to start storybook without errors you will need to build the project once
 (this is because `@ultraviolet/form` uses `@ultraviolet/ui` build to run).
 
 ```sh
@@ -124,7 +124,7 @@ You can redo the same with `@ultraviolet/form` if you want to test it.
 
 We are using [Changeset](https://github.com/changesets/changesets) to manage our versioning.
 
-Once your modifications are ready to be released, you can run `pnpm run changeset` to create a new changeset. 
+Once your modifications are ready to be released, you can run `pnpm run changeset` to create a new changeset.
 It will ask you to describe your changes and will create a new changeset file in the `changesets` folder.
 
 ## Documentation
