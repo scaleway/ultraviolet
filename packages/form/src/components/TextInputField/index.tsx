@@ -42,6 +42,7 @@ type TextInputFieldProps<
       | 'minLength'
       | 'min'
       | 'max'
+      | 'data-testid'
     >
   > & {
     className?: string
@@ -104,6 +105,7 @@ export const TextInputField = <
   customError,
   innerRef,
   shouldUnregister = false,
+  'data-testid': dataTestId,
 }: TextInputFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
@@ -213,6 +215,7 @@ export const TextInputField = <
       size={size}
       value={transformedValue()}
       ref={innerRef}
+      data-testid={dataTestId}
     />
   )
 }
