@@ -67,7 +67,8 @@ type StateManagedSelect = typeof Select
 
 type SelectInputProps = Partial<
   SelectProps &
-    SelectStyleProps & {
+    SelectStyleProps &
+    Pick<ComponentProps<typeof SelectInput>, 'data-testid'> & {
       /**
        * Name of the animation
        */
@@ -124,6 +125,7 @@ export type SelectInputFieldProps<
       | 'noTopLabel'
       | 'noOptionsMessage'
       | 'customStyle'
+      | 'data-testid'
     >
   > & {
     multiple?: boolean
@@ -170,6 +172,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
   noOptionsMessage,
   customStyle,
   shouldUnregister = false,
+  'data-testid': dataTestId,
 }: SelectInputFieldProps<TFieldValues>) => {
   const options = useMemo(
     () =>
@@ -285,6 +288,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
       required={required}
       value={format(field.value)}
       noOptionsMessage={noOptionsMessage}
+      data-testid={dataTestId}
     >
       {children}
     </SelectInput>
