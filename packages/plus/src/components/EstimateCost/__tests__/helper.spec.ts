@@ -35,4 +35,16 @@ describe('EstimateCost - helper', () => {
       }),
     ).toEqual(9.198)
   })
+
+  it('should calculate work with NaN timeAmount number', () => {
+    expect(
+      calculatePrice({
+        price: 0.0014,
+        amount: 5,
+        amountFree: 2,
+        timeUnit: 'months',
+        timeAmount: NaN,
+      }),
+    ).toEqual(0)
+  })
 })

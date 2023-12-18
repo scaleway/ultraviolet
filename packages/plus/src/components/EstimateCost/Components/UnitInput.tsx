@@ -80,6 +80,7 @@ type UnitInputProps = {
   value?: UnitInputValue['inputValue']
   unitValue?: UnitInputValue['unit']
   onChange: (value: UnitInputValue['inputValue']) => void
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void
   onChangeUnitValue: (value: UnitInputValue['unit']) => void
   options: SelectOption[]
   placeholder?: string
@@ -102,6 +103,7 @@ export const UnitInput = ({
   size = 'medium',
   placeholder = '0',
   onChange,
+  onBlur,
   onChangeUnitValue,
   value,
   unitValue,
@@ -142,6 +144,8 @@ export const UnitInput = ({
         if (numericValue > maxValue) {
           onChange(maxValue)
         }
+
+        onBlur?.(event)
       }}
       className={className}
       disabled={disabled}
