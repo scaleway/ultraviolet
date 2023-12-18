@@ -21,6 +21,7 @@ type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
       | 'children'
       | 'tooltip'
       | 'label'
+      | 'data-testid'
     >
   > & {
     className?: string
@@ -43,6 +44,7 @@ export const SelectableCardField = <TFieldValues extends FieldValues>({
   label,
   rules,
   shouldUnregister = false,
+  'data-testid': dataTestId,
 }: SelectableCardFieldProps<TFieldValues>) => {
   const {
     field,
@@ -80,6 +82,7 @@ export const SelectableCardField = <TFieldValues extends FieldValues>({
       label={label}
       value={value ?? ''}
       name={field.name}
+      data-testid={dataTestId}
     >
       {children}
     </SelectableCard>

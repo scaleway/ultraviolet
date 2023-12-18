@@ -9,7 +9,13 @@ export type TagInputFieldProps<TFieldValues extends FieldValues = FieldValues> =
     Partial<
       Pick<
         ComponentProps<typeof TagInput>,
-        'tags' | 'variant' | 'placeholder' | 'disabled' | 'className' | 'id'
+        | 'tags'
+        | 'variant'
+        | 'placeholder'
+        | 'disabled'
+        | 'className'
+        | 'id'
+        | 'data-testid'
       >
     >
 
@@ -24,6 +30,7 @@ export const TagInputField = <TFieldValues extends FieldValues>({
   rules,
   variant,
   shouldUnregister = false,
+  'data-testid': dataTestId,
 }: TagInputFieldProps<TFieldValues>) => {
   const { field } = useController<TFieldValues>({
     name,
@@ -47,6 +54,7 @@ export const TagInputField = <TFieldValues extends FieldValues>({
       placeholder={placeholder}
       variant={variant}
       tags={field.value}
+      data-testid={dataTestId}
     />
   )
 }
