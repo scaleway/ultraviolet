@@ -16,5 +16,6 @@ export const MinMaxLength: StoryFn<
 MinMaxLength.args = {
   maxLength: 15,
   minLength: 10,
-  name: 'Min/max length',
+  name: 'value',
+  notice: 'Min 10 and max 15 characters',
 }

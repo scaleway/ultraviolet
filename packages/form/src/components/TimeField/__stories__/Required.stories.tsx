@@ -12,6 +12,6 @@ export const Required: StoryFn<ComponentProps<typeof TimeField>> = args => (
 )
 
 Required.args = {
-  name: 'required',
+  name: 'time',
   required: true,
 }

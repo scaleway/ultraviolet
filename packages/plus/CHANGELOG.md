@@ -1,5 +1,68 @@
 # @ultraviolet/plus
 
+## 0.5.5
+
+### Patch Changes
+
+- [#3210](https://github.com/scaleway/ultraviolet/pull/3210) [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.43`.
+  Updated dependency `@types/react-dom` to `18.2.17`.
+
+- [#3227](https://github.com/scaleway/ultraviolet/pull/3227) [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.5`.
+  Updated dependency `@babel/runtime` to `7.23.5`.
+  Updated dependency `@babel/preset-env` to `7.23.5`.
+
+- [#3229](https://github.com/scaleway/ultraviolet/pull/3229) [`51ee42a`](https://github.com/scaleway/ultraviolet/commit/51ee42a2796994e6aa072c8da8e2c5f32217a7c9) Thanks [@matthprost](https://github.com/matthprost)! - Fix EstimateCost when the discount is set to 0
+
+- Updated dependencies [[`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2), [`4903820`](https://github.com/scaleway/ultraviolet/commit/49038205d25db2efc9dca152179407d6554b42ee), [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3), [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d), [`eea834d`](https://github.com/scaleway/ultraviolet/commit/eea834d585874b915d06798358ae8cef784c99e5), [`4900764`](https://github.com/scaleway/ultraviolet/commit/4900764288eaa13c16b5637e58cd0b2f5de4cce5)]:
+  - @ultraviolet/ui@1.28.0
+
+## 0.5.4
+
+### Patch Changes
+
+- [#3216](https://github.com/scaleway/ultraviolet/pull/3216) [`3df455e4`](https://github.com/scaleway/ultraviolet/commit/3df455e445495ed6a43f3550cef0403ad850eb34) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@uiw/codemirror-extensions-langs` to `4.21.21`.
+  Updated dependency `@uiw/codemirror-theme-material` to `4.21.21`.
+  Updated dependency `@uiw/react-codemirror` to `4.21.21`.
+- Updated dependencies [[`997398d0`](https://github.com/scaleway/ultraviolet/commit/997398d0161da31e676973f4cb4519c7b35b2abd)]:
+  - @ultraviolet/ui@1.27.3
+
+## 0.5.3
+
+### Patch Changes
+
+- [#3207](https://github.com/scaleway/ultraviolet/pull/3207) [`1a4f472d`](https://github.com/scaleway/ultraviolet/commit/1a4f472dab9030e52e1fc0c485167768082226ec) Thanks [@matthprost](https://github.com/matthprost)! - Added missing props in EstimateCost
+
+## 0.5.2
+
+### Patch Changes
+
+- [#3204](https://github.com/scaleway/ultraviolet/pull/3204) [`2b07d908`](https://github.com/scaleway/ultraviolet/commit/2b07d90850606239859cb757dd1275b40a1da11e) Thanks [@matthprost](https://github.com/matthprost)! - Fix estimate cost style and export default locales
+
+- Updated dependencies [[`7f397e1c`](https://github.com/scaleway/ultraviolet/commit/7f397e1ca87a895f8b575d9748e632e5dd523e3b)]:
+  - @ultraviolet/ui@1.27.2
+
+## 0.5.1
+
+### Patch Changes
+
+- [#3202](https://github.com/scaleway/ultraviolet/pull/3202) [`af367959`](https://github.com/scaleway/ultraviolet/commit/af367959b47bda6ac4e448fef545d2f5ce25e6f1) Thanks [@matthprost](https://github.com/matthprost)! - Add missing export of EstimateCost
+
+- Updated dependencies [[`2dd78d39`](https://github.com/scaleway/ultraviolet/commit/2dd78d394a2dea12011c3cf13b463308f0fc7e0b)]:
+  - @ultraviolet/ui@1.27.1
+
+## 0.5.0
+
+### Minor Changes
+
+- [#2984](https://github.com/scaleway/ultraviolet/pull/2984) [`e54a941a`](https://github.com/scaleway/ultraviolet/commit/e54a941a9f1843e10f9a438a08e426559bd55c5c) Thanks [@matthprost](https://github.com/matthprost)! - Add new component `<EstimateCost />`
+
+### Patch Changes
+
+- [#3188](https://github.com/scaleway/ultraviolet/pull/3188) [`437e367c`](https://github.com/scaleway/ultraviolet/commit/437e367c0a8d36af82a57d689796570522fc5829) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `<ContentCardGroup />` height depending on the content
+  - Change title from `bodyStronger` to `bodyStrong` on `<ContentCard />`
+- Updated dependencies [[`5b88fc85`](https://github.com/scaleway/ultraviolet/commit/5b88fc856e94740ff024b527f375f25ab5c340ca), [`65ce94d5`](https://github.com/scaleway/ultraviolet/commit/65ce94d54fc63792b5c40a7ea558b4779cee96d8), [`a23bf3f8`](https://github.com/scaleway/ultraviolet/commit/a23bf3f842b2a4774e7fdd251df24352df296cf2), [`69134027`](https://github.com/scaleway/ultraviolet/commit/691340270327e319841da361ad4521b71e72555c)]:
+  - @ultraviolet/ui@1.27.0
+
 ## 0.4.10
 
 ### Patch Changes

@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals'
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Checkbox } from '..'
 import {
@@ -158,38 +158,5 @@ describe('Checkbox', () => {
     })
     await userEvent.click(input)
     expect(input.checked).toBe(true)
-  })
-
-  test('check checkbox with space key for a11y', async () => {
-    renderWithTheme(
-      <Checkbox onChange={() => {}} value="test">
-        Checkbox Label
-      </Checkbox>,
-    )
-
-    const input = screen.getByRole<HTMLInputElement>('checkbox', {
-      hidden: true,
-    })
-
-    input.focus()
-    expect(input).toHaveFocus()
-    fireEvent.keyDown(input, { charCode: 32, code: 'Space', key: ' ' })
-    await waitFor(() => expect(input.checked).toBe(true))
-  })
-
-  test('should not check checkbox with key A', async () => {
-    renderWithTheme(
-      <Checkbox onChange={() => {}} value="test">
-        Checkbox Label
-      </Checkbox>,
-    )
-
-    const input = screen.getByRole<HTMLInputElement>('checkbox', {
-      hidden: true,
-    })
-
-    input.focus()
-    fireEvent.keyDown(input, { charCode: 65, code: 'KeyA', key: 'a' })
-    await waitFor(() => expect(input.checked).toBe(false))
   })
 })

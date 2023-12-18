@@ -5,13 +5,11 @@ import type {
   ChangeEvent,
   ForwardedRef,
   InputHTMLAttributes,
-  KeyboardEvent,
   ReactNode,
 } from 'react'
 import { forwardRef, useCallback, useEffect, useId, useState } from 'react'
 import type { XOR } from '../../types'
 import { Loader } from '../Loader'
-import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -57,7 +55,9 @@ const StyledIcon = styled('svg')<{ size: number }>`
     transform: scale(0);
   }
 `
-const StyledLabel = styled('label')``
+const StyledLabel = styled('label')`
+  width: 100%;
+`
 
 const CheckboxInput = styled('input', {
   shouldForwardProp: prop => !['size'].includes(prop),
@@ -126,6 +126,7 @@ const CheckboxContainer = styled.div`
   display: inline-flex;
   align-items: start;
   gap: ${({ theme }) => theme.space['1']};
+  width: 100%;
 
   ${StyledLabel} {
     cursor: pointer;
@@ -341,13 +342,6 @@ export const Checkbox = forwardRef(
       [onChange, progress, setState],
     )
 
-    const onKeyDown = useCallback((event: KeyboardEvent<HTMLInputElement>) => {
-      if (event.key.charCodeAt(0) === 32) {
-        event.preventDefault()
-        setState(current => !current)
-      }
-    }, [])
-
     return (
       <Tooltip text={tooltip}>
         <CheckboxContainer
@@ -373,7 +367,6 @@ export const Checkbox = forwardRef(
             checked={state === 'indeterminate' ? false : state}
             size={size}
             onChange={onLocalChange}
-            onKeyDown={onKeyDown}
             onFocus={onFocus}
             onBlur={onBlur}
             disabled={disabled}
@@ -405,8 +398,8 @@ export const Checkbox = forwardRef(
             </StyledIcon>
           ) : null}
 
-          <Stack gap={0.25}>
-            <Row templateColumns="11fr 1fr" alignItems="center">
+          <Stack gap={0.25} flex={1}>
+            <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
               {children ? (
                 <StyledLabel htmlFor={computedName}>{children}</StyledLabel>
               ) : null}
@@ -415,7 +408,7 @@ export const Checkbox = forwardRef(
                   <Icon name="asterisk" size={10} color="danger" />
                 </sup>
               ) : null}
-            </Row>
+            </Stack>
 
             {helper ? (
               <Text

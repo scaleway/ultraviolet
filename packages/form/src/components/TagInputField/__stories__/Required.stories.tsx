@@ -11,6 +11,6 @@ export const Required: StoryFn<ComponentProps<typeof TagInputField>> = args => (
 )
 
 Required.args = {
-  name: 'required',
+  name: 'tags',
   required: true,
 }

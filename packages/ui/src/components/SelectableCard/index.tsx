@@ -80,8 +80,18 @@ const StyledElement = styled('div', {
   }
 `
 
-const StyledRadio = StyledElement.withComponent(Radio)
-const StyledCheckbox = StyledElement.withComponent(Checkbox)
+const OverloadedRadio = StyledElement.withComponent(Radio)
+const StyledRadio = styled(OverloadedRadio)`
+  pointer-events: none; // Prevents the label from being clickable as we want the container to be clickable
+`
+const OverloadedCheckbox = StyledElement.withComponent(Checkbox)
+const StyledCheckbox = styled(OverloadedCheckbox)`
+  label {
+    width: 100%;
+  }
+
+  pointer-events: none; // Prevents the label from being clickable as we want the container to be clickable
+`
 
 type SelectableCardProps = {
   name?: string

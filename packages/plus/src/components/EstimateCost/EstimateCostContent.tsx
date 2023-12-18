@@ -1,6 +1,13 @@
 import styled from '@emotion/styled'
 import { Alert, Icon, Stack, Text } from '@ultraviolet/ui'
-import { Children, cloneElement, useEffect, useMemo, useState } from 'react'
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 import flattenChildren from 'react-flatten-children'
 import { useInView } from 'react-intersection-observer'
 import { CustomUnitInput } from './Components/CustomUnitInput'
@@ -55,13 +62,25 @@ const StyledIcon = styled(Icon)`
 
 const StyledPriceCell = styled(Cell.withComponent('th'))`
   ${({ theme }) => PriceCell(theme)}
+  padding: 0;
 `
 
 const DEFAULT_UNIT_LIST: Units[] = ['hours', 'days', 'months']
 
+type ExtraProps = {
+  isLastElement?: boolean
+  productsCallback?: {
+    add: (product: EstimateProduct) => void
+    remove: (product: BareEstimateProduct) => void
+  }
+  iteration?: Iteration
+  discount?: number
+}
+
 export const EstimateCostContent = ({
   description,
   alert,
+  alertTitle,
   alertVariant = 'warning',
   defaultTimeUnit = 'hours',
   timeUnits = DEFAULT_UNIT_LIST,
@@ -238,7 +257,11 @@ export const EstimateCostContent = ({
       ) : (
         description
       )}
-      {alert ? <Alert sentiment={alertVariant}>{alert}</Alert> : null}
+      {alert ? (
+        <Alert sentiment={alertVariant} title={alertTitle}>
+          {alert}
+        </Alert>
+      ) : null}
       <OverlayContextProvider value={providerValue}>
         <div>
           {children ? (
@@ -281,24 +304,14 @@ export const EstimateCostContent = ({
               ) : null}
               <tbody>
                 {Children.map(list, (child, index) =>
-                  /* @ts-expect-error I'm too dumb to understand this sorcery */
-                  cloneElement(child, {
-                    isLastElement: index === list.length - 1,
-                    productsCallback,
-                    iteration,
-                    discount:
-                      discount &&
-                      !(
-                        (
-                          child as {
-                            props: Record<string, unknown>
-                          }
-                        ).props as {
-                          discount?: number
-                        }
-                      ).discount
-                        ? discount
-                        : (
+                  isValidElement<ExtraProps>(child)
+                    ? cloneElement(child, {
+                        isLastElement: index === list.length - 1,
+                        productsCallback,
+                        iteration,
+                        discount:
+                          discount &&
+                          !(
                             (
                               child as {
                                 props: Record<string, unknown>
@@ -306,8 +319,19 @@ export const EstimateCostContent = ({
                             ).props as {
                               discount?: number
                             }
-                          ).discount,
-                  }),
+                          ).discount
+                            ? discount
+                            : (
+                                (
+                                  child as {
+                                    props: Record<string, unknown>
+                                  }
+                                ).props as {
+                                  discount?: number
+                                }
+                              ).discount,
+                      })
+                    : child,
                 )}
               </tbody>
             </StyledTable>
@@ -334,7 +358,7 @@ export const EstimateCostContent = ({
                         }
                         sentiment="warning"
                       >
-                        {`${discount * 100}
+                        {`${discount > 0 ? discount * 100 : ''}
                           ${
                             locales[
                               `estimate.cost.beta.${

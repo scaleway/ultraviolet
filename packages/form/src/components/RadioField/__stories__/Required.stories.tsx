@@ -14,4 +14,5 @@ export const Required: StoryFn<ComponentProps<typeof RadioField>> = args => (
 Required.args = {
   name: 'required',
   required: true,
+  label: 'Option 1',
 }

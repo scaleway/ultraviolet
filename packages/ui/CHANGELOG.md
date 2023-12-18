@@ -1,5 +1,68 @@
 # Change Log
 
+## 1.28.0
+
+### Minor Changes
+
+- [#3220](https://github.com/scaleway/ultraviolet/pull/3220) [`d20f2da`](https://github.com/scaleway/ultraviolet/commit/d20f2da0d1d137218d8ebd32ea3828e595fd77d2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` label to take full width
+
+- [#3218](https://github.com/scaleway/ultraviolet/pull/3218) [`4903820`](https://github.com/scaleway/ultraviolet/commit/49038205d25db2efc9dca152179407d6554b42ee) Thanks [@matthprost](https://github.com/matthprost)! - Refactor `<Tabs />` component to use new `<MenuV2 />`
+
+- [#3233](https://github.com/scaleway/ultraviolet/pull/3233) [`4900764`](https://github.com/scaleway/ultraviolet/commit/4900764288eaa13c16b5637e58cd0b2f5de4cce5) Thanks [@matthprost](https://github.com/matthprost)! - Add sizes `xsmall` and `medium` to `<CopyButton />` component
+
+### Patch Changes
+
+- [#3210](https://github.com/scaleway/ultraviolet/pull/3210) [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.43`.
+  Updated dependency `@types/react-dom` to `18.2.17`.
+
+- [#3227](https://github.com/scaleway/ultraviolet/pull/3227) [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.5`.
+  Updated dependency `@babel/runtime` to `7.23.5`.
+  Updated dependency `@babel/preset-env` to `7.23.5`.
+
+- [#3228](https://github.com/scaleway/ultraviolet/pull/3228) [`eea834d`](https://github.com/scaleway/ultraviolet/commit/eea834d585874b915d06798358ae8cef784c99e5) Thanks [@matthprost](https://github.com/matthprost)! - Fix right position on popup
+
+- Updated dependencies [[`de30e18`](https://github.com/scaleway/ultraviolet/commit/de30e18584897ff02f43473d1dd41ee1a9d40d44), [`f077a9c`](https://github.com/scaleway/ultraviolet/commit/f077a9cdf14baf623e868e938185862472ad21b3), [`d497ba6`](https://github.com/scaleway/ultraviolet/commit/d497ba6088496c64eaccd3e55644390f1e4b921d)]:
+  - @ultraviolet/icons@2.7.0
+
+## 1.27.3
+
+### Patch Changes
+
+- [#3221](https://github.com/scaleway/ultraviolet/pull/3221) [`997398d0`](https://github.com/scaleway/ultraviolet/commit/997398d0161da31e676973f4cb4519c7b35b2abd) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Checkbox />` to trigger on change when state changes
+
+- Updated dependencies [[`99eda1d1`](https://github.com/scaleway/ultraviolet/commit/99eda1d14c3feababd1c7898e3dc55f17446ed6e)]:
+  - @ultraviolet/icons@2.6.0
+
+## 1.27.2
+
+### Patch Changes
+
+- [#3200](https://github.com/scaleway/ultraviolet/pull/3200) [`7f397e1c`](https://github.com/scaleway/ultraviolet/commit/7f397e1ca87a895f8b575d9748e632e5dd523e3b) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Text />` component with prop `oneLine` when on modals
+
+## 1.27.1
+
+### Patch Changes
+
+- [#3198](https://github.com/scaleway/ultraviolet/pull/3198) [`2dd78d39`](https://github.com/scaleway/ultraviolet/commit/2dd78d394a2dea12011c3cf13b463308f0fc7e0b) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Handle null value in NumberInput
+
+## 1.27.0
+
+### Minor Changes
+
+- [#3189](https://github.com/scaleway/ultraviolet/pull/3189) [`a23bf3f8`](https://github.com/scaleway/ultraviolet/commit/a23bf3f842b2a4774e7fdd251df24352df296cf2) Thanks [@JulienSaguez](https://github.com/JulienSaguez)! - add size prop and update state for disable for verificationcode component
+
+- [#3180](https://github.com/scaleway/ultraviolet/pull/3180) [`69134027`](https://github.com/scaleway/ultraviolet/commit/691340270327e319841da361ad4521b71e72555c) Thanks [@matthprost](https://github.com/matthprost)! - - New `<GlobalAlert />` component
+  - New prop `variant` for `<Link />` component:
+    - `variant="standalone"` (default): renders a standalone link without underline
+    - `variant="inline"`: renders an inline link with underline
+  - Added hover color from tokens for `<Link />` component
+
+### Patch Changes
+
+- [#3183](https://github.com/scaleway/ultraviolet/pull/3183) [`5b88fc85`](https://github.com/scaleway/ultraviolet/commit/5b88fc856e94740ff024b527f375f25ab5c340ca) Thanks [@matthprost](https://github.com/matthprost)! - Add a tooltip on `<Tag />` component when text is too long
+
+- [#3187](https://github.com/scaleway/ultraviolet/pull/3187) [`65ce94d5`](https://github.com/scaleway/ultraviolet/commit/65ce94d54fc63792b5c40a7ea558b4779cee96d8) Thanks [@matthprost](https://github.com/matthprost)! - Component `<DateInput />` to use font tokens from theme
+
 ## 1.26.2
 
 ### Patch Changes

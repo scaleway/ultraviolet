@@ -337,8 +337,8 @@ export const Popup = forwardRef(
           // We want to detect scroll and resize in order to recompute positions of popup
           // Adding true as third parameter to event listener will detect nested scrolls.
           window.addEventListener('scroll', onWindowChangeDetected, true)
-          window.addEventListener('resize', onWindowChangeDetected, true)
         }
+        window.addEventListener('resize', onWindowChangeDetected, true)
       }
 
       return () => {

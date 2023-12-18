@@ -4,12 +4,16 @@ import { Button } from '../Button'
 const COPY_DURATION = 2500
 
 type CopyButtonProps = {
-  size?: 'small' | 'large'
+  size?: 'xsmall' | 'small' | 'medium' | 'large'
   value: string
   copyText?: string
   copiedText?: string
   sentiment?: 'primary' | 'neutral'
+  /**
+   * @deprecated Use `bordered` instead
+   */
   noBorder?: boolean
+  bordered?: boolean
   className?: string
   'data-testid'?: string
 }
@@ -24,6 +28,7 @@ export const CopyButton = ({
   copiedText = 'Copied!',
   sentiment = 'primary',
   noBorder,
+  bordered,
   className,
   'data-testid': dataTestId,
 }: CopyButtonProps) => {
@@ -37,7 +42,7 @@ export const CopyButton = ({
       onClick={setCopied}
       size={size}
       sentiment={sentiment}
-      variant={noBorder ? 'ghost' : 'outlined'}
+      variant={noBorder || !bordered ? 'ghost' : 'outlined'}
       className={className}
       data-testid={dataTestId}
       aria-label="Copy"

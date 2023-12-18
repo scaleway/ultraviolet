@@ -7,6 +7,7 @@ export type EstimateCostProps = {
    * Text to display into an alert on the top of the EstimateCost component.
    */
   alert?: ReactNode
+  alertTitle?: string
   /**
    * Type of the alert defined by the Scaleway UI Alert component.
    */

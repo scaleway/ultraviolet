@@ -3,5 +3,5 @@ import type { ComponentProps } from 'react'
 import { RadioField } from '..'
 
 export const Template: StoryFn<ComponentProps<typeof RadioField>> = args => (
-  <RadioField {...args}>Radio</RadioField>
+  <RadioField {...args} label="Option 1" />
 )

@@ -12,6 +12,6 @@ export const Required: StoryFn<ComponentProps<typeof ToggleField>> = args => (
 )
 
 Required.args = {
-  name: 'required',
+  name: 'value',
   required: true,
 }

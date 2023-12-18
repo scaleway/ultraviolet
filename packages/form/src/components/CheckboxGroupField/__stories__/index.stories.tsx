@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react'
+import { Snippet, Stack, Text } from '@ultraviolet/ui'
 import { CheckboxGroupField } from '..'
 import { Form } from '../..'
 import { mockErrors } from '../../../mocks'
@@ -8,17 +9,35 @@ export default {
   decorators: [
     ChildStory => (
       <Form
-        initialValues={{ conditions: 'termsAndConditions' }}
-        onRawSubmit={data => {
-          console.log('data', data)
-        }}
+        onRawSubmit={() => {}}
         errors={mockErrors}
+        initialValues={{ conditions: ['termsAndConditions'] }}
       >
-        {ChildStory()}
+        {values => (
+          <Stack gap={2}>
+            {ChildStory()}
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form input values:
+              </Text>
+              <Snippet prefix="lines" initiallyExpanded>
+                {JSON.stringify(values.values, null, 1)}
+              </Snippet>
+            </Stack>
+            <Stack gap={1}>
+              <Text variant="bodyStrong" as="p">
+                Form values:
+              </Text>
+              <Snippet prefix="lines">
+                {JSON.stringify(values, null, 1)}
+              </Snippet>
+            </Stack>
+          </Stack>
+        )}
       </Form>
     ),
   ],
-  title: 'Components/Data Entry/CheckboxGroupField',
+  title: 'Form/Components/Fields/CheckboxGroupField',
   args: {
     name: 'conditions',
     legend: 'Conditions',
@@ -26,7 +45,4 @@ export default {
 } as Meta<typeof CheckboxGroupField>
 
 export { Playground } from './Playground.stories'
-export { Direction } from './Direction.stories'
-export { Helper } from './Helper.stories'
-export { Error } from './Error.stories'
 export { Required } from './Required.stories'

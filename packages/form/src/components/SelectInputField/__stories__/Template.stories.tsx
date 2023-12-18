@@ -4,7 +4,7 @@ import { SelectInputField } from '..'
 
 export const Template: StoryFn<SelectInputFieldProps> = args => (
   <SelectInputField {...args}>
-    <SelectInputField.Option value="value">Label</SelectInputField.Option>
-    <SelectInputField.Option value="value2">Label 2</SelectInputField.Option>
+    <SelectInputField.Option value="a">Option A</SelectInputField.Option>
+    <SelectInputField.Option value="b">Option B</SelectInputField.Option>
   </SelectInputField>
 )

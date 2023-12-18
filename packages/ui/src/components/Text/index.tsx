@@ -2,8 +2,9 @@ import type { Theme } from '@emotion/react'
 import styled from '@emotion/styled'
 import type React from 'react'
 import type { ElementType, ReactNode } from 'react'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import recursivelyGetChildrenString from '../../helpers/recursivelyGetChildrenString'
+import { useIsOverflowing } from '../../hooks/useIsOverflowing'
 import type { Color } from '../../theme'
 import { typography } from '../../theme'
 import capitalize from '../../utils/capitalize'
@@ -150,21 +151,13 @@ export const Text = ({
   'data-testid': dataTestId,
 }: TextProps) => {
   const computedSentiment = sentiment ?? color
-
-  const [isTruncated, setIsTruncated] = useState(false)
   const elementRef = useRef(null)
+  const isOverflowing = useIsOverflowing(elementRef)
 
   const finalStringChildren = recursivelyGetChildrenString(children)
 
-  useEffect(() => {
-    if (oneLine && elementRef?.current) {
-      const { offsetWidth, scrollWidth } = elementRef.current
-      setIsTruncated(offsetWidth < scrollWidth)
-    }
-  }, [oneLine])
-
   return (
-    <Tooltip text={oneLine && isTruncated ? finalStringChildren : ''}>
+    <Tooltip text={oneLine && isOverflowing ? finalStringChildren : ''}>
       <StyledText
         ref={elementRef}
         as={as}
