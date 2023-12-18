@@ -40,7 +40,7 @@ export const ShowTick: StoryFn = args => {
           type="checkbox"
           showTick
           onChange={event =>
-            onChange2({ ...value2, 'label-1': !event.currentTarget.checked })
+            onChange2({ ...value2, 'label-1': event.currentTarget.checked })
           }
           label="Checkbox 1"
         />
@@ -52,7 +52,7 @@ export const ShowTick: StoryFn = args => {
           type="checkbox"
           showTick
           onChange={event =>
-            onChange2({ ...value2, 'label-2': !event.currentTarget.checked })
+            onChange2({ ...value2, 'label-2': event.currentTarget.checked })
           }
           label="Checkbox 2"
         />

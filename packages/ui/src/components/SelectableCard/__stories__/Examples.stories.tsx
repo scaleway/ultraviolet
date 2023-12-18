@@ -43,7 +43,7 @@ export const Examples: StoryFn = args => {
         </SelectableCard>
         <SelectableCard
           {...args}
-          name="label-15"
+          name="label-14"
           checked={value === 'label-15'}
           value="label-15"
           type="radio"
@@ -72,7 +72,7 @@ export const Examples: StoryFn = args => {
           value="label-20"
           type="checkbox"
           onChange={event =>
-            onChange2({ ...value2, 'label-20': !event.currentTarget.checked })
+            onChange2({ ...value2, 'label-20': event.currentTarget.checked })
           }
           showTick
           label={
@@ -96,7 +96,7 @@ export const Examples: StoryFn = args => {
           value="label-21"
           type="checkbox"
           onChange={event =>
-            onChange2({ ...value2, 'label-21': !event.currentTarget.checked })
+            onChange2({ ...value2, 'label-21': event.currentTarget.checked })
           }
           showTick
           label={
@@ -123,7 +123,7 @@ export const Examples: StoryFn = args => {
           value="label-22"
           type="checkbox"
           onChange={event =>
-            onChange3({ ...value3, 'label-22': !event.currentTarget.checked })
+            onChange3({ ...value3, 'label-22': event.currentTarget.checked })
           }
           showTick
           label={
@@ -147,7 +147,7 @@ export const Examples: StoryFn = args => {
           value="label-23"
           type="checkbox"
           onChange={event =>
-            onChange3({ ...value3, 'label-23': !event.currentTarget.checked })
+            onChange3({ ...value3, 'label-23': event.currentTarget.checked })
           }
           showTick
           label={
@@ -172,7 +172,7 @@ export const Examples: StoryFn = args => {
           value="label-24"
           type="checkbox"
           onChange={event =>
-            onChange3({ ...value3, 'label-24': !event.currentTarget.checked })
+            onChange3({ ...value3, 'label-24': event.currentTarget.checked })
           }
           showTick
           label={
@@ -197,7 +197,7 @@ export const Examples: StoryFn = args => {
           value="label-25"
           type="checkbox"
           onChange={event =>
-            onChange3({ ...value3, 'label-25': !event.currentTarget.checked })
+            onChange3({ ...value3, 'label-25': event.currentTarget.checked })
           }
           showTick
           label={

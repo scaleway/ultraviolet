@@ -74,15 +74,14 @@ describe('SwitchButton', () => {
           label: 'Right',
           value: 'right',
         }}
+        data-testid="switch-button"
         tooltip="This is a tooltip"
       />,
     )
 
-    const input = screen.getAllByRole('radio', {
-      hidden: true,
-    })
+    const rightButton = screen.getByTestId('switch-button-right')
 
-    await userEvent.click(input[1])
+    await userEvent.click(rightButton)
   })
 })
 
