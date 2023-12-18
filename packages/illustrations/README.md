@@ -15,12 +15,7 @@ $ pnpm add @ultraviolet/illustrations
 ```js
 import { instanceOriginal } from '@ultraviolet/illustrations/products/instance'
 
-const App = () => (
-  <img
-    src={instanceOriginal}
-    alt="illustration instance"
-  />
-)
+const App = () => <img src={instanceOriginal} alt="illustration instance" />
 ```
 
 ## Documentation

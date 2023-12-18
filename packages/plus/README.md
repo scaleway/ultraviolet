@@ -18,7 +18,6 @@ $ pnpm add @ultraviolet/plus
 
 Checkout our [documentation website](https://storybook.ultraviolet.scaleway.com/).
 
-
 ## Contributing
 
 📝 You can participate in the development and [start contributing](/CONTRIBUTING.md) to it.

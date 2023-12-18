@@ -3,7 +3,7 @@ name: Design tokens
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 9 * * 1-5"
+    - cron: '30 9 * * 1-5'
 
 jobs:
   synchronise:
@@ -35,4 +35,4 @@ jobs:
           body: |
             Design system tokens update. This MR is created automatically when a change is detected in design tokens.
           team-reviewers: console
-          labels:  design system
+          labels: design system
