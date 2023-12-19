@@ -43,7 +43,8 @@
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
       "prettier --write",
-      "eslint --fix --ext js,mjs,ts,tsx"
+      "eslint --fix --ext js,mjs,ts,tsx",
+      "pnpm run svg:all"
     ]
   },
   "config": {
