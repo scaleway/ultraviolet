@@ -1,13 +1,13 @@
 import { SelectableCard } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
-  BaseFieldProps<TFieldValues>,
-  'label' | 'onChange'
-> &
+type SelectableCardFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label' | 'onChange'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCard>,
@@ -27,7 +27,10 @@ type SelectableCardFieldProps<TFieldValues extends FieldValues> = Omit<
     className?: string
   }
 
-export const SelectableCardField = <TFieldValues extends FieldValues>({
+export const SelectableCardField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   name,
   value,
   onChange,
@@ -45,7 +48,7 @@ export const SelectableCardField = <TFieldValues extends FieldValues>({
   rules,
   shouldUnregister = false,
   'data-testid': dataTestId,
-}: SelectableCardFieldProps<TFieldValues>) => {
+}: SelectableCardFieldProps<TFieldValues, TName>) => {
   const {
     field,
     fieldState: { error },

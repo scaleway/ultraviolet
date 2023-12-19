@@ -38,7 +38,7 @@ export type FormErrors = {
 
 export type BaseFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues>,
 > = {
   name: TName
   required?: boolean

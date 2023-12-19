@@ -1,14 +1,14 @@
 import { Radio } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
-  BaseFieldProps<TFieldValues>,
-  'label'
-> &
+type RadioFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof Radio>,
@@ -24,7 +24,10 @@ type RadioFieldProps<TFieldValues extends FieldValues> = Omit<
     className?: string
   }
 
-export const RadioField = <TFieldValues extends FieldValues>({
+export const RadioField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   'data-testid': dataTestId,
   disabled,
@@ -39,7 +42,7 @@ export const RadioField = <TFieldValues extends FieldValues>({
   rules,
   tooltip,
   shouldUnregister = false,
-}: RadioFieldProps<TFieldValues>) => {
+}: RadioFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,

@@ -1,27 +1,32 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type CheckboxGroupFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof CheckboxGroup>,
-        | 'className'
-        | 'helper'
-        | 'required'
-        | 'direction'
-        | 'children'
-        | 'error'
-        | 'legend'
-      >
-    > &
-    Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
+type CheckboxGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof CheckboxGroup>,
+      | 'className'
+      | 'helper'
+      | 'required'
+      | 'direction'
+      | 'children'
+      | 'error'
+      | 'legend'
+    >
+  > &
+  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
 
-export const CheckboxGroupField = <TFieldValues extends FieldValues>({
+export const CheckboxGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   legend,
   className,
   helper,
@@ -33,7 +38,7 @@ export const CheckboxGroupField = <TFieldValues extends FieldValues>({
   name,
   required = false,
   shouldUnregister = false,
-}: CheckboxGroupFieldProps<TFieldValues>) => {
+}: CheckboxGroupFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,

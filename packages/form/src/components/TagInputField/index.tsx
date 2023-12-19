@@ -1,25 +1,30 @@
 import { TagInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-export type TagInputFieldProps<TFieldValues extends FieldValues = FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof TagInput>,
-        | 'tags'
-        | 'variant'
-        | 'placeholder'
-        | 'disabled'
-        | 'className'
-        | 'id'
-        | 'data-testid'
-      >
+export type TagInputFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof TagInput>,
+      | 'tags'
+      | 'variant'
+      | 'placeholder'
+      | 'disabled'
+      | 'className'
+      | 'id'
+      | 'data-testid'
     >
+  >
 
-export const TagInputField = <TFieldValues extends FieldValues>({
+export const TagInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   disabled,
   id,
@@ -31,7 +36,7 @@ export const TagInputField = <TFieldValues extends FieldValues>({
   variant,
   shouldUnregister = false,
   'data-testid': dataTestId,
-}: TagInputFieldProps<TFieldValues>) => {
+}: TagInputFieldProps<TFieldValues, TName>) => {
   const { field } = useController<TFieldValues>({
     name,
     rules: {

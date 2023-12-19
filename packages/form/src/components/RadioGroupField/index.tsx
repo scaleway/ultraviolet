@@ -1,22 +1,27 @@
 import { RadioGroup } from '@ultraviolet/ui'
 import type { ComponentProps, JSX } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type RadioGroupFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof RadioGroup>,
-        'legend' | 'children' | 'error' | 'helper' | 'direction'
-      >
-    > & {
-      className?: string
-    }
+type RadioGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof RadioGroup>,
+      'legend' | 'children' | 'error' | 'helper' | 'direction'
+    >
+  > & {
+    className?: string
+  }
 
-export const RadioGroupField = <TFieldValues extends FieldValues>({
+export const RadioGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   legend = '',
   name,
@@ -29,7 +34,7 @@ export const RadioGroupField = <TFieldValues extends FieldValues>({
   helper,
   direction,
   shouldUnregister = false,
-}: RadioGroupFieldProps<TFieldValues>): JSX.Element => {
+}: RadioGroupFieldProps<TFieldValues, TName>): JSX.Element => {
   const { getError } = useErrors()
   const {
     field,

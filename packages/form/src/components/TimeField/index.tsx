@@ -1,6 +1,6 @@
 import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
@@ -16,13 +16,18 @@ const parseTime = (date?: Date | string): { label: string; value: string } => {
   }
 }
 
-type TimeFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Omit<ComponentProps<typeof TimeInput>, 'onChange'> & {
-      name: string
-    }
+type TimeFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Omit<ComponentProps<typeof TimeInput>, 'onChange'> & {
+    name: string
+  }
 
-export const TimeField = <TFieldValues extends FieldValues>({
+export const TimeField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   required,
   name,
   schedule,
@@ -45,7 +50,7 @@ export const TimeField = <TFieldValues extends FieldValues>({
   options,
   'data-testid': dataTestId,
   shouldUnregister = false,
-}: TimeFieldProps<TFieldValues>) => {
+}: TimeFieldProps<TFieldValues, TName>) => {
   const {
     field,
     fieldState: { error },

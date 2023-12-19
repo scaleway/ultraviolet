@@ -1,30 +1,35 @@
 import { Checkbox } from '@ultraviolet/ui'
 import type { ComponentProps, ReactNode } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type CheckboxFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof Checkbox>,
-        | 'disabled'
-        | 'onBlur'
-        | 'onFocus'
-        | 'progress'
-        | 'size'
-        | 'data-testid'
-        | 'helper'
-        | 'tooltip'
-      >
-    > & {
-      className?: string
-      children?: ReactNode
-    }
+type CheckboxFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof Checkbox>,
+      | 'disabled'
+      | 'onBlur'
+      | 'onFocus'
+      | 'progress'
+      | 'size'
+      | 'data-testid'
+      | 'helper'
+      | 'tooltip'
+    >
+  > & {
+    className?: string
+    children?: ReactNode
+  }
 
-export const CheckboxField = <TFieldValues extends FieldValues>({
+export const CheckboxField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   name,
   label,
   size,
@@ -42,7 +47,7 @@ export const CheckboxField = <TFieldValues extends FieldValues>({
   'data-testid': dataTestId,
   value,
   shouldUnregister = false,
-}: CheckboxFieldProps<TFieldValues>) => {
+}: CheckboxFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,
