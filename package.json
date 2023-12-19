@@ -38,7 +38,7 @@
     "tokens:update": "node ./scripts/figma-synchronise-tokens.mjs && pnpm prettier --write packages/themes/src/themes/console",
     "chromatic": "chromatic --exit-zero-on-changes",
     "release": "pnpm build && pnpm changeset publish",
-    "svg:all": "npx svgo --pretty --multipass -r -f ."
+    "svg:all": "npx svgo --config svgo.config.js -r -f ."
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
