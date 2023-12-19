@@ -7,7 +7,7 @@ import type {
   ReactNode,
 } from 'react'
 import { Children, useCallback, useMemo } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
@@ -96,8 +96,9 @@ type SelectInputOptionOrGroup = NonNullable<SelectInputOptions>[number]
 type SelectInputOption = { value: string; label: string }
 
 export type SelectInputFieldProps<
-  TFieldValues extends FieldValues = FieldValues,
-> = Omit<BaseFieldProps<TFieldValues>, 'onChange'> &
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'onChange'> &
   Partial<
     Pick<
       SelectInputProps,
@@ -138,7 +139,10 @@ export type SelectInputFieldProps<
 const identity = (x: unknown) => x
 // const identity = <T,>(x: T) => x
 
-export const SelectInputField = <TFieldValues extends FieldValues>({
+export const SelectInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   animation,
   animationDuration,
   animationOnChange,
@@ -173,7 +177,7 @@ export const SelectInputField = <TFieldValues extends FieldValues>({
   customStyle,
   shouldUnregister = false,
   'data-testid': dataTestId,
-}: SelectInputFieldProps<TFieldValues>) => {
+}: SelectInputFieldProps<TFieldValues, TName>) => {
   const options = useMemo(
     () =>
       optionsProp ||

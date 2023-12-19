@@ -7,7 +7,7 @@ import type { BaseFieldProps } from '../../types'
 
 type TextInputFieldProps<
   TFieldValues extends FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+  TName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<

@@ -1,31 +1,36 @@
 import { NumberInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent, FocusEventHandler } from 'react'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type NumberInputValueFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof NumberInput>,
-        | 'disabled'
-        | 'maxValue'
-        | 'minValue'
-        | 'onMaxCrossed'
-        | 'onMinCrossed'
-        | 'size'
-        | 'step'
-        | 'text'
-        | 'className'
-      >
-    > & {
-      onBlur?: FocusEventHandler<HTMLInputElement>
-      onFocus?: FocusEventHandler<HTMLInputElement>
-    }
+type NumberInputValueFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof NumberInput>,
+      | 'disabled'
+      | 'maxValue'
+      | 'minValue'
+      | 'onMaxCrossed'
+      | 'onMinCrossed'
+      | 'size'
+      | 'step'
+      | 'text'
+      | 'className'
+    >
+  > & {
+    onBlur?: FocusEventHandler<HTMLInputElement>
+    onFocus?: FocusEventHandler<HTMLInputElement>
+  }
 
-export const NumberInputField = <TFieldValues extends FieldValues>({
+export const NumberInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   disabled,
   maxValue,
   minValue,
@@ -43,7 +48,7 @@ export const NumberInputField = <TFieldValues extends FieldValues>({
   className,
   label,
   shouldUnregister = false,
-}: NumberInputValueFieldProps<TFieldValues>) => {
+}: NumberInputValueFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,

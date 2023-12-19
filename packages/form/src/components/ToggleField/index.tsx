@@ -1,13 +1,13 @@
 import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import type { FieldValues } from 'react-hook-form'
+import type { FieldPath, FieldValues } from 'react-hook-form'
 import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type ToggleFieldProps<TFieldValues extends FieldValues> = Omit<
-  BaseFieldProps<TFieldValues>,
-  'label'
-> &
+type ToggleFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
   Pick<
     ComponentProps<typeof Toggle>,
     | 'disabled'
@@ -23,7 +23,10 @@ type ToggleFieldProps<TFieldValues extends FieldValues> = Omit<
     format?: (value: any) => boolean
   }
 
-export const ToggleField = <TFieldValues extends FieldValues>({
+export const ToggleField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   disabled,
   label,
@@ -38,7 +41,7 @@ export const ToggleField = <TFieldValues extends FieldValues>({
   format,
   'data-testid': dataTestId,
   shouldUnregister = false,
-}: ToggleFieldProps<TFieldValues>) => {
+}: ToggleFieldProps<TFieldValues, TName>) => {
   const { field } = useController<TFieldValues>({
     name,
     shouldUnregister,

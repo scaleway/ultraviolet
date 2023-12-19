@@ -1,21 +1,26 @@
 import { ToggleGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useController } from 'react-hook-form'
-import type { FieldValues, Path, PathValue } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type ToggleGroupFieldProps<TFieldValues extends FieldValues> =
-  BaseFieldProps<TFieldValues> &
-    Partial<
-      Pick<
-        ComponentProps<typeof ToggleGroup>,
-        'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
-      >
-    > &
-    Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend' | 'name'>>
+type ToggleGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Partial<
+    Pick<
+      ComponentProps<typeof ToggleGroup>,
+      'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
+    >
+  > &
+  Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend' | 'name'>>
 
-export const ToggleGroupField = <TFieldValues extends FieldValues>({
+export const ToggleGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   legend,
   className,
   helper,
@@ -27,7 +32,7 @@ export const ToggleGroupField = <TFieldValues extends FieldValues>({
   name,
   required = false,
   shouldUnregister = false,
-}: ToggleGroupFieldProps<TFieldValues>) => {
+}: ToggleGroupFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
   const {
     field,
