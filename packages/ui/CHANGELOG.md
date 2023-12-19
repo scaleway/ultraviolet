@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.29.0
+
+### Minor Changes
+
+- [#3199](https://github.com/scaleway/ultraviolet/pull/3199) [`10c677f`](https://github.com/scaleway/ultraviolet/commit/10c677fd6eb97ed250cf739c322b6a758c3bd3d1) Thanks [@fabienhebert](https://github.com/fabienhebert)! - new components: `TextArea` and `TextAreaField`
+
+### Patch Changes
+
+- [#3249](https://github.com/scaleway/ultraviolet/pull/3249) [`29e8c56`](https://github.com/scaleway/ultraviolet/commit/29e8c566927f7c4eef1ccab67431e3d1d1c97f25) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` with type `checkbox` to workproperly when clicking on both the checkbox and the container
+
+- [#3242](https://github.com/scaleway/ultraviolet/pull/3242) [`c9c9881`](https://github.com/scaleway/ultraviolet/commit/c9c98818f4bf94b0bf7019f8cbfd0f541c580f47) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.6`.
+  Updated dependency `@babel/runtime` to `7.23.6`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.6`.
+  Updated dependency `@babel/preset-env` to `7.23.6`.
+- Updated dependencies [[`c9c9881`](https://github.com/scaleway/ultraviolet/commit/c9c98818f4bf94b0bf7019f8cbfd0f541c580f47)]:
+  - @ultraviolet/icons@2.7.1
+
 ## 1.28.0
 
 ### Minor Changes

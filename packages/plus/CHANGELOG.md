@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.5.6
+
+### Patch Changes
+
+- [#3242](https://github.com/scaleway/ultraviolet/pull/3242) [`c9c9881`](https://github.com/scaleway/ultraviolet/commit/c9c98818f4bf94b0bf7019f8cbfd0f541c580f47) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.6`.
+  Updated dependency `@babel/runtime` to `7.23.6`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.6`.
+  Updated dependency `@babel/preset-env` to `7.23.6`.
+- Updated dependencies [[`10c677f`](https://github.com/scaleway/ultraviolet/commit/10c677fd6eb97ed250cf739c322b6a758c3bd3d1), [`29e8c56`](https://github.com/scaleway/ultraviolet/commit/29e8c566927f7c4eef1ccab67431e3d1d1c97f25), [`c9c9881`](https://github.com/scaleway/ultraviolet/commit/c9c98818f4bf94b0bf7019f8cbfd0f541c580f47)]:
+  - @ultraviolet/ui@1.29.0
+
 ## 0.5.5
 
 ### Patch Changes
