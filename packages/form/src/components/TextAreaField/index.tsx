@@ -1,26 +1,25 @@
 import { TextArea } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-export type TextAreaFieldProps = Pick<
-  BaseFieldProps<string, string>,
-  'validate'
-> &
-  Omit<
-    ComponentProps<typeof TextArea>,
-    'value' | 'onChange' | 'error' | 'name'
-  > & {
+export type TextAreaFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Omit<ComponentProps<typeof TextArea>, 'value' | 'error' | 'name'> & {
     regex?: (RegExp | RegExp[])[]
-    name: string
   }
 
 /**
  * This component offers a form field based on Ultraviolet UI TextArea component
  */
-export const TextAreaField = ({
+export const TextAreaField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   autoFocus,
   clearable,
   className,
@@ -30,6 +29,7 @@ export const TextAreaField = ({
   helper,
   label,
   labelDescription,
+  onChange,
   minLength,
   maxLength,
   name,
@@ -42,25 +42,36 @@ export const TextAreaField = ({
   success,
   tooltip,
   validate,
-  regex,
-}: TextAreaFieldProps) => {
+  regex: regexes,
+}: TextAreaFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
 
-  const { input, meta } = useFormField<string>(name, {
-    disabled,
-    required,
-    type: '',
-    validate,
-    regex,
-  })
-
-  const error = getError({
-    label,
-    maxLength,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    value: input.value,
-    regex,
-    meta: meta as FieldState<string>,
+    rules: {
+      required,
+      validate: {
+        ...(regexes
+          ? {
+              pattern: value =>
+                regexes.every(
+                  regex =>
+                    value === undefined ||
+                    value === '' ||
+                    (Array.isArray(regex)
+                      ? regex.some(regexOr => regexOr.test(value))
+                      : regex.test(value)),
+                ),
+            }
+          : {}),
+        ...validate,
+      },
+      minLength,
+      maxLength,
+    },
   })
 
   return (
@@ -70,7 +81,16 @@ export const TextAreaField = ({
       clearable={clearable}
       data-testid={dataTestId}
       disabled={disabled}
-      error={error}
+      error={getError(
+        {
+          regex: regexes,
+          minLength,
+          maxLength,
+          label,
+          value: field.value,
+        },
+        error,
+      )}
       helper={helper}
       label={label}
       labelDescription={labelDescription}
@@ -79,12 +99,14 @@ export const TextAreaField = ({
       name={name}
       onBlur={event => {
         onBlur?.(event)
-        input.onBlur()
+        field.onBlur()
       }}
-      onChange={input.onChange}
+      onChange={event => {
+        field.onChange(event)
+        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
+      }}
       onFocus={event => {
         onFocus?.(event)
-        input.onFocus()
       }}
       placeholder={placeholder}
       readOnly={readOnly}
@@ -93,7 +115,7 @@ export const TextAreaField = ({
       success={success}
       tabIndex={tabIndex}
       tooltip={tooltip}
-      value={input.value}
+      value={field.value}
     />
   )
 }
