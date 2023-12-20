@@ -1,5 +1,18 @@
 # Change Log
 
+## 1.29.1
+
+### Patch Changes
+
+- [#3260](https://github.com/scaleway/ultraviolet/pull/3260) [`5029e35`](https://github.com/scaleway/ultraviolet/commit/5029e35e9f73f356d874feea160dc2c0b119e0fa) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<SelectableCard />` with type `radio`
+
+- [#3196](https://github.com/scaleway/ultraviolet/pull/3196) [`ccbdcb9`](https://github.com/scaleway/ultraviolet/commit/ccbdcb90da3a245802431d6fc7f0ca851a63835f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-datepicker` to `4.23.0`.
+
+- [#3250](https://github.com/scaleway/ultraviolet/pull/3250) [`df48b95`](https://github.com/scaleway/ultraviolet/commit/df48b95184de08f799eb8c9bad76ee0ab11e7de4) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.45`.
+  Updated dependency `@types/react-dom` to `18.2.18`.
+- Updated dependencies [[`df48b95`](https://github.com/scaleway/ultraviolet/commit/df48b95184de08f799eb8c9bad76ee0ab11e7de4)]:
+  - @ultraviolet/icons@2.7.2
+
 ## 1.29.0
 
 ### Minor Changes
