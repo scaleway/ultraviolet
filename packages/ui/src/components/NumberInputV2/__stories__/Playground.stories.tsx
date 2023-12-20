@@ -4,6 +4,7 @@ export const Playground = Template.bind({})
 
 Playground.args = {
   disabled: false,
+  readOnly: false,
   id: 'number-input',
   label: 'Number Input',
   max: 100,

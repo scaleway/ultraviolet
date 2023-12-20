@@ -43,26 +43,33 @@ const SideContainer = styled('div', {
       : `${theme.space['0.5']} ${theme.space['1']}`};
 `
 
-const Unit = styled(Text)`
-  padding: 0 ${({ theme }) => theme.space['1']};
+const Unit = styled(Text, {
+  shouldForwardProp: prop => !['size'].includes(prop),
+})<{ size: Sizes }>`
+  display: flex;
+  align-items: center;
+  padding: ${({ theme }) =>
+    `${theme.space['1']} ${theme.space['1']} ${theme.space['1']}`};
+  height: ${({ size }) => SIZES[size]};
 `
 
-const Input = styled('input', {
-  shouldForwardProp: prop => !['unit'].includes(prop),
-})<{ unit?: string }>`
+const Input = styled.input`
   outline: none;
   border: none;
-  text-align: center;
   padding: 0;
   width: 100%;
   color: ${({ theme }) => theme.colors.neutral.text};
+  text-align: center;
+  padding: ${({ theme }) => theme.space['1']};
 
-  ${({ unit, theme }) =>
-    unit
-      ? `padding-left: calc(${unit.length} * ${theme.typography.body.fontSize} + ${theme.space['1']});`
-      : ''}
+  &[data-has-unit='true'] {
+    text-align: left;
+    padding: ${({ theme }) =>
+      `${theme.space['1']} 0 ${theme.space['1']} ${theme.space['1']}`};
+  }
 
   // Remove native arrows from input[type=number]
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -88,12 +95,22 @@ const Input = styled('input', {
   &:read-only {
     color: ${({ theme }) => theme.colors.neutral.text};
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+
+    & ~ ${Unit} {
+      background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    }
   }
 
   &:disabled {
     color: ${({ theme }) => theme.colors.neutral.textDisabled};
     background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
     cursor: not-allowed;
+
+    & ~ ${Unit} {
+      background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+      cursor: not-allowed;
+      user-select: none;
+    }
   }
 
   &:placeholder-shown ~ ${Unit} {
@@ -293,6 +310,7 @@ export const NumberInputV2 = forwardRef(
               data-readOnly={readOnly}
               data-error={!!error}
               data-success={!!success}
+              data-unit={!!unit}
               className={className}
             >
               <SideContainer size={size} data-position="left">
@@ -331,7 +349,7 @@ export const NumberInputV2 = forwardRef(
                   required={required}
                   autoFocus={autoFocus}
                   readOnly={readOnly}
-                  unit={unit}
+                  data-has-unit={!!unit}
                 />
                 {unit ? (
                   <Unit
@@ -339,6 +357,7 @@ export const NumberInputV2 = forwardRef(
                     sentiment="neutral"
                     as="span"
                     disabled={disabled}
+                    size={size}
                   >
                     {unit}
                   </Unit>
@@ -363,6 +382,7 @@ export const NumberInputV2 = forwardRef(
             as="span"
             prominence="weak"
             sentiment={helperSentiment}
+            disabled={disabled || readOnly}
           >
             {error || success || helper}
           </Text>
