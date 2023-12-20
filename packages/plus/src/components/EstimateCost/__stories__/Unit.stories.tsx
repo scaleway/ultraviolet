@@ -9,7 +9,7 @@ Unit.args = {
       label="Storage"
       subLabel="50 GB Free"
       price={0.001}
-      unit="GB"
+      unit="samples"
       amountFree={50}
       amount={100}
     >

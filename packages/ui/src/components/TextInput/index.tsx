@@ -128,7 +128,7 @@ const StyledLabel = styled('label', {
   text-overflow: ellipsis;
   width: 100%;
   height: 48px;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.bodySmall};
   transition: transform 150ms;
   transform: translate(0, 12px) scale(1);
 
@@ -181,6 +181,8 @@ type StyledInputProps = {
   multiline?: boolean
   resizable?: boolean
   inputSize: TextInputSizes
+  unit?: string
+  rightComponentLength: number
 } & (
   | InputHTMLAttributes<HTMLInputElement>
   | TextareaHTMLAttributes<HTMLTextAreaElement>
@@ -203,6 +205,8 @@ const StyledInput = styled('input', {
       'resizable',
       'inputSize',
       'paddingRightFactor',
+      'rightComponentLength',
+      'unit',
     ].includes(prop),
 })<StyledInputProps>`
   transition:
@@ -294,10 +298,15 @@ const StyledInput = styled('input', {
     padding-top: ${theme.space['1']};
   `}
 
-  ${({ paddingRightFactor, theme }) =>
+  ${({ paddingRightFactor, rightComponentLength, unit, theme }) =>
     paddingRightFactor > 0 &&
     `
-    padding-right: calc(${paddingRightFactor} * ${theme.space['4']});
+    padding-right: calc(${
+      unit ? `${unit.length} * ${theme.space['1']} + ` : ''
+    }${
+      paddingRightFactor +
+      (unit ? rightComponentLength - 1 : rightComponentLength)
+    } * ${theme.space['4']});
   `}
 `
 
@@ -553,10 +562,7 @@ export const TextInput = forwardRef<
     ])
 
     const showSeparator = (required && hasRightElement) || unit
-    const paddingRightFactor =
-      rightComponentsArray.length +
-      (required ? 1 : 0) +
-      (showSeparator ? 0.5 : 0)
+    const paddingRightFactor = (required ? 1 : 0) + (showSeparator ? 0.5 : 0)
 
     return (
       <div className={className}>
@@ -576,6 +582,8 @@ export const TextInput = forwardRef<
             fillAvailable={fillAvailable}
             hasLabel={hasLabel}
             paddingRightFactor={paddingRightFactor}
+            rightComponentLength={rightComponentsArray.length}
+            unit={unit}
             id={id}
             inputSize={inputSize}
             isPlaceholderVisible={isPlaceholderVisible}

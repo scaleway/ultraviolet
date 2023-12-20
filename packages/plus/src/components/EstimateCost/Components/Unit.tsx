@@ -48,8 +48,7 @@ export const Unit = ({
       <Regular>{capacity}</Regular>
     </ItemResourceName>
   ) : (
-    // 120px is arbitrary, just to avoid full width input (ugly) nor too small input.
-    <div style={{ width: '120px' }}>
+    <div style={{ width: '150px' }}>
       <StyledTextInput
         type="number"
         size="small"
