@@ -144,6 +144,7 @@ export const lightTheme = {
           primary:
             'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
         },
+        text: { dark: '#222638', light: '#ffffff' },
       },
       icon: {
         category: { primary: { fill: '#521094', fillStrong: '#a060f6' } },
