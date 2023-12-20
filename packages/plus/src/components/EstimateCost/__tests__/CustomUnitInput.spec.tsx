@@ -1,5 +1,17 @@
-import { afterAll, beforeAll, describe, jest, test } from '@jest/globals'
-import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
+import {
+  afterAll,
+  beforeAll,
+  describe,
+  expect,
+  jest,
+  test,
+} from '@jest/globals'
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import {
+  renderWithTheme,
+  shouldMatchEmotionSnapshot,
+} from '../../../../.jest/helpers'
 import { CustomUnitInput } from '../Components/CustomUnitInput'
 
 describe('EstimateCost - CustomUnitInput', () => {
@@ -19,4 +31,22 @@ describe('EstimateCost - CustomUnitInput', () => {
         timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
       />,
     ))
+
+  test('render and trigger on blur when leaving input empty', async () => {
+    renderWithTheme(
+      <CustomUnitInput
+        setIteration={() => {}}
+        iteration={{ value: 1, unit: 'hours' }}
+        timeUnits={['seconds', 'minutes', 'hours', 'days', 'months']}
+      />,
+    )
+
+    const input = screen.getByRole<HTMLInputElement>('spinbutton')
+    await waitFor(() => expect(input.value).toBe('1'))
+    await userEvent.click(input)
+    await userEvent.type(input, '{ArrowLeft}{Backspace}0')
+    await userEvent.tab()
+
+    await waitFor(() => expect(input.value).toBe('1'))
+  })
 })
