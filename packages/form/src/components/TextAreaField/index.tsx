@@ -9,7 +9,10 @@ export type TextAreaFieldProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>,
 > = BaseFieldProps<TFieldValues, TName> &
-  Omit<ComponentProps<typeof TextArea>, 'value' | 'error' | 'name'> & {
+  Omit<
+    ComponentProps<typeof TextArea>,
+    'value' | 'error' | 'name' | 'onChange'
+  > & {
     regex?: (RegExp | RegExp[])[]
   }
 
