@@ -74,7 +74,7 @@ export const SelectableCardField = <
       className={className}
       disabled={disabled}
       onChange={event => {
-        if (type === 'checkbox' && Array.isArray(field.value)) {
+        if (type === 'checkbox') {
           const fieldValue = (field.value ?? []) as string[]
           if (fieldValue?.includes(event.currentTarget.value)) {
             field.onChange(
@@ -83,7 +83,7 @@ export const SelectableCardField = <
               ),
             )
           } else {
-            field.onChange([...field.value, event.currentTarget.value])
+            field.onChange([...fieldValue, event.currentTarget.value])
           }
         } else {
           field.onChange(event)
