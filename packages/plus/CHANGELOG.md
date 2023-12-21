@@ -1,5 +1,17 @@
 # @ultraviolet/plus
 
+## 0.5.8
+
+### Patch Changes
+
+- [#3262](https://github.com/scaleway/ultraviolet/pull/3262) [`5214374`](https://github.com/scaleway/ultraviolet/commit/521437477757bcab2acbc0d0f92b855690763412) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<EstimateCost.Unit />` increase the size of the unit and fix overflowing
+
+- [#3237](https://github.com/scaleway/ultraviolet/pull/3237) [`63e55ab`](https://github.com/scaleway/ultraviolet/commit/63e55aba435fab09b90c0ef3cf5022a27851eb6c) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<EstimateCost />` unit input to be clearable completly
+
+- Updated dependencies [[`5214374`](https://github.com/scaleway/ultraviolet/commit/521437477757bcab2acbc0d0f92b855690763412), [`27ed74a`](https://github.com/scaleway/ultraviolet/commit/27ed74a32c1a3639f09161beb49c5ed3d2726bfa), [`35e84a0`](https://github.com/scaleway/ultraviolet/commit/35e84a0467d44acdef0c951c502ed2c2ef9c413a)]:
+  - @ultraviolet/ui@1.29.2
+  - @ultraviolet/themes@1.6.0
+
 ## 0.5.7
 
 ### Patch Changes

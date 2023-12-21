@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.29.2
+
+### Patch Changes
+
+- [#3262](https://github.com/scaleway/ultraviolet/pull/3262) [`5214374`](https://github.com/scaleway/ultraviolet/commit/521437477757bcab2acbc0d0f92b855690763412) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextInput />` to change input padding according to unit size avoiding overflow
+
+- [#3258](https://github.com/scaleway/ultraviolet/pull/3258) [`27ed74a`](https://github.com/scaleway/ultraviolet/commit/27ed74a32c1a3639f09161beb49c5ed3d2726bfa) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.19.4`.
+  Updated dependency `react-datepicker` to `4.24.0`.
+- Updated dependencies [[`35e84a0`](https://github.com/scaleway/ultraviolet/commit/35e84a0467d44acdef0c951c502ed2c2ef9c413a)]:
+  - @ultraviolet/themes@1.6.0
+  - @ultraviolet/icons@2.7.3
+
 ## 1.29.1
 
 ### Patch Changes
