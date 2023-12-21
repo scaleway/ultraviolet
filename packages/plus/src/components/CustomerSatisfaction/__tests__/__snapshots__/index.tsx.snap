@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerSatisfaction should work with parameters 1`] = `
+<DocumentFragment>
+  @keyframes animation-0 {
+  from, 10%, 40%, 80%, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    -moz-transform: translate3d(0, 5px, 0);
+    -ms-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(0, -6px, 0);
+    -moz-transform: translate3d(0, -6px, 0);
+    -ms-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -2px, 0);
+    -moz-transform: translate3d(0, -2px, 0);
+    -ms-transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+.cache-1cjs2t5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-pal2x8-Image-scaled {
+  height: 88px;
+  width: 88px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.cache-pal2x8-Image-scaled:hover,
+.cache-pal2x8-Image-scaled:focus {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.cache-137fro5-Image-scaled-Image {
+  height: 88px;
+  width: 88px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-animation: animation-0 1s ease infinite;
+  animation: animation-0 1s ease infinite;
+}
+
+.cache-137fro5-Image-scaled-Image:hover,
+.cache-137fro5-Image-scaled-Image:focus {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+<div
+    class="cache-1cjs2t5 ehpbis70"
+  >
+    <img
+      class="cache-pal2x8-Image-scaled epmg9lb0"
+      src="test-file-stub"
+    />
+    <img
+      class="cache-pal2x8-Image-scaled epmg9lb0"
+      src="test-file-stub"
+    />
+    <img
+      class="cache-pal2x8-Image-scaled epmg9lb0"
+      src="test-file-stub"
+    />
+    <img
+      class="cache-137fro5-Image-scaled-Image epmg9lb0"
+      src="test-file-stub"
+    />
+    <img
+      class="cache-pal2x8-Image-scaled epmg9lb0"
+      src="test-file-stub"
+    />
+  </div>
+</DocumentFragment>
+`;
