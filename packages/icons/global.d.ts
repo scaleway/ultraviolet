@@ -5,3 +5,8 @@ declare module '*.svg' {
   const svg: Parameters<typeof styled>[0]
   export default svg
 }
+
+declare module '*.md' {
+  const content: string
+  export default content
+}

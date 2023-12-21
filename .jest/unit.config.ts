@@ -1,7 +1,7 @@
 import type { Config } from '@jest/types'
 import path from 'path'
 
-const config: Config.InitialOptions = {
+const config = {
   rootDir: path.join(__dirname, '..'),
   testEnvironment: 'jsdom',
   collectCoverageFrom: [
@@ -28,6 +28,6 @@ const config: Config.InitialOptions = {
     '\\.(css|less)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/.jest/setupTests.ts'],
-}
+} satisfies Config.InitialOptions
 
 export default config

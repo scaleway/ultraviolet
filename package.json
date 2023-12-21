@@ -39,7 +39,8 @@
     "chromatic": "chromatic --exit-zero-on-changes",
     "release": "pnpm build && pnpm changeset publish",
     "svg": "svgo --pretty --multipass",
-    "svg:all": "pnpm run svg -r -f ."
+    "svg:all": "pnpm run svg -r -f .",
+    "typecheck": "pnpm --filter '@ultraviolet/*' recursive run typecheck"
   },
   "lint-staged": {
     "*.(j|t|mj)s?(x)": [
@@ -65,7 +66,8 @@
       "path": [
         "packages/*/dist/**/*.js",
         "!packages/illustrations",
-        "!packages/plus"
+        "!packages/plus",
+        "!packages/icons"
       ],
       "limit": "230 kB",
       "webpack": false,
