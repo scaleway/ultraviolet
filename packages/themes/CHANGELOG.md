@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.6.0
+
+### Minor Changes
+
+- [#3259](https://github.com/scaleway/ultraviolet/pull/3259) [`35e84a0`](https://github.com/scaleway/ultraviolet/commit/35e84a0467d44acdef0c951c502ed2c2ef9c413a) Thanks [@matthprost](https://github.com/matthprost)! - New tokens `colors.other.gradients.text.dark` and `colors.other.gradients.text.light` available.
+  Those tokens can be used for text above gradient background.
+
 ## 1.5.0
 
 ### Minor Changes

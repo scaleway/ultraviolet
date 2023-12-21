@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.12.2
+
+### Patch Changes
+
+- [#3262](https://github.com/scaleway/ultraviolet/pull/3262) [`5214374`](https://github.com/scaleway/ultraviolet/commit/521437477757bcab2acbc0d0f92b855690763412) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<TextInputField />` to change input padding according to unit size avoiding overflow
+
+- Updated dependencies [[`5214374`](https://github.com/scaleway/ultraviolet/commit/521437477757bcab2acbc0d0f92b855690763412), [`27ed74a`](https://github.com/scaleway/ultraviolet/commit/27ed74a32c1a3639f09161beb49c5ed3d2726bfa)]:
+  - @ultraviolet/ui@1.29.2
+
 ## 1.12.1
 
 ### Patch Changes
