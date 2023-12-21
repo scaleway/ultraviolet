@@ -17,9 +17,12 @@ type ProductIconProps = {
   size?: keyof typeof SIZES
 }
 
-const StyledIcon = styled('svg', {
-  shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
-})<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
+const StyledIcon = (component: Parameters<typeof styled>[0]) => styled(
+  component,
+  {
+    shouldForwardProp: prop => !['variant', 'disabled'].includes(prop),
+  },
+)<{ variant: Variants; disabled?: boolean; size: keyof typeof SIZES }>`
   & {
     width: ${({ size }) => `${SIZES[size]}px`};
     min-width: ${({ size }) =>
@@ -70,13 +73,12 @@ export const ProductIcon = ({
   variant = 'primary',
   disabled,
   size = 'small',
-}: ProductIconProps) => (
-  <StyledIcon
-    variant={variant}
-    disabled={disabled}
-    size={size}
-    viewBox="0 0 64 64"
-  >
-    {PRODUCT_ICONS[name]}
-  </StyledIcon>
-)
+}: ProductIconProps) => {
+  const Icon = StyledIcon(PRODUCT_ICONS[name])
+
+  return (
+    <Icon variant={variant} disabled={disabled} size={size} viewBox="0 0 64 64">
+      {PRODUCT_ICONS[name]}
+    </Icon>
+  )
+}

@@ -78,8 +78,9 @@ export default [
       }),
       url({
         limit: 63488,
+        exclude: ['**/*.svg'], // We use svgr for svg files
       }),
-      svgr({ memo: true }),
+      svgr({ memo: true, svgo: false }), // We disable svgo because we have custom configuration for it svgo.config.js
       PROFILE &&
         visualizer({
           brotliSize: true,

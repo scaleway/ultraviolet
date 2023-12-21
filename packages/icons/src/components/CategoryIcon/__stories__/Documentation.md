@@ -2,11 +2,10 @@ CategoryIcon defines a sets of icons that are linked to Scaleway products. They 
 
 ### ➕ How to add a new one?
 
-Simply edit the file `packages/icons/src/components/CategoryIcon/Icons.tsx`, add the new category icon into the object.
-As you can see from existing icons, you should not include the `<svg>` tag it will be added automatically.
+Simply add the `.svg` file `packages/icons/src/components/ProductIcon/assets` then you need to export it in file `Icons.ts` and that's all!
 
 > ** IMPORTANT: ** Make sure that the icon name is unique, otherwise it will override the existing one.\
-> The name should be camelCase and should not contain any special characters.
+> The name should be camelCase and should not contain any special characters while svg file name should be kebab-case.
 
 ### ⚙️ How does it works?
 

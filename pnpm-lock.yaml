@@ -148,6 +148,9 @@ importers:
       '@svgr/rollup':
         specifier: 8.1.0
         version: 8.1.0(rollup@4.9.0)(typescript@5.2.2)
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.2.2)
       '@testing-library/dom':
         specifier: 9.3.3
         version: 9.3.3
@@ -6217,7 +6220,7 @@ packages:
     resolution: {integrity: sha512-EbDKwO9GpfWP4jN9sGdYwPBU0kdomaPIL2Eu4YwmgP+sJeXT+L7bMwJUBnhzfH8Q2qMBqZ4fJwpCyYsAN3mt2Q==}
     engines: {node: '>=14'}
     dependencies:
-      '@babel/types': 7.23.5
+      '@babel/types': 7.23.6
       entities: 4.5.0
     dev: true
 
@@ -6265,6 +6268,23 @@ packages:
       '@svgr/plugin-svgo': 8.1.0(@svgr/core@8.1.0)(typescript@5.2.2)
     transitivePeerDependencies:
       - rollup
+      - supports-color
+      - typescript
+    dev: true
+
+  /@svgr/webpack@8.1.0(typescript@5.2.2):
+    resolution: {integrity: sha512-LnhVjMWyMQV9ZmeEy26maJk+8HTIbd59cH4F2MJ439k9DqejRisfFNGAPvRYlKETuh9LrImlS8aKsBgKjMA8WA==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@babel/core': 7.23.6
+      '@babel/plugin-transform-react-constant-elements': 7.22.5(@babel/core@7.23.6)
+      '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
+      '@babel/preset-react': 7.23.3(@babel/core@7.23.6)
+      '@babel/preset-typescript': 7.23.3(@babel/core@7.23.6)
+      '@svgr/core': 8.1.0(typescript@5.2.2)
+      '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0)
+      '@svgr/plugin-svgo': 8.1.0(@svgr/core@8.1.0)(typescript@5.2.2)
+    transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true

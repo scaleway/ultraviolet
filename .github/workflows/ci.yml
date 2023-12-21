@@ -21,7 +21,7 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm install
-      - run: pnpm tsc --noEmit
+      - run: pnpm typecheck
   lint:
     runs-on: ubuntu-22.04
     steps:
