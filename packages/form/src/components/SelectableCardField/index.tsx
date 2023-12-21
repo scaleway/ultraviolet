@@ -61,15 +61,33 @@ export const SelectableCardField = <
     },
   })
 
+  const isChecked =
+    type === 'checkbox' && Array.isArray(field.value) && value
+      ? (field.value ?? []).includes(value)
+      : field.value === value
+
   return (
     <SelectableCard
       isError={!!error}
       showTick={showTick}
-      checked={field.value === value}
+      checked={isChecked}
       className={className}
       disabled={disabled}
       onChange={event => {
-        field.onChange(event)
+        if (type === 'checkbox' && Array.isArray(field.value)) {
+          const fieldValue = (field.value ?? []) as string[]
+          if (fieldValue?.includes(event.currentTarget.value)) {
+            field.onChange(
+              fieldValue?.filter(
+                currentValue => currentValue !== event.currentTarget.value,
+              ),
+            )
+          } else {
+            field.onChange([...field.value, event.currentTarget.value])
+          }
+        } else {
+          field.onChange(event)
+        }
         onChange?.(event)
       }}
       onBlur={event => {
