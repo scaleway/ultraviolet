@@ -1,6 +1,11 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ForwardedRef, InputHTMLAttributes, ReactNode } from 'react'
+import type {
+  ChangeEvent,
+  ForwardedRef,
+  InputHTMLAttributes,
+  ReactNode,
+} from 'react'
 import {
   createRef,
   forwardRef,
@@ -15,32 +20,35 @@ import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
 
 const SIZES = {
-  small: '34px',
-  medium: '40px',
-  large: '48px',
+  small: '30px',
+  medium: '38px',
+  large: '46px',
 }
 
 type Sizes = keyof typeof SIZES
 
-const SideContainer = styled('div', {
-  shouldForwardProp: prop => !['size'].includes(prop),
-})<{ size: Sizes }>`
-  &[data-position='left'] {
-    border-right: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: ${({ theme }) => theme.radii.default} 0 0
-      ${({ theme }) => theme.radii.default};
+const SideContainer = styled(Stack)`
+  padding: ${({ theme }) => `${theme.space['0.25']} ${theme.space['1']}`};
+
+  &[data-size='small'] {
+    height: ${SIZES.small};
   }
 
-  &[data-position='right'] {
-    border-left: 1px solid ${({ theme }) => theme.colors.neutral.border};
-    border-radius: 0 ${({ theme }) => theme.radii.default}
-      ${({ theme }) => theme.radii.default} 0;
+  &[data-size='medium'] {
+    height: ${SIZES.medium};
   }
 
-  padding: ${({ theme, size }) =>
-    size === 'large'
-      ? theme.space['1']
-      : `${theme.space['0.5']} ${theme.space['1']}`};
+  &[data-size='large'] {
+    height: ${SIZES.large};
+    padding: ${({ theme }) => `${theme.space['0.5']} ${theme.space['1']}`};
+  }
+`
+
+const InputContainer = styled(Stack)`
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
 `
 
 const Unit = styled(Text, {
@@ -59,6 +67,10 @@ const Input = styled.input`
   padding: 0;
   width: 100%;
   color: ${({ theme }) => theme.colors.neutral.text};
+  font-size: ${({ theme }) => theme.typography.body.fontSize};
+  font-family: ${({ theme }) => theme.typography.body.fontFamily};
+  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
+  line-height: ${({ theme }) => theme.typography.body.lineHeight};
   text-align: center;
   padding: ${({ theme }) => theme.space['1']};
 
@@ -129,55 +141,31 @@ const Container = styled.div`
   &:focus-within {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
     box-shadow: ${({ theme }) => theme.shadows.focusPrimary};
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    }
   }
 
   &[data-success='true'] {
     border-color: ${({ theme }) => theme.colors.success.border};
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.success.border};
-    }
   }
 
   &[data-error='true'] {
     border-color: ${({ theme }) => theme.colors.danger.border};
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.danger.border};
-    }
   }
 
   &:hover {
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.primary.borderHover};
-    }
   }
 
   &[data-readOnly='true'] {
     border-color: ${({ theme }) => theme.colors.neutral.border};
+    background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
+    cursor: not-allowed;
     box-shadow: none;
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.neutral.border};
-      background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
-      cursor: not-allowed;
-    }
   }
 
   &[data-disabled='true'] {
     border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-
-    & ${SideContainer} {
-      border-color: ${({ theme }) => theme.colors.neutral.borderDisabled};
-      background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
-      cursor: not-allowed;
-    }
+    background: ${({ theme }) => theme.colors.neutral.backgroundDisabled};
+    cursor: not-allowed;
   }
 `
 
@@ -197,19 +185,17 @@ type NumberInputProps = {
   labelDescription?: ReactNode
   error?: string
   success?: string
-  helper?: string
+  helper?: ReactNode
+  value?: string | number
 } & Pick<
   InputHTMLAttributes<HTMLInputElement>,
   | 'onChange'
-  | 'value'
-  | 'defaultValue'
   | 'onFocus'
   | 'onBlur'
   | 'name'
   | 'id'
   | 'placeholder'
   | 'aria-label'
-  | 'aria-describedby'
   | 'min'
   | 'max'
   | 'disabled'
@@ -221,7 +207,7 @@ type NumberInputProps = {
 
 /**
  * NumberInputV2 component is used to increment / decrement a number value by clicking on + / - buttons or
- * by typing into input.
+ * by typing into input. If the value is out of the min / max range, the input will automatically be the min / max value on blur.
  */
 export const NumberInputV2 = forwardRef(
   (
@@ -242,7 +228,7 @@ export const NumberInputV2 = forwardRef(
       label,
       labelDescription,
       id,
-      placeholder,
+      placeholder = '',
       error,
       success,
       helper,
@@ -257,22 +243,31 @@ export const NumberInputV2 = forwardRef(
     const localRef = createRef<HTMLInputElement>()
     useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
 
-    console.log(unit, unit?.length)
-
     const uniqueId = useId()
     const localId = id ?? uniqueId
+
+    const createChangeEvent = (
+      newValue: string | number,
+    ): ChangeEvent<HTMLInputElement> =>
+      ({
+        target: {
+          value: newValue,
+        },
+      }) as ChangeEvent<HTMLInputElement>
 
     const onClickSideButton = useCallback(
       (direction: 'up' | 'down') => () => {
         if (direction === 'up') {
           localRef.current?.stepUp()
+          onChange?.(createChangeEvent(localRef.current?.value ?? min))
         }
 
         if (direction === 'down') {
           localRef.current?.stepDown()
+          onChange?.(createChangeEvent(localRef.current?.value ?? min))
         }
       },
-      [localRef],
+      [localRef, min, onChange],
     )
 
     const helperSentiment = useMemo(() => {
@@ -288,7 +283,7 @@ export const NumberInputV2 = forwardRef(
     }, [error, success])
 
     return (
-      <Stack gap="0.5">
+      <Stack gap="0.5" className={className}>
         <Stack direction="row" gap="1" alignItems="center">
           <Stack direction="row" gap="0.5" alignItems="start">
             <Text
@@ -311,9 +306,12 @@ export const NumberInputV2 = forwardRef(
               data-error={!!error}
               data-success={!!success}
               data-unit={!!unit}
-              className={className}
             >
-              <SideContainer size={size} data-position="left">
+              <SideContainer
+                justifyContent="center"
+                alignItems="center"
+                data-size={size}
+              >
                 <Button
                   sentiment="neutral"
                   variant="ghost"
@@ -321,9 +319,10 @@ export const NumberInputV2 = forwardRef(
                   size={size === 'small' ? 'xsmall' : 'small'}
                   disabled={disabled || readOnly}
                   onClick={onClickSideButton('down')}
+                  aria-label="minus"
                 />
               </SideContainer>
-              <Stack
+              <InputContainer
                 direction="row"
                 justifyContent="space-between"
                 flex={1}
@@ -335,7 +334,29 @@ export const NumberInputV2 = forwardRef(
                   name={name}
                   id={localId}
                   placeholder={placeholder}
-                  onBlur={onBlur}
+                  onBlur={event => {
+                    if (event.target.value === '') return
+
+                    const numericValue = Number(event.target.value)
+                    const maxValue = typeof max === 'number' ? max : Number(max)
+                    const minValue = typeof min === 'number' ? min : Number(min)
+
+                    if (
+                      Number.isNaN(numericValue) ||
+                      (!Number.isNaN(minValue) && numericValue < minValue)
+                    ) {
+                      onChange?.(createChangeEvent(min.toString()))
+                    }
+
+                    if (
+                      Number.isNaN(numericValue) ||
+                      (!Number.isNaN(maxValue) && numericValue > maxValue)
+                    ) {
+                      onChange?.(createChangeEvent(max.toString()))
+                    }
+
+                    onBlur?.(event)
+                  }}
                   onFocus={onFocus}
                   onChange={onChange}
                   value={value}
@@ -362,8 +383,12 @@ export const NumberInputV2 = forwardRef(
                     {unit}
                   </Unit>
                 ) : null}
-              </Stack>
-              <SideContainer size={size} data-position="right">
+              </InputContainer>
+              <SideContainer
+                justifyContent="center"
+                alignItems="center"
+                data-size={size}
+              >
                 <Button
                   sentiment="neutral"
                   variant="ghost"
@@ -371,6 +396,7 @@ export const NumberInputV2 = forwardRef(
                   size={size === 'small' ? 'xsmall' : 'small'}
                   disabled={disabled || readOnly}
                   onClick={onClickSideButton('up')}
+                  aria-label="plus"
                 />
               </SideContainer>
             </Container>
