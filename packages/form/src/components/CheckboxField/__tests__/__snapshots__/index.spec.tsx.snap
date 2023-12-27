@@ -288,7 +288,7 @@ exports[`CheckboxField should check two boxes 1`] = `
         aria-checked="true"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="value"
+        id=":re:"
         name="value"
         type="checkbox"
         value="foo"
@@ -341,7 +341,7 @@ exports[`CheckboxField should check two boxes 1`] = `
         aria-checked="true"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="value"
+        id=":rg:"
         name="value"
         type="checkbox"
         value="bar"
@@ -676,7 +676,7 @@ exports[`CheckboxField should render correctly 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="test"
+        id=":r0:"
         name="test"
         type="checkbox"
         value=""
@@ -1012,7 +1012,7 @@ exports[`CheckboxField should render correctly checked without value 1`] = `
         aria-invalid="false"
         checked=""
         class="cache-m3g6o6 eqr7bqq2"
-        id="checked"
+        id=":r4:"
         name="checked"
         type="checkbox"
         value=""
@@ -1348,7 +1348,7 @@ exports[`CheckboxField should render correctly disabled 1`] = `
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
         disabled=""
-        id="test"
+        id=":r2:"
         name="test"
         type="checkbox"
         value=""
@@ -1683,7 +1683,7 @@ exports[`CheckboxField should render correctly not checked without value 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="checked"
+        id=":r6:"
         name="checked"
         type="checkbox"
         value=""
@@ -2018,7 +2018,7 @@ exports[`CheckboxField should render correctly with a value 1`] = `
         aria-checked="false"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="value"
+        id=":r8:"
         name="value"
         type="checkbox"
         value="foo"
@@ -2072,7 +2072,7 @@ exports[`CheckboxField should render correctly with a value 1`] = `
         aria-invalid="false"
         checked=""
         class="cache-m3g6o6 eqr7bqq2"
-        id="value"
+        id=":ra:"
         name="value"
         type="checkbox"
         value="bar"
@@ -2431,10 +2431,10 @@ exports[`CheckboxField should render correctly with errors 1`] = `
     >
       <input
         aria-checked="false"
-        aria-describedby="test-hint"
+        aria-describedby=":ri:-hint"
         aria-invalid="true"
         class="cache-m3g6o6 eqr7bqq2"
-        id="test"
+        id=":ri:"
         name="test"
         required=""
         type="checkbox"
@@ -2478,7 +2478,7 @@ exports[`CheckboxField should render correctly with errors 1`] = `
         >
           <label
             class="cache-1d3w5wq eqr7bqq3"
-            for="test"
+            for=":ri:"
           >
             Checkbox field error
           </label>
@@ -2799,7 +2799,7 @@ exports[`CheckboxField should trigger events correctly 1`] = `
         aria-checked="true"
         aria-invalid="false"
         class="cache-m3g6o6 eqr7bqq2"
-        id="test"
+        id=":rc:"
         name="test"
         type="checkbox"
         value=""
@@ -2842,7 +2842,7 @@ exports[`CheckboxField should trigger events correctly 1`] = `
         >
           <label
             class="cache-1d3w5wq eqr7bqq3"
-            for="test"
+            for=":rc:"
           >
             Checkbox field events
           </label>
