@@ -1,11 +1,5 @@
 # Change Log
 
-## 2.0.0
-
-### Major Changes
-
-- Change form library to react-hook-form
-
 ## 1.12.2
 
 ### Patch Changes
