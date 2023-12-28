@@ -1,18 +1,13 @@
 import { SelectableCard } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps } from 'react'
-import { useFormField } from '../../hooks'
-import { useErrors } from '../../providers'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type SelectableCardValue = NonNullable<
-  ComponentProps<typeof SelectableCard>['value']
->
-
 type SelectableCardFieldProps<
-  T = SelectableCardValue,
-  K = string,
-> = BaseFieldProps<T, K> &
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label' | 'onChange'> &
   Partial<
     Pick<
       ComponentProps<typeof SelectableCard>,
@@ -20,23 +15,22 @@ type SelectableCardFieldProps<
       | 'onBlur'
       | 'onChange'
       | 'onFocus'
-      | 'value'
       | 'showTick'
       | 'type'
       | 'id'
       | 'children'
-      | 'name'
       | 'tooltip'
       | 'label'
       | 'data-testid'
     >
   > & {
-    name: string
-    required?: boolean
     className?: string
   }
 
-export const SelectableCardField = ({
+export const SelectableCardField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   name,
   value,
   onChange,
@@ -48,54 +42,67 @@ export const SelectableCardField = ({
   onFocus,
   onBlur,
   required,
-  validate,
   tooltip,
   id,
   label,
+  rules,
+  shouldUnregister = false,
   'data-testid': dataTestId,
-}: SelectableCardFieldProps) => {
-  const { getError } = useErrors()
-
-  const { input, meta } = useFormField(name, {
-    disabled,
-    required,
-    type: type ?? 'radio',
-    validate,
-    value,
-  })
-
-  const error = getError({
-    label: name,
-    meta: meta as FieldState<unknown>,
+}: SelectableCardFieldProps<TFieldValues, TName>) => {
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    value: input.value,
+    shouldUnregister,
+    rules: {
+      required,
+      ...rules,
+    },
   })
+
+  const isChecked =
+    type === 'checkbox' && Array.isArray(field.value) && value
+      ? (field.value ?? []).includes(value)
+      : field.value === value
 
   return (
     <SelectableCard
       isError={!!error}
       showTick={showTick}
-      checked={input.checked}
+      checked={isChecked}
       className={className}
       disabled={disabled}
-      name={input.name}
       onChange={event => {
-        input.onChange(event)
+        if (type === 'checkbox') {
+          const fieldValue = (field.value ?? []) as string[]
+          if (fieldValue?.includes(event.currentTarget.value)) {
+            field.onChange(
+              fieldValue?.filter(
+                currentValue => currentValue !== event.currentTarget.value,
+              ),
+            )
+          } else {
+            field.onChange([...fieldValue, event.currentTarget.value])
+          }
+        } else {
+          field.onChange(event)
+        }
         onChange?.(event)
       }}
       onBlur={event => {
-        input.onBlur(event)
+        field.onBlur()
         onBlur?.(event)
       }}
       onFocus={event => {
-        input.onFocus(event)
         onFocus?.(event)
       }}
       type={type}
-      value={input.value}
       id={id}
       tooltip={tooltip}
       label={label}
+      value={value ?? ''}
+      name={field.name}
       data-testid={dataTestId}
     >
       {children}

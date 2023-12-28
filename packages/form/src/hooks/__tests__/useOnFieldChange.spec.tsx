@@ -3,8 +3,11 @@ import { describe, expect, jest, test } from '@jest/globals'
 import { renderHook } from '@testing-library/react'
 import { theme as lightTheme } from '@ultraviolet/ui'
 import type { ReactElement } from 'react'
+import type { FieldValues } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { CheckboxField, Form, TextInputField } from '../../components'
 import { mockErrors } from '../../mocks'
+import type { CallbackFn } from '../useOnFieldChange'
 import { useOnFieldChange } from '../useOnFieldChange'
 
 type FormValues = {
@@ -27,32 +30,38 @@ const updated = {
   check: false,
 }
 
-const Wrapper = ({ children, initialValues }: Wrapers) => (
-  <ThemeProvider theme={lightTheme}>
-    <Form<FormValues>
-      initialValues={initialValues}
-      errors={mockErrors}
-      onRawSubmit={() => {}}
-    >
-      {children}
-      <CheckboxField name="check" />
-      <TextInputField name="textInputName" type="text" />
-    </Form>
-  </ThemeProvider>
-)
+const Wrapper = ({ children, initialValues }: Wrapers) => {
+  const methods = useForm({
+    values: initialValues,
+  })
+
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <Form<FormValues>
+        methods={methods}
+        errors={mockErrors}
+        onRawSubmit={() => {}}
+      >
+        {children}
+        <CheckboxField name="check" />
+        <TextInputField name="textInputName" type="text" />
+      </Form>
+    </ThemeProvider>
+  )
+}
 
 describe('useOnFieldChange', () => {
   test('should render correctly', () => {
     const callback = jest.fn((value, values) => {
       expect(value).toBe(updated.textInputName)
-      expect(values).toBe(updated)
+      expect(values).toStrictEqual(updated)
     })
 
     let initialValues = initial
 
     const { result, rerender } = renderHook(
       () =>
-        useOnFieldChange<FormValues['textInputName'], FormValues>(
+        useOnFieldChange<FormValues, 'textInputName'>(
           'textInputName',
           callback,
         ),
@@ -75,13 +84,14 @@ describe('useOnFieldChange', () => {
   })
 
   test('should render when condition change', () => {
-    const callback = jest.fn()
+    const callback =
+      jest.fn<CallbackFn<FieldValues, FormValues['textInputName']>>()
 
     let initialValues = initial
 
     const { result, rerender } = renderHook(
       ({ enabled }) => {
-        useOnFieldChange<FormValues['textInputName'], FormValues>(
+        useOnFieldChange<FormValues, 'textInputName'>(
           'textInputName',
           callback,
           // enabled will depends of rerender({ condition: '' })

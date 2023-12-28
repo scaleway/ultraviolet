@@ -1,74 +1,71 @@
 import { ToggleGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFieldArray } from 'react-final-form-arrays'
+import { useController } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type ToggleGroupValue = string[]
-
-type ToggleGroupFieldProps<T = ToggleGroupValue, K = string> = BaseFieldProps<
-  T,
-  K
-> &
+type ToggleGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof ToggleGroup>,
-      | 'className'
-      | 'helper'
-      | 'onChange'
-      | 'required'
-      | 'direction'
-      | 'children'
-      | 'value'
-      | 'error'
-      | 'legend'
+      'className' | 'helper' | 'direction' | 'children' | 'error' | 'legend'
     >
   > &
   Required<Pick<ComponentProps<typeof ToggleGroup>, 'legend' | 'name'>>
 
-export const ToggleGroupField = ({
+export const ToggleGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   legend,
-  value,
   className,
   helper,
   direction,
   children,
   onChange,
+  label,
   error: customError,
   name,
   required = false,
-}: ToggleGroupFieldProps) => {
+  shouldUnregister = false,
+}: ToggleGroupFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
-
-  const { fields, meta } = useFieldArray(name, {
-    type: 'Group',
-    value,
-    validate: localValue =>
-      required && localValue?.length === 0 ? 'Required' : undefined,
-  })
-
-  const error = getError({
-    label: legend,
-    meta,
-    value: fields.value,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
+    shouldUnregister,
+    rules: {
+      validate: required ? value => value.length > 0 : undefined,
+    },
   })
+
+  const value = field.value as string[]
 
   return (
     <ToggleGroup
       legend={legend}
-      name={fields.name}
-      value={fields.value}
+      name={field.name}
+      value={value}
       onChange={event => {
-        if (fields.value?.includes(event.currentTarget.value)) {
-          fields.remove(fields.value.indexOf(event.currentTarget?.value))
+        if (value.includes(event.currentTarget.value)) {
+          const newValue = value.filter(
+            currentValue => currentValue !== event.currentTarget.value,
+          )
+          field.onChange(newValue)
+          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         } else {
-          fields.push(event.currentTarget.value)
+          const newValue = [...value, event.currentTarget.value]
+          field.onChange(newValue)
+          onChange?.(newValue as PathValue<TFieldValues, Path<TFieldValues>>)
         }
-
-        onChange?.(event)
       }}
-      error={error ?? customError}
+      error={customError ?? getError({ label: label ?? '' }, error)}
       className={className}
       direction={direction}
       helper={helper}

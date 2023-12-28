@@ -7,6 +7,7 @@ import {
 } from '../../../../../../scripts/figma-synchronise-tokens'
 import {
   Form,
+  useForm,
   // eslint-disable-next-line import/no-relative-packages
 } from '../../../../../form/src'
 import { Stack, Text } from '../../../components'
@@ -35,6 +36,11 @@ export const ThemeGenerator = () => {
   const [savedFormValues, setSavedFormValues] = useState<
     typeof INITIAL_VALUES | null
   >(null)
+
+  const methods = useForm({
+    values: savedFormValues ?? INITIAL_VALUES,
+    mode: 'onChange',
+  })
 
   useEffect(() => {
     setTheme(generatedPalette)
@@ -133,16 +139,16 @@ export const ThemeGenerator = () => {
           </Stack>
           <Form
             onRawSubmit={onSubmit}
-            initialValues={savedFormValues ?? INITIAL_VALUES}
+            methods={methods}
             errors={{
-              TOO_LOW: '',
-              TOO_HIGH: '',
-              MIN_LENGTH: '',
-              MAX_LENGTH: '',
-              REGEX: 'The hexadecimal color is not valid.',
-              REQUIRED: '',
-              MAX_DATE: '',
-              MIN_DATE: '',
+              min: () => '',
+              max: () => '',
+              minLength: () => '',
+              maxLength: () => '',
+              pattern: () => 'The hexadecimal color is not valid.',
+              required: () => '',
+              maxDate: () => '',
+              minDate: () => '',
             }}
           >
             <FormContent />

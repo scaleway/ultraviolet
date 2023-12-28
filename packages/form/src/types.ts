@@ -1,77 +1,55 @@
-import type { AnyObject, FieldSubscription, FieldValidator } from 'final-form'
-import type { FieldMetaState, UseFieldConfig } from 'react-final-form'
+import type {
+  FieldError,
+  FieldPath,
+  FieldValues,
+  Path,
+  PathValue,
+  UseControllerProps,
+  Validate,
+} from 'react-hook-form'
 
-export type FormErrorFunctionParams<InputValue = unknown> = {
-  label: string
-  name: string
-  value: InputValue
-  allValues: AnyObject
-  meta?: FieldMetaState<InputValue>
-}
-
-type RequiredErrors = {
-  TOO_LOW:
-    | ((params: FormErrorFunctionParams & { min: number }) => string)
-    | string
-  TOO_HIGH:
-    | ((params: FormErrorFunctionParams & { max: number }) => string)
-    | string
-  MIN_LENGTH:
-    | ((params: FormErrorFunctionParams & { minLength: number }) => string)
-    | string
-  MAX_LENGTH:
-    | ((params: FormErrorFunctionParams & { maxLength: number }) => string)
-    | string
-  REGEX:
-    | ((
-        params: FormErrorFunctionParams & { regex: (RegExp | RegExp[])[] },
-      ) => string)
-    | string
-  REQUIRED: ((params: FormErrorFunctionParams) => string) | string
-  MAX_DATE:
-    | ((params: FormErrorFunctionParams & { maxDate: Date }) => string)
-    | string
-  MIN_DATE:
-    | ((params: FormErrorFunctionParams & { minDate: Date }) => string)
-    | string
-}
-
-export type FormErrors = RequiredErrors
-
-export type ValidatorProps = {
-  required?: boolean
-  min?: number
+export type MetaField = {
+  min?: number | string
+  max?: number | string
   minLength?: number
-  max?: number
   maxLength?: number
   regex?: (RegExp | RegExp[])[]
-  maxDate?: Date
   minDate?: Date
+  maxDate?: Date
+  label: string
+  value?: string | number
 }
 
-export type ValidatorObject<InputValue = unknown> = {
-  validate: (
-    value: InputValue,
-    allValues?: AnyObject,
-    meta?: FieldMetaState<InputValue>,
-  ) => boolean
-  error: keyof RequiredErrors
+export type RequiredErrors = {
+  [key in FieldError['type']]: (params: MetaField) => string
 }
 
-export type BaseFieldProps<FieldValue, InputValue = unknown> = {
-  parse?: UseFieldConfig<FieldValue, InputValue>['parse']
-  format?: UseFieldConfig<FieldValue, InputValue>['format']
-  formatOnBlur?: boolean
-  subscription?: FieldSubscription
-  validateFields?: string[]
-  defaultValue?: FieldValue
-  data?: AnyObject
-  allowNull?: boolean
-  initialValue?: FieldValue
-  multiple?: boolean
-  isEqual?: (a: InputValue, b: InputValue) => boolean
-  validate?: FieldValidator<FieldValue>
-  afterSubmit?: () => void
-  beforeSubmit?: () => void | boolean
-  value?: FieldValue
+export type FormErrors = {
+  [key in
+    | 'required'
+    | 'min'
+    | 'max'
+    | 'minLength'
+    | 'maxLength'
+    | 'pattern'
+    | 'minDate'
+    | 'maxDate']: RequiredErrors[key]
+}
+
+export type BaseFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = {
+  name: TName
+  required?: boolean
+  /**
+   * @deprecated use rules props instead
+   */
+  validate?: Validate<PathValue<TFieldValues, Path<TFieldValues>>, TFieldValues>
+  rules?: UseControllerProps<TFieldValues>['rules']
+  defaultValue?: PathValue<TFieldValues, Path<TFieldValues>>
+  label?: string
+  value?: PathValue<TFieldValues, Path<TFieldValues>>
+  onChange?: (value?: PathValue<TFieldValues, TName>) => void
+  shouldUnregister?: UseControllerProps<TFieldValues, TName>['shouldUnregister']
 }

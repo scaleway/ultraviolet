@@ -344,9 +344,7 @@ exports[`CheckboxField should render correctly checked 1`] = `
   width: 100%;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class="cache-1civgmb ehpbis70"
     >
@@ -374,7 +372,7 @@ exports[`CheckboxField should render correctly checked 1`] = `
                 aria-checked="false"
                 aria-invalid="false"
                 class="cache-m3g6o6 eqr7bqq2"
-                id="Checkbox.value-1"
+                id=":r1:"
                 name="Checkbox.value-1"
                 type="checkbox"
                 value="value-1"
@@ -417,7 +415,7 @@ exports[`CheckboxField should render correctly checked 1`] = `
                 >
                   <label
                     class="cache-1d3w5wq eqr7bqq3"
-                    for="Checkbox.value-1"
+                    for=":r1:"
                   >
                     Checkbox 1
                   </label>
@@ -434,7 +432,7 @@ exports[`CheckboxField should render correctly checked 1`] = `
                 aria-checked="true"
                 aria-invalid="false"
                 class="cache-m3g6o6 eqr7bqq2"
-                id="Checkbox.value-2"
+                id=":r3:"
                 name="Checkbox.value-2"
                 type="checkbox"
                 value="value-2"
@@ -477,7 +475,7 @@ exports[`CheckboxField should render correctly checked 1`] = `
                 >
                   <label
                     class="cache-1d3w5wq eqr7bqq3"
-                    for="Checkbox.value-2"
+                    for=":r3:"
                   >
                     Checkbox 2
                   </label>
@@ -846,9 +844,7 @@ exports[`CheckboxField should trigger events correctly with required prop 1`] = 
   width: 100%;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class="cache-1civgmb ehpbis70"
     >
@@ -884,7 +880,7 @@ exports[`CheckboxField should trigger events correctly with required prop 1`] = 
                 aria-checked="false"
                 aria-invalid="false"
                 class="cache-m3g6o6 eqr7bqq2"
-                id="test.value-1"
+                id=":r6:"
                 name="test.value-1"
                 type="checkbox"
                 value="value-1"
@@ -927,7 +923,7 @@ exports[`CheckboxField should trigger events correctly with required prop 1`] = 
                 >
                   <label
                     class="cache-1d3w5wq eqr7bqq3"
-                    for="test.value-1"
+                    for=":r6:"
                   >
                     Checkbox 1
                   </label>
@@ -944,7 +940,7 @@ exports[`CheckboxField should trigger events correctly with required prop 1`] = 
                 aria-checked="false"
                 aria-invalid="false"
                 class="cache-m3g6o6 eqr7bqq2"
-                id="test.value-2"
+                id=":r8:"
                 name="test.value-2"
                 type="checkbox"
                 value="value-2"
@@ -987,7 +983,7 @@ exports[`CheckboxField should trigger events correctly with required prop 1`] = 
                 >
                   <label
                     class="cache-1d3w5wq eqr7bqq3"
-                    for="test.value-2"
+                    for=":r8:"
                   >
                     Checkbox 2
                   </label>

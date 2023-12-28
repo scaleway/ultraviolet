@@ -302,6 +302,7 @@ type CheckboxProps = {
 export const Checkbox = forwardRef(
   (
     {
+      id,
       checked = false,
       onChange,
       onFocus,
@@ -325,8 +326,8 @@ export const Checkbox = forwardRef(
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
     const [state, setState] = useState<boolean | 'indeterminate'>(checked)
-    const id = useId()
-    const computedName = name ?? id
+    const uniqId = useId()
+    const localId = id ?? uniqId
 
     useEffect(() => {
       setState(checked)
@@ -358,10 +359,10 @@ export const Checkbox = forwardRef(
             </StyledActivityContainer>
           ) : null}
           <CheckboxInput
-            id={computedName}
+            id={localId}
             type="checkbox"
             aria-invalid={!!error}
-            aria-describedby={error ? `${computedName}-hint` : undefined}
+            aria-describedby={error ? `${localId}-hint` : undefined}
             aria-checked={state === 'indeterminate' ? 'mixed' : state}
             aria-label={ariaLabel}
             checked={state === 'indeterminate' ? false : state}
@@ -371,7 +372,7 @@ export const Checkbox = forwardRef(
             onBlur={onBlur}
             disabled={disabled}
             value={value}
-            name={computedName}
+            name={name}
             autoFocus={autoFocus}
             ref={ref}
             required={required}
@@ -401,7 +402,7 @@ export const Checkbox = forwardRef(
           <Stack gap={0.25} flex={1}>
             <Stack gap={0.5} direction="row" alignItems="center" flex={1}>
               {children ? (
-                <StyledLabel htmlFor={computedName}>{children}</StyledLabel>
+                <StyledLabel htmlFor={localId}>{children}</StyledLabel>
               ) : null}
               {required ? (
                 <sup>

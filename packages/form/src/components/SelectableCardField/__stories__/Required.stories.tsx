@@ -17,4 +17,5 @@ Required.args = {
   name: 'required',
   showTick: true,
   required: true,
+  value: 'required',
 }

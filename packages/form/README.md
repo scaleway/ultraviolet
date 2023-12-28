@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/%40ultraviolet%2Fform.svg)](https://badge.fury.io/js/%40ultraviolet%2Fform)
 
 Ultraviolet Form is an extension of Ultraviolet UI including everything to build forms using React.
-It is using [React Final Form](https://final-form.org/react) under the hood.
+It is using [React Hook Form](https://react-hook-form.com/) under the hood.
 
 ## Installation
 
@@ -19,27 +19,19 @@ To use the library you need to put a `ThemeProvider` from `@emotion/react` with 
 import { ThemeProvider } from '@emotion/react'
 import { Form, TextInputField } from '@ultraviolet/form'
 import { theme } from '@ultraviolet/ui'
+import { useForm } from '@ultraviolet/form'
 
 export default function App() {
+  const methods = useForm()
   return (
     <ThemeProvider theme={theme}>
-      <Form>
+      <Form methods={methods}>
         <TextInputField name="example" />
       </Form>
     </ThemeProvider>
   )
 }
 ```
-
-## Contribute
-
-### Add a validator
-
-- Create a file under `src/validators/` folder
-- Export a default function with a type : (arg: unknown) => ValidatorObject
-- Export it into `src/validators/index.ts`
-- Add the key into the `ValidatorProps` type in `src/types.ts`
-- Add tests into `src/validators/__tests__` folder
 
 ## Documentation
 

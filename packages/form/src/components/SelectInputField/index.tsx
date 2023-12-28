@@ -1,6 +1,5 @@
 import type { CSSObject, Theme, css } from '@emotion/react'
 import { SelectInput } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type {
   ComponentProps,
   ForwardedRef,
@@ -8,9 +7,10 @@ import type {
   ReactNode,
 } from 'react'
 import { Children, useCallback, useMemo } from 'react'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { CommonProps, GroupBase, OptionProps, Props } from 'react-select'
 import type Select from 'react-select'
-import { useFormField } from '../../hooks'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
@@ -96,46 +96,52 @@ type SelectInputOptionOrGroup = NonNullable<SelectInputOptions>[number]
 type SelectInputOption = { value: string; label: string }
 
 export type SelectInputFieldProps<
-  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
-> = BaseFieldProps<T> &
-  Pick<
-    SelectInputProps,
-    | 'animation'
-    | 'animationDuration'
-    | 'animationOnChange'
-    | 'children'
-    | 'className'
-    | 'disabled'
-    | 'error'
-    | 'id'
-    | 'inputId'
-    | 'isClearable'
-    | 'isLoading'
-    | 'isSearchable'
-    | 'menuPortalTarget'
-    | 'onBlur'
-    | 'onChange'
-    | 'onFocus'
-    | 'options'
-    | 'placeholder'
-    | 'readOnly'
-    | 'required'
-    | 'value'
-    | 'noTopLabel'
-    | 'noOptionsMessage'
-    | 'customStyle'
-    | 'data-testid'
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'onChange'> &
+  Partial<
+    Pick<
+      SelectInputProps,
+      | 'animation'
+      | 'animationDuration'
+      | 'animationOnChange'
+      | 'children'
+      | 'className'
+      | 'disabled'
+      | 'error'
+      | 'id'
+      | 'inputId'
+      | 'isClearable'
+      | 'isLoading'
+      | 'isSearchable'
+      | 'menuPortalTarget'
+      | 'onBlur'
+      | 'onChange'
+      | 'onFocus'
+      | 'options'
+      | 'placeholder'
+      | 'readOnly'
+      | 'required'
+      | 'value'
+      | 'noTopLabel'
+      | 'noOptionsMessage'
+      | 'customStyle'
+      | 'data-testid'
+    >
   > & {
-    label?: string
+    multiple?: boolean
+    parse?: (value: unknown, name?: string) => unknown
+    format?: (value: unknown, name: string) => unknown
     maxLength?: number
     minLength?: number
-    name: string
   }
 
-const identity = <T,>(x: T) => x
+const identity = (x: unknown) => x
+// const identity = <T,>(x: T) => x
 
 export const SelectInputField = <
-  T extends SelectInputOptionOrGroup = SelectInputOptionOrGroup,
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 >({
   animation,
   animationDuration,
@@ -143,9 +149,9 @@ export const SelectInputField = <
   children,
   className,
   disabled,
-  error: errorProp,
-  format: formatProp = identity as NonNullable<BaseFieldProps<T>['format']>,
-  formatOnBlur,
+  // error: errorProp,
+  format: formatProp = identity,
+  // formatOnBlur,
   id,
   inputId,
   isClearable,
@@ -161,19 +167,17 @@ export const SelectInputField = <
   onChange,
   onFocus,
   options: optionsProp,
-  parse: parseProp = identity as NonNullable<BaseFieldProps<T>['parse']>,
+  parse: parseProp = identity,
   placeholder,
   readOnly,
   required,
-  value,
+  rules,
   noTopLabel,
   noOptionsMessage,
   customStyle,
-  validate,
+  shouldUnregister = false,
   'data-testid': dataTestId,
-}: SelectInputFieldProps<T>) => {
-  const { getError } = useErrors()
-
+}: SelectInputFieldProps<TFieldValues, TName>) => {
   const options = useMemo(
     () =>
       optionsProp ||
@@ -198,7 +202,7 @@ export const SelectInputField = <
   )
 
   const format = useCallback(
-    (val: T) => {
+    (val: unknown) => {
       if (multiple) return formatProp(val, name) as SelectInputOption
 
       const find = (opts: SelectInputOptionOrGroup[], valueToFind: string) =>
@@ -235,70 +239,58 @@ export const SelectInputField = <
         }
       }
 
-      return formatProp(selected as T, name) as SelectInputOption
+      return formatProp(selected, name) as SelectInputOption
     },
     [formatProp, multiple, name, options],
   )
 
-  const { input, meta } = useFormField<T, HTMLElement, SelectInputOption>(
+  const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    {
-      disabled,
-      format,
-      formatOnBlur,
-      maxLength,
-      minLength: minLength || required ? 1 : undefined,
-      multiple,
-      parse,
+    shouldUnregister,
+    rules: {
       required,
-      value,
-      validate,
+      minLength: minLength || required ? 1 : undefined,
+      maxLength,
+      ...rules,
     },
-  )
-
-  const error = getError({
-    errorProp,
-    label,
-    meta: meta as FieldState<unknown>,
-    name,
-    value: input.value,
   })
 
   return (
     <SelectInput
+      name={field.name}
       animation={animation}
       animationDuration={animationDuration}
       animationOnChange={animationOnChange}
       className={className}
       disabled={disabled}
-      error={error}
+      error={getError({ label, minLength, maxLength }, error)}
       id={id}
       inputId={inputId}
       isClearable={isClearable}
       isLoading={isLoading}
-      isMulti={input.multiple}
+      isMulti={multiple}
       customStyle={customStyle}
       isSearchable={isSearchable}
       menuPortalTarget={menuPortalTarget}
-      name={name}
       onBlur={event => {
-        input.onBlur(event)
+        field.onBlur()
         onBlur?.(event)
       }}
       onChange={(event, action) => {
-        input.onChange(event)
+        field.onChange(parse(event))
         onChange?.(event, action)
       }}
-      onFocus={event => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
+      onFocus={onFocus}
       options={options}
       placeholder={placeholder}
       readOnly={readOnly}
-      value={input.value}
       noTopLabel={noTopLabel}
       required={required}
+      value={format(field.value)}
       noOptionsMessage={noOptionsMessage}
       data-testid={dataTestId}
     >
