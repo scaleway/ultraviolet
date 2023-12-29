@@ -1,13 +1,18 @@
 import { DateInput } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps, FocusEvent } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
+import { maxDateValidator } from '../../validators/maxDate'
+import { minDateValidator } from '../../validators/minDate'
 
 type DateExtends = Date | [Date | null, Date | null]
 
-type DateFieldProps = BaseFieldProps<DateExtends> &
+type DateFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Omit<
     ComponentProps<typeof DateInput>,
     | 'maxDate'
@@ -20,16 +25,14 @@ type DateFieldProps = BaseFieldProps<DateExtends> &
     | 'onFocus'
     | 'onBlur'
     | 'autoFocus'
-    | 'startDate'
+    | 'stardDate'
     | 'endDate'
   > & {
-    name: string
     maxDate?: Date
     minDate?: Date
     disabled?: boolean
     required?: boolean
     locale?: string
-    onChange?: (value: Date | null) => void
     onBlur?: (event: FocusEvent<HTMLElement>) => void
     onFocus?: (value: FocusEvent<HTMLElement>) => void
     autoFocus?: boolean
@@ -41,102 +44,96 @@ const parseDate = (value: string | Date): Date =>
 const isEmpty = (value?: Date | string): boolean =>
   typeof value === 'string' ? value === '' : value === undefined
 
-export const DateField = ({
+export const DateField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   required,
   name,
   label = '',
-  validate,
   format,
   locale,
   maxDate,
   minDate,
-  initialValue,
   disabled,
-  value: inputVal,
   onChange,
   onBlur,
   onFocus,
-  formatOnBlur,
+  rules,
   autoFocus = false,
   excludeDates,
   selectsRange,
   'data-testid': dataTestId,
-}: DateFieldProps) => {
+  shouldUnregister = false,
+}: DateFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
-
-  const { input, meta } = useFormField<DateExtends>(name, {
-    disabled,
-    formatOnBlur,
-    initialValue,
-    maxDate,
-    minDate,
-    required,
-    validate,
-    value: inputVal,
-  })
-
-  const error = getError({
-    label,
-    maxDate,
-    meta: meta as FieldState<unknown>,
-    minDate,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    value: input.value,
+    shouldUnregister,
+    rules: {
+      ...rules,
+      validate: {
+        ...rules?.validate,
+        minDate: minDateValidator(minDate),
+        maxDate: maxDateValidator(maxDate),
+      },
+      required,
+    },
   })
 
   return (
     <DateInput
+      name={field.name}
       label={label}
+      value={field.value}
       format={
         format ||
         (value => (value ? parseDate(value).toLocaleDateString() : ''))
       }
       locale={locale}
       required={required}
-      value={input.value as Date}
       onChange={(val: DateExtends | null) => {
         if (val && val instanceof Date) {
-          onChange?.(val)
+          onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
           const newDate = parseDate(val)
-          if (isEmpty(input.value as Date)) {
-            input.onChange(newDate)
+          if (isEmpty(field.value as Date)) {
+            field.onChange(newDate)
 
             return
           }
-          const currentDate = parseDate(input.value as Date)
+          const currentDate = parseDate(field.value as Date)
           newDate.setHours(currentDate.getHours(), currentDate.getMinutes())
-          input.onChange(newDate)
+          field.onChange(newDate)
         } else if (Array.isArray(val)) {
-          input.onChange(val)
+          field.onChange(val)
         }
       }}
       onBlur={(e: FocusEvent<HTMLElement>) => {
-        input.onBlur(e)
+        field.onBlur()
         onBlur?.(e)
       }}
-      onFocus={(e: FocusEvent<HTMLElement>) => {
-        input.onFocus(e)
-        onFocus?.(e)
-      }}
+      onFocus={onFocus}
       maxDate={maxDate}
       minDate={minDate}
+      error={getError({ minDate, maxDate, label }, error)}
+      disabled={disabled}
+      autoFocus={autoFocus}
+      excludeDates={excludeDates}
+      selectsRange={selectsRange}
+      data-testid={dataTestId}
       startDate={
-        selectsRange
-          ? (input.value as [Date | null, Date | null])[0]
+        selectsRange && Array.isArray(field.value)
+          ? (field.value as [Date | null, Date | null])[0]
           : undefined
       }
       endDate={
-        selectsRange
-          ? (input.value as [Date | null, Date | null])[1]
+        selectsRange && Array.isArray(field.value)
+          ? (field.value as [Date | null, Date | null])[1]
           : undefined
       }
-      error={error}
-      disabled={disabled}
-      autoFocus={autoFocus}
-      name={input.name}
-      data-testid={dataTestId}
-      excludeDates={excludeDates}
-      selectsRange={selectsRange}
     />
   )
 }

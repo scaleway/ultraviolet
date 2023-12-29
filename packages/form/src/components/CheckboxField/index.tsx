@@ -1,105 +1,101 @@
 import { Checkbox } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
-import type { ComponentProps, ReactNode, Ref } from 'react'
-import { forwardRef } from 'react'
-import { useFormField } from '../../hooks'
+import type { ComponentProps, ReactNode } from 'react'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type CheckboxValue = string
-
-type CheckboxFieldProps<T = CheckboxValue, K = string> = BaseFieldProps<T, K> &
+type CheckboxFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof Checkbox>,
       | 'disabled'
       | 'onBlur'
-      | 'onChange'
       | 'onFocus'
       | 'progress'
       | 'size'
-      | 'value'
       | 'data-testid'
       | 'helper'
       | 'tooltip'
     >
   > & {
-    name: string
-    label?: string
     className?: string
     children?: ReactNode
-    required?: boolean
   }
 
-export const CheckboxField = forwardRef(
-  (
-    {
-      validate,
-      name,
-      label = '',
-      size,
-      progress,
-      disabled,
+export const CheckboxField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
+  name,
+  label,
+  size,
+  progress,
+  disabled,
+  required,
+  className,
+  children,
+  onChange,
+  onBlur,
+  onFocus,
+  rules,
+  helper,
+  tooltip,
+  'data-testid': dataTestId,
+  value,
+  shouldUnregister = false,
+}: CheckboxFieldProps<TFieldValues, TName>) => {
+  const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    disabled,
+    shouldUnregister,
+    rules: {
       required,
-      className,
-      children,
-      onChange,
-      onBlur,
-      onFocus,
-      value,
-      helper,
-      tooltip,
-      'data-testid': dataTestId,
-    }: CheckboxFieldProps,
-    ref: Ref<HTMLInputElement>,
-  ) => {
-    const { getError } = useErrors()
+      ...rules,
+    },
+  })
 
-    const { input, meta } = useFormField(name, {
-      disabled,
-      required,
-      type: 'checkbox',
-      validate,
-      value,
-    })
-
-    const error = getError({
-      label,
-      meta: meta as FieldState<unknown>,
-      name,
-      value: input.value ?? input.checked,
-    })
-
-    return (
-      <Checkbox
-        name={input.name}
-        onChange={event => {
-          input.onChange(event)
-          onChange?.(event)
-        }}
-        onBlur={event => {
-          input.onBlur(event)
-          onBlur?.(event)
-        }}
-        onFocus={event => {
-          input.onFocus(event)
-          onFocus?.(event)
-        }}
-        size={size}
-        progress={progress}
-        disabled={disabled}
-        checked={input.checked}
-        error={error}
-        helper={helper}
-        ref={ref}
-        className={className}
-        value={input.value}
-        required={required}
-        data-testid={dataTestId}
-        tooltip={tooltip}
-      >
-        {children}
-      </Checkbox>
-    )
-  },
-)
+  return (
+    <Checkbox
+      name={field.name}
+      onChange={event => {
+        field.onChange(
+          value ? [...(field.value ?? []), value] : event.target.checked,
+        )
+        onChange?.(
+          event.target.checked as PathValue<TFieldValues, Path<TFieldValues>>,
+        )
+      }}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+      }}
+      onFocus={onFocus}
+      size={size}
+      progress={progress}
+      disabled={field.disabled}
+      checked={
+        Array.isArray(field.value)
+          ? (field.value as (typeof value)[]).includes(value)
+          : !!field.value
+      }
+      error={getError({ label: label ?? '' }, error)}
+      ref={field.ref}
+      className={className}
+      required={required}
+      data-testid={dataTestId}
+      helper={helper}
+      tooltip={tooltip}
+      value={value}
+    >
+      {children}
+    </Checkbox>
+  )
+}

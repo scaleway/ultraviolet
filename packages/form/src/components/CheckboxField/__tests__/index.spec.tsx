@@ -1,5 +1,5 @@
 import { describe, expect, jest, test } from '@jest/globals'
-import { act, screen, waitFor } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { CheckboxField, Form } from '../..'
 import {
@@ -27,15 +27,29 @@ describe('CheckboxField', () => {
     shouldMatchEmotionSnapshotFormWrapper(
       <CheckboxField name="checked" />,
       {
-        transform: async () => {
+        transform: () => {
           const input = screen.getByRole('checkbox', { hidden: true })
-          await waitFor(() => expect(input).toBeChecked())
+          expect(input).toBeChecked()
         },
       },
       {
         initialValues: {
           checked: true,
         },
+      },
+    ))
+
+  test('should render correctly not checked without value', () =>
+    shouldMatchEmotionSnapshotFormWrapper(
+      <CheckboxField name="checked" />,
+      {
+        transform: () => {
+          const input = screen.getByRole('checkbox', { hidden: true })
+          expect(input).not.toBeChecked()
+        },
+      },
+      {
+        initialValues: {},
       },
     ))
 
@@ -94,6 +108,25 @@ describe('CheckboxField', () => {
     )
   })
 
+  test('should check two boxes', () =>
+    shouldMatchEmotionSnapshotFormWrapper(
+      <>
+        <CheckboxField name="value" value="foo" />
+        <CheckboxField name="value" value="bar" />
+      </>,
+      {
+        transform: () => {
+          const inputs = screen.getAllByRole('checkbox', { hidden: true })
+          act(() => inputs[0].click())
+          expect(inputs[0]).toBeChecked()
+          expect(inputs[1]).not.toBeChecked()
+          act(() => inputs[1].click())
+          expect(inputs[0]).toBeChecked()
+          expect(inputs[1]).toBeChecked()
+        },
+      },
+    ))
+
   test('should render correctly with errors', () =>
     shouldMatchEmotionSnapshot(
       <Form onRawSubmit={() => {}} errors={mockErrors}>
@@ -108,7 +141,7 @@ describe('CheckboxField', () => {
           // to trigger error
           await userEvent.click(screen.getByRole('checkbox', { hidden: true }))
           await userEvent.click(screen.getByText('Focus'))
-          const error = screen.getByText(mockErrors.REQUIRED as string)
+          const error = screen.getByText(mockErrors.required({ label: '' }))
           expect(error).toBeVisible()
         },
       },

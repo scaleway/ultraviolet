@@ -1,72 +1,67 @@
 import { RadioGroup } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
-import type { ComponentProps } from 'react'
-import { useFormField } from '../../hooks'
+import type { ComponentProps, JSX } from 'react'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type RadioValue = NonNullable<ComponentProps<typeof RadioGroup>['value']>
-
-type RadioGroupFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
+type RadioGroupFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof RadioGroup>,
-      | 'onChange'
-      | 'value'
-      | 'legend'
-      | 'children'
-      | 'required'
-      | 'name'
-      | 'error'
-      | 'helper'
-      | 'direction'
+      'legend' | 'children' | 'error' | 'helper' | 'direction'
     >
   > & {
     className?: string
-    name: string
-    required?: boolean
   }
 
-export const RadioGroupField = ({
+export const RadioGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   legend = '',
   name,
   onChange,
   required,
-  validate,
-  value,
+  rules,
   children,
+  label = '',
   error: customError,
   helper,
   direction,
-}: RadioGroupFieldProps) => {
+  shouldUnregister = false,
+}: RadioGroupFieldProps<TFieldValues, TName>): JSX.Element => {
   const { getError } = useErrors()
-
-  const { input, meta } = useFormField(name, {
-    required,
-    validate,
-    value,
-  })
-
-  const error = getError({
-    label: legend,
-    meta: meta as FieldState<unknown>,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    value: input.value,
+    shouldUnregister,
+    rules: {
+      required,
+      ...rules,
+    },
   })
 
   return (
     <RadioGroup
       className={className}
-      name={input.name}
+      name={field.name}
       onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
+        field.onChange(event)
+        onChange?.(
+          event.target.value as PathValue<TFieldValues, Path<TFieldValues>>,
+        )
       }}
       required={required}
-      value={input.value}
+      value={field.value}
       legend={legend}
-      error={error ?? customError}
+      error={getError({ label }, error) ?? customError}
       helper={helper}
       direction={direction}
     >

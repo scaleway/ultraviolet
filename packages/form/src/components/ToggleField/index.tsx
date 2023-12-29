@@ -1,9 +1,13 @@
 import { Toggle } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
-type ToggleFieldProps<T = unknown, K = unknown> = BaseFieldProps<T, K> &
+type ToggleFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
   Pick<
     ComponentProps<typeof Toggle>,
     | 'disabled'
@@ -15,69 +19,62 @@ type ToggleFieldProps<T = unknown, K = unknown> = BaseFieldProps<T, K> &
     | 'className'
     | 'data-testid'
   > & {
-    name: string
-    required?: boolean
+    parse?: (value: boolean) => any
+    format?: (value: any) => boolean
   }
 
-export const ToggleField = ({
-  afterSubmit,
-  allowNull,
-  beforeSubmit,
+export const ToggleField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
-  data,
-  defaultValue,
   disabled,
-  format,
-  formatOnBlur,
-  initialValue,
-  isEqual,
   label,
-  multiple,
   name,
   onChange,
-  parse,
   required,
   size,
-  subscription,
   tooltip,
-  validate,
-  validateFields,
-  value,
+  rules,
   labelPosition,
+  parse,
+  format,
   'data-testid': dataTestId,
-}: ToggleFieldProps) => {
-  const { input } = useFormField(name, {
-    afterSubmit,
-    allowNull,
-    beforeSubmit,
-    data,
-    defaultValue,
-    disabled,
-    format,
-    formatOnBlur,
-    initialValue,
-    isEqual,
-    multiple,
-    parse,
-    required,
-    subscription,
-    type: 'checkbox',
-    validate,
-    validateFields,
-    value,
+  shouldUnregister = false,
+}: ToggleFieldProps<TFieldValues, TName>) => {
+  const { field } = useController<TFieldValues>({
+    name,
+    shouldUnregister,
+    rules: {
+      required,
+      ...rules,
+    },
   })
+
+  const transformedValue = () => {
+    if (format) {
+      return format(field.value)
+    }
+
+    return field.value as boolean
+  }
 
   return (
     <Toggle
-      checked={input.checked}
+      name={field.name}
+      ref={field.ref}
+      checked={transformedValue()}
       tooltip={tooltip}
       onChange={event => {
-        input.onChange(event)
+        if (parse) {
+          field.onChange(parse(event.target.checked))
+        } else {
+          field.onChange(event)
+        }
         onChange?.(event)
       }}
       label={label}
       size={size}
-      name={name}
       disabled={disabled}
       labelPosition={labelPosition}
       className={className}

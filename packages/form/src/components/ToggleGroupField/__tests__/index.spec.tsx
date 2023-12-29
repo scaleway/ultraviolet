@@ -29,6 +29,11 @@ describe('GroupField', () => {
           expect(secondInput).toBeChecked()
         },
       },
+      {
+        initialValues: {
+          Group: [],
+        },
+      },
     ))
 
   test('should trigger events correctly with required prop', () => {
@@ -62,6 +67,11 @@ describe('GroupField', () => {
           act(() => input.click())
           expect(onChange).toBeCalledTimes(2)
           expect(input).not.toBeChecked()
+        },
+      },
+      {
+        initialValues: {
+          test: [],
         },
       },
     )

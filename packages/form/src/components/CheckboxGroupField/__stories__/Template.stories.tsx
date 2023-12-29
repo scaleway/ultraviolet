@@ -25,5 +25,4 @@ export const Template: StoryFn<typeof CheckboxGroupField> = args => (
 Template.args = {
   name: 'conditions',
   legend: 'Conditions',
-  value: ['termsAndConditions'],
 }

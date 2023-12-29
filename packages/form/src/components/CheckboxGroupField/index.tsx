@@ -1,74 +1,78 @@
 import { CheckboxGroup } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useFieldArray } from 'react-final-form-arrays'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type CheckboxGroupValue = string[]
-
 type CheckboxGroupFieldProps<
-  T = CheckboxGroupValue,
-  K = string,
-> = BaseFieldProps<T, K> &
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof CheckboxGroup>,
       | 'className'
       | 'helper'
-      | 'onChange'
       | 'required'
       | 'direction'
       | 'children'
-      | 'value'
       | 'error'
       | 'legend'
     >
   > &
-  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend' | 'name'>>
+  Required<Pick<ComponentProps<typeof CheckboxGroup>, 'legend'>>
 
-export const CheckboxGroupField = ({
+export const CheckboxGroupField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   legend,
-  value,
   className,
   helper,
   direction,
   children,
   onChange,
+  label = '',
   error: customError,
   name,
   required = false,
-}: CheckboxGroupFieldProps) => {
+  shouldUnregister = false,
+}: CheckboxGroupFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
-
-  const { fields, meta } = useFieldArray(name, {
-    type: 'checkbox',
-    value,
-    validate: localValue =>
-      required && localValue?.length === 0 ? 'Required' : undefined,
-  })
-
-  const error = getError({
-    label: legend,
-    meta,
-    value: fields.value,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
+    shouldUnregister,
   })
 
   return (
     <CheckboxGroup
       legend={legend}
-      name={fields.name}
-      value={fields.value}
+      name={name}
+      value={field.value}
       onChange={event => {
-        if (fields.value?.includes(event.currentTarget.value)) {
-          fields.remove(fields.value.indexOf(event.currentTarget?.value))
+        const fieldValue = field.value as string[]
+        if (fieldValue?.includes(event.currentTarget.value)) {
+          field.onChange(
+            fieldValue?.filter(
+              currentValue => currentValue !== event.currentTarget.value,
+            ),
+          )
         } else {
-          fields.push(event.currentTarget.value)
+          field.onChange([...field.value, event.currentTarget.value])
         }
 
-        onChange?.(event)
+        onChange?.(
+          event.currentTarget.value as PathValue<
+            TFieldValues,
+            Path<TFieldValues>
+          >,
+        )
       }}
-      error={error ?? customError}
+      error={getError({ label }, error) ?? customError}
       className={className}
       direction={direction}
       helper={helper}

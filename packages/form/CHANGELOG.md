@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0
+
+### Major Changes
+
+- [#3184](https://github.com/scaleway/ultraviolet/pull/3184) [`abacb6d`](https://github.com/scaleway/ultraviolet/commit/abacb6d3ad3db20be5fce856b97e8c87f678f370) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Change form library to react-hook-form
+
 ## 1.12.2
 
 ### Patch Changes

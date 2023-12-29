@@ -1,7 +1,7 @@
 import { TimeInput } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
-import { useMemo } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import type { BaseFieldProps } from '../../types'
 
 const parseTime = (date?: Date | string): { label: string; value: string } => {
@@ -16,76 +16,78 @@ const parseTime = (date?: Date | string): { label: string; value: string } => {
   }
 }
 
-type TimeFieldProps = BaseFieldProps<Date> &
-  ComponentProps<typeof TimeInput> & {
+type TimeFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
+  Omit<ComponentProps<typeof TimeInput>, 'onChange'> & {
     name: string
   }
 
-export const TimeField = ({
+export const TimeField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   required,
   name,
   schedule,
   placeholder,
   disabled,
-  initialValue,
-  validate,
   readOnly,
-  value,
-  onChange,
   onBlur,
   onFocus,
+  onChange,
   isLoading,
   isClearable,
   inputId,
   id,
-  formatOnBlur,
   animation,
   animationDuration,
   animationOnChange,
   className,
   isSearchable,
+  rules,
   options,
   'data-testid': dataTestId,
-}: TimeFieldProps) => {
-  const { input, meta } = useFormField<Date>(name, {
-    disabled,
-    formatOnBlur,
-    initialValue,
-    required,
-    validate,
-    value,
+  shouldUnregister = false,
+}: TimeFieldProps<TFieldValues, TName>) => {
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    shouldUnregister,
+    rules: {
+      required,
+      ...rules,
+    },
   })
-
-  const error = useMemo(
-    () => (input.value && meta.error ? (meta.error as string) : undefined),
-    [input.value, meta.error],
-  )
 
   return (
     <TimeInput
+      name={field.name}
       placeholder={placeholder}
       schedule={schedule}
       required={required}
-      value={parseTime(input.value)}
-      onChange={(val, action) => {
+      value={parseTime(field.value)}
+      onChange={val => {
         if (!val) return
-        onChange?.(val, action)
+        onChange?.(val as PathValue<TFieldValues, Path<TFieldValues>>)
         const [hours, minutes] = (
           val as { value: string; label: string }
         ).value.split(':')
-        const date = input.value ? new Date(input.value) : new Date()
+        const date = field.value ? new Date(field.value) : new Date()
         date.setHours(Number(hours), Number(minutes), 0)
-        input.onChange(date)
+        field.onChange(date)
       }}
       onBlur={event => {
-        input.onBlur(event)
+        field.onBlur()
         onBlur?.(event)
       }}
       onFocus={event => {
-        input.onFocus(event)
         onFocus?.(event)
       }}
-      error={error}
+      error={error?.message}
       disabled={disabled}
       readOnly={readOnly}
       animation={animation}

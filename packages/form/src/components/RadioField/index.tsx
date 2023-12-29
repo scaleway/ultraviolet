@@ -1,87 +1,81 @@
 import { Radio } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type RadioValue = NonNullable<ComponentProps<typeof Radio>['value']>
-
-type RadioFieldProps<T = RadioValue, K = string> = BaseFieldProps<T, K> &
+type RadioFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = Omit<BaseFieldProps<TFieldValues, TName>, 'label'> &
   Partial<
     Pick<
       ComponentProps<typeof Radio>,
       | 'disabled'
       | 'id'
       | 'onBlur'
-      | 'onChange'
       | 'onFocus'
-      | 'value'
       | 'data-testid'
-      | 'label'
       | 'tooltip'
+      | 'label'
     >
   > & {
     className?: string
-    name: string
-    required?: boolean
   }
 
-export const RadioField = ({
+export const RadioField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   className,
   'data-testid': dataTestId,
   disabled,
   id,
-  label = '',
   name,
   onBlur,
+  label = '',
   onChange,
   onFocus,
   required,
-  validate,
   value,
+  rules,
   tooltip,
-}: RadioFieldProps) => {
+  shouldUnregister = false,
+}: RadioFieldProps<TFieldValues, TName>) => {
   const { getError } = useErrors()
-
-  const { input, meta } = useFormField(name, {
-    required,
-    type: 'radio',
-    validate,
-    value,
-  })
-
-  const error = getError({
-    disabled,
-    label: label as string,
-    meta: meta as FieldState<unknown>,
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
     name,
-    value: input.value,
+    shouldUnregister,
+    rules: {
+      required,
+      ...rules,
+    },
   })
 
   return (
     <Radio
-      checked={input.checked}
+      name={field.name}
+      checked={field.value === value}
       className={className}
       data-testid={dataTestId}
       disabled={disabled}
-      error={error}
+      error={getError({ label: typeof label === 'string' ? label : '' }, error)}
       id={id}
-      name={input.name}
-      onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
+      onChange={() => {
+        field.onChange(value)
+        onChange?.(value)
       }}
       onBlur={event => {
-        input.onBlur(event)
+        field.onBlur()
         onBlur?.(event)
       }}
-      onFocus={event => {
-        input.onFocus(event)
-        onFocus?.(event)
-      }}
+      onFocus={onFocus}
       required={required}
-      value={input.value}
+      value={value ?? ''}
       label={label}
       tooltip={tooltip}
     />

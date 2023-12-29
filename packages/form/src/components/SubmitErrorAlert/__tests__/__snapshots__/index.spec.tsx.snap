@@ -2,7 +2,7 @@
 
 exports[`SubmitErrorAlert should display an alert when submitError is present 1`] = `
 <DocumentFragment>
-  .cache-13w4j1t {
+  .cache-1nhcpqm {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,7 +20,7 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: not-allowed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -39,21 +39,13 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   background: #8c40ef;
   border: none;
   color: #ffffff;
+  background: #e5dbfd;
+  color: #ffffff;
 }
 
-.cache-13w4j1t:hover {
+.cache-1nhcpqm:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.cache-13w4j1t:active {
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-13w4j1t:hover,
-.cache-13w4j1t:active {
-  background: #792dd4;
-  color: #f9f9fa;
 }
 
 .cache-i7zpby-alertStyles {
@@ -182,11 +174,10 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
   text-decoration: none;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <button
-      class="cache-13w4j1t e112qvla2"
+      class="cache-1nhcpqm e112qvla2"
+      disabled=""
       type="submit"
     >
       Submit
@@ -227,8 +218,6 @@ exports[`SubmitErrorAlert should display an alert when submitError is present 1`
 
 exports[`SubmitErrorAlert should render nothing if no error 1`] = `
 <DocumentFragment>
-  <form
-    novalidate=""
-  />
+  <form />
 </DocumentFragment>
 `;

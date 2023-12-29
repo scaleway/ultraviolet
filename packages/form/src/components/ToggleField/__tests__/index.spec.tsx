@@ -12,17 +12,28 @@ describe('ToggleField', () => {
 
   test('should render correctly checked', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <ToggleField name="test" value="test" initialValue={['test']} />,
+      <ToggleField name="test" />,
       {
         transform: () => {
           const element = screen.getByRole<HTMLInputElement>('checkbox')
           expect(element.checked).toBeTruthy()
         },
       },
+      {
+        initialValues: {
+          test: true,
+        },
+      },
     ))
 
   test('should render correctly with label and checked', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <ToggleField name="test" initialValue label="test" />,
+      <ToggleField name="test" label="test" />,
+      {},
+      {
+        initialValues: {
+          test: true,
+        },
+      },
     ))
 })

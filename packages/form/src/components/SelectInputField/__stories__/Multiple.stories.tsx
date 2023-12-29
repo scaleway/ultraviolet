@@ -1,8 +1,10 @@
 import type { StoryFn } from '@storybook/react'
-import type { SelectInputFieldProps } from '..'
+import type { ComponentProps } from 'react'
 import { SelectInputField } from '..'
 
-export const Multiple: StoryFn<SelectInputFieldProps> = () => (
+export const Multiple: StoryFn<
+  ComponentProps<typeof SelectInputField>
+> = () => (
   <SelectInputField
     name="options"
     multiple

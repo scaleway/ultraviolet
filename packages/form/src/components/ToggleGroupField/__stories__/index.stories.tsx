@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react'
 import { Snippet, Stack, Text } from '@ultraviolet/ui'
+import { useForm } from 'react-hook-form'
 import { ToggleGroupField } from '..'
 import { Form } from '../..'
 import { mockErrors } from '../../../mocks'
@@ -7,13 +8,28 @@ import { mockErrors } from '../../../mocks'
 export default {
   component: ToggleGroupField,
   decorators: [
-    ChildStory => (
-      <Form
-        initialValues={{ options: ['weekly-save'] }}
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-      >
-        {values => (
+    ChildStory => {
+      const methods = useForm({
+        defaultValues: {
+          options: ['weekly-save'],
+        },
+      })
+      const {
+        errors,
+        isDirty,
+        isSubmitting,
+        touchedFields,
+        submitCount,
+        dirtyFields,
+        isValid,
+        isLoading,
+        isSubmitted,
+        isValidating,
+        isSubmitSuccessful,
+      } = methods.formState
+
+      return (
+        <Form onRawSubmit={() => {}} errors={mockErrors} methods={methods}>
           <Stack gap={2}>
             {ChildStory()}
             <Stack gap={1}>
@@ -21,7 +37,7 @@ export default {
                 Form input values:
               </Text>
               <Snippet prefix="lines" initiallyExpanded>
-                {JSON.stringify(values.values, null, 1)}
+                {JSON.stringify(methods.watch(), null, 1)}
               </Snippet>
             </Stack>
             <Stack gap={1}>
@@ -29,13 +45,29 @@ export default {
                 Form values:
               </Text>
               <Snippet prefix="lines">
-                {JSON.stringify(values, null, 1)}
+                {JSON.stringify(
+                  {
+                    errors,
+                    isDirty,
+                    isSubmitting,
+                    touchedFields,
+                    submitCount,
+                    dirtyFields,
+                    isValid,
+                    isLoading,
+                    isSubmitted,
+                    isValidating,
+                    isSubmitSuccessful,
+                  },
+                  null,
+                  1,
+                )}
               </Snippet>
             </Stack>
           </Stack>
-        )}
-      </Form>
-    ),
+        </Form>
+      )
+    },
   ],
   title: 'Form/Components/Fields/ToggleGroupField',
   args: {

@@ -1,17 +1,14 @@
 import { TextInput } from '@ultraviolet/ui'
-import type { FieldState } from 'final-form'
 import type { ComponentProps, Ref } from 'react'
-import { forwardRef } from 'react'
-import { useFormField } from '../../hooks'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useController } from 'react-hook-form'
 import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type TextInputValue = NonNullable<ComponentProps<typeof TextInput>['value']>
-
-type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
-  T,
-  K
-> &
+type TextInputFieldProps<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof TextInput>,
@@ -21,189 +18,204 @@ type TextInputFieldProps<T = TextInputValue, K = string> = BaseFieldProps<
       | 'autoFocus'
       | 'autoSave'
       | 'cols'
-      | 'data-testid'
       | 'disabled'
       | 'fillAvailable'
       | 'generated'
       | 'id'
-      | 'label'
-      | 'maxLength'
-      | 'minLength'
       | 'multiline'
       | 'notice'
       | 'onBlur'
-      | 'onChange'
       | 'onFocus'
       | 'onKeyDown'
       | 'onKeyUp'
       | 'placeholder'
       | 'random'
       | 'readOnly'
-      | 'required'
       | 'resizable'
       | 'rows'
       | 'type'
-      | 'value'
       | 'noTopLabel'
       | 'unit'
       | 'valid'
       | 'size'
+      | 'maxLength'
+      | 'minLength'
+      | 'min'
+      | 'max'
+      | 'data-testid'
     >
   > & {
-    name: string
     className?: string
-    max?: number
-    min?: number
     regex?: (RegExp | RegExp[])[]
+
+    format?: (value: unknown) => PathValue<TFieldValues, Path<TFieldValues>>
+    parse?: (value: string) => PathValue<TFieldValues, Path<TFieldValues>>
+
+    customError?: string
+    formatOnBlur?: boolean
+    innerRef?: Ref<HTMLInputElement>
   }
 
-export const TextInputField = forwardRef(
-  (
-    {
-      afterSubmit,
-      allowNull,
-      autoCapitalize,
-      autoComplete,
-      autoCorrect,
-      autoFocus,
-      autoSave,
-      beforeSubmit,
-      className,
-      cols,
-      'data-testid': dataTestId,
-      defaultValue,
-      disabled,
-      fillAvailable,
-      format,
-      formatOnBlur,
-      generated,
-      id,
-      initialValue,
-      isEqual,
-      label = '',
-      max,
-      maxLength,
-      min,
-      minLength,
-      multiline,
-      multiple,
-      name,
-      noTopLabel,
-      notice,
-      onBlur,
-      onChange,
-      onFocus,
-      onKeyDown,
-      onKeyUp,
-      parse,
-      placeholder,
-      random,
-      readOnly,
-      regex,
+export const TextInputField = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
+  autoCapitalize,
+  autoComplete,
+  autoCorrect,
+  autoFocus,
+  autoSave,
+  className,
+  cols,
+  disabled,
+  fillAvailable,
+  generated,
+  id,
+  label = '',
+  multiline,
+  name,
+  noTopLabel,
+  notice,
+  onChange,
+  onFocus,
+  onKeyDown,
+  onKeyUp,
+  onBlur,
+  placeholder,
+  random,
+  readOnly,
+  required,
+  resizable,
+  rows,
+  type,
+  unit,
+  size,
+  rules,
+  valid,
+  parse,
+  format,
+  formatOnBlur = false,
+  regex: regexes,
+  min,
+  max,
+  minLength,
+  maxLength,
+  validate,
+  defaultValue,
+  customError,
+  innerRef,
+  shouldUnregister = false,
+  'data-testid': dataTestId,
+}: TextInputFieldProps<TFieldValues, TName>) => {
+  const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    defaultValue,
+    shouldUnregister,
+    rules: {
       required,
-      resizable,
-      rows,
-      subscription,
-      type,
-      unit,
-      size,
-      validate,
-      validateFields,
-      valid,
-      value,
-    }: TextInputFieldProps,
-    ref: Ref<HTMLInputElement>,
-  ) => {
-    const { getError } = useErrors()
-
-    const { input, meta } = useFormField(name, {
-      afterSubmit,
-      allowNull,
-      beforeSubmit,
-      defaultValue,
-      disabled,
-      format,
-      formatOnBlur,
-      initialValue,
-      isEqual,
-      max,
-      maxLength,
-      min,
+      validate: {
+        ...(regexes
+          ? {
+              pattern: value =>
+                regexes.every(
+                  regex =>
+                    value === undefined ||
+                    value === '' ||
+                    (Array.isArray(regex)
+                      ? regex.some(regexOr => regexOr.test(value))
+                      : regex.test(value)),
+                ),
+            }
+          : {}),
+        ...validate,
+      },
       minLength,
-      multiple,
-      parse,
-      regex,
-      required,
-      subscription,
-      type,
-      validate,
-      validateFields,
-      value,
-    })
-
-    const error = getError({
-      label,
-      max,
       maxLength,
-      meta: meta as FieldState<unknown>,
+      max,
       min,
-      minLength,
-      name,
-      regex,
-      value: input.value,
-    })
+      ...rules,
+    },
+  })
 
-    return (
-      <TextInput
-        autoCapitalize={autoCapitalize}
-        autoComplete={autoComplete}
-        autoCorrect={autoCorrect}
-        autoFocus={autoFocus}
-        autoSave={autoSave}
-        className={className}
-        cols={cols}
-        data-testid={dataTestId}
-        disabled={disabled}
-        error={error}
-        fillAvailable={fillAvailable}
-        generated={generated}
-        id={id}
-        label={label}
-        max={max}
-        maxLength={maxLength}
-        min={min}
-        minLength={minLength}
-        multiline={multiline}
-        name={input.name}
-        notice={notice}
-        onBlur={event => {
-          input.onBlur(event)
-          onBlur?.(event)
-        }}
-        onChange={event => {
-          input.onChange(event)
-          onChange?.(event)
-        }}
-        onFocus={event => {
-          input.onFocus(event)
-          onFocus?.(event)
-        }}
-        onKeyUp={onKeyUp}
-        onKeyDown={onKeyDown}
-        placeholder={placeholder}
-        random={random}
-        readOnly={readOnly}
-        ref={ref}
-        required={required}
-        resizable={resizable}
-        rows={rows}
-        type={input.type}
-        value={input.value}
-        noTopLabel={noTopLabel}
-        unit={unit}
-        valid={valid}
-        size={size}
-      />
-    )
-  },
-)
+  const transformedValue = () => {
+    if (format && !formatOnBlur) {
+      return format(field.value) as string
+    }
+
+    return field.value as string
+  }
+
+  return (
+    <TextInput
+      name={field.name}
+      autoCapitalize={autoCapitalize}
+      autoComplete={autoComplete}
+      autoCorrect={autoCorrect}
+      autoFocus={autoFocus}
+      autoSave={autoSave}
+      className={className}
+      cols={cols}
+      disabled={disabled}
+      error={
+        customError ??
+        getError(
+          {
+            regex: regexes,
+            minLength,
+            maxLength,
+            label,
+            min,
+            max,
+            value: field.value,
+          },
+          error,
+        )
+      }
+      fillAvailable={fillAvailable}
+      generated={generated}
+      id={id}
+      label={label}
+      multiline={multiline}
+      notice={notice}
+      required={required}
+      onBlur={event => {
+        field.onBlur()
+        onBlur?.(event)
+        if (formatOnBlur && format) {
+          field.onChange(format(field.value))
+        }
+      }}
+      onChange={event => {
+        if (parse) {
+          field.onChange(parse(event))
+          onChange?.(parse(event))
+        } else {
+          field.onChange(event)
+          onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
+        }
+      }}
+      onFocus={event => {
+        onFocus?.(event)
+      }}
+      onKeyUp={onKeyUp}
+      onKeyDown={onKeyDown}
+      placeholder={placeholder}
+      random={random}
+      readOnly={readOnly}
+      resizable={resizable}
+      rows={rows}
+      type={type}
+      noTopLabel={noTopLabel}
+      unit={unit}
+      valid={valid}
+      size={size}
+      value={transformedValue()}
+      ref={innerRef}
+      data-testid={dataTestId}
+    />
+  )
+}
