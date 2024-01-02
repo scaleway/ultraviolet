@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Alert, Icon, Stack, Text } from '@ultraviolet/ui'
+import type { ReactNode } from 'react'
 import {
   Children,
   cloneElement,
@@ -76,6 +77,21 @@ type ExtraProps = {
   iteration?: Iteration
   discount?: number
 }
+
+const DescriptionComponent = ({
+  description,
+  locales,
+}: {
+  description: ReactNode
+  locales: typeof EstimateCostLocales
+}) =>
+  description === undefined || typeof description === 'string' ? (
+    <Text as="span" variant="body">
+      {description || locales['estimate.cost.description']}
+    </Text>
+  ) : (
+    description
+  )
 
 export const EstimateCostContent = ({
   description,
@@ -250,12 +266,8 @@ export const EstimateCostContent = ({
           {children}
         </OverlayComponent>
       ) : null}
-      {typeof description === 'string' || !description ? (
-        <Text as="span" variant="body">
-          {description || locales['estimate.cost.description']}
-        </Text>
-      ) : (
-        description
+      {description === false ? null : (
+        <DescriptionComponent description={description} locales={locales} />
       )}
       {alert ? (
         <Alert sentiment={alertVariant} title={alertTitle}>
