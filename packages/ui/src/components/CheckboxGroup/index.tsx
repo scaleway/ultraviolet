@@ -12,10 +12,6 @@ import { Checkbox } from '../Checkbox'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 
-const StyledCheckbox = styled(Checkbox)`
-  width: unset;
-`
-
 type CheckboxGroupContextType = {
   groupName: string
   groupValues: string[]
@@ -60,7 +56,7 @@ export const CheckboxGroupCheckbox = ({
   const checkboxValue = `${value}`
 
   return (
-    <StyledCheckbox
+    <Checkbox
       onChange={onChange}
       checked={groupValues?.includes(checkboxValue)}
       onFocus={onFocus}
@@ -75,7 +71,7 @@ export const CheckboxGroupCheckbox = ({
       data-testid={dataTestId}
     >
       {children}
-    </StyledCheckbox>
+    </Checkbox>
   )
 }
 
