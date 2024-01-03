@@ -73,6 +73,7 @@ const Input = styled.input`
   line-height: ${({ theme }) => theme.typography.body.lineHeight};
   text-align: center;
   padding: ${({ theme }) => theme.space['1']};
+  background: none;
 
   &[data-has-unit='true'] {
     text-align: left;
