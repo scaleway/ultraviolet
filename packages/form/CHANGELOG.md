@@ -1,5 +1,23 @@
 # Change Log
 
+## 2.0.1
+
+### Patch Changes
+
+- [#3282](https://github.com/scaleway/ultraviolet/pull/3282) [`693fad6`](https://github.com/scaleway/ultraviolet/commit/693fad648badf0a4848c6161c08fed79e08378d3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.49.2`.
+
+- [#3285](https://github.com/scaleway/ultraviolet/pull/3285) [`b3e8efe`](https://github.com/scaleway/ultraviolet/commit/b3e8efe20ddb96b7776b1664613035596f2b0fd2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.49.2`.
+
+- [#3290](https://github.com/scaleway/ultraviolet/pull/3290) [`9b57f52`](https://github.com/scaleway/ultraviolet/commit/9b57f523a5153448ea2dd0a6c227e1aead9a3365) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.7`.
+  Updated dependency `@babel/runtime` to `7.23.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.7`.
+  Updated dependency `@babel/preset-env` to `7.23.7`.
+
+- [#3267](https://github.com/scaleway/ultraviolet/pull/3267) [`149e900`](https://github.com/scaleway/ultraviolet/commit/149e9004ad0473e5f1aebcea7124bfec97313261) Thanks [@matthprost](https://github.com/matthprost)! - Fix Radio and Checkbox in SelectableCard not to take full witdh
+
+- Updated dependencies [[`9b57f52`](https://github.com/scaleway/ultraviolet/commit/9b57f523a5153448ea2dd0a6c227e1aead9a3365), [`97f4a2c`](https://github.com/scaleway/ultraviolet/commit/97f4a2cb57bc1a9d27815c75214d05eb264afffc), [`149e900`](https://github.com/scaleway/ultraviolet/commit/149e9004ad0473e5f1aebcea7124bfec97313261)]:
+  - @ultraviolet/ui@1.29.3
+
 ## 2.0.0
 
 ### Major Changes
