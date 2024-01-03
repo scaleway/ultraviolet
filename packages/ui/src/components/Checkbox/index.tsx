@@ -126,7 +126,6 @@ const CheckboxContainer = styled.div`
   display: inline-flex;
   align-items: start;
   gap: ${({ theme }) => theme.space['1']};
-  width: 100%;
 
   ${StyledLabel} {
     cursor: pointer;

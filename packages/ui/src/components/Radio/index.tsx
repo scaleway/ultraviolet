@@ -200,7 +200,7 @@ export const Radio = forwardRef(
 
     return (
       <Tooltip text={tooltip}>
-        <Stack gap={0.5} width="100%">
+        <Stack gap={0.5}>
           <RadioContainer
             aria-disabled={disabled}
             className={className}
