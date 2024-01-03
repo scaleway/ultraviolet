@@ -335,7 +335,11 @@ export const NumberInputV2 = forwardRef(
                   id={localId}
                   placeholder={placeholder}
                   onBlur={event => {
-                    if (event.target.value === '') return
+                    if (event.target.value === '') {
+                      onBlur?.(event)
+
+                      return
+                    }
 
                     const numericValue = Number(event.target.value)
                     const maxValue = typeof max === 'number' ? max : Number(max)

@@ -1,16 +1,14 @@
 import { NumberInputV2 } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
-import { useFormField } from '../../hooks'
+import { useController } from 'react-hook-form'
+import type { FieldPath, FieldValues, Path, PathValue } from 'react-hook-form'
+import { useErrors } from '../../providers'
 import type { BaseFieldProps } from '../../types'
 
-type NumberInputV2Value = NonNullable<
-  ComponentProps<typeof NumberInputV2>['value']
->
-
-type NumberInputV2Props<T = NumberInputV2Value, K = string> = BaseFieldProps<
-  T,
-  K
-> &
+type NumberInputV2Props<
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues>,
+> = BaseFieldProps<TFieldValues, TName> &
   Partial<
     Pick<
       ComponentProps<typeof NumberInputV2>,
@@ -44,72 +42,75 @@ type NumberInputV2Props<T = NumberInputV2Value, K = string> = BaseFieldProps<
     required?: boolean
   }
 
-export const NumberInputFieldV2 = ({
+export const NumberInputFieldV2 = <
+  TFieldValues extends FieldValues,
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+>({
   disabled,
   max,
   min,
   name,
   onChange,
-  onFocus,
   onBlur,
   size,
   step,
   unit,
-  value,
   tooltip,
   className,
   label,
   labelDescription,
   id,
   placeholder,
-  error,
   success,
   helper,
+  rules,
   'aria-label': ariaLabel,
   'data-testid': dataTestId,
-  validate,
   required,
   autoFocus,
   readOnly,
-}: NumberInputV2Props) => {
-  const { input } = useFormField(name, {
-    disabled,
-    required,
-    type: 'number',
-    validate,
-    value,
-    max: typeof max === 'number' ? max : Number(max),
-    min: typeof min === 'number' ? min : Number(min),
+  shouldUnregister = false,
+}: NumberInputV2Props<TFieldValues, TName>) => {
+  const { getError } = useErrors()
+  const {
+    field,
+    fieldState: { error },
+  } = useController<TFieldValues>({
+    name,
+    shouldUnregister,
+    rules: {
+      max,
+      min,
+      required,
+      ...rules,
+    },
   })
 
   return (
     <NumberInputV2
-      name={name}
+      name={field.name}
+      value={field.value}
       disabled={disabled}
       onBlur={(event: FocusEvent<HTMLInputElement>) => {
-        input.onBlur(event)
+        field.onBlur()
         onBlur?.(event)
       }}
       onChange={event => {
-        input.onChange(event)
-        onChange?.(event)
-      }}
-      onFocus={(event: FocusEvent<HTMLInputElement>) => {
-        input.onFocus(event)
-        onFocus?.(event)
+        // React hook form doesnt allow undefined values after definition https://react-hook-form.com/docs/usecontroller/controller (that make sense)
+        field.onChange(event ?? null)
+        onChange?.(event as PathValue<TFieldValues, Path<TFieldValues>>)
       }}
       max={max}
       min={min}
       size={size}
       step={step}
-      value={input.value}
       className={className}
       data-testid={dataTestId}
       id={id}
       label={label}
       labelDescription={labelDescription}
       placeholder={placeholder}
-      error={error}
+      error={getError({ label: label ?? '', max, min }, error)}
       success={success}
       helper={helper}
       tooltip={tooltip}

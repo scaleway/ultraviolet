@@ -1,4 +1,4 @@
-import { describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInputFieldV2 } from '../..'
@@ -17,58 +17,25 @@ describe('NumberInputFieldV2', () => {
 
   test('should render correctly disabled', () =>
     shouldMatchEmotionSnapshotFormWrapper(
-      <NumberInputFieldV2 name="test" value={10} disabled />,
+      <NumberInputFieldV2
+        name="test"
+        value={10}
+        disabled
+        aria-label="Number Input"
+      />,
       {
         transform: () => {
           const input = screen.getByLabelText('Number Input')
           expect(input).toBeDisabled()
 
-          const inputMinus = screen.getByLabelText('Minus')
+          const inputMinus = screen.getByLabelText('minus')
           expect(inputMinus).toBeDisabled()
 
-          const inputPlus = screen.getByLabelText('Plus')
+          const inputPlus = screen.getByLabelText('plus')
           expect(inputPlus).toBeDisabled()
         },
       },
     ))
-
-  test('should trigger events correctly', () => {
-    const onFocus = jest.fn(() => {})
-    const onChange = jest.fn(() => {})
-    const onBlur = jest.fn(() => {})
-
-    return shouldMatchEmotionSnapshotFormWrapper(
-      <Form
-        onRawSubmit={() => {}}
-        errors={mockErrors}
-        initialValues={{ test: 10 }}
-      >
-        <NumberInputFieldV2
-          name="test"
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-        />
-      </Form>,
-      {
-        transform: () => {
-          const input = screen.getByLabelText('Number Input')
-          act(() => {
-            input.focus()
-          })
-          expect(onFocus).toBeCalledTimes(1)
-          act(() => {
-            input.click()
-          })
-          expect(onChange).toBeCalledTimes(0)
-          act(() => {
-            input.blur()
-          })
-          expect(onBlur).toBeCalledTimes(1)
-        },
-      },
-    )
-  })
 
   test('should trigger event onMinCrossed & onMaxCrossed', () => {
     const minValue = 5
@@ -80,7 +47,12 @@ describe('NumberInputFieldV2', () => {
         onRawSubmit={() => {}}
         errors={mockErrors}
       >
-        <NumberInputFieldV2 max={maxValue} min={minValue} name="test" />
+        <NumberInputFieldV2
+          max={maxValue}
+          min={minValue}
+          name="test"
+          aria-label="Number Input"
+        />
       </Form>,
       {
         transform: async () => {

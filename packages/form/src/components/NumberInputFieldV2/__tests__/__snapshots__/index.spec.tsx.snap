@@ -339,9 +339,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   color: #727683;
 }
 
-<form
-    novalidate=""
-  >
+<form>
     <div
       class="cache-16otux ehpbis70"
     >
@@ -370,6 +368,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
             data-size="medium"
           >
             <button
+              aria-label="minus"
               class="cache-1ovv447 e112qvla0"
               type="button"
             >
@@ -405,6 +404,853 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
             data-size="medium"
           >
             <button
+              aria-label="plus"
+              class="cache-1ovv447 e112qvla0"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
+<DocumentFragment>
+  .cache-16otux {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1qrwkk1 {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1m2yyol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-1m2yyol:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1m2yyol[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1m2yyol[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-1m2yyol:hover {
+  border-color: #792dd4;
+}
+
+.cache-1m2yyol[data-readOnly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.cache-1m2yyol[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
+}
+
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
+}
+
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-v7jpir {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  color: #b5b7bd;
+}
+
+.cache-v7jpir:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1f6h4yw {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+}
+
+.cache-1c6l9eh {
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px;
+}
+
+.cache-1c6l9eh[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-1c6l9eh::-webkit-outer-spin-button,
+.cache-1c6l9eh::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-1c6l9eh {
+  -moz-appearance: textfield;
+}
+
+.cache-1c6l9eh[data-size='small'] {
+  height: 30px;
+}
+
+.cache-1c6l9eh[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-1c6l9eh[data-size='large'] {
+  height: 46px;
+}
+
+.cache-1c6l9eh:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:disabled {
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-1c6l9eh:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-1c6l9eh:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
+}
+
+<form>
+    <div
+      class="cache-16otux ehpbis70"
+    >
+      <div
+        class="cache-9bqyx6 ehpbis70"
+      >
+        <div
+          class="cache-1l08jzy ehpbis70"
+        >
+          <label
+            class="cache-1qrwkk1 e13y3mga0"
+            for=":r5:"
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          class="cache-1m2yyol e1b9qdjy0"
+          data-disabled="true"
+          data-error="false"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="cache-jyl6y4 e1b9qdjy4"
+            data-size="medium"
+          >
+            <button
+              aria-label="minus"
+              class="cache-v7jpir e112qvla0"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="cache-1f6h4yw e1b9qdjy3"
+            flex="1"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-1c6l9eh e1b9qdjy1"
+              data-has-unit="false"
+              data-size="medium"
+              disabled=""
+              id=":r5:"
+              max="Infinity"
+              min="0"
+              name="test"
+              placeholder=""
+              type="number"
+              value=""
+            />
+          </div>
+          <div
+            class="cache-jyl6y4 e1b9qdjy4"
+            data-size="medium"
+          >
+            <button
+              aria-label="plus"
+              class="cache-v7jpir e112qvla0"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`] = `
+<DocumentFragment>
+  .cache-16otux {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-9bqyx6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1l08jzy {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1qrwkk1 {
+  color: #3f4250;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1m2yyol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: 1px solid #d9dadd;
+  border-radius: 4px;
+}
+
+.cache-1m2yyol:focus-within {
+  border-color: #792dd4;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
+}
+
+.cache-1m2yyol[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1m2yyol[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-1m2yyol:hover {
+  border-color: #792dd4;
+}
+
+.cache-1m2yyol[data-readOnly='true'] {
+  border-color: #d9dadd;
+  background: #f9f9fa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.cache-1m2yyol[data-disabled='true'] {
+  border-color: #e9eaeb;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-jyl6y4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 2px 8px;
+}
+
+.cache-jyl6y4[data-size='small'] {
+  height: 30px;
+}
+
+.cache-jyl6y4[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-jyl6y4[data-size='large'] {
+  height: 46px;
+  padding: 4px 8px;
+}
+
+.cache-1ovv447 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+}
+
+.cache-1ovv447:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1ovv447:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-1ovv447:hover,
+.cache-1ovv447:active {
+  background: #e9eaeb;
+  color: #222638;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.cache-1f6h4yw {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: inherit;
+  background: inherit;
+}
+
+.cache-1c6l9eh {
+  outline: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  color: #3f4250;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: Regular;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px;
+}
+
+.cache-1c6l9eh[data-has-unit='true'] {
+  text-align: left;
+  padding: 8px 0 8px 8px;
+}
+
+.cache-1c6l9eh::-webkit-outer-spin-button,
+.cache-1c6l9eh::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cache-1c6l9eh {
+  -moz-appearance: textfield;
+}
+
+.cache-1c6l9eh[data-size='small'] {
+  height: 30px;
+}
+
+.cache-1c6l9eh[data-size='medium'] {
+  height: 38px;
+}
+
+.cache-1c6l9eh[data-size='large'] {
+  height: 46px;
+}
+
+.cache-1c6l9eh:-moz-read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:read-only {
+  color: #3f4250;
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:-moz-read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:read-only~.e1b9qdjy2 {
+  background: #f9f9fa;
+}
+
+.cache-1c6l9eh:disabled {
+  color: #b5b7bd;
+  background: #f3f3f4;
+  cursor: not-allowed;
+}
+
+.cache-1c6l9eh:disabled~.e1b9qdjy2 {
+  background: #f3f3f4;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cache-1c6l9eh:placeholder-shown~.e1b9qdjy2 {
+  color: #727683;
+}
+
+<form>
+    <div
+      class="cache-16otux ehpbis70"
+    >
+      <div
+        class="cache-9bqyx6 ehpbis70"
+      >
+        <div
+          class="cache-1l08jzy ehpbis70"
+        >
+          <label
+            class="cache-1qrwkk1 e13y3mga0"
+            for=":ra:"
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          class="cache-1m2yyol e1b9qdjy0"
+          data-disabled="false"
+          data-error="false"
+          data-success="false"
+          data-unit="false"
+        >
+          <div
+            class="cache-jyl6y4 e1b9qdjy4"
+            data-size="medium"
+          >
+            <button
+              aria-label="minus"
+              class="cache-1ovv447 e112qvla0"
+              type="button"
+            >
+              <svg
+                class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,13H5V11H19V13Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="cache-1f6h4yw e1b9qdjy3"
+            flex="1"
+          >
+            <input
+              aria-label="Number Input"
+              class="cache-1c6l9eh e1b9qdjy1"
+              data-has-unit="false"
+              data-size="medium"
+              id=":ra:"
+              max="20"
+              min="5"
+              name="test"
+              placeholder=""
+              type="number"
+              value="20"
+            />
+          </div>
+          <div
+            class="cache-jyl6y4 e1b9qdjy4"
+            data-size="medium"
+          >
+            <button
+              aria-label="plus"
               class="cache-1ovv447 e112qvla0"
               type="button"
             >

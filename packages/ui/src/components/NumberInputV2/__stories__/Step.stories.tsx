@@ -8,7 +8,6 @@ Step.args = {
   name: 'number-input',
   onChange: () => {},
   step: 10,
-  value: 0,
 }
 
 Step.parameters = {
