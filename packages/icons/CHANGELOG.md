@@ -1,5 +1,14 @@
 # @ultraviolet/icons
 
+## 2.7.4
+
+### Patch Changes
+
+- [#3290](https://github.com/scaleway/ultraviolet/pull/3290) [`9b57f52`](https://github.com/scaleway/ultraviolet/commit/9b57f523a5153448ea2dd0a6c227e1aead9a3365) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.7`.
+  Updated dependency `@babel/runtime` to `7.23.7`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.7`.
+  Updated dependency `@babel/preset-env` to `7.23.7`.
+
 ## 2.7.3
 
 ### Patch Changes
