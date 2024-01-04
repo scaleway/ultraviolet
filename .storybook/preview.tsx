@@ -74,6 +74,10 @@ export const globalStyles = (mode: 'light' | 'dark') => () => css`
     color-scheme: ${mode};
   }
 
+  p {
+    margin: 0 !important;
+  }
+
   @font-face {
     font-family: 'Inter';
     font-style: normal;

@@ -7,7 +7,7 @@ import {
   Stories,
   PRIMARY_STORY,
 } from '@storybook/blocks'
-import { Badge, Button, Text, Stack, Link } from '../../packages/ui/src'
+import { Badge, Button, Text, Stack, Link, Row } from '../../packages/ui/src'
 import styled from '@emotion/styled'
 import { linkTo } from '@storybook/addon-links'
 import { useMemo } from 'react'
@@ -23,11 +23,6 @@ const StyledTitle = styled.div`
     text-decoration: line-through;
     text-decoration-color: ${({ theme }) => theme.colors.danger.text};
   }
-`
-
-const FlexDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
 `
 
 type PageProps = {
@@ -81,20 +76,22 @@ const Page = ({
         ) : null}
       </StyledHeaderContainer>
       {deprecated ? (
-        <FlexDiv>
+        <Row templateColumns="1fr auto" justifyContent="top">
           <Text as="h3" variant="bodyStronger" color="danger">
             {deprecatedReason
               ? deprecatedReason
               : 'This component is deprecated please do not use it any more.'}
           </Text>
           {migrationLink ? (
-            <p>
-              <Button onClick={linkTo(migrationLink)} variant="ghost">
-                How to migrate?
-              </Button>
-            </p>
+            <Button
+              onClick={linkTo(migrationLink)}
+              variant="ghost"
+              size="small"
+            >
+              How to migrate?
+            </Button>
           ) : null}
-        </FlexDiv>
+        </Row>
       ) : (
         <Subtitle />
       )}
@@ -103,7 +100,7 @@ const Page = ({
           This component is at an unstable stage and is subject to change in
           future releases.&nbsp;
           <Link
-            href="/?path=/docs/state-components-state--page"
+            href="/?path=/docs/state-components-state--docs"
             iconPosition="right"
           >
             Learn more about component states

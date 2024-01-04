@@ -83,6 +83,21 @@ $ pnpm run lint
 $ pnpm run lint:fix
 ```
 
+#### Typecheck
+
+Running `npx typecheck --noEmit` won't work at root of the project. To run type check for all packages you need to run the following command:
+
+```sh
+$ pnpm run typecheck # this is a package json script that will run typecheck for all packages recursively
+```
+
+If you still want to use npx, you can run it from a package folder:
+
+```sh
+$ cd packages/ui
+$ npx typecheck --noEmit
+```
+
 ### Build
 
 ```sh
