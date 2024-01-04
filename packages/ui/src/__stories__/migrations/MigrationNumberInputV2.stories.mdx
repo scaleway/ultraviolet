@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Migrations/NumberInput to NumberInputV2" />
+
+# Migrate NumberInput to NumberInputV2
+
+## Properties to migrate
+
+- `minValue` (string) -> `min` (string | number)
+- `maxValue` (string) -> `max` (string | number)
+- `step` (string) -> `step` (string | number)
+- `value` (string) -> `value` (string | number)
+- `text` (string) -> `unit` (string)
+- `disabledTooltip` (string) -> `tooltip` (string)
+
+## Removed properties
+
+- `onMaxCrossed` (function)
+- `onMinCrossed` (function)
+- `defaultValue` (string)
+
+## Behavior change
+
+- The component act as uncontrolled component as long as the `value` prop is not provided.
+If you set `value`, you will have to handle the `onChange` event to update the value.
+
+- If you set a `min` or `max` value and that the component is controlled (you set the `value` prop), when blur occurs,
+if the value is out of the range, the value will be set to the closest range value.

@@ -15,6 +15,7 @@ import {
   useMemo,
 } from 'react'
 import { Button } from '../Button'
+import { Row } from '../Row'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
 import { Tooltip } from '../Tooltip'
@@ -44,11 +45,12 @@ const SideContainer = styled(Stack)`
   }
 `
 
-const InputContainer = styled(Stack)`
+const InputContainer = styled(Row)`
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 `
 
 const Unit = styled(Text, {
@@ -56,8 +58,7 @@ const Unit = styled(Text, {
 })<{ size: Sizes }>`
   display: flex;
   align-items: center;
-  padding: ${({ theme }) =>
-    `${theme.space['1']} ${theme.space['1']} ${theme.space['1']}`};
+  padding: ${({ theme }) => theme.space['1']};
   height: ${({ size }) => SIZES[size]};
 `
 
@@ -324,10 +325,9 @@ export const NumberInputV2 = forwardRef(
                 />
               </SideContainer>
               <InputContainer
-                direction="row"
                 justifyContent="space-between"
-                flex={1}
                 alignItems="center"
+                templateColumns="1fr auto"
               >
                 <Input
                   ref={localRef}
@@ -411,7 +411,7 @@ export const NumberInputV2 = forwardRef(
           <Text
             variant="caption"
             as="span"
-            prominence="weak"
+            prominence={!error && !success ? 'weak' : undefined}
             sentiment={helperSentiment}
             disabled={disabled || readOnly}
           >

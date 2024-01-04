@@ -8,6 +8,5 @@ Playground.args = {
   id: 'number-input',
   label: 'Number Input',
   name: 'number-input',
-  value: 1,
   onChange: () => {},
 }
