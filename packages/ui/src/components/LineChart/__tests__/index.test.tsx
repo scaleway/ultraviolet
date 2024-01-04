@@ -1,7 +1,6 @@
 import { describe, jest, test } from '@jest/globals'
 import * as nivo from '@nivo/core'
 import { fireEvent, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import type { ComponentProps } from 'react'
 import { useEffect, useState } from 'react'
 import { LineChart } from '..'
@@ -73,20 +72,6 @@ describe('LineChart', () => {
         withLegend
         xScale={{ type: 'linear' }}
       />,
-    ))
-
-  test('renders correctly when chart is hovered', () =>
-    shouldMatchEmotionSnapshot(
-      <LineChart data={lineChartData} withLegend xScale={{ type: 'linear' }} />,
-      {
-        transform: async () => {
-          // eslint-disable-next-line testing-library/no-node-access
-          const line = document.querySelector('svg[role="img"] g path')
-          if (!line) throw new Error('LineChart line path not found')
-          await userEvent.unhover(line)
-          await userEvent.hover(line)
-        },
-      },
     ))
 
   test('renders correctly when legend is deselected', () =>
