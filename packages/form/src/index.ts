@@ -48,4 +48,12 @@ export type {
   FieldErrors,
   Path,
   UseFieldArrayRemove,
+  ArrayPath,
+  FieldArrayPath,
+  FieldPathValues,
+  FieldArray,
+  FieldPathValue,
+  FieldArrayPathValue,
+  FieldPathByValue,
+  Control,
 } from 'react-hook-form'
