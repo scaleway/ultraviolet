@@ -23,6 +23,8 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
         }}
         onChange={value => {
           switchLocale((value as SelectOption).value)
+            .then()
+            .catch(() => null)
         }}
         noTopLabel
       >
@@ -32,7 +34,12 @@ export const I18n: StoryFn<ComponentProps<typeof DateInput>> = args => {
           </SelectInput.Option>
         ))}
       </SelectInput>
-      <DateInput {...args} onChange={() => {}} label={currentLocale} />
+      <DateInput
+        {...args}
+        locale={dateFnsLocale}
+        onChange={() => {}}
+        label={currentLocale}
+      />
     </div>
   )
 }
