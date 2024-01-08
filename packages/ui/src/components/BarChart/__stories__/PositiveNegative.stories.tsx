@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react'
 import type { StoryFn } from '@storybook/react'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 import { BarChart } from '..'
 import { barChartPositiveNegativeData } from './mockData'
 

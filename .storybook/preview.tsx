@@ -9,6 +9,7 @@ import { light, dark } from './storybookThemes'
 import lightTheme, { darkTheme } from '../packages/ui/src/theme'
 import DocsContainer from './components/DocsContainer'
 import Page from './components/Page'
+import { enGB, fr as frFr, es } from 'date-fns/locale'
 import isChromatic from 'chromatic/isChromatic'
 import JetBrains from './assets/fonts/jetbrains/JetBrainsMono-Regular.woff2'
 import InterSemiBoldWoff2 from './assets/fonts/inter/Inter-SemiBold.woff2'
@@ -122,6 +123,35 @@ export const globalStyles = (mode: 'light' | 'dark') => () => css`
   }
 `
 
+const loadDateLocaleAsync = async (locale: string) => {
+  if (locale === 'en') {
+    return (await import('date-fns/locale/en-GB')).default
+  }
+  if (locale === 'fr') {
+    return (await import('date-fns/locale/fr')).default
+  }
+
+  if (locale === 'es') {
+    return (await import('date-fns/locale/es')).default
+  }
+
+  return (await import(`date-fns/locale/en-GB`)).default
+}
+
+const loadDateLocale = (locale: string) => {
+  if (locale === 'en') {
+    return enGB
+  }
+  if (locale === 'fr') {
+    return frFr
+  }
+  if (locale === 'es') {
+    return es
+  }
+
+  return enGB
+}
+
 const decorators: Preview['decorators'] = [
   StoryComponent => {
     const mode = useDarkMode() ? 'dark' : 'light'
@@ -133,9 +163,8 @@ const decorators: Preview['decorators'] = [
         defaultTranslations={{}}
         enableDebugKey={false}
         enableDefaultLocale={false}
-        loadDateLocale={async locale =>
-          import(`date-fns/locale/${locale}/index`)
-        }
+        loadDateLocale={loadDateLocale}
+        loadDateLocaleAsync={loadDateLocaleAsync}
         localeItemStorage="localeI18n"
         supportedLocales={['en', 'fr', 'es']}
       >

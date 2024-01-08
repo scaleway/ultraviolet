@@ -86,8 +86,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1
       '@scaleway/use-i18n':
-        specifier: 5.4.9
-        version: 5.4.9(date-fns@3.0.6)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 6.1.0
+        version: 6.1.0(date-fns@3.1.0)(react-dom@18.2.0)(react@18.2.0)
       '@size-limit/file':
         specifier: 9.0.0
         version: 9.0.0(size-limit@9.0.0)
@@ -203,8 +203,8 @@ importers:
         specifier: 3.3.0
         version: 3.3.0(@types/node@18.19.4)(typescript@5.3.3)
       date-fns:
-        specifier: 3.0.6
-        version: 3.0.6
+        specifier: 3.1.0
+        version: 3.1.0
       emoji-toolkit:
         specifier: 8.0.0
         version: 8.0.0
@@ -4968,17 +4968,17 @@ packages:
     resolution: {integrity: sha512-E67Gge9Az7HaX/i9fYXP2cw8xlsDAwb9d3TpoVO0Xnccal9j+YfGMyblKSyuf5SqZVaduy0lplhu3lk3SSTE+w==}
     dev: true
 
-  /@scaleway/use-i18n@5.4.9(date-fns@3.0.6)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-yAhKvXpxBUZroa86Fh1oHA1epfCBBidS4mYcCrIAx3TJAIZ+5LJFHtqL1H+fxy1G7jQfmrWc6csSvwPm4+AzIw==}
-    engines: {node: '>=14.x'}
+  /@scaleway/use-i18n@6.1.0(date-fns@3.1.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qxdnPUDKg1olxO3eH/e0U7mQ6FGvB3Rj+g6e9tU1Rk5JaBNPovK3oiWo4fR/9mFwyxDa0i7AjlJC7HjFCvjGxg==}
+    engines: {node: '>=18.x'}
     peerDependencies:
-      date-fns: 2.x
+      date-fns: 3.x
       react: 18.x || 18
       react-dom: 18.x || 18
     dependencies:
       '@formatjs/ecma402-abstract': 1.18.0
       '@formatjs/fast-memoize': 2.2.0
-      date-fns: 3.0.6
+      date-fns: 3.1.0
       filesize: 10.1.0
       international-types: 0.8.1
       intl-messageformat: 10.5.8
@@ -8986,8 +8986,8 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.7
 
-  /date-fns@3.0.6:
-    resolution: {integrity: sha512-W+G99rycpKMMF2/YD064b2lE7jJGUe+EjOES7Q8BIGY8sbNdbgcs9XFTZwvzc9Jx1f3k7LB7gZaZa7f8Agzljg==}
+  /date-fns@3.1.0:
+    resolution: {integrity: sha512-ZO7yefXV/wCWzd3I9haCHmfzlfA3i1a2HHO7ZXjtJrRjXt8FULKJ2Vl8wji3XYF4dQ0ZJ/tokXDZeYlFvgms9Q==}
     dev: true
 
   /debug@2.6.9:
