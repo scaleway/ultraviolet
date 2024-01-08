@@ -121,6 +121,14 @@ const Properties = () => {
           This page is used to track the usage of properties across the library.
         </Text>
         <Text as="p" variant="body">
+          <Text as="span" variant="bodyStrong">
+            Similar property name*:
+          </Text>
+          &nbsp;this is a list of properties that are similar to the current
+          property. The way it checks is not very precise, it just checks if the
+          property name contains some part of the other property name.
+        </Text>
+        <Text as="p" variant="body">
           <Text as="span" variant="bodyStronger">
             Number of properties
           </Text>
@@ -132,7 +140,7 @@ const Properties = () => {
           { label: 'Property Name' },
           { label: 'Number of usages' },
           { label: 'Values' },
-          { label: 'Similar property name' },
+          { label: 'Similar property name*' },
           { label: 'Components usage' },
         ]}
         stripped
@@ -201,14 +209,15 @@ const Properties = () => {
                 ...new Set(
                   sortedPropertiesUsagesCountAndComponentsName[
                     property
-                  ].components
-                    .map(component => {
-                      const { name, value } = (
-                        componentNameAndProperties as Record<
-                          string,
-                          Record<string, PropertyType>
-                        >
-                      )[component][property].type
+                  ]?.components
+                    ?.map(component => {
+                      const { name, value } =
+                        (
+                          componentNameAndProperties as Record<
+                            string,
+                            Record<string, PropertyType>
+                          >
+                        )[component]?.[property]?.type ?? {}
 
                       if (name === 'boolean') {
                         return ['true', 'false']
