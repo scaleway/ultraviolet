@@ -15,10 +15,12 @@ import * as instance from './instance'
 import * as iotHub from './iotHub'
 import * as ipfsNaming from './ipfsNaming'
 import * as ipfsPinning from './ipfsPinning'
+import * as jero from './jero'
 import * as k8sKapsule from './k8sKapsule'
 import * as k8sKosmos from './k8sKosmos'
 import * as loadBalancers from './loadBalancers'
 import * as managedDatabase from './managedDatabase'
+import * as nabu from './nabu'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
 import * as publicGateway from './publicGateway'
@@ -70,4 +72,6 @@ export {
   transactionalEmail,
   vpc,
   webHosting,
+  jero,
+  nabu,
 }
