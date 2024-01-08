@@ -114,17 +114,26 @@ const StyledImage = (component: Parameters<typeof styled>[0]) => styled(
 type CustomerSatisfactionProps = {
   value: Value
   onChange: (rating: Value) => void
+  'data-testid'?: string
+  className?: string
 }
 
 export const CustomerSatisfaction = ({
   value,
   onChange,
+  'data-testid': dataTestId,
+  className,
 }: CustomerSatisfactionProps) => {
   const [hoveredValue, setHoveredValue] = useState(0)
   const isHappy = useMemo(() => value > ratings.length / 2, [value])
 
   return (
-    <Stack direction="row" justifyContent="space-between">
+    <Stack
+      direction="row"
+      justifyContent="space-between"
+      className={className}
+      data-testid={dataTestId}
+    >
       {ratings.map(rating => {
         const isSelected = rating.value === value
         const isHovered = rating.value === hoveredValue
@@ -151,6 +160,7 @@ export const CustomerSatisfaction = ({
             onMouseLeave={() => {
               setHoveredValue(0)
             }}
+            data-testid={`${dataTestId}-${rating.value}`}
           />
         )
       })}
