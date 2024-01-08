@@ -1,3 +1,4 @@
+import randomName from '@scaleway/random-name'
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
 import { TextInput } from '..'
@@ -23,7 +24,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         prefix="https://"
         value={value}
         onChange={setValue}
-        onRandomize={() => {}}
+        onRandomize={() => setValue(randomName())}
       />
       <TextInput
         {...args}
@@ -31,7 +32,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         prefix="https://"
         value={value}
         onChange={setValue}
-        onRandomize={() => {}}
+        onRandomize={() => setValue(randomName())}
         type="password"
       />
       <TextInput
@@ -41,7 +42,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         suffix=".com"
         value={value}
         onChange={setValue}
-        onRandomize={() => {}}
+        onRandomize={() => setValue(randomName())}
         success="Field has been updated!"
         loading
         clearable
@@ -53,7 +54,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         helper="Notice to fill the field"
         value={value}
         onChange={setValue}
-        onRandomize={() => {}}
+        onRandomize={() => setValue(randomName())}
         loading
       />
       <TextInput
@@ -69,7 +70,7 @@ export const Examples: StoryFn<typeof TextInput> = args => {
         }
         value={value}
         onChange={setValue}
-        onRandomize={() => {}}
+        onRandomize={() => setValue(randomName())}
         loading
       />
     </Stack>
