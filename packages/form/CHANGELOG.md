@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.0.2
+
+### Patch Changes
+
+- [#3298](https://github.com/scaleway/ultraviolet/pull/3298) [`264d5e3`](https://github.com/scaleway/ultraviolet/commit/264d5e39292e551b6c12a3ad5111bdbfa370c1d1) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Add more exported types of react-hook-form
+
+- Updated dependencies [[`db889ce`](https://github.com/scaleway/ultraviolet/commit/db889ce0dd85d8eac323b25c8ad6d4b01c070f2e)]:
+  - @ultraviolet/ui@1.29.4
+
 ## 2.0.1
 
 ### Patch Changes

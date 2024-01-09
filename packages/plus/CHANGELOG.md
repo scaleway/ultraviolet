@@ -1,5 +1,14 @@
 # @ultraviolet/plus
 
+## 0.5.10
+
+### Patch Changes
+
+- [#3291](https://github.com/scaleway/ultraviolet/pull/3291) [`a82cda0`](https://github.com/scaleway/ultraviolet/commit/a82cda0ec4a11fb7a3b4d50da391b2b161e65ce1) Thanks [@Lawndlwd](https://github.com/Lawndlwd)! - Adjust the estimated cost condition to control the visibility of the description
+
+- Updated dependencies [[`db889ce`](https://github.com/scaleway/ultraviolet/commit/db889ce0dd85d8eac323b25c8ad6d4b01c070f2e)]:
+  - @ultraviolet/ui@1.29.4
+
 ## 0.5.9
 
 ### Patch Changes
