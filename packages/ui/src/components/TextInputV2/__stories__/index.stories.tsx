@@ -4,6 +4,9 @@ import { TextInput } from '..'
 export default {
   component: TextInput,
   title: 'Components/Data Entry/TextInputV2',
+  parameters: {
+    experimental: true,
+  },
 } as Meta<typeof TextInput>
 
 export { Playground } from './Playground.stories'
