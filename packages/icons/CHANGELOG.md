@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.7.5
+
+### Patch Changes
+
+- [#3297](https://github.com/scaleway/ultraviolet/pull/3297) [`ebcf407`](https://github.com/scaleway/ultraviolet/commit/ebcf4072752e27ea57fcabed9ec592c5a061aeba) Thanks [@matthprost](https://github.com/matthprost)! - Fix some `<ProductIcon />` having the wrong color
+
 ## 2.7.4
 
 ### Patch Changes

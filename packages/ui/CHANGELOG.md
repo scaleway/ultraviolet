@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.29.4
+
+### Patch Changes
+
+- [#3310](https://github.com/scaleway/ultraviolet/pull/3310) [`db889ce`](https://github.com/scaleway/ultraviolet/commit/db889ce0dd85d8eac323b25c8ad6d4b01c070f2e) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<Banner />` default illustration to be correctly imported
+
+- Updated dependencies [[`ebcf407`](https://github.com/scaleway/ultraviolet/commit/ebcf4072752e27ea57fcabed9ec592c5a061aeba)]:
+  - @ultraviolet/icons@2.7.5
+
 ## 1.29.3
 
 ### Patch Changes
