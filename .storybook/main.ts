@@ -19,13 +19,33 @@ export default {
   docs: {
     autodocs: true,
   },
+  core: {
+    builder: '@storybook/builder-webpack5',
+  },
   webpackFinal: async config => {
-    config?.module?.rules?.push({
+    const imageRule = config.module?.rules?.find(rule => {
+      const test = (rule as { test: RegExp }).test
+
+      if (!test) {
+        return false
+      }
+
+      return test.test('.svg')
+    }) as { [key: string]: any }
+
+    imageRule['exclude'] = /\.svg$/
+
+    config.module?.rules?.push({
       test: /\.svg$/,
       use: [
         {
           loader: '@svgr/webpack',
-          options: { svgo: false, memo: true }, // We disable svgo because we have custom configuration for it svgo.config.js
+        },
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'static/media/[path][name].[ext]',
+          },
         },
       ],
       type: 'javascript/auto',
