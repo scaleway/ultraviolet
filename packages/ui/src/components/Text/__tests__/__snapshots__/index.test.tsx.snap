@@ -237,10 +237,10 @@ exports[`Text renders correctly with type="bodyStronger" 1`] = `
 
 exports[`Text renders correctly with type="caption" 1`] = `
 <DocumentFragment>
-  .cache-6ypnd3-StyledText {
+  .cache-vt2o5d-StyledText {
   font-size: 12px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -249,7 +249,7 @@ exports[`Text renders correctly with type="caption" 1`] = `
 }
 
 <div
-    class="cache-6ypnd3-StyledText e13y3mga0"
+    class="cache-vt2o5d-StyledText e13y3mga0"
   >
     caption
   </div>
@@ -258,10 +258,10 @@ exports[`Text renders correctly with type="caption" 1`] = `
 
 exports[`Text renders correctly with type="captionSmall" 1`] = `
 <DocumentFragment>
-  .cache-1wbhr4s-StyledText {
+  .cache-1pm8aga-StyledText {
   font-size: 10px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -270,7 +270,7 @@ exports[`Text renders correctly with type="captionSmall" 1`] = `
 }
 
 <div
-    class="cache-1wbhr4s-StyledText e13y3mga0"
+    class="cache-1pm8aga-StyledText e13y3mga0"
   >
     captionSmall
   </div>
@@ -382,6 +382,48 @@ exports[`Text renders correctly with type="code" 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Text renders correctly with type="codeStrong" 1`] = `
+<DocumentFragment>
+  .cache-129x77d-StyledText {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-129x77d-StyledText e13y3mga0"
+  >
+    codeStrong
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="codeStronger" 1`] = `
+<DocumentFragment>
+  .cache-1pdfd0r-StyledText {
+  font-size: 14px;
+  font-family: JetBrains;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-1pdfd0r-StyledText e13y3mga0"
+  >
+    codeStronger
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Text renders correctly with type="heading" 1`] = `
 <DocumentFragment>
   .cache-3j6na9-StyledText {
@@ -424,11 +466,74 @@ exports[`Text renders correctly with type="headingLarge" 1`] = `
 </DocumentFragment>
 `;
 
+exports[`Text renders correctly with type="headingLargeStrong" 1`] = `
+<DocumentFragment>
+  .cache-9i6wh-StyledText {
+  font-size: 35px;
+  font-family: Space Grotesk;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 48px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-9i6wh-StyledText e13y3mga0"
+  >
+    headingLargeStrong
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="headingLargeStronger" 1`] = `
+<DocumentFragment>
+  .cache-2eey3i-StyledText {
+  font-size: 35px;
+  font-family: Space Grotesk;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 48px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-2eey3i-StyledText e13y3mga0"
+  >
+    headingLargeStronger
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Text renders correctly with type="headingSmall" 1`] = `
 <DocumentFragment>
-  .cache-i5ikgi-StyledText {
+  .cache-1yjl96t-StyledText {
   font-size: 21px;
   font-family: Space Grotesk,Inter,Asap;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-1yjl96t-StyledText e13y3mga0"
+  >
+    headingSmall
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="headingSmallStrong" 1`] = `
+<DocumentFragment>
+  .cache-1xftb8s-StyledText {
+  font-size: 21px;
+  font-family: Space Grotesk;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 32px;
@@ -438,9 +543,72 @@ exports[`Text renders correctly with type="headingSmall" 1`] = `
 }
 
 <div
-    class="cache-i5ikgi-StyledText e13y3mga0"
+    class="cache-1xftb8s-StyledText e13y3mga0"
   >
-    headingSmall
+    headingSmallStrong
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="headingSmallStronger" 1`] = `
+<DocumentFragment>
+  .cache-tx5qw-StyledText {
+  font-size: 21px;
+  font-family: Space Grotesk;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-tx5qw-StyledText e13y3mga0"
+  >
+    headingSmallStronger
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="headingStrong" 1`] = `
+<DocumentFragment>
+  .cache-4u3rrv-StyledText {
+  font-size: 25px;
+  font-family: Space Grotesk;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-4u3rrv-StyledText e13y3mga0"
+  >
+    headingStrong
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text renders correctly with type="headingStronger" 1`] = `
+<DocumentFragment>
+  .cache-15l8cgl-StyledText {
+  font-size: 25px;
+  font-family: Space Grotesk;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 32px;
+  text-transform: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div
+    class="cache-15l8cgl-StyledText e13y3mga0"
+  >
+    headingStronger
   </div>
 </DocumentFragment>
 `;
