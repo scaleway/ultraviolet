@@ -1,7 +1,9 @@
 /// <reference types="@emotion/react/types/css-prop" />
 
 declare module '*.svg' {
-  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>
+  import type { FunctionComponent, SVGProps } from 'react'
+
+  const ReactComponent: FunctionComponent<SVGProps<SVGSVGElement>>
   const content: string
 
   export { ReactComponent }

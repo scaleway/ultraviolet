@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
+import type { FunctionComponent, SVGProps } from 'react'
 import { CATEGORY_ICONS } from './Icons'
 
-const StyledIcon = (component: Parameters<typeof styled>[0]) => styled(
-  component,
-)`
+const StyledIcon = (
+  component: FunctionComponent<SVGProps<SVGSVGElement>>,
+) => styled(component)`
   .fill {
     fill: ${({ theme }) => theme.colors.other.icon.category.primary.fill};
   }
