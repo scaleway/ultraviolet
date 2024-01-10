@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.7.6
+
+### Patch Changes
+
+- Updated dependencies [[`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad)]:
+  - @ultraviolet/themes@1.7.0
+
 ## 2.7.5
 
 ### Patch Changes

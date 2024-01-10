@@ -1,5 +1,19 @@
 # @ultraviolet/plus
 
+## 0.6.0
+
+### Minor Changes
+
+- [#3295](https://github.com/scaleway/ultraviolet/pull/3295) [`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New typography headings in tokens
+
+### Patch Changes
+
+- [#3270](https://github.com/scaleway/ultraviolet/pull/3270) [`829e304`](https://github.com/scaleway/ultraviolet/commit/829e304b8bc44451cace7810c5db117d112895e4) Thanks [@philibea](https://github.com/philibea)! - add customer satisfaction component
+
+- Updated dependencies [[`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad)]:
+  - @ultraviolet/themes@1.7.0
+  - @ultraviolet/ui@1.30.0
+
 ## 0.5.10
 
 ### Patch Changes
