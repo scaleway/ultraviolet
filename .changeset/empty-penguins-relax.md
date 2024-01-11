@@ -1,6 +1,6 @@
 ---
-"@ultraviolet/illustrations": major
+"@ultraviolet/illustrations": minor
 ---
 
-- Add new illustrations `jiro` and `nabu`
-- Replace all wire illustrations from `.webp` to `.svg` files, those files should now be used as React components
+- Add new illustrations `jiro`, `nabu` and `quantum`
+- Replace all wire illustrations from `.webp` to `.svg` files
