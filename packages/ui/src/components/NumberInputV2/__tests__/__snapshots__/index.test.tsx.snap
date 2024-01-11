@@ -83,7 +83,7 @@ exports[`NumberInputV2 should click on min button 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,31 +102,30 @@ exports[`NumberInputV2 should click on min button 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -232,15 +231,9 @@ exports[`NumberInputV2 should click on min button 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -248,17 +241,11 @@ exports[`NumberInputV2 should click on min button 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -357,7 +344,7 @@ exports[`NumberInputV2 should click on min button 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -383,8 +370,7 @@ exports[`NumberInputV2 should click on min button 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -507,7 +493,7 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -526,31 +512,30 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -656,15 +641,9 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -672,17 +651,11 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -781,7 +754,7 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -807,8 +780,7 @@ exports[`NumberInputV2 should click on plus button with a step value 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -931,7 +903,7 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -950,31 +922,30 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1080,15 +1051,9 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1096,17 +1061,11 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -1205,7 +1164,7 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -1231,8 +1190,7 @@ exports[`NumberInputV2 should click on plus button with a step value and an in-b
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -1355,7 +1313,7 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1374,31 +1332,30 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1504,15 +1461,9 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1520,17 +1471,11 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -1629,7 +1574,7 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -1655,8 +1600,7 @@ exports[`NumberInputV2 should focus input and modify value 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -1779,7 +1723,7 @@ exports[`NumberInputV2 should renders correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1798,31 +1742,30 @@ exports[`NumberInputV2 should renders correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1928,15 +1871,9 @@ exports[`NumberInputV2 should renders correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1944,17 +1881,11 @@ exports[`NumberInputV2 should renders correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -2053,7 +1984,7 @@ exports[`NumberInputV2 should renders correctly 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -2079,8 +2010,7 @@ exports[`NumberInputV2 should renders correctly 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -2202,7 +2132,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2221,31 +2151,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -2351,15 +2280,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2367,17 +2290,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -2476,7 +2393,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -2502,8 +2419,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large 1`] = 
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -2625,7 +2541,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2644,31 +2560,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -2774,15 +2689,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2790,17 +2699,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -2882,7 +2785,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   color: #727683;
 }
 
-.cache-cbahr1-StyledText-Unit {
+.cache-rhoqy8-StyledText-Unit {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -2900,7 +2803,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 8px 8px;
+  padding: 8px;
   height: 46px;
 }
 
@@ -2921,7 +2824,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -2947,8 +2850,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -2962,7 +2864,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size large and un
             value=""
           />
           <span
-            class="e1b9qdjy2 cache-cbahr1-StyledText-Unit e13y3mga0"
+            class="e1b9qdjy2 cache-rhoqy8-StyledText-Unit e13y3mga0"
           >
             GB
           </span>
@@ -3075,7 +2977,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3094,31 +2996,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -3224,15 +3125,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3240,17 +3135,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -3349,7 +3238,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -3375,8 +3264,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium 1`] =
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -3498,7 +3386,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3517,31 +3405,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -3647,15 +3534,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3663,17 +3544,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -3755,7 +3630,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   color: #727683;
 }
 
-.cache-1rlz9wz-StyledText-Unit {
+.cache-92u7g7-StyledText-Unit {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -3773,7 +3648,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 8px 8px;
+  padding: 8px;
   height: 38px;
 }
 
@@ -3794,7 +3669,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -3820,8 +3695,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -3835,7 +3709,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size medium and u
             value=""
           />
           <span
-            class="e1b9qdjy2 cache-1rlz9wz-StyledText-Unit e13y3mga0"
+            class="e1b9qdjy2 cache-92u7g7-StyledText-Unit e13y3mga0"
           >
             GB
           </span>
@@ -3948,7 +3822,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3967,31 +3841,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -4097,15 +3970,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4113,17 +3980,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -4222,7 +4083,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -4248,8 +4109,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small 1`] = 
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -4371,7 +4231,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4390,31 +4250,30 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -4520,15 +4379,9 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4536,17 +4389,11 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -4628,7 +4475,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   color: #727683;
 }
 
-.cache-1nd2d91-StyledText-Unit {
+.cache-oxh6m6-StyledText-Unit {
   color: #3f4250;
   font-size: 16px;
   font-family: Inter,Asap;
@@ -4646,7 +4493,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 8px 8px;
+  padding: 8px;
   height: 30px;
 }
 
@@ -4667,7 +4514,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -4693,8 +4540,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -4708,7 +4554,7 @@ exports[`NumberInputV2 should renders correctly all sizes with size small and un
             value=""
           />
           <span
-            class="e1b9qdjy2 cache-1nd2d91-StyledText-Unit e13y3mga0"
+            class="e1b9qdjy2 cache-oxh6m6-StyledText-Unit e13y3mga0"
           >
             GB
           </span>
@@ -4821,7 +4667,7 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4840,31 +4686,30 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -4961,15 +4806,9 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4977,17 +4816,11 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -5086,7 +4919,7 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="true"
         data-error="false"
         data-success="false"
@@ -5113,8 +4946,7 @@ exports[`NumberInputV2 should renders correctly disabled 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -5238,7 +5070,7 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5257,31 +5089,30 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -5387,15 +5218,9 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5403,17 +5228,11 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -5512,7 +5331,7 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -5538,8 +5357,7 @@ exports[`NumberInputV2 should renders correctly max value 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -5661,7 +5479,7 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5680,31 +5498,30 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -5810,15 +5627,9 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -5826,17 +5637,11 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -5935,7 +5740,7 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -5961,8 +5766,7 @@ exports[`NumberInputV2 should renders correctly min value 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -6084,7 +5888,7 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6103,31 +5907,30 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -6233,15 +6036,9 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6249,17 +6046,11 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -6341,11 +6132,11 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
   color: #727683;
 }
 
-.cache-fkb4e-StyledText {
+.cache-vdlwt8-StyledText {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -6370,7 +6161,7 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="true"
         data-success="false"
@@ -6396,8 +6187,7 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -6433,7 +6223,7 @@ exports[`NumberInputV2 should renders correctly with error 1`] = `
       </div>
     </div>
     <span
-      class="cache-fkb4e-StyledText e13y3mga0"
+      class="cache-vdlwt8-StyledText e13y3mga0"
     >
       This is an error
     </span>
@@ -6524,7 +6314,7 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6543,31 +6333,30 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -6673,15 +6462,9 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6689,17 +6472,11 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -6798,7 +6575,7 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="false"
@@ -6824,8 +6601,7 @@ exports[`NumberInputV2 should renders correctly with placeholder 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -6947,7 +6723,7 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
   text-decoration: none;
 }
 
-.cache-2u51k1-Container {
+.cache-snr60n-Container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6966,31 +6742,30 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
   border-radius: 4px;
 }
 
-.cache-2u51k1-Container:focus-within {
+.cache-snr60n-Container:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-2u51k1-Container[data-success='true'] {
+.cache-snr60n-Container[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-2u51k1-Container[data-error='true'] {
+.cache-snr60n-Container[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-2u51k1-Container:hover {
+.cache-snr60n-Container:hover {
   border-color: #792dd4;
 }
 
-.cache-2u51k1-Container[data-readOnly='true'] {
+.cache-snr60n-Container[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-2u51k1-Container[data-disabled='true'] {
+.cache-snr60n-Container[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -7096,15 +6871,9 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
   min-height: 16px;
 }
 
-.cache-1ac4yod-Stack-InputContainer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-19zw6op-StyledRow-InputContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -7112,17 +6881,11 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-h5mwdc-Input {
@@ -7204,11 +6967,11 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
   color: #727683;
 }
 
-.cache-urxuf6-StyledText {
+.cache-1n7fwv3-StyledText {
   color: #22674e;
   font-size: 12px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -7233,7 +6996,7 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
     </div>
     <div>
       <div
-        class="cache-2u51k1-Container e1b9qdjy0"
+        class="cache-snr60n-Container e1b9qdjy0"
         data-disabled="false"
         data-error="false"
         data-success="true"
@@ -7259,8 +7022,7 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
           </button>
         </div>
         <div
-          class="cache-1ac4yod-Stack-InputContainer e1b9qdjy3"
-          flex="1"
+          class="e1b9qdjy3 cache-19zw6op-StyledRow-InputContainer e3f5lzv0"
         >
           <input
             class="cache-h5mwdc-Input e1b9qdjy1"
@@ -7296,7 +7058,7 @@ exports[`NumberInputV2 should renders correctly with success 1`] = `
       </div>
     </div>
     <span
-      class="cache-urxuf6-StyledText e13y3mga0"
+      class="cache-1n7fwv3-StyledText e13y3mga0"
     >
       This is a success
     </span>

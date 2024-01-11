@@ -83,7 +83,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-1m2yyol {
+.cache-ztn6dz {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,31 +102,30 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   border-radius: 4px;
 }
 
-.cache-1m2yyol:focus-within {
+.cache-ztn6dz:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1m2yyol[data-success='true'] {
+.cache-ztn6dz[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1m2yyol[data-error='true'] {
+.cache-ztn6dz[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1m2yyol:hover {
+.cache-ztn6dz:hover {
   border-color: #792dd4;
 }
 
-.cache-1m2yyol[data-readOnly='true'] {
+.cache-ztn6dz[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-1m2yyol[data-disabled='true'] {
+.cache-ztn6dz[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -232,15 +231,9 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   min-height: 16px;
 }
 
-.cache-1f6h4yw {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -248,17 +241,11 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-jeg2os {
@@ -358,7 +345,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
       </div>
       <div>
         <div
-          class="cache-1m2yyol e1b9qdjy0"
+          class="cache-ztn6dz e1b9qdjy0"
           data-disabled="false"
           data-error="false"
           data-success="false"
@@ -384,8 +371,7 @@ exports[`NumberInputFieldV2 should render correctly 1`] = `
             </button>
           </div>
           <div
-            class="cache-1f6h4yw e1b9qdjy3"
-            flex="1"
+            class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
           >
             <input
               class="cache-jeg2os e1b9qdjy1"
@@ -509,7 +495,7 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   text-decoration: none;
 }
 
-.cache-1m2yyol {
+.cache-ztn6dz {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -528,31 +514,30 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   border-radius: 4px;
 }
 
-.cache-1m2yyol:focus-within {
+.cache-ztn6dz:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1m2yyol[data-success='true'] {
+.cache-ztn6dz[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1m2yyol[data-error='true'] {
+.cache-ztn6dz[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1m2yyol:hover {
+.cache-ztn6dz:hover {
   border-color: #792dd4;
 }
 
-.cache-1m2yyol[data-readOnly='true'] {
+.cache-ztn6dz[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-1m2yyol[data-disabled='true'] {
+.cache-ztn6dz[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -649,15 +634,9 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   min-height: 16px;
 }
 
-.cache-1f6h4yw {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -665,17 +644,11 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-jeg2os {
@@ -775,7 +748,7 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
       </div>
       <div>
         <div
-          class="cache-1m2yyol e1b9qdjy0"
+          class="cache-ztn6dz e1b9qdjy0"
           data-disabled="true"
           data-error="false"
           data-success="false"
@@ -802,8 +775,7 @@ exports[`NumberInputFieldV2 should render correctly disabled 1`] = `
             </button>
           </div>
           <div
-            class="cache-1f6h4yw e1b9qdjy3"
-            flex="1"
+            class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
           >
             <input
               aria-label="Number Input"
@@ -930,7 +902,7 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
   text-decoration: none;
 }
 
-.cache-1m2yyol {
+.cache-ztn6dz {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -949,31 +921,30 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
   border-radius: 4px;
 }
 
-.cache-1m2yyol:focus-within {
+.cache-ztn6dz:focus-within {
   border-color: #792dd4;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
-.cache-1m2yyol[data-success='true'] {
+.cache-ztn6dz[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-1m2yyol[data-error='true'] {
+.cache-ztn6dz[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-1m2yyol:hover {
+.cache-ztn6dz:hover {
   border-color: #792dd4;
 }
 
-.cache-1m2yyol[data-readOnly='true'] {
+.cache-ztn6dz[data-readonly='true'] {
   border-color: #d9dadd;
   background: #f9f9fa;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.cache-1m2yyol[data-disabled='true'] {
+.cache-ztn6dz[data-disabled='true'] {
   border-color: #e9eaeb;
   background: #f3f3f4;
   cursor: not-allowed;
@@ -1079,15 +1050,9 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
   min-height: 16px;
 }
 
-.cache-1f6h4yw {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 0;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+.cache-1mvom0f {
+  display: grid;
+  grid-template-columns: 1fr auto;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1095,17 +1060,11 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   border-width: 0 1px 0 1px;
   border-style: solid;
   border-color: inherit;
   background: inherit;
+  width: 100%;
 }
 
 .cache-jeg2os {
@@ -1187,6 +1146,51 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
   color: #727683;
 }
 
+.cache-v7jpir {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 32px;
+  padding: 0 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 32px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: none;
+  border: none;
+  color: #3f4250;
+  color: #b5b7bd;
+}
+
+.cache-v7jpir:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 <form>
     <div
       class="cache-16otux ehpbis70"
@@ -1205,7 +1209,7 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
       </div>
       <div>
         <div
-          class="cache-1m2yyol e1b9qdjy0"
+          class="cache-ztn6dz e1b9qdjy0"
           data-disabled="false"
           data-error="false"
           data-success="false"
@@ -1231,8 +1235,7 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
             </button>
           </div>
           <div
-            class="cache-1f6h4yw e1b9qdjy3"
-            flex="1"
+            class="e1b9qdjy3 cache-1mvom0f e3f5lzv0"
           >
             <input
               aria-label="Number Input"
@@ -1254,7 +1257,8 @@ exports[`NumberInputFieldV2 should trigger event onMinCrossed & onMaxCrossed 1`]
           >
             <button
               aria-label="plus"
-              class="cache-1ovv447 e112qvla0"
+              class="cache-v7jpir e112qvla0"
+              disabled=""
               type="button"
             >
               <svg

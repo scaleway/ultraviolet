@@ -7,12 +7,12 @@ import type {
   ReactNode,
 } from 'react'
 import {
-  createRef,
   forwardRef,
   useCallback,
   useId,
   useImperativeHandle,
   useMemo,
+  useRef,
 } from 'react'
 import { Button } from '../Button'
 import { Row } from '../Row'
@@ -241,7 +241,7 @@ export const NumberInputV2 = forwardRef(
     }: NumberInputProps,
     ref: ForwardedRef<HTMLInputElement>,
   ) => {
-    const localRef = createRef<HTMLInputElement>()
+    const localRef = useRef<HTMLInputElement>(null)
     useImperativeHandle(ref, () => localRef.current as HTMLInputElement)
 
     const uniqueId = useId()
@@ -269,6 +269,38 @@ export const NumberInputV2 = forwardRef(
         }
       },
       [localRef, min, onChange],
+    )
+
+    const isMinusDisabled = useMemo(
+      () => {
+        if (!localRef?.current?.value || localRef?.current?.value === '') {
+          return false
+        }
+
+        const numericValue = Number(localRef?.current?.value)
+        if (Number.isNaN(numericValue)) return false
+
+        const minValue = typeof min === 'number' ? min : Number(min)
+
+        return Number.isNaN(numericValue) || numericValue <= minValue
+      }, // eslint-disable-next-line react-hooks/exhaustive-deps
+      [localRef?.current?.value, min],
+    )
+
+    const isPlusDisabled = useMemo(
+      () => {
+        if (!localRef?.current?.value || localRef?.current?.value === '') {
+          return false
+        }
+
+        const numericValue = Number(localRef?.current?.value)
+        if (Number.isNaN(numericValue)) return false
+
+        const maxValue = typeof max === 'number' ? max : Number(max)
+
+        return numericValue >= maxValue
+      }, // eslint-disable-next-line react-hooks/exhaustive-deps
+      [localRef?.current?.value, max],
     )
 
     const helperSentiment = useMemo(() => {
@@ -318,7 +350,7 @@ export const NumberInputV2 = forwardRef(
                   variant="ghost"
                   icon="minus"
                   size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly}
+                  disabled={disabled || readOnly || isMinusDisabled}
                   onClick={onClickSideButton('down')}
                   aria-label="minus"
                 />
@@ -398,7 +430,7 @@ export const NumberInputV2 = forwardRef(
                   variant="ghost"
                   icon="plus"
                   size={size === 'small' ? 'xsmall' : 'small'}
-                  disabled={disabled || readOnly}
+                  disabled={disabled || readOnly || isPlusDisabled}
                   onClick={onClickSideButton('up')}
                   aria-label="plus"
                 />
