@@ -105,6 +105,7 @@ type BannerProps = {
   direction?: 'row' | 'column'
   onClose?: () => void
   buttonText?: string
+  buttonDisabled?: boolean
   onClickButton?: ComponentProps<typeof Button>['onClick']
   linkText?: string
   linkHref?: string
@@ -125,6 +126,7 @@ export const Banner = ({
   direction = 'column',
   onClose,
   buttonText,
+  buttonDisabled = false,
   onClickButton,
   linkText,
   linkHref,
@@ -193,6 +195,7 @@ export const Banner = ({
                 sentiment={variant === 'intro' ? 'primary' : 'neutral'}
                 variant="filled"
                 onClick={onClickButton}
+                disabled={buttonDisabled}
               >
                 {buttonText}
               </Button>
