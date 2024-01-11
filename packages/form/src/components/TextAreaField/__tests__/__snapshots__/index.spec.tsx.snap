@@ -91,7 +91,7 @@ exports[`TextAreaField should render correctly 1`] = `
   display: flex;
 }
 
-.cache-m7sh0y {
+.cache-n64pas {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -102,27 +102,61 @@ exports[`TextAreaField should render correctly 1`] = `
   padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-m7sh0y::-webkit-input-placeholder {
+.cache-n64pas::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-m7sh0y::-moz-placeholder {
+.cache-n64pas::-moz-placeholder {
   color: #727683;
 }
 
-.cache-m7sh0y:-ms-input-placeholder {
+.cache-n64pas:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-m7sh0y::placeholder {
+.cache-n64pas::placeholder {
   color: #727683;
 }
 
-.cache-m7sh0y:hover {
+.cache-n64pas[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-n64pas[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-n64pas[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-n64pas[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-n64pas[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-n64pas[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-n64pas[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-n64pas[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-n64pas:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-m7sh0y:focus {
+.cache-n64pas:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -177,7 +211,11 @@ exports[`TextAreaField should render correctly 1`] = `
       >
         <textarea
           aria-invalid="false"
-          class="cache-m7sh0y enu776d0"
+          class="cache-n64pas enu776d0"
+          data-disabled="false"
+          data-error="false"
+          data-readonly="false"
+          data-success="false"
           id=":r0:"
           name="test"
           rows="3"

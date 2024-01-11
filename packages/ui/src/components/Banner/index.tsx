@@ -134,7 +134,7 @@ export const Banner = ({
   'data-testid': dataTestId,
 }: BannerProps) => {
   const { theme } = useTheme()
-  const DefaultImage =
+  const defaultImage =
     size === 'small' ? defaultIllustrationSmall : defaultIllustration
 
   const [opened, setOpened] = useState(true)
@@ -149,7 +149,7 @@ export const Banner = ({
       data-testid={dataTestId}
     >
       <ImageStack size={size} justifyContent="center">
-        {image ?? <DefaultImage />}
+        {image ?? <img src={defaultImage} alt="" />}
       </ImageStack>
       <Stack
         direction={direction}

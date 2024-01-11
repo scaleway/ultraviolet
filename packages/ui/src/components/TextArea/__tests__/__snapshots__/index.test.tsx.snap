@@ -91,7 +91,7 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   display: flex;
 }
 
-.cache-dqt3sg-StyledTextArea {
+.cache-1gib1rw-StyledTextArea {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -100,30 +100,63 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   border-radius: 4px;
   padding: 12px 8px 12px 16px;
   padding-right: calc(24px + 0px + 16px);
+}
+
+.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea::placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-1gib1rw-StyledTextArea[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-dqt3sg-StyledTextArea::-webkit-input-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
 }
 
-.cache-dqt3sg-StyledTextArea::-moz-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
 }
 
-.cache-dqt3sg-StyledTextArea:-ms-input-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-dqt3sg-StyledTextArea::placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-dqt3sg-StyledTextArea:hover {
+.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-dqt3sg-StyledTextArea:focus {
+.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -178,11 +211,11 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
   justify-content: normal;
 }
 
-.cache-fkb4e-StyledText {
+.cache-vdlwt8-StyledText {
   color: #b3144d;
   font-size: 12px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -212,7 +245,11 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
     >
       <textarea
         aria-invalid="true"
-        class="cache-dqt3sg-StyledTextArea enu776d0"
+        class="cache-1gib1rw-StyledTextArea enu776d0"
+        data-disabled="false"
+        data-error="true"
+        data-readonly="false"
+        data-success="false"
         id=":rk:"
         rows="3"
       >
@@ -236,7 +273,7 @@ exports[`TextArea should render correctly when input  has a error sentiment 1`] 
     >
       <div>
         <p
-          class="cache-fkb4e-StyledText e13y3mga0"
+          class="cache-vdlwt8-StyledText e13y3mga0"
         >
           success
         </p>
@@ -337,7 +374,7 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   display: flex;
 }
 
-.cache-13uqr61-StyledTextArea {
+.cache-1gib1rw-StyledTextArea {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -346,30 +383,63 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   border-radius: 4px;
   padding: 12px 8px 12px 16px;
   padding-right: calc(24px + 0px + 16px);
+}
+
+.cache-1gib1rw-StyledTextArea::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea::placeholder {
+  color: #727683;
+}
+
+.cache-1gib1rw-StyledTextArea[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-13uqr61-StyledTextArea::-webkit-input-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-error='true'] {
+  border-color: #b3144d;
 }
 
-.cache-13uqr61-StyledTextArea::-moz-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
 }
 
-.cache-13uqr61-StyledTextArea:-ms-input-placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
 }
 
-.cache-13uqr61-StyledTextArea::placeholder {
-  color: #727683;
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-13uqr61-StyledTextArea:hover {
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1gib1rw-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1gib1rw-StyledTextArea[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-13uqr61-StyledTextArea:focus {
+.cache-1gib1rw-StyledTextArea:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -424,11 +494,11 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
   justify-content: normal;
 }
 
-.cache-urxuf6-StyledText {
+.cache-1n7fwv3-StyledText {
   color: #22674e;
   font-size: 12px;
   font-family: Inter,Asap;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 16px;
   text-transform: none;
@@ -458,7 +528,11 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
     >
       <textarea
         aria-invalid="false"
-        class="cache-13uqr61-StyledTextArea enu776d0"
+        class="cache-1gib1rw-StyledTextArea enu776d0"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="true"
         id=":rg:"
         rows="3"
       >
@@ -482,7 +556,7 @@ exports[`TextArea should render correctly when input has a success sentiment 1`]
     >
       <div>
         <p
-          class="cache-urxuf6-StyledText e13y3mga0"
+          class="cache-1n7fwv3-StyledText e13y3mga0"
         >
           success
         </p>
@@ -583,7 +657,7 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   display: flex;
 }
 
-.cache-18ftnl8-StyledTextArea {
+.cache-9412ib-StyledTextArea {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -592,42 +666,66 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
   border-radius: 4px;
   padding: 12px 8px 12px 16px;
   padding-right: calc(24px + 0px + 0px);
+}
+
+.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea::placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-9412ib-StyledTextArea[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
-  color: #b5b7bd;
-  cursor: not-allowed;
 }
 
-.cache-18ftnl8-StyledTextArea::-webkit-input-placeholder {
-  color: #727683;
-}
-
-.cache-18ftnl8-StyledTextArea::-moz-placeholder {
-  color: #727683;
-}
-
-.cache-18ftnl8-StyledTextArea:-ms-input-placeholder {
-  color: #727683;
-}
-
-.cache-18ftnl8-StyledTextArea::placeholder {
-  color: #727683;
-}
-
-.cache-18ftnl8-StyledTextArea::-webkit-input-placeholder {
+.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-18ftnl8-StyledTextArea::-moz-placeholder {
+.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-18ftnl8-StyledTextArea:-ms-input-placeholder {
+.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-18ftnl8-StyledTextArea::placeholder {
+.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
   color: #b5b7bd;
+}
+
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
+  border-color: #8c40ef;
+}
+
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
+  outline: none;
+  border-color: #8c40ef;
+  box-shadow: 0px 0px 0px 3px #8c40ef40;
 }
 
 .cache-n9gdiu-Stack-StyledTextAreaAbsoluteStack {
@@ -678,7 +776,11 @@ exports[`TextArea should render correctly when input is disabled 1`] = `
     >
       <textarea
         aria-invalid="false"
-        class="cache-18ftnl8-StyledTextArea enu776d0"
+        class="cache-9412ib-StyledTextArea enu776d0"
+        data-disabled="true"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
         disabled=""
         id=":ra:"
         rows="3"
@@ -784,7 +886,7 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   display: flex;
 }
 
-.cache-1mgkvhk-StyledTextArea {
+.cache-9412ib-StyledTextArea {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -793,31 +895,63 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
   border-radius: 4px;
   padding: 12px 8px 12px 16px;
   padding-right: calc(24px + 0px + 0px);
+}
+
+.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea::-moz-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea:-ms-input-placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea::placeholder {
+  color: #727683;
+}
+
+.cache-9412ib-StyledTextArea[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-9412ib-StyledTextArea[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-9412ib-StyledTextArea[data-readOnly='true'] {
   background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true'] {
+  background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-1mgkvhk-StyledTextArea::-webkit-input-placeholder {
-  color: #727683;
+.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-1mgkvhk-StyledTextArea::-moz-placeholder {
-  color: #727683;
+.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-1mgkvhk-StyledTextArea:-ms-input-placeholder {
-  color: #727683;
+.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
 }
 
-.cache-1mgkvhk-StyledTextArea::placeholder {
-  color: #727683;
+.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+  color: #b5b7bd;
 }
 
-.cache-1mgkvhk-StyledTextArea:hover {
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-1mgkvhk-StyledTextArea:focus {
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -871,9 +1005,12 @@ exports[`TextArea should render correctly when input is readOnly 1`] = `
     >
       <textarea
         aria-invalid="false"
-        class="cache-1mgkvhk-StyledTextArea enu776d0"
+        class="cache-9412ib-StyledTextArea enu776d0"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="true"
+        data-success="false"
         id=":rd:"
-        readonly=""
         rows="3"
       >
         test
@@ -977,7 +1114,7 @@ exports[`TextArea should render correctly with basic props 1`] = `
   display: flex;
 }
 
-.cache-gulgun-StyledTextArea {
+.cache-9412ib-StyledTextArea {
   width: 100%;
   resize: vertical;
   background: #ffffff;
@@ -988,27 +1125,61 @@ exports[`TextArea should render correctly with basic props 1`] = `
   padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-gulgun-StyledTextArea::-webkit-input-placeholder {
+.cache-9412ib-StyledTextArea::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-gulgun-StyledTextArea::-moz-placeholder {
+.cache-9412ib-StyledTextArea::-moz-placeholder {
   color: #727683;
 }
 
-.cache-gulgun-StyledTextArea:-ms-input-placeholder {
+.cache-9412ib-StyledTextArea:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-gulgun-StyledTextArea::placeholder {
+.cache-9412ib-StyledTextArea::placeholder {
   color: #727683;
 }
 
-.cache-gulgun-StyledTextArea:hover {
+.cache-9412ib-StyledTextArea[data-success='true'] {
+  border-color: #22674e;
+}
+
+.cache-9412ib-StyledTextArea[data-error='true'] {
+  border-color: #b3144d;
+}
+
+.cache-9412ib-StyledTextArea[data-readOnly='true'] {
+  background: #f9f9fa;
+  border-color: #d9dadd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true'] {
+  background: #f3f3f4;
+  border-color: #e9eaeb;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true']::-webkit-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true']::-moz-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true']:-ms-input-placeholder {
+  color: #b5b7bd;
+}
+
+.cache-9412ib-StyledTextArea[data-disabled='true']::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:hover {
   border-color: #8c40ef;
 }
 
-.cache-gulgun-StyledTextArea:focus {
+.cache-9412ib-StyledTextArea:not([data-disabled='true']):hover:focus {
   outline: none;
   border-color: #8c40ef;
   box-shadow: 0px 0px 0px 3px #8c40ef40;
@@ -1062,7 +1233,11 @@ exports[`TextArea should render correctly with basic props 1`] = `
     >
       <textarea
         aria-invalid="false"
-        class="cache-gulgun-StyledTextArea enu776d0"
+        class="cache-9412ib-StyledTextArea enu776d0"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
         id=":r0:"
         rows="3"
       >

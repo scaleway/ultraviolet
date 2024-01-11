@@ -1,5 +1,17 @@
 # Change Log
 
+## 1.30.0
+
+### Minor Changes
+
+- [#3295](https://github.com/scaleway/ultraviolet/pull/3295) [`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New typography headings in tokens
+
+### Patch Changes
+
+- Updated dependencies [[`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad)]:
+  - @ultraviolet/themes@1.7.0
+  - @ultraviolet/icons@2.7.6
+
 ## 1.29.4
 
 ### Patch Changes
