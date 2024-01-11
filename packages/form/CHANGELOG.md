@@ -1,5 +1,27 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#3295](https://github.com/scaleway/ultraviolet/pull/3295) [`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad) Thanks [@scaleway-bot](https://github.com/scaleway-bot)! - New typography headings in tokens
+
+### Patch Changes
+
+- [#3312](https://github.com/scaleway/ultraviolet/pull/3312) [`d81dc48`](https://github.com/scaleway/ultraviolet/commit/d81dc48665ceaa95c6e14016b35f538ab1d1c4d7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/preset-env` to `7.23.8`.
+  Updated dependency `@babel/runtime` to `7.23.8`.
+- Updated dependencies [[`f65dccd`](https://github.com/scaleway/ultraviolet/commit/f65dccdce849c7a07d5cc1baced0fdbc51495fad)]:
+  - @ultraviolet/ui@1.30.0
+
+## 2.0.2
+
+### Patch Changes
+
+- [#3298](https://github.com/scaleway/ultraviolet/pull/3298) [`264d5e3`](https://github.com/scaleway/ultraviolet/commit/264d5e39292e551b6c12a3ad5111bdbfa370c1d1) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Add more exported types of react-hook-form
+
+- Updated dependencies [[`db889ce`](https://github.com/scaleway/ultraviolet/commit/db889ce0dd85d8eac323b25c8ad6d4b01c070f2e)]:
+  - @ultraviolet/ui@1.29.4
+
 ## 2.0.1
 
 ### Patch Changes

@@ -6,7 +6,7 @@ declare module '*.svg' {
   export default svg
 }
 
-declare module '*.md' {
+declare module '*.png' {
   const content: string
   export default content
 }
