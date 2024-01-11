@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextAreaField should render correctly 1`] = `
+exports[`TextInputFieldV2 should render correctly 1`] = `
 <DocumentFragment>
   .cache-16otux {
   display: -webkit-box;
@@ -83,109 +83,91 @@ exports[`TextAreaField should render correctly 1`] = `
   text-decoration: none;
 }
 
-.cache-8k1832 {
-  position: relative;
+.cache-1fbmuwp {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.cache-n64pas {
-  width: 100%;
-  resize: vertical;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 48px;
   background: #ffffff;
   border: 1px solid #d9dadd;
-  color: #3f4250;
   border-radius: 4px;
-  padding: 12px 8px 12px 16px;
-  padding-right: calc(24px + 0px + 0px);
 }
 
-.cache-n64pas::-webkit-input-placeholder {
+.cache-1fbmuwp>.e7tir8v1 {
+  color: #3f4250;
+}
+
+.cache-1fbmuwp>.e7tir8v1::-webkit-input-placeholder {
   color: #727683;
 }
 
-.cache-n64pas::-moz-placeholder {
+.cache-1fbmuwp>.e7tir8v1::-moz-placeholder {
   color: #727683;
 }
 
-.cache-n64pas:-ms-input-placeholder {
+.cache-1fbmuwp>.e7tir8v1:-ms-input-placeholder {
   color: #727683;
 }
 
-.cache-n64pas::placeholder {
+.cache-1fbmuwp>.e7tir8v1::placeholder {
   color: #727683;
 }
 
-.cache-n64pas[data-success='true'] {
+.cache-1fbmuwp[data-success='true'] {
   border-color: #22674e;
 }
 
-.cache-n64pas[data-error='true'] {
+.cache-1fbmuwp[data-error='true'] {
   border-color: #b3144d;
 }
 
-.cache-n64pas[data-readOnly='true'] {
+.cache-1fbmuwp[data-readOnly='true'] {
   background: #f9f9fa;
   border-color: #d9dadd;
 }
 
-.cache-n64pas[data-disabled='true'] {
+.cache-1fbmuwp[data-disabled='true'] {
   background: #f3f3f4;
   border-color: #e9eaeb;
 }
 
-.cache-n64pas[data-disabled='true']::-webkit-input-placeholder {
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1 {
   color: #b5b7bd;
 }
 
-.cache-n64pas[data-disabled='true']::-moz-placeholder {
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-webkit-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-n64pas[data-disabled='true']:-ms-input-placeholder {
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::-moz-placeholder {
   color: #b5b7bd;
 }
 
-.cache-n64pas[data-disabled='true']::placeholder {
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1:-ms-input-placeholder {
   color: #b5b7bd;
 }
 
-.cache-n64pas:not([data-disabled='true']):hover:hover {
+.cache-1fbmuwp[data-disabled='true']>.e7tir8v1::placeholder {
+  color: #b5b7bd;
+}
+
+.cache-1fbmuwp:not([data-disabled='true']):not([data-readOnly]):hover {
   border-color: #8c40ef;
 }
 
-.cache-n64pas:not([data-disabled='true']):hover:focus {
+.cache-2aies0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
   outline: none;
-  border-color: #8c40ef;
-  box-shadow: 0px 0px 0px 3px #8c40ef40;
-}
-
-.cache-104ftim {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: normal;
-  -ms-flex-pack: normal;
-  -webkit-justify-content: normal;
-  justify-content: normal;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  position: absolute;
-  top: 12px;
-  right: 8px;
+  height: 100%;
+  padding-left: 16px;
+  background: transparent;
 }
 
 <form>
@@ -207,21 +189,19 @@ exports[`TextAreaField should render correctly 1`] = `
         </div>
       </div>
       <div
-        class="cache-8k1832 enu776d2"
+        class="cache-1fbmuwp e7tir8v0"
+        data-disabled="false"
+        data-error="false"
+        data-readonly="false"
+        data-success="false"
       >
-        <textarea
+        <input
           aria-invalid="false"
-          class="cache-n64pas enu776d0"
-          data-disabled="false"
-          data-error="false"
-          data-readonly="false"
-          data-success="false"
+          class="cache-2aies0 e7tir8v1"
           id=":r0:"
           name="test"
-          rows="3"
-        />
-        <div
-          class="cache-104ftim enu776d1"
+          type="text"
+          value=""
         />
       </div>
     </div>
