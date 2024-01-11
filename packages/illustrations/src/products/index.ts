@@ -24,6 +24,7 @@ import * as nabu from './nabu'
 import * as nats from './nats'
 import * as objectStorage from './objectStorage'
 import * as publicGateway from './publicGateway'
+import * as quantum from './quantum'
 import * as redis from './redis'
 import * as secretManager from './secretManager'
 import * as serverlessDB from './serverlessDB'
@@ -74,4 +75,5 @@ export {
   webHosting,
   jero,
   nabu,
+  quantum,
 }

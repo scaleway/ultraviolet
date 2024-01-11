@@ -61,21 +61,24 @@ const SubListElement = ({
         {Object.keys(
           (assets.default as AssetsModule)[category][productName],
         ).map(productImg => {
-          const Image = (assets.default as AssetsModule)[category][productName][
-            productImg
-          ]
+          const imgSrc = (assets.default as AssetsModule)[category][
+            productName
+          ][productImg]
 
           return (
             <Card direction="row" gap={2} flex={1} alignItems="center">
-              {typeof Image === 'string' ? (
-                <StyledImage width={200} src={Image} alt={productName} />
-              ) : (
-                // @ts-expect-error this is because we don't know the type of Image
-                <Image width={200} height={200} />
-              )}
+              <StyledImage
+                width={200}
+                src={
+                  (assets.default as AssetsModule)[category][productName][
+                    productImg
+                  ]
+                }
+                alt={productName}
+              />
               <Stack direction="column">
                 <Text as="h3" variant="bodyStrong">
-                  {productImg}.{typeof Image === 'string' ? 'webp' : 'svg'}
+                  {productImg}.{imgSrc.split('.').pop()}
                 </Text>
                 <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
               </Stack>
