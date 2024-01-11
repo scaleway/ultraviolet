@@ -157,11 +157,10 @@ const Container = styled.div`
     border-color: ${({ theme }) => theme.colors.primary.borderHover};
   }
 
-  &[data-readOnly='true'] {
+  &[data-readonly='true'] {
     border-color: ${({ theme }) => theme.colors.neutral.border};
     background: ${({ theme }) => theme.colors.neutral.backgroundWeak};
     cursor: not-allowed;
-    box-shadow: none;
   }
 
   &[data-disabled='true'] {
@@ -304,7 +303,7 @@ export const NumberInputV2 = forwardRef(
           <Tooltip text={tooltip}>
             <Container
               data-disabled={disabled}
-              data-readOnly={readOnly}
+              data-readonly={readOnly}
               data-error={!!error}
               data-success={!!success}
               data-unit={!!unit}
