@@ -1,5 +1,5 @@
 import { describe, expect, it } from '@jest/globals'
-import { fireEvent, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { NumberInput } from '..'
 import {
@@ -113,7 +113,9 @@ describe('NumberInput', () => {
 
           await userEvent.click(buttonContainer)
           await waitFor(() => expect(input).toHaveFocus())
-          input.blur()
+          act(() => {
+            input.blur()
+          })
 
           await userEvent.click(buttonContainer)
           await userEvent.clear(input)
@@ -138,7 +140,9 @@ describe('NumberInput', () => {
           await userEvent.clear(input)
           await userEvent.type(input, '1')
           await waitFor(() => expect(input.value).toBe('1'))
-          input.blur()
+          act(() => {
+            input.blur()
+          })
           await waitFor(() => expect(input.value).toBe('10'))
         },
       },
@@ -160,7 +164,9 @@ describe('NumberInput', () => {
           await userEvent.clear(input)
           await userEvent.type(input, '120')
           await waitFor(() => expect(input.value).toBe('120'))
-          input.blur()
+          act(() => {
+            input.blur()
+          })
           await waitFor(() => expect(input.value).toBe('100'))
         },
       },
@@ -234,7 +240,9 @@ describe('NumberInput', () => {
     const input = screen.getByRole<HTMLInputElement>('spinbutton')
     await waitFor(() => expect(input.value).toBe('32'))
 
-    input.focus()
+    act(() => {
+      input.focus()
+    })
     expect(input).toHaveFocus()
 
     fireEvent.keyDown(input, {
@@ -321,7 +329,9 @@ describe('NumberInput', () => {
     await userEvent.clear(input)
     await userEvent.type(input, '5')
 
-    input.blur()
+    act(() => {
+      input.blur()
+    })
     await waitFor(() => expect(input.value).toBe('10'))
   })
 
@@ -334,7 +344,9 @@ describe('NumberInput', () => {
     await userEvent.clear(input)
     await userEvent.type(input, '15')
 
-    input.blur()
+    act(() => {
+      input.blur()
+    })
     await waitFor(() => expect(input.value).toBe('10'))
   })
 })

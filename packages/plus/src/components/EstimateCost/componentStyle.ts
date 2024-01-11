@@ -36,7 +36,7 @@ export const StyledFeesTable = styled('table')`
   margin-top: 16px;
 `
 
-export const PriceCol = styled.td`
+export const PriceCol = styled.col`
   background-color: ${({ theme }) => theme.colors.neutral.background};
 `
 
@@ -121,6 +121,15 @@ export const BadgeBeta = styled(Badge, {
   position: absolute;
   top: calc(50% - 16px);
 `
+
+export const StyledTr = styled('tr', {
+  shouldForwardProp: prop =>
+    !['isFirstElement', 'shouldBeHidden', 'hideFromOverlay'].includes(prop),
+})<{
+  isFirstElement?: boolean
+  shouldBeHidden?: boolean
+  hideFromOverlay?: boolean
+}>``
 
 export const OverlayRow = styled('li', {
   shouldForwardProp: prop =>

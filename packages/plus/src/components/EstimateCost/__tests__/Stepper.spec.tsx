@@ -1,16 +1,34 @@
-import { afterAll, beforeAll, describe, jest, test } from '@jest/globals'
-import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
+import {
+  afterAll,
+  afterEach,
+  beforeAll,
+  beforeEach,
+  describe,
+  jest,
+  test,
+} from '@jest/globals'
+import {
+  resetIntersectionMocking,
+  setupIntersectionMocking,
+} from 'react-intersection-observer/test-utils'
 import { EstimateCost } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
 
 describe('EstimateCost - NumberInput Item', () => {
   beforeAll(() => {
     jest.spyOn(Math, 'random').mockReturnValue(0.4155913669444804)
-    mockAllIsIntersecting(true)
   })
 
   afterAll(() => {
     jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  beforeEach(() => {
+    setupIntersectionMocking(jest.fn)
+  })
+
+  afterEach(() => {
+    resetIntersectionMocking()
   })
 
   test('render basic props', () =>

@@ -1,6 +1,8 @@
 import {
   afterAll,
+  afterEach,
   beforeAll,
+  beforeEach,
   describe,
   expect,
   jest,
@@ -8,7 +10,10 @@ import {
 } from '@jest/globals'
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
+import {
+  resetIntersectionMocking,
+  setupIntersectionMocking,
+} from 'react-intersection-observer/test-utils'
 import { EstimateCost } from '..'
 import {
   renderWithTheme,
@@ -20,11 +25,18 @@ const OverlaySubmitButton = () => <div>Submit</div>
 describe('EstimateCost - Regular Item', () => {
   beforeAll(() => {
     jest.spyOn(Math, 'random').mockReturnValue(0.4155913669444804)
-    mockAllIsIntersecting(true)
   })
 
   afterAll(() => {
     jest.spyOn(Math, 'random').mockRestore()
+  })
+
+  beforeEach(() => {
+    setupIntersectionMocking(jest.fn)
+  })
+
+  afterEach(() => {
+    resetIntersectionMocking()
   })
 
   test('render basic props', () =>
