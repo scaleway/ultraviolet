@@ -102,7 +102,7 @@ const StyledInputWrapper = styled('div', {
     }
   }
 
-  &:not([data-disabled='true']):hover {
+  &:not([data-disabled='true']):not([data-readOnly]):hover {
     border-color: ${({ theme }) => theme.colors.primary.border};
   }
 
@@ -110,7 +110,7 @@ const StyledInputWrapper = styled('div', {
     hasFocus
       ? `
   box-shadow: ${theme.shadows.focusPrimary};
-  border: 1px solid ${theme.colors.primary.border};    
+  border: 1px solid ${theme.colors.primary.border};
 `
       : null};
 `
