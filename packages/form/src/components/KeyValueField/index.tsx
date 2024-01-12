@@ -17,7 +17,7 @@ type InputValueProps = {
 type AddButtonProps = {
   name: ComponentProps<typeof Button>['children']
   fullWidth?: ComponentProps<typeof Button>['fullWidth']
-  tooltip?: string
+  tooltip: string
   tooltipAlert: string
 }
 
@@ -51,12 +51,7 @@ export const KeyValueField = ({
       {fields.length ? (
         <Stack gap={2}>
           {fields.map((field, index) => (
-            <Row
-              key={field.id}
-              templateColumns="1fr 1fr auto"
-              alignItems="flex-start"
-              gap={2}
-            >
+            <Row key={field.id} templateColumns="1fr 1fr auto" gap={2}>
               <TextInputField
                 readOnly={readonly}
                 required={inputKey.required}

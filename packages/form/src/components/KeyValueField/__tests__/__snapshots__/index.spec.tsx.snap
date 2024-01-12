@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyValueField should render with default props & max size 1`] = `
+<DocumentFragment>
+  .cache-1ln6wpc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1g4uved {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-jhu4ja {
+  display: inherit;
+}
+
+.cache-jhu4ja[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-o0msiz {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #e9eaeb;
+  border: none;
+  color: #222638;
+}
+
+.cache-o0msiz:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-o0msiz:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-o0msiz:hover,
+.cache-o0msiz:active {
+  background: #d9dadd;
+  color: #151a2d;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<form>
+    <div
+      class="cache-1ln6wpc ehpbis70"
+    >
+      <div
+        class="cache-1g4uved ehpbis70"
+      >
+        <div
+          aria-controls=":r2:"
+          aria-describedby=":r2:"
+          class="cache-jhu4ja e4h1g860"
+          data-container-full-width="false"
+          tabindex="0"
+        >
+          <button
+            class="cache-o0msiz e112qvla2"
+            data-testid="add-button"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`KeyValueField should render with default props 1`] = `
+<DocumentFragment>
+  .cache-1ln6wpc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1g4uved {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-jhu4ja {
+  display: inherit;
+}
+
+.cache-jhu4ja[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-o0msiz {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #e9eaeb;
+  border: none;
+  color: #222638;
+}
+
+.cache-o0msiz:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-o0msiz:active {
+  box-shadow: 0px 0px 0px 3px #151a2d5c;
+}
+
+.cache-o0msiz:hover,
+.cache-o0msiz:active {
+  background: #d9dadd;
+  color: #151a2d;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<form>
+    <div
+      class="cache-1ln6wpc ehpbis70"
+    >
+      <div
+        class="cache-1g4uved ehpbis70"
+      >
+        <div
+          aria-controls=":r0:"
+          aria-describedby=":r0:"
+          class="cache-jhu4ja e4h1g860"
+          data-container-full-width="false"
+          tabindex="0"
+        >
+          <button
+            class="cache-o0msiz e112qvla2"
+            data-testid="add-button"
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`KeyValueField should render with default props in readonly mode 1`] = `
+<DocumentFragment>
+  .cache-1ln6wpc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: normal;
+  -ms-flex-pack: normal;
+  -webkit-justify-content: normal;
+  justify-content: normal;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-1g4uved {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: normal;
+  -webkit-box-align: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.cache-jhu4ja {
+  display: inherit;
+}
+
+.cache-jhu4ja[data-container-full-width='true'] {
+  width: 100%;
+}
+
+.cache-lvpj4k {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 48px;
+  padding: 0 16px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  outline-offset: 2px;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Inter,Asap;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  paragraph-spacing: 0;
+  text-case: none;
+  background: #e9eaeb;
+  border: none;
+  color: #222638;
+  background: #f3f3f4;
+  color: #b5b7bd;
+}
+
+.cache-lvpj4k:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.cache-1ah7xw8-sizeStyles {
+  vertical-align: middle;
+  fill: currentColor;
+  height: 16px;
+  width: 16px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+<form>
+    <div
+      class="cache-1ln6wpc ehpbis70"
+    >
+      <div
+        class="cache-1g4uved ehpbis70"
+      >
+        <div
+          aria-controls=":r3:"
+          aria-describedby=":r3:"
+          class="cache-jhu4ja e4h1g860"
+          data-container-full-width="false"
+          tabindex="0"
+        >
+          <button
+            class="cache-lvpj4k e112qvla2"
+            data-testid="add-button"
+            disabled=""
+            type="button"
+          >
+            <svg
+              class="cache-1ah7xw8-sizeStyles e1gt4cfo0"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+              />
+            </svg>
+            add
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;
