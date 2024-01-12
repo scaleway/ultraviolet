@@ -12,7 +12,6 @@ export const Regex: StoryFn<ComponentProps<typeof KeyValueField>> = args => (
 )
 
 const alpha = /^[a-zA-Z]*$/
-// const digits = /^[0-9]*$/
 const accessKeyRegex = /^SCW[A-Z0-9]{17}$/i
 
 Regex.args = {
