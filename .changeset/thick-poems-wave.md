@@ -1,5 +1,5 @@
 ---
-"@ultraviolet/form": minor
+'@ultraviolet/form': minor
 ---
 
-Add KeyValueField component
+Add `KeyValueField` component

@@ -1,9 +1,10 @@
 import { Button, Row, Stack } from '@ultraviolet/ui'
 import type { ComponentProps } from 'react'
 import { useFieldArray } from 'react-hook-form'
+import type { Control, FieldArrayPath, FieldValues } from 'react-hook-form'
 import { TextInputField } from '../TextInputField'
 
-type InputProps = {
+type InputKeyProps = {
   label: ComponentProps<typeof TextInputField>['label']
   required?: ComponentProps<typeof TextInputField>['required']
   regex?: ComponentProps<typeof TextInputField>['regex']
@@ -12,36 +13,49 @@ type InputProps = {
 type InputValueProps = {
   type?: ComponentProps<typeof TextInputField>['type']
   placeholder?: ComponentProps<typeof TextInputField>['placeholder']
-} & InputProps
+} & InputKeyProps
 
 type AddButtonProps = {
   name: ComponentProps<typeof Button>['children']
   fullWidth?: ComponentProps<typeof Button>['fullWidth']
   tooltip: string
-  tooltipAlert: string
-}
-
-type KeyValueFieldProps = {
-  name: string
-  inputKey: InputProps
-  inputValue: InputValueProps
-  addButton: AddButtonProps
-  maxSize?: number
-  readonly?: boolean
+  maxSizeReachedTooltip: string
 }
 
 export type KeyValue = { key: string; value: string }
 
-export const KeyValueField = ({
+type KeyValueFieldProps<
+  TFieldValues extends FieldValues,
+  TFieldArrayName extends FieldArrayPath<TFieldValues>,
+> = {
+  name: TFieldArrayName
+  inputKey: InputKeyProps
+  inputValue: InputValueProps
+  addButton: AddButtonProps
+  maxSize?: number
+  readonly?: boolean
+  control?: Control<TFieldValues>
+}
+
+/**
+ * A React component that allows users to manage key-value pairs
+ */
+export const KeyValueField = <
+  TFieldValues extends FieldValues = FieldValues,
+  TFieldArrayName extends
+    FieldArrayPath<TFieldValues> = FieldArrayPath<TFieldValues>,
+>({
   name,
   inputKey,
   inputValue,
   addButton,
   maxSize = 100,
   readonly = false,
-}: KeyValueFieldProps) => {
+  control,
+}: KeyValueFieldProps<TFieldValues, TFieldArrayName>) => {
   const { fields, append, remove } = useFieldArray({
     name,
+    control,
   })
 
   const canAdd = fields.length !== undefined && fields.length < maxSize
@@ -72,7 +86,7 @@ export const KeyValueField = ({
 
               <Button
                 disabled={readonly}
-                data-testid={`remove-button-${index}`} // @note: used for this component unit test
+                data-testid={`remove-button-${index}`}
                 icon="delete"
                 variant="outlined"
                 sentiment="danger"
@@ -85,13 +99,16 @@ export const KeyValueField = ({
       ) : null}
       <Stack direction="row" justifyContent="flex-start">
         <Button
-          data-testid="add-button" // @note: used for this component unit test
+          data-testid="add-button"
           icon="plus"
           variant="filled"
           sentiment="neutral"
           fullWidth={addButton.fullWidth}
           disabled={!canAdd || readonly}
-          tooltip={!canAdd ? addButton.tooltipAlert : addButton.tooltip}
+          tooltip={
+            !canAdd ? addButton.maxSizeReachedTooltip : addButton.tooltip
+          }
+          // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}
         >
           {addButton.name}

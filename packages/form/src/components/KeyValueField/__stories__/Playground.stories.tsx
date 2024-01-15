@@ -15,6 +15,6 @@ Playground.args = {
   addButton: {
     name: 'Add key-value',
     tooltip: 'This is a tooltip',
-    tooltipAlert: 'This is a tooltip alert',
+    maxSizeReachedTooltip: 'This is a tooltip when the max size is reached',
   },
 }

@@ -64,14 +64,6 @@ export default {
       )
     },
   ],
-  parameters: {
-    docs: {
-      description: {
-        component:
-          'A React component that allows users to manage key-value pairs',
-      },
-    },
-  },
   title: 'Form/Components/Fields/KeyValueField',
 } as Meta
 

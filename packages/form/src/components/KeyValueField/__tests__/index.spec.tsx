@@ -17,7 +17,8 @@ describe('KeyValueField', () => {
         addButton={{
           name: 'add',
           tooltip: 'This is a tooltip',
-          tooltipAlert: 'This is a tooltip alert',
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
         }}
       />,
       {
@@ -48,7 +49,8 @@ describe('KeyValueField', () => {
         addButton={{
           name: 'add',
           tooltip: 'This is a tooltip',
-          tooltipAlert: 'This is a tooltip alert',
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
         }}
         maxSize={42}
       />,
@@ -67,7 +69,8 @@ describe('KeyValueField', () => {
         addButton={{
           name: 'add',
           tooltip: 'This is a tooltip',
-          tooltipAlert: 'This is a tooltip alert',
+          maxSizeReachedTooltip:
+            'This is a tooltip when the max size is reached',
         }}
         readonly
       />,
