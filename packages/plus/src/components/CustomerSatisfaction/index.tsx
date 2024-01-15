@@ -86,9 +86,7 @@ const scaled = css`
   transform: scale(1.2);
 `
 
-const StyledImage = (component: Parameters<typeof styled>[0]) => styled(
-  component,
-)<{
+const Image = styled.img<{
   isSelected: boolean
   isHovered: boolean
   isHappy: boolean
@@ -139,18 +137,17 @@ export const CustomerSatisfaction = ({
         const isHovered = rating.value === hoveredValue
         const isOverfly = rating.value <= hoveredValue
 
-        const Image = StyledImage(
-          isSelected || isOverfly || rating.value <= value
-            ? rating.imgSelected
-            : rating.imgNotSelected,
-        )
-
         return (
           <Image
             key={rating.value}
             isHappy={isHappy}
             isHovered={isHovered}
             isSelected={isSelected}
+            src={
+              isSelected || isOverfly || rating.value <= value
+                ? rating.imgSelected
+                : rating.imgNotSelected
+            }
             onClick={() => {
               onChange(rating.value)
             }}
