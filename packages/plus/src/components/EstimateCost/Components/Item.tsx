@@ -21,6 +21,7 @@ import {
   Cell as StyledCell,
   StyledDiv,
   StyledLeftSide,
+  StyledTr,
 } from '../componentStyle'
 import {
   MAX_CELL_WIDTH,
@@ -289,7 +290,7 @@ export const Item = ({
   }, [baseUnit, locales])
 
   const { isOverlay } = useOverlay()
-  const Row = isOverlay ? OverlayRow : 'tr'
+  const Row = isOverlay ? OverlayRow : StyledTr
   const Cell = isOverlay ? StyledCell.withComponent('div') : StyledCell
   const LeftSide = isOverlay ? 'div' : StyledLeftSide
 

@@ -28,6 +28,7 @@ export const Stack = styled('div', {
       'justifyContent',
       'wrap',
       'width',
+      'flex',
     ].includes(prop),
 })<StackProps>`
   display: flex;

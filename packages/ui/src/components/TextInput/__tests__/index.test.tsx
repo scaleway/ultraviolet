@@ -1,5 +1,5 @@
 import { describe, test } from '@jest/globals'
-import { screen } from '@testing-library/react'
+import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { TextInput } from '..'
 import { shouldMatchEmotionSnapshot } from '../../../../.jest/helpers'
@@ -126,7 +126,9 @@ describe('TextInput', () => {
       {
         transform: () => {
           const input = screen.getByLabelText('Test')
-          input.focus()
+          act(() => {
+            input.focus()
+          })
         },
       },
     ))

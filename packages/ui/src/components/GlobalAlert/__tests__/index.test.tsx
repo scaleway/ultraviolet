@@ -12,11 +12,7 @@ describe('GlobalAlert', () => {
     shouldMatchEmotionSnapshot(<GlobalAlert>Simple GlobalAlert</GlobalAlert>))
 
   test('renders correctly with children as component', () =>
-    shouldMatchEmotionSnapshot(
-      <GlobalAlert>
-        <p>Sample GlobalAlert</p>
-      </GlobalAlert>,
-    ))
+    shouldMatchEmotionSnapshot(<GlobalAlert>Sample GlobalAlert</GlobalAlert>))
 
   test('renders correctly with buttonText and onClickButton', () =>
     shouldMatchEmotionSnapshot(
