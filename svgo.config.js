@@ -15,6 +15,7 @@ module.exports = {
             keepAriaAttrs: true,
             keepRoleAttr: false,
           },
+          removeViewBox: false,
         },
       },
     },
