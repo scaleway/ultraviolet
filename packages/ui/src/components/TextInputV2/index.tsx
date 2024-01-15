@@ -254,7 +254,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               autoFocus={autoFocus}
               disabled={disabled}
               ref={ref}
-              value={value}
+              value={value === null ? '' : value}
               onChange={event => {
                 onChange(event.currentTarget.value)
               }}

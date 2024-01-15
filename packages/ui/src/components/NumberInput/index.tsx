@@ -393,9 +393,7 @@ export const NumberInput = ({
               style={{
                 width: inputWidth,
               }}
-              value={
-                currentValue !== undefined ? currentValue.toString() : undefined
-              } // A dom element can only have string attributes.
+              value={currentValue !== undefined ? currentValue.toString() : ''} // A dom element can only have string attributes.
               type="number"
               id={id || uniqueId}
               aria-label={!label && !ariaLabel ? 'Number Input' : ariaLabel}
