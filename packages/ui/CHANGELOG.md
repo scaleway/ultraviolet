@@ -1,5 +1,22 @@
 # Change Log
 
+## 1.31.0
+
+### Minor Changes
+
+- [#3244](https://github.com/scaleway/ultraviolet/pull/3244) [`0c04608`](https://github.com/scaleway/ultraviolet/commit/0c04608dcc1dcc4b05e78ff184e24309d2964e72) Thanks [@matthprost](https://github.com/matthprost)! - New component `<NumberInputV2 />`
+
+- [#3265](https://github.com/scaleway/ultraviolet/pull/3265) [`95b71bf`](https://github.com/scaleway/ultraviolet/commit/95b71bfe96218975c9dc986e2f2af8ff299746c6) Thanks [@fabienhebert](https://github.com/fabienhebert)! - new components: `TextInputV2` and `TextInputFieldV2`
+
+### Patch Changes
+
+- [#3315](https://github.com/scaleway/ultraviolet/pull/3315) [`718fc59`](https://github.com/scaleway/ultraviolet/commit/718fc5990087e262912af121c46c39a6b11fa6a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ProductIcon />` and `<CategoryIcon />` to have better svg import
+
+- [#3317](https://github.com/scaleway/ultraviolet/pull/3317) [`5e4ee53`](https://github.com/scaleway/ultraviolet/commit/5e4ee53f33aaa4098e0cc55f00f182bdf6f68902) Thanks [@matthprost](https://github.com/matthprost)! - Remove useless props spread to dom for `<Stack />`
+
+- Updated dependencies [[`718fc59`](https://github.com/scaleway/ultraviolet/commit/718fc5990087e262912af121c46c39a6b11fa6a2)]:
+  - @ultraviolet/icons@2.7.7
+
 ## 1.30.0
 
 ### Minor Changes

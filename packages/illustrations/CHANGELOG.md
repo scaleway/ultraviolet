@@ -1,5 +1,12 @@
 # @ultraviolet/illustrations
 
+## 1.3.0
+
+### Minor Changes
+
+- [#3309](https://github.com/scaleway/ultraviolet/pull/3309) [`8f5cb66`](https://github.com/scaleway/ultraviolet/commit/8f5cb66fea4f83367a4492362201396e97735165) Thanks [@matthprost](https://github.com/matthprost)! - - Add new illustrations `jiro`, `nabu` and `quantum`
+  - Replace all wire illustrations from `.webp` to `.svg` files
+
 ## 1.2.2
 
 ### Patch Changes

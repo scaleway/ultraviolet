@@ -1,5 +1,22 @@
 # Change Log
 
+## 2.2.0
+
+### Minor Changes
+
+- [#3265](https://github.com/scaleway/ultraviolet/pull/3265) [`95b71bf`](https://github.com/scaleway/ultraviolet/commit/95b71bfe96218975c9dc986e2f2af8ff299746c6) Thanks [@fabienhebert](https://github.com/fabienhebert)! - new components: `TextInputV2` and `TextInputFieldV2`
+
+- [#3319](https://github.com/scaleway/ultraviolet/pull/3319) [`b4e4535`](https://github.com/scaleway/ultraviolet/commit/b4e45358244e0808ec92d3501752b1fe2e9d699c) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - Add `KeyValueField` component
+
+### Patch Changes
+
+- [#3317](https://github.com/scaleway/ultraviolet/pull/3317) [`5e4ee53`](https://github.com/scaleway/ultraviolet/commit/5e4ee53f33aaa4098e0cc55f00f182bdf6f68902) Thanks [@matthprost](https://github.com/matthprost)! - Remove useless props spread to dom for `<Stack />`
+
+- [#3313](https://github.com/scaleway/ultraviolet/pull/3313) [`7fc36b6`](https://github.com/scaleway/ultraviolet/commit/7fc36b68ed762d1e86f02a2032084f6a2797b377) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-hook-form` to `7.49.3`.
+
+- Updated dependencies [[`718fc59`](https://github.com/scaleway/ultraviolet/commit/718fc5990087e262912af121c46c39a6b11fa6a2), [`0c04608`](https://github.com/scaleway/ultraviolet/commit/0c04608dcc1dcc4b05e78ff184e24309d2964e72), [`5e4ee53`](https://github.com/scaleway/ultraviolet/commit/5e4ee53f33aaa4098e0cc55f00f182bdf6f68902), [`95b71bf`](https://github.com/scaleway/ultraviolet/commit/95b71bfe96218975c9dc986e2f2af8ff299746c6)]:
+  - @ultraviolet/ui@1.31.0
+
 ## 2.1.0
 
 ### Minor Changes
