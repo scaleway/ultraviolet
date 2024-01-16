@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.7.7
+
+### Patch Changes
+
+- [#3315](https://github.com/scaleway/ultraviolet/pull/3315) [`718fc59`](https://github.com/scaleway/ultraviolet/commit/718fc5990087e262912af121c46c39a6b11fa6a2) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<ProductIcon />` and `<CategoryIcon />` to have better svg import
+
 ## 2.7.6
 
 ### Patch Changes
