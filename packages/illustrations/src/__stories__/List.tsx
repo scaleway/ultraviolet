@@ -60,25 +60,31 @@ const SubListElement = ({
       <Stack gap={1}>
         {Object.keys(
           (assets.default as AssetsModule)[category][productName],
-        ).map(productImg => (
-          <Card direction="row" gap={2} flex={1} alignItems="center">
-            <StyledImage
-              width={200}
-              src={
-                (assets.default as AssetsModule)[category][productName][
-                  productImg
-                ]
-              }
-              alt={productName}
-            />
-            <Stack direction="column">
-              <Text as="h3" variant="bodyStrong">
-                {productImg}.webp
-              </Text>
-              <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
-            </Stack>
-          </Card>
-        ))}
+        ).map(productImg => {
+          const imgSrc = (assets.default as AssetsModule)[category][
+            productName
+          ][productImg]
+
+          return (
+            <Card direction="row" gap={2} flex={1} alignItems="center">
+              <StyledImage
+                width={200}
+                src={
+                  (assets.default as AssetsModule)[category][productName][
+                    productImg
+                  ]
+                }
+                alt={productName}
+              />
+              <Stack direction="column">
+                <Text as="h3" variant="bodyStrong">
+                  {productImg}.{imgSrc.split('.').pop()}
+                </Text>
+                <StyledSnippet>{`import { ${productImg} } from '@ultraviolet/illustrations/${category}/${productName}'`}</StyledSnippet>
+              </Stack>
+            </Card>
+          )
+        })}
       </Stack>
     </Expandable>
   </MargedStack>
@@ -93,8 +99,6 @@ export const List = () => {
     {},
   )
   const [isAllExpanded, setIsAllExpanded] = useReducer(state => !state, false)
-
-  console.log(expandedStates)
 
   const toggleAllExpanded = () => {
     const newExpandedCategoryStates = Object.keys(assets.default).reduce(
@@ -122,8 +126,6 @@ export const List = () => {
     setExpandedStates(newExpandedProductStates)
     setIsAllExpanded()
   }
-
-  console.log(assets.default.products.cli)
 
   return (
     <Stack gap={3}>
