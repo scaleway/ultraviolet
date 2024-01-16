@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon, Stack, Text } from '@ultraviolet/ui'
 import type { MouseEventHandler, ReactNode } from 'react'
-import { createRef, forwardRef, useEffect, useMemo, useState } from 'react'
+import { forwardRef, useEffect, useMemo, useRef, useState } from 'react'
 import { Skeleton } from './Skeleton'
 
 const activeStyle = (theme: Theme) => css`
@@ -136,7 +136,7 @@ export const ContentCard = forwardRef<
     },
     ref,
   ) => {
-    const subContainerRef = createRef<HTMLDivElement>()
+    const subContainerRef = useRef<HTMLDivElement>(null)
     const [subContainerHeight, setSubContainerHeight] = useState(
       subContainerRef?.current?.offsetHeight,
     )
