@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.3.0
+
+### Minor Changes
+
+- [#3332](https://github.com/scaleway/ultraviolet/pull/3332) [`b6a49fa`](https://github.com/scaleway/ultraviolet/commit/b6a49fa4b16f475745ed1a8778fb54795ba265a5) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - export `KeyValueField` component
+
 ## 2.2.0
 
 ### Minor Changes
