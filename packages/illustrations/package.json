@@ -35,9 +35,17 @@
       "types": "./dist/products/*/index.d.ts",
       "default": "./dist/products/*/index.js"
     },
+    "./products": {
+      "types": "./dist/products/index.d.ts",
+      "default": "./dist/products/index.js"
+    },
     "./various/*": {
       "types": "./dist/various/*/index.d.ts",
       "default": "./dist/various/*/index.js"
+    },
+    "./various": {
+      "types": "./dist/various/index.d.ts",
+      "default": "./dist/various/index.js"
     }
   },
   "devDependencies": {
