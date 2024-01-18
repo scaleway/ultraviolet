@@ -1,5 +1,5 @@
 export { FORM_ERROR } from './constants'
-export type { FormProps } from './components'
+export type { FormProps, KeyValue } from './components'
 export {
   CheckboxField,
   CheckboxGroupField,
