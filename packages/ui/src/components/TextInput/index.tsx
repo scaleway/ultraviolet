@@ -602,7 +602,7 @@ export const TextInput = forwardRef<
             style={{ height }}
             tabIndex={tabIndex}
             type={getType()}
-            value={value}
+            value={value === null ? '' : value}
             wrap={wrap}
             min={min}
             max={max}

@@ -64,5 +64,10 @@ describe('TextInputField', () => {
           })
         },
       },
+      {
+        initialValues: {
+          test: null,
+        },
+      },
     ))
 })
