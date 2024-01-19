@@ -2,4 +2,4 @@
 '@ultraviolet/form': patch
 ---
 
-make tooltip properties optional and add a default value to `maxSizeReachedTooltip`
+In component `KeyValueField`: tooltip properties are now optional and add a default value to `maxSizeReachedTooltip`
