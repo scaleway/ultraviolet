@@ -18,8 +18,8 @@ type InputValueProps = {
 type AddButtonProps = {
   name: ComponentProps<typeof Button>['children']
   fullWidth?: ComponentProps<typeof Button>['fullWidth']
-  tooltip: string
-  maxSizeReachedTooltip: string
+  tooltip?: string
+  maxSizeReachedTooltip?: string
 }
 
 export type KeyValue = { key: string; value: string }
@@ -59,6 +59,9 @@ export const KeyValueField = <
   })
 
   const canAdd = fields.length !== undefined && fields.length < maxSize
+  const maxSizeReachedTooltip =
+    addButton.maxSizeReachedTooltip ??
+    `Cannot add more than ${maxSize} elements`
 
   return (
     <Stack gap={3}>
@@ -105,9 +108,7 @@ export const KeyValueField = <
           sentiment="neutral"
           fullWidth={addButton.fullWidth}
           disabled={!canAdd || readonly}
-          tooltip={
-            !canAdd ? addButton.maxSizeReachedTooltip : addButton.tooltip
-          }
+          tooltip={!canAdd ? maxSizeReachedTooltip : addButton.tooltip}
           // @ts-expect-error can't infer properly
           onClick={() => append({ key: '', value: '' })}
         >
