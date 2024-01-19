@@ -22,8 +22,6 @@ type AddButtonProps = {
   maxSizeReachedTooltip?: string
 }
 
-export type KeyValue = { key: string; value: string }
-
 type KeyValueFieldProps<
   TFieldValues extends FieldValues,
   TFieldArrayName extends FieldArrayPath<TFieldValues>,
