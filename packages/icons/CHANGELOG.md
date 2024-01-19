@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.8.0
+
+### Minor Changes
+
+- [#3349](https://github.com/scaleway/ultraviolet/pull/3349) [`55a302c`](https://github.com/scaleway/ultraviolet/commit/55a302c5690f656b36763a22659ea8da1f6c7b93) Thanks [@matthprost](https://github.com/matthprost)! - New names in `<ProductIcon />`:
+  - `nabu`
+  - `dedicaredControlPlane`
+  - `distributedDataLab`
+  - `jero`
+  - `nabu`
+  - `qaas`
+  - `router`
+
 ## 2.7.7
 
 ### Patch Changes
