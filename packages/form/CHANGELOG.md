@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.3.1
+
+### Patch Changes
+
+- [#3329](https://github.com/scaleway/ultraviolet/pull/3329) [`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Fix input value for controlled fields
+
+- [#3348](https://github.com/scaleway/ultraviolet/pull/3348) [`2cded8d`](https://github.com/scaleway/ultraviolet/commit/2cded8d88d915069d303955ef652bef04e628826) Thanks [@BABAK0T0](https://github.com/BABAK0T0)! - In component `KeyValueField`: tooltip properties are now optional and add a default value to `maxSizeReachedTooltip`
+
+- Updated dependencies [[`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d), [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b)]:
+  - @ultraviolet/ui@1.31.1
+
 ## 2.3.0
 
 ### Minor Changes

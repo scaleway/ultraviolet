@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.31.1
+
+### Patch Changes
+
+- [#3329](https://github.com/scaleway/ultraviolet/pull/3329) [`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Fix input value for controlled fields
+
+- [#3333](https://github.com/scaleway/ultraviolet/pull/3333) [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b) Thanks [@matthprost](https://github.com/matthprost)! - Remove usages of `createRef` to use only `useRef`
+
+- Updated dependencies [[`55a302c`](https://github.com/scaleway/ultraviolet/commit/55a302c5690f656b36763a22659ea8da1f6c7b93)]:
+  - @ultraviolet/icons@2.8.0
+
 ## 1.31.0
 
 ### Minor Changes

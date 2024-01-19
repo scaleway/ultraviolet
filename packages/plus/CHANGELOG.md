@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.6.2
+
+### Patch Changes
+
+- [#3333](https://github.com/scaleway/ultraviolet/pull/3333) [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b) Thanks [@matthprost](https://github.com/matthprost)! - Remove usages of `createRef` to use only `useRef`
+
+- [#3328](https://github.com/scaleway/ultraviolet/pull/3328) [`1237885`](https://github.com/scaleway/ultraviolet/commit/1237885bd348b6a48207a8eba30f45cff0cfa7f3) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CUstomerSatisfaction />`
+
+- Updated dependencies [[`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d), [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b)]:
+  - @ultraviolet/ui@1.31.1
+
 ## 0.6.1
 
 ### Patch Changes
