@@ -7,13 +7,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: summary
-    attributes:
-      label: Summary
-      placeholder: Please provide the clearest summary of your purpose.
-    validations:
-      required: true
   - type: dropdown
     id: team
     attributes:
@@ -34,7 +27,10 @@ body:
       options:
         - UI
         - From
+        - Illustrations
+        - Icons
         - Plus
+        - Themes/Tokens
         - Other
     validations:
       required: false
