@@ -1,6 +1,6 @@
 name: Icon Request
 description: Request a new icon or a change to an existing one
-title: "[Icons]: "
+title: "[Icon]: "
 labels: ["enhancement"]
 body:
   - type: markdown
@@ -33,19 +33,19 @@ body:
     id: type
     attributes:
       label: Type of icon
-      description: What type of icon this issue is about?
+      description: What type of icon this ticket is about?
       options:
-        - Product Icon
-        - Category Icon
-        - System Icon
+        - Product-Icon
+        - Category-Icon
+        - System-Icon
         - Unsure
     validations:
       required: true
   - type: input
-    id: name
+    id: icon-name
     attributes:
-      label: Icon Name
-      placeholder: The suggested icon request name or existing icon name.
+      label: Name of the icon
+      description: The suggested icon request name or existing icon name.
     validations:
       required: true
   - type: textarea
@@ -56,17 +56,17 @@ body:
     validations:
       required: true
   - type: textarea
-    id: svg
+    id: file
     attributes:
       label: Icon SVG
       description: Attach the icon svg of anything that helps.
     validations:
       required: true
   - type: input
-    id: alt
+    id: icon-alt
     attributes:
       label: Icon alt text
-      placeholder: Alt text, or alternative text, is a brief description of an image or icon that helps users understand its content and purpose
+      description: Alt text, or alternative text, is a brief description of an image or icon that helps users understand its content and purpose
     validations:
       required: false
   - type: textarea
