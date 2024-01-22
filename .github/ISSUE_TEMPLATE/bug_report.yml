@@ -1,0 +1,64 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: Please provide the clearest summary of your purpose.
+    validations:
+      required: true
+  - type: dropdown
+    id: team
+    attributes:
+      label: Is it Front-End or Design related only?
+      description: If this issue is related to Front-End or Design, please select the appropriate team. If you are unsure, please select "Unsure".
+      options:
+        - Front-End
+        - Design
+        - Both
+        - Unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: library
+    attributes:
+      label: Library
+      description: Which library is this issue related to?
+      options:
+        - UI
+        - From
+        - Illustrations
+        - Icons
+        - Plus
+        - Themes/Tokens
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: Describe what happens instead of the expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe what should happen.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to accomplish? How has this issue affected you? Providing context helps us come up with a solution that is more useful in the real world.
+    validations:
+      required: true
