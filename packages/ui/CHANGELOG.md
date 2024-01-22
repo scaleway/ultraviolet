@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.31.2
+
+### Patch Changes
+
+- [#3354](https://github.com/scaleway/ultraviolet/pull/3354) [`4be9628`](https://github.com/scaleway/ultraviolet/commit/4be96287e93eb0990c8cd6e0f92a8ef364a3e66e) Thanks [@matthprost](https://github.com/matthprost)! - Revert `Modal` component, disclosure to use `createRef` instead of `useRef`
+
 ## 1.31.1
 
 ### Patch Changes
