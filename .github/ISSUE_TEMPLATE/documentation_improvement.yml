@@ -1,0 +1,30 @@
+name: Documentation Improvement
+description: Suggest an improvement to our documentation
+title: "[Documentation]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: description
+    attributes:
+      label: A clear and concise description of what is the documentation improvement that you propose.
+      description: Detailing the user experience, the reason for creating the new icon or updating, and any additional context.
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Are there any other important details?
+      description: Any additional detail that will help like a link to the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Videos
+      description: If applicable, add screenshots and/or videos to help explain your problem.
+    validations:
+      required: false
