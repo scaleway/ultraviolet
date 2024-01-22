@@ -1,6 +1,6 @@
-name: Component Request
-description: Request a new component or a change to an existing component
-title: "[Component]: "
+name: Icon Request
+description: Request a new icon or a change to an existing one
+title: "[Icons]: "
 labels: ["enhancement"]
 body:
   - type: markdown
@@ -30,38 +30,45 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: library
+    id: type
     attributes:
-      label: Library
-      description: Which library is this issue related to?
+      label: Type of icon
+      description: What type of icon this issue is about?
       options:
-        - UI
-        - From
-        - Plus
-        - Other
+        - Product Icon
+        - Category Icon
+        - System Icon
+        - Unsure
     validations:
-      required: false
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Icon Name
+      placeholder: The suggested icon request name or existing icon name.
+    validations:
+      required: true
   - type: textarea
     id: needs
     attributes:
-      label: Describe the needs
-      description: Give a brief description of your proposal.
+      label: How will these icons be used?
+      description: Detailing the user experience, the reason for creating the new icon or updating, and any additional context.
     validations:
       required: true
   - type: textarea
-    id: specifications
+    id: svg
     attributes:
-      label: Include any specifications
-      description: Give a brief description of the component / enhancement you want to propose.
+      label: Icon SVG
+      description: Attach the icon svg of anything that helps.
+    validations:
+      required: true
+  - type: input
+    id: alt
+    attributes:
+      label: Icon alt text
+      placeholder: Alt text, or alternative text, is a brief description of an image or icon that helps users understand its content and purpose
     validations:
       required: false
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots / Videos
-      description: Add screenshots and/or videos to demonstrate you enhancement / request.
-    validations:
-      required: true
   - type: textarea
     id: other
     attributes:
