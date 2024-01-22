@@ -1,5 +1,11 @@
 import type { PropsWithRef } from 'react'
-import { cloneElement, isValidElement, useEffect, useMemo, useRef } from 'react'
+import {
+  cloneElement,
+  createRef,
+  isValidElement,
+  useEffect,
+  useMemo,
+} from 'react'
 import type { DisclosureProps } from './types'
 
 export const Disclosure = ({
@@ -10,7 +16,7 @@ export const Disclosure = ({
   toggle,
   id,
 }: DisclosureProps) => {
-  const disclosureRef = useRef<HTMLElement>(null)
+  const disclosureRef = createRef<HTMLElement>()
 
   useEffect(() => {
     const element = disclosureRef.current
