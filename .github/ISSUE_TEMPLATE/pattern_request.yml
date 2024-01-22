@@ -1,6 +1,6 @@
-name: Component Request
-description: Request a new component or a change to an existing component
-title: "[Component]: "
+name: Pattern Request
+description: Request a new pattern or a change to an existing one
+title: "[Pattern]: "
 labels: ["enhancement"]
 body:
   - type: markdown
@@ -29,19 +29,13 @@ body:
         - Unsure
     validations:
       required: true
-  - type: dropdown
-    id: library
+  - type: input
+    id: name
     attributes:
-      label: Library
-      description: Which library is this issue related to?
-      options:
-        - UI
-        - From
-        - Icons
-        - Plus
-        - Other
+      label: Pattern Name
+      placeholder: The suggested pattern request name or existing pattern name.
     validations:
-      required: false
+      required: true
   - type: textarea
     id: needs
     attributes:
