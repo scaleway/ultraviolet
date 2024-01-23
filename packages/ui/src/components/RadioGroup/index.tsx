@@ -133,12 +133,17 @@ export const RadioGroup = ({
           </Stack>
         </FieldSet>
         {helper ? (
-          <Text as="p" variant="bodySmall" prominence="weak">
+          <Text
+            as="span"
+            variant="caption"
+            prominence="weak"
+            sentiment="neutral"
+          >
             {helper}
           </Text>
         ) : null}
         {error ? (
-          <Text as="p" variant="bodySmall" sentiment="danger" prominence="weak">
+          <Text as="span" variant="caption" sentiment="danger">
             {error}
           </Text>
         ) : null}
