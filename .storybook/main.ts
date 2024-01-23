@@ -17,6 +17,6 @@ export default {
     options: {},
   },
   docs: {
-    autodocs: 'tag',
+    autodocs: true,
   },
 } satisfies StorybookConfig
