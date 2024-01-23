@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-webpack5'
+import type { StorybookConfig } from '@storybook/react-vite'
 
 export default {
   stories: [
@@ -13,47 +13,10 @@ export default {
     'storybook-dark-mode',
   ],
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/react-vite',
     options: {},
   },
   docs: {
-    autodocs: true,
-  },
-  core: {
-    builder: '@storybook/builder-webpack5',
-  },
-  webpackFinal: async config => {
-    const imageRule = config.module?.rules?.find(rule => {
-      const test = (rule as { test: RegExp }).test
-
-      if (!test) {
-        return false
-      }
-
-      return test.test('.svg')
-    }) as { [key: string]: any }
-
-    imageRule['exclude'] = /\.svg$/
-
-    config.module?.rules?.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-        },
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'static/media/[path][name].[ext]',
-          },
-        },
-      ],
-      type: 'javascript/auto',
-      issuer: {
-        and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
-      },
-    })
-
-    return config
+    autodocs: 'tag',
   },
 } satisfies StorybookConfig
