@@ -1,3 +1,4 @@
+import * as feedback from './feedback'
 import * as onboarding from './onboarding'
 
-export { onboarding }
+export { onboarding, feedback }
