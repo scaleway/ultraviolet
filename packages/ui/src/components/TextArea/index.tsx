@@ -182,7 +182,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           <Stack direction="row" gap="0.5" alignItems="start">
             <Text
               as="label"
-              variant="bodySmallStrong"
+              variant="bodyStrong"
               sentiment="neutral"
               htmlFor={id ?? localId}
             >
