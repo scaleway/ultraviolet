@@ -194,8 +194,8 @@ importers:
         specifier: 0.0.2
         version: 0.0.2
       chromatic:
-        specifier: 10.2.2
-        version: 10.2.2
+        specifier: 10.5.0
+        version: 10.5.0
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -8166,9 +8166,17 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@10.2.2:
-    resolution: {integrity: sha512-F0GQnrx5hyT9MbNvA27Ul6UBqX5+XhlU8HUAFgXa7+iKYisNMkroRXWXzvFF0StH9Y0I5hqSdH+A5aKHzmi1Zg==}
+  /chromatic@10.5.0:
+    resolution: {integrity: sha512-fOdncJpF/JxRKhNyKwkxw08tVyqF+SJq/TI9cEEUgqip/+KHDfW4U0fy2U1C+RXuJefN6FgqOflsEUoURNBmGg==}
     hasBin: true
+    peerDependencies:
+      chromatic-cypress: ^0.4.0 || ^1.0.0
+      chromatic-playwright: ^0.4.0 || ^1.0.0
+    peerDependenciesMeta:
+      chromatic-cypress:
+        optional: true
+      chromatic-playwright:
+        optional: true
     dev: true
 
   /chrome-trace-event@1.0.3:
