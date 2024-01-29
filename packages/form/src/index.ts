@@ -17,6 +17,8 @@ export {
   TimeField,
   ToggleField,
   RadioGroupField,
+  NumberInputFieldV2,
+  TextInputFieldV2,
 } from './components'
 export type { BaseFieldProps, FormErrors } from './types'
 export { useErrors, ErrorProvider } from './providers/ErrorContext'
