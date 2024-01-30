@@ -1,5 +1,32 @@
 # @ultraviolet/plus
 
+## 0.6.4
+
+### Patch Changes
+
+- [#3301](https://github.com/scaleway/ultraviolet/pull/3301) [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.47`.
+
+- Updated dependencies [[`740915c`](https://github.com/scaleway/ultraviolet/commit/740915c2111c49c77e10679bc48dc006f0c589b0), [`08fa9b5`](https://github.com/scaleway/ultraviolet/commit/08fa9b5a68ff52b68cd5ff68e8965be1ae29359f), [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0), [`f59a7b2`](https://github.com/scaleway/ultraviolet/commit/f59a7b270dd90fd5ed5893abf0e8ae5afcd1a8d2)]:
+  - @ultraviolet/ui@1.31.3
+
+## 0.6.3
+
+### Patch Changes
+
+- Updated dependencies [[`4be9628`](https://github.com/scaleway/ultraviolet/commit/4be96287e93eb0990c8cd6e0f92a8ef364a3e66e)]:
+  - @ultraviolet/ui@1.31.2
+
+## 0.6.2
+
+### Patch Changes
+
+- [#3333](https://github.com/scaleway/ultraviolet/pull/3333) [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b) Thanks [@matthprost](https://github.com/matthprost)! - Remove usages of `createRef` to use only `useRef`
+
+- [#3328](https://github.com/scaleway/ultraviolet/pull/3328) [`1237885`](https://github.com/scaleway/ultraviolet/commit/1237885bd348b6a48207a8eba30f45cff0cfa7f3) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<CUstomerSatisfaction />`
+
+- Updated dependencies [[`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d), [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b)]:
+  - @ultraviolet/ui@1.31.1
+
 ## 0.6.1
 
 ### Patch Changes

@@ -17,9 +17,11 @@ import { ReactComponent as cockpit } from './assets/cockpit.svg'
 import { ReactComponent as console } from './assets/console.svg'
 import { ReactComponent as containers } from './assets/containers.svg'
 import { ReactComponent as dedibox } from './assets/dedibox.svg'
+import { ReactComponent as dedicatedControlPlane } from './assets/dedicated-control-plane.svg'
 import { ReactComponent as dedicatedServer } from './assets/dedicated-server.svg'
 import { ReactComponent as devices } from './assets/devices.svg'
 import { ReactComponent as directConnect } from './assets/direct-connect.svg'
+import { ReactComponent as distributedDataLab } from './assets/distributed-data-lab.svg'
 import { ReactComponent as dns } from './assets/dns.svg'
 import { ReactComponent as documentDB } from './assets/document-db.svg'
 import { ReactComponent as documentation } from './assets/documentation.svg'
@@ -43,12 +45,14 @@ import { ReactComponent as iot } from './assets/iot.svg'
 import { ReactComponent as ipFailover } from './assets/ip-failover.svg'
 import { ReactComponent as ipfsNaming } from './assets/ipfs-naming.svg'
 import { ReactComponent as ipfs } from './assets/ipfs.svg'
+import { ReactComponent as jero } from './assets/jero.svg'
 import { ReactComponent as k8sKosmos } from './assets/k8s-kosmos.svg'
 import { ReactComponent as kubernetes } from './assets/kubernetes.svg'
 import { ReactComponent as lb } from './assets/lb.svg'
 import { ReactComponent as lifeCycleRules } from './assets/life-cycle-rules.svg'
 import { ReactComponent as macMiniM2 } from './assets/mac-mini-m2.svg'
 import { ReactComponent as multiUser } from './assets/multi-user.svg'
+import { ReactComponent as nabu } from './assets/nabu.svg'
 import { ReactComponent as nats } from './assets/nats.svg'
 import { ReactComponent as objectStorage } from './assets/object-storage.svg'
 import { ReactComponent as packer } from './assets/packer.svg'
@@ -59,12 +63,14 @@ import { ReactComponent as pool } from './assets/pool.svg'
 import { ReactComponent as postgreSqlAndMySql } from './assets/postgresql-mysql.svg'
 import { ReactComponent as privateNetwork } from './assets/private-network.svg'
 import { ReactComponent as publicGateway } from './assets/public-gateway.svg'
+import { ReactComponent as qaas } from './assets/qaas.svg'
 import { ReactComponent as queueing } from './assets/queueing.svg'
 import { ReactComponent as rabbitMQ } from './assets/rabbit-mq.svg'
 import { ReactComponent as rdb } from './assets/rdb.svg'
 import { ReactComponent as redis } from './assets/redis.svg'
 import { ReactComponent as registry } from './assets/registry.svg'
 import { ReactComponent as rocket } from './assets/rocket.svg'
+import { ReactComponent as router } from './assets/router.svg'
 import { ReactComponent as secretManager } from './assets/secret-manager.svg'
 import { ReactComponent as securityGroup } from './assets/security-group.svg'
 import { ReactComponent as sepa } from './assets/sepa.svg'
@@ -182,4 +188,10 @@ export const PRODUCT_ICONS = {
   file,
   folder,
   apiKey,
+  distributedDataLab,
+  dedicatedControlPlane,
+  qaas,
+  router,
+  jero,
+  nabu,
 } as const

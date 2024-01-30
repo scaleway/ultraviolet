@@ -1,0 +1,78 @@
+name: Icon Request
+description: Request a new icon or a change to an existing one
+title: "[Icon]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this component request!
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of request
+      description: What type of request is this?
+      options:
+        - New Proposal
+        - Enhancement
+    validations:
+      required: true
+  - type: dropdown
+    id: team
+    attributes:
+      label: Is it Front-End or Design related only?
+      description: If this issue is related to Front-End or Design, please select the appropriate team. If you are unsure, please select "Unsure".
+      options:
+        - Front-End
+        - Design
+        - Both
+        - Unsure
+    validations:
+      required: true
+  - type: dropdown
+    id: icon-type
+    attributes:
+      label: Type of icon
+      description: What type of icon this ticket is about?
+      options:
+        - Product-Icon
+        - Category-Icon
+        - System-Icon
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: icon-name
+    attributes:
+      label: Name of the icon
+      description: The suggested icon request name or existing icon name.
+    validations:
+      required: true
+  - type: textarea
+    id: needs
+    attributes:
+      label: How will these icons be used?
+      description: Detailing the user experience, the reason for creating the new icon or updating, and any additional context.
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: Icon SVG
+      description: Attach the icon svg of anything that helps.
+    validations:
+      required: true
+  - type: input
+    id: icon-alt
+    attributes:
+      label: Icon alt text
+      description: Alt text, or alternative text, is a brief description of an image or icon that helps users understand its content and purpose
+    validations:
+      required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: Any other details?
+      description: Include links to any examples, research or code to support your proposal, if available.
+    validations:
+      required: false

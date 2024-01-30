@@ -1,5 +1,24 @@
 # Change Log
 
+## 2.8.1
+
+### Patch Changes
+
+- [#3301](https://github.com/scaleway/ultraviolet/pull/3301) [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.47`.
+
+## 2.8.0
+
+### Minor Changes
+
+- [#3349](https://github.com/scaleway/ultraviolet/pull/3349) [`55a302c`](https://github.com/scaleway/ultraviolet/commit/55a302c5690f656b36763a22659ea8da1f6c7b93) Thanks [@matthprost](https://github.com/matthprost)! - New names in `<ProductIcon />`:
+  - `nabu`
+  - `dedicaredControlPlane`
+  - `distributedDataLab`
+  - `jero`
+  - `nabu`
+  - `qaas`
+  - `router`
+
 ## 2.7.7
 
 ### Patch Changes

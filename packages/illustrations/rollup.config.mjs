@@ -28,11 +28,18 @@ const external = id =>
     ...Object.keys(pkg.peerDependencies || {}),
   ].find(dep => new RegExp(dep).test(id))
 
+const input = [
+  'src/products/*/index.ts',
+  'src/products/index.ts',
+  './src/various/*/index.ts',
+  'src/various/index.ts',
+]
+
 export default [
   {
     external,
     preserveSymlinks: true,
-    input: ['src/products/*/index.ts', './src/various/*/index.ts'],
+    input,
     output: {
       dir: 'dist',
       format: 'es',
@@ -90,7 +97,7 @@ export default [
     ].filter(Boolean),
   },
   {
-    input: ['./src/products/*/index.ts', './src/various/*/index.ts'],
+    input,
     output: [{ dir: 'dist', format: 'es' }],
     plugins: [
       multiInput.default(),

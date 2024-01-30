@@ -39,7 +39,7 @@ LabelDescription.args = {
 LabelDescription.parameters = {
   docs: {
     description: {
-      story: `Using the prop \`labelDescription\` you can add a badge or a tooltip to the label.`,
+      story: `Using the prop \`labelDescription\` you can add a badge or a tooltip to the label. You can also use the prop \`required\` in order to display a required icon but be aware that without the label being set this icon won't be shown.`,
     },
   },
 }

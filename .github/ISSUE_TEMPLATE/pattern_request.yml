@@ -1,0 +1,66 @@
+name: Pattern Request
+description: Request a new pattern or a change to an existing one
+title: "[Pattern]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this component request!
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of request
+      description: What type of request is this?
+      options:
+        - New Proposal
+        - Enhancement
+    validations:
+      required: true
+  - type: dropdown
+    id: team
+    attributes:
+      label: Is it Front-End or Design related only?
+      description: If this issue is related to Front-End or Design, please select the appropriate team. If you are unsure, please select "Unsure".
+      options:
+        - Front-End
+        - Design
+        - Both
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Pattern Name
+      placeholder: The suggested pattern request name or existing pattern name.
+    validations:
+      required: true
+  - type: textarea
+    id: needs
+    attributes:
+      label: Describe the needs
+      description: Give a brief description of your proposal.
+    validations:
+      required: true
+  - type: textarea
+    id: specifications
+    attributes:
+      label: Include any specifications
+      description: Give a brief description of the component / enhancement you want to propose.
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Videos
+      description: Add screenshots and/or videos to demonstrate you enhancement / request.
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Any other details?
+      description: Include links to any examples, research or code to support your proposal, if available.
+    validations:
+      required: false

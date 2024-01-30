@@ -1,5 +1,37 @@
 # Change Log
 
+## 1.31.3
+
+### Patch Changes
+
+- [#3367](https://github.com/scaleway/ultraviolet/pull/3367) [`740915c`](https://github.com/scaleway/ultraviolet/commit/740915c2111c49c77e10679bc48dc006f0c589b0) Thanks [@matthprost](https://github.com/matthprost)! - Fix `RadioGroup` and `CheckboxGroup` helpers to have the correct style
+
+- [#3350](https://github.com/scaleway/ultraviolet/pull/3350) [`08fa9b5`](https://github.com/scaleway/ultraviolet/commit/08fa9b5a68ff52b68cd5ff68e8965be1ae29359f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `NumberInputV2`, `TextInputV2` and `TextArea` label to have `bodyStrong` instead of `bodySmallStrong` label
+
+- [#3301](https://github.com/scaleway/ultraviolet/pull/3301) [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.47`.
+
+- [#3302](https://github.com/scaleway/ultraviolet/pull/3302) [`f59a7b2`](https://github.com/scaleway/ultraviolet/commit/f59a7b270dd90fd5ed5893abf0e8ae5afcd1a8d2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react-datepicker` to `4.19.5`.
+
+- Updated dependencies [[`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0)]:
+  - @ultraviolet/icons@2.8.1
+
+## 1.31.2
+
+### Patch Changes
+
+- [#3354](https://github.com/scaleway/ultraviolet/pull/3354) [`4be9628`](https://github.com/scaleway/ultraviolet/commit/4be96287e93eb0990c8cd6e0f92a8ef364a3e66e) Thanks [@matthprost](https://github.com/matthprost)! - Revert `Modal` component, disclosure to use `createRef` instead of `useRef`
+
+## 1.31.1
+
+### Patch Changes
+
+- [#3329](https://github.com/scaleway/ultraviolet/pull/3329) [`9db896c`](https://github.com/scaleway/ultraviolet/commit/9db896cda9486fab624c35c00b25e529aa5a0c6d) Thanks [@johnrazeur](https://github.com/johnrazeur)! - Fix input value for controlled fields
+
+- [#3333](https://github.com/scaleway/ultraviolet/pull/3333) [`56ffe3b`](https://github.com/scaleway/ultraviolet/commit/56ffe3b110c384c3cda3daa7ceaeeb8fd4db799b) Thanks [@matthprost](https://github.com/matthprost)! - Remove usages of `createRef` to use only `useRef`
+
+- Updated dependencies [[`55a302c`](https://github.com/scaleway/ultraviolet/commit/55a302c5690f656b36763a22659ea8da1f6c7b93)]:
+  - @ultraviolet/icons@2.8.0
+
 ## 1.31.0
 
 ### Minor Changes

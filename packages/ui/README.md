@@ -21,6 +21,10 @@ You will also need to import fonts in your project by adding:
   href="https://fonts.cdnfonts.com/css/jetbrains-mono-2?styles=156604"
   rel="stylesheet"
 />
+<link
+  href="https://fonts.cdnfonts.com/css/space-grotesk?styles=24816,24815"
+  rel="stylesheet"
+/>
 ```
 
 ### Usage

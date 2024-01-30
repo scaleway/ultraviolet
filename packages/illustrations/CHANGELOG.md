@@ -1,5 +1,20 @@
 # @ultraviolet/illustrations
 
+## 1.5.0
+
+### Minor Changes
+
+- [#3364](https://github.com/scaleway/ultraviolet/pull/3364) [`7663971`](https://github.com/scaleway/ultraviolet/commit/76639712edb8d405fd1789031b2c34079b27c8fa) Thanks [@matthprost](https://github.com/matthprost)! - New illustration `notFound` for display 404 illustration, it that can be imported as follows:
+  ```
+  import { notFound } from '@ultraviolet/illustrations/various/feedback'
+  ```
+
+## 1.4.0
+
+### Minor Changes
+
+- [#3344](https://github.com/scaleway/ultraviolet/pull/3344) [`11f3304`](https://github.com/scaleway/ultraviolet/commit/11f33043bafcd38e5f862c22226a8ab1da9eb5a1) Thanks [@Slashgear](https://github.com/Slashgear)! - export index of all illustrations for products and various
+
 ## 1.3.0
 
 ### Minor Changes

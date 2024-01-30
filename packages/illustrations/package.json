@@ -1,6 +1,6 @@
 {
   "name": "@ultraviolet/illustrations",
-  "version": "1.3.0",
+  "version": "1.5.0",
   "description": "Ultraviolet Illustrations",
   "homepage": "https://github.com/scaleway/ultraviolet#readme",
   "repository": {
@@ -35,9 +35,17 @@
       "types": "./dist/products/*/index.d.ts",
       "default": "./dist/products/*/index.js"
     },
+    "./products": {
+      "types": "./dist/products/index.d.ts",
+      "default": "./dist/products/index.js"
+    },
     "./various/*": {
       "types": "./dist/various/*/index.d.ts",
       "default": "./dist/various/*/index.js"
+    },
+    "./various": {
+      "types": "./dist/various/index.d.ts",
+      "default": "./dist/various/index.js"
     }
   },
   "devDependencies": {
