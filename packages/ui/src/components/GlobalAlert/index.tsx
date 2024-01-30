@@ -33,7 +33,8 @@ const Container = styled(Stack)`
   }
 
   &[data-variant='promotional'] {
-    background: ${({ theme }) => theme.colors.other.gradients.background.aqua};
+    background: ${({ theme }) =>
+      theme.colors.other.gradients.background.linear.aqua};
   }
 `
 
