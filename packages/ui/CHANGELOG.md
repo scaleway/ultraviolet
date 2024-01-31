@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.31.4
+
+### Patch Changes
+
+- [#3382](https://github.com/scaleway/ultraviolet/pull/3382) [`c2e824e`](https://github.com/scaleway/ultraviolet/commit/c2e824efe7f875b9f917b946c2b4575f82132240) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<MenuV2 />` component to spread `onClick` of the disclosure
+
+- [#3372](https://github.com/scaleway/ultraviolet/pull/3372) [`2ab58ef`](https://github.com/scaleway/ultraviolet/commit/2ab58efd55530673da91d50042c5eb014ebad446) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.48`.
+
+- Updated dependencies [[`2ab58ef`](https://github.com/scaleway/ultraviolet/commit/2ab58efd55530673da91d50042c5eb014ebad446)]:
+  - @ultraviolet/icons@2.8.2
+
 ## 1.31.3
 
 ### Patch Changes
