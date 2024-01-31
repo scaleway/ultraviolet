@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ComponentProps, DOMAttributes, ReactNode } from 'react'
+import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId, useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
@@ -116,42 +116,45 @@ const StyledInputWrapper = styled('div', {
 `
 
 type TextInputProps = {
-  autoFocus?: boolean
   className?: string
   clearable?: boolean
   'data-testid'?: string
-  disabled?: boolean
   error?: string
   helper?: ReactNode
   iconName?: ComponentProps<typeof Icon>['name']
-  id?: string
-  label: string
+  label?: string
   labelDescription?: ReactNode
   loading?: boolean
   minLength?: number
   maxLength?: number
-  name?: string
-  onBlur?: DOMAttributes<HTMLInputElement>['onBlur']
-  onChange: (newValue: string) => void
-  onFocus?: DOMAttributes<HTMLInputElement>['onFocus']
   onRandomize?: () => void
-  placeholder?: string
-  prefix?: string
-  readOnly?: boolean
-  required?: boolean
+  onChange?: (newValue: string) => void
+  prefix?: ReactNode
   size?: TextInputSize
   success?: string
-  suffix?: string
+  suffix?: ReactNode
   tabIndex?: number
   tooltip?: string
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
-}
+} & Pick<
+  InputHTMLAttributes<HTMLInputElement>,
+  | 'onFocus'
+  | 'onBlur'
+  | 'name'
+  | 'id'
+  | 'placeholder'
+  | 'aria-label'
+  | 'disabled'
+  | 'readOnly'
+  | 'required'
+  | 'autoFocus'
+>
 
 /**
  * This component offers an extended input HTML
  */
-export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
+export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
   (
     {
       id,
@@ -235,14 +238,18 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
           >
             {prefix ? (
               <BasicPrefixStack direction="row" alignItems="center">
-                <Text
-                  as="span"
-                  sentiment="neutral"
-                  variant="bodySmall"
-                  disabled={disabled}
-                >
-                  {prefix}
-                </Text>
+                {typeof prefix === 'string' ? (
+                  <Text
+                    as="span"
+                    sentiment="neutral"
+                    variant="bodySmall"
+                    disabled={disabled}
+                  >
+                    {prefix}
+                  </Text>
+                ) : (
+                  prefix
+                )}
               </BasicPrefixStack>
             ) : null}
             {iconName ? <Icon name={iconName} size={16} /> : null}
@@ -256,7 +263,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
               ref={ref}
               value={value === null ? '' : value}
               onChange={event => {
-                onChange(event.currentTarget.value)
+                onChange?.(event.currentTarget.value)
               }}
               isSuccess={!!success}
               isError={!!error}
@@ -286,7 +293,7 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
                     size={size === 'small' ? 'xsmall' : 'small'}
                     icon="close"
                     onClick={() => {
-                      onChange('')
+                      onChange?.('')
                     }}
                     sentiment="neutral"
                   />
@@ -312,14 +319,18 @@ export const TextInput = forwardRef<HTMLInputElement, TextInputProps>(
             ) : null}
             {suffix ? (
               <BasicSuffixStack direction="row" alignItems="center">
-                <Text
-                  as="span"
-                  sentiment="neutral"
-                  variant="bodySmall"
-                  disabled={disabled}
-                >
-                  {suffix}
-                </Text>
+                {typeof suffix === 'string' ? (
+                  <Text
+                    as="span"
+                    sentiment="neutral"
+                    variant="bodySmall"
+                    disabled={disabled}
+                  >
+                    {suffix}
+                  </Text>
+                ) : (
+                  suffix
+                )}
               </BasicSuffixStack>
             ) : null}
             {type === 'password' ? (

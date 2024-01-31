@@ -1,22 +1,17 @@
 import { Global } from '@emotion/react'
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { FocusEvent } from 'react'
+import type { FocusEvent, ReactNode } from 'react'
+import { useId } from 'react'
 import type { ReactDatePickerProps } from 'react-datepicker'
 import DatePicker, { registerLocale } from 'react-datepicker'
 import style from 'react-datepicker/dist/react-datepicker.min.css'
 import { Button } from '../Button'
-import { Separator } from '../Separator'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
-import { TextInput } from '../TextInput'
+import { TextInputV2 } from '../TextInputV2'
 
 const PREFIX = '.react-datepicker'
-
-const StyledSeparator = styled(Separator)`
-  margin: 0 ${({ theme }) => theme.space['1']};
-  height: 100%;
-`
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -81,11 +76,18 @@ const StyledWrapper = styled.div`
 
     ${PREFIX}__day {
       color: ${({ theme }) => theme.colors.neutral.textWeak};
-      font-size: ${({ theme }) => theme.typography.body.fontSize};
-      width: 1.7rem;
-      height: 1.7rem;
+      font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
+      font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
+      width: 26px;
+      height: 26px;
       margin-left: 3px;
       margin-right: 3px;
+    }
+
+    ${PREFIX}__day--outside-month {
+      color: ${({ theme }) => theme.colors.neutral.textDisabled};
+      font-weight: ${({ theme }) => theme.typography.bodyStrong.weight};
+      font-size: ${({ theme }) => theme.typography.bodyStrong.fontSize};
     }
 
     ${PREFIX}__day--selected {
@@ -169,16 +171,6 @@ const StyledWrapper = styled.div`
   }
 `
 
-const StyledIconContainer = styled.div`
-  padding: ${({ theme }) => theme.space['1']};
-  position: absolute;
-  display: flex;
-  align-items: center;
-  right: 0;
-  top: 0;
-  height: 48px;
-`
-
 const StyledText = styled(Text)`
   text-transform: capitalize;
 `
@@ -208,6 +200,13 @@ type DateInputProps = Pick<
   startDate?: Date | null
   endDate?: Date | null
   excludeDates?: Date[]
+  id?: string
+  labelDescription?: ReactNode
+  success?: string
+  helper?: string
+  size?: 'small' | 'medium' | 'large'
+  readOnly?: boolean
+  tooltip?: string
 }
 
 const DEFAULT_FORMAT: DateInputProps['format'] = value =>
@@ -223,6 +222,7 @@ export const DateInput = ({
   error,
   format = DEFAULT_FORMAT,
   label,
+  labelDescription,
   locale,
   maxDate,
   minDate,
@@ -232,13 +232,22 @@ export const DateInput = ({
   onBlur,
   onChange,
   onFocus,
-  required = false,
+  required = true,
   excludeDates,
   value,
   selectsRange,
   className,
+  id,
+  success,
+  helper,
+  size = 'large',
+  readOnly = false,
+  tooltip,
   'data-testid': dataTestId,
 }: DateInputProps) => {
+  const uniqueId = useId()
+  const localId = id ?? uniqueId
+
   // Linked to: https://github.com/Hacker0x01/react-datepicker/issues/3834
   const ReactDatePicker =
     (DatePicker as unknown as { default: typeof DatePicker }).default ??
@@ -284,26 +293,21 @@ export const DateInput = ({
           selectsRange={selectsRange}
           excludeDates={excludeDates}
           customInput={
-            <div>
-              <TextInput
-                error={error ? `${error}` : undefined}
-                id={`date-input${name ? `-${name}` : ''}`}
-                label={label}
-                value={valueFormat || ''}
-                disabled={disabled}
-              />
-              <StyledIconContainer>
-                {required ? (
-                  <Icon name="asterisk" color="danger" size={8} />
-                ) : null}
-                <StyledSeparator direction="vertical" />
-                <Icon
-                  name="calendar-range"
-                  color={error ? 'danger' : 'neutral'}
-                  size={24}
-                />
-              </StyledIconContainer>
-            </div>
+            <TextInputV2
+              error={error}
+              success={success}
+              helper={helper}
+              id={localId}
+              label={label}
+              labelDescription={labelDescription}
+              value={valueFormat || ''}
+              disabled={disabled}
+              required={required}
+              size={size}
+              suffix={<Icon name="calendar-range" color="neutral" />}
+              readOnly={readOnly}
+              tooltip={tooltip}
+            />
           }
           disabled={disabled}
           calendarClassName="calendar"

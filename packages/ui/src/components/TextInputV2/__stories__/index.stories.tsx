@@ -1,13 +1,13 @@
 import type { Meta } from '@storybook/react'
-import { TextInput } from '..'
+import { TextInputV2 } from '..'
 
 export default {
-  component: TextInput,
+  component: TextInputV2,
   title: 'Components/Data Entry/TextInputV2',
   parameters: {
     experimental: true,
   },
-} as Meta<typeof TextInput>
+} as Meta<typeof TextInputV2>
 
 export { Playground } from './Playground.stories'
 export { Size } from './Size.stories'

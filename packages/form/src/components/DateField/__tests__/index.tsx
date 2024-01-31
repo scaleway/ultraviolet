@@ -6,7 +6,8 @@ import {
   jest,
   test,
 } from '@jest/globals'
-import { act, fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { DateField } from '..'
 import {
   mockRandom,
@@ -34,11 +35,11 @@ describe('DateField', () => {
     return shouldMatchEmotionSnapshotFormWrapper(
       <DateField name="test" onBlur={onBlur} onChange={onChange} />,
       {
-        transform: () => {
+        transform: async () => {
           const select = screen.getByRole('textbox')
-          fireEvent.keyDown(select, { key: 'ArrowDown', keyCode: 40 })
+          await userEvent.click(select)
           const option = screen.getAllByRole('option')[0]
-          act(() => option.click())
+          await userEvent.click(option)
           expect(onChange).toBeCalledTimes(1)
           // Blur not working on react-datepicker:
           // https://github.com/Hacker0x01/react-datepicker/issues/2028
