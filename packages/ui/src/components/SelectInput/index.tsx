@@ -148,17 +148,11 @@ const getSelectStyles = ({
         boxShadow: error
           ? theme.shadows.focusDanger
           : theme.shadows.focusPrimary,
-        svg: {
-          fill: error ? theme.colors.danger.text : theme.colors.primary.text,
-        },
       },
       ':hover': {
         borderColor: error
           ? theme.colors.danger.borderHover
           : theme.colors.primary.borderHover,
-        svg: {
-          fill: error ? theme.colors.danger.text : theme.colors.primary.text,
-        },
       },
     }),
     ...(customStyle(state)?.['control'] || {}),
