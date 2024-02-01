@@ -1,5 +1,23 @@
 # @ultraviolet/plus
 
+## 0.6.5
+
+### Patch Changes
+
+- [#3372](https://github.com/scaleway/ultraviolet/pull/3372) [`2ab58ef`](https://github.com/scaleway/ultraviolet/commit/2ab58efd55530673da91d50042c5eb014ebad446) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.48`.
+
+- Updated dependencies [[`c2e824e`](https://github.com/scaleway/ultraviolet/commit/c2e824efe7f875b9f917b946c2b4575f82132240), [`2ab58ef`](https://github.com/scaleway/ultraviolet/commit/2ab58efd55530673da91d50042c5eb014ebad446)]:
+  - @ultraviolet/ui@1.31.4
+
+## 0.6.4
+
+### Patch Changes
+
+- [#3301](https://github.com/scaleway/ultraviolet/pull/3301) [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/react` to `18.2.47`.
+
+- Updated dependencies [[`740915c`](https://github.com/scaleway/ultraviolet/commit/740915c2111c49c77e10679bc48dc006f0c589b0), [`08fa9b5`](https://github.com/scaleway/ultraviolet/commit/08fa9b5a68ff52b68cd5ff68e8965be1ae29359f), [`a13c6a7`](https://github.com/scaleway/ultraviolet/commit/a13c6a7ce3e712ef7788ac7219434b723a7983e0), [`f59a7b2`](https://github.com/scaleway/ultraviolet/commit/f59a7b270dd90fd5ed5893abf0e8ae5afcd1a8d2)]:
+  - @ultraviolet/ui@1.31.3
+
 ## 0.6.3
 
 ### Patch Changes

@@ -321,7 +321,7 @@ export const NumberInputV2 = forwardRef(
           <Stack direction="row" gap="0.5" alignItems="start">
             <Text
               as="label"
-              variant="bodySmallStrong"
+              variant="bodyStrong"
               sentiment="neutral"
               htmlFor={id ?? localId}
             >

@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import type {
   ButtonHTMLAttributes,
   ComponentProps,
+  MouseEvent,
   ReactElement,
   ReactNode,
   Ref,
@@ -124,7 +125,10 @@ const FwdMenu = forwardRef(
     useImperativeHandle(ref, () => innerRef.current)
 
     const finalDisclosure = cloneElement(target, {
-      onClick: () => setIsVisible(!isVisible),
+      onClick: (event: MouseEvent<HTMLButtonElement>) => {
+        target.props.onClick?.(event)
+        setIsVisible(!isVisible)
+      },
       'aria-haspopup': 'dialog',
       'aria-expanded': isVisible,
       // @ts-expect-error not sure how to fix this

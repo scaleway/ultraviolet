@@ -347,12 +347,12 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--top-right cache-se1d56-ToastContainer"
+      class="Toastify__toast-container Toastify__toast-container--undefined cache-se1d56-ToastContainer"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info Toastify__toast--close-on-click cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        data-in="true"
         id="info"
-        style="--nth: 1; --len: 3;"
       >
         <div
           class="Toastify__toast-body"
@@ -392,17 +392,25 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           </svg>
         </button>
         <div
-          aria-hidden="false"
-          aria-label="notification timer"
-          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--info"
-          role="progressbar"
-          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
-        />
+          class="Toastify__progress-bar--wrp"
+          data-hidden="false"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--info"
+          />
+          <div
+            aria-hidden="false"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--info"
+            role="progressbar"
+            style="animation-duration: 6000ms; animation-play-state: paused;"
+          />
+        </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success Toastify__toast--close-on-click cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        data-in="true"
         id="success"
-        style="--nth: 2; --len: 3;"
       >
         <div
           class="Toastify__toast-body"
@@ -442,17 +450,25 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           </svg>
         </button>
         <div
-          aria-hidden="false"
-          aria-label="notification timer"
-          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--success"
-          role="progressbar"
-          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
-        />
+          class="Toastify__progress-bar--wrp"
+          data-hidden="false"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--success"
+          />
+          <div
+            aria-hidden="false"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--success"
+            role="progressbar"
+            style="animation-duration: 6000ms; animation-play-state: paused;"
+          />
+        </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error Toastify__toast--close-on-click cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--top-right"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        data-in="true"
         id="error"
-        style="--nth: 3; --len: 3;"
       >
         <div
           class="Toastify__toast-body"
@@ -492,12 +508,20 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
           </svg>
         </button>
         <div
-          aria-hidden="false"
-          aria-label="notification timer"
-          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--error"
-          role="progressbar"
-          style="animation-duration: 6000ms; animation-play-state: paused; opacity: 1;"
-        />
+          class="Toastify__progress-bar--wrp"
+          data-hidden="false"
+        >
+          <div
+            class="Toastify__progress-bar--bg Toastify__progress-bar-theme--light Toastify__progress-bar--error"
+          />
+          <div
+            aria-hidden="false"
+            aria-label="notification timer"
+            class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--light Toastify__progress-bar--error"
+            role="progressbar"
+            style="animation-duration: 6000ms; animation-play-state: paused;"
+          />
+        </div>
       </div>
     </div>
   </div>
