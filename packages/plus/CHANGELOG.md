@@ -1,5 +1,20 @@
 # @ultraviolet/plus
 
+## 0.6.6
+
+### Patch Changes
+
+- [#3365](https://github.com/scaleway/ultraviolet/pull/3365) [`126b7e9`](https://github.com/scaleway/ultraviolet/commit/126b7e98941dc99eebb01097d4fcaf3cafa033ce) Thanks [@matthprost](https://github.com/matthprost)! - Fix `<EstimateCost />` time unit spacing on firefox
+
+- [#3378](https://github.com/scaleway/ultraviolet/pull/3378) [`a5eff2a`](https://github.com/scaleway/ultraviolet/commit/a5eff2ad4264dcf56c3b44b28d3f84acd0f849b6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.9`.
+  Updated dependency `@babel/runtime` to `7.23.9`.
+  Updated dependency `@babel/eslint-parser` to `7.23.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.9`.
+  Updated dependency `@babel/preset-env` to `7.23.9`.
+- Updated dependencies [[`b492e36`](https://github.com/scaleway/ultraviolet/commit/b492e36ae2f540bed61458993b6baa8db2444a24), [`c1dfb10`](https://github.com/scaleway/ultraviolet/commit/c1dfb103f5b149e6b7483d0c271536fed59a7a09), [`a5eff2a`](https://github.com/scaleway/ultraviolet/commit/a5eff2ad4264dcf56c3b44b28d3f84acd0f849b6), [`75a8424`](https://github.com/scaleway/ultraviolet/commit/75a8424b2da80cc9eb2083b9b7e6b0db7b496b1b)]:
+  - @ultraviolet/themes@1.8.0
+  - @ultraviolet/ui@1.31.5
+
 ## 0.6.5
 
 ### Patch Changes
