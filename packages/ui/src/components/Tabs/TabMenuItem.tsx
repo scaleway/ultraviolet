@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import type { ComponentProps } from 'react'
 import { useMemo } from 'react'
-import Item from '../Menu/Item'
+import Item from '../MenuV2/Item'
 import { useTabsContext } from './TabsContext'
 
 const StyledMenuItem = styled(Item)`
