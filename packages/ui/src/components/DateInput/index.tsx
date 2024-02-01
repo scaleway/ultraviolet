@@ -232,7 +232,7 @@ export const DateInput = ({
   onBlur,
   onChange,
   onFocus,
-  required = true,
+  required = false,
   excludeDates,
   value,
   selectsRange,
@@ -278,6 +278,7 @@ export const DateInput = ({
       <Global styles={style} />
       <StyledWrapper>
         <ReactDatePicker
+          required={required}
           data-testid={dataTestId}
           className={className}
           autoFocus={autoFocus}
@@ -302,7 +303,6 @@ export const DateInput = ({
               labelDescription={labelDescription}
               value={valueFormat || ''}
               disabled={disabled}
-              required={required}
               size={size}
               suffix={<Icon name="calendar-range" color="neutral" />}
               readOnly={readOnly}
