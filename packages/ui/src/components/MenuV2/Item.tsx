@@ -107,44 +107,48 @@ const Item = forwardRef<HTMLElement, ItemProps>(
   ) => {
     if (href && !disabled) {
       return (
+        <div>
+          <Tooltip text={tooltip}>
+            <StyledLinkItem
+              borderless
+              href={href}
+              ref={ref as Ref<HTMLAnchorElement>}
+              onClick={
+                disabled
+                  ? undefined
+                  : (onClick as MouseEventHandler<HTMLAnchorElement>)
+              }
+              role="menuitem"
+              disabled={disabled}
+              sentiment={sentiment}
+              className={className}
+              data-testid={dataTestId}
+            >
+              {children}
+            </StyledLinkItem>
+          </Tooltip>
+        </div>
+      )
+    }
+
+    return (
+      <div>
         <Tooltip text={tooltip}>
-          <StyledLinkItem
-            borderless
-            href={href}
-            ref={ref as Ref<HTMLAnchorElement>}
-            onClick={
-              disabled
-                ? undefined
-                : (onClick as MouseEventHandler<HTMLAnchorElement>)
-            }
+          <StyledItem
+            type="button"
+            ref={ref as Ref<HTMLButtonElement>}
             role="menuitem"
             disabled={disabled}
+            onClick={onClick}
+            borderless={borderless}
             sentiment={sentiment}
             className={className}
             data-testid={dataTestId}
           >
             {children}
-          </StyledLinkItem>
+          </StyledItem>
         </Tooltip>
-      )
-    }
-
-    return (
-      <Tooltip text={tooltip}>
-        <StyledItem
-          type="button"
-          ref={ref as Ref<HTMLButtonElement>}
-          role="menuitem"
-          disabled={disabled}
-          onClick={onClick}
-          borderless={borderless}
-          sentiment={sentiment}
-          className={className}
-          data-testid={dataTestId}
-        >
-          {children}
-        </StyledItem>
-      </Tooltip>
+      </div>
     )
   },
 )
