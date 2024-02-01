@@ -26,3 +26,5 @@ If you set `value`, you will have to handle the `onChange` event to update the v
 
 - If you set a `min` or `max` value and that the component is controlled (you set the `value` prop), when blur occurs,
 if the value is out of the range, the value will be set to the closest range value.
+
+- <b>⚠ WARNING:</b> If the `min` or `max` prop is set in addition with `step` prop you need to be coherent in the number you are setting up. If the `step` is a multiple of 5 then you need to set your `min` or `max` to be also a multiple of 5.
