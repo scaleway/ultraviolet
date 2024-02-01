@@ -53,7 +53,6 @@ export const CustomUnitInput = ({
       minValue={1}
       size="medium"
       options={options}
-      selectInputWidth={300}
     />
   )
 }

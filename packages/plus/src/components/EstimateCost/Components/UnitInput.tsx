@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { SelectInput, Stack, TextInput } from '@ultraviolet/ui'
+import { Row, SelectInput, TextInput } from '@ultraviolet/ui'
 import type { ComponentProps, FocusEvent } from 'react'
 
 type SelectOption = Exclude<
@@ -84,7 +84,6 @@ type UnitInputProps = {
   onChangeUnitValue: (value: UnitInputValue['unit']) => void
   options: SelectOption[]
   placeholder?: string
-  selectInputWidth?: number
   size?: string
   textBoxWidth?: string | number
   'data-testid'?: string
@@ -108,7 +107,6 @@ export const UnitInput = ({
   value,
   unitValue,
   textBoxWidth = 100,
-  selectInputWidth = 200,
   disabled = false,
   options,
   className,
@@ -120,7 +118,7 @@ export const UnitInput = ({
   type = 'number',
   'data-testid': dataTestId,
 }: UnitInputProps) => (
-  <Stack direction="row" data-testid={dataTestId}>
+  <Row templateColumns="1fr auto" data-testid={dataTestId}>
     <CustomTextInput
       height={sizesHeight[size]}
       width={textBoxWidth}
@@ -154,7 +152,6 @@ export const UnitInput = ({
       error={valueError}
     />
     <CustomSelectInput
-      width={selectInputWidth}
       noTopLabel
       height={sizesHeight[size]}
       id={`${name}-unit`}
@@ -168,5 +165,5 @@ export const UnitInput = ({
       customStyle={customSelectStyle(sizesHeight[size])}
       disabled={disabled || options.length === 1}
     />
-  </Stack>
+  </Row>
 )
