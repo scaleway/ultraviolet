@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.8.3
+
+### Patch Changes
+
+- [#3378](https://github.com/scaleway/ultraviolet/pull/3378) [`a5eff2a`](https://github.com/scaleway/ultraviolet/commit/a5eff2ad4264dcf56c3b44b28d3f84acd0f849b6) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@babel/core` to `7.23.9`.
+  Updated dependency `@babel/runtime` to `7.23.9`.
+  Updated dependency `@babel/eslint-parser` to `7.23.9`.
+  Updated dependency `@babel/plugin-transform-runtime` to `7.23.9`.
+  Updated dependency `@babel/preset-env` to `7.23.9`.
+- Updated dependencies [[`b492e36`](https://github.com/scaleway/ultraviolet/commit/b492e36ae2f540bed61458993b6baa8db2444a24)]:
+  - @ultraviolet/themes@1.8.0
+
 ## 2.8.2
 
 ### Patch Changes
