@@ -1,5 +1,5 @@
-import { NumberInput as UVNumberInput } from '@ultraviolet/ui'
-import { useEffect } from 'react'
+import { NumberInputV2 } from '@ultraviolet/ui'
+import { useEffect, useState } from 'react'
 import { useOverlay } from '../OverlayContext'
 import { ItemResourceName } from '../componentStyle'
 import { Regular } from './Regular'
@@ -20,6 +20,7 @@ export const NumberInput = ({
   itemCallback,
 }: NumberInputProps) => {
   const { isOverlay } = useOverlay()
+  const [value, setValue] = useState<number | string | undefined>(amount)
 
   useEffect(() => {
     getAmountValue?.(amount)
@@ -30,17 +31,18 @@ export const NumberInput = ({
       <Regular>{amount}</Regular>
     </ItemResourceName>
   ) : (
-    <UVNumberInput
-      minValue={minValue}
-      maxValue={maxValue}
+    <NumberInputV2
+      min={minValue}
+      max={maxValue}
       size="small"
-      onChange={value => {
-        if (typeof value === 'number' && itemCallback) {
-          itemCallback(value, true)
-          getAmountValue?.(value)
-        }
+      onChange={event => {
+        setValue(event.target.value)
+        const newValue =
+          event.target.value !== '' ? Number(event.target.value) : 0
+        itemCallback?.(newValue, true)
+        getAmountValue?.(newValue)
       }}
-      value={amount}
+      value={value}
     />
   )
 }
