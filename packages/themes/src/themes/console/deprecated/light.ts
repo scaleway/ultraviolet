@@ -93,6 +93,18 @@ export const deprecatedLightTokens = {
           gold: 'linear-gradient(180deg, #fbc600 0%, #521094 88.87%)',
           purple: 'linear-gradient(180deg, #c43bff 0%, #521094 88.87%)',
           strong: 'linear-gradient(180deg, #521094 0%, #151a2d 100%)',
+          accent:
+            'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          aqua: 'linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          blue: 'linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          emerald:
+            'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          fuschia:
+            'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          magenta:
+            'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          primary:
+            'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
         },
       },
     },

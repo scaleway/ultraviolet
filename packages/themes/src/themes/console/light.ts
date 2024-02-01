@@ -131,18 +131,33 @@ export const lightTheme = {
       },
       gradients: {
         background: {
-          accent:
-            'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          aqua: 'linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          blue: 'linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          emerald:
-            'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          fuschia:
-            'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          magenta:
-            'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
-          primary:
-            'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          linear: {
+            accent:
+              'linear-gradient(151deg, #ff602e 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            aqua: 'linear-gradient(151deg, #03cfda 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            blue: 'linear-gradient(151deg, #47b0ff 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            emerald:
+              'linear-gradient(151deg, #45d19f 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            fuschia:
+              'linear-gradient(151deg, #f91b6c 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            magenta:
+              'linear-gradient(151deg, #ec0bc3 0%, #3d1862 28.91%, #151a2d 75.01%);',
+            primary:
+              'linear-gradient(151deg, #792dd4 0%, #3d1862 28.91%, #151a2d 75.01%);',
+          },
+          radial: {
+            aquaFuschia:
+              'radial-gradient(32.85% 10.4% at 0% 54.09%, rgba(251, 198, 0, 0.20) 0%, rgba(251, 198, 0, 0.00) 100%), radial-gradient(45.5% 19.24% at 0% 32.17%, rgba(255, 96, 46, 0.30) 0%, rgba(255, 96, 46, 0.00) 100%), radial-gradient(58.2% 33.79% at 100% 36.38%, rgba(249, 27, 108, 0.54) 0%, rgba(249, 27, 108, 0.00) 100%), radial-gradient(87.18% 38.05% at 88.33% 0%, #03cfda 0%, rgba(3, 207, 218, 0.30) 59.06%, rgba(3, 207, 218, 0.00) 100%), var(--palette-dark-neutral-200, #151a2d);',
+            aquaPurple:
+              'radial-gradient( 32.85% 10.4% at 0% 54.09%, rgba(251, 198, 0, 0.20) 0%, rgba(251, 198, 0, 0.00) 100%), radial-gradient( 45.5% 19.24% at 0% 32.17%, rgba(255, 96, 46, 0.30) 0%, rgba(255, 96, 46, 0.00) 100%), radial-gradient( 58.2% 33.79% at 100% 36.38%, rgba(121, 45, 212, 0.72) 0%, rgba(121, 45, 212, 0.00) 100%), radial-gradient( 87.18% 38.05% at 82.33% 0%, rgba(3, 207, 218, 0.30) 59.06%, rgba(3, 207, 218, 0.00) 100%), #110b1e;',
+            fuschiaPurple:
+              'radial-gradient(32.85% 10.4% at 0% 54.09%, rgba(251, 198, 0, 0.20) 0%, rgba(251, 198, 0, 0.00) 100%), radial-gradient(45.5% 19.24% at 0% 32.17%, rgba(255, 96, 46, 0.30) 0%, rgba(255, 96, 46, 0.00) 100%), radial-gradient(58.2% 33.79% at 100% 36.38%, rgba(121, 45, 212, 0.72) 0%, rgba(121, 45, 212, 0.00) 100%), radial-gradient(87.18% 38.05% at 88.33% 0%, #f91b6c 0%, rgba(249, 27, 108, 0.30) 59.06%, rgba(249, 27, 108, 0.00) 100%), var(--palette-dark-neutral-200, #151a2d);',
+            lime: 'radial-gradient(32.85% 10.4% at 0% 54.09%, rgba(82, 16, 148, 0.40) 0%, rgba(82, 16, 148, 0.00) 100%), radial-gradient(45.5% 19.24% at 0% 32.17%, rgba(82, 16, 148, 0.40) 0%, rgba(82, 16, 148, 0.00) 100%), radial-gradient(58.2% 33.79% at 100% 36.38%, rgba(116, 179, 33, 0.36) 0%, rgba(116, 179, 33, 0.00) 100%), radial-gradient(87.18% 38.05% at 88.33% 0%, #74b321 0%, rgba(116, 179, 33, 0.30) 59.06%, rgba(116, 179, 33, 0.00) 100%), var(--palette-dark-neutral-200, #151a2d);',
+            magenta:
+              'radial-gradient(32.85% 10.4% at 0% 54.09%, rgba(251, 198, 0, 0.20) 0%, rgba(251, 198, 0, 0.00) 100%), radial-gradient(45.5% 19.24% at 0% 32.17%, rgba(255, 96, 46, 0.30) 0%, rgba(255, 96, 46, 0.00) 100%), radial-gradient(58.2% 33.79% at 100% 36.38%, rgba(236, 11, 195, 0.54) 0%, rgba(121, 45, 212, 0.00) 100%), radial-gradient(87.18% 38.05% at 88.33% 0%, #ec0bc3 0%, rgba(236, 11, 195, 0.30) 59.06%, rgba(236, 11, 195, 0.00) 100%), var(--palette-dark-neutral-200, #151a2d);',
+            purple:
+              'radial-gradient(32.85% 10.4% at 0% 54.09%, rgba(251, 198, 0, 0.20) 0%, rgba(251, 198, 0, 0.00) 100%), radial-gradient(45.5% 19.24% at 0% 32.17%, rgba(255, 96, 46, 0.30) 0%, rgba(255, 96, 46, 0.00) 100%), radial-gradient(58.2% 33.79% at 100% 36.38%, rgba(121, 45, 212, 0.54) 0%, rgba(82, 16, 148, 0.00) 100%), radial-gradient(87.18% 38.05% at 88.33% 0%, #792dd4 0%, rgba(121, 45, 212, 0.30) 59.06%, rgba(121, 45, 212, 0.00) 100%), var(--palette-dark-neutral-200, #151a2d);',
+          },
         },
         text: { dark: '#222638', light: '#ffffff' },
       },

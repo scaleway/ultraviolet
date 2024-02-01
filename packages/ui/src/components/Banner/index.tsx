@@ -35,7 +35,8 @@ const styles = ({
     if (variant === 'promotional') {
       return css`
         background-position: left, right;
-        background-image: ${theme.colors.other.gradients.background.aqua};
+        background-image: ${theme.colors.other.gradients.background.linear
+          .aqua};
         background-repeat: no-repeat, no-repeat;
         background-size: contain, contain;
       `
@@ -54,7 +55,8 @@ const styles = ({
 
     if (variant === 'promotional') {
       return css`
-        background-image: ${theme.colors.other.gradients.background.aqua};
+        background-image: ${theme.colors.other.gradients.background.linear
+          .aqua};
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
