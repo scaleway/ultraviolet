@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.31.6
+
+### Patch Changes
+
+- [#3393](https://github.com/scaleway/ultraviolet/pull/3393) [`90785f5`](https://github.com/scaleway/ultraviolet/commit/90785f50f81f73f415bda96364a1294baf4a1dfb) Thanks [@matthprost](https://github.com/matthprost)! - Remove fully `Menu` from `Tabs` component
+
+- [#3395](https://github.com/scaleway/ultraviolet/pull/3395) [`2c56a48`](https://github.com/scaleway/ultraviolet/commit/2c56a489cf94738a09bb4ae743f2b1952c6f98b2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `react-toastify` to `10.0.4`.
+
 ## 1.31.5
 
 ### Patch Changes
