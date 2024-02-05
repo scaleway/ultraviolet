@@ -216,43 +216,46 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
   right: calc(0% + 16px);
 }
 
-.cache-11q7wrm-toast {
+.cache-81melq-toast {
   border-radius: 4px;
   box-shadow: 0px 4px 24px 6px #d9dadd66;
   min-height: 44px;
   margin-bottom: 16px;
 }
 
-.cache-11q7wrm-toast .Toastify__toast-body {
+.cache-81melq-toast .Toastify__toast-body {
   margin: 0;
   padding: 0;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--success {
+.cache-81melq-toast.Toastify__toast--success {
   background-color: #daf6ec;
   color: #22674e;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--success .Toastify__progress-bar {
+.cache-81melq-toast.Toastify__toast--success .Toastify__progress-bar--success {
   background-color: #2c8564;
+  height: 4px;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--info {
+.cache-81melq-toast.Toastify__toast--info {
   background-color: #e0f2ff;
   color: #005da3;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--info .Toastify__progress-bar {
+.cache-81melq-toast.Toastify__toast--info .Toastify__progress-bar--info {
   background-color: #0078d2;
+  height: 4px;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--error {
+.cache-81melq-toast.Toastify__toast--error {
   background-color: #ffebf2;
   color: #b3144d;
 }
 
-.cache-11q7wrm-toast.Toastify__toast--error .Toastify__progress-bar {
+.cache-81melq-toast.Toastify__toast--error .Toastify__progress-bar--danger {
   background-color: #e51963;
+  height: 4px;
 }
 
 .cache-4lkpn5-Stack {
@@ -347,10 +350,10 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
     class="Toastify"
   >
     <div
-      class="Toastify__toast-container Toastify__toast-container--undefined cache-se1d56-ToastContainer"
+      class="Toastify__toast-container Toastify__toast-container--top-right cache-se1d56-ToastContainer"
     >
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--info cache-81melq-toast Toastify--animate Toastify__bounce-enter--top-right"
         data-in="true"
         id="info"
       >
@@ -408,7 +411,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--success cache-81melq-toast Toastify--animate Toastify__bounce-enter--top-right"
         data-in="true"
         id="success"
       >
@@ -466,7 +469,7 @@ exports[`Toaster renders correctly with all kind of toast 2`] = `
         </div>
       </div>
       <div
-        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-11q7wrm-toast Toastify--animate Toastify__bounce-enter--undefined"
+        class="Toastify__toast Toastify__toast-theme--light Toastify__toast--error cache-81melq-toast Toastify--animate Toastify__bounce-enter--top-right"
         data-in="true"
         id="error"
       >
