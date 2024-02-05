@@ -235,7 +235,12 @@ export const Radio = forwardRef(
             ) : null}
           </RadioContainer>
           {helper ? (
-            <MargedText as="p" variant="bodySmall" prominence="weak">
+            <MargedText
+              as="span"
+              variant="caption"
+              prominence="weak"
+              sentiment="neutral"
+            >
               {helper}
             </MargedText>
           ) : null}

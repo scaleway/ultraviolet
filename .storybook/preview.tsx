@@ -76,7 +76,7 @@ export const globalStyles = (mode: 'light' | 'dark') => () => css`
   }
 
   p {
-    margin: 0 !important;
+    margin: 0;
   }
 
   @font-face {
