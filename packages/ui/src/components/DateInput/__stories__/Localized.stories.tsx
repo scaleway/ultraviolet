@@ -2,6 +2,7 @@ import type { Decorator } from '@storybook/react'
 import { es, fr, ru } from 'date-fns/locale'
 import type { ComponentProps } from 'react'
 import { DateInput } from '..'
+import { Template } from './Template'
 
 const locales = [
   { label: 'fr-FR', locale: fr },
@@ -13,6 +14,8 @@ export const Localized = (props: ComponentProps<typeof DateInput>) =>
   locales.map(({ label, locale }) => (
     <DateInput {...props} onChange={() => {}} label={label} locale={locale} />
   ))
+
+Localized.args = Template.args
 
 Localized.parameters = {
   docs: {

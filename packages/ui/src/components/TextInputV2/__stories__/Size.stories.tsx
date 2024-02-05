@@ -1,9 +1,9 @@
 import type { StoryFn } from '@storybook/react'
 import { useState } from 'react'
-import { TEXTINPUT_SIZE_HEIGHT, TextInput } from '..'
+import { TEXTINPUT_SIZE_HEIGHT, TextInputV2 } from '..'
 import { Stack } from '../../Stack'
 
-export const Size: StoryFn<typeof TextInput> = args => {
+export const Size: StoryFn<typeof TextInputV2> = args => {
   const [value, setValue] = useState<string>('Text')
 
   return (
@@ -13,7 +13,7 @@ export const Size: StoryFn<typeof TextInput> = args => {
           TEXTINPUT_SIZE_HEIGHT,
         ) as (keyof typeof TEXTINPUT_SIZE_HEIGHT)[]
       ).map(size => (
-        <TextInput
+        <TextInputV2
           {...args}
           label={size}
           size={size}

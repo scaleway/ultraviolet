@@ -1,22 +1,24 @@
 import { describe, expect, jest, test } from '@jest/globals'
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { TextInput } from '..'
+import { TextInputV2 } from '..'
 import {
   renderWithTheme,
   shouldMatchEmotionSnapshot,
 } from '../../../../.jest/helpers'
 
-describe('TextInput', () => {
+describe('TextInputV2', () => {
   test('should render correctly with basic props', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} />,
+      <TextInputV2 label="Test" value="test" onChange={() => {}} />,
     ))
 
   test('should control the value', () => {
     const onChange = jest.fn<() => string>()
 
-    renderWithTheme(<TextInput label="Test" value="test" onChange={onChange} />)
+    renderWithTheme(
+      <TextInputV2 label="Test" value="test" onChange={onChange} />,
+    )
 
     const textarea = screen.getByLabelText<HTMLInputElement>('Test')
     expect(textarea.value).toBe('test')
@@ -29,7 +31,7 @@ describe('TextInput', () => {
     const onChange = jest.fn<() => string>()
 
     renderWithTheme(
-      <TextInput label="Test" value="test" onChange={onChange} clearable />,
+      <TextInputV2 label="Test" value="test" onChange={onChange} clearable />,
     )
 
     const textarea = screen.getByLabelText<HTMLTextAreaElement>('Test')
@@ -41,17 +43,17 @@ describe('TextInput', () => {
 
   test('should render correctly when input is disabled', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} disabled />,
+      <TextInputV2 label="Test" value="test" onChange={() => {}} disabled />,
     ))
 
   test('should render correctly when input is readOnly', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput label="Test" value="test" onChange={() => {}} readOnly />,
+      <TextInputV2 label="Test" value="test" onChange={() => {}} readOnly />,
     ))
 
   test('should render correctly when input has a success sentiment', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={() => {}}
@@ -61,7 +63,7 @@ describe('TextInput', () => {
 
   test('should render correctly when input  has a error sentiment', () =>
     shouldMatchEmotionSnapshot(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={() => {}}
@@ -74,7 +76,7 @@ describe('TextInput', () => {
     const successMessage = 'success message'
 
     renderWithTheme(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={onChange}
@@ -90,7 +92,7 @@ describe('TextInput', () => {
     const errorMessage = 'error!'
 
     renderWithTheme(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={onChange}
@@ -106,7 +108,7 @@ describe('TextInput', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={onChange}
@@ -123,7 +125,7 @@ describe('TextInput', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={onChange}
@@ -142,7 +144,7 @@ describe('TextInput', () => {
     const helperMessage = 'helper'
 
     renderWithTheme(
-      <TextInput
+      <TextInputV2
         label="Test"
         value="test"
         onChange={onChange}
