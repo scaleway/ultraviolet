@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.31.7
+
+### Patch Changes
+
+- [#3410](https://github.com/scaleway/ultraviolet/pull/3410) [`4662905`](https://github.com/scaleway/ultraviolet/commit/4662905fc479a97a1dacbede8fceeef917b4180f) Thanks [@matthprost](https://github.com/matthprost)! - Fix `Toaster` to be closing on close button and when time elapsed
+
+- [#3396](https://github.com/scaleway/ultraviolet/pull/3396) [`958ca76`](https://github.com/scaleway/ultraviolet/commit/958ca769620795b3232dfcfac2727ad9faefe240) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `SelectInput` required icon to stay with danger sentiment
+  - Fix `TimeField` to pass `noTopLabel` prop
+
 ## 1.31.6
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @ultraviolet/plus
 
+## 0.6.8
+
+### Patch Changes
+
+- [#3399](https://github.com/scaleway/ultraviolet/pull/3399) [`ba87606`](https://github.com/scaleway/ultraviolet/commit/ba876069b502f525189f0e6a3ba9421778d74e6a) Thanks [@matthprost](https://github.com/matthprost)! - Fix `EstimateCost.NumberInput` to be able to remove fully the content
+
+- [#3396](https://github.com/scaleway/ultraviolet/pull/3396) [`958ca76`](https://github.com/scaleway/ultraviolet/commit/958ca769620795b3232dfcfac2727ad9faefe240) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `SelectInput` required icon to stay with danger sentiment
+  - Fix `TimeField` to pass `noTopLabel` prop
+- Updated dependencies [[`4662905`](https://github.com/scaleway/ultraviolet/commit/4662905fc479a97a1dacbede8fceeef917b4180f), [`958ca76`](https://github.com/scaleway/ultraviolet/commit/958ca769620795b3232dfcfac2727ad9faefe240)]:
+  - @ultraviolet/ui@1.31.7
+
 ## 0.6.7
 
 ### Patch Changes
