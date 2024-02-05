@@ -1,5 +1,14 @@
 # Change Log
 
+## 2.3.7
+
+### Patch Changes
+
+- [#3396](https://github.com/scaleway/ultraviolet/pull/3396) [`958ca76`](https://github.com/scaleway/ultraviolet/commit/958ca769620795b3232dfcfac2727ad9faefe240) Thanks [@matthprost](https://github.com/matthprost)! - - Fix `SelectInput` required icon to stay with danger sentiment
+  - Fix `TimeField` to pass `noTopLabel` prop
+- Updated dependencies [[`4662905`](https://github.com/scaleway/ultraviolet/commit/4662905fc479a97a1dacbede8fceeef917b4180f), [`958ca76`](https://github.com/scaleway/ultraviolet/commit/958ca769620795b3232dfcfac2727ad9faefe240)]:
+  - @ultraviolet/ui@1.31.7
+
 ## 2.3.6
 
 ### Patch Changes
