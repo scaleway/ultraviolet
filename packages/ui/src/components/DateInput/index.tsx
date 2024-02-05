@@ -304,7 +304,13 @@ export const DateInput = ({
               value={valueFormat || ''}
               disabled={disabled}
               size={size}
-              suffix={<Icon name="calendar-range" color="neutral" />}
+              suffix={
+                <Icon
+                  name="calendar-range"
+                  color="neutral"
+                  disabled={disabled}
+                />
+              }
               readOnly={readOnly}
               tooltip={tooltip}
             />

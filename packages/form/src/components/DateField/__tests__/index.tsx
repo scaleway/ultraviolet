@@ -37,7 +37,7 @@ describe('DateField', () => {
       {
         transform: async () => {
           const select = screen.getByRole('textbox')
-          await userEvent.click(select)
+          await userEvent.type(select, '{ArrowDown}')
           const option = screen.getAllByRole('option')[0]
           await userEvent.click(option)
           expect(onChange).toBeCalledTimes(1)
