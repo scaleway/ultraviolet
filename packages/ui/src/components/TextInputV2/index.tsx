@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { Icon } from '@ultraviolet/icons'
-import type { ComponentProps, InputHTMLAttributes, ReactNode } from 'react'
+import type { InputHTMLAttributes, ReactNode } from 'react'
 import { forwardRef, useId, useMemo, useState } from 'react'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
@@ -123,7 +123,6 @@ type TextInputProps = {
   'data-testid'?: string
   error?: string
   helper?: ReactNode
-  iconName?: ComponentProps<typeof Icon>['name']
   label?: string
   labelDescription?: ReactNode
   loading?: boolean
@@ -133,9 +132,8 @@ type TextInputProps = {
   onChange?: (newValue: string) => void
   prefix?: ReactNode
   size?: TextInputSize
-  success?: string
+  success?: string | boolean
   suffix?: ReactNode
-  tabIndex?: number
   tooltip?: string
   type?: 'text' | 'password' | 'url' | 'email'
   value?: string
@@ -147,10 +145,12 @@ type TextInputProps = {
   | 'id'
   | 'placeholder'
   | 'aria-label'
+  | 'aria-labelledby'
   | 'disabled'
   | 'readOnly'
   | 'required'
   | 'autoFocus'
+  | 'tabIndex'
 >
 
 /**
@@ -183,12 +183,13 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
       type = 'text',
       prefix,
       suffix,
-      iconName,
       size = 'large',
       loading,
       onRandomize,
       minLength,
       maxLength,
+      'aria-labelledby': ariaLabelledBy,
+      'aria-label': ariaLabel,
     },
     ref,
   ) => {
@@ -255,7 +256,6 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                   )}
                 </BasicPrefixStack>
               ) : null}
-              {iconName ? <Icon name={iconName} size={16} /> : null}
               <StyledInput
                 type={computedType}
                 aria-invalid={!!error}
@@ -285,6 +285,8 @@ export const TextInputV2 = forwardRef<HTMLInputElement, TextInputProps>(
                 readOnly={readOnly}
                 minLength={minLength}
                 maxLength={maxLength}
+                aria-labelledby={ariaLabelledBy}
+                aria-label={ariaLabel}
               />
               {success || error || loading || computedClearable ? (
                 <StateStack direction="row" gap={1} alignItems="center">
